@@ -1,11 +1,15 @@
-# Earnings-Bubble — a formally-verified anatomy of the AI capital loop
+# Bubble Map — a formally-verified anatomy of the AI capital loop
+
+[![Live](https://img.shields.io/badge/live-pq--cybarg.github.io%2Fbubble--map-7fd1ff)](https://pq-cybarg.github.io/bubble-map/) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE) [![Reproduce](https://img.shields.io/badge/reproduce-bash%20run__all.sh-7CFC9B)](run_all.sh) [![Proofs](https://img.shields.io/badge/proofs-Z3%20%C2%B7%20TLA%2B%20%C2%B7%20Alloy-ffd479)](#formal-engines-models)
 
 A forensic, **formally-verified** analysis of the AI earnings bubble: the circular funding among
 NVIDIA / OpenAI / Microsoft / Oracle / CoreWeave / Anthropic / Amazon (+ the SpaceX/SPCX edge),
 and the macro, commodity, banking, and political-economy systems around it.
 
 **Start here:** [`report/UNMASKING.md`](report/UNMASKING.md) — the full analysis.
-**Reproduce everything:** `bash run_all.sh`
+**🌐 Live:** https://pq-cybarg.github.io/bubble-map/ · 📊 [Dashboard](https://pq-cybarg.github.io/bubble-map/dashboard.html) · 🌍 [Globe](https://pq-cybarg.github.io/bubble-map/globe.html) · ✍️ [Sign the poll](https://github.com/pq-cybarg/bubble-map/issues/1)
+
+**Verify:** [`CONTRIBUTING.md`](CONTRIBUTING.md) · **Reproduce everything:** `bash run_all.sh`
 
 ## What is proven vs. evidenced
 - **Layer 1 — AI circular core: PROVEN** by four independent engines (below).
