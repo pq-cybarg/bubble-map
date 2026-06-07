@@ -76,6 +76,9 @@ python3 models/z3/scenario.py | sed -n "1,12p"
 hr "[6i] System-of-systems contagion matrix (cross-leg cascade)"
 python3 models/graph/contagion_matrix.py | tail -28
 
+hr "[6j2] Age-verification FUTILITY theorem (why even ZK fails)"
+python3 models/z3/ageverif_futility.py | tail -8
+
 hr "[6k] ZK age-proof self-test (privacy-preserving age verification)"
 python3 zkage/zk_age_proof.py | tail -8
 

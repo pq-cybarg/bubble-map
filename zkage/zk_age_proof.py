@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
-zk_age_proof.py - a REAL, runnable, dependency-free non-interactive zero-knowledge proof that
-"age >= 18" WITHOUT revealing the birth year. The privacy-preserving alternative to centralized
-digital ID / ID-upload age verification: prove the predicate, reveal nothing else, no server.
+zk_age_proof.py - a STEELMAN, NOT an endorsement. This builds the strongest cryptographic case for
+age verification - a real, dependency-free non-interactive zero-knowledge proof of "age >= 18" that
+reveals nothing about the birth year - precisely to demonstrate that EVEN THIS IS NOT ENOUGH, and
+that population-scale age verification should be OPPOSED as a category, not optimized.
+Sound crypto, unsound system. See research/age-verification-abolition.md and
+models/z3/ageverif_futility.py. Running this prints the working proof AND why it still fails.
 
 Construction (all standard, Fiat-Shamir / non-interactive):
   group   : prime-order-q subgroup of Z_p* (RFC 3526 2048-bit safe prime; g=4, h hash-derived)
@@ -152,4 +155,15 @@ if __name__=="__main__":
     # 5) tampered range proof is rejected
     pf5=holder_prove_over18(cred,YEAR); pf5["range"]["Cs"][0]=(pf5["range"]["Cs"][0]*G)%P
     v5,_=verifier_check(PK,pf5); print(f"[5] tampered proof: over18={v5}"); ok&=(not v5)
-    print("\nALL CHECKS PASSED" if ok else "\n!! CHECK FAILED"); sys.exit(0 if ok else 1)
+    print("\nALL CHECKS PASSED — the cryptography is sound." if ok else "\n!! CHECK FAILED")
+    print("\n== ...AND WHY EVEN THIS SHOULD BE OPPOSED (the point) ==")
+    for w in ["(1) the proof still leaks the age>=18 predicate bit;",
+              "(2) presence/absence + when/where of the check = behavioral surveillance the crypto can't hide;",
+              "(3) it still needs a trusted ISSUER = a centralized identity root = breach point + coercion lever;",
+              "(4) once any ID system is breached or creds are shared/stolen, the gate fails (ageverif_futility.py: UNSAT);",
+              "(5) the mandate manufactures a database of minors / identity<->behavior linkage (a honeypot);",
+              "(6) a 'private' version is used to PASS the mandate -> legitimization trap."]:
+        print("   "+w)
+    print("   => Sound crypto, unsound system. Oppose the REQUIREMENT, not the lock.")
+    print("      Full argument: research/age-verification-abolition.md")
+    sys.exit(0 if ok else 1)

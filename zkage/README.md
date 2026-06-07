@@ -1,47 +1,35 @@
-# zkage — prove "age ≥ 18" without revealing who you are
+# zkage — the strongest cryptographic case for age verification, and why even it fails
 
-A **real, runnable, dependency-free** zero-knowledge proof that a person is over 18 **without
-disclosing their birth year, exact age, or identity** — the privacy-preserving alternative to the
-centralized digital-ID / ID-upload / facial-scan age verification this project documents
-(`research/digitalid-*`).
-
-The whole "freedom" stake in the analysis is that age/identity verification is being built as
-**centralized surveillance** when it doesn't have to be. The fight isn't *ID vs no-ID* — it's
-**centralized identity vs zero-knowledge proof.** This is a one-file demonstration that the
-privacy-preserving version is buildable by one person.
+> **This is a STEELMAN, not an endorsement.** `zkage/` builds the *best-possible* privacy-preserving
+> age check — a real zero-knowledge proof of "age ≥ 18" that reveals nothing about the birth year —
+> precisely to show that **even this is not good enough**, and that population-scale age verification
+> should be **opposed as a category, not optimized**. Read the argument: [`../research/age-verification-abolition.md`](../research/age-verification-abolition.md) · formal: [`../models/z3/ageverif_futility.py`](../models/z3/ageverif_futility.py).
 
 ## Run it
 ```bash
 python3 zkage/zk_age_proof.py
 ```
-Expected: `ALL CHECKS PASSED` (exit 0). No packages required (pure Python stdlib).
+It prints the working proof **and** the reasons it still fails. (Pure Python stdlib; `ALL CHECKS PASSED` = the crypto is sound — which is the point: sound crypto, unsound system.)
 
-## What it proves (and hides)
-- **Reveals:** only the boolean `age ≥ 18`.
-- **Hides:** birth year, exact age, and identity — they live only inside perfectly-hiding
-  Pedersen commitments; recovering them would require breaking the discrete-log problem.
-- **Verified properties** (in the self-test): a valid adult passes; exactly-18 passes; a **minor
-  cannot produce an honest proof**; a **forged (non-issuer-signed) credential is rejected**; a
-  **tampered proof is rejected**; and **no secret scalar appears in the transcript**.
+## What the code shows (the steelman)
+A genuine non-interactive ZK age proof: an issuer Schnorr-signs a Pedersen commitment to the birth
+year; the verifier derives `Cv = g^(Y-18)·Cby⁻¹` and the holder proves `Cv ∈ [0, 2⁷)` via per-bit
+OR-proofs + an equality proof (Fiat–Shamir). Verified: adult passes, exactly-18 passes, **minor is
+refused**, **forged credential rejected**, **tampered proof rejected**, and **no secret scalar (birth
+year / age / blinding) appears in the transcript**. Cryptographically, this is about as good as it gets.
 
-## How it works
-- **Group:** prime-order-q subgroup of Z_p* using the RFC 3526 2048-bit safe prime; `g=4`, `h`
-  hash-derived (unknown relative discrete log).
-- **Credential:** an issuer (who checks your ID once, offline) **Schnorr-signs** a Pedersen
-  commitment `Cby = g^birthyear · h^r` — attesting your age claim without learning a reusable identifier.
-- **Presentation:** for year `Y`, the verifier derives `Cv = g^(Y-18) · Cby⁻¹ = commit(age-18, -r)`.
-  The holder proves `Cv` opens to a value in `[0, 2⁷)` via **per-bit OR-proofs** (each committed bit
-  is 0 or 1) plus an **equality/composition proof** — all made non-interactive with Fiat–Shamir.
-- **Result:** the verifier learns `age ≥ 18 = true`, nothing else, with no server and no callback.
+## Why even this fails (the refutation — see the brief)
+1. **Predicate leakage** — it still reveals the `age≥18` bit.
+2. **Presence/absence metadata** — *that* you were asked, **where and when**, and whether you complied
+   is behavioral surveillance the cryptography can't touch.
+3. **Issuer centralization** — it still needs a trusted issuer = a centralized identity root = the
+   breach point and coercion lever.
+4. **Futility under breach** — once any population-scale identity system is breached or credentials are
+   shared/stolen, the gate can't distinguish authorized from unauthorized (`ageverif_futility.py`: UNSAT).
+5. **Honeypot** — the mandate manufactures a database of minors / identity↔behavior linkage.
+6. **Legitimization trap** — a "private" version is used to *pass* the mandate, accelerating the
+   surveillance regime. Shipping this as a *solution* would do harm; shipping it as a *refutation* does not.
 
-## Honest limitations
-- Reference/education code — **not audited, not production**. Real deployments should use vetted
-  libraries (BBS+ selective disclosure, Bulletproofs range proofs) and hardware-backed credentials.
-- It does not solve issuance trust (who vouches for the birth year) or revocation — those are
-  policy/PKI problems on top of the cryptography.
-- It demonstrates the *principle*: predicate proofs can replace identity disclosure.
-
-## Why it's in this repo
-Because the highest-leverage move for a skilled individual (see `report/UNMASKING.md` and the
-project's premise) is to **lower the cost of the privacy-preserving option** so the surveillance
-version loses on merit. Fork it, harden it, ship it.
+## Use
+Cite it when someone claims "age verification can be done privately with ZK." Yes — and it still
+surveils adults, endangers children, and fails at its goal. **Oppose the requirement, not the lock.**
