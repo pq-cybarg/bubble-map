@@ -2,6 +2,8 @@
 
 *Generated 2026-06-07 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard.*
 
+**Hard-money split (gold lens):** S&P 500 **−69%** vs **NVIDIA +1,985% (1985)** in gold; US median home **−81%** in gold since 1998 — broad debasement + real concentration into the circular oligopoly.
+
 ## The finding in one sentence
 The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
 
@@ -21,4 +23,4 @@ Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** 
 **Not one cabal — a small elite operator-network + recurring structures + regulatory arbitrage.** The temporal meta-graph (1998→2026) shows the weavers (OpenAI, a16z, the PayPal-mafia/Thiel, Circle/USDC, BlackRock, the SPV structure, Larry Summers as the literal dereg→AI→Epstein bridge) and the recurring devices (LTCM interconnection, Enron off-balance-sheet SPVs + mark-to-market, dotcom vendor financing) rebuilt in each era's least-regulated venue. Intent is never inferred from adjacency; sensitive threads (Epstein, Waters, foreign influence) are graded and quarantined from the proofs.
 
 ## Reproduce
-`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 19 cited source files in `research/`.
+`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 29 cited source files in `research/`.

@@ -11,6 +11,8 @@ and the macro, commodity, banking, and political-economy systems around it.
 
 **Verify:** [`CONTRIBUTING.md`](CONTRIBUTING.md) · **Reproduce everything:** `bash run_all.sh`
 
+**Hard-money split (gold lens):** S&P 500 **−69%** vs **NVIDIA +1,985% (1985)** in gold; US median home **−81%** in gold since 1998 — broad debasement + real concentration into the circular oligopoly.
+
 ## What is proven vs. evidenced
 - **Layer 1 — AI circular core: PROVEN** by four independent engines (below).
 - **Layer 2 — banking/credit: STRONG** primary data + **two PROVEN sub-claims** (coordination trap, Fed policy trap).
