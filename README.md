@@ -56,3 +56,6 @@ Forward-looking items (SpaceX pricing, BOJ June hike), reversible "commitments" 
 
 ## Disclaimer
 Structural analysis, not financial advice. Figures are cited to public sources; speculative threads are graded and kept out of the formal proofs.
+
+## Build: privacy-preserving identity (`zkage/`)
+A runnable zero-knowledge proof of **age ≥ 18 without revealing birth year or identity** — the privacy-preserving alternative to centralized digital ID. Run: `python3 zkage/zk_age_proof.py`. See [`zkage/README.md`](zkage/README.md).
