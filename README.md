@@ -51,3 +51,6 @@ and the macro, commodity, banking, and political-economy systems around it.
 
 ## Honesty
 Forward-looking items (SpaceX pricing, BOJ June hike), reversible "commitments" (Disney proved it), and unverified specifics are flagged in-line. Bilateral interbank exposures are not public; intent of named actors is not inferred from outcomes. See the honesty ledger in `report/UNMASKING.md §9`.
+
+## Disclaimer
+Structural analysis, not financial advice. Figures are cited to public sources; speculative threads are graded and kept out of the formal proofs.
