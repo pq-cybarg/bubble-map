@@ -80,7 +80,7 @@ hr "[6j2] Age-verification FUTILITY theorem (why even ZK fails)"
 python3 models/z3/ageverif_futility.py | tail -8
 
 hr "[6k] ZK age-proof self-test (privacy-preserving age verification)"
-python3 zkage/zk_age_proof.py | tail -8
+python3 zkage/zk_age_proof.py | tail -20
 
 hr "[7b] Build dashboard + globe"
 python3 models/graph/build_dashboard.py

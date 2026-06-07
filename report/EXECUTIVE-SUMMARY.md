@@ -2,8 +2,6 @@
 
 *Generated 2026-06-07 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard.*
 
-**Hard-money split (gold lens):** S&P 500 **−69%** vs **NVIDIA +1,985% (1985)** in gold; US median home **−81%** in gold since 1998 — broad debasement + real concentration into the circular oligopoly.
-
 ## The finding in one sentence
 The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
 
@@ -17,10 +15,13 @@ The AI build-out is a **self-referential capital loop** that books each firm's s
 - **Three physical chokepoints**, two adversary-controlled: capital (trap), **rare earths/China** (independence ~2028), **power+HALEU/Russia** (~2028-29) — none liftable by dollars on the timeline.
 
 ## The hard-money lens
-Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** since 1998; CRE peaked in gold ~2001; the **$1-trillion defense budget buys ~25%** of the gold the 1998 one did; OpenAI's $1.4T is **0.53× all of TARP** in gold.
+Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** since 1998; CRE peaked in gold ~2001; the **$1-trillion defense budget buys ~25%** of the gold the 1998 one did; OpenAI's $1.4T is **0.53× all of TARP** in gold. In gold the broad market is **−69%** since 2000 while **NVIDIA is +1,985%** — debasement vs real concentration; a US home is **−81% in gold**.
 
 ## The honest answer to "is it all connected?"
 **Not one cabal — a small elite operator-network + recurring structures + regulatory arbitrage.** The temporal meta-graph (1998→2026) shows the weavers (OpenAI, a16z, the PayPal-mafia/Thiel, Circle/USDC, BlackRock, the SPV structure, Larry Summers as the literal dereg→AI→Epstein bridge) and the recurring devices (LTCM interconnection, Enron off-balance-sheet SPVs + mark-to-market, dotcom vendor financing) rebuilt in each era's least-regulated venue. Intent is never inferred from adjacency; sensitive threads (Epstein, Waters, foreign influence) are graded and quarantined from the proofs.
 
+## Identity / age-verification (corrected stance)
+Reject age verification as a category — *futile-under-breach* (`models/z3/ageverif_futility.py`: effective gating UNSAT once IDs are breached or credentials shared), a *predator honeypot*, and *adult surveillance by construction*; **ZK does not save it** (hides the input, not the issuer, the presence/absence metadata, or the breach dynamics). `zkage/` is a steelman-then-refutation, not a solution. Full case: `research/age-verification-abolition.md`.
+
 ## Reproduce
-`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 29 cited source files in `research/`.
+`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 30 cited source files in `research/`.

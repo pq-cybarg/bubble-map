@@ -126,7 +126,7 @@ Blockchain is no longer a separate "5th sector"; under the 2025 GENIUS Act its s
 
 ### 5.4 Synthesis tools — scenario engine + the equity gold-split
 - **Scenario engine (`models/z3/scenario.py`):** parameterized Z3 verdicts — **BASE = FRAGILE** (solvent only while the capital tap is open), **BULL = RESILIENT** (near self-financing), **BEAR = BREAKS** (carry-unwind shuts the tap → the cascade). Dial gold price, OpenAI growth/commitments, available capital, allied ramp, BOJ stress.
-- **Equities in gold (`models/graph/equity_in_gold.py`):** the lens **splits the market** — S&P 500 **−69% in gold since 2000** (debasement) vs **NVIDIA +1,985% in gold** (real value capture). The "everything bubble" = broad debasement **+** extreme real concentration into the circular oligopoly.
+- **Equities in gold (`models/graph/equity_in_gold.py`):** the lens **splits the market** — S&P 500 **−69% in gold since 2000** (and a US median home **−81% in gold since 1998**) (debasement) vs **NVIDIA +1,985% in gold** (real value capture). The "everything bubble" = broad debasement **+** extreme real concentration into the circular oligopoly.
 - **Dashboards:** `report/INDEX.html` (control panel over all data) and `report/GLOBE.html` (rotatable d3 chokepoint globe).
 
 ## 6. LAYER 4 — The influence / identity convergence (graded; the honest answer to "is there a relationship?")
@@ -146,6 +146,9 @@ Three of the largest AI-core actors, three documented identity-layer vectors. **
 - **Crypto/SEC/Epstein threads (`spec-crypto-sec-epstein.json` — explicit SPECULATIVE overlay):** four *real* factual cores joined by overlapping actors, not proven coordination. The **Hinman/SEC "ETH-pass vs XRP-suit"** conflict is documented (facts STRONG, corrupt-intent contested); **McCaleb's Mt.Gox→Ripple→Stellar** is one person's lineage; **Ethereum→Ant/CCP** is dated/WEAK. **Exactly one thread touches the AI core:** **Leon Black → Epstein ($158–170M) → Apollo**, and **Apollo is a top AI-datacenter private-credit lender** (~$36B Anthropic, ~$40B incl. xAI) — a real *institutional association*, not causation.
 
 ---
+
+### 6.1 Position on the identity/age-verification front (corrected)
+The freedom-relevant conclusion is **not** "build privacy-preserving verification" — it is **reject age verification as a category.** It is *futile-under-breach* (once any population-scale ID is breached or credentials are shared/stolen, the gate can't distinguish authorized from unauthorized — formal: `models/z3/ageverif_futility.py`, gating UNSAT), a *predator honeypot* (a mandated database of minors / identity↔behavior linkage), and *adult surveillance by construction* (you can't verify a child without processing every adult). **Zero-knowledge proofs do not save it** — they hide the input, not the issuer, the presence/absence metadata, or the breach/honeypot dynamics, and a "private" version is wielded to *legitimize* the mandate. `zkage/` is included as a **steelman-then-refutation**, not a solution. Full argument: `research/age-verification-abolition.md`. Support instead: device/family-level controls that need no population-scale identity, and opposition to mandates (which works — the BritCard walk-back).
 
 ## 7. The unifying pattern (why these layers are one story)
 The same structural defect appears in four markets at once:

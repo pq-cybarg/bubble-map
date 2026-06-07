@@ -13,8 +13,8 @@ Canonical numbers (from data/*.json — the source of truth):
 - `base_gap` = **1090**
 
 ## Inventory
-- models: 23 (z3 .py: 6) + TLA + Alloy
-- research: 29 json / 19 md
+- models: 24 (z3 .py: 7) + TLA + Alloy
+- research: 30 json / 20 md
 - data outputs: 12
 - reports: 6
 
@@ -22,9 +22,7 @@ Canonical numbers (from data/*.json — the source of truth):
 - ALL VALID
 
 ## Cross-document consistency flags
-- ⚠ -81% home gold: NOT found in report/UNMASKING.md
-- ⚠ +1985 nvda gold: NOT found in docs/index.html
-- ⚠ -69 sp500 gold: NOT found in docs/index.html
+- none — consistent
 
 ## Leg coverage (research present?)
 - AI core: ✓

@@ -36,6 +36,7 @@ VERDICTS=[
  ("Z3 power adequacy P1","AI power demand > supply thru 2028","UNSAT"),
  ("Z3 HALEU chokepoint P2","Russia enrichment dependence to ~2029","UNSAT"),
  ("Allied REE min-cut","feasible ~2028; bottleneck = midstream separation, not mining","max-flow"),
+ ("Z3 age-verif futility","effective gating UNSAT under breach; surveillance unconditional","UNSAT"),
 ]
 CHOKE=[
  ("Compute capital","OpenAI needs ≥$1.03T external; solvent only while capital flows","—","capital trap","Z3 T3/T4"),
@@ -51,6 +52,7 @@ banks=be.get("banks",[])
 htm=sorted([b for b in banks if b.get("htm_loss_to_eq_pct") is not None], key=lambda b:b["htm_loss_to_eq_pct"])[:8]
 vuln=[b for b in banks if b.get("vulnerable")]
 res_files=sorted(os.path.basename(f) for f in glob.glob(os.path.join(RES,"*.md")))
+nres_json=len(glob.glob(os.path.join(RES,"*.json")))
 
 def tbl(headers,rows):
     h="".join(f"<th>{html.escape(str(x))}</th>" for x in headers)
@@ -108,7 +110,7 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <h2 id=weavers>The weavers (temporal meta-graph, betweenness)</h2>{weavet}
 <h2 id=banks>Bank vulnerability (biggest hidden HTM holes)</h2>{bankt}
 <p class=muted>{len(vuln)} mid-tier banks flagged on &ge;2 axes (CRE + securities loss + uninsured). Foreign-branch artifacts excluded.</p>
-<h2 id=src>Source index ({len(res_files)} cited files)</h2><ul>{srct}</ul>
+<h2 id=src>Source index ({nres_json} cited sources)</h2><ul>{srct}</ul>
 <p class=muted>Reports: <code>report/UNMASKING.md</code> &middot; <code>report/TEMPORAL-WEB.md</code> &middot; <code>report/EXECUTIVE-SUMMARY.md</code>. Every figure's URLs are in the matching <code>research/*.json</code>.</p>
 </main></body></html>"""
 
@@ -132,13 +134,13 @@ The AI build-out is a **self-referential capital loop** that books each firm's s
 - **Three physical chokepoints**, two adversary-controlled: capital (trap), **rare earths/China** (independence ~2028), **power+HALEU/Russia** (~2028-29) — none liftable by dollars on the timeline.
 
 ## The hard-money lens
-Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** since 1998; CRE peaked in gold ~2001; the **$1-trillion defense budget buys ~25%** of the gold the 1998 one did; OpenAI's $1.4T is **0.53× all of TARP** in gold.
+Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** since 1998; CRE peaked in gold ~2001; the **$1-trillion defense budget buys ~25%** of the gold the 1998 one did; OpenAI's $1.4T is **0.53× all of TARP** in gold. In gold the broad market is **−69%** since 2000 while **NVIDIA is +1,985%** — debasement vs real concentration; a US home is **−81% in gold**.
 
 ## The honest answer to "is it all connected?"
 **Not one cabal — a small elite operator-network + recurring structures + regulatory arbitrage.** The temporal meta-graph (1998→2026) shows the weavers (OpenAI, a16z, the PayPal-mafia/Thiel, Circle/USDC, BlackRock, the SPV structure, Larry Summers as the literal dereg→AI→Epstein bridge) and the recurring devices (LTCM interconnection, Enron off-balance-sheet SPVs + mark-to-market, dotcom vendor financing) rebuilt in each era's least-regulated venue. Intent is never inferred from adjacency; sensitive threads (Epstein, Waters, foreign influence) are graded and quarantined from the proofs.
 
-## Reproduce
-`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. {len(res_files)} cited source files in `research/`.
+## Identity / age-verification (corrected stance)\nReject age verification as a category — *futile-under-breach* (`models/z3/ageverif_futility.py`: effective gating UNSAT once IDs are breached or credentials shared), a *predator honeypot*, and *adult surveillance by construction*; **ZK does not save it** (hides the input, not the issuer, the presence/absence metadata, or the breach dynamics). `zkage/` is a steelman-then-refutation, not a solution. Full case: `research/age-verification-abolition.md`.\n\n## Reproduce
+`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. {nres_json} cited source files in `research/`.
 """
 open(os.path.join(REP,"EXECUTIVE-SUMMARY.md"),"w").write(ES)
 print("wrote report/INDEX.html ("+str(len(HTML))+" bytes) and report/EXECUTIVE-SUMMARY.md")
