@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "title": "Tony Blair Institute / Ellison(Oracle) -> UK digital-ID -> Oracle infrastructure: the AI-core <-> digital-ID bridge",
+    "generated": "2026-06-07",
+    "provenance": "Sourced to Lighthouse Reports, New Statesman, Democracy for Sale, TBI's own reports, FOI'd minutes, FT/WaPo/Guardian, DatacenterDynamics/Register.",
+    "ai_core_linkage": "Oracle is a CORE node of the AI circular SCC (data/graph.json). Its founder funds the think tank driving UK digital-ID policy, and Oracle is positioned to build that infrastructure. This is the most documented bridge between the AI-capex core and the digital-ID/age-verification push - alongside Altman/Worldcoin and Meta/age-verification-astroturf."
+  },
+  "funding": [
+    {"funder": "Larry Ellison Foundation", "recipient": "Tony Blair Institute", "amount_usd": 130000000, "year": "2021-2023 (disbursed)", "source": ["https://www.lighthousereports.com/investigation/blair-and-the-billionaire/", "https://www.newstatesman.com/politics/2025/09/inside-the-tony-blair-institute"]},
+    {"funder": "Larry Ellison Foundation", "recipient": "Tony Blair Institute", "amount_usd": 218000000, "year": "post-2023 (pledged)", "source": ["https://www.lighthousereports.com/investigation/blair-and-the-billionaire/"]},
+    {"funder": "Larry Ellison Foundation", "recipient": "Tony Blair Institute", "amount_usd": 348000000, "year": "since 2021 (total given-or-pledged, ~£257m)", "source": ["https://democracyforsale.substack.com/p/inside-the-tony-blair-institute-larry-ellison-peter-kyle-starmer", "https://dailysceptic.org/2025/09/28/is-the-tech-giant-who-gave-blair-257-million-in-line-for-huge-id-card-contract/"]},
+    {"funder": "Gates Foundation", "recipient": "Tony Blair Institute", "amount_usd": 27000000, "year": "2019-2020+", "source": ["https://en.wikipedia.org/wiki/Tony_Blair_Institute_for_Global_Change"]},
+    {"funder": "Saudi Arabia (government)", "recipient": "Tony Blair / TBI", "amount_usd": null, "year": "2018+", "source": ["https://en.wikipedia.org/wiki/Tony_Blair_Institute_for_Global_Change"]},
+    {"funder": "US State Department", "recipient": "Tony Blair Institute", "amount_usd": null, "year": "undisclosed (TBI-confirmed)", "source": ["https://en.wikipedia.org/wiki/Tony_Blair_Institute_for_Global_Change"]}
+  ],
+  "advocacy": [
+    {"actor": "Tony Blair Institute", "position": "Leading UK national-digital-ID advocate; 'Time for Digital ID' (Sep 2025) recommends a digital-ID superapp on GOV.UK One Login (claimed 62% support, ~GBP 2bn/yr benefit)", "source": ["https://institute.global/insights/politics-and-governance/time-for-digital-id-a-new-consensus-for-a-state-that-works"]},
+    {"actor": "Tony Blair & William Hague (TBI)", "position": "'A New National Purpose' - single digital ID for all residents + wallet + 'once only' principle", "source": ["https://www.techuk.org/resource/new-joint-report-from-tony-blair-and-william-hague-focuses-on-digital-identity.html"]},
+    {"actor": "Tony Blair (personally)", "position": "Recommended Tech Sec Peter Kyle consult the Ellison Institute (FOI'd 12 Sep 2024 meeting minutes)", "source": ["https://democracyforsale.substack.com/p/inside-the-tony-blair-institute-larry-ellison-peter-kyle-starmer"]},
+    {"actor": "Keir Starmer / UK Labour", "position": "Announced national digital-ID 'BritCard' (25 Sep 2025), initially mandatory for right-to-work; walked back compulsion to optional 14 Jan 2026", "source": ["https://www.washingtonpost.com/world/2026/01/14/britain-digital-id-cards-retreat-starmer-immigration/07a4cdf0-f12a-11f0-a4dc-effc74cb25af_story.html"]},
+    {"actor": "Nigel Farage / Reform UK", "position": "Firmly opposed ('used to control and penalize'); called the U-turn 'a victory for individual liberty'", "source": ["https://www.foxnews.com/world/starmers-digital-id-work-requirement-sparks-uproar-from-uks-left-right"]},
+    {"actor": "Public (petition #730194)", "position": "2.9m+ signatures by 23 Oct 2025 against mandatory digital ID; TBI's 62% support figure reportedly collapsed to ~31% (FT leak)", "source": ["https://petition.parliament.uk/petitions/730194"]},
+    {"actor": "Oracle", "position": "Dominant UK-gov cloud incumbent (10yr ~$1bn across DWP/DEFRA/MoJ/Home Office; GBP 1bn+ public revenue since 2022); widely cited digital-ID infrastructure frontrunner (NO award confirmed)", "source": ["https://www.datacenterdynamics.com/en/news/oracle-wins-four-uk-govt-contracts-worth-1bn/", "https://www.theregister.com/2025/10/08/home_office_oracle_cloud/"]},
+    {"actor": "Ofcom (Online Safety Act)", "position": "Escalating age-assurance enforcement 2025-26 (GBP 1m Dec 2025; GBP 1.35m vs 8579 LLC Feb 2026; ~76 sites investigated) - tailwind normalizing online identity verification", "source": ["https://www.lewissilkin.com/insights/2025/12/05/ofcom-fines-adult-website-provider-1-million-for-not-having-robust-age-checks-102lwzu"]}
+  ],
+  "loop_grade": "moderate (leaning strong)",
+  "grade_reasoning": "Every link is documented: (1) Ellison Foundation gave/pledged ~£257m/~$348m to TBI since 2021; (2) TBI is the named leading UK digital-ID advocate; (3) Blair personally lobbied Tech Sec Peter Kyle to engage Ellison's institute (FOI'd minutes); (4) Oracle is the dominant UK-gov cloud incumbent; (5) Starmer adopted a digital-ID policy mirroring TBI's blueprint. Materially stronger than coincidental alignment. NOT closed: Oracle actually winning the digital-ID contract is positional/unconfirmed; funding-intent is inferred not proven; no illegality alleged. MODERATE leaning STRONG; upgrade to STRONG if an Oracle digital-ID award/bid is confirmed."
+}

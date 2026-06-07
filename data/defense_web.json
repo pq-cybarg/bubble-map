@@ -1,0 +1,189 @@
+{
+  "nodes": {
+    "DoD": {
+      "role": "buyer",
+      "note": "FY26 topline ~$1,000B ($838.7B approp + $150B OBBB); FY27 request ~$1,500B"
+    },
+    "Lockheed Martin": {
+      "role": "prime",
+      "note": "~$100B mkt cap; largest US samarium user (F-35)"
+    },
+    "RTX": {
+      "role": "prime",
+      "note": "~$190B; missiles/radar"
+    },
+    "Northrop Grumman": {
+      "role": "prime",
+      "note": "~$80B; B-21/ICBM"
+    },
+    "General Dynamics": {
+      "role": "prime",
+      "note": "~$80B; subs/land"
+    },
+    "Boeing Defense": {
+      "role": "prime",
+      "note": "segment of BA"
+    },
+    "Anduril": {
+      "role": "defense_tech",
+      "note": "$30.5B (Jun-2025 Series G) -> $61B (May-2026 Series H); rev ~$2.2B 2025"
+    },
+    "Palantir": {
+      "role": "defense_tech",
+      "note": "~$350B mkt cap (approx); Army Maven / ~$10B enterprise deal"
+    },
+    "SpaceX Starshield": {
+      "role": "defense_tech",
+      "note": "mil Starlink; part of SpaceX (SPCX)"
+    },
+    "Founders Fund": {
+      "role": "financier",
+      "note": "led Anduril $2.5B Series G - $1B largest-ever FF check"
+    },
+    "a16z": {
+      "role": "financier",
+      "note": "co-led Anduril $5B Series H"
+    },
+    "Thrive Capital": {
+      "role": "financier",
+      "note": "co-led Series H"
+    },
+    "China REE": {
+      "role": "chokepoint",
+      "note": "~70% mining, ~90% processing, ~100% samarium, ~99% heavy-REE separation"
+    },
+    "MP Materials": {
+      "role": "domestic",
+      "note": "DoD ~15% equity + $110/kg NdPr floor; magnets ~2027"
+    },
+    "USA Rare Earth": {
+      "role": "domestic",
+      "note": "magnet plant; ~2027-2028"
+    }
+  },
+  "capital_flows": [
+    {
+      "from": "DoD",
+      "to": "Lockheed Martin",
+      "kind": "contract",
+      "usd_b": 70,
+      "gold_Moz": 16.28,
+      "note": "largest DoD vendor (F-35 etc.)"
+    },
+    {
+      "from": "DoD",
+      "to": "RTX",
+      "kind": "contract",
+      "usd_b": 40,
+      "gold_Moz": 9.3,
+      "note": "missiles/radar"
+    },
+    {
+      "from": "DoD",
+      "to": "Northrop Grumman",
+      "kind": "contract",
+      "usd_b": 30,
+      "gold_Moz": 6.98,
+      "note": "B-21/Sentinel"
+    },
+    {
+      "from": "DoD",
+      "to": "General Dynamics",
+      "kind": "contract",
+      "usd_b": 30,
+      "gold_Moz": 6.98,
+      "note": "subs/land"
+    },
+    {
+      "from": "DoD",
+      "to": "Anduril",
+      "kind": "contract",
+      "usd_b": 22,
+      "gold_Moz": 5.12,
+      "note": "Army IVAS reassigned + enterprise"
+    },
+    {
+      "from": "DoD",
+      "to": "Palantir",
+      "kind": "contract",
+      "usd_b": 10,
+      "gold_Moz": 2.33,
+      "note": "Army enterprise/Maven"
+    },
+    {
+      "from": "DoD",
+      "to": "MP Materials",
+      "kind": "equity+floor",
+      "usd_b": 0.55,
+      "gold_Moz": 0.13,
+      "note": "~15% + price floor + loan"
+    },
+    {
+      "from": "Founders Fund",
+      "to": "Anduril",
+      "kind": "equity",
+      "usd_b": 1.0,
+      "gold_Moz": 0.23,
+      "note": "largest FF check"
+    },
+    {
+      "from": "a16z",
+      "to": "Anduril",
+      "kind": "equity",
+      "usd_b": 2.5,
+      "gold_Moz": 0.58,
+      "note": "Series H co-lead (part of $5B)"
+    },
+    {
+      "from": "Thrive Capital",
+      "to": "Anduril",
+      "kind": "equity",
+      "usd_b": 2.5,
+      "gold_Moz": 0.58,
+      "note": "Series H co-lead (part of $5B)"
+    }
+  ],
+  "systems": {
+    "F-35": {
+      "ree_kg": 418,
+      "samarium_kg": 22.6,
+      "annual_units": 150
+    },
+    "Virginia-class sub": {
+      "ree_kg": 4200,
+      "samarium_kg": 50,
+      "annual_units": 2
+    },
+    "Arleigh Burke destroyer": {
+      "ree_kg": 2360,
+      "samarium_kg": 30,
+      "annual_units": 2
+    },
+    "Tomahawk / missiles": {
+      "ree_kg": 5,
+      "samarium_kg": 1,
+      "annual_units": 2000
+    }
+  },
+  "china_share": {
+    "samarium": 1.0,
+    "heavy_ree_processing": 0.9,
+    "ndfeb_magnets": 0.9
+  },
+  "dod_budget": {
+    "1998": 270,
+    "2008": 612,
+    "2016": 580,
+    "2020": 721,
+    "2024": 842,
+    "2026": 1000
+  },
+  "gold": {
+    "1998": 294,
+    "2008": 872,
+    "2016": 1251,
+    "2020": 1770,
+    "2024": 2386,
+    "2026": 4300
+  }
+}

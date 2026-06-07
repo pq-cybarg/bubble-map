@@ -1,0 +1,61 @@
+{
+  "power_deals": [
+    {
+      "buyer": "Microsoft",
+      "source": "Constellation/Three Mile Island",
+      "kind": "nuclear restart",
+      "mw": 835,
+      "usd_b": 16.0,
+      "note": "20yr PPA, ~2028 online"
+    },
+    {
+      "buyer": "Amazon",
+      "source": "Talen/Susquehanna",
+      "kind": "nuclear PPA",
+      "mw": 1920,
+      "usd_b": null,
+      "note": "through 2042 + SMR exploration"
+    },
+    {
+      "buyer": "Google",
+      "source": "Kairos Power",
+      "kind": "SMR",
+      "mw": 500,
+      "usd_b": null,
+      "note": "first corp SMR fleet deal; 50MW by 2030"
+    },
+    {
+      "buyer": "Meta",
+      "source": "Oklo",
+      "kind": "SMR",
+      "mw": 1200,
+      "usd_b": null,
+      "note": "1.2GW campus; +RFP 1-4GW nuclear"
+    },
+    {
+      "buyer": "Oracle",
+      "source": "SMR (3 reactors)",
+      "kind": "SMR",
+      "mw": 1000,
+      "usd_b": null,
+      "note": "gigawatt datacenter design"
+    },
+    {
+      "buyer": "Crusoe",
+      "source": "GE Vernova",
+      "kind": "gas turbines",
+      "mw": null,
+      "usd_b": null,
+      "note": "19 turbines ordered (behind-the-meter gas)"
+    }
+  ],
+  "spec_suppliers": {
+    "TMC": "deep-sea Ni/Cu/Co/Mn nodules - BATTERY/grid metals; Trump seabed EO; pre-commercial",
+    "CRML": "Tanbreez Greenland REE - magnets for grid/defense; pre-revenue (~2028-29)",
+    "LAES/WKEY": "SEALSQ/WISeKey PQC chips + WISeSat sats on SpaceX rideshare; narrative microcaps",
+    "SPCX": "SpaceX - Starshield (defense) + Starlink (power-hungry LEO) + compute reselling"
+  },
+  "pjm_cap_usd_mwday": 333.44,
+  "datacenter_share_2023_pct": 4.4,
+  "datacenter_share_2028_pct": "6.7-12"
+}

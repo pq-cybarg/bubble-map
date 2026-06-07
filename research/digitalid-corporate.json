@@ -1,0 +1,205 @@
+{
+  "generated": "2026-06-05",
+  "hypothesis": "The same actors/capital/infrastructure behind the AI-capex bubble also sit behind the digital-ID/age-verification push.",
+  "grade": "partial-moderate",
+  "grade_reasoning": "Strong on shared people/capital/narrative (Altman OpenAI+World; a16z/SoftBank/Coatue funding ID vendors that pitch the 'AI age'; OpenAI covertly funding age-verification law while owning the supply). Weak/falsified on the compute-demand link: age-verification inference is ~6+ orders of magnitude smaller than AI-capex compute and trending on-device. Several major ID vendors have no AI-VC overlap.",
+  "entities": [
+    {
+      "name": "Tools for Humanity / World (Worldcoin)",
+      "type": "proof-of-personhood / biometric digital ID",
+      "valuation_usd": "WLD FDV ~5.3e9; ~250M raised by 2023 + 135M token sale May 2025",
+      "investors": ["a16z", "a16z crypto", "Khosla Ventures", "Bain Capital Crypto", "Blockchain Capital", "Reid Hoffman", "Tiger Global", "Distributed Global"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://en.wikipedia.org/wiki/Tools_For_Humanity", "https://en.wikipedia.org/wiki/World_(blockchain)", "https://world.org/blog/announcements/world-raises-135m", "https://news.crunchbase.com/fintech-ecommerce/crypto-web3-venture-tools-for-humanity/", "https://cryptonary.com/crypto-startup-worldcoin-raises-100m-from-a16z-and-khosla-ventures-valuated-at-3b/"],
+      "notes": "Sam Altman (OpenAI CEO) is co-founder/chairman. Explicit 'authenticate humans vs AI bots' framing. ~33M app users, ~15M Orb-verified late 2025. Integrations: Tinder, Zoom, Docusign. No confirmed technical OpenAI integration."
+    },
+    {
+      "name": "OpenAI (age verification + lobbying)",
+      "type": "AI lab also operating/lobbying age verification",
+      "valuation_usd": "private, ~5e11 reported",
+      "investors": ["Microsoft", "SoftBank", "Thrive", "Khosla"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://help.openai.com/en/articles/12652064-age-prediction-in-chatgpt", "https://platform.openai.com/verify-age", "https://news.slashdot.org/story/26/04/02/0345206/group-pushing-age-verification-requirements-for-ai-sneakily-backed-by-openai"],
+      "notes": "Runs ChatGPT age prediction + ID upload. Reported covert funder (~$10M) of CA Parents and Kids Safe AI Act coalition; conflict because Altman owns World which sells age verification."
+    },
+    {
+      "name": "Persona",
+      "type": "identity verification",
+      "valuation_usd": "2e9 (Series D, Apr 2025, $200M)",
+      "investors": ["Founders Fund", "Ribbit Capital", "Coatue", "BOND", "Index Ventures", "First Round Capital", "Chemistry"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://www.prnewswire.com/news-releases/persona-raises-200m-at-2b-valuation-to-build-the-verified-identity-layer-for-an-agentic-ai-world-302442649.html", "https://pitchbook.com/news/articles/persona-id-verification-cybersecurity-raises-200m"],
+      "notes": "Explicitly pitched as 'verified identity layer for an agentic AI world.' Coatue is an AI-cluster investor. No a16z."
+    },
+    {
+      "name": "Incode",
+      "type": "biometric identity verification",
+      "valuation_usd": "1.25e9 (2021); seeking up to 3e9 (Nov 2025)",
+      "investors": ["SoftBank LatAm Fund", "General Atlantic", "J.P. Morgan", "Coinbase Ventures", "Capital One Ventures"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://www.bloomberg.com/news/articles/2025-11-19/id-verification-startup-incode-seeks-up-to-3-billion-valuation", "https://www.securityweek.com/identity-verification-company-incode-raises-220-million-125-billion-valuation/"],
+      "notes": "SoftBank is a core AI-cluster (OpenAI/Stargate) financier. Markets age-validation compliance. OpenAge member."
+    },
+    {
+      "name": "k-ID",
+      "type": "age assurance / online safety compliance",
+      "valuation_usd": "~51M raised (Series A $45M, 2024)",
+      "investors": ["a16z", "Lightspeed Venture Partners", "Okta", "Konvoy", "Z Venture Capital", "Tirta"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://a16z.com/announcement/investing-in-k-id/", "https://www.prnewswire.com/apac/news-releases/k-id-closes-45-million-series-a-from-andreessen-horowitz-and-lightspeed-venture-partners-to-set-a-new-global-benchmark-for-age-appropriate-gaming-experiences-302180979.html"],
+      "notes": "a16z + Lightspeed lead = same marquee AI VCs. Leads OpenAge/AgeKey reusable age-check standard (NOT OpenAI)."
+    },
+    {
+      "name": "Onfido (Entrust company)",
+      "type": "AI document/identity verification",
+      "valuation_usd": "6.5e8 acquisition (2024)",
+      "investors": ["Entrust (acquirer; PE/Thoma Bravo history)"],
+      "ai_cluster_overlap": "partial",
+      "source": ["https://techcrunch.com/2024/02/06/confirmed-entrust-is-buying-ai-based-id-verification-startup-onfido-sources-say-for-more-than-400m/", "https://www.entrust.com/company/newsroom/entrust-completes-acquisition-of-onfido-creating-a-new-era-of-identity-centric-security"],
+      "notes": "10,000+ ML fraud models (AI-heavy product) but PE-owned, not marquee AI VC."
+    },
+    {
+      "name": "AU10TIX",
+      "type": "identity verification (Israeli-heritage)",
+      "valuation_usd": "private; ~$80M invested (TPG, Oak HC/FT)",
+      "investors": ["ICTS International (parent)", "TPG", "Oak HC/FT"],
+      "ai_cluster_overlap": "partial",
+      "source": ["https://en.wikipedia.org/wiki/AU10TIX", "https://www.prnewswire.com/news-releases/icts-international-nv-announces-usd-20-million-investment-by-venture-growth-equity-fund-oak-hcft-into-abc-technologies-bv-parent-of-au10tix-limited-300954246.html"],
+      "notes": "Big-tech tie = selected as premier IDV issuer for Microsoft Entra Verified ID (2025); verifies X users. PE-funded, not AI VC."
+    },
+    {
+      "name": "Jumio",
+      "type": "identity verification",
+      "valuation_usd": "private; $150M raised 2021; take-private 2016",
+      "investors": ["Centana Growth Partners (owner)", "Great Hill Partners", "Millennium Technology Value Partners"],
+      "ai_cluster_overlap": "no",
+      "source": ["https://techcrunch.com/2021/03/23/jumio-raises-150m-as-its-all-in-one-id-authentication-platform-crosses-300m-verified-identities/"],
+      "notes": "PE-owned. No AI-VC overlap. Disconfirming evidence."
+    },
+    {
+      "name": "Yoti",
+      "type": "age estimation / reusable digital ID",
+      "valuation_usd": "~£82M (2019); ~$210M raised",
+      "investors": ["founders", "Lloyds Banking Group (£10M)", "HSBC (£12.5M)"],
+      "ai_cluster_overlap": "no",
+      "source": ["https://sifted.eu/articles/yoti-fundraising-bootstrapping-digital-identity", "https://www.yoti.com/blog/lloyds-banking-group-invests-10-million-in-digital-identity-company-yoti/"],
+      "notes": "Founder/bank funded. Widely deployed (Bluesky UK via Epic). No AI-VC overlap. Disconfirming evidence."
+    },
+    {
+      "name": "FaceTec",
+      "type": "face biometric/liveness",
+      "valuation_usd": "small (~$5M raised, ~$4.8M rev)",
+      "investors": ["Ignite Farm Funds"],
+      "ai_cluster_overlap": "no",
+      "source": ["https://www.crunchbase.com/organization/facetec"],
+      "notes": "No AI-cluster overlap."
+    },
+    {
+      "name": "Entrust",
+      "type": "identity/security software (acquirer of Onfido)",
+      "valuation_usd": "private (PE)",
+      "investors": ["Thoma Bravo (historical owner)", "Datacard/Entrust Datacard lineage"],
+      "ai_cluster_overlap": "partial",
+      "source": ["https://www.darkreading.com/cyber-risk/entrust-tops-4-year-financial-business-goals-under-thoma-bravo-ownership"],
+      "notes": "PE, not AI VC. Owns Onfido."
+    },
+    {
+      "name": "AgeChecked / VerifyMy / Privately",
+      "type": "age verification/estimation (UK)",
+      "valuation_usd": "small/undisclosed",
+      "investors": ["UK-centric/private"],
+      "ai_cluster_overlap": "no",
+      "source": ["https://www.biometricupdate.com/202509/age-assurance-tech-trial-highlights-providers-for-verification-estimation"],
+      "notes": "Privately is fully on-device (anti-cloud). Disconfirming evidence for the cloud/compute-demand thesis."
+    },
+    {
+      "name": "Microsoft Entra Verified ID",
+      "type": "big-tech identity (Azure)",
+      "valuation_usd": "n/a (Microsoft)",
+      "investors": ["Microsoft"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id"],
+      "notes": "Azure-managed verifiable credentials incl 'over 18'; AU10TIX premier issuer 2025. Routes some IDV onto Azure cloud."
+    },
+    {
+      "name": "Apple Digital ID / Google Wallet ID",
+      "type": "big-tech wallet mDL + age APIs",
+      "valuation_usd": "n/a",
+      "investors": ["Apple", "Google"],
+      "ai_cluster_overlap": "partial",
+      "source": ["https://mattr.global/article/the-future-of-identity-is-interoperable-and-apple-just-stepped-in", "https://developers.google.com/wallet/identity/verify/accepting-ids-from-wallet-online"],
+      "notes": "Largely device-side/cryptographic (W3C DC API), so modest cloud-inference demand. AgeKey recognizes Apple/Google/Samsung wallets."
+    },
+    {
+      "name": "Palantir (ImmigrationOS / gov identity)",
+      "type": "government identity/surveillance data integration",
+      "valuation_usd": "public (PLTR)",
+      "investors": ["public markets"],
+      "ai_cluster_overlap": "yes",
+      "source": ["https://www.americanimmigrationcouncil.org/blog/ice-immigrationos-palantir-ai-track-immigrants/"],
+      "notes": "$30M ICE ImmigrationOS; >$900M federal contracts. Government identity, NOT consumer age-assurance — adjacent market."
+    }
+  ],
+  "linkages": [
+    {
+      "claim": "Sam Altman simultaneously leads OpenAI (AI-capex cluster) and is co-founder/chairman of World/Tools for Humanity, an iris-biometric proof-of-personhood/identity company explicitly framed as the human-verification layer for the AI age.",
+      "evidence_strength": "strong",
+      "source": ["https://en.wikipedia.org/wiki/Tools_For_Humanity", "https://en.wikipedia.org/wiki/World_(blockchain)", "https://time.com/7288387/sam-altman-orb-tools-for-humanity/", "https://www.cbsnews.com/news/sam-altman-orb-world-iris-scan-proof-of-personhood-ai/"],
+      "notes": "Same principal + same investors (a16z, Khosla, Hoffman) + same thesis. No confirmed technical product integration with OpenAI."
+    },
+    {
+      "claim": "OpenAI covertly funds AI age-verification legislation (CA Parents and Kids Safe AI Act, ~$10M) while Altman owns a leading age/identity supplier (World) — actor pushing the mandate also owns the supply.",
+      "evidence_strength": "strong",
+      "source": ["https://news.slashdot.org/story/26/04/02/0345206/group-pushing-age-verification-requirements-for-ai-sneakily-backed-by-openai"],
+      "notes": "Conflict of interest documented via SF Standard reporting. OpenAI also runs ChatGPT age prediction + ID upload directly."
+    },
+    {
+      "claim": "Marquee AI-cluster investors (a16z, SoftBank, Coatue, Lightspeed) recur as the lead backers of leading age/identity vendors (World, k-ID, Persona, Incode).",
+      "evidence_strength": "moderate",
+      "source": ["https://a16z.com/announcement/investing-in-k-id/", "https://www.prnewswire.com/news-releases/persona-raises-200m-at-2b-valuation-to-build-the-verified-identity-layer-for-an-agentic-ai-world-302442649.html", "https://www.bloomberg.com/news/articles/2025-11-19/id-verification-startup-incode-seeks-up-to-3-billion-valuation"],
+      "notes": "Real overlapping capital, but a significant subset only — Yoti, Jumio, Entrust/AU10TIX have NO AI-VC overlap."
+    },
+    {
+      "claim": "ID/age vendors explicitly market themselves as identity infrastructure for an AI-saturated / agentic-AI internet.",
+      "evidence_strength": "strong",
+      "source": ["https://www.prnewswire.com/news-releases/persona-raises-200m-at-2b-valuation-to-build-the-verified-identity-layer-for-an-agentic-ai-world-302442649.html", "https://en.wikipedia.org/wiki/World_(blockchain)"],
+      "notes": "Narrative overlap is unambiguous (Persona 'agentic AI world'; World 'counter AI bots')."
+    },
+    {
+      "claim": "Age-verification mandates route demand to the same hyperscaler clouds and AI inference.",
+      "evidence_strength": "weak",
+      "source": ["https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id", "https://developers.google.com/wallet/identity/verify/accepting-ids-from-wallet-online", "https://www.biometricupdate.com/202509/age-assurance-tech-trial-highlights-providers-for-verification-estimation"],
+      "notes": "Some routing to Azure/GCP exists (Entra, Wallet APIs), but architecture trend (W3C DC API, on-device AgeKey, Privately) minimizes cloud calls."
+    },
+    {
+      "claim": "Facial age estimation / document verification = GPU inference at population scale, materially adding to AI compute demand.",
+      "evidence_strength": "weak",
+      "source": ["https://arxiv.org/html/2604.17007v1", "https://medium.com/@krako_cloud/the-real-cost-of-ai-compute-training-vs-inference-b6c86f06c178", "https://nebius.com/blog/posts/difference-between-ai-training-and-inference"],
+      "notes": "Effectively falsified. ~14ms mobile / ~0.5s single CPU core, often on-device, no GPU needed. ~6+ orders of magnitude below LLM compute. Rounding error vs AI-capex."
+    },
+    {
+      "claim": "OpenAge/AgeKey is an OpenAI-led age-verification standard.",
+      "evidence_strength": "speculative",
+      "source": ["https://www.biometricupdate.com/202601/persona-incode-veratad-join-k-ids-openage-initiative-for-reusable-age-checks", "https://www.businesswire.com/news/home/20251110709762/en/Newly-Launched-OpenAge-Initiative-Introduces-AgeKey", "https://openageinitiative.org/"],
+      "notes": "FALSE/CORRECTION: OpenAge is led by k-ID (a16z/Lightspeed-backed), not OpenAI. Members include Meta, Discord, Snap, Persona, Incode, Socure. Do not conflate OpenAge with OpenAI."
+    },
+    {
+      "claim": "Microsoft (OpenAI's chief backer) channels third-party identity verification onto Azure via Entra Verified ID (e.g., AU10TIX premier issuer).",
+      "evidence_strength": "moderate",
+      "source": ["https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-verified-id", "https://en.wikipedia.org/wiki/AU10TIX"],
+      "notes": "Real cloud-routing tie, but credential verification is light compute; not a GPU/AI-capex driver."
+    },
+    {
+      "claim": "Financing circularity: AI investors fund ID firms that drive cloud/AI demand, closing a loop that inflates AI compute revenue.",
+      "evidence_strength": "weak",
+      "source": ["https://a16z.com/announcement/investing-in-k-id/", "https://www.bloomberg.com/news/articles/2025-11-19/id-verification-startup-incode-seeks-up-to-3-billion-valuation"],
+      "notes": "Capital/influence loop is real (a16z->World+k-ID; SoftBank->Incode+OpenAI; OpenAI lobby->Altman supply). But it does NOT materially inflate AI compute demand because ID inference is negligible."
+    },
+    {
+      "claim": "Palantir (AI-capex cluster) is expanding into government identity/surveillance (ImmigrationOS for ICE).",
+      "evidence_strength": "moderate",
+      "source": ["https://www.americanimmigrationcouncil.org/blog/ice-immigrationos-palantir-ai-track-immigrants/"],
+      "notes": "True, but government identity-data integration is a distinct market from consumer age-assurance. Adjacent, not the same bridge."
+    }
+  ]
+}

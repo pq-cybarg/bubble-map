@@ -1,0 +1,196 @@
+{
+  "as_of": "2026-06-05",
+  "entities": [
+    {
+      "name": "OpenAI",
+      "type": "AI lab (OpenAI Group PBC, controlled by nonprofit foundation)",
+      "valuation_usd": 852000000000,
+      "revenue_runrate_usd": 20000000000,
+      "notes": "Recapitalized to PBC 2025-10-28; Microsoft ~27% (~$135B). Valuation ~$500B (Oct 2025 secondary) -> ~$840B post-money (Feb 27 2026, $110B round at $730B pre) -> ~$852B after $122B round closed Mar 31 2026. ~$20B ARR end-2025; net loss ~$13.5B in H1 2025; ~$1.4T disclosed compute commitments over ~8yr.",
+      "source": [
+        "https://www.cnbc.com/2025/10/28/open-ai-for-profit-microsoft.html",
+        "https://www.bloomberg.com/news/articles/2026-03-31/openai-valued-at-852-billion-after-completing-122-billion-round",
+        "https://techcrunch.com/2025/11/06/sam-altman-says-openai-has-20b-arr-and-about-1-4-trillion-in-data-center-commitments/",
+        "https://fortune.com/2025/11/12/openai-cash-burn-rate-annual-losses-2028-profitable-2030-financial-documents/"
+      ]
+    },
+    {
+      "name": "NVIDIA",
+      "type": "GPU/AI systems supplier and strategic investor",
+      "valuation_usd": null,
+      "revenue_runrate_usd": null,
+      "notes": "Supplier that also takes equity in many customers (OpenAI, CoreWeave, xAI, Anthropic, Intel, Nokia, Nscale, Mistral) - analysts flag round-trip / vendor-financing pattern.",
+      "source": ["https://www.cnbc.com/2026/01/26/nvidia-ai-startup-investments-europe-chips-jensen-huang.html"]
+    },
+    {
+      "name": "CoreWeave",
+      "type": "GPU cloud (neocloud)",
+      "valuation_usd": null,
+      "revenue_runrate_usd": null,
+      "notes": "NVIDIA holds ~7%; revenue backstopped by NVIDIA take-or-pay on residual unsold capacity through 2032. Cumulative OpenAI contracts ~$22.4B.",
+      "source": [
+        "https://invezz.com/news/2025/09/15/coreweave-shares-jump-7-after-unveiling-6-3-billion-nvidia-deal/",
+        "https://www.sec.gov/Archives/edgar/data/0001769628/000176962825000047/crwv-20250909.htm"
+      ]
+    },
+    {
+      "name": "AMD",
+      "type": "GPU supplier",
+      "valuation_usd": null,
+      "revenue_runrate_usd": null,
+      "notes": "Issued OpenAI warrant for up to 160M shares (~10%) at $0.01, vesting on Instinct GPU purchase milestones (1GW first tranche, full at 6GW).",
+      "source": ["https://ir.amd.com/financial-information/sec-filings/content/0001193125-25-230895/d28189d8k.htm"]
+    },
+    {
+      "name": "xAI",
+      "type": "AI lab",
+      "valuation_usd": 230000000000,
+      "revenue_runrate_usd": null,
+      "notes": "Series E $20B (~$7.5B equity + $12.5B debt via SPV); SPV buys NVIDIA GPUs for Colossus 2, leased back to xAI.",
+      "source": ["https://x.ai/news/series-e"]
+    },
+    {
+      "name": "Anthropic",
+      "type": "AI lab",
+      "valuation_usd": 183000000000,
+      "revenue_runrate_usd": null,
+      "notes": "Nov 2025: NVIDIA up to $10B + Microsoft up to $5B equity; Anthropic commits $30B Azure + up to 1GW, powered by NVIDIA.",
+      "source": ["https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/"]
+    }
+  ],
+  "edges": [
+    {
+      "from": "NVIDIA", "to": "OpenAI", "instrument": "progressive equity LOI (tied to 10GW NVIDIA systems)",
+      "amount_usd": 100000000000, "date": "2025-09-22", "status": "signed-LOI",
+      "circular": true, "confidence": "high",
+      "source": ["https://blogs.nvidia.com/blog/openai-nvidia/", "https://www.cnbc.com/2025/09/22/nvidia-openai-data-center.html", "https://www.cnbc.com/2026/02/03/nvidia-openai-stalled-on-their-mega-deal-ai-giants-need-each-other.html"],
+      "notes": "LOI, up to $100B paid progressively per GW deployed; never reached definitive agreement. CFO confirmed no signed deal (Dec 2025); WSJ 'on ice' (Jan/Feb 2026). Effectively lapsed/replaced by the $30B direct stake. DO NOT count as closed."
+    },
+    {
+      "from": "NVIDIA", "to": "OpenAI", "instrument": "direct equity (mega-round)",
+      "amount_usd": 30000000000, "date": "2026-02-27", "status": "closed",
+      "circular": true, "confidence": "high",
+      "source": ["https://www.cnbc.com/2026/02/27/open-ai-funding-round-amazon.html", "https://www.cnbc.com/2026/03/31/openai-funding-round-ipo.html"],
+      "notes": "Clean equity, NOT tied to GW milestones; part of $110B round (expanded to $122B, closed 2026-03-31)."
+    },
+    {
+      "from": "NVIDIA", "to": "CoreWeave", "instrument": "equity stake (~7%)",
+      "amount_usd": 350000000, "date": "2025-03", "status": "closed",
+      "circular": true, "confidence": "high",
+      "source": ["https://invezz.com/news/2025/09/15/coreweave-shares-jump-7-after-unveiling-6-3-billion-nvidia-deal/"],
+      "notes": "~$350M at cost pre-IPO; ~7% stake. CoreWeave buys NVIDIA GPUs."
+    },
+    {
+      "from": "NVIDIA", "to": "CoreWeave", "instrument": "take-or-pay backstop (residual unsold capacity, MSA order form)",
+      "amount_usd": 6300000000, "date": "2025-09-09", "status": "committed",
+      "circular": true, "confidence": "high",
+      "source": ["https://www.sec.gov/Archives/edgar/data/0001769628/000176962825000047/crwv-20250909.htm"],
+      "notes": "Order form under 2023 MSA, initial value $6.3B; NVIDIA obligated to buy residual unsold capacity through 2032-04-13."
+    },
+    {
+      "from": "NVIDIA", "to": "xAI", "instrument": "equity (Series E)",
+      "amount_usd": 2000000000, "date": "2025", "status": "committed",
+      "circular": true, "confidence": "med",
+      "source": ["https://x.ai/news/series-e", "https://finance.yahoo.com/news/nvidia-reportedly-invest-2bn-elon-101712438.html"],
+      "notes": "Reported 'up to $2B' in $20B Series E; SPV uses proceeds to buy NVIDIA GPUs for Colossus 2."
+    },
+    {
+      "from": "NVIDIA", "to": "Anthropic", "instrument": "equity",
+      "amount_usd": 10000000000, "date": "2025-11-18", "status": "committed",
+      "circular": true, "confidence": "high",
+      "source": ["https://blogs.microsoft.com/blog/2025/11/18/microsoft-nvidia-and-anthropic-announce-strategic-partnerships/", "https://www.anthropic.com/news/microsoft-nvidia-anthropic-announce-strategic-partnerships"],
+      "notes": "Up to $10B (Microsoft up to $5B); Anthropic commits $30B Azure + up to 1GW powered by NVIDIA."
+    },
+    {
+      "from": "NVIDIA", "to": "Intel", "instrument": "common stock (~4%, private placement)",
+      "amount_usd": 5000000000, "date": "2025-09-18", "status": "closed",
+      "circular": false, "confidence": "high",
+      "source": ["https://fortune.com/2025/09/18/nvidia-intel-5-billion-investment/", "https://www.tomshardware.com/tech-industry/nvidia-gives-intel-a-lifeline-with-usd5-billion-common-stock-deal-september-deal-gets-ftc-approval-for-more-than-217-4-million-intel-shares-at-usd23-28-per-share"],
+      "notes": "$23.28/share, ~214.78M shares; FTC approved Dec 18 2025, closed Dec 2025. Strategic co-dev (x86 + RTX chiplets), not a GPU-customer round-trip."
+    },
+    {
+      "from": "NVIDIA", "to": "Nokia", "instrument": "equity (directed share issuance)",
+      "amount_usd": 1000000000, "date": "2025-10-28", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://www.nokia.com/newsroom/inside-information-nvidia-to-make-usd-1-billion-equity-investment-in-nokia-in-addition-to-new-strategic-partnership-nokias-board-resolved-on-directed-share-issuance-to-nvidia/"],
+      "notes": "$6.01/share; AI-RAN strategic partnership."
+    },
+    {
+      "from": "NVIDIA", "to": "Nscale", "instrument": "equity",
+      "amount_usd": 600000000, "date": "2025-09", "status": "committed",
+      "circular": true, "confidence": "low",
+      "source": ["https://www.cnbc.com/2026/01/26/nvidia-ai-startup-investments-europe-chips-jensen-huang.html", "https://www.nscale.com/press-releases/nscale-series-b"],
+      "notes": "Sources conflict: GBP500M vs $667M. Nscale is a neocloud that deploys NVIDIA GPUs (round-trip)."
+    },
+    {
+      "from": "NVIDIA", "to": "Mistral", "instrument": "equity (Series C participation)",
+      "amount_usd": null, "date": "2025-09", "status": "closed",
+      "circular": true, "confidence": "low",
+      "source": ["https://www.cnbc.com/2026/01/26/nvidia-ai-startup-investments-europe-chips-jensen-huang.html"],
+      "notes": "Participated in EUR1.7B round; NVIDIA's specific check not disclosed."
+    },
+    {
+      "from": "OpenAI", "to": "Microsoft", "instrument": "Azure compute commitment (incremental)",
+      "amount_usd": 250000000000, "date": "2025-10-28", "status": "committed",
+      "circular": true, "confidence": "high",
+      "source": ["https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/", "https://www.geekwire.com/2025/microsoft-secures-27-stake-in-openai-in-new-deal-with-commitment-for-250b-in-azure-usage/"],
+      "notes": "Incremental $250B Azure commitment in Oct 2025 recap; Microsoft holds ~27% of OpenAI (~$135B). Circular: investor/IP-licensor also the compute vendor."
+    },
+    {
+      "from": "OpenAI", "to": "Oracle", "instrument": "cloud/compute (Stargate, ~4.5GW)",
+      "amount_usd": 300000000000, "date": "2025-09", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://www.datacenterdynamics.com/en/news/openai-signs-300bn-cloud-deal-with-oracle-report/", "https://openai.com/index/five-new-stargate-sites/"],
+      "notes": "~$300B over ~5 years from 2027; ~4.5GW; part of Stargate (OpenAI/Oracle/SoftBank)."
+    },
+    {
+      "from": "OpenAI", "to": "CoreWeave", "instrument": "compute contracts (cumulative)",
+      "amount_usd": 22400000000, "date": "2025-09-25", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://www.coreweave.com/news/coreweave-expands-agreement-with-openai-by-up-to-6-5b"],
+      "notes": "$11.9B initial (Mar 2025) + $4B (May 2025) + up to $6.5B (Sep 2025) = ~$22.4B."
+    },
+    {
+      "from": "OpenAI", "to": "AMD", "instrument": "6GW Instinct GPU deployment + warrant (up to 160M shares @ $0.01)",
+      "amount_usd": null, "date": "2025-10-05", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://ir.amd.com/financial-information/sec-filings/content/0001193125-25-230895/d28189d8k.htm", "https://www.cnbc.com/2025/10/06/openai-amd-chip-deal-ai.html"],
+      "notes": "6GW MI450 deployment (est. ~$100B AMD revenue over years). Warrant: up to 160M AMD shares (~10%) at $0.01, vesting on purchase milestones (1GW first tranche, full at 6GW). Amount_usd null - revenue undisclosed/estimated."
+    },
+    {
+      "from": "OpenAI", "to": "Broadcom", "instrument": "10GW custom AI accelerators (XPU 'Titan')",
+      "amount_usd": null, "date": "2025-10-13", "status": "committed",
+      "circular": false, "confidence": "med",
+      "source": ["https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-announce-strategic-collaboration-deploy-10", "https://www.servethehome.com/broadcom-and-openai-announce-a-10gw-custom-xpu-deal/"],
+      "notes": "10GW custom accelerators + Ethernet, deploy H2 2026 thru 2029. Financial terms undisclosed; Mizuho est. $150-200B (not company-confirmed)."
+    },
+    {
+      "from": "OpenAI", "to": "NVIDIA", "instrument": "GPU/systems purchases (10GW)",
+      "amount_usd": null, "date": "2025-09-22", "status": "committed",
+      "circular": true, "confidence": "high",
+      "source": ["https://blogs.nvidia.com/blog/openai-nvidia/"],
+      "notes": "10GW of NVIDIA systems (Vera Rubin, first GW H2 2026); part of OpenAI's ~$1.4T commitments. Pairs with NVIDIA equity into OpenAI = round-trip."
+    },
+    {
+      "from": "SoftBank", "to": "OpenAI", "instrument": "equity ($40B round, fully funded)",
+      "amount_usd": 41000000000, "date": "2025-12-31", "status": "closed",
+      "circular": false, "confidence": "high",
+      "source": ["https://group.softbank/en/news/press/20251231", "https://www.cnbc.com/2025/12/30/softbank-openai-investment.html"],
+      "notes": "$41B aggregate funded (incl. $11B third-party co-invest); SoftBank ~11% stake."
+    },
+    {
+      "from": "SoftBank", "to": "OpenAI", "instrument": "equity (follow-on)",
+      "amount_usd": 30000000000, "date": "2026-02-27", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://group.softbank/en/news/press/20260227"],
+      "notes": "Definitive agreement for $30B follow-on via Vision Fund 2; cumulative ~$64.6B, ~13% ownership."
+    },
+    {
+      "from": "Amazon", "to": "OpenAI", "instrument": "equity (mega-round)",
+      "amount_usd": 50000000000, "date": "2026-02-27", "status": "committed",
+      "circular": false, "confidence": "high",
+      "source": ["https://www.cnbc.com/2026/02/27/open-ai-funding-round-amazon.html"],
+      "notes": "$15B initial + $35B on conditions; led the $110B round."
+    }
+  ]
+}

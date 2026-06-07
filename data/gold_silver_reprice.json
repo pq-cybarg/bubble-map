@@ -1,0 +1,493 @@
+{
+  "gold": {
+    "1998": 294,
+    "1999": 279,
+    "2000": 279,
+    "2001": 271,
+    "2002": 310,
+    "2003": 363,
+    "2004": 410,
+    "2005": 445,
+    "2006": 604,
+    "2007": 695,
+    "2008": 872,
+    "2009": 972,
+    "2010": 1225,
+    "2011": 1572,
+    "2012": 1669,
+    "2013": 1411,
+    "2014": 1266,
+    "2015": 1160,
+    "2016": 1251,
+    "2017": 1257,
+    "2018": 1268,
+    "2019": 1393,
+    "2020": 1770,
+    "2021": 1799,
+    "2022": 1801,
+    "2023": 1943,
+    "2024": 2386,
+    "2025": 3300,
+    "2026": 4300
+  },
+  "silver": {
+    "1998": 5.55,
+    "1999": 5.22,
+    "2000": 5.0,
+    "2001": 4.39,
+    "2002": 4.6,
+    "2003": 4.88,
+    "2004": 6.69,
+    "2005": 7.32,
+    "2006": 11.55,
+    "2007": 13.38,
+    "2008": 14.99,
+    "2009": 14.67,
+    "2010": 20.19,
+    "2011": 35.12,
+    "2012": 31.15,
+    "2013": 23.79,
+    "2014": 19.08,
+    "2015": 15.68,
+    "2016": 17.14,
+    "2017": 17.05,
+    "2018": 15.71,
+    "2019": 16.21,
+    "2020": 20.55,
+    "2021": 25.14,
+    "2022": 21.73,
+    "2023": 23.35,
+    "2024": 28.0,
+    "2025": 35.0,
+    "2026": 70.0
+  },
+  "home_usd": {
+    "1998": 152000,
+    "2000": 165000,
+    "2002": 188000,
+    "2004": 221000,
+    "2006": 243000,
+    "2007": 247000,
+    "2008": 233000,
+    "2009": 216000,
+    "2010": 222000,
+    "2012": 245000,
+    "2014": 282000,
+    "2016": 306000,
+    "2018": 331000,
+    "2019": 327000,
+    "2020": 336000,
+    "2021": 423000,
+    "2022": 457000,
+    "2023": 430000,
+    "2024": 420000,
+    "2025": 415000,
+    "2026": 418000
+  },
+  "cre_cppi": {
+    "1998": 55,
+    "2001": 62,
+    "2004": 78,
+    "2007": 100,
+    "2009": 69,
+    "2012": 88,
+    "2016": 118,
+    "2019": 132,
+    "2022": 155,
+    "2023": 126,
+    "2024": 124,
+    "2026": 129
+  },
+  "caseshiller": {
+    "Los Angeles": {
+      "2000": 100,
+      "2006": 270,
+      "2012": 150,
+      "2019": 280,
+      "2022": 430,
+      "2026": 445
+    },
+    "Miami": {
+      "2000": 100,
+      "2006": 280,
+      "2011": 140,
+      "2019": 240,
+      "2022": 400,
+      "2026": 475
+    },
+    "Detroit": {
+      "2000": 100,
+      "2005": 127,
+      "2009": 68,
+      "2019": 130,
+      "2022": 180,
+      "2026": 198
+    },
+    "Chicago": {
+      "2000": 100,
+      "2006": 168,
+      "2012": 100,
+      "2019": 140,
+      "2022": 165,
+      "2026": 190
+    }
+  },
+  "flows": [
+    {
+      "year": 1998,
+      "label": "LTCM Fed-brokered bailout",
+      "usd_b": 3.6,
+      "gold_Moz": 12.24,
+      "silver_Moz": 648.6
+    },
+    {
+      "year": 2008,
+      "label": "TARP",
+      "usd_b": 700.0,
+      "gold_Moz": 802.75,
+      "silver_Moz": 46697.8
+    },
+    {
+      "year": 2008,
+      "label": "Fannie/Freddie conservatorship",
+      "usd_b": 187.0,
+      "gold_Moz": 214.45,
+      "silver_Moz": 12475.0
+    },
+    {
+      "year": 2020,
+      "label": "COVID Fed balance-sheet expansion",
+      "usd_b": 4500.0,
+      "gold_Moz": 2542.37,
+      "silver_Moz": 218978.1
+    },
+    {
+      "year": 2023,
+      "label": "SVB failed assets",
+      "usd_b": 209.0,
+      "gold_Moz": 107.57,
+      "silver_Moz": 8950.7
+    },
+    {
+      "year": 2023,
+      "label": "Microsoft->OpenAI cumulative",
+      "usd_b": 13.0,
+      "gold_Moz": 6.69,
+      "silver_Moz": 556.7
+    },
+    {
+      "year": 2024,
+      "label": "Hyperscaler AI capex (yr)",
+      "usd_b": 400.0,
+      "gold_Moz": 167.64,
+      "silver_Moz": 14285.7
+    },
+    {
+      "year": 2025,
+      "label": "OpenAI disclosed compute commitments",
+      "usd_b": 1400.0,
+      "gold_Moz": 424.24,
+      "silver_Moz": 40000.0
+    },
+    {
+      "year": 2025,
+      "label": "Stargate headline",
+      "usd_b": 500.0,
+      "gold_Moz": 151.52,
+      "silver_Moz": 14285.7
+    },
+    {
+      "year": 2025,
+      "label": "SoftBank->OpenAI round",
+      "usd_b": 40.0,
+      "gold_Moz": 12.12,
+      "silver_Moz": 1142.9
+    },
+    {
+      "year": 2025,
+      "label": "NVIDIA->OpenAI (LOI/closed)",
+      "usd_b": 100.0,
+      "gold_Moz": 30.3,
+      "silver_Moz": 2857.1
+    },
+    {
+      "year": 2026,
+      "label": "Hyperscaler AI capex (yr)",
+      "usd_b": 520.0,
+      "gold_Moz": 120.93,
+      "silver_Moz": 7428.6
+    },
+    {
+      "year": 2026,
+      "label": "AI datacenter private-credit pipeline",
+      "usd_b": 800.0,
+      "gold_Moz": 186.05,
+      "silver_Moz": 11428.6
+    },
+    {
+      "year": 2026,
+      "label": "SpaceX IPO raise",
+      "usd_b": 75.0,
+      "gold_Moz": 17.44,
+      "silver_Moz": 1071.4
+    }
+  ],
+  "home_repriced": [
+    {
+      "year": 1998,
+      "usd": 152000,
+      "gold_oz": 517.0,
+      "silver_oz": 27387.0,
+      "idx_nominal": 100,
+      "idx_gold": 100
+    },
+    {
+      "year": 2000,
+      "usd": 165000,
+      "gold_oz": 591.4,
+      "silver_oz": 33000.0,
+      "idx_nominal": 109,
+      "idx_gold": 114
+    },
+    {
+      "year": 2002,
+      "usd": 188000,
+      "gold_oz": 606.5,
+      "silver_oz": 40870.0,
+      "idx_nominal": 124,
+      "idx_gold": 117
+    },
+    {
+      "year": 2004,
+      "usd": 221000,
+      "gold_oz": 539.0,
+      "silver_oz": 33034.0,
+      "idx_nominal": 145,
+      "idx_gold": 104
+    },
+    {
+      "year": 2006,
+      "usd": 243000,
+      "gold_oz": 402.3,
+      "silver_oz": 21039.0,
+      "idx_nominal": 160,
+      "idx_gold": 78
+    },
+    {
+      "year": 2007,
+      "usd": 247000,
+      "gold_oz": 355.4,
+      "silver_oz": 18460.0,
+      "idx_nominal": 162,
+      "idx_gold": 69
+    },
+    {
+      "year": 2008,
+      "usd": 233000,
+      "gold_oz": 267.2,
+      "silver_oz": 15544.0,
+      "idx_nominal": 153,
+      "idx_gold": 52
+    },
+    {
+      "year": 2009,
+      "usd": 216000,
+      "gold_oz": 222.2,
+      "silver_oz": 14724.0,
+      "idx_nominal": 142,
+      "idx_gold": 43
+    },
+    {
+      "year": 2010,
+      "usd": 222000,
+      "gold_oz": 181.2,
+      "silver_oz": 10996.0,
+      "idx_nominal": 146,
+      "idx_gold": 35
+    },
+    {
+      "year": 2012,
+      "usd": 245000,
+      "gold_oz": 146.8,
+      "silver_oz": 7865.0,
+      "idx_nominal": 161,
+      "idx_gold": 28
+    },
+    {
+      "year": 2014,
+      "usd": 282000,
+      "gold_oz": 222.7,
+      "silver_oz": 14780.0,
+      "idx_nominal": 186,
+      "idx_gold": 43
+    },
+    {
+      "year": 2016,
+      "usd": 306000,
+      "gold_oz": 244.6,
+      "silver_oz": 17853.0,
+      "idx_nominal": 201,
+      "idx_gold": 47
+    },
+    {
+      "year": 2018,
+      "usd": 331000,
+      "gold_oz": 261.0,
+      "silver_oz": 21069.0,
+      "idx_nominal": 218,
+      "idx_gold": 50
+    },
+    {
+      "year": 2019,
+      "usd": 327000,
+      "gold_oz": 234.7,
+      "silver_oz": 20173.0,
+      "idx_nominal": 215,
+      "idx_gold": 45
+    },
+    {
+      "year": 2020,
+      "usd": 336000,
+      "gold_oz": 189.8,
+      "silver_oz": 16350.0,
+      "idx_nominal": 221,
+      "idx_gold": 37
+    },
+    {
+      "year": 2021,
+      "usd": 423000,
+      "gold_oz": 235.1,
+      "silver_oz": 16826.0,
+      "idx_nominal": 278,
+      "idx_gold": 45
+    },
+    {
+      "year": 2022,
+      "usd": 457000,
+      "gold_oz": 253.7,
+      "silver_oz": 21031.0,
+      "idx_nominal": 301,
+      "idx_gold": 49
+    },
+    {
+      "year": 2023,
+      "usd": 430000,
+      "gold_oz": 221.3,
+      "silver_oz": 18415.0,
+      "idx_nominal": 283,
+      "idx_gold": 43
+    },
+    {
+      "year": 2024,
+      "usd": 420000,
+      "gold_oz": 176.0,
+      "silver_oz": 15000.0,
+      "idx_nominal": 276,
+      "idx_gold": 34
+    },
+    {
+      "year": 2025,
+      "usd": 415000,
+      "gold_oz": 125.8,
+      "silver_oz": 11857.0,
+      "idx_nominal": 273,
+      "idx_gold": 24
+    },
+    {
+      "year": 2026,
+      "usd": 418000,
+      "gold_oz": 97.2,
+      "silver_oz": 5971.0,
+      "idx_nominal": 275,
+      "idx_gold": 19
+    }
+  ],
+  "cre_repriced": [
+    {
+      "year": 1998,
+      "cppi": 55,
+      "gold_idx": 100
+    },
+    {
+      "year": 2001,
+      "cppi": 62,
+      "gold_idx": 122
+    },
+    {
+      "year": 2004,
+      "cppi": 78,
+      "gold_idx": 102
+    },
+    {
+      "year": 2007,
+      "cppi": 100,
+      "gold_idx": 77
+    },
+    {
+      "year": 2009,
+      "cppi": 69,
+      "gold_idx": 38
+    },
+    {
+      "year": 2012,
+      "cppi": 88,
+      "gold_idx": 28
+    },
+    {
+      "year": 2016,
+      "cppi": 118,
+      "gold_idx": 50
+    },
+    {
+      "year": 2019,
+      "cppi": 132,
+      "gold_idx": 51
+    },
+    {
+      "year": 2022,
+      "cppi": 155,
+      "gold_idx": 46
+    },
+    {
+      "year": 2023,
+      "cppi": 126,
+      "gold_idx": 35
+    },
+    {
+      "year": 2024,
+      "cppi": 124,
+      "gold_idx": 28
+    },
+    {
+      "year": 2026,
+      "cppi": 129,
+      "gold_idx": 16
+    }
+  ],
+  "regional_repriced": [
+    {
+      "metro": "Los Angeles",
+      "nom_2000": 100,
+      "nom_2026": 445,
+      "gold_idx_2026": 29
+    },
+    {
+      "metro": "Miami",
+      "nom_2000": 100,
+      "nom_2026": 475,
+      "gold_idx_2026": 31
+    },
+    {
+      "metro": "Detroit",
+      "nom_2000": 100,
+      "nom_2026": 198,
+      "gold_idx_2026": 13
+    },
+    {
+      "metro": "Chicago",
+      "nom_2000": 100,
+      "nom_2026": 190,
+      "gold_idx_2026": 12
+    }
+  ]
+}

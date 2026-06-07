@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "title": "Chinese tech cross-ownership in Western media/games/tech + CCP influence vectors",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified ownership figures.",
+    "note": "Separates FACT (ownership) from SPECULATION (CCP direction)."
+  },
+  "ownership": [
+    {"holder": "Tencent", "target": "Riot Games", "stake_pct": 100, "control": "full", "date": "2015", "source": ["https://en.wikipedia.org/wiki/Riot_Games"]},
+    {"holder": "Tencent", "target": "Supercell", "stake_pct": 82, "control": "controlling consortium", "date": "2016-2019", "source": ["https://en.wikipedia.org/wiki/Supercell"]},
+    {"holder": "Tencent", "target": "Epic Games", "stake_pct": 38, "control": "economic, NON-controlling", "date": "2012", "source": ["https://en.wikipedia.org/wiki/Epic_Games"]},
+    {"holder": "Tencent", "target": "Snap", "stake_pct": 14, "control": "minority/passive", "date": "2017+", "source": ["https://www.reuters.com/"]},
+    {"holder": "Tencent", "target": "Reddit", "stake_pct": 9.98, "control": "minority, 13G passive (post-IPO)", "date": "2024", "source": ["https://www.sec.gov/"]},
+    {"holder": "Tencent", "target": "Spotify", "stake_pct": 9.1, "control": "minority, voting waived to Ek", "date": "2017+", "source": ["https://www.reuters.com/"]},
+    {"holder": "Tencent", "target": "Universal Music Group", "stake_pct": 10, "control": "consortium (option to 20%)", "date": "2020", "source": ["https://www.reuters.com/"]},
+    {"holder": "Tencent", "target": "Ubisoft (Guillemot/Tencent)", "stake_pct": 49.9, "control": "economic in new sub; only ~5% voting", "date": "2025", "source": ["https://www.reuters.com/"]},
+    {"holder": "Tencent", "target": "Activision Blizzard", "stake_pct": 5, "control": "HISTORICAL / exited", "date": "pre-2013", "source": ["https://en.wikipedia.org/wiki/Activision_Blizzard"]},
+    {"holder": "Naspers/Prosus", "target": "Tencent", "stake_pct": 23, "control": "largest external holder, NET SELLER (down from ~26%)", "date": "2026", "source": ["https://www.reuters.com/"]},
+    {"holder": "Alibaba", "target": "South China Morning Post (SCMP)", "stake_pct": 100, "control": "full", "date": "2016 (~$266M)", "source": ["https://en.wikipedia.org/wiki/South_China_Morning_Post"]},
+    {"holder": "US/allied consortium (Oracle, Silver Lake, MGX ~15% each)", "target": "TikTok US JV", "stake_pct": 80.1, "control": "US-majority board; algorithm LICENSED TO ORACLE, retrained on US data; ByteDance 19.9%", "date": "2026-01-22 (PAFACA divestiture closed)", "source": ["https://www.reuters.com/"]}
+  ],
+  "influence_vectors": [
+    {"vector": "State 'golden shares' / special-management-shares (~1% + board/content veto) in CHINA-DOMESTIC operating subs of ByteDance (Douyin/Toutiao), Alibaba, Tencent", "evidence_strength": "strong-existence / domestic-scope-only", "source": ["https://www.ft.com/"], "notes": "Real and powerful, but reaches only China-domestic content/news licensing - NOT Western subsidiaries."},
+    {"vector": "National Intelligence Law Art. 7 (compelled cooperation) + VIE structures", "evidence_strength": "moderate (legal exposure) / unproven (Western use)", "source": ["https://en.wikipedia.org/wiki/National_Intelligence_Law_of_the_People%27s_Republic_of_China"], "notes": "Creates theoretical leverage; no evidence used to direct Western child-safety lawfare."},
+    {"vector": "Equity stakes used to steer Western online-safety policy", "evidence_strength": "weak/unsupported", "source": [], "notes": "Most stakes are non-voting/passive; incentive to resist costly youth-safety rules is shared by ALL platform shareholders, not China-specific."}
+  ],
+  "hypothesis_grade": "weak (convergent, NOT directed)",
+  "grade_reasoning": "Cross-ownership is extensive and real but predominantly MINORITY, NON-VOTING, and PASSIVE (Riot 100% and Supercell ~82% are the exceptions). Hard CCP levers (golden shares, NIL, VIE) operate on China-DOMESTIC content/data, not Western subs. Critically, Beijing's own policy preference is STRICTER minor protection (anti-addiction/youth-mode), which cuts AGAINST the idea that China works to halt Western child-safety lawfare. Any incentive to resist costly youth-safety regulation is a generic platform-shareholder interest. Recurring incidental node: Oracle (Larry Ellison) now operates the TikTok US algorithm - another appearance of Oracle across AI-core / TikTok / (via Ellison) digital-ID policy."
+}

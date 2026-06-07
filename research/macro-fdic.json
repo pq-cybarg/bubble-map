@@ -1,0 +1,725 @@
+{
+  "metadata": {
+    "title": "FDIC Aggregate US Banking Industry Time Series (all FDIC-insured institutions)",
+    "generated": "2026-06-06",
+    "primary_source": "FDIC BankFind Suite financial data API: https://api.fdic.gov/banks/financials (formerly https://banks.data.fdic.gov/api/financials)",
+    "secondary_source": "FDIC Quarterly Banking Profile: https://www.fdic.gov/quarterly-banking-profile",
+    "units": "All *_usd fields in nominal US dollars. Industry aggregates computed by summing per-institution call-report values (reported by FDIC in $thousands) across every insured institution for the quarter.",
+    "methodology_notes": [
+      "unrealized_secs_usd computed from API as SUM[(SCAF - SCAA) + (SCHF - SCHA)] = AFS fair value minus AFS amortized cost, plus HTM fair value minus HTM amortized cost. Validated against FDIC QBP: API 2026Q1 -$325.3B vs QBP -$325.1B; 2025Q4 -$306.2B vs QBP -$306.1B.",
+      "unrealized_secs_qbp_usd is FDIC's officially published headline figure for cross-check.",
+      "roa_pct = SUM(NETINCQ)*4 / SUM(ASSET); nim_pct = SUM(NIMQ)*4 / SUM(ERNAST). Slightly differ from QBP which uses average assets/earning assets (period-average denominators).",
+      "cre_loans_usd = construction & land development (LNRECONS) + nonfarm nonresidential RE (LNRENRES, owner + non-owner-occupied).",
+      "cre_nonowner_construction_usd = construction (LNRECONS) + non-owner-occupied nonfarm nonresidential (LNRENROT) -- the investor/riskier CRE slice.",
+      "cre_noncurrent_pct = (NCRECONS + NCRENRES) / cre_loans * 100 (noncurrent = 90+ days past due plus nonaccrual).",
+      "Problem Bank List asset totals are null from 2025Q1 onward: FDIC stopped disclosing them in Feb 2025 (Acting Chairman Travis Hill).",
+      "net_income_q_usd is quarterly net income (NETINCQ). 2023Q4 ROA depressed by the FDIC special assessment for the 2023 systemic-risk-exception (SVB/Signature) losses."
+    ]
+  },
+  "quarterly": [
+    {
+      "period": "2023Q4",
+      "repdte": "20231231",
+      "num_institutions": 4658,
+      "total_assets_usd": 23900091438000,
+      "total_deposits_usd": 18931675078000,
+      "uninsured_deposits_usd": 7224440351000,
+      "net_income_q_usd": 36265569000,
+      "roa_pct": 0.607,
+      "nim_pct": 3.251,
+      "unrealized_secs_usd": -478416585000,
+      "unrealized_afs_usd": -204620386000,
+      "unrealized_htm_usd": -273796199000,
+      "cre_loans_usd": 2327533414000,
+      "cre_nonowner_construction_usd": 1674845580000,
+      "cre_noncurrent_usd": 23323977000,
+      "cre_noncurrent_pct": 1.002,
+      "total_noncurrent_loans_usd": 107937364000,
+      "reserves_alll_usd": 218042291000,
+      "reserve_coverage_pct": 202.0,
+      "net_chargeoffs_q_usd": 20258376000,
+      "problem_banks": 52,
+      "problem_bank_assets_usd": 66300000000,
+      "dif_balance_usd": 121800000000,
+      "dif_reserve_ratio_pct": 1.15,
+      "unrealized_secs_qbp_usd": -477600000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20231231",
+        "https://www.fdic.gov/quarterly-banking-profile (2023Q4 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2024Q1",
+      "repdte": "20240331",
+      "num_institutions": 4640,
+      "total_assets_usd": 24174088924000,
+      "total_deposits_usd": 19113933126000,
+      "uninsured_deposits_usd": 7293157210000,
+      "net_income_q_usd": 65140148000,
+      "roa_pct": 1.078,
+      "nim_pct": 3.16,
+      "unrealized_secs_usd": -517350724000,
+      "unrealized_afs_usd": -212157831000,
+      "unrealized_htm_usd": -305192893000,
+      "cre_loans_usd": 2337089022000,
+      "cre_nonowner_construction_usd": 1676502542000,
+      "cre_noncurrent_usd": 25687981000,
+      "cre_noncurrent_pct": 1.099,
+      "total_noncurrent_loans_usd": 114236861000,
+      "reserves_alll_usd": 218724719000,
+      "reserve_coverage_pct": 191.5,
+      "net_chargeoffs_q_usd": 20324191000,
+      "problem_banks": 63,
+      "problem_bank_assets_usd": 82100000000,
+      "dif_balance_usd": null,
+      "dif_reserve_ratio_pct": 1.17,
+      "unrealized_secs_qbp_usd": -516500000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20240331",
+        "https://www.fdic.gov/quarterly-banking-profile (2024Q1 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2024Q2",
+      "repdte": "20240630",
+      "num_institutions": 4610,
+      "total_assets_usd": 24102985567000,
+      "total_deposits_usd": 18920503721000,
+      "uninsured_deposits_usd": 7200848149000,
+      "net_income_q_usd": 72123224000,
+      "roa_pct": 1.197,
+      "nim_pct": 3.169,
+      "unrealized_secs_usd": -513677531000,
+      "unrealized_afs_usd": -204125299000,
+      "unrealized_htm_usd": -309552232000,
+      "cre_loans_usd": 2340414927000,
+      "cre_nonowner_construction_usd": 1672803092000,
+      "cre_noncurrent_usd": 27895503000,
+      "cre_noncurrent_pct": 1.192,
+      "total_noncurrent_loans_usd": 114515122000,
+      "reserves_alll_usd": 220612921000,
+      "reserve_coverage_pct": 192.6,
+      "net_chargeoffs_q_usd": 21303281000,
+      "problem_banks": 66,
+      "problem_bank_assets_usd": 83400000000,
+      "dif_balance_usd": 129200000000,
+      "dif_reserve_ratio_pct": 1.21,
+      "unrealized_secs_qbp_usd": -512900000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20240630",
+        "https://www.fdic.gov/quarterly-banking-profile (2024Q2 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2024Q3",
+      "repdte": "20240930",
+      "num_institutions": 4589,
+      "total_assets_usd": 24435201570000,
+      "total_deposits_usd": 19182974678000,
+      "uninsured_deposits_usd": 7402211343000,
+      "net_income_q_usd": 65833454000,
+      "roa_pct": 1.078,
+      "nim_pct": 3.207,
+      "unrealized_secs_usd": -364484184000,
+      "unrealized_afs_usd": -139041606000,
+      "unrealized_htm_usd": -225442578000,
+      "cre_loans_usd": 2342781864000,
+      "cre_nonowner_construction_usd": 1669871043000,
+      "cre_noncurrent_usd": 29469620000,
+      "cre_noncurrent_pct": 1.258,
+      "total_noncurrent_loans_usd": 121345559000,
+      "reserves_alll_usd": 222737319000,
+      "reserve_coverage_pct": 183.6,
+      "net_chargeoffs_q_usd": 20939596000,
+      "problem_banks": 68,
+      "problem_bank_assets_usd": 87300000000,
+      "dif_balance_usd": 133100000000,
+      "dif_reserve_ratio_pct": 1.25,
+      "unrealized_secs_qbp_usd": -364000000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20240930",
+        "https://www.fdic.gov/quarterly-banking-profile (2024Q3 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2024Q4",
+      "repdte": "20241231",
+      "num_institutions": 4560,
+      "total_assets_usd": 24361985971000,
+      "total_deposits_usd": 19352974995000,
+      "uninsured_deposits_usd": 7607491634000,
+      "net_income_q_usd": 67340640000,
+      "roa_pct": 1.106,
+      "nim_pct": 3.28,
+      "unrealized_secs_usd": -481169314000,
+      "unrealized_afs_usd": -182471774000,
+      "unrealized_htm_usd": -298697540000,
+      "cre_loans_usd": 2337613330000,
+      "cre_nonowner_construction_usd": 1659648724000,
+      "cre_noncurrent_usd": 28768604000,
+      "cre_noncurrent_pct": 1.231,
+      "total_noncurrent_loans_usd": 125966272000,
+      "reserves_alll_usd": 222877081000,
+      "reserve_coverage_pct": 176.9,
+      "net_chargeoffs_q_usd": 22361798000,
+      "problem_banks": 66,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": 137100000000,
+      "dif_reserve_ratio_pct": 1.28,
+      "unrealized_secs_qbp_usd": -478100000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20241231",
+        "https://www.fdic.gov/quarterly-banking-profile (2024Q4 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2025Q1",
+      "repdte": "20250331",
+      "num_institutions": 4536,
+      "total_assets_usd": 24777333478000,
+      "total_deposits_usd": 19597156726000,
+      "uninsured_deposits_usd": 7649996583000,
+      "net_income_q_usd": 70851794000,
+      "roa_pct": 1.144,
+      "nim_pct": 3.217,
+      "unrealized_secs_usd": -413494873000,
+      "unrealized_afs_usd": -151703172000,
+      "unrealized_htm_usd": -261791701000,
+      "cre_loans_usd": 2338787173000,
+      "cre_nonowner_construction_usd": 1657112536000,
+      "cre_noncurrent_usd": 28962963000,
+      "cre_noncurrent_pct": 1.238,
+      "total_noncurrent_loans_usd": 126695272000,
+      "reserves_alll_usd": 223600371000,
+      "reserve_coverage_pct": 176.5,
+      "net_chargeoffs_q_usd": 21258733000,
+      "problem_banks": 63,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": null,
+      "dif_reserve_ratio_pct": 1.31,
+      "unrealized_secs_qbp_usd": -413400000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20250331",
+        "https://www.fdic.gov/quarterly-banking-profile (2025Q1 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2025Q2",
+      "repdte": "20250630",
+      "num_institutions": 4494,
+      "total_assets_usd": 25230158509000,
+      "total_deposits_usd": 19789364013000,
+      "uninsured_deposits_usd": 7836356806000,
+      "net_income_q_usd": 70537074000,
+      "roa_pct": 1.118,
+      "nim_pct": 3.214,
+      "unrealized_secs_usd": -395522635000,
+      "unrealized_afs_usd": -143836558000,
+      "unrealized_htm_usd": -251686077000,
+      "cre_loans_usd": 2347935447000,
+      "cre_nonowner_construction_usd": 1658765959000,
+      "cre_noncurrent_usd": 29707020000,
+      "cre_noncurrent_pct": 1.265,
+      "total_noncurrent_loans_usd": 125871873000,
+      "reserves_alll_usd": 224326953000,
+      "reserve_coverage_pct": 178.2,
+      "net_chargeoffs_q_usd": 19390528000,
+      "problem_banks": 59,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": null,
+      "dif_reserve_ratio_pct": 1.36,
+      "unrealized_secs_qbp_usd": -395400000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20250630",
+        "https://www.fdic.gov/quarterly-banking-profile (2025Q2 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2025Q3",
+      "repdte": "20250930",
+      "num_institutions": 4452,
+      "total_assets_usd": 25370572349000,
+      "total_deposits_usd": 19884770293000,
+      "uninsured_deposits_usd": 7925040749000,
+      "net_income_q_usd": 79867148000,
+      "roa_pct": 1.259,
+      "nim_pct": 3.328,
+      "unrealized_secs_usd": -337274479000,
+      "unrealized_afs_usd": -115461685000,
+      "unrealized_htm_usd": -221812794000,
+      "cre_loans_usd": 2355604960000,
+      "cre_nonowner_construction_usd": 1660513116000,
+      "cre_noncurrent_usd": 29043819000,
+      "cre_noncurrent_pct": 1.233,
+      "total_noncurrent_loans_usd": 126764421000,
+      "reserves_alll_usd": 224501451000,
+      "reserve_coverage_pct": 177.1,
+      "net_chargeoffs_q_usd": 20132389000,
+      "problem_banks": 57,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": 150200000000,
+      "dif_reserve_ratio_pct": 1.4,
+      "unrealized_secs_qbp_usd": -337200000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20250930",
+        "https://www.fdic.gov/quarterly-banking-profile (2025Q3 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2025Q4",
+      "repdte": "20251231",
+      "num_institutions": 4411,
+      "total_assets_usd": 25540214241000,
+      "total_deposits_usd": 20229064583000,
+      "uninsured_deposits_usd": 8137782563000,
+      "net_income_q_usd": 78427485000,
+      "roa_pct": 1.228,
+      "nim_pct": 3.376,
+      "unrealized_secs_usd": -306152042000,
+      "unrealized_afs_usd": -98759033000,
+      "unrealized_htm_usd": -207393009000,
+      "cre_loans_usd": 2375792055000,
+      "cre_nonowner_construction_usd": 1670450348000,
+      "cre_noncurrent_usd": 28946259000,
+      "cre_noncurrent_pct": 1.218,
+      "total_noncurrent_loans_usd": 130965525000,
+      "reserves_alll_usd": 222425022000,
+      "reserve_coverage_pct": 169.8,
+      "net_chargeoffs_q_usd": 20895911000,
+      "problem_banks": 60,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": 153900000000,
+      "dif_reserve_ratio_pct": 1.42,
+      "unrealized_secs_qbp_usd": -306100000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20251231",
+        "https://www.fdic.gov/quarterly-banking-profile (2025Q4 press release / Statistics at a Glance)"
+      ]
+    },
+    {
+      "period": "2026Q1",
+      "repdte": "20260331",
+      "num_institutions": 4352,
+      "total_assets_usd": 26392338929000,
+      "total_deposits_usd": 20682375129000,
+      "uninsured_deposits_usd": 8373013149000,
+      "net_income_q_usd": 80999257000,
+      "roa_pct": 1.228,
+      "nim_pct": 3.244,
+      "unrealized_secs_usd": -325264451000,
+      "unrealized_afs_usd": -110717154000,
+      "unrealized_htm_usd": -214547297000,
+      "cre_loans_usd": 2391501073000,
+      "cre_nonowner_construction_usd": 1679312129000,
+      "cre_noncurrent_usd": 29159095000,
+      "cre_noncurrent_pct": 1.219,
+      "total_noncurrent_loans_usd": 135445830000,
+      "reserves_alll_usd": 224028412000,
+      "reserve_coverage_pct": 165.4,
+      "net_chargeoffs_q_usd": 19928894000,
+      "problem_banks": 54,
+      "problem_bank_assets_usd": null,
+      "dif_balance_usd": 157400000000,
+      "dif_reserve_ratio_pct": 1.43,
+      "unrealized_secs_qbp_usd": -325100000000,
+      "source": [
+        "https://api.fdic.gov/banks/financials (aggregated across all FDIC-insured institutions) filters=REPDTE:20260331",
+        "https://www.fdic.gov/quarterly-banking-profile (2026Q1 press release / Statistics at a Glance)"
+      ]
+    }
+  ],
+  "annual": [
+    {
+      "year": 1999,
+      "snapshot": "19991231",
+      "num_institutions": 10344,
+      "failures": 8,
+      "failed_assets_usd": 1592189000,
+      "total_assets_usd": 6706915783000,
+      "total_deposits_usd": 4417962748000,
+      "cre_loans_usd": 607497773000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:19991231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:1999 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2000,
+      "snapshot": "20001231",
+      "num_institutions": 10020,
+      "failures": 7,
+      "failed_assets_usd": 410160000,
+      "total_assets_usd": 7490782069000,
+      "total_deposits_usd": 4925940825000,
+      "cre_loans_usd": 721693951000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20001231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2000 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2001,
+      "snapshot": "20011231",
+      "num_institutions": 9731,
+      "failures": 4,
+      "failed_assets_usd": 1821760000,
+      "total_assets_usd": 7897276818000,
+      "total_deposits_usd": 5201806076000,
+      "cre_loans_usd": 800997333000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20011231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2001 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2002,
+      "snapshot": "20021231",
+      "num_institutions": 9464,
+      "failures": 11,
+      "failed_assets_usd": 2872720000,
+      "total_assets_usd": 8465156698000,
+      "total_deposits_usd": 5582240547000,
+      "cre_loans_usd": 872491651000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20021231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2002 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2003,
+      "snapshot": "20031231",
+      "num_institutions": 9296,
+      "failures": 3,
+      "failed_assets_usd": 947317000,
+      "total_assets_usd": 9104652444000,
+      "total_deposits_usd": 5972888430000,
+      "cre_loans_usd": 954333978000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20031231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2003 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2004,
+      "snapshot": "20041231",
+      "num_institutions": 9084,
+      "failures": 4,
+      "failed_assets_usd": 170099000,
+      "total_assets_usd": 10142687844000,
+      "total_deposits_usd": 6604941523000,
+      "cre_loans_usd": 1089794497000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20041231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2004 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2005,
+      "snapshot": "20051231",
+      "num_institutions": 8938,
+      "failures": 0,
+      "failed_assets_usd": 0,
+      "total_assets_usd": 10921505461000,
+      "total_deposits_usd": 7162883344000,
+      "cre_loans_usd": 1275333570000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20051231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2005 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2006,
+      "snapshot": "20061231",
+      "num_institutions": 8783,
+      "failures": 0,
+      "failed_assets_usd": 0,
+      "total_assets_usd": 11913798557000,
+      "total_deposits_usd": 7852937722000,
+      "cre_loans_usd": 1469652592000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20061231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2006 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2007,
+      "snapshot": "20071231",
+      "num_institutions": 8631,
+      "failures": 3,
+      "failed_assets_usd": 2614928000,
+      "total_assets_usd": 13106746036000,
+      "total_deposits_usd": 8464456550000,
+      "cre_loans_usd": 1598161859000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20071231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2007 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2008,
+      "snapshot": "20081231",
+      "num_institutions": 8395,
+      "failures": 30,
+      "failed_assets_usd": 1677987474000,
+      "total_assets_usd": 13973720034000,
+      "total_deposits_usd": 9123894930000,
+      "cre_loans_usd": 1658435369000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20081231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2008 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2009,
+      "snapshot": "20091231",
+      "num_institutions": 8103,
+      "failures": 148,
+      "failed_assets_usd": 2087191343000,
+      "total_assets_usd": 13217916476000,
+      "total_deposits_usd": 9311495136000,
+      "cre_loans_usd": 1543880914000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20091231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2009 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2010,
+      "snapshot": "20101231",
+      "num_institutions": 7747,
+      "failures": 157,
+      "failed_assets_usd": 92084988000,
+      "total_assets_usd": 13427251817000,
+      "total_deposits_usd": 9475480875000,
+      "cre_loans_usd": 1395174213000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20101231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2010 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2011,
+      "snapshot": "20111231",
+      "num_institutions": 7443,
+      "failures": 92,
+      "failed_assets_usd": 34922997000,
+      "total_assets_usd": 14011020181000,
+      "total_deposits_usd": 10248325201000,
+      "cre_loans_usd": 1304359288000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20111231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2011 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2012,
+      "snapshot": "20121231",
+      "num_institutions": 7166,
+      "failures": 51,
+      "failed_assets_usd": 11617348000,
+      "total_assets_usd": 14579117608000,
+      "total_deposits_usd": 10890915938000,
+      "cre_loans_usd": 1281566631000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20121231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2012 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2013,
+      "snapshot": "20131231",
+      "num_institutions": 6894,
+      "failures": 24,
+      "failed_assets_usd": 6044051000,
+      "total_assets_usd": 14877019264000,
+      "total_deposits_usd": 11277385568000,
+      "cre_loans_usd": 1324609806000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20131231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2013 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2014,
+      "snapshot": "20141231",
+      "num_institutions": 6587,
+      "failures": 18,
+      "failed_assets_usd": 2913503000,
+      "total_assets_usd": 15751118732000,
+      "total_deposits_usd": 11883530842000,
+      "cre_loans_usd": 1395728277000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20141231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2014 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2015,
+      "snapshot": "20151231",
+      "num_institutions": 6255,
+      "failures": 8,
+      "failed_assets_usd": 6706038000,
+      "total_assets_usd": 16149036226000,
+      "total_deposits_usd": 12301470481000,
+      "cre_loans_usd": 1517222723000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20151231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2015 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2016,
+      "snapshot": "20161231",
+      "num_institutions": 5983,
+      "failures": 5,
+      "failed_assets_usd": 277182000,
+      "total_assets_usd": 16949966060000,
+      "total_deposits_usd": 12983235646000,
+      "cre_loans_usd": 1649001774000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20161231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2016 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2017,
+      "snapshot": "20171231",
+      "num_institutions": 5738,
+      "failures": 8,
+      "failed_assets_usd": 5081737000,
+      "total_assets_usd": 17573282765000,
+      "total_deposits_usd": 13487986410000,
+      "cre_loans_usd": 1741217657000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20171231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2017 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2018,
+      "snapshot": "20181231",
+      "num_institutions": 5473,
+      "failures": 0,
+      "failed_assets_usd": 0,
+      "total_assets_usd": 18111148223000,
+      "total_deposits_usd": 13956687347000,
+      "cre_loans_usd": 1804077632000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20181231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2018 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2019,
+      "snapshot": "20191231",
+      "num_institutions": 5244,
+      "failures": 4,
+      "failed_assets_usd": 208767000,
+      "total_assets_usd": 18814829822000,
+      "total_deposits_usd": 14634008714000,
+      "cre_loans_usd": 1886602228000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20191231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2019 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2020,
+      "snapshot": "20201231",
+      "num_institutions": 5067,
+      "failures": 4,
+      "failed_assets_usd": 454986000,
+      "total_assets_usd": 22051134490000,
+      "total_deposits_usd": 17926440557000,
+      "cre_loans_usd": 1963778153000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20201231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2020 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2021,
+      "snapshot": "20211231",
+      "num_institutions": 4904,
+      "failures": 0,
+      "failed_assets_usd": 0,
+      "total_assets_usd": 23940213641000,
+      "total_deposits_usd": 19816755943000,
+      "cre_loans_usd": 2057853228000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20211231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2021 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2022,
+      "snapshot": "20221231",
+      "num_institutions": 4773,
+      "failures": 0,
+      "failed_assets_usd": 0,
+      "total_assets_usd": 23796663614000,
+      "total_deposits_usd": 19326909068000,
+      "cre_loans_usd": 2253915046000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20221231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2022 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2023,
+      "snapshot": "20231231",
+      "num_institutions": 4658,
+      "failures": 5,
+      "failed_assets_usd": 532228416000,
+      "total_assets_usd": 23900091438000,
+      "total_deposits_usd": 18931675078000,
+      "cre_loans_usd": 2327533414000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20231231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2023 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2024,
+      "snapshot": "20241231",
+      "num_institutions": 4560,
+      "failures": 2,
+      "failed_assets_usd": 5974040000,
+      "total_assets_usd": 24361985971000,
+      "total_deposits_usd": 19352974995000,
+      "cre_loans_usd": 2337613330000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20241231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2024 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2025,
+      "snapshot": "20251231",
+      "num_institutions": 4411,
+      "failures": 2,
+      "failed_assets_usd": 126404000,
+      "total_assets_usd": 25540214241000,
+      "total_deposits_usd": 20229064583000,
+      "cre_loans_usd": 2375792055000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20251231 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2025 (failure count & failed assets)"
+      ]
+    },
+    {
+      "year": 2026,
+      "snapshot": "20260331",
+      "num_institutions": 4352,
+      "failures": 2,
+      "failed_assets_usd": 566901000,
+      "total_assets_usd": 26392338929000,
+      "total_deposits_usd": 20682375129000,
+      "cre_loans_usd": 2391501073000,
+      "source": [
+        "https://api.fdic.gov/banks/financials filters=REPDTE:20260331 (institution count, assets, deposits, CRE summed across all banks)",
+        "https://api.fdic.gov/banks/failures filters=FAILYR:2026 (failure count & failed assets)"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "title": "SPECULATIVE OVERLAY - crypto/SEC regulatory-capture + Epstein-finance threads",
+    "generated": "2026-06-07",
+    "WARNING": "This file is an EVIDENCE-GRADED SPECULATIVE OVERLAY. It is deliberately kept OUT of the formally-proven financial core (data/graph.json, models/z3, models/tla). Each claim is graded fact|contested|weak|unsupported. The connective tissue here is OVERLAPPING ACTORS AND INSTITUTIONS, not demonstrated coordination. Do not represent these as proven.",
+    "method": "Direct web verification, primary where possible (SEC dockets, Senate Finance Committee, court orders, Wikipedia for uncontested chronology)."
+  },
+  "threads": [
+    {
+      "id": "hinman-sec-ripple",
+      "claim": "SEC's Division of Corporation Finance gave Ethereum a regulatory pass while pursuing XRP/Ripple, via a conflicted official.",
+      "grade": "facts STRONG; corrupt-intent CONTESTED",
+      "facts": [
+        "William Hinman was SEC Director of Corporation Finance; his June 14 2018 speech said ETH 'is not a security'.",
+        "SEC sued Ripple over XRP in Dec 2020 (filed under Chair Jay Clayton); Ripple cited Hinman's ETH stance to argue inconsistent/selective enforcement.",
+        "Hinman received a ~$1.6M pension from his former (and subsequent) firm Simpson Thacher WHILE serving at the SEC; Simpson Thacher was a member of the Enterprise Ethereum Alliance (EEA).",
+        "Judge Sarah Netburn ordered release of the 'Hinman emails'; they showed internal disagreement about the speech.",
+        "SEC OIG / Empower Oversight scrutiny of Hinman; a 2025 report addressed selective-enforcement allegations."
+      ],
+      "what_it_does_not_show": "No finding of criminal corruption; the conflict-of-interest is documented but a deliberate quid-pro-quo to favor ETH is not proven.",
+      "ai_core_relevance": "Indirect. Establishes a pattern of regulatory discretion benefiting some networks over others - relevant to the broader 'regulatory capture favors incumbents' theme, not to AI funding flows.",
+      "source": ["https://www.coindesk.com/policy/2023/05/16/sec-cant-seal-docs-tied-to-hinmans-ether-speech-judge-in-ripple-suit-rules", "https://www.coindesk.com/policy/2022/01/14/sec-must-surrender-hinman-email-on-ether-to-ripple-judge-rules", "https://thecryptobasic.com/2024/02/16/pro-xrp-lawyer-reacts-as-sec-confirms-investigating-william-hinman/"]
+    },
+    {
+      "id": "mccaleb-mtgox-ripple-stellar",
+      "claim": "Mt. Gox / Ripple / Stellar are corruptly interconnected.",
+      "grade": "common-founder lineage STRONG; coordinated corruption UNSUPPORTED",
+      "facts": [
+        "Jed McCaleb created Mtgox.com (2007 MTG-card site -> 2010 bitcoin exchange), sold to Mark Karpeles Feb 2011, stayed minority owner until the 2014 collapse.",
+        "McCaleb co-founded Ripple (2011-2013); was allocated 9B XRP; litigated 2015-2016 over sell-down; sold his last XRP July 2022.",
+        "McCaleb co-founded the Stellar Development Foundation (2014)."
+      ],
+      "what_it_does_not_show": "The link across Mt.Gox/Ripple/Stellar is ONE PERSON's career, not demonstrated cross-entity fraud. No documented tie between McCaleb and Sam Altman's Worldcoin was found.",
+      "ai_core_relevance": "None direct.",
+      "source": ["https://en.wikipedia.org/wiki/Jed_McCaleb", "https://www.coindesk.com/markets/2014/07/31/mt-gox-and-ripple-founder-jed-mccaleb-unveils-project-stellar"]
+    },
+    {
+      "id": "black-epstein-apollo",
+      "claim": "The Epstein network connects to the AI-capex financing complex.",
+      "grade": "facts STRONG; directed-influence SPECULATIVE",
+      "facts": [
+        "Apollo co-founder Leon Black paid Jeffrey Epstein $158M (2012-2017) per a 2021 Dechert review filed to the SEC; revised to ~$170M after Senate Finance (Wyden) found an additional $12M (Mar 2026).",
+        "Black resigned as Apollo CEO/chairman in 2021 amid the probe.",
+        "CNN (Feb 21 2026): 'How Wall Street's Apollo got tangled up again in the Epstein files'.",
+        "Apollo (now led by Marc Rowan) is one of the LARGEST AI-datacenter private-credit lenders: ~$36B arranged for Anthropic (with Blackstone), ~$40B for next-gen datacenters incl. xAI/Valor/Stream, and an Apollo+Blackstone >20GW XPU financing platform (see macro-cre-privatecredit.json / fin-google-amazon-anthropic-meta.json)."
+      ],
+      "what_it_does_not_show": "There is NO evidence the Epstein relationship directs Apollo's AI lending. This is an institutional ASSOCIATION (a major AI lender's founder had deep Epstein ties), not causation.",
+      "ai_core_relevance": "This is the ONLY thread in this overlay that materially touches the proven AI-capex core: Apollo is a real, large private-credit financier of the AI buildout, and its founder is a central Epstein-finance figure. Worth flagging; not worth overclaiming.",
+      "source": ["https://www.cnbc.com/2023/07/25/leon-black-ties-to-jeffrey-epstein-probed-by-senate-panel.html", "https://www.cnn.com/2026/02/21/business/apollo-epstein-wall-street", "https://www.finance.senate.gov/chairmans-news/wyden-unveils-ongoing-investigation-into-private-equity-billionaire-leon-blacks-tax-planning-and-financial-ties-with-jeffrey-epstein"]
+    },
+    {
+      "id": "ethereum-ant-ccp",
+      "claim": "The Ethereum Foundation is tied to Ant Group / CCP / China.",
+      "grade": "early ties REAL but DATED; control thesis WEAK/UNSUPPORTED",
+      "facts": [
+        "2016-2018: ConsenSys + Ethereum Foundation (incl. Vitalik Buterin) did China outreach (Beijing/Shanghai/Nanjing/Hangzhou); ConsenSys aimed to bring Ethereum to Tencent, Ping An, Ant Financial, Alibaba.",
+        "Ant Financial (Alibaba) experimented with the Ethereum protocol for payments c.2016.",
+        "A Jiangsu provincial institute (JBI) was authorized to spread the Enterprise Ethereum Alliance framework in China.",
+        "Ant later built its OWN permissioned chain (AntChain), diverging from public Ethereum."
+      ],
+      "what_it_does_not_show": "No evidence the Ethereum Foundation is controlled by Ant Group or the CCP. Early enterprise outreach is not capture. Note: the Enterprise Ethereum Alliance recurs as a connective institution (it links the Hinman/Simpson-Thacher conflict thread and the China-outreach thread) - but that is a thin coincidence of membership, not a mechanism.",
+      "ai_core_relevance": "None direct.",
+      "source": ["https://technode.com/2016/07/21/company-bringing-ethereum-chinese-tech-giants/", "https://www.ledgerinsights.com/china-ant-blockchain-open-alliance/"]
+    }
+  ],
+  "overall_verdict": "These are four REAL factual cores joined mainly by overlapping people and institutions (Hinman/Simpson Thacher/EEA; McCaleb across three crypto ventures; Black/Epstein/Apollo; ConsenSys/EEA/China). The honest reading: a milieu of regulatory discretion, concentrated elite networks, and recurring institutions - NOT a demonstrated single coordinated conspiracy. Exactly ONE thread (Black->Epstein->Apollo) connects to the proven AI-capex financing core, and even there only as association. Everything in this file is an OVERLAY; none of it is used in the formal proofs (graph/Z3/TLA+)."
+}

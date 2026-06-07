@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Historical bubble analogues, post-2008 deregulation chain, and market-manipulation enforcement",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (CNBC, DOJ/CFTC/SEC press, Fortune, Roosevelt Institute, The Hill, Marketplace) + FDIC time series in macro-fdic.json.",
+    "thesis": "Every bubble cycle moves risk into a LESS-REGULATED venue and uses an accounting/financing device that books revenue or hides leverage until a discrete unwind. AI 2025-26 rhymes precisely with dotcom (vendor financing) and 2008 (off-balance-sheet leverage), enabled by post-2008 deregulation and recurring market manipulation."
+  },
+  "analogues": [
+    {
+      "era": "Dotcom 1999-2002",
+      "device": "VENDOR FINANCING",
+      "fact": "Lucent, Nortel, Cisco extended billions in credit to telecom customers so they could buy the vendors' own equipment, booking the financed sales as revenue. Lucent had ~$8B of customer financing commitments; the loans soured as carriers (e.g. Winstar) failed in 2001. Nasdaq fell ~78% peak-to-trough (Mar 2000-Oct 2002).",
+      "modern_parallel": "NVIDIA -> OpenAI/CoreWeave/xAI/neocloud equity + take-or-pay backstops, which fund customers' purchases of NVIDIA GPUs. Same structure, larger scale (NVIDIA self-funding ratio ~18-56% - see data/graph.json).",
+      "source": ["https://en.wikipedia.org/wiki/Dot-com_bubble"]
+    },
+    {
+      "era": "GFC 2008",
+      "device": "OFF-BALANCE-SHEET leverage (SIVs, CDOs, ABCP)",
+      "fact": "Risk warehoused in off-balance-sheet vehicles invisible until 2007-08. FDIC bank failures spiked to 30 (2008), 148 (2009), 157 (2010) (macro-fdic.json). Glass-Steagall had been repealed by Gramm-Leach-Bliley in 1999.",
+      "modern_parallel": "AI datacenters financed via SPVs/JVs (Stargate, Meta-Hyperion/Blue Owl ~$27B) and private credit kept off the hyperscalers' balance sheets (macro-cre-privatecredit.json; First Brands as the canary, macro-firstbrands-ubs.json).",
+      "source": ["https://www.fdic.gov/quarterly-banking-profile"]
+    },
+    {
+      "era": "2022-2023 rate-shock + crypto",
+      "device": "Held-to-maturity accounting + uninsured-deposit runs + crypto leverage",
+      "fact": "Fed hiking cycle created huge unrealized securities losses (FDIC peak -$517B, 2024Q1); SVB (~$209-220B, Mar 2023), Signature (~$110B), First Republic (~$229B, largest since WaMu) failed; Silvergate wound down; FTX collapsed Nov 2022 (Sam Bankman-Fried). 2023 failed-bank assets ~$532B (macro-fdic.json).",
+      "modern_parallel": "The HTM/AFS unrealized-loss overhang persists (-$325B, 2026Q1; HTM -$214.5B is NOT marked to AOCI - the SVB failure mode). Rising long rates from the AI-debt issuance wave re-widen it.",
+      "source": ["https://www.fdic.gov/quarterly-banking-profile"]
+    }
+  ],
+  "deregulation_chain": [
+    {"step": "1999 Gramm-Leach-Bliley repeals Glass-Steagall", "effect": "Merges commercial + investment banking; sets up scale/concentration.", "source": ["https://en.wikipedia.org/wiki/Gramm%E2%80%93Leach%E2%80%93Bliley_Act"]},
+    {"step": "2010 Dodd-Frank", "effect": "Enhanced prudential standards for banks >$50B (stress tests, liquidity, resolution plans).", "source": ["https://www.federalreserve.gov/supervisionreg/dodd-frank-act.htm"]},
+    {"step": "2018 EGRRCPA (Economic Growth, Regulatory Relief and Consumer Protection Act)", "effect": "Raised the enhanced-supervision/SIFI threshold from $50B to $250B - exempting SVB and dozens of mid-size banks from regular stress testing and enhanced liquidity/resolution requirements. SVB CEO Greg Becker had lobbied for this since 2015.", "source": ["https://thehill.com/business/3900920-warren-porter-unveil-bill-to-undo-trump-era-dodd-frank-rollback-after-silicon-valley-bank-collapse/", "https://fortune.com/2023/03/11/silicon-valley-bank-svb-ceo-greg-becker-dodd-frank-trump-rollback-systemically-important-fdic/"]},
+    {"step": "2023 consequence", "effect": "SVB (~$209-220B, below the $250B line) failed having escaped enhanced oversight - the direct dereg->failure causal chain. Critics (Warren/Porter, Roosevelt Institute) tie the rollback to the collapse.", "source": ["https://rooseveltinstitute.org/blog/how-2018-regulatory-rollbacks-set-the-stage-for-the-silicon-valley-bank-collapse-and-how-to-change-course/"]}
+  ],
+  "market_manipulation": [
+    {"case": "JPMorgan precious-metals & Treasuries spoofing", "fact": "From 2008-2016 JPM traders placed hundreds of thousands of spoof orders in gold/silver/platinum/palladium/Treasury futures. Sept 29 2020: record $920.2M settlement (DOJ+CFTC+SEC). Traders (Nowak, Smith) convicted 2022, sentenced. ", "venue": "COMEX/CME, US Treasuries", "source": ["https://www.cftc.gov/PressRoom/PressReleases/8260-20", "https://www.justice.gov/archives/opa/pr/former-jp-morgan-precious-metals-traders-sentenced-prison"]},
+    {"case": "LME nickel / Tsingshan short squeeze", "fact": "March 2022: Chinese tycoon Xiang Guangda's Tsingshan held a massive nickel short; a squeeze spiked prices, and the LME SUSPENDED trading and CANCELLED ~$12B of trades (highly controversial; litigation followed). Separately, JPMorgan was left holding LME nickel warrants that turned out to be 'bags of rocks' (fake, 2023).", "venue": "London Metal Exchange", "source": ["https://fortune.com/2023/03/21/jpmorgan-fake-nickel-london-metal-exchange-bag-of-rocks/"]},
+    {"case": "SHFE / Chinese futures manipulation", "fact": "Recurring Chinese-exchange manipulation crackdowns (Shanghai Futures Exchange); state-linked players and the LME/SHFE/COMEX arb are repeated stress points (see commodities-metals.json for the 2025-26 COMEX-LME gold/copper dislocations).", "venue": "Shanghai Futures Exchange", "source": ["https://commodities-metals.json"]}
+  ],
+  "synthesis": "The AI bubble is not novel in mechanism, only in scale and in the speed/abstraction of its financing. Vendor financing (dotcom) + off-balance-sheet leverage (2008) + an HTM/AFS rate-shock overhang (2023) are ALL present simultaneously now, layered on a banking system deregulated at the margin (2018) and markets with a documented manipulation record (JPM/LME/SHFE). The formal cascade model (models/tla) treats these as the channels through which an AI-core shock propagates into the banking/credit system."
+}

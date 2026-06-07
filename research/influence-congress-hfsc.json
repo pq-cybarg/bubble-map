@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Congressional nexus - House Financial Services Committee, industry money, and foreign-influence VECTORS (graded)",
+    "generated": "2026-06-07",
+    "DISCIPLINE": "For named living officials, ONLY documented facts (committee role, public positions, public campaign-finance) are stated. 'Foreign leverage / kompromat over a specific member' is graded SPECULATIVE/UNSUPPORTED and is NOT asserted. Vectors are described as general, documented risks, not as proven against any individual.",
+    "provenance": "Web-verified (The Hill, CBS, TIME, Yahoo Finance, HFSC Democrats releases, OpenSecrets, FEC)."
+  },
+  "structural_nexus": {
+    "body": "House Financial Services Committee (HFSC)",
+    "why": "HFSC has jurisdiction over banks, housing/FHFA, securities, the CFPB, and digital assets/stablecoins - so EVERY industry in this analysis (mega banks, community banks, crypto/stablecoin, private credit, housing) concentrates lobbying and campaign money there. That concentration IS the structural leverage point - documented and BIPARTISAN, not specific to any member.",
+    "grade": "STRONG (documented, structural)"
+  },
+  "members": [
+    {
+      "name": "Maxine Waters (D-CA)",
+      "role": "Ranking Member, HFSC (former Chair)",
+      "documented_positions": [
+        "Worked on stablecoin legislation for years, then REVERSED to OPPOSE the GENIUS Act, citing that it would let the President (via Trump-family World Liberty Financial) own a stablecoin; labeled it 'anti-crypto corruption week' and a 'full-scale crypto con'.",
+        "Introduced the 'Stop TRUMP in Crypto Act of 2025'; sought to bar Presidents/Members of Congress from owning crypto assets/firms.",
+        "Raised a FOREIGN national-security concern: GENIUS 'leaves the door open for foreign firms that present a major national security threat.' (i.e., she publicly flagged foreign-issuer risk - aligning with the user's foreign-leverage concern as a POLICY matter).",
+        "GENIUS Act nonetheless passed with bipartisan support and was signed July 2025."
+      ],
+      "campaign_finance": "Finance/Insurance/Real Estate (FIRE) is historically a leading donor sector to HFSC members of BOTH parties (OpenSecrets profile: https://www.opensecrets.org/members-of-congress/maxine-waters/summary?cid=N00006690). Specific recent totals not asserted here to avoid error; see OpenSecrets/FEC primary data.",
+      "source": ["https://thehill.com/policy/technology/5406918-stablecoin-genius-act-house-crypto/", "https://democrats-financialservices.house.gov/news/documentsingle.aspx?DocumentID=413438", "https://finance.yahoo.com/news/rep-maxine-waters-warns-crypto-143140550.html", "https://www.opensecrets.org/members-of-congress/maxine-waters/summary?cid=N00006690"]
+    }
+  ],
+  "foreign_influence_vectors": [
+    {"vector": "FARA-registered foreign lobbying", "status": "documented general mechanism", "note": "Foreign governments/firms lawfully lobby Congress via FARA-registered agents; disclosure exists but influence is real."},
+    {"vector": "Campaign-finance laundering via LLCs/PACs", "status": "illegal; documented in past enforcement cases generally", "note": "Direct foreign campaign donations are illegal; laundering through shell LLCs/PACs has occurred in prosecuted cases - a general risk, NOT alleged against any member here."},
+    {"vector": "Foreign funding of US-influential NGOs/think tanks", "status": "documented in specific instances", "note": "e.g., Tony Blair Institute received Saudi + US-State-Dept funding (influence-tbi-policy.json); think-tank foreign funding shapes the policy environment Congress operates in - an INDIRECT vector."},
+    {"vector": "Industry capture via revolving door", "status": "documented, bipartisan, lawful", "note": "Staff/members moving to/from banks, crypto, law firms - ordinary influence, the dominant real mechanism."}
+  ],
+  "hypothesis_grade": "STRUCTURAL influence DOCUMENTED/STRONG; specific foreign 'leverage/kompromat' over a named member UNSUPPORTED",
+  "grade_reasoning": "The defensible finding is STRUCTURAL: HFSC's jurisdiction concentrates bank/crypto/housing/private-credit lobbying and FIRE-sector money, giving those institutions real, lawful, bipartisan influence over the members who write the rules (GENIUS Act, Basel III endgame, CFPB, deposit insurance). Maxine Waters' documented record actually shows her OPPOSING the industry-favored GENIUS Act and FLAGGING foreign-issuer national-security risk - the opposite of being captured by it on that bill. The user's stronger claim - that China or other foreign actors hold leverage/kompromat over specific members, directly or via NGOs - is NOT supported by available evidence and is not asserted; the legitimate foreign-influence VECTORS (FARA lobbying, donation laundering, foreign-funded think tanks, revolving door) are documented as general risks that operate on the policy ENVIRONMENT, not as proven control over any individual. Kept as an OVERLAY; not used in the formal proofs."
+}

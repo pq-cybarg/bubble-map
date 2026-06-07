@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "title": "Oil geopolitics + precious-metals backwardation (the physical-market stress signal)",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (EIA STEO, IEA Oil Market Reports, JPMorgan/Goldman, BullionStar, Investing.com/BofA, Andrew Maguire/Sprott, Seeking Alpha). Note: several precious-metals sources are bullion-dealer/analyst commentary - flagged as such.",
+    "frame": "Two simultaneous signals: (1) OIL whipsawed by geopolitics (Hormuz/Iran, Russia sanctions) on top of structural oversupply; (2) SILVER/GOLD BACKWARDATION = acute physical tightness and a 'paper vs physical' dislocation often read as forced/institutional pressure. Both feed the macro-rates and trust backdrop the AI bubble sits on."
+  },
+  "oil": {
+    "geopolitics": [
+      {"factor": "Iran / Strait of Hormuz", "fact": "De facto closure of the Strait of Hormuz from ~Feb 28 2026 (military action); ~20% of global oil supply transits Hormuz. Drove a price spike.", "source": ["https://www.iea.org/reports/oil-market-report-may-2026"]},
+      {"factor": "Russia sanctions", "fact": "~70% of Russian crude now under restrictions; flows redirected to China, Indian flows declining - a structural reshuffle of global crude trade.", "source": ["https://www.eia.gov/outlooks/steo/report/global_oil.php"]}
+    ],
+    "price_action": {"brent_april_2026_avg": 117, "note_spike": "Brent averaged ~$117 in April 2026 (highest since Jun 2022) on Hormuz disruption", "recent_settle_wti": 55.27, "recent_settle_brent": 58.92, "note_crash": "then fell to lowest since Feb 2021 on oversupply + weak demand", "forecasts_2026": {"jpmorgan_brent": 60, "goldman_wti": 53, "consensus_brent": 62}, "source": ["https://www.jpmorgan.com/insights/global-research/commodities/oil-prices", "https://oilprice.com/Energy/Crude-Oil/Why-Oil-Prices-are-Set-to-Fall-Below-60-Next-Year.html"]},
+    "read": "Extreme two-way volatility: a geopolitical supply shock (Iran/Hormuz, Russia) superimposed on OPEC+ oversupply and soft demand. Spiking oil = inflation/rates pressure (re-widens bank HTM losses, tightens the carry trade); crashing oil = demand-weakness signal. Either way it injects instability into the rate path the AI-debt complex depends on."
+  },
+  "precious_metals_backwardation": {
+    "signal": "BACKWARDATION (spot > futures) in silver/gold = the market paying a premium for METAL NOW vs paper claims later - the classic signature of a physical squeeze / distrust of paper settlement.",
+    "data": [
+      {"metric": "London 1-month silver lease rate", "value": "spiked to 39% (Oct 9), eased to ~32%", "normal": "<1% (was 6% in July)", "source": ["https://www.investing.com/analysis/silver-flashes-rare-warning-signal-as-physical-market-seizes-up--bofa-targets-65-200668602"]},
+      {"metric": "London vs COMEX silver", "value": "London trading ~$1.55 OVER New York COMEX", "normal": "arb closes within hours", "source": ["https://www.bullionstar.com/blogs/bullionstar/silver-enters-2026-in-a-state-of-structural-breakdown/"]},
+      {"metric": "EFP (Exchange for Physical) spread", "value": "collapsed to ~0.156c/oz from 64c two weeks earlier", "normal": "tightening EFP coincides with vault outflows / delivery stress", "source": ["https://seekingalpha.com/article/4855832-comex-physical-silver-demand-keeps-market-backwardation"]},
+      {"metric": "Shanghai silver premium", "value": "~$78.55/oz (industrial demand)", "source": ["https://www.ainvest.com/news/shanghai-silver-surges-industrial-demand-trading-78-55-ounce-premium-2512/"]},
+      {"metric": "BofA 2026 silver target", "value": "$65 (raised on physical seizure)", "source": ["https://www.investing.com/analysis/silver-flashes-rare-warning-signal-as-physical-market-seizes-up--bofa-targets-65-200668602"]}
+    ],
+    "four_forces": ["a physical run on paper silver (delivery demand)", "China export controls (critical-mineral squeeze)", "central-bank gold accumulation (de-dollarization)", "nuclear/AI + clean-energy industrial demand"],
+    "read": "Institutional traders taking COMEX delivery 'because it's the only accessible source' and a >30x lease-rate spike are forced-pressure / squeeze conditions. Consistent with commodities-metals.json (silver spiked toward $90-121 then pulled back to ~$67). The 'paper vs physical' fracture is the commodity-market analogue of the financial bubble's RPO-vs-cash gap: claims vastly exceed deliverable substance.",
+    "caveat": "Much silver-squeeze commentary comes from bullion dealers/permabull analysts; the lease-rate spike, EFP collapse, and London-COMEX gap are the hard, corroborated facts. Treat triple-digit price predictions as opinion."
+  },
+  "linkage_to_bubble": "Both the oil whipsaw and the precious-metals backwardation are stress fractures in the PHYSICAL economy that bound the AI/financial bubble: (1) they drive the rates/inflation path that governs bank HTM losses (macro-fdic.json) and the carry-trade unwind (macro-carry-trades.json); (2) the 'paper >> physical' dislocation in metals rhymes structurally with 'RPO/commitments >> cash' in the AI core (data/graph.json) and 'off-balance-sheet claims >> real receivables' in First Brands. The same pattern - promises far exceeding deliverable substance - appears in commodities, in credit, and in AI compute simultaneously."
+}

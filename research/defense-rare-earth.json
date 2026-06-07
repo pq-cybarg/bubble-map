@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "title": "Defense leg - primes + defense-tech x the rare-earth chokepoint",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (CSIS, Modern War Institute/West Point, GAO/CRS-cited reporting, TechCrunch/CNBC, DoD FY26 budget, Arnold/Dura Magnetics). Per-unit REE figures are widely-cited estimates (GAO/CRS lineage); treat as order-of-magnitude.",
+    "models": [
+      "models/graph/defense_web.py",
+      "models/z3/defense_chokepoint.py"
+    ]
+  },
+  "rare_earth_dependency": [
+    {
+      "system": "F-35",
+      "ree_kg_per_unit": 418,
+      "samarium_kg": 22.6,
+      "note": "~900 lbs REE/jet; SmCo magnets for high-temp (missile nose cones); Lockheed = largest US samarium user. Block 4 upgrade slipped 2026->2031, +$6B.",
+      "source": [
+        "https://mwi.westpoint.edu/minerals-magnets-and-military-capability-chinas-rare-earth-weaponization-should-be-a-wake-up-call/",
+        "https://aviationa2z.com/index.php/2025/09/15/china-rare-earth-monopoly-threatens-f-35-upgrade/"
+      ]
+    },
+    {
+      "system": "Virginia-class submarine",
+      "ree_kg_per_unit": 4200,
+      "samarium_kg": 50,
+      "note": "~9,200 lbs REE/boat",
+      "source": [
+        "https://moderndiplomacy.eu/2025/08/29/critical-minerals-and-critical-security-u-s-military-dependence-on-chinas-rare-earths/"
+      ]
+    },
+    {
+      "system": "Arleigh Burke destroyer",
+      "ree_kg_per_unit": 2360,
+      "samarium_kg": 30,
+      "source": [
+        "https://www.karveinternational.com/insights/the-impact-of-chinas-rare-earth-supply-chain-monopoly-on-national-security"
+      ]
+    },
+    {
+      "system": "Tomahawk/JDAM/Predator/radar",
+      "ree_kg_per_unit": 5,
+      "samarium_kg": 1,
+      "note": "per-missile small but volume is huge",
+      "source": [
+        "https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions"
+      ]
+    }
+  ],
+  "china_control": {
+    "mining_pct": 70,
+    "processing_pct": 90,
+    "samarium_pct": 100,
+    "heavy_ree_separation_pct": 99,
+    "controls": "Apr 2025: export licenses required on 7 heavy REEs (Sm, Gd, Tb, Dy, Lu, Sc, Y) + magnets. Dec 1 2025: entities affiliated with FOREIGN MILITARIES (incl. US) largely DENIED licenses; military-use requests auto-rejected. Nov 7 2025 Trump-Xi deal paused broad controls 1yr but RETAINED the military-supply chokehold.",
+    "source": [
+      "https://www.csis.org/analysis/chinas-new-rare-earth-and-magnet-restrictions-threaten-us-defense-supply-chains",
+      "https://www.geopolitechs.org/p/chinas-new-restriction-on-rare-earths"
+    ]
+  },
+  "domestic_response": {
+    "fact": "MP Materials (DoD ~15% equity + $110/kg NdPr floor + $150M loan + 10yr offtake) and USA Rare Earth not at full magnet scale until 2027-2028; samarium resilience 3-7 yrs; full mine-to-magnet 7-12+ yrs. DoD using DPA Title III + Office of Strategic Capital 'equity-like investments + offtake' (the state-as-vendor-financier model).",
+    "source": [
+      "https://www.arnoldmagnetics.com/blog/chinas-rare-earth-export-delays-2025-2026-magnet-supply-chain-outlook/",
+      "https://www.insidegovernmentcontracts.com/2026/03/defense-industrial-base-consortium-issues-new-critical-minerals-request-for-project-proposals/"
+    ]
+  },
+  "defense_tech": [
+    {
+      "name": "Anduril",
+      "valuation": "$30.5B (Jun-2025 Series G, Founders Fund led, $1B largest-ever FF check, 8x oversubscribed) -> $61B (May-2026 Series H, Thrive + a16z); revenue ~$2.2B 2025 (doubled). Army IVAS reassigned from Microsoft ($22B program, Feb 2026); Army enterprise contract consolidating 120 procurement actions (Mar 2026).",
+      "source": [
+        "https://techcrunch.com/2025/06/05/anduril-raises-2-5b-at-30-5b-valuation-led-by-founders-fund/",
+        "https://techcrunch.com/2026/05/13/anduril-raises-5b-doubles-valuation-to-61b/"
+      ]
+    },
+    {
+      "name": "Palantir",
+      "valuation": "~$350B market cap (approx, 2025-26); Army Maven Smart System; ~$10B Army enterprise agreement.",
+      "source": [
+        "https://www.csis.org/"
+      ]
+    }
+  ],
+  "dod_budget": {
+    "FY2026_topline_usd_b": 1000,
+    "detail": "$838.7B appropriations + $150B One Big Beautiful Bill; FY27 request ~$1,500B.",
+    "source": [
+      "https://breakingdefense.com/2026/04/trump-to-propose-1-5-trillion-defense-budget-banking-on-350-billion-from-reconciliation/"
+    ]
+  },
+  "proven_results": {
+    "chokepoint": "Z3: REE-independent flagship production is UNSAT for 2026 (supply ~1,700 kg vs ~5,550 kg/yr demand); earliest feasible year 2028; 2026-27 REQUIRES China. Binding constraint = mine-to-magnet years, not dollars.",
+    "debasement": "DoD budget +3.7x nominal (1998 $270B -> 2026 $1T) but -75% in gold (918M -> 233M oz). The $1T military buys ~25% of the gold the 1998 military did.",
+    "allied_mincut": "Max-flow/min-cut (data/allied_mincut.json): allies+domestic cannot meet demand without China until ~2028; the MIN-CUT is consistently midstream SEPARATION/magnet-making, NOT mining (allied mining ~11,000 kg/yr >> 5,550 demand). Re-shoring mines does not fix the gap; only midstream processing does."
+  }
+}

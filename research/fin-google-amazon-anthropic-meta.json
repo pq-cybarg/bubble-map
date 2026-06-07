@@ -1,0 +1,232 @@
+{
+  "as_of": "2026-06-05",
+  "description": "Second ring of the AI funding web: Google/Amazon/Anthropic triangle, Meta off-balance-sheet datacenter financing, custom-silicon (Broadcom/AMD/Marvell) commitments, and sovereign/Gulf capital. 'circular' = counterparty is simultaneously investor AND vendor to the same company.",
+  "entities": [
+    {"id": "GOOGL", "name": "Alphabet / Google (Google Cloud)", "type": "hyperscaler"},
+    {"id": "AMZN", "name": "Amazon / AWS", "type": "hyperscaler"},
+    {"id": "META", "name": "Meta Platforms", "type": "hyperscaler"},
+    {"id": "ANTHROPIC", "name": "Anthropic PBC", "type": "ai_lab"},
+    {"id": "OPENAI", "name": "OpenAI", "type": "ai_lab"},
+    {"id": "XAI", "name": "xAI", "type": "ai_lab"},
+    {"id": "AVGO", "name": "Broadcom", "type": "custom_silicon"},
+    {"id": "AMD", "name": "AMD", "type": "custom_silicon"},
+    {"id": "MRVL", "name": "Marvell", "type": "custom_silicon"},
+    {"id": "BLUEOWL", "name": "Blue Owl Capital", "type": "private_credit"},
+    {"id": "PIMCO", "name": "PIMCO", "type": "private_credit"},
+    {"id": "BLACKROCK", "name": "BlackRock", "type": "asset_manager"},
+    {"id": "APOLLO", "name": "Apollo", "type": "private_credit"},
+    {"id": "BLACKSTONE", "name": "Blackstone", "type": "private_credit"},
+    {"id": "MGX", "name": "MGX (Abu Dhabi, Mubadala+G42)", "type": "sovereign"},
+    {"id": "PIF", "name": "Public Investment Fund (Saudi)", "type": "sovereign"},
+    {"id": "QIA", "name": "Qatar Investment Authority", "type": "sovereign"},
+    {"id": "GIC", "name": "GIC (Singapore)", "type": "sovereign"},
+    {"id": "TEMASEK", "name": "Temasek (Singapore)", "type": "sovereign"},
+    {"id": "SOFTBANK", "name": "SoftBank / Vision Fund", "type": "investor"},
+    {"id": "COATUE", "name": "Coatue", "type": "investor"},
+    {"id": "ICONIQ", "name": "ICONIQ", "type": "investor"},
+    {"id": "FIDELITY", "name": "Fidelity", "type": "investor"},
+    {"id": "MSFT", "name": "Microsoft", "type": "hyperscaler"},
+    {"id": "NVDA", "name": "Nvidia", "type": "chipmaker"}
+  ],
+  "edges": [
+    {
+      "from": "GOOGL", "to": "ANTHROPIC", "instrument": "equity (~14% stake, capped 15%, no voting/board rights)",
+      "amount_usd": 3000000000, "date": "2023-2025", "status": "completed",
+      "circular": true,
+      "source": ["https://techcrunch.com/2025/03/11/google-has-given-anthropic-more-funding-than-previously-known-show-new-filings/", "https://www.computing.co.uk/news/2025/ai/google-revealed-to-hold-14-stake-in-anthropic"],
+      "confidence": "high",
+      "notes": ">$3B cumulative incl ~$750M tranche due Sept 2025; ~14% stake. No voting rights/board seats."
+    },
+    {
+      "from": "GOOGL", "to": "ANTHROPIC", "instrument": "equity investment (cash + contingent)",
+      "amount_usd": 40000000000, "date": "2026-04-24", "status": "announced",
+      "circular": true,
+      "source": ["https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic", "https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html", "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/"],
+      "confidence": "high",
+      "notes": "$10B cash now at $350B valuation + up to $30B contingent on performance targets. Bundled with 5GW Google Cloud compute over 5 years."
+    },
+    {
+      "from": "GOOGL", "to": "ANTHROPIC", "instrument": "TPU + Google Cloud compute (vendor)",
+      "amount_usd": 30000000000, "date": "2025-10-23", "status": "active",
+      "circular": true,
+      "source": ["https://www.googlecloudpresscorner.com/2025-10-23-Anthropic-to-Expand-Use-of-Google-Cloud-TPUs-and-Services", "https://www.cnbc.com/2025/10/23/anthropic-google-cloud-deal-tpu.html", "https://www.datacenterdynamics.com/en/news/google-and-anthropic-confirm-massive-1gw-cloud-deal-with-up-to-one-million-google-tpus/"],
+      "confidence": "high",
+      "notes": "'Up to 1 million TPU chips', 'well over a gigawatt coming online in 2026', value 'tens of billions'. amount_usd is approx midpoint. Builds on 2023 partnership. INVESTOR=VENDOR."
+    },
+    {
+      "from": "GOOGL", "to": "ANTHROPIC", "instrument": "TPU compute expansion (~3.5GW, Broadcom-codeveloped TPUs)",
+      "amount_usd": 21000000000, "date": "2026-04-06", "status": "announced",
+      "circular": true,
+      "source": ["https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html", "https://techcrunch.com/2026/04/07/anthropic-compute-deal-google-broadcom-tpus/", "https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic"],
+      "confidence": "medium",
+      "notes": "~3.5GW TPU access; amount_usd is analyst estimate of Broadcom 2026 rev from Anthropic arrangement, NOT company-disclosed contract value."
+    },
+    {
+      "from": "AMZN", "to": "ANTHROPIC", "instrument": "equity (initial + add-ons to $8B)",
+      "amount_usd": 8000000000, "date": "2023-09 to 2024-11", "status": "completed",
+      "circular": true,
+      "source": ["https://www.aboutamazon.com/news/company-news/amazon-invests-additional-5-billion-anthropic-ai"],
+      "confidence": "high",
+      "notes": "$1.25B (Sep 2023) + $2.75B (2024) + $4B (Nov 2024) = $8B. AWS = primary cloud/training partner."
+    },
+    {
+      "from": "AMZN", "to": "ANTHROPIC", "instrument": "equity (cash now + contingent)",
+      "amount_usd": 25000000000, "date": "2026-04-20", "status": "announced",
+      "circular": true,
+      "source": ["https://www.anthropic.com/news/anthropic-amazon-compute", "https://capacityglobal.com/news/amazon-anthropic-investent-ai-cloud-technology/"],
+      "confidence": "high",
+      "notes": "$5B now + up to $20B future, on top of prior $8B (=> up to ~$33B cumulative)."
+    },
+    {
+      "from": "ANTHROPIC", "to": "AMZN", "instrument": "AWS compute commitment (Trainium2/3, Project Rainier, 5GW)",
+      "amount_usd": 100000000000, "date": "2026-04-20", "status": "active",
+      "circular": true,
+      "source": ["https://www.anthropic.com/news/anthropic-amazon-compute", "https://www.datacenterdynamics.com/en/news/aws-activates-project-rainier-cluster-of-nearly-500000-trainium2-chips/", "https://siliconangle.com/2025/10/29/aws-opens-11b-project-rainier-data-center-campus-built-anthropic/"],
+      "confidence": "high",
+      "notes": "Anthropic committed '>$100B over 10 years to AWS'. Up to 5GW; >1M Trainium2 chips; ~1GW Trainium2/3 online by end-2026. Project Rainier ~500k Trainium2, ~$11B Indiana campus. THE CLEAREST circular round-trip: Amazon invests, Anthropic pays it back to AWS."
+    },
+    {
+      "from": "GIC", "to": "ANTHROPIC", "instrument": "Series G equity (co-lead)",
+      "amount_usd": null, "date": "2026-02-12", "status": "completed",
+      "circular": false,
+      "source": ["https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"],
+      "confidence": "high",
+      "notes": "GIC + Coatue led the $30B round at $380B post-money."
+    },
+    {
+      "from": "MGX", "to": "ANTHROPIC", "instrument": "Series G equity (co-lead)",
+      "amount_usd": null, "date": "2026-02-12", "status": "completed",
+      "circular": false,
+      "source": ["https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation", "https://www.bloomberg.com/news/articles/2026-02-17/openai-anthropic-deals-power-abu-dhabi-s-100-billion-ai-bet"],
+      "confidence": "high",
+      "notes": "MGX (UAE sovereign) co-led. Round total $30B / $380B post-money."
+    },
+    {
+      "from": "ANTHROPIC_INVESTORS", "to": "ANTHROPIC", "instrument": "Series G round (total)",
+      "amount_usd": 30000000000, "date": "2026-02-12", "status": "completed",
+      "circular": false,
+      "source": ["https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation"],
+      "confidence": "high",
+      "notes": "$30B raised at $380B post-money (Jan 2026 term sheet was ~$10B/$350B; expanded ~3x). Leads GIC+Coatue; co-leads DE Shaw, Dragoneer, Founders Fund, ICONIQ, MGX. Also QIA, Temasek, Fidelity, BlackRock, Blackstone, Sequoia, Microsoft, Nvidia."
+    },
+    {
+      "from": "BLUEOWL", "to": "META_HYPERION_JV", "instrument": "off-balance-sheet JV equity + debt (SPV)",
+      "amount_usd": 27000000000, "date": "2025-10-21", "status": "completed",
+      "circular": false,
+      "source": ["https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/", "https://www.cnbc.com/2025/10/21/meta-blue-owl-capital-partner-on-27-billion-ai-data-center-project-.html", "https://www.datacenterdynamics.com/en/news/meta-forms-27-billion-joint-venture-with-blue-owl-to-fund-gigawatt-scale-ai-data-center-campus-in-louisiana/"],
+      "confidence": "high",
+      "notes": "~$27B total dev cost. Blue Owl owns 80%, Meta 20%. Blue Owl ~$7B cash; Meta got ~$3B one-time distribution. Debt to PIMCO + bond investors via private offering; Morgan Stanley arranged. Capped 16-yr residual value guarantee. Reported largest private-credit deal ever (~$30B incl equity). Hyperion: Richland Parish LA, >4M sqft, up to 5GW, ~2029. OFF-BALANCE-SHEET."
+    },
+    {
+      "from": "PIMCO", "to": "META_HYPERION_JV", "instrument": "private bond/debt (anchor lender)",
+      "amount_usd": 18000000000, "date": "2025-10-21", "status": "completed",
+      "circular": false,
+      "source": ["https://www.datacenterdynamics.com/en/news/meta-forms-27-billion-joint-venture-with-blue-owl-to-fund-gigawatt-scale-ai-data-center-campus-in-louisiana/", "https://pe-insights.com/blue-owl-and-meta-close-record-30bn-financing-for-ai-data-centre-expansion-in-louisiana/"],
+      "confidence": "medium",
+      "notes": "~$18B per secondary press. Meta's own release names PIMCO only, no amount. UNVERIFIED split."
+    },
+    {
+      "from": "BLACKROCK", "to": "META_HYPERION_JV", "instrument": "private debt",
+      "amount_usd": 3000000000, "date": "2025-10-21", "status": "completed",
+      "circular": false,
+      "source": ["https://pe-insights.com/blue-owl-and-meta-close-record-30bn-financing-for-ai-data-centre-expansion-in-louisiana/"],
+      "confidence": "low",
+      "notes": ">$3B per secondary press; NOT named in Meta's official release. UNVERIFIED."
+    },
+    {
+      "from": "BONDMARKET", "to": "META", "instrument": "corporate bonds (6-part)",
+      "amount_usd": 30000000000, "date": "2025-10-30", "status": "completed",
+      "circular": false,
+      "source": ["https://www.bloomberg.com/news/articles/2025-10-30/meta-sets-bond-sale-at-30-billion-biggest-offering-of-the-year", "https://www.fi-desk.com/origination-meta-sold-us30-billion-of-ai-bonds-on-30-october/"],
+      "confidence": "high",
+      "notes": "$30B, largest US corp bond of 2025; ~$125B orders. Maturities 5/7/10/20/30/40yr. On-balance-sheet (contrast with Hyperion SPV)."
+    },
+    {
+      "from": "META", "to": "CAPEX", "instrument": "capital expenditure FY2026 guidance",
+      "amount_usd": 115000000000, "date": "2026", "status": "guidance",
+      "circular": false,
+      "source": ["https://wolfstreet.com/2026/02/07/amzn-goog-msft-meta-orcl-plan-700-billion-in-largely-ai-related-capex-in-2026-heres-where-the-cash-comes-from/"],
+      "confidence": "low",
+      "notes": "FY26 guidance spans ~$115B-$125B across sources; FY25 ~$70-72B. Hyperscaler aggregate 2026 capex ~$700B."
+    },
+    {
+      "from": "OPENAI", "to": "AVGO", "instrument": "custom XPU accelerators (10GW)",
+      "amount_usd": null, "date": "2025-10-13", "status": "announced",
+      "circular": false,
+      "source": ["https://openai.com/index/openai-and-broadcom-announce-strategic-collaboration/", "https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-announce-strategic-collaboration-deploy-10", "https://www.cnbc.com/2025/10/13/openai-partners-with-broadcom-custom-ai-chips-alongside-nvidia-amd.html"],
+      "confidence": "high",
+      "notes": "10GW OpenAI-designed accelerators, co-developed/deployed with Broadcom. First deploy H2 2026; 3nm/2nm; through 2029; 1.3GW targeted 2027. No public dollar value."
+    },
+    {
+      "from": "GOOGL", "to": "AVGO", "instrument": "TPU supply agreement (custom silicon)",
+      "amount_usd": null, "date": "2026-04-06", "status": "announced",
+      "circular": false,
+      "source": ["https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html", "https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia"],
+      "confidence": "medium",
+      "notes": "Broadcom develops/supplies future TPU generations; contract reported through 2031. ~$46B figure cited by some analysts is a model, not disclosed."
+    },
+    {
+      "from": "META", "to": "AVGO", "instrument": "MTIA custom silicon (extended through 2029)",
+      "amount_usd": null, "date": "2026-04-14", "status": "announced",
+      "circular": false,
+      "source": ["https://www.tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia", "https://nerdleveltech.com/meta-broadcom-mtia-deal-1gw-custom-ai-silicon"],
+      "confidence": "medium",
+      "notes": ">1GW initial, multi-GW scale-up; ~3GW through end-2028."
+    },
+    {
+      "from": "ANTHROPIC", "to": "AVGO", "instrument": "custom silicon / TPU (via Google TPUs co-developed by Broadcom)",
+      "amount_usd": null, "date": "2026-04", "status": "announced",
+      "circular": false,
+      "source": ["https://futurumgroup.com/insights/anthropics-gigawatt-scale-tpu-deal-with-broadcom-creates-a-structural-advantage/", "https://www.bloomberg.com/news/articles/2026-04-06/broadcom-confirms-deal-to-ship-google-tpu-chips-to-anthropic"],
+      "confidence": "medium",
+      "notes": "1GW in 2026, +5GW from 2027. Anthropic buys TPU access, Broadcom builds the TPUs for Google."
+    },
+    {
+      "from": "AVGO", "to": "AI_BACKLOG", "instrument": "AI semiconductor revenue/backlog (Q2 FY2026)",
+      "amount_usd": 56000000000, "date": "2026-06-03", "status": "guidance",
+      "circular": false,
+      "source": ["https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript/", "https://www.techtimes.com/articles/317703/20260603/broadcom-earnings-record-ai-revenue-hits-108b-stock-slips-software-miss.htm"],
+      "confidence": "high",
+      "notes": "Q2 FY26 AI revenue $10.8B (+143% YoY); AI bookings >$30B in quarter; Q3 guide ~$16B; FY26 AI ~$56B; 2027 >$100B reiterated. 6 custom-XPU customers (Google, Meta, OpenAI, Anthropic + 2 unnamed). Consolidated backlog ~$110B."
+    },
+    {
+      "from": "APOLLO_BLACKSTONE", "to": "AVGO_XPU_PLATFORM", "instrument": "compute-financing platform (>20GW, first tranche ~$35B)",
+      "amount_usd": 35000000000, "date": "2026-06-03", "status": "announced",
+      "circular": false,
+      "source": ["https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript/"],
+      "confidence": "medium",
+      "notes": "Broadcom AI XPU Platform w/ Apollo, Blackstone et al to deploy >20GW; first tranche ~$35B. A new off-balance-sheet financing vehicle mirroring Meta's SPV approach."
+    },
+    {
+      "from": "AMD", "to": "OPENAI", "instrument": "warrant (~160M shares ~10%) tied to ~6GW MI450 deployment",
+      "amount_usd": null, "date": "2025-10", "status": "announced",
+      "circular": true,
+      "source": ["https://www.cnbc.com/2025/10/13/openai-partners-with-broadcom-custom-ai-chips-alongside-nvidia-amd.html"],
+      "confidence": "medium",
+      "notes": "Noted for completeness; detailed in core-ring file. ~6GW Instinct; warrant for up to ~160M AMD shares vesting on deployment/price milestones. OpenAI is both customer and (via warrant) equity holder."
+    },
+    {
+      "from": "MGX", "to": "OPENAI", "instrument": "equity + Stargate partner ($7B)",
+      "amount_usd": 7000000000, "date": "2025-2026", "status": "active",
+      "circular": false,
+      "source": ["https://www.bloomberg.com/news/articles/2026-02-17/openai-anthropic-deals-power-abu-dhabi-s-100-billion-ai-bet", "https://en.wikipedia.org/wiki/Stargate_LLC", "https://www.menabytes.com/openai-pif-mgx/"],
+      "confidence": "medium",
+      "notes": "MGX = Stargate partner ($7B, 40% with Oracle vs SoftBank/OpenAI 40% each at $19B). Also OpenAI investor; PIF in talks on OpenAI ~$40B round."
+    },
+    {
+      "from": "MGX", "to": "XAI", "instrument": "equity (co-lead, Jan 2026 round)",
+      "amount_usd": null, "date": "2026-01", "status": "completed",
+      "circular": false,
+      "source": ["https://enterpriseam.com/uae/issues/mgx-now-backs-anthropic-xai-and-openai/"],
+      "confidence": "medium",
+      "notes": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
+    }
+  ],
+  "unverifiable_or_soft": [
+    "Hyperion debt split PIMCO ~$18B / BlackRock >$3B - secondary press only; Meta release names PIMCO only, no amounts.",
+    "Meta FY2026 capex exact figure spans ~$115B-$125B across sources.",
+    "Anthropic next round >$900B valuation and 2026 IPO - rumor/talks, not closed as of 2026-06-05.",
+    "Broadcom 2 unnamed XPU customers (analyst guesses Apple, ByteDance) - unconfirmed.",
+    "Per-deal Broadcom revenue estimates (~$21B Anthropic, ~$46B Google) are analyst models, not disclosed."
+  ]
+}

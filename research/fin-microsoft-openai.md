@@ -1,0 +1,29 @@
+# Microsoft ↔ OpenAI
+
+*Generated 2026-06-06. Compiled from primary sources (Microsoft/OpenAI blogs, SEC 8-K ex99 accession 000119312525256310, accounting analyses) + flagged knowledge fills.*
+
+## The arrangement
+
+- **Cumulative investment ~$13B** (from ~$1B in 2019 through 2023). A **large portion delivered as Azure credits**, not cash — so OpenAI "spends" Microsoft's investment back into Microsoft's own cloud. *[exact cash/credit split never itemized — med confidence]*
+- **Oct 28 2025 restructuring** (definitive): Microsoft holds **~27% of the new OpenAI Group PBC**, reported value **~$135B**. IP rights through **~2032**; reciprocal revenue-share (reported cap **~$38B**); **Azure right-of-first-refusal removed** (OpenAI free to use Oracle/CoreWeave/Google).
+- **OpenAI's incremental $250B Azure commitment** — a quarter-trillion-dollar purchase pledge to the cloud of its own 27% owner.
+- **Apr 27 2026 "next phase" deal** supersedes the Oct 2025 terms; the equity + Azure-commitment architecture persists.
+
+## The round-trips (why this is circular)
+
+1. **Credits round-trip:** Microsoft funds OpenAI partly in Azure credits → OpenAI consumes Azure → Microsoft books it as Azure revenue. Microsoft both funds and is paid by the same dollar.
+2. **Commitment round-trip:** OpenAI raises cash (SoftBank, Nvidia, sovereigns) → pledges $250B to Azure → Azure buys Nvidia GPUs (Nvidia also funds OpenAI). The dollar circles supplier→customer→supplier.
+3. **Equity-method drag (the honest counterweight):** OpenAI's *net loss* flows onto Microsoft's income statement. **Q1 FY26 hit: $3.1B / $0.41 EPS**, up **6×** from $523M / $0.07 a year earlier. OpenAI's burn is now a visible, accelerating cost to Microsoft GAAP earnings — the circularity cuts both ways.
+
+## Scale anchors
+
+| Item | Value | Period |
+|---|---|---|
+| MSFT stake in OpenAI | ~27% (~$135B) | Oct 2025 |
+| OpenAI → Azure commitment (incremental) | **$250B** | Oct 2025 |
+| MSFT FY25 capex (P&E, excl. leases) | **$64.55B** (FY24 $44.48B) | FY2025 |
+| MSFT commercial RPO | **$631B** | Q2 FY26 |
+| OpenAI equity-method loss to MSFT | **$3.1B/qtr** | Q1 FY26 |
+| OpenAI revenue run-rate vs commitments | ~$13–20B vs **~$1.4T** | 2025–26 |
+
+The last row is the crux: OpenAI has pledged on the order of **$1.4 trillion** in compute (Azure $250B + Oracle ~$300B + CoreWeave ~$22B + Broadcom/AMD/Nvidia/SoftBank) against a revenue run-rate **~70× smaller**. Every node in the web has booked a slice of that $1.4T as backlog/RPO/expected revenue.

@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "title": "First Brands collapse + UBS/O'Connor: the off-balance-sheet private-credit canary",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (Bloomberg, AdvisorHub, finews, ABF Journal, swissinfo, Fed FSR reporting).",
+    "why_it_matters": "First Brands is the 2025 dress rehearsal for the SAME off-balance-sheet financing structure used to fund AI datacenters (Stargate SPV, Meta-Hyperion/Blue Owl JV, GPU-collateralized neocloud debt). It shows how opaque factoring/supply-chain-finance + private credit can hide leverage until a sudden, fraudulent-or-not unwind - and how the losses surface at banks (UBS, Jefferies) and nonbanks simultaneously."
+  },
+  "events": [
+    {"date": "2025-09", "event": "First Brands Group (auto-parts roll-up) files Chapter 11.", "source": ["https://www.abfjournal.com/middle-market-debt-weekly-first-brands-collapse-spurs-scrutiny-of-off-balance-sheet-financing/"]},
+    {"date": "2025-11-04", "event": "Fraud allegations detailed: ~$700M misappropriated, invoices inflated ~50x, $2.3B in missing receivables; alleged fraudulent operation 2018-2025; financed by Jefferies, UBS and multiple banks.", "source": ["https://www.ctol.digital/news/ubs-half-billion-hit-first-brands-bankruptcy/"]},
+    {"date": "2025-11-06", "event": "UBS winds down two O'Connor Working Capital Finance Opportunistic funds with First Brands exposure.", "source": ["https://www.bloomberg.com/news/articles/2025-11-06/ubs-to-wind-down-o-connor-funds-with-first-brands-exposure", "https://www.advisorhub.com/ubs-winds-down-oconnor-funds-in-sign-of-first-brands-strain/"]},
+    {"date": "2025-11-07", "event": "US Federal Reserve Financial Stability Report explicitly cites an 'auto parts supplier' bankruptcy and warns on 'risks from opaque off-balance-sheet funding, potentially amplifying spillovers to banks and nonbanks.'", "source": ["https://www.abfjournal.com/middle-market-debt-weekly-first-brands-collapse-spurs-scrutiny-of-off-balance-sheet-financing/"]}
+  ],
+  "metrics": [
+    {"name": "UBS HFS + O'Connor total First Brands exposure", "value": 500000000, "unit": "USD", "date": "2025-11", "source": ["https://www.ctol.digital/news/ubs-half-billion-hit-first-brands-bankruptcy/"], "notes": "Largest unsecured creditor group: $349.8M supply-chain-finance claims (HFS $233.7M + O'Connor $116.1M unsecured) plus secured exposure pushing total >$500M."},
+    {"name": "O'Connor Working Capital fund concentration in First Brands", "value": 30, "unit": "percent", "date": "2025", "source": ["https://www.swissinfo.ch/eng/global-trade/ubs-fund-holds-30-exposure-linked-to-first-brands/90131444"], "notes": "Single-name concentration far beyond standard portfolio limits - the fragility signature of reaching for yield in opaque private credit."},
+    {"name": "Expected UBS fund NAV recovery", "value": 70, "unit": "percent", "date": "2025-11", "source": ["https://www.advisorhub.com/ubs-winds-down-oconnor-funds-in-sign-of-first-brands-strain/"], "notes": "~$0.70 on the dollar expected to be monetized by year-end - i.e. ~30% loss on a supposedly low-risk invoice-finance strategy."},
+    {"name": "Missing receivables", "value": 2300000000, "unit": "USD", "date": "2025-11", "source": ["https://www.ctol.digital/news/ubs-half-billion-hit-first-brands-bankruptcy/"], "notes": "$2.3B of receivables financed multiple times / unaccounted - the off-balance-sheet leakage."}
+  ],
+  "chain_edges": [
+    {"from": "First_Brands", "to": "UBS_OConnor", "instrument": "supply_chain_finance_loss", "amount_usd": 500000000, "date": "2025", "source": ["https://www.ctol.digital/news/ubs-half-billion-hit-first-brands-bankruptcy/"], "notes": "Loss path: opaque factoring obligor -> private-credit fund -> bank-affiliated asset manager."},
+    {"from": "First_Brands", "to": "Jefferies", "instrument": "private_credit_loss", "amount_usd": null, "date": "2025", "source": ["https://www.ctol.digital/news/ubs-half-billion-hit-first-brands-bankruptcy/"], "notes": "Jefferies/Leucadia (Point Bonita) also exposed; second canary alongside Tricolor (subprime auto) in 2025."}
+  ],
+  "linkage_to_ai_bubble": "Same structural DNA as AI-datacenter financing: leverage moved off the balance sheet into factoring/SPVs/private credit, invisible until a discrete unwind, with losses landing at BOTH a globally-systemic bank (UBS) and nonbanks. The Fed naming it in the FSR is the regulator pre-positioning for the bigger version of this risk sitting in Stargate/Hyperion/GPU-backed neocloud debt (see macro-cre-privatecredit.json)."
+}

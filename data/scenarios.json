@@ -1,0 +1,35 @@
+{
+  "demand_samarium_kg": 5550,
+  "scenarios": {
+    "BASE": {
+      "capital_gap_usd_b": 1090,
+      "self_finance": "unsat",
+      "solvent_at_tap": true,
+      "ree_independent_year": 2028,
+      "power_adequate_year": null,
+      "haleu_year": null,
+      "commitments_gold_Moz": 326,
+      "verdict": "FRAGILE"
+    },
+    "BULL": {
+      "capital_gap_usd_b": 40,
+      "self_finance": "unsat",
+      "solvent_at_tap": true,
+      "ree_independent_year": 2028,
+      "power_adequate_year": 2026,
+      "haleu_year": 2027,
+      "commitments_gold_Moz": 400,
+      "verdict": "RESILIENT"
+    },
+    "BEAR": {
+      "capital_gap_usd_b": 1331,
+      "self_finance": "unsat",
+      "solvent_at_tap": false,
+      "ree_independent_year": 2029,
+      "power_adequate_year": null,
+      "haleu_year": null,
+      "commitments_gold_Moz": 233,
+      "verdict": "BREAKS"
+    }
+  }
+}

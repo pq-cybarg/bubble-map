@@ -1,0 +1,2373 @@
+{
+  "eras": {
+    "E1": "1998-2007 dereg/dotcom/PayPal",
+    "E2": "2008-2019 GFC/QE/crypto-birth",
+    "E3": "2020-2026 AI/identity/stablecoin"
+  },
+  "n_nodes": 123,
+  "n_edges": 179,
+  "nodes": {
+    "PayPal": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 619.3,
+      "degree": 6,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Peter Thiel": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 687.4,
+      "degree": 7,
+      "layer_span": 5,
+      "era_span": 3
+    },
+    "Elon Musk": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 261.6,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Reid Hoffman": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 257.4,
+      "degree": 5,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Max Levchin": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "David Sacks": {
+      "layer": "payments",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "GLBA 1999": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "event",
+      "betweenness": 576.8,
+      "degree": 6,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Glass-Steagall": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "law",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Larry Summers": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 751.9,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Robert Rubin": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 112.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Alan Greenspan": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Phil Gramm": {
+      "layer": "finance_dereg",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Dodd-Frank 2010": {
+      "layer": "finance_dereg",
+      "era_first": "E2",
+      "kind": "law",
+      "betweenness": 222.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "EGRRCPA 2018": {
+      "layer": "finance_dereg",
+      "era_first": "E2",
+      "kind": "law",
+      "betweenness": 112.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Citigroup": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "LTCM 1998": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "event",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Enron 2001": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "event",
+      "betweenness": 12.3,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Dotcom 2000": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "event",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "GFC 2008": {
+      "layer": "structure",
+      "era_first": "E2",
+      "kind": "event",
+      "betweenness": 476.7,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Too-Interconnected-to-Fail": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "pattern",
+      "betweenness": 477.1,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Off-Balance-Sheet SPV": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "pattern",
+      "betweenness": 491.4,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Vendor Financing": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "pattern",
+      "betweenness": 112.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Mark-to-Market Revenue": {
+      "layer": "structure",
+      "era_first": "E1",
+      "kind": "pattern",
+      "betweenness": 36.9,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "OpenAI": {
+      "layer": "ai_core",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 2889.4,
+      "degree": 14,
+      "layer_span": 6,
+      "era_span": 3
+    },
+    "Sam Altman": {
+      "layer": "ai_core",
+      "era_first": "E2",
+      "kind": "person",
+      "betweenness": 13.8,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "NVIDIA": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 549.0,
+      "degree": 8,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Jensen Huang": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Microsoft": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Oracle": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 511.3,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "CoreWeave": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 112.0,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "Anthropic": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 263.6,
+      "degree": 6,
+      "layer_span": 4,
+      "era_span": 2
+    },
+    "Amazon": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Google": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 112.0,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "xAI": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 98.4,
+      "degree": 5,
+      "layer_span": 5,
+      "era_span": 2
+    },
+    "SoftBank": {
+      "layer": "sovereign",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 239.5,
+      "degree": 5,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Stargate": {
+      "layer": "ai_core",
+      "era_first": "E3",
+      "kind": "spv",
+      "betweenness": 966.4,
+      "degree": 6,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "Founders Fund": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 136.1,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Greylock": {
+      "layer": "ai_core",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "SpaceX": {
+      "layer": "defense",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 198.7,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Bitcoin": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "proto",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Ethereum": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "proto",
+      "betweenness": 974.8,
+      "degree": 7,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Vitalik Buterin": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "person",
+      "betweenness": 51.1,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Thiel Fellowship": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "prog",
+      "betweenness": 78.7,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Worldcoin/World ID": {
+      "layer": "identity",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 221.5,
+      "degree": 4,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "Circle/USDC": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 725.5,
+      "degree": 6,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "Ripple": {
+      "layer": "crypto",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 480.5,
+      "degree": 5,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "Stellar": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Jed McCaleb": {
+      "layer": "crypto",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 223.0,
+      "degree": 3,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Mt. Gox": {
+      "layer": "crypto",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "William Hinman": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Simpson Thacher": {
+      "layer": "crypto",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Bullish/Bitmine": {
+      "layer": "crypto",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Larry Ellison": {
+      "layer": "identity",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 27.6,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Tony Blair Institute": {
+      "layer": "identity",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 65.2,
+      "degree": 4,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "UK Digital ID": {
+      "layer": "identity",
+      "era_first": "E3",
+      "kind": "policy",
+      "betweenness": 324.7,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Palantir": {
+      "layer": "defense",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 107.0,
+      "degree": 4,
+      "layer_span": 4,
+      "era_span": 2
+    },
+    "Meta": {
+      "layer": "identity",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 152.0,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "Digital Childhood Alliance": {
+      "layer": "identity",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 17.0,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "TikTok US": {
+      "layer": "identity",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Anduril": {
+      "layer": "defense",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 226.1,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Palmer Luckey": {
+      "layer": "defense",
+      "era_first": "E3",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "MP Materials": {
+      "layer": "defense",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 0,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "DoD": {
+      "layer": "defense",
+      "era_first": "E1",
+      "kind": "gov",
+      "betweenness": 9.9,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "BlackRock": {
+      "layer": "private_credit",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 520.9,
+      "degree": 4,
+      "layer_span": 4,
+      "era_span": 2
+    },
+    "Larry Fink": {
+      "layer": "private_credit",
+      "era_first": "E2",
+      "kind": "person",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Blackstone": {
+      "layer": "private_credit",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Apollo": {
+      "layer": "private_credit",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 50.8,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Leon Black": {
+      "layer": "private_credit",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 23.4,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "PIMCO": {
+      "layer": "private_credit",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Blue Owl": {
+      "layer": "private_credit",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 150.3,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "First Brands": {
+      "layer": "private_credit",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 267.6,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "UBS": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 124.3,
+      "degree": 2,
+      "layer_span": 3,
+      "era_span": 2
+    },
+    "JPMorgan": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 43.9,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "SVB 2023": {
+      "layer": "banking",
+      "era_first": "E3",
+      "kind": "event",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "GENIUS Act 2025": {
+      "layer": "banking",
+      "era_first": "E3",
+      "kind": "law",
+      "betweenness": 336.5,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "ICBA": {
+      "layer": "banking",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "ABA": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Joint Bank Stablecoin": {
+      "layer": "banking",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 187.2,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "MGX": {
+      "layer": "sovereign",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 294.5,
+      "degree": 5,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "PIF/Mubadala": {
+      "layer": "sovereign",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 2.8,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Jeffrey Epstein": {
+      "layer": "epstein",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 158.2,
+      "degree": 3,
+      "layer_span": 3,
+      "era_span": 1
+    },
+    "Bill Gates": {
+      "layer": "epstein",
+      "era_first": "E1",
+      "kind": "person",
+      "betweenness": 26.5,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "MUFG": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "SBI Holdings": {
+      "layer": "crypto",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 238.0,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Arm": {
+      "layer": "ai_core",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 13.6,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "a16z": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 1797.2,
+      "degree": 6,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "Tencent": {
+      "layer": "china_tech",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 10.0,
+      "degree": 5,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "Alibaba": {
+      "layer": "china_tech",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 112.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Ant Group": {
+      "layer": "china_tech",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 222.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Naspers/Prosus": {
+      "layer": "china_tech",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 1
+    },
+    "Riot Games": {
+      "layer": "games_media",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Epic Games": {
+      "layer": "games_media",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Universal Music": {
+      "layer": "games_media",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Reddit": {
+      "layer": "games_media",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "SCMP": {
+      "layer": "games_media",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "UnionPay": {
+      "layer": "payments_infra",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 76.6,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Visa": {
+      "layer": "payments_infra",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 460.3,
+      "degree": 4,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "Mastercard": {
+      "layer": "payments_infra",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 484.0,
+      "degree": 5,
+      "layer_span": 4,
+      "era_span": 3
+    },
+    "EMVCo": {
+      "layer": "payments_infra",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 194.9,
+      "degree": 3,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Swift": {
+      "layer": "payments_infra",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 33.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "BIS": {
+      "layer": "payments_infra",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Project Agora": {
+      "layer": "payments_infra",
+      "era_first": "E3",
+      "kind": "proj",
+      "betweenness": 495.2,
+      "degree": 7,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "WEF": {
+      "layer": "identity",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Jefferies": {
+      "layer": "private_credit",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "HSBC": {
+      "layer": "banking",
+      "era_first": "E1",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Collective Shout": {
+      "layer": "identity",
+      "era_first": "E3",
+      "kind": "org",
+      "betweenness": 34.9,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Maxine Waters": {
+      "layer": "congress",
+      "era_first": "E2",
+      "kind": "person",
+      "betweenness": 172.1,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "HFSC": {
+      "layer": "congress",
+      "era_first": "E1",
+      "kind": "gov",
+      "betweenness": 133.7,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "OneUnited Bank": {
+      "layer": "banking",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 150.7,
+      "degree": 2,
+      "layer_span": 3,
+      "era_span": 1
+    },
+    "Coinbase": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 280.0,
+      "degree": 4,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Kraken": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 1,
+      "era_span": 2
+    },
+    "Binance": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "Hedera": {
+      "layer": "crypto",
+      "era_first": "E2",
+      "kind": "org",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "CLARITY Act": {
+      "layer": "crypto",
+      "era_first": "E3",
+      "kind": "law",
+      "betweenness": 36.6,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "Fairshake PAC": {
+      "layer": "crypto",
+      "era_first": "E3",
+      "kind": "pac",
+      "betweenness": 592.3,
+      "degree": 6,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "Tornado Cash": {
+      "layer": "threat_actor",
+      "era_first": "E2",
+      "kind": "mixer",
+      "betweenness": 0.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Samourai Wallet": {
+      "layer": "threat_actor",
+      "era_first": "E2",
+      "kind": "mixer",
+      "betweenness": 0.0,
+      "degree": 1,
+      "layer_span": 2,
+      "era_span": 1
+    },
+    "Lazarus Group": {
+      "layer": "threat_actor",
+      "era_first": "E2",
+      "kind": "group",
+      "betweenness": 273.8,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "DPRK": {
+      "layer": "threat_actor",
+      "era_first": "E1",
+      "kind": "state",
+      "betweenness": 300.7,
+      "degree": 4,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "UNC threat actors": {
+      "layer": "threat_actor",
+      "era_first": "E2",
+      "kind": "group",
+      "betweenness": 93.0,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    },
+    "BRICS": {
+      "layer": "sovereign",
+      "era_first": "E2",
+      "kind": "bloc",
+      "betweenness": 121.1,
+      "degree": 4,
+      "layer_span": 3,
+      "era_span": 3
+    },
+    "mBridge": {
+      "layer": "payments_infra",
+      "era_first": "E3",
+      "kind": "proj",
+      "betweenness": 47.5,
+      "degree": 3,
+      "layer_span": 2,
+      "era_span": 3
+    },
+    "Russia": {
+      "layer": "threat_actor",
+      "era_first": "E1",
+      "kind": "state",
+      "betweenness": 108.2,
+      "degree": 2,
+      "layer_span": 2,
+      "era_span": 2
+    }
+  },
+  "edges": [
+    {
+      "from": "Peter Thiel",
+      "to": "PayPal",
+      "era": "E1",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "PayPal",
+      "era": "E1",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Reid Hoffman",
+      "to": "PayPal",
+      "era": "E1",
+      "relation": "founding-team",
+      "evidence": "doc"
+    },
+    {
+      "from": "Max Levchin",
+      "to": "PayPal",
+      "era": "E1",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "David Sacks",
+      "to": "PayPal",
+      "era": "E1",
+      "relation": "exec",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "Palantir",
+      "era": "E1",
+      "relation": "cofounder-2003",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "Founders Fund",
+      "era": "E1",
+      "relation": "founder-2005",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "Meta",
+      "era": "E1",
+      "relation": "first-investor-2004",
+      "evidence": "doc"
+    },
+    {
+      "from": "Founders Fund",
+      "to": "SpaceX",
+      "era": "E2",
+      "relation": "investor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Founders Fund",
+      "to": "Anduril",
+      "era": "E3",
+      "relation": "seed-2017",
+      "evidence": "doc"
+    },
+    {
+      "from": "Founders Fund",
+      "to": "Palantir",
+      "era": "E1",
+      "relation": "investor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "Thiel Fellowship",
+      "era": "E2",
+      "relation": "founder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Thiel Fellowship",
+      "to": "Vitalik Buterin",
+      "era": "E2",
+      "relation": "grant-2014",
+      "evidence": "doc"
+    },
+    {
+      "from": "Vitalik Buterin",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "Bullish/Bitmine",
+      "era": "E3",
+      "relation": "backer",
+      "evidence": "doc"
+    },
+    {
+      "from": "Palmer Luckey",
+      "to": "Anduril",
+      "era": "E3",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Anduril",
+      "to": "DoD",
+      "era": "E3",
+      "relation": "contractor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Palantir",
+      "to": "DoD",
+      "era": "E2",
+      "relation": "contractor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Palantir",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "gov-identity-vendor",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "SpaceX",
+      "era": "E1",
+      "relation": "founder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "xAI",
+      "era": "E3",
+      "relation": "founder",
+      "evidence": "doc"
+    },
+    {
+      "from": "SpaceX",
+      "to": "xAI",
+      "era": "E3",
+      "relation": "MERGED (+invest)",
+      "evidence": "doc"
+    },
+    {
+      "from": "SpaceX",
+      "to": "Google",
+      "era": "E3",
+      "relation": "compute-cancelable",
+      "evidence": "doc"
+    },
+    {
+      "from": "Google",
+      "to": "SpaceX",
+      "era": "E3",
+      "relation": "~$100B-equity-6pct",
+      "evidence": "doc"
+    },
+    {
+      "from": "SpaceX",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "compute-cancelable",
+      "evidence": "doc"
+    },
+    {
+      "from": "SpaceX",
+      "to": "NVIDIA",
+      "era": "E3",
+      "relation": "gpu-purchase",
+      "evidence": "doc"
+    },
+    {
+      "from": "Elon Musk",
+      "to": "OpenAI",
+      "era": "E2",
+      "relation": "cofounder-2015",
+      "evidence": "doc"
+    },
+    {
+      "from": "Reid Hoffman",
+      "to": "Microsoft",
+      "era": "E3",
+      "relation": "board-2017",
+      "evidence": "doc"
+    },
+    {
+      "from": "Reid Hoffman",
+      "to": "OpenAI",
+      "era": "E2",
+      "relation": "board-till-2023",
+      "evidence": "doc"
+    },
+    {
+      "from": "Reid Hoffman",
+      "to": "Worldcoin/World ID",
+      "era": "E3",
+      "relation": "investor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Reid Hoffman",
+      "to": "Greylock",
+      "era": "E2",
+      "relation": "partner",
+      "evidence": "doc"
+    },
+    {
+      "from": "Sam Altman",
+      "to": "OpenAI",
+      "era": "E2",
+      "relation": "cofounder-CEO",
+      "evidence": "doc"
+    },
+    {
+      "from": "Sam Altman",
+      "to": "Worldcoin/World ID",
+      "era": "E2",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Peter Thiel",
+      "to": "OpenAI",
+      "era": "E2",
+      "relation": "early-donor-2015",
+      "evidence": "doc"
+    },
+    {
+      "from": "Microsoft",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "investor-27pct",
+      "evidence": "doc"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Oracle",
+      "era": "E3",
+      "relation": "compute-Stargate",
+      "evidence": "doc"
+    },
+    {
+      "from": "OpenAI",
+      "to": "CoreWeave",
+      "era": "E3",
+      "relation": "compute",
+      "evidence": "doc"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "CoreWeave",
+      "era": "E3",
+      "relation": "equity+backstop",
+      "evidence": "doc"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "xAI",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "Amazon",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "equity+compute",
+      "evidence": "doc"
+    },
+    {
+      "from": "Google",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "equity+TPU",
+      "evidence": "doc"
+    },
+    {
+      "from": "Jensen Huang",
+      "to": "NVIDIA",
+      "era": "E3",
+      "relation": "CEO",
+      "evidence": "doc"
+    },
+    {
+      "from": "SoftBank",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "SoftBank",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "JV",
+      "evidence": "doc"
+    },
+    {
+      "from": "Oracle",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "JV",
+      "evidence": "doc"
+    },
+    {
+      "from": "MGX",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "JV",
+      "evidence": "doc"
+    },
+    {
+      "from": "MGX",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "MGX",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "MGX",
+      "to": "xAI",
+      "era": "E3",
+      "relation": "equity",
+      "evidence": "doc"
+    },
+    {
+      "from": "Larry Summers",
+      "to": "GLBA 1999",
+      "era": "E1",
+      "relation": "Treasury-architect",
+      "evidence": "doc"
+    },
+    {
+      "from": "Larry Summers",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "board-2023-2025",
+      "evidence": "doc"
+    },
+    {
+      "from": "Larry Summers",
+      "to": "Jeffrey Epstein",
+      "era": "E2",
+      "relation": "correspondence",
+      "evidence": "doc"
+    },
+    {
+      "from": "Robert Rubin",
+      "to": "GLBA 1999",
+      "era": "E1",
+      "relation": "Treasury",
+      "evidence": "doc"
+    },
+    {
+      "from": "Robert Rubin",
+      "to": "Citigroup",
+      "era": "E1",
+      "relation": "exec-after",
+      "evidence": "doc"
+    },
+    {
+      "from": "Alan Greenspan",
+      "to": "GLBA 1999",
+      "era": "E1",
+      "relation": "Fed-support",
+      "evidence": "doc"
+    },
+    {
+      "from": "Phil Gramm",
+      "to": "GLBA 1999",
+      "era": "E1",
+      "relation": "sponsor",
+      "evidence": "doc"
+    },
+    {
+      "from": "GLBA 1999",
+      "to": "Glass-Steagall",
+      "era": "E1",
+      "relation": "repealed",
+      "evidence": "doc"
+    },
+    {
+      "from": "GLBA 1999",
+      "to": "GFC 2008",
+      "era": "E2",
+      "relation": "enabled-consolidation",
+      "evidence": "struct"
+    },
+    {
+      "from": "Dodd-Frank 2010",
+      "to": "GFC 2008",
+      "era": "E2",
+      "relation": "response",
+      "evidence": "doc"
+    },
+    {
+      "from": "EGRRCPA 2018",
+      "to": "Dodd-Frank 2010",
+      "era": "E2",
+      "relation": "rollback",
+      "evidence": "doc"
+    },
+    {
+      "from": "EGRRCPA 2018",
+      "to": "SVB 2023",
+      "era": "E3",
+      "relation": "exempted->failed",
+      "evidence": "struct"
+    },
+    {
+      "from": "LTCM 1998",
+      "to": "Too-Interconnected-to-Fail",
+      "era": "E1",
+      "relation": "template",
+      "evidence": "doc"
+    },
+    {
+      "from": "Too-Interconnected-to-Fail",
+      "to": "GFC 2008",
+      "era": "E2",
+      "relation": "recurs",
+      "evidence": "struct"
+    },
+    {
+      "from": "Too-Interconnected-to-Fail",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "recurs-AI-core",
+      "evidence": "struct"
+    },
+    {
+      "from": "Enron 2001",
+      "to": "Off-Balance-Sheet SPV",
+      "era": "E1",
+      "relation": "origin-LJM/Raptor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Enron 2001",
+      "to": "Mark-to-Market Revenue",
+      "era": "E1",
+      "relation": "origin",
+      "evidence": "doc"
+    },
+    {
+      "from": "Off-Balance-Sheet SPV",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "recurs",
+      "evidence": "struct"
+    },
+    {
+      "from": "Off-Balance-Sheet SPV",
+      "to": "First Brands",
+      "era": "E3",
+      "relation": "recurs",
+      "evidence": "struct"
+    },
+    {
+      "from": "Off-Balance-Sheet SPV",
+      "to": "Blue Owl",
+      "era": "E3",
+      "relation": "recurs-Hyperion",
+      "evidence": "struct"
+    },
+    {
+      "from": "Mark-to-Market Revenue",
+      "to": "Oracle",
+      "era": "E3",
+      "relation": "recurs-RPO",
+      "evidence": "struct"
+    },
+    {
+      "from": "Dotcom 2000",
+      "to": "Vendor Financing",
+      "era": "E1",
+      "relation": "origin-Lucent/Nortel",
+      "evidence": "doc"
+    },
+    {
+      "from": "Vendor Financing",
+      "to": "NVIDIA",
+      "era": "E3",
+      "relation": "recurs",
+      "evidence": "struct"
+    },
+    {
+      "from": "Larry Fink",
+      "to": "BlackRock",
+      "era": "E2",
+      "relation": "CEO",
+      "evidence": "doc"
+    },
+    {
+      "from": "BlackRock",
+      "to": "Circle/USDC",
+      "era": "E3",
+      "relation": "manages-reserves",
+      "evidence": "doc"
+    },
+    {
+      "from": "BlackRock",
+      "to": "Stargate",
+      "era": "E3",
+      "relation": "AI-datacenter-credit",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Apollo",
+      "to": "Anthropic",
+      "era": "E3",
+      "relation": "datacenter-credit",
+      "evidence": "doc"
+    },
+    {
+      "from": "Apollo",
+      "to": "xAI",
+      "era": "E3",
+      "relation": "datacenter-credit",
+      "evidence": "doc"
+    },
+    {
+      "from": "Leon Black",
+      "to": "Apollo",
+      "era": "E1",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Leon Black",
+      "to": "Jeffrey Epstein",
+      "era": "E2",
+      "relation": "$158-170M-payments",
+      "evidence": "doc"
+    },
+    {
+      "from": "Jeffrey Epstein",
+      "to": "Bill Gates",
+      "era": "E2",
+      "relation": "association",
+      "evidence": "doc"
+    },
+    {
+      "from": "Bill Gates",
+      "to": "Tony Blair Institute",
+      "era": "E3",
+      "relation": "funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Blackstone",
+      "to": "CoreWeave",
+      "era": "E3",
+      "relation": "debt",
+      "evidence": "doc"
+    },
+    {
+      "from": "Blue Owl",
+      "to": "Meta",
+      "era": "E3",
+      "relation": "Hyperion-SPV",
+      "evidence": "doc"
+    },
+    {
+      "from": "PIMCO",
+      "to": "Blue Owl",
+      "era": "E3",
+      "relation": "anchor-lender",
+      "evidence": "doc"
+    },
+    {
+      "from": "First Brands",
+      "to": "UBS",
+      "era": "E3",
+      "relation": "supply-chain-finance-loss",
+      "evidence": "doc"
+    },
+    {
+      "from": "Larry Ellison",
+      "to": "Oracle",
+      "era": "E1",
+      "relation": "founder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Larry Ellison",
+      "to": "Tony Blair Institute",
+      "era": "E3",
+      "relation": "~$348M-funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tony Blair Institute",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "advocate",
+      "evidence": "doc"
+    },
+    {
+      "from": "Oracle",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "infra-frontrunner",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Oracle",
+      "to": "TikTok US",
+      "era": "E3",
+      "relation": "algorithm-operator",
+      "evidence": "doc"
+    },
+    {
+      "from": "Meta",
+      "to": "Digital Childhood Alliance",
+      "era": "E3",
+      "relation": "covert-funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Digital Childhood Alliance",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "age-verification-push",
+      "evidence": "struct"
+    },
+    {
+      "from": "Worldcoin/World ID",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "proof-of-personhood",
+      "evidence": "struct"
+    },
+    {
+      "from": "Jed McCaleb",
+      "to": "Mt. Gox",
+      "era": "E1",
+      "relation": "founder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Jed McCaleb",
+      "to": "Ripple",
+      "era": "E1",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Jed McCaleb",
+      "to": "Stellar",
+      "era": "E2",
+      "relation": "cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "William Hinman",
+      "to": "Simpson Thacher",
+      "era": "E1",
+      "relation": "pension",
+      "evidence": "doc"
+    },
+    {
+      "from": "William Hinman",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "ETH-not-security-2018",
+      "evidence": "doc"
+    },
+    {
+      "from": "Simpson Thacher",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "EEA-member",
+      "evidence": "assoc"
+    },
+    {
+      "from": "GENIUS Act 2025",
+      "to": "Circle/USDC",
+      "era": "E3",
+      "relation": "regulates",
+      "evidence": "doc"
+    },
+    {
+      "from": "ICBA",
+      "to": "GENIUS Act 2025",
+      "era": "E3",
+      "relation": "lobbied-guardrails",
+      "evidence": "doc"
+    },
+    {
+      "from": "ABA",
+      "to": "GENIUS Act 2025",
+      "era": "E3",
+      "relation": "lobbied",
+      "evidence": "doc"
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Joint Bank Stablecoin",
+      "era": "E3",
+      "relation": "consortium",
+      "evidence": "doc"
+    },
+    {
+      "from": "BlackRock",
+      "to": "Joint Bank Stablecoin",
+      "era": "E3",
+      "relation": "reserve-economics",
+      "evidence": "assoc"
+    },
+    {
+      "from": "PIF/Mubadala",
+      "to": "MGX",
+      "era": "E3",
+      "relation": "sovereign-parent",
+      "evidence": "doc"
+    },
+    {
+      "from": "SoftBank",
+      "to": "PIF/Mubadala",
+      "era": "E2",
+      "relation": "Vision-Fund-LP",
+      "evidence": "doc"
+    },
+    {
+      "from": "SoftBank",
+      "to": "SBI Holdings",
+      "era": "E1",
+      "relation": "spawned-1999",
+      "evidence": "doc"
+    },
+    {
+      "from": "SoftBank",
+      "to": "Arm",
+      "era": "E2",
+      "relation": "owns",
+      "evidence": "doc"
+    },
+    {
+      "from": "Arm",
+      "to": "NVIDIA",
+      "era": "E3",
+      "relation": "chip-IP",
+      "evidence": "struct"
+    },
+    {
+      "from": "SBI Holdings",
+      "to": "Ripple",
+      "era": "E2",
+      "relation": "~9pct-largest-external",
+      "evidence": "doc"
+    },
+    {
+      "from": "MUFG",
+      "to": "Ripple",
+      "era": "E2",
+      "relation": "RippleNet",
+      "evidence": "doc"
+    },
+    {
+      "from": "SBI Holdings",
+      "to": "Circle/USDC",
+      "era": "E3",
+      "relation": "RLUSD-Japan",
+      "evidence": "assoc"
+    },
+    {
+      "from": "a16z",
+      "to": "Worldcoin/World ID",
+      "era": "E3",
+      "relation": "investor",
+      "evidence": "doc"
+    },
+    {
+      "from": "a16z",
+      "to": "Ripple",
+      "era": "E3",
+      "relation": "XRP-Tokyo",
+      "evidence": "assoc"
+    },
+    {
+      "from": "a16z",
+      "to": "OpenAI",
+      "era": "E3",
+      "relation": "investor",
+      "evidence": "doc"
+    },
+    {
+      "from": "a16z",
+      "to": "Anduril",
+      "era": "E3",
+      "relation": "investor",
+      "evidence": "assoc"
+    },
+    {
+      "from": "a16z",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "backer",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Naspers/Prosus",
+      "to": "Tencent",
+      "era": "E1",
+      "relation": "~23pct-stake",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tencent",
+      "to": "Riot Games",
+      "era": "E2",
+      "relation": "100pct",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tencent",
+      "to": "Epic Games",
+      "era": "E2",
+      "relation": "~40pct",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tencent",
+      "to": "Reddit",
+      "era": "E3",
+      "relation": "stake",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tencent",
+      "to": "Universal Music",
+      "era": "E3",
+      "relation": "stake",
+      "evidence": "doc"
+    },
+    {
+      "from": "Alibaba",
+      "to": "Ant Group",
+      "era": "E2",
+      "relation": "affiliate",
+      "evidence": "doc"
+    },
+    {
+      "from": "Ant Group",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "early-experiment",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Alibaba",
+      "to": "SCMP",
+      "era": "E2",
+      "relation": "owns",
+      "evidence": "doc"
+    },
+    {
+      "from": "Visa",
+      "to": "EMVCo",
+      "era": "E2",
+      "relation": "member",
+      "evidence": "doc"
+    },
+    {
+      "from": "Mastercard",
+      "to": "EMVCo",
+      "era": "E2",
+      "relation": "member",
+      "evidence": "doc"
+    },
+    {
+      "from": "UnionPay",
+      "to": "EMVCo",
+      "era": "E2",
+      "relation": "member",
+      "evidence": "doc"
+    },
+    {
+      "from": "PayPal",
+      "to": "Visa",
+      "era": "E1",
+      "relation": "rails",
+      "evidence": "struct"
+    },
+    {
+      "from": "Mastercard",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "participant",
+      "evidence": "doc"
+    },
+    {
+      "from": "BIS",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "leads",
+      "evidence": "doc"
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "participant",
+      "evidence": "doc"
+    },
+    {
+      "from": "UBS",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "participant",
+      "evidence": "doc"
+    },
+    {
+      "from": "Swift",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "participant",
+      "evidence": "doc"
+    },
+    {
+      "from": "HSBC",
+      "to": "Project Agora",
+      "era": "E3",
+      "relation": "participant",
+      "evidence": "doc"
+    },
+    {
+      "from": "Visa",
+      "to": "Circle/USDC",
+      "era": "E3",
+      "relation": "stablecoin-settle",
+      "evidence": "doc"
+    },
+    {
+      "from": "Mastercard",
+      "to": "Circle/USDC",
+      "era": "E3",
+      "relation": "stablecoin-settle",
+      "evidence": "doc"
+    },
+    {
+      "from": "Mastercard",
+      "to": "Joint Bank Stablecoin",
+      "era": "E3",
+      "relation": "TCH-tokenization",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Collective Shout",
+      "to": "Visa",
+      "era": "E3",
+      "relation": "payment-censor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Collective Shout",
+      "to": "Mastercard",
+      "era": "E3",
+      "relation": "payment-censor",
+      "evidence": "doc"
+    },
+    {
+      "from": "WEF",
+      "to": "UK Digital ID",
+      "era": "E3",
+      "relation": "digital-ID-advocacy",
+      "evidence": "assoc"
+    },
+    {
+      "from": "WEF",
+      "to": "Tony Blair Institute",
+      "era": "E3",
+      "relation": "Davos-aligned",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Jefferies",
+      "to": "First Brands",
+      "era": "E3",
+      "relation": "lender",
+      "evidence": "doc"
+    },
+    {
+      "from": "Maxine Waters",
+      "to": "HFSC",
+      "era": "E2",
+      "relation": "ranking-member",
+      "evidence": "doc"
+    },
+    {
+      "from": "Maxine Waters",
+      "to": "OneUnited Bank",
+      "era": "E2",
+      "relation": "husband-stock-ethics-cleared",
+      "evidence": "doc"
+    },
+    {
+      "from": "OneUnited Bank",
+      "to": "GFC 2008",
+      "era": "E2",
+      "relation": "TARP-12.1M",
+      "evidence": "doc"
+    },
+    {
+      "from": "HFSC",
+      "to": "GENIUS Act 2025",
+      "era": "E3",
+      "relation": "jurisdiction",
+      "evidence": "doc"
+    },
+    {
+      "from": "HFSC",
+      "to": "ICBA",
+      "era": "E3",
+      "relation": "lobby-target",
+      "evidence": "assoc"
+    },
+    {
+      "from": "HFSC",
+      "to": "ABA",
+      "era": "E3",
+      "relation": "lobby-target",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Maxine Waters",
+      "to": "GENIUS Act 2025",
+      "era": "E3",
+      "relation": "opposed",
+      "evidence": "doc"
+    },
+    {
+      "from": "Coinbase",
+      "to": "Circle/USDC",
+      "era": "E2",
+      "relation": "USDC-cofounder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Coinbase",
+      "to": "Fairshake PAC",
+      "era": "E3",
+      "relation": "top-funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "a16z",
+      "to": "Fairshake PAC",
+      "era": "E3",
+      "relation": "funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Ripple",
+      "to": "Fairshake PAC",
+      "era": "E3",
+      "relation": "funder",
+      "evidence": "doc"
+    },
+    {
+      "from": "Fairshake PAC",
+      "to": "HFSC",
+      "era": "E3",
+      "relation": "elects-pro-crypto",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Fairshake PAC",
+      "to": "GENIUS Act 2025",
+      "era": "E3",
+      "relation": "backed",
+      "evidence": "assoc"
+    },
+    {
+      "from": "HFSC",
+      "to": "CLARITY Act",
+      "era": "E3",
+      "relation": "jurisdiction",
+      "evidence": "doc"
+    },
+    {
+      "from": "Maxine Waters",
+      "to": "CLARITY Act",
+      "era": "E3",
+      "relation": "opposed",
+      "evidence": "doc"
+    },
+    {
+      "from": "Coinbase",
+      "to": "CLARITY Act",
+      "era": "E3",
+      "relation": "industry-backed",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Google",
+      "to": "Hedera",
+      "era": "E2",
+      "relation": "governing-council",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Kraken",
+      "to": "Fairshake PAC",
+      "era": "E3",
+      "relation": "funder",
+      "evidence": "assoc"
+    },
+    {
+      "from": "DPRK",
+      "to": "Lazarus Group",
+      "era": "E1",
+      "relation": "state-sponsor",
+      "evidence": "doc"
+    },
+    {
+      "from": "Lazarus Group",
+      "to": "Tornado Cash",
+      "era": "E2",
+      "relation": "launders-via",
+      "evidence": "doc"
+    },
+    {
+      "from": "Lazarus Group",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "exploits/Bybit-Ronin",
+      "evidence": "doc"
+    },
+    {
+      "from": "Tornado Cash",
+      "to": "Ethereum",
+      "era": "E2",
+      "relation": "mixer-on",
+      "evidence": "struct"
+    },
+    {
+      "from": "Samourai Wallet",
+      "to": "Bitcoin",
+      "era": "E2",
+      "relation": "privacy-mixer-DOJ",
+      "evidence": "doc"
+    },
+    {
+      "from": "Binance",
+      "to": "DPRK",
+      "era": "E2",
+      "relation": "laundering-conduit-alleged",
+      "evidence": "assoc"
+    },
+    {
+      "from": "DPRK",
+      "to": "UNC threat actors",
+      "era": "E2",
+      "relation": "attribution-overlap",
+      "evidence": "assoc"
+    },
+    {
+      "from": "UNC threat actors",
+      "to": "Coinbase",
+      "era": "E3",
+      "relation": "targets-exchanges",
+      "evidence": "assoc"
+    },
+    {
+      "from": "BRICS",
+      "to": "Swift",
+      "era": "E3",
+      "relation": "alternative-to",
+      "evidence": "struct"
+    },
+    {
+      "from": "BRICS",
+      "to": "mBridge",
+      "era": "E3",
+      "relation": "cross-border-CBDC",
+      "evidence": "assoc"
+    },
+    {
+      "from": "mBridge",
+      "to": "BIS",
+      "era": "E2",
+      "relation": "incubated-then-exited",
+      "evidence": "doc"
+    },
+    {
+      "from": "BRICS",
+      "to": "UnionPay",
+      "era": "E3",
+      "relation": "de-dollar-rails",
+      "evidence": "assoc"
+    },
+    {
+      "from": "Project Agora",
+      "to": "mBridge",
+      "era": "E3",
+      "relation": "parallel-rival-bloc",
+      "evidence": "struct"
+    },
+    {
+      "from": "Russia",
+      "to": "BRICS",
+      "era": "E2",
+      "relation": "member-sanctioned",
+      "evidence": "doc"
+    },
+    {
+      "from": "Russia",
+      "to": "DPRK",
+      "era": "E3",
+      "relation": "aligned",
+      "evidence": "assoc"
+    }
+  ]
+}

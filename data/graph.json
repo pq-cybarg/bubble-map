@@ -1,0 +1,1813 @@
+{
+  "entities": {
+    "AI data centers": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "AI data-center SPVs / hyperscaler projects": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "AMD": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "Amazon": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "Anthropic": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Anthropic AI infrastructure": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Apollo": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Apollo_Blackstone": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Apple": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "BlackRock": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Blackstone": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "BlueOwl": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Broadcom": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "CoreWeave": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Crusoe": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Defense_Primes": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
+    "Disney": {
+      "sector": "ip_rightsholder",
+      "has_exogenous_revenue": true
+    },
+    "Disney_Studios_Coalition": {
+      "sector": "ip_rightsholder",
+      "has_exogenous_revenue": true
+    },
+    "First_Brands": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "GIC": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Google": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "Intel": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "JPMorgan": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Jefferies": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Lambda": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "MGX": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "MP_Materials": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": true
+    },
+    "Meta": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "Meta_Hyperion_SPV": {
+      "sector": "spv",
+      "has_exogenous_revenue": false
+    },
+    "Microsoft": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "Midjourney": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Mistral": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "NVIDIA": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "Nebius": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Neoclouds": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Next-gen data centers / AI infrastructure": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Nokia": {
+      "sector": "telecom",
+      "has_exogenous_revenue": true
+    },
+    "Nondepository financial institutions": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Nscale": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "OpenAI": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Oracle": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "PIMCO": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Private credit / venture debt lenders": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Private-credit funds": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Private-credit funds / asset managers": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Private-credit market": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SINK_backlog": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_bondmarket": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_capex": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_debt": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_investors": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_lenders": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SoftBank": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "SpaceX": {
+      "sector": "space_real_economy",
+      "has_exogenous_revenue": true
+    },
+    "SpaceX_IPO_Public": {
+      "sector": "exogenous_source",
+      "has_exogenous_revenue": true
+    },
+    "Stargate": {
+      "sector": "spv",
+      "has_exogenous_revenue": false
+    },
+    "Starlink_Subscribers": {
+      "sector": "exogenous_source",
+      "has_exogenous_revenue": true
+    },
+    "UBS_OConnor": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "US_Banks": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "US_Government": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "Vantage": {
+      "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "xAI": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    }
+  },
+  "edges": [
+    {
+      "from": "Google",
+      "to": "SpaceX",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 100000000000,
+      "status": "held",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "MAJOR CORRECTION: Alphabet held ~6.11% of SpaceX (end-2025, revealed Apr-2026 filing); ~$100-122B at a $1.75-2T IPO (~5% diluted post xAI merger). This NON-cancelable equity stake DWARFS the ~$11B/yr compute deal and is a two-way contagion channel: a SpaceX valuation shock hits a CORE hyperscaler's (Google's) balance sheet directly."
+    },
+    {
+      "from": "SpaceX",
+      "to": "xAI",
+      "instrument": "other",
+      "raw_instrument": "merger",
+      "amount_usd": null,
+      "status": "merged",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "SpaceX and xAI reportedly merged (SpaceX stake in xAI diluted Google's SpaceX % to ~5%). Fuses an AI-lab into SpaceX's cap table - pulls the AI core into SpaceX structurally, beyond the cancelable compute deals."
+    },
+    {
+      "from": "Starlink_Subscribers",
+      "to": "SpaceX",
+      "instrument": "exogenous_revenue",
+      "raw_instrument": "exogenous_revenue",
+      "amount_usd": 11400000000,
+      "status": "recurring-durable",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "GENUINE external cash flow (broadband subs + govt launch + Starshield). This is why SpaceX is fundamentally less bubble-exposed than the AI labs - it sells a real service to real non-cluster customers."
+    },
+    {
+      "from": "SpaceX_IPO_Public",
+      "to": "SpaceX",
+      "instrument": "ipo_proceeds",
+      "raw_instrument": "ipo_proceeds",
+      "amount_usd": 75000000000,
+      "status": "offering",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "$75B all-primary raise at ~$1.75T (~95-107x 2025 sales). Public-market capital injection; valuation embeds AI-compute optionality (below)."
+    },
+    {
+      "from": "Google",
+      "to": "SpaceX",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_commitment",
+      "amount_usd": 30000000000,
+      "status": "signed-CANCELABLE",
+      "declared_circular": true,
+      "cancelable": true,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "$920M/MONTH Oct 2026-Jun 2029 (~$30B total) for ~110,000 NVIDIA GPUs+CPUs. CANCELABLE: either party 90 days' notice after Dec 31 2026; Google may terminate if SpaceX misses GPU delivery by Sep 30 2026. Signed DAYS before IPO pricing = revenue-padding with contingent contracts."
+    },
+    {
+      "from": "Anthropic",
+      "to": "SpaceX",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_commitment",
+      "amount_usd": 45000000000,
+      "status": "signed-CANCELABLE",
+      "declared_circular": true,
+      "cancelable": true,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "$1.25B/MONTH through May 2029 (~$45B) for SpaceX's 'Colossus' compute infra (xAI-linked). CANCELABLE: either party 90 days' notice after Dec 31 2026. Pulls SpaceX into the circular core via Anthropic->SpaceX->NVIDIA->Anthropic - but ONLY through a cancelable edge."
+    },
+    {
+      "from": "SpaceX",
+      "to": "NVIDIA",
+      "instrument": "gpu_purchase",
+      "raw_instrument": "gpu_purchase",
+      "amount_usd": null,
+      "status": "implied",
+      "declared_circular": true,
+      "cancelable": true,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "To service the Google/Anthropic deals SpaceX provisions ~110k+ NVIDIA GPUs -> SpaceX becomes a NVIDIA customer AND a compute RESELLER. This is the edge that closes the cancelable cycle into the core SCC."
+    },
+    {
+      "from": "SpaceX",
+      "to": "xAI",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 2000000000,
+      "status": "reported",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-spacex-spcx.json",
+      "note": "SpaceX reportedly invested ~$2B in xAI; intra-Musk-empire capital. 'Colossus' is xAI's supercomputer - SpaceX reselling xAI/NVIDIA compute is the Musk-cluster's own mini-loop."
+    },
+    {
+      "from": "US_Banks",
+      "to": "Nondepository financial institutions",
+      "instrument": "debt",
+      "raw_instrument": "H.8 'loans to NDFIs' (warehouse, subscription/NAV, repo, term loans)",
+      "amount_usd": 1972670000000,
+      "status": "2026-04",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Broadest top-of-chain bank exposure. ~6x growth since 2015. Bucket includes mortgage cos/REITs/BDCs/securitization plus private-credit & PE funds."
+    },
+    {
+      "from": "US_Banks",
+      "to": "Private-credit funds",
+      "instrument": "other",
+      "raw_instrument": "committed credit lines to private-credit obligors",
+      "amount_usd": 123000000000,
+      "status": "2024-12",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Specifically the PC slice inside NDFI; vs ~$1.6T Tier-1 capital."
+    },
+    {
+      "from": "Private-credit funds / asset managers",
+      "to": "AI data-center SPVs / hyperscaler projects",
+      "instrument": "debt",
+      "raw_instrument": "project-finance bonds + direct loans (off-balance-sheet JVs/SPVs)",
+      "amount_usd": 27000000000,
+      "status": "2025-10",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Meta Hyperion JV: ~$27B debt + ~$2.5B equity; Blue Owl 80%/Meta 20%; PIMCO ~$18B, BlackRock ~$3B. Largest private-credit deal ever. Some reports $29-30B."
+    },
+    {
+      "from": "Private-credit funds",
+      "to": "Anthropic AI infrastructure",
+      "instrument": "debt",
+      "raw_instrument": "debt financing (in progress)",
+      "amount_usd": 36000000000,
+      "status": "2026 (in progress)",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Reported/in-progress; size may change."
+    },
+    {
+      "from": "Apollo",
+      "to": "Next-gen data centers / AI infrastructure",
+      "instrument": "equity",
+      "raw_instrument": "direct lending + equity",
+      "amount_usd": 40000000000,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": ">$40B deployed in 2025; $3.5B Valor/xAI; majority stake Stream Data Centers."
+    },
+    {
+      "from": "Private credit / venture debt lenders",
+      "to": "Neoclouds",
+      "instrument": "debt",
+      "raw_instrument": "GPU-backed / chip-collateralized loans",
+      "amount_usd": 18000000000,
+      "status": "2025-2026",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Sum of named facilities: CoreWeave $7.5B + Fluidstack $10B + Lambda $0.5B (+ Crusoe, unsized). Collateral = depreciating GPUs."
+    },
+    {
+      "from": "Private-credit market",
+      "to": "AI data centers",
+      "instrument": "other",
+      "raw_instrument": "projected datacenter private-credit financing",
+      "amount_usd": 800000000000,
+      "status": "2026 (Morgan Stanley 2yr projection)",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "PROJECTION, not realized. Indicates scale of intended chain expansion."
+    },
+    {
+      "from": "Disney",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 1000000000,
+      "status": "announced-then-cancelled",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-disney-openai-sora.json",
+      "note": "Disney announced a $1B equity stake in OpenAI on Dec 11 2025. NEVER CLOSED/FUNDED - dropped when OpenAI shut down Sora on Mar 24 2026. A booked-then-vaporized commitment: a worked example of how much of the $1.4T 'commitment' stack is reversible announcement, not cash."
+    },
+    {
+      "from": "Disney",
+      "to": "OpenAI",
+      "instrument": "ip_license",
+      "raw_instrument": "ip_license",
+      "amount_usd": null,
+      "status": "announced-then-cancelled",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-disney-openai-sora.json",
+      "note": "3-year content license letting Sora/ChatGPT Images generate 200+ characters from Disney/Marvel/Pixar/Star Wars; Disney+ to curate Sora videos later in 2026. Cancelled with the Sora shutdown."
+    },
+    {
+      "from": "Disney_Studios_Coalition",
+      "to": "Midjourney",
+      "instrument": "ip_litigation",
+      "raw_instrument": "ip_litigation",
+      "amount_usd": null,
+      "status": "active-lawsuit",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-disney-openai-sora.json",
+      "note": "Copyright-infringement suit (joined later vs Minimax). The studio cartel litigating the generative-AI cluster = a systemic, uncapped contingent liability sitting on top of AI valuations."
+    },
+    {
+      "from": "Disney",
+      "to": "Google",
+      "instrument": "ip_cease_desist",
+      "raw_instrument": "ip_cease_and_desist",
+      "amount_usd": null,
+      "status": "demand",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-disney-openai-sora.json",
+      "note": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."
+    },
+    {
+      "from": "First_Brands",
+      "to": "UBS_OConnor",
+      "instrument": "other",
+      "raw_instrument": "supply_chain_finance_loss",
+      "amount_usd": 500000000,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-firstbrands-ubs.json",
+      "note": "Loss path: opaque factoring obligor -> private-credit fund -> bank-affiliated asset manager."
+    },
+    {
+      "from": "First_Brands",
+      "to": "Jefferies",
+      "instrument": "other",
+      "raw_instrument": "private_credit_loss",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-firstbrands-ubs.json",
+      "note": "Jefferies/Leucadia (Point Bonita) also exposed; second canary alongside Tricolor (subprime auto) in 2025."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "progressive equity LOI (tied to 10GW NVIDIA systems)",
+      "amount_usd": 100000000000,
+      "status": "signed-LOI",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "LOI, up to $100B paid progressively per GW deployed; never reached definitive agreement. CFO confirmed no signed deal (Dec 2025); WSJ 'on ice' (Jan/Feb 2026). Effectively lapsed/replaced by the $30B direct stake. DO NOT count as closed."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "CoreWeave",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 2000000000,
+      "status": "closed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "~$350M at cost pre-IPO; ~7% stake. CoreWeave buys NVIDIA GPUs."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "CoreWeave",
+      "instrument": "backstop",
+      "raw_instrument": "take-or-pay backstop (residual unsold capacity, MSA order form)",
+      "amount_usd": 6300000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "Order form under 2023 MSA, initial value $6.3B; NVIDIA obligated to buy residual unsold capacity through 2032-04-13."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "xAI",
+      "instrument": "equity",
+      "raw_instrument": "equity (Series E)",
+      "amount_usd": 2000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "Reported 'up to $2B' in $20B Series E; SPV uses proceeds to buy NVIDIA GPUs for Colossus 2."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 10000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "Up to $10B (Microsoft up to $5B); Anthropic commits $30B Azure + up to 1GW powered by NVIDIA."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Intel",
+      "instrument": "other",
+      "raw_instrument": "common stock (~4%, private placement)",
+      "amount_usd": 5000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "$23.28/share, ~214.78M shares; FTC approved Dec 18 2025, closed Dec 2025. Strategic co-dev (x86 + RTX chiplets), not a GPU-customer round-trip."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nokia",
+      "instrument": "equity",
+      "raw_instrument": "equity (directed share issuance)",
+      "amount_usd": 1000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "$6.01/share; AI-RAN strategic partnership."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nscale",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 600000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "Sources conflict: GBP500M vs $667M. Nscale is a neocloud that deploys NVIDIA GPUs (round-trip)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Mistral",
+      "instrument": "equity",
+      "raw_instrument": "equity (Series C participation)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "Participated in EUR1.7B round; NVIDIA's specific check not disclosed."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Microsoft",
+      "instrument": "compute_commitment",
+      "raw_instrument": "Azure compute commitment (incremental)",
+      "amount_usd": 250000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-microsoft-openai.json",
+      "note": "Incremental $250B Azure commitment in Oct 2025 recap; Microsoft holds ~27% of OpenAI (~$135B). Circular: investor/IP-licensor also the compute vendor."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Oracle",
+      "instrument": "compute_commitment",
+      "raw_instrument": "cloud/compute (Stargate, ~4.5GW)",
+      "amount_usd": 300000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "~$300B over ~5 years from 2027; ~4.5GW; part of Stargate (OpenAI/Oracle/SoftBank)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "CoreWeave",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute contracts (cumulative)",
+      "amount_usd": 22400000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "$11.9B initial (Mar 2025) + $4B (May 2025) + up to $6.5B (Sep 2025) = ~$22.4B."
+    },
+    {
+      "from": "OpenAI",
+      "to": "AMD",
+      "instrument": "warrant",
+      "raw_instrument": "6GW Instinct GPU deployment + warrant (up to 160M shares @ $0.01)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "6GW MI450 deployment (est. ~$100B AMD revenue over years). Warrant: up to 160M AMD shares (~10%) at $0.01, vesting on purchase milestones (1GW first tranche, full at 6GW). Amount_usd null - revenue undisclosed/estimated."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "10GW custom AI accelerators (XPU 'Titan')",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json,fin-google-amazon-anthropic-meta.json",
+      "note": "10GW custom accelerators + Ethernet, deploy H2 2026 thru 2029. Financial terms undisclosed; Mizuho est. $150-200B (not company-confirmed)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "NVIDIA",
+      "instrument": "gpu_purchase",
+      "raw_instrument": "GPU/systems purchases (10GW)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "10GW of NVIDIA systems (Vera Rubin, first GW H2 2026); part of OpenAI's ~$1.4T commitments. Pairs with NVIDIA equity into OpenAI = round-trip."
+    },
+    {
+      "from": "SoftBank",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "equity ($40B round, fully funded)",
+      "amount_usd": 41000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "$41B aggregate funded (incl. $11B third-party co-invest); SoftBank ~11% stake."
+    },
+    {
+      "from": "Amazon",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "equity (mega-round)",
+      "amount_usd": 50000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-nvidia-openai.json",
+      "note": "$15B initial + $35B on conditions; led the $110B round."
+    },
+    {
+      "from": "Google",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "raw_instrument": "equity investment (cash + contingent)",
+      "amount_usd": 40000000000,
+      "status": "completed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": ">$3B cumulative incl ~$750M tranche due Sept 2025; ~14% stake. No voting rights/board seats."
+    },
+    {
+      "from": "Google",
+      "to": "Anthropic",
+      "instrument": "compute_commitment",
+      "raw_instrument": "TPU + Google Cloud compute (vendor)",
+      "amount_usd": 30000000000,
+      "status": "active",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "'Up to 1 million TPU chips', 'well over a gigawatt coming online in 2026', value 'tens of billions'. amount_usd is approx midpoint. Builds on 2023 partnership. INVESTOR=VENDOR."
+    },
+    {
+      "from": "Amazon",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "raw_instrument": "equity (cash now + contingent)",
+      "amount_usd": 25000000000,
+      "status": "completed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "$1.25B (Sep 2023) + $2.75B (2024) + $4B (Nov 2024) = $8B. AWS = primary cloud/training partner."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Amazon",
+      "instrument": "compute_commitment",
+      "raw_instrument": "AWS compute commitment (Trainium2/3, Project Rainier, 5GW)",
+      "amount_usd": 100000000000,
+      "status": "active",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "Anthropic committed '>$100B over 10 years to AWS'. Up to 5GW; >1M Trainium2 chips; ~1GW Trainium2/3 online by end-2026. Project Rainier ~500k Trainium2, ~$11B Indiana campus. THE CLEAREST circular round-trip: Amazon invests, Anthropic pays it back to AWS."
+    },
+    {
+      "from": "GIC",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "raw_instrument": "Series G equity (co-lead)",
+      "amount_usd": null,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "GIC + Coatue led the $30B round at $380B post-money."
+    },
+    {
+      "from": "MGX",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "raw_instrument": "Series G equity (co-lead)",
+      "amount_usd": null,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "MGX (UAE sovereign) co-led. Round total $30B / $380B post-money."
+    },
+    {
+      "from": "SINK_investors",
+      "to": "Anthropic",
+      "instrument": "other",
+      "raw_instrument": "Series G round (total)",
+      "amount_usd": 30000000000,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "$30B raised at $380B post-money (Jan 2026 term sheet was ~$10B/$350B; expanded ~3x). Leads GIC+Coatue; co-leads DE Shaw, Dragoneer, Founders Fund, ICONIQ, MGX. Also QIA, Temasek, Fidelity, BlackRock, Blackstone, Sequoia, Microsoft, Nvidia."
+    },
+    {
+      "from": "BlueOwl",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "equity",
+      "raw_instrument": "off-balance-sheet JV equity + debt (SPV)",
+      "amount_usd": 27000000000,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "~$27B total dev cost. Blue Owl owns 80%, Meta 20%. Blue Owl ~$7B cash; Meta got ~$3B one-time distribution. Debt to PIMCO + bond investors via private offering; Morgan Stanley arranged. Capped 16-yr residual value guarantee. Reported largest private-credit deal ever (~$30B incl equity). Hyperion: Richland Parish LA, >4M sqft, up to 5GW, ~2029. OFF-BALANCE-SHEET."
+    },
+    {
+      "from": "PIMCO",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "debt",
+      "raw_instrument": "private bond/debt (anchor lender)",
+      "amount_usd": 18000000000,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "~$18B per secondary press. Meta's own release names PIMCO only, no amount. UNVERIFIED split."
+    },
+    {
+      "from": "BlackRock",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "debt",
+      "raw_instrument": "private debt",
+      "amount_usd": 3000000000,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": ">$3B per secondary press; NOT named in Meta's official release. UNVERIFIED."
+    },
+    {
+      "from": "SINK_bondmarket",
+      "to": "Meta",
+      "instrument": "debt",
+      "raw_instrument": "corporate bonds (6-part)",
+      "amount_usd": 30000000000,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "$30B, largest US corp bond of 2025; ~$125B orders. Maturities 5/7/10/20/30/40yr. On-balance-sheet (contrast with Hyperion SPV)."
+    },
+    {
+      "from": "Meta",
+      "to": "SINK_capex",
+      "instrument": "capex",
+      "raw_instrument": "capital expenditure FY2026 guidance",
+      "amount_usd": 115000000000,
+      "status": "guidance",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "FY26 guidance spans ~$115B-$125B across sources; FY25 ~$70-72B. Hyperscaler aggregate 2026 capex ~$700B."
+    },
+    {
+      "from": "Google",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "TPU supply agreement (custom silicon)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "Broadcom develops/supplies future TPU generations; contract reported through 2031. ~$46B figure cited by some analysts is a model, not disclosed."
+    },
+    {
+      "from": "Meta",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "MTIA custom silicon (extended through 2029)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": ">1GW initial, multi-GW scale-up; ~3GW through end-2028."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "custom silicon / TPU (via Google TPUs co-developed by Broadcom)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "1GW in 2026, +5GW from 2027. Anthropic buys TPU access, Broadcom builds the TPUs for Google."
+    },
+    {
+      "from": "Broadcom",
+      "to": "SINK_backlog",
+      "instrument": "compute_commitment",
+      "raw_instrument": "AI semiconductor revenue/backlog (Q2 FY2026)",
+      "amount_usd": 56000000000,
+      "status": "guidance",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "Q2 FY26 AI revenue $10.8B (+143% YoY); AI bookings >$30B in quarter; Q3 guide ~$16B; FY26 AI ~$56B; 2027 >$100B reiterated. 6 custom-XPU customers (Google, Meta, OpenAI, Anthropic + 2 unnamed). Consolidated backlog ~$110B."
+    },
+    {
+      "from": "Apollo_Blackstone",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute-financing platform (>20GW, first tranche ~$35B)",
+      "amount_usd": 35000000000,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "Broadcom AI XPU Platform w/ Apollo, Blackstone et al to deploy >20GW; first tranche ~$35B. A new off-balance-sheet financing vehicle mirroring Meta's SPV approach."
+    },
+    {
+      "from": "AMD",
+      "to": "OpenAI",
+      "instrument": "warrant",
+      "raw_instrument": "warrant (~160M shares ~10%) tied to ~6GW MI450 deployment",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "Noted for completeness; detailed in core-ring file. ~6GW Instinct; warrant for up to ~160M AMD shares vesting on deployment/price milestones. OpenAI is both customer and (via warrant) equity holder."
+    },
+    {
+      "from": "MGX",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "equity + Stargate partner ($7B)",
+      "amount_usd": 7000000000,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "MGX = Stargate partner ($7B, 40% with Oracle vs SoftBank/OpenAI 40% each at $19B). Also OpenAI investor; PIF in talks on OpenAI ~$40B round."
+    },
+    {
+      "from": "MGX",
+      "to": "xAI",
+      "instrument": "equity",
+      "raw_instrument": "equity (co-lead, Jan 2026 round)",
+      "amount_usd": null,
+      "status": "completed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-google-amazon-anthropic-meta.json",
+      "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
+    },
+    {
+      "from": "Microsoft",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 135000000000,
+      "status": "closed-definitive",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-microsoft-openai.json",
+      "note": "~27% stake in OpenAI Group PBC, reported value ~$135B. Definitive agreement Oct 28 2025."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Microsoft",
+      "instrument": "revenue_share",
+      "raw_instrument": "revenue_share",
+      "amount_usd": 38000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-microsoft-openai.json",
+      "note": "Reciprocal revenue-sharing; reported cap around ~$38B over the term; IP rights for Microsoft through ~2032; Azure right-of-first-refusal removed (OpenAI now free to use Oracle/CoreWeave/Google etc.)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Microsoft",
+      "instrument": "equity_method_loss",
+      "raw_instrument": "equity_method_loss",
+      "amount_usd": 3100000000,
+      "status": "realized",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-microsoft-openai.json",
+      "note": "OpenAI's NET LOSS flows onto MSFT's income statement via equity method: $3.1B / $0.41 EPS hit in Q1 FY26, up 6x from $523M / $0.07 a year earlier. OpenAI's cash burn is now a visible, growing drag on Microsoft GAAP earnings."
+    },
+    {
+      "from": "CoreWeave",
+      "to": "NVIDIA",
+      "instrument": "gpu_purchase",
+      "raw_instrument": "gpu_purchase",
+      "amount_usd": 10309000000,
+      "status": "ongoing",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "FY2025 capex $10.31B (property/equipment/capitalized software), predominantly NVIDIA GPUs; not a pure GPU spend figure."
+    },
+    {
+      "from": "Microsoft",
+      "to": "CoreWeave",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_contract",
+      "amount_usd": null,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Customer concentration: Microsoft = 62% of FY2024 revenue (two customers = 77%); 67% of FY2025 revenue. Mgmt expects <50% as OpenAI/Meta ramp."
+    },
+    {
+      "from": "Blackstone",
+      "to": "CoreWeave",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 7500000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "DDTL 1.0. Collateral: GPUs. Co-led with Magnetar."
+    },
+    {
+      "from": "SINK_lenders",
+      "to": "CoreWeave",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 8500000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "DDTL 4.0 delayed-draw term loan. Collateral: HPC/GPU infra + customer contract. First IG GPU-backed financing, rated A3 (Moody's)/A(low) (DBRS)."
+    },
+    {
+      "from": "CoreWeave",
+      "to": "SINK_debt",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 21373000000,
+      "status": "outstanding",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Total debt $21.373B ($6.708B current + $14.665B non-current). ~$10B is GPU-backed. Cash ~$3.1B. FY25 revenue $5.131B, net loss $1.167B. Backlog/RPO $66.8B."
+    },
+    {
+      "from": "Oracle",
+      "to": "NVIDIA",
+      "instrument": "gpu_purchase",
+      "raw_instrument": "gpu_purchase",
+      "amount_usd": null,
+      "status": "ongoing",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Leaked docs (The Information, Oct 2025): ~$900M GPU rental rev produced ~$125M gross profit = ~14% gross margin (vs ~70% legacy); avg AI-cloud deal margin ~16%."
+    },
+    {
+      "from": "Oracle",
+      "to": "SINK_bondmarket",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 18000000000,
+      "status": "issued",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Senior notes, maturities 2030-2065, coupons 4.450%-6.100%, to pre-fund AI capex. Total senior unsecured borrowings ~$91.3B at 2025-08-31."
+    },
+    {
+      "from": "SoftBank",
+      "to": "Stargate",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 19000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "40% interest. SoftBank = financial lead, Son = chairman."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Stargate",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 19000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "40% interest, operational lead. OpenAI both funds Stargate and is the offtaker \u2014 circular."
+    },
+    {
+      "from": "Oracle",
+      "to": "Stargate",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 7000000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Oracle is JV equity holder AND lessee/operator of Stargate (Abilene) capacity."
+    },
+    {
+      "from": "MGX",
+      "to": "Stargate",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 7000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Abu Dhabi fund. $500B/10GW is a 2029 target; only ~$100B initial / ~$52B equity committed."
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Stargate",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 2300000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Loan for Abilene TX project (Crusoe / Primary Digital / Blue Owl SPV, leased to Oracle)."
+    },
+    {
+      "from": "SINK_lenders",
+      "to": "Vantage",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 38000000000,
+      "status": "reported",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Vantage reportedly taking on ~$38B debt for two OpenAI sites (TX, WI). Secondary source, not a primary filing."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Lambda",
+      "instrument": "backstop",
+      "raw_instrument": "take-or-pay backstop",
+      "amount_usd": 1500000000,
+      "status": "active",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "NVIDIA $1.5B capacity deal + equity in $480M Series D. Lambda ~$500M GPU-backed debt."
+    },
+    {
+      "from": "Lambda",
+      "to": "SINK_lenders",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 500000000,
+      "status": "outstanding",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "~$500M GPU-collateralized debt (secondary aggregation)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Crusoe",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 1400000000,
+      "status": "funded",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "NVIDIA participated in $1.4B Series E at $10B valuation. Crusoe builds Stargate Abilene. ~$425M GPU-backed debt."
+    },
+    {
+      "from": "Crusoe",
+      "to": "SINK_lenders",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 425000000,
+      "status": "outstanding",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "~$425M GPU-collateralized debt (secondary aggregation)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nebius",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 2700000000,
+      "status": "funded",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "$0.7B raise (Dec 2024) + ~$2B further NVIDIA investment. Combined ~$2.7B."
+    },
+    {
+      "from": "Microsoft",
+      "to": "Nebius",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_contract",
+      "amount_usd": 19400000000,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-coreweave-oracle.json",
+      "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
+    },
+    {
+      "from": "US_Government",
+      "to": "MP_Materials",
+      "instrument": "equity",
+      "raw_instrument": "DoD $400M convertible pref ~15% + $110/kg NdPr price floor + $150M loan",
+      "amount_usd": 400000000,
+      "status": "closed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": "STATE as circular vendor-financier of the supply chain"
+    },
+    {
+      "from": "MP_Materials",
+      "to": "Defense_Primes",
+      "instrument": "offtake",
+      "raw_instrument": "10yr 100% DoD offtake -> magnets for missiles/F-35/radar",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "MP_Materials",
+      "instrument": "offtake",
+      "raw_instrument": "$500M recycled-magnet supply deal",
+      "amount_usd": 500000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": ""
+    }
+  ],
+  "analysis": {
+    "num_nodes": 62,
+    "num_edges": 83,
+    "core_scc_all": [
+      "AMD",
+      "Amazon",
+      "Anthropic",
+      "CoreWeave",
+      "Crusoe",
+      "Lambda",
+      "Microsoft",
+      "NVIDIA",
+      "OpenAI",
+      "Oracle",
+      "SINK_lenders",
+      "SpaceX"
+    ],
+    "core_scc_all_size": 12,
+    "core_scc_robust_excl_cancelable": [
+      "AMD",
+      "Amazon",
+      "Anthropic",
+      "CoreWeave",
+      "Crusoe",
+      "Lambda",
+      "Microsoft",
+      "NVIDIA",
+      "OpenAI",
+      "Oracle",
+      "SINK_lenders"
+    ],
+    "core_scc_robust_size": 11,
+    "nodes_only_circular_via_cancelable": [
+      "SpaceX"
+    ],
+    "num_elementary_cycles": 15,
+    "elementary_cycles": [
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Microsoft",
+        "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ]
+    ],
+    "circularity_exposure": {
+      "AI data centers": {
+        "total_usd": 800000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI data-center SPVs / hyperscaler projects": {
+        "total_usd": 27000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AMD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Amazon": {
+        "total_usd": 175000000000,
+        "circular_usd": 175000000000,
+        "circularity_ratio": 1.0,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Anthropic": {
+        "total_usd": 280000000000,
+        "circular_usd": 180000000000,
+        "circularity_ratio": 0.643,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Anthropic AI infrastructure": {
+        "total_usd": 36000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apollo": {
+        "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apollo_Blackstone": {
+        "total_usd": 35000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apple": {
+        "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BlackRock": {
+        "total_usd": 3000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Blackstone": {
+        "total_usd": 7500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BlueOwl": {
+        "total_usd": 27000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Broadcom": {
+        "total_usd": 91000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CoreWeave": {
+        "total_usd": 78382000000,
+        "circular_usd": 49509000000,
+        "circularity_ratio": 0.632,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Crusoe": {
+        "total_usd": 1825000000,
+        "circular_usd": 1825000000,
+        "circularity_ratio": 1.0,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Defense_Primes": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Disney": {
+        "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Disney_Studios_Coalition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "First_Brands": {
+        "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GIC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Google": {
+        "total_usd": 200000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Intel": {
+        "total_usd": 5000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "JPMorgan": {
+        "total_usd": 2300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jefferies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Lambda": {
+        "total_usd": 2000000000,
+        "circular_usd": 2000000000,
+        "circularity_ratio": 1.0,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "MGX": {
+        "total_usd": 14000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MP_Materials": {
+        "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Meta": {
+        "total_usd": 145000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Meta_Hyperion_SPV": {
+        "total_usd": 48000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Microsoft": {
+        "total_usd": 445500000000,
+        "circular_usd": 426100000000,
+        "circularity_ratio": 0.956,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Midjourney": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mistral": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NVIDIA": {
+        "total_usd": 142809000000,
+        "circular_usd": 131509000000,
+        "circularity_ratio": 0.921,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Nebius": {
+        "total_usd": 22100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Neoclouds": {
+        "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Next-gen data centers / AI infrastructure": {
+        "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nokia": {
+        "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nondepository financial institutions": {
+        "total_usd": 1972670000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nscale": {
+        "total_usd": 600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OpenAI": {
+        "total_usd": 966500000000,
+        "circular_usd": 898500000000,
+        "circularity_ratio": 0.93,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "Oracle": {
+        "total_usd": 325000000000,
+        "circular_usd": 300000000000,
+        "circularity_ratio": 0.923,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "PIMCO": {
+        "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Private credit / venture debt lenders": {
+        "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Private-credit funds": {
+        "total_usd": 159000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Private-credit funds / asset managers": {
+        "total_usd": 27000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Private-credit market": {
+        "total_usd": 800000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_backlog": {
+        "total_usd": 56000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_bondmarket": {
+        "total_usd": 48000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_capex": {
+        "total_usd": 115000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_debt": {
+        "total_usd": 21373000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_investors": {
+        "total_usd": 30000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_lenders": {
+        "total_usd": 47425000000,
+        "circular_usd": 9425000000,
+        "circularity_ratio": 0.199,
+        "in_core_scc": true,
+        "in_robust_core": true
+      },
+      "SoftBank": {
+        "total_usd": 60000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SpaceX": {
+        "total_usd": 263400000000,
+        "circular_usd": 45000000000,
+        "circularity_ratio": 0.171,
+        "in_core_scc": true,
+        "in_robust_core": false
+      },
+      "SpaceX_IPO_Public": {
+        "total_usd": 75000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Stargate": {
+        "total_usd": 54300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Starlink_Subscribers": {
+        "total_usd": 11400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UBS_OConnor": {
+        "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "US_Banks": {
+        "total_usd": 2095670000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "US_Government": {
+        "total_usd": 400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Vantage": {
+        "total_usd": 38000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "xAI": {
+        "total_usd": 4000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      }
+    },
+    "nvidia_self_funding": {
+      "funded_usd": 21200000000,
+      "headline_usd": 121200000000,
+      "nvidia_fy26_revenue_usd": 215900000000.0,
+      "funded_ratio": 0.098,
+      "headline_ratio": 0.561
+    }
+  }
+}

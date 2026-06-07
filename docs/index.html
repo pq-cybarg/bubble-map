@@ -1,0 +1,90 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Bubble Map — make the hidden legible</title>
+<meta name=description content="A formally-verified, reproducible X-ray of the AI capital bubble and the systems around it — and a transparent coordination signal.">
+<style>
+:root{--bg:#0b0e14;--card:#11161f;--line:#22304a;--fg:#d7dce5;--ac:#7fd1ff;--g:#7CFC9B;--r:#ff8a8a;--mut:#8a96a8}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
+header{background:linear-gradient(120deg,#11151f,#1b2433);border-bottom:1px solid var(--line);padding:40px 24px}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+h1{margin:0;font-size:30px;color:#fff;letter-spacing:-.5px} .tag{color:var(--ac);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.thesis{font-size:16px;color:#cfe;background:#0f1622;border-left:3px solid var(--ac);padding:14px 18px;margin:18px 0;border-radius:4px}
+h2{color:var(--ac);border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:42px;font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;text-decoration:none;color:var(--fg);display:block;transition:.15s}
+.card:hover{border-color:var(--ac);transform:translateY(-2px)} .card b{color:#fff;font-size:16px} .card p{color:var(--mut);font-size:13px;margin:6px 0 0}
+.poll{background:linear-gradient(135deg,#101a28,#0f1622);border:1px solid var(--line);border-radius:14px;padding:24px;margin:14px 0}
+.counts{display:flex;gap:28px;flex-wrap:wrap;margin:10px 0 16px}
+.counts div{font-size:13px;color:var(--mut)} .counts b{display:block;font-size:34px;color:var(--g);line-height:1.1}
+.btn{display:inline-block;background:var(--ac);color:#03101a;font-weight:700;padding:12px 20px;border-radius:8px;text-decoration:none}
+.btn.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+#avatars{display:flex;flex-wrap:wrap;gap:4px;margin-top:14px} #avatars img{border-radius:50%;border:1px solid var(--line)}
+.mut{color:var(--mut);font-size:13px} code{background:#16202f;padding:2px 6px;border-radius:4px;color:#ffd479;font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:24px;color:var(--mut);font-size:12px;text-align:center}
+.kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.kpis span{background:#16202f;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--mut)}.kpis b{color:var(--ac);display:block;font-size:18px}
+</style></head>
+<body>
+<header><div class=wrap>
+<div class=tag>formally verified · reproducible · evidence-graded</div>
+<h1>Bubble&nbsp;Map</h1>
+<div class=thesis>A machine-verified X-ray of the AI capital loop and the systems around it — an 11-firm circular core solvent only while external capital flows, gated by adversary chokepoints (China rare earths, Russia enrichment), wired into the banking, energy, defense, crypto, and identity-control layers. The financial core is <b>proven</b> (Z3 / TLA+ / Alloy); every speculative thread is <b>graded</b> and quarantined from the proofs. <b>This page makes the hidden legible — and lets the dispersed coordinate.</b></div>
+<div class=kpis>
+<span><b>11</b>firm circular core</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>−81%</b>US home in gold since 1998</span><span><b>20</b>runnable models</span><span><b>29</b>cited sources</span>
+</div>
+</div></header>
+<div class=wrap>
+
+<h2 id=poll>The signal — sign &amp; coordinate</h2>
+<p class=mut>The system's weak point (proven in the model) is a <b>coordination failure wrapped in opacity</b>. This poll is the antidote: a <b>transparent, auditable, server-less</b> signal. To sign, react <b>👍</b> on the GitHub issue; to add testimony, comment. Every signature is public and verifiable — no backend, no harvesting, nothing to capture.</p>
+<div class=poll>
+  <div class=counts>
+    <div><b id=signs>—</b>signatures (👍)</div>
+    <div><b id=tests>—</b>testimonies (comments)</div>
+  </div>
+  <a class=btn id=signbtn href="#" target=_blank rel=noopener>✍️ Sign on GitHub (react 👍)</a>
+  <a class=btn sec id=testbtn href="#" target=_blank rel=noopener>Add testimony</a>
+  <div id=avatars></div>
+  <p class=mut id=pollstatus style="margin-top:12px"></p>
+</div>
+
+<h2 id=explore>Explore the evidence</h2>
+<div class=grid>
+  <a class=card href="dashboard.html"><b>📊 Control dashboard</b><p>Every formal verdict, the circular core, the three chokepoints, the gold lens, the weavers, bank vulnerability — over the live data.</p></a>
+  <a class=card href="globe.html"><b>🌍 Chokepoint globe</b><p>A rotatable d3 globe: adversary chokepoints, supply responses, capital hubs, and the dependency/flow arcs.</p></a>
+  <a class=card id=repo href="#"><b>⚙️ Source &amp; proofs</b><p>20 runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
+  <a class=card id=report href="#"><b>📄 Full report</b><p>UNMASKING.md — the complete write-up, layer by layer, with the honesty ledger.</p></a>
+</div>
+
+<h2>What this is — and isn't</h2>
+<p>It <b>is</b> a cited inventory of how the AI / banking / credit / commodity / energy / defense / crypto / identity webs connect, with the provable core machine-verified and the rest evidence-graded. It is <b>not</b> a claim of a single conspiracy: the honest reading is a small recurring operator-network + recurring structures (LTCM interconnection, Enron off-balance-sheet vehicles, dotcom vendor financing) + regulatory arbitrage, rebuilt each era in the least-regulated venue. <b>Intent is never inferred from adjacency</b>; sensitive threads (people, influence, foreign actors) are graded and kept out of the proofs.</p>
+<p class=mut>Reproduce everything: clone the repo and run <code>bash run_all.sh</code> (Python + Z3; Java for TLA+/Alloy — jars auto-fetched). Fork it. Extend it. Make the seeing and the proving cheap for everyone.</p>
+
+</div>
+<footer>Bubble Map · open source · no backend · the poll reads the public GitHub API client-side · made to be forked.</footer>
+<script>
+const OWNER="pq-cybarg", REPO="bubble-map", ISSUE=1;
+const issueURL=`https://github.com/${OWNER}/${REPO}/issues/${ISSUE}`;
+document.getElementById('signbtn').href=issueURL;
+document.getElementById('testbtn').href=issueURL+"#new_comment_field";
+document.getElementById('repo').href=`https://github.com/${OWNER}/${REPO}`;
+document.getElementById('report').href=`https://github.com/${OWNER}/${REPO}/blob/main/report/UNMASKING.md`;
+async function gh(p){const r=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}${p}`,{headers:{Accept:"application/vnd.github+json"}});if(!r.ok)throw new Error(r.status);return r.json();}
+async function loadPoll(){
+  try{
+    const d=await gh(`/issues/${ISSUE}`);
+    document.getElementById('signs').textContent=(d.reactions&&d.reactions['+1'])||0;
+    document.getElementById('tests').textContent=d.comments||0;
+    try{
+      const rs=await gh(`/issues/${ISSUE}/reactions?per_page=100`);
+      const ppl=rs.filter(x=>x.content==='+1').reverse().slice(0,72);
+      document.getElementById('avatars').innerHTML=ppl.map(p=>`<a href="${p.user.html_url}" target=_blank rel=noopener title="${p.user.login}"><img src="${p.user.avatar_url}&s=56" width=28 height=28 alt=""></a>`).join('');
+    }catch(_){}
+    document.getElementById('pollstatus').textContent="live from the public GitHub API · last refreshed "+new Date().toLocaleTimeString();
+  }catch(e){
+    document.getElementById('signs').textContent="—";document.getElementById('tests').textContent="—";
+    document.getElementById('pollstatus').textContent="(live count unavailable — likely the GitHub API rate limit for your IP; click through to sign and the count is always exact on GitHub.)";
+  }
+}
+loadPoll(); setInterval(loadPoll, 60000);
+</script>
+</body></html>

@@ -1,0 +1,268 @@
+{
+  "generated": "2026-06-05",
+  "jurisdictions": [
+    {
+      "name": "United Kingdom",
+      "instrument": "Online Safety Act 2023 + Ofcom 'Highly Effective Age Assurance' (HEAA) codes",
+      "effective_date": "2025-07-25",
+      "mandate": "Pornography providers and platforms serving content harmful to children must deploy highly effective age assurance (technically accurate, robust, reliable, fair). Self-declaration insufficient.",
+      "tech_required": "Facial age estimation (AI); photo-ID + facial recognition/liveness; open banking; mobile-network-operator checks; credit card; reusable digital-ID wallets; email-based estimation",
+      "status": "In force and enforced. ~76 sites under investigation; fines exceeding GBP 1m issued.",
+      "source": [
+        "https://www.ofcom.org.uk/online-safety/protecting-children/age-checks-to-protect-children-online",
+        "https://www.ofcom.org.uk/online-safety/protecting-children/online-age-checks-must-be-in-force-from-tomorrow",
+        "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/age-assurance",
+        "https://merlin.obs.coe.int/article/10358"
+      ],
+      "notes": "Method-agnostic but pushes platforms toward AI facial age estimation as lowest-friction compliant option."
+    },
+    {
+      "name": "United Kingdom",
+      "instrument": "BritCard national digital ID (Starmer government policy)",
+      "effective_date": "2025-09-25",
+      "mandate": "Announced national digital ID; initially proposed mandatory to prove right to work; compulsion walked back January 2026. Full scheme targeted 2029.",
+      "tech_required": "Smartphone-based digital identity wallet credential",
+      "status": "Policy stage, not yet primary legislation. Highly contested (petition ~2.9m signatures). First credential (Veteran Card) live 17 Oct 2025.",
+      "source": [
+        "https://en.wikipedia.org/wiki/UK_Digital_ID",
+        "https://www.nbcnews.com/world/united-kingdom/uk-says-will-introduce-digital-id-cards-reviving-contentious-idea-rcna233839",
+        "https://www.aljazeera.com/news/2025/9/29/why-is-the-uk-introducing-digital-ids-and-why-are-they-so-controversial"
+      ],
+      "notes": "Anti-illegal-migration framing; civil-liberties backlash strong."
+    },
+    {
+      "name": "Australia",
+      "instrument": "Online Safety Amendment (Social Media Minimum Age) Act 2024",
+      "effective_date": "2025-12-10",
+      "mandate": "Age-restricted social media platforms must take 'reasonable steps' to prevent under-16s from holding accounts (Facebook, Instagram, Threads, TikTok, Snapchat, Reddit, X, YouTube, Twitch, Kick). Penalties up to ~A$49.5m.",
+      "tech_required": "Age assurance not prescribed; in practice age estimation/inference, ID checks, third-party verification. eSafety discourages sole reliance on government ID.",
+      "status": "In force. ~4.7m under-16 accounts removed by mid-Dec 2025. eSafety + OAIC co-regulate.",
+      "source": [
+        "https://www.esafety.gov.au/about-us/industry-regulation/social-media-age-restrictions",
+        "https://en.wikipedia.org/wiki/Online_Safety_Amendment_(Social_Media_Minimum_Age)_Act_2024",
+        "https://www.infrastructure.gov.au/media-communications/internet/online-safety/social-media-minimum-age"
+      ],
+      "notes": "World-first national under-16 social media ban."
+    },
+    {
+      "name": "Australia",
+      "instrument": "Age Assurance Technology Trial (final report)",
+      "effective_date": "2025-09",
+      "mandate": "Government-commissioned evidence base, not a mandate. Tested 48 vendors / 60+ technologies.",
+      "tech_required": "AI facial age estimation; ID verification; parental controls",
+      "status": "Published. Found age assurance viable but no universal solution; facial age estimation error commonly ~18 months, worse for girls, First Nations, lower-SES groups.",
+      "source": [
+        "https://www.infrastructure.gov.au/department/media/publications/age-assurance-technology-trial-final-report",
+        "https://ageassurance.com.au/",
+        "https://www.biometricupdate.com/202509/australia-releases-age-assurance-technology-trial-final-report"
+      ],
+      "notes": "Key public benchmark showing biometric age-estimation accuracy limits."
+    },
+    {
+      "name": "Australia",
+      "instrument": "Digital ID Act 2024",
+      "effective_date": "2024-12-01",
+      "mandate": "Voluntary accreditation scheme for digital-ID providers; identity-proofing levels, privacy, security standards. Government system (AGDIS) built on myID.",
+      "tech_required": "Accredited digital identity with proofing levels; biometric face-matching at higher assurance levels",
+      "status": "Live. >15m myIDs, ~80m verified transactions by Dec 2025. Private-sector expansion targeted Dec 2026. ACCC = regulator.",
+      "source": [
+        "https://www.digitalidsystem.gov.au/what-is-digital-id/digital-id-act-2024",
+        "https://ministers.finance.gov.au/financeminister/media-release/2025/12/04/more-15-million-australians-choose-simpler-safer-digital-id",
+        "https://www.accc.gov.au/by-industry/digital-platforms-and-services/digital-id-regulation"
+      ],
+      "notes": "Provides identity rails that age-assurance schemes can leverage."
+    },
+    {
+      "name": "European Union",
+      "instrument": "eIDAS 2.0 / European Digital Identity (EUDI) Wallet (Reg. (EU) 2024/1183)",
+      "effective_date": "2026-12 (Member State availability deadline)",
+      "mandate": "Each Member State must offer an EUDI Wallet to all citizens; large platforms must accept it where strong identification is required.",
+      "tech_required": "Interoperable digital identity wallet; selective disclosure; age attestation",
+      "status": "Toolbox/Architecture Reference Framework being finalised; national rollouts ramping into 2026.",
+      "source": [
+        "https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-toolbox",
+        "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home"
+      ],
+      "notes": "Foundational identity layer underpinning EU age verification."
+    },
+    {
+      "name": "European Union",
+      "instrument": "EU Age-Verification 'mini-wallet' / blueprint",
+      "effective_date": "2025-07-14 (blueprint v1); summer 2026 (pilot app distribution)",
+      "mandate": "Provides an age-verification app ahead of full EUDI wallets. Pilots: France, Denmark, Greece, Italy, Spain, Cyprus, Ireland.",
+      "tech_required": "On-device zero-knowledge proofs (cryptographic yes/no); eID/passport/ID-card onboarding. No identifying data leaves device.",
+      "status": "Pilot phase. v2 blueprint 10 Oct 2025; technical readiness ~15 Apr 2026; app-store distribution summer 2026.",
+      "source": [
+        "https://ageverification.dev/",
+        "https://digital-strategy.ec.europa.eu/en/news/commission-makes-available-age-verification-blueprint",
+        "https://www.biometricupdate.com/202507/eu-moves-forward-on-age-verification-with-release-of-guidelines-software"
+      ],
+      "notes": "Privacy-by-design alternative to biometric estimation; ZKP rather than raw face data."
+    },
+    {
+      "name": "European Union",
+      "instrument": "DSA Article 28 — Guidelines on Protection of Minors",
+      "effective_date": "2025-07-14",
+      "mandate": "Platforms accessible to minors must take appropriate/proportionate measures incl. age assurance. Methods must be accurate, reliable, robust, non-intrusive, non-discriminatory. Voluntary but used as compliance benchmark.",
+      "tech_required": "Age assurance up to verification; ZKP-based mini-wallet recommended",
+      "status": "Guidance live; Commission using DSA enforcement to push age verification.",
+      "source": [
+        "https://digital-strategy.ec.europa.eu/en/library/commission-publishes-guidelines-protection-minors",
+        "https://fpf.org/blog/the-eu-commissions-approach-to-age-verification-mobile-apps-dsa-enforcement-and-challenging-national-social-media-bans/"
+      ],
+      "notes": "Soft-law benchmark backed by hard DSA enforcement powers."
+    },
+    {
+      "name": "European Union",
+      "instrument": "CSAM Regulation / 'Chat Control' (CSAR)",
+      "effective_date": "2025-11-26 (Council political agreement); in trilogue",
+      "mandate": "Softened text drops mandatory message scanning (now voluntary). Providers must take 'all reasonable mitigation measures' including age verification and age assessment.",
+      "tech_required": "Age verification/assessment; (mandatory client-side scanning removed)",
+      "status": "Not final. Trilogue ongoing; interim voluntary-scanning derogation expires 2026; outcome uncertain.",
+      "source": [
+        "https://www.eff.org/deeplinks/2025/12/after-years-controversy-eus-chat-control-nears-its-final-hurdle-what-know",
+        "https://tuta.com/blog/chat-control-criticism"
+      ],
+      "notes": "Encryption-breaking mandate defeated; age verification survives as core obligation."
+    },
+    {
+      "name": "United States (Federal - SCOTUS)",
+      "instrument": "Free Speech Coalition v. Paxton (606 U.S. ___)",
+      "effective_date": "2025-06-27",
+      "mandate": "Upheld 6-3 Texas HB 1181 age-verification law for sites with >1/3 content harmful to minors; intermediate scrutiny. Removes principal First Amendment obstacle to state porn age-verification laws.",
+      "tech_required": "Greenlights government-ID upload / digital-ID / age-estimation age checks",
+      "status": "Binding precedent; >20 states have such laws.",
+      "source": [
+        "https://supreme.justia.com/cases/federal/us/606/23-1122/",
+        "https://www.congress.gov/crs-product/LSB11354",
+        "https://en.wikipedia.org/wiki/Free_Speech_Coalition_v._Paxton"
+      ],
+      "notes": "Pivotal enabler of the US state age-verification wave."
+    },
+    {
+      "name": "United States (States - porn)",
+      "instrument": "Louisiana Act 440 (HB 142) + 20+ state successors (TX HB 1181, UT, AR, MS, AZ, SC, VA, etc.)",
+      "effective_date": "2023-01-01 (Louisiana first)",
+      "mandate": "Sites with >=1/3 material harmful to minors must verify users' age. LA penalties up to $5,000/day plus $10,000/violation.",
+      "tech_required": "Government-ID verification (LA Wallet digital ID / driver's license); commercial vendors (ID upload, facial age estimation, transactional data)",
+      "status": "Broadly in force post-Paxton; some platforms geo-block non-compliant states.",
+      "source": [
+        "https://www.moderntreatise.com/the-americas/louisiana-first-state-to-enact-age-verification-requirements-for-pornography-sites",
+        "https://veratad.com/regulatory-compliance/la-act-440-compliance"
+      ],
+      "notes": "Louisiana model (LA Wallet) links porn age-gating directly to state digital ID."
+    },
+    {
+      "name": "United States (States - app stores)",
+      "instrument": "App Store Accountability Acts (Utah SB 142, Texas SB 2420, LA, AL, CA Digital Age Assurance Act)",
+      "effective_date": "Utah 2025-05-07 (comply by 2026-05-06); Texas in effect ~2026-06 under 5th Cir. stay",
+      "mandate": "App stores must verify user age at account creation and obtain parental consent for minors before downloads/in-app purchases; share age/consent signals with developers.",
+      "tech_required": "OS/app-store-layer age verification (age-category determination, ID or inference) + parental-consent flows",
+      "status": "Utah in effect (ramp to May 2026); Texas in effect under 5th Cir. stay (28 May 2026) pending merits; ongoing First Amendment litigation.",
+      "source": [
+        "https://le.utah.gov/~2025/bills/static/SB0142.html",
+        "https://fpf.org/blog/comparing-enacted-app-store-accountability-acts/",
+        "https://appleinsider.com/articles/26/06/03/age-verification-now-mandatory-for-app-store-users-in-texas",
+        "https://www.bassberry.com/news/apps-and-minors-new-compliance-frontiers-and-risks-in-louisiana-utah-and-texas/"
+      ],
+      "notes": "Shifts age-verification burden to Apple/Google at the device layer."
+    },
+    {
+      "name": "United States (Federal - KOSA)",
+      "instrument": "Kids Online Safety Act (S.1748 / H.R.6484; House KIDS Act)",
+      "effective_date": null,
+      "mandate": "If enacted: duty of care + safeguards for 'known' minors (House/Senate differ on knowledge standard). Pushes age-knowledge inference, not explicit age verification.",
+      "tech_required": "Age-knowledge inference (no explicit method mandated)",
+      "status": "Not enacted. Reintroduced 14 May 2025; House KIDS Act advanced out of subcommittee Mar 2026; versions diverge; uncertain.",
+      "source": [
+        "https://www.congress.gov/bill/119th-congress/senate-bill/1748/text",
+        "https://www.biometricupdate.com/202603/house-republicans-gut-kosa-as-they-advance-new-child-safety-bill"
+      ],
+      "notes": "Federal counterpart still stalled; states are the active front."
+    },
+    {
+      "name": "United States (States - mDL/mobile ID)",
+      "instrument": "State mDL programs; ISO/IEC 18013-5; AAMVA guidelines; DHS/TSA acceptance",
+      "effective_date": "ISO 18013-5 published 2021; ~21 states + PR TSA-accepted by Jan 2026",
+      "mandate": "Voluntary mobile credential; increasingly the rails for age verification and identity.",
+      "tech_required": "ISO 18013-5 cryptographically signed mobile credential (Apple/Google/Samsung Wallet); enrollment often uses facial matching/liveness",
+      "status": "Expanding. CA ~2.65m mDLs (Aug 2025); IL Apple Wallet IDs Nov 2025 with selfie + liveness.",
+      "source": [
+        "https://www.biometricupdate.com/202605/us-states-deepen-mobile-id-rollouts-as-focus-shifts-to-verification-and-privacy",
+        "https://en.wikipedia.org/wiki/Mobile_driver's_license",
+        "https://www.federalregister.gov/documents/2024/10/25/2024-23881/minimum-standards-for-drivers-licenses-and-identification-cards-acceptable-by-federal-agencies-for"
+      ],
+      "notes": "Verifier ecosystem and privacy norms still maturing; biometrics at enrollment."
+    },
+    {
+      "name": "China",
+      "instrument": "Measures for Administration of National Network Identity Authentication Public Services (CyberID / wanghao-wangzheng)",
+      "effective_date": "2025-07-15",
+      "mandate": "State-operated centralized real-name authentication. Issues network number + network credential so users authenticate without giving real names/ID numbers to each platform. Officially voluntary.",
+      "tech_required": "Government-issued cryptographic ID token; app-based auth; underpinned by real-name + facial-recognition infrastructure",
+      "status": "Live; ~6m IDs issued by May 2025.",
+      "source": [
+        "https://www.loc.gov/item/global-legal-monitor/2025-07-09/china-centralized-internet-id-system-officially-launched/",
+        "https://en.wikipedia.org/wiki/National_online_identity_authentication",
+        "https://technode.com/2025/07/16/china-rolls-out-national-online-id-card-platform-for-secure-digital-identity-verification/"
+      ],
+      "notes": "Centralizes the real-name layer under MPS/CAC; surveillance concerns."
+    },
+    {
+      "name": "China",
+      "instrument": "Real-name registration + Regulations on Protection of Minors in Cyberspace + CAC 'Minor Mode'",
+      "effective_date": "Minor Mode launched 2025-04-29; gaming limits since 2021",
+      "mandate": "Minors' online gaming limited to 1 hour, 8-9pm, weekends/holidays only; device/app/app-store 'minor mode' with daily limits, 10pm-6am blackout, break reminders, content filters; real-name registration across platforms.",
+      "tech_required": "Real-name verification (ID + facial recognition for gaming login spot-checks)",
+      "status": "In force; enforcement uneven (~77% of minors evade via relatives' identities).",
+      "source": [
+        "https://itif.org/publications/2025/05/09/chinas-minors-mode-blueprint-or-cautionary-tale/",
+        "https://www.chinalawtranslate.com/en/overview-of-protections-for-minors-online/"
+      ],
+      "notes": "World's most prescriptive minor-protection regime; uses facial recognition."
+    },
+    {
+      "name": "Russia",
+      "instrument": "Presidential decree (Jun 2025) on state messenger MAX; SIM-to-Gosuslugi binding; VPN restrictions",
+      "effective_date": "SIM binding 2025-01-01; MAX pre-install mandatory 2025-09-01",
+      "mandate": "Every SIM must be tied to a Gosuslugi (state services) account; unregistered SIMs deactivated. MAX messenger mandatory pre-install; Gosuslugi mobile access funneled through MAX. State digital ID piloted via MAX.",
+      "tech_required": "State identity binding (Gosuslugi); government messenger as identity/auth chokepoint; deep-packet inspection (TSPU)",
+      "status": "Active and tightening. Roskomnadzor blocked 469 VPN services (Feb 2026); Telegram/WhatsApp throttled.",
+      "source": [
+        "https://cyberinsider.com/russia-makes-state-backed-max-messenger-mandatory-on-devices/",
+        "https://en.zona.media/article/2026/04/07/russian_internet_censorship_2026",
+        "https://www.hrw.org/news/2026/03/12/russia-digital-iron-curtain-falls-on-internet-freedom-protection-day",
+        "https://www.myprivacy.blog/russia-pilots-state-linked-digital-id-through-max-app-a-deep-dive-into-digital-surveillance/"
+      ],
+      "notes": "Sovereign-internet identity layer; control-oriented rather than child-protection."
+    },
+    {
+      "name": "Iran",
+      "instrument": "National Information Network (NIN); Supreme Council of Cyberspace 'white SIM' system; VPN-criminalization bill",
+      "effective_date": "NIN since ~2013; white-SIM system formally instituted 2025-07",
+      "mandate": "SIM cards/devices linked to national identity records; two-tier internet (government-approved 'white SIM' unrestricted access vs. filtered public). VPN production/use criminalized.",
+      "tech_required": "Identity-bound SIM registration; NIN sovereign network layer; whitelisting; VPN detection/neutralization",
+      "status": "Active, intensified during 2025-2026 protests (near-total blackout Jan 2026, NIN-only whitelisted access).",
+      "source": [
+        "https://circleid.com/posts/iran-expands-digital-dragnet-after-crushing-protests",
+        "https://carnegieendowment.org/research/2026/03/iran-wields-wartime-internet-access-as-a-political-tool",
+        "https://en.wikipedia.org/wiki/Internet_censorship_in_Iran"
+      ],
+      "notes": "Identity controls serve censorship/surveillance, not age assurance."
+    },
+    {
+      "name": "India",
+      "instrument": "Digital Personal Data Protection Act 2023 + DPDP Rules 2025 (Rule 10); Aadhaar",
+      "effective_date": "2025-11-13 (DPDP Rules in effect)",
+      "mandate": "Under-18 = child. Verifiable parental consent required before processing children's data; platforms must confirm parent is adult, child is minor, and genuine relationship. Behavioral profiling/targeted ads to children prohibited. Penalties up to INR 200 crore.",
+      "tech_required": "Identity/age verification; Aadhaar-linked DigiLocker tokens designated authoritative credential; virtual tokens from authorized entities",
+      "status": "In force; compliance ramp ongoing; parental-consent mechanics debated as impractical.",
+      "source": [
+        "https://www.dpdpa.com/dpdparules/rule10.html",
+        "https://ksandk.com/data-protection-and-data-privacy/childrens-data-protection-under-indias-dpdp-rules/",
+        "https://www.medianama.com/2025/11/223-parental-consent-children-indias-data-protection-rules/"
+      ],
+      "notes": "Builds on Aadhaar (~1.4bn enrolled); DigiLocker as the verification rail."
+    }
+  ]
+}

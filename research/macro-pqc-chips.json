@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "title": "Post-quantum cryptography (PQC) chips - SEALSQ/WISeKey vs incumbents; the stacked-narrative microcap pattern",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (NIST CSRC, GlobeNewswire/SEALSQ/WISeKey press, StockTitan, Investing.com, MarketsandMarkets, Infineon/NXP/Thales). Vendor press flagged.",
+    "frame": "The real PQC market (post NIST FIPS 203/204/205) is growing but incumbent-dominated. SEALSQ/WISeKey are speculative microcaps stacking THREE narratives - quantum + space + crypto/AI - and monetizing via equity dilution and partnership press. They also touch the digital-ID/PKI layer (WISeKey is a PKI/identity firm)."
+  },
+  "real_market": {
+    "standards": "NIST finalized FIPS 203 (ML-KEM), 204 (ML-DSA), 205 (SLH-DSA) on Aug 13 2024 - a real, mandated migration driver.",
+    "size": "PQC market ~$0.42B (2025) -> ~$2.84B (2030), ~46% CAGR (MarketsandMarkets).",
+    "incumbents": ["Infineon (SLC27 security controller, CC-certified ML-KEM/ML-DSA, first-mover)", "NXP (PQC roadmap/products)", "STMicroelectronics (secure MCU PQC integration 2026)", "Thales (co-developed a standardized algorithm; Luna HSMs with FIPS 203/204/205)", "IDEMIA, Entrust, PQShield, AWS, DigiCert"],
+    "source": ["https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved", "https://www.marketsandmarkets.com/ResearchInsight/post-quantum-cryptography-market.asp", "https://www.infineon.com/promo/postquantumcryptography"]
+  },
+  "companies": [
+    {"name": "SEALSQ", "ticker": "LAES", "parent": "WISeKey (WKEY)", "grade": "SPECULATIVE microcap (low likelihood of incumbency)", "facts": ["QS7001 post-quantum secure chip", "Stock ~$2.45, -35% YTD; reported strong liquidity (current ratio 7.38, more cash than debt) - consistent with heavy equity raising during the 2024-25 quantum mania (dilution-funded cash)", "Competes against Infineon/NXP/STMicro/Thales in secure elements - a market it does not lead"], "narratives_stacked": ["post-quantum", "space (WISeSat)", "crypto/AI (SEALCOIN.AI, DePIN-from-space)"], "source": ["https://www.stocktitan.net/news/LAES/sealsq-wi-se-key-and-wi-se-sat-space-successfully-launch-their-new-82pr1wixj5z7.html", "https://www.sealsq.com/investors/news-releases/wisesat.space-and-sealsq-launch-new-satellite-with-spacex-enabling-the-first-ever-depin-from-space-and-advancing-quantum-safe-space-communications"]},
+    {"name": "WISeKey", "ticker": "WKEY", "grade": "SPECULATIVE; legacy PKI/identity pivoting to quantum+space", "facts": ["PKI/Root-of-Trust/digital-identity heritage (touches the digital-ID layer)", "WISeSat.Space launched its 21st LEO satellite (QS7001 aboard) on SpaceX Falcon 9 Transporter-16, Mar 30 2026, Vandenberg", "Plan: 100-satellite quantum-comms constellation by 2033"], "spacex_relationship": "RIDESHARE LAUNCH CUSTOMER (picosats on SpaceX Transporter missions) - NOT a strategic partnership or investment by SpaceX.", "source": ["https://www.globenewswire.com/news-release/2026/03/30/3264532/0/en/WISeKey-s-WISeSat-Space-Subsidiary-Successfully-Launches-Its-21st-Satellite-to-Low-Earth-Orbit-with-SpaceX.html"]}
+  ],
+  "competitors": ["Infineon", "NXP", "STMicroelectronics", "Thales", "IDEMIA", "Entrust", "PQShield", "AWS", "DigiCert"],
+  "assessment": "LIKELIHOOD OF SUCCESS for SEALSQ/WISeKey as major PQC-chip players: LOW. The PQC migration is real and incumbent-led; SEALSQ's edge is press-release velocity and narrative-stacking, not silicon market share or certification depth. The SpaceX tie is a launch-customer relationship. This is the SAME microcap pattern as the critical-minerals juniors (macro-critical-minerals.json) and the IPO compute-padding (fin-spacex-spcx.json): real macro-theme, speculative vehicle. Classification: semiconductor/quantum SUB-BUBBLE, narrative-driven, dilution-funded; tangential to the AI circular core (not part of the SCC), but a clean example of bubble-adjacent froth and of the digital-ID/PKI thread reappearing."
+}

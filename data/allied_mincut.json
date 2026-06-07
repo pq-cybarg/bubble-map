@@ -1,0 +1,25 @@
+{
+  "demand": 5550,
+  "years": {
+    "2026": {
+      "allied_maxflow": 800,
+      "feasible": false,
+      "min_cut": "Allied_sep->Allied_mag"
+    },
+    "2027": {
+      "allied_maxflow": 1500,
+      "feasible": false,
+      "min_cut": "Allied_sep->Allied_mag"
+    },
+    "2028": {
+      "allied_maxflow": 6000,
+      "feasible": true,
+      "min_cut": "Allied_sep->Allied_mag"
+    },
+    "2029": {
+      "allied_maxflow": 11500,
+      "feasible": true,
+      "min_cut": "S->Lynas_mine, S->MP_mine, S->Greenland_mine, S->OtherAllied_mine"
+    }
+  }
+}

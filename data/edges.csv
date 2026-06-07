@@ -1,0 +1,84 @@
+from,to,instrument,amount_usd,status,declared_circular,cancelable,source_file
+US_Banks,Nondepository financial institutions,debt,1972670000000,2026-04,False,False,macro-cre-privatecredit.json
+Private-credit market,AI data centers,other,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
+OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+OpenAI,Microsoft,compute_commitment,250000000000,committed,True,False,"fin-nvidia-openai.json,fin-microsoft-openai.json"
+Microsoft,OpenAI,equity,135000000000,closed-definitive,True,False,fin-microsoft-openai.json
+US_Banks,Private-credit funds,other,123000000000,2024-12,False,False,macro-cre-privatecredit.json
+Meta,SINK_capex,capex,115000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
+Google,SpaceX,equity,100000000000,held,False,False,fin-spacex-spcx.json
+NVIDIA,OpenAI,equity,100000000000,signed-LOI,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+Anthropic,Amazon,compute_commitment,100000000000,active,True,False,fin-google-amazon-anthropic-meta.json
+SpaceX_IPO_Public,SpaceX,ipo_proceeds,75000000000,offering,False,False,fin-spacex-spcx.json
+Broadcom,SINK_backlog,compute_commitment,56000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
+Amazon,OpenAI,equity,50000000000,committed,False,False,fin-nvidia-openai.json
+Anthropic,SpaceX,compute_commitment,45000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
+SoftBank,OpenAI,equity,41000000000,closed,False,False,fin-nvidia-openai.json
+Apollo,Next-gen data centers / AI infrastructure,equity,40000000000,2025,False,False,macro-cre-privatecredit.json
+Google,Anthropic,equity,40000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
+OpenAI,Microsoft,revenue_share,38000000000,committed,False,False,fin-microsoft-openai.json
+SINK_lenders,Vantage,debt,38000000000,reported,False,False,fin-coreweave-oracle.json
+Private-credit funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progress),False,False,macro-cre-privatecredit.json
+Apollo_Blackstone,Broadcom,compute_commitment,35000000000,announced,False,False,fin-google-amazon-anthropic-meta.json
+Google,SpaceX,compute_commitment,30000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
+Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-amazon-anthropic-meta.json
+SINK_investors,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+SINK_bondmarket,Meta,debt,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+Private-credit funds / asset managers,AI data-center SPVs / hyperscaler projects,debt,27000000000,2025-10,False,False,macro-cre-privatecredit.json
+BlueOwl,Meta_Hyperion_SPV,equity,27000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+Amazon,Anthropic,equity,25000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
+OpenAI,CoreWeave,compute_commitment,22400000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+CoreWeave,SINK_debt,debt,21373000000,outstanding,False,False,fin-coreweave-oracle.json
+Microsoft,Nebius,compute_commitment,19400000000,active,False,False,fin-coreweave-oracle.json
+SoftBank,Stargate,equity,19000000000,committed,False,False,fin-coreweave-oracle.json
+OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.json
+Private credit / venture debt lenders,Neoclouds,debt,18000000000,2025-2026,False,False,macro-cre-privatecredit.json
+PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
+Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
+CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
+NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
+SINK_lenders,CoreWeave,debt,8500000000,closed,False,False,fin-coreweave-oracle.json
+Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
+MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
+Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
+MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
+NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
+OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsoft-openai.json
+BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+NVIDIA,Nebius,equity,2700000000,funded,True,False,fin-coreweave-oracle.json
+JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
+SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
+NVIDIA,CoreWeave,equity,2000000000,closed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
+NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
+NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
+Disney,OpenAI,equity,1000000000,announced-then-cancelled,False,False,fin-disney-openai-sora.json
+NVIDIA,Nokia,equity,1000000000,committed,False,False,fin-nvidia-openai.json
+NVIDIA,Nscale,equity,600000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+First_Brands,UBS_OConnor,other,500000000,2025,False,False,macro-firstbrands-ubs.json
+Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.json
+Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minerals.json
+Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
+US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
+SpaceX,xAI,other,,merged,True,False,fin-spacex-spcx.json
+SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
+Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
+Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
+Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
+First_Brands,Jefferies,other,,2025,False,False,macro-firstbrands-ubs.json
+NVIDIA,Mistral,equity,,closed,True,False,fin-nvidia-openai.json
+OpenAI,AMD,warrant,,committed,False,False,fin-nvidia-openai.json
+OpenAI,Broadcom,compute_commitment,,committed,False,False,"fin-nvidia-openai.json,fin-google-amazon-anthropic-meta.json"
+OpenAI,NVIDIA,gpu_purchase,,committed,True,False,fin-nvidia-openai.json
+GIC,Anthropic,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+MGX,Anthropic,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+Google,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
+Meta,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
+Anthropic,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
+AMD,OpenAI,warrant,,announced,True,False,fin-google-amazon-anthropic-meta.json
+MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
+Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
+MP_Materials,Defense_Primes,offtake,,committed,True,False,macro-critical-minerals.json

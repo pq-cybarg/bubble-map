@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "title": "Energy/power leg - the AI+defense power bottleneck, nuclear/SMR PPAs, turbine wall, Russia enrichment chokepoint",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (IEA Energy & AI; US DOE; PJM auction releases; Utility Dive/GE Vernova; Centrus 8-Ks; DOE/NRC on Russian uranium ban). GW/kg-HALEU figures illustrative-but-grounded.",
+    "models": ["models/graph/energy_web.py","models/z3/power_adequacy.py"]
+  },
+  "demand": {
+    "datacenter_share_us_electricity": {"2023_pct": 4.4, "2028_pct": "6.7-12", "source": ["https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand"]},
+    "share_of_us_load_growth_to_2030": "~half", "global_dc_twh_2030": 945,
+    "pjm_capacity_auction": {"cap_usd_mwday_latest": 333.44, "note": "hit cap 3 auctions running ($329->$333.44); ~$9.3B of the increase data-center-driven", "source": ["https://www.utilitydive.com/news/pjm-interconnection-capacity-auction-data-center/808264/"]}
+  },
+  "nuclear_smr_deals": [
+    {"buyer": "Microsoft", "source": "Constellation / Three Mile Island Unit 1 restart", "mw": 835, "usd_b": 16.0, "term": "20yr PPA, ~2028", "source": ["https://www.datacenterfrontier.com/energy/article/55239739/data-center-nuclear-power-update-microsoft-constellation-aws-talen-meta"]},
+    {"buyer": "Amazon", "source": "Talen / Susquehanna", "mw": 1920, "term": "through 2042 + SMR exploration", "source": ["https://www.sec.gov/Archives/edgar/data/0001622536/000162828025030559/a20250611pressreleasebusin.htm"]},
+    {"buyer": "Google", "source": "Kairos Power (SMR)", "mw": 500, "term": "first corp SMR fleet deal; 50MW by 2030", "source": ["https://introl.com/blog/nuclear-power-ai-data-centers-microsoft-google-amazon-2025"]},
+    {"buyer": "Meta", "source": "Oklo (SMR)", "mw": 1200, "term": "+RFP 1-4GW nuclear", "source": ["https://www.datacenterfrontier.com/energy/article/55239739/data-center-nuclear-power-update-microsoft-constellation-aws-talen-meta"]},
+    {"buyer": "Oracle", "source": "SMR x3", "mw": 1000, "term": "gigawatt datacenter design", "source": ["https://introl.com/blog/nuclear-power-ai-data-centers-microsoft-google-amazon-2025"]}
+  ],
+  "supply_walls": {
+    "gas_turbines": {"fact": "GE Vernova ~80 GW backlog into 2029; heavy-duty lead ~3yr, CCGT 5-7yr; ~80GW orders vs ~30GW/yr capacity; Crusoe ordered 19 turbines (behind-the-meter gas).", "source": ["https://www.utilitydive.com/news/ge-vernova-gas-turbine-investor/807662/"]},
+    "haleu_enrichment_chokepoint": {"fact": "Russia ~44% of global enrichment; ~35% of US imports; 27% of US enriched-uranium demand (2023). HALEU for SMRs was ~100% Russia. Prohibiting Russian Uranium Imports Act (May 2024, eff Aug 11 2024) with waivers to 2027; Russia retaliated with export curbs. Domestic Centrus ~900 kg/yr HALEU (Piketon OH). Kazatomprom ~38-40% of mining. Midstream (conversion+enrichment) is the real chokepoint.", "source": ["https://www.utilitydive.com/news/congress-passes-russian-uranium-import-ban-haleu-nuclear-fuel-advanced-reactors/715256/", "https://www.centrusenergy.com/news/centrus-achieves-key-production-milestone-with-delivery-of-900-kilograms-of-haleu-to-the-department-of-energy/"]}
+  },
+  "spec_suppliers": {"TMC": "deep-sea battery/grid metals (pre-commercial)", "CRML": "Greenland REE (pre-revenue)", "LAES/WKEY": "PQC chips + WISeSat on SpaceX (microcaps)", "SPCX": "SpaceX Starshield+Starlink+compute"},
+  "proven_results": {
+    "power_adequacy": "Z3 P1 UNSAT: new firm power supply < AI demand every year through 2028 (2026: 18 vs 25 GW; 2028: 34 vs 80 GW - gap widens). Earliest balanced year >2028.",
+    "haleu_chokepoint": "Z3 P2 UNSAT: domestic HALEU short of SMR-fleet need through 2029 -> US dependent on Russia-controlled enrichment (energy analog of the China rare-earth chokepoint).",
+    "parallel": "TWO adversary chokepoints on one buildout: China (rare earths, independence ~2028) + Russia (enrichment, ~2028-29). Dollars cannot resolve either on the timeline."
+  }
+}

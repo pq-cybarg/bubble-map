@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Disney <-> OpenAI / Sora: funding edge (rescinded) + IP-liability overhang",
+    "generated": "2026-06-06",
+    "provenance": "Web-verified directly (Variety, CNBC, Axios, TechCrunch, WDWNT). Two distinct relationship types: (a) a brief equity+licensing edge that was ANNOUNCED then CANCELLED, and (b) an adversarial IP-litigation cluster. Models content-provenance/legal risk and deal fragility, NOT circular funding.",
+    "why_it_matters": "This is a complete bubble MICRO-CYCLE: a $1B mega-deal formed (Dec 11 2025) and collapsed (Mar 24 2026) inside ~90 days, with the underlying product (Sora app) shut down. It is the cleanest real-world instance of an edge in the funding graph reversing - exactly the dynamic the TLA+ cascade model formalizes."
+  },
+  "entities": [
+    {"name": "Disney", "type": "ip_rightsholder_media", "valuation_usd": null, "notes": "Ticker $DIS. Simultaneously (a) a would-be OpenAI investor/licensor and (b) lead litigant against AI image/video generators. Pulled its OpenAI investment.", "source": ["https://www.cnbc.com/2025/12/11/disney-openai-sora-characters-video.html"]}
+  ],
+  "edges": [
+    {"from": "Disney", "to": "OpenAI", "instrument": "equity", "amount_usd": 1000000000, "date": "2025-12-11", "status": "announced-then-cancelled", "circular": false, "source": ["https://www.cnbc.com/2025/12/11/disney-openai-sora-characters-video.html", "https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/"], "confidence": "high", "notes": "Disney announced a $1B equity stake in OpenAI on Dec 11 2025. NEVER CLOSED/FUNDED - dropped when OpenAI shut down Sora on Mar 24 2026. A booked-then-vaporized commitment: a worked example of how much of the $1.4T 'commitment' stack is reversible announcement, not cash."},
+    {"from": "Disney", "to": "OpenAI", "instrument": "ip_license", "amount_usd": null, "date": "2025-12-11", "status": "announced-then-cancelled", "circular": false, "source": ["https://www.axios.com/2025/12/11/disney-openai-sora-deal-what-to-know", "https://techcrunch.com/2025/12/11/disney-signs-deal-with-openai-to-allow-sora-to-generate-ai-videos-featuring-its-characters/"], "confidence": "high", "notes": "3-year content license letting Sora/ChatGPT Images generate 200+ characters from Disney/Marvel/Pixar/Star Wars; Disney+ to curate Sora videos later in 2026. Cancelled with the Sora shutdown."},
+    {"from": "Disney+NBCUniversal+WarnerBrosDiscovery", "to": "Midjourney", "instrument": "ip_litigation", "amount_usd": null, "date": "2025-06", "status": "active-lawsuit", "circular": false, "source": ["https://www.cnbc.com/2025/12/11/disney-openai-sora-characters-video.html"], "confidence": "high", "notes": "Copyright-infringement suit (joined later vs Minimax). The studio cartel litigating the generative-AI cluster = a systemic, uncapped contingent liability sitting on top of AI valuations."},
+    {"from": "Disney", "to": "Google", "instrument": "ip_cease_and_desist", "amount_usd": null, "date": "2025", "status": "demand", "circular": false, "source": ["https://www.insiderfinance.io/news/disney-openai-investment-google-cease-and-desist"], "confidence": "high", "notes": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."}
+  ],
+  "events": [
+    {"date": "2025-09", "event": "Sora 2 launches with an OPT-OUT model (rightsholders must flag exclusion); floods with Disney/Marvel/Star Wars/Nintendo IP; Hollywood backlash.", "source": ["https://www.disneytouristblog.com/disneys-groundbreaking-ai-deal-is-dead/"]},
+    {"date": "2025-12-11", "event": "Disney+OpenAI deal: $1B equity + 3-yr 200-character license announced.", "source": ["https://www.cnbc.com/2025/12/11/disney-openai-sora-characters-video.html"]},
+    {"date": "2026-03-24", "event": "OpenAI announces it is SHUTTING DOWN the Sora video app ('We're saying goodbye to Sora', no reason given); Disney drops the $1B investment.", "source": ["https://variety.com/2026/digital/news/openai-shutting-down-sora-video-disney-1236698277/"]}
+  ]
+}

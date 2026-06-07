@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Yen (and developing EUR/CHF) reverse carry trade - the deleveraging trigger",
+    "generated": "2026-06-07",
+    "provenance": "Web-verified (BOJ reporting, Investing.com, Deriv, Stapleton AM, EBC, Mesirow, Capital.com).",
+    "thesis": "The AI/Mega-cap trade is the crowded 'risk-on' destination funded, at the margin, by cheap carry borrowing. As the cheapest funding currencies (JPY, then CHF) normalize, the carry math breaks and forced deleveraging can simultaneously hit FX, equities and credit - the exogenous trigger that could force-sell the AI bubble."
+  },
+  "yen": {
+    "boj_path": [{"date": "2025-01", "rate": 0.50}, {"date": "2025-12-19", "rate": 0.75}, {"date": "2026-06 (expected)", "rate": 1.0}],
+    "jgb_10y": "~2.8% (highest since 1997)",
+    "carry_size_usd": "300-500B (estimated peak)",
+    "unwind_window": "Peak repatriation Nov 2025-Feb 2026; Japanese fiscal year-end Mar 2026 pressure",
+    "precedent": "Aug 5 2024: a sharp yen-carry unwind crashed the Nikkei (~-12% in a day) and spiked global volatility - proof the mechanism can transmit globally in hours.",
+    "source": ["https://www.investing.com/analysis/the-boj-just-pulled-the-trigger-markets-brace-for-carry-trade-chaos-200672097", "https://deriv.com/blog/posts/usdjpy-carry-trade-breaking-down", "https://stapletonam.com/the-unwind-of-the-yen-carry-trade-understanding-the-reverse-carry-trade-and-its-global-consequences/"]
+  },
+  "euro_chf": {
+    "fact": "CHF is the secondary classic funding currency; SNB expected to hold ~0% well into 2026, anchoring cheap CHF funding; EUR/CHF ~0.94. A developing carry vector as EUR-area growth firms.",
+    "source": ["https://capital.com/en-int/analysis/eur-to-chf-forecast", "https://www.mesirow.com/insights/quiet-engine-global-risk"]
+  },
+  "mechanism": "Borrow JPY/CHF near zero -> convert -> buy higher-yielding/risk assets (US tech/AI prominent). Rising BOJ rates + ~2.8% JGB yields shrink the spread and strengthen the yen, forcing position liquidation. Because carry is leveraged and crowded, the unwind is non-linear and correlation-spiking - it deleverages the most crowded longs (Mag7/AI) regardless of fundamentals.",
+  "linkage_to_bubble": "This is the clearest EXOGENOUS shock channel for the formal cascade model (models/tla): a carry-unwind / rate-shock node that simultaneously (1) raises the discount rate on the AI core's back-loaded RPO, (2) re-widens bank HTM unrealized losses (macro-fdic.json), and (3) forces selling of the crowded AI trade - any of which can flip the core from 'solvent-while-inflows-continue' to 'insolvent' (Z3 theorem T4)."
+}

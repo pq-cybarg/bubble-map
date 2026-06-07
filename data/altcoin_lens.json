@@ -1,0 +1,112 @@
+{
+  "XRP (Ripple)": {
+    "what": "cross-border payments / RLUSD stablecoin",
+    "adoption": "SBI ~9% owner; bank corridors (RippleNet); RLUSD; spot ETF; SEC case won in part (2023)",
+    "token_value_accrual": "moderate (payments volume != token demand; XRP largely speculative)",
+    "thread": "payments/Japan (SBI) + SEC selective-enforcement thread (Hinman ETH vs XRP)",
+    "grade": "REAL-USE / weak-accrual"
+  },
+  "LINK (Chainlink)": {
+    "what": "oracle + cross-chain (CCIP) for tokenization",
+    "adoption": "SWIFT (11,500 banks; tokenized-bond milestone Apr-2026), Euroclear, UBS, JPM Kinexys, Mastercard, Ondo; ~$75B secured; CRE runtime live",
+    "token_value_accrual": "improving (staking/CCIP fees) but value-accrual still debated",
+    "thread": "THE tokenization 'picks & shovels' -> BIS Project Agora / stablecoin rails",
+    "grade": "REAL-INFRA (strongest utility)"
+  },
+  "HBAR (Hedera)": {
+    "what": "enterprise DLT, RWA settlement",
+    "adoption": "31-member council (Google/IBM/Boeing/FedEx/Standard Bank); >$10B RWA settled; SWIFT ISO20022 test; SEC/CFTC 'digital commodity'; acquired Hyperledger Fabric IP",
+    "token_value_accrual": "WEAK ('enterprise adoption means nothing when token holders get ~zero revenue' - the core critique)",
+    "thread": "enterprise tokenization + temporal-web (Google council member)",
+    "grade": "REAL-ADOPTION / weak-accrual"
+  },
+  "ALGO (Algorand)": {
+    "what": "L1 (Micali); CBDC/tokenization pilots",
+    "adoption": "~$0.09, mcap ~$0.8B (#62); Revolut staking, PostFinance; classified 'digital commodity'",
+    "token_value_accrual": "weak (token languished despite solid tech)",
+    "thread": "tokenization/CBDC rails",
+    "grade": "SOLID-TECH / modest-traction"
+  },
+  "Story / IP (Story Protocol)": {
+    "what": "L1 to tokenize INTELLECTUAL PROPERTY for the AI era",
+    "adoption": "a16z $80M Series B at $2.25B val; 'IP Legos'; Bieber/BTS/Blackpink/Adidas; pitched as creator defense vs LLMs",
+    "token_value_accrual": "early/speculative; narrative-led",
+    "thread": "AI x IP provenance -> DIRECTLY the Disney/Sora thread; a16z = the connective weaver node",
+    "grade": "THEMATIC-SPECULATIVE (AI-IP)"
+  },
+  "QRL (Quantum Resistant Ledger)": {
+    "what": "post-quantum L1 (XMSS -> SPHINCS+/FIPS205)",
+    "adoption": "live since 2018; +45% spikes on quantum-risk headlines (Mar-2026); tiny mcap",
+    "token_value_accrual": "narrative-driven; thin liquidity",
+    "thread": "quantum thread -> same narrative as LAES/WKEY (PQC chips)",
+    "grade": "THEMATIC-SPECULATIVE (quantum)"
+  },
+  "MCM (Mochimo)": {
+    "what": "post-quantum PoW coin (since 2018)",
+    "adoption": "niche PQ community; minimal institutional use",
+    "token_value_accrual": "narrative/speculative",
+    "thread": "quantum thread (with QRL)",
+    "grade": "SPECULATIVE-NICHE"
+  },
+  "POL (Polygon)": {
+    "what": "Ethereum scaling L2 / 'agg' network (ex-MATIC)",
+    "adoption": "large ecosystem, payments push; broad DeFi/enterprise pilots",
+    "token_value_accrual": "moderate; competitive/commoditized scaling",
+    "thread": "Ethereum-scaling infra",
+    "grade": "INFRA / commoditized"
+  },
+  "POLY (Polymath)": {
+    "what": "security-token issuance platform (ST-20)",
+    "adoption": "~$0.02, faded; security-token thesis never scaled",
+    "token_value_accrual": "weak/dormant",
+    "thread": "tokenization-of-securities (early, stalled)",
+    "grade": "FADED-NARRATIVE"
+  },
+  "XLM (Stellar)": {
+    "what": "payments/remittance + RWA tokenization",
+    "adoption": "MoneyGram; USDC on Stellar; Franklin Templeton BENJI tokenized money-market fund runs on Stellar; co-founded by Jed McCaleb",
+    "token_value_accrual": "moderate; large foundation-held supply",
+    "thread": "payments + RWA tokenization + the McCaleb Mt.Gox->Ripple->Stellar lineage (spec-crypto-sec-epstein)",
+    "grade": "REAL-USE / weak-accrual"
+  },
+  "SUI (Mysten Labs)": {
+    "what": "Move-based high-throughput L1",
+    "adoption": "built by ex-Meta DIEM/Novi engineers (Mysten Labs); a16z-backed (FTX historically); DeFi/gaming throughput",
+    "token_value_accrual": "moderate; heavy insider/VC unlocks",
+    "thread": "DIRECT Meta/Diem-stablecoin lineage (the Facebook coin that died, reborn as Sui) + a16z connective node",
+    "grade": "VC-L1 / Diem-lineage"
+  },
+  "_meta": {
+    "threads": {
+      "tokenization (BIS Agora / RWA)": [
+        "LINK (Chainlink)",
+        "HBAR (Hedera)",
+        "ALGO (Algorand)",
+        "POLY (Polymath)",
+        "XLM (Stellar)"
+      ],
+      "payments (Japan/SBI, banks)": [
+        "XRP (Ripple)",
+        "XLM (Stellar)"
+      ],
+      "AI x IP provenance (Disney/Sora, a16z)": [
+        "Story / IP (Story Protocol)"
+      ],
+      "quantum (PQC chips LAES/WKEY)": [
+        "QRL (Quantum Resistant Ledger)",
+        "MCM (Mochimo)"
+      ],
+      "Ethereum scaling": [
+        "POL (Polygon)"
+      ],
+      "Meta/Diem lineage (a16z VC L1s)": [
+        "SUI (Mysten Labs)"
+      ],
+      "McCaleb lineage (Mt.Gox->Ripple->Stellar)": [
+        "XRP (Ripple)",
+        "XLM (Stellar)"
+      ]
+    },
+    "finding": "Real tokenization/payments infra (LINK/HBAR/XRP/ALGO) with weak token-value accrual; thematic alts (Story/QRL/MCM) ride the same AI-IP/quantum narratives as equity microcaps; only BTC durably up in gold. a16z is a recurring connective node (Story, Fairshake, Worldcoin)."
+  }
+}

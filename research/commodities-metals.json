@@ -1,0 +1,193 @@
+{
+  "as_of": "2026-06-05",
+  "frame": "Metals/energy assessed as (a) AI/datacenter/electrification demand signal and (b) macro-stress/safe-haven signal. Both confirmed: copper/uranium/power = physical AI buildout; gold/silver = monetary/debt stress. Complex peaked late-Jan 2026 and pulled back into spring 2026.",
+  "metrics": [
+    {
+      "name": "Copper COMEX HG front-month",
+      "value": "6.25",
+      "unit": "USD/lb",
+      "date": "2026-06-05",
+      "yoy_or_move": "+29.9% YoY; off record ~6.6/lb hit early June 2026; from ~3.80-4.00/lb early 2024",
+      "source": ["https://tradingeconomics.com/commodity/copper", "https://www.recyclingtoday.com/news/copper-comex-lme-price-january-2026-us-dollar/"],
+      "notes": "AI-demand metal. -3.97% on the day."
+    },
+    {
+      "name": "Copper LME 3-month",
+      "value": "12965",
+      "unit": "USD/tonne",
+      "date": "2026-06-04",
+      "yoy_or_move": "spot ~13,000; recent range 12,900-13,200; 2024 record ref 11,771/t",
+      "source": ["https://www.lme.com/metals/non-ferrous/lme-copper", "https://www.recyclingtoday.com/news/copper-comex-lme-price-january-2026-us-dollar/"],
+      "notes": "Secondary reporting; LME settlement files not pulled directly."
+    },
+    {
+      "name": "Copper refined supply deficit 2026 (forecast range)",
+      "value": "150000-400000",
+      "unit": "tonnes",
+      "date": "2026",
+      "yoy_or_move": "flip from 2025 surplus to deficit",
+      "source": ["https://press.spglobal.com/2026-01-08-Substantial-Shortfall-in-Copper-Supply-Widens", "https://www.tradingkey.com/analysis/commodities/metal/261726965-copper-outlook-2026-tradingkey"],
+      "notes": "ICSG ~150k; JPM ~330k; UBS >400k. Bank forecasts."
+    },
+    {
+      "name": "AI datacenter copper intensity",
+      "value": "27-66",
+      "unit": "tonnes per MW",
+      "date": "2026",
+      "yoy_or_move": "hyperscale AI facility up to ~50,000 t; ~1.1 Mt/yr by 2030 (~3% global demand)",
+      "source": ["https://www.tomshardware.com/tech-industry/why-copper-markets-are-feeling-the-pinch", "https://www.usfunds.com/resource/ai-data-centers-could-consume-half-a-million-tons-of-copper-annually-by-2030/"],
+      "notes": "Conventional DC 5,000-15,000 t. Core AI-demand confirm."
+    },
+    {
+      "name": "Copper Section 232 tariff",
+      "value": "50",
+      "unit": "% on semi-finished/derivative copper",
+      "date": "2025-08-01",
+      "yoy_or_move": "COMEX-LME premium blew out to record ~2,520-2,600/t (~26%); COMEX +13% in a day to >12,445/t",
+      "source": ["https://www.whitecase.com/insight-alert/president-trump-orders-50-percent-section-232-tariff-copper-imports", "https://www.spglobal.com/market-intelligence/en/news-insights/research/potential-50-us-import-tariff-on-copper-to-fragment-global-market", "https://www.fastmarkets.com/insights/us-copper-tariff-impact/"],
+      "notes": "Front-running drove COMEX stocks to record 232,195 t (since 2004)."
+    },
+    {
+      "name": "Gold spot",
+      "value": "4331",
+      "unit": "USD/oz",
+      "date": "2026-06-05",
+      "yoy_or_move": "+30.78% YoY; from ~2,069 (Jan 1 2024); off all-time high 5,589 (Jan 28 2026)",
+      "source": ["https://tradingeconomics.com/commodity/gold", "https://www.cnbc.com/amp/select/the-price-of-gold-today-june-5-2026/"],
+      "notes": "Macro-stress metal. -3.2% on day to 2026 low on hot US jobs print (172k vs 85k est). CNBC quoted ~4,413 at 9am ET."
+    },
+    {
+      "name": "Gold all-time high 2026",
+      "value": "5589",
+      "unit": "USD/oz",
+      "date": "2026-01-28",
+      "yoy_or_move": "peak; ~2.1x vs early-2024 base",
+      "source": ["https://investingnews.com/daily/resource-investing/precious-metals-investing/gold-investing/highest-price-for-gold/"],
+      "notes": "Record then spring pullback."
+    },
+    {
+      "name": "Central bank gold purchases 2025",
+      "value": "1237",
+      "unit": "tonnes",
+      "date": "2025",
+      "yoy_or_move": "record; 3rd straight year >1,000 t; 2026 est ~755 t; pre-2022 norm ~400-500 t",
+      "source": ["https://carboncredits.com/gold-prices-smash-another-record-spot-gold-hits-4689-all-time-high-as-central-banks-go-on-a-buying-spree/", "https://www.jpmorgan.com/insights/global-research/commodities/gold-prices"],
+      "notes": "Cleanest macro-stress / de-dollarization signal."
+    },
+    {
+      "name": "PBoC gold holdings",
+      "value": "2322",
+      "unit": "tonnes (~9% of reserves)",
+      "date": "2026-04",
+      "yoy_or_move": "18th consecutive monthly addition",
+      "source": ["https://www.gold.org/goldhub/gold-focus/2026/05/china-gold-market-update-notable-rise-gold-reserves"],
+      "notes": "Structural de-dollarization bid. WGC/Ray Jia."
+    },
+    {
+      "name": "Gold COMEX-LME EFP premium spike (2025 dislocation)",
+      "value": "60",
+      "unit": "USD/oz (vs typical 3-5)",
+      "date": "2025-01",
+      "yoy_or_move": "COMEX gold inventory 17.1 -> 43.3 Moz (Nov24->Mar25, +153%, record quarterly inflow)",
+      "source": ["https://www.tradingkey.com/analysis/commodities/metal/261892590-us-gold-exports-number-one-what-efp-tells-you-tradingkey", "https://www.fxempire.com/forecasts/article/what-caused-the-new-york-vs-london-gold-price-spread-and-why-it-persists-646853"],
+      "notes": "Tariff-fear driven; London 400oz bars recast in Switzerland to 100oz COMEX bars."
+    },
+    {
+      "name": "SHFE gold futures activity",
+      "value": "456",
+      "unit": "tonnes/day avg",
+      "date": "2026-01",
+      "yoy_or_move": "volumes +17% MoM, ~72% above 5-yr avg",
+      "source": ["https://www.gold.org/goldhub/gold-focus/2026/02/china-gold-market-update-strong-start-2026"],
+      "notes": "Live June bp-premium not obtained."
+    },
+    {
+      "name": "Silver spot",
+      "value": "67.30",
+      "unit": "USD/oz",
+      "date": "2026-06-05",
+      "yoy_or_move": "+87.04% YoY; -8.86% on day; off all-time high 121.64 (Jan 29 2026); from ~23 (Jan 2024)",
+      "source": ["https://tradingeconomics.com/commodity/silver", "https://www.bullionstar.com/blogs/bullionstar/silver-enters-2026-in-a-state-of-structural-breakdown/"],
+      "notes": "Squeeze then unwind. Dual industrial/monetary signal."
+    },
+    {
+      "name": "Silver market squeeze metrics (Jan 2026)",
+      "value": "13.4",
+      "unit": "% COMEX registered coverage",
+      "date": "2026-01",
+      "yoy_or_move": ">33 Moz withdrawn in one week (~26% of stock); 1-month lease rate ~8%",
+      "source": ["https://www.financemagnates.com/trending/how-high-can-silver-go-in-2026-as-comex-inventory-tightens"],
+      "notes": "Severe physical scarcity. 2026 deficit ~46.3 Moz (6th straight)."
+    },
+    {
+      "name": "Platinum spot",
+      "value": "1777.40",
+      "unit": "USD/oz",
+      "date": "2026-06-05",
+      "yoy_or_move": "+51.62% YoY; -6.45% on day; off late-Dec 2025 records (~2,446 reached)",
+      "source": ["https://tradingeconomics.com/commodity/platinum", "https://www.mining.com/web/analysts-raise-2026-price-forecasts-for-platinum-palladium-after-2025-rally/"],
+      "notes": "BofA 2026 forecast raised to 2,450 from 1,825."
+    },
+    {
+      "name": "Palladium spot",
+      "value": "1240.50",
+      "unit": "USD/oz",
+      "date": "2026-06-05",
+      "yoy_or_move": "+17.97% YoY; -7.08% on day; off ~1,826 reached",
+      "source": ["https://tradingeconomics.com/commodity/palladium", "https://www.mining.com/web/analysts-raise-2026-price-forecasts-for-platinum-palladium-after-2025-rally/"],
+      "notes": "BofA 2026 forecast raised to 1,725 from 1,525. Russia/Norilsk supply risk + hybrid demand."
+    },
+    {
+      "name": "Uranium spot U3O8",
+      "value": "85.05",
+      "unit": "USD/lb",
+      "date": "2026-06-04",
+      "yoy_or_move": "+20.64% YoY; off 2026 high 101.41 (Jan 29, first >100 since 2007); from ~72 (early 2024)",
+      "source": ["https://tradingeconomics.com/commodity/uranium", "https://www.datacenterdynamics.com/en/news/uranium-prices-hit-all-time-high-fueled-by-ai-data-center-demand/"],
+      "notes": "Nuclear-for-AI metal. Long-term contract price ~93/lb (highest since 2008)."
+    },
+    {
+      "name": "Big Tech nuclear/SMR deals for AI datacenters",
+      "value": "5+ named deals",
+      "unit": "PPAs/SMRs",
+      "date": "2024-2026",
+      "yoy_or_move": "MSFT/Constellation TMI 837 MW by 2028; Google/Kairos 500 MW 6-7 SMRs; Amazon/X-energy; Oracle 3 SMRs; Oklo/Meta 1.2 GW Ohio",
+      "source": ["https://www.cnbc.com/2024/09/20/constellation-energy-to-restart-three-mile-island-and-sell-the-power-to-microsoft.html", "https://fortune.com/2024/11/21/tech-nuclear-energy-google-microsoft-amazon-ai/"],
+      "notes": "Physical AI-power buildout evidence."
+    },
+    {
+      "name": "Global datacenter electricity demand 2026 (IEA)",
+      "value": ">1000",
+      "unit": "TWh",
+      "date": "2026",
+      "yoy_or_move": "from ~460 TWh (2022); AI-DC electricity to more than quadruple by 2030; US >250 TWh in 2026",
+      "source": ["https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai", "https://www.iea.org/news/ai-is-set-to-drive-surging-electricity-demand-from-data-centres"],
+      "notes": "~equal to Japan's total consumption. Big-tech capex >400B in 2025, +75% in 2026."
+    },
+    {
+      "name": "PJM capacity auction clearing price",
+      "value": "329.17",
+      "unit": "USD/MW-day (2026/27)",
+      "date": "2025-12",
+      "yoy_or_move": "from 28.92 (2024/25) = ~10x; hit cap 333.44; record 3rd auction running",
+      "source": ["https://www.utilitydive.com/news/pjm-interconnection-capacity-auction-data-center/808264/", "https://ieefa.org/resources/projected-data-center-growth-spurs-pjm-capacity-prices-factor-10"],
+      "notes": "Cleanest AI-demand signal. DCs = 40% of cost & 63% of price rise; cleared 6,625 MW below reserve target."
+    },
+    {
+      "name": "PJM datacenter share of capacity costs",
+      "value": "40",
+      "unit": "% ($6.5B of $16.4B)",
+      "date": "2025-12",
+      "yoy_or_move": "63% of the price increase (~$9.3B); peak demand +32 GW 2024-2030, all but 2 GW from DCs",
+      "source": ["https://www.utilitydive.com/news/data-centers-pjm-capacity-auction/808951/", "https://insidelines.pjm.com/pjm-auction-procures-134479-mw-of-generation-resources/"],
+      "notes": "Physical grid bottleneck for AI."
+    }
+  ],
+  "caveats": [
+    "June 5 spot from TradingEconomics commodity pages (gold cross-checked vs CNBC). CME/COMEX and LME settlement files not pulled directly (JS-rendered/paywalled to curl).",
+    "LME 3M copper and COMEX-LME premium figures from secondary reporting (RecyclingToday, Fastmarkets, S&P).",
+    "Live June 2026 SHFE bp-premium not obtained; only Jan 2026 activity + qualitative WGC framing.",
+    "Some 2024 baselines (copper ~3.80-4.00, uranium ~72) are approximate round figures from secondary sources.",
+    "Forecast figures (JPM, BofA, UBS, Goldman, Deutsche, SocGen) are bank research opinions, not realized data."
+  ]
+}
