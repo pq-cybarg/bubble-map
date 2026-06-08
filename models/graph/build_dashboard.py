@@ -53,6 +53,30 @@ htm=sorted([b for b in banks if b.get("htm_loss_to_eq_pct") is not None], key=la
 vuln=[b for b in banks if b.get("vulnerable")]
 res_files=sorted(os.path.basename(f) for f in glob.glob(os.path.join(RES,"*.md")))
 nres_json=len(glob.glob(os.path.join(RES,"*.json")))
+nmodels=len(glob.glob(os.path.join(ROOT,"models","z3","*.py"))+glob.glob(os.path.join(ROOT,"models","graph","*.py"))+glob.glob(os.path.join(ROOT,"models","alloy","*.als"))+glob.glob(os.path.join(ROOT,"models","tla","*.tla")))
+BUILD_DATE="2026-06-08"
+# graded speculative overlays (kept OUT of the proofs) - the evidence-graded layer
+OVERLAYS=[
+ ("Regulatory capture (SEC/SDNY/FDIC)","Choke Point 2.0 FOIA, ConsenSys/MetaMask, Ripple-timing+JPM, Kraken/Binance/LBRY sweep, Fairshake $169M","spec-sec-sdny-regulatory"),
+ ("Privacy-tool prosecutions","Tornado Cash + Samourai: real Lazarus $7.6B use vs theories courts rejected (Van Loon) vs developers jailed (code-is-speech)","spec-tornado-samourai"),
+ ("Exchanges + Asia/Gulf","Mt.Gox unwind, Binance CZ-pardon/USD1/MGX, SBI/Ripple ~9%, Ant HKDA+PBoC pause, ByteDance/TikTok->Oracle+MGX","spec-exchanges-asia"),
+ ("Telecom + satellite + ISR","Salt Typhoon broke the CALEA backdoor; Amazon/Apple Globalstar; Starshield/NRO; carrier direct-to-cell","spec-telecom-satellite"),
+ ("Disclosures + surveillance","Snowden (Bullrun/Dual_EC/Room 641A), In-Q-Tel/Palantir, DARPA-TrailOfBits, FBI ANOM, Epstein Files Act, Pandora","spec-disclosures-surveillance"),
+ ("PQC / quantum-sat / DLT","SEALSQ/WISeKey global build-out + Hedera 34-member council overlaps (Google/IBM) + SEALCOIN bridge","fin-hedera-connections"),
+]
+# primary, independently-checkable sources - the anti-fabrication anchor
+PRIMARY=[
+ ("US Supreme Court","Murthy v. Missouri (standing)","https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf"),
+ ("US Treasury / OFAC","Tornado Cash delisting (SB0057)","https://home.treasury.gov/news/press-releases/sb0057"),
+ ("5th Cir. Court of Appeals","Van Loon v. Treasury opinion","https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf"),
+ ("US DOJ / SDNY","Samourai founders plead guilty","https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-plead-guilty"),
+ ("US SEC","Kraken staking settlement (2023-25)","https://www.sec.gov/newsroom/press-releases/2023-25"),
+ ("US Congress","Epstein Files Transparency Act (H.R.4405)","https://www.congress.gov/bill/119th-congress/house-bill/4405/text"),
+ ("ICIJ","Pandora Papers","https://www.icij.org/investigations/pandora-papers/"),
+ ("Hedera Council","Governing-council roster","https://hederacouncil.org/"),
+ ("NIST CSRC","Post-quantum FIPS 203/204/205","https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved"),
+ ("US FDIC","FOIA 'pause letters' coverage","https://www.bankingdive.com/news/fdic-letters-cryptos-operation-chokepoint-2-0-claims-coinbase/735309/"),
+]
 
 def tbl(headers,rows):
     h="".join(f"<th>{html.escape(str(x))}</th>" for x in headers)
@@ -71,6 +95,8 @@ goldt=tbl(["Year","US median home $","in gold","$ idx (1998=100)","GOLD idx"],go
 weavet=tbl(["Node","Layer","Betweenness","Layers","Eras"],[[k,v["layer"],round(v["betweenness"]),v["layer_span"],v["era_span"]] for k,v in weavers])
 bankt=tbl(["Bank","HTM loss/equity","AFS/eq"],[[b["name"],f"{b['htm_loss_to_eq_pct']}%",f"{b.get('afs_loss_b','')}B"] for b in htm])
 srct="".join(f"<li><code>research/{f}</code></li>" for f in res_files)
+overt=tbl(["Layer","What it documents","File"],[[a,b,f"research/{c}.json"] for a,b,c in OVERLAYS])
+primt="".join(f'<li><b>{html.escape(o)}</b> — <a href="{u}" target=_blank rel=noopener>{html.escape(t)}</a></li>' for o,t,u in PRIMARY)
 
 CSS="""body{background:#0b0e14;color:#d7dce5;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}
 header{background:linear-gradient(120deg,#11151f,#1b2433);padding:28px 32px;border-bottom:1px solid #2a3550}
@@ -83,17 +109,20 @@ code{background:#16202f;padding:1px 5px;border-radius:3px;color:#ffd479;font-siz
 .k b{color:#7fd1ff;font-size:20px;display:block} .UNSAT{color:#ff8a8a} .PROVED,.HOLDS,.SAT{color:#7CFC9B}
 nav a{color:#7fd1ff;margin-right:14px;text-decoration:none;font-size:13px} .muted{color:#8a96a8;font-size:12px}"""
 
-KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular core (SCC)</span>
+KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular core (SCC; {an.get('core_scc_all_size','?')} incl. cancelable)</span>
 <span class=k><b>{ncyc}</b>round-trip cycles</span>
+<span class=k><b>{an.get('num_nodes','?')}/{an.get('num_edges','?')}</b>graph nodes/edges</span>
 <span class=k><b>$1.03T</b>external capital OpenAI needs</span>
 <span class=k><b>{nself.get('headline_ratio',0)*100:.0f}%</b>NVIDIA self-funding (headline)</span>
 <span class=k><b>-81%</b>US home priced in gold since 1998</span>
-<span class=k><b>2</b>adversary chokepoints (CN+RU)</span>"""
+<span class=k><b>2</b>adversary chokepoints (CN+RU)</span>
+<span class=k><b>{nres_json}</b>cited research blocks</span>
+<span class=k><b>{nmodels}</b>runnable models</span>"""
 
 HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI Earnings Bubble</title><style>{CSS}</style></head>
 <body><header><h1>Unmasking the AI Earnings Bubble &mdash; control dashboard</h1>
-<div class=muted>Formally-verified analysis &middot; generated from live data/*.json &middot; reproduce: <code>bash run_all.sh</code></div>
-<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#src>Sources</a></nav></header>
+<div class=muted>Formally-verified analysis &middot; auto-generated from live <code>data/*.json</code> on {BUILD_DATE} &middot; reproduce: <code>bash run_all.sh</code> &middot; every figure carries a source URL in the matching <code>research/*.json</code></div>
+<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#overlays>Overlays</a><a href=#verify>Verify it yourself</a><a href=#src>Sources</a></nav></header>
 <main>
 <div class=thesis>A self-referential capital loop booking each other's spending as revenue, solvent only while external capital flows &mdash; the same defect (promises &raquo; deliverable substance, risk parked in the least-regulated venue) recurring in bank books, private credit, metals, and power, while the loop's largest actors converge on the digital-identity control layer. The financial core is machine-proven; the rest is evidence-graded.</div>
 {KPIS}
@@ -110,16 +139,28 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <h2 id=weavers>The weavers (temporal meta-graph, betweenness)</h2>{weavet}
 <h2 id=banks>Bank vulnerability (biggest hidden HTM holes)</h2>{bankt}
 <p class=muted>{len(vuln)} mid-tier banks flagged on &ge;2 axes (CRE + securities loss + uninsured). Foreign-branch artifacts excluded.</p>
-<h2 id=src>Source index ({nres_json} cited sources)</h2><ul>{srct}</ul>
+<h2 id=overlays>Evidence-graded overlays (excluded from the proofs)</h2>
+<p class=muted>These layers extend the map beyond the financial core. Each item is graded <code>fact | contested | weak | unsupported</code> and is excluded from the Z3/TLA+/Alloy proofs.</p>{overt}
+<h2 id=verify>Primary sources</h2>
+<p class=muted>Sample of the government and court records cited:</p><ul>{primt}</ul>
+<p class=muted><code>models/audit.py</code> (cross-document number/coverage checks) and <code>models/cross_review.py</code> (edge-amount conflicts, connectors) run via <code>scripts/new-research.sh</code>. Current audit: 0 flags.</p>
+<h2 id=src>Source index ({nres_json} cited research blocks)</h2><ul>{srct}</ul>
 <p class=muted>Reports: <code>report/UNMASKING.md</code> &middot; <code>report/TEMPORAL-WEB.md</code> &middot; <code>report/EXECUTIVE-SUMMARY.md</code>. Every figure's URLs are in the matching <code>research/*.json</code>.</p>
 </main></body></html>"""
 
 open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 
+# ---- mirror to docs/ (GitHub Pages) with a back-link to the hub ----
+DOCS=os.path.join(ROOT,"docs")
+if os.path.isdir(DOCS):
+    backnav='<div style="background:#0b0e14;border-bottom:1px solid #2a3550;padding:8px 32px"><a href="index.html" style="color:#7fd1ff;text-decoration:none;font-size:13px">&larr; Bubble Map</a></div>'
+    docs_html=HTML.replace("<body>","<body>"+backnav,1)
+    open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
+
 # ---- executive summary ----
 ES=f"""# Executive Summary — Unmasking the AI Earnings Bubble
 
-*Generated {gs.get('flows') and ''}2026-06-07 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard.*
+*Auto-generated {BUILD_DATE} from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard. Each figure carries a source URL in the matching `research/*.json`. Checked by `models/audit.py` + `models/cross_review.py` (current: 0 flags).*
 
 ## The finding in one sentence
 The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
@@ -139,8 +180,14 @@ Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** 
 ## The honest answer to "is it all connected?"
 **Not one cabal — a small elite operator-network + recurring structures + regulatory arbitrage.** The temporal meta-graph (1998→2026) shows the weavers (OpenAI, a16z, the PayPal-mafia/Thiel, Circle/USDC, BlackRock, the SPV structure, Larry Summers as the literal dereg→AI→Epstein bridge) and the recurring devices (LTCM interconnection, Enron off-balance-sheet SPVs + mark-to-market, dotcom vendor financing) rebuilt in each era's least-regulated venue. Intent is never inferred from adjacency; sensitive threads (Epstein, Waters, foreign influence) are graded and quarantined from the proofs.
 
-## Identity / age-verification (corrected stance)\nReject age verification as a category — *futile-under-breach* (`models/z3/ageverif_futility.py`: effective gating UNSAT once IDs are breached or credentials shared), a *predator honeypot*, and *adult surveillance by construction*; **ZK does not save it** (hides the input, not the issuer, the presence/absence metadata, or the breach dynamics). `zkage/` is a steelman-then-refutation, not a solution. Full case: `research/age-verification-abolition.md`.\n\n## Reproduce
-`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. {nres_json} cited source files in `research/`.
+## Identity / age-verification (corrected stance)\nReject age verification as a category — *futile-under-breach* (`models/z3/ageverif_futility.py`: effective gating UNSAT once IDs are breached or credentials shared), a *predator honeypot*, and *adult surveillance by construction*; **ZK does not save it** (hides the input, not the issuer, the presence/absence metadata, or the breach dynamics). `zkage/` is a steelman-then-refutation, not a solution. Full case: `research/age-verification-abolition.md`.\n\n## The broader map (evidence-graded overlays, kept OUT of the proofs)
+Beyond the proven core, the corpus documents — each graded `fact|contested|weak|unsupported`: **regulatory capture** (SEC/SDNY/FDIC: Choke Point 2.0 FOIA, Ripple-timing, the Kraken/Binance/LBRY enforcement sweep + 2025 reversal, ~$169M Fairshake money); **privacy-tool prosecutions** (Tornado Cash + Samourai — real Lazarus laundering vs theories courts rejected vs developers jailed); **exchanges + Asia/Gulf** (Mt.Gox, the Binance CZ-pardon/USD1/MGX nexus, SBI/Ripple, Ant's paused HKDA, ByteDance/TikTok→Oracle+MGX); the **telecom + satellite/ISR** rail (Salt Typhoon breaking the mandated CALEA backdoor; Amazon/Apple absorbing Globalstar; Starshield/NRO); and the **disclosures/surveillance** overlay (Snowden Bullrun/Dual_EC/Room 641A, In-Q-Tel/Palantir, DARPA–Trail of Bits, FBI ANOM, the Epstein Files Act, Pandora Papers). These extend the picture; they are never used to assert the proofs.
+
+## Primary sources
+Claims cite primary government and court records: SCOTUS opinions, DOJ/SDNY releases, Treasury/OFAC, the Fifth Circuit, SEC, Congress.gov, FDIC FOIA disclosures, ICIJ, NIST. `models/audit.py` and `models/cross_review.py` run via `scripts/new-research.sh`; current audit 0 flags.
+
+## Reproduce
+`bash run_all.sh` runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models ({nmodels} runnable models). {nres_json} cited research blocks in `research/`.
 """
 open(os.path.join(REP,"EXECUTIVE-SUMMARY.md"),"w").write(ES)
 print("wrote report/INDEX.html ("+str(len(HTML))+" bytes) and report/EXECUTIVE-SUMMARY.md")

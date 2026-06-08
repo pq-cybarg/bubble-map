@@ -1,16 +1,16 @@
 <!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Bubble Map — make the hidden legible</title>
-<meta property="og:title" content="Bubble Map — make the hidden legible">
-<meta property="og:description" content="A formally-verified, reproducible X-ray of the AI capital loop + a transparent, server-less coordination poll.">
+<title>Bubble Map — formally-verified analysis of the AI capital loop</title>
+<meta property="og:title" content="Bubble Map — formally-verified analysis of the AI capital loop">
+<meta property="og:description" content="A reproducible, source-cited X-ray of the AI capital loop and the systems around it. Financial core machine-checked with Z3 / TLA+ / Alloy; everything else evidence-graded.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pq-cybarg.github.io/bubble-map/">
 <meta property="og:image" content="https://pq-cybarg.github.io/bubble-map/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bubble Map — make the hidden legible">
-<meta name="twitter:description" content="Formally-verified analysis of the AI capital loop + a transparent coordination poll.">
+<meta name="twitter:title" content="Bubble Map — formally-verified analysis of the AI capital loop">
+<meta name="twitter:description" content="Reproducible, source-cited analysis of the AI capital loop. Core machine-checked (Z3/TLA+/Alloy); overlays evidence-graded.">
 <meta name="twitter:image" content="https://pq-cybarg.github.io/bubble-map/social-preview.png">
-<meta name=description content="A formally-verified, reproducible X-ray of the AI capital bubble and the systems around it — and a transparent coordination signal.">
+<meta name=description content="A reproducible, source-cited analysis of the AI capital loop and the systems around it. Financial core machine-checked with Z3 / TLA+ / Alloy; overlays evidence-graded. Run bash run_all.sh to reproduce.">
 <style>
 :root{--bg:#0b0e14;--card:#11161f;--line:#22304a;--fg:#d7dce5;--ac:#7fd1ff;--g:#7CFC9B;--r:#ff8a8a;--mut:#8a96a8}
 *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
@@ -31,20 +31,23 @@ h2{color:var(--ac);border-bottom:1px solid var(--line);padding-bottom:8px;margin
 .mut{color:var(--mut);font-size:13px} code{background:#16202f;padding:2px 6px;border-radius:4px;color:#ffd479;font-size:13px}
 footer{border-top:1px solid var(--line);margin-top:50px;padding:24px;color:var(--mut);font-size:12px;text-align:center}
 .kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.kpis span{background:#16202f;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--mut)}.kpis b{color:var(--ac);display:block;font-size:18px}
+table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top} th{background:#16202f;color:#9fb}
+ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600px){ul.src{columns:1}}
 </style></head>
 <body>
 <header><div class=wrap>
-<div class=tag>formally verified · reproducible · evidence-graded</div>
+<div class=tag>reproducible · source-cited · evidence-graded</div>
 <h1>Bubble&nbsp;Map</h1>
-<div class=thesis>A machine-verified X-ray of the AI capital loop and the systems around it — an 11-firm circular core solvent only while external capital flows, gated by adversary chokepoints (China rare earths, Russia enrichment), wired into the banking, energy, defense, crypto, and identity-control layers. The financial core is <b>proven</b> (Z3 / TLA+ / Alloy); every speculative thread is <b>graded</b> and quarantined from the proofs. <b>This page makes the hidden legible — and lets the dispersed coordinate.</b></div>
+<div class=thesis>A reproducible, source-cited map of the AI capital loop and the systems around it: a circular core of firms that book each other's spending as revenue and is solvent only while external capital flows, gated by adversary chokepoints (China rare earths, Russia enrichment), wired into the banking, energy, defense, crypto, telecom, and identity layers. The financial core is machine-checked with Z3 / TLA+ / Alloy. Every other thread is graded <code>fact · contested · weak · unsupported</code> and excluded from the proofs.</div>
 <div class=kpis>
-<span><b>11</b>firm circular core</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>−81%</b>US home in gold since 1998</span><span><b>+1,985% / −69%</b>NVDA vs S&amp;P in gold</span><span><b>20</b>runnable models</span><span><b>29</b>cited sources</span>
+<span><b>12</b>firm circular core (11 robust)</span><span><b>15</b>round-trip cycles</span><span><b>150 / 162</b>graph nodes / edges</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>-81%</b>US home in gold since 1998</span><span><b>+1985% / -69%</b>NVDA vs S&P in gold</span><span><b>40</b>cited research blocks</span><span><b>23</b>runnable models</span>
 </div>
 </div></header>
 <div class=wrap>
 
-<h2 id=poll>The signal — sign &amp; coordinate</h2>
-<p class=mut>The system's weak point (proven in the model) is a <b>coordination failure wrapped in opacity</b>. This poll is the antidote: a <b>transparent, auditable, server-less</b> signal. To sign, react <b>👍</b> on the GitHub issue; to add testimony, comment. Every signature is public and verifiable — no backend, no harvesting, nothing to capture.</p>
+<h2 id=poll>Coordination poll</h2>
+<p class=mut>A transparent, server-less signal read client-side from the public GitHub API. To sign, react <b>👍</b> on the GitHub issue; to add testimony, comment. Every signature is public on GitHub — no backend, no data collection.</p>
 <div class=poll>
   <div class=counts>
     <div><b id=signs>—</b>signatures (👍)</div>
@@ -56,21 +59,70 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:24px;color:var(-
   <p class=mut id=pollstatus style="margin-top:12px"></p>
 </div>
 
-<h2 id=explore>Explore the evidence</h2>
+<h2 id=explore>Explore</h2>
 <div class=grid>
-  <a class=card href="dashboard.html"><b>📊 Control dashboard</b><p>Every formal verdict, the circular core, the three chokepoints, the gold lens, the weavers, bank vulnerability — over the live data.</p></a>
+  <a class=card href="dashboard.html"><b>📊 Control dashboard</b><p>Every formal verdict, the circular core, the chokepoints, the gold lens, the weavers, bank exposure, the graded overlays, and the primary-source list — over the live data.</p></a>
   <a class=card href="globe.html"><b>🌍 Chokepoint globe</b><p>A rotatable d3 globe: adversary chokepoints, supply responses, capital hubs, and the dependency/flow arcs.</p></a>
-  <a class=card id=repo href="#"><b>⚙️ Source &amp; proofs</b><p>23 runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
-    <a class=card href="https://github.com/pq-cybarg/bubble-map/tree/main/zkage"><b>🔐 Age verification: steelmanned &amp; refuted</b><p>The strongest ZK age proof — and why <b>even it should be opposed</b> (surveillance, honeypot, futility-under-breach). Oppose the requirement, not the lock.</p></a>
-  <a class=card id=report href="#"><b>📄 Full report</b><p>UNMASKING.md — the complete write-up, layer by layer, with the honesty ledger.</p></a>
+  <a class=card id=repo href="#"><b>⚙️ Source &amp; proofs</b><p>Runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
+  <a class=card id=report href="#"><b>📄 Full report</b><p><code>report/UNMASKING.md</code> — the complete write-up, layer by layer, with the honesty ledger.</p></a>
+  <a class=card href="https://github.com/pq-cybarg/bubble-map/tree/main/zkage"><b>🔐 Age verification: steelman &amp; refutation</b><p>The strongest ZK age proof, and the case that the requirement itself should be opposed (surveillance, honeypot, futility-under-breach).</p></a>
+  <a class=card id=audit href="#"><b>✅ Audit &amp; cross-review</b><p><code>report/AUDIT.md</code> + <code>report/CROSS-REVIEW.md</code> — cross-document number/coverage checks and edge-amount reconciliation. Current audit: 0 flags.</p></a>
 </div>
 
-<h2>What this is — and isn't</h2>
-<p>It <b>is</b> a cited inventory of how the AI / banking / credit / commodity / energy / defense / crypto / identity webs connect, with the provable core machine-verified and the rest evidence-graded. It is <b>not</b> a claim of a single conspiracy: the honest reading is a small recurring operator-network + recurring structures (LTCM interconnection, Enron off-balance-sheet vehicles, dotcom vendor financing) + regulatory arbitrage, rebuilt each era in the least-regulated venue. <b>Intent is never inferred from adjacency</b>; sensitive threads (people, influence, foreign actors) are graded and kept out of the proofs.</p>
-<p class=mut>Reproduce everything: clone the repo and run <code>bash run_all.sh</code> (Python + Z3; Java for TLA+/Alloy — jars auto-fetched). Fork it. Extend it. Make the seeing and the proving cheap for everyone.</p>
+<h2 id=proven>What is machine-checked</h2>
+<p>The financial core is checked by runnable solvers, not asserted:</p>
+<table>
+<thead><tr><th>Engine</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>Graph SCC (Tarjan)</td><td>12-firm circular core; 11-firm robust excluding cancelable edges; SpaceX circular only via cancelable edges</td></tr>
+<tr><td>Z3 — OpenAI commitments (T3)</td><td>requires ≥ $1.03T external capital (UNSAT without it)</td></tr>
+<tr><td>Z3 — core at zero inflow (T4)</td><td>insolvent at zero external inflow (UNSAT)</td></tr>
+<tr><td>Z3 — NVIDIA self-finance (T2)</td><td>cannot self-finance the headline figure (UNSAT)</td></tr>
+<tr><td>TLA+ cascade</td><td>capital-stop trace: OpenAI → CoreWeave → Oracle (invariant violated)</td></tr>
+<tr><td>TLA+ SpaceX</td><td>never defaults (invariant holds)</td></tr>
+<tr><td>Alloy structure</td><td>core circular; SpaceX separable without cancelable edges (all assertions hold)</td></tr>
+<tr><td>Z3 — Fed policy (F1–F3)</td><td>no single rate satisfies the divergent targets (UNSAT)</td></tr>
+<tr><td>Z3 — defense / power / HALEU</td><td>rare-earth independence and firm-power adequacy infeasible on the stated timeline (UNSAT)</td></tr>
+</tbody></table>
+<p class=mut>Full verdict table and scenario engine (BASE / BULL / BEAR) on the <a href="dashboard.html">dashboard</a>.</p>
+
+<h2 id=overlays>Evidence-graded overlays</h2>
+<p class=mut>Layers beyond the financial core. Each is graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3 / TLA+ / Alloy proofs.</p>
+<table>
+<thead><tr><th>Layer</th><th>Contents</th></tr></thead>
+<tbody>
+<tr><td>Regulatory (SEC / SDNY / FDIC)</td><td>Choke Point 2.0 FOIA disclosures; ConsenSys/MetaMask; SEC v. Ripple timing + JPMorgan rail; Kraken / Binance / Coinbase / LBRY enforcement and 2025 dismissals; ~$169M Fairshake spending</td></tr>
+<tr><td>Privacy-tool prosecutions</td><td>Tornado Cash and Samourai Wallet: documented Lazarus use; Van Loon v. Treasury and the OFAC delisting; the Storm verdict, Samourai pleas, and Pertsev (Netherlands)</td></tr>
+<tr><td>Exchanges + Asia / Gulf</td><td>Mt. Gox repayments; Binance CZ pardon, USD1 and the MGX $2B; SBI/Ripple ~9%; Ant Group HKDA and the PBoC pause; ByteDance/TikTok to Oracle + MGX + Silver Lake</td></tr>
+<tr><td>Telecom + satellite + ISR</td><td>Salt Typhoon's compromise of the CALEA wiretap system; Apple's $1.7B and Amazon's ~$11.6B in Globalstar; Starshield/NRO; carrier direct-to-cell deals</td></tr>
+<tr><td>Disclosures + surveillance</td><td>Snowden (PRISM, Bullrun, Dual_EC_DRBG, Room 641A); In-Q-Tel/Palantir; DARPA–Trail of Bits; FBI ANOM; Epstein Files Transparency Act; Pandora Papers</td></tr>
+<tr><td>PQC / quantum-sat / DLT</td><td>SEALSQ/WISeKey global build-out; Hedera 34-member council overlaps (Google, IBM) and the SEALCOIN bridge</td></tr>
+</tbody></table>
+
+<h2 id=verify>Primary sources</h2>
+<p class=mut>Sample of the government and court records cited across the corpus:</p>
+<ul class=src>
+<li><a href="https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf" target=_blank rel=noopener>SCOTUS — Murthy v. Missouri</a></li>
+<li><a href="https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf" target=_blank rel=noopener>5th Cir. — Van Loon v. Treasury</a></li>
+<li><a href="https://home.treasury.gov/news/press-releases/sb0057" target=_blank rel=noopener>US Treasury / OFAC — Tornado Cash delisting</a></li>
+<li><a href="https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-plead-guilty" target=_blank rel=noopener>DOJ / SDNY — Samourai guilty pleas</a></li>
+<li><a href="https://www.sec.gov/newsroom/press-releases/2023-25" target=_blank rel=noopener>SEC — Kraken staking settlement</a></li>
+<li><a href="https://www.congress.gov/bill/119th-congress/house-bill/4405/text" target=_blank rel=noopener>Congress — Epstein Files Transparency Act</a></li>
+<li><a href="https://www.icij.org/investigations/pandora-papers/" target=_blank rel=noopener>ICIJ — Pandora Papers</a></li>
+<li><a href="https://hederacouncil.org/" target=_blank rel=noopener>Hedera — Governing Council roster</a></li>
+<li><a href="https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved" target=_blank rel=noopener>NIST — PQC FIPS 203/204/205</a></li>
+<li><a href="https://www.bankingdive.com/news/fdic-letters-cryptos-operation-chokepoint-2-0-claims-coinbase/735309/" target=_blank rel=noopener>FDIC — FOIA pause letters</a></li>
+</ul>
+<p class=mut>Each figure in the corpus carries its source URL in the matching <code>research/*.json</code>. <code>models/audit.py</code> and <code>models/cross_review.py</code> run via <code>scripts/new-research.sh</code>; current audit: 0 flags.</p>
+
+<h2 id=method>Method</h2>
+<p>Research is split across <code>research/*.json</code> (structured edges + sources) and <code>research/*.md</code> (write-ups). <code>models/graph/build_graph.py</code> consolidates the edges into <code>data/graph.json</code> (150 nodes, 162 edges) and runs the Tarjan SCC. The Z3, TLA+, and Alloy models take their inputs from that data. Claims are graded <code>fact · contested · weak · unsupported</code>; graded overlays are kept out of the proofs. Intent is not inferred from adjacency. Reproduce with <code>bash run_all.sh</code> (Python + Z3; Java for TLA+/Alloy, jars auto-fetched).</p>
+
+<h2 id=isnt>What this is and is not</h2>
+<p>It <b>is</b> a cited inventory of how the AI, banking, credit, commodity, energy, defense, crypto, telecom, and identity webs connect, with the financial core machine-checked and the rest evidence-graded. It is <b>not</b> a claim of a single conspiracy: the reading is a recurring operator-network plus recurring structures (LTCM interconnection, Enron off-balance-sheet vehicles, dotcom vendor financing) plus regulatory arbitrage, rebuilt each era in the least-regulated venue. Sensitive threads (people, influence, foreign actors) are graded and excluded from the proofs.</p>
 
 </div>
-<footer>Bubble Map · open source · no backend · the poll reads the public GitHub API client-side · made to be forked.</footer>
+<footer>Bubble Map · open source · no backend · the poll reads the public GitHub API client-side · updated 2026-06-08 · <a href="https://github.com/pq-cybarg/bubble-map/commits/main" style="color:#8a96a8">commit history</a> · contact resistant@tuta.com</footer>
 <script>
 const OWNER="pq-cybarg", REPO="bubble-map", ISSUE=1;
 const issueURL=`https://github.com/${OWNER}/${REPO}/issues/${ISSUE}`;
@@ -78,6 +130,7 @@ document.getElementById('signbtn').href=issueURL;
 document.getElementById('testbtn').href=issueURL+"#new_comment_field";
 document.getElementById('repo').href=`https://github.com/${OWNER}/${REPO}`;
 document.getElementById('report').href=`https://github.com/${OWNER}/${REPO}/blob/main/report/UNMASKING.md`;
+document.getElementById('audit').href=`https://github.com/${OWNER}/${REPO}/blob/main/report/AUDIT.md`;
 async function gh(p){const r=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}${p}`,{headers:{Accept:"application/vnd.github+json"}});if(!r.ok)throw new Error(r.status);return r.json();}
 async function loadPoll(){
   try{
@@ -92,7 +145,7 @@ async function loadPoll(){
     document.getElementById('pollstatus').textContent="live from the public GitHub API · last refreshed "+new Date().toLocaleTimeString();
   }catch(e){
     document.getElementById('signs').textContent="—";document.getElementById('tests').textContent="—";
-    document.getElementById('pollstatus').textContent="(live count unavailable — likely the GitHub API rate limit for your IP; click through to sign and the count is always exact on GitHub.)";
+    document.getElementById('pollstatus').textContent="(live count unavailable — likely the GitHub API rate limit for your IP; the count is always exact on GitHub.)";
   }
 }
 loadPoll(); setInterval(loadPoll, 60000);
