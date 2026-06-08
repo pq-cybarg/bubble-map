@@ -37,6 +37,7 @@ Private credit / venture debt lenders,Neoclouds,debt,18000000000,2025-2026,False
 PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
 Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
+Amazon,Globalstar,other,11600000000,announced,False,False,spec-telecom-satellite.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
@@ -58,6 +59,7 @@ SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
 MGX,Binance,equity,2000000000,invested-settled-in-USD1,False,False,spec-exchanges-asia.json
 NVIDIA,CoreWeave,equity,2000000000,closed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
+Apple,Globalstar,other,1700000000,closed,False,False,spec-telecom-satellite.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
 NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
 Disney,OpenAI,equity,1000000000,announced-then-cancelled,False,False,fin-disney-openai-sora.json
@@ -68,10 +70,12 @@ Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.
 Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minerals.json
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
+Verizon,AST_SpaceMobile,other,100000000,committed,False,False,spec-telecom-satellite.json
 Coinbase,Fairshake,other,75000000,given,False,False,spec-sec-sdny-regulatory.json
 a16z,Fairshake,other,70000000,given,False,False,spec-sec-sdny-regulatory.json
 Ripple,Fairshake,other,50000000,given,False,False,spec-sec-sdny-regulatory.json
 SEC,Kraken,other,30000000,settled-staking-then-sued,False,False,spec-sec-sdny-regulatory.json
+ATT,AST_SpaceMobile,other,20000000,committed,False,False,spec-telecom-satellite.json
 Coinbase,FDIC,other,188440,won-fees,False,False,spec-sec-sdny-regulatory.json
 SpaceX,xAI,other,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
@@ -90,6 +94,10 @@ MGX,Stargate,other,,backer,False,False,spec-exchanges-asia.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
+SaltTyphoon,US_Telecoms,other,,ongoing,False,False,spec-telecom-satellite.json
+TMobile,SpaceX,other,,live,False,False,spec-telecom-satellite.json
+SpaceX,NRO,other,,operational,False,False,spec-telecom-satellite.json
+Telesat,US_Allied_Military,other,,added,False,False,spec-telecom-satellite.json
 OFAC,TornadoCash,other,,sanctioned-then-DELISTED,False,False,spec-tornado-samourai.json
 VanLoon,Treasury,other,,won-5thCir,False,False,spec-tornado-samourai.json
 SDNY,RomanStorm,other,,partial-verdict-retrial-pending,False,False,spec-tornado-samourai.json

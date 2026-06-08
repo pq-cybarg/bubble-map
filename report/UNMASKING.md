@@ -26,7 +26,7 @@ We prove the financial half. We evidence-grade the rest.
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 38 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **104 nodes, 127 directed money/credit/compute edges.**
+Consolidating 39 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **104 nodes, 127 directed money/credit/compute edges.**
 
 **Tarjan strongly-connected-component analysis** (the formal definition of "circular" — every node reachable from every other):
 - **Core SCC = 11 firms:** NVIDIA, OpenAI, Oracle, CoreWeave, Microsoft, Amazon, Anthropic, AMD, Crusoe, Lambda, + the private-credit lender node.

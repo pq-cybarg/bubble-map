@@ -12,28 +12,28 @@
 - ⚠ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json]  (same-instrument differing amounts — reconcile: LOI vs closed / cumulative / date?)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 24 files
-- **Google** — 19 files
-- **Oracle** — 14 files
-- **OpenAI** — 14 files
-- **Amazon** — 13 files
+- **Meta** — 25 files
+- **Google** — 20 files
+- **Oracle** — 15 files
+- **OpenAI** — 15 files
+- **Amazon** — 14 files
+- **Anthropic** — 12 files
 - **Microsoft** — 11 files
-- **Anthropic** — 11 files
 - **Stargate** — 10 files
 - **a16z** — 9 files
 - **JPMorgan** — 9 files
 - **NVIDIA** — 9 files
-- **SoftBank** — 8 files
+- **SEALSQ** — 8 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, InQTel, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, TrailOfBits, Vistra
 
-## Newest file `spec-exchanges-asia.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 14 shared entities
-- fin-hedera-connections.json: 12 shared entities
-- altcoin-lens.json: 11 shared entities
-- spec-crypto-sec-epstein.json: 11 shared entities
-- spec-sec-sdny-regulatory.json: 10 shared entities
-- fin-google-amazon-anthropic-meta.json: 9 shared entities
-- spec-network-overlay.json: 9 shared entities
-- fin-coreweave-oracle.json: 8 shared entities
+## Newest file `spec-telecom-satellite.json` — related files by shared entities (verify cross-refs exist)
+- fin-hedera-connections.json: 9 shared entities
+- spec-exchanges-asia.json: 8 shared entities
+- altcoin-lens.json: 7 shared entities
+- macro-crqc-quantum-landscape.json: 7 shared entities
+- energy-power.json: 7 shared entities
+- sec-filings.json: 7 shared entities
+- fin-sealsq-wisekey-global.json: 6 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities

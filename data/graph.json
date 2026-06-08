@@ -12,6 +12,14 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "AST_SpaceMobile": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "ATT": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Amazon": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -152,6 +160,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Globalstar": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Google": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -257,6 +269,10 @@
       "has_exogenous_revenue": false
     },
     "MtGox": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "NRO": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -404,6 +420,10 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SaltTyphoon": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SamouraiWallet": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -448,6 +468,14 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "TMobile": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Telesat": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "TikTok_US": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -472,12 +500,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "US_Allied_Military": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "US_Banks": {
       "sector": "bank",
       "has_exogenous_revenue": true
     },
     "US_Government": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "US_Telecoms": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "VanLoon": {
@@ -487,6 +523,10 @@
     "Vantage": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Verizon": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "WISeART": {
       "sector": "other",
@@ -929,6 +969,102 @@
       "cancelable": false,
       "source_file": "fin-disney-openai-sora.json",
       "note": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "raw_instrument": "breach_via_CALEA",
+      "amount_usd": null,
+      "status": "ongoing",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "China MSS breached 9+ carriers via the CALEA wiretap backdoor; 1M+ users' metadata; the mandated-backdoor-becomes-open-door proof."
+    },
+    {
+      "from": "Apple",
+      "to": "Globalstar",
+      "instrument": "other",
+      "raw_instrument": "investment",
+      "amount_usd": 1700000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "$1.1B prepay + $400M for 20% of a subsidiary; ~85% capacity exclusive to Apple."
+    },
+    {
+      "from": "Amazon",
+      "to": "Globalstar",
+      "instrument": "other",
+      "raw_instrument": "acquisition",
+      "amount_usd": 11600000000,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "~$11.6B Amazon acquisition of Globalstar - satellite carrier into the AWS/Kuiper/Anthropic core. CORE BRIDGE."
+    },
+    {
+      "from": "Verizon",
+      "to": "AST_SpaceMobile",
+      "instrument": "other",
+      "raw_instrument": "strategic_commitment",
+      "amount_usd": 100000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "$100M direct-to-cell; AST uses Verizon spectrum."
+    },
+    {
+      "from": "ATT",
+      "to": "AST_SpaceMobile",
+      "instrument": "other",
+      "raw_instrument": "commercial_agreement",
+      "amount_usd": 20000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "~$20M revenue commitment; AST uses AT&T spectrum."
+    },
+    {
+      "from": "TMobile",
+      "to": "SpaceX",
+      "instrument": "other",
+      "raw_instrument": "direct_to_cell",
+      "amount_usd": null,
+      "status": "live",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "T-Satellite with Starlink commercial direct-to-cell."
+    },
+    {
+      "from": "SpaceX",
+      "to": "NRO",
+      "instrument": "other",
+      "raw_instrument": "starshield_military",
+      "amount_usd": null,
+      "status": "operational",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "Starshield ISR/missile-warning constellation for NRO/SDA/Space Force; 183+ sats."
+    },
+    {
+      "from": "Telesat",
+      "to": "US_Allied_Military",
+      "instrument": "other",
+      "raw_instrument": "military_kaband",
+      "amount_usd": null,
+      "status": "added",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-satellite.json",
+      "note": "500 MHz dedicated military Ka-band on Lightspeed; dual-use LEO; full service Q1 2028."
     },
     {
       "from": "OFAC",
@@ -2264,8 +2400,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 127,
-    "num_edges": 146,
+    "num_nodes": 137,
+    "num_edges": 154,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2301,10 +2437,6 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -2313,16 +2445,15 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
+        "NVIDIA"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -2338,6 +2469,23 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
@@ -2348,28 +2496,16 @@
         "Microsoft"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "Oracle",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -2404,10 +2540,24 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "AST_SpaceMobile": {
+        "total_usd": 120000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ATT": {
+        "total_usd": 20000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Amazon": {
-        "total_usd": 175000000000,
+        "total_usd": 186600000000,
         "circular_usd": 175000000000,
-        "circularity_ratio": 1.0,
+        "circularity_ratio": 0.938,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -2447,7 +2597,7 @@
         "in_robust_core": false
       },
       "Apple": {
-        "total_usd": 500000000,
+        "total_usd": 2200000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2649,6 +2799,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Globalstar": {
+        "total_usd": 13300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Google": {
         "total_usd": 200000000000,
         "circular_usd": 0,
@@ -2833,6 +2990,13 @@
       },
       "MtGox": {
         "total_usd": 9000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NRO": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3090,6 +3254,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "SaltTyphoon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SamouraiWallet": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3167,6 +3338,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TMobile": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Telesat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TikTok_US": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3209,6 +3394,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Allied_Military": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Banks": {
         "total_usd": 2095670000000,
         "circular_usd": 0,
@@ -3223,6 +3415,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Telecoms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanLoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3232,6 +3431,13 @@
       },
       "Vantage": {
         "total_usd": 38000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Verizon": {
+        "total_usd": 100000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
