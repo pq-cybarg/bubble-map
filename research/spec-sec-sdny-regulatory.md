@@ -1,0 +1,24 @@
+# SEC / SDNY / FDIC crypto regulatory-capture, FOIA disclosures & the Ripple-timing question
+
+*Web-verified 2026-06-07. Structured + edges + sources: `spec-sec-sdny-regulatory.json`. **EVIDENCE-GRADED SPECULATIVE OVERLAY** — kept OUT of the formal proofs. Extends `spec-crypto-sec-epstein.json` (Hinman, McCaleb, Black/Epstein/Apollo, Ethereum/Ant — not duplicated). Connective tissue = overlapping actors, timing, revolving doors; **not** a proven conspiracy. No individual is alleged a crime beyond court records. Where the record contradicts a popular framing, that is stated.*
+
+## The threads (each graded)
+
+**1. Operation Choke Point 2.0 / FOIA** — *FOIA facts STRONG; coordinated debanking CONTESTED→supported; single-conspiracy UNSUPPORTED.* The FDIC sent **"pause letters"** to ~2 dozen banks (2022). They surfaced only because **Coinbase/History Associates** sued under FOIA — **Judge Ana Reyes** ordered production (June 2024), slammed the redactions, and the **FDIC paid Coinbase $188,440 + overhauled FOIA** (Feb 2026). Narrative alleges parallel **Fed + OCC + Treasury** pressure. Chair **Gruenberg** resigned (harassment probe) effective **Jan 19 2025**. *Pattern: disclosure via litigation, not transparency — the SEC's Hinman emails came out the same way.*
+
+**2. ConsenSys / MetaMask** — *facts STRONG; selective-enforcement CONTESTED.* SEC **Wells notice Apr 10 2024**; ConsenSys's preemptive suit **dismissed (TX) Sep 19 2024**; SEC charged MetaMask **Staking/Swaps** as unregistered broker/securities (Lido, Rocket Pool). ETH-the-asset got a pass; its flagship wallet got sued.
+
+**3. Ripple timing + JPMorgan** — *lawsuit-timing STRONG; bank-benefit OPEN; "JPM/Ripple prior collaboration that quieted" UNSUPPORTED.* SEC sued Ripple **Dec 22 2020** (Clayton's last full day; 3-of-5 commissioners; Garlinghouse + Larsen named). JPM launched **JPM Coin** (2019) on its **Quorum** ledger and built a competing bank rail (**Onyx/Liink**). On **Aug 25 2020 JPM sold Quorum to ConsenSys and took a stake** — aligning with the **Ethereum/ConsenSys camp**. **Torres ruling (Jul 13 2023):** programmatic XRP sales weren't securities. **Honest correction:** there was *no* vanished JPM↔Ripple partnership — JPM ran its own rail + backed Ethereum while XRP sat under a 2.5-year cloud; JPM only touched **XRPL** *after* the cloud lifted (May-2026 tokenized-Treasury pilot w/ Mastercard + Ondo). The defensible thesis is **structural**, not a lost deal.
+
+**4. Regulation-by-enforcement sweep (+ Kraken, Binance, LBRY)** — *enforcement + reversal STRONG; destroy-intent CONTESTED.*
+- **Kraken** — **$30M** staking settlement (Feb 9 2023), forced to **shut US staking** (had advertised ~21% yields); then a **Nov 2023** unregistered-exchange suit.
+- **Coinbase + Binance** — sued **Jun 2023** (Binance + CZ). *(Binance's $4.3B DOJ/CFTC/FinCEN + CZ plea is the separate criminal/AML track → Task #5.)*
+- **LBRY** — lost summary judgment (**D.N.H., Nov 2022**); **dropped its appeal and shut down** (2023); **Odysee** (its spun-out frontend) survived. SEC Commissioner **Hester Peirce dissented** ("Overdue").
+- **The reversal:** in **2025** the SEC **dismissed** Coinbase, dropped Binance/Kraken and the Ripple appeal — retiring "regulation by enforcement." **Honest note:** *LBRY itself was never reversed* — it died; what reversed was the **posture**, too late for the small casualty while the big exchanges survived to see dismissal. **That asymmetry — small firms die, large firms outlast the policy — is the durable point.**
+
+**5. SDNY** — *venue STRONG; political-targeting CONTESTED.* SBF/FTX, Eisenberg (Mango), Roman Storm (Tornado → Task #4). Prominence is venue + jurisdiction; the selective-enforcement critique is strongest applied to **open-source developers** (Task #4), weakest as a blanket claim.
+
+**6. Crypto political money** — *spending STRONG; "bought outcomes" CONTESTED.* **Fairshake** super-PAC: 2024 — **Coinbase ~$75M+, a16z ~$70M, Ripple ~$50M** (~$169M war chest, ~$139M spent), **~91% win rate** (58 races, ~5 losses); carried **~$193M** into 2026. The same capital (a16z/Coinbase/Ripple) **funds both the assets and the politics.**
+
+## Verdict
+Six documented cores — FOIA'd FDIC pause letters, ConsenSys/MetaMask, Ripple-timing + Clayton revolving door, JPM's own rail + Ethereum alignment, the enforcement sweep + 2025 reversal, and ~$169M of SuperPAC money — joined by **recurring discretion, timing, opacity, and revolving doors**, *not* a single proven conspiracy. Honest standouts: regulators resisted transparency until **litigation forced disclosure**; the **enforcement-then-reversal** pattern **killed small firms (LBRY) while big exchanges outlasted the policy**; and the Ripple-timing thesis is **partly corrected** here. An overlay on the *environment* in which the proven AI-capital loop operates — never used in the proofs.

@@ -36,6 +36,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Binance": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "BlackRock": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -64,7 +68,15 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Coinbase": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ColibriTD": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "ConsenSys": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -97,6 +109,14 @@
       "has_exogenous_revenue": true
     },
     "EeroQ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "FDIC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Fairshake": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -153,6 +173,14 @@
       "has_exogenous_revenue": true
     },
     "Kaynes_SemiCon": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Kraken": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "LBRY": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -268,6 +296,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Ripple": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SEALCOIN": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -281,6 +313,10 @@
       "has_exogenous_revenue": true
     },
     "SEALSQ_Murcia_Hub": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SEC": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -369,6 +405,10 @@
       "has_exogenous_revenue": true
     },
     "WeCan_Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "a16z": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -677,6 +717,162 @@
       "cancelable": false,
       "source_file": "macro-firstbrands-ubs.json",
       "note": "Jefferies/Leucadia (Point Bonita) also exposed; second canary alongside Tricolor (subprime auto) in 2025."
+    },
+    {
+      "from": "FDIC",
+      "to": "US_Banks",
+      "instrument": "other",
+      "raw_instrument": "pause_letters",
+      "amount_usd": null,
+      "status": "FOIA-released",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "~2 dozen 'pause all crypto activity' letters; the documented core of 'Choke Point 2.0'."
+    },
+    {
+      "from": "Coinbase",
+      "to": "FDIC",
+      "instrument": "other",
+      "raw_instrument": "foia_litigation",
+      "amount_usd": 188440,
+      "status": "won-fees",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Coinbase/History Associates FOIA suit forced disclosure; FDIC paid $188,440 fees + FOIA overhaul (Feb 2026); Judge Ana Reyes."
+    },
+    {
+      "from": "SEC",
+      "to": "Ripple",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "filed-then-Torres-2023",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Filed Clayton's last full day; Torres (Jul 2023): programmatic XRP sales not securities."
+    },
+    {
+      "from": "SEC",
+      "to": "ConsenSys",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "wells-then-charges",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Wells notice Apr 10 2024; MetaMask Staking/Swaps; ConsenSys preemptive suit dismissed (TX) Sep 19 2024."
+    },
+    {
+      "from": "JPMorgan",
+      "to": "ConsenSys",
+      "instrument": "other",
+      "raw_instrument": "divestiture_plus_investment",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "JPM sold Quorum (enterprise-Ethereum; JPM Coin's ledger) to ConsenSys AND took a strategic stake -> JPM enterprise-chain bet aligned with the Ethereum/ConsenSys camp."
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Ripple",
+      "instrument": "other",
+      "raw_instrument": "settlement_pilot",
+      "amount_usd": null,
+      "status": "pilot-AFTER-cloud-lifted",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Tokenized-Treasury settlement on XRPL w/ Ripple+Mastercard+Ondo - the FIRST documented JPM-Ripple cooperation, and it came AFTER the lawsuit resolved (corrects the 'prior collaboration that quieted' framing)."
+    },
+    {
+      "from": "SEC",
+      "to": "Kraken",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": 30000000,
+      "status": "settled-staking-then-sued",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "$30M staking settlement (shut US staking) Feb 2023; separate unregistered-exchange suit Nov 2023; dismissed 2025."
+    },
+    {
+      "from": "SEC",
+      "to": "Coinbase",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "sued-then-DISMISSED-2025-02",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Unregistered-exchange suit Jun 2023; SEC agreed to dismiss Feb 2025 (the posture reversal)."
+    },
+    {
+      "from": "SEC",
+      "to": "Binance",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "sued-then-dropped-2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "SEC suit Jun 2023 (separate from the $4.3B DOJ/CFTC/FinCEN track + CZ plea, Task #5); SEC case dropped 2025."
+    },
+    {
+      "from": "SEC",
+      "to": "LBRY",
+      "instrument": "other",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "won-LBRY-died",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "Summary judgment (D.N.H., Nov 2022): LBC sales unregistered securities. LBRY dropped appeal + shut down 2023; Odysee (frontend) survived. Commissioner Peirce dissented ('Overdue'). The small-firm casualty of the sweep."
+    },
+    {
+      "from": "a16z",
+      "to": "Fairshake",
+      "instrument": "other",
+      "raw_instrument": "pac_funding",
+      "amount_usd": 70000000,
+      "status": "given",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "~$70M to crypto super-PAC (2024 cycle)."
+    },
+    {
+      "from": "Coinbase",
+      "to": "Fairshake",
+      "instrument": "other",
+      "raw_instrument": "pac_funding",
+      "amount_usd": 75000000,
+      "status": "given",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "~$75M+ to Fairshake/affiliates (2024)."
+    },
+    {
+      "from": "Ripple",
+      "to": "Fairshake",
+      "instrument": "other",
+      "raw_instrument": "pac_funding",
+      "amount_usd": 50000000,
+      "status": "given",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-sdny-regulatory.json",
+      "note": "~$50M to Fairshake (2023-24 cycle). a16z+Coinbase+Ripple ~ $169M war chest; ~91% win rate."
     },
     {
       "from": "NVIDIA",
@@ -1748,8 +1944,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 94,
-    "num_edges": 114,
+    "num_nodes": 104,
+    "num_edges": 127,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -1785,6 +1981,18 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -1794,30 +2002,30 @@
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -1830,18 +2038,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "Amazon",
@@ -1930,6 +2126,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Binance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BlackRock": {
         "total_usd": 3000000000,
         "circular_usd": 0,
@@ -1979,7 +2182,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Coinbase": {
+        "total_usd": 75188440,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ColibriTD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ConsenSys": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -2037,6 +2254,20 @@
       },
       "EeroQ": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FDIC": {
+        "total_usd": 188440,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fairshake": {
+        "total_usd": 195000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2134,6 +2365,20 @@
         "in_robust_core": false
       },
       "Kaynes_SemiCon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kraken": {
+        "total_usd": 30000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LBRY": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -2336,6 +2581,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ripple": {
+        "total_usd": 50000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SEALCOIN": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -2359,6 +2611,13 @@
       },
       "SEALSQ_Murcia_Hub": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SEC": {
+        "total_usd": 30000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2513,6 +2772,13 @@
       },
       "WeCan_Group": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "a16z": {
+        "total_usd": 70000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
