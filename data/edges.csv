@@ -41,6 +41,7 @@ Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,Fals
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
 SINK_lenders,CoreWeave,debt,8500000000,closed,False,False,fin-coreweave-oracle.json
+Lazarus,TornadoCash,other,7600000000,documented,False,False,spec-tornado-samourai.json
 Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
 MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
@@ -51,6 +52,7 @@ OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsof
 BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 NVIDIA,Nebius,equity,2700000000,funded,True,False,fin-coreweave-oracle.json
 JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
+Netherlands,Pertsev,other,2200000000,convicted-on-appeal,False,False,spec-tornado-samourai.json
 SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
 NVIDIA,CoreWeave,equity,2000000000,closed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
@@ -76,6 +78,11 @@ Meta,Broadcom,compute_commitment,,committed,False,False,"fin-meta-family.json,fi
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
+OFAC,TornadoCash,other,,sanctioned-then-DELISTED,False,False,spec-tornado-samourai.json
+VanLoon,Treasury,other,,won-5thCir,False,False,spec-tornado-samourai.json
+SDNY,RomanStorm,other,,partial-verdict-retrial-pending,False,False,spec-tornado-samourai.json
+SDNY,SamouraiWallet,other,,guilty-pleas-CountII,False,False,spec-tornado-samourai.json
+FinCEN,SamouraiWallet,other,,suppressed-until-2025-04,False,False,spec-tornado-samourai.json
 First_Brands,Jefferies,other,,2025,False,False,macro-firstbrands-ubs.json
 FDIC,US_Banks,other,,FOIA-released,False,False,spec-sec-sdny-regulatory.json
 SEC,Ripple,other,,filed-then-Torres-2023,False,False,spec-sec-sdny-regulatory.json

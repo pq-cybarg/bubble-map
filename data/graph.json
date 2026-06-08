@@ -120,6 +120,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "FinCEN": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "First_Brands": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -196,6 +200,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Lazarus": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "MGX": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -244,6 +252,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Netherlands": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Next-gen data centers / AI infrastructure": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -264,6 +276,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "OFAC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Oklo": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -278,6 +294,10 @@
     },
     "PIMCO": {
       "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Pertsev": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Private credit / venture debt lenders": {
@@ -297,6 +317,14 @@
       "has_exogenous_revenue": true
     },
     "Ripple": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "RomanStorm": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SDNY": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -344,6 +372,10 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SamouraiWallet": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ScaleAI": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -380,6 +412,14 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "TornadoCash": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Treasury": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "UBS_OConnor": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -390,6 +430,10 @@
     },
     "US_Government": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "VanLoon": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Vantage": {
@@ -693,6 +737,90 @@
       "cancelable": false,
       "source_file": "fin-disney-openai-sora.json",
       "note": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."
+    },
+    {
+      "from": "OFAC",
+      "to": "TornadoCash",
+      "instrument": "other",
+      "raw_instrument": "sanction",
+      "amount_usd": null,
+      "status": "sanctioned-then-DELISTED",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "First sanction of an immutable smart-contract protocol; delisted after the 5th Cir. loss."
+    },
+    {
+      "from": "VanLoon",
+      "to": "Treasury",
+      "instrument": "other",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "won-5thCir",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "Immutable smart contracts not 'property' under IEEPA; OFAC overstepped."
+    },
+    {
+      "from": "Lazarus",
+      "to": "TornadoCash",
+      "instrument": "other",
+      "raw_instrument": "laundering",
+      "amount_usd": 7600000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "DPRK Lazarus: $455M Ronin + $96M Harmony + $7.8M Nomad; ~$7.6B total platform volume since 2019. The real-harm strand (A)."
+    },
+    {
+      "from": "SDNY",
+      "to": "RomanStorm",
+      "instrument": "other",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "partial-verdict-retrial-pending",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "Guilty: unlicensed money-transmitting conspiracy; deadlocked on ML + sanctions; DOJ to retry (~Oct 2026)."
+    },
+    {
+      "from": "SDNY",
+      "to": "SamouraiWallet",
+      "instrument": "other",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "guilty-pleas-CountII",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "Rodriguez 5y, Hill 4y on unlicensed-money-transmitting conspiracy; ML count dismissed per plea. FinCEN-guidance suppression (Brady) + proceeding post-Blanche-memo = strand C."
+    },
+    {
+      "from": "FinCEN",
+      "to": "SamouraiWallet",
+      "instrument": "other",
+      "raw_instrument": "guidance_contradicting_charge",
+      "amount_usd": null,
+      "status": "suppressed-until-2025-04",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "FinCEN told prosecutors Samourai was NOT a money transmitter ~6mo before charges; not disclosed until Apr 1 2025."
+    },
+    {
+      "from": "Netherlands",
+      "to": "Pertsev",
+      "instrument": "other",
+      "raw_instrument": "conviction",
+      "amount_usd": 2200000000,
+      "status": "convicted-on-appeal",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tornado-samourai.json",
+      "note": "64 months for laundering ~$2.2B; multi-jurisdiction developer-liability question."
     },
     {
       "from": "First_Brands",
@@ -1944,8 +2072,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 104,
-    "num_edges": 127,
+    "num_nodes": 115,
+    "num_edges": 134,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2001,14 +2129,14 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -2024,8 +2152,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -2036,8 +2164,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -2273,6 +2401,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FinCEN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "First_Brands": {
         "total_usd": 500000000,
         "circular_usd": 0,
@@ -2406,6 +2541,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Lazarus": {
+        "total_usd": 7600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MGX": {
         "total_usd": 14000000000,
         "circular_usd": 0,
@@ -2490,6 +2632,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Netherlands": {
+        "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Next-gen data centers / AI infrastructure": {
         "total_usd": 40000000000,
         "circular_usd": 0,
@@ -2525,6 +2674,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "OFAC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Oklo": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -2548,6 +2704,13 @@
       },
       "PIMCO": {
         "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pertsev": {
+        "total_usd": 2200000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2583,6 +2746,20 @@
       },
       "Ripple": {
         "total_usd": 50000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RomanStorm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SDNY": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2665,6 +2842,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "SamouraiWallet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ScaleAI": {
         "total_usd": 14300000000,
         "circular_usd": 0,
@@ -2728,6 +2912,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TornadoCash": {
+        "total_usd": 7600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Treasury": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UBS_OConnor": {
         "total_usd": 500000000,
         "circular_usd": 0,
@@ -2744,6 +2942,13 @@
       },
       "US_Government": {
         "total_usd": 400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "VanLoon": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

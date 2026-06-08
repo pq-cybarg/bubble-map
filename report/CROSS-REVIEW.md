@@ -26,14 +26,9 @@
 - **FDIC** — 8 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- BRICS, CLARITY, DPRK, InQTel, Lazarus, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, TrailOfBits, Vistra
+- BRICS, CLARITY, InQTel, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, TrailOfBits, Vistra
 
-## Newest file `spec-sec-sdny-regulatory.json` — related files by shared entities (verify cross-refs exist)
-- altcoin-lens.json: 11 shared entities
-- temporal-bridges.json: 9 shared entities
-- fin-hedera-connections.json: 8 shared entities
-- spec-crypto-sec-epstein.json: 7 shared entities
-- blockchain-leg.json: 6 shared entities
-- spec-network-overlay.json: 5 shared entities
-- digitalid-corporate.json: 4 shared entities
-- macro-cre-privatecredit.json: 4 shared entities
+## Newest file `spec-tornado-samourai.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities

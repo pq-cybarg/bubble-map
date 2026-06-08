@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "Tornado Cash & Samourai Wallet - privacy-tool prosecutions, developer liability, the code-is-speech axis (evidence-graded)",
+    "generated": "2026-06-08",
+    "WARNING": "EVIDENCE-GRADED. Three strands are kept STRICTLY SEPARATE and graded independently: (A) the FACT that DPRK/Lazarus and other criminals used these tools to launder funds; (B) the FACT that key legal theories used against them were contested or partly REJECTED by courts/agencies; (C) documented PROSECUTORIAL-CONDUCT problems. No defendant is described as more or less guilty than the court record states (convictions, pleas, deadlocks, appeals are stated precisely). This is the privacy-vs-surveillance axis - the repo's anti-digital-ID/anti-surveillance spine - NOT an endorsement of money laundering.",
+    "method": "Primary where possible (DOJ/SDNY + Treasury/OFAC press releases, Fifth Circuit opinion, FBI, Dutch court coverage, CoinDesk/DL News/Mayer Brown/DeFi Education Fund).",
+    "cross_refs": ["spec-sec-sdny-regulatory.json (SDNY + 'regulation by enforcement/prosecution')", "macro-crqc-quantum-landscape.json (cryptography/privacy)", "digitalid-regulatory.json + age-verification-abolition.md (surveillance/anti-privacy thesis)", "spec-disclosures-surveillance.json (Task #7 - Lazarus/DPRK + IC)", "spec-exchanges-asia.json (Task #5 - Lazarus exchange hacks)"]
+  },
+  "strand_A_criminal_use_FACTS": {
+    "grade": "STRONG (documented by Treasury/FBI/Dutch court)",
+    "facts": [
+      "Tornado Cash was estimated to have laundered >$7.6B in virtual assets since 2019 (Treasury/coverage).",
+      "DPRK's Lazarus Group used Tornado Cash to launder >$455M from the Mar 2022 Ronin/Axie bridge hack (largest crypto heist at the time), >$96M from the Jun 2022 Harmony Horizon bridge, and >=$7.8M from the Aug 2022 Nomad heist.",
+      "The Dutch court found Pertsev's Tornado Cash laundered ~$2.2B in stolen/hacked crypto.",
+      "Samourai Wallet (Whirlpool CoinJoin + Ricochet) processed substantial volume DOJ characterized as including criminal proceeds."
+    ],
+    "honest_note": "These harms are REAL. The privacy-tool critique below is NOT that laundering didn't happen - it's that the LEGAL MEANS used to prosecute were contested and the conduct sometimes improper.",
+    "source": ["https://home.treasury.gov/news/press-releases/jy0916", "https://www.fbi.gov/news/stories/tornado-cash-co-founders-accused-of-helping-cybercriminals-launder-stolen-crypto", "https://www.coindesk.com/policy/2024/05/14/tornado-cash-developer-alexey-pertsev-found-guilty-of-money-laundering"]
+  },
+  "strand_B_legal_theories_REJECTED_or_CONTESTED": {
+    "grade": "STRONG (court/agency record)",
+    "facts": [
+      "OFAC sanctioned Tornado Cash Aug 8 2022 (added smart-contract addresses to the SDN list) - the first time an autonomous, immutable smart-contract protocol was sanctioned.",
+      "Van Loon v. Department of the Treasury (5th Cir., Nov 26 2024): a unanimous panel held Tornado Cash's IMMUTABLE smart contracts are NOT 'property' under IEEPA ('just software code', no owner/counterparty), so OFAC 'overstepped its congressionally defined authority.'",
+      "OFAC DELISTED Tornado Cash on Mar 21 2025, removing the sanctions, citing review of 'novel legal and policy issues.'",
+      "FinCEN had told SDNY prosecutors (Aug 2023, ~6 months BEFORE charges) that, under its guidance, Samourai Wallet did NOT qualify as a money-transmitting business / did not need a license."
+    ],
+    "what_it_does_not_show": "The 5th Circuit ruling was about SANCTIONS authority over immutable code, not about whether individuals can be criminally liable - those are separate questions (and the criminal cases proceeded). Delisting was discretionary, not a finding that Tornado Cash was lawful.",
+    "source": ["https://www.jonesday.com/en/insights/2024/12/fifth-circuit-reverses-tornado-cash-sanctions-ruling", "https://home.treasury.gov/news/press-releases/sb0057", "https://www.coindesk.com/policy/2025/05/30/samourai-wallet-files-to-dismiss-doj-case-citing-fincen-guidance"]
+  },
+  "strand_C_prosecutorial_conduct": {
+    "grade": "Samourai Brady/timing facts STRONG; characterization as bad-faith CONTESTED",
+    "facts": [
+      "SDNY charged Samourai's Keonne Rodriguez (CEO) and William Lonergan Hill (CTO) in Apr 2024 with conspiracy to commit money laundering + conspiracy to run an unlicensed money-transmitting business.",
+      "Prosecutors did NOT disclose the Aug 2023 FinCEN communication (that Samourai wasn't a money transmitter) to the court/defense until Apr 1 2025 - a delayed disclosure the defense framed as a Brady violation and basis for dismissal.",
+      "Apr 7 2025: Deputy AG Todd Blanche issued 'Ending Regulation by Prosecution', directing DOJ to stop targeting non-custodial wallets/mixers for end-user conduct.",
+      "Despite the memo, SDNY proceeded: Rodriguez (Jul 29 2025) and Hill (Jul 30 2025) pled GUILTY to Count II (unlicensed money transmitting conspiracy); Count I (money-laundering conspiracy) was DISMISSED per the pleas. Rodriguez sentenced to 5 years, Hill to 4 years.",
+      "Tornado Cash: Roman Storm tried in SDNY; Aug 6 2025 MIXED verdict - convicted on conspiracy to operate an unlicensed money-transmitting business; jury DEADLOCKED on the money-laundering and sanctions-violation conspiracies. DOJ moved (Mar 9 2026) to RETRY the deadlocked counts (~Oct 2026)."
+    ],
+    "what_it_does_not_show": "Guilty pleas are convictions; the developers are not 'exonerated.' But the SEQUENCE - charge despite FinCEN guidance, suppress that guidance ~18 months, proceed even after a DOJ memo disfavoring such cases - is a documented process problem and the strongest 'selective/aggressive prosecution' example in the corpus (ties spec-sec-sdny-regulatory.json).",
+    "source": ["https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-plead-guilty", "https://www.coindesk.com/policy/2025/05/05/samourai-wallet-s-lawyers-say-prosecution-suppressed-critical-evidence-call-for-dismissal", "https://www.coindesk.com/policy/2025/08/06/roman-storm-guilty-of-unlicensed-money-transmitting-conspiracy-in-partial-verdict"]
+  },
+  "international_dimension": {
+    "pertsev_netherlands": "Alexey Pertsev (Russian national, Tornado Cash dev) convicted by a Dutch court (May 14 2024), sentenced to 64 months for laundering ~$2.2B; briefly released under electronic monitoring (Feb 2025) then continued detention pending appeal (Court of Appeal 's-Hertogenbosch). Shows the developer-liability question is being litigated in MULTIPLE jurisdictions, not just the US.",
+    "semenov": "Co-founder Roman Semenov was also OFAC-designated (Aug 2023) and charged; remains at large (reportedly Russia).",
+    "source": ["https://www.coindesk.com/policy/2024/05/14/tornado-cash-developer-alexey-pertsev-found-guilty-of-money-laundering", "https://home.treasury.gov/news/press-releases/jy1702"]
+  },
+  "edges": [
+    {"from": "OFAC", "to": "TornadoCash", "instrument": "sanction", "amount_usd": null, "date": "2022-08-08 to 2025-03-21", "status": "sanctioned-then-DELISTED", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://home.treasury.gov/news/press-releases/jy0916", "https://home.treasury.gov/news/press-releases/sb0057"], "notes": "First sanction of an immutable smart-contract protocol; delisted after the 5th Cir. loss."},
+    {"from": "VanLoon", "to": "Treasury", "instrument": "litigation", "amount_usd": null, "date": "2024-11-26", "status": "won-5thCir", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.jonesday.com/en/insights/2024/12/fifth-circuit-reverses-tornado-cash-sanctions-ruling"], "notes": "Immutable smart contracts not 'property' under IEEPA; OFAC overstepped."},
+    {"from": "Lazarus", "to": "TornadoCash", "instrument": "laundering", "amount_usd": 7600000000, "date": "2019-2022", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://home.treasury.gov/news/press-releases/jy0916", "https://www.fbi.gov/news/stories/tornado-cash-co-founders-accused-of-helping-cybercriminals-launder-stolen-crypto"], "notes": "DPRK Lazarus: $455M Ronin + $96M Harmony + $7.8M Nomad; ~$7.6B total platform volume since 2019. The real-harm strand (A)."},
+    {"from": "SDNY", "to": "RomanStorm", "instrument": "prosecution", "amount_usd": null, "date": "2025-08-06", "status": "partial-verdict-retrial-pending", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.coindesk.com/policy/2025/08/06/roman-storm-guilty-of-unlicensed-money-transmitting-conspiracy-in-partial-verdict"], "notes": "Guilty: unlicensed money-transmitting conspiracy; deadlocked on ML + sanctions; DOJ to retry (~Oct 2026)."},
+    {"from": "SDNY", "to": "SamouraiWallet", "instrument": "prosecution", "amount_usd": null, "date": "2024-04 to 2025-07", "status": "guilty-pleas-CountII", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-plead-guilty"], "notes": "Rodriguez 5y, Hill 4y on unlicensed-money-transmitting conspiracy; ML count dismissed per plea. FinCEN-guidance suppression (Brady) + proceeding post-Blanche-memo = strand C."},
+    {"from": "FinCEN", "to": "SamouraiWallet", "instrument": "guidance_contradicting_charge", "amount_usd": null, "date": "2023-08", "status": "suppressed-until-2025-04", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.coindesk.com/policy/2025/05/30/samourai-wallet-files-to-dismiss-doj-case-citing-fincen-guidance"], "notes": "FinCEN told prosecutors Samourai was NOT a money transmitter ~6mo before charges; not disclosed until Apr 1 2025."},
+    {"from": "Netherlands", "to": "Pertsev", "instrument": "conviction", "amount_usd": 2200000000, "date": "2024-05-14", "status": "convicted-on-appeal", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.coindesk.com/policy/2024/05/14/tornado-cash-developer-alexey-pertsev-found-guilty-of-money-laundering"], "notes": "64 months for laundering ~$2.2B; multi-jurisdiction developer-liability question."}
+  ],
+  "overall_verdict": "The honest reading requires holding THREE true things at once: (A) Tornado Cash and Samourai were REALLY used by DPRK/Lazarus and others to launder large sums ($7.6B+ TC total; $455M Ronin etc.) - the harm is real; (B) the SANCTIONS theory against immutable code was REJECTED (Van Loon, 5th Cir.; OFAC delisting Mar 2025) and a key money-transmitter theory was CONTRADICTED by FinCEN's own guidance (Samourai); yet (C) developers were still convicted/pled (Pertsev 64mo NL; Storm guilty on 1 of 3, retrial pending; Rodriguez 5y/Hill 4y) - and in Samourai the government SUPPRESSED the exculpatory FinCEN communication for ~18 months and proceeded even after DOJ's own 'Ending Regulation by Prosecution' memo. This is the cleanest privacy-vs-surveillance case study in the corpus: the same state apparatus that pushes digital-ID/age-verification surveillance (digitalid-*, age-verification-abolition) simultaneously criminalizes financial-privacy tooling - on legal theories courts and agencies partly rejected - while real laundering (a genuine problem) supplies the justification. It ties directly to the SDNY/'regulation by prosecution' thread (spec-sec-sdny-regulatory) and the DPRK/Lazarus thread (Tasks #5/#7). Kept as an OVERLAY; not used in the formal proofs."
+}
