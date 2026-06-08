@@ -48,8 +48,20 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "Boeing": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Broadcom": {
       "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "Canary": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Chainlink": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "ColibriTD": {
@@ -66,6 +78,14 @@
     },
     "Defense_Primes": {
       "sector": "defense",
+      "has_exogenous_revenue": true
+    },
+    "Dell": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "DeutscheTelekom": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Disney": {
@@ -88,6 +108,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Georgia_MoJ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Google": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -97,6 +121,18 @@
       "has_exogenous_revenue": true
     },
     "Hashgraph_Association": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Hedera": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Hiero_LFDT": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "IBM": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -117,6 +153,14 @@
       "has_exogenous_revenue": true
     },
     "Kaynes_SemiCon": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "LG": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "LSEG": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -156,6 +200,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "NSE_India": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "NVIDIA": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -174,6 +222,10 @@
     },
     "Nokia": {
       "sector": "telecom",
+      "has_exogenous_revenue": true
+    },
+    "Nomura": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Nondepository financial institutions": {
@@ -276,12 +328,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "StandardBank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Stargate": {
       "sector": "spv",
       "has_exogenous_revenue": false
     },
     "Starlink_Subscribers": {
       "sector": "exogenous_source",
+      "has_exogenous_revenue": true
+    },
+    "Swift": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "UBS_OConnor": {
@@ -821,6 +881,210 @@
       "cancelable": false,
       "source_file": "fin-nvidia-openai.json",
       "note": "$15B initial + $35B on conditions; led the $110B round."
+    },
+    {
+      "from": "Google",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Core AI-bubble hyperscaler is a Hedera governor - the key AI-core <-> enterprise-DLT overlap."
+    },
+    {
+      "from": "IBM",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Lead quantum program (CRQC) also governs Hedera; quantum<->DLT bridge."
+    },
+    {
+      "from": "LG",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Korean electronics conglomerate; council member."
+    },
+    {
+      "from": "Dell",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Enterprise IT; council member."
+    },
+    {
+      "from": "DeutscheTelekom",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Telecom node operator; council member."
+    },
+    {
+      "from": "LSEG",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "London Stock Exchange Group - market-infrastructure incumbent; RWA/settlement relevance."
+    },
+    {
+      "from": "Nomura",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Japanese bank (Laser Digital crypto arm); ties to banking/carry threads."
+    },
+    {
+      "from": "StandardBank",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "African banking group; council member."
+    },
+    {
+      "from": "NSE_India",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "National Stock Exchange of India; India sovereign-tech overlap with SEALSQ-Kaynes Gujarat JV."
+    },
+    {
+      "from": "Chainlink",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council",
+      "amount_usd": null,
+      "status": "member",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Cross-chain oracle infra; underpins RWA/settlement interoperability claims."
+    },
+    {
+      "from": "SEALCOIN",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "built_on",
+      "amount_usd": null,
+      "status": "live",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "WISeKey/SEALSQ's DePIN runs on Hedera (HTS/HCS/HSCS). Closes the SEALSQ<->Hedera bridge (with Hashgraph_Association->SEALCOIN in fin-sealsq-wisekey-global.json)."
+    },
+    {
+      "from": "Georgia_MoJ",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "adoption_registry",
+      "amount_usd": null,
+      "status": "live",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Republic of Georgia migrated its national land registry to Hedera - concrete government adoption (fact corroborated across multiple outlets; the cited page is promotional but the registry migration is widely reported)."
+    },
+    {
+      "from": "Canary",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "etf",
+      "amount_usd": null,
+      "status": "trading-HBR",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Canary HBAR ETF (Nasdaq: HBR), 0.95% fee, SEC-effective - financializes HBAR (token-value-accrual vector)."
+    },
+    {
+      "from": "Hedera",
+      "to": "Hiero_LFDT",
+      "instrument": "other",
+      "raw_instrument": "code_donation",
+      "amount_usd": null,
+      "status": "donated",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Entire codebase donated to Linux Foundation Decentralized Trust (absorbed Hyperledger); first L1 to do so."
+    },
+    {
+      "from": "Swift",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "tokenization_poc",
+      "amount_usd": null,
+      "status": "experiment-registries-role",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "REAL but BOUNDED: Hedera was a named chain in SWIFT's 2023 tokenization/CBDC-interlinking POC, assigned the CORPORATE & GOVERNMENT REGISTRIES role (settlement role went to Ripple/XRPL). POC, not production. 'SWIFT replacement' framing is the overstated/pump layer."
+    },
+    {
+      "from": "Chainlink",
+      "to": "Swift",
+      "instrument": "other",
+      "raw_instrument": "ccip_abstraction_layer",
+      "amount_usd": null,
+      "status": "experiment",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "Chainlink CCIP was the abstraction layer connecting SWIFT to the chains in the POC. Chainlink is ALSO a Hedera council member - so a single entity sits on both sides (council governor + SWIFT-experiment plumbing)."
+    },
+    {
+      "from": "Boeing",
+      "to": "Hedera",
+      "instrument": "other",
+      "raw_instrument": "governance_council_FORMER",
+      "amount_usd": null,
+      "status": "departed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-hedera-connections.json",
+      "note": "FORMER member (10th to join, Aug 2019; invested via HorizonX; board seat; departed Feb 14 2025). Aerospace/SATELLITE prime exited an enterprise DLT amid its own crisis-era retrenchment - while the same secure-satellite/identity use-case migrated to narrative vehicles (WISeSat/SEALSQ). Timeline tell: see boeing_timeline."
     },
     {
       "from": "Google",
@@ -1484,8 +1748,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 79,
-    "num_edges": 97,
+    "num_nodes": 94,
+    "num_edges": 114,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -1521,11 +1785,11 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -1533,16 +1797,11 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -1554,6 +1813,11 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -1568,16 +1832,16 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -1687,8 +1951,29 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Boeing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Broadcom": {
         "total_usd": 91000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Canary": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chainlink": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -1716,6 +2001,20 @@
         "in_robust_core": true
       },
       "Defense_Primes": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Dell": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DeutscheTelekom": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -1757,6 +2056,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Georgia_MoJ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Google": {
         "total_usd": 200000000000,
         "circular_usd": 0,
@@ -1772,6 +2078,27 @@
         "in_robust_core": false
       },
       "Hashgraph_Association": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hedera": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hiero_LFDT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IBM": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -1807,6 +2134,20 @@
         "in_robust_core": false
       },
       "Kaynes_SemiCon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LG": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LSEG": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -1876,6 +2217,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NSE_India": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NVIDIA": {
         "total_usd": 142809000000,
         "circular_usd": 131509000000,
@@ -1906,6 +2254,13 @@
       },
       "Nokia": {
         "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nomura": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2086,6 +2441,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "StandardBank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stargate": {
         "total_usd": 54300000000,
         "circular_usd": 0,
@@ -2095,6 +2457,13 @@
       },
       "Starlink_Subscribers": {
         "total_usd": 11400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Swift": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
