@@ -24,4 +24,4 @@ Re-priced in gold, most "gains" are debasement: a US home is **−81% in gold** 
 Reject age verification as a category — *futile-under-breach* (`models/z3/ageverif_futility.py`: effective gating UNSAT once IDs are breached or credentials shared), a *predator honeypot*, and *adult surveillance by construction*; **ZK does not save it** (hides the input, not the issuer, the presence/absence metadata, or the breach dynamics). `zkage/` is a steelman-then-refutation, not a solution. Full case: `research/age-verification-abolition.md`.
 
 ## Reproduce
-`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 37 cited source files in `research/`.
+`bash run_all.sh` — runs all 5 Z3 engines, TLA+, Alloy, the graph/bank/temporal/gold/defense/energy models. 38 cited source files in `research/`.

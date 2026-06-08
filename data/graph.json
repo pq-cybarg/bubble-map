@@ -16,6 +16,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "AntGroup": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Anthropic": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -60,6 +64,14 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "ByteDance": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "CZ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Canary": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -83,6 +95,10 @@
     "CoreWeave": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Creditors": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Crusoe": {
       "sector": "neocloud",
@@ -141,6 +157,10 @@
       "has_exogenous_revenue": true
     },
     "Government_of_Gujarat": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "HKDA": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -236,6 +256,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "MtGox": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "NSE_India": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -292,6 +316,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "PBoC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "PIMCO": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -321,6 +349,10 @@
       "has_exogenous_revenue": true
     },
     "RomanStorm": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SBI": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -380,6 +412,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "SilverLake": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SoftBank": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -412,6 +448,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "TikTok_US": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "TornadoCash": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -420,7 +460,15 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Trump": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "UBS_OConnor": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "USD1": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -689,6 +737,150 @@
       "cancelable": false,
       "source_file": "fin-meta-family.json",
       "note": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."
+    },
+    {
+      "from": "MtGox",
+      "to": "Creditors",
+      "instrument": "other",
+      "raw_instrument": "repayment",
+      "amount_usd": 9000000000,
+      "status": "in-progress",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "~$9B repaid/ing; ~34,689 BTC (~$4B) still held; deadline Oct 31 2026 (3rd delay)."
+    },
+    {
+      "from": "Trump",
+      "to": "CZ",
+      "instrument": "other",
+      "raw_instrument": "pardon",
+      "amount_usd": null,
+      "status": "granted",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Pardon of Binance founder; clears criminal record, leaves $4.3B corporate settlement intact; ~28 House Dems condemned."
+    },
+    {
+      "from": "MGX",
+      "to": "Binance",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 2000000000,
+      "status": "invested-settled-in-USD1",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Abu Dhabi state fund MGX $2B into Binance, settled using USD1 (Trump-family WLF stablecoin). The conflict nexus."
+    },
+    {
+      "from": "Binance",
+      "to": "USD1",
+      "instrument": "other",
+      "raw_instrument": "tech_build",
+      "amount_usd": null,
+      "status": "reported-disputed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Binance reportedly helped build World Liberty Financial's USD1 stablecoin tech (Binance/CZ dispute framing)."
+    },
+    {
+      "from": "MGX",
+      "to": "TikTok_US",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "signed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "MGX ~15% of TikTok-US JV. Same Gulf fund as the Binance deal AND a Stargate backer -> triple connector."
+    },
+    {
+      "from": "Oracle",
+      "to": "TikTok_US",
+      "instrument": "equity",
+      "raw_instrument": "equity_plus_infra",
+      "amount_usd": null,
+      "status": "signed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Oracle ~15% + stores US data + retrains algorithm. Oracle = AI-core/Stargate node -> social-data layer fused to the core."
+    },
+    {
+      "from": "SilverLake",
+      "to": "TikTok_US",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "signed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Silver Lake ~15% of TikTok-US."
+    },
+    {
+      "from": "ByteDance",
+      "to": "TikTok_US",
+      "instrument": "other",
+      "raw_instrument": "divestiture",
+      "amount_usd": null,
+      "status": "closing",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "ByteDance sells US unit, retains minority; close ~Jan 22 2026."
+    },
+    {
+      "from": "AntGroup",
+      "to": "HKDA",
+      "instrument": "other",
+      "raw_instrument": "stablecoin_issuance",
+      "amount_usd": null,
+      "status": "launched-then-paused",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "HK-licensed HKDA stablecoin; AntCoin trademark."
+    },
+    {
+      "from": "PBoC",
+      "to": "AntGroup",
+      "instrument": "other",
+      "raw_instrument": "pause_order",
+      "amount_usd": null,
+      "status": "ordered",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "PBoC + Cyberspace Administration ordered Ant + JD.com to pause HK stablecoin plans - CCP control reflex."
+    },
+    {
+      "from": "SBI",
+      "to": "Ripple",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "held-~9pct",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "Ripple's biggest external shareholder (~9%); SBI Remit XRP corridor (~$15B); RLUSD Asia distributor; Japan's first XRP ETF filing."
+    },
+    {
+      "from": "MGX",
+      "to": "Stargate",
+      "instrument": "other",
+      "raw_instrument": "ai_infra_backer",
+      "amount_usd": null,
+      "status": "backer",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-exchanges-asia.json",
+      "note": "MGX (Abu Dhabi AI fund) is also a backer of the Stargate AI-infra program (OpenAI/SoftBank/Oracle) - so the SAME Gulf fund touches the AI core, Binance, and TikTok. Cross-ref fin-google-amazon-anthropic-meta / Stargate nodes."
     },
     {
       "from": "Disney",
@@ -2072,8 +2264,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 115,
-    "num_edges": 134,
+    "num_nodes": 127,
+    "num_edges": 146,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2109,16 +2301,12 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -2126,6 +2314,15 @@
       ],
       [
         "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -2141,24 +2338,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -2168,9 +2348,14 @@
         "Microsoft"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -2178,6 +2363,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -2219,6 +2411,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "AntGroup": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Anthropic": {
         "total_usd": 280000000000,
         "circular_usd": 180000000000,
@@ -2255,7 +2454,7 @@
         "in_robust_core": false
       },
       "Binance": {
-        "total_usd": 0,
+        "total_usd": 2000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2291,6 +2490,20 @@
       },
       "Broadcom": {
         "total_usd": 91000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ByteDance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CZ": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2337,6 +2550,13 @@
         "circularity_ratio": 0.632,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Creditors": {
+        "total_usd": 9000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Crusoe": {
         "total_usd": 1825000000,
@@ -2437,6 +2657,13 @@
         "in_robust_core": false
       },
       "Government_of_Gujarat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "HKDA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -2549,7 +2776,7 @@
         "in_robust_core": false
       },
       "MGX": {
-        "total_usd": 14000000000,
+        "total_usd": 16000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2599,6 +2826,13 @@
       },
       "Mistral": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MtGox": {
+        "total_usd": 9000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -2702,6 +2936,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "PBoC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PIMCO": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -2752,6 +2993,13 @@
         "in_robust_core": false
       },
       "RomanStorm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SBI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -2856,6 +3104,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SilverLake": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SoftBank": {
         "total_usd": 60000000000,
         "circular_usd": 0,
@@ -2912,6 +3167,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TikTok_US": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TornadoCash": {
         "total_usd": 7600000000,
         "circular_usd": 0,
@@ -2926,8 +3188,22 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Trump": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UBS_OConnor": {
         "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "USD1": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

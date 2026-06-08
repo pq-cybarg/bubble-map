@@ -40,6 +40,7 @@ Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
+MtGox,Creditors,other,9000000000,in-progress,False,False,spec-exchanges-asia.json
 SINK_lenders,CoreWeave,debt,8500000000,closed,False,False,fin-coreweave-oracle.json
 Lazarus,TornadoCash,other,7600000000,documented,False,False,spec-tornado-samourai.json
 Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
@@ -54,6 +55,7 @@ NVIDIA,Nebius,equity,2700000000,funded,True,False,fin-coreweave-oracle.json
 JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
 Netherlands,Pertsev,other,2200000000,convicted-on-appeal,False,False,spec-tornado-samourai.json
 SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
+MGX,Binance,equity,2000000000,invested-settled-in-USD1,False,False,spec-exchanges-asia.json
 NVIDIA,CoreWeave,equity,2000000000,closed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
@@ -75,6 +77,16 @@ SpaceX,xAI,other,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
 Meta,Oklo,compute_commitment,,committed,False,False,fin-meta-family.json
 Meta,Broadcom,compute_commitment,,committed,False,False,"fin-meta-family.json,fin-google-amazon-anthropic-meta.json"
+Trump,CZ,other,,granted,False,False,spec-exchanges-asia.json
+Binance,USD1,other,,reported-disputed,False,False,spec-exchanges-asia.json
+MGX,TikTok_US,equity,,signed,False,False,spec-exchanges-asia.json
+Oracle,TikTok_US,equity,,signed,False,False,spec-exchanges-asia.json
+SilverLake,TikTok_US,equity,,signed,False,False,spec-exchanges-asia.json
+ByteDance,TikTok_US,other,,closing,False,False,spec-exchanges-asia.json
+AntGroup,HKDA,other,,launched-then-paused,False,False,spec-exchanges-asia.json
+PBoC,AntGroup,other,,ordered,False,False,spec-exchanges-asia.json
+SBI,Ripple,equity,,held-~9pct,False,False,spec-exchanges-asia.json
+MGX,Stargate,other,,backer,False,False,spec-exchanges-asia.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
