@@ -42,3 +42,10 @@ emails, real-world locations) to commits, files, or metadata. Use a throwaway id
 
 ## License
 See `LICENSE` (or open an issue if none is set yet).
+
+## Re-review on every change (REQUIRED)
+Whenever you add or edit a `research/*.json` block, **re-review all prior findings before committing**:
+```bash
+bash scripts/new-research.sh   # runs build_graph + audit + cross_review + dashboard
+```
+Then read `report/AUDIT.md` and `report/CROSS-REVIEW.md` and **reconcile every flag** — sync counts, resolve same-instrument edge conflicts (LOI vs closed / cumulative / date), and add missing cross-links. The repo's integrity depends on each new block being checked against the whole corpus.

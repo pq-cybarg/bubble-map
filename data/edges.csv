@@ -25,6 +25,7 @@ Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-ama
 SINK_investors,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 SINK_bondmarket,Meta,debt,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Private-credit funds / asset managers,AI data-center SPVs / hyperscaler projects,debt,27000000000,2025-10,False,False,macro-cre-privatecredit.json
+BlueOwl,Meta_Hyperion_SPV,debt,27000000000,closed,False,False,fin-meta-family.json
 BlueOwl,Meta_Hyperion_SPV,equity,27000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Amazon,Anthropic,equity,25000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
 OpenAI,CoreWeave,compute_commitment,22400000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
@@ -35,6 +36,7 @@ OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.jso
 Private credit / venture debt lenders,Neoclouds,debt,18000000000,2025-2026,False,False,macro-cre-privatecredit.json
 PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
+Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
@@ -64,6 +66,8 @@ Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 SpaceX,xAI,other,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
+Meta,Oklo,compute_commitment,,committed,False,False,fin-meta-family.json
+Meta,Broadcom,compute_commitment,,committed,False,False,"fin-meta-family.json,fin-google-amazon-anthropic-meta.json"
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
@@ -75,7 +79,6 @@ OpenAI,NVIDIA,gpu_purchase,,committed,True,False,fin-nvidia-openai.json
 GIC,Anthropic,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
 MGX,Anthropic,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
 Google,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
-Meta,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
 Anthropic,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
 AMD,OpenAI,warrant,,announced,True,False,fin-google-amazon-anthropic-meta.json
 MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json

@@ -10,6 +10,10 @@ hr(){ printf '\n\033[1m%s\033[0m\n%s\n' "$1" "==================================
 hr "[1/8] Build canonical funding graph + structural SCC analysis"
 python3 models/graph/build_graph.py
 
+hr "[1a2] Consistency re-review (audit + cross-review)"
+python3 models/audit.py | tail -3
+python3 models/cross_review.py | tail -3
+
 hr "[1b] Temporal META-graph (1998->2026) + betweenness 'weavers'"
 python3 models/graph/temporal_web.py | sed -n '1,40p'
 

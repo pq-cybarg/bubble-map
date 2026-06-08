@@ -156,6 +156,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Oklo": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "OpenAI": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -206,6 +210,10 @@
     },
     "SINK_lenders": {
       "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "ScaleAI": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "SoftBank": {
@@ -429,6 +437,54 @@
       "cancelable": false,
       "source_file": "macro-cre-privatecredit.json",
       "note": "PROJECTION, not realized. Indicates scale of intended chain expansion."
+    },
+    {
+      "from": "Meta",
+      "to": "ScaleAI",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": 14300000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": "$14.3B for ~49% of Scale AI; Scale CEO Alexandr Wang now leads Meta Superintelligence Labs (MSL). Scale ~$29B valuation. Meta owns ~half the data-labeler that serves the WHOLE AI cluster (incl. Meta's rivals) - a semi-circular, conflicted position that reshaped the data-labeling market."
+    },
+    {
+      "from": "Meta",
+      "to": "Oklo",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_commitment",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": "Meta nuclear deals with Oklo + Vistra + TerraPower for up to 6.6 GW by 2035 (part of the energy leg / SMR thread)."
+    },
+    {
+      "from": "Meta",
+      "to": "Broadcom",
+      "instrument": "compute_commitment",
+      "raw_instrument": "compute_commitment",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json,fin-google-amazon-anthropic-meta.json",
+      "note": "Co-develop 4 generations of MTIA custom AI silicon in 2 years (new chip every <=6 months). Broadcom is one of its 6 XPU customers (Google/Meta/OpenAI/Anthropic +2)."
+    },
+    {
+      "from": "BlueOwl",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "debt",
+      "raw_instrument": "debt",
+      "amount_usd": 27000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."
     },
     {
       "from": "Disney",
@@ -863,18 +919,6 @@
       "note": "Broadcom develops/supplies future TPU generations; contract reported through 2031. ~$46B figure cited by some analysts is a model, not disclosed."
     },
     {
-      "from": "Meta",
-      "to": "Broadcom",
-      "instrument": "compute_commitment",
-      "raw_instrument": "MTIA custom silicon (extended through 2029)",
-      "amount_usd": null,
-      "status": "announced",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "fin-google-amazon-anthropic-meta.json",
-      "note": ">1GW initial, multi-GW scale-up; ~3GW through end-2028."
-    },
-    {
       "from": "Anthropic",
       "to": "Broadcom",
       "instrument": "compute_commitment",
@@ -1248,8 +1292,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 62,
-    "num_edges": 83,
+    "num_nodes": 64,
+    "num_edges": 86,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -1297,12 +1341,12 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -1322,8 +1366,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -1334,14 +1384,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -1445,7 +1489,7 @@
         "in_robust_core": false
       },
       "BlueOwl": {
-        "total_usd": 27000000000,
+        "total_usd": 54000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -1557,14 +1601,14 @@
         "in_robust_core": false
       },
       "Meta": {
-        "total_usd": 145000000000,
+        "total_usd": 159300000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
         "in_robust_core": false
       },
       "Meta_Hyperion_SPV": {
-        "total_usd": 48000000000,
+        "total_usd": 75000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -1635,6 +1679,13 @@
       },
       "Nscale": {
         "total_usd": 600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Oklo": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -1730,6 +1781,13 @@
         "circularity_ratio": 0.199,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "ScaleAI": {
+        "total_usd": 14300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "SoftBank": {
         "total_usd": 60000000000,
