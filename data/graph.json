@@ -12,6 +12,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "ANOM": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "AST_SpaceMobile": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -96,6 +100,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Congress": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ConsenSys": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -111,6 +119,18 @@
     "Crusoe": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Crypto_Standards": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "DARPA": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "DOJ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Defense_Primes": {
       "sector": "defense",
@@ -133,6 +153,10 @@
       "has_exogenous_revenue": true
     },
     "EeroQ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "FBI": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -193,6 +217,14 @@
       "has_exogenous_revenue": true
     },
     "ICALPS": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "ICIJ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "InQTel": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -276,6 +308,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "NSA": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "NSE_India": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -320,6 +356,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Offshore_Finance": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Oklo": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -338,6 +378,10 @@
     },
     "PIMCO": {
       "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "Palantir": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Pertsev": {
@@ -472,6 +516,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "TechCompanies": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Telesat": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -481,6 +529,10 @@
       "has_exogenous_revenue": true
     },
     "TornadoCash": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "TrailOfBits": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -969,6 +1021,102 @@
       "cancelable": false,
       "source_file": "fin-disney-openai-sora.json",
       "note": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."
+    },
+    {
+      "from": "NSA",
+      "to": "Crypto_Standards",
+      "instrument": "other",
+      "raw_instrument": "bullrun_backdoor",
+      "amount_usd": 250000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "~$250M/yr to insert backdoors; Dual_EC_DRBG NIST standard backdoored then withdrawn. The mandated-weakness proof."
+    },
+    {
+      "from": "NSA",
+      "to": "ATT",
+      "instrument": "other",
+      "raw_instrument": "backbone_tap_641A",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "Room 641A fiber splitters copy internet backbone to NSA (Narus); Mark Klein whistleblower. Same telecom layer Salt Typhoon breached (spec-telecom-satellite)."
+    },
+    {
+      "from": "NSA",
+      "to": "TechCompanies",
+      "instrument": "other",
+      "raw_instrument": "prism_702",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "PRISM stored-comms collection under FISA 702 (Google/Apple/etc.)."
+    },
+    {
+      "from": "InQTel",
+      "to": "Palantir",
+      "instrument": "other",
+      "raw_instrument": "cia_seed",
+      "amount_usd": 2000000,
+      "status": "invested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "CIA venture arm seeded Palantir (+ Anduril, Keyhole->Google Earth). CIA-SV bridge."
+    },
+    {
+      "from": "DARPA",
+      "to": "TrailOfBits",
+      "instrument": "other",
+      "raw_instrument": "research_commission",
+      "amount_usd": null,
+      "status": "published",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "'Are Blockchains Decentralized?': BTC breakable by ~4, ETH ~2, <10 most. Same ToB later refuted Google's quantum proof (macro-crqc)."
+    },
+    {
+      "from": "FBI",
+      "to": "ANOM",
+      "instrument": "other",
+      "raw_instrument": "honeypot_network",
+      "amount_usd": null,
+      "status": "operation",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "FBI/AFP ran a 'secure' phone network; 27M+ messages. State-run trojan = rebuttal to 'trust the blessed secure system.'"
+    },
+    {
+      "from": "Congress",
+      "to": "DOJ",
+      "instrument": "other",
+      "raw_instrument": "epstein_transparency_act",
+      "amount_usd": null,
+      "status": "enacted",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "House 427-1; ~3.5M pages (Dec 2025) + ~3M (Jan 2026); <1% fully released. Released != complete."
+    },
+    {
+      "from": "ICIJ",
+      "to": "Offshore_Finance",
+      "instrument": "other",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "published",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "Pandora Papers: 35 leaders, 330+ officials, 91 countries; 810k+ offshore entities. The elite-opacity pole."
     },
     {
       "from": "SaltTyphoon",
@@ -2400,8 +2548,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 137,
-    "num_edges": 154,
+    "num_nodes": 150,
+    "num_edges": 162,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2437,11 +2585,11 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -2453,13 +2601,8 @@
         "NVIDIA"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -2470,6 +2613,17 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -2488,12 +2642,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -2539,6 +2687,13 @@
         "circularity_ratio": 0.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "ANOM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "AST_SpaceMobile": {
         "total_usd": 120000000,
@@ -2687,6 +2842,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Congress": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ConsenSys": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -2714,6 +2876,27 @@
         "circularity_ratio": 1.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Crypto_Standards": {
+        "total_usd": 250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DARPA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DOJ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Defense_Primes": {
         "total_usd": 0,
@@ -2751,6 +2934,13 @@
         "in_robust_core": false
       },
       "EeroQ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FBI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -2857,6 +3047,20 @@
       },
       "ICALPS": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ICIJ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "InQTel": {
+        "total_usd": 2000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3002,6 +3206,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NSA": {
+        "total_usd": 250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NSE_India": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3079,6 +3290,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Offshore_Finance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Oklo": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3109,6 +3327,13 @@
       },
       "PIMCO": {
         "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Palantir": {
+        "total_usd": 2000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3345,6 +3570,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TechCompanies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Telesat": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3361,6 +3593,13 @@
       },
       "TornadoCash": {
         "total_usd": 7600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "TrailOfBits": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

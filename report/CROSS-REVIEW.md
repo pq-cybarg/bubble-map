@@ -13,7 +13,7 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 25 files
-- **Google** — 20 files
+- **Google** — 21 files
 - **Oracle** — 15 files
 - **OpenAI** — 15 files
 - **Amazon** — 14 files
@@ -23,17 +23,17 @@
 - **a16z** — 9 files
 - **JPMorgan** — 9 files
 - **NVIDIA** — 9 files
-- **SEALSQ** — 8 files
+- **Epstein** — 8 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- BRICS, CLARITY, InQTel, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, TrailOfBits, Vistra
+- BRICS, CLARITY, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-telecom-satellite.json` — related files by shared entities (verify cross-refs exist)
-- fin-hedera-connections.json: 9 shared entities
-- spec-exchanges-asia.json: 8 shared entities
-- altcoin-lens.json: 7 shared entities
-- macro-crqc-quantum-landscape.json: 7 shared entities
-- energy-power.json: 7 shared entities
-- sec-filings.json: 7 shared entities
-- fin-sealsq-wisekey-global.json: 6 shared entities
-- fin-google-amazon-anthropic-meta.json: 6 shared entities
+## Newest file `spec-disclosures-surveillance.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 5 shared entities
+- spec-network-overlay.json: 4 shared entities
+- spec-crypto-sec-epstein.json: 4 shared entities
+- temporal-bridges.json: 3 shared entities
+- fin-hedera-connections.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- altcoin-lens.json: 3 shared entities

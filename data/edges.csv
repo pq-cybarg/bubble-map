@@ -70,12 +70,14 @@ Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.
 Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minerals.json
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
+NSA,Crypto_Standards,other,250000000,documented,False,False,spec-disclosures-surveillance.json
 Verizon,AST_SpaceMobile,other,100000000,committed,False,False,spec-telecom-satellite.json
 Coinbase,Fairshake,other,75000000,given,False,False,spec-sec-sdny-regulatory.json
 a16z,Fairshake,other,70000000,given,False,False,spec-sec-sdny-regulatory.json
 Ripple,Fairshake,other,50000000,given,False,False,spec-sec-sdny-regulatory.json
 SEC,Kraken,other,30000000,settled-staking-then-sued,False,False,spec-sec-sdny-regulatory.json
 ATT,AST_SpaceMobile,other,20000000,committed,False,False,spec-telecom-satellite.json
+InQTel,Palantir,other,2000000,invested,False,False,spec-disclosures-surveillance.json
 Coinbase,FDIC,other,188440,won-fees,False,False,spec-sec-sdny-regulatory.json
 SpaceX,xAI,other,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
@@ -94,6 +96,12 @@ MGX,Stargate,other,,backer,False,False,spec-exchanges-asia.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
+NSA,ATT,other,,documented,False,False,spec-disclosures-surveillance.json
+NSA,TechCompanies,other,,documented,False,False,spec-disclosures-surveillance.json
+DARPA,TrailOfBits,other,,published,False,False,spec-disclosures-surveillance.json
+FBI,ANOM,other,,operation,False,False,spec-disclosures-surveillance.json
+Congress,DOJ,other,,enacted,False,False,spec-disclosures-surveillance.json
+ICIJ,Offshore_Finance,other,,published,False,False,spec-disclosures-surveillance.json
 SaltTyphoon,US_Telecoms,other,,ongoing,False,False,spec-telecom-satellite.json
 TMobile,SpaceX,other,,live,False,False,spec-telecom-satellite.json
 SpaceX,NRO,other,,operational,False,False,spec-telecom-satellite.json

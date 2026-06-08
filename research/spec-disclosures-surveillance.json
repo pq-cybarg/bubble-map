@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "title": "Disclosures & surveillance overlay - Twitter Files/jawboning, Snowden, the intel-community<->tech/crypto nexus, Epstein records, offshore leaks (evidence-graded)",
+    "generated": "2026-06-08",
+    "WARNING": "HEAVIEST honesty/defamation discipline in the corpus. Each item is split into (a) what primary documents/court records SHOW, (b) reasonable inference, (c) speculation - labeled. No private individual is described as a criminal beyond charges/convictions/unsealed records. Court rulings are stated precisely (e.g., a STANDING dismissal is NOT a merits vindication either way). This overlay documents the SURVEILLANCE/OPACITY ASYMMETRY that motivates the repo's anti-digital-ID/anti-backdoor spine; it is NOT used in the formal proofs.",
+    "method": "Primary where possible (SCOTUS opinion, DOJ justice.gov/epstein, Congress.gov, ICIJ, EFF, NIST, Trail of Bits/DARPA report, Wikipedia for uncontested chronology).",
+    "cross_refs": ["influence-ad-censorship.json (platform content-moderation/jawboning)", "digitalid-regulatory.json + age-verification-abolition.md (backdoors-get-breached spine)", "spec-telecom-satellite.json (Salt Typhoon via CALEA = the live proof; Room 641A lineage)", "macro-crqc-quantum-landscape.json (Bullrun crypto-weakening -> HNDL; Trail of Bits also refuted Google's quantum proof)", "spec-crypto-sec-epstein.json (Black/Epstein/Apollo - the ONLY corpus-anchored Epstein link)", "macro-cre-privatecredit.json (offshore/shadow-finance opacity)", "spec-tornado-samourai.json (privacy-tool axis)"]
+  },
+  "twitter_files_jawboning": {
+    "grade": "documented contacts STRONG; 'unlawful state censorship' LEGALLY UNRESOLVED (dismissed on standing); some specific flagging claims DID NOT hold",
+    "facts": [
+      "The 'Twitter Files' (2022-23, journalists incl. Taibbi/Weiss/Shellenberger via internal docs) showed routine govt-platform contact channels (FBI, CISA, White House, CDC, Surgeon General) about COVID + election content.",
+      "Academic programs - the Election Integrity Partnership, the Virality Project, the Stanford Internet Observatory (Stanford/UW) - studied/flagged 'misinformation' narratives; critics called this a govt-adjacent moderation pipeline.",
+      "Murthy v. Missouri (SCOTUS, Jun 26 2024): 6-3 (Barrett) held the plaintiffs LACKED STANDING - no substantial, traceable, redressable injury - VACATING the injunction. The district court had earlier said WH/Surgeon-General/CDC/FBI/CISA likely 'coerced or significantly encouraged' moderation.",
+      "Honest caveat: the Court did NOT decide whether the contacts were lawful or unlawful on the merits; and the record showed, e.g., NO evidence the Virality Project flagged named plaintiff Jill Hines - some viral claims about specific flagging did not hold up."
+    ],
+    "thesis_significance": "Documents a real govt-platform contact apparatus AND the danger of over-claiming. The honest lesson for THIS repo: jawboning concerns are legitimate, but precision matters - the strongest cases survive scrutiny, the weakest (mis-attributed flags) discredit the rest. Ties influence-ad-censorship + the digital-ID/speech thread.",
+    "source": ["https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf", "https://en.wikipedia.org/wiki/Murthy_v._Missouri"]
+  },
+  "snowden_2013": {
+    "grade": "STRONG (Snowden docs, NYT, EFF, NIST)",
+    "facts": [
+      "PRISM: NSA collection of internet communications from US firms (Google/Apple/etc.) under FISA Section 702; revealed 2013.",
+      "Bullrun: NSA program to defeat encryption; per NYT, ~$250M/yr to insert backdoors into software/hardware/standards.",
+      "Dual_EC_DRBG: NSA maneuvered to become sole editor of the NIST RNG standard; it contained a backdoor; NIST later WITHDREW it. A documented case of a deliberately weakened public crypto STANDARD.",
+      "Room 641A: an AT&T facility (San Francisco) with a Narus STA 6400 fed by fiber beam-SPLITTERS copying internet-backbone traffic to the NSA; exposed by AT&T technician Mark Klein (2006). Upstream collection (vs PRISM's stored-data)."
+    ],
+    "thesis_significance": "The empirical foundation of the anti-backdoor argument: the state (a) tapped backbone traffic at the carrier (Room 641A - the same telecom layer Salt Typhoon later breached via CALEA, spec-telecom-satellite), and (b) deliberately WEAKENED a public crypto standard (Dual_EC/Bullrun). HNDL (macro-crqc) is the quantum-era continuation: collect now, decrypt later.",
+    "source": ["https://en.wikipedia.org/wiki/Bullrun_(decryption_program)", "https://en.wikipedia.org/wiki/Dual_EC_DRBG", "https://en.wikipedia.org/wiki/Room_641A", "https://en.wikipedia.org/wiki/PRISM"]
+  },
+  "intel_tech_crypto_nexus": {
+    "grade": "program facts STRONG; 'control of crypto' SPECULATIVE",
+    "items": [
+      {"item": "In-Q-Tel (CIA venture arm, est. 1999)", "fact": "Seed-backed Palantir (~$2M), plus Anduril and Keyhole (-> Google Earth) and a broad data/geospatial portfolio - the CIA-Silicon-Valley bridge.", "grade": "STRONG"},
+      {"item": "DARPA / Trail of Bits 'Are Blockchains Decentralized?' (Jun 2022)", "fact": "DARPA-commissioned study found blockchains are NOT fully decentralized: ~4 entities suffice to disrupt Bitcoin, ~2 for Ethereum, <10 for most. SAME firm (Trail of Bits) that in 2026 refuted Google's quantum ZK proof (macro-crqc) - a recurring 'verify the decentralization/soundness claim' actor, aligned with this repo's ethos.", "grade": "STRONG"},
+      {"item": "FBI ANOM / Operation Trojan Shield (2018-2021)", "fact": "FBI + Australian Federal Police covertly RAN a 'secure' encrypted-phone network (ANOM); catalogued 27M+ messages; global takedown. A STATE-RUN 'trust us, it's secure' comms system that was the opposite.", "grade": "STRONG", "significance": "Direct rebuttal to 'trust the government-blessed secure system' - the inverse of a mandated backdoor (a state-built trojan). Reinforces age-verification-abolition + the Tornado/Samourai privacy axis."},
+      {"item": "Chainalysis used by FBI/IRS-CI/DEA", "fact": "Blockchain-analytics firm provides chain-surveillance/deanonymization to US agencies - the financial-surveillance counterpart to telecom intercept.", "grade": "STRONG"},
+      {"item": "NSA & cryptographic standards (nuance)", "fact": "NSA authored SHA-2 (no known backdoor; widely trusted) - so 'NSA touches crypto' is NOT automatically malign; Dual_EC is the documented bad case. Hold both.", "grade": "STRONG-nuance"}
+    ],
+    "source": ["https://fortune.com/2025/07/29/in-q-tel-cia-venture-capital-palantir-anduril/", "https://blog.trailofbits.com/2022/06/21/are-blockchains-decentralized/", "https://en.wikipedia.org/wiki/Operation_Trojan_Shield"]
+  },
+  "epstein_records": {
+    "grade": "release-process facts STRONG; any specific-association claims STRICTLY limited to unsealed records",
+    "method_note": "Use DOJ's own portal + Congress + ICIJ + archive mirrors; do NOT assert associations beyond what unsealed court records establish; the ONLY corpus-anchored financial link remains Leon Black -> Epstein -> Apollo (spec-crypto-sec-epstein) - an Apollo is a major AI-datacenter private-credit lender.",
+    "facts": [
+      "Epstein Files Transparency Act: House passed 427-1 (Nov 18 2025); Senate by unanimous consent; signed into law. Requires DOJ to release unclassified Epstein records.",
+      "DOJ published ~3.5M responsive pages by Dec 19 2025; ~3M more on Jan 30 2026 (DOJ justice.gov/epstein portal).",
+      "BUT watchdogs/DOJ acknowledge a small fraction is FULLY processed/released (reports of <1% fully released; large volumes still in review/redaction) - i.e., 'released' != 'readable/complete.'",
+      "Earlier unsealings (Giuffre v. Maxwell docket, 2024) and the Maxwell conviction are the established court-record base."
+    ],
+    "thesis_significance": "Fits the ASYMMETRY theme: records of a powerful network emerge slowly, partially, heavily redacted - the inverse of the granular surveillance applied to ordinary citizens. Connect ONLY to the documented Apollo/Black financial node; everything else is out-of-scope speculation.",
+    "source": ["https://www.congress.gov/bill/119th-congress/house-bill/4405/text", "https://www.justice.gov/epstein/doj-disclosures", "https://time.com/7343702/epstein-files-release-doj/"]
+  },
+  "offshore_leaks": {
+    "grade": "STRONG (ICIJ)",
+    "facts": [
+      "Pandora Papers (ICIJ, 2021): exposed offshore holdings of 35 current/former world leaders + 330+ public officials across 91 countries.",
+      "ICIJ Offshore Leaks database aggregates >810,000 offshore entities across Pandora/Paradise/Bahamas/Panama/Offshore Leaks."
+    ],
+    "thesis_significance": "The elite-finance OPACITY pole: the same era that built mass citizen surveillance left elite offshore wealth structurally hidden until leaks. Ties the shadow-finance/private-credit opacity thread (macro-cre-privatecredit) and the 'rules favor incumbents' theme.",
+    "source": ["https://www.icij.org/investigations/pandora-papers/", "https://offshoreleaks.icij.org/"]
+  },
+  "edges": [
+    {"from": "NSA", "to": "Crypto_Standards", "instrument": "bullrun_backdoor", "amount_usd": 250000000, "date": "2013-revealed", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/Bullrun_(decryption_program)", "https://en.wikipedia.org/wiki/Dual_EC_DRBG"], "notes": "~$250M/yr to insert backdoors; Dual_EC_DRBG NIST standard backdoored then withdrawn. The mandated-weakness proof."},
+    {"from": "NSA", "to": "ATT", "instrument": "backbone_tap_641A", "amount_usd": null, "date": "2003-2006revealed", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/Room_641A"], "notes": "Room 641A fiber splitters copy internet backbone to NSA (Narus); Mark Klein whistleblower. Same telecom layer Salt Typhoon breached (spec-telecom-satellite)."},
+    {"from": "NSA", "to": "TechCompanies", "instrument": "prism_702", "amount_usd": null, "date": "2013-revealed", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/PRISM"], "notes": "PRISM stored-comms collection under FISA 702 (Google/Apple/etc.)."},
+    {"from": "InQTel", "to": "Palantir", "instrument": "cia_seed", "amount_usd": 2000000, "date": "2000s", "status": "invested", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://fortune.com/2025/07/29/in-q-tel-cia-venture-capital-palantir-anduril/"], "notes": "CIA venture arm seeded Palantir (+ Anduril, Keyhole->Google Earth). CIA-SV bridge."},
+    {"from": "DARPA", "to": "TrailOfBits", "instrument": "research_commission", "amount_usd": null, "date": "2022-06", "status": "published", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://blog.trailofbits.com/2022/06/21/are-blockchains-decentralized/"], "notes": "'Are Blockchains Decentralized?': BTC breakable by ~4, ETH ~2, <10 most. Same ToB later refuted Google's quantum proof (macro-crqc)."},
+    {"from": "FBI", "to": "ANOM", "instrument": "honeypot_network", "amount_usd": null, "date": "2018-2021", "status": "operation", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/Operation_Trojan_Shield"], "notes": "FBI/AFP ran a 'secure' phone network; 27M+ messages. State-run trojan = rebuttal to 'trust the blessed secure system.'"},
+    {"from": "Congress", "to": "DOJ", "instrument": "epstein_transparency_act", "amount_usd": null, "date": "2025-11", "status": "enacted", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.congress.gov/bill/119th-congress/house-bill/4405/text"], "notes": "House 427-1; ~3.5M pages (Dec 2025) + ~3M (Jan 2026); <1% fully released. Released != complete."},
+    {"from": "ICIJ", "to": "Offshore_Finance", "instrument": "leak_disclosure", "amount_usd": null, "date": "2021", "status": "published", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://www.icij.org/investigations/pandora-papers/"], "notes": "Pandora Papers: 35 leaders, 330+ officials, 91 countries; 810k+ offshore entities. The elite-opacity pole."}
+  ],
+  "overall_verdict": "The disclosures share ONE structure - a SURVEILLANCE/OPACITY ASYMMETRY: granular, often-mandated surveillance of ordinary people (PRISM, Room 641A backbone taps, the CALEA system Salt Typhoon hijacked, ANOM, Chainalysis chain-tracing) and pressure on platform speech (the documented govt-platform jawboning channels), set against STRUCTURAL OPACITY for elite finance (Pandora Papers) and slow, partial, redacted release of powerful-network records (Epstein: ~6.5M pages nominally released, <1% fully processed). The repo's spine follows directly: every MANDATED backdoor or weakened standard (Dual_EC/Bullrun; CALEA->Salt Typhoon) proves you cannot build surveillance access only the 'good guys' use - the same argument as age-verification-abolition.md. Two honesty disciplines are enforced: (1) Murthy v. Missouri was a STANDING dismissal, not a merits ruling, and some viral 'flagging' claims did not hold - over-claiming discredits the real concern; (2) 'NSA touches crypto' is not automatically malign (NSA authored the trusted SHA-2; Dual_EC is the documented bad case). The recurring on-thesis actor is Trail of Bits (DARPA decentralization study + the Google-quantum-proof refutation) - independent verification of grand claims, which is exactly what this repo does. Overlay only; never used in the formal proofs."
+}
