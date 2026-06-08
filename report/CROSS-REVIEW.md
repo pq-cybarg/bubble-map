@@ -33,7 +33,7 @@
 - spec-network-overlay.json: 4 shared entities
 - spec-crypto-sec-epstein.json: 4 shared entities
 - temporal-bridges.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
 - digitalid-corporate.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
 - altcoin-lens.json: 3 shared entities
+- fin-hedera-connections.json: 3 shared entities
