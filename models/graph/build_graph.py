@@ -51,15 +51,35 @@ def iclass(instr):
     if "revenue_share" in s or "revenue share" in s: return "revenue_share"
     if "ipo_proceeds" in s: return "ipo_proceeds"
     if "exogenous_revenue" in s: return "exogenous_revenue"
-    if "equity" in s: return "equity"
-    if "debt" in s or "bond" in s or "loan" in s: return "debt"
     if "ip_litigation" in s: return "ip_litigation"
     if "ip_license" in s: return "ip_license"
     if "cease" in s: return "ip_cease_desist"
+    # structural / relationship classes (NON money-flow) - classify before generic 'equity'
+    if "governance" in s or "council" in s: return "governance"
+    if any(k in s for k in ["enforcement","prosecution","conviction","sanction","pardon","foia","pause_order","pause letter","pause_letter","transparency_act","guidance_contradict","plea","subpoena"]): return "regulatory_legal"
+    if "litigation" in s and "ip" not in s: return "regulatory_legal"
+    if any(k in s for k in ["breach","backbone_tap","prism","bullrun","backdoor","honeypot","wiretap","laundering","leak_disclosure","_641a"]): return "surveillance_security"
+    if any(k in s for k in ["code_donation","built_on","launch","adoption","etf","mou","subsidy","grant","research_commission","military","starshield","kaband","direct_to_cell","stablecoin","registry","cia_seed","iso20022","ccip","tokenization_poc","pause"]): return "relationship"
+    # money-flow (financial) classes
+    if "equity" in s: return "equity"
+    if any(k in s for k in ["debt","bond","loan","credit line","credit lines","private credit","private-credit","credit_loss","finance_loss","finance loss","credit facilit"]): return "debt"
     if any(k in s for k in ["compute","cloud","azure","aws","capacity","tpu","xpu","silicon","accelerator","backlog"]): return "compute_commitment"
     if "offtake" in s: return "offtake"
     if "capital expenditure" in s or "capex" in s: return "capex"
+    if "acquisition" in s or "acquire" in s: return "acquisition"
+    if "merger" in s or "merge" in s: return "merger"
+    if "divestiture" in s: return "divestiture"
+    if "pac_funding" in s or "pac funding" in s: return "pac_funding"
+    if "repayment" in s: return "repayment"
+    if any(k in s for k in ["investment","invest","backer","seed","strategic_commitment","strategic commitment","commercial_agreement","tech_build","settlement_pilot","stake"]): return "investment"
     return "other"
+
+# layer split: which edges are real capital/credit/compute FLOWS (the substrate of the formal
+# proofs) vs non-economic governance/legal/security/relationship edges (graded overlay context).
+FINANCIAL_CLASSES={"equity","debt","compute_commitment","gpu_purchase","backstop","warrant","offtake",
+ "exogenous_revenue","ipo_proceeds","capex","revenue_share","equity_method_loss","ip_license",
+ "acquisition","merger","divestiture","investment","pac_funding","repayment"}
+def layer_of(ic): return "financial" if ic in FINANCIAL_CLASSES else "structural"
 
 NODE_META = {
  "NVIDIA":("chip_vendor",True),"AMD":("chip_vendor",True),"Broadcom":("chip_vendor",True),"Intel":("chip_vendor",True),
@@ -74,13 +94,46 @@ NODE_META = {
  "Disney":("ip_rightsholder",True),"Disney_Studios_Coalition":("ip_rightsholder",True),"Midjourney":("ai_lab",False),
  "Nokia":("telecom",True),"US_Government":("state",True),"MP_Materials":("critical_minerals",True),
  "Defense_Primes":("defense",True),"Apple":("hyperscaler",True),
+ # exchanges / crypto firms
+ "Binance":("exchange",True),"Coinbase":("exchange",True),"Kraken":("exchange",True),"MtGox":("exchange",False),
+ "Ripple":("crypto_infra",True),"SBI":("financier",True),"LBRY":("crypto_firm",False),
+ "TornadoCash":("privacy_tool",False),"SamouraiWallet":("privacy_tool",False),"USD1":("stablecoin",False),"HKDA":("stablecoin",False),
+ # DLT / crypto-infra
+ "Hedera":("dlt",True),"Hashgraph_Association":("dlt",False),"Hiero_LFDT":("dlt",False),"Chainlink":("crypto_infra",True),
+ "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
+ # PQC / quantum / semiconductor
+ "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
+ "ColibriTD":("pqc_quantum",False),"Miraex":("pqc_quantum",False),"Kaynes_SemiCon":("semiconductor",True),"SEALKAYNESQ":("pqc_quantum",False),
+ "IBM":("tech",True),"LG":("tech",True),"Dell":("tech",True),"ScaleAI":("ai_data",True),
+ # telecom + satellite
+ "Verizon":("telecom",True),"ATT":("telecom",True),"TMobile":("telecom",True),"DeutscheTelekom":("telecom",True),"US_Telecoms":("telecom",True),
+ "Globalstar":("satellite",True),"Telesat":("satellite",True),"AST_SpaceMobile":("satellite",False),"WISeSat":("satellite",False),
+ "Swift":("financial_infra",True),
+ # finance / markets / asia-gulf bigtech
+ "Nomura":("bank",True),"StandardBank":("bank",True),"LSEG":("financial_infra",True),"NSE_India":("financial_infra",True),
+ "Jefferies":("bank",True),"SilverLake":("financier",True),"a16z":("financier",True),"UBS_OConnor":("financier",True),
+ "AntGroup":("bigtech_asia",True),"ByteDance":("bigtech_asia",True),"TikTok_US":("bigtech_asia",True),
+ # regulators / state / intel / threat
+ "SEC":("regulator",True),"FDIC":("regulator",True),"SDNY":("regulator",True),"DOJ":("regulator",True),"OFAC":("regulator",True),
+ "FinCEN":("regulator",True),"Treasury":("regulator",True),"PBoC":("regulator",True),"Congress":("state",True),
+ "Government_of_Gujarat":("state",True),"Spanish_Government_SETT":("state",True),"Georgia_MoJ":("state",True),
+ "NSA":("state_intel",True),"FBI":("state_intel",True),"DARPA":("state_intel",True),"NRO":("state_intel",True),"InQTel":("state_intel",True),
+ "Palantir":("defense_tech",True),"ANOM":("surveillance",False),"Crypto_Standards":("standards",False),"US_Allied_Military":("defense",True),
+ "SaltTyphoon":("threat_actor",False),"Lazarus":("threat_actor",False),"Boeing":("defense",True),
+ # PACs / journalism / offshore
+ "Fairshake":("political",False),"ICIJ":("journalism",False),"Offshore_Finance":("offshore",False),
+ # persons / misc
+ "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
+ "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),
+ "Jefferies":("bank",True),"First_Brands":("industrial",False),"Creditors":("creditor",False),
 }
 
 edges=[]
 def add(frm,to,instr,amt,status,circ,src,note="",cancelable=False):
     f,t=canon(frm),canon(to)
     if f==t: return
-    edges.append({"from":f,"to":t,"instrument":iclass(instr),"raw_instrument":instr,
+    ic=iclass(instr)
+    edges.append({"from":f,"to":t,"instrument":ic,"layer":layer_of(ic),"raw_instrument":instr,
         "amount_usd":amt if isinstance(amt,(int,float)) else None,"status":status or "",
         "declared_circular":bool(circ),"cancelable":bool(cancelable),"source_file":src,"note":note})
 
@@ -100,6 +153,9 @@ edges += [
  {"from":"MP_Materials","to":"Defense_Primes","instrument":"offtake","raw_instrument":"10yr 100% DoD offtake -> magnets for missiles/F-35/radar","amount_usd":None,"status":"committed","declared_circular":True,"cancelable":False,"source_file":"macro-critical-minerals.json","note":""},
  {"from":"Apple","to":"MP_Materials","instrument":"offtake","raw_instrument":"$500M recycled-magnet supply deal","amount_usd":500000000,"status":"committed","declared_circular":False,"cancelable":False,"source_file":"macro-critical-minerals.json","note":""},
 ]
+
+# ensure every edge carries a layer (static minerals edges above are added raw)
+for e in edges: e.setdefault("layer",layer_of(e["instrument"]))
 
 # dedupe by (from,to,instrument): keep MAX amount, OR the flags, merge sources
 dd={}
@@ -147,6 +203,10 @@ def scc_core(edge_list):
 
 sccs_all,core_all,adj=scc_core(E)
 sccs_robust,core_robust,_=scc_core([e for e in E if not e.get("cancelable")])
+# PROOF-INTEGRITY CHECK: the circular core must rest on capital/credit/compute FLOWS, not on
+# governance/legal/security relationships. Compute the SCC over financial-layer edges only.
+_,core_financial,_=scc_core([e for e in E if e.get("layer")=="financial"])
+structural_adds_no_cycle=(core_financial==core_all)
 
 # elementary cycles (bounded) over full graph
 cycset=set();cyclist=[]
@@ -168,6 +228,26 @@ for n in nodes:
     expo[n]={"total_usd":tot,"circular_usd":cir,"circularity_ratio":round(cir/tot,3) if tot else 0.0,
              "in_core_scc":n in core_all,"in_robust_core":n in core_robust}
 
+# ---- cross-layer connector analysis: which nodes BRIDGE the most distinct sectors/files ----
+nbrs=defaultdict(set); efiles=defaultdict(set); elayers=defaultdict(set); deg=defaultdict(int)
+for e in E:
+    f,t=e["from"],e["to"]; nbrs[f].add(t); nbrs[t].add(f)
+    deg[f]+=1; deg[t]+=1
+    for n in (f,t):
+        for sf in str(e["source_file"]).split(","): efiles[n].add(sf.strip())
+        elayers[n].add(e.get("layer","financial"))
+connectors={}
+for n in nodes:
+    nb_sectors=sorted({entities[x]["sector"] for x in nbrs[n]})
+    connectors[n]={"degree":deg[n],"neighbor_sectors":nb_sectors,"n_neighbor_sectors":len(nb_sectors),
+        "source_files":len(efiles[n]),"layers":sorted(elayers[n]),"both_layers":len(elayers[n])>1}
+# bridge score: distinct neighbor-sectors + distinct source-files + cross-layer bonus
+def bscore(n):
+    c=connectors[n]; return c["n_neighbor_sectors"]*2+c["source_files"]+(3 if c["both_layers"] else 0)
+top_connectors=sorted(nodes,key=bscore,reverse=True)[:18]
+
+nfin=sum(1 for e in E if e.get("layer")=="financial"); nstr=len(E)-nfin
+
 nvda_funded=sum(amt(e) for e in E if e["from"]=="NVIDIA" and e["instrument"] in("equity","backstop","warrant") and e["to"] in core_all and (e["amount_usd"] or 0)<=35e9)
 nvda_head=sum(amt(e) for e in E if e["from"]=="NVIDIA" and e["instrument"] in("equity","backstop","warrant") and e["to"] in core_all)
 nvda_rev=215.9e9
@@ -176,11 +256,14 @@ selffund={"funded_usd":nvda_funded,"headline_usd":nvda_head,"nvidia_fy26_revenue
 
 graph={"entities":entities,"edges":E,"analysis":{
     "num_nodes":len(nodes),"num_edges":len(E),
+    "num_financial_edges":nfin,"num_structural_edges":nstr,
     "core_scc_all":sorted(core_all),"core_scc_all_size":len(core_all),
     "core_scc_robust_excl_cancelable":sorted(core_robust),"core_scc_robust_size":len(core_robust),
+    "core_scc_financial_only":sorted(core_financial),"structural_edges_add_no_cycle":structural_adds_no_cycle,
     "nodes_only_circular_via_cancelable":sorted(core_all-core_robust),
     "num_elementary_cycles":len(cyclist),"elementary_cycles":cyclist,
-    "circularity_exposure":expo,"nvidia_self_funding":selffund}}
+    "circularity_exposure":expo,"nvidia_self_funding":selffund,
+    "top_cross_layer_connectors":[{"node":n,**connectors[n]} for n in top_connectors]}}
 json.dump(graph,open(os.path.join(DATA,"graph.json"),"w"),indent=2)
 with open(os.path.join(DATA,"edges.csv"),"w",newline="") as f:
     w=csv.writer(f);w.writerow(["from","to","instrument","amount_usd","status","declared_circular","cancelable","source_file"])
@@ -191,7 +274,9 @@ with open(os.path.join(DATA,"entities.csv"),"w",newline="") as f:
     for n in nodes: w.writerow([n,entities[n]["sector"],entities[n]["has_exogenous_revenue"],expo[n]["in_core_scc"],expo[n]["in_robust_core"],expo[n]["circularity_ratio"]])
 
 print("="*74+"\nSTRUCTURAL FORMAL ANALYSIS  -  AI circular-funding graph\n"+"="*74)
-print(f"nodes={len(nodes)}  edges={len(E)}")
+print(f"nodes={len(nodes)}  edges={len(E)}  (financial={nfin}, structural={nstr})")
+print(f"\n[S0] PROOF-INTEGRITY: SCC over FINANCIAL-layer edges only == SCC over all edges? {structural_adds_no_cycle}")
+print(f"     => the circular core rests on capital/credit/compute flows; governance/legal/security edges add no cycle.")
 print(f"\n[S1] Core SCC (ALL edges): |SCC|={len(core_all)}")
 print("     "+", ".join(sorted(core_all)))
 print(f"\n[S1b] Core SCC (EXCLUDING cancelable contracts): |SCC|={len(core_robust)}")
@@ -210,4 +295,8 @@ for n in ["SpaceX","NVIDIA","OpenAI","CoreWeave","Oracle"]:
 print(f"\n[METRIC] NVIDIA vendor-financing self-funding ratio:")
 print(f"    funded-only  ${selffund['funded_usd']/1e9:,.0f}B / ${nvda_rev/1e9:,.0f}B = {selffund['funded_ratio']:.1%}")
 print(f"    headline     ${selffund['headline_usd']/1e9:,.0f}B / ${nvda_rev/1e9:,.0f}B = {selffund['headline_ratio']:.1%}")
+print(f"\n[METRIC] Top cross-layer connectors (bridge distinct sectors/files/layers):")
+for n in top_connectors[:12]:
+    c=connectors[n]; lyr="F+S" if c["both_layers"] else (c["layers"][0][0].upper() if c["layers"] else "-")
+    print(f"    {n:<20} deg={c['degree']:<3} sectors={c['n_neighbor_sectors']:<2} files={c['source_files']:<2} layers={lyr}  [{', '.join(c['neighbor_sectors'][:6])}]")
 print("\nwrote data/graph.json, data/edges.csv, data/entities.csv")

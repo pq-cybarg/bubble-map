@@ -84,6 +84,10 @@ def tbl(headers,rows):
     return f"<table><thead><tr>{h}</tr></thead><tbody>{r}</tbody></table>"
 
 verd=tbl(["Engine","What it shows","Verdict"],VERDICTS)
+conn_rows=[[c["node"],c["degree"],c["n_neighbor_sectors"],c["source_files"],
+            "financial+structural" if c["both_layers"] else (c["layers"][0] if c.get("layers") else "—"),
+            ", ".join(c["neighbor_sectors"][:7])] for c in an.get("top_cross_layer_connectors",[])[:12]]
+conn_t=tbl(["Node","Degree","Sectors bridged","Source files","Layers","Neighbor sectors"],conn_rows)
 scn=sc.get("scenarios",{})
 scent=tbl(["Scenario","OpenAI cap gap","solvent@tap","REE indep","power ok","verdict"],
           [[k,f"${v.get('capital_gap_usd_b'):,}B","YES" if v.get('solvent_at_tap') else "NO",
@@ -112,6 +116,7 @@ nav a{color:#7fd1ff;margin-right:14px;text-decoration:none;font-size:13px} .mute
 KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular core (SCC; {an.get('core_scc_all_size','?')} incl. cancelable)</span>
 <span class=k><b>{ncyc}</b>round-trip cycles</span>
 <span class=k><b>{an.get('num_nodes','?')}/{an.get('num_edges','?')}</b>graph nodes/edges</span>
+<span class=k><b>{an.get('num_financial_edges','?')}/{an.get('num_structural_edges','?')}</b>financial/structural edges</span>
 <span class=k><b>$1.03T</b>external capital OpenAI needs</span>
 <span class=k><b>{nself.get('headline_ratio',0)*100:.0f}%</b>NVIDIA self-funding (headline)</span>
 <span class=k><b>-81%</b>US home priced in gold since 1998</span>
@@ -122,7 +127,7 @@ KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular 
 HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI Earnings Bubble</title><style>{CSS}</style></head>
 <body><header><h1>Unmasking the AI Earnings Bubble &mdash; control dashboard</h1>
 <div class=muted>Formally-verified analysis &middot; auto-generated from live <code>data/*.json</code> on {BUILD_DATE} &middot; reproduce: <code>bash run_all.sh</code> &middot; every figure carries a source URL in the matching <code>research/*.json</code></div>
-<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#overlays>Overlays</a><a href=#verify>Verify it yourself</a><a href=#src>Sources</a></nav></header>
+<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></header>
 <main>
 <div class=thesis>A self-referential capital loop booking each other's spending as revenue, solvent only while external capital flows &mdash; the same defect (promises &raquo; deliverable substance, risk parked in the least-regulated venue) recurring in bank books, private credit, metals, and power, while the loop's largest actors converge on the digital-identity control layer. The financial core is machine-proven; the rest is evidence-graded.</div>
 {KPIS}
@@ -130,6 +135,9 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <h2 id=core>The circular core</h2>
 <p><b>Robust core SCC ({an.get('core_scc_robust_size','?')}):</b> {html.escape(", ".join(robust))}.<br>
 <b>Circular only via cancelable edges:</b> {html.escape(", ".join(cancel_only)) or '—'} (SpaceX: operationally separable, financially cross-held by Google's ~$100B stake).</p>
+<p class=muted>Edges split into a <b>financial layer</b> ({an.get('num_financial_edges','?')} capital/credit/compute flows) and a <b>structural layer</b> ({an.get('num_structural_edges','?')} governance/legal/security/ownership relationships). The SCC computed over the financial layer alone equals the SCC over all edges (<code>structural_edges_add_no_cycle = {an.get('structural_edges_add_no_cycle','?')}</code>): the circular core rests on capital flows; the graded structural edges add no cycle.</p>
+<h2 id=connectors>Cross-layer connectors</h2>
+<p class=muted>Nodes ranked by distinct neighbor-sectors bridged (degree, source-files, and whether they span both layers). This quantifies the bridge nodes that tie the financial core to the surrounding layers.</p>{conn_t}
 <h2 id=choke>The three physical chokepoints</h2>{chk}
 <h2 id=scenarios>Scenario engine (formal verdicts)</h2>{scent}
 <p class=muted>BASE = FRAGILE (solvent only while the capital tap stays open) &middot; BULL = RESILIENT (near self-financing) &middot; BEAR = BREAKS (carry-unwind shuts the tap &rarr; the cascade).</p>

@@ -59,16 +59,33 @@ for fp in files:
 
 out=["# Cross-Review — re-review of all prior findings\n"]
 out.append("## JSON validity"); out.append("- ALL VALID" if not bad else "\n".join("- BAD "+b for b in bad))
+# Reconciled edge-amount differences: reviewed, intentional (distinct tranches / LOI-vs-closed /
+# cash-invested-vs-marked-value). Keyed by (from,to,instrument-class) as displayed. Documenting
+# these here moves them out of the active-flag list so genuinely-new conflicts stand out.
+RECONCILED={
+ ("AMZN","Anthropic","equity"):"staged rounds: initial up-to-$8B then expanded to $25B (cumulative, distinct dates)",
+ ("GOOGL","Anthropic","equity"):"initial $3B stake vs expanded ~$40B cumulative commitment (distinct dates)",
+ ("Blackstone","CoreWeave","debt"):"distinct debt facilities ($2.3B and $7.5B), not the same loan",
+ ("Microsoft","OpenAI","equity"):"$13B cumulative cash invested vs ~$135B marked stake value post-2025 restructuring",
+ ("NVIDIA","CoreWeave","equity"):"early ~$0.3B stake vs later ~$2B marked holding (distinct dates)",
+ ("NVIDIA","OpenAI","equity"):"$100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)",
+}
 # edge conflicts
 out.append("\n## Edge-amount reconcile (same from->to, materially different amounts across files)")
-conf=0
+conf=0; recon=[]
 for (a,b,cls),lst in sorted(edges.items()):
     amts={round(x[0]/1e9,1) for x in lst}
     if len(amts)>1 and (max(amts)/(min(amts) or 1))>=1.5:
-        conf+=1
         det="; ".join(f"${x[0]/1e9:.1f}B [{x[1]}]" for x in lst)
-        out.append(f"- ⚠ **{a} → {b}** ({cls}): {det}  (same-instrument differing amounts — reconcile: LOI vs closed / cumulative / date?)")
-if not conf: out.append("- none — edge amounts consistent (or differences explained by instrument/date)")
+        if (a,b,cls) in RECONCILED:
+            recon.append(f"- ✓ **{a} → {b}** ({cls}): {det} — reconciled: {RECONCILED[(a,b,cls)]}")
+        else:
+            conf+=1
+            out.append(f"- ⚠ **{a} → {b}** ({cls}): {det}  (same-instrument differing amounts — reconcile: LOI vs closed / cumulative / date?)")
+if not conf: out.append("- none unreconciled — all material edge-amount differences are documented below")
+if recon:
+    out.append("\n### Reconciled (reviewed, intentional — distinct tranches / LOI-vs-closed / marked-value)")
+    out+=recon
 # connectors
 out.append("\n## Connectors (entities appearing across the most files)")
 for e,fs in sorted(ent_files.items(),key=lambda kv:-len(kv[1]))[:12]:
