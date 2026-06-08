@@ -52,6 +52,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "ColibriTD": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "CoreWeave": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
@@ -72,6 +76,10 @@
       "sector": "ip_rightsholder",
       "has_exogenous_revenue": true
     },
+    "EeroQ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "First_Brands": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -84,6 +92,18 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Government_of_Gujarat": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Hashgraph_Association": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "ICALPS": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Intel": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -93,6 +113,10 @@
       "has_exogenous_revenue": true
     },
     "Jefferies": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Kaynes_SemiCon": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -123,6 +147,10 @@
     "Midjourney": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
+    },
+    "Miraex": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Mistral": {
       "sector": "ai_lab",
@@ -188,6 +216,22 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "SEALCOIN": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SEALKAYNESQ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SEALSQ": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SEALSQ_Murcia_Hub": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SINK_backlog": {
       "sector": "sink",
       "has_exogenous_revenue": true
@@ -228,6 +272,10 @@
       "sector": "exogenous_source",
       "has_exogenous_revenue": true
     },
+    "Spanish_Government_SETT": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Stargate": {
       "sector": "spv",
       "has_exogenous_revenue": false
@@ -251,6 +299,18 @@
     "Vantage": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "WISeART": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "WISeSat": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "WeCan_Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "xAI": {
       "sector": "ai_lab",
@@ -991,6 +1051,138 @@
       "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
     },
     {
+      "from": "SEALSQ",
+      "to": "ICALPS",
+      "instrument": "other",
+      "raw_instrument": "acquisition",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Acquired French ASIC design house IC'ALPS (Grenoble; partner of Intel Foundry/TSMC/GlobalFoundries). ~$3.5M revenue contribution. Vertical-integration into custom silicon. The French node of the Quantum Corridor."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "Miraex",
+      "instrument": "other",
+      "raw_instrument": "acquisition_LOI",
+      "amount_usd": null,
+      "status": "LOI",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Letter of intent to acquire Miraex (Swiss photonics/quantum-sensing). LOI = non-binding; treat as intention."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "EeroQ",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "invested-lead",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Multiple rounds into EeroQ (US electrons-on-helium quantum-chip startup); SEALSQ to lead its next round. The 'Quantum Made in USA' anchor stake."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "ColibriTD",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "invested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Via SEALQUANTUM.com (up-to-$35M quantum-startup program); quantum-as-a-service / wafer-yield. One of two finalized SEALQUANTUM investments."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "Kaynes_SemiCon",
+      "instrument": "other",
+      "raw_instrument": "joint_venture",
+      "amount_usd": null,
+      "status": "formed-SEALKAYNESQ",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "SEALKAYNESQ Ltd (SEALSQ 51% / Kaynes 49%); India's first CC-compliant test + PKI/PQC personalization, Sanand Gujarat OSAT. Commercial production H2-2026."
+    },
+    {
+      "from": "Government_of_Gujarat",
+      "to": "SEALKAYNESQ",
+      "instrument": "other",
+      "raw_instrument": "mou_subsidy",
+      "amount_usd": null,
+      "status": "MoU",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "State MoU for a 300M-unit/yr PQC semiconductor center; India Semiconductor Mission alignment. STATE-as-anchor (like MP Materials/Centrus pattern in defense-rare-earth)."
+    },
+    {
+      "from": "Spanish_Government_SETT",
+      "to": "SEALSQ_Murcia_Hub",
+      "instrument": "other",
+      "raw_instrument": "grant_cofinance",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "EUR20M Spanish-government co-finance (SETT.ES) of the EUR40M Murcia Quantum Edge Hub; SEALSQ/WISeKey put in EUR10M via QuantixEdges. European Chips Act framing."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "WeCan_Group",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "invested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Investment in Swiss blockchain firm WeCan to embed its KYO ('Know Your Object') into SEALSQ chips - IoT object identity on-chain. The Swiss blockchain node."
+    },
+    {
+      "from": "Hashgraph_Association",
+      "to": "SEALCOIN",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "invested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Strategic investment + technical support; SEALCOIN built on Hedera (HTS/HCS/HSCS). BRIDGE EDGE into the Hedera ecosystem -> fin-hedera-connections.json (Task #2)."
+    },
+    {
+      "from": "Hashgraph_Association",
+      "to": "WISeART",
+      "instrument": "equity",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "invested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "Second Hashgraph Association investment into the WISeKey cluster (WISe.ART = authenticated digital assets/NFT). Reinforces the WISeKey<->Hedera tie."
+    },
+    {
+      "from": "WISeSat",
+      "to": "SpaceX",
+      "instrument": "other",
+      "raw_instrument": "launch_service",
+      "amount_usd": null,
+      "status": "rideshare-customer",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "WISeSat buys rideshare slots on SpaceX Falcon 9 Transporter missions (21st sat, Transporter-16, Mar 30 2026, Vandenberg). CUSTOMER relationship ONLY - explicitly NOT a SpaceX strategic partnership/investment. Prevents over-stating the SpaceX link."
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -1292,8 +1484,8 @@
     }
   ],
   "analysis": {
-    "num_nodes": 64,
-    "num_edges": 86,
+    "num_nodes": 79,
+    "num_edges": 97,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -1329,8 +1521,8 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -1345,8 +1537,13 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -1359,23 +1556,6 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
@@ -1386,6 +1566,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -1502,6 +1694,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ColibriTD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CoreWeave": {
         "total_usd": 78382000000,
         "circular_usd": 49509000000,
@@ -1537,6 +1736,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EeroQ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "First_Brands": {
         "total_usd": 500000000,
         "circular_usd": 0,
@@ -1558,6 +1764,27 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Government_of_Gujarat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hashgraph_Association": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ICALPS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Intel": {
         "total_usd": 5000000000,
         "circular_usd": 0,
@@ -1573,6 +1800,13 @@
         "in_robust_core": false
       },
       "Jefferies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kaynes_SemiCon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -1622,6 +1856,13 @@
         "in_robust_core": true
       },
       "Midjourney": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Miraex": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -1740,6 +1981,34 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SEALCOIN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SEALKAYNESQ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SEALSQ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SEALSQ_Murcia_Hub": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_backlog": {
         "total_usd": 56000000000,
         "circular_usd": 0,
@@ -1810,6 +2079,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Spanish_Government_SETT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stargate": {
         "total_usd": 54300000000,
         "circular_usd": 0,
@@ -1847,6 +2123,27 @@
       },
       "Vantage": {
         "total_usd": 38000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WISeART": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WISeSat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WeCan_Group": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
