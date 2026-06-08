@@ -26,17 +26,17 @@
 - **a16z** — 9 files
 - **JPMorgan** — 9 files
 - **NVIDIA** — 9 files
-- **Epstein** — 8 files
+- **FDIC** — 9 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-disclosures-surveillance.json` — related files by shared entities (verify cross-refs exist)
-- macro-crqc-quantum-landscape.json: 5 shared entities
-- spec-crypto-sec-epstein.json: 4 shared entities
-- spec-network-overlay.json: 4 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
-- altcoin-lens.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- digitalid-corporate.json: 3 shared entities
-- temporal-bridges.json: 3 shared entities
+## Newest file `macro-official-data-integrity.json` — related files by shared entities (verify cross-refs exist)
+- macro-cre-privatecredit.json: 2 shared entities
+- fin-google-amazon-anthropic-meta.json: 1 shared entities
+- fin-meta-family.json: 1 shared entities
+- macro-history-dereg-manipulation.json: 1 shared entities
+- macro-fdic.json: 1 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- macro-carry-trades.json: 1 shared entities

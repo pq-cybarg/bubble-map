@@ -52,6 +52,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "BLS": {
+      "sector": "statistical_agency",
+      "has_exogenous_revenue": true
+    },
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -72,6 +76,10 @@
       "sector": "defense",
       "has_exogenous_revenue": true
     },
+    "Boskin_Commission": {
+      "sector": "commission",
+      "has_exogenous_revenue": false
+    },
     "Broadcom": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -79,6 +87,10 @@
     "ByteDance": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
+    },
+    "CPI_Methodology": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "CZ": {
       "sector": "person",
@@ -168,6 +180,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Federal_Reserve": {
+      "sector": "central_bank",
+      "has_exogenous_revenue": true
+    },
     "FinCEN": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -239,6 +255,10 @@
     "Jefferies": {
       "sector": "bank",
       "has_exogenous_revenue": true
+    },
+    "Jobs_Headline": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "Kaynes_SemiCon": {
       "sector": "semiconductor",
@@ -376,6 +396,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "PCE": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
     "PIMCO": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -403,6 +427,10 @@
     "Private-credit market": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "QCEW_Benchmark": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "Ripple": {
       "sector": "crypto_infra",
@@ -462,6 +490,10 @@
     },
     "SINK_lenders": {
       "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SSA": {
+      "sector": "statistical_agency",
       "has_exogenous_revenue": true
     },
     "SaltTyphoon": {
@@ -592,6 +624,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "WhiteHouse": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "a16z": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -602,6 +638,84 @@
     }
   },
   "edges": [
+    {
+      "from": "Boskin_Commission",
+      "to": "CPI_Methodology",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "methodology_change",
+      "amount_usd": null,
+      "status": "adopted",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "1996 report -> substitution/hedonics/OER; CBO ~$691B debt reduction by 2006. Documented fiscal motive to lower measured CPI."
+    },
+    {
+      "from": "SSA",
+      "to": "CPI_Methodology",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cola_indexing",
+      "amount_usd": null,
+      "status": "structural",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "~71M beneficiaries indexed to CPI-W; each suppressed 1pp of COLA saves the Treasury tens of $B/yr -> incentive to keep the index low."
+    },
+    {
+      "from": "Treasury",
+      "to": "CPI_Methodology",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tips_indexing",
+      "amount_usd": null,
+      "status": "structural",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "TIPS coupons/principal indexed to CPI; lower CPI lowers debt service on indexed tranche. Conflict: the issuer benefits from a lower print of its own index."
+    },
+    {
+      "from": "WhiteHouse",
+      "to": "BLS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "political_pressure",
+      "amount_usd": null,
+      "status": "event",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "Commissioner McEntarfer fired after a weak jobs report; Antoni nominee (proposed suspending the jobs report) withdrawn Sep 2025. Politicization of the statistical agency."
+    },
+    {
+      "from": "QCEW_Benchmark",
+      "to": "Jobs_Headline",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "revision",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "-911k (to Mar 2025) and -818k prelim (2024) downward benchmark corrections; birth-death model ~half. Late correction of an upward-biased headline."
+    },
+    {
+      "from": "Federal_Reserve",
+      "to": "PCE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "target_choice",
+      "amount_usd": null,
+      "status": "structural",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-official-data-integrity.json",
+      "note": "Fed anchors to PCE, which historically prints ~30-40bps below CPI - choosing the lower-reading gauge as policy target."
+    },
     {
       "from": "Google",
       "to": "SpaceX",
@@ -2710,10 +2824,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 150,
-    "num_edges": 162,
+    "num_nodes": 159,
+    "num_edges": 168,
     "num_financial_edges": 107,
-    "num_structural_edges": 55,
+    "num_structural_edges": 61,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2764,16 +2878,12 @@
     "num_elementary_cycles": 15,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -2785,8 +2895,7 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -2797,6 +2906,17 @@
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -2819,6 +2939,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -2826,13 +2947,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -2937,6 +3051,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BLS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Binance": {
         "total_usd": 2000000000,
         "circular_usd": 0,
@@ -2972,6 +3093,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Boskin_Commission": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Broadcom": {
         "total_usd": 91000000000,
         "circular_usd": 0,
@@ -2980,6 +3108,13 @@
         "in_robust_core": false
       },
       "ByteDance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CPI_Methodology": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3140,6 +3275,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Federal_Reserve": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FinCEN": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3260,6 +3402,13 @@
         "in_robust_core": false
       },
       "Jefferies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jobs_Headline": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3504,6 +3653,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PCE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PIMCO": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -3548,6 +3704,13 @@
       },
       "Private-credit market": {
         "total_usd": 800000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QCEW_Benchmark": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3657,6 +3820,13 @@
         "circularity_ratio": 0.199,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "SSA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "SaltTyphoon": {
         "total_usd": 0,
@@ -3876,6 +4046,13 @@
         "in_robust_core": false
       },
       "WeCan_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WhiteHouse": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

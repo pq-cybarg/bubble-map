@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Official US macro-statistics under zero-trust scrutiny - methodology bias, late revisions, collection degradation, politicization, and the fiscal incentive to mismeasure",
+    "generated": "2026-06-08",
+    "frame": "A ZERO-TRUST read of federal economic data (BLS/BEA/Census/Fed/Treasury). The claim is NOT that raw microdata is fabricated (that is unsupported). The defensible claim, graded below, is FOURFOLD: (1) headline methodologies embed documented choices that bias the print; (2) the headline is systematically corrected LATER by large revisions, after it has set the narrative; (3) the collection apparatus is degrading (response-rate collapse, budget/sample cuts, rising imputation); (4) the apparatus is now under direct political pressure. The institutional INCENTIVES - debt service, COLA, TIPS, debt/GDP optics, Fed cover, election optics - all point one way: understate inflation, flatter output and labor at the headline. The Boskin Commission is the openly budget-motivated precedent.",
+    "WARNING": "EVIDENCE-GRADED. Methodology and events are documented (fact); claims of deliberate falsification are graded contested/weak/unsupported and labeled. Kept OUT of the formal proofs - this is the epistemics layer that tells you how much to trust the inputs the other models consume.",
+    "method": "Primary/credible: BLS technical notes + benchmark releases, BEA, CBO, GAO, SSA, FRED, Boskin Commission report (SSA archive), NBER, mainstream coverage of the 2025 BLS firing.",
+    "cross_refs": ["macro-gold-silver-reprice.md (the hard-money cross-check: nominal 'gains' are debasement)","macro-fed-trap-regional.md (the Fed acts on these possibly-biased inputs)","macro-fdic.json (FDIC stopped publishing problem-bank asset totals in 2025 - parallel transparency degradation)","blockchain-leg.json (GENIUS-Act stablecoin->Treasury demand: manufacturing buyers for the debt the data flatters)","spec-disclosures-surveillance.json (institutional opacity / 'released != complete' pattern)"]
+  },
+  "strands": [
+    {
+      "id": "jobs-revisions",
+      "claim": "The monthly jobs headline systematically overstated employment, corrected only by large, late benchmark revisions.",
+      "grade": "STRONG (BLS's own QCEW benchmarks)",
+      "facts": [
+        "Preliminary benchmark (Sep 9 2025): nonfarm job creation for the 12 months through March 2025 cut by 911,000 (-0.6%), to ~1.44M.",
+        "Prior year: the preliminary 2024 benchmark projected -818,000; finalized (Feb 2025) to ~-598-626k.",
+        "The July 2025 report itself revised May+June down by a combined 258,000.",
+        "The BLS net birth-death MODEL (which statistically adds jobs from assumed new-business formation) is estimated to account for roughly HALF of the downward revisions - i.e., the over-count came substantially from a model, not measured payrolls.",
+        "Benchmarks arrive ~6-18 months after the headlines they correct, so the optimistic monthly prints drive Fed/market/political decisions long before the truth lands."
+      ],
+      "what_it_does_not_show": "Revisions are a normal, disclosed part of the methodology, not proof of intent. But TWO consecutive years of ~600k-900k DOWNWARD benchmarks, model-driven, with the correction arriving late, is a systematic upward bias in the narrative-setting number.",
+      "source": ["https://www.bls.gov/news.release/prebmk.nr0.htm","https://wolfstreet.com/2025/09/09/annual-benchmark-payroll-revisions-nonfarm-job-creation-for-12-months-to-march-chopped-by-911000-to-1-45-million-jobs-created/","https://www.bls.gov/web/empsit/cesbd.htm"]
+    },
+    {
+      "id": "cpi-methodology",
+      "claim": "CPI methodology choices structurally hold the measured number below lived cost-of-living.",
+      "grade": "methodology FACT; 'rigged to understate' CONTESTED",
+      "facts": [
+        "Owners' Equivalent Rent (OER) is ~25% of CPI (and ~12% of PCE) and is IMPUTED from a rent survey, NOT from transacted home prices - so the 2020-2024 home-price surge (~+50%) entered the index only as a smoothed, lagged rent estimate.",
+        "Post-Boskin methodology: geometric-mean (substitution) treatment, hedonic quality adjustment (apparel, tech, rent), and outlet substitution - each can lower the measured rate vs a fixed basket.",
+        "The Fed targets PCE, which historically runs ~30-40 bps BELOW CPI (different weights/scope) - choosing the lower-reading gauge as the policy anchor.",
+        "Substitution/quality effects are REAL economics (a fixed basket does overstate cost-of-living); the dispute is whether the corrections overshot in the fiscally convenient direction."
+      ],
+      "what_it_does_not_show": "No evidence the microdata is faked. The honest critique is that defensible methodological choices ALL happen to lower the print, and homeownership cost enters via imputed rent rather than price - cross-check with the gold lens (a US home is -81% priced in gold since 1998).",
+      "source": ["https://www.bls.gov/cpi/factsheets/owners-equivalent-rent-and-rent.htm","https://www.pimco.com/us/en/insights/us-inflation-measures-tell-two-different-stories","https://www.bls.gov/opub/mlr/2024/article/assessing-and-improving-the-accuracy-of-the-cpi.htm"]
+    },
+    {
+      "id": "boskin-the-why",
+      "claim": "The CPI was deliberately re-engineered downward for fiscal reasons - the documented motive.",
+      "grade": "STRONG (it is on the record)",
+      "facts": [
+        "The Boskin Commission (Senate-appointed) reported Dec 4 1996 that CPI OVERSTATED cost-of-living by ~1.1 pp/yr (1.3 pp pre-1996).",
+        "The report was framed around the FISCAL cost of the 'bias': because Social Security, federal pensions, and tax brackets are CPI-indexed, an overstatement is an automatic real spending increase + tax cut.",
+        "CBO/contemporary estimates: correcting the 'bias' would cut ~$148B from the 2006 deficit and ~$691B from the debt by 2006.",
+        "BLS subsequently adopted substitution (geometric mean, 1999), expanded hedonics, and OER - changes that lowered measured CPI."
+      ],
+      "what_it_does_not_show": "Boskin's substitution point was technically defensible and widely accepted. But the EXPLICIT framing - 'the index costs the Treasury money, so fix the index' - establishes a documented government motive to lower the measured number, which is exactly what a zero-trust reading must weight.",
+      "source": ["https://www.ssa.gov/history/reports/boskinrpt.html","https://en.wikipedia.org/wiki/Boskin_Commission","https://www.nber.org/system/files/working_papers/w12311/w12311.pdf"]
+    },
+    {
+      "id": "agency-degradation-politicization",
+      "claim": "The statistical apparatus is simultaneously degrading and being politicized.",
+      "grade": "STRONG (events) + minimal-impact caveat (BLS)",
+      "facts": [
+        "2025 CPI collection CUTS: BLS suspended collection entirely in Lincoln NE, Provo UT, and Buffalo NY, and cut ~15% of the sample across 72 other areas, citing a federal hiring freeze; imputation rose.",
+        "The 2025 government shutdown further disrupted CPI collection; an Oct-2025 housing component required counterfactual imputation.",
+        "Aug 1 2025: President Trump FIRED BLS Commissioner Erika McEntarfer after a weak jobs report, alleging data manipulation - though the commissioner does not produce the estimates and sees them only just before release.",
+        "His nominee E.J. Antoni (Project 2025 contributor, Bannon-backed) proposed SUSPENDING the monthly jobs report; the nomination was withdrawn Sep 30 2025 after bipartisan criticism.",
+        "BLS states the collection cuts changed 12-month all-items CPI by <0.01 pp (the degradation mainly raises volatility/uncertainty and hits sub-indices)."
+      ],
+      "what_it_does_not_show": "Firing a commissioner is not the same as falsifying data, and BLS's minimal-impact claim on headline CPI is stated and plausible. But the COMBINATION - fewer collectors, more imputation, a fired chief, and a nominee who wanted to stop publishing the report - degrades reliability and independence at once, which is the core zero-trust concern.",
+      "source": ["https://www.bls.gov/cpi/notices/2025/collection-reduction.htm","https://www.washingtonpost.com/business/2025/08/01/trump-fires-bls-chief/","https://www.cnn.com/2025/09/30/politics/ej-antoni-nomination-withdrawn-bls","https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi.htm"]
+    },
+    {
+      "id": "measure-shopping-gdp-gdi",
+      "claim": "Output strength depends on which measure you cite; the weaker income-side series is downplayed.",
+      "grade": "STRONG (BEA data)",
+      "facts": [
+        "GDP (expenditure) and GDI (income) should be equal; the statistical discrepancy was ~$126B (0.4% of GDP) in Q1-2025, with GDI notably WEAKER - implying less momentum than the GDP headline.",
+        "GDI's mean-absolute-revision rose from 1.33 to 1.91 pp across 2011->2024 evaluations - the income side is increasingly revised.",
+        "A lower GDP DEFLATOR mechanically RAISES real GDP and LOWERS the debt/GDP ratio - the same inflation-understatement incentive flows straight into the growth headline."
+      ],
+      "what_it_does_not_show": "The GDP-GDI gap is a known data-quality issue, not proof of manipulation. But the consistent pattern - cite the stronger gauge, lean on the lower deflator - is the optics-maximizing choice at every fork.",
+      "source": ["https://www.bea.gov/help/faq/484","https://www.clevelandfed.org/publications/economic-commentary/2023/ec-202301-discrepancy-between-expenditure-income-side-estimates-us-output"]
+    }
+  ],
+  "incentive_map_the_why": {
+    "summary": "Every major fiscal incentive points toward understating inflation and flattering output/labor at the headline.",
+    "drivers": [
+      "DEBT SERVICE: federal debt ~$37.6T (FY2025); interest ~$1.2T/yr - now larger than defense and Medicare. Lower measured inflation -> Fed cover to hold/cut rates -> cheaper rollover.",
+      "COLA: ~71M Social Security/SSI beneficiaries are indexed to CPI-W; each ~1 pp of suppressed COLA saves the Treasury tens of billions per year, compounding.",
+      "TIPS: Treasury Inflation-Protected Securities pay principal/coupons indexed to CPI - a lower CPI directly lowers the government's own debt-service on that tranche.",
+      "TAX BRACKETS: CPI-indexed brackets/standard deduction - lower indexation is a slow real tax increase (bracket creep).",
+      "DEBT/GDP OPTICS: a lower deflator raises real GDP and shrinks the debt/GDP ratio without any change in the real economy.",
+      "POLITICS: the incumbent benefits from a strong-jobs / low-inflation headline; the 2025 firing shows the headline is treated as a political object.",
+      "MODERN TWIST: the GENIUS Act's stablecoin->Treasury rail (blockchain-leg.json) manufactures forced demand for the very debt these statistics make look sustainable."
+    ]
+  },
+  "what_cannot_be_supported": {
+    "shadowstats": "John Williams' ShadowStats 'real' CPI (~7-8%+) is produced by ADDING A FIXED CONSTANT to official CPI to undo the Boskin-era changes; it does not re-collect prices and implies cumulative price levels wildly inconsistent with observed nominal GDP/wages. Grade: WEAK/UNSUPPORTED as a number, even though its DIRECTIONAL intuition (understatement) overlaps the documented critiques here.",
+    "fabrication": "There is no evidence BLS/BEA staff falsify raw microdata. The defensible critique is methodology + revision-timing + collection degradation + incentive alignment + (new) political pressure - NOT invented numbers. Conflating the two discredits the real case."
+  },
+  "edges": [
+    {"from":"Boskin_Commission","to":"CPI_Methodology","instrument":"methodology_change","amount_usd":null,"date":"1996-12","status":"adopted","circular":false,"cancelable":false,"confidence":"high","source":["https://www.ssa.gov/history/reports/boskinrpt.html"],"notes":"1996 report -> substitution/hedonics/OER; CBO ~$691B debt reduction by 2006. Documented fiscal motive to lower measured CPI."},
+    {"from":"SSA","to":"CPI_Methodology","instrument":"cola_indexing","amount_usd":null,"date":"ongoing","status":"structural","circular":false,"cancelable":false,"confidence":"high","source":["https://www.ssa.gov/oact/cola/latestCOLA.html"],"notes":"~71M beneficiaries indexed to CPI-W; each suppressed 1pp of COLA saves the Treasury tens of $B/yr -> incentive to keep the index low."},
+    {"from":"Treasury","to":"CPI_Methodology","instrument":"tips_indexing","amount_usd":null,"date":"ongoing","status":"structural","circular":false,"cancelable":false,"confidence":"med","source":["https://fiscaldata.treasury.gov/americas-finance-guide/national-debt/"],"notes":"TIPS coupons/principal indexed to CPI; lower CPI lowers debt service on indexed tranche. Conflict: the issuer benefits from a lower print of its own index."},
+    {"from":"WhiteHouse","to":"BLS","instrument":"political_pressure","amount_usd":null,"date":"2025-08","status":"event","circular":false,"cancelable":false,"confidence":"high","source":["https://www.washingtonpost.com/business/2025/08/01/trump-fires-bls-chief/"],"notes":"Commissioner McEntarfer fired after a weak jobs report; Antoni nominee (proposed suspending the jobs report) withdrawn Sep 2025. Politicization of the statistical agency."},
+    {"from":"QCEW_Benchmark","to":"Jobs_Headline","instrument":"revision","amount_usd":null,"date":"2024-2025","status":"recurring","circular":false,"cancelable":false,"confidence":"high","source":["https://www.bls.gov/news.release/prebmk.nr0.htm"],"notes":"-911k (to Mar 2025) and -818k prelim (2024) downward benchmark corrections; birth-death model ~half. Late correction of an upward-biased headline."},
+    {"from":"Federal_Reserve","to":"PCE","instrument":"target_choice","amount_usd":null,"date":"ongoing","status":"structural","circular":false,"cancelable":false,"confidence":"high","source":["https://www.pimco.com/us/en/insights/us-inflation-measures-tell-two-different-stories"],"notes":"Fed anchors to PCE, which historically prints ~30-40bps below CPI - choosing the lower-reading gauge as policy target."}
+  ],
+  "assessment": "A zero-trust reading of US official statistics is warranted not because the microdata is fabricated (it is not, on available evidence) but because four documented forces align in one direction. (1) The jobs headline overstated employment two years running, corrected only by ~600-900k LATE downward benchmarks driven substantially by a birth-death MODEL. (2) CPI methodology (OER as ~25% imputed rent, substitution, hedonics, PCE-as-target) systematically holds the print below lived cost - and the Boskin Commission put the fiscal MOTIVE for exactly this on the record (cutting indexed outlays). (3) The collection apparatus is degrading (suspended cities, ~15% sample cuts, rising imputation, shutdown disruption). (4) The apparatus is being politicized (a fired commissioner, a nominee who wanted to stop publishing the data). Behind all four sits an incentive structure - $37.6T debt, $1.2T interest, 71M CPI-indexed beneficiaries, TIPS, bracket indexation, debt/GDP optics, election optics - that rewards a low inflation print and a strong jobs/output print. The operational posture: treat each headline as the MOST FLATTERING admissible estimate; weight the benchmark revisions, the income-side (GDI), U-6, real wages, and the hard-money cross-check (the gold lens) over the first print. This block is the epistemics layer for the whole corpus: it calibrates how much to trust the inputs every other model consumes, and it is deliberately kept out of the proofs."
+}

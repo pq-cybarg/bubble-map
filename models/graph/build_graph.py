@@ -122,6 +122,11 @@ NODE_META = {
  "SaltTyphoon":("threat_actor",False),"Lazarus":("threat_actor",False),"Boeing":("defense",True),
  # PACs / journalism / offshore
  "Fairshake":("political",False),"ICIJ":("journalism",False),"Offshore_Finance":("offshore",False),
+ # statistical agencies / statistics / data-integrity layer
+ "BLS":("statistical_agency",True),"BEA":("statistical_agency",True),"Census":("statistical_agency",True),
+ "CBO":("statistical_agency",True),"SSA":("statistical_agency",True),"Boskin_Commission":("commission",False),
+ "Federal_Reserve":("central_bank",True),"WhiteHouse":("state",True),
+ "CPI_Methodology":("statistic",False),"Jobs_Headline":("statistic",False),"PCE":("statistic",False),"QCEW_Benchmark":("statistic",False),
  # persons / misc
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),

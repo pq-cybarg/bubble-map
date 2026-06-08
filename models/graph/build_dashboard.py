@@ -63,6 +63,7 @@ OVERLAYS=[
  ("Telecom + satellite + ISR","Salt Typhoon broke the CALEA backdoor; Amazon/Apple Globalstar; Starshield/NRO; carrier direct-to-cell","spec-telecom-satellite"),
  ("Disclosures + surveillance","Snowden (Bullrun/Dual_EC/Room 641A), In-Q-Tel/Palantir, DARPA-TrailOfBits, FBI ANOM, Epstein Files Act, Pandora","spec-disclosures-surveillance"),
  ("PQC / quantum-sat / DLT","SEALSQ/WISeKey global build-out + Hedera 34-member council overlaps (Google/IBM) + SEALCOIN bridge","fin-hedera-connections"),
+ ("Official-data integrity (epistemics)","Zero-trust read of BLS/BEA/Fed: -911k jobs benchmark, OER/CPI methodology, Boskin fiscal motive, 2025 collection cuts + BLS-chief firing, the understate-inflation incentive map","macro-official-data-integrity"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[
@@ -76,6 +77,8 @@ PRIMARY=[
  ("Hedera Council","Governing-council roster","https://hederacouncil.org/"),
  ("NIST CSRC","Post-quantum FIPS 203/204/205","https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved"),
  ("US FDIC","FOIA 'pause letters' coverage","https://www.bankingdive.com/news/fdic-letters-cryptos-operation-chokepoint-2-0-claims-coinbase/735309/"),
+ ("US BLS","Preliminary payroll benchmark (-911k)","https://www.bls.gov/news.release/prebmk.nr0.htm"),
+ ("SSA","Boskin Commission report (1996)","https://www.ssa.gov/history/reports/boskinrpt.html"),
 ]
 
 def tbl(headers,rows):
