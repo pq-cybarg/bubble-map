@@ -64,6 +64,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "Banks": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -462,6 +466,10 @@
     },
     "QCEW_Benchmark": {
       "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "Rate_Shock": {
+      "sector": "macro_factor",
       "has_exogenous_revenue": false
     },
     "Ripple": {
@@ -2750,6 +2758,19 @@
       "note": "Shelter (rent + OER) ~1/3 of CPI; a ~1yr-lagged largest component drives the headline at every turning point."
     },
     {
+      "from": "Rate_Shock",
+      "to": "Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "unrealized_loss",
+      "amount_usd": 306000000000,
+      "status": "unrealized-HTM-AFS",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-bank-htm-marks.json",
+      "note": "$306B aggregate unrealized securities loss (down from $684B 2023 peak); invisible while HTM held at cost, realized only if forced to sell (the SVB mechanism). BTFP backstop expired Mar 2024."
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -3063,10 +3084,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 170,
-    "num_edges": 183,
+    "num_nodes": 172,
+    "num_edges": 184,
     "num_financial_edges": 113,
-    "num_structural_edges": 70,
+    "num_structural_edges": 71,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3117,24 +3138,24 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -3156,12 +3177,6 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -3178,6 +3193,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -3310,6 +3331,13 @@
       },
       "BLS_NTRI": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Banks": {
+        "total_usd": 306000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4010,6 +4038,13 @@
       },
       "QCEW_Benchmark": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rate_Shock": {
+        "total_usd": 306000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

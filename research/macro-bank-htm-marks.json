@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "title": "Bank securities marks under zero-trust scrutiny - HTM 'held to par' is a self-reported solvency choice, not a market price",
+    "generated": "2026-06-09",
+    "frame": "Zero-trust applied to BANK balance sheets, paralleling the AI paper-marks proof (reflexive_marks). Banks classify bonds as Held-to-Maturity (HTM, carried at amortized COST - losses invisible unless sold) vs Available-for-Sale (AFS, marked-to-market through AOCI). The HTM 'held to par' value is the bank's own CHOICE, not a price - the same 'carried at cost until forced to realize' pattern that sank SVB in 2023. Honest update: aggregate unrealized losses FELL through 2025 as long rates declined; the point is structural fragility + opacity, not a current acute hole.",
+    "WARNING": "EVIDENCE-GRADED. The FDIC totals are fact. The claim is NOT that banks are insolvent now (they are not, in aggregate) - it is that (a) HTM accounting lets a bank report solvency it might not have at market, (b) the loss is only 'unrealized' until a deposit run forces sales, and (c) the regulator reduced disclosure (FDIC stopped publishing problem-bank asset totals). Kept out of the proofs.",
+    "method": "FDIC Quarterly Banking Profile (Q2-Q4 2025), OCC Bank Accounting Advisory Series, FAU unrealized-loss screener, Wolf Street; cross-read with macro-fdic + bank_exposure.",
+    "cross_refs": ["macro-fdic.json","macro-fed-trap-regional.md","models/z3/reflexive_marks.py (same 'marks held at cost until forced' logic, AI side)","macro-official-data-integrity.json (self-reported figures)","contagion.json (Treasuries_Fiscal -> Banks: rate shock -> HTM losses)"]
+  },
+  "the_numbers": {
+    "grade": "STRONG (FDIC Quarterly Banking Profile)",
+    "unrealized_loss_series_HTM_plus_AFS_usd_b": {
+      "2019-2021": "net unrealized GAINS / near-zero (ultra-low rates kept fixed-income at/above par; pre-pandemic 2015-2019 baseline small)",
+      "2022-Q3": "~690 (PEAK; FDIC: 'highest levels in Q3 2022'; ~$690B widely reported)",
+      "2022-Q4": 620.0,
+      "2023-Q3": 684.0,
+      "2023-Q4": 478.0,
+      "2024-Q4": 482.0,
+      "Q1-2025": 413.2, "Q2-2025": 395.3, "Q3-2025": 337.1, "Q4-2025": 306.1, "Q1-2026": 325.1,
+      "confidence": "2022-Q4 / 2024-Q4 / all 2025-2026 quarters = FDIC-stated (high). 2022-Q3 peak (~690) and 2023-Q3 (684, Wolf Street) / 2023-Q4 (478) = widely-reported approximations (med). 2019-2021 = qualitative (gains/near-zero). Intermediate quarters not individually re-verified here track between these anchors; exact per-quarter figures are in each QBP PDF.",
+      "note": "The ARC is the point: ~0 (2019-21, low rates) -> EXPLOSION to ~$690B (Q3-2022) on the fastest rate-hike cycle in 40 yrs -> a second ~$684B spike (Q3-2023, SVB era) -> grind down to $306.1B (Q4-2025, lowest since Q1-2022) as long rates fell -> UP again to $325.1B (Q1-2026) as the 30-yr mortgage rate rose in March. The hole tracks long rates and REOPENS whenever they rise."
+    },
+    "context_series": {
+      "net_income_usd_b": {"Q1-2025": 70.6, "Q4-2025": 77.7, "Q1-2026": 80.5},
+      "ROA_pct": {"Q1-2025": 1.16, "Q1-2026": 1.26},
+      "problem_banks": {"Q4-2024": 66, "Q1-2025": 63, "Q1-2026": 54},
+      "note": "Profits hit record highs (Q1-2026 net income $80.5B, ROA 1.26%) and the problem-bank COUNT fell to 54 (~1.3%, normal range) - but the FDIC stopped publishing problem-bank ASSET totals in 2025, so size-of-exposure is no longer disclosed."
+    },
+    "facts": [
+      "Historical arc: ~0 / net GAINS (2019-2021, low rates) -> ~$690B PEAK (Q3-2022) on the fastest rate-hike cycle in 40 years -> $620B (Q4-2022) -> ~$684B second spike (Q3-2023, SVB era) -> ~$478B (Q4-2023) -> ~$482B (Q4-2024) -> $413.2B (Q1-2025) -> $395.3B (Q2) -> $337.1B (Q3) -> $306.1B (Q4-2025, lowest since Q1-2022) -> $325.1B (Q1-2026, UP +$19.0B/+6.2%).",
+      "The 2025 decline was driven by FALLING long rates (10yr/30yr) lifting bond prices + low-yield securities maturing - NOT by accounting; the Q1-2026 REVERSAL (30-yr mortgage rate rose in March, MBS fell) proves the loss is rate-dependent and not gone.",
+      "Peak was ~$684B (Q3-2023, the SVB-era stress level).",
+      "HTM securities are carried at AMORTIZED COST - balance-sheet value does NOT move with market price unless sold; AFS is marked-to-market through AOCI and, for advanced-approaches banks, flows into regulatory capital.",
+      "BTFP (the Fed facility letting banks borrow against underwater bonds at PAR) expired March 2024, removing the explicit 2023 backstop."
+    ],
+    "source": ["https://www.fdic.gov/news/speeches/2025/fdic-quarterly-banking-profile-first-quarter-2025","https://www.fdic.gov/news/speeches/2026/fdic-quarterly-banking-profile-fourth-quarter-2025","https://www.fdic.gov/news/speeches/2026/fdic-quarterly-banking-profile-first-quarter-2026","https://www.fdic.gov/news/speeches/2025/fdic-quarterly-banking-profile-fourth-quarter-2024","https://www.fdic.gov/news/speeches/2023/spfeb2823.html","https://www.financialresearch.gov/the-ofr-blog/2025/05/15/the-state-of-banks-unrealized-securities-losses/","https://wolfstreet.com/2023/11/30/unrealized-losses-on-securities-held-by-banks-jump-by-22-to-684-billion-in-q3-oh-lordy/"]
+  },
+  "the_zero_trust_read": {
+    "htm_is_a_choice": "Whether a loss appears on the balance sheet depends on a classification the bank picks. Move a bond to HTM and the mark-to-market loss disappears from reported equity. So 'book equity' and HTM 'held-to-par' values are self-reported solvency, not prices - exactly the critique applied to government statistics (macro-official-data-integrity) and to AI fair-value marks (reflexive_marks), now on the asset side of banks.",
+    "unrealized_until_forced": "An unrealized HTM loss stays invisible only while the bank is NOT forced to sell. A deposit run forces sales, which (a) realizes the loss and (b) can taint the entire HTM book (a single forced sale can trigger reclassification). That is precisely the SVB 2023 mechanism: solvent at cost, insolvent at market, dead in a weekend.",
+    "opacity": "The FDIC stopped publishing problem-bank ASSET totals in 2025 (macro-fdic) - so the public can see the unrealized-loss aggregate but not which institutions concentrate it. Disclosure narrowed exactly where concentration matters.",
+    "parallel_to_ai_marks": "Symmetry worth stating: AI funders hold private stakes UP at self-set marks (reflexive_marks M2a) and book gains; banks hold bonds at cost and AVOID losses. Both are 'carried at a chosen value, not a market price, until an external event forces realization' - an IPO below the mark for the AI side, a deposit run for the bank side."
+  },
+  "exposing_the_hidden": {
+    "premise": "The FDIC stopped publishing the problem-bank ASSET total, but the withdrawal is cosmetic: the underlying data is still public and the concentration is RECONSTRUCTIBLE from primary sources, plus independent funding/market proxies bypass the FDIC aggregate entirely.",
+    "reconstruct_directly": [
+      "PER-BANK CALL REPORTS (FFIEC 031/041, Schedule RC-B): every bank reports HTM amortized cost AND fair value, AFS fair value, and pledged securities - so each bank's unrealized HTM loss = fair value - amortized cost is COMPUTABLE per institution, quarterly. The aggregate was withdrawn; the line items were not.",
+      "FDIC BankFind Suite API (banks.data.fdic.gov, no registration): institution-level financials incl. securities, equity, uninsured deposits - you can rebuild the problem-bank concentration yourself. THIS REPO ALREADY DOES: models/graph/bank_exposure.py pulls it and computes per-bank HTM-loss / equity (found e.g. BofA HTM -$81B = -34% of equity).",
+      "UNINSURED DEPOSIT SHARE (call report): the run-risk metric (SVB was ~94% uninsured) - high uninsured% + large HTM loss = the SVB setup, computable per bank."
+    ],
+    "funding_stress_proxies": [
+      "FHLB ADVANCES: the 'lender of next-to-last-resort.' System advances $742.8B (Jun 30 2025) vs $736.7B (YE 2024); peaked Mar 2023 (SVB). Advance growth - especially at higher-risk (low-z-score) banks - is a stress tell, visible in FHLB disclosures AND each bank's call report (borrowings).",
+      "FED DISCOUNT WINDOW / H.4.1: aggregate primary credit is published weekly (H.4.1 table 1); individual-bank borrowing is delayed ~2 years (and Reserve-Bank-level not reported since 2020) - so SPIKES in the weekly aggregate flag system stress even without names (the 2023 surge was the tell).",
+      "BTFP run-off: the emergency par-loan facility expired Mar 2024; its prior usage mapped who was underwater.",
+      "BROKERED / HOT-MONEY DEPOSITS + deposit beta (call report): reliance on rate-sensitive funding."
+    ],
+    "market_proxies": [
+      "KBW Regional Bank Index (KRE) + single-name bank equity drawdowns - market front-runs the accounting.",
+      "Bank CDS spreads + equity-options skew - implied default/​tail risk that doesn't wait for the QBP.",
+      "Rating-agency watch lists / downgrades; the FDIC still publishes the problem-bank COUNT and the failed-bank list (just not the asset total)."
+    ],
+    "conclusion": "Opacity of the aggregate != opacity of the facts. The per-bank RC-B + FDIC API reconstruct the very number that was withdrawn (bank_exposure.py does it), and FHLB advances / discount-window spikes / CDS / uninsured-deposit share give independent, FDIC-free stress signals."
+  },
+  "edges": [
+    {"from":"Rate_Shock","to":"Banks","instrument":"unrealized_loss","amount_usd":306000000000,"date":"2025-Q4","status":"unrealized-HTM-AFS","circular":false,"cancelable":false,"confidence":"high","source":["https://www.fdic.gov/news/speeches/2026/fdic-quarterly-banking-profile-fourth-quarter-2025"],"notes":"$306B aggregate unrealized securities loss (down from $684B 2023 peak); invisible while HTM held at cost, realized only if forced to sell (the SVB mechanism). BTFP backstop expired Mar 2024."}
+  ],
+  "assessment": "Banks are the asset-side instance of the corpus's core epistemic move: a reported value that is a CHOICE, not a market price. Aggregate unrealized securities losses fell through 2025 ($395B -> $306B, lowest since Q1-2022) as long rates declined - so the honest read is that the acute 2023 hole has eased, NOT that the structure is sound. The structure remains: HTM accounting carries underwater bonds at par, the loss is unrealized only until a deposit run forces sales (the SVB 2023 mechanism), the explicit backstop (BTFP) expired in March 2024, and the regulator narrowed disclosure (no more problem-bank asset totals). It is the exact mirror of the AI paper-marks proof (reflexive_marks): a stake/bond held at a self-chosen value until an external event - an IPO below the mark, or a run - forces realization. Zero-trust posture: read 'book equity' and HTM 'held-to-par' as the most solvent admissible presentation, and stress-test it at market (AFS+HTM marked) and under forced-sale, not at cost. Overlay; not used in the proofs."
+}

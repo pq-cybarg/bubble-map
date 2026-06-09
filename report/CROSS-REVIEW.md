@@ -26,17 +26,17 @@
 - **Chainlink** — 10 files
 - **JPMorgan** — 10 files
 - **NVIDIA** — 10 files
-- **a16z** — 9 files
+- **FDIC** — 10 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-sec-filings-primary.json` — related files by shared entities (verify cross-refs exist)
-- sec-filings.json: 11 shared entities
-- fin-google-amazon-anthropic-meta.json: 10 shared entities
-- fin-coreweave-oracle.json: 9 shared entities
-- fin-nvidia-openai.json: 8 shared entities
-- macro-cre-privatecredit.json: 7 shared entities
-- spec-telecom-satellite.json: 7 shared entities
-- spec-exchanges-asia.json: 7 shared entities
-- fin-hedera-connections.json: 7 shared entities
+## Newest file `macro-bank-htm-marks.json` — related files by shared entities (verify cross-refs exist)
+- macro-fdic.json: 1 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- macro-history-dereg-manipulation.json: 1 shared entities
+- influence-ad-censorship.json: 1 shared entities
+- macro-oil-backwardation.json: 1 shared entities
+- macro-cre-privatecredit.json: 1 shared entities
+- macro-official-data-integrity.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities

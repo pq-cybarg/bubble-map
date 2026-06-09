@@ -11,7 +11,8 @@
     "Defense_REE",
     "Blockchain_Stablecoin",
     "Sovereign_Capital",
-    "Commodities_Gold"
+    "Commodities_Gold",
+    "Mag7_PaperMarks"
   ],
   "matrix": {
     "CarryTrade->AI_core": 0.7,
@@ -35,6 +36,11 @@
     "Sovereign_Capital->AI_core": 0.6,
     "AI_core->Treasuries_Fiscal": 0.3,
     "CRE->PrivateCredit": 0.4,
+    "AI_core->Mag7_PaperMarks": 0.7,
+    "Mag7_PaperMarks->Equities_Mag7": 0.8,
+    "Mag7_PaperMarks->AI_core": 0.5,
+    "Equities_Mag7->Mag7_PaperMarks": 0.4,
+    "Mag7_PaperMarks->Banks": 0.3,
     "CarryTrade->Commodities_Gold": 0.3,
     "Banks->Commodities_Gold": 0.3,
     "Treasuries_Fiscal->Commodities_Gold": 0.3,
@@ -44,13 +50,14 @@
   "triggers": [
     {
       "leg": "Defense_REE",
-      "total_stress": 11.0,
-      "legs_reached": 11,
+      "total_stress": 12.0,
+      "legs_reached": 12,
       "order": [
         "Defense_REE",
         "AI_core",
         "Equities_Mag7",
         "PrivateCredit",
+        "Mag7_PaperMarks",
         "Treasuries_Fiscal",
         "Energy_Power",
         "Sovereign_Capital",
@@ -62,8 +69,8 @@
     },
     {
       "leg": "Blockchain_Stablecoin",
-      "total_stress": 11.0,
-      "legs_reached": 11,
+      "total_stress": 12.0,
+      "legs_reached": 12,
       "order": [
         "Blockchain_Stablecoin",
         "Treasuries_Fiscal",
@@ -73,6 +80,7 @@
         "CarryTrade",
         "AI_core",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "PrivateCredit",
         "CRE",
         "Energy_Power"
@@ -80,8 +88,8 @@
     },
     {
       "leg": "CarryTrade",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "CarryTrade",
         "AI_core",
@@ -91,14 +99,15 @@
         "Treasuries_Fiscal",
         "Energy_Power",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Banks",
         "CRE"
       ]
     },
     {
       "leg": "AI_core",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "AI_core",
         "Equities_Mag7",
@@ -107,6 +116,7 @@
         "Energy_Power",
         "Sovereign_Capital",
         "Commodities_Gold",
+        "Mag7_PaperMarks",
         "Banks",
         "CRE",
         "CarryTrade"
@@ -114,16 +124,17 @@
     },
     {
       "leg": "Equities_Mag7",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Equities_Mag7",
         "Banks",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "AI_core",
         "PrivateCredit",
-        "CRE",
         "Commodities_Gold",
+        "CRE",
         "Treasuries_Fiscal",
         "Energy_Power",
         "CarryTrade"
@@ -131,8 +142,8 @@
     },
     {
       "leg": "PrivateCredit",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "PrivateCredit",
         "Banks",
@@ -143,13 +154,14 @@
         "Equities_Mag7",
         "AI_core",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Energy_Power"
       ]
     },
     {
       "leg": "Banks",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Banks",
         "PrivateCredit",
@@ -160,13 +172,14 @@
         "CarryTrade",
         "AI_core",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Energy_Power"
       ]
     },
     {
       "leg": "CRE",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "CRE",
         "PrivateCredit",
@@ -177,13 +190,14 @@
         "Equities_Mag7",
         "AI_core",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Energy_Power"
       ]
     },
     {
       "leg": "Treasuries_Fiscal",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Treasuries_Fiscal",
         "CarryTrade",
@@ -194,47 +208,50 @@
         "PrivateCredit",
         "CRE",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Energy_Power"
       ]
     },
     {
       "leg": "Energy_Power",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Energy_Power",
         "AI_core",
         "Equities_Mag7",
         "PrivateCredit",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "Treasuries_Fiscal",
         "Commodities_Gold",
         "Banks",
-        "CarryTrade",
-        "CRE"
+        "CRE",
+        "CarryTrade"
       ]
     },
     {
       "leg": "Sovereign_Capital",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Sovereign_Capital",
         "AI_core",
         "Equities_Mag7",
         "PrivateCredit",
         "Energy_Power",
+        "Mag7_PaperMarks",
         "Treasuries_Fiscal",
         "Commodities_Gold",
         "Banks",
-        "CarryTrade",
-        "CRE"
+        "CRE",
+        "CarryTrade"
       ]
     },
     {
       "leg": "Commodities_Gold",
-      "total_stress": 10.0,
-      "legs_reached": 10,
+      "total_stress": 11.0,
+      "legs_reached": 11,
       "order": [
         "Commodities_Gold",
         "Treasuries_Fiscal",
@@ -243,18 +260,38 @@
         "Equities_Mag7",
         "AI_core",
         "Sovereign_Capital",
+        "Mag7_PaperMarks",
         "PrivateCredit",
         "CRE",
         "Energy_Power"
       ]
+    },
+    {
+      "leg": "Mag7_PaperMarks",
+      "total_stress": 11.0,
+      "legs_reached": 11,
+      "order": [
+        "Mag7_PaperMarks",
+        "AI_core",
+        "Equities_Mag7",
+        "Banks",
+        "PrivateCredit",
+        "Sovereign_Capital",
+        "Commodities_Gold",
+        "Treasuries_Fiscal",
+        "Energy_Power",
+        "CRE",
+        "CarryTrade"
+      ]
     }
   ],
   "fragility": {
-    "Banks": 2.3,
-    "AI_core": 2.2,
-    "Equities_Mag7": 1.8,
+    "AI_core": 2.7,
+    "Equities_Mag7": 2.6,
+    "Banks": 2.6,
     "PrivateCredit": 1.5,
     "Commodities_Gold": 1.2,
+    "Mag7_PaperMarks": 1.1,
     "Treasuries_Fiscal": 1.0,
     "Sovereign_Capital": 1.0,
     "CarryTrade": 0.5,
@@ -265,48 +302,57 @@
   },
   "centrality": {
     "AI_core": 1.0,
-    "Equities_Mag7": 0.72,
-    "Banks": 0.67,
-    "Treasuries_Fiscal": 0.58,
-    "CarryTrade": 0.57,
-    "PrivateCredit": 0.57,
-    "Sovereign_Capital": 0.55,
-    "CRE": 0.38,
-    "Commodities_Gold": 0.38,
-    "Energy_Power": 0.37,
-    "Defense_REE": 0.11,
-    "Blockchain_Stablecoin": 0.09
+    "Equities_Mag7": 0.8,
+    "Mag7_PaperMarks": 0.73,
+    "Banks": 0.49,
+    "Sovereign_Capital": 0.47,
+    "CarryTrade": 0.46,
+    "Treasuries_Fiscal": 0.42,
+    "PrivateCredit": 0.4,
+    "Energy_Power": 0.31,
+    "Commodities_Gold": 0.26,
+    "CRE": 0.23,
+    "Defense_REE": 0.09,
+    "Blockchain_Stablecoin": 0.05
   },
   "feedback_loops": [
     [
-      "AI_core",
-      "Energy_Power"
+      "Banks",
+      "PrivateCredit"
     ],
     [
       "Commodities_Gold",
       "Treasuries_Fiscal"
     ],
     [
-      "Banks",
-      "CRE"
-    ],
-    [
-      "Banks",
-      "PrivateCredit"
+      "AI_core",
+      "Energy_Power"
     ],
     [
       "AI_core",
       "Sovereign_Capital"
     ],
     [
-      "Banks",
-      "Commodities_Gold",
-      "Treasuries_Fiscal"
+      "AI_core",
+      "Mag7_PaperMarks"
     ],
     [
-      "CarryTrade",
-      "Commodities_Gold",
-      "Treasuries_Fiscal"
+      "Banks",
+      "CRE"
+    ],
+    [
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Equities_Mag7",
+      "Sovereign_Capital"
     ],
     [
       "AI_core",
@@ -319,7 +365,30 @@
       "PrivateCredit"
     ],
     [
+      "CarryTrade",
+      "Commodities_Gold",
+      "Treasuries_Fiscal"
+    ],
+    [
+      "Banks",
+      "Commodities_Gold",
+      "Treasuries_Fiscal"
+    ],
+    [
       "AI_core",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Sovereign_Capital"
+    ],
+    [
+      "AI_core",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Mag7_PaperMarks",
       "Equities_Mag7",
       "Sovereign_Capital"
     ],
@@ -331,29 +400,16 @@
     ],
     [
       "AI_core",
-      "Treasuries_Fiscal",
-      "Equities_Mag7",
-      "Sovereign_Capital"
-    ],
-    [
-      "AI_core",
       "Commodities_Gold",
       "Treasuries_Fiscal",
       "CarryTrade"
     ],
     [
-      "AI_core",
+      "Banks",
       "Commodities_Gold",
       "Treasuries_Fiscal",
       "Equities_Mag7",
-      "Sovereign_Capital"
-    ],
-    [
-      "AI_core",
-      "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Sovereign_Capital"
+      "Mag7_PaperMarks"
     ],
     [
       "Banks",
@@ -364,7 +420,35 @@
     ],
     [
       "AI_core",
+      "Treasuries_Fiscal",
+      "CarryTrade",
       "Equities_Mag7",
+      "Sovereign_Capital"
+    ],
+    [
+      "AI_core",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Sovereign_Capital"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Mag7_PaperMarks",
       "Banks",
       "Commodities_Gold",
       "Treasuries_Fiscal",
@@ -372,11 +456,11 @@
     ],
     [
       "AI_core",
+      "Equities_Mag7",
+      "Banks",
       "Commodities_Gold",
       "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Sovereign_Capital"
+      "CarryTrade"
     ],
     [
       "AI_core",
@@ -385,6 +469,30 @@
       "Commodities_Gold",
       "Treasuries_Fiscal",
       "CarryTrade"
+    ],
+    [
+      "Banks",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Sovereign_Capital"
     ]
   ]
 }

@@ -30,6 +30,7 @@ VERDICTS=[
  ("Z3 reflexive marks M1-M4","AI 'profit' is self-referential paper marks; gains reverse if IPO < private mark","SAT/UNSAT"),
  ("TLA+ cascade","capital-stop → OpenAI→CoreWeave→Oracle","VIOLATED(trace)"),
  ("TLA+ SpaceX safe","never defaults","HOLDS"),
+ ("TLA+ MarkUnwind","down-round/IPO<mark -> Amazon+Google reverse gains (writedown trace)","VIOLATED(trace)"),
  ("Alloy structure","core circular; SpaceX separable w/o cancelable","ALL HOLD"),
  ("Z3 coordination C1-C4","small-bank stablecoin trap, suppressible","PROVED"),
  ("Z3 Fed trap F1-F3","no single rate satisfies N targets","UNSAT"),
@@ -68,7 +69,8 @@ OVERLAYS=[
  ("Rent vs CPI (ALNRI analysis)","Apartment List / Zillow / BLS New-Tenant rents lead official CPI shelter by ~1 year; shelter ~1/3 of CPI -> headline misreports turning points","macro-rent-cpi-divergence"),
  ("Gig / contingent labor","Full-time independents 13.6M->27.7M; misclassification (Lyft NJ $19.4M); CES/CPS + multiple-jobholders distort the jobs headline","macro-gig-labor"),
  ("Futures vs physical (commodities)","COMEX/LBMA/LME/SHFE: 2025-26 silver backwardation, >$2.50 gold premium, ~4.2:1 paper:registered, 28% copper tariff spread, JPM $920M spoofing","macro-futures-vs-physical"),
- ("SEC filings (primary source)","The circular-funding thesis in the filers' own 10-Ks: CoreWeave 67% Microsoft + $21B debt; NVIDIA concentration 36%->61%","spec-sec-filings-primary"),
+ ("SEC filings (primary source)","The circular-funding thesis in the filers' own 10-Ks: CoreWeave 67% Microsoft + $21B debt; NVIDIA concentration 36%->61%; Amazon/Google fair-value GAINS vs Microsoft equity-method LOSSES","spec-sec-filings-primary"),
+ ("Bank HTM marks (zero-trust)","HTM 'held to par' is a self-chosen value, not a price; FDIC unrealized-loss series ~$690B(Q3-22)->$306B(Q4-25)->$325B(Q1-26); withdrawn problem-bank totals reconstructable from RC-B + FDIC API","macro-bank-htm-marks"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[

@@ -16,7 +16,7 @@ ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 LEGS=["CarryTrade","AI_core","Equities_Mag7","PrivateCredit","Banks","CRE",
       "Treasuries_Fiscal","Energy_Power","Defense_REE","Blockchain_Stablecoin",
-      "Sovereign_Capital","Commodities_Gold"]
+      "Sovereign_Capital","Commodities_Gold","Mag7_PaperMarks"]
 # T[(from,to)] = transmission strength (grounded in the proofs/threads)
 E={
  ("CarryTrade","AI_core"):0.7,           # unwind shuts the external-capital tap (Z3 T4 / BEAR)
@@ -40,6 +40,14 @@ E={
  ("Sovereign_Capital","AI_core"):0.6,    # MGX/PIF/SoftBank fund the core
  ("AI_core","Treasuries_Fiscal"):0.3,    # AI debt issuance pressures rates
  ("CRE","PrivateCredit"):0.4,
+ # reflexive paper-marks channel (models/z3/reflexive_marks.py): a down-round / IPO-below-mark
+ # forces hyperscalers to reverse fair-value gains -> reported-earnings hit -> capex pullback ->
+ # less funding into the loop. A self-reinforcing loop with AI_core.
+ ("AI_core","Mag7_PaperMarks"):0.7,      # lab down-round / IPO below private mark -> writedowns (M3)
+ ("Mag7_PaperMarks","Equities_Mag7"):0.8,# earnings writedowns hit the Mag7 stocks
+ ("Mag7_PaperMarks","AI_core"):0.5,      # earnings hit -> capex pullback -> external tap narrows (M4 reversal)
+ ("Equities_Mag7","Mag7_PaperMarks"):0.4,# stock drop makes the private marks harder to defend (feedback)
+ ("Mag7_PaperMarks","Banks"):0.3,        # Mag7 collateral/wealth effect into credit
 }
 # Gold is an INDICATOR/amplifier: system stress -> gold up -> signals debasement -> rates/carry pressure
 for src in ["CarryTrade","Banks","Treasuries_Fiscal","AI_core"]:
@@ -116,8 +124,10 @@ print(f"VERDICT: the most systemic single triggers are {top3} - each cascades to
 print(f"  Most CENTRAL node: {cent[0][0]} ({cent[0][1]}) - the hub everything routes through.")
 print(f"  Most FRAGILE leg:  {fragility[0][0]} ({fragility[0][1]} inbound) - the ultimate shock-absorber.")
 print("  The upstream chokepoints (Defense_REE/China, Blockchain_Stablecoin->Treasuries) and the carry-unwind")
-print("  are the widest-reaching triggers; AI_core is the central hub; Banks absorb the most. Self-reinforcing")
-print("  loops (Banks<->CRE, Banks<->PrivateCredit, Gold<->Treasuries, AI<->Sovereign) mean a single shock does")
+print("  are the widest-reaching triggers; AI_core is the central hub AND now the most fragile (the reflexive")
+print("  paper-marks loop AI_core<->Mag7_PaperMarks feeds stress back into it). Self-reinforcing loops (Banks<->CRE,")
+print("  Banks<->PrivateCredit, Gold<->Treasuries, AI<->Sovereign, AND AI_core<->Mag7_PaperMarks - a down-round/IPO")
+print("  below the private mark reverses hyperscaler gains -> capex pullback -> the loop) mean a single shock does")
 print("  NOT stay contained. Macro mirror of every leg's local UNSAT: there is NO single-shock-safe configuration.")
 json.dump({"legs":LEGS,"matrix":{f"{a}->{b}":w for (a,b),w in E.items()},
            "triggers":[{"leg":L,"total_stress":t,"legs_reached":d,"order":o} for L,t,d,o in trig],

@@ -131,6 +131,7 @@ NODE_META = {
  # commodities / exchanges / labor
  "COMEX":("exchange",True),"Metals_Futures":("commodity_market",False),"Silver_Physical":("commodity",False),"Copper":("commodity",False),
  "US_Tariff_Policy":("state",True),"Gig_Platforms":("labor_platform",False),"Contingent_Labor":("labor",False),
+ "Rate_Shock":("macro_factor",False),
  # persons / misc
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),

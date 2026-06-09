@@ -54,7 +54,9 @@ if [ -f models/tla/tla2tools.jar ]; then
     echo "--- Inv_NoCoreCollapse (expect VIOLATED = the cascade trace) ---"
     "$JAVA" -cp tla2tools.jar tlc2.TLC -config cascade.cfg BubbleCascade.tla 2>&1 | grep -E 'Error: Invariant|State [0-9]|status =|tap =|states generated' | head -40
     echo "--- Inv_SpaceXSafe (expect HOLDS) ---"
-    "$JAVA" -cp tla2tools.jar tlc2.TLC -config spacex.cfg BubbleCascade.tla 2>&1 | grep -E 'No error|Error: Invariant' )
+    "$JAVA" -cp tla2tools.jar tlc2.TLC -config spacex.cfg BubbleCascade.tla 2>&1 | grep -E 'No error|Error: Invariant'
+    echo "--- MarkUnwind Inv_MarksHold (expect VIOLATED = the paper-marks writedown trace) ---"
+    "$JAVA" -cp tla2tools.jar tlc2.TLC -config markunwind.cfg MarkUnwind.tla 2>&1 | grep -E 'Error: Invariant|State [0-9]|round =|mark =|lab =|states generated' | head -28 )
 else echo "tla2tools.jar missing - fetch from https://github.com/tlaplus/tlaplus/releases/latest/download/tla2tools.jar"; fi
 
 hr "[8/8] Alloy - relational structure checks"

@@ -1,6 +1,7 @@
 from,to,instrument,amount_usd,status,declared_circular,cancelable,source_file
 US_Banks,Nondepository financial institutions,debt,1972670000000,2026-04,False,False,macro-cre-privatecredit.json
 Private-credit market,AI data centers,debt,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
+Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 OpenAI,Microsoft,compute_commitment,250000000000,committed,True,False,"fin-nvidia-openai.json,fin-microsoft-openai.json"
 Microsoft,OpenAI,equity,135000000000,closed-definitive,True,False,fin-microsoft-openai.json
