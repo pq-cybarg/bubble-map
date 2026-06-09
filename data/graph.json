@@ -735,6 +735,58 @@
       "note": "Oracle's ~$523B RPO backlog is dominated by OpenAI/Stargate cloud capacity - the demand side of the loop, financed by >=$72B partner debt + $50B capex."
     },
     {
+      "from": "NVIDIA",
+      "to": "CoreWeave",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": 3660000000,
+      "status": "13F-~11pct",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json,fin-nvidia-openai.json,fin-coreweave-oracle.json",
+      "note": "NVIDIA 13F: ~47.2M CoreWeave shares (~$3.66B), ~11% ownership - vendor-financing the neocloud that buys its GPUs (reconciled with prior $2.0B/$0.3B as staged 13F marks)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Intel",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": 7900000000,
+      "status": "13F-largest",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "NVIDIA 13F: ~214.8M Intel shares (~$7.9B, ~50% of the 13F portfolio) - the chipmaker funding a rival/foundry."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Nebius",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": 2700000000,
+      "status": "13F",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json,fin-coreweave-oracle.json",
+      "note": "NVIDIA 13F: ~$100M Nebius (0.63%) - another neocloud customer-investment."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Amazon",
+      "instrument": "equity_method_loss",
+      "layer": "financial",
+      "raw_instrument": "equity_method_loss",
+      "amount_usd": 9500000000,
+      "status": "mark-to-market-GAIN",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "REVERSE sign: Amazon booked a ~$9.5B Q3-2025 GAIN marking up its Anthropic stake (fair-value) after Anthropic's $183B round - circular paper income (vs Microsoft's equity-method OpenAI losses)."
+    },
+    {
       "from": "Boskin_Commission",
       "to": "CPI_Methodology",
       "instrument": "other",
@@ -1838,19 +1890,6 @@
       "cancelable": false,
       "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
       "note": "LOI, up to $100B paid progressively per GW deployed; never reached definitive agreement. CFO confirmed no signed deal (Dec 2025); WSJ 'on ice' (Jan/Feb 2026). Effectively lapsed/replaced by the $30B direct stake. DO NOT count as closed."
-    },
-    {
-      "from": "NVIDIA",
-      "to": "CoreWeave",
-      "instrument": "equity",
-      "layer": "financial",
-      "raw_instrument": "equity",
-      "amount_usd": 2000000000,
-      "status": "closed",
-      "declared_circular": true,
-      "cancelable": false,
-      "source_file": "fin-nvidia-openai.json,fin-coreweave-oracle.json",
-      "note": "~$350M at cost pre-IPO; ~7% stake. CoreWeave buys NVIDIA GPUs."
     },
     {
       "from": "NVIDIA",
@@ -2971,19 +3010,6 @@
       "note": "~$425M GPU-collateralized debt (secondary aggregation)."
     },
     {
-      "from": "NVIDIA",
-      "to": "Nebius",
-      "instrument": "equity",
-      "layer": "financial",
-      "raw_instrument": "equity",
-      "amount_usd": 2700000000,
-      "status": "funded",
-      "declared_circular": true,
-      "cancelable": false,
-      "source_file": "fin-coreweave-oracle.json",
-      "note": "$0.7B raise (Dec 2024) + ~$2B further NVIDIA investment. Combined ~$2.7B."
-    },
-    {
       "from": "Microsoft",
       "to": "Nebius",
       "instrument": "compute_commitment",
@@ -3038,8 +3064,8 @@
   ],
   "analysis": {
     "num_nodes": 170,
-    "num_edges": 181,
-    "num_financial_edges": 111,
+    "num_edges": 183,
+    "num_financial_edges": 113,
     "num_structural_edges": 70,
     "core_scc_all": [
       "AMD",
@@ -3091,33 +3117,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -3130,16 +3151,15 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -3156,7 +3176,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -3164,6 +3183,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -3220,9 +3246,9 @@
         "in_robust_core": false
       },
       "Amazon": {
-        "total_usd": 186600000000,
-        "circular_usd": 175000000000,
-        "circularity_ratio": 0.938,
+        "total_usd": 196100000000,
+        "circular_usd": 184500000000,
+        "circularity_ratio": 0.941,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3234,9 +3260,9 @@
         "in_robust_core": false
       },
       "Anthropic": {
-        "total_usd": 280000000000,
-        "circular_usd": 180000000000,
-        "circularity_ratio": 0.643,
+        "total_usd": 289500000000,
+        "circular_usd": 189500000000,
+        "circularity_ratio": 0.655,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3430,9 +3456,9 @@
         "in_robust_core": false
       },
       "CoreWeave": {
-        "total_usd": 99382000000,
-        "circular_usd": 70509000000,
-        "circularity_ratio": 0.709,
+        "total_usd": 101042000000,
+        "circular_usd": 72169000000,
+        "circularity_ratio": 0.714,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3654,7 +3680,7 @@
         "in_robust_core": false
       },
       "Intel": {
-        "total_usd": 5000000000,
+        "total_usd": 12900000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3822,9 +3848,9 @@
         "in_robust_core": false
       },
       "NVIDIA": {
-        "total_usd": 142809000000,
-        "circular_usd": 131509000000,
-        "circularity_ratio": 0.921,
+        "total_usd": 152369000000,
+        "circular_usd": 133169000000,
+        "circularity_ratio": 0.874,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -4369,11 +4395,11 @@
       }
     },
     "nvidia_self_funding": {
-      "funded_usd": 21200000000,
-      "headline_usd": 121200000000,
+      "funded_usd": 22860000000,
+      "headline_usd": 122860000000,
       "nvidia_fy26_revenue_usd": 215900000000.0,
-      "funded_ratio": 0.098,
-      "headline_ratio": 0.561
+      "funded_ratio": 0.106,
+      "headline_ratio": 0.569
     },
     "top_cross_layer_connectors": [
       {
@@ -4420,7 +4446,7 @@
       },
       {
         "node": "NVIDIA",
-        "degree": 16,
+        "degree": 17,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -4430,7 +4456,25 @@
           "telecom"
         ],
         "n_neighbor_sectors": 6,
-        "source_files": 3,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Anthropic",
+        "degree": 11,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "sink",
+          "space_real_economy"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 4,
         "layers": [
           "financial",
           "structural"
@@ -4472,24 +4516,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Anthropic",
-        "degree": 10,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "sink",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Oracle",

@@ -26,9 +26,9 @@ We prove the financial half. We evidence-grade the rest.
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **170 nodes, 181 directed edges.**
+Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **170 nodes, 183 directed edges.**
 
-Each edge is tagged with a **layer**: **111 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **70 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
+Each edge is tagged with a **layer**: **113 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **70 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 
 **Cross-layer connectors** (nodes ranked by distinct neighbor-sectors bridged) quantify the bridge nodes: **Hedera** spans the most sectors (10 — the enterprise-DLT council overlap), then **NVIDIA** and **Google** (the AI core also sitting on the DLT council), with **MGX** bridging ai-lab / Gulf-bigtech / exchange / SPV (the single Abu-Dhabi fund touching Stargate, Binance, and TikTok-US).
 
@@ -165,6 +165,8 @@ The same structural defect appears in four markets at once:
 | Metals | paper claims | physical delivery | silver backwardation, 39% lease rates |
 
 **Promises vastly exceeding deliverable substance, with risk parked in the least-regulated venue available, solvent only while new capital flows in.** That is the bubble — and it is the *same* bubble wearing four costumes.
+
+**The accounting tell.** The same circular stakes distort the funders' earnings in *opposite* directions by method. Microsoft carries OpenAI at the **equity method** and books its ~27% share of an ~$11.5B/qtr loss; Amazon and Google carry Anthropic at **fair value**, so a higher private funding round is booked as a **gain** — Amazon's Q3-2025 profit got a **~$9.5B lift** from marking up a company it simultaneously funds. NVIDIA's own **13F** shows it holds **~11% of CoreWeave** (the neocloud that is ~67% Microsoft and exists to buy NVIDIA GPUs). So the loop's reported profitability is itself partly a set of **self-referential paper marks** on illiquid private stakes — which the eventual Anthropic/OpenAI IPOs will finally test against a public price.
 
 ---
 

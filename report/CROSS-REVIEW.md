@@ -11,7 +11,7 @@
 - ✓ **Blackstone → CoreWeave** (debt): $2.3B [fin-coreweave-oracle.json]; $7.5B [fin-coreweave-oracle.json] — reconciled: distinct debt facilities ($2.3B and $7.5B), not the same loan
 - ✓ **GOOGL → Anthropic** (equity): $3.0B [fin-google-amazon-anthropic-meta.json]; $40.0B [fin-google-amazon-anthropic-meta.json] — reconciled: initial $3B stake vs expanded ~$40B cumulative commitment (distinct dates)
 - ✓ **Microsoft → OpenAI** (equity): $135.0B [fin-microsoft-openai.json]; $13.0B [fin-microsoft-openai.json] — reconciled: $13B cumulative cash invested vs ~$135B marked stake value post-2025 restructuring
-- ✓ **NVIDIA → CoreWeave** (equity): $2.0B [fin-coreweave-oracle.json]; $0.3B [fin-nvidia-openai.json] — reconciled: early ~$0.3B stake vs later ~$2B marked holding (distinct dates)
+- ✓ **NVIDIA → CoreWeave** (equity): $2.0B [fin-coreweave-oracle.json]; $0.3B [fin-nvidia-openai.json]; $3.7B [spec-sec-filings-primary.json] — reconciled: early ~$0.3B stake vs later ~$2B marked holding (distinct dates)
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
@@ -36,7 +36,7 @@
 - fin-google-amazon-anthropic-meta.json: 10 shared entities
 - fin-coreweave-oracle.json: 9 shared entities
 - fin-nvidia-openai.json: 8 shared entities
-- spec-exchanges-asia.json: 7 shared entities
-- spec-telecom-satellite.json: 7 shared entities
 - macro-cre-privatecredit.json: 7 shared entities
+- spec-telecom-satellite.json: 7 shared entities
 - fin-hedera-connections.json: 7 shared entities
+- spec-exchanges-asia.json: 7 shared entities

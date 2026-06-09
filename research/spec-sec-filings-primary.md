@@ -34,8 +34,22 @@
 
 > The clearest primary picture of the loop's funding mechanics: a **$523B backlog that is largely one circular counterparty** (OpenAI/Stargate), financed by **≥$72B partner debt + $50B capex + $18B bonds** — with **private credit (PIMCO) the marginal lender** when banks pull back. This *is* "solvent only while capital keeps flowing," in Oracle's own filings.
 
-## Pull queue (next primary documents)
-Amazon/Google 10-K (capex run-rate; Amazon's Anthropic carrying value + equity-method) · SpaceX/SPCX S-1 (CIK 1181412) · 13F cross-holdings (the equity edges of the SCC).
+## Amazon (CIK 1018724) & Alphabet (CIK 1652044) — *STRONG*
+- **Amazon:** ~**$200B** 2025 capex (mostly AI); booked a **~$9.5B pre-tax gain** in Q3-2025 from **marking up its Anthropic stake** after Anthropic's $13B raise at a **$183B** valuation; committed up to a further **$25B** (Apr 2026).
+- **Alphabet:** 2026 capex guided **$180–190B** (raised from $175–185B), 2027 to "significantly increase"; also a fair-value Anthropic stake (billions in gains) and **~$100B SpaceX** equity.
+
+> **Key accounting finding.** The *same* circular AI stakes distort hyperscaler earnings in **opposite** directions by method. **Fair value** (Amazon, Google on Anthropic): a higher private round = a **gain** booked to profit — Amazon's Q3-2025 profit got a **$9.5B lift from revaluing a company it is simultaneously funding**. **Equity method** (Microsoft on OpenAI): the investor books its **share of losses** (~$11.5B/qtr implied). So the loop flatters Amazon/Google reported profit and drags Microsoft's — and the Anthropic IPO will finally test those private marks against a public price. *Treat hyperscaler "AI gains" as partly self-referential paper marks.*
+
+## NVIDIA 13F-HR (Q4 2025) — CIK 1045810 — *STRONG*
+- **~11% of CoreWeave** (~47.2M shares, **~$3.66B**; added ~$2B in Q4); **Intel ~$7.9B** (~50% of the 13F portfolio — funding a rival/foundry); **Nebius ~$100M**; plus Synopsys, Nokia, Coherent; exited Applied Digital, Arm, Recursion, WeRide.
+
+> The vendor-financing loop in NVIDIA's **own** filing: it owns ~11% of CoreWeave — a neocloud that is ~67% Microsoft and exists to buy NVIDIA GPUs. The equity edges of the SCC, disclosed by the chipmaker itself.
+
+## Oil / Dubai note
+The commodities block (`macro-futures-vs-physical`) now carries the **Brent–Dubai EFS** (the sour/Asia differential): it narrowed and flipped **negative (−11¢, Aug 2025)**, expected to widen in 2026 on OPEC+ sour supply.
+
+## Pull queue (remaining)
+The eventual **Anthropic / OpenAI S-1** (will test the private marks) · SpaceX S-1 (summarized in `fin-spacex-spcx`) · full 13F text parse for MSFT/AMZN/GOOGL institutional cross-holdings.
 
 ## Takeaway
 The strongest corroboration of the circular-funding thesis is the **firms' own SEC risk factors**: CoreWeave and NVIDIA disclose the concentration and leverage the models formalize. The caveat is symmetrical with the data-integrity block — *"as reported" deserves the same zero-trust reading as the government's headline numbers.*

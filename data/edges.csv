@@ -43,8 +43,10 @@ Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,Fals
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 PIMCO,Oracle,debt,10000000000,anchored,False,False,spec-sec-filings-primary.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
+Anthropic,Amazon,equity_method_loss,9500000000,mark-to-market-GAIN,True,False,spec-sec-filings-primary.json
 MtGox,Creditors,repayment,9000000000,in-progress,False,False,spec-exchanges-asia.json
 SINK_lenders,CoreWeave,debt,8500000000,closed,False,False,fin-coreweave-oracle.json
+NVIDIA,Intel,equity,7900000000,13F-largest,False,False,spec-sec-filings-primary.json
 Lazarus,TornadoCash,surveillance_security,7600000000,documented,False,False,spec-tornado-samourai.json
 Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
 MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
@@ -52,14 +54,14 @@ Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
 MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
+NVIDIA,CoreWeave,equity,3660000000,13F-~11pct,True,False,"spec-sec-filings-primary.json,fin-nvidia-openai.json,fin-coreweave-oracle.json"
 OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsoft-openai.json
 BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
-NVIDIA,Nebius,equity,2700000000,funded,True,False,fin-coreweave-oracle.json
+NVIDIA,Nebius,equity,2700000000,13F,True,False,"spec-sec-filings-primary.json,fin-coreweave-oracle.json"
 JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
 Netherlands,Pertsev,regulatory_legal,2200000000,convicted-on-appeal,False,False,spec-tornado-samourai.json
 SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
 MGX,Binance,equity,2000000000,invested-settled-in-USD1,False,False,spec-exchanges-asia.json
-NVIDIA,CoreWeave,equity,2000000000,closed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
 Apple,Globalstar,investment,1700000000,closed,False,False,spec-telecom-satellite.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json

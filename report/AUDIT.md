@@ -5,8 +5,8 @@ Canonical numbers (from data/*.json — the source of truth):
 - `core_scc_robust` = **11**
 - `core_scc_all` = **12**
 - `cycles` = **16**
-- `nvda_headline_pct` = **56**
-- `nvda_funded_pct` = **10**
+- `nvda_headline_pct` = **57**
+- `nvda_funded_pct` = **11**
 - `home_gold_idx_2026` = **19**
 - `sp500_gold_chg` = **-69**
 - `nvda_gold_chg` = **1985**

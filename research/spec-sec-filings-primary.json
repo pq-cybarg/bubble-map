@@ -47,6 +47,40 @@
       "grade":"STRONG (primary 10-Q)"
     },
     {
+      "filer":"Amazon.com Inc (AMZN)","cik":"1018724","form":"10-Q / 8-K FY2025","filed":"2025-2026",
+      "edgar":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001018724&type=10-Q",
+      "key_disclosures":[
+        "~$200B capital expenditure guided for 2025, most toward AI infrastructure (data centers, Trainium, Anthropic capacity).",
+        "Q3-2025: a ~$9.5B PRE-TAX GAIN booked in non-operating income from MARKING UP its Anthropic stake after Anthropic raised $13B at a $183B valuation - a mark-to-market revaluation of an illiquid private holding.",
+        "Apr 2026: committed up to a further $25B in Anthropic (deepening the AI-infra partnership)."
+      ],
+      "thesis_link":"CRITICAL ACCOUNTING NUANCE: Amazon (and Google) carry Anthropic at FAIR VALUE, so a higher private funding round flows through as a GAIN to reported profit - while Microsoft carries OpenAI at EQUITY METHOD, booking its share of LOSSES. The SAME circular structure thus inflates Amazon/Google earnings (paper marks on private stakes whose rounds they help fund) and depresses Microsoft's. Amazon's Q3-2025 profit got a ~$9.5B lift from revaluing a company it is simultaneously funding - circular paper income.",
+      "grade":"STRONG (reported gain + capex guidance)"
+    },
+    {
+      "filer":"Alphabet Inc (GOOGL)","cik":"1652044","form":"8-K / 10-K FY2025-2026","filed":"2026",
+      "edgar":"https://www.sec.gov/Archives/edgar/data/0001652044/000165204426000012/googexhibit991q42025.htm",
+      "key_disclosures":[
+        "2026 capex guided $175-185B, raised to $180-190B; 2027 to 'significantly increase' - the largest single-company AI-infra spend.",
+        "Also holds a multibillion Anthropic stake carried at fair value (billions in gains as Anthropic's valuation rose); ~$100B SpaceX equity (fin-spacex-spcx).",
+        "Spend directed at AI compute for DeepMind + cloud demand."
+      ],
+      "thesis_link":"Google sits on BOTH sides: a hyperscaler in the circular core AND a fair-value holder of Anthropic (gains) and SpaceX (~$100B). Its ~$180-190B 2026 capex is the scale of the build the loop must keep financing.",
+      "grade":"STRONG (capex guidance; fair-value stakes)"
+    },
+    {
+      "filer":"NVIDIA Corp (NVDA) - Form 13F-HR","cik":"1045810","form":"13F-HR Q4 2025","filed":"2026-02",
+      "edgar":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=13F",
+      "key_disclosures":[
+        "Increased CoreWeave stake to ~47.2M shares (~$3.66B), ~11% of CoreWeave (added ~$2B / 24.2M shares in Q4 2025).",
+        "Largest disclosed position: Intel ~214.8M shares (~$7.9B, ~50% of the 13F portfolio) - NVIDIA funding a chip rival/foundry.",
+        "Smaller stakes: Nebius (~$100M, 0.63%), plus Synopsys, Nokia, Coherent - investing across the AI supply chain.",
+        "Exited Applied Digital, Arm, Recursion, WeRide in Q4 2025."
+      ],
+      "thesis_link":"PRIMARY-SOURCE confirmation of vendor-financing circularity: NVIDIA's OWN 13F shows it owns ~11% of CoreWeave - directly funding a neocloud whose ~67% customer is Microsoft and which exists to buy NVIDIA GPUs. The equity edges of the SCC, disclosed by the chipmaker itself.",
+      "grade":"STRONG (primary 13F-HR)"
+    },
+    {
       "filer":"Oracle Corp (ORCL)","cik":"1341439","form":"10-Q / 8-K FY2026 (qtr ended 2025-11-30)","filed":"2025-12",
       "edgar":"https://www.sec.gov/Archives/edgar/data/0001341439/000119312525315925/orcl-20251130.htm",
       "key_disclosures":[
@@ -60,16 +94,21 @@
       "grade":"STRONG (primary 8-K/10-Q + financing record)"
     }
   ],
-  "pull_queue":[
-    "Amazon/Google 10-K: capex run-rate + 'AI infrastructure' commitments; Amazon's Anthropic carrying value + equity-method treatment.",
-    "SpaceX/SPCX S-1/S-1/A (CIK 1181412): revenue mix + the Google equity stake + cancelable compute deals (already in fin-spacex-spcx).",
-    "13F cross-holdings: hyperscaler stakes in labs/neoclouds (the equity edges of the SCC) - to be pulled from EDGAR 13F filings."
+  "fair_value_vs_equity_method": "KEY FINDING: hyperscaler earnings are distorted in OPPOSITE directions by the SAME circular AI stakes, depending on accounting method. FAIR VALUE (Amazon, Google on Anthropic): a higher private funding round = a mark-to-market GAIN booked to profit (Amazon +$9.5B in Q3-2025; Google billions) - paper income on illiquid stakes whose rounds they help fund. EQUITY METHOD (Microsoft on OpenAI ~27%): the investor books its SHARE OF LOSSES (~$11.5B/qtr implied OpenAI burn). So the loop simultaneously flatters Amazon/Google reported profit and drags Microsoft's - and the Anthropic IPO is expected to finally test those private marks against a public price. Treat hyperscaler 'AI gains' as partly self-referential paper marks.",
+  "pull_queue_remaining":[
+    "Anthropic / OpenAI eventual S-1 (will test the private marks Amazon/Google/Microsoft carry).",
+    "SpaceX/SPCX S-1/S-1/A (CIK 1181412): already summarized in fin-spacex-spcx.",
+    "Full 13F text parse for Microsoft/Amazon/Alphabet (institutional cross-holdings beyond NVIDIA's)."
   ],
   "edges":[
     {"from":"Microsoft","to":"CoreWeave","instrument":"revenue_share","amount_usd":null,"date":"2025","status":"reported-10K","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm"],"notes":"CoreWeave 10-K: ~67% of FY2025 revenue from Microsoft - primary-source confirmation of the concentration the SCC encodes (a hyperscaler funding a neocloud that buys NVIDIA)."},
     {"from":"CoreWeave","to":"SINK_lenders","instrument":"debt","amount_usd":21000000000,"date":"2025","status":"reported-10K","circular":false,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm"],"notes":"Total debt >$21B (from <$8B 2024), ~11% variable; Q4 interest $388M (~1/3 of revenue). The leverage that makes the cascade node fragile."},
     {"from":"PIMCO","to":"Oracle","instrument":"debt","amount_usd":10000000000,"date":"2025","status":"anchored","circular":false,"cancelable":false,"confidence":"high","source":["https://thenextweb.com/news/oracle-data-centre-16-billion-financing-stargate"],"notes":"PIMCO anchored ~$10B of Oracle's $16.3B Michigan data-center bond after US banks retreated - private credit as the marginal lender for the Stargate build (ties macro-cre-privatecredit)."},
-    {"from":"Oracle","to":"Stargate","instrument":"compute_commitment","amount_usd":null,"date":"2025","status":"RPO-523B","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001341439/000119312525315925/orcl-20251130.htm"],"notes":"Oracle's ~$523B RPO backlog is dominated by OpenAI/Stargate cloud capacity - the demand side of the loop, financed by >=$72B partner debt + $50B capex."}
+    {"from":"Oracle","to":"Stargate","instrument":"compute_commitment","amount_usd":null,"date":"2025","status":"RPO-523B","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001341439/000119312525315925/orcl-20251130.htm"],"notes":"Oracle's ~$523B RPO backlog is dominated by OpenAI/Stargate cloud capacity - the demand side of the loop, financed by >=$72B partner debt + $50B capex."},
+    {"from":"NVIDIA","to":"CoreWeave","instrument":"equity","amount_usd":3660000000,"date":"2025-Q4","status":"13F-~11pct","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=13F"],"notes":"NVIDIA 13F: ~47.2M CoreWeave shares (~$3.66B), ~11% ownership - vendor-financing the neocloud that buys its GPUs (reconciled with prior $2.0B/$0.3B as staged 13F marks)."},
+    {"from":"NVIDIA","to":"Intel","instrument":"equity","amount_usd":7900000000,"date":"2025-Q4","status":"13F-largest","circular":false,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=13F"],"notes":"NVIDIA 13F: ~214.8M Intel shares (~$7.9B, ~50% of the 13F portfolio) - the chipmaker funding a rival/foundry."},
+    {"from":"NVIDIA","to":"Nebius","instrument":"equity","amount_usd":100000000,"date":"2025-Q4","status":"13F","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001045810&type=13F"],"notes":"NVIDIA 13F: ~$100M Nebius (0.63%) - another neocloud customer-investment."},
+    {"from":"Anthropic","to":"Amazon","instrument":"equity_method_loss","amount_usd":9500000000,"date":"2025-Q3","status":"mark-to-market-GAIN","circular":true,"cancelable":false,"confidence":"high","source":["https://www.geekwire.com/2025/amazons-anthropic-investment-boosts-its-quarterly-profits-by-9-5b/"],"notes":"REVERSE sign: Amazon booked a ~$9.5B Q3-2025 GAIN marking up its Anthropic stake (fair-value) after Anthropic's $183B round - circular paper income (vs Microsoft's equity-method OpenAI losses)."}
   ],
   "assessment": "Re-anchoring to primary EDGAR filings strengthens the core finding without changing a proof: the firms DISCLOSE the circular concentration and leverage themselves. CoreWeave's FY2025 10-K states ~67% revenue from Microsoft, >$21B debt (from <$8B) at ~11% variable with $388M quarterly interest (~1/3 of revenue), and a $1.2B net loss - the exact fragility the TLA+ cascade and the 'insolvent at zero inflow' Z3 result describe, in the filer's own risk language. NVIDIA's 10-K discloses customer concentration (A/B/C each >=10%; ~36%->61% in a year) - the demand side of the loop, corroborating the vendor-financing self-funding metric. The honest caveat: 'as reported' is itself contestable (non-GAAP add-backs, segment definitions, RPO timing) - the same scrutiny the data-integrity block applies to government statistics applies to corporate filings. A pull-queue lists the next primary documents (Microsoft/Oracle/Amazon/Google capex + equity-method, SpaceX S-1, 13F cross-holdings). Overlay/corroboration layer; the proofs already stand on the consolidated graph."
 }
