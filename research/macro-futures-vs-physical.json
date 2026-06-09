@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "Futures vs physical across exchanges over time - where the paper price and the deliverable metal/barrel diverge (COMEX/CME, LBMA, LME, SHFE/SGE, DGCX)",
+    "generated": "2026-06-08",
+    "frame": "Zero-trust applied to PRICE itself. The headline commodity 'price' is set in leveraged DERIVATIVE markets (futures), but the deliverable PHYSICAL market trades on separate venues at separate prices. When they diverge - backwardation (spot > futures), cross-exchange premia, registered-vs-open-interest stress - the paper price is revealed as a claim, not the thing. This block compares futures vs physical for gold, silver, copper, and oil across multiple exchanges and over time, and grades the market-structure facts (strong) separately from the perma-bull 'suppression' narrative (contested).",
+    "WARNING": "EVIDENCE-GRADED. Many cited commodity outlets (SchiffGold, SprottMoney, DiscoveryAlert, ITMTrading, GoldBroker, 24/7 Wall St.) are directionally motivated (perma-bull / manipulation thesis) - used only for the market-STRUCTURE facts they report, which are checkable against exchange/CFTC data. Documented enforcement (JPMorgan spoofing) is fact; blanket 'price suppression' is graded contested. Kept out of the proofs.",
+    "method": "Exchange-structure facts (LME/CME education, SMM/Shanghai Metals, ING) + CFTC enforcement record + commodity press. Verify spot/futures and registered/eligible against the exchanges' own daily reports.",
+    "cross_refs": ["macro-gold-silver-reprice.md (the hard-money repricing lens)","macro-oil-backwardation.json","macro-commodities-metals.json","macro-critical-minerals.json (state-as-vendor + tariff policy)","macro-official-data-integrity.json (price as a contestable signal, like CPI)","defense-rare-earth.json"]
+  },
+  "structure": {
+    "why_it_matters": "A futures market is leveraged paper claims on a much smaller deliverable base. The tells of physical stress: (1) BACKWARDATION (spot>futures) - you pay a premium for metal NOW vs a promise later, the opposite of the normal carry; (2) cross-EXCHANGE premia (the 'same' asset priced differently in NY/London/Shanghai) - arbitrage that can't close means metal can't move; (3) registered-vs-open-interest - how many paper ounces claim each deliverable ounce; (4) lease rates - the cost to borrow physical."
+  },
+  "gold_silver": {
+    "grade": "market-structure FACTS strong (exchange data); 'suppression' CONTESTED",
+    "facts": [
+      "2025-26: silver entered BACKWARDATION (spot > futures) - reported as the first sustained instance since 1980; e.g., Dec-2025 contract ~$47.62 vs spot ~$47.67.",
+      "LBMA spot vs COMEX futures premium blew out to >$2.50 (vs the usual few cents) - a rare NY/London dislocation; London interbank physical reportedly seized, lease rates spiked.",
+      "COMEX futures-to-REGISTERED ratio reported ~4.2 (≈4.2 paper claims per deliverable registered ounce); much 'eligible' metal is allocated to ETFs/industrial/banks and not freely deliverable.",
+      "Shanghai (SGE) physical settling ~12-13% PREMIUM over Western futures (Q4 2025+) - a persistent East-pulls-physical signal.",
+      "Earlier 2025: a large gold flow from London to COMEX vaults (NY) on US tariff/positioning fears - the inverse logistics scramble.",
+      "ENFORCEMENT (fact): JPMorgan paid ~$920M (Sept 2020, CFTC/DOJ) to settle SPOOFING of precious-metals (and Treasury) futures - documented manipulation of the paper market (distinct from a blanket-suppression claim)."
+    ],
+    "what_it_does_not_show": "Backwardation + premia prove tightness in the deliverable market and that paper != physical; they do NOT by themselves prove a coordinated long-term suppression scheme. The JPM spoofing case proves manipulation OCCURRED in metals futures - the strongest factual anchor - but was about short-horizon order spoofing, not a decades-long price cap.",
+    "source": ["https://www.schiffgold.com/exploring-finance/comex-physical-silver-demand-keeps-the-market-in-backwardation","https://247wallst.com/investing/2026/05/08/how-far-can-comex-move-the-goalposts-until-they-run-out-of-playing-field/","https://news.metal.com/newscontent/103563716"]
+  },
+  "copper": {
+    "grade": "STRONG (exchange + policy record)",
+    "facts": [
+      "July 30 2025: US announced a 50% tariff on semi-finished copper (raw cathode/concentrate exempt). Before the carve-out was known, the COMEX-front vs LME-3M spread widened to >28%, driving massive cross-exchange arbitrage and physical pre-positioning into the US.",
+      "On the tariff announcement, COMEX copper fell >18% in a day - its largest single-day drop on record - as the arbitrage premium collapsed.",
+      "Structure split by venue: CME (US) in contango on tariff distortion while LME ran backwardation in nearby months; SHFE arbitrage transmits into LME-SHFE spreads; Chinese offshore premia normalize as US arb appetite fades.",
+      "Lesson: a single POLICY action (tariff) blew open a >28% wedge between two exchanges pricing the same metal - proof that the 'price' is venue- and policy-contingent, not a single physical truth."
+    ],
+    "source": ["https://news.metal.com/newscontent/103899519-What-Is-Driving-the-Recent-Copper-Price-Rally-and-Which-Trading-Indicators-Should-the-Market-Watch-Next","https://www.lme.com/en/education/online-resources/lme-digest/lme-and-cme-copper-arbitrage-when-global-and-regional-prices-meet","https://www.metal.com/en/newscontent/103202757"]
+  },
+  "oil": {
+    "grade": "structure FACT; specific 2025 differentials not pinned here",
+    "facts": [
+      "Three benchmarks price 'oil' differently by region/quality: WTI (US light-sweet, ~39.6 API, ~0.24% S), Brent (waterborne global), Dubai (Asia sour) - physical differentials (sulfur/density/freight) mean the futures benchmark is not the barrel a refiner buys.",
+      "Curve shape (contango vs backwardation) across WTI/Brent/Dubai signals near-term physical tightness vs glut; Dubai/Brent spreads track Asian physical demand and OPEC+ sour supply.",
+      "Method note: exact 2025 WTI-Brent-Dubai spreads and physical premia should be read off EIA/CME/DGCX/Platts series; this block records the STRUCTURE (multi-benchmark, futures!=physical) and defers live differentials to those primary series (macro-oil-backwardation.json holds the prior episode)."
+    ],
+    "source": ["https://www.cmegroup.com/markets/energy/crude-oil/brent-dubai-swap-futures.html","https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm"]
+  },
+  "edges": [
+    {"from":"JPMorgan","to":"Metals_Futures","instrument":"spoofing_settlement","amount_usd":920000000,"date":"2020-09","status":"settled","circular":false,"cancelable":false,"confidence":"high","source":["https://www.schiffgold.com/exploring-finance/comex-physical-silver-demand-keeps-the-market-in-backwardation"],"notes":"JPM ~$920M CFTC/DOJ settlement for spoofing precious-metals + Treasury futures - documented manipulation of the paper market (the factual anchor; not proof of long-run suppression)."},
+    {"from":"US_Tariff_Policy","to":"Copper","instrument":"policy_distortion","amount_usd":null,"date":"2025-07-30","status":"event","circular":false,"cancelable":false,"confidence":"high","source":["https://www.metal.com/en/newscontent/103202757"],"notes":"50% copper-semis tariff -> COMEX-LME spread >28% then COMEX -18% single-day record drop. Policy as a cross-exchange price distortion."},
+    {"from":"COMEX","to":"Silver_Physical","instrument":"paper_claim_ratio","amount_usd":null,"date":"2025-26","status":"stressed","circular":false,"cancelable":false,"confidence":"med","source":["https://247wallst.com/investing/2026/05/08/how-far-can-comex-move-the-goalposts-until-they-run-out-of-playing-field/"],"notes":"~4.2 paper claims per registered deliverable oz; backwardation + LBMA premium + Shanghai 12-13% premium = physical reasserting over paper."}
+  ],
+  "assessment": "Across gold, silver, copper, and oil the same pattern holds: the headline 'price' is made in leveraged FUTURES on one venue while the DELIVERABLE good trades on others (LBMA, LME, SGE/SHFE, DGCX, physical spot) at different prices. In 2025-26 the divergence became visible and large - silver backwardation (first since 1980), a >$2.50 LBMA-COMEX gold premium, a ~4.2:1 COMEX paper-to-registered ratio, a 12-13% Shanghai physical premium, and a >28% COMEX-LME copper spread blown open by a single tariff (then a record 18% COMEX crash). The DOCUMENTED anchor is the JPMorgan ~$920M spoofing settlement: manipulation of metals futures is a proven fact, not a theory - but it was short-horizon spoofing, so the broader 'permanent suppression' narrative (pushed by directionally-motivated outlets, flagged) remains CONTESTED. The defensible, zero-trust conclusion: the commodity price signal is venue-, leverage-, and policy-contingent; treat the futures print like a BLS headline (the most tradable, not necessarily the most physical, number) and cross-check it against backwardation, cross-exchange premia, registered/eligible stocks, lease rates, and the Eastern physical bid. This complements the gold lens (macro-gold-silver-reprice): not only are nominal gains debasement, the metal price itself is a paper construct that physical periodically overrides. Overlay only; not used in the proofs."
+}

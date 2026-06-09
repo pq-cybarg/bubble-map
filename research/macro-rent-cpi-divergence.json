@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "ALNRI analysis - market rents (Apartment List / Zillow / BLS New-Tenant) vs official CPI shelter: the ~1-year lag in CPI's largest component",
+    "generated": "2026-06-08",
+    "frame": "The 'ALNRI analysis' the user requested: compare the Apartment List National Rent Index (ALNRI), Zillow Observed Rent Index (ZORI), and the BLS New Tenant Rent Index (NTRI / R-CPI-NTR) - all MARKET / new-lease rent gauges - against the OFFICIAL CPI shelter series (Rent of primary residence CUUR0000SEHA + Owners' Equivalent Rent). Shelter is ~1/3 of CPI; because BLS samples the FULL STOCK of existing leases (most reset only annually), official shelter LAGS market rents by ~12 months and misreports every turning point by ~a year. BLS itself built NTRI to show this. This is the concrete deepening of macro-official-data-integrity's CPI-methodology strand.",
+    "WARNING": "EVIDENCE-GRADED. The LAG is a documented, BLS-acknowledged methodological feature - FACT, not manipulation. The observation that the direction of the lag error aligned with policy convenience at each phase is the analytical (contested) layer, labeled. Apartment List / Zillow are private series with their own scope/method caveats; cross-read with BLS NTRI (same microdata).",
+    "method": "Apartment List Research (ALNRI), Zillow Research (ZORI methodology), BLS New Tenant Rent Index + R-CPI-NTR research series + Cleveland Fed/Richmond Fed working papers, FRED CUUR0000SEHA. Provided by the user.",
+    "data_sources": {
+      "ALNRI":"https://www.apartmentlist.com/research/national-rent-data (Apartment List National Rent Index - new-lease median rents)",
+      "ZORI":"https://www.zillow.com/research/methodology-zori-repeat-rent-27092/ (Zillow Observed Rent Index - asking rents, repeat-rent, quality-controlled)",
+      "NTRI":"https://www.bls.gov/pir/new-tenant-rent.htm + https://www.bls.gov/cpi/research-series/r-cpi-ntr.htm (BLS New Tenant Rent Index - official microdata, turnover units only)",
+      "CPI_rent":"https://fred.stlouisfed.org/series/CUUR0000SEHA (CPI-U Rent of primary residence, official)",
+      "analysis":"https://arkominaresearch.substack.com/p/inflation-and-the-fed (paywalled; thesis: 2024 'resurging inflation' was substantially lagged shelter)"
+    },
+    "cross_refs": ["macro-official-data-integrity.json (this is the deep-dive on the CPI shelter strand)","macro-gold-silver-reprice.md (home -81% in gold)","macro-fed-trap-regional.md (the Fed acted on the lagged shelter print)","macro-cre-privatecredit.json (CRE/multifamily valuations tie to actual rents)"]
+  },
+  "the_divergence": {
+    "grade": "STRONG (multiple independent series + BLS's own NTRI)",
+    "facts": [
+      "Dec 2021: Apartment List National Rent Index (ALNRI) +18% YoY; official CPI rent showed ~3% at the SAME time - a ~15pp gap.",
+      "Zillow ZORI ~15.2% YoY (Nov 2021) / ~15% early 2022 vs official CPI rent ~5.5%.",
+      "ALNRI YoY peaked Nov 2021 and LED the peak in rent-CPI by ~16 months.",
+      "BLS New Tenant Rent Index (R-CPI-NTR) uses the SAME microdata as official CPI but keeps only TURNOVER units and dates the price change to when it occurred (not when surveyed) -> it LEADS official CPI rent by ~4 quarters (~1 year). (BLS's own series, confirming the lag.)",
+      "Mechanism: official CPI shelter measures what ALL renters pay this month; most leases reset only annually, so a market-rent shock enters the index slowly, smeared over ~12 months."
+    ],
+    "source": ["https://www.floridarealtors.org/news-media/news-articles/2022/01/cpi-says-rents-3-apartment-list-says-18","https://wolfstreet.com/2023/05/22/rent-inflation-re-accelerates-to-red-hot-all-three-now-agree-zillow-asking-rents-what-big-landlords-said-and-actual-rents-tracked-by-cpi/","https://www.richmondfed.org/research/national_economy/macro_minute/2024/new_renters_and_rent_cpi_20240206"]
+  },
+  "the_two_phase_bias": {
+    "grade": "lag FACT; 'conveniently directional' CONTESTED-analytical",
+    "phase1_understatement_2021_2022": "When market rents exploded (+15-18%), official CPI shelter rose only ~3-5.5%, so headline CPI UNDERSTATED true inflation while the Fed funds rate was still ~0% - i.e., the lag helped justify staying too loose too long ('transitory').",
+    "phase2_overstatement_2023_2025": "When market rents cooled (ALNRI/ZORI flat-to-negative in 2023-24), official CPI shelter stayed ELEVATED for ~a year, propping up headline CPI - the lagged shelter was a large part of the 2024 'inflation is resurging' narrative used to keep policy restrictive (Arkomina thesis).",
+    "implication": "The single most-weighted CPI component is structurally ~1 year stale, so it BIASES the headline in whichever direction is ~12 months out of date - and in 2021-25 that error ran in the policy-convenient direction at each phase (loose when rates were zero, then 'sticky' when cuts would otherwise have been forced). Whether convenient or merely coincidental is the contested layer; the lag and its sign are fact."
+  },
+  "why_it_matters_fiscally": "Shelter ~1/3 of CPI feeds COLA (CPI-W), TIPS, and bracket indexation (macro-official-data-integrity). A smoothed shelter series also avoids spikes that would have forced larger COLA/TIPS payouts at the 2021-22 peak. And it ties to the real economy: CRE/multifamily valuations and private-credit marks depend on ACTUAL rents (macro-cre-privatecredit), not the lagged CPI proxy - so the same lag that flatters the inflation print can mask stress in apartment/CRE collateral.",
+  "edges": [
+    {"from":"ApartmentList_ALNRI","to":"CPI_Rent","instrument":"leading_indicator","amount_usd":null,"date":"2021-2025","status":"leads_~16mo","circular":false,"cancelable":false,"confidence":"high","source":["https://www.floridarealtors.org/news-media/news-articles/2022/01/cpi-says-rents-3-apartment-list-says-18"],"notes":"ALNRI +18% (Dec 2021) vs CPI rent ~3%; ALNRI YoY peak led rent-CPI peak by ~16 months. Market/new-lease vs full-stock."},
+    {"from":"Zillow_ZORI","to":"CPI_Rent","instrument":"leading_indicator","amount_usd":null,"date":"2021-2025","status":"leads","circular":false,"cancelable":false,"confidence":"high","source":["https://www.zillow.com/research/methodology-zori-repeat-rent-27092/"],"notes":"ZORI ~15% (late 2021) vs CPI rent ~5.5%. Asking-rent repeat index."},
+    {"from":"BLS_NTRI","to":"CPI_Rent","instrument":"leading_indicator","amount_usd":null,"date":"ongoing","status":"leads_4q","circular":false,"cancelable":false,"confidence":"high","source":["https://www.bls.gov/pir/new-tenant-rent.htm"],"notes":"BLS's OWN new-tenant series, same microdata, leads official CPI rent by ~4 quarters - BLS confirming the ~1yr lag in its headline shelter measure."},
+    {"from":"CPI_Rent","to":"CPI_Methodology","instrument":"weight_one_third","amount_usd":null,"date":"ongoing","status":"structural","circular":false,"cancelable":false,"confidence":"high","source":["https://www.bls.gov/cpi/factsheets/owners-equivalent-rent-and-rent.htm"],"notes":"Shelter (rent + OER) ~1/3 of CPI; a ~1yr-lagged largest component drives the headline at every turning point."}
+  ],
+  "assessment": "The ALNRI analysis is the cleanest, BLS-confirmed instance of the data-integrity thesis. Three independent market-rent gauges - Apartment List (ALNRI), Zillow (ZORI), and BLS's OWN New Tenant Rent Index - all lead official CPI shelter by ~12-16 months because the official series samples the full stock of mostly-annual leases. Since shelter is ~1/3 of CPI, this guarantees the headline misreports inflation turning points by ~a year: it UNDERSTATED in 2021-22 (market rents +18% vs CPI +3%, while rates were ~0%) and then OVERSTATED in 2023-25 (cooling market rents vs sticky CPI shelter, feeding the 'resurging inflation' narrative that kept policy restrictive). The lag is documented fact - BLS built NTRI to expose it; the only contested part is whether the convenient SIGN of the error at each phase was design or coincidence. Either way, the operational lesson is exact: read ALNRI/ZORI/NTRI for the real shelter signal and treat official CPI shelter (CUUR0000SEHA/OER) as a ~1-year-stale, policy-relevant lagging print. This block deepens macro-official-data-integrity's CPI strand and connects to the gold lens (home -81% in gold) and CRE/private-credit collateral marks. Overlay; not used in the proofs."
+}

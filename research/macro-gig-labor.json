@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "title": "Gig / contingent labor - the precarity buffer the jobs headline obscures, and how it distorts the labor statistics",
+    "generated": "2026-06-08",
+    "frame": "Gig/1099/contingent work is both a real precarity story AND a measurement distortion. The establishment survey (CES) counts W-2 PAYROLL jobs (plus the birth-death model); the household survey (CPS) counts someone EMPLOYED at >=1 hour/week including gig. So gig work (a) is partly invisible to the payroll headline, (b) lets the unemployment rate (U-3) absorb underemployment, and (c) inflates the 'jobs' count via multiple-jobholders (one person, two payrolls). It is the labor-market analogue of the shelter-CPI lag: the headline misses the lived reality.",
+    "WARNING": "EVIDENCE-GRADED. Headline gig counts come substantially from a paystub-vendor aggregator (MakeMyPaystub) and freelance-platform surveys - SECONDARY/promotional, definitions vary (any freelance income vs primary income). Flagged. The structural facts (full-time independents doubling; the Lyft NJ misclassification settlement) are firmer. Kept out of the proofs.",
+    "method": "Gig statistics aggregators + legal/enforcement record (state misclassification settlements) + BLS survey methodology (CES vs CPS). Cross-read with macro-official-data-integrity.",
+    "cross_refs": ["macro-official-data-integrity.json (CES vs CPS, birth-death model, the jobs headline)","macro-rent-cpi-divergence.json (headline-vs-lived-reality pattern)","influence-tbi-policy.json (digital-ID / platform-labor governance)","fin-google-amazon-anthropic-meta.json (AI displacement of knowledge/gig tasks)"]
+  },
+  "scale": {
+    "grade": "directional STRONG; exact shares CONTESTED (definition-dependent, vendor sources)",
+    "facts": [
+      "~70.4M Americans doing freelance/independent work in 2025 (~36% of the workforce per platform surveys); projected ~86.5M (~50%) by 2027.",
+      "Workers receiving a short-term W-2 or 1099 ~27% of all jobs in 2024.",
+      "FULL-TIME independents more than doubled: ~13.6M (2020) -> ~27.7M (2024) - the firmer, more striking structural number.",
+      "Definitions vary widely (any side income vs primary livelihood), so the '36%/50%' headlines overstate full-time gig dependence; the ~27.7M full-time figure is the more conservative anchor."
+    ],
+    "source": ["https://www.makemypaystub.com/reports/gig-economy-statistics"]
+  },
+  "misclassification": {
+    "grade": "STRONG (legal record) + estimate (cost)",
+    "facts": [
+      "Up to ~30% of employers misclassify workers as 1099 contractors, saving ~20-40% on labor costs (no payroll tax, benefits, UI, workers' comp).",
+      "Estimated ~$3-4B/yr in lost federal tax revenue from misclassification.",
+      "Sept 2025: Lyft paid New Jersey ~$19.4M to resolve driver-misclassification/benefits claims (one of many state actions).",
+      "Penalty exposure is real (IRS back-tax assessments; CA fines up to ~$25k/violation) - so misclassification is a documented, enforced phenomenon, not a theory."
+    ],
+    "source": ["https://millershah.com/blog/irs-misclassified-workers/","https://www.tax1099.com/blog/employee-misclassification-how-it-costs-gig-economy-companies/"]
+  },
+  "statistical_distortion": {
+    "grade": "mechanism FACT; magnitude uncertain",
+    "points": [
+      "CES (establishment/payroll survey) primarily captures W-2 jobs at established firms + the birth-death MODEL; pure-1099 gig work is largely outside it - so payroll headlines can miss gig labor entirely.",
+      "CPS (household survey) counts a person EMPLOYED if they worked >=1 hour for pay in the reference week - so a gig worker scraping a few hours counts as 'employed', holding U-3 down even amid underemployment (U-6 captures more but is less cited).",
+      "MULTIPLE JOBHOLDERS: one person with two payroll jobs counts as two 'jobs' in CES - so the jobs-added headline can rise while the number of employed PEOPLE (CPS) stagnates (the CES-CPS divergence seen in 2024-25 alongside the -911k benchmark, macro-official-data-integrity).",
+      "Net effect: gig/contingent work lets the labor headline look stronger and tighter than the lived experience of precarious, benefit-less, multi-job income - the same headline-vs-reality gap as shelter CPI."
+    ]
+  },
+  "bubble_link": "The AI build-out (the proven core) is simultaneously a labor story: AI targets exactly the knowledge/creative/customer-service tasks that gig platforms intermediate, while gig work is the buffer absorbing displaced or underemployed workers without benefits or job security. A 'strong jobs' headline built partly on multiple-jobholders and gig hours can coexist with deteriorating labor quality - which the bubble's productivity narrative needs to obscure.",
+  "edges": [
+    {"from":"Gig_Platforms","to":"Contingent_Labor","instrument":"misclassification","amount_usd":null,"date":"2024-2025","status":"enforced","circular":false,"cancelable":false,"confidence":"med","source":["https://millershah.com/blog/irs-misclassified-workers/"],"notes":"~30% of employers misclassify (save 20-40% labor cost); ~$3-4B/yr lost tax; Lyft NJ ~$19.4M settlement (Sep 2025)."},
+    {"from":"Contingent_Labor","to":"Jobs_Headline","instrument":"statistical_distortion","amount_usd":null,"date":"ongoing","status":"structural","circular":false,"cancelable":false,"confidence":"med","source":["https://www.makemypaystub.com/reports/gig-economy-statistics"],"notes":"Gig invisible to CES payroll; CPS counts >=1hr/wk as employed; multiple-jobholders inflate the jobs count -> headline stronger than lived reality (ties the CES-CPS divergence + -911k benchmark)."}
+  ],
+  "assessment": "Gig/contingent labor is both real precarity and a statistical fog machine. The firmest figure is full-time independents roughly DOUBLING (13.6M->27.7M, 2020->2024); the splashier '36%/50% of the workforce' counts are vendor-survey, definition-dependent, and flagged. Misclassification is documented and enforced (Lyft's $19.4M NJ settlement; ~$3-4B/yr lost tax; ~30% of employers). The measurement consequence is concrete: pure-1099 work sits largely outside the payroll (CES) headline; the household (CPS) survey counts >=1hr/week as employed, so U-3 absorbs underemployment; and multiple-jobholders inflate the jobs-added count - exactly the CES-CPS divergence that accompanied the -911k 2025 benchmark (macro-official-data-integrity). It is the labor twin of the shelter-CPI lag: the headline looks healthier than the lived reality. And it is the buffer absorbing the very workers the AI build-out threatens. Overlay; not used in the proofs."
+}

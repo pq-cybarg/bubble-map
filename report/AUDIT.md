@@ -4,7 +4,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 - `core_scc_robust` = **11**
 - `core_scc_all` = **12**
-- `cycles` = **15**
+- `cycles` = **16**
 - `nvda_headline_pct` = **56**
 - `nvda_funded_pct` = **10**
 - `home_gold_idx_2026` = **19**
@@ -14,7 +14,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Inventory
 - models: 25 (z3 .py: 7) + TLA + Alloy
-- research: 41 json / 31 md
+- research: 45 json / 35 md
 - data outputs: 12
 - reports: 7
 

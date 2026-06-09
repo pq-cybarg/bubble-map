@@ -26,9 +26,9 @@ We prove the financial half. We evidence-grade the rest.
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 41 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **159 nodes, 168 directed edges.**
+Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **170 nodes, 179 directed edges.**
 
-Each edge is tagged with a **layer**: **107 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **61 structural** edges (governance, legal/regulatory, security, ownership relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
+Each edge is tagged with a **layer**: **109 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **70 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 
 **Cross-layer connectors** (nodes ranked by distinct neighbor-sectors bridged) quantify the bridge nodes: **Hedera** spans the most sectors (10 — the enterprise-DLT council overlap), then **NVIDIA** and **Google** (the AI core also sitting on the DLT council), with **MGX** bridging ai-lab / Gulf-bigtech / exchange / SPV (the single Abu-Dhabi fund touching Stargate, Binance, and TikTok-US).
 

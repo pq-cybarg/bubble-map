@@ -6,7 +6,7 @@
 The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
 
 ## What is machine-proven (not asserted)
-- **An 11-firm circular core** (Tarjan SCC): NVIDIA, OpenAI, Oracle, CoreWeave, Microsoft, Amazon, Anthropic, AMD, Crusoe, Lambda + lenders; **15 round-trip cycles**.
+- **An 11-firm circular core** (Tarjan SCC): NVIDIA, OpenAI, Oracle, CoreWeave, Microsoft, Amazon, Anthropic, AMD, Crusoe, Lambda + lenders; **16 round-trip cycles**.
 - **OpenAI needs ≥ $1.03 trillion of external capital** to honor its commitments (Z3 T3, UNSAT); the **core is insolvent at zero external inflow** (T4) — the formal signature of a bubble.
 - **NVIDIA vendor-financing self-funding: 10% funded-only / 56% headline.**
 - **SpaceX is separable** — the only node circular *solely via cancelable edges* — but **financially cross-held** by Google's ~$100B equity stake + the xAI merger.
@@ -30,4 +30,4 @@ Beyond the proven core, the corpus documents — each graded `fact|contested|wea
 Claims cite primary government and court records: SCOTUS opinions, DOJ/SDNY releases, Treasury/OFAC, the Fifth Circuit, SEC, Congress.gov, FDIC FOIA disclosures, ICIJ, NIST. `models/audit.py` and `models/cross_review.py` run via `scripts/new-research.sh`; current audit 0 flags.
 
 ## Reproduce
-`bash run_all.sh` runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models (23 runnable models). 41 cited research blocks in `research/`.
+`bash run_all.sh` runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models (23 runnable models). 45 cited research blocks in `research/`.

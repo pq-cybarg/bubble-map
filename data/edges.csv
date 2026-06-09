@@ -30,6 +30,7 @@ BlueOwl,Meta_Hyperion_SPV,equity,27000000000,completed,False,False,fin-google-am
 Amazon,Anthropic,equity,25000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
 OpenAI,CoreWeave,compute_commitment,22400000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 CoreWeave,SINK_debt,debt,21373000000,outstanding,False,False,fin-coreweave-oracle.json
+CoreWeave,SINK_lenders,debt,21000000000,reported-10K,False,False,spec-sec-filings-primary.json
 Microsoft,Nebius,compute_commitment,19400000000,active,False,False,fin-coreweave-oracle.json
 SoftBank,Stargate,equity,19000000000,committed,False,False,fin-coreweave-oracle.json
 OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.json
@@ -64,6 +65,7 @@ NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
 NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
 Disney,OpenAI,equity,1000000000,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 NVIDIA,Nokia,equity,1000000000,committed,False,False,fin-nvidia-openai.json
+JPMorgan,Metals_Futures,other,920000000,settled,False,False,macro-futures-vs-physical.json
 NVIDIA,Nscale,equity,600000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 First_Brands,UBS_OConnor,debt,500000000,2025,False,False,macro-firstbrands-ubs.json
 Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.json
@@ -79,6 +81,7 @@ SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
 InQTel,Palantir,relationship,2000000,invested,False,False,spec-disclosures-surveillance.json
 Coinbase,FDIC,regulatory_legal,188440,won-fees,False,False,spec-sec-sdny-regulatory.json
+Microsoft,CoreWeave,revenue_share,,reported-10K,True,False,spec-sec-filings-primary.json
 Boskin_Commission,CPI_Methodology,other,,adopted,False,False,macro-official-data-integrity.json
 SSA,CPI_Methodology,other,,structural,False,False,macro-official-data-integrity.json
 Treasury,CPI_Methodology,other,,structural,False,False,macro-official-data-integrity.json
@@ -99,6 +102,10 @@ AntGroup,HKDA,relationship,,launched-then-paused,False,False,spec-exchanges-asia
 PBoC,AntGroup,regulatory_legal,,ordered,False,False,spec-exchanges-asia.json
 SBI,Ripple,equity,,held-~9pct,False,False,spec-exchanges-asia.json
 MGX,Stargate,investment,,backer,False,False,spec-exchanges-asia.json
+US_Tariff_Policy,Copper,other,,event,False,False,macro-futures-vs-physical.json
+COMEX,Silver_Physical,other,,stressed,False,False,macro-futures-vs-physical.json
+Gig_Platforms,Contingent_Labor,other,,enforced,False,False,macro-gig-labor.json
+Contingent_Labor,Jobs_Headline,other,,structural,False,False,macro-gig-labor.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
@@ -164,6 +171,10 @@ SEALSQ,WeCan_Group,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,SEALCOIN,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,WISeART,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 WISeSat,SpaceX,relationship,,rideshare-customer,False,False,fin-sealsq-wisekey-global.json
+ApartmentList_ALNRI,CPI_Rent,other,,leads_~16mo,False,False,macro-rent-cpi-divergence.json
+Zillow_ZORI,CPI_Rent,other,,leads,False,False,macro-rent-cpi-divergence.json
+BLS_NTRI,CPI_Rent,other,,leads_4q,False,False,macro-rent-cpi-divergence.json
+CPI_Rent,CPI_Methodology,other,,structural,False,False,macro-rent-cpi-divergence.json
 Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
 Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
 MP_Materials,Defense_Primes,offtake,,committed,True,False,macro-critical-minerals.json

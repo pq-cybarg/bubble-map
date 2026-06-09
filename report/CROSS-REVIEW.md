@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 25 files
-- **Google** — 21 files
-- **Oracle** — 15 files
-- **OpenAI** — 15 files
-- **Amazon** — 14 files
-- **Anthropic** — 12 files
-- **Microsoft** — 11 files
-- **Stargate** — 10 files
+- **Meta** — 27 files
+- **Google** — 23 files
+- **Oracle** — 16 files
+- **Amazon** — 16 files
+- **OpenAI** — 16 files
+- **Anthropic** — 14 files
+- **Microsoft** — 12 files
+- **Stargate** — 11 files
+- **Chainlink** — 10 files
+- **JPMorgan** — 10 files
+- **NVIDIA** — 10 files
 - **a16z** — 9 files
-- **JPMorgan** — 9 files
-- **NVIDIA** — 9 files
-- **FDIC** — 9 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-official-data-integrity.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 2 shared entities
-- fin-google-amazon-anthropic-meta.json: 1 shared entities
-- fin-meta-family.json: 1 shared entities
-- macro-history-dereg-manipulation.json: 1 shared entities
-- macro-fdic.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- macro-carry-trades.json: 1 shared entities
+## Newest file `macro-gig-labor.json` — related files by shared entities (verify cross-refs exist)
+- spec-crypto-sec-epstein.json: 5 shared entities
+- fin-hedera-connections.json: 5 shared entities
+- spec-sec-filings-primary.json: 5 shared entities
+- fin-meta-family.json: 4 shared entities
+- macro-crqc-quantum-landscape.json: 4 shared entities
+- sec-filings.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
+- spec-telecom-satellite.json: 4 shared entities

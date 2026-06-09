@@ -127,6 +127,10 @@ NODE_META = {
  "CBO":("statistical_agency",True),"SSA":("statistical_agency",True),"Boskin_Commission":("commission",False),
  "Federal_Reserve":("central_bank",True),"WhiteHouse":("state",True),
  "CPI_Methodology":("statistic",False),"Jobs_Headline":("statistic",False),"PCE":("statistic",False),"QCEW_Benchmark":("statistic",False),
+ "CPI_Rent":("statistic",False),"BLS_NTRI":("statistic",False),"ApartmentList_ALNRI":("data_provider",False),"Zillow_ZORI":("data_provider",False),
+ # commodities / exchanges / labor
+ "COMEX":("exchange",True),"Metals_Futures":("commodity_market",False),"Silver_Physical":("commodity",False),"Copper":("commodity",False),
+ "US_Tariff_Policy":("state",True),"Gig_Platforms":("labor_platform",False),"Contingent_Labor":("labor",False),
  # persons / misc
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),

@@ -9,10 +9,12 @@ Amazon,hyperscaler,True,True,True,0.938
 AntGroup,bigtech_asia,True,False,False,0.0
 Anthropic,ai_lab,False,True,True,0.643
 Anthropic AI infrastructure,other,True,False,False,0.0
+ApartmentList_ALNRI,data_provider,False,False,False,0.0
 Apollo,private_credit,True,False,False,0.0
 Apollo_Blackstone,private_credit,True,False,False,0.0
 Apple,hyperscaler,True,False,False,0.0
 BLS,statistical_agency,True,False,False,0.0
+BLS_NTRI,statistic,False,False,False,0.0
 Binance,exchange,True,False,False,0.0
 BlackRock,private_credit,True,False,False,0.0
 Blackstone,private_credit,True,False,False,0.0
@@ -21,7 +23,9 @@ Boeing,defense,True,False,False,0.0
 Boskin_Commission,commission,False,False,False,0.0
 Broadcom,chip_vendor,True,False,False,0.0
 ByteDance,bigtech_asia,True,False,False,0.0
+COMEX,exchange,True,False,False,0.0
 CPI_Methodology,statistic,False,False,False,0.0
+CPI_Rent,statistic,False,False,False,0.0
 CZ,person,False,False,False,0.0
 Canary,financier,True,False,False,0.0
 Chainlink,crypto_infra,True,False,False,0.0
@@ -29,7 +33,9 @@ Coinbase,exchange,True,False,False,0.0
 ColibriTD,pqc_quantum,False,False,False,0.0
 Congress,state,True,False,False,0.0
 ConsenSys,crypto_infra,True,False,False,0.0
-CoreWeave,neocloud,False,True,True,0.632
+Contingent_Labor,labor,False,False,False,0.0
+Copper,commodity,False,False,False,0.0
+CoreWeave,neocloud,False,True,True,0.709
 Creditors,creditor,False,False,False,0.0
 Crusoe,neocloud,False,True,True,1.0
 Crypto_Standards,standards,False,False,False,0.0
@@ -49,6 +55,7 @@ FinCEN,regulator,True,False,False,0.0
 First_Brands,industrial,False,False,False,0.0
 GIC,financier,True,False,False,0.0
 Georgia_MoJ,state,True,False,False,0.0
+Gig_Platforms,labor_platform,False,False,False,0.0
 Globalstar,satellite,True,False,False,0.0
 Google,hyperscaler,True,False,False,0.0
 Government_of_Gujarat,state,True,False,False,0.0
@@ -75,6 +82,7 @@ MGX,financier,True,False,False,0.0
 MP_Materials,critical_minerals,True,False,False,0.0
 Meta,hyperscaler,True,False,False,0.0
 Meta_Hyperion_SPV,spv,False,False,False,0.0
+Metals_Futures,commodity_market,False,False,False,0.0
 Microsoft,hyperscaler,True,True,True,0.956
 Midjourney,ai_lab,False,False,False,0.0
 Miraex,pqc_quantum,False,False,False,0.0
@@ -121,12 +129,13 @@ SINK_bondmarket,sink,True,False,False,0.0
 SINK_capex,sink,True,False,False,0.0
 SINK_debt,sink,True,False,False,0.0
 SINK_investors,sink,True,False,False,0.0
-SINK_lenders,sink,True,True,True,0.199
+SINK_lenders,sink,True,True,True,0.445
 SSA,statistical_agency,True,False,False,0.0
 SaltTyphoon,threat_actor,False,False,False,0.0
 SamouraiWallet,privacy_tool,False,False,False,0.0
 ScaleAI,ai_data,True,False,False,0.0
 SilverLake,financier,True,False,False,0.0
+Silver_Physical,commodity,False,False,False,0.0
 SoftBank,financier,True,False,False,0.0
 SpaceX,space_real_economy,True,True,False,0.171
 SpaceX_IPO_Public,exogenous_source,True,False,False,0.0
@@ -148,6 +157,7 @@ USD1,stablecoin,False,False,False,0.0
 US_Allied_Military,defense,True,False,False,0.0
 US_Banks,bank,True,False,False,0.0
 US_Government,state,True,False,False,0.0
+US_Tariff_Policy,state,True,False,False,0.0
 US_Telecoms,telecom,True,False,False,0.0
 VanLoon,person,False,False,False,0.0
 Vantage,neocloud,False,False,False,0.0
@@ -156,5 +166,6 @@ WISeART,other,True,False,False,0.0
 WISeSat,satellite,False,False,False,0.0
 WeCan_Group,crypto_infra,False,False,False,0.0
 WhiteHouse,state,True,False,False,0.0
+Zillow_ZORI,data_provider,False,False,False,0.0
 a16z,financier,True,False,False,0.0
 xAI,ai_lab,False,False,False,0.0

@@ -40,6 +40,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "ApartmentList_ALNRI": {
+      "sector": "data_provider",
+      "has_exogenous_revenue": false
+    },
     "Apollo": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -55,6 +59,10 @@
     "BLS": {
       "sector": "statistical_agency",
       "has_exogenous_revenue": true
+    },
+    "BLS_NTRI": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "Binance": {
       "sector": "exchange",
@@ -88,7 +96,15 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "COMEX": {
+      "sector": "exchange",
+      "has_exogenous_revenue": true
+    },
     "CPI_Methodology": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "CPI_Rent": {
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
@@ -119,6 +135,14 @@
     "ConsenSys": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
+    },
+    "Contingent_Labor": {
+      "sector": "labor",
+      "has_exogenous_revenue": false
+    },
+    "Copper": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "CoreWeave": {
       "sector": "neocloud",
@@ -199,6 +223,10 @@
     "Georgia_MoJ": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Gig_Platforms": {
+      "sector": "labor_platform",
+      "has_exogenous_revenue": false
     },
     "Globalstar": {
       "sector": "satellite",
@@ -302,6 +330,10 @@
     },
     "Meta_Hyperion_SPV": {
       "sector": "spv",
+      "has_exogenous_revenue": false
+    },
+    "Metals_Futures": {
+      "sector": "commodity_market",
       "has_exogenous_revenue": false
     },
     "Microsoft": {
@@ -512,6 +544,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Silver_Physical": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "SoftBank": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -596,6 +632,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "US_Tariff_Policy": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "US_Telecoms": {
       "sector": "telecom",
       "has_exogenous_revenue": true
@@ -628,6 +668,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Zillow_ZORI": {
+      "sector": "data_provider",
+      "has_exogenous_revenue": false
+    },
     "a16z": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -638,6 +682,32 @@
     }
   },
   "edges": [
+    {
+      "from": "Microsoft",
+      "to": "CoreWeave",
+      "instrument": "revenue_share",
+      "layer": "financial",
+      "raw_instrument": "revenue_share",
+      "amount_usd": null,
+      "status": "reported-10K",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "CoreWeave 10-K: ~67% of FY2025 revenue from Microsoft - primary-source confirmation of the concentration the SCC encodes (a hyperscaler funding a neocloud that buys NVIDIA)."
+    },
+    {
+      "from": "CoreWeave",
+      "to": "SINK_lenders",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "debt",
+      "amount_usd": 21000000000,
+      "status": "reported-10K",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "Total debt >$21B (from <$8B 2024), ~11% variable; Q4 interest $388M (~1/3 of revenue). The leverage that makes the cascade node fragile."
+    },
     {
       "from": "Boskin_Commission",
       "to": "CPI_Methodology",
@@ -1118,6 +1188,71 @@
       "cancelable": false,
       "source_file": "spec-exchanges-asia.json",
       "note": "MGX (Abu Dhabi AI fund) is also a backer of the Stargate AI-infra program (OpenAI/SoftBank/Oracle) - so the SAME Gulf fund touches the AI core, Binance, and TikTok. Cross-ref fin-google-amazon-anthropic-meta / Stargate nodes."
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Metals_Futures",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spoofing_settlement",
+      "amount_usd": 920000000,
+      "status": "settled",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-futures-vs-physical.json",
+      "note": "JPM ~$920M CFTC/DOJ settlement for spoofing precious-metals + Treasury futures - documented manipulation of the paper market (the factual anchor; not proof of long-run suppression)."
+    },
+    {
+      "from": "US_Tariff_Policy",
+      "to": "Copper",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "policy_distortion",
+      "amount_usd": null,
+      "status": "event",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-futures-vs-physical.json",
+      "note": "50% copper-semis tariff -> COMEX-LME spread >28% then COMEX -18% single-day record drop. Policy as a cross-exchange price distortion."
+    },
+    {
+      "from": "COMEX",
+      "to": "Silver_Physical",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "paper_claim_ratio",
+      "amount_usd": null,
+      "status": "stressed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-futures-vs-physical.json",
+      "note": "~4.2 paper claims per registered deliverable oz; backwardation + LBMA premium + Shanghai 12-13% premium = physical reasserting over paper."
+    },
+    {
+      "from": "Gig_Platforms",
+      "to": "Contingent_Labor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "misclassification",
+      "amount_usd": null,
+      "status": "enforced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gig-labor.json",
+      "note": "~30% of employers misclassify (save 20-40% labor cost); ~$3-4B/yr lost tax; Lyft NJ ~$19.4M settlement (Sep 2025)."
+    },
+    {
+      "from": "Contingent_Labor",
+      "to": "Jobs_Headline",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "statistical_distortion",
+      "amount_usd": null,
+      "status": "structural",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gig-labor.json",
+      "note": "Gig invisible to CES payroll; CPS counts >=1hr/wk as employed; multiple-jobholders inflate the jobs count -> headline stronger than lived reality (ties the CES-CPS divergence + -911k benchmark)."
     },
     {
       "from": "Disney",
@@ -2498,6 +2633,58 @@
       "note": "WISeSat buys rideshare slots on SpaceX Falcon 9 Transporter missions (21st sat, Transporter-16, Mar 30 2026, Vandenberg). CUSTOMER relationship ONLY - explicitly NOT a SpaceX strategic partnership/investment. Prevents over-stating the SpaceX link."
     },
     {
+      "from": "ApartmentList_ALNRI",
+      "to": "CPI_Rent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading_indicator",
+      "amount_usd": null,
+      "status": "leads_~16mo",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-rent-cpi-divergence.json",
+      "note": "ALNRI +18% (Dec 2021) vs CPI rent ~3%; ALNRI YoY peak led rent-CPI peak by ~16 months. Market/new-lease vs full-stock."
+    },
+    {
+      "from": "Zillow_ZORI",
+      "to": "CPI_Rent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading_indicator",
+      "amount_usd": null,
+      "status": "leads",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-rent-cpi-divergence.json",
+      "note": "ZORI ~15% (late 2021) vs CPI rent ~5.5%. Asking-rent repeat index."
+    },
+    {
+      "from": "BLS_NTRI",
+      "to": "CPI_Rent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading_indicator",
+      "amount_usd": null,
+      "status": "leads_4q",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-rent-cpi-divergence.json",
+      "note": "BLS's OWN new-tenant series, same microdata, leads official CPI rent by ~4 quarters - BLS confirming the ~1yr lag in its headline shelter measure."
+    },
+    {
+      "from": "CPI_Rent",
+      "to": "CPI_Methodology",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "weight_one_third",
+      "amount_usd": null,
+      "status": "structural",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-rent-cpi-divergence.json",
+      "note": "Shelter (rent + OER) ~1/3 of CPI; a ~1yr-lagged largest component drives the headline at every turning point."
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -2824,10 +3011,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 159,
-    "num_edges": 168,
-    "num_financial_edges": 107,
-    "num_structural_edges": 61,
+    "num_nodes": 170,
+    "num_edges": 179,
+    "num_financial_edges": 109,
+    "num_structural_edges": 70,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -2875,8 +3062,16 @@
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
-    "num_elementary_cycles": 15,
+    "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
       [
         "Amazon",
         "Anthropic"
@@ -2886,21 +3081,12 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -2913,10 +3099,9 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -2935,6 +3120,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -3030,6 +3221,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ApartmentList_ALNRI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Apollo": {
         "total_usd": 40000000000,
         "circular_usd": 0,
@@ -3052,6 +3250,13 @@
         "in_robust_core": false
       },
       "BLS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BLS_NTRI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3114,7 +3319,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "COMEX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CPI_Methodology": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CPI_Rent": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3170,10 +3389,24 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Contingent_Labor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Copper": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CoreWeave": {
-        "total_usd": 78382000000,
-        "circular_usd": 49509000000,
-        "circularity_ratio": 0.632,
+        "total_usd": 99382000000,
+        "circular_usd": 70509000000,
+        "circularity_ratio": 0.709,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3310,6 +3543,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Gig_Platforms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Globalstar": {
         "total_usd": 13300000000,
         "circular_usd": 0,
@@ -3395,7 +3635,7 @@
         "in_robust_core": false
       },
       "JPMorgan": {
-        "total_usd": 2300000000,
+        "total_usd": 3220000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3487,6 +3727,13 @@
       },
       "Meta_Hyperion_SPV": {
         "total_usd": 75000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Metals_Futures": {
+        "total_usd": 920000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3815,9 +4062,9 @@
         "in_robust_core": false
       },
       "SINK_lenders": {
-        "total_usd": 47425000000,
-        "circular_usd": 9425000000,
-        "circularity_ratio": 0.199,
+        "total_usd": 68425000000,
+        "circular_usd": 30425000000,
+        "circularity_ratio": 0.445,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3850,6 +4097,13 @@
         "in_robust_core": false
       },
       "SilverLake": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Silver_Physical": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -4003,6 +4257,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Tariff_Policy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Telecoms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4053,6 +4314,13 @@
         "in_robust_core": false
       },
       "WhiteHouse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zillow_ZORI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -4198,6 +4466,23 @@
         "both_layers": true
       },
       {
+        "node": "CoreWeave",
+        "degree": 10,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "private_credit",
+          "sink"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 3,
+        "layers": [
+          "financial"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Oracle",
         "degree": 5,
         "neighbor_sectors": [
@@ -4232,21 +4517,20 @@
         "both_layers": true
       },
       {
-        "node": "CoreWeave",
-        "degree": 8,
+        "node": "JPMorgan",
+        "degree": 4,
         "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "private_credit",
-          "sink"
+          "commodity_market",
+          "crypto_infra",
+          "spv"
         ],
-        "n_neighbor_sectors": 5,
-        "source_files": 2,
+        "n_neighbor_sectors": 3,
+        "source_files": 3,
         "layers": [
-          "financial"
+          "financial",
+          "structural"
         ],
-        "both_layers": false
+        "both_layers": true
       },
       {
         "node": "Binance",
@@ -4293,6 +4577,22 @@
         "source_files": 3,
         "layers": [
           "financial"
+        ],
+        "both_layers": false
+      },
+      {
+        "node": "CPI_Methodology",
+        "degree": 4,
+        "neighbor_sectors": [
+          "commission",
+          "regulator",
+          "statistic",
+          "statistical_agency"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 2,
+        "layers": [
+          "structural"
         ],
         "both_layers": false
       },
@@ -4358,36 +4658,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 3,
-        "neighbor_sectors": [
-          "other",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 2,
-        "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "xAI",
-        "degree": 4,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 3,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       }
     ]
   }

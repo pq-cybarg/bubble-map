@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "SEC filings, primary-source pass - the circular-funding thesis in the companies' OWN risk factors and financials (EDGAR)",
+    "generated": "2026-06-08",
+    "frame": "Zero-trust on secondary press: re-anchor the proven financial core to PRIMARY SEC filings (10-K/10-Q/8-K/S-1/6-K/13F on EDGAR). The point - the firms' own mandatory disclosures describe the circular concentration and leverage the SCC/Z3/TLA+ models formalize. Customer-concentration and going-concern-adjacent risk language is the 'circular core' stated in legalese; the variable-rate debt load is the cascade fragility.",
+    "WARNING": "Filings corroborate, they do NOT change the proofs (the proofs already ran on the consolidated graph). Figures are as-reported by the filer; 'as-reported' is itself an object of scrutiny (non-GAAP add-backs, segment definitions). Primary links given so any number is checkable on EDGAR.",
+    "method": "SEC EDGAR (sec.gov/Archives) + filer 10-K/10-Q text, cross-read with StockTitan/IndexBox extractions; verify against the filing itself.",
+    "cross_refs": ["fin-coreweave-oracle.json","fin-nvidia-openai.json","fin-microsoft-openai.json","fin-google-amazon-anthropic-meta.json","sec-filings.json (the prior S-1/status tracker)","macro-official-data-integrity.json (as-reported scrutiny)"]
+  },
+  "filings": [
+    {
+      "filer":"CoreWeave, Inc. (CRWV)","cik":"1769628","form":"10-K FY2025","filed":"2026",
+      "edgar":"https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm",
+      "key_disclosures":[
+        "Revenue ~$5.1B (FY2025), up sharply YoY.",
+        "CUSTOMER CONCENTRATION: ~67% of 2025 revenue from Microsoft; backlog anchored to a handful of counterparties - OpenAI (~$22.4B), Meta (~$35.2B implied), Anthropic, Jane Street.",
+        "DEBT: total >$21B (from <$8B in 2024); large portion VARIABLE-rate averaging ~11%; Q4-2025 interest expense $388M (~1/3 of quarterly revenue).",
+        "Net loss ~$1.2B (FY2025); 43 data-center sites, >850 MW active power; continued dependence on financing + stable power markets.",
+        "Risk factors explicitly flag dependence on a few customers, contract renegotiation/cancellation, and customers building in-house compute."
+      ],
+      "thesis_link":"This is the cascade node (TLA+): a neocloud whose revenue is ~2/3 one customer and whose ~$21B variable-rate debt eats ~1/3 of revenue in interest. The filing's own concentration + leverage language IS the OpenAI->CoreWeave->Oracle fragility the model traces.",
+      "grade":"STRONG (primary 10-K)"
+    },
+    {
+      "filer":"NVIDIA Corp (NVDA)","cik":"1045810","form":"10-K FY2025","filed":"2025",
+      "edgar":"https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/nvda-20250126.htm",
+      "key_disclosures":[
+        "Customer concentration disclosed: Direct Customer A ~12%, B ~11%, C ~11% of FY2025 revenue (each >=10%).",
+        "Subsequent analyses: top-4 direct customers ~61% of Q3-FY2026 sales; concentration grew from ~36% to ~61% in a year.",
+        "Risk factor: 'A significant amount of our revenue stems from a limited number of partners and distributors... revenue could be adversely affected if we lose... any of these end customers.'"
+      ],
+      "thesis_link":"NVIDIA's own filing confirms the demand side of the loop is a handful of buyers (the same hyperscalers/neoclouds it invests in). Rising 36%->61% concentration is the SCC tightening - corroborates the vendor-financing self-funding metric (build_graph: ~10% funded / ~56% headline).",
+      "grade":"STRONG (primary 10-K)"
+    }
+  ],
+  "pull_queue":[
+    "Microsoft 10-Q: OpenAI equity-method losses (the ~$135B marked stake / cash-invested gap reconciled in spec-sec-sdny via cross-review).",
+    "Oracle 10-K/10-Q: RPO (remaining performance obligations) backlog jump + the OpenAI/Stargate-linked capacity commitments + debt issuance for capex.",
+    "Microsoft/Amazon/Google 10-K: capex run-rate + 'AI infrastructure' commitments; Amazon Anthropic carrying value.",
+    "SpaceX/SPCX S-1/S-1/A (CIK 1181412): revenue mix + the Google equity stake + cancelable compute deals (already in fin-spacex-spcx).",
+    "13F cross-holdings: hyperscaler stakes in labs/neoclouds (the equity edges of the SCC)."
+  ],
+  "edges":[
+    {"from":"Microsoft","to":"CoreWeave","instrument":"revenue_share","amount_usd":null,"date":"2025","status":"reported-10K","circular":true,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm"],"notes":"CoreWeave 10-K: ~67% of FY2025 revenue from Microsoft - primary-source confirmation of the concentration the SCC encodes (a hyperscaler funding a neocloud that buys NVIDIA)."},
+    {"from":"CoreWeave","to":"SINK_lenders","instrument":"debt","amount_usd":21000000000,"date":"2025","status":"reported-10K","circular":false,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm"],"notes":"Total debt >$21B (from <$8B 2024), ~11% variable; Q4 interest $388M (~1/3 of revenue). The leverage that makes the cascade node fragile."}
+  ],
+  "assessment": "Re-anchoring to primary EDGAR filings strengthens the core finding without changing a proof: the firms DISCLOSE the circular concentration and leverage themselves. CoreWeave's FY2025 10-K states ~67% revenue from Microsoft, >$21B debt (from <$8B) at ~11% variable with $388M quarterly interest (~1/3 of revenue), and a $1.2B net loss - the exact fragility the TLA+ cascade and the 'insolvent at zero inflow' Z3 result describe, in the filer's own risk language. NVIDIA's 10-K discloses customer concentration (A/B/C each >=10%; ~36%->61% in a year) - the demand side of the loop, corroborating the vendor-financing self-funding metric. The honest caveat: 'as reported' is itself contestable (non-GAAP add-backs, segment definitions, RPO timing) - the same scrutiny the data-integrity block applies to government statistics applies to corporate filings. A pull-queue lists the next primary documents (Microsoft/Oracle/Amazon/Google capex + equity-method, SpaceX S-1, 13F cross-holdings). Overlay/corroboration layer; the proofs already stand on the consolidated graph."
+}

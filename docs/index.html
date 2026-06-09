@@ -36,12 +36,19 @@ th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-alig
 ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600px){ul.src{columns:1}}
 </style></head>
 <body>
+<div style="background:#0b0e14;border-bottom:1px solid #22304a;padding:10px 24px;font-size:13px"><div class=wrap style="padding:0">
+<a href="index.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Home</a>
+<a href="dashboard.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Dashboard</a>
+<a href="research.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Research index</a>
+<a href="methodology.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Methodology</a>
+<a href="globe.html" style="color:#7fd1ff;text-decoration:none">Globe</a>
+</div></div>
 <header><div class=wrap>
 <div class=tag>reproducible · source-cited · evidence-graded</div>
 <h1>Bubble&nbsp;Map</h1>
 <div class=thesis>A reproducible, source-cited map of the AI capital loop and the systems around it: a circular core of firms that book each other's spending as revenue and is solvent only while external capital flows, gated by adversary chokepoints (China rare earths, Russia enrichment), wired into the banking, energy, defense, crypto, telecom, and identity layers. The financial core is machine-checked with Z3 / TLA+ / Alloy. Every other thread is graded <code>fact · contested · weak · unsupported</code> and excluded from the proofs.</div>
 <div class=kpis>
-<span><b>12</b>firm circular core (11 robust)</span><span><b>15</b>round-trip cycles</span><span><b>159 / 168</b>graph nodes / edges</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>-81%</b>US home in gold since 1998</span><span><b>+1985% / -69%</b>NVDA vs S&P in gold</span><span><b>41</b>cited research blocks</span><span><b>23</b>runnable models</span>
+<span><b>12</b>firm circular core (11 robust)</span><span><b>15</b>round-trip cycles</span><span><b>170 / 179</b>graph nodes / edges</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>-81%</b>US home in gold since 1998</span><span><b>+1985% / -69%</b>NVDA vs S&P in gold</span><span><b>45</b>cited research blocks</span><span><b>23</b>runnable models</span>
 </div>
 </div></header>
 <div class=wrap>
@@ -67,6 +74,8 @@ ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600p
   <a class=card id=report href="#"><b>📄 Full report</b><p><code>report/UNMASKING.md</code> — the complete write-up, layer by layer, with the honesty ledger.</p></a>
   <a class=card href="https://github.com/pq-cybarg/bubble-map/tree/main/zkage"><b>🔐 Age verification: steelman &amp; refutation</b><p>The strongest ZK age proof, and the case that the requirement itself should be opposed (surveillance, honeypot, futility-under-breach).</p></a>
   <a class=card id=audit href="#"><b>✅ Audit &amp; cross-review</b><p><code>report/AUDIT.md</code> + <code>report/CROSS-REVIEW.md</code> — cross-document number/coverage checks and edge-amount reconciliation. Current audit: 0 flags.</p></a>
+  <a class=card href="research.html"><b>🗂️ Research index</b><p>All 45 cited research blocks, grouped by theme, each linking to its structured data and write-up.</p></a>
+  <a class=card href="methodology.html"><b>🧪 Methodology</b><p>How the corpus is built, the grading scale, the graph layers and proof-integrity check, the consistency tooling, and how to reproduce.</p></a>
 </div>
 
 <h2 id=proven>What is machine-checked</h2>
@@ -84,7 +93,7 @@ ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600p
 <tr><td>Z3 — Fed policy (F1–F3)</td><td>no single rate satisfies the divergent targets (UNSAT)</td></tr>
 <tr><td>Z3 — defense / power / HALEU</td><td>rare-earth independence and firm-power adequacy infeasible on the stated timeline (UNSAT)</td></tr>
 </tbody></table>
-<p class=mut>Edges are tagged by layer: 107 financial (capital/credit/compute) and 61 structural (governance/legal/security/ownership). The SCC over the financial layer alone equals the SCC over all edges, so the structural overlay adds no cycle to the core. Full verdict table, the cross-layer connector ranking, and the scenario engine (BASE / BULL / BEAR) are on the <a href="dashboard.html">dashboard</a>.</p>
+<p class=mut>Edges are tagged by layer: 109 financial (capital/credit/compute) and 70 structural (governance/legal/security/ownership/statistics). The SCC over the financial layer alone equals the SCC over all edges, so the structural overlay adds no cycle to the core. Full verdict table, the cross-layer connector ranking, and the scenario engine (BASE / BULL / BEAR) are on the <a href="dashboard.html">dashboard</a>.</p>
 
 <h2 id=overlays>Evidence-graded overlays</h2>
 <p class=mut>Layers beyond the financial core. Each is graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3 / TLA+ / Alloy proofs.</p>
@@ -98,6 +107,10 @@ ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600p
 <tr><td>Disclosures + surveillance</td><td>Snowden (PRISM, Bullrun, Dual_EC_DRBG, Room 641A); In-Q-Tel/Palantir; DARPA–Trail of Bits; FBI ANOM; Epstein Files Transparency Act; Pandora Papers</td></tr>
 <tr><td>PQC / quantum-sat / DLT</td><td>SEALSQ/WISeKey global build-out; Hedera 34-member council overlaps (Google, IBM) and the SEALCOIN bridge</td></tr>
 <tr><td>Official-data integrity (epistemics)</td><td>Zero-trust read of BLS/BEA/Fed data: the −911k jobs benchmark, OER/CPI methodology, the Boskin Commission's fiscal motive, 2025 collection cuts and the BLS-chief firing, and the incentive map to understate inflation</td></tr>
+<tr><td>Rent vs CPI (ALNRI analysis)</td><td>Apartment List (ALNRI), Zillow (ZORI), and BLS's own New Tenant Rent Index lead official CPI shelter by ~1 year; shelter is ~⅓ of CPI, so the headline misreports inflation turning points</td></tr>
+<tr><td>Gig / contingent labor</td><td>Full-time independents 13.6M→27.7M; misclassification (Lyft NJ $19.4M); CES vs CPS surveys + multiple-jobholders flatter the jobs headline vs lived reality</td></tr>
+<tr><td>Futures vs physical (commodities)</td><td>COMEX/LBMA/LME/SHFE across gold, silver, copper, oil: 2025–26 silver backwardation, a >$2.50 gold premium, ~4.2:1 paper:registered, the 28% copper-tariff spread, the JPMorgan $920M spoofing settlement</td></tr>
+<tr><td>SEC filings (primary source)</td><td>The circular-funding thesis in the filers' own 10-Ks — CoreWeave (67% Microsoft, $21B debt) and NVIDIA (concentration 36%→61%) on EDGAR</td></tr>
 </tbody></table>
 
 <h2 id=verify>Primary sources</h2>

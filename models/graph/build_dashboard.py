@@ -64,6 +64,10 @@ OVERLAYS=[
  ("Disclosures + surveillance","Snowden (Bullrun/Dual_EC/Room 641A), In-Q-Tel/Palantir, DARPA-TrailOfBits, FBI ANOM, Epstein Files Act, Pandora","spec-disclosures-surveillance"),
  ("PQC / quantum-sat / DLT","SEALSQ/WISeKey global build-out + Hedera 34-member council overlaps (Google/IBM) + SEALCOIN bridge","fin-hedera-connections"),
  ("Official-data integrity (epistemics)","Zero-trust read of BLS/BEA/Fed: -911k jobs benchmark, OER/CPI methodology, Boskin fiscal motive, 2025 collection cuts + BLS-chief firing, the understate-inflation incentive map","macro-official-data-integrity"),
+ ("Rent vs CPI (ALNRI analysis)","Apartment List / Zillow / BLS New-Tenant rents lead official CPI shelter by ~1 year; shelter ~1/3 of CPI -> headline misreports turning points","macro-rent-cpi-divergence"),
+ ("Gig / contingent labor","Full-time independents 13.6M->27.7M; misclassification (Lyft NJ $19.4M); CES/CPS + multiple-jobholders distort the jobs headline","macro-gig-labor"),
+ ("Futures vs physical (commodities)","COMEX/LBMA/LME/SHFE: 2025-26 silver backwardation, >$2.50 gold premium, ~4.2:1 paper:registered, 28% copper tariff spread, JPM $920M spoofing","macro-futures-vs-physical"),
+ ("SEC filings (primary source)","The circular-funding thesis in the filers' own 10-Ks: CoreWeave 67% Microsoft + $21B debt; NVIDIA concentration 36%->61%","spec-sec-filings-primary"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[
@@ -79,6 +83,10 @@ PRIMARY=[
  ("US FDIC","FOIA 'pause letters' coverage","https://www.bankingdive.com/news/fdic-letters-cryptos-operation-chokepoint-2-0-claims-coinbase/735309/"),
  ("US BLS","Preliminary payroll benchmark (-911k)","https://www.bls.gov/news.release/prebmk.nr0.htm"),
  ("SSA","Boskin Commission report (1996)","https://www.ssa.gov/history/reports/boskinrpt.html"),
+ ("US BLS","New Tenant Rent Index (leads CPI ~1yr)","https://www.bls.gov/pir/new-tenant-rent.htm"),
+ ("SEC EDGAR","CoreWeave 10-K FY2025 (67% Microsoft, $21B debt)","https://www.sec.gov/Archives/edgar/data/0001769628/000176962826000104/crwv-20251231.htm"),
+ ("SEC EDGAR","NVIDIA 10-K FY2025 (customer concentration)","https://www.sec.gov/Archives/edgar/data/0001045810/000104581025000023/nvda-20250126.htm"),
+ ("LME","CME-LME copper arbitrage (education)","https://www.lme.com/en/education/online-resources/lme-digest/lme-and-cme-copper-arbitrage-when-global-and-regional-prices-meet"),
 ]
 
 def tbl(headers,rows):
@@ -167,6 +175,59 @@ if os.path.isdir(DOCS):
     backnav='<div style="background:#0b0e14;border-bottom:1px solid #2a3550;padding:8px 32px"><a href="index.html" style="color:#7fd1ff;text-decoration:none;font-size:13px">&larr; Bubble Map</a></div>'
     docs_html=HTML.replace("<body>","<body>"+backnav,1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
+
+    # ---- additional pages: research index + methodology ----
+    GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
+    NAVBAR=('<div style="background:#0b0e14;border-bottom:1px solid #2a3550;padding:10px 32px;font-size:13px">'
+            '<a href="index.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Home</a>'
+            '<a href="dashboard.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Dashboard</a>'
+            '<a href="research.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Research</a>'
+            '<a href="methodology.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Methodology</a>'
+            '<a href="globe.html" style="color:#7fd1ff;text-decoration:none">Globe</a></div>')
+    PCSS=("body{background:#0b0e14;color:#d7dce5;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}"
+          "main{max-width:1000px;margin:0 auto;padding:0 24px}h1{color:#fff}h2{color:#7fd1ff;border-bottom:1px solid #233;padding-bottom:6px;margin-top:34px}"
+          "a{color:#7fd1ff}code{background:#16202f;padding:1px 5px;border-radius:3px;color:#ffd479;font-size:13px}"
+          ".b{background:#11161f;border:1px solid #22304a;border-radius:8px;padding:12px 14px;margin:8px 0}.b b{color:#fff}.muted{color:#8a96a8;font-size:13px}")
+    def section(fn):
+        if fn.startswith("fin-"): return "AI financial core"
+        if fn.startswith("macro-"): return "Macro · banking · commodities · data integrity"
+        if fn.startswith("spec-"): return "Regulatory · crypto · surveillance overlays"
+        if fn.startswith("influence-"): return "Influence & identity"
+        if fn.startswith("digitalid-") or fn.startswith("age-"): return "Digital ID & age verification"
+        return "Thematic"
+    groups={}
+    for fn in sorted(glob.glob(os.path.join(RES,"*.json"))):
+        base=os.path.basename(fn)
+        try: d=json.load(open(fn)); title=d.get("metadata",{}).get("title",base)
+        except: title=base
+        nsrc=open(fn).read().count("http")
+        groups.setdefault(section(base),[]).append((base,title,nsrc))
+    body=[f"<p class=muted>{nres_json} cited research blocks. Each links to its structured data (<code>.json</code>, with every source URL) and write-up (<code>.md</code>) on GitHub. Generated {BUILD_DATE}.</p>"]
+    for sec in sorted(groups):
+        body.append(f"<h2>{html.escape(sec)} ({len(groups[sec])})</h2>")
+        for base,title,nsrc in groups[sec]:
+            stub=base[:-5]
+            body.append(f'<div class=b><b>{html.escape(title)}</b><br>'
+                        f'<span class=muted>~{nsrc} source links · </span>'
+                        f'<a href="{GH}{base}">data (.json)</a> · <a href="{GH}{stub}.md">write-up (.md)</a></div>')
+    RES_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Research index</title><style>{PCSS}</style></head>"
+              f"<body>{NAVBAR}<main><h1>Research index</h1>{''.join(body)}</main></body></html>")
+    open(os.path.join(DOCS,"research.html"),"w").write(RES_HTML)
+
+    METH=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Methodology</title><style>{PCSS}</style></head>"
+          f"<body>{NAVBAR}<main><h1>Methodology</h1>"
+          "<h2>How it is built</h2><p>Each finding is a structured <code>research/*.json</code> (entities, directed edges, amounts, status, and source URLs) plus a <code>.md</code> write-up. "
+          "<code>models/graph/build_graph.py</code> consolidates the edges into <code>data/graph.json</code> and runs the Tarjan SCC. The Z3, TLA+, and Alloy models read that data. "
+          "The dashboard, this site, and the reports are generated from the same data.</p>"
+          f"<h2>Graph layers</h2><p>Every edge is tagged <b>financial</b> (capital/credit/compute flows — {an.get('num_financial_edges','?')}) or <b>structural</b> (governance/legal/security/ownership/statistics — {an.get('num_structural_edges','?')}). "
+          f"The SCC over the financial layer alone equals the SCC over all edges (<code>structural_edges_add_no_cycle = {an.get('structural_edges_add_no_cycle','?')}</code>): the circular core rests on capital flows.</p>"
+          "<h2>Grading</h2><p>Claims outside the proven financial core are graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3/TLA+/Alloy proofs. Intent is not inferred from adjacency.</p>"
+          "<h2>Consistency checks</h2><p><code>models/audit.py</code> (cross-document number/coverage checks) and <code>models/cross_review.py</code> (edge-amount reconciliation, connectors, under-connection) run via <code>scripts/new-research.sh</code>. Current audit: 0 flags.</p>"
+          "<h2>Primary sources</h2><p>Load-bearing claims cite primary government and court records (SCOTUS, DOJ/SDNY, Treasury/OFAC, the Fifth Circuit, SEC EDGAR, Congress.gov, FDIC, BLS, ICIJ, NIST, exchanges). See the <a href=dashboard.html#verify>dashboard</a> for a sample and the <a href=research.html>research index</a> for per-block sources.</p>"
+          "<h2>Reproduce</h2><p><code>bash run_all.sh</code> runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models. Python + Z3; Java for TLA+/Alloy (jars auto-fetched).</p>"
+          "<p class=muted>Open source · no backend · updated "+BUILD_DATE+" · contact resistant@tuta.com</p>"
+          "</main></body></html>")
+    open(os.path.join(DOCS,"methodology.html"),"w").write(METH)
 
 # ---- executive summary ----
 ES=f"""# Executive Summary — Unmasking the AI Earnings Bubble
