@@ -4,8 +4,10 @@ Private-credit market,AI data centers,debt,800000000000,2026 (Morgan Stanley 2yr
 Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 OpenAI,Microsoft,compute_commitment,250000000000,committed,True,False,"fin-nvidia-openai.json,fin-microsoft-openai.json"
+PrivateCredit_Funds,PE_Insurers,other,180000000000,deployed,True,False,spec-insurance-bermuda.json
 PrivateCredit_Funds,Insurers_Annuities,other,180000000000,deployed,False,False,macro-private-credit-marks.json
 Microsoft,OpenAI,equity,135000000000,closed-definitive,True,False,fin-microsoft-openai.json
+PE_Insurers,Bermuda_Captives,other,130000000000,ceded-offshore,True,False,spec-insurance-bermuda.json
 US_Banks,Private-credit funds,debt,123000000000,2024-12,False,False,macro-cre-privatecredit.json
 Meta,SINK_capex,capex,115000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
 Google,SpaceX,equity,100000000000,held,False,False,fin-spacex-spcx.json
@@ -139,6 +141,7 @@ JPMorgan,Ripple,investment,,pilot-AFTER-cloud-lifted,False,False,spec-sec-sdny-r
 SEC,Coinbase,regulatory_legal,,sued-then-DISMISSED-2025-02,False,False,spec-sec-sdny-regulatory.json
 SEC,Binance,regulatory_legal,,sued-then-dropped-2025,False,False,spec-sec-sdny-regulatory.json
 SEC,LBRY,regulatory_legal,,won-LBRY-died,False,False,spec-sec-sdny-regulatory.json
+Bermuda_Captives,Annuity_Holders,other,,opaque,False,False,spec-insurance-bermuda.json
 NVIDIA,Mistral,equity,,closed,True,False,fin-nvidia-openai.json
 OpenAI,AMD,warrant,,committed,False,False,fin-nvidia-openai.json
 OpenAI,Broadcom,compute_commitment,,committed,False,False,"fin-nvidia-openai.json,fin-google-amazon-anthropic-meta.json"

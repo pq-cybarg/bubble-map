@@ -32,6 +32,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Annuity_Holders": {
+      "sector": "retail",
+      "has_exogenous_revenue": false
+    },
     "AntGroup": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
@@ -71,6 +75,10 @@
     "Banks": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Bermuda_Captives": {
+      "sector": "insurance",
+      "has_exogenous_revenue": false
     },
     "Binance": {
       "sector": "exchange",
@@ -443,6 +451,10 @@
     "PCE": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "PE_Insurers": {
+      "sector": "insurance",
+      "has_exogenous_revenue": true
     },
     "PIMCO": {
       "sector": "private_credit",
@@ -1903,6 +1915,45 @@
       "note": "~$50M to Fairshake (2023-24 cycle). a16z+Coinbase+Ripple ~ $169M war chest; ~91% win rate."
     },
     {
+      "from": "PE_Insurers",
+      "to": "Bermuda_Captives",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "risk_transfer",
+      "amount_usd": 130000000000,
+      "status": "ceded-offshore",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-insurance-bermuda.json",
+      "note": ">$130B liabilities (Athene+Global Atlantic) ceded to offshore reinsurers in 2025; ~60% of US reinsurance offshore, much to CAPTIVES the same group controls -> internal (circular) 'risk transfer'."
+    },
+    {
+      "from": "Bermuda_Captives",
+      "to": "Annuity_Holders",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "liability_backing",
+      "amount_usd": null,
+      "status": "opaque",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-insurance-bermuda.json",
+      "note": "Retiree annuities backed by manager-marked private credit (often affiliated-fund loans) under reduced-disclosure offshore structures - the terminal bag-holder."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "PE_Insurers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "risk_transfer",
+      "amount_usd": 180000000000,
+      "status": "deployed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-insurance-bermuda.json",
+      "note": "~$180B insurance capital into private credit (2025); the PE owner both originates the credit and owns the insurer that holds it - vertical/circular integration."
+    },
+    {
       "from": "NVIDIA",
       "to": "OpenAI",
       "instrument": "equity",
@@ -3139,10 +3190,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 176,
-    "num_edges": 187,
+    "num_nodes": 179,
+    "num_edges": 190,
     "num_financial_edges": 114,
-    "num_structural_edges": 73,
+    "num_structural_edges": 76,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3194,10 +3245,10 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -3205,16 +3256,16 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -3234,8 +3285,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -3246,14 +3303,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -3335,6 +3386,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Annuity_Holders": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AntGroup": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3400,6 +3458,13 @@
       },
       "Banks": {
         "total_usd": 306000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bermuda_Captives": {
+        "total_usd": 130000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4056,6 +4121,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PE_Insurers": {
+        "total_usd": 310000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PIMCO": {
         "total_usd": 28000000000,
         "circular_usd": 0,
@@ -4106,7 +4178,7 @@
         "in_robust_core": false
       },
       "PrivateCredit_Funds": {
-        "total_usd": 180000000000,
+        "total_usd": 360000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4752,6 +4824,22 @@
         "both_layers": false
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 4,
+        "neighbor_sectors": [
+          "ai_infra",
+          "insurance",
+          "retail"
+        ],
+        "n_neighbor_sectors": 3,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stargate",
         "degree": 7,
         "neighbor_sectors": [
@@ -4798,22 +4886,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 3,
-        "neighbor_sectors": [
-          "ai_infra",
-          "insurance",
-          "retail"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 1,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "SEALSQ",

@@ -72,6 +72,7 @@ OVERLAYS=[
  ("SEC filings (primary source)","The circular-funding thesis in the filers' own 10-Ks: CoreWeave 67% Microsoft + $21B debt; NVIDIA concentration 36%->61%; Amazon/Google fair-value GAINS vs Microsoft equity-method LOSSES","spec-sec-filings-primary"),
  ("Bank HTM marks (zero-trust)","HTM 'held to par' is a self-chosen value, not a price; FDIC unrealized-loss series ~$690B(Q3-22)->$306B(Q4-25)->$325B(Q1-26); withdrawn problem-bank totals reconstructable from RC-B + FDIC API","macro-bank-htm-marks"),
  ("Private credit marks (zero-trust)","3rd self-marked asset class (manager NAVs); First Brands/Tricolor marked ~par then ~12-33c; bad-PIK ~3x 2021; risk migrating to insurance annuities + 401(k) retail","macro-private-credit-marks"),
+ ("Insurance / Bermuda endpoint","Where the risk lands: PE-owned insurers (>$700B, ~25% of US life) fund annuities with manager-marked private credit, cede liabilities to Bermuda CAPTIVES they control (~60% offshore = internal 'transfer'); IMF/FSB/FIO/NAIC warning","spec-insurance-bermuda"),
  ("Timing of the unwind","STRUCTURE certain (insolvent at zero inflow; marks must reverse), DATE unforecastable in principle (reflexivity/Minsky/Keynes); watch the trigger panel, not the calendar","spec-unwind-timing"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor

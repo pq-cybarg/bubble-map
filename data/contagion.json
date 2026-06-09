@@ -317,24 +317,12 @@
   },
   "feedback_loops": [
     [
-      "AI_core",
-      "Sovereign_Capital"
-    ],
-    [
-      "AI_core",
-      "Energy_Power"
+      "Banks",
+      "PrivateCredit"
     ],
     [
       "Commodities_Gold",
       "Treasuries_Fiscal"
-    ],
-    [
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
-    ],
-    [
-      "Banks",
-      "PrivateCredit"
     ],
     [
       "Banks",
@@ -345,19 +333,16 @@
       "Mag7_PaperMarks"
     ],
     [
-      "Banks",
-      "Commodities_Gold",
-      "Treasuries_Fiscal"
+      "AI_core",
+      "Sovereign_Capital"
     ],
     [
       "AI_core",
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
+      "Energy_Power"
     ],
     [
-      "CarryTrade",
-      "Commodities_Gold",
-      "Treasuries_Fiscal"
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
     ],
     [
       "Banks",
@@ -370,6 +355,21 @@
       "CarryTrade"
     ],
     [
+      "CarryTrade",
+      "Commodities_Gold",
+      "Treasuries_Fiscal"
+    ],
+    [
+      "Banks",
+      "Commodities_Gold",
+      "Treasuries_Fiscal"
+    ],
+    [
+      "AI_core",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
       "AI_core",
       "Equities_Mag7",
       "Sovereign_Capital"
@@ -394,13 +394,13 @@
     ],
     [
       "AI_core",
-      "Mag7_PaperMarks",
+      "Treasuries_Fiscal",
       "Equities_Mag7",
       "Sovereign_Capital"
     ],
     [
       "AI_core",
-      "Treasuries_Fiscal",
+      "Mag7_PaperMarks",
       "Equities_Mag7",
       "Sovereign_Capital"
     ],
@@ -409,7 +409,35 @@
       "Treasuries_Fiscal",
       "CarryTrade",
       "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
       "Sovereign_Capital"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Sovereign_Capital"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "Banks",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
     ],
     [
       "Banks",
@@ -419,30 +447,10 @@
       "Equities_Mag7"
     ],
     [
-      "AI_core",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
-      "Equities_Mag7",
-      "Sovereign_Capital"
-    ],
-    [
-      "AI_core",
-      "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
-    ],
-    [
       "Banks",
       "Commodities_Gold",
       "Treasuries_Fiscal",
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
-    ],
-    [
-      "AI_core",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
+      "CarryTrade",
       "Equities_Mag7",
       "Mag7_PaperMarks"
     ],
@@ -453,38 +461,6 @@
       "Commodities_Gold",
       "Treasuries_Fiscal",
       "CarryTrade"
-    ],
-    [
-      "AI_core",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
-    ],
-    [
-      "AI_core",
-      "Mag7_PaperMarks",
-      "Banks",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
-      "CarryTrade"
-    ],
-    [
-      "Banks",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Mag7_PaperMarks"
-    ],
-    [
-      "AI_core",
-      "Commodities_Gold",
-      "Treasuries_Fiscal",
-      "CarryTrade",
-      "Equities_Mag7",
-      "Sovereign_Capital"
     ],
     [
       "AI_core",
@@ -493,6 +469,30 @@
       "Commodities_Gold",
       "Treasuries_Fiscal",
       "CarryTrade"
+    ],
+    [
+      "AI_core",
+      "Mag7_PaperMarks",
+      "Banks",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Mag7_PaperMarks"
+    ],
+    [
+      "AI_core",
+      "Commodities_Gold",
+      "Treasuries_Fiscal",
+      "CarryTrade",
+      "Equities_Mag7",
+      "Sovereign_Capital"
     ]
   ]
 }

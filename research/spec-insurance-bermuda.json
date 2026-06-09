@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "The insurance / Bermuda-reinsurance endpoint - where the self-marked private credit risk finally lands, and the offshore captive structure that hides it",
+    "generated": "2026-06-09",
+    "frame": "The terminal node of the 'who holds the bag' chain (macro-private-credit-marks): PE-owned life insurers fund retiree ANNUITIES with illiquid, manager-marked private credit, then cede the liabilities OFFSHORE to Bermuda/Cayman reinsurers - often CAPTIVES the same group controls, so the 'risk transfer' is largely internal. It compounds every prior theme: self-marked assets, circular (self-dealing) structure, regulatory arbitrage, reduced disclosure - now sitting under ordinary retirement income.",
+    "WARNING": "EVIDENCE-GRADED. Scale, flows, and regulator warnings (IMF/FSB/FIO/NAIC/US Treasury) are fact. 'Annuities are at risk' is the regulators' and critics' concern, not a prediction of failure; PE-insurers argue their asset-liability matching is sound. Both stated. Kept out of the proofs.",
+    "method": "Bloomberg (America's Insurance / Bermuda series), IMF GFSN + Institutional Investor, FSB (Vulnerabilities in Private Credit, 6 May 2026), NAIC LATF, FIO, US Treasury, Chicago Fed WP, Mayer Brown.",
+    "cross_refs": ["macro-private-credit-marks.json (the asset; this is where it lands)","macro-bank-htm-marks.json + spec-sec-filings-primary.json (the self-marked trilogy)","spec-crypto-sec-epstein.json (Apollo/Black/Epstein - the same Apollo)","spec-sec-sdny-regulatory.json (offshore regulatory arbitrage)","contagion.json (PrivateCredit/Banks legs)"]
+  },
+  "scale": {
+    "grade": "STRONG",
+    "facts": [
+      "PE firms control >$700B of US life-insurance assets - ~25% of US life insurers (vs <10% Europe, ~5% Asia). Athene reportedly ~40% of NEW capital entering US life insurance via PE.",
+      "Bermuda long-term reinsurance: ~$1.52T assets (Sep 2025), >80% of ceded business originating in the US; US Treasury has joined the scrutiny of this market.",
+      "US life/health reinsurance ceded FROM Bermuda entities: ~$928B (2025) vs ~$205B (2014) - a ~4.5x rise in a decade.",
+      "In 2025 alone, Apollo's Athene + KKR's Global Atlantic moved >$130B of liabilities to offshore (mainly Bermuda) reinsurers."
+    ],
+    "source": ["https://www.bloomberg.com/graphics/2025-america-insurance-part-1/","https://www.insurancebusinessmag.com/reinsurance/news/breaking-news/us-treasury-joins-scrutiny-of-1-52-trillion-bermuda-reinsurance-market-574857.aspx","https://www.bloomberg.com/graphics/2025-bermuda-insurance/"]
+  },
+  "the_captive_circularity": {
+    "grade": "STRONG (Bloomberg/Moody's/regulators)",
+    "facts": [
+      "~60% of ~$1T US reinsurance purchased in 2024 went OFFSHORE, much of it to CAPTIVES ultimately controlled by the SAME insurer/PE group - so the risk transfer is largely INTERNAL, not genuine.",
+      "AM Best: ~1/5 of Athene US Life and KKR Global Atlantic investments are loans to AFFILIATED funds (related-party) - the asset side is self-dealing too (macro-private-credit-marks).",
+      "Captive Bermuda/Cayman structures offer lighter capital requirements, alternative accounting, and FEWER disclosures - boosting reported capital ratios without a genuine third party bearing the risk.",
+      "Net effect: a US retiree's annuity can be backed by manager-marked private credit (often lent to affiliated funds), with the liability ceded to a captive the same group controls, in a jurisdiction with reduced disclosure - circularity + self-marking + opacity stacked under retirement income."
+    ],
+    "source": ["https://retirementincomejournal.com/article/bermuda-triangle-arbitrage-explained-by-moodys/","https://www.bloomberg.com/features/2025-america-insurance-part-4/"]
+  },
+  "regulator_warnings": {
+    "grade": "STRONG (official bodies)",
+    "facts": [
+      "IMF: raised the alarm on insurers' private-credit exposure and PE influence in life insurance; supervisors urged to coordinate on systemic risk.",
+      "FSB: 'Report on Vulnerabilities in Private Credit' (6 May 2026) - private credit ~$1.5-2.0T at end-2024; flags the insurance channel.",
+      "FIO (US Federal Insurance Office): warned of PE-led insurers' ties to 'shadow banking' / 'shadow insurance.'",
+      "NAIC Life Actuarial Task Force: adopted tougher asset-adequacy / cash-flow-testing guidance (2025) for assets backing business ceded offshore.",
+      "Counter-view: PE-insurers (Apollo's Rowan, others) argue long-dated annuity liabilities are well-matched to illiquid long-dated credit and that the model is sound; recorded, not endorsed."
+    ],
+    "source": ["https://www.institutionalinvestor.com/article/imf-raising-alarm-insurance-investments-private-credit","https://www.fsb.org/uploads/P060526.pdf","https://retirementincomejournal.com/article/the-naic-the-fio-and-the-bermuda-triangle/"]
+  },
+  "edges": [
+    {"from":"PE_Insurers","to":"Bermuda_Captives","instrument":"risk_transfer","amount_usd":130000000000,"date":"2025","status":"ceded-offshore","circular":true,"cancelable":false,"confidence":"high","source":["https://www.bloomberg.com/graphics/2025-bermuda-insurance/"],"notes":">$130B liabilities (Athene+Global Atlantic) ceded to offshore reinsurers in 2025; ~60% of US reinsurance offshore, much to CAPTIVES the same group controls -> internal (circular) 'risk transfer'."},
+    {"from":"Bermuda_Captives","to":"Annuity_Holders","instrument":"liability_backing","amount_usd":null,"date":"2025","status":"opaque","circular":false,"cancelable":false,"confidence":"high","source":["https://www.bloomberg.com/features/2025-america-insurance-part-4/"],"notes":"Retiree annuities backed by manager-marked private credit (often affiliated-fund loans) under reduced-disclosure offshore structures - the terminal bag-holder."},
+    {"from":"PrivateCredit_Funds","to":"PE_Insurers","instrument":"risk_transfer","amount_usd":180000000000,"date":"2025","status":"deployed","circular":true,"cancelable":false,"confidence":"high","source":["https://www.institutionalinvestor.com/article/imf-raising-alarm-insurance-investments-private-credit"],"notes":"~$180B insurance capital into private credit (2025); the PE owner both originates the credit and owns the insurer that holds it - vertical/circular integration."}
+  ],
+  "assessment": "This is the terminal node of the corpus's 'who holds the bag' chain and a compounding of every prior theme. PE firms control >$700B of US life insurance (~25% of the sector), fund retiree annuities with illiquid MANAGER-MARKED private credit (often lent to AFFILIATED funds - self-dealing on the asset side), then cede the liabilities OFFSHORE to Bermuda/Cayman reinsurers - ~$1.52T market, ~$928B ceded from the US (4.5x since 2014), >$130B moved by Athene+Global Atlantic in 2025 alone. The decisive structural fact: ~60% of that reinsurance goes to CAPTIVES the same group controls, so the 'risk transfer' is largely INTERNAL - circular, like the AI loop and the affiliated-fund lending. The result stacks self-marking + circular self-dealing + regulatory arbitrage + reduced disclosure directly under ordinary retirement income, and the official bodies (IMF, FSB, FIO, NAIC, US Treasury) are all now warning on it (PE-insurers' asset-liability-matching defense noted). It does not predict failure - it identifies WHERE the unwind, if it comes, would land: retiree annuities, valued at marks the holders cannot check, in jurisdictions built to disclose less. Overlay; not used in the proofs."
+}
