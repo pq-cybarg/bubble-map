@@ -12,6 +12,27 @@ We prove the financial half. We evidence-grade the rest.
 
 ---
 
+## 0b. Headline findings
+
+Four results that emerged as the corpus deepened — the most consequential, stated plainly:
+
+**1. The self-marked-value machine.** In the four places financial risk hides, value is carried at a *chosen number, not a market price*, and held there until a forcing event prices it:
+| Asset class | Carried at | Forcing event that prices it | Tested |
+|---|---|---|---|
+| Bank securities | **HTM amortized cost** | a deposit run forces sales | SVB 2023: solvent at cost, insolvent at market |
+| AI lab stakes | **fair-value / equity marks** | an IPO below the last private mark | `reflexive_marks` M3 / `MarkUnwind` |
+| Private-credit loans | **manager-set NAV** | a default | First Brands ≥100¢→~33¢; Tricolor AAA→12¢ |
+| Insurance liabilities | **offshore captive marks** | a redemption / ratings event | IMF/FSB/FIO/NAIC warnings |
+It is the same defect four times: a self-chosen valuation that holds until reality forces it.
+
+**2. AI "profit" is partly self-referential (proven).** Amazon/Google book mark-to-market *gains* by helping fund the rounds that set the marks (Amazon +$9.5B on Anthropic); Microsoft books equity-method *losses* on OpenAI. `models/z3/reflexive_marks.py` (M1–M4) proves those gains aren't externally realized and **must reverse** if an IPO clears below the private mark; `models/tla/MarkUnwind.tla` is the writedown-cascade trace. The earnings analogue of "solvent only while capital flows."
+
+**3. Who holds the bag: retiree annuities and 401(k)s.** The risk migrates off banks → PE-owned insurers (**>$700B, ~25% of US life**) → annuities backed by manager-marked private credit (~⅕ loans to *affiliated* funds) → ceded to **Bermuda captives the same group controls** (~60% offshore = internal "transfer"). An Aug-2025 Executive Order opens **401(k)s** to private credit. IMF, FSB, FIO, NAIC, and US Treasury are all warning. (`macro-private-credit-marks`, `spec-insurance-bermuda`.)
+
+**4. When does it break? Structure certain, date unknowable.** Proven: the core is insolvent at zero external inflow and the marks must reverse on a forcing event. **The date is not knowable** — unforecastable in principle (reflexivity, Minsky, Keynes); dot-com / 2008 / SVB were all visible for years and broke suddenly on catalysts no one called. What replaces a date is the trigger panel (§8) and one contractual inflection: the SpaceX compute deals are cancelable after **Dec 31 2026**. (`spec-unwind-timing`.)
+
+---
+
 ## 1. The four layers
 
 | Layer | Claim strength | Engines / sources |
