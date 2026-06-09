@@ -113,16 +113,17 @@ srct="".join(f"<li><code>research/{f}</code></li>" for f in res_files)
 overt=tbl(["Layer","What it documents","File"],[[a,b,f"research/{c}.json"] for a,b,c in OVERLAYS])
 primt="".join(f'<li><b>{html.escape(o)}</b> — <a href="{u}" target=_blank rel=noopener>{html.escape(t)}</a></li>' for o,t,u in PRIMARY)
 
-CSS="""body{background:#0b0e14;color:#d7dce5;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}
-header{background:linear-gradient(120deg,#11151f,#1b2433);padding:28px 32px;border-bottom:1px solid #2a3550}
-h1{margin:0;font-size:24px;color:#fff} h2{color:#7fd1ff;border-bottom:1px solid #233;padding-bottom:6px;margin-top:36px}
-.thesis{font-size:15px;color:#cfe;background:#0f1622;border-left:3px solid #7fd1ff;padding:12px 16px;margin:16px 0}
+CSS="""body{background:#faf8f2;color:#1c1b19;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}
+header{background:#fffdf8;padding:26px 32px;border-bottom:1px solid #e4ddcc}
+h1{margin:0;font-size:25px;color:#1c1b19;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
+h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin-top:34px;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
+.thesis{font-size:15.5px;color:#33312c;background:#fffdf8;border:1px solid #e4ddcc;border-left:4px solid #7b2d26;padding:14px 18px;margin:16px 0}
 main{max-width:1100px;margin:0 auto;padding:0 24px} table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
-th,td{border:1px solid #233;padding:6px 9px;text-align:left} th{background:#16202f;color:#9fb} tr:nth-child(even) td{background:#0f1520}
-code{background:#16202f;padding:1px 5px;border-radius:3px;color:#ffd479;font-size:12px}
-.k{display:inline-block;background:#16202f;border:1px solid #2a3550;border-radius:6px;padding:10px 14px;margin:6px 8px 6px 0}
-.k b{color:#7fd1ff;font-size:20px;display:block} .UNSAT{color:#ff8a8a} .PROVED,.HOLDS,.SAT{color:#7CFC9B}
-nav a{color:#7fd1ff;margin-right:14px;text-decoration:none;font-size:13px} .muted{color:#8a96a8;font-size:12px}"""
+th,td{border:1px solid #e4ddcc;padding:6px 9px;text-align:left;vertical-align:top} th{background:#f3eedf;color:#1c1b19} tr:nth-child(even) td{background:#fbf8f0}
+code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:12px}
+.k{display:inline-block;background:#fffdf8;border:1px solid #e4ddcc;border-radius:6px;padding:10px 14px;margin:6px 8px 6px 0}
+.k b{color:#7b2d26;font-size:20px;display:block} .UNSAT{color:#9a2b1f;font-weight:600} .PROVED,.HOLDS,.SAT{color:#1f6f43;font-weight:600}
+nav a{color:#1f4e79;margin-right:14px;text-decoration:none;font-size:13px} .muted{color:#6b665d;font-size:12px}"""
 
 KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular core (SCC; {an.get('core_scc_all_size','?')} incl. cancelable)</span>
 <span class=k><b>{ncyc}</b>round-trip cycles</span>
@@ -140,7 +141,7 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <div class=muted>Formally-verified analysis &middot; auto-generated from live <code>data/*.json</code> on {BUILD_DATE} &middot; reproduce: <code>bash run_all.sh</code> &middot; every figure carries a source URL in the matching <code>research/*.json</code></div>
 <nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></header>
 <main>
-<div class=thesis>A self-referential capital loop booking each other's spending as revenue, solvent only while external capital flows &mdash; the same defect (promises &raquo; deliverable substance, risk parked in the least-regulated venue) recurring in bank books, private credit, metals, and power, while the loop's largest actors converge on the digital-identity control layer. The financial core is machine-proven; the rest is evidence-graded.</div>
+<div class=thesis>A circular capital loop &mdash; firms booking each other's spending as revenue, solvent only while external capital keeps flowing &mdash; gated by physical chokepoints it cannot buy past on the timeline (compute capital, China rare earths, Russian enrichment, the power grid), and embedded in measurement and control layers (official statistics, paper commodity prices, and the identity / surveillance / political-money rails) that determine whether it can be seen and questioned. The financial core is machine-verified; every other layer is evidence-graded and excluded from the proofs. Not one cabal &mdash; recurring operators rebuilding the dot-com (vendor financing), Enron (off-balance-sheet SPVs), and LTCM (interconnected leverage) structures in the least-regulated venue.</div>
 {KPIS}
 <h2 id=verdicts>Formal verdicts (every engine)</h2>{verd}
 <h2 id=core>The circular core</h2>
@@ -172,22 +173,23 @@ open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 # ---- mirror to docs/ (GitHub Pages) with a back-link to the hub ----
 DOCS=os.path.join(ROOT,"docs")
 if os.path.isdir(DOCS):
-    backnav='<div style="background:#0b0e14;border-bottom:1px solid #2a3550;padding:8px 32px"><a href="index.html" style="color:#7fd1ff;text-decoration:none;font-size:13px">&larr; Bubble Map</a></div>'
+    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Glossary</a></div>'
     docs_html=HTML.replace("<body>","<body>"+backnav,1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
 
     # ---- additional pages: research index + methodology ----
     GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
-    NAVBAR=('<div style="background:#0b0e14;border-bottom:1px solid #2a3550;padding:10px 32px;font-size:13px">'
-            '<a href="index.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Home</a>'
-            '<a href="dashboard.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Dashboard</a>'
-            '<a href="research.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Research</a>'
-            '<a href="methodology.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Methodology</a>'
-            '<a href="globe.html" style="color:#7fd1ff;text-decoration:none">Globe</a></div>')
-    PCSS=("body{background:#0b0e14;color:#d7dce5;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}"
-          "main{max-width:1000px;margin:0 auto;padding:0 24px}h1{color:#fff}h2{color:#7fd1ff;border-bottom:1px solid #233;padding-bottom:6px;margin-top:34px}"
-          "a{color:#7fd1ff}code{background:#16202f;padding:1px 5px;border-radius:3px;color:#ffd479;font-size:13px}"
-          ".b{background:#11161f;border:1px solid #22304a;border-radius:8px;padding:12px 14px;margin:8px 0}.b b{color:#fff}.muted{color:#8a96a8;font-size:13px}")
+    def navlinks(active=""):
+        items=[("index.html","Home"),("dashboard.html","Dashboard"),("research.html","Research"),("methodology.html","Methodology"),("glossary.html","Glossary"),("globe.html","Globe")]
+        return "".join(f'<a href="{h}" style="color:#1f4e79;text-decoration:none;margin-right:16px{";font-weight:600" if t==active else ""}">{t}</a>' for h,t in items)
+    NAVBAR=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 32px;font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">'+navlinks()+'</div>')
+    PCSS=("body{background:#faf8f2;color:#1c1b19;font:18px/1.72 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;margin:0;padding:0 0 60px}"
+          "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:34px;margin:26px 0 4px}"
+          "h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:7px;margin-top:34px;font-family:Georgia,serif;font-weight:600;font-size:24px}"
+          "a{color:#1f4e79}code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:14px}"
+          ".b{background:#fffdf8;border:1px solid #e4ddcc;border-radius:7px;padding:13px 15px;margin:9px 0}.b b{color:#1c1b19}"
+          ".muted{color:#6b665d;font-size:14px}dl dt{font-weight:600;margin-top:14px}dl dd{margin:3px 0 0;color:#33312c;font-size:16px}"
+          "p{margin:12px 0}")
     def section(fn):
         if fn.startswith("fin-"): return "AI financial core"
         if fn.startswith("macro-"): return "Macro · banking · commodities · data integrity"
@@ -229,13 +231,53 @@ if os.path.isdir(DOCS):
           "</main></body></html>")
     open(os.path.join(DOCS,"methodology.html"),"w").write(METH)
 
+    GLOSSARY=[
+     ("Circular core (strongly-connected component, SCC)","A set of firms where money can flow from each to every other and back. Mathematically it is the formal definition of 'circular'; here it is the group of AI firms funding one another."),
+     ("Vendor financing","When a seller funds its own customer so the customer can buy from it (e.g., a chipmaker investing in a startup that then buys its chips). It can inflate apparent demand."),
+     ("Cancelable edge","A funding/contract link that either party can terminate on short notice. The model separates the core that survives only via cancelable deals (e.g., SpaceX) from the robust core."),
+     ("Backwardation / contango","Backwardation = you pay more for a commodity now than for delivery later (a sign of physical tightness). Contango = the opposite (ample supply / storage demand)."),
+     ("Registered vs eligible (COMEX)","Registered metal is available for delivery against futures; eligible metal is in the vault but not pledged for delivery. A high paper-claims-to-registered ratio signals fragility."),
+     ("Owners' Equivalent Rent (OER)","The CPI's estimate of what a homeowner would pay to rent their own home. It is ~¼ of CPI, is imputed from surveys (not home prices), and lags the market."),
+     ("ALNRI / ZORI / New Tenant Rent Index","Market-rent gauges (Apartment List, Zillow, and BLS's own new-lease index) that track rents on new leases. They lead the official CPI shelter measure by ~1 year."),
+     ("Equity method","An accounting rule where an investor books its share of an investee's profit or loss. Microsoft books ~27% of OpenAI's losses this way."),
+     ("Remaining Performance Obligations (RPO)","Contracted future revenue not yet delivered — a backlog. Oracle's ~$523B RPO is largely promised cloud capacity for OpenAI/Stargate."),
+     ("Birth-death model","A statistical model the BLS uses to estimate jobs at newly formed businesses. When it over-estimates, payrolls are revised down later (it drove ~half the 2024-25 downward revisions)."),
+     ("Benchmark revision (QCEW)","An annual correction of the monthly jobs estimates to near-complete tax records. The 2025 correction cut ~911,000 jobs."),
+     ("U-3 vs U-6","U-3 is the headline unemployment rate; U-6 also counts discouraged and involuntarily part-time workers, so it is higher and captures more underemployment."),
+     ("CPI vs PCE","Two inflation gauges with different weights; PCE (the Fed's target) usually reads ~0.3-0.4 pp below CPI."),
+     ("Hedonic adjustment","A method that lowers measured prices to account for quality improvements (e.g., a faster computer at the same price counts as a price cut)."),
+     ("TIPS / COLA","TIPS are Treasury bonds whose payments rise with CPI; COLA is the CPI-linked annual increase in Social Security. Both make a lower measured CPI cheaper for the government."),
+     ("Formal verification (Z3 / TLA+ / Alloy)","Software that mathematically proves whether statements are possible (SAT) or impossible (UNSAT). Used here to prove the core's circularity and capital dependence rather than assert them."),
+     ("HTM vs AFS","How banks classify bonds: Held-to-Maturity (losses hidden until sold) vs Available-for-Sale (losses shown). Rising rates created large hidden HTM losses."),
+     ("Private credit","Non-bank lending (e.g., Apollo, Blackstone, PIMCO). It became the marginal lender for AI data centers when banks pulled back."),
+     ("Special-purpose vehicle (SPV)","A separate legal entity used to move assets or debt off a company's main balance sheet — the structure at the heart of the Enron collapse, reused in AI-infra finance."),
+     ("PQC / CRQC / harvest-now-decrypt-later","Post-Quantum Cryptography defends against a Cryptographically-Relevant Quantum Computer; HNDL is adversaries storing encrypted data now to decrypt once such a computer exists."),
+     ("CALEA","The US law requiring telecom carriers to build wiretap access for law enforcement. China's Salt Typhoon breached exactly this system."),
+     ("Spoofing","Placing and rapidly canceling orders to move a price. JPMorgan paid ~$920M to settle spoofing of metals and Treasury futures."),
+     ("Stablecoin","A crypto token pegged to a currency (e.g., USD1). New US rules route stablecoin reserves into Treasuries, creating forced demand for government debt."),
+     ("Evidence grading","Each non-proven claim is labeled fact, contested, weak, or unsupported, and kept out of the formal proofs. Intent is never inferred from mere association."),
+     ("Financial vs structural edge","Graph links are split into capital/credit/compute flows (financial) and governance/legal/security/ownership relationships (structural). The proven core rests only on the financial layer."),
+    ]
+    gl="".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(d)}</dd>" for t,d in GLOSSARY)
+    GL_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Glossary</title><style>{PCSS}</style></head>"
+             f"<body>{NAVBAR}<main><h1>Glossary</h1>"
+             "<p class=muted>Plain-language definitions of the technical terms used across the project.</p>"
+             f"<dl>{gl}</dl></main></body></html>")
+    open(os.path.join(DOCS,"glossary.html"),"w").write(GL_HTML)
+
 # ---- executive summary ----
 ES=f"""# Executive Summary — Unmasking the AI Earnings Bubble
 
 *Auto-generated {BUILD_DATE} from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard. Each figure carries a source URL in the matching `research/*.json`. Checked by `models/audit.py` + `models/cross_review.py` (current: 0 flags).*
 
 ## The finding in one sentence
-The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
+The AI build-out is a **circular capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing**; it is **gated by physical chokepoints it cannot buy past** on the timeline (compute capital, China rare earths, Russian enrichment, the power grid); and it is **embedded in measurement and control layers** — official statistics, paper commodity prices, and the identity / surveillance / political-money rails — that determine whether it can be seen and questioned.
+
+## How sure we are (the confidence ladder)
+- **Proven** (Z3/TLA+/Alloy, reproducible): the 11-firm circular core; OpenAI's ≥$1.03T external-capital need and insolvency at zero inflow; the OpenAI→CoreWeave→Oracle cascade; no single feasible Fed rate; rare-earth and firm-power independence infeasible on the timeline.
+- **Strongly evidenced** (primary filings/exchange/court/government records): Oracle's $523B backlog + ≥$72B partner debt + PIMCO's $10B anchor; CoreWeave 67% one-customer / $21B debt; NVIDIA 36%→61%; Microsoft's 27% equity-method share of an ~$11.5B/qtr OpenAI loss; the −911k jobs benchmark; the ALNRI/New-Tenant rent lag; the COMEX/LBMA dislocation + JPMorgan's $920M spoofing settlement; the Binance pardon/USD1/MGX nexus; Salt Typhoon via CALEA.
+- **Graded / contested** (overlay, never used in proofs): regulatory-capture intent; the permanent-suppression narrative; whether each data lag's convenient direction was design or coincidence.
+- **Out of scope** (unsupported, excluded): fabricated government microdata; a single coordinating cabal; ShadowStats-style CPI numbers.
 
 ## What is machine-proven (not asserted)
 - **An {an.get('core_scc_robust_size','?')}-firm circular core** (Tarjan SCC): NVIDIA, OpenAI, Oracle, CoreWeave, Microsoft, Amazon, Anthropic, AMD, Crusoe, Lambda + lenders; **{ncyc} round-trip cycles**.

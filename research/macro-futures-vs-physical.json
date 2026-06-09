@@ -34,13 +34,15 @@
     "source": ["https://news.metal.com/newscontent/103899519-What-Is-Driving-the-Recent-Copper-Price-Rally-and-Which-Trading-Indicators-Should-the-Market-Watch-Next","https://www.lme.com/en/education/online-resources/lme-digest/lme-and-cme-copper-arbitrage-when-global-and-regional-prices-meet","https://www.metal.com/en/newscontent/103202757"]
   },
   "oil": {
-    "grade": "structure FACT; specific 2025 differentials not pinned here",
+    "grade": "STRONG (ICE/CME curve data)",
     "facts": [
-      "Three benchmarks price 'oil' differently by region/quality: WTI (US light-sweet, ~39.6 API, ~0.24% S), Brent (waterborne global), Dubai (Asia sour) - physical differentials (sulfur/density/freight) mean the futures benchmark is not the barrel a refiner buys.",
-      "Curve shape (contango vs backwardation) across WTI/Brent/Dubai signals near-term physical tightness vs glut; Dubai/Brent spreads track Asian physical demand and OPEC+ sour supply.",
-      "Method note: exact 2025 WTI-Brent-Dubai spreads and physical premia should be read off EIA/CME/DGCX/Platts series; this block records the STRUCTURE (multi-benchmark, futures!=physical) and defers live differentials to those primary series (macro-oil-backwardation.json holds the prior episode)."
+      "Three benchmarks price 'oil' differently by region/quality: WTI (US light-sweet, ~39.6 API, ~0.24% S), Brent (waterborne global), Dubai (Asia sour) - physical differentials (sulfur/density/freight) mean the futures benchmark is not the barrel a refiner buys; Brent trades a slight premium to WTI for its waterborne-delivery flexibility.",
+      "CURVE SHAPE (2025-26): the Brent forward curve was in pronounced BACKWARDATION - front ~$94.22 (Jun 5 2026) falling to ~$85.79 (Dec 2026) and ~$77.68 (Dec 2027); WTI also in backwardation amid a supply crunch (CME, 2026).",
+      "BUT the structure FLIPPED repeatedly: Brent's 6-month calendar spread collapsed to just 41 cents backwardation in Nov 2025 (from >$2 on Oct 24) and briefly traded CONTANGO - the lowest in ~2 years; May 2025 saw forward curves flatten into contango beyond Q4.",
+      "Steep backwardation makes storage uneconomic (buy spot, sell forward at a loss) - i.e., the curve itself is a real-time signal of physical tightness vs glut, and it whipsawed in 2025-26."
     ],
-    "source": ["https://www.cmegroup.com/markets/energy/crude-oil/brent-dubai-swap-futures.html","https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm"]
+    "interpretation": "Oil shows the same lesson as the metals: the 'price' is a curve, not a number, and its SHAPE (backwardation<->contango, the three-benchmark spreads) is where physical tightness reveals itself - and in 2025-26 that shape was unstable, flipping between scarcity (backwardation) and glut (contango) within weeks.",
+    "source": ["https://www.cmegroup.com/insights/economic-research/2026/implications-of-wti-oil-futures-in-backwardation-amid-the-supply-crunch.html","https://jkempenergy.com/tag/calendar-spreads/","https://www.ice.com/products/1242/Brent-WTI-Futures-Spread/data"]
   },
   "edges": [
     {"from":"JPMorgan","to":"Metals_Futures","instrument":"spoofing_settlement","amount_usd":920000000,"date":"2020-09","status":"settled","circular":false,"cancelable":false,"confidence":"high","source":["https://www.schiffgold.com/exploring-finance/comex-physical-silver-demand-keeps-the-market-in-backwardation"],"notes":"JPM ~$920M CFTC/DOJ settlement for spoofing precious-metals + Treasury futures - documented manipulation of the paper market (the factual anchor; not proof of long-run suppression)."},

@@ -18,8 +18,24 @@
 
 > NVIDIA's filing confirms the **demand side of the loop** is a handful of buyers — the same hyperscalers/neoclouds it invests in. The 36%→61% tightening is the **SCC tightening**, and it corroborates the vendor-financing self-funding metric (~10% funded / ~56% headline).
 
+## Microsoft 10-Q (FY2026 Q1, qtr ended 2025-09-30) — CIK 789019 · [EDGAR](https://www.sec.gov/Archives/edgar/data/0000789019/000119312526191507/msft-20260331.htm) — *STRONG*
+- **~27% of OpenAI** (as-converted), **equity method**; **$13B** committed, **$11.6B funded** as of Sep 30 2025.
+- OpenAI's losses flow through "other income (expense), net" — Q1-FY2026 other income showed a **~$683M loss**, "primarily… net recognized losses on equity method investments, including OpenAI."
+- External reporting infers Microsoft's share implies an **OpenAI quarterly loss ≈ $11.5B+**.
+
+> Primary confirmation of the Z3 result (**OpenAI needs ≥$1.03T external; insolvent at zero inflow**): Microsoft books its 27% share of OpenAI's losses, and the implied ~$11.5B/qtr burn is the cash the loop must keep raising. Reconciles the **$13B-cash vs ~$135B-marked** gap.
+
+## Oracle 10-Q / 8-K (FY2026, qtr ended 2025-11-30) — CIK 1341439 · [EDGAR](https://www.sec.gov/Archives/edgar/data/0001341439/000119312525315925/orcl-20251130.htm) — *STRONG*
+- **RPO ~$523.3B** (Nov 30 2025; +~359% YoY in a prior quarter) — a backlog **dominated by OpenAI/Stargate** cloud capacity.
+- OCI revenue guided on a hockey-stick: **$18B → $32B → $73B → $114B → $144B**.
+- **≥$72B of data-center partner debt** for Stargate: **$16.3B** Michigan (largest single-facility tech debt ever), **~$38B** Texas/Wisconsin, **~$18B** New Mexico.
+- **PIMCO anchored ~$10B** of the Michigan bond **after US banks retreated**.
+- FY2026 capex **~$50B** (>2× prior year); **$18B of public bonds sold in a single day** (Sep 2025) to fund OpenAI data centers.
+
+> The clearest primary picture of the loop's funding mechanics: a **$523B backlog that is largely one circular counterparty** (OpenAI/Stargate), financed by **≥$72B partner debt + $50B capex + $18B bonds** — with **private credit (PIMCO) the marginal lender** when banks pull back. This *is* "solvent only while capital keeps flowing," in Oracle's own filings.
+
 ## Pull queue (next primary documents)
-Microsoft 10-Q (OpenAI equity-method losses; the $135B-marked vs $13B-cash gap) · Oracle 10-K/Q (RPO backlog jump + Stargate-linked capacity + capex debt) · MSFT/AMZN/GOOG 10-K (capex run-rate; Amazon's Anthropic carrying value) · SpaceX/SPCX S-1 (CIK 1181412) · 13F cross-holdings (the equity edges of the SCC).
+Amazon/Google 10-K (capex run-rate; Amazon's Anthropic carrying value + equity-method) · SpaceX/SPCX S-1 (CIK 1181412) · 13F cross-holdings (the equity edges of the SCC).
 
 ## Takeaway
 The strongest corroboration of the circular-funding thesis is the **firms' own SEC risk factors**: CoreWeave and NVIDIA disclose the concentration and leverage the models formalize. The caveat is symmetrical with the data-integrity block — *"as reported" deserves the same zero-trust reading as the government's headline numbers.*

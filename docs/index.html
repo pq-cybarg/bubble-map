@@ -1,150 +1,161 @@
 <!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Bubble Map — formally-verified analysis of the AI capital loop</title>
-<meta property="og:title" content="Bubble Map — formally-verified analysis of the AI capital loop">
-<meta property="og:description" content="A reproducible, source-cited X-ray of the AI capital loop and the systems around it. Financial core machine-checked with Z3 / TLA+ / Alloy; everything else evidence-graded.">
+<title>Bubble Map — a verified map of the AI capital loop and the systems around it</title>
+<meta property="og:title" content="Bubble Map — a verified map of the AI capital loop">
+<meta property="og:description" content="A reproducible, source-cited study: the AI financial core is machine-verified (Z3/TLA+/Alloy); the surrounding macro, data-integrity, and control layers are evidence-graded.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pq-cybarg.github.io/bubble-map/">
 <meta property="og:image" content="https://pq-cybarg.github.io/bubble-map/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bubble Map — formally-verified analysis of the AI capital loop">
-<meta name="twitter:description" content="Reproducible, source-cited analysis of the AI capital loop. Core machine-checked (Z3/TLA+/Alloy); overlays evidence-graded.">
+<meta name="twitter:title" content="Bubble Map — a verified map of the AI capital loop">
+<meta name="twitter:description" content="Machine-verified AI capital loop + evidence-graded macro, data-integrity, and control layers.">
 <meta name="twitter:image" content="https://pq-cybarg.github.io/bubble-map/social-preview.png">
-<meta name=description content="A reproducible, source-cited analysis of the AI capital loop and the systems around it. Financial core machine-checked with Z3 / TLA+ / Alloy; overlays evidence-graded. Run bash run_all.sh to reproduce.">
+<meta name=description content="A reproducible, source-cited study of the AI capital loop and the systems around it. The financial core is machine-verified with Z3/TLA+/Alloy; everything else is evidence-graded. Reproduce with bash run_all.sh.">
 <style>
-:root{--bg:#0b0e14;--card:#11161f;--line:#22304a;--fg:#d7dce5;--ac:#7fd1ff;--g:#7CFC9B;--r:#ff8a8a;--mut:#8a96a8}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
-header{background:linear-gradient(120deg,#11151f,#1b2433);border-bottom:1px solid var(--line);padding:40px 24px}
-.wrap{max-width:980px;margin:0 auto;padding:0 20px}
-h1{margin:0;font-size:30px;color:#fff;letter-spacing:-.5px} .tag{color:var(--ac);font-size:13px;letter-spacing:2px;text-transform:uppercase}
-.thesis{font-size:16px;color:#cfe;background:#0f1622;border-left:3px solid var(--ac);padding:14px 18px;margin:18px 0;border-radius:4px}
-h2{color:var(--ac);border-bottom:1px solid var(--line);padding-bottom:8px;margin-top:42px;font-size:20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;text-decoration:none;color:var(--fg);display:block;transition:.15s}
-.card:hover{border-color:var(--ac);transform:translateY(-2px)} .card b{color:#fff;font-size:16px} .card p{color:var(--mut);font-size:13px;margin:6px 0 0}
-.poll{background:linear-gradient(135deg,#101a28,#0f1622);border:1px solid var(--line);border-radius:14px;padding:24px;margin:14px 0}
-.counts{display:flex;gap:28px;flex-wrap:wrap;margin:10px 0 16px}
-.counts div{font-size:13px;color:var(--mut)} .counts b{display:block;font-size:34px;color:var(--g);line-height:1.1}
-.btn{display:inline-block;background:var(--ac);color:#03101a;font-weight:700;padding:12px 20px;border-radius:8px;text-decoration:none}
-.btn.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
-#avatars{display:flex;flex-wrap:wrap;gap:4px;margin-top:14px} #avatars img{border-radius:50%;border:1px solid var(--line)}
-.mut{color:var(--mut);font-size:13px} code{background:#16202f;padding:2px 6px;border-radius:4px;color:#ffd479;font-size:13px}
-footer{border-top:1px solid var(--line);margin-top:50px;padding:24px;color:var(--mut);font-size:12px;text-align:center}
-.kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.kpis span{background:#16202f;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--mut)}.kpis b{color:var(--ac);display:block;font-size:18px}
-table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
-th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top} th{background:#16202f;color:#9fb}
-ul.src{columns:2;font-size:13px} ul.src a{color:var(--ac)} @media(max-width:600px){ul.src{columns:1}}
+:root{--bg:#faf8f2;--paper:#fffdf8;--ink:#1c1b19;--mut:#6b665d;--line:#e4ddcc;--ac:#7b2d26;--ac2:#1f4e79;--plain:#eef3f6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.72 Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif}
+.nav{background:var(--paper);border-bottom:1px solid var(--line);padding:11px 22px;font-size:14px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.nav a{color:var(--ac2);text-decoration:none;margin-right:18px}.nav a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+header.h{background:var(--paper);border-bottom:1px solid var(--line);padding:46px 22px 34px}
+.kicker{font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ac);margin-bottom:10px}
+h1{margin:0 0 6px;font-size:38px;line-height:1.12;font-weight:600;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:19px;font-style:italic;margin:0}
+.abstract{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:3px;padding:18px 22px;margin:26px 0;font-size:17.5px}
+.abstract b{font-variant:small-caps;letter-spacing:.03em;color:var(--ac)}
+h2{font-size:25px;font-weight:600;margin:42px 0 6px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+h2 .n{color:var(--ac);font-size:18px;margin-right:10px;font-variant:numeric:tabular-nums}
+h3{font-size:20px;margin:26px 0 4px}
+p{margin:12px 0}
+a{color:var(--ac2)}
+.plain{background:var(--plain);border-radius:6px;padding:12px 16px;margin:14px 0;font-size:16px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+.plain b{color:var(--ac2);font-variant:small-caps;letter-spacing:.03em}
+.kpis{display:flex;flex-wrap:wrap;gap:0;margin:22px 0 0;border-top:1px solid var(--line);font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.kpis span{flex:1 1 150px;padding:12px 14px 12px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kpis b{display:block;font-size:23px;color:var(--ac);font-weight:600}.kpis em{font-style:normal;font-size:12.5px;color:var(--mut)}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--paper);font-weight:600}
+.ladder dt{font-weight:600;margin-top:14px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px}
+.ladder dt .tag{font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px;margin-right:8px;color:#fff}
+.t-proven{background:#1f6f43}.t-strong{background:#1f4e79}.t-graded{background:#9a6a1a}.t-out{background:#8a8a8a}
+.ladder dd{margin:4px 0 0;font-size:16px;color:#33312c}
+code{background:#f2ede0;padding:1px 5px;border-radius:3px;font-size:14px;color:#6b3b16}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:15px;text-decoration:none;color:var(--ink);display:block}
+.card:hover{border-color:var(--ac2)}.card b{color:var(--ac2);font-size:15.5px}.card p{color:var(--mut);font-size:13.5px;margin:6px 0 0}
+.poll{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;margin:14px 0;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+.counts{display:flex;gap:30px;flex-wrap:wrap;margin:6px 0 14px}.counts b{display:block;font-size:30px;color:#1f6f43}.counts em{font-style:normal;font-size:13px;color:var(--mut)}
+.btn{display:inline-block;background:var(--ac2);color:#fff;font-weight:600;padding:10px 18px;border-radius:6px;text-decoration:none;font-size:14px}
+.btn.sec{background:transparent;color:var(--ac2);border:1px solid var(--ac2)}
+#avatars{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}#avatars img{border-radius:50%;border:1px solid var(--line)}
+.mut{color:var(--mut);font-size:14px}
+footer{border-top:1px solid var(--line);margin-top:48px;padding:24px;color:var(--mut);font-size:13px;text-align:center;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
+dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33312c;font-size:16px}
 </style></head>
 <body>
-<div style="background:#0b0e14;border-bottom:1px solid #22304a;padding:10px 24px;font-size:13px"><div class=wrap style="padding:0">
-<a href="index.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Home</a>
-<a href="dashboard.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Dashboard</a>
-<a href="research.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Research index</a>
-<a href="methodology.html" style="color:#7fd1ff;text-decoration:none;margin-right:16px">Methodology</a>
-<a href="globe.html" style="color:#7fd1ff;text-decoration:none">Globe</a>
+<div class=nav><div class=wrap style="padding:0">
+<a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="research.html">Research index</a><a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a><a href="globe.html">Globe</a>
 </div></div>
-<header><div class=wrap>
-<div class=tag>reproducible · source-cited · evidence-graded</div>
-<h1>Bubble&nbsp;Map</h1>
-<div class=thesis>A reproducible, source-cited map of the AI capital loop and the systems around it: a circular core of firms that book each other's spending as revenue and is solvent only while external capital flows, gated by adversary chokepoints (China rare earths, Russia enrichment), wired into the banking, energy, defense, crypto, telecom, and identity layers. The financial core is machine-checked with Z3 / TLA+ / Alloy. Every other thread is graded <code>fact · contested · weak · unsupported</code> and excluded from the proofs.</div>
+
+<header class=h><div class=wrap>
+<div class=kicker>reproducible · source-cited · evidence-graded</div>
+<h1>Bubble Map</h1>
+<p class=sub>A verified map of the AI capital loop — and the measurement, commodity, and control systems around it.</p>
 <div class=kpis>
-<span><b>12</b>firm circular core (11 robust)</span><span><b>15</b>round-trip cycles</span><span><b>170 / 179</b>graph nodes / edges</span><span><b>$1.03T</b>external capital OpenAI needs</span><span><b>2</b>adversary chokepoints</span><span><b>-81%</b>US home in gold since 1998</span><span><b>+1985% / -69%</b>NVDA vs S&P in gold</span><span><b>45</b>cited research blocks</span><span><b>23</b>runnable models</span>
+<span><b>12</b><em>firm circular core (11 robust)</em></span>
+<span><b>$1.03T</b><em>external capital OpenAI needs</em></span>
+<span><b>2</b><em>adversary chokepoints</em></span>
+<span><b>-81%</b><em>US home in gold since 1998</em></span>
+<span><b>+1985% / -69%</b><em>NVDA vs S&amp;P in gold</em></span>
+<span><b>45</b><em>cited research blocks</em></span>
+<span><b>23</b><em>runnable models</em></span>
+<span><b>0</b><em>open audit flags</em></span>
 </div>
 </div></header>
+
 <div class=wrap>
 
-<h2 id=poll>Coordination poll</h2>
-<p class=mut>A transparent, server-less signal read client-side from the public GitHub API. To sign, react <b>👍</b> on the GitHub issue; to add testimony, comment. Every signature is public on GitHub — no backend, no data collection.</p>
-<div class=poll>
-  <div class=counts>
-    <div><b id=signs>—</b>signatures (👍)</div>
-    <div><b id=tests>—</b>testimonies (comments)</div>
-  </div>
-  <a class=btn id=signbtn href="#" target=_blank rel=noopener>✍️ Sign on GitHub (react 👍)</a>
-  <a class=btn sec id=testbtn href="#" target=_blank rel=noopener>Add testimony</a>
-  <div id=avatars></div>
-  <p class=mut id=pollstatus style="margin-top:12px"></p>
+<div class=abstract>
+<b>Abstract.</b> This project maps how money, supply, and information move through the AI boom and the systems around it. At the center is a small group of firms that largely <b>fund one another</b> — paying for each other's chips, cloud, and capacity — so the group is solvent only while new outside capital keeps arriving. That circular structure is proven mathematically. Around it we document the <b>physical limits</b> it cannot buy past on the timeline (chip capital, rare earths, uranium enrichment, electricity), and the <b>measurement and control layers</b> that make it hard to see clearly: official inflation and jobs figures that lag or are revised away from lived reality; commodity "prices" set in paper markets that physical metal periodically overrides; and the identity, payment, surveillance, and political-money rails that decide who gets to ask questions. <b>Everything at the financial core is machine-verified; everything else is graded by evidence strength and kept out of the proofs.</b>
 </div>
 
-<h2 id=explore>Explore</h2>
-<div class=grid>
-  <a class=card href="dashboard.html"><b>📊 Control dashboard</b><p>Every formal verdict, the circular core, the chokepoints, the gold lens, the weavers, bank exposure, the graded overlays, and the primary-source list — over the live data.</p></a>
-  <a class=card href="globe.html"><b>🌍 Chokepoint globe</b><p>A rotatable d3 globe: adversary chokepoints, supply responses, capital hubs, and the dependency/flow arcs.</p></a>
-  <a class=card id=repo href="#"><b>⚙️ Source &amp; proofs</b><p>Runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
-  <a class=card id=report href="#"><b>📄 Full report</b><p><code>report/UNMASKING.md</code> — the complete write-up, layer by layer, with the honesty ledger.</p></a>
-  <a class=card href="https://github.com/pq-cybarg/bubble-map/tree/main/zkage"><b>🔐 Age verification: steelman &amp; refutation</b><p>The strongest ZK age proof, and the case that the requirement itself should be opposed (surveillance, honeypot, futility-under-breach).</p></a>
-  <a class=card id=audit href="#"><b>✅ Audit &amp; cross-review</b><p><code>report/AUDIT.md</code> + <code>report/CROSS-REVIEW.md</code> — cross-document number/coverage checks and edge-amount reconciliation. Current audit: 0 flags.</p></a>
-  <a class=card href="research.html"><b>🗂️ Research index</b><p>All 45 cited research blocks, grouped by theme, each linking to its structured data and write-up.</p></a>
-  <a class=card href="methodology.html"><b>🧪 Methodology</b><p>How the corpus is built, the grading scale, the graph layers and proof-integrity check, the consistency tooling, and how to reproduce.</p></a>
-</div>
+<h2><span class=n>1</span>What we conclude, and how sure we are</h2>
+<p>The honest reading is not a single conspiracy. It is a recurring operator-network rebuilding the same structures — circular vendor financing (the dot-com playbook), off-balance-sheet special-purpose vehicles (the Enron playbook), and interconnected leverage (the LTCM playbook) — in each era's least-regulated venue, now fused with the instruments that shape what the public can measure and say. Claims are sorted by how strong the evidence is:</p>
+<dl class=ladder>
+<dt><span class="tag t-proven">Proven</span>Formal results (Z3 / TLA+ / Alloy), reproducible</dt>
+<dd>An 11-firm circular core (Tarjan SCC); OpenAI needs ≥ <b>$1.03&nbsp;trillion</b> of external capital and the core is insolvent at zero inflow; a single capital stop cascades OpenAI → CoreWeave → Oracle; the Fed has no single rate that satisfies its divergent targets; rare-earth and firm-power independence are infeasible on the stated timeline.</dd>
+<dt><span class="tag t-strong">Strongly evidenced</span>Primary filings, exchange, court &amp; government records</dt>
+<dd>Oracle's <b>$523B backlog</b> (largely OpenAI/Stargate) financed by ≥$72B partner debt + $50B capex, with PIMCO anchoring $10B after banks retreated; CoreWeave 67% one customer + $21B debt; NVIDIA customer concentration 36%→61%; Microsoft's 27% equity-method share of an ~$11.5B/qtr OpenAI loss; the −911k jobs benchmark; the ALNRI/New-Tenant rent lag in CPI; the COMEX/LBMA dislocation + JPMorgan's $920M spoofing settlement; the Binance pardon / USD1 / MGX nexus; Salt Typhoon's breach of the mandated CALEA wiretap system.</dd>
+<dt><span class="tag t-graded">Graded / contested</span>Overlay context — labeled, never used in the proofs</dt>
+<dd>Regulatory-capture <i>intent</i>; the "permanent price suppression" narrative; whether the convenient direction of each data lag was design or coincidence. Documented as facts plus inference, with the inference marked.</dd>
+<dt><span class="tag t-out">Out of scope</span>Unsupported — explicitly excluded</dt>
+<dd>Fabrication of raw government microdata; a single coordinating cabal; ShadowStats-style "real" CPI numbers. We say so rather than imply them.</dd>
+</dl>
 
-<h2 id=proven>What is machine-checked</h2>
-<p>The financial core is checked by runnable solvers, not asserted:</p>
+<h2><span class=n>2</span>The financial core (machine-checked)</h2>
+<p class=plain><b>In plain terms:</b> picture a circle of companies where each one's spending shows up as the next one's sales. As long as fresh money flows into the circle, everyone looks profitable. Stop the inflow and the circle can't pay itself. We prove the circle exists and that it depends on outside money.</p>
 <table>
 <thead><tr><th>Engine</th><th>Result</th></tr></thead>
 <tbody>
-<tr><td>Graph SCC (Tarjan)</td><td>12-firm circular core; 11-firm robust excluding cancelable edges; SpaceX circular only via cancelable edges</td></tr>
-<tr><td>Z3 — OpenAI commitments (T3)</td><td>requires ≥ $1.03T external capital (UNSAT without it)</td></tr>
-<tr><td>Z3 — core at zero inflow (T4)</td><td>insolvent at zero external inflow (UNSAT)</td></tr>
-<tr><td>Z3 — NVIDIA self-finance (T2)</td><td>cannot self-finance the headline figure (UNSAT)</td></tr>
-<tr><td>TLA+ cascade</td><td>capital-stop trace: OpenAI → CoreWeave → Oracle (invariant violated)</td></tr>
-<tr><td>TLA+ SpaceX</td><td>never defaults (invariant holds)</td></tr>
-<tr><td>Alloy structure</td><td>core circular; SpaceX separable without cancelable edges (all assertions hold)</td></tr>
-<tr><td>Z3 — Fed policy (F1–F3)</td><td>no single rate satisfies the divergent targets (UNSAT)</td></tr>
-<tr><td>Z3 — defense / power / HALEU</td><td>rare-earth independence and firm-power adequacy infeasible on the stated timeline (UNSAT)</td></tr>
+<tr><td>Graph SCC (Tarjan)</td><td>12-firm circular core; 11-firm robust excluding cancelable contracts; SpaceX circular only via cancelable edges</td></tr>
+<tr><td>Z3 — OpenAI commitments (T3)</td><td>requires ≥ $1.03T external capital (unsatisfiable without it)</td></tr>
+<tr><td>Z3 — core at zero inflow (T4)</td><td>insolvent at zero external inflow</td></tr>
+<tr><td>TLA+ cascade</td><td>capital-stop trace: OpenAI → CoreWeave → Oracle</td></tr>
+<tr><td>Alloy structure</td><td>core circular; SpaceX separable without cancelable edges</td></tr>
+<tr><td>Z3 — Fed policy / chokepoints</td><td>no single rate fits the targets; rare-earth &amp; firm-power independence infeasible on timeline</td></tr>
 </tbody></table>
-<p class=mut>Edges are tagged by layer: 109 financial (capital/credit/compute) and 70 structural (governance/legal/security/ownership/statistics). The SCC over the financial layer alone equals the SCC over all edges, so the structural overlay adds no cycle to the core. Full verdict table, the cross-layer connector ranking, and the scenario engine (BASE / BULL / BEAR) are on the <a href="dashboard.html">dashboard</a>.</p>
+<p class=mut>Edges are tagged by layer: <b>111 financial</b> (capital/credit/compute) and <b>70 structural</b> (governance/legal/security/ownership/statistics). The SCC over the financial layer alone equals the SCC over all edges, so the structural overlay adds no cycle to the core. Full verdict table, the cross-layer connector ranking, and the scenario engine are on the <a href="dashboard.html">dashboard</a>.</p>
 
-<h2 id=overlays>Evidence-graded overlays</h2>
-<p class=mut>Layers beyond the financial core. Each is graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3 / TLA+ / Alloy proofs.</p>
+<h2><span class=n>3</span>The layers around it (evidence-graded)</h2>
+<p class=plain><b>In plain terms:</b> the same numbers we'd use to check whether the boom is real — inflation, jobs, commodity and asset prices — are themselves shaped by methodology, lag, and incentives. So we read the official figure as the most flattering version that's still defensible, and cross-check it against harder signals.</p>
 <table>
-<thead><tr><th>Layer</th><th>Contents</th></tr></thead>
+<thead><tr><th>Layer</th><th>What it documents</th></tr></thead>
 <tbody>
-<tr><td>Regulatory (SEC / SDNY / FDIC)</td><td>Choke Point 2.0 FOIA disclosures; ConsenSys/MetaMask; SEC v. Ripple timing + JPMorgan rail; Kraken / Binance / Coinbase / LBRY enforcement and 2025 dismissals; ~$169M Fairshake spending</td></tr>
-<tr><td>Privacy-tool prosecutions</td><td>Tornado Cash and Samourai Wallet: documented Lazarus use; Van Loon v. Treasury and the OFAC delisting; the Storm verdict, Samourai pleas, and Pertsev (Netherlands)</td></tr>
-<tr><td>Exchanges + Asia / Gulf</td><td>Mt. Gox repayments; Binance CZ pardon, USD1 and the MGX $2B; SBI/Ripple ~9%; Ant Group HKDA and the PBoC pause; ByteDance/TikTok to Oracle + MGX + Silver Lake</td></tr>
-<tr><td>Telecom + satellite + ISR</td><td>Salt Typhoon's compromise of the CALEA wiretap system; Apple's $1.7B and Amazon's ~$11.6B in Globalstar; Starshield/NRO; carrier direct-to-cell deals</td></tr>
-<tr><td>Disclosures + surveillance</td><td>Snowden (PRISM, Bullrun, Dual_EC_DRBG, Room 641A); In-Q-Tel/Palantir; DARPA–Trail of Bits; FBI ANOM; Epstein Files Transparency Act; Pandora Papers</td></tr>
-<tr><td>PQC / quantum-sat / DLT</td><td>SEALSQ/WISeKey global build-out; Hedera 34-member council overlaps (Google, IBM) and the SEALCOIN bridge</td></tr>
-<tr><td>Official-data integrity (epistemics)</td><td>Zero-trust read of BLS/BEA/Fed data: the −911k jobs benchmark, OER/CPI methodology, the Boskin Commission's fiscal motive, 2025 collection cuts and the BLS-chief firing, and the incentive map to understate inflation</td></tr>
-<tr><td>Rent vs CPI (ALNRI analysis)</td><td>Apartment List (ALNRI), Zillow (ZORI), and BLS's own New Tenant Rent Index lead official CPI shelter by ~1 year; shelter is ~⅓ of CPI, so the headline misreports inflation turning points</td></tr>
-<tr><td>Gig / contingent labor</td><td>Full-time independents 13.6M→27.7M; misclassification (Lyft NJ $19.4M); CES vs CPS surveys + multiple-jobholders flatter the jobs headline vs lived reality</td></tr>
-<tr><td>Futures vs physical (commodities)</td><td>COMEX/LBMA/LME/SHFE across gold, silver, copper, oil: 2025–26 silver backwardation, a >$2.50 gold premium, ~4.2:1 paper:registered, the 28% copper-tariff spread, the JPMorgan $920M spoofing settlement</td></tr>
-<tr><td>SEC filings (primary source)</td><td>The circular-funding thesis in the filers' own 10-Ks — CoreWeave (67% Microsoft, $21B debt) and NVIDIA (concentration 36%→61%) on EDGAR</td></tr>
+<tr><td>Official-data integrity</td><td>The −911k jobs benchmark; CPI methodology (imputed owners' rent, substitution, PCE-as-target); the Boskin Commission's fiscal motive; 2025 collection cuts and the BLS-chief firing; the incentive map to understate inflation (debt service, COLA, TIPS, brackets)</td></tr>
+<tr><td>Rent vs CPI (ALNRI)</td><td>Apartment List, Zillow, and BLS's own New-Tenant index lead official CPI shelter by ~1 year; shelter is ~⅓ of CPI, so the headline misreports turning points</td></tr>
+<tr><td>Gig / contingent labor</td><td>Full-time independents 13.6M→27.7M; misclassification (Lyft NJ $19.4M); how the surveys + multiple-jobholders flatter the jobs headline</td></tr>
+<tr><td>Futures vs physical</td><td>COMEX/LBMA/LME/SHFE across gold, silver, copper, oil: 2025–26 silver backwardation, a >$2.50 gold premium, ~4.2:1 paper:registered, the 28% copper-tariff spread, JPMorgan's $920M spoofing settlement</td></tr>
+<tr><td>Regulatory (SEC/SDNY/FDIC)</td><td>Choke Point 2.0 FOIA; ConsenSys/MetaMask; SEC v. Ripple timing; the Kraken/Binance/LBRY sweep and 2025 dismissals; ~$169M Fairshake spending</td></tr>
+<tr><td>Crypto & exchanges</td><td>Tornado Cash / Samourai prosecutions; Mt. Gox; the Binance pardon / USD1 / MGX nexus; SBI/Ripple; Ant's paused HKDA; ByteDance/TikTok → Oracle + MGX</td></tr>
+<tr><td>Telecom, satellite & surveillance</td><td>Salt Typhoon via CALEA; Amazon/Apple absorbing Globalstar; Starshield/NRO; Snowden (Bullrun, Room 641A); In-Q-Tel/Palantir; the Epstein Files Act; Pandora Papers</td></tr>
+<tr><td>PQC / quantum-sat / DLT</td><td>SEALSQ/WISeKey's state-subsidized build-out; Hedera's 34-member council overlaps (Google, IBM); the SEALCOIN bridge</td></tr>
 </tbody></table>
 
-<h2 id=verify>Primary sources</h2>
-<p class=mut>Sample of the government and court records cited across the corpus:</p>
-<ul class=src>
-<li><a href="https://www.supremecourt.gov/opinions/23pdf/23-411_3dq3.pdf" target=_blank rel=noopener>SCOTUS — Murthy v. Missouri</a></li>
-<li><a href="https://www.ca5.uscourts.gov/opinions/pub/23/23-50669-CV0.pdf" target=_blank rel=noopener>5th Cir. — Van Loon v. Treasury</a></li>
-<li><a href="https://home.treasury.gov/news/press-releases/sb0057" target=_blank rel=noopener>US Treasury / OFAC — Tornado Cash delisting</a></li>
-<li><a href="https://www.justice.gov/usao-sdny/pr/founders-samourai-wallet-cryptocurrency-mixing-service-plead-guilty" target=_blank rel=noopener>DOJ / SDNY — Samourai guilty pleas</a></li>
-<li><a href="https://www.sec.gov/newsroom/press-releases/2023-25" target=_blank rel=noopener>SEC — Kraken staking settlement</a></li>
-<li><a href="https://www.congress.gov/bill/119th-congress/house-bill/4405/text" target=_blank rel=noopener>Congress — Epstein Files Transparency Act</a></li>
-<li><a href="https://www.icij.org/investigations/pandora-papers/" target=_blank rel=noopener>ICIJ — Pandora Papers</a></li>
-<li><a href="https://hederacouncil.org/" target=_blank rel=noopener>Hedera — Governing Council roster</a></li>
-<li><a href="https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved" target=_blank rel=noopener>NIST — PQC FIPS 203/204/205</a></li>
-<li><a href="https://www.bankingdive.com/news/fdic-letters-cryptos-operation-chokepoint-2-0-claims-coinbase/735309/" target=_blank rel=noopener>FDIC — FOIA pause letters</a></li>
-</ul>
-<p class=mut>Each figure in the corpus carries its source URL in the matching <code>research/*.json</code>. <code>models/audit.py</code> and <code>models/cross_review.py</code> run via <code>scripts/new-research.sh</code>; current audit: 0 flags.</p>
+<h2><span class=n>4</span>Explore</h2>
+<div class=cards>
+  <a class=card href="dashboard.html"><b>Control dashboard</b><p>Every formal verdict, the circular core, the chokepoints, the gold lens, cross-layer connectors, bank exposure, and the primary-source list — over the live data.</p></a>
+  <a class=card href="research.html"><b>Research index</b><p>All 45 cited blocks, grouped by theme, each linking to its structured data and write-up.</p></a>
+  <a class=card href="methodology.html"><b>Methodology</b><p>The build pipeline, the grading scale, the graph layers and proof-integrity check, the consistency tooling, and how to reproduce.</p></a>
+  <a class=card href="glossary.html"><b>Glossary</b><p>Plain-language definitions of the technical terms used throughout — backwardation, SCC, OER, equity method, RPO, and more.</p></a>
+  <a class=card href="globe.html"><b>Chokepoint globe</b><p>A rotatable globe of adversary chokepoints, supply responses, capital hubs, and dependency arcs.</p></a>
+  <a class=card href="https://github.com/pq-cybarg/bubble-map"><b>Source &amp; proofs</b><p>Runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
+</div>
 
-<h2 id=method>Method</h2>
-<p>Research is split across <code>research/*.json</code> (structured edges + sources) and <code>research/*.md</code> (write-ups). <code>models/graph/build_graph.py</code> consolidates the edges into <code>data/graph.json</code> (150 nodes, 162 edges) and runs the Tarjan SCC. The Z3, TLA+, and Alloy models take their inputs from that data. Claims are graded <code>fact · contested · weak · unsupported</code>; graded overlays are kept out of the proofs. Intent is not inferred from adjacency. Reproduce with <code>bash run_all.sh</code> (Python + Z3; Java for TLA+/Alloy, jars auto-fetched).</p>
+<h2><span class=n>5</span>Add your signal</h2>
+<p class=mut>A transparent, server-less poll read client-side from the public GitHub API. To sign, react 👍 on the GitHub issue; to add testimony, comment. Every signature is public on GitHub — no backend, no data collection.</p>
+<div class=poll>
+  <div class=counts>
+    <div><b id=signs>—</b><em>signatures (👍)</em></div>
+    <div><b id=tests>—</b><em>testimonies (comments)</em></div>
+  </div>
+  <a class=btn id=signbtn href="#" target=_blank rel=noopener>Sign on GitHub (react 👍)</a>
+  <a class=btn sec id=testbtn href="#" target=_blank rel=noopener>Add testimony</a>
+  <div id=avatars></div>
+  <p class=mut id=pollstatus style="margin-top:10px"></p>
+</div>
 
-<h2 id=isnt>What this is and is not</h2>
-<p>It <b>is</b> a cited inventory of how the AI, banking, credit, commodity, energy, defense, crypto, telecom, and identity webs connect, with the financial core machine-checked and the rest evidence-graded. It is <b>not</b> a claim of a single conspiracy: the reading is a recurring operator-network plus recurring structures (LTCM interconnection, Enron off-balance-sheet vehicles, dotcom vendor financing) plus regulatory arbitrage, rebuilt each era in the least-regulated venue. Sensitive threads (people, influence, foreign actors) are graded and excluded from the proofs.</p>
+<h2><span class=n>6</span>What this is, and is not</h2>
+<p>It <b>is</b> a cited inventory of how the AI, banking, credit, commodity, energy, defense, crypto, telecom, and identity webs connect — financial core machine-verified, the rest evidence-graded, with primary government, court, and exchange records cited throughout. It is <b>not</b> a claim of one cabal: the reading is recurring operators and recurring structures rebuilt in the least-regulated venue, with intent never inferred from adjacency. Reproduce everything with <code>bash run_all.sh</code>; fork it; extend it.</p>
 
 </div>
-<footer>Bubble Map · open source · no backend · the poll reads the public GitHub API client-side · updated 2026-06-08 · <a href="https://github.com/pq-cybarg/bubble-map/commits/main" style="color:#8a96a8">commit history</a> · contact resistant@tuta.com</footer>
+<footer>Bubble Map · open source · no backend · the poll reads the public GitHub API client-side · updated 2026-06-08 · <a href="https://github.com/pq-cybarg/bubble-map/commits/main">commit history</a> · contact resistant@tuta.com</footer>
 <script>
 const OWNER="pq-cybarg", REPO="bubble-map", ISSUE=1;
 const issueURL=`https://github.com/${OWNER}/${REPO}/issues/${ISSUE}`;
 document.getElementById('signbtn').href=issueURL;
 document.getElementById('testbtn').href=issueURL+"#new_comment_field";
-document.getElementById('repo').href=`https://github.com/${OWNER}/${REPO}`;
-document.getElementById('report').href=`https://github.com/${OWNER}/${REPO}/blob/main/report/UNMASKING.md`;
-document.getElementById('audit').href=`https://github.com/${OWNER}/${REPO}/blob/main/report/AUDIT.md`;
 async function gh(p){const r=await fetch(`https://api.github.com/repos/${OWNER}/${REPO}${p}`,{headers:{Accept:"application/vnd.github+json"}});if(!r.ok)throw new Error(r.status);return r.json();}
 async function loadPoll(){
   try{

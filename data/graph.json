@@ -709,6 +709,32 @@
       "note": "Total debt >$21B (from <$8B 2024), ~11% variable; Q4 interest $388M (~1/3 of revenue). The leverage that makes the cascade node fragile."
     },
     {
+      "from": "PIMCO",
+      "to": "Oracle",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "debt",
+      "amount_usd": 10000000000,
+      "status": "anchored",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "PIMCO anchored ~$10B of Oracle's $16.3B Michigan data-center bond after US banks retreated - private credit as the marginal lender for the Stargate build (ties macro-cre-privatecredit)."
+    },
+    {
+      "from": "Oracle",
+      "to": "Stargate",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "compute_commitment",
+      "amount_usd": null,
+      "status": "RPO-523B",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "spec-sec-filings-primary.json",
+      "note": "Oracle's ~$523B RPO backlog is dominated by OpenAI/Stargate cloud capacity - the demand side of the loop, financed by >=$72B partner debt + $50B capex."
+    },
+    {
       "from": "Boskin_Commission",
       "to": "CPI_Methodology",
       "instrument": "other",
@@ -3012,8 +3038,8 @@
   ],
   "analysis": {
     "num_nodes": 170,
-    "num_edges": 179,
-    "num_financial_edges": 109,
+    "num_edges": 181,
+    "num_financial_edges": 111,
     "num_structural_edges": 70,
     "core_scc_all": [
       "AMD",
@@ -3065,28 +3091,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -3110,6 +3136,12 @@
         "Microsoft"
       ],
       [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
@@ -3120,12 +3152,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "Amazon",
@@ -3887,9 +3913,9 @@
         "in_robust_core": true
       },
       "Oracle": {
-        "total_usd": 325000000000,
+        "total_usd": 335000000000,
         "circular_usd": 300000000000,
-        "circularity_ratio": 0.923,
+        "circularity_ratio": 0.896,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -3908,7 +3934,7 @@
         "in_robust_core": false
       },
       "PIMCO": {
-        "total_usd": 18000000000,
+        "total_usd": 28000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4466,6 +4492,24 @@
         "both_layers": true
       },
       {
+        "node": "Oracle",
+        "degree": 7,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "private_credit",
+          "sink",
+          "spv"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 4,
+        "layers": [
+          "financial"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -4474,23 +4518,6 @@
           "hyperscaler",
           "private_credit",
           "sink"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 3,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "Oracle",
-        "degree": 5,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "sink",
-          "spv"
         ],
         "n_neighbor_sectors": 5,
         "source_files": 3,
@@ -4581,6 +4608,22 @@
         "both_layers": false
       },
       {
+        "node": "Stargate",
+        "degree": 7,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bank",
+          "financier",
+          "hyperscaler"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 3,
+        "layers": [
+          "financial"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "CPI_Methodology",
         "degree": 4,
         "neighbor_sectors": [
@@ -4627,22 +4670,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Stargate",
-        "degree": 6,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bank",
-          "financier",
-          "hyperscaler"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 2,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       },
       {
         "node": "ATT",

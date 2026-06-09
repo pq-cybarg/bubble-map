@@ -26,9 +26,9 @@ We prove the financial half. We evidence-grade the rest.
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **170 nodes, 179 directed edges.**
+Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **170 nodes, 181 directed edges.**
 
-Each edge is tagged with a **layer**: **109 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **70 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
+Each edge is tagged with a **layer**: **111 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **70 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 
 **Cross-layer connectors** (nodes ranked by distinct neighbor-sectors bridged) quantify the bridge nodes: **Hedera** spans the most sectors (10 — the enterprise-DLT council overlap), then **NVIDIA** and **Google** (the AI core also sitting on the DLT council), with **MGX** bridging ai-lab / Gulf-bigtech / exchange / SPV (the single Abu-Dhabi fund touching Stargate, Binance, and TikTok-US).
 
@@ -176,11 +176,13 @@ The same structural defect appears in four markets at once:
 
 ---
 
-## 9. Honesty ledger
-- **Proven (formal):** the circular core, its non-self-financing, the cascade, SpaceX separability.
-- **Strong (primary data):** the macro/banking/credit fragility, HTM>AFS, the per-bank vulnerable subset, the commodity stress.
-- **Graded (overlay):** the identity convergence (real but convergent, not a cabal); China (weak); ad-cartel (mechanism not collusion); crypto/Epstein (association not causation).
-- **Unverified specifics flagged in-line:** the named community-bank leader, "Bank on Roger," the "$2B Meta dark-money" figure, all SpaceX IPO terms (offering range, not priced).
-- **Hard limits:** bilateral interbank exposures aren't public; many "commitments" are reversible (Disney proved it); forward-looking items (SpaceX pricing, BOJ June hike) are labeled.
+## 9. The confidence ladder (honesty ledger)
+Every claim is sorted by evidence strength; only the top tier enters the formal proofs.
+
+- **Proven** (Z3 / TLA+ / Alloy, reproducible): the 11-firm circular core and its non-self-financing; OpenAI's ≥$1.03T external-capital need and insolvency at zero inflow; the OpenAI→CoreWeave→Oracle cascade; SpaceX separability; no single feasible Fed rate; rare-earth and firm-power independence infeasible on the timeline.
+- **Strongly evidenced** (primary filings / exchange / court / government records): Oracle's $523B RPO + ≥$72B partner debt + PIMCO's $10B anchor after banks retreated; CoreWeave 67%-one-customer / $21B debt / $388M quarterly interest; NVIDIA customer concentration 36%→61%; Microsoft's 27% equity-method share of an ~$11.5B/qtr OpenAI loss; HTM>AFS bank holes + the vulnerable per-bank subset; the −911k jobs benchmark; the ALNRI / New-Tenant rent lag in CPI; the COMEX/LBMA dislocation + JPMorgan's $920M spoofing settlement; the Binance pardon / USD1 / MGX nexus; Salt Typhoon's breach of the CALEA wiretap system; the Choke Point 2.0 FOIA disclosures.
+- **Graded / contested** (overlay, never used in the proofs): the digital-identity convergence (convergent, not a cabal); regulatory-capture *intent*; the "permanent price suppression" narrative; whether each official-data lag's convenient direction was design or coincidence; China (weak); ad-cartel (mechanism, not proven collusion); crypto/Epstein (association, not causation).
+- **Out of scope** (unsupported, explicitly excluded): fabrication of raw government microdata; a single coordinating cabal; ShadowStats-style "real" CPI numbers.
+- **Hard limits / flagged in-line:** bilateral interbank exposures aren't public; many "commitments" are reversible (Disney proved it); some named specifics (community-bank leader, "Bank on Roger," the "$2B Meta dark-money" figure) and forward-looking items (SpaceX pricing) are labeled unverified; "as-reported" corporate figures get the same scrutiny as government statistics.
 
 *Run everything: `bash run_all.sh`. Each engine's exact output is reproducible from `models/`. Sources for every figure are in the corresponding `research/*.json`.*

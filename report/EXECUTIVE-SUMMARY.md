@@ -3,7 +3,13 @@
 *Auto-generated 2026-06-08 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard. Each figure carries a source URL in the matching `research/*.json`. Checked by `models/audit.py` + `models/cross_review.py` (current: 0 flags).*
 
 ## The finding in one sentence
-The AI build-out is a **self-referential capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing** — and the same defect (promises far exceeding deliverable substance, risk parked in the least-regulated venue) recurs in bank securities books, private credit, metals, and the power grid, while the loop's largest actors converge on the **digital-identity control layer**.
+The AI build-out is a **circular capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing**; it is **gated by physical chokepoints it cannot buy past** on the timeline (compute capital, China rare earths, Russian enrichment, the power grid); and it is **embedded in measurement and control layers** — official statistics, paper commodity prices, and the identity / surveillance / political-money rails — that determine whether it can be seen and questioned.
+
+## How sure we are (the confidence ladder)
+- **Proven** (Z3/TLA+/Alloy, reproducible): the 11-firm circular core; OpenAI's ≥$1.03T external-capital need and insolvency at zero inflow; the OpenAI→CoreWeave→Oracle cascade; no single feasible Fed rate; rare-earth and firm-power independence infeasible on the timeline.
+- **Strongly evidenced** (primary filings/exchange/court/government records): Oracle's $523B backlog + ≥$72B partner debt + PIMCO's $10B anchor; CoreWeave 67% one-customer / $21B debt; NVIDIA 36%→61%; Microsoft's 27% equity-method share of an ~$11.5B/qtr OpenAI loss; the −911k jobs benchmark; the ALNRI/New-Tenant rent lag; the COMEX/LBMA dislocation + JPMorgan's $920M spoofing settlement; the Binance pardon/USD1/MGX nexus; Salt Typhoon via CALEA.
+- **Graded / contested** (overlay, never used in proofs): regulatory-capture intent; the permanent-suppression narrative; whether each data lag's convenient direction was design or coincidence.
+- **Out of scope** (unsupported, excluded): fabricated government microdata; a single coordinating cabal; ShadowStats-style CPI numbers.
 
 ## What is machine-proven (not asserted)
 - **An 11-firm circular core** (Tarjan SCC): NVIDIA, OpenAI, Oracle, CoreWeave, Microsoft, Amazon, Anthropic, AMD, Crusoe, Lambda + lenders; **16 round-trip cycles**.

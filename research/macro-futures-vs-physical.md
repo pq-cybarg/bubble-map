@@ -23,8 +23,11 @@ The headline commodity price is set in **leveraged futures** on one venue; the *
 - **Venue split:** CME in contango (tariff distortion) while LME ran backwardation in nearby months; SHFE arbitrage transmits into LME–SHFE spreads.
 - *Lesson:* one policy action blew a **>28% wedge** between two exchanges pricing the same metal — the "price" is venue- and policy-contingent, not a single physical truth.
 
-## Oil — *structure fact; live differentials deferred to primary series*
-Three benchmarks price "oil" differently: **WTI** (US light-sweet), **Brent** (waterborne), **Dubai** (Asia sour). Physical differentials (sulfur/density/freight) mean the futures benchmark isn't the barrel a refiner buys; curve shape (contango/backwardation) across the three signals tightness vs glut. Exact 2025 WTI–Brent–Dubai spreads belong to EIA/CME/DGCX/Platts series (`macro-oil-backwardation` holds the prior episode).
+## Oil (2025–26) — *strong (ICE/CME curve data)*
+Three benchmarks price "oil" differently: **WTI** (US light-sweet), **Brent** (waterborne, slight premium to WTI), **Dubai** (Asia sour) — physical differentials (sulfur/density/freight) mean the futures benchmark isn't the barrel a refiner buys.
+- **Brent in pronounced backwardation:** front **~$94.22** (Jun 5 2026) → **~$85.79** (Dec 2026) → **~$77.68** (Dec 2027); WTI also backwardated amid a supply crunch.
+- **But the structure whipsawed:** Brent's 6-month calendar spread collapsed to **41¢** backwardation in Nov 2025 (from **>$2** on Oct 24) and briefly went **contango** — the lowest in ~2 years; May 2025 curves flattened into contango.
+- Steep backwardation makes storage uneconomic — so the **curve shape is the live tightness signal**, and in 2025–26 it flipped between scarcity and glut within weeks. *The price is a curve, not a number.*
 
 ## Zero-trust conclusion
 Treat the **futures print like a BLS headline** — the most *tradable*, not necessarily the most *physical*, number — and cross-check it against **backwardation, cross-exchange premia, registered/eligible stocks, lease rates, and the Eastern physical bid**. This complements the gold lens (`macro-gold-silver-reprice`): not only are nominal gains debasement, the metal price itself is a paper construct that physical periodically overrides.
