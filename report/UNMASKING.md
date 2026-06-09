@@ -29,7 +29,7 @@ It is the same defect four times: a self-chosen valuation that holds until reali
 
 **3. Who holds the bag: retiree annuities and 401(k)s.** The risk migrates off banks → PE-owned insurers (**>$700B, ~25% of US life**) → annuities backed by manager-marked private credit (~⅕ loans to *affiliated* funds) → ceded to **Bermuda captives the same group controls** (~60% offshore = internal "transfer"). An Aug-2025 Executive Order opens **401(k)s** to private credit. IMF, FSB, FIO, NAIC, and US Treasury are all warning. (`macro-private-credit-marks`, `spec-insurance-bermuda`.)
 
-**4. When does it break? Structure certain, date unknowable.** Proven: the core is insolvent at zero external inflow and the marks must reverse on a forcing event. **The date is not knowable** — unforecastable in principle (reflexivity, Minsky, Keynes); dot-com / 2008 / SVB were all visible for years and broke suddenly on catalysts no one called. What replaces a date is the trigger panel (§8) and one contractual inflection: the SpaceX compute deals are cancelable after **Dec 31 2026**. (`spec-unwind-timing`.)
+**4. When does it break? Structure certain, date unknowable.** Proven: the core is insolvent at zero external inflow and the marks must reverse on a forcing event. **The date is not knowable** — unforecastable in principle (reflexivity, Minsky, Keynes); dot-com / 2008 / SVB were all visible for years and broke suddenly on catalysts no one called. What replaces a date is the trigger panel (§8) and the staged contractual cliffs in the SpaceX compute deals: Google can terminate as early as **Sep 30 2026** (GPU-delivery miss), and either party can give **90 days' notice after Dec 31 2026** (first exits ~Q1 2027). (`spec-unwind-timing`.)
 
 ---
 
@@ -200,7 +200,7 @@ The same structural defect appears in four markets at once:
 - **Falsifier for Layer 1:** OpenAI/Anthropic reaching cash-flow self-sufficiency (revenue catching commitments) would break T3/T4. Watch the revenue-vs-commitment ratio.
 - **Triggers (the TLA+ shock):** a yen-carry/rate shock; a refusal of the next OpenAI/Anthropic mega-round; an Oracle/CoreWeave debt-service miss; an IP-liability ruling (the Sora-style node).
 - **Identity-convergence upgrade to STRONG:** a confirmed Oracle UK digital-ID award; a wired OpenAI↔World ID integration.
-- **SpaceX watch:** if the Google/Anthropic compute deals are *renewed* (not cancelled) past Dec 31 2026, SpaceX migrates from cancelable-only into the structural core.
+- **SpaceX watch (staged cliffs):** Google can terminate the $30B deal as early as **Sep 30 2026** if SpaceX misses GPU delivery; either party (Google + Anthropic) can give **90 days' notice after Dec 31 2026** (first exits ~Q1 2027). If instead the deals are *renewed* through that window, SpaceX migrates from cancelable-only into the structural core.
 
 ---
 

@@ -39,4 +39,4 @@ Canonical numbers (from data/*.json — the source of truth):
 - speculation: ✓
 
 ## Research files lacking any 'source' field
-- spec-unwind-timing.json
+- none

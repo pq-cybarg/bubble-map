@@ -25,7 +25,7 @@ Also uncertain: whether it's *violent* or a slow/bailout-cushioned deflate; whic
 ## OBSERVABLE (watch these, not the calendar)
 **Capital-tap triggers:** a yen/BOJ **carry unwind**; a **failed or down** OpenAI/Anthropic mega-round; an **IPO that prices below the last private mark** (fires the M3 reversal); an **Oracle/CoreWeave debt-service miss**.
 **Credit/rate triggers:** a **long-rate spike** reopening bank HTM (already turned up, $306B→$325B in Q1-2026); a **private-credit default cluster** beyond First Brands/Tricolor (bad-PIK ~6.4%, ~40% of borrowers FCF-negative, defaults ~5.8%); a **stablecoin/Treasury** wobble or sovereign (MGX/PIF/SoftBank) pullback.
-**The one dated inflection** (contractual, not a forecast): the **Google/Anthropic↔SpaceX compute deals are cancelable after Dec 31 2026** — renewal pulls SpaceX into the structural core; cancellation unwinds the cancelable slice.
+**The dated inflections** (contractual, staged — not forecasts): **(a)** Google may terminate the $30B deal as early as **Sep 30 2026** if SpaceX **misses GPU delivery**; **(b)** either party (Google *and* Anthropic) can give **90 days' notice after Dec 31 2026** — so the first effective exits could land **~Q1 2027**. Renewal pulls SpaceX into the structural core; exercise unwinds the cancelable slice.
 
 ## Verdict
-**Structure: certain. Date: unknowable.** The honest deliverable is the trigger panel above plus the falsifiers in `UNMASKING` §8 — watch the indicators, not the calendar.
+**Structure: certain. Date: unknowable.** The honest deliverable is the trigger panel above (including the staged SpaceX cliffs — Sep 30 2026 delivery-miss, 90-day notice from Dec 31 2026) plus the falsifiers in `UNMASKING` §8 — watch the indicators, not the calendar.
