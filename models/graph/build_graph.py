@@ -132,6 +132,7 @@ NODE_META = {
  "COMEX":("exchange",True),"Metals_Futures":("commodity_market",False),"Silver_Physical":("commodity",False),"Copper":("commodity",False),
  "US_Tariff_Policy":("state",True),"Gig_Platforms":("labor_platform",False),"Contingent_Labor":("labor",False),
  "Rate_Shock":("macro_factor",False),
+ "PrivateCredit_Funds":("private_credit",True),"AI_Datacenters":("ai_infra",False),"Insurers_Annuities":("insurance",True),"Retail_401k":("retail",False),
  # persons / misc
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),

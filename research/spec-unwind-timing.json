@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "On the timing of a violent unwind - what is CERTAIN, what is fundamentally UNCERTAIN, and what is OBSERVABLE",
+    "generated": "2026-06-09",
+    "frame": "Direct answer to: 'when does this come to a head / get forced to unwind violently? Absolute certainty only - if uncertain, say so.' The honest answer: the STRUCTURE is provable; the DATE is not. This block states the certainties (the proven results), states plainly that the timing is UNCERTAIN and why it is unforecastable in principle, and gives what IS observable - the triggers and leading indicators to watch (not a date).",
+    "discipline": "ABSOLUTE-CERTAINTY-ONLY as requested. Anything that is a forecast, a probability, or a date is labeled UNCERTAIN. Only mathematically-proven or definitionally-true statements are labeled CERTAIN. No date is asserted."
+  },
+  "what_is_certain": {
+    "label": "CERTAIN (proven by the models / definitionally true) - NOT timing",
+    "items": [
+      "The core is solvent ONLY while external capital keeps flowing: at zero external inflow it is insolvent (Z3 T4, UNSAT). This is a structural certainty, not a schedule.",
+      "OpenAI's commitments require >=$1.03T of external capital it does not have (Z3 T3, UNSAT).",
+      "Self-set marks (AI fair-value, bank HTM, private-credit NAV) MUST reverse when a forcing event prices them externally - an IPO below the mark forces a writedown (reflexive_marks M3, UNSAT to keep the gains; TLA+ MarkUnwind invariant violated). Certain that it reverses IF the event occurs; the event's date is not certain.",
+      "A single capital-stop propagates OpenAI->CoreWeave->Oracle (TLA+ cascade, reachable). Certain that the path exists; not when it fires.",
+      "There is no single feasible configuration that is shock-safe (every leg's local UNSAT + the contagion matrix). Certain structurally."
+    ]
+  },
+  "what_is_uncertain": {
+    "label": "UNCERTAIN - and unforecastable in principle. STATED PLAINLY: the date of a violent unwind is NOT knowable.",
+    "core_statement": "No one can give the date with certainty, and anyone who gives you a precise date is wrong or selling something. The timing is not merely unknown to us - it is unforecastable in principle, for three reasons:",
+    "reasons": [
+      "REFLEXIVITY (Soros): the trigger is confidence/coordination, which is self-referential - the act of widely predicting the unwind changes when it happens. A variable that responds to its own forecast cannot be forecast.",
+      "MINSKY: stability itself breeds the leverage that eventually destabilizes; the 'Minsky moment' is identifiable only in hindsight - the model tells you the system is fragile, not the day it breaks.",
+      "SOLVENCY-vs-RATIONALITY (Keynes): 'markets can remain irrational longer than you can remain solvent.' Bubbles routinely persist far past the point the fundamentals justify, then break suddenly on a catalyst whose timing is exogenous."
+    ],
+    "empirical_note": "Every comparable episode (dot-com, 2008, SVB-2023) had the STRUCTURE visible for YEARS before the break; the break was sudden and catalyst-triggered, and essentially no one called the date. That pattern is itself evidence that the date is not reliably forecastable - only the fragility is.",
+    "also_uncertain": ["whether the unwind is violent (fast) or a slow grind/bailout-cushioned deflate","which trigger fires first","whether policy (rate cuts, a new BTFP-style facility, sovereign backstops) defers it again","the magnitude of losses and who is made whole"]
+  },
+  "what_is_observable": {
+    "label": "OBSERVABLE - leading indicators and triggers to WATCH (these are NOT a date; they are the instrument panel).",
+    "triggers_capital_tap": [
+      "Yen / BOJ carry unwind (the BEAR trigger): a sharp yen appreciation / JGB-yield rise that forces deleveraging of crowded carry-funded longs.",
+      "A FAILED or DOWN mega-round for OpenAI or Anthropic (the loop needs the next round to keep marks up and cash flowing).",
+      "An IPO of OpenAI/Anthropic that PRICES BELOW the last private mark -> the reflexive_marks M3 reversal fires (Amazon/Google writedowns, MarkUnwind trace).",
+      "An Oracle or CoreWeave debt-service miss / failed refinancing (CoreWeave ~$21B @ ~11% variable; Oracle >=$72B partner debt + $50B capex)."
+    ],
+    "triggers_credit_rates": [
+      "A long-rate SPIKE that reopens bank HTM losses (already turned up: FDIC unrealized losses rose $306B->$325B in Q1-2026).",
+      "A private-credit default CLUSTER beyond First Brands/Tricolor (bad-PIK ~6.4%, ~40% of borrowers FCF-negative, default rate ~5.8% and rising).",
+      "A stablecoin/Treasury-demand wobble (GENIUS-Act rail) or a sovereign (MGX/PIF/SoftBank) funding pullback."
+    ],
+    "dated_known_inflection": "The ONE near-certain DATE on the board is contractual, not a forecast: the Google/Anthropic<->SpaceX compute deals are cancelable after Dec 31 2026 - a known optionality cliff (renewal => SpaceX enters the structural core; cancellation => the cancelable slice unwinds). A scheduled decision point, not a predicted crash.",
+    "watch_panel": "report/INDEX.html (dashboard) + contagion.json track the legs; the falsifiers in report/UNMASKING.md s8 list the break conditions. Watch the indicators, not the calendar."
+  },
+  "verdict": "TIMING: UNCERTAIN - stated plainly as requested. The STRUCTURE is certain (proven: insolvent at zero inflow; marks must reverse on a forcing event; the cascade path exists; no shock-safe configuration). The DATE of a violent unwind is NOT knowable and is unforecastable in principle (reflexivity + Minsky + markets-vs-solvency), as the dot-com/2008/SVB record confirms. What you get instead of a date is an instrument panel: a specific, observable trigger set (carry unwind, a down-round / IPO-below-mark, an Oracle/CoreWeave debt miss, a long-rate spike reopening HTM, a private-credit default cluster) and one contractual inflection (the Dec 31 2026 SpaceX-deal cancelability). Anyone offering a precise date is not being honest about what is knowable."
+}

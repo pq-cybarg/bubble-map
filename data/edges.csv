@@ -4,6 +4,7 @@ Private-credit market,AI data centers,debt,800000000000,2026 (Morgan Stanley 2yr
 Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 OpenAI,Microsoft,compute_commitment,250000000000,committed,True,False,"fin-nvidia-openai.json,fin-microsoft-openai.json"
+PrivateCredit_Funds,Insurers_Annuities,other,180000000000,deployed,False,False,macro-private-credit-marks.json
 Microsoft,OpenAI,equity,135000000000,closed-definitive,True,False,fin-microsoft-openai.json
 US_Banks,Private-credit funds,debt,123000000000,2024-12,False,False,macro-cre-privatecredit.json
 Meta,SINK_capex,capex,115000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
@@ -182,4 +183,6 @@ BLS_NTRI,CPI_Rent,other,,leads_4q,False,False,macro-rent-cpi-divergence.json
 CPI_Rent,CPI_Methodology,other,,structural,False,False,macro-rent-cpi-divergence.json
 Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
 Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
+PrivateCredit_Funds,AI_Datacenters,debt,,marginal-lender,False,False,macro-private-credit-marks.json
+PrivateCredit_Funds,Retail_401k,other,,EO-opened,False,False,macro-private-credit-marks.json
 MP_Materials,Defense_Primes,offtake,,committed,True,False,macro-critical-minerals.json

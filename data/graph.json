@@ -8,6 +8,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Datacenters": {
+      "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
     "AMD": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -276,6 +280,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "Insurers_Annuities": {
+      "sector": "insurance",
+      "has_exogenous_revenue": true
+    },
     "Intel": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -464,12 +472,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "PrivateCredit_Funds": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
     "QCEW_Benchmark": {
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
     "Rate_Shock": {
       "sector": "macro_factor",
+      "has_exogenous_revenue": false
+    },
+    "Retail_401k": {
+      "sector": "retail",
       "has_exogenous_revenue": false
     },
     "Ripple": {
@@ -3044,6 +3060,45 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "PrivateCredit_Funds",
+      "to": "AI_Datacenters",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "debt",
+      "amount_usd": null,
+      "status": "marginal-lender",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-marks.json",
+      "note": "Apollo/Blue Owl/PIMCO are the marginal lenders to the AI buildout (Oracle $72B, CoreWeave, Meta Hyperion $27B) - ties spec-sec-filings-primary + macro-cre-privatecredit."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Insurers_Annuities",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "risk_transfer",
+      "amount_usd": 180000000000,
+      "status": "deployed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-marks.json",
+      "note": "~$180B insurance-linked capital into private credit (2025, up from $120B 2023); ~1/5 of Athene/Global Atlantic investments are loans to AFFILIATED funds - the risk lands in annuity reserves."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Retail_401k",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "risk_transfer",
+      "amount_usd": null,
+      "status": "EO-opened",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-marks.json",
+      "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
+    },
+    {
       "from": "US_Government",
       "to": "MP_Materials",
       "instrument": "equity",
@@ -3084,10 +3139,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 172,
-    "num_edges": 184,
-    "num_financial_edges": 113,
-    "num_structural_edges": 71,
+    "num_nodes": 176,
+    "num_edges": 187,
+    "num_financial_edges": 114,
+    "num_structural_edges": 73,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3138,16 +3193,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "AMD",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
       ],
       [
         "Microsoft",
@@ -3160,6 +3211,10 @@
       [
         "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -3177,10 +3232,10 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -3191,14 +3246,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -3233,6 +3288,13 @@
       },
       "AI data-center SPVs / hyperscaler projects": {
         "total_usd": 27000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Datacenters": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3707,6 +3769,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Insurers_Annuities": {
+        "total_usd": 180000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Intel": {
         "total_usd": 12900000000,
         "circular_usd": 0,
@@ -4036,6 +4105,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PrivateCredit_Funds": {
+        "total_usd": 180000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "QCEW_Benchmark": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4045,6 +4121,13 @@
       },
       "Rate_Shock": {
         "total_usd": 306000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Retail_401k": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4717,12 +4800,12 @@
         "both_layers": false
       },
       {
-        "node": "SEALSQ",
-        "degree": 6,
+        "node": "PrivateCredit_Funds",
+        "degree": 3,
         "neighbor_sectors": [
-          "crypto_infra",
-          "pqc_quantum",
-          "semiconductor"
+          "ai_infra",
+          "insurance",
+          "retail"
         ],
         "n_neighbor_sectors": 3,
         "source_files": 1,
@@ -4733,14 +4816,15 @@
         "both_layers": true
       },
       {
-        "node": "ATT",
-        "degree": 2,
+        "node": "SEALSQ",
+        "degree": 6,
         "neighbor_sectors": [
-          "satellite",
-          "state_intel"
+          "crypto_infra",
+          "pqc_quantum",
+          "semiconductor"
         ],
-        "n_neighbor_sectors": 2,
-        "source_files": 2,
+        "n_neighbor_sectors": 3,
+        "source_files": 1,
         "layers": [
           "financial",
           "structural"

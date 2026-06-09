@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 27 files
-- **Google** — 23 files
-- **Oracle** — 16 files
-- **Amazon** — 16 files
-- **OpenAI** — 16 files
-- **Anthropic** — 14 files
+- **Meta** — 28 files
+- **Google** — 24 files
+- **Oracle** — 18 files
+- **Amazon** — 17 files
+- **OpenAI** — 17 files
+- **Anthropic** — 15 files
 - **Microsoft** — 12 files
 - **Stargate** — 11 files
+- **FDIC** — 11 files
 - **Chainlink** — 10 files
 - **JPMorgan** — 10 files
-- **NVIDIA** — 10 files
-- **FDIC** — 10 files
+- **SpaceX** — 10 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- BRICS, CLARITY, PIF, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
+- BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-bank-htm-marks.json` — related files by shared entities (verify cross-refs exist)
-- macro-fdic.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- macro-history-dereg-manipulation.json: 1 shared entities
-- influence-ad-censorship.json: 1 shared entities
-- macro-oil-backwardation.json: 1 shared entities
-- macro-cre-privatecredit.json: 1 shared entities
-- macro-official-data-integrity.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
+## Newest file `spec-unwind-timing.json` — related files by shared entities (verify cross-refs exist)
+- fin-google-amazon-anthropic-meta.json: 8 shared entities
+- spec-sec-filings-primary.json: 7 shared entities
+- sec-filings.json: 7 shared entities
+- spec-exchanges-asia.json: 7 shared entities
+- fin-coreweave-oracle.json: 7 shared entities
+- spec-telecom-satellite.json: 6 shared entities
+- fin-nvidia-openai.json: 6 shared entities
+- fin-hedera-connections.json: 6 shared entities

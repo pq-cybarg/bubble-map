@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "Private credit under zero-trust - manager-marked NAVs ('mark-to-myth'), the AI-buildout's marginal lender, and the insurance/retail channel that absorbs the risk",
+    "generated": "2026-06-09",
+    "frame": "The THIRD self-marked asset class, completing the pattern with bank HTM (carried at cost) and AI stakes (fair-value/equity marks). Private-credit loans are valued by the MANAGER (who earns fees on the mark), are illiquid, and are not exchange-priced - so reported NAVs are a chosen value held until a forcing event. This block documents the marks, the 2025-26 credit events that tested them (First Brands, Tricolor), the quality deterioration (PIK, negative-FCF borrowers, rising defaults), and - critically - WHO ULTIMATELY HOLDS THE RISK as it migrates into insurance annuities and retail 401(k)s.",
+    "WARNING": "EVIDENCE-GRADED. Size, credit events, PIK/default data, and the 401(k) Executive Order are fact. The 'marks are inflated' reading is the strong interpretation of the BDC price-vs-NAV gap (the gap is fact; whether it is inflation or deterioration - both adverse - is the contested part). Apollo's Marc Rowan publicly REJECTS the systemic-risk framing; presented. Kept out of the proofs.",
+    "method": "FSB (Vulnerabilities in Private Credit, May 2026), SDNY enforcement statements, Bloomberg (bad-PIK), Goldman Sachs, BDC 10-Qs, iCapital/Dechert valuation pieces, SEC/DOL/White House on retailization, AM Best on insurer related-party lending.",
+    "cross_refs": ["macro-bank-htm-marks.json (self-marked asset class #1)","spec-sec-filings-primary.json + models/z3/reflexive_marks.py (self-marked asset class #2 - AI fair-value)","macro-cre-privatecredit.json + macro-firstbrands-ubs.json (prior threads)","spec-crypto-sec-epstein.json (Apollo/Black/Epstein - the same Apollo)","contagion.json (PrivateCredit->Banks leg)","spec-unwind-timing.json (where this lands in a forced unwind)"]
+  },
+  "self_marked_navs": {
+    "grade": "BDC price-NAV GAP is fact; 'inflated marks' interpretation CONTESTED",
+    "facts": [
+      "Private credit ~doubled to ~$2T in five years; loans are MANAGER-VALUED, illiquid, not exchange-priced - the manager earns fees on the very mark it sets.",
+      "2025 divergence: the public S&P BDC Index fell ~13% while private (non-traded) BDCs reported ~+8-10% - either portfolio health deteriorated or NAVs are inflated/lagged (both adverse).",
+      "Nov 2025: the SDNY US Attorney flagged as an enforcement focus whether private-fund advisers 'cherry-pick prices' that benefit themselves through higher fees (ties spec-sec-sdny-regulatory).",
+      "Apollo's Marc Rowan publicly rejects the systemic-risk framing ('people lost their minds over private credit fears') - the counter-view, recorded."
+    ],
+    "source": ["https://icapital.com/insights/private-credit/the-valuation-gap-how-timing-mismatches-are-shaping-private-credit-risk-perception/","https://www.dechert.com/knowledge/the-cred/2025/11/state-of-the-private-credit-market-and-valuation-best-practices.html","https://www.wealthmanagement.com/alternative-investments/rowan-says-people-lost-their-minds-over-private-credit-fears"]
+  },
+  "marks_tested_2025": {
+    "grade": "STRONG (the events happened)",
+    "facts": [
+      "FIRST BRANDS (auto parts): marked at/above 100 cents on the dollar by private-credit funds months before bankruptcy; pitched as a $6B loan opportunity (Jefferies) with ~$1B cash - now top loans ~one-third of value; earlier thread: ~$2.3B receivables 'missing' (macro-firstbrands-ubs).",
+      "TRICOLOR (subprime auto): AAA-rated ABS trading at full value before bankruptcy; defaulted on ~$1B; lower bonds crashed to ~12 cents.",
+      "Both show the same thing: a chosen/rated value held at par until the forcing event, then a near-instant repricing to a fraction - the mark was fiction, revealed only on default."
+    ],
+    "source": ["https://blog.siebert.com/tricolor-first-brands-and-the-trouble-brewing-beneath-the-surface","https://www.nb.com/en/global/insights/article-lessons-from-first-brands-and-tricolor"]
+  },
+  "quality_deterioration": {
+    "grade": "STRONG (BDC data / Bloomberg / Goldman)",
+    "facts": [
+      "PIK (payment-in-kind, interest deferred onto principal) ~8.8% of total investment income in late 2025; public BDCs average ~8% PIK.",
+      "'BAD PIK' (deferred mid-loan due to liquidity strain, not structured at origination) ~6.4% of private-credit loans Q4-2025 - nearly TRIPLE 2021 levels.",
+      "~40% of private-credit borrowers now have NEGATIVE free cash flow (vs ~25% in 2021).",
+      "US private-credit default rate ~5.8% (Jan 2026, up from 5.6% Dec); companies needing unexpected loan-term changes jumped 2.5% -> 6.4% YoY.",
+      "FSB issued a report on private-credit vulnerabilities (May 2026) - the global regulator flagging the asset class."
+    ],
+    "source": ["https://www.bloomberg.com/news/articles/2025-10-31/private-credit-s-rising-pile-of-bad-pik-points-to-default-woes","https://www.goldmansachs.com/insights/goldman-sachs-exchanges/cracks-in-private-credit","https://www.fsb.org/uploads/P060526.pdf"]
+  },
+  "who_holds_the_bag": {
+    "grade": "STRONG (Bloomberg/AM Best/White House EO)",
+    "the_migration": "The risk is moving OFF banks and sophisticated funds and INTO insurance reserves (annuities) and retail retirement accounts - the least-able-to-bear, longest-locked-up holders.",
+    "facts": [
+      "INSURANCE-PE NEXUS: Apollo's Athene manages >$300B with a large, growing direct-lending/asset-based-finance allocation; KKR's Global Atlantic similar. AM Best: ~ONE-FIFTH of Athene US Life and Global Atlantic investments are loans to AFFILIATED funds (related-party / self-dealing structure).",
+      "Insurance-linked capital deployed ~$180B into private credit in 2025 (up from ~$120B in 2023) - life insurers funding annuities with illiquid manager-marked credit, a shift from their traditional high-grade-bond books.",
+      "RETAILIZATION: interval funds / tender-offer funds / BDCs had >$400B assets (end-2024), expected to MORE THAN DOUBLE by 2029; from 2025 privately-offered BDCs can issue multiple retail share classes.",
+      "401(k) ACCESS: Trump Executive Order (Aug 7 2025) opens defined-contribution plans to private credit/equity/real estate/crypto; a DOL proposed rule (Mar 2025) broadens alt access; SEC leadership pushing 'democratization' (Better Markets and others call it pushing illiquid, opaquely-marked risk onto Main Street)."
+    ],
+    "source": ["https://www.bloomberg.com/graphics/2025-america-insurance-part-1/","https://www.sec.gov/newsroom/speeches-statements/uyeda-remarks-diversification-deficit-opening-401ks-private-markets-112025","https://bettermarkets.org/analysis/the-secs-determination-to-push-retail-investors-into-private-market-assets-benefits-wall-street-rather-than-main-street/"]
+  },
+  "edges": [
+    {"from":"PrivateCredit_Funds","to":"AI_Datacenters","instrument":"debt","amount_usd":null,"date":"2025","status":"marginal-lender","circular":false,"cancelable":false,"confidence":"high","source":["https://www.goldmansachs.com/insights/goldman-sachs-exchanges/cracks-in-private-credit"],"notes":"Apollo/Blue Owl/PIMCO are the marginal lenders to the AI buildout (Oracle $72B, CoreWeave, Meta Hyperion $27B) - ties spec-sec-filings-primary + macro-cre-privatecredit."},
+    {"from":"PrivateCredit_Funds","to":"Insurers_Annuities","instrument":"risk_transfer","amount_usd":180000000000,"date":"2025","status":"deployed","circular":false,"cancelable":false,"confidence":"high","source":["https://www.bloomberg.com/graphics/2025-america-insurance-part-1/"],"notes":"~$180B insurance-linked capital into private credit (2025, up from $120B 2023); ~1/5 of Athene/Global Atlantic investments are loans to AFFILIATED funds - the risk lands in annuity reserves."},
+    {"from":"PrivateCredit_Funds","to":"Retail_401k","instrument":"risk_transfer","amount_usd":null,"date":"2025-08","status":"EO-opened","circular":false,"cancelable":false,"confidence":"high","source":["https://www.sec.gov/newsroom/speeches-statements/uyeda-remarks-diversification-deficit-opening-401ks-private-markets-112025"],"notes":"Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."}
+  ],
+  "assessment": "Private credit is the THIRD self-marked asset class, completing the corpus's epistemic pattern: bank securities held at HTM COST (macro-bank-htm-marks), AI stakes held at FAIR-VALUE/EQUITY marks (reflexive_marks), and private-credit loans held at MANAGER-SET NAVs - all chosen values, not market prices, held until a forcing event. The 2025-26 events tested the marks and they failed instantly: First Brands marked >=100c months before bankruptcy then to ~33c; Tricolor AAA-at-par then 12c. The deterioration is measurable (bad-PIK ~3x 2021, ~40% of borrowers FCF-negative, defaults ~5.8%), and the public-BDC price (-13%) vs private-BDC NAV (+8-10%) gap says the marks lag reality (whether by inflation or lag, both adverse; Rowan's denial noted). The decisive finding is WHERE THE RISK GOES: off banks/funds and INTO insurance annuities (Apollo/Athene, ~1/5 related-party affiliated-fund loans; ~$180B insurance capital in 2025) and RETAIL 401(k)s (Trump EO Aug-2025, BDC retail wrappers doubling) - the longest-locked, least-able-to-bear holders, valued at marks they cannot independently check. This is the same private credit that is the marginal lender to the AI buildout (PIMCO/Apollo/Blue Owl) and the contagion PrivateCredit->Banks leg. Overlay; not used in the proofs; it is the answer to 'who ultimately holds the bag.'"
+}

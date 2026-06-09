@@ -26,9 +26,9 @@ We prove the financial half. We evidence-grade the rest.
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 45 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **172 nodes, 184 directed edges.**
+Consolidating 48 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **176 nodes, 187 directed edges.**
 
-Each edge is tagged with a **layer**: **113 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **71 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
+Each edge is tagged with a **layer**: **114 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **73 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 
 **Cross-layer connectors** (nodes ranked by distinct neighbor-sectors bridged) quantify the bridge nodes: **Hedera** spans the most sectors (10 — the enterprise-DLT council overlap), then **NVIDIA** and **Google** (the AI core also sitting on the DLT council), with **MGX** bridging ai-lab / Gulf-bigtech / exchange / SPV (the single Abu-Dhabi fund touching Stargate, Binance, and TikTok-US).
 
@@ -173,7 +173,9 @@ The same structural defect appears in four markets at once:
 
 ---
 
-## 8. What would falsify this / what to watch
+## 8. Timing, falsifiers, and what to watch
+
+**On timing (the honest answer): the structure is certain; the date is not.** It is *certain* (proven) that the core is insolvent at zero external inflow, that the self-set marks must reverse on a forcing event, and that a shock-safe configuration does not exist. It is *uncertain* — and **unforecastable in principle** — when a violent unwind fires: the trigger is confidence/coordination (reflexive, so it can't be reliably forecast — Soros), stability breeds the leverage that breaks it only in hindsight (Minsky), and markets stay irrational longer than shorts stay solvent (Keynes). Dot-com, 2008, and SVB-2023 were all structurally visible for years and broke suddenly on catalysts no one dated. **No date is knowable; anyone offering a precise one is wrong or selling something.** What replaces a date is the trigger panel below (full treatment: `research/spec-unwind-timing.md`).
 - **Falsifier for Layer 1:** OpenAI/Anthropic reaching cash-flow self-sufficiency (revenue catching commitments) would break T3/T4. Watch the revenue-vs-commitment ratio.
 - **Triggers (the TLA+ shock):** a yen-carry/rate shock; a refusal of the next OpenAI/Anthropic mega-round; an Oracle/CoreWeave debt-service miss; an IP-liability ruling (the Sora-style node).
 - **Identity-convergence upgrade to STRONG:** a confirmed Oracle UK digital-ID award; a wired OpenAI↔World ID integration.
