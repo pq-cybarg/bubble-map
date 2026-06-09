@@ -27,6 +27,7 @@ VERDICTS=[
  ("Z3 T3 OpenAI commitments","needs ≥$1.03T external capital","UNSAT(refuted)"),
  ("Z3 T4 core at zero inflow","insolvent without continued capital","UNSAT(refuted)"),
  ("Z3 T5 SpaceX vs OpenAI","SpaceX SAT / OpenAI UNSAT standalone","PROVED"),
+ ("Z3 reflexive marks M1-M4","AI 'profit' is self-referential paper marks; gains reverse if IPO < private mark","SAT/UNSAT"),
  ("TLA+ cascade","capital-stop → OpenAI→CoreWeave→Oracle","VIOLATED(trace)"),
  ("TLA+ SpaceX safe","never defaults","HOLDS"),
  ("Alloy structure","core circular; SpaceX separable w/o cancelable","ALL HOLD"),
@@ -274,7 +275,7 @@ ES=f"""# Executive Summary — Unmasking the AI Earnings Bubble
 The AI build-out is a **circular capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing**; it is **gated by physical chokepoints it cannot buy past** on the timeline (compute capital, China rare earths, Russian enrichment, the power grid); and it is **embedded in measurement and control layers** — official statistics, paper commodity prices, and the identity / surveillance / political-money rails — that determine whether it can be seen and questioned.
 
 ## How sure we are (the confidence ladder)
-- **Proven** (Z3/TLA+/Alloy, reproducible): the 11-firm circular core; OpenAI's ≥$1.03T external-capital need and insolvency at zero inflow; the OpenAI→CoreWeave→Oracle cascade; no single feasible Fed rate; rare-earth and firm-power independence infeasible on the timeline.
+- **Proven** (Z3/TLA+/Alloy, reproducible): the 11-firm circular core; OpenAI's ≥$1.03T external-capital need and insolvency at zero inflow; the OpenAI→CoreWeave→Oracle cascade; no single feasible Fed rate; rare-earth and firm-power independence infeasible on the timeline; and that the funders' AI "profit" is partly self-referential paper marks — manufactured by funding the rounds that set the marks, not externally realized, and forced to reverse if a public price clears below the last private mark (`reflexive_marks` M1–M4).
 - **Strongly evidenced** (primary filings/exchange/court/government records): Oracle's $523B backlog + ≥$72B partner debt + PIMCO's $10B anchor; CoreWeave 67% one-customer / $21B debt; NVIDIA's 13F holding ~11% of CoreWeave + concentration 36%→61%; Microsoft's 27% equity-method share of an ~$11.5B/qtr OpenAI loss, while Amazon/Google book mark-to-market GAINS on the same kind of stakes (Amazon +$9.5B on Anthropic) — circular paper income cutting both ways; the −911k jobs benchmark; the ALNRI/New-Tenant rent lag; the COMEX/LBMA dislocation + JPMorgan's $920M spoofing settlement; the Binance pardon/USD1/MGX nexus; Salt Typhoon via CALEA.
 - **Graded / contested** (overlay, never used in proofs): regulatory-capture intent; the permanent-suppression narrative; whether each data lag's convenient direction was design or coincidence.
 - **Out of scope** (unsupported, excluded): fabricated government microdata; a single coordinating cabal; ShadowStats-style CPI numbers.

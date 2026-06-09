@@ -37,6 +37,9 @@ Each edge is tagged with a **layer**: **113 financial** edges (capital / credit 
 - **15 elementary directed cycles**, including the textbook round-trips:
   `NVIDIA → OpenAI → NVIDIA` · `CoreWeave → NVIDIA → CoreWeave` · `Microsoft → OpenAI → Microsoft` · `Amazon → Anthropic → Amazon` · `NVIDIA → OpenAI → Oracle → NVIDIA`.
 
+### 2.1b The earnings are partly self-referential (Z3 reflexive marks)
+`models/z3/reflexive_marks.py` formalizes the accounting tell as five discharged theorems. **M1 (SAT):** a fair-value gain on a cash-burning investee is realizable (Amazon's +$9.5B on Anthropic). **M2a (SAT):** the funder group can lift its *own* reported income by funding the round that sets the mark — at a 25% pre-existing stake, a $13B group-funded round stepping Anthropic $61B→$183B books **$31B of gains on $13B of cash, with zero arms-length capital**. **M2b (UNSAT):** those gains cannot be backed by realized external cash while the stake is unsold and the mark is self-set — they are unrealized paper. **M3 (UNSAT):** if the eventual IPO clears below the last private mark, fair value *forces* the gains to reverse (a 30% stake on a $183B→$130B reset is a ~$15.9B writedown). **M4 (SAT):** reported AI "profit" is bounded only by willingness to keep funding rounds — the earnings analogue of "solvent only while external capital flows." The conclusion: a material share of hyperscaler AI profit is self-referential paper, not externally realized cash.
+
 ### 2.2 The circularity is structural, not rhetorical (Z3)
 `models/z3/circularity_smt.py` discharges five theorems over the reals:
 

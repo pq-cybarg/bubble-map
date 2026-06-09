@@ -20,6 +20,9 @@ python3 models/graph/temporal_web.py | sed -n '1,40p'
 hr "[2/8] Z3 - quantitative circularity proofs (T1-T5)"
 python3 models/z3/circularity_smt.py
 
+hr "[2b] Z3 - reflexive mark-to-market proofs (M1-M4: self-referential AI 'profit')"
+python3 models/z3/reflexive_marks.py | grep -E "M[0-9]|Z3 result|WITNESS|UNSAT:|ILLUSTRATION" | head -24
+
 hr "[3/8] Z3 - small-bank coordination game (C1-C4)"
 python3 models/z3/coordination_game.py
 

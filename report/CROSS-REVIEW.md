@@ -38,5 +38,5 @@
 - fin-nvidia-openai.json: 8 shared entities
 - macro-cre-privatecredit.json: 7 shared entities
 - spec-telecom-satellite.json: 7 shared entities
-- fin-hedera-connections.json: 7 shared entities
 - spec-exchanges-asia.json: 7 shared entities
+- fin-hedera-connections.json: 7 shared entities
