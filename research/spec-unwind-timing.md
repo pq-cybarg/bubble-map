@@ -27,5 +27,8 @@ Also uncertain: whether it's *violent* or a slow/bailout-cushioned deflate; whic
 **Credit/rate triggers:** a **long-rate spike** reopening bank HTM (already turned up, $306B→$325B in Q1-2026); a **private-credit default cluster** beyond First Brands/Tricolor (bad-PIK ~6.4%, ~40% of borrowers FCF-negative, defaults ~5.8%); a **stablecoin/Treasury** wobble or sovereign (MGX/PIF/SoftBank) pullback.
 **The dated inflections** (contractual, staged — not forecasts): **(a)** Google may terminate the $30B deal as early as **Sep 30 2026** if SpaceX **misses GPU delivery**; **(b)** either party (Google *and* Anthropic) can give **90 days' notice after Dec 31 2026** — so the first effective exits could land **~Q1 2027**. Renewal pulls SpaceX into the structural core; exercise unwinds the cancelable slice.
 
+## Live trigger panel
+The watch-list is operationalized with current FRED readings on the [charts page](https://pq-cybarg.github.io/bubble-map/charts.html): the **carry differential** (US−Japan 10Y, down from ~3.85pp peak to ~2pp as the JGB rose to ~2.5% — *arming*), the **2Y−funds gap** (~neutral), **HY OAS** (~cycle lows — *complacent*), **long rates** (30Y ~5%, pressuring bank HTM — already reopened to $325B in Q1-26), the **AI mark reversal** (pending an IPO below the private mark), and the **SpaceX deal cliffs** (Sep 30 2026 / 90-day notice from Dec 31 2026). The read: fragile and arming, not yet firing — the panel sizes the kindling, it does not date the spark.
+
 ## Verdict
 **Structure: certain. Date: unknowable.** The honest deliverable is the trigger panel above (including the staged SpaceX cliffs — Sep 30 2026 delivery-miss, 90-day notice from Dec 31 2026) plus the falsifiers in `UNMASKING` §8 — watch the indicators, not the calendar.

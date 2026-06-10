@@ -429,6 +429,32 @@ if _m and all(k in _m for k in ("DGS10","BAA","MORTGAGE30US")):
         note="FRED DGS10 / BAA / MORTGAGE30US."),
       "Stacking borrower types shows the spread STACK: households pay the mortgage rate (Treasury + ~spread), corporates the Baa rate; all three roughly doubled off the 2020-21 floor — the repricing hit sovereign, corporate, and household credit together."))
 
+# --- the carry trade quantified + a live trigger panel for the unwind-timing thesis ---
+TRIGGER_PANEL=""
+if _m and all(k in _m for k in ("DGS10","IRLTLT01JPM156N","DGS2","FEDFUNDS","DGS30","BAMLH0A0HYM2")):
+    cy=sorted(set(_m["DGS10"])&set(_m["IRLTLT01JPM156N"]))
+    carry=[_m["DGS10"][d]-_m["IRLTLT01JPM156N"][d] for d in cy]; jp=[_m["IRLTLT01JPM156N"][d] for d in cy]
+    charts.append(("The yen carry trade, quantified — US−Japan 10Y differential vs the JGB",
+      monthly_line_chart("US−Japan 10Y (pp) and JGB level (%)", cy, [("US − Japan 10Y differential (carry fuel)",carry),("Japan 10Y (JGB)",jp)], [AC,AC2], ymin=-0.5,
+        note="FRED DGS10 − IRLTLT01JPM156N. The differential is the gross spread a yen-funded long earns."),
+      "The carry's fuel is draining: the US−Japan 10Y differential peaked near 3.85pp (Oct-2023) and has compressed toward ~1.8-2.0pp as the JGB climbed from ~0% (yield-curve-control) to ~2.5%. A shrinking differential + a rising yen is the classic carry-unwind setup (the 'BEAR' trigger) — it removes the cheap funding the crowded global longs depend on."))
+    def L(s): k=sorted(_m[s]); return _m[s][k[-1]], k[-1]
+    us10,_=L("DGS10"); jp10,jpd=L("IRLTLT01JPM156N"); g2,_=L("DGS2"); ff,_=L("FEDFUNDS"); t30,_=L("DGS30"); hy,_=L("BAMLH0A0HYM2")
+    cd=round(us10-jp10,2); fg=round(g2-ff,2); cpk=max(carry)
+    rows=[
+      ("Yen carry unwind",f"US−JP 10Y = {cd}pp (peak {cpk:.2f}); JGB {jp10:.2f}% &amp; rising","ARMING","a sharp yen rally / further BOJ hikes that collapse the differential and force deleveraging of crowded longs"),
+      ("Fed / rate path",f"2Y − funds = {fg:+.2f}pp (market ≈ neutral)","NEUTRAL","a swing deeply negative (cuts/stress priced) or a debt-service miss at a core borrower"),
+      ("Credit stress",f"HY OAS = {hy:.2f}pp (near cycle lows)","COMPLACENT","a spread blow-out / default cluster beyond First Brands–Tricolor"),
+      ("Bank HTM reopening",f"30Y = {t30:.2f}%, 10Y = {us10:.2f}% (elevated)","PRESSURED","a further long-rate spike (FDIC unrealized losses already turned up to $325B in Q1-26)"),
+      ("AI mark reversal","Anthropic/OpenAI still private (no public price)","PENDING","an IPO that prices BELOW the last private mark (reflexive_marks M3 / MarkUnwind)"),
+      ("SpaceX deal cliffs","contractual","SCHEDULED","Google's Sep 30 2026 delivery-miss right; 90-day notice from Dec 31 2026 (first exits ~Q1 2027)"),
+    ]
+    body_rows="".join(f"<tr><td><b>{n}</b></td><td>{r}</td><td>{st}</td><td>{f}</td></tr>" for n,r,st,f in rows)
+    TRIGGER_PANEL=("<h2>Trigger panel — the unwind watch-list, live from the data</h2>"
+      "<p class=cap>Operationalizing <code>spec-unwind-timing</code>: the date of a violent unwind is <b>not forecastable</b>, but the triggers are <b>observable</b>. Current readings (latest monthly FRED) — watch the indicators, not the calendar:</p>"
+      "<table><thead><tr><th>Trigger</th><th>Current reading</th><th>State</th><th>What would fire it</th></tr></thead><tbody>"+body_rows+"</tbody></table>"
+      "<p class=cap>Read: the carry's fuel is draining (differential down from ~3.85 to ~2pp) and bank HTM is pressured by elevated long rates, while credit and the Fed-path gap look calm/neutral — i.e., the system is fragile and arming, not yet firing. None of this dates the break; it sizes the kindling.</p>")
+
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,
     note="FRED DGS10 / IRLTLT01JPM156N / BAA, year-end. JGB: YCC ended Mar 2024."),
@@ -451,12 +477,12 @@ body=[f'<h1>Charts — jobs, inflation, and the Fed vs the bond market</h1>',
  '<p class=src>All series are <b>annual</b>, compiled from public data (FRED / BLS / US Treasury / BIS / BOJ), <b>rounded</b> to the precision shown; FRED/BLS series IDs are noted under each chart. "~" marks an estimate or partial year. Verify any value at the cited series. Companion data + sourcing: <a href="https://github.com/pq-cybarg/bubble-map/blob/main/research/macro-jobs-inflation-fed.md">macro-jobs-inflation-fed</a>.</p>']
 for h,svg,cap in charts:
     body.append(f'<h2>{esc(h)}</h2>'); body.append(svg); body.append(f'<p class=cap>{cap}</p>')
+if TRIGGER_PANEL: body.append(TRIGGER_PANEL)
 if SIGNAL_TABLE: body.append(SIGNAL_TABLE)
 body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <p class=cap>The bond universe can be sliced along two axes — <b>geography</b> (region → sub-region → country → state → city → institution) and <b>type/quality</b> (sovereign, corporate-by-rating, household/mortgage, municipal, agency). What is charted here vs what requires other sources, stated plainly:</p>
 <table><thead><tr><th>Cut</th><th>Charted here?</th><th>Source</th></tr></thead><tbody>
 <tr><td>Region / sub-region / country (sovereign 10Y)</td><td><b>Yes</b> — US, CA, DE, GB, FR, IT, JP, AU, GDP-weighted to sub-region &amp; global</td><td>FRED IRLTLT01* + DGS10 (keyless CSV)</td></tr>
-<tr><td>Corporate by credit quality (AAA→CCC)</td><td><b>Yes</b> (range-limited)</td><td>FRED ICE BofA OAS (BAMLC0A1CAAA, BAMLC0A4CBBB, BAMLH0A3HYC)</td></tr>
 <tr><td>Borrower type (sovereign / corporate / household)</td><td><b>Yes</b> (10Y / Baa / 30Y mortgage)</td><td>FRED DGS10 / BAA / MORTGAGE30US</td></tr>
 <tr><td>Corporate by credit quality (AAA→CCC ladder)</td><td><b>Yes</b> — full rating ladder (2023+)</td><td>FRED ICE BofA OAS by rating (BAMLC0A1CAAA … BAMLH0A3HYC)</td></tr>
 <tr><td>Corporate by region (Emerging-Market)</td><td><b>Yes</b> (2023+)</td><td>FRED BAMLEMPVPRIVSLCRPIUSOAS</td></tr>
