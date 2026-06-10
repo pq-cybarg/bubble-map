@@ -15,6 +15,23 @@ def load_fred():
     try: return json.load(open(os.path.join(ROOT,"data","fred_monthly.json")))["data"]
     except Exception: return None
 
+def load_fred_daily():
+    try: return json.load(open(os.path.join(ROOT,"data","fred_daily.json")))["data"]
+    except Exception: return None
+
+def lead_lag_daily(funds, two, w=21, maxlag=63):
+    """On the daily grid, correlate w-day CHANGES of funds[t] with two[t-lag]; return the lag
+    (trading days the 2Y leads) maximizing corr, plus that corr and the lag-0 corr."""
+    df=[funds[i]-funds[i-w] for i in range(w,len(funds))]
+    dt=[two[i]-two[i-w]   for i in range(w,len(two))]
+    best=(0,-2.0)
+    for k in range(0,maxlag+1):
+        a=df[k:]; b=dt[:len(df)-k]
+        if len(a)>=60:
+            c=_pearson(a,b)
+            if c>best[1]: best=(k,c)
+    return best[0], best[1], _pearson(df,dt)
+
 def _pearson(a,b):
     n=len(a)
     if n<3: return 0.0
@@ -168,6 +185,35 @@ def monthly_line_chart(title, dates, series, colors, ylab="%", note=""):
     if note: s.append(f'<text x="{L}" y="{H-6}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
     s.append('</svg>'); return "".join(s)
 
+def daily_line_chart(title, dates, series, colors, ylab="%", note=""):
+    W,H=760,360; L,R,T,B=54,150,40,46; pw,ph=W-L-R,H-T-B
+    vals=[v for _,ys in series for v in ys]; lo=min(0,min(vals)); hi=max(vals)
+    n=len(dates)
+    def X(i): return L+pw*i/(n-1)
+    def Y(v): return T+ph*(hi-v)/(hi-lo)
+    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
+    for k in range(6):
+        v=lo+(hi-lo)*k/5; y=Y(v)
+        s.append(f'<line x1="{L}" y1="{y:.1f}" x2="{L+pw}" y2="{y:.1f}" stroke="{GRID}"/>')
+        s.append(f'<text x="{L-6}" y="{y+3:.1f}" font-size="10" fill="{MUT}" text-anchor="end" font-family="sans-serif">{v:.1f}</text>')
+    prevyr=None
+    for i,dt in enumerate(dates):
+        yr=dt[:4]
+        if yr!=prevyr:
+            s.append(f'<line x1="{X(i):.1f}" y1="{T}" x2="{X(i):.1f}" y2="{T+ph}" stroke="{GRID}"/>')
+            s.append(f'<text x="{X(i):.1f}" y="{T+ph+15:.1f}" font-size="9" fill="{MUT}" text-anchor="middle" font-family="sans-serif">{yr}</text>')
+            prevyr=yr
+    for (name,ys),c in zip(series,colors):
+        d=" ".join(f'{"M" if k==0 else "L"}{X(i):.1f} {Y(v):.1f}' for k,(i,v) in enumerate(enumerate(ys)))
+        s.append(f'<path d="{d}" fill="none" stroke="{c}" stroke-width="1.3"/>')
+    ly=T+8
+    for (name,_),c in zip(series,colors):
+        s.append(f'<rect x="{L+pw+12}" y="{ly-8}" width="11" height="11" fill="{c}"/>')
+        s.append(f'<text x="{L+pw+27}" y="{ly+1}" font-size="10.5" fill="{INK}" font-family="sans-serif">{esc(name)}</text>'); ly+=18
+    if note: s.append(f'<text x="{L}" y="{H-6}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
+    s.append('</svg>'); return "".join(s)
+
 # ---- build the charts ----
 charts=[]
 charts.append(("Jobs: nonfarm payroll change per year — and the downward benchmark revisions",
@@ -211,6 +257,22 @@ if _fred and "DGS2" in _fred and "FEDFUNDS" in _fred:
       monthly_line_chart("Effective fed funds vs 2Y/3M Treasury — monthly, 2015-2026", common, series, cols,
         note="FRED monthly: FEDFUNDS / DGS2 / DGS3MO (daily->monthly avg via fredgraph.csv). Refresh: python3 models/graph/fetch_fred.py."),
       LEADLAG_NOTE+" At each pivot the 2Y turns first (it fell ahead of the 2019 and 2024 cuts and rose ahead of the 2022 hikes) — the bond market sets the path the Fed ratifies."))
+
+# --- DAILY tick-by-tick: 2Y vs daily effective fed funds, with daily lead-lag ---
+_fd=load_fred_daily()
+_fundskey="DFF" if (_fd and "DFF" in _fd) else ("EFFR" if (_fd and "EFFR" in _fd) else None)
+if _fd and "DGS2" in _fd and _fundskey:
+    cd=sorted(set(_fd["DGS2"]) & set(_fd[_fundskey]) & set(_fd.get("DGS3MO",_fd["DGS2"])))
+    dff=[_fd[_fundskey][d] for d in cd]; d2=[_fd["DGS2"][d] for d in cd]
+    d3=[_fd["DGS3MO"][d] for d in cd] if "DGS3MO" in _fd else None
+    k,corr,same=lead_lag_daily(dff,d2)
+    series=[(f"Daily eff. fed funds ({_fundskey})",dff),("2Y Treasury (daily)",d2)]; cols=[INK,AC]
+    if d3: series.append(("3M Treasury (daily)",d3)); cols.append("#9a6a1a")
+    note=(f"Daily, {len(cd)} trading days {cd[0]}..{cd[-1]} (FRED DFF / DGS2 / DGS3MO). Lead-lag of 21-day changes: "
+          f"the 2Y LEADS the funds rate by ~{k} trading days (~{k/21:.1f} mo; peak corr {corr:.2f} vs {same:.2f} at lag 0).")
+    charts.append(("Daily resolution: the funds rate is a STEP the 2-year Treasury reaches first",
+      daily_line_chart("Daily effective fed funds vs 2Y/3M Treasury, 2015-2026", cd, series, cols, note="FRED daily series via fredgraph.csv; refresh: python3 models/graph/fetch_fred.py."),
+      note+" The funds rate (DFF) is a near-step that jumps only at FOMC meetings; the 2Y is continuous and has already moved to the new level before each step — the bond market prices the decision first."))
 
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,
