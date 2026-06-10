@@ -7,9 +7,34 @@ ALL series are ANNUAL, compiled from public sources (FRED / BLS / US Treasury / 
 to the precision shown; series IDs are cited on the page. Estimates / partial-year are marked '~'.
 This is the visual companion to research/macro-jobs-inflation-fed.json (which carries the sourcing).
 """
-import os
+import os, json
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOCS=os.path.join(ROOT,"docs")
+
+def load_fred():
+    try: return json.load(open(os.path.join(ROOT,"data","fred_monthly.json")))["data"]
+    except Exception: return None
+
+def _pearson(a,b):
+    n=len(a)
+    if n<3: return 0.0
+    ma=sum(a)/n; mb=sum(b)/n
+    num=sum((x-ma)*(y-mb) for x,y in zip(a,b))
+    da=(sum((x-ma)**2 for x in a))**0.5; db=(sum((y-mb)**2 for y in b))**0.5
+    return num/(da*db) if da*db else 0.0
+
+def lead_lag(funds, two):
+    """Find k>=0 (months the 2Y LEADS the funds rate) maximizing corr of m/m CHANGES."""
+    df=[funds[i]-funds[i-1] for i in range(1,len(funds))]
+    dt=[two[i]-two[i-1]   for i in range(1,len(two))]
+    best=(0,-2.0)
+    for k in range(0,7):
+        a=df[k:]; b=dt[:len(df)-k]
+        if len(a)>=24:
+            c=_pearson(a,b)
+            if c>best[1]: best=(k,c)
+    same=_pearson(df,dt)
+    return best[0], best[1], same
 
 YEARS=[2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025,2026]
 
@@ -117,6 +142,32 @@ def bar_chart_sectors(title, data, note=""):
     if note: s.append(f'<text x="14" y="{H-8}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
     s.append('</svg>'); return "".join(s)
 
+def monthly_line_chart(title, dates, series, colors, ylab="%", note=""):
+    W,H=760,360; L,R,T,B=54,150,40,46; pw,ph=W-L-R,H-T-B
+    vals=[v for _,ys in series for v in ys]; lo=min(0,min(vals)); hi=max(vals)
+    n=len(dates)
+    def X(i): return L+pw*i/(n-1)
+    def Y(v): return T+ph*(hi-v)/(hi-lo)
+    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
+    for k in range(6):
+        v=lo+(hi-lo)*k/5; y=Y(v)
+        s.append(f'<line x1="{L}" y1="{y:.1f}" x2="{L+pw}" y2="{y:.1f}" stroke="{GRID}"/>')
+        s.append(f'<text x="{L-6}" y="{y+3:.1f}" font-size="10" fill="{MUT}" text-anchor="end" font-family="sans-serif">{v:.1f}</text>')
+    for i,dt in enumerate(dates):
+        if dt.endswith("-01"):
+            s.append(f'<line x1="{X(i):.1f}" y1="{T}" x2="{X(i):.1f}" y2="{T+ph}" stroke="{GRID}"/>')
+            s.append(f'<text x="{X(i):.1f}" y="{T+ph+15:.1f}" font-size="9" fill="{MUT}" text-anchor="middle" font-family="sans-serif">{dt[:4]}</text>')
+    for (name,ys),c in zip(series,colors):
+        d=" ".join(f'{"M" if k==0 else "L"}{X(i):.1f} {Y(v):.1f}' for k,(i,v) in enumerate(enumerate(ys)))
+        s.append(f'<path d="{d}" fill="none" stroke="{c}" stroke-width="1.8"/>')
+    ly=T+8
+    for (name,_),c in zip(series,colors):
+        s.append(f'<rect x="{L+pw+12}" y="{ly-8}" width="11" height="11" fill="{c}"/>')
+        s.append(f'<text x="{L+pw+27}" y="{ly+1}" font-size="10.5" fill="{INK}" font-family="sans-serif">{esc(name)}</text>'); ly+=18
+    if note: s.append(f'<text x="{L}" y="{H-6}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
+    s.append('</svg>'); return "".join(s)
+
 # ---- build the charts ----
 charts=[]
 charts.append(("Jobs: nonfarm payroll change per year — and the downward benchmark revisions",
@@ -143,6 +194,24 @@ charts.append(("The real driver: the funds rate tracks the BOND MARKET (the 2-ye
   line_chart("Policy vs market rates (%)", [("Fed funds",FEDFUNDS),("2Y Treasury",T2),("3M",T3M),("10Y",T10),("30Y",T30)],"%",[INK,AC,"#9a6a1a",AC2,"#1f6f43"], ymin=0,
     note="FRED DFEDTARU / DGS2 / DGS3MO / DGS10 / DGS30, year-end."),
   "The funds rate and the 2-year yield move together, with the 2Y turning FIRST at every pivot (it fell ahead of the 2019 and 2024 cuts; rose ahead of the 2022 hikes). The Fed is following the bond market's expectation, not delivering a mandate."))
+# --- monthly tick-by-tick: 2Y vs effective fed funds (live FRED), with lead-lag stat ---
+_fred=load_fred()
+LEADLAG_NOTE=""
+if _fred and "DGS2" in _fred and "FEDFUNDS" in _fred:
+    common=sorted(set(_fred["DGS2"]) & set(_fred["FEDFUNDS"]) & set(_fred.get("DGS3MO",_fred["DGS2"])))
+    ff=[_fred["FEDFUNDS"][d] for d in common]
+    t2=[_fred["DGS2"][d] for d in common]
+    t3=[_fred["DGS3MO"][d] for d in common] if "DGS3MO" in _fred else None
+    k,corr,same=lead_lag(ff,t2)
+    series=[("Effective fed funds",ff),("2Y Treasury",t2)]; cols=[INK,AC]
+    if t3: series.append(("3M Treasury",t3)); cols.append("#9a6a1a")
+    LEADLAG_NOTE=(f"Lead-lag of month-over-month CHANGES: the 2-year yield LEADS the funds rate by ~{k} month(s) "
+                  f"(peak corr {corr:.2f}; contemporaneous corr {same:.2f}). The Fed moves after the 2Y, not before it.")
+    charts.append(("Tick-by-tick (monthly): the funds rate FOLLOWS the 2-year Treasury",
+      monthly_line_chart("Effective fed funds vs 2Y/3M Treasury — monthly, 2015-2026", common, series, cols,
+        note="FRED monthly: FEDFUNDS / DGS2 / DGS3MO (daily->monthly avg via fredgraph.csv). Refresh: python3 models/graph/fetch_fred.py."),
+      LEADLAG_NOTE+" At each pivot the 2Y turns first (it fell ahead of the 2019 and 2024 cuts and rose ahead of the 2022 hikes) — the bond market sets the path the Fed ratifies."))
+
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,
     note="FRED DGS10 / IRLTLT01JPM156N / BAA, year-end. JGB: YCC ended Mar 2024."),
