@@ -136,6 +136,14 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "China": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "Circle": {
+      "sector": "stablecoin",
+      "has_exogenous_revenue": true
+    },
     "Coinbase": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -232,6 +240,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "GENIUS_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "GIC": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -247,6 +259,10 @@
     "Globalstar": {
       "sector": "satellite",
       "has_exogenous_revenue": true
+    },
+    "Gold": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "Google": {
       "sector": "hyperscaler",
@@ -600,6 +616,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Stablecoins": {
+      "sector": "stablecoin",
+      "has_exogenous_revenue": false
+    },
     "StandardBank": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -626,6 +646,10 @@
     },
     "Telesat": {
       "sector": "satellite",
+      "has_exogenous_revenue": true
+    },
+    "Tether": {
+      "sector": "stablecoin",
       "has_exogenous_revenue": true
     },
     "TikTok_US": {
@@ -676,6 +700,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "US_Treasuries": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
     "VanLoon": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -703,6 +731,10 @@
     "WhiteHouse": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "WorldLibertyFinancial": {
+      "sector": "stablecoin",
+      "has_exogenous_revenue": false
     },
     "Zillow_ZORI": {
       "sector": "data_provider",
@@ -2630,6 +2662,84 @@
       "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
     },
     {
+      "from": "GENIUS_Act",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reserve_mandate",
+      "amount_usd": null,
+      "status": "enacted",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": "1:1 reserves limited to T-bills/repo/cash -> stablecoin growth = mandated T-bill demand, by law."
+    },
+    {
+      "from": "Tether",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reserve_holding",
+      "amount_usd": 100000000000,
+      "status": "held",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": ">$100B T-bills (~79% of reserves in Treasuries); more US debt than UAE/Germany - sovereign-scale, lightly-audited."
+    },
+    {
+      "from": "Circle",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reserve_holding",
+      "amount_usd": 74000000000,
+      "status": "held",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": "~$74B; 37.6% T-bills + 49.6% T-bill repo."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "manufactured_demand",
+      "amount_usd": 1000000000000,
+      "status": "projected",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": "StanChart: ~$2T mcap by 2028 -> ~$1T fresh T-bill demand; ~$900B demand-supply gap; Treasury may front-load bill issuance to meet it."
+    },
+    {
+      "from": "China",
+      "to": "Gold",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reserve_diversification",
+      "amount_usd": 86000000000,
+      "status": "net-seller",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": "China shed ~$86B Treasuries (-11% YoY) into gold - the hard-money exit as the stablecoin buyer is engineered in (macro-gold-silver-reprice)."
+    },
+    {
+      "from": "WorldLibertyFinancial",
+      "to": "GENIUS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conflict_of_interest",
+      "amount_usd": null,
+      "status": "flagged",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-treasury-rail.json",
+      "note": "USD1 (Trump-family WLF) is a GENIUS-Act stablecoin; the administration legislating the demand rail has a family stake in an issuer (ties spec-exchanges-asia USD1/MGX/Binance)."
+    },
+    {
       "from": "SEALSQ",
       "to": "ICALPS",
       "instrument": "acquisition",
@@ -3190,10 +3300,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 179,
-    "num_edges": 190,
+    "num_nodes": 187,
+    "num_edges": 196,
     "num_financial_edges": 114,
-    "num_structural_edges": 76,
+    "num_structural_edges": 82,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3245,6 +3355,22 @@
     "elementary_cycles": [
       [
         "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -3252,20 +3378,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -3278,21 +3393,16 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -3303,8 +3413,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -3568,6 +3678,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "China": {
+        "total_usd": 86000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Circle": {
+        "total_usd": 74000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Coinbase": {
         "total_usd": 75188440,
         "circular_usd": 0,
@@ -3736,6 +3860,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GENIUS_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GIC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3759,6 +3890,13 @@
       },
       "Globalstar": {
         "total_usd": 13300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gold": {
+        "total_usd": 86000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4380,6 +4518,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stablecoins": {
+        "total_usd": 1000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "StandardBank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4424,6 +4569,13 @@
       },
       "Telesat": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tether": {
+        "total_usd": 100000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4513,6 +4665,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Treasuries": {
+        "total_usd": 1174000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanLoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4556,6 +4715,13 @@
         "in_robust_core": false
       },
       "WhiteHouse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WorldLibertyFinancial": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

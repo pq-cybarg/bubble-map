@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-unwind-timing.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 8 shared entities
-- spec-exchanges-asia.json: 7 shared entities
-- fin-coreweave-oracle.json: 7 shared entities
-- sec-filings.json: 7 shared entities
-- spec-sec-filings-primary.json: 7 shared entities
-- fin-nvidia-openai.json: 6 shared entities
-- spec-telecom-satellite.json: 6 shared entities
-- fin-hedera-connections.json: 6 shared entities
+## Newest file `macro-stablecoin-treasury-rail.json` — related files by shared entities (verify cross-refs exist)
+- macro-cre-privatecredit.json: 2 shared entities
+- fin-google-amazon-anthropic-meta.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- spec-insurance-bermuda.json: 1 shared entities
+- spec-crypto-sec-epstein.json: 1 shared entities
+- macro-private-credit-marks.json: 1 shared entities

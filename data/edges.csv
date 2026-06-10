@@ -1,5 +1,6 @@
 from,to,instrument,amount_usd,status,declared_circular,cancelable,source_file
 US_Banks,Nondepository financial institutions,debt,1972670000000,2026-04,False,False,macro-cre-privatecredit.json
+Stablecoins,US_Treasuries,other,1000000000000,projected,False,False,macro-stablecoin-treasury-rail.json
 Private-credit market,AI data centers,debt,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
 Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
@@ -13,7 +14,10 @@ Meta,SINK_capex,capex,115000000000,guidance,False,False,fin-google-amazon-anthro
 Google,SpaceX,equity,100000000000,held,False,False,fin-spacex-spcx.json
 NVIDIA,OpenAI,equity,100000000000,signed-LOI,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 Anthropic,Amazon,compute_commitment,100000000000,active,True,False,fin-google-amazon-anthropic-meta.json
+Tether,US_Treasuries,other,100000000000,held,False,False,macro-stablecoin-treasury-rail.json
+China,Gold,other,86000000000,net-seller,False,False,macro-stablecoin-treasury-rail.json
 SpaceX_IPO_Public,SpaceX,ipo_proceeds,75000000000,offering,False,False,fin-spacex-spcx.json
+Circle,US_Treasuries,other,74000000000,held,False,False,macro-stablecoin-treasury-rail.json
 Broadcom,SINK_backlog,compute_commitment,56000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
 Amazon,OpenAI,equity,50000000000,committed,False,False,fin-nvidia-openai.json
 Anthropic,SpaceX,compute_commitment,45000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
@@ -169,6 +173,8 @@ Google,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anth
 Anthropic,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
 AMD,OpenAI,warrant,,announced,True,False,fin-google-amazon-anthropic-meta.json
 MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+GENIUS_Act,Stablecoins,other,,enacted,False,False,macro-stablecoin-treasury-rail.json
+WorldLibertyFinancial,GENIUS_Act,other,,flagged,False,False,macro-stablecoin-treasury-rail.json
 SEALSQ,ICALPS,acquisition,,closed,False,False,fin-sealsq-wisekey-global.json
 SEALSQ,Miraex,acquisition,,LOI,False,True,fin-sealsq-wisekey-global.json
 SEALSQ,EeroQ,equity,,invested-lead,False,False,fin-sealsq-wisekey-global.json

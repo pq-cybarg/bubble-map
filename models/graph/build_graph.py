@@ -134,6 +134,7 @@ NODE_META = {
  "Rate_Shock":("macro_factor",False),
  "PrivateCredit_Funds":("private_credit",True),"AI_Datacenters":("ai_infra",False),"Insurers_Annuities":("insurance",True),"Retail_401k":("retail",False),
  "PE_Insurers":("insurance",True),"Bermuda_Captives":("insurance",False),"Annuity_Holders":("retail",False),
+ "GENIUS_Act":("state",False),"Stablecoins":("stablecoin",False),"Tether":("stablecoin",True),"Circle":("stablecoin",True),"US_Treasuries":("statistic",False),"WorldLibertyFinancial":("stablecoin",False),"Gold":("commodity",False),"China":("state",True),
  # persons / misc
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),
