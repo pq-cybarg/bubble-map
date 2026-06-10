@@ -394,14 +394,32 @@ if _m and all(k in _m for k in _REG):
         note="FRED IRLTLT01* + DGS10; GDP-weighted within each sub-region (US/CA; DE/GB/FR/IT; JP/AU)."),
       "Aggregating up the hierarchy (country -> sub-region -> global) shows Asia-Pacific dragged down for years by Japan's near-0% yield-curve-control, Europe weighed by the Bund, North America highest — then all converging UP into 2024-26 as Japan normalized. The weighted aggregate hides, then reveals, the synchronized duration repricing."))
 
-# --- corporate by CREDIT QUALITY (rating buckets) ---
-_RAT=["BAMLC0A1CAAA","BAMLC0A4CBBB","BAMLH0A3HYC"]
+# --- corporate by CREDIT QUALITY (full rating ladder) + EM corporate (regional credit) ---
+_RAT=["BAMLC0A1CAAA","BAMLC0A2CAA","BAMLC0A3CA","BAMLC0A4CBBB","BAMLH0A3HYC"]
 if _m and all(k in _m for k in _RAT):
     cq=sorted(set.intersection(*[set(_m[k]) for k in _RAT]))
-    charts.append((f"Corporates by CREDIT QUALITY — AAA vs BBB vs CCC option-adjusted spread ({cq[0]}+)",
-      monthly_line_chart("OAS by rating (pp), monthly", cq, [("AAA (IG, safest)",[_m['BAMLC0A1CAAA'][d] for d in cq]),("BBB (IG, lowest)",[_m['BAMLC0A4CBBB'][d] for d in cq]),("CCC & lower (HY, riskiest)",[_m['BAMLH0A3HYC'][d] for d in cq])], ["#1f6f43",AC2,AC], ymin=0,
-        note="FRED BAMLC0A1CAAA / BAMLC0A4CBBB / BAMLH0A3HYC. Range limited by the monthly series returned."),
-      "The quality dimension: CCC spreads dwarf and move far more than AAA/BBB — the 'sector' that blows out first in stress. Through 2024-26 even CCC sits well off its crisis peaks, i.e., the riskiest corporates are priced for calm."))
+    ladder=[("AAA",[_m['BAMLC0A1CAAA'][d] for d in cq]),("AA",[_m['BAMLC0A2CAA'][d] for d in cq]),("A",[_m['BAMLC0A3CA'][d] for d in cq]),("BBB",[_m['BAMLC0A4CBBB'][d] for d in cq]),("CCC & lower",[_m['BAMLH0A3HYC'][d] for d in cq])]
+    charts.append((f"Corporates by CREDIT QUALITY — the AAA→CCC option-adjusted-spread ladder ({cq[0]}+)",
+      monthly_line_chart("OAS by rating (pp), monthly", cq, ladder, ["#1f6f43","#3a7d44",AC2,"#9a6a1a",AC], ymin=0,
+        note="FRED BAMLC0A1CAAA/0A2CAA/0A3CA/0A4CBBB + BAMLH0A3HYC. The accessible PROXY for sector-by-quality (true industry OAS needs licensed feeds)."),
+      "The quality ladder is the free proxy for the 'which corporates blow out first' question: CCC spreads dwarf and move far more than the IG rungs (AAA→BBB), which barely separate. Through 2024-26 even CCC sits well off its crisis peaks — the riskiest corporates priced for calm."))
+if _m and all(k in _m for k in ("BAMLC0A0CM","BAMLH0A0HYM2","BAMLEMPVPRIVSLCRPIUSOAS")):
+    ce=sorted(set(_m["BAMLC0A0CM"])&set(_m["BAMLH0A0HYM2"])&set(_m["BAMLEMPVPRIVSLCRPIUSOAS"]))
+    charts.append((f"Credit by REGION/TYPE — US investment-grade vs US high-yield vs Emerging-Market corporate ({ce[0]}+)",
+      monthly_line_chart("OAS by segment (pp), monthly", ce, [("US IG",[_m['BAMLC0A0CM'][d] for d in ce]),("US HY",[_m['BAMLH0A0HYM2'][d] for d in ce]),("EM corporate",[_m['BAMLEMPVPRIVSLCRPIUSOAS'][d] for d in ce])], [AC2,AC,"#9a6a1a"], ymin=0,
+        note="FRED BAMLC0A0CM / BAMLH0A0HYM2 / BAMLEMPVPRIVSLCRPIUSOAS."),
+      "Adding the regional credit cut: EM-corporate OAS runs between US-IG and US-HY and is the accessible proxy for cross-border corporate risk — all three sit near cycle lows into 2026."))
+
+# --- municipal proxy snapshot (via the published muni/Treasury ratio) ---
+if _m and "DGS10" in _m and "DGS30" in _m:
+    t10=sorted(_m["DGS10"].items())[-1][1]; t30=sorted(_m["DGS30"].items())[-1][1]
+    MT10,MT30=0.67,0.87   # muni/Treasury ratio, ~Apr-2026 (published; BondWave/market data)
+    charts.append(("Municipals — proxy snapshot via the muni/Treasury ratio (state &amp; local)",
+      bar_chart_sectors("Yield: Treasury vs AAA muni (current, %)", [
+        ("US Treasury 10Y",round(t10,2)),("AAA muni 10Y (proxy)",round(MT10*t10,2)),
+        ("US Treasury 30Y",round(t30,2)),("AAA muni 30Y (proxy)",round(MT30*t30,2))],
+        note="Muni = published muni/Treasury ratio (10Y~67%, 30Y~87%, Apr-2026) x current Treasury yield. Free proxies for the licensed-data gap."),
+      "State/city muni yields aren't on FRED's free endpoint (the Bond Buyer 20-GO series ended 2016), but accessible PROXIES substitute: the published muni/Treasury RATIO (here x current Treasuries), the MUB ETF yield (~3.2%), and — for trade-level data — MSRB EMMA and FINRA TRACE, which is where the licensed indices source from too. Munis trade rich (below Treasury yields) on their tax exemption."))
 
 # --- borrowing cost by TYPE (sovereign / corporate / household-mortgage) ---
 if _m and all(k in _m for k in ("DGS10","BAA","MORTGAGE30US")):
@@ -440,8 +458,10 @@ body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <tr><td>Region / sub-region / country (sovereign 10Y)</td><td><b>Yes</b> — US, CA, DE, GB, FR, IT, JP, AU, GDP-weighted to sub-region &amp; global</td><td>FRED IRLTLT01* + DGS10 (keyless CSV)</td></tr>
 <tr><td>Corporate by credit quality (AAA→CCC)</td><td><b>Yes</b> (range-limited)</td><td>FRED ICE BofA OAS (BAMLC0A1CAAA, BAMLC0A4CBBB, BAMLH0A3HYC)</td></tr>
 <tr><td>Borrower type (sovereign / corporate / household)</td><td><b>Yes</b> (10Y / Baa / 30Y mortgage)</td><td>FRED DGS10 / BAA / MORTGAGE30US</td></tr>
-<tr><td>Corporate by <i>industry sector</i> (financials/energy/tech/utilities)</td><td>No — industry-level OAS not on FRED's free endpoint</td><td>Requires licensed ICE BofA / Bloomberg sector indices</td></tr>
-<tr><td>State / city (municipal bonds)</td><td>No — granular muni yields not free on FRED</td><td>Requires MSRB EMMA / Bloomberg / S&amp;P muni indices</td></tr>
+<tr><td>Corporate by credit quality (AAA→CCC ladder)</td><td><b>Yes</b> — full rating ladder (2023+)</td><td>FRED ICE BofA OAS by rating (BAMLC0A1CAAA … BAMLH0A3HYC)</td></tr>
+<tr><td>Corporate by region (Emerging-Market)</td><td><b>Yes</b> (2023+)</td><td>FRED BAMLEMPVPRIVSLCRPIUSOAS</td></tr>
+<tr><td>Corporate by <i>industry sector</i> (financials/energy/tech)</td><td><b>Proxied</b> — rating ladder + EM stand in; true industry OAS not free</td><td>Proxy: FRED rating/EM OAS · Full: licensed ICE BofA/Bloomberg, or build from <b>FINRA TRACE</b> (free trade tape)</td></tr>
+<tr><td>State / city (municipal bonds)</td><td><b>Proxied</b> — muni/Treasury-ratio snapshot + MUB; Bond Buyer 20-GO (FRED) to 2016</td><td>Proxy: published M/T ratio, MUB ETF, FRED WSLB20(→2016) · Full: <b>MSRB EMMA</b> (free trade tape) / index licenses</td></tr>
 <tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
 </tbody></table>
 <p class=cap>So the institution-level cut already exists (the bank model); the geography and quality cuts are charted above; industry-sector OAS and state/city muni granularity are the two pieces that need licensed/alternative feeds — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
