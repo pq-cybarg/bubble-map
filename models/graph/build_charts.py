@@ -19,6 +19,20 @@ def load_fred_daily():
     try: return json.load(open(os.path.join(ROOT,"data","fred_daily.json")))["data"]
     except Exception: return None
 
+def load_yahoo():
+    try: return json.load(open(os.path.join(ROOT,"data","yahoo_monthly.json")))["data"]
+    except Exception: return None
+
+def ttm_yield(etf):
+    """trailing-12-month distribution yield (%) per month: sum(last 12 divs)/close*100."""
+    months=sorted(etf); out={}
+    for i in range(11,len(months)):
+        m=months[i]; px=etf[m].get("c")
+        if not px: continue
+        d12=sum(etf[months[j]].get("d",0.0) for j in range(i-11,i+1))
+        out[m]=round(100*d12/px,3)
+    return out
+
 def lead_lag_daily(funds, two, w=21, maxlag=63):
     """On the daily grid, correlate w-day CHANGES of funds[t] with two[t-lag]; return the lag
     (trading days the 2Y leads) maximizing corr, plus that corr and the lag-0 corr."""
@@ -421,6 +435,25 @@ if _m and "DGS10" in _m and "DGS30" in _m:
         note="Muni = published muni/Treasury ratio (10Y~67%, 30Y~87%, Apr-2026) x current Treasury yield. Free proxies for the licensed-data gap."),
       "State/city muni yields aren't on FRED's free endpoint (the Bond Buyer 20-GO series ended 2016), but accessible PROXIES substitute: the published muni/Treasury RATIO (here x current Treasuries), the MUB ETF yield (~3.2%), and — for trade-level data — MSRB EMMA and FINRA TRACE, which is where the licensed indices source from too. Munis trade rich (below Treasury yields) on their tax exemption."))
 
+# --- PER-STATE municipal yield proxy (real time series from state muni ETFs, Yahoo) ---
+_y=load_yahoo()
+if _y and all(t in _y for t in ("MUB","CMF","NYF","HYD")):
+    yy={t:ttm_yield(_y[t]) for t in ("MUB","CMF","NYF","HYD")}
+    ym=sorted(set.intersection(*[set(yy[t]) for t in yy]))
+    charts.append(("Municipals by STATE — trailing distribution yield (California vs New York vs national vs HY-muni)",
+      monthly_line_chart("Muni ETF distribution yield (%), monthly", ym, [("California (CMF)",[yy['CMF'][d] for d in ym]),("New York (NYF)",[yy['NYF'][d] for d in ym]),("National (MUB)",[yy['MUB'][d] for d in ym]),("High-yield muni (HYD)",[yy['HYD'][d] for d in ym])], ["#1f6f43",AC2,INK,AC], ymin=0,
+        note="Yahoo chart API: trailing-12mo dividends / price for CMF/NYF/MUB/HYD. A yield PROXY (not the AAA-GO curve); built from the free ETF tape."),
+      "The per-STATE muni cut, as a real time series rather than a snapshot: California (high-tax-state demand) trades richest (lowest yield), New York near national, high-yield muni well above — and all stepped UP with rates from the 2020-21 lows. City-level granularity still needs MSRB EMMA per-CUSIP; this gets the state layer from free ETF data."))
+
+# --- corporate by MATURITY (short / intermediate / long IG corporate ETFs, Yahoo) ---
+if _y and all(t in _y for t in ("VCSH","VCIT","VCLT")):
+    ym2=sorted(set.intersection(*[set(ttm_yield(_y[t])) for t in ("VCSH","VCIT","VCLT")]))
+    yv={t:ttm_yield(_y[t]) for t in ("VCSH","VCIT","VCLT")}
+    charts.append(("Corporate by MATURITY — short / intermediate / long IG (distribution yield)",
+      monthly_line_chart("IG corporate ETF distribution yield (%), monthly", ym2, [("Short (VCSH)",[yv['VCSH'][d] for d in ym2]),("Intermediate (VCIT)",[yv['VCIT'][d] for d in ym2]),("Long (VCLT)",[yv['VCLT'][d] for d in ym2])], ["#1f6f43",AC2,AC], ymin=0,
+        note="Yahoo chart API: trailing-12mo dividends / price for Vanguard VCSH/VCIT/VCLT."),
+      "The maturity dimension of corporate credit: long IG (VCLT) yields most and is the most rate-sensitive; the short/long gap widened as the curve moved — the corporate-credit analogue of the Treasury term structure."))
+
 # --- borrowing cost by TYPE (sovereign / corporate / household-mortgage) ---
 if _m and all(k in _m for k in ("DGS10","BAA","MORTGAGE30US")):
     ct=sorted(set(_m["DGS10"])&set(_m["BAA"])&set(_m["MORTGAGE30US"]))
@@ -487,7 +520,9 @@ body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <tr><td>Corporate by credit quality (AAA→CCC ladder)</td><td><b>Yes</b> — full rating ladder (2023+)</td><td>FRED ICE BofA OAS by rating (BAMLC0A1CAAA … BAMLH0A3HYC)</td></tr>
 <tr><td>Corporate by region (Emerging-Market)</td><td><b>Yes</b> (2023+)</td><td>FRED BAMLEMPVPRIVSLCRPIUSOAS</td></tr>
 <tr><td>Corporate by <i>industry sector</i> (financials/energy/tech)</td><td><b>Proxied</b> — rating ladder + EM stand in; true industry OAS not free</td><td>Proxy: FRED rating/EM OAS · Full: licensed ICE BofA/Bloomberg, or build from <b>FINRA TRACE</b> (free trade tape)</td></tr>
-<tr><td>State / city (municipal bonds)</td><td><b>Proxied</b> — muni/Treasury-ratio snapshot + MUB; Bond Buyer 20-GO (FRED) to 2016</td><td>Proxy: published M/T ratio, MUB ETF, FRED WSLB20(→2016) · Full: <b>MSRB EMMA</b> (free trade tape) / index licenses</td></tr>
+<tr><td>Corporate by maturity (short/int/long IG)</td><td><b>Yes</b> — ETF distribution-yield time series (VCSH/VCIT/VCLT)</td><td>Yahoo chart API (free, keyless)</td></tr>
+<tr><td>Municipal by STATE (CA / NY / national / HY)</td><td><b>Yes</b> — per-state ETF distribution-yield time series (CMF/NYF/MUB/HYD), 10yr</td><td>Yahoo chart API (free) + M/T-ratio snapshot</td></tr>
+<tr><td>Municipal by CITY / individual issuer</td><td><b>Proxied</b> — state ETFs above stand in</td><td>Full: <b>MSRB EMMA</b> per-CUSIP trade tape (free, but per-bond scraping)</td></tr>
 <tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
 </tbody></table>
 <p class=cap>So the institution-level cut already exists (the bank model); the geography and quality cuts are charted above; industry-sector OAS and state/city muni granularity are the two pieces that need licensed/alternative feeds — flagged rather than fabricated, per the project's zero-trust rule.</p>""")

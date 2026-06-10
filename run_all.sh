@@ -98,6 +98,7 @@ hr "[7b] Build dashboard + globe"
 python3 models/graph/build_dashboard.py
 python3 models/graph/build_globe.py
 python3 models/graph/fetch_fred.py || true   # refresh monthly FRED cache (tolerates offline; build_charts uses cache)
+python3 models/graph/fetch_yahoo.py || true  # ETF distribution-yield proxies (per-state muni, corporate by maturity)
 python3 models/graph/build_charts.py
 
 hr "DONE"
