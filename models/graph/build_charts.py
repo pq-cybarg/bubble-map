@@ -159,9 +159,11 @@ def bar_chart_sectors(title, data, note=""):
     if note: s.append(f'<text x="14" y="{H-8}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
     s.append('</svg>'); return "".join(s)
 
-def monthly_line_chart(title, dates, series, colors, ylab="%", note=""):
+def monthly_line_chart(title, dates, series, colors, ylab="%", note="", ymin=None, ymax=None):
     W,H=760,360; L,R,T,B=54,150,40,46; pw,ph=W-L-R,H-T-B
-    vals=[v for _,ys in series for v in ys]; lo=min(0,min(vals)); hi=max(vals)
+    vals=[v for _,ys in series for v in ys]
+    lo=ymin if ymin is not None else min(0,min(vals)); hi=ymax if ymax is not None else max(vals)
+    if hi==lo: hi=lo+1
     n=len(dates)
     def X(i): return L+pw*i/(n-1)
     def Y(v): return T+ph*(hi-v)/(hi-lo)
@@ -297,13 +299,14 @@ if _m and all(k in _m for k in ("DGS2","FEDFUNDS","DGS3MO","DGS10")):
     ff=[_m["FEDFUNDS"][d] for d in mc]; g2=[_m["DGS2"][d] for d in mc]; g3=[_m["DGS3MO"][d] for d in mc]; g10=[_m["DGS10"][d] for d in mc]
     SPREADS=[("2Y − fed funds","short",[g2[i]-ff[i] for i in range(len(mc))]),
              ("3M − fed funds","short",[g3[i]-ff[i] for i in range(len(mc))]),
+             ("2Y − 3M (policy-path)","medium",[g2[i]-g3[i] for i in range(len(mc))]),
              ("10Y − 2Y (2s10s)","long",[g10[i]-g2[i] for i in range(len(mc))]),
              ("10Y − 3M (3m10s)","long",[g10[i]-g3[i] for i in range(len(mc))])]
-    # two spread charts (short-end sharp; long-end smooth)
-    charts.append(("Sharp & fast — the SHORT-END policy gap (2Y/3M minus the fed funds rate)",
-      monthly_line_chart("Short-end spreads (pp), monthly", mc, [(n,s) for n,grp,s in SPREADS if grp=="short"], [AC,"#9a6a1a"],
-        note="FRED DGS2/DGS3MO minus FEDFUNDS. Negative = market expects CUTS (Fed 'behind'); positive = expects HIKES."),
-      "The short-end gap turns FAST: it went deeply negative ahead of the 2019, 2020, and 2024 cuts and strongly positive ahead of the 2022 hikes — the market pre-committing the Fed. (The 2Y−funds line is jumpier; the 3M−funds line is cleaner — see the measured noise below.)"))
+    # two spread charts (short-end sharp; long-end smooth) + the 2Y-3M policy-path in the middle
+    charts.append(("Sharp & fast — the SHORT-END gap (2Y/3M minus funds) + the 2Y−3M policy-path",
+      monthly_line_chart("Short/medium spreads (pp), monthly", mc, [(n,s) for n,grp,s in SPREADS if grp in("short","medium")], [AC,"#9a6a1a",AC2],
+        note="FRED DGS2/DGS3MO minus FEDFUNDS, and DGS2-DGS3MO. Negative = market expects CUTS (Fed 'behind'); positive = HIKES."),
+      "The short-end gap turns FAST: deeply negative ahead of the 2019/2020/2024 cuts, strongly positive ahead of the 2022 hikes — the market pre-committing the Fed. The 2Y−3M 'policy-path' spread sits in the middle: it captures the expected ~2-year rate path vs the front, smoother than the 3M−funds jump-detector but faster than the 2s10s curve."))
     charts.append(("Smooth & delayed — the CURVE spreads (10Y minus 2Y / 3M)",
       monthly_line_chart("Curve spreads (pp), monthly", mc, [(n,s) for n,grp,s in SPREADS if grp=="long"], [AC2,"#1f6f43"],
         note="FRED DGS10 minus DGS2 / DGS3MO. Inversion (below 0) is the classic recession lead — smoother, but with a long and variable lag."),
@@ -312,17 +315,65 @@ if _m and all(k in _m for k in ("DGS2","FEDFUNDS","DGS3MO","DGS10")):
     for n,grp,s in SPREADS:
         noise=_std(_chg(s)); h,c=best_horizon(s,ff)
         rows.append((n,grp,noise,h,c))
-    sh=[r for r in rows if r[1]=="short"]; lo=[r for r in rows if r[1]=="long"]
+    sh=[r for r in rows if r[1]=="short"]; me=[r for r in rows if r[1]=="medium"]; lo=[r for r in rows if r[1]=="long"]
     def _fmt(rs): return "".join(f"<tr><td>{n}</td><td>{noise:.2f}</td><td>{h} mo</td><td>{c:+.2f}</td></tr>" for n,grp,noise,h,c in rs)
     SIGNAL_TABLE=("<h2>Signal quality: the sharp-vs-smooth tradeoff, measured</h2>"
       "<p class=cap>For each rate differential: <b>noise</b> = stdev of its month-over-month change (higher = jumpier); "
       "<b>horizon</b> = the lead h (months) at which the spread's level best predicts the subsequent change in the fed funds rate; "
-      "<b>corr</b> = that predictive correlation. Short-end gaps are noisier but predict at a short horizon (fast); curve spreads are smoother but predict at a long horizon (delayed).</p>"
+      "<b>corr</b> = that predictive correlation. The horizon lengthens from the short end (fast) to the curve (delayed); the 2Y−3M policy-path spread sits in the middle.</p>"
       "<table><thead><tr><th>Differential</th><th>Noise (Δ stdev, pp)</th><th>Best lead horizon</th><th>Corr at horizon</th></tr></thead><tbody>"
-      "<tr><td colspan=4 style='background:#f3eedf'><b>Short end — sharp / fast / noisy</b></td></tr>"+_fmt(sh)+
-      "<tr><td colspan=4 style='background:#f3eedf'><b>Long end — smooth / delayed / clean</b></td></tr>"+_fmt(lo)+
+      "<tr><td colspan=4 style='background:#f3eedf'><b>Short end — fast (1–8 mo)</b></td></tr>"+_fmt(sh)+
+      "<tr><td colspan=4 style='background:#f3eedf'><b>Medium — the 2Y−3M policy path (~9 mo)</b></td></tr>"+_fmt(me)+
+      "<tr><td colspan=4 style='background:#f3eedf'><b>Long end — the curve, smooth & delayed (18 mo+)</b></td></tr>"+_fmt(lo)+
       "</tbody></table>"
-      "<p class=cap>The tradeoff, quantified from the data: the predictive <b>horizon lengthens from the short end to the curve</b> — 3M−funds predicts the next move at ~1&nbsp;month, 2Y−funds at ~8&nbsp;months (and is the strongest predictor, corr ~0.77), while the 2s10s/3m10s curve leads longest (~18&nbsp;months+) but weaker — the fast-vs-delayed axis. Noise is <i>not</i> monotonic: the 3M−funds gap is actually the cleanest, the 2Y−funds and 10Y−3M the jumpiest. So pick the differential to match the question: <b>3M−funds</b> for the fastest clean read on an imminent move, <b>2Y−funds</b> for the strongest read on where the Fed is headed, the <b>2s10s curve</b> for the smoothest (most delayed) cycle/recession read.</p>")
+      "<p class=cap>The tradeoff, quantified from the data: the predictive <b>horizon lengthens from the short end to the curve</b> — 3M−funds predicts the next move at ~1&nbsp;month, 2Y−funds at ~8&nbsp;months (and is the strongest predictor, corr ~0.77), while the 2s10s/3m10s curve leads longest (~18&nbsp;months+) but weaker — the fast-vs-delayed axis. Noise is <i>not</i> monotonic: the 3M−funds gap is actually the cleanest, the 2Y−funds and 10Y−3M the jumpiest. So pick the differential to match the question: <b>3M−funds</b> for the fastest clean read on an imminent move, <b>2Y−funds</b> for the strongest read on where the Fed is headed, the <b>2Y−3M policy-path</b> (noise 0.17, ~9-mo horizon, corr +0.66) for the medium-term expected path, and the <b>2s10s curve</b> for the smoothest (most delayed) cycle/recession read.</p>")
+
+# --- 30Y differentials (term premium / long-end steepness) ---
+if _m and all(k in _m for k in ("DGS30","DGS10","DGS2","FEDFUNDS")):
+    c30=sorted(set(_m["DGS30"])&set(_m["DGS10"])&set(_m["DGS2"])&set(_m["FEDFUNDS"]))
+    g30=[_m["DGS30"][d] for d in c30]; g10=[_m["DGS10"][d] for d in c30]; g2=[_m["DGS2"][d] for d in c30]; ff=[_m["FEDFUNDS"][d] for d in c30]
+    s30_10=[g30[i]-g10[i] for i in range(len(c30))]; s30_2=[g30[i]-g2[i] for i in range(len(c30))]; s30_ff=[g30[i]-ff[i] for i in range(len(c30))]
+    charts.append(("30Y differentials: the long-end term premium (30Y−10Y, 30Y−2Y)",
+      monthly_line_chart("30Y spreads (pp), monthly", c30, [("30Y − 10Y (term premium)",s30_10),("30Y − 2Y",s30_2),("30Y − fed funds",s30_ff)], [AC,AC2,"#9a6a1a"],
+        note="FRED DGS30 minus DGS10/DGS2/FEDFUNDS."),
+      "The 30Y−10Y term premium was compressed/near-zero through 2015-21 (QE era), inverted with the rest of the curve in 2022-23, then STEEPENED sharply in 2024-26 as long-end supply (deficits) and term premium returned — the smoothest, slowest-moving differential, reflecting fiscal/duration risk rather than near-term policy."))
+    if SIGNAL_TABLE:
+        n30,h30,c30c=_std(_chg(s30_ff)), *best_horizon(s30_ff,ff)
+        SIGNAL_TABLE=SIGNAL_TABLE.replace("</tbody></table>",
+          f"<tr><td colspan=4 style='background:#f3eedf'><b>Very long end — fiscal/duration, slowest</b></td></tr><tr><td>30Y − fed funds</td><td>{n30:.2f}</td><td>{h30} mo</td><td>{c30c:+.2f}</td></tr></tbody></table>")
+
+# --- corporate / credit markets over time ---
+if _m and all(k in _m for k in ("BAA","AAA","DGS10")):
+    cc=sorted(set(_m["BAA"])&set(_m["AAA"])&set(_m["DGS10"]))
+    baa=[_m["BAA"][d] for d in cc]; aaa=[_m["AAA"][d] for d in cc]; t10=[_m["DGS10"][d] for d in cc]
+    charts.append(("Corporate bond YIELDS over time (Moody's Baa, Aaa vs the 10Y Treasury)",
+      monthly_line_chart("Corporate vs Treasury yields (%), monthly", cc, [("Baa corporate",baa),("Aaa corporate",aaa),("10Y Treasury",t10)], [AC,"#9a6a1a",AC2], ymin=0,
+        note="FRED BAA / AAA / DGS10."),
+      "Corporate borrowing costs (Baa/Aaa) track the Treasury but with a CREDIT SPREAD on top; both repriced from the ~3-4% 2015-21 floor to ~5-6% by 2022-26."))
+    sp=[baa[i]-t10[i] for i in range(len(cc))]
+    charts.append(("Credit SPREAD over time — Baa minus the 10Y Treasury (full history)",
+      monthly_line_chart("Baa − 10Y credit spread (pp), monthly", cc, [("Baa − 10Y",sp)], [AC], ymin=0,
+        note="FRED BAA minus DGS10."),
+      "The credit spread is the market's default-risk read: it spiked in early 2016 (energy bust) and Mar-2020 (COVID), then COMPRESSED to cycle-lows by 2024-26 — credit priced almost no stress even as the self-marked private-credit risk built (macro-private-credit-marks)."))
+    if "BAMLH0A0HYM2" in _m and "BAMLC0A0CM" in _m:
+        ccc=sorted(set(_m["BAMLH0A0HYM2"])&set(_m["BAMLC0A0CM"]))
+        hy=[_m["BAMLH0A0HYM2"][d] for d in ccc]; ig=[_m["BAMLC0A0CM"][d] for d in ccc]
+        charts.append((f"Option-adjusted spreads — HY vs IG ({ccc[0]}+)",
+          monthly_line_chart("ICE BofA OAS (pp), monthly", ccc, [("High-yield OAS",hy),("Inv-grade OAS",ig)], [AC,AC2], ymin=0,
+            note="FRED BAMLH0A0HYM2 (HY OAS) / BAMLC0A0CM (IG OAS). Range limited by the monthly series returned."),
+          "Even on the available window, high-yield and investment-grade OAS sit near cycle lows — the corporate market is pricing minimal default risk into 2026."))
+
+# --- regional sovereign yields + a GDP-weighted global aggregate ---
+if _m and all(k in _m for k in ("DGS10","IRLTLT01DEM156N","IRLTLT01GBM156N","IRLTLT01JPM156N")):
+    cr=sorted(set(_m["DGS10"])&set(_m["IRLTLT01DEM156N"])&set(_m["IRLTLT01GBM156N"])&set(_m["IRLTLT01JPM156N"]))
+    us=[_m["DGS10"][d] for d in cr]; de=[_m["IRLTLT01DEM156N"][d] for d in cr]; gb=[_m["IRLTLT01GBM156N"][d] for d in cr]; jp=[_m["IRLTLT01JPM156N"][d] for d in cr]
+    # GDP weights (2024 nominal $tn, approx): US 29.2, JP 4.0, DE 4.7, GB 3.6 -> renormalized
+    W={"US":29.2,"JP":4.0,"DE":4.7,"GB":3.6}; tot=sum(W.values()); wU,wJ,wD,wG=W["US"]/tot,W["JP"]/tot,W["DE"]/tot,W["GB"]/tot
+    glob=[wU*us[i]+wJ*jp[i]+wD*de[i]+wG*gb[i] for i in range(len(cr))]
+    charts.append(("Regional sovereign 10Y + a GDP-weighted GLOBAL long rate",
+      monthly_line_chart("10Y government yields (%), monthly", cr, [("US",us),("UK",gb),("Germany",de),("Japan",jp),("GDP-weighted global",glob)], [AC2,"#9a6a1a","#1f6f43","#7b2d26",INK], ymin=-0.5,
+        note="FRED DGS10 (US) / IRLTLT01{DE,GB,JP}M156N. Global = GDP-weighted (US 70% / DE 11% / GB 9% / JP 10%, 2024 GDP)."),
+      "Subdividing by region shows the divergence the single 'US 10Y' hides: Japan sat near 0% under yield-curve-control while the US/UK ran 4%+; the GDP-weighted global long rate (black) rose from ~1% (2020) toward ~3% (2026) as Japan finally joined — the synchronized global repricing of duration, and the carry-unwind pressure (macro-carry-trades)."))
 
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,

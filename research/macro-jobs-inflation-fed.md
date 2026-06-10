@@ -28,8 +28,9 @@ Different spreads trade off noise against lead horizon (computed on the monthly 
 
 | Differential | Noise (Δσ, pp) | Best lead horizon | Corr |
 |---|---|---|---|
-| **2Y − funds** | 0.20 | **~8 mo** | **+0.77** |
 | **3M − funds** | **0.10** | **~1 mo** | +0.72 |
+| **2Y − funds** | 0.20 | **~8 mo** | **+0.77** |
+| **2Y − 3M (policy-path)** | 0.17 | ~9 mo | +0.66 |
 | **10Y − 2Y (2s10s)** | 0.12 | **~18 mo+** | +0.38 |
 | **10Y − 3M (3m10s)** | 0.21 | ~18 mo+ | +0.54 |
 

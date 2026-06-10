@@ -14,7 +14,9 @@ OUT=os.path.join(DATA,"fred_monthly.json")
 OUT_D=os.path.join(DATA,"fred_daily.json")
 COSD="2015-01-01"
 # (series_id, needs daily->monthly aggregation?)
-SERIES=[("DGS2",True),("FEDFUNDS",False),("DGS3MO",True),("DGS10",True),("DFEDTARU",True)]
+SERIES=[("DGS2",True),("FEDFUNDS",False),("DGS3MO",True),("DGS10",True),("DFEDTARU",True),
+        ("DGS30",True),("BAA",True),("AAA",True),("BAMLH0A0HYM2",True),("BAMLC0A0CM",True),
+        ("IRLTLT01DEM156N",False),("IRLTLT01GBM156N",False),("IRLTLT01JPM156N",False)]
 DAILY=["DGS2","EFFR","DGS3MO"]   # daily 2Y, daily effective fed funds (EFFR; DFF often 504s on fredgraph), daily 3M
 BASE="https://fred.stlouisfed.org/graph/fredgraph.csv"
 
