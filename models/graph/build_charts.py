@@ -375,6 +375,42 @@ if _m and all(k in _m for k in ("DGS10","IRLTLT01DEM156N","IRLTLT01GBM156N","IRL
         note="FRED DGS10 (US) / IRLTLT01{DE,GB,JP}M156N. Global = GDP-weighted (US 70% / DE 11% / GB 9% / JP 10%, 2024 GDP)."),
       "Subdividing by region shows the divergence the single 'US 10Y' hides: Japan sat near 0% under yield-curve-control while the US/UK ran 4%+; the GDP-weighted global long rate (black) rose from ~1% (2020) toward ~3% (2026) as Japan finally joined — the synchronized global repricing of duration, and the carry-unwind pressure (macro-carry-trades)."))
 
+# --- sub-regional sovereign aggregates (region -> subregion -> country) ---
+_REG=["DGS10","IRLTLT01CAM156N","IRLTLT01DEM156N","IRLTLT01GBM156N","IRLTLT01FRM156N","IRLTLT01ITM156N","IRLTLT01JPM156N","IRLTLT01AUM156N"]
+if _m and all(k in _m for k in _REG):
+    cs=sorted(set.intersection(*[set(_m[k]) for k in _REG]))
+    GDP={"US":29.2,"CA":2.2,"DE":4.7,"GB":3.6,"FR":3.2,"IT":2.4,"JP":4.0,"AU":1.8}  # 2024 nominal $tn, approx
+    SUBREG={"North America":[("DGS10","US"),("IRLTLT01CAM156N","CA")],
+            "Europe":[("IRLTLT01DEM156N","DE"),("IRLTLT01GBM156N","GB"),("IRLTLT01FRM156N","FR"),("IRLTLT01ITM156N","IT")],
+            "Asia-Pacific":[("IRLTLT01JPM156N","JP"),("IRLTLT01AUM156N","AU")]}
+    def wavg(members):
+        tw=sum(GDP[c] for _,c in members)
+        return [sum(GDP[c]*_m[k][cs[i]] for k,c in members)/tw for i in range(len(cs))]
+    subseries=[(name,wavg(mem)) for name,mem in SUBREG.items()]
+    allmem=[(k,c) for mem in SUBREG.values() for k,c in mem]
+    subseries.append(("Global (GDP-weighted)",wavg(allmem)))
+    charts.append(("Sovereign 10Y by SUB-REGION (GDP-weighted) — North America / Europe / Asia-Pacific",
+      monthly_line_chart("Sub-regional 10Y aggregates (%), monthly", cs, subseries, [AC2,"#1f6f43","#7b2d26",INK], ymin=-0.5,
+        note="FRED IRLTLT01* + DGS10; GDP-weighted within each sub-region (US/CA; DE/GB/FR/IT; JP/AU)."),
+      "Aggregating up the hierarchy (country -> sub-region -> global) shows Asia-Pacific dragged down for years by Japan's near-0% yield-curve-control, Europe weighed by the Bund, North America highest — then all converging UP into 2024-26 as Japan normalized. The weighted aggregate hides, then reveals, the synchronized duration repricing."))
+
+# --- corporate by CREDIT QUALITY (rating buckets) ---
+_RAT=["BAMLC0A1CAAA","BAMLC0A4CBBB","BAMLH0A3HYC"]
+if _m and all(k in _m for k in _RAT):
+    cq=sorted(set.intersection(*[set(_m[k]) for k in _RAT]))
+    charts.append((f"Corporates by CREDIT QUALITY — AAA vs BBB vs CCC option-adjusted spread ({cq[0]}+)",
+      monthly_line_chart("OAS by rating (pp), monthly", cq, [("AAA (IG, safest)",[_m['BAMLC0A1CAAA'][d] for d in cq]),("BBB (IG, lowest)",[_m['BAMLC0A4CBBB'][d] for d in cq]),("CCC & lower (HY, riskiest)",[_m['BAMLH0A3HYC'][d] for d in cq])], ["#1f6f43",AC2,AC], ymin=0,
+        note="FRED BAMLC0A1CAAA / BAMLC0A4CBBB / BAMLH0A3HYC. Range limited by the monthly series returned."),
+      "The quality dimension: CCC spreads dwarf and move far more than AAA/BBB — the 'sector' that blows out first in stress. Through 2024-26 even CCC sits well off its crisis peaks, i.e., the riskiest corporates are priced for calm."))
+
+# --- borrowing cost by TYPE (sovereign / corporate / household-mortgage) ---
+if _m and all(k in _m for k in ("DGS10","BAA","MORTGAGE30US")):
+    ct=sorted(set(_m["DGS10"])&set(_m["BAA"])&set(_m["MORTGAGE30US"]))
+    charts.append(("Borrowing cost by TYPE — sovereign (10Y) vs corporate (Baa) vs household (30Y mortgage)",
+      monthly_line_chart("Cost of money by borrower type (%), monthly", ct, [("US 10Y (sovereign)",[_m['DGS10'][d] for d in ct]),("Baa (corporate)",[_m['BAA'][d] for d in ct]),("30Y mortgage (household)",[_m['MORTGAGE30US'][d] for d in ct])], [INK,AC,AC2], ymin=0,
+        note="FRED DGS10 / BAA / MORTGAGE30US."),
+      "Stacking borrower types shows the spread STACK: households pay the mortgage rate (Treasury + ~spread), corporates the Baa rate; all three roughly doubled off the 2020-21 floor — the repricing hit sovereign, corporate, and household credit together."))
+
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,
     note="FRED DGS10 / IRLTLT01JPM156N / BAA, year-end. JGB: YCC ended Mar 2024."),
@@ -398,6 +434,17 @@ body=[f'<h1>Charts — jobs, inflation, and the Fed vs the bond market</h1>',
 for h,svg,cap in charts:
     body.append(f'<h2>{esc(h)}</h2>'); body.append(svg); body.append(f'<p class=cap>{cap}</p>')
 if SIGNAL_TABLE: body.append(SIGNAL_TABLE)
+body.append("""<h2>Breakdown framework &amp; data provenance</h2>
+<p class=cap>The bond universe can be sliced along two axes — <b>geography</b> (region → sub-region → country → state → city → institution) and <b>type/quality</b> (sovereign, corporate-by-rating, household/mortgage, municipal, agency). What is charted here vs what requires other sources, stated plainly:</p>
+<table><thead><tr><th>Cut</th><th>Charted here?</th><th>Source</th></tr></thead><tbody>
+<tr><td>Region / sub-region / country (sovereign 10Y)</td><td><b>Yes</b> — US, CA, DE, GB, FR, IT, JP, AU, GDP-weighted to sub-region &amp; global</td><td>FRED IRLTLT01* + DGS10 (keyless CSV)</td></tr>
+<tr><td>Corporate by credit quality (AAA→CCC)</td><td><b>Yes</b> (range-limited)</td><td>FRED ICE BofA OAS (BAMLC0A1CAAA, BAMLC0A4CBBB, BAMLH0A3HYC)</td></tr>
+<tr><td>Borrower type (sovereign / corporate / household)</td><td><b>Yes</b> (10Y / Baa / 30Y mortgage)</td><td>FRED DGS10 / BAA / MORTGAGE30US</td></tr>
+<tr><td>Corporate by <i>industry sector</i> (financials/energy/tech/utilities)</td><td>No — industry-level OAS not on FRED's free endpoint</td><td>Requires licensed ICE BofA / Bloomberg sector indices</td></tr>
+<tr><td>State / city (municipal bonds)</td><td>No — granular muni yields not free on FRED</td><td>Requires MSRB EMMA / Bloomberg / S&amp;P muni indices</td></tr>
+<tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
+</tbody></table>
+<p class=cap>So the institution-level cut already exists (the bank model); the geography and quality cuts are charted above; industry-sector OAS and state/city muni granularity are the two pieces that need licensed/alternative feeds — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')

@@ -16,7 +16,9 @@ COSD="2015-01-01"
 # (series_id, needs daily->monthly aggregation?)
 SERIES=[("DGS2",True),("FEDFUNDS",False),("DGS3MO",True),("DGS10",True),("DFEDTARU",True),
         ("DGS30",True),("BAA",True),("AAA",True),("BAMLH0A0HYM2",True),("BAMLC0A0CM",True),
-        ("IRLTLT01DEM156N",False),("IRLTLT01GBM156N",False),("IRLTLT01JPM156N",False)]
+        ("IRLTLT01DEM156N",False),("IRLTLT01GBM156N",False),("IRLTLT01JPM156N",False),
+        ("IRLTLT01FRM156N",False),("IRLTLT01ITM156N",False),("IRLTLT01CAM156N",False),("IRLTLT01AUM156N",False),
+        ("BAMLC0A1CAAA",True),("BAMLC0A4CBBB",True),("BAMLH0A3HYC",True),("MORTGAGE30US",True)]
 DAILY=["DGS2","EFFR","DGS3MO"]   # daily 2Y, daily effective fed funds (EFFR; DFF often 504s on fredgraph), daily 3M
 BASE="https://fred.stlouisfed.org/graph/fredgraph.csv"
 

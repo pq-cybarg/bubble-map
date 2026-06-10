@@ -36,5 +36,8 @@ Different spreads trade off noise against lead horizon (computed on the monthly 
 
 The **horizon lengthens from the short end to the curve** (1–8 months → 18+ months) — the fast-vs-delayed axis. Noise is *not* monotonic (the 3M−funds gap is the cleanest; the 2Y−funds and 10Y−3M are jumpiest). **Use the right differential for the question:** 3M−funds for the fastest clean read on an imminent move, 2Y−funds for the strongest read on the Fed's direction, the 2s10s curve for the smoothest (most delayed) cycle/recession read. Charts: [docs/charts.html](https://pq-cybarg.github.io/bubble-map/charts.html).
 
+## Bond-market breakdowns (charts page)
+The differentials extend across the curve and the bond universe — sliced by **geography** (region → sub-region → country, GDP-weighted: US/CA, DE/GB/FR/IT, JP/AU → global) and **type/quality** (sovereign 10Y, corporate Baa/Aaa, household 30Y-mortgage, and corporate OAS by rating AAA/BBB/CCC). Plus **30Y term-premium** differentials and **credit spreads** (Baa−10Y full history; HY/IG OAS recent). Two cuts are flagged as needing licensed/alternative feeds rather than fabricated: **industry-sector** OAS (ICE BofA/Bloomberg) and **state/city municipal** yields (MSRB EMMA). The **per-institution** cut already exists in the repo via the FDIC BankFind API (`models/graph/bank_exposure.py`). Full provenance table on the [charts page](https://pq-cybarg.github.io/bubble-map/charts.html).
+
 ## Bottom line
 Disambiguation dissolves the official story, and the rate path maps onto the **2-year yield**, not onto 2% inflation or full employment. The evidence supports the thesis: **the Fed steers to the bond market / financial conditions, with the "dual mandate" as the public framing.**
