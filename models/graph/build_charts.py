@@ -274,6 +274,56 @@ if _fd and "DGS2" in _fd and _fundskey:
       daily_line_chart("Daily effective fed funds vs 2Y/3M Treasury, 2015-2026", cd, series, cols, note="FRED daily series via fredgraph.csv; refresh: python3 models/graph/fetch_fred.py."),
       note+" The funds rate (DFF) is a near-step that jumps only at FOMC meetings; the 2Y is continuous and has already moved to the new level before each step — the bond market prices the decision first."))
 
+# --- RATE DIFFERENTIALS: sharp-but-fast (short end) vs smooth-but-delayed (long end) ---
+def _std(xs):
+    n=len(xs);
+    if n<2: return 0.0
+    m=sum(xs)/n; return (sum((x-m)**2 for x in xs)/n)**0.5
+def _chg(xs): return [xs[i]-xs[i-1] for i in range(1,len(xs))]
+def best_horizon(spread, funds, hmax=18):
+    best=(0,0.0)
+    for h in range(1,hmax+1):
+        a=[spread[t] for t in range(len(spread)-h)]
+        b=[funds[t+h]-funds[t] for t in range(len(funds)-h)]
+        if len(a)>=24:
+            c=_pearson(a,b)
+            if abs(c)>abs(best[1]): best=(h,c)
+    return best
+
+SIGNAL_TABLE=""
+_m=load_fred()
+if _m and all(k in _m for k in ("DGS2","FEDFUNDS","DGS3MO","DGS10")):
+    mc=sorted(set(_m["DGS2"])&set(_m["FEDFUNDS"])&set(_m["DGS3MO"])&set(_m["DGS10"]))
+    ff=[_m["FEDFUNDS"][d] for d in mc]; g2=[_m["DGS2"][d] for d in mc]; g3=[_m["DGS3MO"][d] for d in mc]; g10=[_m["DGS10"][d] for d in mc]
+    SPREADS=[("2Y − fed funds","short",[g2[i]-ff[i] for i in range(len(mc))]),
+             ("3M − fed funds","short",[g3[i]-ff[i] for i in range(len(mc))]),
+             ("10Y − 2Y (2s10s)","long",[g10[i]-g2[i] for i in range(len(mc))]),
+             ("10Y − 3M (3m10s)","long",[g10[i]-g3[i] for i in range(len(mc))])]
+    # two spread charts (short-end sharp; long-end smooth)
+    charts.append(("Sharp & fast — the SHORT-END policy gap (2Y/3M minus the fed funds rate)",
+      monthly_line_chart("Short-end spreads (pp), monthly", mc, [(n,s) for n,grp,s in SPREADS if grp=="short"], [AC,"#9a6a1a"],
+        note="FRED DGS2/DGS3MO minus FEDFUNDS. Negative = market expects CUTS (Fed 'behind'); positive = expects HIKES."),
+      "The short-end gap turns FAST: it went deeply negative ahead of the 2019, 2020, and 2024 cuts and strongly positive ahead of the 2022 hikes — the market pre-committing the Fed. (The 2Y−funds line is jumpier; the 3M−funds line is cleaner — see the measured noise below.)"))
+    charts.append(("Smooth & delayed — the CURVE spreads (10Y minus 2Y / 3M)",
+      monthly_line_chart("Curve spreads (pp), monthly", mc, [(n,s) for n,grp,s in SPREADS if grp=="long"], [AC2,"#1f6f43"],
+        note="FRED DGS10 minus DGS2 / DGS3MO. Inversion (below 0) is the classic recession lead — smoother, but with a long and variable lag."),
+      "The 2s10s/3m10s curve is far smoother but slower: it inverted through 2022-24 (recession signal) and is a cleaner but lagged read than the jumpy short-end gap."))
+    rows=[]
+    for n,grp,s in SPREADS:
+        noise=_std(_chg(s)); h,c=best_horizon(s,ff)
+        rows.append((n,grp,noise,h,c))
+    sh=[r for r in rows if r[1]=="short"]; lo=[r for r in rows if r[1]=="long"]
+    def _fmt(rs): return "".join(f"<tr><td>{n}</td><td>{noise:.2f}</td><td>{h} mo</td><td>{c:+.2f}</td></tr>" for n,grp,noise,h,c in rs)
+    SIGNAL_TABLE=("<h2>Signal quality: the sharp-vs-smooth tradeoff, measured</h2>"
+      "<p class=cap>For each rate differential: <b>noise</b> = stdev of its month-over-month change (higher = jumpier); "
+      "<b>horizon</b> = the lead h (months) at which the spread's level best predicts the subsequent change in the fed funds rate; "
+      "<b>corr</b> = that predictive correlation. Short-end gaps are noisier but predict at a short horizon (fast); curve spreads are smoother but predict at a long horizon (delayed).</p>"
+      "<table><thead><tr><th>Differential</th><th>Noise (Δ stdev, pp)</th><th>Best lead horizon</th><th>Corr at horizon</th></tr></thead><tbody>"
+      "<tr><td colspan=4 style='background:#f3eedf'><b>Short end — sharp / fast / noisy</b></td></tr>"+_fmt(sh)+
+      "<tr><td colspan=4 style='background:#f3eedf'><b>Long end — smooth / delayed / clean</b></td></tr>"+_fmt(lo)+
+      "</tbody></table>"
+      "<p class=cap>The tradeoff, quantified from the data: the predictive <b>horizon lengthens from the short end to the curve</b> — 3M−funds predicts the next move at ~1&nbsp;month, 2Y−funds at ~8&nbsp;months (and is the strongest predictor, corr ~0.77), while the 2s10s/3m10s curve leads longest (~18&nbsp;months+) but weaker — the fast-vs-delayed axis. Noise is <i>not</i> monotonic: the 3M−funds gap is actually the cleanest, the 2Y−funds and 10Y−3M the jumpiest. So pick the differential to match the question: <b>3M−funds</b> for the fastest clean read on an imminent move, <b>2Y−funds</b> for the strongest read on where the Fed is headed, the <b>2s10s curve</b> for the smoothest (most delayed) cycle/recession read.</p>")
+
 charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) while Baa credit repriced",
   line_chart("Long rates (%)", [("US 10Y",T10),("Japan 10Y (JGB)",JGB10),("Baa corporate",BAA)],"%",[AC2,AC,"#9a6a1a"], ymin=-0.5,
     note="FRED DGS10 / IRLTLT01JPM156N / BAA, year-end. JGB: YCC ended Mar 2024."),
@@ -296,6 +346,7 @@ body=[f'<h1>Charts — jobs, inflation, and the Fed vs the bond market</h1>',
  '<p class=src>All series are <b>annual</b>, compiled from public data (FRED / BLS / US Treasury / BIS / BOJ), <b>rounded</b> to the precision shown; FRED/BLS series IDs are noted under each chart. "~" marks an estimate or partial year. Verify any value at the cited series. Companion data + sourcing: <a href="https://github.com/pq-cybarg/bubble-map/blob/main/research/macro-jobs-inflation-fed.md">macro-jobs-inflation-fed</a>.</p>']
 for h,svg,cap in charts:
     body.append(f'<h2>{esc(h)}</h2>'); body.append(svg); body.append(f'<p class=cap>{cap}</p>')
+if SIGNAL_TABLE: body.append(SIGNAL_TABLE)
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')

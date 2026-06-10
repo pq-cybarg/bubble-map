@@ -23,5 +23,17 @@
 - The long end and the **global bond market** bind it too: US 10Y/30Y, **Baa ~6%**, and the **10Y JGB escaping YCC (0% → 2.0% Dec-2025 → ~2.66% 2026)** — raising the cost of the yen carry trade that funds crowded longs (`macro-carry-trades`).
 - **Z3 (`macro-fed-trap`):** there is **no single feasible rate** satisfying the divergent targets — so the mandate cannot be what sets the rate; financial conditions / the bond market do.
 
+## Rate differentials — sharp/fast vs smooth/delayed (measured)
+Different spreads trade off noise against lead horizon (computed on the monthly cache, predicting the subsequent fed-funds change):
+
+| Differential | Noise (Δσ, pp) | Best lead horizon | Corr |
+|---|---|---|---|
+| **2Y − funds** | 0.20 | **~8 mo** | **+0.77** |
+| **3M − funds** | **0.10** | **~1 mo** | +0.72 |
+| **10Y − 2Y (2s10s)** | 0.12 | **~18 mo+** | +0.38 |
+| **10Y − 3M (3m10s)** | 0.21 | ~18 mo+ | +0.54 |
+
+The **horizon lengthens from the short end to the curve** (1–8 months → 18+ months) — the fast-vs-delayed axis. Noise is *not* monotonic (the 3M−funds gap is the cleanest; the 2Y−funds and 10Y−3M are jumpiest). **Use the right differential for the question:** 3M−funds for the fastest clean read on an imminent move, 2Y−funds for the strongest read on the Fed's direction, the 2s10s curve for the smoothest (most delayed) cycle/recession read. Charts: [docs/charts.html](https://pq-cybarg.github.io/bubble-map/charts.html).
+
 ## Bottom line
 Disambiguation dissolves the official story, and the rate path maps onto the **2-year yield**, not onto 2% inflation or full employment. The evidence supports the thesis: **the Fed steers to the bond market / financial conditions, with the "dual mandate" as the public framing.**
