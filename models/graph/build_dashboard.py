@@ -74,6 +74,7 @@ OVERLAYS=[
  ("Bank HTM marks (zero-trust)","HTM 'held to par' is a self-chosen value, not a price; FDIC unrealized-loss series ~$690B(Q3-22)->$306B(Q4-25)->$325B(Q1-26); withdrawn problem-bank totals reconstructable from RC-B + FDIC API","macro-bank-htm-marks"),
  ("Private credit marks (zero-trust)","3rd self-marked asset class (manager NAVs); First Brands/Tricolor marked ~par then ~12-33c; bad-PIK ~3x 2021; risk migrating to insurance annuities + 401(k) retail","macro-private-credit-marks"),
  ("Insurance / Bermuda endpoint","Where the risk lands: PE-owned insurers (>$700B, ~25% of US life) fund annuities with manager-marked private credit, cede liabilities to Bermuda CAPTIVES they control (~60% offshore = internal 'transfer'); IMF/FSB/FIO/NAIC warning","spec-insurance-bermuda"),
+ ("Jobs / inflation / Fed-vs-bond-market (CHARTS)","Disambiguated jobs + inflation over 10yr; the funds rate tracks the 2Y Treasury (bond market), not the 2%/full-employment mandate; see the Charts page","macro-jobs-inflation-fed"),
  ("Stablecoin -> Treasury rail","GENIUS Act mandates 1:1 T-bill reserves -> stablecoin growth = legislated T-bill demand; Tether >$100B (>UAE/Germany); Bessent's stated motive; China exits to gold; ~$900B demand-supply gap","macro-stablecoin-treasury-rail"),
  ("Timing of the unwind","STRUCTURE certain (insolvent at zero inflow; marks must reverse), DATE unforecastable in principle (reflexivity/Minsky/Keynes); watch the trigger panel, not the calendar","spec-unwind-timing"),
 ]
@@ -181,14 +182,14 @@ open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 # ---- mirror to docs/ (GitHub Pages) with a back-link to the hub ----
 DOCS=os.path.join(ROOT,"docs")
 if os.path.isdir(DOCS):
-    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Glossary</a></div>'
+    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Charts</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Glossary</a></div>'
     docs_html=HTML.replace("<body>","<body>"+backnav,1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
 
     # ---- additional pages: research index + methodology ----
     GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
     def navlinks(active=""):
-        items=[("index.html","Home"),("dashboard.html","Dashboard"),("research.html","Research"),("methodology.html","Methodology"),("glossary.html","Glossary"),("globe.html","Globe")]
+        items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),("methodology.html","Methodology"),("glossary.html","Glossary"),("globe.html","Globe")]
         return "".join(f'<a href="{h}" style="color:#1f4e79;text-decoration:none;margin-right:16px{";font-weight:600" if t==active else ""}">{t}</a>' for h,t in items)
     NAVBAR=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 32px;font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">'+navlinks()+'</div>')
     PCSS=("body{background:#faf8f2;color:#1c1b19;font:18px/1.72 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;margin:0;padding:0 0 60px}"

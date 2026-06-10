@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Jobs, inflation, and the Fed vs the bond market - the dual-mandate test (data behind docs/charts.html)",
+    "generated": "2026-06-09",
+    "frame": "The sourcing + thesis behind the charts page. Two claims: (1) a single 'jobs number' and 'inflation number' hide opposite sectoral / labor-slack / measure-by-measure trends (disambiguation needed to see the truth); (2) the Fed's policy rate tracks the BOND MARKET - specifically the 2-year Treasury yield - far more tightly than it tracks its statutory dual mandate of 2% inflation and maximum employment. The user's thesis: the Fed is responding to bond markets, not the mandate.",
+    "WARNING": "EVIDENCE-GRADED. The series are public and fact (FRED/BLS/Treasury/BIS/BOJ; annual, rounded). 'The Fed follows the 2Y not the mandate' is a STRONG EVIDENCED thesis: the funds-rate<->2Y co-movement and 2Y-leads-at-pivots are documented facts; the causal/intent claim ('responding to bonds') is the user's interpretation, well-supported but labeled interpretation not proof. Kept out of the formal proofs.",
+    "method": "Annual values compiled from FRED series (CPIAUCSL, PCEPILFE, DFEDTARU, DGS2, DGS3MO, DGS10, DGS30, BAA, UNRATE, U6RATE, PAYEMS, IRLTLT01JPM156N), BLS CES Table B-1, BOJ; rounded; estimates marked. Verify at the cited series.",
+    "cross_refs": ["macro-official-data-integrity.json (the -911k benchmark, true vs headline)","macro-rent-cpi-divergence.json (CPI shelter lag - why CPI misstates)","macro-gig-labor.json (U-6/gig - true labor slack)","macro-carry-trades.json (JGB / yen carry - the bond-market channel)","macro-gold-silver-reprice.md (inflation in hard money)","macro-fed-trap-regional.md (no single feasible rate, Z3)"]
+  },
+  "disambiguation_true_employment": {
+    "point": "There is no single 'employment' number; the honest reading needs several, and they diverge.",
+    "metrics": [
+      "HEADLINE payroll growth (CES) overstated 2024-25 - cut ~1.5M by the QCEW benchmarks (-818k 2024, -911k 2025), arriving 6-18 months late (macro-official-data-integrity).",
+      "U-3 (headline unemployment) ran 3.6-4.4% recently; U-6 (incl. discouraged + involuntary part-time + marginally attached) ran ~3-5 pts higher (6.8-8.1%) - the slack the Fed's 'maximum employment' framing omits.",
+      "SECTORAL divergence: recent growth concentrated in health care (+~900k/yr), leisure/hospitality, and STATE/LOCAL GOVERNMENT, while MANUFACTURING, INFORMATION (tech), TEMP HELP, and FEDERAL GOVERNMENT shrank. One aggregate hides opposite trends.",
+      "GIG/contingent: full-time independents 13.6M->27.7M (macro-gig-labor); multiple-jobholders inflate the CES count; gig absorbs underemployment so U-3 understates."
+    ]
+  },
+  "disambiguation_inflation": {
+    "point": "There is no single 'inflation' number either; each gauge tells a different story and none sat at 2%.",
+    "metrics": [
+      "CPI-U vs core PCE (the Fed's gauge) differ by weight/scope; core PCE runs ~0.3-0.4pt below CPI.",
+      "Neither was at 2% for most of the decade: ~0% (2015), well below target 2015-2020, then 4-8% (2021-2023), settling ~3% (2024-26) - target met only in passing.",
+      "CPI shelter (~1/3 of CPI) LAGS market rents ~12 months (ALNRI/Zillow/NTRI, macro-rent-cpi-divergence) - so the official series misstated inflation's turning points in both directions.",
+      "In hard money the picture is worse: a US home is -81% in gold since 1998 (macro-gold-silver-reprice) - '2% inflation' is a measurement artifact relative to gold/debasement."
+    ]
+  },
+  "the_fed_follows_the_bond_market": {
+    "grade": "co-movement FACT; 'responding to bonds not mandate' STRONG-EVIDENCED interpretation",
+    "facts": [
+      "The Fed funds target and the 2-YEAR Treasury yield move together; the 2Y TURNS FIRST at every pivot - it fell below the funds rate ahead of the 2019 and 2024 cuts, and rose above it ahead of/with the 2022 hikes. The funds rate ratifies the 2Y, the market's rate-path expectation.",
+      "If the Fed steered to the MANDATE, the funds rate would track 2% inflation + full employment - but it sat at 0.25% through 3.6% core PCE (2021) and stayed >=4.5-5.5% as core PCE fell toward ~2.8% and U-6 rose (2023-25).",
+      "The long end and the global bond market constrain it too: US 10Y/30Y, Moody's Baa (~6%), and the 10Y JGB - which escaped yield-curve-control (0%) to ~2% (Dec 2025) to ~2.66% (2026), raising the cost of the yen carry trade that funds crowded global longs (macro-carry-trades).",
+      "Z3 (macro-fed-trap): there is NO single feasible rate that satisfies the Fed's divergent targets - so 'the mandate' cannot be what determines the rate; something else (the bond market / financial conditions) does."
+    ]
+  },
+  "series_annual": {
+    "note": "annual, rounded, year-end for rates / annual-avg for CPI-PCE-U; '~' = est/partial. Full arrays in models/graph/build_charts.py.",
+    "CPI_yoy": {"2021":4.7,"2022":8.0,"2023":4.1,"2024":2.9,"2025":3.0},
+    "corePCE_yoy": {"2021":3.6,"2022":5.2,"2023":4.1,"2024":2.8,"2025":2.9},
+    "fed_funds_ye": {"2020":0.25,"2021":0.25,"2022":4.5,"2023":5.5,"2024":4.5,"2025":4.0},
+    "UST_2y_ye": {"2021":0.73,"2022":4.41,"2023":4.23,"2024":4.25,"2025":3.6},
+    "UST_10y_ye": {"2021":1.52,"2022":3.88,"2023":3.88,"2024":4.58,"2025":4.3},
+    "JGB_10y_ye": {"2021":0.07,"2022":0.42,"2023":0.61,"2024":1.09,"2025":2.02,"2026":2.66},
+    "U3": {"2022":3.6,"2023":3.6,"2024":4.0,"2025":4.2},
+    "U6": {"2022":6.9,"2023":6.8,"2024":7.5,"2025":7.9}
+  },
+  "edges": [
+    {"from":"Bond_Market_2Y","to":"Federal_Reserve","instrument":"rate_setting_pressure","amount_usd":null,"date":"2015-2026","status":"co-moves-2Y-leads","circular":false,"cancelable":false,"confidence":"high","source":["https://fred.stlouisfed.org/series/DGS2"],"notes":"Fed funds tracks the 2Y; the 2Y turns first at every pivot - the Fed ratifies the market's expectation rather than steering to the mandate."},
+    {"from":"Federal_Reserve","to":"Dual_Mandate","instrument":"mandate_miss","amount_usd":null,"date":"2015-2026","status":"unmet","circular":false,"cancelable":false,"confidence":"high","source":["https://fred.stlouisfed.org/series/PCEPILFE"],"notes":"Neither 2% inflation nor full employment (U-6) held while the rate path moved; Z3 macro-fed-trap shows no single feasible rate exists."}
+  ],
+  "assessment": "The charts (docs/charts.html) make two things visible. First, DISAMBIGUATION dissolves the official story: 'jobs' splits into an overstated-then-revised headline, a U-3 that hides a 3-5pt-higher U-6, and sectoral growth confined to health care / leisure / state-local government while manufacturing, tech, temp, and federal government shrink; 'inflation' splits into CPI vs core PCE vs lagged shelter vs gold, none at 2% for long. Second, the Fed's rate path maps onto the 2-YEAR TREASURY YIELD (the bond market's expectation), which leads it at every pivot - not onto 2% inflation or full employment. Combined with the Z3 fed-trap result (no single feasible mandate-satisfying rate), the evidence supports the user's thesis: the Fed is steering to financial conditions / the bond market, with the 'dual mandate' as the public framing. Co-movement is fact; the causal 'responding to bonds' reading is a strong, labeled interpretation. The global bond squeeze (JGB 0%->2.66%, Baa ~6%) is the channel that can force the issue (the carry-unwind trigger). Overlay; not used in the formal proofs."
+}

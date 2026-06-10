@@ -100,6 +100,10 @@
       "sector": "defense",
       "has_exogenous_revenue": true
     },
+    "Bond_Market_2Y": {
+      "sector": "macro_factor",
+      "has_exogenous_revenue": false
+    },
     "Boskin_Commission": {
       "sector": "commission",
       "has_exogenous_revenue": false
@@ -211,6 +215,10 @@
     "Disney_Studios_Coalition": {
       "sector": "ip_rightsholder",
       "has_exogenous_revenue": true
+    },
+    "Dual_Mandate": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "EeroQ": {
       "sector": "pqc_quantum",
@@ -3260,6 +3268,32 @@
       "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
     },
     {
+      "from": "Bond_Market_2Y",
+      "to": "Federal_Reserve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rate_setting_pressure",
+      "amount_usd": null,
+      "status": "co-moves-2Y-leads",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-jobs-inflation-fed.json",
+      "note": "Fed funds tracks the 2Y; the 2Y turns first at every pivot - the Fed ratifies the market's expectation rather than steering to the mandate."
+    },
+    {
+      "from": "Federal_Reserve",
+      "to": "Dual_Mandate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mandate_miss",
+      "amount_usd": null,
+      "status": "unmet",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-jobs-inflation-fed.json",
+      "note": "Neither 2% inflation nor full employment (U-6) held while the rate path moved; Z3 macro-fed-trap shows no single feasible rate exists."
+    },
+    {
       "from": "US_Government",
       "to": "MP_Materials",
       "instrument": "equity",
@@ -3300,10 +3334,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 187,
-    "num_edges": 196,
+    "num_nodes": 189,
+    "num_edges": 198,
     "num_financial_edges": 114,
-    "num_structural_edges": 82,
+    "num_structural_edges": 84,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3354,14 +3388,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -3370,12 +3396,25 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "AMD",
         "OpenAI"
       ],
       [
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -3388,9 +3427,16 @@
         "NVIDIA"
       ],
       [
+        "CoreWeave",
         "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
         "OpenAI",
-        "Oracle"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -3401,18 +3447,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -3420,13 +3461,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -3609,6 +3643,13 @@
         "in_robust_core": false
       },
       "Boeing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bond_Market_2Y": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3805,6 +3846,13 @@
         "in_robust_core": false
       },
       "Disney_Studios_Coalition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Dual_Mandate": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

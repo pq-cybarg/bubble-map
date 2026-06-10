@@ -97,6 +97,7 @@ python3 zkage/zk_age_proof.py | tail -20
 hr "[7b] Build dashboard + globe"
 python3 models/graph/build_dashboard.py
 python3 models/graph/build_globe.py
+python3 models/graph/build_charts.py
 
 hr "DONE"
 echo "Report:   report/UNMASKING.md"
