@@ -32,11 +32,11 @@
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
 ## Newest file `macro-stablecoin-treasury-rail.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 2 shared entities
-- fin-google-amazon-anthropic-meta.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
 - altcoin-lens.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- spec-insurance-bermuda.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- macro-private-credit-marks.json: 1 shared entities
+- fin-google-amazon-anthropic-meta.json: 2 shared entities
+- macro-cre-privatecredit.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- blockchain-leg.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities
+- fin-coreweave-oracle.json: 1 shared entities
+- influence-china-tech.json: 1 shared entities

@@ -23,6 +23,9 @@ python3 models/z3/circularity_smt.py
 hr "[2b] Z3 - reflexive mark-to-market proofs (M1-M4: self-referential AI 'profit')"
 python3 models/z3/reflexive_marks.py | grep -E "M[0-9]|Z3 result|WITNESS|UNSAT:|ILLUSTRATION" | head -24
 
+hr "[2c] Z3 - self-marked-value theorem (U1-U4: bank HTM / AI marks / private credit / insurance = same defect)"
+python3 models/z3/self_marked_value.py | grep -E "U[0-9]|Z3 result|WITNESS|UNSAT:|CONCLUSION" | head -22
+
 hr "[3/8] Z3 - small-bank coordination game (C1-C4)"
 python3 models/z3/coordination_game.py
 

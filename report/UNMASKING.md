@@ -23,7 +23,7 @@ Four results that emerged as the corpus deepened — the most consequential, sta
 | AI lab stakes | **fair-value / equity marks** | an IPO below the last private mark | `reflexive_marks` M3 / `MarkUnwind` |
 | Private-credit loans | **manager-set NAV** | a default | First Brands ≥100¢→~33¢; Tricolor AAA→12¢ |
 | Insurance liabilities | **offshore captive marks** | a redemption / ratings event | IMF/FSB/FIO/NAIC warnings |
-It is the same defect four times: a self-chosen valuation that holds until reality forces it.
+It is the same defect four times: a self-chosen valuation that holds until reality forces it. **Now formalized:** `models/z3/self_marked_value.py` (U1–U4) proves "solvent at book / insolvent at market" is realizable (U1, SAT), a self-marked unsold position's book is *not* guaranteed realizable (U2, UNSAT), the four gaps **correlate under a common macro factor so "diversification" fails** (U3 — SAT they co-move, UNSAT to net them), and carrying value **must converge down once a forcing event prices the asset** (U4, UNSAT). The four are one defect, proven.
 
 **2. AI "profit" is partly self-referential (proven).** Amazon/Google book mark-to-market *gains* by helping fund the rounds that set the marks (Amazon +$9.5B on Anthropic); Microsoft books equity-method *losses* on OpenAI. `models/z3/reflexive_marks.py` (M1–M4) proves those gains aren't externally realized and **must reverse** if an IPO clears below the private mark; `models/tla/MarkUnwind.tla` is the writedown-cascade trace. The earnings analogue of "solvent only while capital flows."
 

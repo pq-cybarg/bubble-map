@@ -28,6 +28,7 @@ VERDICTS=[
  ("Z3 T4 core at zero inflow","insolvent without continued capital","UNSAT(refuted)"),
  ("Z3 T5 SpaceX vs OpenAI","SpaceX SAT / OpenAI UNSAT standalone","PROVED"),
  ("Z3 reflexive marks M1-M4","AI 'profit' is self-referential paper marks; gains reverse if IPO < private mark","SAT/UNSAT"),
+ ("Z3 self-marked value U1-U4","bank HTM / AI marks / private credit / insurance = one defect; gaps correlate under a common factor (no netting); forced convergence on the event","SAT/UNSAT"),
  ("TLA+ cascade","capital-stop → OpenAI→CoreWeave→Oracle","VIOLATED(trace)"),
  ("TLA+ SpaceX safe","never defaults","HOLDS"),
  ("TLA+ MarkUnwind","down-round/IPO<mark -> Amazon+Google reverse gains (writedown trace)","VIOLATED(trace)"),
@@ -281,7 +282,7 @@ ES=f"""# Executive Summary — Unmasking the AI Earnings Bubble
 The AI build-out is a **circular capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing**; it is **gated by physical chokepoints it cannot buy past** on the timeline (compute capital, China rare earths, Russian enrichment, the power grid); and it is **embedded in measurement and control layers** — official statistics, paper commodity prices, and the identity / surveillance / political-money rails — that determine whether it can be seen and questioned.
 
 ## Headline findings
-1. **The self-marked-value machine** — in the four places risk hides (bank securities at HTM *cost*, AI stakes at *fair-value* marks, private-credit loans at *manager* NAVs, insurance liabilities at *offshore captive* marks) value is a chosen number, not a market price, held until a forcing event prices it (First Brands ≥100¢→33¢; Tricolor AAA→12¢; SVB solvent-at-cost-insolvent-at-market).
+1. **The self-marked-value machine (proven)** — in the four places risk hides (bank securities at HTM *cost*, AI stakes at *fair-value* marks, private-credit loans at *manager* NAVs, insurance liabilities at *offshore captive* marks) value is a chosen number, not a market price, held until a forcing event prices it (First Brands ≥100¢→33¢; Tricolor AAA→12¢; SVB solvent-at-cost-insolvent-at-market). `self_marked_value` U1–U4 formalizes it: the four are one defect, their gaps correlate under a common factor (no diversification), and carrying value is forced to converge on the event.
 2. **AI "profit" is partly self-referential (proven)** — Amazon/Google book mark-to-market *gains* by funding the rounds that set the marks (Amazon +$9.5B on Anthropic) while Microsoft books equity-method *losses*; `reflexive_marks` M1–M4 + `MarkUnwind` show the gains must reverse if an IPO prices below the mark.
 3. **Who holds the bag: annuities and 401(k)s** — risk migrates to PE-owned insurers (>$700B, ~25% of US life) → annuities on manager-marked private credit (~⅕ affiliated-fund loans) → Bermuda captives the same group controls (~60% offshore = internal "transfer"); an Aug-2025 EO opens 401(k)s to it.
 4. **Timing: structure certain, date unknowable** — insolvency at zero inflow is proven; the date is unforecastable in principle (reflexivity/Minsky/Keynes). Watch the trigger panel + the staged SpaceX cliffs (Google's Sep 30 2026 delivery-miss right; 90-day notice from Dec 31 2026).
