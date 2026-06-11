@@ -84,6 +84,9 @@ OVERLAYS=[
  ("Identity-theft supply-chain wave","Shai-Hulud self-propagating npm worm (+2.0, 25k repos), Team PCP/Mini Shai-Hulud (UNC6780), the Scattered LAPSUS$ Hunters OAuth-token extortion (700+ orgs via Salesloft/Drift), and the Nightmare-Eclipse anti-Microsoft zero-day grudge — one mechanism: steal the trust attached to an identity","spec-supplychain-shaihulud-extortion"),
  ("Threat-actor attribution map (UNC / DPRK)","How Mandiant/Google UNC→TEMP→APT/FIN graduation works (epistemic-honesty device), and where DPRK's financially-motivated state hacking sits — TraderTraitor/UNC4899, Bybit $1.5B, Contagious-Interview npm overlap","spec-unc-nk-attribution-map"),
  ("AI-capex depreciation & duration-mismatch trap","Useful-life as the 5th self-marked number (Burry ~$176B understated depreciation 2026-28; Meta 5.5yr, MSFT 6 vs 3yr); Oracle FY2026 -$23.7B FCF + $248B 15-19yr leases vs ~3yr GPUs; formalized in models/z3/depreciation_trap.py (D1-D4). From the justdario article","fin-ai-depreciation-debttrap"),
+ ("Critical-minerals supply-response equities","The allied answer to the China rare-earth + ANTIMONY chokepoint: MP (DoD largest shareholder + $110/kg NdPr price floor + Apple $500M), Perpetua (only mined US antimony, EXIM $2.9B, 2029), US Antimony (only NA mil-spec smelter), Ucore (DoD REE separation) + the stockpile-pumped tail. Quasi-nationalization = mirror of the AI-capex circular financing","macro-critical-minerals-equities"),
+ ("Contested resource states (force/territory/money/denial)","Venezuela (US captured Maduro Jan-2026; oil/gold/REE), Greenland (Trump 'framework'; REE + Pituffik/GIUK Arctic), Argentina ($40B US backstop for lithium vs China's Ganfeng), Iran (2026 war; Hormuz blocked; cutting China off the oil/REE axis) - the chokepoint contest gone kinetic","geopolitics-contested-resource-states"),
+ ("Allied intel & strategic-geography nodes","Physical chokepoints of intel/compute/data: Pine Gap signals (US spy-sats over 1/3 of globe), Korea/Japan HBM + Taiwan packaging (the allied memory chokepoint), Singapore cables vs Hong Kong's bifurcation, and the Greenland/GIUK Arctic frontier","geopolitics-allied-intel-nodes"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[
@@ -251,6 +254,7 @@ if os.path.isdir(DOCS):
         if fn.startswith("spec-"): return "Regulatory · crypto · surveillance overlays"
         if fn.startswith("influence-"): return "Influence & identity"
         if fn.startswith("digitalid-") or fn.startswith("age-"): return "Digital ID & age verification"
+        if fn.startswith("geopolitics-"): return "Geopolitics & strategic geography"
         return "Thematic"
     import re as _re
     # which research stubs have a .md write-up -> get a rendered on-site page r-<stub>.html

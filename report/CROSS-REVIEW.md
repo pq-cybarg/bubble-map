@@ -15,27 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 31 files
+- **Meta** — 33 files
 - **Google** — 27 files
+- **OpenAI** — 21 files
 - **Oracle** — 20 files
-- **OpenAI** — 20 files
 - **Amazon** — 19 files
+- **Microsoft** — 15 files
 - **Anthropic** — 15 files
-- **Microsoft** — 14 files
-- **Stargate** — 12 files
+- **Stargate** — 13 files
+- **Chainlink** — 12 files
+- **NVIDIA** — 12 files
 - **FDIC** — 12 files
 - **JPMorgan** — 11 files
-- **NVIDIA** — 11 files
-- **Worldcoin** — 10 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-critical-minerals-equities.json` — related files by shared entities (verify cross-refs exist)
-- macro-quantum-computing.json: 3 shared entities
-- fin-sealsq-wisekey-global.json: 3 shared entities
-- energy-power.json: 2 shared entities
-- macro-critical-minerals.json: 2 shared entities
-- spec-network-overlay.json: 1 shared entities
-- defense-rare-earth.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
+## Newest file `geopolitics-allied-intel-nodes.json` — related files by shared entities (verify cross-refs exist)
+- fin-google-amazon-anthropic-meta.json: 7 shared entities
+- fin-nvidia-openai.json: 6 shared entities
+- digitalid-corporate.json: 6 shared entities
+- fin-coreweave-oracle.json: 6 shared entities
+- spec-sec-filings-primary.json: 6 shared entities
+- temporal-bridges.json: 6 shared entities
+- fin-ai-depreciation-debttrap.json: 5 shared entities
+- sec-filings.json: 5 shared entities

@@ -24,8 +24,17 @@ POINTS=[
  ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
  ["Taiwan (advanced chips)",25.0,121.5,"choke","TSMC - the leading-edge AI-chip fabrication chokepoint the loop cannot buy past on the timeline."],
  ["DR Congo (cobalt)",-4.3,15.3,"choke","~70% of cobalt (battery/grid metal); China-controlled offtake."],
- ["Strait of Hormuz",26.57,56.25,"choke","~20% of world oil/LNG transits here; energy-leg sensitivity for the power build-out."],
+ ["Strait of Hormuz",26.57,56.25,"choke","~20% of world oil/LNG transits here; Iran moved to BLOCK it in the 2026 war -> a global fuel crisis (geopolitics-contested-resource-states)."],
  ["Strait of Malacca",1.43,102.9,"choke","Chip, fuel and rare-earth shipping chokepoint between the Indian and Pacific oceans."],
+ # --- contested resource states (burnt orange) ---
+ ["Venezuela (oil/gold seizure)",10.5,-66.9,"frontier","US captured Maduro Jan-2026 (Op. Absolute Resolve); largest oil reserves + gold + REE; Trump: US oil cos 'go in'. Resource access by FORCE."],
+ ["Argentina (Lithium Triangle)",-24.2,-66.3,"frontier","~20% of global lithium + Vaca Muerta; US $40B backstop + RIGI to pull it from China - but Ganfeng keeps a Jujuy stake. Resource access by MONEY."],
+ ["Iran (resistance REE + Hormuz)",35.7,51.4,"frontier","2026 war (Khamenei killed); China buys ~90% of Iran oil (Hengli sanctioned); Iran builds REE/lithium into a China+Russia axis bypassing sanctions. DENIAL contest."],
+ # --- allied intel / compute / data chokepoints (indigo) ---
+ ["Pine Gap (Alice Springs)",-23.8,133.74,"intel","Five-Eyes signals: controls US spy satellites over ~1/3 of the globe (China/NK/Russia/ME); ECHELON/XKEYSCORE; role in the 2026 Iran war."],
+ ["Seoul (HBM)",37.57,126.98,"intel","SK Hynix + Samsung dominate HBM - the memory chokepoint every Nvidia/hyperscaler AI accelerator needs. The key ALLIED compute dependency."],
+ ["Singapore (subsea cables)",1.35,103.82,"intel","~28 subsea cables + ~13 planned - the SE-Asia data chokepoint ('Silk Road of the digital economy'); allied-leaning."],
+ ["Hong Kong (bifurcation)",22.32,114.17,"intel","China's AI+Finance testbed; subsea-cable landing stagnant since 2017 (cables route away) - the live internet bifurcation into US vs China rails."],
  # --- threat actors (magenta) ---
  ["North Korea (Lazarus)",39.0,125.7,"threat","DPRK/Lazarus crypto theft (Ronin/Bybit, ~$7.6B cited) laundered via Tornado Cash on Ethereum."],
  # --- allied supply responses (green) ---
@@ -87,12 +96,16 @@ ARCS=[
  [46.0,8.96,38.9,-77.0,"settlement","Tether reserves -> US T-bill demand (GENIUS rail)"],
  [40.7,-74.0,32.31,-64.78,"insurance","Wall St private credit -> annuities -> Bermuda captives"],
  [46.2,6.14,33.45,-112.07,"pqc","SEALSQ Geneva -> global PQC build-out"],
+ [37.57,126.98,37.77,-122.4,"flow","Korea HBM -> US AI core (the allied compute dependency)"],
+ [10.5,-66.9,38.9,-77.0,"frontier","Venezuela oil seizure -> US (resource access by force)"],
 ]
 COLORS={"choke":"#c0392b","threat":"#b5179e","supply":"#2e8b57","capital":"#1f4e79","policy":"#7b3fb5",
-        "datacenter":"#b8860b","flow":"#8a7a5c","settlement":"#138a8a","insurance":"#b5179e","pqc":"#8a5a2b"}
+        "datacenter":"#b8860b","flow":"#8a7a5c","settlement":"#138a8a","insurance":"#b5179e","pqc":"#8a5a2b",
+        "frontier":"#d35400","intel":"#5e35b1"}
 LEGEND=[("choke","adversary / physical chokepoint"),("supply","allied supply response"),
         ("capital","capital hub"),("datacenter","datacenter / power"),("settlement","settlement / token rail"),
         ("insurance","insurance endpoint (Bermuda)"),("pqc","post-quantum build-out"),
+        ("frontier","contested resource state"),("intel","allied intel / compute / data chokepoint"),
         ("policy","policy node"),("threat","threat actor")]
 
 NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 22px;font-size:14px;'
