@@ -200,6 +200,30 @@
       "evidence_strength": "moderate",
       "source": ["https://www.americanimmigrationcouncil.org/blog/ice-immigrationos-palantir-ai-track-immigrants/"],
       "notes": "True, but government identity-data integration is a distinct market from consumer age-assurance. Adjacent, not the same bridge."
+    },
+    {
+      "claim": "Discord's age-verification pipeline leaked twice in months: a third-party support vendor (5CA) breach exposed ~70,000 government-ID photos from age-verification appeals (Oct 2025).",
+      "evidence_strength": "strong",
+      "source": ["https://fortune.com/2026/02/24/discord-peter-thiel-backed-persona-identity-verification-breach/", "https://www.eff.org/deeplinks/2026/02/discord-voluntarily-pushes-mandatory-age-verification-despite-recent-data-breach"],
+      "notes": "Discord framed it as a third-party (5CA) breach, not its own - which is the point: mandated ID collection creates honeypots at every downstream contractor."
+    },
+    {
+      "claim": "Persona (Founders Fund/Thiel-backed; Discord's UK age-verification trial vendor) left its government-dashboard front-end codebase publicly accessible (~53MB, ~2,500 files, misconfigured Vite), revealing an age check is a financial-intelligence + watchlist + biometric-retention pipeline.",
+      "evidence_strength": "strong",
+      "source": ["https://www.malwarebytes.com/blog/news/2026/02/age-verification-vendor-persona-left-frontend-exposed", "https://cybernews.com/privacy/persona-leak-exposes-global-surveillance-capabilities/", "https://fortune.com/2026/02/24/discord-peter-thiel-backed-persona-identity-verification-breach/"],
+      "notes": "269 verification checks incl. adverse-media (14 categories), PEP/watchlist screening, SAR filing to FinCEN/FINTRAC; retains IP, device fingerprints, gov-ID numbers, faces, selfie analytics up to 3yr. Discord cut ties within days (partnership <1 month). Persona says the exposed domain had zero customer data; the CAPABILITY is the finding = adult surveillance by construction."
+    },
+    {
+      "claim": "The EU's own reference Age Verification App was bypassed in under two minutes on release day (15 Apr 2026): PIN encrypted but stored with its IV in plaintext shared preferences with no hardware binding.",
+      "evidence_strength": "strong",
+      "source": ["https://www.pcgamer.com/hardware/security-researchers-hacked-the-demo-version-of-the-european-commissions-new-age-verification-app-in-less-than-two-minutes/", "https://cybernews.com/security/eu-age-verification-app-hack/", "https://www.gataca.io/resources/blog/eu-age-verification-app-hacked-eudi-wallet/"],
+      "notes": "Researcher Paul Moore. Distinct from the full EUDI Wallet, but it is the reference app the EU is shipping to pilot states (FR/DK/GR/IT/ES/CY/IE)."
+    },
+    {
+      "claim": "The body mandating EU-wide identity wallets by Dec 2026 disclosed a breach of its own Europa public web systems (24 Mar 2026, possible exfiltration), while ENISA was still drafting EUDI Wallet cybersecurity certification.",
+      "evidence_strength": "strong",
+      "source": ["https://www.theregister.com/2026/03/30/european_commission_breach/", "https://www.biometricupdate.com/202604/enisa-invites-feedback-for-eu-digital-identity-wallet-cybersecurity-certification"],
+      "notes": "Empirical support for [[age-verification-abolition]] futile-under-breach: every population-scale identity system is eventually breached; centralizing identity (Persona/EUDI/World) concentrates the honeypot."
     }
   ]
 }

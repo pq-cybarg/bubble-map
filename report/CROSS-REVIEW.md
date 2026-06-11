@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `fin-ai-depreciation-debttrap.json` — related files by shared entities (verify cross-refs exist)
-- sec-filings.json: 8 shared entities
-- spec-sec-filings-primary.json: 8 shared entities
-- fin-coreweave-oracle.json: 8 shared entities
-- fin-google-amazon-anthropic-meta.json: 8 shared entities
-- spec-exchanges-asia.json: 6 shared entities
-- fin-nvidia-openai.json: 6 shared entities
-- digitalid-corporate.json: 5 shared entities
-- fin-microsoft-openai.json: 5 shared entities
+## Newest file `digitalid-corporate.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 10 shared entities
+- spec-network-overlay.json: 8 shared entities
+- spec-exchanges-asia.json: 7 shared entities
+- spec-sec-filings-primary.json: 6 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- fin-coreweave-oracle.json: 6 shared entities
+- altcoin-lens.json: 5 shared entities
+- fin-ai-depreciation-debttrap.json: 5 shared entities

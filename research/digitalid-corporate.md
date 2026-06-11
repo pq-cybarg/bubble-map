@@ -5,6 +5,8 @@
 
 **Verdict: PARTIAL (leaning moderate).** There is one genuinely strong, well-documented bridge (Sam Altman's dual role across OpenAI and World/Tools for Humanity, reinforced by OpenAI's covert funding of AI age-verification legislation) and a real, repeated *narrative + capital* overlap (AI VCs — chiefly a16z, plus Coatue, SoftBank, Lightspeed — funding ID vendors that explicitly pitch themselves as "the identity layer for the AI age"). But the claim that age-verification meaningfully *drives* AI-capex / GPU-inference demand is **weak**: the compute footprint of facial age estimation and document checks is trivial relative to LLM inference. So the overlap is real at the level of *people, capital, and framing*, but NOT at the level of *material compute demand*. Do not over-read it as a single coordinated machine.
 
+**The harm is separately and strongly evidenced — §7.** Where the *compute-demand* claim is weak, the *futility-and-harm* claim is strong and now documented by an unbroken 2025–26 breach record: Discord's age-verification pipeline leaked **~70,000 government IDs** (5CA, Oct 2025); its vendor **Persona** (Founders Fund/Thiel-backed) exposed a code base revealing an "age check" is a **financial-intelligence + watchlist + biometric-retention pipeline** (Feb 2026); the **EU's own age-verification app was broken in under two minutes** on release day; and the **European Commission's own Europa systems were breached** (Mar 2026) — the very body mandating wallets for 450M people by Dec 2026. This is the empirical body behind [[age-verification-abolition]].
+
 ---
 
 ## 1. The strongest bridge: Sam Altman's dual role (OpenAI ↔ World / Tools for Humanity)
@@ -87,6 +89,22 @@ A genuine but *narrow* loop exists:
 - **OpenAI** lobbies/funds age-verification law while **Altman owns** a leading age/identity supplier (World).
 
 This is real circularity of *capital and influence*. It is **not**, however, a circularity that materially inflates AI compute revenue (see §4). The loop is about ownership, market-making, and regulatory tailwinds — not GPU demand.
+
+---
+
+## 7. The breach record — the futility case, empirically *(added 2026-06-11)*
+
+The vendor table above is only half the story; the other half is that these systems **leak**, exactly as the abolition argument ([[age-verification-abolition]]) and the Z3 futility proof (`models/z3/ageverif_futility.py`) predict. The 2025–26 record:
+
+- **Persona × Discord (the cleanest case).** Discord ran a UK age-verification trial with **Persona** (the IDV vendor in §2's table; backed by **Founders Fund / Peter Thiel**, Coatue, Ribbit). Two failures hit that one pipeline within months:
+  - **Oct 2025 — ~70,000 government IDs exposed.** A breach of Discord's third-party customer-support vendor **5CA** exposed government-ID photos that users had uploaded for **age-verification appeals**. Discord stressed it was "not a breach of Discord" but of a third party — which is the *point*: mandated ID collection creates honeypots at every downstream contractor.
+  - **Feb 2026 — Persona's own surveillance pipeline exposed.** Researchers found Persona had left its **government-dashboard front-end codebase publicly accessible** (~53MB, ~2,500 files, via a misconfigured Vite build). The code revealed Persona runs **269 distinct verification checks** — adverse-media screening across 14 categories (incl. terrorism/espionage), **PEP / watchlist** screening, and the ability to file **Suspicious Activity Reports to FinCEN / FINTRAC** — and **collects and retains for up to three years** IP addresses, device/browser fingerprints, government-ID numbers, names, faces, and a battery of "selfie" analytics. **Discord cut ties within days** (the partnership had lasted <1 month). Persona pushed back that the exposed domain "had zero customer data." Regardless of the data question, the *capability* is the story: an "age check" is, by construction, a financial-intelligence + watchlist + biometric-retention pipeline. **Adult surveillance by construction**, documented from the vendor's own code.
+
+- **The EU's own systems, same window.**
+  - **EU Age Verification App hacked in <2 minutes (Apr 15 2026).** The European Commission published its reference age-verification app; the **same day**, researcher Paul Moore bypassed PIN + biometric controls in under two minutes — the PIN was encrypted but stored with its IV in **plaintext shared preferences with no hardware binding**, so root access lets an attacker delete the artifacts, reset the PIN, and take over the prior user's credentials, defeating rate limits and biometrics. (It is the single-purpose reference app, *distinct from* the full EUDI Wallet — but it is the very tool the EU is shipping to pilot states.)
+  - **The "Europa" breach (Mar 24 2026).** The **European Commission disclosed a breach of its Europa public web systems and cloud**, with data possibly exfiltrated (scope undisclosed). The body **mandating** that all 27 member states issue identity wallets by Dec 2026 **could not keep its own public systems uncompromised** — while **ENISA was still drafting** the EUDI Wallet cybersecurity-certification scheme *after* the mandate's clock had started.
+
+**Why this belongs in this file.** It closes the loop between the *capital/narrative* overlap documented above and the *harm*: the same actors building the "identity layer for the AI age" are shipping systems that are breached on arrival, and the breached payload is the most sensitive data a person has (government ID + face + financial-intelligence flags). This is the empirical body behind [[age-verification-abolition]]'s "futile-under-breach" + "predator-honeypot" + "adult-surveillance-by-construction" claims, and it is *why* the project treats age verification as a **category to reject**, not a mechanism to optimize. Centralizing identity (Persona, EUDI, World) does not remove the attacker — it concentrates the prize. See also the broader incentive ([[digitalid-orchestration-real-incentive]]) and the security-mirror thesis that the prize is always *the trust attached to an identity* ([[spec-supplychain-shaihulud-extortion]]).
 
 ---
 
