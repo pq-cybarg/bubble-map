@@ -27,3 +27,6 @@
 | OpenAI revenue run-rate vs commitments | ~$13–20B vs **~$1.4T** | 2025–26 |
 
 The last row is the crux: OpenAI has pledged on the order of **$1.4 trillion** in compute (Azure $250B + Oracle ~$300B + CoreWeave ~$22B + Broadcom/AMD/Nvidia/SoftBank) against a revenue run-rate **~70× smaller**. Every node in the web has booked a slice of that $1.4T as backlog/RPO/expected revenue.
+
+## The asset behind the backlog ages out *(added 2026-06-11)*
+That $1.4T of "expected revenue" is also $1.4T of compute someone must *build* with debt- and lease-financed GPUs — and those GPUs economically age in **~2–3 years** while the financing runs 5–19 (Microsoft itself depreciates GPUs over ~6yr; on honest lives that overstates profit by ~$2.9B/yr on one tranche). So even the "real assets" side of this web carries the duration-mismatch defect ([[fin-ai-depreciation-debttrap]], [[depreciation_trap]] D1–D4): the backlog is promised against compute that depreciates faster than the loans that bought it amortize. The equity-method drag above (OpenAI's loss flowing onto MSFT GAAP at $3.1B/qtr) is the *visible* cost; the *deferred* one is the depreciation that a long assumed useful life is borrowing from a future writedown.
