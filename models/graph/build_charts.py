@@ -562,6 +562,106 @@ body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
 </tbody></table>
 <p class=cap>So the institution-level cut already exists (the bank model); the geography, credit-quality, and now the <b>real FINRA TRACE quality-tier</b> cuts are charted above; the only remaining gaps are <i>GICS-industry</i> corporate OAS and <i>city/per-issuer</i> muni granularity, both of which need a per-CUSIP feed (TRACE file download / MSRB EMMA) — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
+# ===== Cross-sectional analysis section =====
+_xs=None
+try: _xs=json.load(open(os.path.join(ROOT,"data","cross_section.json")))
+except Exception: _xs=None
+if _xs and _xs.get("cross_sections"):
+    XS=_xs["cross_sections"]
+    def _hm_color(c):
+        # correlation 0..1 -> pale->deep red; negatives -> blue
+        if c is None: return "#fff"
+        if c<0: return f"rgba(31,78,121,{min(0.6,abs(c)*0.6):.2f})"
+        return f"rgba(123,45,38,{min(0.85,c*0.85):.2f})"
+    out=['<h2 id=xsec>Cross-sectional analysis — dispersion, relative value, and the common factor</h2>',
+      '<p class=cap>The charts above are mostly <b>time-series</b> (one rate through time). This section is <b>cross-sectional</b>: '
+      'at each moment it compares the whole <i>cross-section</i> of segments — every credit-rating bucket, every sovereign, every '
+      'muni state — and asks how dispersed they are, which are rich/cheap vs their own history, and <b>how much of their co-movement '
+      'is one shared factor.</b> Method follows the credit literature: cross-sectional spread <b>dispersion</b> as a stress gauge; '
+      '<b>relative-value z-scores</b> (a segment vs its own trailing history); and a <b>PCA first-principal-component share</b> on '
+      'monthly spread <i>changes</i> — Collin-Dufresne, Goldstein &amp; Martin (2001) found one common factor dominates credit-spread '
+      'changes. Engine: <code>models/graph/cross_section.py</code> → <code>data/cross_section.json</code>.</p>']
+
+    # --- common-factor headline table ---
+    cf_rows=[]
+    LBL={"credit_oas":"US corporate credit (OAS rating ladder)","sovereign_10y":"Developed sovereign 10Y",
+         "muni_yield":"Municipal (per-state/quality)","trace_breadth":"Corporate breadth by tier (FINRA TRACE)"}
+    for k in ("credit_oas","sovereign_10y","muni_yield","trace_breadth"):
+        b=XS.get(k)
+        if not b: continue
+        cf=b["common_factor"]; d=b["dispersion_now"]
+        cf_rows.append(f"<tr><td>{esc(LBL[k])}</td><td>{cf['n']}</td><td>{cf['avg_pairwise_corr']}</td>"
+                       f"<td><b>{int(round((cf['pc1_share'] or 0)*100))}%</b></td>"
+                       f"<td>{d['reading']} (z={d['z_vs_history']})</td></tr>")
+    if cf_rows:
+        out.append('<h3>The common factor (PC1 share of cross-sectional change)</h3>'
+          '<table><thead><tr><th>Cross-section</th><th>Segments</th><th>Avg pairwise corr</th>'
+          '<th>PC1 share</th><th>Dispersion now</th></tr></thead><tbody>'+"".join(cf_rows)+'</tbody></table>'
+          '<p class=src><b>Reading:</b> a high PC1 share means the segments move as <i>one</i>. US credit’s '
+          f"~{int(round((XS['credit_oas']['common_factor']['pc1_share'] or 0)*100))}% PC1 share confirms the "
+          'Collin-Dufresne–Goldstein–Martin common factor — and means cross-credit <b>diversification is largely illusory</b> '
+          'at the system level (the data point that agrees with the project’s self-marked-value claim: the gaps correlate under '
+          'a common factor, so there is no netting). Standard portfolio theory assumes the opposite.</p>')
+
+    # --- dispersion-over-time charts ---
+    for k,col in (("credit_oas",AC),("sovereign_10y",AC2)):
+        b=XS.get(k)
+        if not b: continue
+        dts=[r["date"] for r in b["dispersion"]]; std=[r["std"] for r in b["dispersion"]]
+        out.append('<h3>'+esc(b["label"].split(" - ")[0])+' — cross-sectional dispersion over time</h3>')
+        out.append(monthly_line_chart("Cross-sectional std across segments ("+b["units"]+"), monthly",
+            dts,[("dispersion (std)",std)],[col],ylab=b["units"],ymin=0,
+            note="Higher = segments spread apart (discrimination/stress); lower = compressed (complacency). "+b["note"]))
+
+    # --- credit correlation heatmap ---
+    cm=XS.get("credit_oas",{}).get("common_factor",{}).get("matrix")
+    if cm:
+        names=list(cm.keys())
+        h="<tr><th></th>"+"".join(f"<th>{esc(n)}</th>" for n in names)+"</tr>"
+        rows=""
+        for a in names:
+            cells="".join(f'<td style="background:{_hm_color(cm[a][b2])};text-align:center">{cm[a][b2]:.2f}</td>' for b2 in names)
+            rows+=f"<tr><th>{esc(a)}</th>{cells}</tr>"
+        out.append('<h3>Credit-spread change correlation (heatmap)</h3>'
+          '<table style="font-size:12px">'+h+rows+'</table>'
+          '<p class=src>Pearson correlation of monthly OAS <i>changes</i>. Deep red = near-perfectly co-moving — the visual of the common factor.</p>')
+
+    # --- unified RV snapshot ---
+    uni=XS.get("unified")
+    if uni and uni.get("rows"):
+        rr="".join(f"<tr><td>{esc(u['segment'])}</td><td>{esc(u['cross_section'])}</td>"
+                   f"<td>{u['latest']} {esc(u['units'])}</td><td>{u['rv_z']}</td><td>{u['pct']}%</td></tr>"
+                   for u in uni["rows"])
+        out.append('<h3>Unified relative-value snapshot (every segment, z-scored vs its own history)</h3>'
+          '<table><thead><tr><th>Segment</th><th>Cross-section</th><th>Latest</th><th>RV z-score</th><th>Pctile</th></tr></thead><tbody>'
+          +rr+'</tbody></table>'
+          '<p class=src>Positive z = wide/cheap vs its own history (more stress priced in); negative = rich/tight. '
+          f"Most stretched right now: <b>{esc(uni['most_stressed']['segment'])}</b>; tightest: <b>{esc(uni['least_stressed']['segment'])}</b>.</p>")
+
+    # --- bank cross-section ---
+    bk=XS.get("banks")
+    if bk:
+        rr="".join(f"<tr><td>{esc(b['bank'])}</td><td>{esc(str(b['state']))}</td><td>{b['assets_b']}</td>"
+                   f"<td>{b['htm_loss_to_eq_pct']}%</td><td>{b['uninsured_ratio_pct']}%</td><td>{b['total_cre_to_t1_pct']}%</td>"
+                   f"<td><b>{b['composite_z']}</b></td><td>{b['pct']}%</td></tr>" for b in bk["ranking"][:12])
+        out.append('<h3>Bank vulnerability cross-section (FDIC, peer-relative z-scores)</h3>'
+          '<table style="font-size:12px"><thead><tr><th>Bank</th><th>St</th><th>Assets $B</th><th>HTM loss/eq</th>'
+          '<th>Uninsured</th><th>CRE/T1</th><th>Composite z</th><th>Pctile</th></tr></thead><tbody>'+rr+'</tbody></table>'
+          f"<p class=src>{bk['n_banks']} institutions; composite z = mean of peer z-scores on HTM-hole, uninsured %, and CRE/Tier-1 "
+          f"(higher = more vulnerable). Cross-sectional HTM-hole std ≈ {bk['dispersion_now']['htm_hole_std_pp']}pp of equity — the holes are highly unequal.</p>")
+
+    # --- graph connectors ---
+    gc=XS.get("graph_connectors")
+    if gc:
+        rr="".join(f"<tr><td>{esc(r['node'])}</td><td>{r['degree']}</td><td>{r['n_neighbor_sectors']}</td>"
+                   f"<td>{'yes' if r['both_layers'] else 'no'}</td><td><b>{r['bridge_score']}</b></td></tr>" for r in gc["ranking"][:12])
+        out.append('<h3>Funding-graph cross-layer connectors (bridging score)</h3>'
+          '<table><thead><tr><th>Node</th><th>Degree</th><th>Sectors bridged</th><th>Both layers</th><th>Bridge score</th></tr></thead><tbody>'
+          +rr+'</tbody></table>'
+          '<p class=src>bridge_score = z(degree) + z(distinct neighbor-sectors) + 0.5 if the node spans both the financial and structural layers. The highest scores are the structural keystones tying the core to the surrounding webs.</p>')
+
+    body.append("".join(out))
+
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')

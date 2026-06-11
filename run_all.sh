@@ -100,6 +100,7 @@ python3 models/graph/build_globe.py
 python3 models/graph/fetch_fred.py || true   # refresh monthly FRED cache (tolerates offline; build_charts uses cache)
 python3 models/graph/fetch_yahoo.py || true  # ETF distribution-yield proxies (per-state muni, corporate by maturity)
 python3 models/graph/fetch_tape.py || true   # FINRA TRACE corporate aggregates (needs FINRA_API_CLIENT/SECRET env; tolerates absence)
+python3 models/graph/cross_section.py        # cross-sectional analysis (dispersion / RV z / PC1 common factor)
 python3 models/graph/build_charts.py
 
 hr "DONE"

@@ -22,21 +22,21 @@
 - **OpenAI** — 17 files
 - **Anthropic** — 15 files
 - **Microsoft** — 12 files
+- **FDIC** — 12 files
 - **JPMorgan** — 11 files
 - **Stargate** — 11 files
-- **FDIC** — 11 files
 - **Epstein** — 10 files
 - **Chainlink** — 10 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-jobs-inflation-fed.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
-- fin-coreweave-oracle.json: 1 shared entities
-- macro-oil-backwardation.json: 1 shared entities
-- macro-futures-vs-physical.json: 1 shared entities
+## Newest file `macro-cross-sectional-analysis.json` — related files by shared entities (verify cross-refs exist)
 - influence-ad-censorship.json: 1 shared entities
-- commodities-metals.json: 1 shared entities
+- macro-official-data-integrity.json: 1 shared entities
+- macro-history-dereg-manipulation.json: 1 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- macro-bank-htm-marks.json: 1 shared entities
+- spec-unwind-timing.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- macro-carry-trades.json: 1 shared entities

@@ -13,6 +13,7 @@ def load(n):
 g=load("graph.json"); tw=load("temporal_web.json"); gs=load("gold_silver_reprice.json")
 be=load("bank_exposure.json"); dw=load("defense_web.json"); ew=load("energy_web.json")
 sc=load("scenarios.json"); eq=load("equity_in_gold.json")
+xs=load("cross_section.json")
 
 # ---- derive key metrics ----
 an=g.get("analysis",{})
@@ -122,6 +123,43 @@ srct="".join(f"<li><code>research/{f}</code></li>" for f in res_files)
 overt=tbl(["Layer","What it documents","File"],[[a,b,f"research/{c}.json"] for a,b,c in OVERLAYS])
 primt="".join(f'<li><b>{html.escape(o)}</b> — <a href="{u}" target=_blank rel=noopener>{html.escape(t)}</a></li>' for o,t,u in PRIMARY)
 
+# ---- cross-sectional analysis (dispersion / RV / PC1 common factor) ----
+xsec_html=""; credit_pc1=None
+if xs and xs.get("cross_sections"):
+    XSC=xs["cross_sections"]
+    LBL={"credit_oas":"US corporate credit (OAS ladder)","sovereign_10y":"Developed sovereign 10Y",
+         "muni_yield":"Municipal (per-state/quality)","trace_breadth":"Corporate breadth by tier (FINRA TRACE)"}
+    cf_rows=[]
+    for k in ("credit_oas","sovereign_10y","muni_yield","trace_breadth"):
+        b=XSC.get(k)
+        if not b: continue
+        cf=b["common_factor"]; d=b["dispersion_now"]
+        share=int(round((cf["pc1_share"] or 0)*100))
+        if k=="credit_oas": credit_pc1=share
+        cf_rows.append([LBL[k],cf["n"],cf["avg_pairwise_corr"],f"{share}%",f"{d['reading']} (z={d['z_vs_history']})"])
+    cf_t=tbl(["Cross-section","Segments","Avg pairwise corr","PC1 share (common factor)","Dispersion now"],cf_rows)
+    bk=XSC.get("banks",{}); bk_rows=[[r["bank"],r.get("state"),r["assets_b"],f"{r['htm_loss_to_eq_pct']}%",
+        f"{r['uninsured_ratio_pct']}%",f"{r['total_cre_to_t1_pct']}%",r["composite_z"],f"{r['pct']}%"] for r in bk.get("ranking",[])[:8]]
+    bk_t=tbl(["Bank","St","Assets $B","HTM loss/eq","Uninsured","CRE/T1","Composite z","Pctile"],bk_rows)
+    gc=XSC.get("graph_connectors",{}); gc_rows=[[r["node"],r["degree"],r["n_neighbor_sectors"],
+        "yes" if r["both_layers"] else "no",r["bridge_score"]] for r in gc.get("ranking",[])[:8]]
+    gc_t=tbl(["Node","Degree","Sectors bridged","Both layers","Bridge score"],gc_rows)
+    uni=XSC.get("unified",{})
+    ms=uni.get("most_stressed"); ls=uni.get("least_stressed")
+    xsec_html=(f"<h2 id=xsec>Cross-sectional analysis</h2>"
+      f"<p class=muted>At each moment, compare the whole cross-section of segments — credit-rating buckets, sovereigns, muni states — "
+      f"and measure dispersion, relative value, and the shared common factor. PCA first-principal-component share on monthly spread "
+      f"<i>changes</i> (Collin-Dufresne–Goldstein–Martin basis). Engine: <code>models/graph/cross_section.py</code>; full charts + "
+      f"correlation heatmap + RV snapshot on the <a href=charts.html#xsec>charts page</a>.</p>"
+      f"<h3 style='font-size:16px;margin:18px 0 4px'>The common factor (PC1 share)</h3>{cf_t}"
+      f"<p class=muted>A high PC1 share = the segments move as one. US credit ≈ <b>{credit_pc1}%</b> confirms the CDGM common factor and means "
+      f"cross-credit <b>diversification is largely illusory</b> at the system level — the empirical agreement with the self-marked-value claim "
+      f"(<code>self_marked_value</code> U1–U4: the gaps correlate under a common factor; no netting)."
+      + (f" Most stress priced right now: <b>{html.escape(ms['segment'])}</b>; tightest: <b>{html.escape(ls['segment'])}</b>." if ms and ls else "")
+      + f"</p>"
+      f"<h3 style='font-size:16px;margin:18px 0 4px'>Bank vulnerability cross-section (peer-relative z)</h3>{bk_t}"
+      f"<h3 style='font-size:16px;margin:18px 0 4px'>Cross-layer connectors (bridging score)</h3>{gc_t}")
+
 CSS="""body{background:#faf8f2;color:#1c1b19;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}
 header{background:#fffdf8;padding:26px 32px;border-bottom:1px solid #e4ddcc}
 h1{margin:0;font-size:25px;color:#1c1b19;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
@@ -142,13 +180,14 @@ KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular 
 <span class=k><b>{nself.get('headline_ratio',0)*100:.0f}%</b>NVIDIA self-funding (headline)</span>
 <span class=k><b>-81%</b>US home priced in gold since 1998</span>
 <span class=k><b>2</b>adversary chokepoints (CN+RU)</span>
+{f'<span class=k><b>{credit_pc1}%</b>credit common factor (PC1 share; diversification illusory)</span>' if credit_pc1 else ''}
 <span class=k><b>{nres_json}</b>cited research blocks</span>
 <span class=k><b>{nmodels}</b>runnable models</span>"""
 
 HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI Earnings Bubble</title><style>{CSS}</style></head>
 <body><header><h1>Unmasking the AI Earnings Bubble &mdash; control dashboard</h1>
 <div class=muted>Formally-verified analysis &middot; auto-generated from live <code>data/*.json</code> on {BUILD_DATE} &middot; reproduce: <code>bash run_all.sh</code> &middot; every figure carries a source URL in the matching <code>research/*.json</code></div>
-<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></header>
+<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#xsec>Cross-section</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></header>
 <main>
 <div class=thesis>A circular capital loop &mdash; firms booking each other's spending as revenue, solvent only while external capital keeps flowing &mdash; gated by physical chokepoints it cannot buy past on the timeline (compute capital, China rare earths, Russian enrichment, the power grid), and embedded in measurement and control layers (official statistics, paper commodity prices, and the identity / surveillance / political-money rails) that determine whether it can be seen and questioned. The financial core is machine-verified; every other layer is evidence-graded and excluded from the proofs. Not one cabal &mdash; recurring operators rebuilding the dot-com (vendor financing), Enron (off-balance-sheet SPVs), and LTCM (interconnected leverage) structures in the least-regulated venue.</div>
 {KPIS}
@@ -168,6 +207,7 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <h2 id=weavers>The weavers (temporal meta-graph, betweenness)</h2>{weavet}
 <h2 id=banks>Bank vulnerability (biggest hidden HTM holes)</h2>{bankt}
 <p class=muted>{len(vuln)} mid-tier banks flagged on &ge;2 axes (CRE + securities loss + uninsured). Foreign-branch artifacts excluded.</p>
+{xsec_html}
 <h2 id=overlays>Evidence-graded overlays (excluded from the proofs)</h2>
 <p class=muted>These layers extend the map beyond the financial core. Each item is graded <code>fact | contested | weak | unsupported</code> and is excluded from the Z3/TLA+/Alloy proofs.</p>{overt}
 <h2 id=verify>Primary sources</h2>
