@@ -1,0 +1,47 @@
+{
+ "metadata": {
+  "title": "Taiwan & TSMC — the silicon shield: the master compute chokepoint the entire AI thesis rests on",
+  "generated": "2026-06-11",
+  "status": "facts from filings/CFR/CSIS/major-press; the 'reshoring weakens the shield' paradox and 'single point of failure' framing are labeled interpretation",
+  "frame": "The keystone. The machine-verified 11-firm AI loop (fin-nvidia-openai) and the allied compute chokepoint (geopolitics-allied-intel-nodes: HBM) both run through ONE island that makes ~95% of the world's advanced chips and nearly all advanced PACKAGING (CoWoS) - the bottleneck for every AI accelerator. It sits under escalating Chinese gray-zone coercion, and the US 'reshoring' meant to de-risk it paradoxically erodes the 'silicon shield' that deters invasion. This is the single largest physical single-point-of-failure in the whole map. Overlay; excluded from the proofs. Connects to defense_chokepoint, geopolitics-allied-intel-nodes, geopolitics-contested-resource-states, fin-nvidia-openai, spec-telecom-satellite.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "the_concentration": {
+  "advanced_chips": "~95% of the world's most-advanced chips are made in Taiwan; TSMC is the sole volume producer of the leading edge. Taipei BANS TSMC from making its most-advanced nodes abroad, so the bleeding edge stays on the island for the foreseeable future. status: fact.",
+  "advanced_packaging": "Advanced PACKAGING (TSMC CoWoS / InFO) is a separate, equally-concentrated chokepoint - it is what stitches GPU dies to HBM stacks into an AI accelerator; it remains a major gap outside Taiwan (TSMC+Amkor only now standing up CoWoS in Arizona). Cross-ref: even 'US' HBM (Micron) is PACKAGED in Taichung, Taiwan (geopolitics-allied-intel-nodes). status: fact.",
+  "why_it_is_the_keystone": "Every node of the AI-capex core - Nvidia GPUs, hyperscaler accelerators, the $1.4T of OpenAI compute commitments - is fabricated and packaged here. The formal 'circular loop' silently assumes this stays open; it is the master dependency the firms cannot buy past on any near timeline. status: interpretation (the dependency is fact)."
+ },
+ "the_coercion": {
+  "gray_zone": "Since 2022 China has normalized PLA air/naval incursions, missile drills, and a maritime gray-zone fleet (coast guard + maritime militia + dredgers + 'commercial' vessels under opaque ownership) eroding Taiwan's sea control with plausible deniability - including undersea-cable cuts (ties to the subsea-cable chokepoint, spec-telecom-satellite). status: fact.",
+  "quarantine_over_invasion": "China can QUARANTINE Taiwan - coast-guard 'customs inspections' choking exports without touching a fab: the chips still get made but can't leave unless Beijing allows it. Most analysts assess a full amphibious invasion as unlikely before ~2027-2030 (PLA logistics/training gaps); blockade/cyber/info-war are the more probable near-term levers. status: fact + contested (timeline estimates).",
+  "blast_radius": "A Taiwan quarantine/blockade would halt the leading-edge chip + CoWoS supply the entire AI build depends on - a far larger shock to the AI-core than any financial trigger in the scenario engine. status: interpretation."
+ },
+ "the_reshoring_paradox": {
+  "tsmc_arizona": "Trump (Mar 2026) announced TSMC +$100B in Arizona -> total $165B: six fabs + two advanced-packaging plants + an R&D center. Fab 1 in mass production (4nm, late 2024); Fab 2 (3nm) ramping. But Arizona is a SMALL share of TSMC capacity and runs a node or two behind the island's bleeding edge (which Taipei law keeps at home). status: fact.",
+  "global_diversification": "Also Japan (Kumamoto) and Germany (Dresden, JV with NXP/Infineon/Bosch, EU-subsidized); ~$2.23B in global subsidies H1. status: fact.",
+  "the_paradox": "Analysts (Stimson, MIT Tech Review) warn the more chip production the US pulls onshore, the WEAKER Taiwan's 'silicon shield' - the deterrent value that the world (esp. the US) needs Taiwan intact. 'America First' chip policy and the silicon shield are in tension: de-risking the supply chain de-risks abandoning the island. status: contested interpretation (widely argued)."
+ },
+ "arizona_resilience_under_a_taiwan_cutoff": {
+  "verdict": "Could North America keep getting advanced chips if Taiwan were blockaded/invaded? Largely NO today. Arizona is a fab island, not a self-sufficient supply chain - it substitutes the Taiwan-fab dependency for a WEB of others, two of which are their own chokepoints. status: fact (the dependencies) + interpretation (the 'no' verdict).",
+  "packaging_gap": "TSMC Arizona wafers are reportedly FLOWN BACK TO TAIWAN for CoWoS packaging; the $165B 'advanced packaging' plants show little progress so far - a finished AI accelerator currently cannot be completed in the US, so a Taiwan cutoff breaks the chain at packaging even if the fab keeps running. status: fact.",
+  "input_web": "Inside the Arizona fabs: 'equipment is DUTCH (ASML EUV - sole supplier), chemicals are JAPANESE, subsidies are AMERICAN, engineers are TAIWANESE.' Japan holds >50% of 14 of the most critical chip materials and ~75% of high-end photoresist (Shin-Etsu/Tokyo Ohka/JSR/Fujifilm); Japan pulled critical materials from China Nov-2025 (the lever is live). So Arizona still routes through Japan (materials) + the Netherlands (lithography), each a single point. status: fact.",
+  "talent": "TSMC ~84,500 employees, only ~7-8% outside Taiwan (up from ~4% in 2022); Arizona leans on imported Taiwanese engineers; home-grown expertise takes years. status: fact.",
+  "economics_and_node": "Arizona costs >=50% more than Taiwan, subsidy-dependent, and runs a node or two behind the island's (legally home-only) bleeding edge. status: fact.",
+  "net": "Arizona reduces US exposure for SOME volume by the late 2020s but does NOT make North America independent of a Taiwan contingency - packaging still routes through Taiwan, the leading edge is Taiwan-only, and inputs still pass through Japan + the Netherlands. A QUARANTINE (the likeliest near-term move) is exactly what Arizona cannot backfill. status: interpretation grounded in the facts above."
+ },
+ "the_through_line": "Taiwan is the physical keystone under the entire map: the AI-core's circular financing, the allied HBM chokepoint, and the US-China contest all converge on one island's fabs and packaging lines. It is the clearest case of the project's core finding - that the binding constraints are PHYSICAL and locational, not financial. No amount of capital, on any near timeline, relocates 95% of advanced-chip + CoWoS capacity or removes the coercion risk; the AI build is, at bottom, a bet that the Taiwan Strait stays calm.",
+ "sources": [
+  {"name": "CFR - Unpacking TSMC's $100B investment in the United States", "url": "https://www.cfr.org/blog/unpacking-tsmcs-100-billion-investment-united-states"},
+  {"name": "MIT Technology Review - Taiwan's 'silicon shield' could be weakening", "url": "https://www.technologyreview.com/2025/08/15/1121358/taiwan-silicon-shield-tsmc-china-chip-manufacturing/"},
+  {"name": "Rest of World - Taiwan's chips power the global economy; China holds the leverage (quarantine)", "url": "https://restofworld.org/2026/china-taiwan-tsmc-semiconductor-economic-risk/"},
+  {"name": "Foreign Policy - The US remains dependent on Taiwan for semiconductor production", "url": "https://foreignpolicy.com/2025/10/10/tsmc-taiwan-semiconductor-arizona-tech/"},
+  {"name": "Stimson Center - Why Taiwan fears 'America First' risks eroding its 'silicon shield'", "url": "https://www.stimson.org/2025/why-taiwan-fears-america-first-risks-eroding-its-silicon-shield/"},
+  {"name": "CSIS - Signals in the swarm: China's maritime gray-zone campaign near Taiwan", "url": "https://www.csis.org/analysis/signals-swarm-data-behind-chinas-maritime-gray-zone-campaign-near-taiwan"},
+  {"name": "IEEE Spectrum - TSMC's Arizona plant to start making advanced chips", "url": "https://spectrum.ieee.org/tsmc-arizona"},
+  {"name": "AppleInsider - Advanced Apple silicon remains tied to Taiwan despite Arizona expansion", "url": "https://appleinsider.com/articles/26/02/25/advanced-apple-silicon-remains-tied-to-taiwan-despite-arizona-fab-expansion"},
+  {"name": "SemiWiki/Wccftech - TSMC Arizona chips flown back to Taiwan for packaging; US supply chain still dependent", "url": "https://wccftech.com/tsmc-arizona-chips-are-reportedly-being-flown-back-to-taiwan-for-packaging/"},
+  {"name": "techovedas - Global semiconductor supply chain: who controls the real chokepoints (Japan materials, ASML EUV)", "url": "https://techovedas.com/global-semiconductor-supply-chain-who-controls-the-real-chokepoints/"},
+  {"name": "Asia Times / SCMP - Japan photoresist stranglehold; China targets US-Japan photoresist (Nov 2025)", "url": "https://asiatimes.com/2025/11/rumored-japan-photoresist-ban-sparks-chinas-worst-fears/"}
+ ],
+ "edges": []
+}

@@ -17,26 +17,26 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 33 files
 - **Google** — 27 files
-- **OpenAI** — 21 files
+- **OpenAI** — 22 files
 - **Oracle** — 20 files
 - **Amazon** — 19 files
 - **Microsoft** — 15 files
 - **Anthropic** — 15 files
 - **Stargate** — 13 files
+- **NVIDIA** — 13 files
 - **Chainlink** — 12 files
-- **NVIDIA** — 12 files
 - **FDIC** — 12 files
 - **JPMorgan** — 11 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `geopolitics-allied-intel-nodes.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 7 shared entities
-- fin-nvidia-openai.json: 6 shared entities
-- digitalid-corporate.json: 6 shared entities
-- fin-coreweave-oracle.json: 6 shared entities
-- spec-sec-filings-primary.json: 6 shared entities
-- temporal-bridges.json: 6 shared entities
-- fin-ai-depreciation-debttrap.json: 5 shared entities
-- sec-filings.json: 5 shared entities
+## Newest file `geopolitics-taiwan-silicon-shield.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 2 shared entities
+- fin-microsoft-openai.json: 2 shared entities
+- fin-nvidia-openai.json: 2 shared entities
+- fin-ai-depreciation-debttrap.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 2 shared entities
+- sec-filings.json: 2 shared entities
+- geopolitics-allied-intel-nodes.json: 2 shared entities
+- macro-critical-minerals.json: 2 shared entities

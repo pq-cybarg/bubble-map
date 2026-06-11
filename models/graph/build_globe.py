@@ -22,7 +22,7 @@ POINTS=[
  ["China (REE + antimony)",39.9,116.4,"choke","~90% of rare-earth processing + ~90% of ANTIMONY (military: ammo/hardening/IR); auto-denies foreign-military licenses (Dec 2025); antimony export ban Dec-2024 (suspended to Nov-2026, mil-end-user ban stays). defense_chokepoint UNSAT until ~2028."],
  ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; the HALEU chokepoint for SMRs. power_adequacy P2 UNSAT to ~2029."],
  ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
- ["Taiwan (advanced chips)",25.0,121.5,"choke","TSMC - the leading-edge AI-chip fabrication chokepoint the loop cannot buy past on the timeline."],
+ ["Taiwan (TSMC silicon shield)",25.0,121.5,"choke","~95% of advanced chips + nearly all advanced packaging (CoWoS); Taipei keeps the bleeding edge home; under China gray-zone/quarantine pressure. The master compute chokepoint (geopolitics-taiwan-silicon-shield)."],
  ["DR Congo (cobalt)",-4.3,15.3,"choke","~70% of cobalt (battery/grid metal); China-controlled offtake."],
  ["Strait of Hormuz",26.57,56.25,"choke","~20% of world oil/LNG transits here; Iran moved to BLOCK it in the 2026 war -> a global fuel crisis (geopolitics-contested-resource-states)."],
  ["Strait of Malacca",1.43,102.9,"choke","Chip, fuel and rare-earth shipping chokepoint between the Indian and Pacific oceans."],
@@ -46,6 +46,7 @@ POINTS=[
  ["Alexandria LA (Ucore)",31.31,-92.45,"supply","Ucore RapidSX rare-earth SEPARATION (DoD $18.4M) - attacks the six China-controlled elements; production H2-2026."],
  ["Piketon OH (Centrus HALEU)",39.0,-83.0,"supply","Centrus American Centrifuge ~900 kg/yr HALEU (vs fleet need) - the bottleneck is midstream, not mining."],
  ["Saskatchewan (Cameco U)",52.13,-106.65,"supply","Cameco uranium mining - allied fuel supply outside Russia/Kazakhstan."],
+ ["Phoenix AZ (TSMC fab)",33.69,-112.1,"supply","TSMC Arizona $165B (6 fabs) - the reshoring hedge; but wafers still flown to Taiwan for packaging, runs behind the leading edge, inputs via Japan+ASML. Doesn't yet cover a Taiwan cutoff."],
  # --- capital hubs (blue) ---
  ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the machine-verified circular core (11-firm robust SCC)."],
  ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; the Fed (no feasible single rate, F1-F3 UNSAT); HFSC."],
