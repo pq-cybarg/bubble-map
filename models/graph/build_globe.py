@@ -19,7 +19,7 @@ REP=os.path.join(ROOT,"report"); DOCS=os.path.join(ROOT,"docs")
 # [name, lat, lon, type, note]   type -> color/legend
 POINTS=[
  # --- adversary / physical chokepoints (red) ---
- ["China (REE processing)",39.9,116.4,"choke","~90% of rare-earth processing, ~100% of samarium; auto-denies foreign-military licenses (Dec 2025). defense_chokepoint UNSAT until ~2028."],
+ ["China (REE + antimony)",39.9,116.4,"choke","~90% of rare-earth processing + ~90% of ANTIMONY (military: ammo/hardening/IR); auto-denies foreign-military licenses (Dec 2025); antimony export ban Dec-2024 (suspended to Nov-2026, mil-end-user ban stays). defense_chokepoint UNSAT until ~2028."],
  ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; the HALEU chokepoint for SMRs. power_adequacy P2 UNSAT to ~2029."],
  ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
  ["Taiwan (advanced chips)",25.0,121.5,"choke","TSMC - the leading-edge AI-chip fabrication chokepoint the loop cannot buy past on the timeline."],
@@ -31,7 +31,10 @@ POINTS=[
  # --- allied supply responses (green) ---
  ["Greenland (CRML/Tanbreez)",60.9,-45.9,"supply","Critical Metals Corp REE; pre-revenue ~2028-29; US/EXIM interest."],
  ["Australia (Lynas REE)",-31.95,115.86,"supply","Lynas - largest ex-China REE; the allied supply response."],
- ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD ~15% equity + price floor; magnets ~2027."],
+ ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD is the LARGEST shareholder (~15%) + 10-yr $110/kg NdPr price floor + Apple $500M; '10X' magnet plant ~2028."],
+ ["Stibnite ID (Perpetua/PPTA)",44.9,-115.33,"supply","Perpetua - the ONLY mined US antimony (+ high-grade gold); EXIM $2.9B loan + DoD DPA $59M; ~2029 ops for military antimony."],
+ ["Thompson Falls MT (UAMY)",47.6,-115.35,"supply","US Antimony - the only fully-integrated mil-spec antimony SMELTER in North America; DPA $27M; 6x expansion Jan-2026."],
+ ["Alexandria LA (Ucore)",31.31,-92.45,"supply","Ucore RapidSX rare-earth SEPARATION (DoD $18.4M) - attacks the six China-controlled elements; production H2-2026."],
  ["Piketon OH (Centrus HALEU)",39.0,-83.0,"supply","Centrus American Centrifuge ~900 kg/yr HALEU (vs fleet need) - the bottleneck is midstream, not mining."],
  ["Saskatchewan (Cameco U)",52.13,-106.65,"supply","Cameco uranium mining - allied fuel supply outside Russia/Kazakhstan."],
  # --- capital hubs (blue) ---
