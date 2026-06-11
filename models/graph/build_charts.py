@@ -23,6 +23,10 @@ def load_yahoo():
     try: return json.load(open(os.path.join(ROOT,"data","yahoo_monthly.json")))["data"]
     except Exception: return None
 
+def load_tape():
+    try: return json.load(open(os.path.join(ROOT,"data","tape_trace.json")))
+    except Exception: return None
+
 def ttm_yield(etf):
     """trailing-12-month distribution yield (%) per month: sum(last 12 divs)/close*100."""
     months=sorted(etf); out={}
@@ -493,6 +497,36 @@ charts.append(("The global bond squeeze: JGB 10Y escaped 0% (carry-unwind fuel) 
     note="FRED DGS10 / IRLTLT01JPM156N / BAA, year-end. JGB: YCC ended Mar 2024."),
   "The 10Y JGB went from ~0% (yield-curve-control) to ~2% (Dec 2025) to ~2.66% (2026) — the rising cost of the yen carry trade that funds crowded global longs (the 'BEAR' trigger)."))
 
+# --- corporate by QUALITY TIER from the real FINRA TRACE tape (advance/decline breadth + volume) ---
+_tape=load_tape()
+if _tape and _tape.get("corporate_breadth"):
+    cb=_tape["corporate_breadth"]
+    TIERS=[("investment grade","Investment grade",AC2),("high yield","High yield",AC),("convertibles","Convertibles","#1f6f43")]
+    have=[t for t in TIERS if t[0] in cb]
+    if have:
+        # common month axis where every present tier has a full-month reading (drop partial first/last)
+        months=sorted(set.intersection(*[set(cb[t[0]].keys()) for t in have]))
+        months=[m for m in months if all(cb[t[0]][m]["days"]>=15 for t in have)]
+        if len(months)>=6:
+            adr=[(lab,[cb[k][m]["ad_ratio"] for m in months]) for k,lab,_ in have]
+            cols=[c for _,_,c in have]
+            n_rows=_tape.get("meta",{}).get("datasets",{}).get("corporate_breadth",{}).get("rows","?")
+            charts.append((f"Corporates by QUALITY from the real FINRA TRACE tape — advance/decline breadth ({months[0]}–{months[-1]})",
+              monthly_line_chart("Advancing÷declining bonds (monthly, >1 = more rising than falling)", months, adr, cols,
+                ylab="ratio", ymin=0,
+                note=f"FINRA TRACE corporateMarketBreadth (OAuth Query API), {n_rows} trading-day rows aggregated to month; line at 1.0 separates risk-on/off."),
+              "The actual TRACE trade tape, not a proxy: each month's advancing-vs-declining bond count by quality tier. "
+              "High yield swings hardest (it falls below 1 first when risk-off hits and rebounds highest) while investment grade is steadier — "
+              "the real corporate-credit breadth signal the rating-ladder OAS chart only approximated."))
+            # volume share: HY as % of (IG+HY) traded volume — risk appetite by money, not just count
+            volm=[m for m in months if cb["investment grade"][m]["vol"] and (m in cb.get("high yield",{}))]
+            if volm and "high yield" in cb:
+                hy_share=[("HY share of IG+HY volume",[round(100*cb["high yield"][m]["vol"]/(cb["high yield"][m]["vol"]+cb["investment grade"][m]["vol"]),2) for m in volm])]
+                charts.append(("Corporate trading VOLUME mix — high-yield share of (IG+HY) dollar volume (FINRA TRACE)",
+                  monthly_line_chart("HY ÷ (HY+IG) traded volume (%), monthly", volm, hy_share, [AC], ylab="%", ymin=0,
+                    note="FINRA TRACE corporateMarketBreadth totalVolume by quality tier; rising = money rotating toward high yield."),
+                  "Where the dollars actually traded: the high-yield share of corporate volume. A real, tape-sourced risk-appetite gauge to read alongside the spread charts above."))
+
 # ---- page ----
 NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 22px;font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">'
      '<a href="index.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Home</a>'
@@ -500,7 +534,8 @@ NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11p
      '<a href="charts.html" style="color:#1f4e79;text-decoration:none;margin-right:16px;font-weight:600">Charts</a>'
      '<a href="research.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Research</a>'
      '<a href="methodology.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Methodology</a>'
-     '<a href="glossary.html" style="color:#1f4e79;text-decoration:none">Glossary</a></div>')
+     '<a href="glossary.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Glossary</a>'
+     '<a href="globe.html" style="color:#1f4e79;text-decoration:none">Globe</a></div>')
 CSS=("body{background:#faf8f2;color:#1c1b19;font:17px/1.7 Georgia,'Iowan Old Style','Palatino Linotype',serif;margin:0;padding:0 0 60px}"
      "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:32px;margin:26px 0 4px}"
      "h2{color:#7b2d26;font-family:Georgia,serif;font-weight:600;font-size:21px;margin:34px 0 2px;border-bottom:1px solid #e4ddcc;padding-bottom:6px}"
@@ -519,13 +554,14 @@ body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <tr><td>Borrower type (sovereign / corporate / household)</td><td><b>Yes</b> (10Y / Baa / 30Y mortgage)</td><td>FRED DGS10 / BAA / MORTGAGE30US</td></tr>
 <tr><td>Corporate by credit quality (AAA→CCC ladder)</td><td><b>Yes</b> — full rating ladder (2023+)</td><td>FRED ICE BofA OAS by rating (BAMLC0A1CAAA … BAMLH0A3HYC)</td></tr>
 <tr><td>Corporate by region (Emerging-Market)</td><td><b>Yes</b> (2023+)</td><td>FRED BAMLEMPVPRIVSLCRPIUSOAS</td></tr>
-<tr><td>Corporate by <i>industry sector</i> (financials/energy/tech)</td><td><b>Proxied</b> — rating ladder + EM stand in; true industry OAS not free</td><td>Proxy: FRED rating/EM OAS · Full: licensed ICE BofA/Bloomberg, or build from <b>FINRA TRACE</b> (free trade tape)</td></tr>
+<tr><td>Corporate by <b>quality tier</b> (IG / HY / convertibles)</td><td><b>Yes — real FINRA TRACE tape</b> (advance/decline breadth + volume mix, monthly)</td><td><b>FINRA TRACE</b> corporateMarketBreadth/Sentiment (OAuth Query API) → <code>models/graph/fetch_tape.py</code></td></tr>
+<tr><td>Corporate by <i>GICS industry</i> (financials/energy/tech)</td><td><b>Proxied</b> — rating ladder + EM + the real TRACE quality tiers stand in; GICS-industry breakdown needs per-CUSIP</td><td>Proxy: FRED rating/EM OAS + TRACE quality tiers · Full: per-CUSIP TRACE file feed (download.finratraqs.org) mapped to SIC, or licensed ICE/Bloomberg</td></tr>
 <tr><td>Corporate by maturity (short/int/long IG)</td><td><b>Yes</b> — ETF distribution-yield time series (VCSH/VCIT/VCLT)</td><td>Yahoo chart API (free, keyless)</td></tr>
 <tr><td>Municipal by STATE (CA / NY / national / HY)</td><td><b>Yes</b> — per-state ETF distribution-yield time series (CMF/NYF/MUB/HYD), 10yr</td><td>Yahoo chart API (free) + M/T-ratio snapshot</td></tr>
 <tr><td>Municipal by CITY / individual issuer</td><td><b>Proxied</b> — state ETFs above stand in</td><td>Full: <b>MSRB EMMA</b> per-CUSIP trade tape (free, but per-bond scraping)</td></tr>
 <tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
 </tbody></table>
-<p class=cap>So the institution-level cut already exists (the bank model); the geography and quality cuts are charted above; industry-sector OAS and state/city muni granularity are the two pieces that need licensed/alternative feeds — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
+<p class=cap>So the institution-level cut already exists (the bank model); the geography, credit-quality, and now the <b>real FINRA TRACE quality-tier</b> cuts are charted above; the only remaining gaps are <i>GICS-industry</i> corporate OAS and <i>city/per-issuer</i> muni granularity, both of which need a per-CUSIP feed (TRACE file download / MSRB EMMA) — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')

@@ -1,38 +1,66 @@
 #!/usr/bin/env python3
 """
-build_globe.py - generate report/GLOBE.html: a draggable/rotatable d3 orthographic globe
-plotting the geographic spine of the analysis - chokepoints, supply responses, capital hubs,
-settlement blocs - plus great-circle arcs for the key dependencies and capital flows.
-Self-contained HTML; loads d3 v7 + topojson + world-atlas from CDN (needs internet to render map).
-Data points are baked in from the analysis so the picture ties to the proofs.
+build_globe.py - generate the draggable/rotatable d3 orthographic globe that plots the geographic
+spine of the analysis: adversary chokepoints, allied supply responses, capital hubs, datacenters,
+settlement/insurance endpoints, PQC build-out, and policy nodes - plus great-circle arcs for the
+key dependencies and capital flows. Each node ties back to a proof or a graded research block.
+
+Writes BOTH:
+  - report/GLOBE.html   (stand-alone artifact in the report bundle)
+  - docs/globe.html     (GitHub Pages page, with the shared site nav bar)
+
+Self-contained HTML; loads d3 v7 + topojson + world-atlas from CDN (needs internet to render the
+basemap; markers and arcs still render offline). Data points are baked in from the analysis.
 """
 import json, os
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-REP=os.path.join(ROOT,"report")
+REP=os.path.join(ROOT,"report"); DOCS=os.path.join(ROOT,"docs")
 
 # [name, lat, lon, type, note]   type -> color/legend
 POINTS=[
- ["China (REE processing)",39.9,116.4,"choke","~90% rare-earth processing, ~100% samarium; auto-denies foreign-military licenses (Dec 2025)"],
- ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; HALEU chokepoint for SMRs"],
- ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining"],
- ["Taiwan (advanced chips)",25.0,121.5,"choke","TSMC - the leading-edge AI-chip fabrication chokepoint"],
- ["DR Congo (cobalt)",-4.3,15.3,"choke","~70% of cobalt (battery/grid metal); China-controlled offtake"],
- ["North Korea (Lazarus)",39.0,125.7,"threat","DPRK/Lazarus crypto theft (Ronin/Bybit) via Tornado Cash on Ethereum"],
- ["Greenland (CRML/Tanbreez)",60.9,-45.9,"supply","Critical Metals Corp REE; pre-revenue ~2028-29; US/EXIM interest"],
- ["Australia (Lynas REE)",-31.95,115.86,"supply","Lynas - largest ex-China REE; allied supply response"],
- ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD ~15% equity + price floor; magnets ~2027"],
- ["Piketon OH (Centrus HALEU)",39.0,-83.0,"supply","Centrus American Centrifuge ~900 kg/yr HALEU (vs fleet need)"],
- ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the circular core"],
- ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; Fed (no feasible single rate); HFSC"],
- ["New York (Wall St)",40.7,-74.0,"capital","BlackRock/Apollo/Blackstone - private credit + USDC reserves"],
- ["Abu Dhabi (MGX)",24.45,54.38,"capital","MGX sovereign capital -> OpenAI/Anthropic/xAI/Stargate"],
- ["Riyadh (PIF)",24.7,46.7,"capital","Public Investment Fund - Gulf capital into the AI loop"],
- ["Tokyo (SoftBank/SBI)",35.68,139.69,"capital","SoftBank->OpenAI/Stargate/Arm; SBI ~9% of Ripple"],
- ["London (LBMA/TBI)",51.5,-0.12,"policy","LBMA gold; Tony Blair Institute->UK digital ID; Ofcom"],
- ["Basel (BIS)",47.55,7.59,"policy","BIS Project Agora - Western tokenized 'unified ledger'"],
- ["Abilene TX (Stargate)",32.45,-99.73,"datacenter","Stargate flagship AI datacenter (OpenAI/Oracle/SoftBank SPV)"],
- ["Memphis (xAI Colossus)",35.1,-90.0,"datacenter","xAI Colossus supercluster (now merged w/ SpaceX)"],
- ["Three Mile Island PA",40.15,-76.7,"datacenter","MSFT-Constellation nuclear restart (835MW, ~2028)"],
+ # --- adversary / physical chokepoints (red) ---
+ ["China (REE processing)",39.9,116.4,"choke","~90% of rare-earth processing, ~100% of samarium; auto-denies foreign-military licenses (Dec 2025). defense_chokepoint UNSAT until ~2028."],
+ ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; the HALEU chokepoint for SMRs. power_adequacy P2 UNSAT to ~2029."],
+ ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
+ ["Taiwan (advanced chips)",25.0,121.5,"choke","TSMC - the leading-edge AI-chip fabrication chokepoint the loop cannot buy past on the timeline."],
+ ["DR Congo (cobalt)",-4.3,15.3,"choke","~70% of cobalt (battery/grid metal); China-controlled offtake."],
+ ["Strait of Hormuz",26.57,56.25,"choke","~20% of world oil/LNG transits here; energy-leg sensitivity for the power build-out."],
+ ["Strait of Malacca",1.43,102.9,"choke","Chip, fuel and rare-earth shipping chokepoint between the Indian and Pacific oceans."],
+ # --- threat actors (magenta) ---
+ ["North Korea (Lazarus)",39.0,125.7,"threat","DPRK/Lazarus crypto theft (Ronin/Bybit, ~$7.6B cited) laundered via Tornado Cash on Ethereum."],
+ # --- allied supply responses (green) ---
+ ["Greenland (CRML/Tanbreez)",60.9,-45.9,"supply","Critical Metals Corp REE; pre-revenue ~2028-29; US/EXIM interest."],
+ ["Australia (Lynas REE)",-31.95,115.86,"supply","Lynas - largest ex-China REE; the allied supply response."],
+ ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD ~15% equity + price floor; magnets ~2027."],
+ ["Piketon OH (Centrus HALEU)",39.0,-83.0,"supply","Centrus American Centrifuge ~900 kg/yr HALEU (vs fleet need) - the bottleneck is midstream, not mining."],
+ ["Saskatchewan (Cameco U)",52.13,-106.65,"supply","Cameco uranium mining - allied fuel supply outside Russia/Kazakhstan."],
+ # --- capital hubs (blue) ---
+ ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the machine-verified circular core (11-firm robust SCC)."],
+ ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; the Fed (no feasible single rate, F1-F3 UNSAT); HFSC."],
+ ["New York (Wall St)",40.7,-74.0,"capital","BlackRock/Apollo/Blackstone - private credit + USDC reserves; the private-credit mark machine."],
+ ["Abu Dhabi (MGX)",24.45,54.38,"capital","MGX sovereign capital -> OpenAI/Anthropic/xAI/Stargate; the Gulf inflow that keeps the tap open."],
+ ["Riyadh (PIF)",24.7,46.7,"capital","Public Investment Fund - Gulf capital into the AI loop."],
+ ["Tokyo (SoftBank/SBI)",35.68,139.69,"capital","SoftBank->OpenAI/Stargate/Arm; SBI ~9% of Ripple. Also the yen-carry source (JGB exit)."],
+ # --- datacenters / power (amber) ---
+ ["Abilene TX (Stargate)",32.45,-99.73,"datacenter","Stargate flagship AI datacenter (OpenAI/Oracle/SoftBank SPV)."],
+ ["Memphis (xAI Colossus)",35.1,-90.0,"datacenter","xAI Colossus supercluster (merged w/ SpaceX)."],
+ ["Three Mile Island PA",40.15,-76.7,"datacenter","MSFT-Constellation nuclear restart (835MW, ~2028) - power-leg response."],
+ ["Oracle (Abilene/Stargate cluster)",32.5,-99.7,"datacenter","Oracle's ~$523B RPO backlog is largely promised AI cloud capacity (financed by partner debt)."],
+ ["Meta Hyperion (Richland LA)",32.45,-91.76,"datacenter","Meta's multi-GW Hyperion datacenter build - the hyperscaler capex arms race."],
+ ["New Mexico (DC build)",34.4,-106.0,"datacenter","Greenfield AI datacenter capacity tied to the Stargate/partner expansion."],
+ # --- settlement / token rails (teal) ---
+ ["Tether (settlement)",46.0,8.96,"settlement","Tether >$100B reserves (> some sovereigns); GENIUS Act routes stablecoin reserves into T-bills - the legislated Treasury-demand rail."],
+ ["Hedera Council (DLT)",38.9,-77.1,"settlement","34-member governing council (Google, IBM overlaps); SEALCOIN bridge - the tokenized-settlement overlay."],
+ # --- insurance endpoint (purple-pink) ---
+ ["Bermuda (captive reinsurance)",32.31,-64.78,"insurance","Where the risk lands: PE-owned insurers cede annuity liabilities to captives they control (~60% offshore = internal 'transfer'). IMF/FSB/FIO/NAIC warning."],
+ # --- post-quantum / DLT build-out (brown) ---
+ ["SEALSQ/WISeKey (Geneva)",46.2,6.14,"pqc","WISeKey/SEALSQ HQ - state-subsidized PQC + secure-chip build-out."],
+ ["SEALSQ (Murcia, Spain)",37.99,-1.13,"pqc","SEALSQ European semiconductor / PQC personalization site."],
+ ["SEALSQ (Gujarat, India)",22.31,72.14,"pqc","SEALSQ India PQC/secure-element expansion."],
+ ["SEALSQ (Arizona, US)",33.45,-112.07,"pqc","SEALSQ US PQC/secure-chip footprint."],
+ # --- policy nodes (violet) ---
+ ["London (LBMA/TBI)",51.5,-0.12,"policy","LBMA gold; Tony Blair Institute -> UK digital ID; Ofcom."],
+ ["Basel (BIS)",47.55,7.59,"policy","BIS Project Agora - the Western tokenized 'unified ledger'."],
 ]
 # [from_lat,from_lon,to_lat,to_lon,kind,label]
 ARCS=[
@@ -40,77 +68,122 @@ ARCS=[
  [55.75,37.6,39.0,-83.0,"choke","Russia enrichment -> US HALEU/SMR fuel"],
  [51.1,71.4,55.75,37.6,"choke","Kazakhstan uranium -> Russia/processing"],
  [25.0,121.5,37.77,-122.4,"choke","Taiwan chips -> US AI core"],
+ [-4.3,15.3,39.9,116.4,"choke","DR Congo cobalt -> China offtake"],
  [24.45,54.38,37.77,-122.4,"capital","MGX (UAE) -> AI core"],
  [24.7,46.7,37.77,-122.4,"capital","PIF (Saudi) -> AI core"],
  [35.68,139.69,37.77,-122.4,"capital","SoftBank (Japan) -> AI core"],
+ [40.7,-74.0,37.77,-122.4,"capital","NY private credit -> AI infra debt"],
  [37.77,-122.4,32.45,-99.73,"flow","AI core -> Stargate datacenter"],
+ [37.77,-122.4,32.45,-91.76,"flow","AI core -> Meta Hyperion build"],
  [51.5,-0.12,38.9,-77.0,"policy","Ellison/TBI -> US/UK digital-ID policy"],
+ [47.55,7.59,38.9,-77.1,"policy","BIS Agora <-> Hedera tokenized settlement"],
  [60.9,-45.9,35.48,-115.53,"supply","Greenland REE -> US processing (supply response)"],
  [-31.95,115.86,35.48,-115.53,"supply","Australia (Lynas) -> US (allied supply)"],
+ [52.13,-106.65,39.0,-83.0,"supply","Cameco uranium -> US HALEU enrichment"],
  [39.0,125.7,40.7,-74.0,"threat","DPRK crypto theft -> Western exchanges"],
+ [46.0,8.96,38.9,-77.0,"settlement","Tether reserves -> US T-bill demand (GENIUS rail)"],
+ [40.7,-74.0,32.31,-64.78,"insurance","Wall St private credit -> annuities -> Bermuda captives"],
+ [46.2,6.14,33.45,-112.07,"pqc","SEALSQ Geneva -> global PQC build-out"],
 ]
-COLORS={"choke":"#ff5a5a","threat":"#ff2bd6","supply":"#5ad17a","capital":"#5ab0ff","policy":"#c08bff","datacenter":"#ffd479","flow":"#8a96a8"}
+COLORS={"choke":"#c0392b","threat":"#b5179e","supply":"#2e8b57","capital":"#1f4e79","policy":"#7b3fb5",
+        "datacenter":"#b8860b","flow":"#8a7a5c","settlement":"#138a8a","insurance":"#b5179e","pqc":"#8a5a2b"}
+LEGEND=[("choke","adversary / physical chokepoint"),("supply","allied supply response"),
+        ("capital","capital hub"),("datacenter","datacenter / power"),("settlement","settlement / token rail"),
+        ("insurance","insurance endpoint (Bermuda)"),("pqc","post-quantum build-out"),
+        ("policy","policy node"),("threat","threat actor")]
 
-HTML="""<!doctype html><html><head><meta charset=utf-8><title>AI Bubble - Geographic Chokepoint Globe</title>
+NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 22px;font-size:14px;'
+     'font-family:-apple-system,Segoe UI,Roboto,sans-serif">'
+     '<a href="index.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Home</a>'
+     '<a href="dashboard.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Dashboard</a>'
+     '<a href="charts.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Charts</a>'
+     '<a href="research.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Research</a>'
+     '<a href="methodology.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Methodology</a>'
+     '<a href="glossary.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Glossary</a>'
+     '<a href="globe.html" style="color:#1f4e79;text-decoration:none;font-weight:600">Globe</a></div>')
+
+# __NAV__ is replaced per-target (site nav for docs, empty for the stand-alone report copy)
+HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Bubble Map - geographic chokepoint globe</title>
 <style>
-body{margin:0;background:#05080f;color:#cfe;font:13px -apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
-#hud{position:fixed;top:12px;left:14px;z-index:5;max-width:320px}
-h1{font-size:16px;color:#fff;margin:0 0 4px} .sub{color:#8a96a8;font-size:11px;margin-bottom:8px}
-#legend span{display:block;margin:2px 0} .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
-#tip{position:fixed;pointer-events:none;background:#0f1622e8;border:1px solid #2a3550;border-radius:6px;padding:7px 10px;max-width:280px;font-size:12px;display:none;z-index:10}
-#tip b{color:#7fd1ff} .note{color:#8a96a8;position:fixed;bottom:8px;left:14px;font-size:11px}
-.err{position:fixed;top:50%;left:0;right:0;text-align:center;color:#ff8a8a}
-</style></head><body>
-<div id=hud><h1>AI-bubble geographic chokepoints</h1><div class=sub>drag to rotate &middot; hover a node &middot; the spatial spine of the proofs</div>
+body{margin:0;background:#faf8f2;color:#1c1b19;font:14px/1.6 -apple-system,Segoe UI,Roboto,sans-serif}
+#stage{position:relative;width:100%;height:calc(100vh - 46px);overflow:hidden}
+#hud{position:absolute;top:14px;left:18px;z-index:5;max-width:340px;background:#fffdf8e8;border:1px solid #e4ddcc;border-radius:8px;padding:14px 16px}
+h1{font-size:17px;color:#1c1b19;margin:0 0 4px;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
+.sub{color:#6b665d;font-size:12px;margin-bottom:10px}
+#legend span{display:block;margin:3px 0;color:#33312c} .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle;border:1px solid #00000022}
+#tip{position:absolute;pointer-events:none;background:#fffdf8;border:1px solid #c9bfa5;border-radius:6px;padding:8px 11px;max-width:300px;font-size:12.5px;display:none;z-index:10;box-shadow:0 4px 14px #0002}
+#tip b{color:#7b2d26;display:block;margin-bottom:3px} #tip .ty{color:#6b665d;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.note{color:#6b665d;position:absolute;bottom:10px;left:18px;font-size:11px;background:#fffdf8c8;padding:4px 8px;border-radius:5px}
+.err{position:absolute;top:50%;left:0;right:0;text-align:center;color:#9a2b1f}
+svg{display:block;cursor:grab} svg:active{cursor:grabbing}
+</style></head><body>__NAV__
+<div id=stage>
+<div id=hud><h1>AI-bubble geographic chokepoints</h1>
+<div class=sub>drag to rotate &middot; hover a node for detail &middot; the spatial spine of the proofs &amp; graded overlays</div>
 <div id=legend></div></div>
-<div id=tip></div><div class=note>red = adversary chokepoint &middot; green = supply response &middot; blue = capital hub &middot; purple = policy &middot; needs internet for basemap</div>
-<svg id=g></svg>
+<div id=tip></div>
+<div class=note>red = adversary/physical chokepoint &middot; green = allied supply &middot; blue = capital &middot; amber = datacenter &middot; teal = settlement &middot; basemap needs internet (markers render offline)</div>
+<svg id=g></svg></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 <script>
-const POINTS=__POINTS__, ARCS=__ARCS__, COLORS=__COLORS__;
-const W=innerWidth,H=innerHeight, R=Math.min(W,H)/2-30;
+const POINTS=__POINTS__, ARCS=__ARCS__, COLORS=__COLORS__, LEGEND=__LEGEND__;
+const stage=document.getElementById('stage');
+const W=stage.clientWidth, H=stage.clientHeight, R=Math.min(W,H)/2-34;
 const svg=d3.select('#g').attr('width',W).attr('height',H);
 const proj=d3.geoOrthographic().scale(R).translate([W/2,H/2]).rotate([-10,-20]);
 const path=d3.geoPath(proj); const tip=d3.select('#tip');
-const leg=d3.select('#legend'); const seen={};
-[['choke','adversary chokepoint'],['supply','supply response'],['capital','capital hub'],['policy','policy node'],['datacenter','datacenter'],['threat','threat actor']].forEach(([k,t])=>{
- leg.append('span').html('<span class=dot style="background:'+COLORS[k]+'"></span>'+t);});
-svg.append('circle').attr('cx',W/2).attr('cy',H/2).attr('r',R).attr('fill','#07101f').attr('stroke','#1b2740');
-const gGrat=svg.append('path').attr('fill','none').attr('stroke','#13203a').attr('stroke-width',.5);
+const leg=d3.select('#legend');
+LEGEND.forEach(([k,t])=>{leg.append('span').html('<span class=dot style="background:'+COLORS[k]+'"></span>'+t);});
+svg.append('circle').attr('cx',W/2).attr('cy',H/2).attr('r',R).attr('fill','#dce8f0').attr('stroke','#c9bfa5');
+const gGrat=svg.append('path').attr('fill','none').attr('stroke','#c2d2de').attr('stroke-width',.5);
 const grat=d3.geoGraticule10();
+const gCountry=svg.append('g'), gArc=svg.append('g'), gPt=svg.append('g');
 let countries=null;
 d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world=>{
- countries=topojson.feature(world,world.objects.countries);
- render();
-}).catch(e=>{d3.select('body').append('div').attr('class','err').text('basemap failed to load (needs internet) - markers still render');render();});
-const gCountry=svg.append('g'), gArc=svg.append('g'), gPt=svg.append('g');
+ countries=topojson.feature(world,world.objects.countries); render();
+}).catch(e=>{d3.select('#stage').append('div').attr('class','err').text('basemap failed to load (needs internet) - markers still render');render();});
 function visible(lon,lat){const c=proj.invert([W/2,H/2]);return d3.geoDistance([lon,lat],c)<Math.PI/2;}
 function render(){
  gGrat.attr('d',path(grat));
  if(countries){gCountry.selectAll('path').data(countries.features).join('path').attr('d',path)
-   .attr('fill','#0e1b30').attr('stroke','#1f3152').attr('stroke-width',.4);}
+   .attr('fill','#eef0e6').attr('stroke','#cdd2c2').attr('stroke-width',.5);}
  gArc.selectAll('path').data(ARCS).join('path')
    .attr('d',d=>path({type:'LineString',coordinates:[[d[1],d[0]],[d[3],d[2]]]}))
-   .attr('fill','none').attr('stroke',d=>COLORS[d[4]]).attr('stroke-width',1.1).attr('opacity',.55);
+   .attr('fill','none').attr('stroke',d=>COLORS[d[4]]).attr('stroke-width',1.3).attr('opacity',.5)
+   .attr('stroke-dasharray',d=>d[4]==='flow'||d[4]==='capital'?'4,3':null);
  gPt.selectAll('circle').data(POINTS).join('circle')
    .attr('transform',d=>{const p=proj([d[2],d[1]]);return p?`translate(${p[0]},${p[1]})`:'translate(-99,-99)';})
-   .attr('r',d=>d[3]==='choke'?6:4.5).attr('fill',d=>COLORS[d[3]])
-   .attr('stroke','#05080f').attr('stroke-width',1)
+   .attr('r',d=>d[3]==='choke'?6.5:5).attr('fill',d=>COLORS[d[3]])
+   .attr('stroke','#fffdf8').attr('stroke-width',1.3)
    .attr('opacity',d=>visible(d[2],d[1])?1:0)
-   .on('mousemove',(e,d)=>{tip.style('display','block').style('left',(e.clientX+12)+'px').style('top',(e.clientY+12)+'px')
-     .html('<b>'+d[0]+'</b><br>'+d[4]);})
+   .style('cursor','pointer')
+   .on('mousemove',(e,d)=>{const r=stage.getBoundingClientRect();
+     tip.style('display','block').style('left',(e.clientX-r.left+14)+'px').style('top',(e.clientY-r.top+14)+'px')
+     .html('<span class=ty>'+d[3]+'</span><b>'+d[0]+'</b>'+d[4]);})
    .on('mouseout',()=>tip.style('display','none'));
 }
 let v0,r0;
 svg.call(d3.drag()
- .on('start',e=>{v0=[e.x,e.y];r0=proj.rotate();})
+ .on('start',e=>{v0=[e.x,e.y];r0=proj.rotate();spin=false;})
  .on('drag',e=>{const k=75/proj.scale();proj.rotate([r0[0]+(e.x-v0[0])*k,r0[1]-(e.y-v0[1])*k]);render();}));
-let spin=true; svg.on('mousedown',()=>spin=false);
-d3.timer(()=>{if(spin){const r=proj.rotate();proj.rotate([r[0]+0.18,r[1]]);render();}});
+let spin=true;
+d3.timer(()=>{if(spin){const r=proj.rotate();proj.rotate([r[0]+0.16,r[1]]);render();}});
 </script></body></html>"""
 HTML=(HTML.replace("__POINTS__",json.dumps(POINTS))
           .replace("__ARCS__",json.dumps(ARCS))
-          .replace("__COLORS__",json.dumps(COLORS)))
-open(os.path.join(REP,"GLOBE.html"),"w").write(HTML)
-print("wrote report/GLOBE.html ("+str(len(HTML))+" bytes) - "+str(len(POINTS))+" nodes, "+str(len(ARCS))+" arcs")
+          .replace("__COLORS__",json.dumps(COLORS))
+          .replace("__LEGEND__",json.dumps(LEGEND)))
+
+# stand-alone report copy: no site nav bar (adjust the stage height to full viewport)
+rep_html=HTML.replace("__NAV__","").replace("calc(100vh - 46px)","100vh")
+open(os.path.join(REP,"GLOBE.html"),"w").write(rep_html)
+print("wrote report/GLOBE.html ("+str(len(rep_html))+" bytes) - "+str(len(POINTS))+" nodes, "+str(len(ARCS))+" arcs")
+
+# GitHub Pages copy: with the shared site nav bar
+if os.path.isdir(DOCS):
+    docs_html=HTML.replace("__NAV__",NAV)
+    open(os.path.join(DOCS,"globe.html"),"w").write(docs_html)
+    print("wrote docs/globe.html ("+str(len(docs_html))+" bytes)")

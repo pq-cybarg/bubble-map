@@ -57,7 +57,7 @@ vuln=[b for b in banks if b.get("vulnerable")]
 res_files=sorted(os.path.basename(f) for f in glob.glob(os.path.join(RES,"*.md")))
 nres_json=len(glob.glob(os.path.join(RES,"*.json")))
 nmodels=len(glob.glob(os.path.join(ROOT,"models","z3","*.py"))+glob.glob(os.path.join(ROOT,"models","graph","*.py"))+glob.glob(os.path.join(ROOT,"models","alloy","*.als"))+glob.glob(os.path.join(ROOT,"models","tla","*.tla")))
-BUILD_DATE="2026-06-08"
+BUILD_DATE="2026-06-10"
 # graded speculative overlays (kept OUT of the proofs) - the evidence-graded layer
 OVERLAYS=[
  ("Regulatory capture (SEC/SDNY/FDIC)","Choke Point 2.0 FOIA, ConsenSys/MetaMask, Ripple-timing+JPM, Kraken/Binance/LBRY sweep, Fairshake $169M","spec-sec-sdny-regulatory"),
@@ -182,7 +182,7 @@ open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 # ---- mirror to docs/ (GitHub Pages) with a back-link to the hub ----
 DOCS=os.path.join(ROOT,"docs")
 if os.path.isdir(DOCS):
-    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Charts</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Glossary</a></div>'
+    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="dashboard.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px;font-weight:600">Dashboard</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Charts</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Glossary</a><a href="globe.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Globe</a></div>'
     docs_html=HTML.replace("<body>","<body>"+backnav,1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
 

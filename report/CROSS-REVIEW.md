@@ -32,11 +32,11 @@
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
 ## Newest file `macro-jobs-inflation-fed.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
 - temporal-bridges.json: 2 shared entities
-- influence-ad-censorship.json: 1 shared entities
-- macro-futures-vs-physical.json: 1 shared entities
-- commodities-metals.json: 1 shared entities
-- macro-history-dereg-manipulation.json: 1 shared entities
+- altcoin-lens.json: 2 shared entities
+- macro-cre-privatecredit.json: 2 shared entities
 - fin-coreweave-oracle.json: 1 shared entities
+- macro-oil-backwardation.json: 1 shared entities
+- macro-futures-vs-physical.json: 1 shared entities
+- influence-ad-censorship.json: 1 shared entities
+- commodities-metals.json: 1 shared entities
