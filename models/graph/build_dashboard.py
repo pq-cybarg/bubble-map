@@ -59,7 +59,7 @@ vuln=[b for b in banks if b.get("vulnerable")]
 res_files=sorted(os.path.basename(f) for f in glob.glob(os.path.join(RES,"*.md")))
 nres_json=len(glob.glob(os.path.join(RES,"*.json")))
 nmodels=len(glob.glob(os.path.join(ROOT,"models","z3","*.py"))+glob.glob(os.path.join(ROOT,"models","graph","*.py"))+glob.glob(os.path.join(ROOT,"models","alloy","*.als"))+glob.glob(os.path.join(ROOT,"models","tla","*.tla")))
-BUILD_DATE="2026-06-10"
+BUILD_DATE="2026-06-11"
 # graded speculative overlays (kept OUT of the proofs) - the evidence-graded layer
 OVERLAYS=[
  ("Regulatory capture (SEC/SDNY/FDIC)","Choke Point 2.0 FOIA, ConsenSys/MetaMask, Ripple-timing+JPM, Kraken/Binance/LBRY sweep, Fairshake $169M","spec-sec-sdny-regulatory"),
@@ -355,7 +355,8 @@ if os.path.isdir(DOCS):
           "<h2>Grading</h2><p>Claims outside the proven financial core are graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3/TLA+/Alloy proofs. Intent is not inferred from adjacency.</p>"
           "<h2>Consistency checks</h2><p><code>models/audit.py</code> (cross-document number/coverage checks) and <code>models/cross_review.py</code> (edge-amount reconciliation, connectors, under-connection) run via <code>scripts/new-research.sh</code>. Current audit: 0 flags.</p>"
           "<h2>Primary sources</h2><p>Load-bearing claims cite primary government and court records (SCOTUS, DOJ/SDNY, Treasury/OFAC, the Fifth Circuit, SEC EDGAR, Congress.gov, FDIC, BLS, ICIJ, NIST, exchanges). See the <a href=dashboard.html#verify>dashboard</a> for a sample and the <a href=research.html>research index</a> for per-block sources.</p>"
-          "<h2>Reproduce</h2><p><code>bash run_all.sh</code> runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models. Python + Z3; Java for TLA+/Alloy (jars auto-fetched).</p>"
+          "<h2>Data pipeline</h2><p>The charts and the cross-sectional analysis are built from keyless/public feeds, cached under <code>data/</code>: <code>fetch_fred.py</code> (FRED CSV — rates, the ICE BofA OAS rating ladder, sovereign 10Ys), <code>fetch_yahoo.py</code> (ETF distribution yields — per-state munis, corporates by maturity), and <code>fetch_tape.py</code> (the <b>FINRA TRACE</b> corporate trade tape via the OAuth Query API; credentials read from the environment only, never stored). <code>cross_section.py</code> then computes dispersion, relative-value z-scores, snapshot rankings, and the PCA common-factor (PC1) share across the credit, sovereign, muni, and bank cross-sections.</p>"
+          "<h2>Reproduce</h2><p><code>bash run_all.sh</code> runs the Z3 engines (circularity, reflexive marks, the self-marked-value theorem, the <b>depreciation/duration-mismatch trap</b>, the Fed trap, the defense/power chokepoints, age-verification futility), TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion/cross-section models, then regenerates this site (including an on-site page for every research block). Python + Z3; Java for TLA+/Alloy (jars auto-fetched).</p>"
           "<p class=muted>Open source · no backend · updated "+BUILD_DATE+" · contact resistant@tuta.com</p>"
           "</main></body></html>")
     open(os.path.join(DOCS,"methodology.html"),"w").write(METH)
@@ -386,6 +387,15 @@ if os.path.isdir(DOCS):
      ("Stablecoin","A crypto token pegged to a currency (e.g., USD1). New US rules route stablecoin reserves into Treasuries, creating forced demand for government debt."),
      ("Evidence grading","Each non-proven claim is labeled fact, contested, weak, or unsupported, and kept out of the formal proofs. Intent is never inferred from mere association."),
      ("Financial vs structural edge","Graph links are split into capital/credit/compute flows (financial) and governance/legal/security/ownership relationships (structural). The proven core rests only on the financial layer."),
+     ("Cross-sectional analysis","Comparing many things at one moment (e.g., every credit-rating bucket today) rather than one thing over time. Used here to measure how spread-apart segments are, which are rich/cheap, and how much they move together."),
+     ("Common factor / PC1 share","The fraction of a group's joint variation explained by a single shared driver (the first principal component). A high share means the segments move as one — so spreading money across them does NOT diversify. US credit ≈ 91%."),
+     ("Relative value (z-score)","How far a price/yield sits from its own recent average, in standard deviations. Positive = unusually wide/cheap; negative = unusually tight/rich. A standard desk tool for spotting mispricing."),
+     ("Useful life / depreciation","The number of years a company spreads an asset's cost over. It is an estimate, not a price; choosing a longer life lowers each year's expense and raises reported profit, deferring the cost into the future."),
+     ("Duration mismatch","When an asset's economic life is shorter than the debt or lease that financed it (e.g., ~3-year GPUs funded by 15-year leases). The asset can be worthless while the loan is still owed."),
+     ("Proof-of-personhood","A credential meant to prove an account is a real, unique human (e.g., Worldcoin's iris scan), pitched as a defense against AI bots — and a route to a global biometric identity layer."),
+     ("Digital Public Infrastructure (DPI)","Government-built 'rails' for identity, payments, and data (e.g., India's Aadhaar/UPI). Promoted globally by the World Bank/UN/G20; the foundation a digital-ID + programmable-money stack runs on."),
+     ("Programmable money / CBDC","A central-bank digital currency whose rules can be coded in — limiting when, where, or how it is spent. The BIS has stated this gives the issuer 'absolute control … and the technology to enforce that.'"),
+     ("Supply-chain worm / token theft","Malware that steals a developer's access tokens and uses them to publish poisoned software others trust (e.g., the Shai-Hulud npm worm). The prize is the trust attached to an identity, not a password."),
     ]
     gl="".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(d)}</dd>" for t,d in GLOSSARY)
     GL_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Glossary</title><style>{PCSS}</style></head>"

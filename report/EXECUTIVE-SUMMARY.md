@@ -1,6 +1,6 @@
 # Executive Summary — Unmasking the AI Earnings Bubble
 
-*Auto-generated 2026-06-10 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard. Each figure carries a source URL in the matching `research/*.json`. Checked by `models/audit.py` + `models/cross_review.py` (current: 0 flags).*
+*Auto-generated 2026-06-11 from the live models. Full analysis: `report/UNMASKING.md` + `report/TEMPORAL-WEB.md`. Open `report/INDEX.html` for the dashboard. Each figure carries a source URL in the matching `research/*.json`. Checked by `models/audit.py` + `models/cross_review.py` (current: 0 flags).*
 
 ## The finding in one sentence
 The AI build-out is a **circular capital loop** that books each firm's spending as another's revenue and is **solvent only while external capital keeps flowing**; it is **gated by physical chokepoints it cannot buy past** on the timeline (compute capital, China rare earths, Russian enrichment, the power grid); and it is **embedded in measurement and control layers** — official statistics, paper commodity prices, and the identity / surveillance / political-money rails — that determine whether it can be seen and questioned.
