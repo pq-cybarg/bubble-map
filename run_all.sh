@@ -26,6 +26,9 @@ python3 models/z3/reflexive_marks.py | grep -E "M[0-9]|Z3 result|WITNESS|UNSAT:|
 hr "[2c] Z3 - self-marked-value theorem (U1-U4: bank HTM / AI marks / private credit / insurance = same defect)"
 python3 models/z3/self_marked_value.py | grep -E "U[0-9]|Z3 result|WITNESS|UNSAT:|CONCLUSION" | head -22
 
+hr "[2d] Z3 - AI-capex depreciation & duration-mismatch trap (D1-D4: useful-life = the 5th self-marked number)"
+python3 models/z3/depreciation_trap.py | grep -E "D[0-9]|Z3 result|WITNESS|UNSAT:|=>|CONCLUSION" | head -26
+
 hr "[3/8] Z3 - small-bank coordination game (C1-C4)"
 python3 models/z3/coordination_game.py
 

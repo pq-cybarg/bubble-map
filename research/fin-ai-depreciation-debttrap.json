@@ -1,0 +1,46 @@
+{
+ "metadata": {
+  "title": "The AI-capex depreciation & duration-mismatch trap: useful-life as the fifth self-marked number (Burry, Oracle FY2026, justdario)",
+  "generated": "2026-06-10",
+  "status": "primary claims FACT (Burry statements, Oracle 8-K, hyperscaler 10-K life changes); the unifying 'fifth self-marked number' framing is a labeled interpretation; formalized in models/z3/depreciation_trap.py",
+  "frame": "Triggered by the justdario.com piece (2026-06) 'The Unhappy Ending of the Whole AI Dream'. Its checkable claims verify against primary data and add a mechanism the corpus had not formalized: AI compute depreciates faster (~2-3yr) than the debt/leases financing it (5-19yr), so even if revenue arrives the asset is gone before the debt is repaid - and the 'useful life' assumption that hides this is the SAME defect as the self-marked-value theorem (self_marked_value U1-U4), now applied to depreciation. Cross-refs fin-oracle / spec-sec-filings-primary, macro-bank-htm-marks, reflexive_marks.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "article_assessed": {
+  "url": "https://justdario.com/2026/06/the-unhappy-ending-of-the-whole-ai-dream/",
+  "thesis": "the US AI datacenter buildout is debt-financed, fast-depreciating, winner-take-all capital waste with no graceful exit: abandoning triggers a Meta-metaverse-style stock crash, continuing requires perpetual capital, and (unlike Meta's cash-funded metaverse) the debt financing impairs the balance sheet and legacy operations when it unwinds; QE won't save it because debt service absorbs the cash flow.",
+  "alignment": "strongly aligned with this project's machine-proven circular-core + insolvency-at-zero-inflow results; adds the depreciation/useful-life and asset-light->asset-heavy angles. status: the alignment is fact; the 'inevitable collapse' framing is the author's interpretation (this project proves STRUCTURE, not DATE - see spec-unwind-timing)."
+ },
+ "verified_claims": {
+  "burry_depreciation": {
+   "claim": "hyperscalers (Meta/Amazon/MSFT/Google/Oracle) depreciate Nvidia GPUs over 5-6yr when true economic life is ~2-3yr; ~$176B understated depreciation / overstated profit 2026-2028; ~$50-60B/yr if true life is 3 not 6.",
+   "examples": "Meta raised most server/network life to 5.5yr, cutting depreciation ~$2.3B over 9 months of 2025; Microsoft's ~$17B GPU purchases booked over 6yr vs 3yr -> ~$2.9B/yr earnings overstatement.",
+   "status": "fact (Burry's statements, Nov 2025) + contested (the $176B is his estimate; 'probably not fraud but optimistic estimates that will require adjustment'). The useful-life IS a discretionary assumption - that part is fact."
+  },
+  "oracle_asset_heavy_pivot": {
+   "claim": "Oracle shifted from asset-light to asset-heavy/debt-financed: FY2026 free cash flow NEGATIVE ~$23.7B, ~$50B capex, >$108B debt (raised +$30B IG bonds + mandatory convertible preferred early 2026).",
+   "backlog_concentration": "$523B RPO with >half resting on ONE customer (OpenAI via the ~$300B Stargate deal); $75B of the large AI contracts are customer-prepaid or customer-supplied GPUs (reduces Oracle's own raise).",
+   "off_balance_sheet": "$248B of additional datacenter/cloud LEASE commitments of 15-19yr term, substantially all not yet on the balance sheet - long-tenor financing against ~2-3yr-life GPUs ('Oracle is building yesterday's data centers with tomorrow's debt').",
+   "status": "fact (Oracle FY2026 8-K + reporting)."
+  },
+  "geopolitical_color": {
+   "china": "China ~$295bn state-directed AI buildout requiring 80%+ domestically produced semiconductors (per article; ~ one year of Google's spend). status: contested (single-source figure here; directionally consistent with China's self-sufficiency drive).",
+   "us_concentration": "US operational datacenters reportedly exceed all other countries combined / ~10x Germany. status: weak (magnitude unverified here)."
+  }
+ },
+ "the_mechanism_formalized": {
+  "duration_mismatch": "If asset economic life La (~3yr GPUs) < financing tenor Ld (5-7yr bonds, 15-19yr leases), there is an interval (La, Ld) where the asset book value is zero but the debt is still outstanding - a residual liability with no asset. Even if the planned revenue materializes, the thing it was borrowed to buy is gone before the loan is repaid.",
+  "depreciation_is_timing": "Total depreciation over an asset's life is fixed (=capex); a longer assumed life only DEFERS expense and inflates current profit, leaving an un-depreciated residual that must be written off at retirement (a catch-up). No life choice avoids both near-term losses and the eventual writedown.",
+  "fifth_self_marked_number": "Useful life joins HTM cost, AI fair-value marks, private-credit NAVs, and insurance captive marks as a CHOSEN number held above realizable until a forcing event - here the event is asset RETIREMENT/obsolescence. Same defect, fifth locus.",
+  "z3_model": "models/z3/depreciation_trap.py - D1 SAT (long life prints a profit), D2 UNSAT (honest short life strictly lowers profit; ~$2.9B/yr MSFT-like), D3 UNSAT (equity can't stay whole when La<Ld), D4 UNSAT (no schedule avoids both losses and a writedown)."
+ },
+ "sources": [
+  {"name": "justdario.com - The Unhappy Ending of the Whole AI Dream (2026-06)", "url": "https://justdario.com/2026/06/the-unhappy-ending-of-the-whole-ai-dream/"},
+  {"name": "Dave Friedman - The $176 Billion Accounting Question at the Heart of the AI Boom (Burry)", "url": "https://davefriedman.substack.com/p/the-176-billion-accounting-question"},
+  {"name": "The Motley Fool - Michael Burry just sent a warning to AI stocks", "url": "https://www.fool.com/investing/2025/12/02/michael-burry-just-sent-a-warning-to-artificial-in/"},
+  {"name": "National Law Review / Deep Quarry - useful lives of GPUs, key considerations + earnings risk", "url": "https://natlawreview.com/article/deep-quarry-useful-lives-gpus-key-considerations"},
+  {"name": "Oracle Corp - FY2026 Form 8-K (Q4 results, FCF/capex/debt)", "url": "https://www.sec.gov/Archives/edgar/data/0001341439/000119312526265848/orcl-ex99_1.htm"},
+  {"name": "CNBC - Oracle is building yesterday's data centers with tomorrow's debt", "url": "https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html"}
+ ],
+ "edges": []
+}

@@ -30,6 +30,7 @@ VERDICTS=[
  ("Z3 T5 SpaceX vs OpenAI","SpaceX SAT / OpenAI UNSAT standalone","PROVED"),
  ("Z3 reflexive marks M1-M4","AI 'profit' is self-referential paper marks; gains reverse if IPO < private mark","SAT/UNSAT"),
  ("Z3 self-marked value U1-U4","bank HTM / AI marks / private credit / insurance = one defect; gaps correlate under a common factor (no netting); forced convergence on the event","SAT/UNSAT"),
+ ("Z3 depreciation trap D1-D4","useful-life = the 5th self-marked number; honest 2-3yr life strictly lowers profit (~$176B 2026-28, Burry); asset life < 5-19yr financing tenor -> equity can't stay whole; depreciation is only timing","SAT/UNSAT"),
  ("TLA+ cascade","capital-stop → OpenAI→CoreWeave→Oracle","VIOLATED(trace)"),
  ("TLA+ SpaceX safe","never defaults","HOLDS"),
  ("TLA+ MarkUnwind","down-round/IPO<mark -> Amazon+Google reverse gains (writedown trace)","VIOLATED(trace)"),
@@ -82,6 +83,7 @@ OVERLAYS=[
  ("Digital-ID orchestration — the REAL incentive","Who coordinates it (World Bank ID4D, UN DPI, India-Stack/G20, BIS unified ledger, WEF, TBI) and why beyond the defensible frame: BIS's Carstens on record that CBDC gives 'absolute control … technology to enforce'; fiscal repression + access-chokepoint + AI-transition + de-anonymization","digitalid-orchestration-real-incentive"),
  ("Identity-theft supply-chain wave","Shai-Hulud self-propagating npm worm (+2.0, 25k repos), Team PCP/Mini Shai-Hulud (UNC6780), the Scattered LAPSUS$ Hunters OAuth-token extortion (700+ orgs via Salesloft/Drift), and the Nightmare-Eclipse anti-Microsoft zero-day grudge — one mechanism: steal the trust attached to an identity","spec-supplychain-shaihulud-extortion"),
  ("Threat-actor attribution map (UNC / DPRK)","How Mandiant/Google UNC→TEMP→APT/FIN graduation works (epistemic-honesty device), and where DPRK's financially-motivated state hacking sits — TraderTraitor/UNC4899, Bybit $1.5B, Contagious-Interview npm overlap","spec-unc-nk-attribution-map"),
+ ("AI-capex depreciation & duration-mismatch trap","Useful-life as the 5th self-marked number (Burry ~$176B understated depreciation 2026-28; Meta 5.5yr, MSFT 6 vs 3yr); Oracle FY2026 -$23.7B FCF + $248B 15-19yr leases vs ~3yr GPUs; formalized in models/z3/depreciation_trap.py (D1-D4). From the justdario article","fin-ai-depreciation-debttrap"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[
@@ -250,6 +252,58 @@ if os.path.isdir(DOCS):
         if fn.startswith("influence-"): return "Influence & identity"
         if fn.startswith("digitalid-") or fn.startswith("age-"): return "Digital ID & age verification"
         return "Thematic"
+    import re as _re
+    # which research stubs have a .md write-up -> get a rendered on-site page r-<stub>.html
+    md_stubs=set(os.path.basename(f)[:-3] for f in glob.glob(os.path.join(RES,"*.md")))
+    def _resolve(name):
+        return f"r-{name}.html" if name in md_stubs else None
+    def md2html(md):
+        esc=lambda s: s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+        def wl(m):
+            n=m.group(1); tgt=_resolve(n)
+            return f'<a href="{tgt}">{n}</a>' if tgt else n
+        def inline(t):
+            t=esc(t)
+            t=_re.sub(r'\[\[([^\]]+)\]\]', wl, t)
+            t=_re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', t)
+            t=_re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', t)
+            t=_re.sub(r'`([^`]+)`', r'<code>\1</code>', t)
+            t=_re.sub(r'(?<!\*)\*([^*\n]+)\*(?!\*)', r'<i>\1</i>', t)
+            t=t.replace("**","")          # strip any unmatched bold markers (e.g. emphasis wrapped across lines)
+            return t
+        lines=md.split("\n"); out=[]; i=0
+        bullet=lambda s: bool(_re.match(r'^\s*[-*]\s', s)); numbered=lambda s: bool(_re.match(r'^\s*\d+\.\s', s))
+        while i<len(lines):
+            ln=lines[i]
+            if ln.startswith("|"):
+                rows=[]
+                while i<len(lines) and lines[i].startswith("|"): rows.append(lines[i]); i+=1
+                cells=lambda r:[c.strip() for c in r.strip().strip("|").split("|")]
+                th="".join(f"<th>{inline(c)}</th>" for c in cells(rows[0]))
+                trs="".join("<tr>"+"".join(f"<td>{inline(c)}</td>" for c in cells(r))+"</tr>" for r in rows[2:])
+                out.append(f"<table><thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table>"); continue
+            if _re.match(r'^#{1,6}\s', ln):
+                lvl=len(ln)-len(ln.lstrip("#")); out.append(f"<h{lvl}>{inline(ln.lstrip('#').strip())}</h{lvl}>"); i+=1; continue
+            if ln.strip()=="---": out.append("<hr>"); i+=1; continue
+            if ln.startswith(">"):
+                buf=[]
+                while i<len(lines) and lines[i].startswith(">"): buf.append(lines[i].lstrip(">").strip()); i+=1
+                out.append(f"<blockquote>{inline(' '.join(buf))}</blockquote>"); continue
+            if bullet(ln):
+                buf=[]
+                while i<len(lines) and bullet(lines[i]): buf.append(inline(_re.sub(r'^\s*[-*]\s','',lines[i]))); i+=1
+                out.append("<ul>"+"".join(f"<li>{b}</li>" for b in buf)+"</ul>"); continue
+            if numbered(ln):
+                buf=[]
+                while i<len(lines) and numbered(lines[i]): buf.append(inline(_re.sub(r'^\s*\d+\.\s','',lines[i]))); i+=1
+                out.append("<ol>"+"".join(f"<li>{b}</li>" for b in buf)+"</ol>"); continue
+            if ln.strip()=="": i+=1; continue
+            buf=[ln]; i+=1
+            while i<len(lines) and lines[i].strip() and not lines[i].startswith(("|","#",">")) and not bullet(lines[i]) and not numbered(lines[i]) and lines[i].strip()!="---":
+                buf.append(lines[i]); i+=1
+            out.append(f"<p>{inline(' '.join(buf))}</p>")
+        return "\n".join(out)
+
     groups={}
     for fn in sorted(glob.glob(os.path.join(RES,"*.json"))):
         base=os.path.basename(fn)
@@ -257,17 +311,39 @@ if os.path.isdir(DOCS):
         except: title=base
         nsrc=open(fn).read().count("http")
         groups.setdefault(section(base),[]).append((base,title,nsrc))
-    body=[f"<p class=muted>{nres_json} cited research blocks. Each links to its structured data (<code>.json</code>, with every source URL) and write-up (<code>.md</code>) on GitHub. Generated {BUILD_DATE}.</p>"]
+
+    # render each .md write-up as an on-site, themed, interlinked page  ->  docs/r-<stub>.html
+    npages=0
+    for fn in sorted(glob.glob(os.path.join(RES,"*.md"))):
+        stub=os.path.basename(fn)[:-3]
+        try: md=open(fn).read()
+        except Exception: continue
+        try: title=json.load(open(os.path.join(RES,stub+".json"))).get("metadata",{}).get("title",stub) if os.path.exists(os.path.join(RES,stub+".json")) else stub
+        except Exception: title=stub
+        srcbar=(f'<p class=muted style="border-top:1px solid #e4ddcc;margin-top:30px;padding-top:12px">'
+                f'<a href="research.html">&larr; Research index</a> &middot; structured data: '
+                f'<a href="{GH}{stub}.json">{stub}.json</a>'
+                + (f' &middot; <a href="{GH}{stub}.md">{stub}.md</a>' if True else '') + '</p>')
+        PG=(f"<!doctype html><html lang=en><head><meta charset=utf-8>"
+            f"<meta name=viewport content=\"width=device-width,initial-scale=1\">"
+            f"<title>{html.escape(str(title))[:90]} — Bubble Map</title><style>{PCSS}</style></head>"
+            f"<body>{NAVBAR}<main>{md2html(md)}{srcbar}</main></body></html>")
+        open(os.path.join(DOCS,f"r-{stub}.html"),"w").write(PG); npages+=1
+
+    body=[f"<p class=muted>{nres_json} cited research blocks. Each is a readable on-site page (rendered from its <code>.md</code>) and links to its structured data (<code>.json</code>, with every source URL) on GitHub. Generated {BUILD_DATE}.</p>"]
     for sec in sorted(groups):
         body.append(f"<h2>{html.escape(sec)} ({len(groups[sec])})</h2>")
         for base,title,nsrc in groups[sec]:
             stub=base[:-5]
-            body.append(f'<div class=b><b>{html.escape(title)}</b><br>'
+            page=f'<a href="r-{stub}.html"><b>{html.escape(title)}</b></a>' if stub in md_stubs else f'<b>{html.escape(title)}</b>'
+            body.append(f'<div class=b>{page}<br>'
                         f'<span class=muted>~{nsrc} source links · </span>'
-                        f'<a href="{GH}{base}">data (.json)</a> · <a href="{GH}{stub}.md">write-up (.md)</a></div>')
+                        + (f'<a href="r-{stub}.html">read on site</a> · ' if stub in md_stubs else '')
+                        + f'<a href="{GH}{base}">data (.json)</a> · <a href="{GH}{stub}.md">write-up (.md)</a></div>')
     RES_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Research index</title><style>{PCSS}</style></head>"
               f"<body>{NAVBAR}<main><h1>Research index</h1>{''.join(body)}</main></body></html>")
     open(os.path.join(DOCS,"research.html"),"w").write(RES_HTML)
+    print(f"  rendered {npages} research blocks as on-site pages (docs/r-*.html)")
 
     METH=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Methodology</title><style>{PCSS}</style></head>"
           f"<body>{NAVBAR}<main><h1>Methodology</h1>"
