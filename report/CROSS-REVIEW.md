@@ -25,18 +25,18 @@
 - **Stargate** — 13 files
 - **NVIDIA** — 13 files
 - **Chainlink** — 12 files
+- **SpaceX** — 12 files
 - **FDIC** — 12 files
-- **JPMorgan** — 11 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `geopolitics-cables-space-layer.json` — related files by shared entities (verify cross-refs exist)
-- fin-spacex-spcx.json: 2 shared entities
-- energy-power.json: 1 shared entities
-- spec-sec-filings-primary.json: 1 shared entities
-- spec-telecom-satellite.json: 1 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- macro-pqc-chips.json: 1 shared entities
-- temporal-bridges.json: 1 shared entities
+## Newest file `geopolitics-defense-industrial-base.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 5 shared entities
+- spec-network-overlay.json: 4 shared entities
+- digitalid-corporate.json: 3 shared entities
+- defense-rare-earth.json: 3 shared entities
+- fin-hedera-connections.json: 2 shared entities
+- spec-disclosures-surveillance.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities

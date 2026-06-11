@@ -54,7 +54,7 @@ POINTS=[
  ["Phoenix AZ (TSMC fab)",33.69,-112.1,"supply","TSMC Arizona $165B (6 fabs) - the reshoring hedge; but wafers still flown to Taiwan for packaging, runs behind the leading edge, inputs via Japan+ASML. Doesn't yet cover a Taiwan cutoff."],
  # --- capital hubs (blue) ---
  ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the machine-verified circular core (11-firm robust SCC)."],
- ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; the Fed (no feasible single rate, F1-F3 UNSAT); HFSC."],
+ ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; the Fed (no feasible single rate, F1-F3 UNSAT); HFSC. Arsenal depleted by Ukraine + the 2026 Iran war; rebuild gated by China's REE/antimony (no F-35s/missiles without them) - geopolitics-defense-industrial-base."],
  ["New York (Wall St)",40.7,-74.0,"capital","BlackRock/Apollo/Blackstone - private credit + USDC reserves; the private-credit mark machine."],
  ["Abu Dhabi (MGX)",24.45,54.38,"capital","MGX sovereign capital -> OpenAI/Anthropic/xAI/Stargate; the Gulf inflow that keeps the tap open."],
  ["Riyadh (PIF)",24.7,46.7,"capital","Public Investment Fund - Gulf capital into the AI loop."],
@@ -62,6 +62,7 @@ POINTS=[
  # --- datacenters / power (amber) ---
  ["Abilene TX (Stargate)",32.45,-99.73,"datacenter","Stargate flagship AI datacenter (OpenAI/Oracle/SoftBank SPV)."],
  ["Memphis (xAI Colossus)",35.1,-90.0,"datacenter","xAI Colossus supercluster (merged w/ SpaceX)."],
+ ["Anduril Arsenal-1 (Ohio)",39.9,-83.8,"datacenter","Anduril's 5M-sq-ft drone factory; $20B Army counter-drone contract; $61B valuation. Anduril+Palantir+SpaceX ~88% of defense-tech contracts - the AI core's defense adjacency (same a16z/Founders Fund money)."],
  ["Three Mile Island PA",40.15,-76.7,"datacenter","MSFT-Constellation nuclear restart (835MW, ~2028) - power-leg response."],
  ["Oracle (Abilene/Stargate cluster)",32.5,-99.7,"datacenter","Oracle's ~$523B RPO backlog is largely promised AI cloud capacity (financed by partner debt)."],
  ["Meta Hyperion (Richland LA)",32.45,-91.76,"datacenter","Meta's multi-GW Hyperion datacenter build - the hyperscaler capex arms race."],

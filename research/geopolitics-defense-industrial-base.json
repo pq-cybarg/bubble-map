@@ -1,0 +1,41 @@
+{
+ "metadata": {
+  "title": "The defense-industrial base — arsenal depletion, the China materials chokepoint on weapons, and the defense-tech capital wave",
+  "generated": "2026-06-11",
+  "status": "facts from GAO/Army/Pentagon/major-press; the 'fight-deplete-cannot-reload loop' and 'defense-tech narrative-beta split' framings are labeled interpretation",
+  "frame": "What the rare-earth/antimony chokepoints actually GATE: weapons. The corpus proves the materials chokepoints (defense_chokepoint, macro-critical-minerals-equities); this block connects them to (1) a depleted US arsenal after Ukraine + the 2026 Iran war, (2) a production base that can't reload fast, and (3) the defense-tech capital wave (Anduril/Palantir/SpaceX + a16z American Dynamism) riding the AI core. The result is a vicious loop: fight wars -> deplete munitions -> need to rebuild -> need Chinese materials -> China can deny. Overlay; excluded from the proofs. Connects to defense_web, macro-critical-minerals-equities, geopolitics-chip-chokepoint-war, geopolitics-contested-resource-states, macro-ai-power-grid-bottleneck.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "arsenal_depletion": {
+  "ukraine": "Since 2022 the US shipped ~1/3 of its Javelins, ~1/4 of its Stingers, >2M 155mm rounds, and thousands of GMLRS to Ukraine; Pentagon assessments describe a 'near-term risk' of running out of some munitions; a 2025 shipment was briefly halted over stockpile concerns. status: fact.",
+  "iran_2026": "In the 2026 Iran war the US reportedly burned ~45% of its Precision Strike Missile stockpile, ~half of its THAAD interceptors, ~half of its Patriot PAC-3 inventory, ~30% of Tomahawks, and >20% of long-range JASSMs. status: fact (per defense reporting).",
+  "read": "two wars emptied the magazine faster than industry can refill it - the physical-production mirror of the AI power bottleneck: demand spikes, supply is on a multi-year clock."
+ },
+ "production_cannot_keep_up": {
+  "shells_155mm": "The flagship metric: 155mm output is ~40,000 rounds/month, with the 100,000/month goal slipping to ~mid-2026; >1M shells planned for 2026 total. The Army invested >$4.2B to expand the organic industrial base (new Parsons, Kansas M795 plant ~12,000/mo; Hanwha/UNION adding US capacity). status: fact.",
+  "lesson": "Building shell lines, propellant, and energetics is a multi-year industrial problem, not a budget line - same shape as transformers and gas turbines (macro-ai-power-grid-bottleneck). status: interpretation."
+ },
+ "china_materials_gate_weapons": {
+  "the_dependency": "China's rare-earth processing/metallization dominance directly gates US weapons: 'If China said we're not going to give you rare earths, that means no F-35s, no missiles.' Every F-35 needs samarium-cobalt magnets; THAAD and PAC-3 interceptors rely on REE inputs. Antimony (ammunition/hardening) is ~90% China - the Aug/Dec-2024 ban spiked prices +134%. status: fact.",
+  "pentagon_response": "The Pentagon set a 2027 line: after 2026, Chinese-origin materials are barred from US defense equipment - widely judged extraordinarily hard for heavy REE; it is moving to secure rare earths and stockpile (the MP/Perpetua/UAMY/Ucore response, macro-critical-minerals-equities). status: fact + contested (feasibility).",
+  "the_loop": "The vicious loop: the wars that deplete the arsenal (incl. the Iran war, geopolitics-contested-resource-states) require materials to rebuild that China controls and has shown it will weaponize (geopolitics-chip-chokepoint-war). 'America shot its arsenal empty in two wars and now needs Beijing's permission to reload.' status: interpretation grounded in the facts."
+ },
+ "defense_tech_capital_wave": {
+  "concentration": "Anduril + Palantir + SpaceX reportedly account for ~88% of significant defense-tech investment and contracts - the same concentration pattern as the AI core, and overlapping principals (Thiel/Founders Fund, Musk). status: fact (per reporting).",
+  "anduril": "Anduril: >$2B 2025 revenue (+110% YoY), a $20B Army counter-drone contract, a 5M-sq-ft Ohio drone factory (Arsenal-1), and a $5B Series H at a $61B valuation. status: fact.",
+  "the_money": "a16z's 'American Dynamism' practice (~$1.2B Fund 2; part of a ~$15B a16z raise) pours VC into defense/aerospace/energy/supply-chains - the same marquee AI VCs (a16z, Founders Fund) now funding defense the way they fund the AI core. status: fact.",
+  "narrative_beta_split": "Same split as the AI/quantum/critical-minerals cohorts: real builders + state demand vs froth. Reality checks: Anduril's Altius drones crashed in USAF tests; CNBC: the Iran war was 'defense tech's chance to shine' but few systems were ready; Anduril's own Trae Stephens warns defense tech is headed for a shakeout. status: fact + interpretation (separate the deliverers from the valuation)."
+ },
+ "why_it_matters": "This is where the abstract 'materials chokepoint' becomes concrete national power: rare earths and antimony are not just AI inputs - they are F-35s and interceptors, and China gates them. The US is fighting wars that empty a magazine its own industrial base can't refill on the timeline, using materials an adversary controls; meanwhile the SAME AI-core capital (a16z/Founders Fund) is funding a concentrated, partly-frothy defense-tech wave to digitize the fight. The physical-chokepoint thesis (the AI build can't buy past Taiwan/ASML/HBM/HALEU/power) extends one-to-one to hard power: the defense build can't buy past China's materials + a slow industrial base.",
+ "sources": [
+  {"name": "Fortune - America shot its arsenal empty in 2 wars; now needs Beijing's permission to reload", "url": "https://fortune.com/2026/04/30/us-missile-stockpile-depleted-iran-ukraine-china-rare-earths-restock/"},
+  {"name": "TIME - Iran war burning through crucial US weapons stockpiles", "url": "https://time.com/7382582/trump-iran-war-weapons-stockpiles/"},
+  {"name": "National Defense Magazine - Army falls short of 155mm production goal", "url": "https://www.nationaldefensemagazine.org/articles/2025/8/14/army-falls-short-of-155mm-production-goal"},
+  {"name": "Modern War Institute - Minerals, magnets and military capability: China's rare-earth weaponization", "url": "https://mwi.westpoint.edu/minerals-magnets-and-military-capability-chinas-rare-earth-weaponization-should-be-a-wake-up-call/"},
+  {"name": "PRNewswire - Pentagon moves to secure rare earth metals for next-gen weapons (2027 ban)", "url": "https://www.prnewswire.com/news-releases/pentagon-moves-to-secure-rare-earth-metals-for-next-gen-weapons-302708653.html"},
+  {"name": "CNBC - The Iran war is defense tech's chance to shine, but few systems are ready", "url": "https://www.cnbc.com/2026/03/28/iran-war-defense-tech-drones-trump-hegseth.html"},
+  {"name": "Fortune - Anduril's Trae Stephens says defense tech is headed for a shakeout", "url": "https://fortune.com/2026/06/05/anduril-trae-stephens-founders-fund-defense-tech-ipo-palantir-venture-capital/"},
+  {"name": "Crunchbase - a16z raises $15B; American Dynamism backs US-interest startups", "url": "https://news.crunchbase.com/venture/a16z-15b-new-funds-american-dynamism-ben-horowitz/"}
+ ],
+ "edges": []
+}
