@@ -19,7 +19,8 @@ REP=os.path.join(ROOT,"report"); DOCS=os.path.join(ROOT,"docs")
 # [name, lat, lon, type, note]   type -> color/legend
 POINTS=[
  # --- adversary / physical chokepoints (red) ---
- ["China (REE + antimony)",39.9,116.4,"choke","~90% of rare-earth processing + ~90% of ANTIMONY (military: ammo/hardening/IR); auto-denies foreign-military licenses (Dec 2025); antimony export ban Dec-2024 (suspended to Nov-2026, mil-end-user ban stays). defense_chokepoint UNSAT until ~2028."],
+ ["China (REE + antimony)",39.9,116.4,"choke","~90% of rare-earth processing + ~90% of ANTIMONY/gallium/germanium/graphite; extraterritorial export controls (0.1% rule, Oct-2025; suspended to Nov-2026). The materials counter-leverage to Western equipment controls (geopolitics-chip-chokepoint-war)."],
+ ["Shenzhen (China indigenous EUV)",22.54,114.06,"choke","Huawei/SMEE/SiCarrier LDP-EUV (~100-150W mid-2025) + Tsinghua SSMB accelerator path - the whole-of-nation race to break the ASML chokepoint; SMIC 7nm via DUV multipatterning. Reported/projected, contested."],
  ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; the HALEU chokepoint for SMRs. power_adequacy P2 UNSAT to ~2029."],
  ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
  ["Taiwan (TSMC silicon shield)",25.0,121.5,"choke","~95% of advanced chips + nearly all advanced packaging (CoWoS); Taipei keeps the bleeding edge home; under China gray-zone/quarantine pressure. The master compute chokepoint (geopolitics-taiwan-silicon-shield)."],
@@ -38,6 +39,8 @@ POINTS=[
  # --- threat actors (magenta) ---
  ["North Korea (Lazarus)",39.0,125.7,"threat","DPRK/Lazarus crypto theft (Ronin/Bybit, ~$7.6B cited) laundered via Tornado Cash on Ethereum."],
  # --- allied supply responses (green) ---
+ ["ASML (Veldhoven, NL)",51.42,5.4,"supply","The SOLE maker of EUV lithography (~100% of EUV) - the upstream equipment chokepoint; barred from China; reported remote kill switch on TSMC's machines (geopolitics-chip-chokepoint-war)."],
+ ["Zeiss SMT (Oberkochen, DE)",48.78,10.1,"supply","Sole supplier of ASML's EUV optics - ~80% of all chips made with Zeiss optics + ASML systems. A monopoly under the monopoly."],
  ["Greenland (CRML/Tanbreez)",60.9,-45.9,"supply","Critical Metals Corp REE; pre-revenue ~2028-29; US/EXIM interest."],
  ["Australia (Lynas REE)",-31.95,115.86,"supply","Lynas - largest ex-China REE; the allied supply response."],
  ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD is the LARGEST shareholder (~15%) + 10-yr $110/kg NdPr price floor + Apple $500M; '10X' magnet plant ~2028."],

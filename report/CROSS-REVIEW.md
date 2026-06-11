@@ -31,12 +31,8 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `geopolitics-taiwan-silicon-shield.json` — related files by shared entities (verify cross-refs exist)
-- spec-sec-filings-primary.json: 2 shared entities
-- fin-microsoft-openai.json: 2 shared entities
-- fin-nvidia-openai.json: 2 shared entities
-- fin-ai-depreciation-debttrap.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- sec-filings.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 2 shared entities
-- macro-critical-minerals.json: 2 shared entities
+## Newest file `geopolitics-chip-chokepoint-war.json` — related files by shared entities (verify cross-refs exist)
+- fin-hedera-connections.json: 1 shared entities
+- spec-tornado-samourai.json: 1 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities
+- spec-disclosures-surveillance.json: 1 shared entities
