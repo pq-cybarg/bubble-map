@@ -25,3 +25,6 @@ Stablecoins → **~$2T by 2028** = up to **$1T fresh T-bill demand**; plus ~$1.2
 
 ## Takeaway
 A **captive, conflicted, opacity-laden buyer is being engineered to fund the front end** of a debt the official data makes look sustainable — the corpus's core defect (*promises > substance, risk in the least-regulated venue*) now operating at the level of **sovereign funding.**
+
+## The other half of the rail: programmable money + identity *(updated 2026-06-11)*
+The US private-stablecoin version here has a **public-money mirror** abroad — the **ECB Digital Euro** (Council direction Dec 2025; Parliament vote ~Jun 2026) and the broader digital-ID stack ([[digitalid-worldcoin-eid-convergence]]). They are two routes to the **same destination**: an identity-bound, programmable claim on money. The orchestration analysis ([[digitalid-orchestration-real-incentive]]) ties them together — the BIS's own GM is **on record** that a CBDC gives the central bank *"absolute control … and the technology to enforce that."* Read with this block, the picture is symmetric: **fiscal repression needs both a captive buyer for the debt (the stablecoin rail) and a programmable rail to enforce it (CBDC + digital ID).** The stablecoin Treasury bid funds the deficit; programmable money + ID is how an over-indebted system conditions and controls access to the money it has flooded out.

@@ -19,3 +19,6 @@
 
 ## Takeaway
 This doesn't predict failure — it identifies **where an unwind would land:** retiree annuities, valued at marks the holders can't check, in jurisdictions built to disclose less. It is the same Apollo that recurs in the Epstein-finance thread (`spec-crypto-sec-epstein`), now the largest force in American retirement income.
+
+## Where this sits in the larger pattern *(updated 2026-06-11)*
+The offshore-captive mark is the **fourth of five** self-marked numbers — and the terminal one, because it is *where the other four come to rest*: bank HTM cost ([[macro-bank-htm-marks]]), AI fair-value marks ([[fin-google-amazon-anthropic-meta]]), private-credit NAVs ([[macro-private-credit-marks]]), **insurance captives (here)**, and AI-compute depreciation ([[fin-ai-depreciation-debttrap]]). The [[self_marked_value]] proof (U1–U4) shows the four marked balance-sheet classes are *one defect whose gaps correlate*; the [cross-sectional analysis](https://pq-cybarg.github.io/bubble-map/charts.html#xsec) confirms it empirically (**~91% common factor** in credit). The danger of the Bermuda endpoint is precisely that it pools correlated, self-marked risk into one lightly-disclosed place while *reporting* it as diversified — so when the common factor moves, the "transfer" that was internal all along provides no cushion.

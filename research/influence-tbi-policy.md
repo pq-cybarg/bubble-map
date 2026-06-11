@@ -1,6 +1,6 @@
 # Tony Blair Institute → UK Digital ID → Oracle: the AI-core ↔ identity-layer bridge
 
-*Sourced to Lighthouse Reports, New Statesman, Democracy for Sale, TBI reports, FOI'd minutes, FT/WaPo, DatacenterDynamics/Register.*
+*Web-verified 2026-06-11. Sourced to Lighthouse Reports, New Statesman, Democracy for Sale, TBI reports, FOI'd minutes, FT/WaPo, DatacenterDynamics/Register. Overlay; graded; kept out of the proofs.*
 
 ## Why this is the load-bearing influence thread
 **Oracle is a core node of the AI circular SCC** (`data/graph.json`). Its founder funds the think tank driving UK national-digital-ID policy, and Oracle is positioned to build that infrastructure. This is the most-documented bridge from the **AI-capex core** to the **digital-ID/age-verification push**.
@@ -25,3 +25,5 @@ Three of the largest AI-core actors each carry a **documented identity-layer vec
 - **Oracle/Ellison** — funds TBI → digital-ID policy → Oracle positioned to build it (this file)
 
 Not one cabal — but the **same incumbents repeatedly positioned at the identity/access-control layer** of an AI-saturated internet, with aligned regulatory tailwinds. That is the real, defensible relationship; it is an *overlay*, graded, and kept out of the formally-proven financial core.
+
+TBI sits inside the broader **orchestration layer** mapped in [[digitalid-orchestration-real-incentive]] (World Bank ID4D, UN DPI, India-Stack/G20, BIS) and the five-track convergence in [[digitalid-worldcoin-eid-convergence]] — this file is the best-documented *single national instance* of that global pattern: a funder of the AI core financing the think tank that writes the digital-ID policy the same funder is positioned to build.

@@ -51,3 +51,6 @@ The FDIC dropped the problem-bank **asset total**, but that's cosmetic — the f
 
 ## Posture
 Read "book equity" and HTM "held-to-par" as the **most solvent admissible presentation**, and stress-test at market (AFS + HTM marked) and under forced-sale — not at cost.
+
+## Where this sits in the larger pattern *(updated 2026-06-11)*
+HTM amortized cost is the **first of five** self-marked numbers: bank securities (here), AI fair-value marks ([[fin-google-amazon-anthropic-meta]]), private-credit NAVs ([[macro-private-credit-marks]]), insurance captive marks ([[spec-insurance-bermuda]]), and AI-compute depreciation ([[fin-ai-depreciation-debttrap]]). The [[self_marked_value]] proof (U1–U4) shows the four balance-sheet marks are one defect whose gaps **correlate under a common factor**, so "diversified across asset classes" is false; the [cross-sectional analysis](https://pq-cybarg.github.io/bubble-map/charts.html#xsec) measures that factor at **~91%** of credit-spread variance. The bank-HTM hole is the original instance (SVB, 2023) — and the same rate move that re-opens it is the common factor that simultaneously prices the other four.
