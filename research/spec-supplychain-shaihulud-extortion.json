@@ -1,0 +1,58 @@
+{
+ "metadata": {
+  "title": "The 2025-26 identity-theft supply-chain wave: Shai-Hulud npm worms, Team PCP (UNC6780), the Scattered LAPSUS$ Hunters extortion alliance, and the Nightmare-Eclipse grudge",
+  "generated": "2026-06-10",
+  "status": "facts from vendor/government advisories; motivations graded; cross-actor 'coordination' NOT asserted beyond documented mergers",
+  "frame": "Four threads the user named, unified by one mechanism - steal an IDENTITY ARTIFACT (npm/CI token, OAuth refresh token, MSRC account, cloud key), then automate leverage off it. Two are financially-motivated and self-propagating (Shai-Hulud / Team PCP) or extortion alliances (Scattered LAPSUS$ Hunters); one is a personal-grudge retaliation (Nightmare-Eclipse vs Microsoft). Overlay; excluded from the formal proofs. Feeds the attribution map in spec-unc-nk-attribution-map.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "threads": {
+  "shai_hulud": {
+   "what": "The first successful SELF-PROPAGATING worm in the npm ecosystem.",
+   "v1": "15 Sep 2025: malicious versions of popular packages published with a post-install script that uses TruffleHog to harvest secrets (GitHub/npm/AWS/GCP tokens, Atlassian/Datadog keys) and exfiltrates to attacker-created PUBLIC GitHub repos named 'Shai-Hulud'; then re-authenticates with stolen npm tokens to republish the maintainer's OTHER packages -> exponential spread. 180+ (some counts ~500-640) packages. CISA alert 23 Sep 2025. status: fact.",
+   "v2": "early Nov 2025 'Shai-Hulud 2.0': preinstall-script propagation widened the blast radius to ~25,000+ malicious GitHub repos across ~350 users; among the fastest-spreading npm attacks observed; Bitwarden CLI and node-gyp among compromised. status: fact.",
+   "significance": "credentials/tokens are the propagation fuel - the worm IS an identity-theft engine. status: fact."
+  },
+  "team_pcp_mini_shai_hulud": {
+   "what": "Team PCP - the actor behind the 'Mini Shai-Hulud' copycat worm across npm AND PyPI.",
+   "attribution": "tracked by Google Threat Intelligence Group as UNC6780; aliases DeadCatx3, PCPcat, ShellForce, CipherForce. status: fact.",
+   "activity": "Sep 2025-May/Jun 2026: hit @tanstack, AntV, SAP and Mistral AI packages (millions of weekly downloads) by stealing CI/CD publishing secrets via compromised maintainer accounts. status: fact.",
+   "motivation": "financially motivated: history of ransomware, stolen-data resale, and cryptomining; stated trajectory is to keep exploiting package dependencies + CI/CD to infect machines at scale and steal info + crypto. status: fact (per GTIG/vendor reporting)."
+  },
+  "scattered_lapsus_hunters": {
+   "what": "Aug 2025 public MERGER of Scattered Spider + LAPSUS$ + ShinyHunters into 'Scattered LAPSUS$ Hunters' (SLH).",
+   "salesforce_wave": "Jun-Jul 2025: voice-phishing (vishing) staff into authorizing malicious OAuth 'Connected Apps' -> API tokens -> bulk Salesforce CRM export -> pay-or-leak extortion (sample-data pressure). status: fact. (Salesforce vishing clusters tracked as UNC6040/UNC6240.)",
+   "salesloft_drift_wave": "8-18 Aug 2025: UNC6395 abused OAuth/refresh tokens from compromised Salesloft/Drift integrations to pull data via Salesforce APIs from 700+ orgs incl. Cloudflare, Zscaler, PagerDuty, Tanium. status: fact.",
+   "ops": "ran a network of ~16 Telegram channels - recruiting affiliates, marketing breaches, reappearing after takedowns; 'information warfare'/spectacle as an extortion vector. status: fact.",
+   "motivation": "financial extortion + clout/notoriety + affiliate recruitment (a chaos/clout economy on top of the ransom). status: fact + contested (the clout motive is inferred from behavior)."
+  },
+  "nightmare_eclipse": {
+   "what": "Anonymous actor (GitHub handle 'Nightmare-Eclipse'; blog aliases Chaotic Eclipse / Dead Eclipse / Eclipse) running an escalating retaliatory zero-day campaign against Microsoft since ~Apr 2026, targeting Microsoft Defender + BitLocker -> SYSTEM privilege / encryption bypass on fully-patched Win10/11. status: fact.",
+   "exploit_run": "the initial six: RedSun, UnDefend, BlueHammer, YellowKey, GreenPlasma, MiniPlasma; then RoguePlanet (a further Defender SYSTEM zero-day after Patch Tuesday); then GreatXML (newest, dropped ~10 Jun 2026 - name per direct user report; The Register reported a new Nightmare-Eclipse Defender zero-day on 10 Jun 2026; the specific name 'GreatXML' not yet in indexed vendor reporting at compile time -> weak on the name, fact on the continued drops). Attackers were observed exploiting BlueHammer/RedSun/UnDefend soon after PoC publication. status: fact (campaign) + weak (GreatXML naming pending confirmation).",
+   "trigger": "claims Microsoft revoked their MSRC (vuln-submission) account, mishandled reports / failed to pay bounties, 'violated their agreement', 'ruined their life', left them 'homeless' - so they published publicly. A retaliation/grudge campaign, NOT financial. status: contested (self-stated motive) + fact (the zero-day drops).",
+   "microsoft_response": "Microsoft threatened criminal prosecution and banned the researcher's GitHub/GitLab accounts, then retreated and scrubbed rhetoric equating uncoordinated disclosure with malice after community backlash. status: fact.",
+   "significance": "the odd one out: not money, but a governance failure in the researcher-vendor relationship turning an insider into an adversary - a reminder that the disclosure/identity-trust pipeline is itself an attack surface. status: contested interpretation."
+  }
+ },
+ "the_unifying_mechanism": "Across all four: the prize is an identity/trust artifact - an npm or CI/CD token, an OAuth refresh token, a vendor-trust account (MSRC), a cloud key. Steal the artifact and you inherit the trust attached to it (publish as the maintainer, call the API as the app, disclose as the researcher). The same primitive that the digital-ID stack (digitalid-worldcoin-eid-convergence) is trying to concentrate is the primitive these actors steal. Concentrating identity raises the value of each stolen credential.",
+ "motivations_summary": {
+  "financial": "Team PCP (UNC6780) and SLH: ransom/extortion, stolen-data resale, crypto theft, cryptomining.",
+  "clout_recruitment": "SLH's Telegram-channel spectacle - notoriety + affiliate pipeline as an amplifier of extortion leverage.",
+  "access_brokering": "stolen tokens/creds become sellable initial access for others (the IAB economy). status: contested (general pattern).",
+  "grudge_retaliation": "Nightmare-Eclipse: personal retaliation after a vendor-trust relationship broke down - non-financial."
+ },
+ "sources": [
+  {"name": "Palo Alto Unit 42 - 'Shai-Hulud' worm compromises npm ecosystem", "url": "https://unit42.paloaltonetworks.com/npm-supply-chain-attack/"},
+  {"name": "CISA - Widespread supply-chain compromise impacting npm ecosystem (23 Sep 2025)", "url": "https://www.cisa.gov/news-events/alerts/2025/09/23/widespread-supply-chain-compromise-impacting-npm-ecosystem"},
+  {"name": "Datadog Security Labs - The Shai-Hulud 2.0 npm worm analysis", "url": "https://securitylabs.datadoghq.com/articles/shai-hulud-2.0-npm-worm/"},
+  {"name": "ReversingLabs - Team PCP's Mini Shai-Hulud tears at OSS trust", "url": "https://www.reversinglabs.com/blog/mini-shai-hulud-tears-at-oss-trust"},
+  {"name": "The Hacker News - Mini Shai-Hulud pushes malicious AntV npm packages", "url": "https://thehackernews.com/2026/05/mini-shai-hulud-pushes-malicious-antv.html"},
+  {"name": "The Hacker News - ShinyHunters & Scattered Spider join forces in extortion", "url": "https://thehackernews.com/2025/08/cybercrime-groups-shinyhunters.html"},
+  {"name": "Resecurity - Trinity of Chaos: LAPSUS$, ShinyHunters, Scattered Spider alliance", "url": "https://www.resecurity.com/blog/article/trinity-of-chaos-the-lapsus-shinyhunters-and-scattered-spider-alliance-embarks-on-global-cybercrime-spree"},
+  {"name": "Cybernews - Microsoft responds to Nightmare-Eclipse zero-days", "url": "https://cybernews.com/security/microsoft-responds-to-nightmare-eclipse-zero-days/"},
+  {"name": "BleepingComputer - Microsoft patches YellowKey, GreenPlasma, MiniPlasma zero-days", "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-yellowkey-greenplasma-miniplasma-zero-days/"},
+  {"name": "The Register - Nightmare Eclipse publishes new Windows Defender zero-day (10 Jun 2026)", "url": "https://www.theregister.com/security/2026/06/10/nightmare-eclipse-publishes-new-windows-defender-zero-day/5253725"},
+  {"name": "Tom's Hardware - Microsoft's GitHub bans security researcher who posted zero-day exploits", "url": "https://www.tomshardware.com/tech-industry/cyber-security/microsofts-github-bans-security-researcher-who-posted-zero-day-windows-exploits-because-company-ruined-their-life-expert-claims-action-is-vindictive-and-promises-further-retaliation"}
+ ],
+ "edges": []
+}

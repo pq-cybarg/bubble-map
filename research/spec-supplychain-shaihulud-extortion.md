@@ -1,0 +1,31 @@
+# The 2025–26 identity-theft supply-chain wave: Shai-Hulud, Team PCP, the Scattered LAPSUS$ Hunters, and Nightmare-Eclipse
+
+*Compiled 2026-06-10. Overlay — evidence-graded (`fact | contested | weak | unsupported`), excluded from the formal proofs. Feeds `spec-unc-nk-attribution-map`. Cites primary vendor/government advisories.*
+
+Four threads you named, unified by **one mechanism**: steal an **identity/trust artifact** — an npm or CI/CD token, an OAuth refresh token, a vendor-trust account, a cloud key — then automate leverage off the trust attached to it. Three are financially driven (two self-propagating worms, one extortion alliance); one is a personal-grudge retaliation. That the *same primitive the digital-ID stack is trying to concentrate* (see `digitalid-worldcoin-eid-convergence`) is exactly what these actors steal is the thread that ties this to the rest of the map.
+
+## 1. Shai-Hulud — the first self-propagating npm worm
+On **15 Sep 2025**, malicious versions of popular npm packages shipped a post-install script that ran **TruffleHog** to harvest secrets (GitHub/npm/AWS/GCP tokens, Atlassian/Datadog keys) and exfiltrated them to attacker-created **public GitHub repos named "Shai-Hulud,"** then re-authenticated with the stolen npm tokens to **republish the maintainer's other packages** — spreading exponentially with no operator in the loop. 180+ packages (some counts run to ~500–640); **CISA** issued an alert on 23 Sep 2025. A **"Shai-Hulud 2.0"** in early Nov 2025 switched to *preinstall*-script propagation and exploded to **~25,000+ malicious GitHub repos across ~350 users** — among the fastest-spreading npm attacks observed; the Bitwarden CLI and node-gyp were among the compromised. (**fact**) The point: **credentials are the fuel** — the worm *is* an identity-theft engine.
+
+## 2. Team PCP / "Mini Shai-Hulud" (UNC6780)
+**Team PCP** runs the "Mini Shai-Hulud" copycat across **npm *and* PyPI**, tracked by Google's Threat Intelligence Group as **UNC6780** (aliases DeadCatx3, PCPcat, ShellForce, CipherForce) (**fact**). From Sep 2025 into mid-2026 it hit **@tanstack, AntV, SAP, and Mistral AI** packages (millions of weekly downloads) by stealing **CI/CD publishing secrets** through compromised maintainer accounts. **Motivation (fact, per GTIG/vendors): financial** — a history of ransomware, stolen-data resale, and cryptomining, with a stated trajectory of exploiting package dependencies + CI/CD to infect machines at scale and steal info and crypto.
+
+## 3. Scattered LAPSUS$ Hunters (ShinyHunters + Scattered Spider + LAPSUS$)
+In **Aug 2025** the three groups publicly **merged into "Scattered LAPSUS$ Hunters" (SLH)** (**fact**). Two waves defined the year:
+- **Salesforce (Jun–Jul 2025):** **vishing** staff into authorizing malicious **OAuth "Connected Apps"** → API tokens → bulk **CRM export** → **pay-or-leak extortion** with sample-data pressure. (Salesforce vishing clusters: UNC6040/UNC6240.)
+- **Salesloft/Drift (8–18 Aug 2025):** **UNC6395** abused **OAuth/refresh tokens** from compromised Salesloft/Drift integrations to pull data via Salesforce APIs from **700+ organizations**, including **Cloudflare, Zscaler, PagerDuty, and Tanium**.
+
+SLH ran ~**16 Telegram channels** — recruiting affiliates, marketing breaches, reappearing after takedowns. **Motivation:** financial extortion **plus** clout/notoriety and affiliate recruitment — a *chaos/clout economy* layered on top of the ransom (the financial part is **fact**; the clout motive is **contested**, inferred from behavior). Note the through-line with Shai-Hulud: the prize is again a **token** (an OAuth grant), not a password.
+
+## 4. Nightmare-Eclipse — the odd one out (a grudge, not money)
+An anonymous actor (GitHub handle **Nightmare-Eclipse**; aliases Chaotic/Dead Eclipse) is running an **escalating retaliatory zero-day campaign against Microsoft** since ~Apr 2026, targeting **Microsoft Defender and BitLocker** for **SYSTEM** privileges / encryption bypass on fully-patched Win10/11 (**fact**). The run so far: the initial six — **RedSun, UnDefend, BlueHammer, YellowKey, GreenPlasma, MiniPlasma** — then **RoguePlanet** (a further Defender SYSTEM zero-day after Patch Tuesday), and now **GreatXML** (dropped ~10 Jun 2026 — name per direct report; The Register reported a *new* Nightmare-Eclipse Defender zero-day on 10 Jun 2026, though the specific name "GreatXML" is **not yet in indexed vendor reporting** at compile time → **weak** on the name, **fact** on the continued drops). Attackers were seen exploiting BlueHammer/RedSun/UnDefend soon after PoC publication. The stated trigger (**contested**, self-reported): Microsoft **revoked their MSRC account**, mishandled reports / **failed to pay bounties**, "ruined their life," left them "homeless" — so they published. Microsoft **threatened criminal prosecution and banned their GitHub/GitLab accounts, then retreated** and scrubbed rhetoric equating uncoordinated disclosure with malice after community backlash (**fact**). The significance (**contested**): not money but a **governance failure in the researcher–vendor trust relationship** turning an insider into an adversary — the disclosure/identity-trust pipeline is itself an attack surface.
+
+## The unifying mechanism & motivations
+| Actor | Identity artifact stolen/abused | Motivation |
+|---|---|---|
+| Shai-Hulud worm | npm/CI tokens, cloud keys (via TruffleHog) | financial; automated propagation |
+| Team PCP (UNC6780) | CI/CD publishing secrets, maintainer accounts | **financial** — ransom, data resale, cryptomining |
+| Scattered LAPSUS$ Hunters | OAuth "Connected App" / refresh tokens | **financial extortion** + clout/recruitment |
+| Nightmare-Eclipse | (MSRC trust account revoked) | **grudge / retaliation** — non-financial |
+
+**The lesson for the larger map:** every one of these is theft of *trust attached to an identity*, not of a secret per se. Steal the artifact and you **inherit the trust** — publish as the maintainer, call the API as the app, disclose as the researcher. The digital-ID agenda (`digitalid-worldcoin-eid-convergence`) is racing to **concentrate** identity into single wallets/credentials; concentration raises the payoff of every stolen token. Centralizing the keys does not abolish the thieves — it enriches them.

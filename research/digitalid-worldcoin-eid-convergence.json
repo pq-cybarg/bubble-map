@@ -1,0 +1,54 @@
+{
+ "metadata": {
+  "title": "Proof-of-personhood to programmable identity: Worldcoin/World, eIDAS 2.0 EUDI wallets, the Digital Euro, EU Chat Control, and the UK Online Safety Act",
+  "generated": "2026-06-10",
+  "status": "facts graded individually; the 'convergence into one identity+payment+scanning rail' is a labeled structural interpretation, not asserted intent",
+  "frame": "Five tracks that are usually reported separately but r-build the SAME stack from different angles: a biometric 'are-you-human' credential (Worldcoin/World), a state identity wallet (eIDAS 2.0 EUDI), state programmable money (Digital Euro), message-scanning + mandatory age verification (EU Chat Control / CSAR), and platform age-gating with ID (UK Online Safety Act). The shared public justification is child-protection / anti-fraud / anti-deepfake; the shared structural output is a unified, attributable identity layer bound to payments and communications. Overlay; excluded from the formal proofs; ties to [[reject-age-verification]] and age-verification-abolition.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "tracks": {
+  "worldcoin_world": {
+   "what": "OpenAI co-founder Sam Altman's World (formerly Worldcoin), built by Tools for Humanity: iris-scanning 'Orb' issues a 'World ID' proof-of-personhood + WLD token.",
+   "stated_rationale": "Altman: because AI can now imitate humans online, the world needs 'proof of personhood' to tell humans from bots. status: fact (his stated motive).",
+   "scale": "claims >18M verified across ~160 countries; ~7,000 Orbs across six US cities by Apr 2025. status: contested (self-reported).",
+   "regulatory_rejection": "banned/suspended/investigated for biometric-consent and data-law violations in Brazil, Spain, Hong Kong, Portugal, Germany, Kenya, South Korea, Colombia, Indonesia (May 2025), Philippines (Oct 2025, 'exploitation of vulnerable populations'), Thailand (Nov 2025, ordered deletion). status: fact.",
+   "us_pivot_partnerships": "while blocked abroad, expanding in the US; Apr 2026 announced World ID verification partnerships with Tinder, Zoom and Docusign (anti-deepfake/anti-scam framing). status: fact.",
+   "reading": "a private, token-incentivised global biometric registry positioning to become the 'human' login layer for AI-era platforms - i.e. the same node (Altman/OpenAI) that built the deepfake problem also sells the identity 'cure'. status: contested interpretation."
+  },
+  "eidas2_eudi_wallet": {
+   "what": "EU Digital Identity Wallet under eIDAS 2.0, Regulation (EU) 2024/1183 (in force May 2024). All 27 member states must offer every citizen/resident a wallet by Dec 2026.",
+   "scope_creep": "binds national eID to driving licences, diplomas, professional qualifications and BANK ACCOUNTS in one wallet; selective-disclosure age proofs; EU Age Verification Blueprint open-sourced 15 Apr 2026, piloted by FR/DK/GR/IT/ES/CY/IE. status: fact.",
+   "security_caveat": "the EU age-verification reference app was reportedly hacked/spoofed within ~2 minutes; specs still incomplete near the deadline. status: contested (per security reporting) - reinforces the age-verification-futility result.",
+   "reading": "the wallet is the keystone: once identity, credentials and bank account share one credential, every later 'age check' or 'payment' can be an authenticated, logged identity event. status: contested interpretation."
+  },
+  "digital_euro": {
+   "what": "ECB retail CBDC. European Council approved direction Dec 2025; European Parliament vote expected Jun 2026; ECB targeting technical standards summer 2026, pilot H2-2027, possible first issuance ~2029.",
+   "design_tension": "marketed as 'digital cash' (privacy, offline); but a central-bank ledger is programmable and identity-linkable by construction. status: fact (timeline) + contested (privacy claims).",
+   "reading": "supplies the programmable-money half of an identity+money rail; pairs naturally with the EUDI wallet. status: contested interpretation. Cross-ref macro-stablecoin-treasury-rail (the US private-stablecoin version of the same rail)."
+  },
+  "eu_chat_control_csar": {
+   "what": "Child Sexual Abuse Regulation ('Chat Control'): originally mandated client-side scanning of private messages.",
+   "the_pivot": "after years of opposition, on 31 Oct 2025 Denmark dropped MANDATORY scanning (Germany + others refused); Council position adopted 26 Nov 2025 removes the forced-scan/break-encryption mandate BUT (a) legitimises 'voluntary' scanning of non-E2EE messages and (b) ADDS mandatory age verification for communication providers. Trilogues scheduled Feb/May/Jun 2026. status: fact.",
+   "reading": "the surveillance goal survived the privacy 'win' by switching levers - from scan-everyone to identify-everyone (age verification kills anonymity); the child-protection frame is the constant. status: contested interpretation."
+  },
+  "uk_online_safety_act": {
+   "what": "Age-verification duties live 25 Jul 2025; Ofcom requires 'highly effective' checks (facial estimation, credit card, digital ID); fines up to GBP 18M or 10% of global revenue + senior-exec criminal liability.",
+   "revealed_preference": "immediate VPN surge - Proton +1,400-1,800% UK signups ('levels usually associated with civil unrest'), NordVPN +1,000%; half the top-10 UK App Store apps on launch day were VPN/ID apps; Ofcom concedes it cannot stop VPNs and floats action against VPN-promotion. status: fact.",
+   "reading": "mass circumvention shows the public treats it as surveillance, not safety; the enforcement reflex (target VPNs next) reveals the goal is attributability, not merely blocking minors. status: contested interpretation."
+  }
+ },
+ "the_common_pattern": "Each track is sold on an unimpeachable, parent-sympathetic harm (CSAM, deepfakes, minors, fraud). Each delivers a piece of one stack: a 'human' credential (World), a state identity wallet (EUDI), programmable money (Digital Euro), and age/ID gates on speech (Chat Control, OSA). The provable structural fact is the STACK; specific coordinating INTENT across actors is NOT asserted (graded, quarantined). See digitalid-orchestration-real-incentive for the incentive analysis.",
+ "sources": [
+  {"name": "Rest of World - US tech embraces World iris-scan ID banned elsewhere (Tinder/Zoom/Docusign)", "url": "https://restofworld.org/2026/sam-altman-worldcoin-zoom-tinder-partnerships/"},
+  {"name": "The Block - World suspended in Indonesia over regulatory violations", "url": "https://www.theblock.co/post/353072/sam-altmans-world-project-hit-with-suspension-in-indonesia-over-alleged-regulatory-violations"},
+  {"name": "EFF - After years of controversy, the EU's Chat Control nears its final hurdle", "url": "https://www.eff.org/deeplinks/2025/12/after-years-controversy-eus-chat-control-nears-its-final-hurdle-what-know"},
+  {"name": "Patrick Breyer - EU Parliament votes to end untargeted mass scanning", "url": "https://www.patrick-breyer.de/en/historic-chat-control-vote-in-the-eu-parliament-meps-vote-to-end-untargeted-mass-scanning-of-private-chats/"},
+  {"name": "European Commission - The European Digital Identity Regulation (eIDAS 2.0 / EUDI Wallet)", "url": "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/915931811/The+European+Digital+Identity+Regulation"},
+  {"name": "European Commission - EU Age Verification (blueprint / use-case manual)", "url": "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/930450954/The+Age+Verification+Manual"},
+  {"name": "King & Spalding - When regulators build the age-verification app: not necessarily for the greater good", "url": "https://www.kslaw.com/news-and-insights/when-regulators-build-the-age-verification-app-it-is-not-necessarily-for-the-greater-good"},
+  {"name": "ECB - Eurosystem moving to next phase of digital euro project (30 Oct 2025)", "url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr251030~8c5b5beef0.en.html"},
+  {"name": "European Parliament - Digital euro legislative train", "url": "https://www.europarl.europa.eu/legislative-train/theme-an-economy-that-works-for-people/file-digital-euro"},
+  {"name": "AlternativeTo - UK age-verification law triggers VPN surge & privacy concerns", "url": "https://alternativeto.net/news/2025/7/uk-age-verification-law-for-adult-sites-requiring-id-sparks-vpn-surge-and-privacy-concerns/"}
+ ],
+ "edges": []
+}

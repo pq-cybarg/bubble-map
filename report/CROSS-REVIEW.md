@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 28 files
-- **Google** — 24 files
-- **Oracle** — 18 files
-- **Amazon** — 17 files
-- **OpenAI** — 17 files
+- **Meta** — 30 files
+- **Google** — 26 files
+- **Oracle** — 19 files
+- **OpenAI** — 19 files
+- **Amazon** — 18 files
 - **Anthropic** — 15 files
-- **Microsoft** — 12 files
+- **Microsoft** — 13 files
 - **FDIC** — 12 files
 - **JPMorgan** — 11 files
 - **Stargate** — 11 files
+- **Worldcoin** — 10 files
 - **Epstein** — 10 files
-- **Chainlink** — 10 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-cross-sectional-analysis.json` — related files by shared entities (verify cross-refs exist)
-- influence-ad-censorship.json: 1 shared entities
-- macro-official-data-integrity.json: 1 shared entities
-- macro-history-dereg-manipulation.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- macro-bank-htm-marks.json: 1 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- macro-carry-trades.json: 1 shared entities
+## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
+- spec-network-overlay.json: 6 shared entities
+- temporal-bridges.json: 5 shared entities
+- influence-tbi-policy.json: 4 shared entities
+- digitalid-corporate.json: 3 shared entities
+- altcoin-lens.json: 3 shared entities
+- macro-cre-privatecredit.json: 3 shared entities
+- digitalid-worldcoin-eid-convergence.json: 2 shared entities
+- influence-congress-hfsc.json: 2 shared entities

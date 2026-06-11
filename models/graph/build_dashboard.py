@@ -78,6 +78,10 @@ OVERLAYS=[
  ("Jobs / inflation / Fed-vs-bond-market (CHARTS)","Disambiguated jobs + inflation over 10yr; the funds rate tracks the 2Y Treasury (bond market), not the 2%/full-employment mandate; see the Charts page","macro-jobs-inflation-fed"),
  ("Stablecoin -> Treasury rail","GENIUS Act mandates 1:1 T-bill reserves -> stablecoin growth = legislated T-bill demand; Tether >$100B (>UAE/Germany); Bessent's stated motive; China exits to gold; ~$900B demand-supply gap","macro-stablecoin-treasury-rail"),
  ("Timing of the unwind","STRUCTURE certain (insolvent at zero inflow; marks must reverse), DATE unforecastable in principle (reflexivity/Minsky/Keynes); watch the trigger panel, not the calendar","spec-unwind-timing"),
+ ("Digital-ID convergence (Worldcoin→eIDAS→Digital Euro→Chat Control→OSA)","Five tracks rebuild ONE identity+payment+scanning stack from five angles; each sold on child-protection/anti-deepfake; EUDI wallets + Digital Euro + Chat Control trilogues all land 2026-27","digitalid-worldcoin-eid-convergence"),
+ ("Digital-ID orchestration — the REAL incentive","Who coordinates it (World Bank ID4D, UN DPI, India-Stack/G20, BIS unified ledger, WEF, TBI) and why beyond the defensible frame: BIS's Carstens on record that CBDC gives 'absolute control … technology to enforce'; fiscal repression + access-chokepoint + AI-transition + de-anonymization","digitalid-orchestration-real-incentive"),
+ ("Identity-theft supply-chain wave","Shai-Hulud self-propagating npm worm (+2.0, 25k repos), Team PCP/Mini Shai-Hulud (UNC6780), the Scattered LAPSUS$ Hunters OAuth-token extortion (700+ orgs via Salesloft/Drift), and the Nightmare-Eclipse anti-Microsoft zero-day grudge — one mechanism: steal the trust attached to an identity","spec-supplychain-shaihulud-extortion"),
+ ("Threat-actor attribution map (UNC / DPRK)","How Mandiant/Google UNC→TEMP→APT/FIN graduation works (epistemic-honesty device), and where DPRK's financially-motivated state hacking sits — TraderTraitor/UNC4899, Bybit $1.5B, Contagious-Interview npm overlap","spec-unc-nk-attribution-map"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[

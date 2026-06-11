@@ -42,4 +42,4 @@ Beyond the proven core, the corpus documents — each graded `fact|contested|wea
 Claims cite primary government and court records: SCOTUS opinions, DOJ/SDNY releases, Treasury/OFAC, the Fifth Circuit, SEC, Congress.gov, FDIC FOIA disclosures, ICIJ, NIST. `models/audit.py` and `models/cross_review.py` run via `scripts/new-research.sh`; current audit 0 flags.
 
 ## Reproduce
-`bash run_all.sh` runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models (31 runnable models). 52 cited research blocks in `research/`.
+`bash run_all.sh` runs the Z3 engines, TLA+, Alloy, and the graph/bank/temporal/gold/defense/energy/contagion models (31 runnable models). 56 cited research blocks in `research/`.
