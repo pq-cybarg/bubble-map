@@ -89,6 +89,9 @@ OVERLAYS=[
  ("Allied intel & strategic-geography nodes","Physical chokepoints of intel/compute/data: Pine Gap signals (US spy-sats over 1/3 of globe), Korea/Japan HBM + Taiwan packaging (the allied memory chokepoint), Singapore cables vs Hong Kong's bifurcation, and the Greenland/GIUK Arctic frontier","geopolitics-allied-intel-nodes"),
  ("Taiwan / TSMC silicon shield (the keystone)","~95% of advanced chips + nearly all advanced packaging (CoWoS) on one island under China gray-zone/quarantine pressure - the master compute single-point-of-failure. Arizona ($165B) is a hedge, not independence: wafers still fly to Taiwan for packaging, runs behind the leading edge, inputs via Japan (materials) + ASML (EUV). The AI build is a bet the Strait stays calm","geopolitics-taiwan-silicon-shield"),
  ("Chip-chokepoint war: equipment vs materials","West controls the equipment (ASML EUV monopoly + Zeiss optics + Japanese tools; reported kill switch on Taiwan's machines); China controls the materials (gallium/germanium/antimony/heavy-REE + an extraterritorial 0.1% rule) - mutual deterrence. Sticky NOT permanent: China's multi-track indigenous EUV (LDP, Tsinghua SSMB), Canon nanoimprint, and the tacit-knowledge wall espionage can't copy","geopolitics-chip-chokepoint-war"),
+ ("Russia - energy, nuclear fuel & the Arctic","Gates HALEU (~44% of enrichment, the SMR fuel; Rosatom un-sanctioned), controls the Northern Sea Route + the only nuclear icebreaker fleet, and routes oil to China/India via a ~100-vessel shadow fleet. Sanctions re-routed the levers, didn't close them","geopolitics-russia-energy-arctic"),
+ ("AI power & grid bottleneck","Power-constrained, not just capital-constrained: ~$650B+ 2026 capex meets ~127-week transformer lead times (shortage to 2029), sold-out gas turbines, multi-year interconnection queues, Russia-gated nuclear fuel - ~half of US datacenter projects risk delay. BYOP privatizes the energy chokepoint; idle GPUs compound the depreciation trap","macro-ai-power-grid-bottleneck"),
+ ("Physical information layer (cables + space)","~99% of intercontinental data on undersea cables being cut (Baltic/Taiwan/Red Sea) by deniable shadow-fleet/anchor-drag vs a too-small aging repair fleet; orbital ISR/comms concentrating into one private actor (SpaceX Starshield/NRO). The data substrate is itself a contested chokepoint","geopolitics-cables-space-layer"),
 ]
 # primary, independently-checkable sources - the anti-fabrication anchor
 PRIMARY=[
@@ -177,7 +180,7 @@ h1{margin:0;font-size:25px;color:#1c1b19;font-family:Georgia,'Iowan Old Style',s
 h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin-top:34px;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
 .thesis{font-size:15.5px;color:#33312c;background:#fffdf8;border:1px solid #e4ddcc;border-left:4px solid #7b2d26;padding:14px 18px;margin:16px 0}
 main{max-width:1100px;margin:0 auto;padding:0 24px} table{border-collapse:collapse;width:100%;margin:10px 0;font-size:13px}
-th,td{border:1px solid #e4ddcc;padding:6px 9px;text-align:left;vertical-align:top} th{background:#f3eedf;color:#1c1b19} tr:nth-child(even) td{background:#fbf8f0}
+th,td{border:1px solid #e4ddcc;padding:11px 14px;text-align:left;vertical-align:top;line-height:1.5} th{background:#f3eedf;color:#1c1b19} tr:nth-child(even) td{background:#fbf8f0}
 code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:12px}
 .k{display:inline-block;background:#fffdf8;border:1px solid #e4ddcc;border-radius:6px;padding:10px 14px;margin:6px 8px 6px 0}
 .k b{color:#7b2d26;font-size:20px;display:block} .UNSAT{color:#9a2b1f;font-weight:600} .PROVED,.HOLDS,.SAT{color:#1f6f43;font-weight:600}
@@ -249,7 +252,12 @@ if os.path.isdir(DOCS):
           "a{color:#1f4e79}code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:14px}"
           ".b{background:#fffdf8;border:1px solid #e4ddcc;border-radius:7px;padding:13px 15px;margin:9px 0}.b b{color:#1c1b19}"
           ".muted{color:#6b665d;font-size:14px}dl dt{font-weight:600;margin-top:14px}dl dd{margin:3px 0 0;color:#33312c;font-size:16px}"
-          "p{margin:12px 0}")
+          "p{margin:12px 0}h3{font-family:Georgia,serif;font-weight:600;font-size:19px;margin:24px 0 4px;color:#33312c}"
+          "blockquote{border-left:4px solid #c9bfa5;background:#fffdf8;margin:14px 0;padding:10px 16px;color:#33312c;font-style:italic}"
+          "table{border-collapse:separate;border-spacing:0;width:100%;margin:18px 0;font-size:15px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;border:1px solid #e4ddcc;border-radius:8px;overflow:hidden}"
+          "th,td{border-bottom:1px solid #e4ddcc;padding:11px 15px;text-align:left;vertical-align:top;line-height:1.5}"
+          "td+td,th+th{border-left:1px solid #e4ddcc}tr:last-child td{border-bottom:none}"
+          "thead th{background:#f3eedf}tbody tr:nth-child(even){background:#fbf9f3}")
     def section(fn):
         if fn.startswith("fin-"): return "AI financial core"
         if fn.startswith("macro-"): return "Macro · banking · commodities · data integrity"

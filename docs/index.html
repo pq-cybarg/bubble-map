@@ -34,8 +34,11 @@ a{color:var(--ac2)}
 .kpis{display:flex;flex-wrap:wrap;gap:0;margin:22px 0 0;border-top:1px solid var(--line);font-family:-apple-system,Segoe UI,Roboto,sans-serif}
 .kpis span{flex:1 1 150px;padding:12px 14px 12px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
 .kpis b{display:block;font-size:23px;color:var(--ac);font-weight:600}.kpis em{font-style:normal;font-size:12.5px;color:var(--mut)}
-table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px;font-family:-apple-system,Segoe UI,Roboto,sans-serif}
-th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table{border-collapse:separate;border-spacing:0;width:100%;margin:18px 0;font-size:15px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{border-bottom:1px solid var(--line);padding:13px 18px;text-align:left;vertical-align:top;line-height:1.55}
+td+td,th+th{border-left:1px solid var(--line)}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even){background:#fbf9f3}
 th{background:var(--paper);font-weight:600}
 .ladder dt{font-weight:600;margin-top:14px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;font-size:15px}
 .ladder dt .tag{font-size:11px;letter-spacing:.05em;text-transform:uppercase;padding:2px 7px;border-radius:10px;margin-right:8px;color:#fff}
@@ -70,7 +73,7 @@ dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33
 <span><b>-81%</b><em>US home in gold since 1998</em></span>
 <span><b>+1985% / -69%</b><em>NVDA vs S&amp;P in gold</em></span>
 <span><b>91%</b><em>credit common factor (diversification illusory)</em></span>
-<span><b>62</b><em>cited research blocks</em></span>
+<span><b>65</b><em>cited research blocks</em></span>
 <span><b>32</b><em>runnable models</em></span>
 <span><b>0</b><em>open audit flags</em></span>
 </div>
@@ -79,7 +82,7 @@ dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33
 <div class=wrap>
 
 <div class=abstract>
-<b>Abstract.</b> This project maps how money, supply, and information move through the AI boom and the systems around it. At the center is a small group of firms that largely <b>fund one another</b> — paying for each other's chips, cloud, and capacity — so the group is solvent only while new outside capital keeps arriving. That circular structure is proven mathematically. Around it we document the <b>physical limits</b> it cannot buy past on the timeline (chip capital, rare earths, uranium enrichment, electricity), and the <b>measurement and control layers</b> that make it hard to see clearly: official inflation and jobs figures that lag or are revised away from lived reality; commodity "prices" set in paper markets that physical metal periodically overrides; and the identity, payment, surveillance, and political-money rails that decide who gets to ask questions. <b>Everything at the financial core is machine-verified; everything else is graded by evidence strength and kept out of the proofs.</b>
+<b>Abstract.</b> This project maps how money, supply, and information move through the AI boom and the systems around it. At the center is a small group of firms that largely <b>fund one another</b> — paying for each other's chips, cloud, and capacity — so the group is solvent only while new outside capital keeps arriving. That circular structure is proven mathematically. Around it we map, in depth, the rest of the system: the <b>physical chokepoints</b> the build cannot buy past on the timeline — the full semiconductor stack (Taiwan/TSMC fabrication + CoWoS packaging, ASML/Zeiss lithography, Korea/Japan HBM &amp; materials), rare earths and antimony, uranium enrichment/HALEU, and the power grid (transformers, turbines, interconnection); the <b>geopolitics</b> around them (contested resource states — Venezuela, Greenland, Argentina, Iran; Russia's energy/fuel/Arctic leverage; the allied intel nodes and the undersea-cable + space layer); the <b>measurement layers</b> (lagged/revised jobs &amp; inflation, paper-vs-physical commodities, the gold lens); the <b>credit &amp; banking</b> fragility (bank HTM, private credit, insurance/Bermuda, the cross-sectional common factor); the <b>crypto, regulatory &amp; surveillance</b> rails (Choke Point 2.0, exchanges, telecom/CALEA, Snowden/Five-Eyes); the <b>cyber-threat &amp; supply-chain</b> layer (Shai-Hulud, ShinyHunters, UNC/DPRK); the <b>digital-ID / programmable-money control stack</b> and its breach record; and the <b>quantum/PQC</b> frontier. <b>Everything at the financial core is machine-verified; everything else is graded by evidence strength and kept out of the proofs.</b>
 </div>
 
 <h2>Headline findings</h2>
@@ -91,6 +94,7 @@ dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33
 <tr><td><b>Who holds the bag: your annuity and 401(k)</b></td><td>The risk migrates off banks → PE-owned insurers (<b>&gt;$700B, ~25% of US life</b>) → retiree <b>annuities</b> backed by manager-marked private credit (~⅕ loans to <i>affiliated</i> funds) → ceded to <b>Bermuda captives the same group controls</b> (~60% offshore = internal "transfer"). An Aug-2025 Executive Order opens <b>401(k)s</b> to it; the IMF, FSB, FIO, NAIC and US Treasury are all warning.</td></tr>
 <tr><td><b>The real assets age out before the debt does</b></td><td>The cleanest answer to "but they have <i>real assets</i> backing the loans": AI compute economically ages in <b>~2–3 years</b> while the bonds and leases financing it run <b>5–19 years</b> (Oracle alone discloses <b>$248B</b> of 15–19-yr datacenter leases). Hyperscalers depreciate GPUs over 5–6 yr; on honest lives that is <b>~$176B of overstated profit 2026–28</b> (Burry). The <code>depreciation_trap</code> proof (D1–D4): a long assumed life prints today's earnings by borrowing them from a future writedown — depreciation is only timing.</td></tr>
 <tr><td><b>The control rail being built around it</b></td><td>The same low-trust, high-debt, AI-disrupted moment is producing a converging <b>identity + programmable-money + speech-gating</b> stack — Worldcoin → eIDAS 2.0 wallets (mandatory Dec 2026) → the Digital Euro → Chat Control's age-verification pivot → the UK Online Safety Act. Sold on child-protection/fraud; the structural payoff (stated <i>on record</i> by the BIS: a CBDC gives "absolute control … and the technology to enforce that") is fiscal repression of an over-indebted system, conditioning economic access on compliance, and de-anonymizing money and speech. <a href="r-digitalid-orchestration-real-incentive.html">The real incentive →</a></td></tr>
+<tr><td><b>The binding constraints are physical, not financial</b></td><td>The deeper the map goes, the clearer it is that capital is the <i>easy</i> part. The AI build runs on a stack of <b>single-point physical chokepoints</b>, each in a different jurisdiction, each on a multi-year clock money can't compress: <b>Taiwan</b> (~95% of advanced chips + CoWoS packaging), <b>ASML/Zeiss</b> (EUV lithography), <b>Korea/Japan</b> (HBM + materials), <b>China</b> (rare earths/antimony/gallium), <b>Russia</b> (HALEU nuclear fuel + the Arctic), and the <b>power grid</b> (~127-week transformer lead times, sold-out turbines). Add the contested information layer — undersea cables and orbital ISR — and the picture is a $650B-a-year build betting that seven foreign chokepoints all stay open and cooperative at once.</td></tr>
 </tbody></table>
 
 <h2><span class=n>1</span>What we conclude, and how sure we are</h2>
@@ -149,20 +153,38 @@ dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33
 <tr><td>Allied intel &amp; strategic geography</td><td>The physical chokepoints the AI/intel economy runs on: <b>signals</b> (Pine Gap controls US spy-sats over ⅓ of the globe), <b>compute</b> (Korea/Japan <b>HBM</b> + Taiwan packaging — the allied memory chokepoint behind every Nvidia accelerator), <b>data</b> (Singapore's ~28 subsea cables vs Hong Kong's bifurcation into China's stack), and the <b>Arctic</b> frontier (Greenland/GIUK, NATO Arctic Sentry, Russia's Kola subs)</td></tr>
 <tr><td>Taiwan / TSMC — the silicon shield</td><td>The keystone: <b>~95% of advanced chips</b> + nearly all advanced <b>packaging (CoWoS)</b> on one island, under China gray-zone/<b>quarantine</b> pressure — the master physical single-point-of-failure the AI loop silently assumes stays open. And the honest read on the hedge: <b>Arizona is a fab island, not independence</b> — wafers still fly back to Taiwan for packaging, it runs behind the leading edge, and inputs still route through Japan (materials) + ASML (EUV). The build is a bet the Strait stays calm</td></tr>
 <tr><td>The chip-chokepoint war (two-sided)</td><td>Upstream of TSMC: the West controls the <b>equipment</b> (ASML's EUV monopoly + Zeiss optics + Japanese tools/materials; a reported remote <b>kill switch</b> on Taiwan's machines) and denies it to China; China controls the <b>materials</b> (gallium/germanium/antimony/heavy-REE; an extraterritorial 0.1% rule) and retaliates. Mutual deterrence. But it's <b>sticky, not permanent</b> — China's multi-track indigenous EUV (LDP, Tsinghua SSMB), Canon nanoimprint, and the deepest moat of all: <b>tacit know-how</b> espionage can't copy. The full 7-jurisdiction stack the AI loop assumes stays open at once</td></tr>
+<tr><td>Russia — energy, nuclear fuel &amp; the Arctic</td><td>The adversary the AI story underweights: Russia gates <b>HALEU</b> (~44% of enrichment — the SMR fuel the AI-power build needs; Rosatom is un-sanctioned), controls the <b>Northern Sea Route</b> + the only nuclear icebreaker fleet, and keeps oil revenue flowing via a <b>~100-vessel shadow fleet</b> to China/India. Sanctions re-routed the levers, they didn't close them</td></tr>
+<tr><td>The AI power &amp; grid bottleneck</td><td>The build is <b>power-constrained, not just capital-constrained</b>: ~$650B+ 2026 hyperscaler capex meets HV-transformer lead times of <b>~127 weeks (3–5 yr, shortage to 2029)</b>, sold-out gas turbines, multi-year interconnection queues, and Russia-gated nuclear fuel — so ~half of US datacenter projects risk delay. "Bring your own power" privatizes the energy chokepoint; idle GPUs waiting for power compound the depreciation trap</td></tr>
+<tr><td>The physical information layer (cables + space)</td><td>~99% of intercontinental data rides undersea <b>cables</b> being cut (Baltic, Taiwan, 15 at the Red Sea Sep-2025) by deniable shadow-fleet/anchor-drag — against a too-small, aging <b>repair</b> fleet; and the orbital <b>ISR/comms</b> layer is concentrating into one private actor (SpaceX <b>Starshield</b>/NRO). The data substrate the AI/intel economy assumes is itself a contested chokepoint</td></tr>
 </tbody></table>
+<p class=mut>The rows above are highlights, not the whole corpus. The complete set of <b>65 source-cited research blocks</b> — every one a readable on-site page — is grouped by theme below and in the <a href="research.html">research index</a>.</p>
 
-<h2><span class=n>4</span>Explore</h2>
+<h2><span class=n>4</span>Full coverage — every theme</h2>
+<p>The investigation spans nine domains. Each links to its blocks (data + write-ups) in the research index.</p>
+<div class=cards>
+  <a class=card href="research.html"><b>AI financial core</b><p>The machine-verified circular loop (Tarjan SCC, Z3, TLA+, Alloy): NVIDIA↔OpenAI↔Oracle↔CoreWeave↔Microsoft↔Amazon↔Anthropic, the $1.03T capital need, reflexive marks, and the depreciation/duration-mismatch trap.</p></a>
+  <a class=card href="research.html"><b>Markets, credit &amp; the self-marked machine</b><p>Bank HTM holes, private-credit "mark-to-myth," insurance/Bermuda, First Brands/Tricolor, the cross-sectional 91% common factor, futures-vs-physical commodities, and the gold lens.</p></a>
+  <a class=card href="research.html"><b>Macro &amp; data integrity</b><p>Jobs &amp; inflation disambiguated, the Fed-vs-bond-market thesis, the −911k benchmark, ALNRI rent-vs-CPI, gig labor, FDIC bank exposure, and official-statistics zero-trust.</p></a>
+  <a class=card href="research.html"><b>Semiconductor &amp; physical chokepoints</b><p>Taiwan/TSMC silicon shield + Arizona, the ASML/Zeiss equipment-vs-China-materials war, Korea/Japan HBM, critical minerals &amp; antimony, and the AI power/grid bottleneck.</p></a>
+  <a class=card href="research.html"><b>Geopolitics &amp; strategic geography</b><p>Contested resource states (Venezuela, Greenland, Argentina, Iran), Russia's energy/fuel/Arctic leverage, the allied intel nodes, and the undersea-cable + space/ISR layer.</p></a>
+  <a class=card href="research.html"><b>Crypto, regulation &amp; lawfare</b><p>Choke Point 2.0, SEC v. Ripple/Kraken/Binance, Tornado Cash/Samourai, Mt.Gox &amp; the exchanges/Asia-Gulf nexus, and the stablecoin→Treasury rail.</p></a>
+  <a class=card href="research.html"><b>Surveillance, telecom &amp; identity</b><p>Salt Typhoon/CALEA, Snowden &amp; Five Eyes, satellites/ISR, and the digital-ID convergence + orchestration ("the real incentive") with its 2025–26 breach record.</p></a>
+  <a class=card href="research.html"><b>Cyber-threat &amp; supply chain</b><p>The Shai-Hulud npm worm, Team PCP, the Scattered LAPSUS$ Hunters extortion, the UNC/DPRK attribution map (TraderTraitor, Bybit $1.5B), and the Nightmare-Eclipse grudge.</p></a>
+  <a class=card href="research.html"><b>Quantum, PQC &amp; influence</b><p>The quantum-equities split, the CRQC landscape, SEALSQ/WISeKey, the Tony Blair Institute / digital-ID bridge, and the broader influence/identity overlaps.</p></a>
+</div>
+
+<h2><span class=n>5</span>Explore</h2>
 <div class=cards>
   <a class=card href="dashboard.html"><b>Control dashboard</b><p>Every formal verdict, the circular core, the chokepoints, the gold lens, cross-layer connectors, bank exposure, and the primary-source list — over the live data.</p></a>
   <a class=card href="charts.html"><b>Charts</b><p>Jobs and inflation disambiguated over 10 years (sectoral, U-3 vs U-6, CPI vs PCE); the Fed's rate path vs the bond market; real FINRA TRACE corporate-credit breadth; and the <b>cross-sectional</b> analysis — dispersion, relative-value z-scores, and the 91% common factor.</p></a>
-  <a class=card href="research.html"><b>Research index</b><p>All 62 cited blocks, grouped by theme, each linking to its structured data and write-up.</p></a>
+  <a class=card href="research.html"><b>Research index</b><p>All 65 cited blocks, grouped by theme, each linking to its structured data and write-up.</p></a>
   <a class=card href="methodology.html"><b>Methodology</b><p>The build pipeline, the grading scale, the graph layers and proof-integrity check, the consistency tooling, and how to reproduce.</p></a>
   <a class=card href="glossary.html"><b>Glossary</b><p>Plain-language definitions of the technical terms used throughout — backwardation, SCC, OER, equity method, RPO, and more.</p></a>
   <a class=card href="globe.html"><b>Chokepoint globe</b><p>A rotatable globe of adversary chokepoints, supply responses, capital hubs, and dependency arcs.</p></a>
   <a class=card href="https://github.com/pq-cybarg/bubble-map"><b>Source &amp; proofs</b><p>Runnable models (Z3, TLA+, Alloy, graph). <code>bash run_all.sh</code> reproduces every result.</p></a>
 </div>
 
-<h2><span class=n>5</span>Add your signal</h2>
+<h2><span class=n>6</span>Add your signal</h2>
 <p class=mut>A transparent, server-less poll read client-side from the public GitHub API. To sign, react 👍 on the GitHub issue; to add testimony, comment. Every signature is public on GitHub — no backend, no data collection.</p>
 <div class=poll>
   <div class=counts>
@@ -175,7 +197,7 @@ dl.gloss dt{font-weight:600;margin-top:12px}dl.gloss dd{margin:2px 0 0;color:#33
   <p class=mut id=pollstatus style="margin-top:10px"></p>
 </div>
 
-<h2><span class=n>6</span>What this is, and is not</h2>
+<h2><span class=n>7</span>What this is, and is not</h2>
 <p>It <b>is</b> a cited inventory of how the AI, banking, credit, commodity, energy, defense, crypto, telecom, and identity webs connect — financial core machine-verified, the rest evidence-graded, with primary government, court, and exchange records cited throughout. It is <b>not</b> a claim of one cabal: the reading is recurring operators and recurring structures rebuilt in the least-regulated venue, with intent never inferred from adjacency. Reproduce everything with <code>bash run_all.sh</code>; fork it; extend it.</p>
 
 </div>

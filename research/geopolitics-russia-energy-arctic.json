@@ -1,0 +1,36 @@
+{
+ "metadata": {
+  "title": "Russia as energy, nuclear-fuel & Arctic chokepoint — shadow fleet, Rosatom/HALEU, and the Northern Sea Route",
+  "generated": "2026-06-11",
+  "status": "facts from CREA/EU/Rosatom/major-press; the 'sanctions forged a China-India energy axis' framing is labeled interpretation",
+  "frame": "The adversary the corpus underweighted: Russia holds three chokepoints the AI/defense economy touches - OIL/GAS (now routed to China/India via a sanctioned shadow fleet), NUCLEAR FUEL (Rosatom ~44% of global enrichment + the HALEU bottleneck for the SMRs the AI-power build needs), and the ARCTIC (Rosatom controls the Northern Sea Route + the only nuclear icebreaker fleet). Sanctions didn't close these - they re-routed them into a China/India axis. Overlay; excluded from the proofs. Connects to energy_web, power_adequacy (HALEU P2 UNSAT), geopolitics-allied-intel-nodes (Arctic), geopolitics-contested-resource-states (Iran shadow-fleet parallel), macro-ai-power-grid-bottleneck.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "oil_gas_shadow_fleet": {
+  "the_fleet": "Russia sustains war revenue via a 'shadow fleet' of unregistered/uninsured tankers selling discounted crude. Jan 2026: shadow-fleet exports ~14.32M tonnes of crude, CHINA the largest recipient while INDIA cut volumes sharply (US-India trade pressure). China took ~33.8% of all Russian exports in 2024 (~75% oil & gas). status: fact.",
+  "lng_caution": "India refused Russian LNG from the sanctioned Portovaya (Baltic) plant; Arctic LNG 2 is also sanctioned but Russia reopened its eastern NSR export corridor (the icebreaking carrier Christophe de Margerie ran the route in ~13 days, from 26 May). status: fact.",
+  "sanctions": "EU 19th package (23 Oct 2025) targeted Russian energy, third-country banks, and crypto providers; 2026 US action tightened the shadow-fleet net. The fleet adapts; the revenue persists. status: fact.",
+  "read": "sanctions converted Russia's energy from a Western market into a discounted China/India supply - the same shadow-fleet mechanism as Iran (geopolitics-contested-resource-states); the barrels still flow, just eastward and cheaper."
+ },
+ "nuclear_fuel_rosatom": {
+  "haleu_chokepoint": "Russia (Rosatom/Tenex) is ~44% of global uranium ENRICHMENT and the dominant source of HALEU - the high-assay low-enriched fuel nearly every Western advanced/SMR reactor design needs. The corpus's power_adequacy P2 proves US fuel independence infeasible to ~2029; Centrus (Piketon) is the thin domestic response. status: fact.",
+  "leverage": "Rosatom is largely UN-sanctioned (Western reactors depend on its fuel), giving Russia a quiet chokepoint over the nuclear leg of the AI-power build (the SMR/nuclear-restart wave at Three Mile Island etc.). status: fact + interpretation.",
+  "read": "the AI build's 'go nuclear for clean firm power' answer runs into a Russian fuel chokepoint - money can't buy past it on the datacenter timeline."
+ },
+ "arctic": {
+  "nsr_control": "Rosatom has near-total control of the Northern Sea Route and operates the world's only fleet of nuclear-powered ICEBREAKERS. Oct 2025: Rosatom + China's NDRC signed an NSR action plan; Russia invited India to build (non-nuclear) icebreakers and expand NSR LNG logistics to Indian ports. status: fact.",
+  "shadow_fleet_arctic": "The NSR is becoming a shadow-fleet corridor: ~100 sanctioned 'dark fleet' vessels used it in 2025, up from ~13 in 2024 - a ~7x jump. status: fact.",
+  "militarization": "Russia rebuilt Kola Peninsula / Novaya Zemlya bases + a modernized submarine fleet; NATO responded with Arctic Sentry (geopolitics-allied-intel-nodes). The Arctic fuses energy + fuel + shipping + military + the GIUK/undersea-cable layer. status: fact."
+ },
+ "the_pattern": "Russia is the chokepoint holder the AI-capex story rarely names: it gates NUCLEAR FUEL (HALEU - the clean-firm-power answer), holds an ARCTIC route + icebreaker monopoly, and keeps its energy revenue flowing via a shadow fleet now serving China/India. Sanctions did not remove these levers; they reorganized the buyers. Combined with China's materials leverage (geopolitics-chip-chokepoint-war) and the Iran oil contest, it completes the adversary side of the physical-chokepoint map: the West controls equipment + capital; the adversaries control fuel, materials, and routes.",
+ "sources": [
+  {"name": "CREA - March 2026 monthly analysis of Russian fossil-fuel exports & sanctions", "url": "https://energyandcleanair.org/march-2026-monthly-analysis-of-russian-fossil-fuel-exports-and-sanctions/"},
+  {"name": "United24 - China boosts shadow-fleet oil imports from Russia as India cuts volumes", "url": "https://united24media.com/latest-news/china-boosts-shadow-fleet-oil-imports-from-russia-as-india-cuts-volumes-15992"},
+  {"name": "Consilium (EU) - 19th sanctions package targets Russian energy, banks, crypto (Oct 2025)", "url": "https://www.consilium.europa.eu/en/press/press-releases/2025/10/23/19th-package-of-sanctions-against-russia-eu-targets-russian-energy-third-country-banks-and-crypto-providers/"},
+  {"name": "The Arctic Institute - Sanction-proof? Russia's Arctic ambitions and the China factor", "url": "https://www.thearcticinstitute.org/sanction-proof-russias-arctic-ambitions-china-factor/"},
+  {"name": "gCaptain - Arctic shipping lane sees surge in shadow-fleet traffic (~100 sanctioned vessels)", "url": "https://gcaptain.com/arctic-shipping-lane-sees-surge-in-shadow-fleet-traffic-totaling-100-sanctioned-vessels/"},
+  {"name": "gCaptain - Russia reactivates Arctic LNG route to Asia (Christophe de Margerie NSR transit)", "url": "https://gcaptain.com/russia-reactivates-arctic-lng-route-to-asia-as-icebreaking-carrier-completes-rare-early-summer-transit/"},
+  {"name": "Modern Diplomacy - How Rosatom is turning Arctic geopolitics into infrastructure", "url": "https://moderndiplomacy.eu/2025/10/24/how-rosatom-is-turning-arctic-geopolitics-into-infrastructure/"}
+ ],
+ "edges": []
+}

@@ -15,12 +15,12 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 33 files
-- **Google** — 27 files
-- **OpenAI** — 22 files
-- **Oracle** — 20 files
-- **Amazon** — 19 files
-- **Microsoft** — 15 files
+- **Meta** — 34 files
+- **Google** — 28 files
+- **OpenAI** — 23 files
+- **Oracle** — 21 files
+- **Amazon** — 20 files
+- **Microsoft** — 16 files
 - **Anthropic** — 15 files
 - **Stargate** — 13 files
 - **NVIDIA** — 13 files
@@ -31,8 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `geopolitics-chip-chokepoint-war.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `geopolitics-cables-space-layer.json` — related files by shared entities (verify cross-refs exist)
+- fin-spacex-spcx.json: 2 shared entities
+- energy-power.json: 1 shared entities
+- spec-sec-filings-primary.json: 1 shared entities
+- spec-telecom-satellite.json: 1 shared entities
+- spec-unwind-timing.json: 1 shared entities
 - fin-hedera-connections.json: 1 shared entities
-- spec-tornado-samourai.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
-- spec-disclosures-surveillance.json: 1 shared entities
+- macro-pqc-chips.json: 1 shared entities
+- temporal-bridges.json: 1 shared entities

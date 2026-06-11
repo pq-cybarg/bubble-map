@@ -1,0 +1,27 @@
+{
+ "metadata": {
+  "title": "The AI power & grid bottleneck — transformers, turbines, interconnection, and the fuel behind it",
+  "generated": "2026-06-11",
+  "status": "facts from utility/industry/press; the 'power, not capital, is the binding constraint' framing is labeled interpretation (and aligns with power_adequacy P1)",
+  "frame": "The AI build is power-constrained, not just capital-constrained. ~$650B+ of hyperscaler 2026 capex collides with multi-YEAR lead times for the physical grid: high-voltage transformers, gas turbines, interconnection, and the fuel (gas + Russian-gated HALEU). The binding constraints are physical and on a 3-5 year clock that does not match the 2026-2027 datacenter schedule. Overlay; excluded from the proofs but mirrors the machine-proven power_adequacy P1 (AI power demand > supply through 2028). Connects to energy_web, power_adequacy, fin-ai-depreciation-debttrap (the capex), geopolitics-russia-energy-arctic (HALEU), fin-coreweave-oracle.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "the_collision": "Alphabet/Amazon/Meta/Microsoft guided to >$650B of AI-infrastructure capex in 2026 alone - but nearly HALF of US data-center projects may be delayed or cancelled due to grid + component bottlenecks. The money is not the binding constraint; the physical grid is. status: fact (capex + delay warnings) + interpretation (the 'binding constraint' read).",
+ "the_bottlenecks": {
+  "transformers": "High-voltage transformer lead times went from ~50 weeks to ~127 weeks (some critical units 3-4 years); HV substations 3-5 years; the global HV-transformer shortage is expected to last to at least 2029. Domestic supply is insufficient, so developers IMPORT - including from China - adding a geopolitical-supply risk to the grid itself. status: fact.",
+  "gas_turbines": "Large gas turbines (the 'big three': GE Vernova, Siemens Energy, Mitsubishi) are effectively sold out for years - turbine backlogs push new firm gas capacity toward ~2028-2029, the same window as the datacenter demand. status: fact (directional; exact slots vary).",
+  "interconnection": "US interconnection queues delay projects for years; utilities warn of regional capacity shortages as early as 2026. status: fact.",
+  "fuel": "The 'clean firm power' answers both have chokepoints: nuclear/SMR fuel (HALEU) is ~Russia-gated (geopolitics-russia-energy-arctic; power_adequacy P2 UNSAT to ~2029), and gas needs turbines + pipelines that are themselves backlogged. status: fact."
+ },
+ "the_workaround": "Because the grid can't connect them in time, hyperscalers go 'BRING YOUR OWN POWER' (BYOP) - behind-the-meter on-site generation (gas turbines, fuel cells, nuclear restarts like Three Mile Island, SMRs). This bypasses the HV-transformer + interconnection bottleneck but (a) still needs turbines/fuel that are backlogged/gated, and (b) moves the AI build off the regulated grid into self-supplied power - privatizing the energy chokepoint. status: fact + interpretation.",
+ "why_it_matters": "(1) It is the physical mirror of the financial thesis: the $650B+ capex and the $1.4T of OpenAI compute commitments (fin-microsoft-openai) assume power that is on a 3-5 year delivery clock the 2026-2027 buildout cannot meet - so a large share of announced capacity is, like the marks, a promise ahead of deliverable substance. (2) It compounds the DEPRECIATION trap (fin-ai-depreciation-debttrap): GPUs that age in ~2-3 years sitting idle waiting for power they can't get is stranded, fast-depreciating capital. (3) It hands leverage to whoever controls turbines (a few firms), transformers (a strained global supply incl. China), and fuel (Russia/HALEU, gas) - the energy chokepoint behind the compute chokepoint.",
+ "sources": [
+  {"name": "Digital Watch - Power hardware shortages delaying AI datacenter expansion despite record investment", "url": "https://dig.watch/updates/power-hardware-shortages-are-delaying-ai-data-centre-expansion-despite-record-investment"},
+  {"name": "Energy News Beat - More than half of data centers may be delayed due to lack of transformers/equipment", "url": "https://energynewsbeat.co/ai/more-than-half-of-the-data-centers-may-be-delayed-due-to-lack-of-transformers-and-electrical-equipment-2/"},
+  {"name": "pv magazine USA - US transformer market: lead times extend to four years", "url": "https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/"},
+  {"name": "Tech Fund - Power bottlenecks & the AI data center", "url": "https://www.techinvestments.io/p/power-bottlenecks-and-the-ai-data"},
+  {"name": "EnkiAI - Data center power crisis 2026: the grid bottleneck", "url": "https://enkiai.com/data-center/data-center-power-crisis-2026-the-grid-bottleneck/"},
+  {"name": "NPC Electric - Power transformers: the hidden bottleneck in AI compute expansion", "url": "https://www.npcelectric.com/news/power-transformers-the-hidden-bottleneck-in-ai-compute-expansion-and-data-center-power-demand.html"}
+ ],
+ "edges": []
+}

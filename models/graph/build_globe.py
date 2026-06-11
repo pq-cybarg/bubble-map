@@ -21,12 +21,14 @@ POINTS=[
  # --- adversary / physical chokepoints (red) ---
  ["China (REE + antimony)",39.9,116.4,"choke","~90% of rare-earth processing + ~90% of ANTIMONY/gallium/germanium/graphite; extraterritorial export controls (0.1% rule, Oct-2025; suspended to Nov-2026). The materials counter-leverage to Western equipment controls (geopolitics-chip-chokepoint-war)."],
  ["Shenzhen (China indigenous EUV)",22.54,114.06,"choke","Huawei/SMEE/SiCarrier LDP-EUV (~100-150W mid-2025) + Tsinghua SSMB accelerator path - the whole-of-nation race to break the ASML chokepoint; SMIC 7nm via DUV multipatterning. Reported/projected, contested."],
- ["Russia (U enrichment)",55.75,37.6,"choke","~44% of global uranium enrichment; the HALEU chokepoint for SMRs. power_adequacy P2 UNSAT to ~2029."],
+ ["Russia (enrichment + Arctic + shadow fleet)",55.75,37.6,"choke","~44% of global uranium enrichment (HALEU chokepoint for SMRs, P2 UNSAT to ~2029); Rosatom controls the Northern Sea Route + the only nuclear icebreaker fleet; oil to China/India via a ~100-vessel shadow fleet (geopolitics-russia-energy-arctic)."],
  ["Kazakhstan (U mining)",51.1,71.4,"choke","Kazatomprom ~38-40% of global uranium mining; feeds Russian processing."],
  ["Taiwan (TSMC silicon shield)",25.0,121.5,"choke","~95% of advanced chips + nearly all advanced packaging (CoWoS); Taipei keeps the bleeding edge home; under China gray-zone/quarantine pressure. The master compute chokepoint (geopolitics-taiwan-silicon-shield)."],
  ["DR Congo (cobalt)",-4.3,15.3,"choke","~70% of cobalt (battery/grid metal); China-controlled offtake."],
  ["Strait of Hormuz",26.57,56.25,"choke","~20% of world oil/LNG transits here; Iran moved to BLOCK it in the 2026 war -> a global fuel crisis (geopolitics-contested-resource-states)."],
  ["Strait of Malacca",1.43,102.9,"choke","Chip, fuel and rare-earth shipping chokepoint between the Indian and Pacific oceans."],
+ ["Bab el-Mandeb (Red Sea cables)",12.6,43.4,"choke","~15 undersea cables severed Sep-2025 -> ME/South-Asia outages; the cable+shipping chokepoint to Suez (geopolitics-cables-space-layer)."],
+ ["Baltic Sea (cable cuts)",59.5,20.0,"threat","~10 subsea cables cut since 2022 (7 in Nov24-Jan25; Yi Peng 3 from Ust-Luga); deniable anchor-drag sabotage; NATO 'Baltic Sentry' response."],
  # --- contested resource states (burnt orange) ---
  ["Venezuela (oil/gold seizure)",10.5,-66.9,"frontier","US captured Maduro Jan-2026 (Op. Absolute Resolve); largest oil reserves + gold + REE; Trump: US oil cos 'go in'. Resource access by FORCE."],
  ["Argentina (Lithium Triangle)",-24.2,-66.3,"frontier","~20% of global lithium + Vaca Muerta; US $40B backstop + RIGI to pull it from China - but Ganfeng keeps a Jujuy stake. Resource access by MONEY."],

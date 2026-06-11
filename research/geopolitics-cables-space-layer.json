@@ -1,0 +1,34 @@
+{
+ "metadata": {
+  "title": "The physical information layer — undersea cables (sabotage + repair shortage) and the space/ISR layer (Starshield/NRO concentration)",
+  "generated": "2026-06-11",
+  "status": "facts from CSIS/Recorded Future/NATO/NPR/major-press; attribution of specific cable cuts is contested (officials split sabotage vs accident); the 'concentration into one private actor' read is interpretation",
+  "frame": "The data chokepoint made physical and kinetic. ~99% of intercontinental data rides undersea CABLES that are being cut (Baltic, Taiwan, Red Sea) by gray-zone/shadow-fleet vessels with plausible deniability, while the repair fleet is aging and too small; and the orbital ISR/comms layer is concentrating into ONE private actor (SpaceX Starshield/NRO). Both are contested, under-defended chokepoints on the information substrate the AI/intel economy runs on. Overlay; excluded from the proofs. Extends spec-telecom-satellite; connects to geopolitics-allied-intel-nodes (Singapore/HK cables), geopolitics-russia-energy-arctic + contested-resource-states (shadow fleet), spec-disclosures-surveillance.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "undersea_cables": {
+  "the_cuts": "~10 subsea cables cut in the Baltic since 2022, 7 of them Nov-2024 to Jan-2025 (e.g., BCS East-West Sweden-Lithuania and C-Lion1 Finland-Germany within 24h; the Chinese vessel Yi Peng 3 departing the Russian port Ust-Luga is a prime suspect). Around Taiwan: 5 incidents / 5 cable damages 2024-25; Taiwan's coast guard blacklists 96 China-linked vessels (flags of convenience) across 24 cables. ~6 Sep 2025: 15 cables severed at Bab el-Mandeb (Red Sea) -> ME/South-Asia outages. status: fact (the incidents).",
+  "attribution_ambiguity": "Anchor-dragging is a low-sophistication, deniable tactic; US/EU officials have called some Baltic damage ACCIDENTAL rather than sabotage. The deniability IS the weapon. status: fact + contested (intent).",
+  "purpose_built": "Beyond improvised anchor-dragging, China is developing PURPOSE-BUILT cable-cutting capability (a patented compact deep-sea cable-cutting device; CSIS flagged a new cutting ship) - moving from gray-zone to wartime capability. status: fact (the capability) + contested (intent to use).",
+  "repair_shortfall": "The chokepoint is the REPAIR layer: the global cable-repair fleet is aging (~1/4 of ships >40 years old) and too small (most ships lay new cable, not repair); Asia-Pacific repairs take ~30 days vs ~15 in North America (permitting). Cutting is cheap; fixing is slow and capacity-constrained. status: fact.",
+  "defense": "NATO launched 'Baltic Sentry' (14 Jan 2025) - frigates, maritime patrol aircraft, naval drones, surveillance - to deter cable attacks. status: fact."
+ },
+ "space_isr_layer": {
+  "starshield": "SpaceX Starshield (a Starlink-derived military bus) builds the NRO's PROLIFERATED constellation - target tracking, optical/radio reconnaissance, missile warning. >=183 Starshield satellites launched by 2025; a $1.8B classified contract (2021, revealed 2023) for hundreds of spy satellites; operational from May 2024 (NROL-146); launches planned through 2029. status: fact.",
+  "concentration": "US military space ISR + comms is concentrating into ONE private actor (SpaceX) - the same single-point-of-failure pattern as TSMC (compute) and ASML (litho), now for orbital intelligence and the launch cadence that sustains it. status: fact (the concentration) + interpretation (the risk).",
+  "anomaly": "Oct 2025 (NPR): Starshield satellites were found emitting an unexplained DOWNLINK on uplink frequencies - counter to ITU norms - surfaced by amateur astronomers; capability/oversight opacity. status: contested (reported anomaly).",
+  "read": "the orbital layer mirrors the cable layer: a critical, contested information chokepoint that is increasingly concentrated - here into a private firm whose owner also sits across the AI core (xAI/Colossus), launch, and satellite comms."
+ },
+ "the_pattern": "The information substrate the AI/intel economy assumes is a given - cables carrying ~99% of intercontinental data, and the orbital ISR/comms layer - is in fact a set of contested, under-defended, increasingly CONCENTRATED chokepoints. Cables: cheap deniable sabotage by shadow-fleet/anchor-drag vs a too-small aging repair fleet. Space: ISR + comms funneling into one private actor (SpaceX). Same lesson as Taiwan/ASML/HBM/HALEU, applied to the data layer: the AI build silently assumes the bits keep flowing.",
+ "sources": [
+  {"name": "Atlantic Council - How the Baltic Sea nations have tackled suspicious cable cuts (Baltic Sentry)", "url": "https://www.atlanticcouncil.org/in-depth-research-reports/issue-brief/how-the-baltic-sea-nations-have-tackled-suspicious-cable-cuts/"},
+  {"name": "Recorded Future - Submarine cable security at risk amid geopolitical tensions & limited repair", "url": "https://www.recordedfuture.com/research/submarine-cables-face-increasing-threats"},
+  {"name": "CSIS - China's underwater power play: the PRC's new subsea cable-cutting ship", "url": "https://www.csis.org/analysis/chinas-underwater-power-play-prcs-new-subsea-cable-cutting-ship-spooks-international"},
+  {"name": "Tom's Hardware - Taiwan monitors 96 blacklisted China-linked boats around 24 undersea cables", "url": "https://www.tomshardware.com/networking/taiwan-increases-undersea-cable-protection-patrols-closely-monitoring-96-blacklisted-china-linked-boats"},
+  {"name": "DCD - The cable ship capacity crunch (repair-fleet shortage)", "url": "https://www.datacenterdynamics.com/en/analysis/the-cable-ship-capacity-crunch/"},
+  {"name": "Washington Post - Officials say accidents, not Russian sabotage, behind some Baltic cable damage", "url": "https://www.washingtonpost.com/world/2025/01/19/russia-baltic-undersea-cables-accidents-sabotage/"},
+  {"name": "Wikipedia - SpaceX Starshield (NRO proliferated constellation)", "url": "https://en.wikipedia.org/wiki/SpaceX_Starshield"},
+  {"name": "NPR - A classified network of SpaceX satellites is emitting a mysterious signal", "url": "https://www.npr.org/2025/10/17/nx-s1-5575254/spacex-starshield-starlink-signal"}
+ ],
+ "edges": []
+}

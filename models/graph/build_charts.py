@@ -539,7 +539,11 @@ NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11p
 CSS=("body{background:#faf8f2;color:#1c1b19;font:17px/1.7 Georgia,'Iowan Old Style','Palatino Linotype',serif;margin:0;padding:0 0 60px}"
      "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:32px;margin:26px 0 4px}"
      "h2{color:#7b2d26;font-family:Georgia,serif;font-weight:600;font-size:21px;margin:34px 0 2px;border-bottom:1px solid #e4ddcc;padding-bottom:6px}"
-     ".cap{color:#33312c;font-size:15px;margin:6px 0 4px}.src{color:#6b665d;font-size:13px}a{color:#1f4e79}code{background:#f2ede0;padding:1px 5px;border-radius:3px;font-size:13px;color:#6b3b16}")
+     ".cap{color:#33312c;font-size:15px;margin:6px 0 4px}.src{color:#6b665d;font-size:13px}a{color:#1f4e79}code{background:#f2ede0;padding:1px 5px;border-radius:3px;font-size:13px;color:#6b3b16}"
+     "h3{font-family:Georgia,serif;font-weight:600;font-size:18px;margin:22px 0 4px;color:#33312c}"
+     "table{border-collapse:separate;border-spacing:0;width:100%;margin:16px 0;font-size:14px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;border:1px solid #e4ddcc;border-radius:8px;overflow:hidden}"
+     "th,td{border-bottom:1px solid #e4ddcc;padding:10px 13px;text-align:left;vertical-align:top;line-height:1.5}"
+     "td+td,th+th{border-left:1px solid #e4ddcc}tr:last-child td{border-bottom:none}thead th{background:#f3eedf}tbody tr:nth-child(even){background:#fbf9f3}")
 body=[f'<h1>Charts — jobs, inflation, and the Fed vs the bond market</h1>',
  '<p class=cap>Bar and line charts over the last decade. <b>Thesis tested here:</b> the Fed is steering to the <b>bond market</b> (the 2-year yield), not to its stated dual mandate of 2% inflation and full employment — and a single "jobs number" / "inflation number" hides opposite sectoral and labor-slack trends.</p>',
  '<p class=src>All series are <b>annual</b>, compiled from public data (FRED / BLS / US Treasury / BIS / BOJ), <b>rounded</b> to the precision shown; FRED/BLS series IDs are noted under each chart. "~" marks an estimate or partial year. Verify any value at the cited series. Companion data + sourcing: <a href="https://github.com/pq-cybarg/bubble-map/blob/main/research/macro-jobs-inflation-fed.md">macro-jobs-inflation-fed</a>.</p>']
