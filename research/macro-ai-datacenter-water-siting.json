@@ -1,0 +1,41 @@
+{
+ "metadata": {
+  "title": "The datacenter water, siting & ratepayer chokepoints — and the orbital-datacenter escape",
+  "generated": "2026-06-11",
+  "status": "facts from IEA/Dallas-Fed/Data-Center-Watch/press; the orbital-datacenter 'escape' is graded weak/speculative; the 'public consent is the new binding constraint' read is interpretation",
+  "frame": "Beyond power/transformers (macro-ai-power-grid-bottleneck), the AI build hits three more physical/social constraints money can't simply buy past: WATER (built in drought zones), COMMUNITY CONSENT (moratoriums, organized opposition), and RATEPAYER backlash (rising bills -> politics). The proposed escape - SpaceX/orbital datacenters & AI satellites - is graded as a far-future moonshot, not a near-term answer. Overlay; excluded from the proofs. Connects to macro-ai-power-grid-bottleneck, fin-ai-depreciation-debttrap, geopolitics-cables-space-layer (the space leg).",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "water": {
+  "scale": "US AI servers are projected to consume ~200-300 BILLION gallons of water annually (2024-2030), mostly for evaporative cooling. Global datacenter electricity is set to more than double to ~1,000 TWh by 2026 (IEA). status: fact.",
+  "drought_siting": "~2/3 of the 809 US datacenters planned are slated for land that has been in drought over the past year; ~517 are set for drought-classified areas - building water-hungry cooling exactly where water is scarcest. status: fact.",
+  "mitigation": "Closed-loop / air cooling cuts water (Microsoft claims new designs use 'as little as a restaurant'), but trades water for MORE power - shifting load onto the grid bottleneck. status: fact + contested (vendor claims)."
+ },
+ "community_consent": {
+  "blocked_delayed": "~$18B of datacenter projects BLOCKED and ~$46B DELAYED over the last two years amid local opposition; >=142 activist groups across 24 states organizing against datacenters. status: fact.",
+  "moratoria": "Apr 2026: Maine's legislature approved the first US STATEWIDE moratorium on new large datacenters (>20MW), effective through Oct 2027; many local/state laws in progress. status: fact.",
+  "class_pattern": "The poorest neighborhoods resist at ~5x the rate of the wealthiest (19.0% vs 3.8%) - the burden lands on those least able to oppose. status: fact.",
+  "read": "'Public consent' has become a real, volatile siting constraint - a social chokepoint on top of the physical ones; even a grassroots NIMBY revolt in Republican strongholds. status: interpretation."
+ },
+ "ratepayer_backlash": {
+  "bills": "Dallas Fed: with datacenter demand doubling in ~5 years, wholesale power prices could rise up to ~50%; reported cases (a Virginia resident's bill jumping from ~$100 to $281 in a month) are fueling a ratepayer backlash. status: fact.",
+  "policy": "States are moving to make datacenters pay their grid-cost share (special tariffs, cost-allocation rules) - 'private compute, public burden.' The datacenter boom is now showing up in PCE-inflation estimates. status: fact.",
+  "read": "rising bills turn an infrastructure story into a POLITICAL one - the cost of the AI build is being socialized onto households, which creates the constituency to constrain it. status: interpretation."
+ },
+ "orbital_datacenter_escape": {
+  "the_pitch": "The proposed escape from terrestrial power/water/siting limits: ORBITAL datacenters + AI satellites - continuous solar power, radiative cooling to space, no land/water/NIMBY. SpaceX is pushing this (Starlink/Starship-enabled compute in orbit; AI-on-satellite for onboard processing), alongside startups (e.g., Starcloud) and others (Google 'Project Suncatcher'-type concepts). status: fact (the proposals exist).",
+  "the_physics": "Major barriers make it a moonshot, not a near-term answer: heat REJECTION in vacuum is hard (no air/water - only radiators), radiation hardening, latency, launch mass/cost, and on-orbit servicing of fast-depreciating GPUs. It is graded WEAK/SPECULATIVE as a solution to the 2026-2030 build. status: weak (speculative).",
+  "tie_in": "It connects the power/water bottleneck to the space layer (geopolitics-cables-space-layer) and to the SAME concentrated actor (SpaceX) that holds launch + Starshield ISR - extending the single-actor concentration risk to orbital compute. status: interpretation."
+ },
+ "why_it_matters": "Stacked with the power/grid block, this completes the PHYSICAL-constraint picture: the AI build is gated not only by chips, transformers, turbines and fuel, but by WATER (in drought zones), COMMUNITY CONSENT (moratoria), and HOUSEHOLD bills (politics). These are exactly the frictions that turn announced capacity into delayed/cancelled capacity - the supply side of the 'promises > deliverable substance' defect, and another way debt-financed, fast-depreciating GPUs end up stranded (fin-ai-depreciation-debttrap). The orbital escape is the tell of how binding the terrestrial limits feel - serious actors are pitching space to get around them.",
+ "sources": [
+  {"name": "Tom's Hardware - Most new US AI datacenters are being built in drought zones (2/3 of 809)", "url": "https://www.tomshardware.com/tech-industry/most-new-us-ai-data-centers-are-going-up-on-drought-land"},
+  {"name": "Data Center Watch - $64B of datacenter projects blocked or delayed amid local opposition", "url": "https://www.datacenterwatch.org/report"},
+  {"name": "Data Center Knowledge - Maine vetoes... (statewide datacenter moratorium pressure)", "url": "https://www.datacenterknowledge.com/regulations/maine-vetoes-data-center-moratorium-but-pressure-continues"},
+  {"name": "Dallas Fed - Data center boom expected to raise electricity component of PCE inflation", "url": "https://www.dallasfed.org/research/economics/2026/0305-kay-datacenters"},
+  {"name": "CNBC - Who is really footing the AI energy bill? Ratepayer protection debate", "url": "https://www.cnbc.com/2026/03/13/ai-data-centers-electricity-prices-backlash-ratepayer-protection.html"},
+  {"name": "Tom's Hardware - Microsoft closed-loop cooling: new datacenters use as little water as a restaurant", "url": "https://www.tomshardware.com/tech-industry/big-tech/microsoft-ceo-says-new-ai-data-centers-use-as-little-water-annually-as-a-restaurant-closed-loop-cooling-system-aims-to-slash-consumption-from-millions-of-gallons-as-ai-infrastructure-faces-mounting-environmental-scrutiny"},
+  {"name": "EESI - Data centers and water consumption", "url": "https://www.eesi.org/articles/view/data-centers-and-water-consumption"}
+ ],
+ "edges": []
+}

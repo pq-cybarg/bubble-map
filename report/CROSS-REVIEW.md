@@ -16,27 +16,27 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 34 files
-- **Google** — 28 files
-- **OpenAI** — 23 files
+- **Google** — 29 files
+- **OpenAI** — 24 files
 - **Oracle** — 21 files
 - **Amazon** — 20 files
-- **Microsoft** — 16 files
+- **Microsoft** — 18 files
 - **Anthropic** — 15 files
+- **NVIDIA** — 14 files
 - **Stargate** — 13 files
-- **NVIDIA** — 13 files
+- **SpaceX** — 13 files
 - **Chainlink** — 12 files
-- **SpaceX** — 12 files
 - **FDIC** — 12 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `geopolitics-defense-industrial-base.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 5 shared entities
-- spec-network-overlay.json: 4 shared entities
-- digitalid-corporate.json: 3 shared entities
-- defense-rare-earth.json: 3 shared entities
+## Newest file `macro-ai-datacenter-water-siting.json` — related files by shared entities (verify cross-refs exist)
+- sec-filings.json: 3 shared entities
+- spec-sec-filings-primary.json: 3 shared entities
+- energy-power.json: 3 shared entities
+- fin-sealsq-wisekey-global.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
 - fin-hedera-connections.json: 2 shared entities
-- spec-disclosures-surveillance.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
+- spec-unwind-timing.json: 2 shared entities
+- fin-spacex-spcx.json: 2 shared entities
