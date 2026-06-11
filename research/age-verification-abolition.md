@@ -70,6 +70,15 @@ the system surveils adults, endangers children, and fails at its goal. (Grade: i
 Don't build a better age gate. **Argue the category out of existence** — it cannot be made safe, it
 cannot be made to work, and the "private" version is the trojan horse. Optimize *opposition*, not the lock.
 
+## Why the mandate keeps coming anyway *(added 2026-06-11)*
+The futility case explains why age verification *can't work*; it doesn't explain why it keeps being
+mandated. That "why" is the control-rail incentive in [[digitalid-orchestration-real-incentive]]: age
+verification is the **lever that de-anonymizes speech and money** under an unbeatable child-protection
+frame — one track of the converging identity + programmable-money stack in
+[[digitalid-worldcoin-eid-convergence]] (Worldcoin → eIDAS wallets → Digital Euro → Chat Control's
+age-verification pivot → the UK Online Safety Act). Read together: this file shows the gate is *futile
+and harmful*; the orchestration block shows *who benefits from building it anyway and why they can't say so*.
+
 **Sources:** EFF and privacy-research consensus on age verification; this repo's `digitalid-regulatory.json`,
 `digitalid-corporate.json`, `influence-meta-childsafety.json`, `influence-tbi-policy.json`,
 `influence-ad-censorship.json`; formal: `models/z3/ageverif_futility.py`.
