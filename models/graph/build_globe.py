@@ -56,8 +56,8 @@ POINTS=[
  ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the machine-verified circular core (11-firm robust SCC)."],
  ["Washington DC (DoD/Fed)",38.9,-77.0,"capital","$1T DoD budget; the Fed (no feasible single rate, F1-F3 UNSAT); HFSC. Arsenal depleted by Ukraine + the 2026 Iran war; rebuild gated by China's REE/antimony (no F-35s/missiles without them) - geopolitics-defense-industrial-base."],
  ["New York (Wall St)",40.7,-74.0,"capital","BlackRock/Apollo/Blackstone - private credit + USDC reserves; the private-credit mark machine."],
- ["Abu Dhabi (MGX)",24.45,54.38,"capital","MGX sovereign capital -> OpenAI/Anthropic/xAI/Stargate; the Gulf inflow that keeps the tap open."],
- ["Riyadh (PIF)",24.7,46.7,"capital","Public Investment Fund - Gulf capital into the AI loop."],
+ ["Abu Dhabi (MGX/G42)",24.45,54.38,"capital","MGX (~>$100B AUM, ~$10B/yr) backs ALL THREE labs (OpenAI/Anthropic $380B/xAI) + Stargate UAE (1GW, G42 60%); G42 divested China for chip access (IGAA/RTE). The marginal external capital the proofs require (fin-gulf-sovereign-ai-capital)."],
+ ["Riyadh (PIF/HUMAIN)",24.7,46.7,"capital","PIF $100B 'Project Transcendence' + HUMAIN (1.9->6.6GW, Nvidia/Qualcomm); the intra-Gulf AI arms race vs UAE. Petro-sovereign patient capital backstopping the bubble."],
  ["Tokyo (SoftBank/SBI)",35.68,139.69,"capital","SoftBank->OpenAI/Stargate/Arm; SBI ~9% of Ripple. Also the yen-carry source (JGB exit)."],
  # --- datacenters / power (amber) ---
  ["Abilene TX (Stargate)",32.45,-99.73,"datacenter","Stargate flagship AI datacenter (OpenAI/Oracle/SoftBank SPV)."],
@@ -67,6 +67,7 @@ POINTS=[
  ["Oracle (Abilene/Stargate cluster)",32.5,-99.7,"datacenter","Oracle's ~$523B RPO backlog is largely promised AI cloud capacity (financed by partner debt)."],
  ["Meta Hyperion (Richland LA)",32.45,-91.76,"datacenter","Meta's multi-GW Hyperion datacenter build - the hyperscaler capex arms race."],
  ["New Mexico (DC build)",34.4,-106.0,"datacenter","Greenfield AI datacenter capacity tied to the Stargate/partner expansion."],
+ ["Stargate UAE (Abu Dhabi)",24.43,54.64,"datacenter","1GW G42+OpenAI+Oracle+Nvidia(GB300)+Cisco+SoftBank, ~$30B, first 200MW 2026 - the US Stargate SPV exported to a petro-sovereign (Gulf capital + US chips/models/cloud, walled off from China)."],
  # --- settlement / token rails (teal) ---
  ["Tether (settlement)",46.0,8.96,"settlement","Tether >$100B reserves (> some sovereigns); GENIUS Act routes stablecoin reserves into T-bills - the legislated Treasury-demand rail."],
  ["Hedera Council (DLT)",38.9,-77.1,"settlement","34-member governing council (Google, IBM overlaps); SEALCOIN bridge - the tokenized-settlement overlay."],
