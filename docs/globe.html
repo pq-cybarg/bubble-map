@@ -76,7 +76,8 @@ function openPopup(d,x,y){
  div.style.left=Math.max(6,Math.min(x,stage.clientWidth-294))+'px';
  div.style.top=Math.max(6,Math.min(y,stage.clientHeight-120))+'px';
  const bl=blocks.length?blocks.map(b=>'<a href="r-'+b+'.html">'+b+'</a>').join(' &middot; '):'<span style="color:#6b665d">—</span>';
- const pl=persons.length?persons.map(p=>'<a href="persons.html">'+p+'</a>').join(', '):'';
+ const pslug=s=>'p-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+ const pl=persons.length?persons.map(p=>'<a href="persons.html#'+pslug(p)+'">'+p+'</a>').join(', '):'';
  div.innerHTML='<div class=ph><span>'+name+'</span><span class=pc>&times;</span></div>'
   +'<div class=pb><div class=ty>'+type+'</div>'+note
   +(pl?'<div class=k>Key person</div><div>'+pl+'</div>':'')

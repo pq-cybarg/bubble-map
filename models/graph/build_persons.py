@@ -6,9 +6,10 @@ worldview, decision/risk profile, track record, vulnerabilities/levers, relation
 confidence) that expands inline. Search + domain-filter chips. Self-contained HTML (data embedded),
 light academic theme, shared site nav. Writes docs/persons.html and report/PERSONS.html.
 """
-import json, os, html
+import json, os, html, re
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOCS=os.path.join(ROOT,"docs"); REP=os.path.join(ROOT,"report")
+def slug(name): return "p-"+re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
 
 def load():
     try: return json.load(open(os.path.join(ROOT,"data","persons.json")))
@@ -98,7 +99,7 @@ def card_html(i,p):
     av=dcolor(doms[0]) if doms else "#6b665d"
     hay=html.escape(" ".join([p.get("name",""),p.get("role",""),
         " ".join(p.get("orgs",[]))," ".join(doms),p.get("bluf","")]).lower())
-    return (f'<div class=card data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
+    return (f'<div class=card id="{slug(p.get("name",""))}" data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
             f'<div class=row onclick="this.parentNode.classList.toggle(\'open\')">'
             f'<div class=av style="background:{av}">{html.escape(initials(p.get("name","?")))}</div>'
             f'<div class=who><div class=nm>{html.escape(p.get("name",""))}</div>'
@@ -152,6 +153,11 @@ function apply(){{
  empty.style.display=n?'none':'block';
 }}
 apply();
+function openHash(){{if(!location.hash)return;const el=document.querySelector(location.hash);
+ if(el&&el.classList.contains('card')){{q.value='';active.clear();
+  document.querySelectorAll('.chip.on').forEach(c=>{{c.classList.remove('on');c.style.background='';}});apply();
+  el.classList.add('open');setTimeout(()=>el.scrollIntoView({{block:'center',behavior:'smooth'}}),60);}}}}
+window.addEventListener('hashchange',openHash);openHash();
 </script></body></html>"""
 
 open(os.path.join(DOCS,"persons.html"),"w").write(HTML)
