@@ -24,6 +24,7 @@ def dcolor(d): return DOMAIN_COLORS.get(d,"#6b665d")
 NAV=('<div class=nav><div class=wrap style="padding:0">'
  '<a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="charts.html">Charts</a>'
  '<a href="research.html">Research</a><a href="persons.html" class=active>Persons</a>'
+ '<a href="bubblemap.html">Bubble Map</a>'
  '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a><a href="globe.html">Globe</a>'
  '</div></div>')
 
