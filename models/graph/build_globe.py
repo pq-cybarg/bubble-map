@@ -51,6 +51,7 @@ POINTS=[
  ["Alexandria LA (Ucore)",31.31,-92.45,"supply","Ucore RapidSX rare-earth SEPARATION (DoD $18.4M) - attacks the six China-controlled elements; production H2-2026."],
  ["Piketon OH (Centrus HALEU)",39.0,-83.0,"supply","Centrus American Centrifuge ~900 kg/yr HALEU (vs fleet need) - the bottleneck is midstream, not mining."],
  ["Saskatchewan (Cameco U)",52.13,-106.65,"supply","Cameco uranium mining - allied fuel supply outside Russia/Kazakhstan."],
+ ["India (Dholera fab / swing power)",22.25,72.2,"supply","Tata+PSMC fab (first silicon ~late 2026) + Micron ATMP; Aadhaar/UPI = the DPI template the West copies; US chips+minerals tilt but keeps Russian oil + BRICS - the swing power captive to neither bloc (geopolitics-india-swing-power)."],
  ["Phoenix AZ (TSMC fab)",33.69,-112.1,"supply","TSMC Arizona $165B (6 fabs) - the reshoring hedge; but wafers still flown to Taiwan for packaging, runs behind the leading edge, inputs via Japan+ASML. Doesn't yet cover a Taiwan cutoff."],
  # --- capital hubs (blue) ---
  ["San Francisco (AI core)",37.77,-122.4,"capital","OpenAI/Anthropic/NVIDIA/hyperscalers - the machine-verified circular core (11-firm robust SCC)."],

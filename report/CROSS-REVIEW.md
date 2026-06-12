@@ -17,26 +17,26 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 35 files
 - **Google** — 29 files
-- **OpenAI** — 25 files
-- **Oracle** — 22 files
+- **OpenAI** — 27 files
+- **Oracle** — 23 files
+- **Microsoft** — 20 files
 - **Amazon** — 20 files
-- **Microsoft** — 19 files
+- **Stargate** — 16 files
+- **NVIDIA** — 16 files
 - **Anthropic** — 16 files
-- **NVIDIA** — 15 files
-- **Stargate** — 14 files
-- **SpaceX** — 13 files
+- **SpaceX** — 14 files
 - **Chainlink** — 12 files
-- **FDIC** — 12 files
+- **SoftBank** — 12 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- BRICS, CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
+- CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `fin-gulf-sovereign-ai-capital.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 11 shared entities
-- fin-coreweave-oracle.json: 9 shared entities
-- fin-nvidia-openai.json: 9 shared entities
-- spec-sec-filings-primary.json: 8 shared entities
-- macro-cre-privatecredit.json: 8 shared entities
-- sec-filings.json: 8 shared entities
-- spec-exchanges-asia.json: 7 shared entities
-- spec-unwind-timing.json: 7 shared entities
+## Newest file `influence-operator-network.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 10 shared entities
+- spec-network-overlay.json: 9 shared entities
+- digitalid-corporate.json: 6 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- geopolitics-defense-industrial-base.json: 5 shared entities
+- spec-exchanges-asia.json: 5 shared entities
+- fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- altcoin-lens.json: 4 shared entities

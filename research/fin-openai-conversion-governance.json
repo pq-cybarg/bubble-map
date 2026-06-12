@@ -1,0 +1,30 @@
+{
+ "metadata": {
+  "title": "OpenAI's for-profit conversion & the $1.4T-vs-$25B gap — the engine of the circular core",
+  "generated": "2026-06-11",
+  "status": "facts from CNBC/Fortune/OpenAI/Microsoft; the '~56x commitments-to-revenue gap is the bubble's load-bearing number' framing is labeled interpretation",
+  "frame": "OpenAI is the node every other node in the circular core booked as backlog/RPO/expected revenue. This block covers the Oct-2025 for-profit conversion that unlocked the mega-capital, the resulting governance structure, and the central number: ~$1.4T of compute commitments against a ~$25B revenue run-rate (~56x). The conversion is what made the Microsoft/MGX/SoftBank/Gulf capital legally raisable; the gap is what the Z3 proofs (T3 needs >=$1.03T external; T4 insolvent at zero inflow) formalize. Overlay; excluded from the proofs (but the proofs operate on these figures). Connects to fin-microsoft-openai, fin-coreweave-oracle, fin-gulf-sovereign-ai-capital, fin-ai-depreciation-debttrap.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "the_conversion": {
+  "what": "28 Oct 2025: OpenAI completed its for-profit recapitalization. The for-profit arm is now OpenAI Group PBC (a public benefit corporation); the OpenAI Foundation (nonprofit) holds ~26% as a CONTROLLING stake; current/former employees + investors hold ~47%; Microsoft holds ~27% (~$135B). status: fact.",
+  "capped_profit_gone": "The old 'capped-profit' cap was abandoned for a conventional equity structure (nonprofit-controls-PBC) - the change that made unlimited upside, and therefore the mega-rounds, possible. status: fact.",
+  "regulatory": "It cleared the Delaware Attorney General (a 'statement of no objection') and California review - the charitable-asset-conversion scrutiny resolved in OpenAI's favor. status: fact + contested (critics argued a charitable mission was converted to private gain)."
+ },
+ "why_the_conversion_matters": "The nonprofit structure capped how much capital OpenAI could raise; converting to a PBC with normal equity is what UNLOCKED the Microsoft 27% recap, the MGX/SoftBank/Gulf mega-rounds (fin-gulf-sovereign-ai-capital), and an eventual IPO path (reported ~$850B valuation talk). The conversion is the legal precondition for the 'continuous external-capital injection' the proofs require - no conversion, no $1.4T of commitments.",
+ "the_central_gap": {
+  "commitments": "OpenAI's compute commitments total on the order of $1.4 TRILLION: Stargate ($500B headline / 10GW with Oracle + SoftBank, Jan 2025), an Oracle agreement >$300B over five years (Jul 2025), plus Azure ($250B), Broadcom/AMD/Nvidia/CoreWeave. By Sep 2025 Stargate alone claimed ~7GW planned and >$400B committed over three years. status: fact.",
+  "revenue": "OpenAI's annualized revenue run-rate was reported above ~$25B by end-Feb 2026. status: fact.",
+  "the_ratio": "~$1.4T of commitments vs ~$25B of revenue is a ~56x gap - the bubble's load-bearing number. Every counterparty (Oracle's $523B RPO, CoreWeave's 67%-one-customer book, Nvidia's vendor financing) has booked a slice of that $1.4T as its own backlog/expected revenue. status: fact (figures) + interpretation (the 'load-bearing' read)."
+ },
+ "how_it_ties_to_the_proofs": "The formal core operates exactly here: Z3 T3 proves OpenAI needs >=$1.03T of EXTERNAL capital to honor its commitments (UNSAT without it); T4 proves the core is insolvent at zero external inflow; TLA+ shows a capital-stop cascading OpenAI->CoreWeave->Oracle. The for-profit conversion is what keeps the external tap legally open; the Gulf (fin-gulf-sovereign-ai-capital) is who is increasingly pouring through it; and the depreciation trap (fin-ai-depreciation-debttrap) means the compute the $1.4T buys ages out in ~2-3 years. The governance change, the capital source, the commitments, and the asset life are one story: a mission-born nonprofit restructured to raise the unprecedented external capital its commitments require - solvent only while it keeps arriving.",
+ "sources": [
+  {"name": "CNBC - OpenAI completes restructure, solidifying Microsoft as a major shareholder", "url": "https://www.cnbc.com/2025/10/28/open-ai-for-profit-microsoft.html"},
+  {"name": "Fortune - OpenAI completes for-profit restructuring; Microsoft 27% stake", "url": "https://fortune.com/2025/10/28/openai-for-profit-restructuring-microsoft-stake/"},
+  {"name": "OpenAI - Statement on OpenAI's nonprofit and PBC", "url": "https://openai.com/index/statement-on-openai-nonprofit-and-pbc/"},
+  {"name": "Microsoft - The next chapter of the Microsoft-OpenAI partnership", "url": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/"},
+  {"name": "Fortune - As OpenAI restructures, Microsoft locks in long-term gains", "url": "https://fortune.com/2025/10/28/openai-restructure-for-profit-microsoft-pbc-long-term-gains-agi/"},
+  {"name": "OpenAI - Introducing Stargate (the $500B / 10GW commitment)", "url": "https://openai.com/index/announcing-the-stargate-project/"}
+ ],
+ "edges": []
+}
