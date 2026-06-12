@@ -31,7 +31,9 @@ D=load(); persons=D.get("persons",[]); meta=D.get("meta",{})
 
 DOMAIN_COLORS={"AI":"#1f4e79","Capital":"#7b2d26","Crypto":"#b8860b","Defense":"#2e8b57",
  "Digital-ID":"#5e35b1","State/Policy":"#c0392b","Macro/Finance":"#138a8a","Sovereign":"#d35400",
- "Geopolitics":"#8a5a2b","Markets":"#6b3b16"}
+ "Geopolitics":"#8a5a2b","Markets":"#6b3b16",
+ "Regulator":"#1b6b6b","Executive":"#8e2b1b","Judiciary":"#4a3f8a",
+ "Intelligence":"#37474f","Legislature":"#7a4a6e"}
 def dcolor(d): return DOMAIN_COLORS.get(d,"#6b665d")
 
 NAV=('<div class=nav><div class=wrap style="padding:0">'
