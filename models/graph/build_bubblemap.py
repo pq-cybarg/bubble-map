@@ -174,6 +174,12 @@ function showPanel(d){const p=document.getElementById('panel'),b=document.getEle
   +`<div class=k>Inflows (${ins.length})</div>${nb(ins)}`
   +`<div class=k>Documented in</div><div style=font-size:12.5px>${blk}</div>`;
  p.style.display='block';}
+function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);
+ node.select('circle').attr('stroke',n=>n===d?'#1f4e79':(n.scc?'#d4a017':'#fffdf8'))
+  .attr('stroke-width',n=>n===d?4.5:(n.scc?2.6:1));
+ q.value='';}
+function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(m)setTimeout(()=>focusNode(decodeURIComponent(m[1])),500);}
+window.addEventListener('hashchange',fromHash);fromHash();
 </script></body></html>"""
 HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
       .replace("__N__",str(len(nodes))).replace("__E__",str(len(links)))

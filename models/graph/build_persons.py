@@ -12,6 +12,16 @@ DOCS=os.path.join(ROOT,"docs"); REP=os.path.join(ROOT,"report")
 def slug(name): return "p-"+re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
 import glob as _glob
 MD_HAVE=set(os.path.basename(f)[:-3] for f in _glob.glob(os.path.join(ROOT,"research","*.md")))
+try: ENT_IDS=set(json.load(open(os.path.join(ROOT,"data","graph.json"))).get("entities",{}).keys())
+except Exception: ENT_IDS=set()
+def graph_nodes(p):
+    out=set()
+    for o in p.get("orgs",[]):
+        if o in ENT_IDS: out.add(o)
+        for t in o.replace("/"," ").replace("(", " ").replace(")"," ").split(","):
+            t=t.strip()
+            if t in ENT_IDS: out.add(t)
+    return sorted(out)
 
 def load():
     try: return json.load(open(os.path.join(ROOT,"data","persons.json")))
@@ -99,6 +109,10 @@ def card_html(i,p):
         links=" ".join((f'<a href="r-{html.escape(b)}.html">{html.escape(b)}</a>' if b in MD_HAVE
                         else f'<code>{html.escape(b)}</code>') for b in blocks)
         body.append(f'<div class=src><b>Documented in:</b> {links}</div>')
+    gn=graph_nodes(p)
+    if gn:
+        gl=" &middot; ".join(f'<a href="bubblemap.html#node={html.escape(n)}">{html.escape(n)}</a>' for n in gn)
+        body.append(f'<div class=src><b>In the Bubble Map:</b> {gl}</div>')
     av=dcolor(doms[0]) if doms else "#6b665d"
     hay=html.escape(" ".join([p.get("name",""),p.get("role",""),
         " ".join(p.get("orgs",[]))," ".join(doms),p.get("bluf","")]).lower())
