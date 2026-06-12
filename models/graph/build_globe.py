@@ -12,7 +12,7 @@ Writes BOTH:
 Self-contained HTML; loads d3 v7 + topojson + world-atlas from CDN (needs internet to render the
 basemap; markers and arcs still render offline). Data points are baked in from the analysis.
 """
-import json, os
+import json, os, glob
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 REP=os.path.join(ROOT,"report"); DOCS=os.path.join(ROOT,"docs")
 
@@ -144,11 +144,18 @@ h1{font-size:17px;color:#1c1b19;margin:0 0 4px;font-family:Georgia,'Iowan Old St
 #tip b{color:#7b2d26;display:block;margin-bottom:3px} #tip .ty{color:#6b665d;font-size:11px;text-transform:uppercase;letter-spacing:.05em}
 .note{color:#6b665d;position:absolute;bottom:10px;left:18px;font-size:11px;background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 .err{position:absolute;top:50%;left:0;right:0;text-align:center;color:#9a2b1f}
+.pop{position:absolute;width:288px;background:#fffdf8;border:1px solid #c9bfa5;border-radius:9px;box-shadow:0 8px 26px #0003;z-index:20;font-size:12.5px;color:#26241f}
+.pop .ph{cursor:move;background:#f3eedf;padding:8px 11px;border-radius:9px 9px 0 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:Georgia,serif}
+.pop .pc{cursor:pointer;color:#6b665d;font-weight:400;font-size:17px;line-height:1}
+.pop .pb{padding:9px 12px}
+.pop .ty{color:#6b665d;font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+.pop .k{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#7b2d26;font-weight:700;margin:9px 0 2px}
+.pop a{color:#1f4e79;text-decoration:none}.pop a:hover{text-decoration:underline}
 svg{display:block;cursor:grab} svg:active{cursor:grabbing}
 </style></head><body>__NAV__
 <div id=stage>
 <div id=hud><h1>AI-bubble geographic chokepoints</h1>
-<div class=sub>drag to rotate &middot; hover a node for detail &middot; the spatial spine of the proofs &amp; graded overlays</div>
+<div class=sub>drag to rotate &middot; hover for a tip &middot; <b>click a node for a draggable profile</b> &middot; the spatial spine of the proofs</div>
 <div id=legend></div></div>
 <div id=tip></div>
 <div class=note>red = adversary/physical chokepoint &middot; green = allied supply &middot; blue = capital &middot; amber = datacenter &middot; teal = settlement &middot; basemap needs internet (markers render offline)</div>
@@ -190,8 +197,32 @@ function render(){
    .on('mousemove',(e,d)=>{const r=stage.getBoundingClientRect();
      tip.style('display','block').style('left',(e.clientX-r.left+14)+'px').style('top',(e.clientY-r.top+14)+'px')
      .html('<span class=ty>'+d[3]+'</span><b>'+d[0]+'</b>'+d[4]);})
-   .on('mouseout',()=>tip.style('display','none'));
+   .on('mouseout',()=>tip.style('display','none'))
+   .on('click',(e,d)=>{e.stopPropagation();tip.style('display','none');
+     const r=stage.getBoundingClientRect();openPopup(d,e.clientX-r.left+12,e.clientY-r.top-10);});
 }
+// --- draggable, multi-open profile popups ---
+function openPopup(d,x,y){
+ const name=d[0],type=d[3],note=d[4],blocks=d[5]||[],persons=d[6]||[];
+ const div=document.createElement('div');div.className='pop';
+ div.style.left=Math.max(6,Math.min(x,stage.clientWidth-294))+'px';
+ div.style.top=Math.max(6,Math.min(y,stage.clientHeight-120))+'px';
+ const bl=blocks.length?blocks.map(b=>'<a href="r-'+b+'.html">'+b+'</a>').join(' &middot; '):'<span style="color:#6b665d">—</span>';
+ const pl=persons.length?persons.map(p=>'<a href="persons.html">'+p+'</a>').join(', '):'';
+ div.innerHTML='<div class=ph><span>'+name+'</span><span class=pc>&times;</span></div>'
+  +'<div class=pb><div class=ty>'+type+'</div>'+note
+  +(pl?'<div class=k>Key person</div><div>'+pl+'</div>':'')
+  +'<div class=k>Documented in</div><div>'+bl+'</div></div>';
+ stage.appendChild(div);
+ div.querySelector('.pc').onclick=()=>div.remove();
+ // drag by header
+ const ph=div.querySelector('.ph');let ox,oy,drag=false;
+ ph.addEventListener('mousedown',ev=>{drag=true;ox=ev.clientX-div.offsetLeft;oy=ev.clientY-div.offsetTop;ev.preventDefault();
+   div.style.zIndex=++popZ;});
+ document.addEventListener('mousemove',ev=>{if(drag){div.style.left=(ev.clientX-ox)+'px';div.style.top=(ev.clientY-oy)+'px';}});
+ document.addEventListener('mouseup',()=>drag=false);
+}
+let popZ=20;
 let v0,r0;
 svg.call(d3.drag()
  .on('start',e=>{v0=[e.x,e.y];r0=proj.rotate();spin=false;})
@@ -199,7 +230,27 @@ svg.call(d3.drag()
 let spin=true;
 d3.timer(()=>{if(spin){const r=proj.rotate();proj.rotate([r[0]+0.16,r[1]]);render();}});
 </script></body></html>"""
-HTML=(HTML.replace("__POINTS__",json.dumps(POINTS))
+# --- enrich each node with the research blocks it mentions + any matching Persons-of-Interest ---
+_stubs=sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT,"research","*.json")))
+try: _persons=json.load(open(os.path.join(ROOT,"data","persons.json"))).get("persons",[])
+except Exception: _persons=[]
+def _ptokens(p):
+    toks=set()
+    for w in p.get("name","").split():
+        if len(w)>=4: toks.add(w)
+    for o in p.get("orgs",[]):
+        for t in o.replace("/"," ").replace(","," ").replace("(", " ").replace(")"," ").split():
+            if len(t)>=3: toks.add(t)
+    return toks
+def _enrich(pt):
+    name,note=pt[0],pt[4]
+    blocks=[s for s in _stubs if s in note]
+    nl=name.lower()
+    persons=sorted({p["name"] for p in _persons if any(t.lower() in nl for t in _ptokens(p))})
+    return pt+[blocks,persons]
+EPOINTS=[_enrich(list(p)) for p in POINTS]
+
+HTML=(HTML.replace("__POINTS__",json.dumps(EPOINTS))
           .replace("__ARCS__",json.dumps(ARCS))
           .replace("__COLORS__",json.dumps(COLORS))
           .replace("__LEGEND__",json.dumps(LEGEND)))
