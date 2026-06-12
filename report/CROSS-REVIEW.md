@@ -36,7 +36,7 @@
 - spec-network-overlay.json: 9 shared entities
 - fin-google-amazon-anthropic-meta.json: 6 shared entities
 - digitalid-corporate.json: 6 shared entities
-- spec-exchanges-asia.json: 5 shared entities
 - fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- spec-exchanges-asia.json: 5 shared entities
 - geopolitics-defense-industrial-base.json: 5 shared entities
 - spec-unwind-timing.json: 4 shared entities

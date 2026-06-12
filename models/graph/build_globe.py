@@ -123,6 +123,7 @@ NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11p
      '<a href="dashboard.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Dashboard</a>'
      '<a href="charts.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Charts</a>'
      '<a href="research.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Research</a>'
+     '<a href="persons.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Persons</a>'
      '<a href="methodology.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Methodology</a>'
      '<a href="glossary.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Glossary</a>'
      '<a href="globe.html" style="color:#1f4e79;text-decoration:none;font-weight:600">Globe</a></div>')
