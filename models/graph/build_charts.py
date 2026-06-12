@@ -579,7 +579,7 @@ if _xs and _xs.get("cross_sections"):
         if c is None: return "#fff"
         if c<0: return f"rgba(31,78,121,{min(0.6,abs(c)*0.6):.2f})"
         return f"rgba(123,45,38,{min(0.85,c*0.85):.2f})"
-    out=['<h2 id=xsec>Cross-sectional analysis — dispersion, relative value, and the common factor</h2>',
+    out=['<h2 id="xsec">Cross-sectional analysis — dispersion, relative value, and the common factor</h2>',
       '<p class=cap>The charts above are mostly <b>time-series</b> (one rate through time). This section is <b>cross-sectional</b>: '
       'at each moment it compares the whole <i>cross-section</i> of segments — every credit-rating bucket, every sovereign, every '
       'muni state — and asks how dispersed they are, which are rich/cheap vs their own history, and <b>how much of their co-movement '

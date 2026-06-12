@@ -232,7 +232,7 @@ let spin=true;
 d3.timer(()=>{if(spin){const r=proj.rotate();proj.rotate([r[0]+0.16,r[1]]);render();}});
 </script></body></html>"""
 # --- enrich each node with the research blocks it mentions + any matching Persons-of-Interest ---
-_stubs=sorted(os.path.basename(f)[:-5] for f in glob.glob(os.path.join(ROOT,"research","*.json")))
+_stubs=sorted(os.path.basename(f)[:-3] for f in glob.glob(os.path.join(ROOT,"research","*.md")))
 try: _persons=json.load(open(os.path.join(ROOT,"data","persons.json"))).get("persons",[])
 except Exception: _persons=[]
 def _ptokens(p):

@@ -10,6 +10,8 @@ import json, os, html, re
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOCS=os.path.join(ROOT,"docs"); REP=os.path.join(ROOT,"report")
 def slug(name): return "p-"+re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
+import glob as _glob
+MD_HAVE=set(os.path.basename(f)[:-3] for f in _glob.glob(os.path.join(ROOT,"research","*.md")))
 
 def load():
     try: return json.load(open(os.path.join(ROOT,"data","persons.json")))
@@ -94,7 +96,8 @@ def card_html(i,p):
         body.append(f'<div class="{cls}"><div class=lab>{lab}</div><div class=val>{html.escape(str(v))}</div></div>')
     blocks=p.get("blocks",[])
     if blocks:
-        links=" ".join(f'<a href="r-{html.escape(b)}.html">{html.escape(b)}</a>' for b in blocks)
+        links=" ".join((f'<a href="r-{html.escape(b)}.html">{html.escape(b)}</a>' if b in MD_HAVE
+                        else f'<code>{html.escape(b)}</code>') for b in blocks)
         body.append(f'<div class=src><b>Documented in:</b> {links}</div>')
     av=dcolor(doms[0]) if doms else "#6b665d"
     hay=html.escape(" ".join([p.get("name",""),p.get("role",""),

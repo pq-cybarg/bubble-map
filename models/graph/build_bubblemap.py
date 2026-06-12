@@ -7,9 +7,10 @@ circular core (Tarjan SCC) ring-highlighted. Click a bubble for a detail panel (
 the research blocks documenting it, and any matching Persons-of-Interest profile). Self-contained
 HTML (d3 v7 from CDN; data embedded), light academic theme, shared nav. Writes docs/bubblemap.html.
 """
-import json, os, html
+import json, os, html, glob
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DOCS=os.path.join(ROOT,"docs"); REP=os.path.join(ROOT,"report")
+_MD_HAVE=set(os.path.basename(f)[:-3] for f in glob.glob(os.path.join(ROOT,"research","*.md")))
 
 def load(n):
     try: return json.load(open(os.path.join(ROOT,"data",n)))
@@ -43,7 +44,8 @@ for e in edges:
     sf=e.get("source_file","")
     if sf.endswith(".json"):
         stub=sf[:-5]
-        for x in (a,b): blocks.setdefault(x,set()).add(stub)
+        if stub in _MD_HAVE:
+            for x in (a,b): blocks.setdefault(x,set()).add(stub)
 
 # org/name -> person(s): match person.name==id, or any of person.orgs contains id (or id contains an org token)
 def match_persons(node):
