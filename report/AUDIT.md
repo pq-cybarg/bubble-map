@@ -14,7 +14,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Inventory
 - models: 37 (z3 .py: 10) + TLA + Alloy
-- research: 76 json / 66 md
+- research: 77 json / 67 md
 - data outputs: 20
 - reports: 9
 
@@ -22,7 +22,7 @@ Canonical numbers (from data/*.json — the source of truth):
 - ALL VALID
 
 ## Cross-document consistency flags
-- ⚠ stale source count '73' in report/UNMASKING.md (actual 76)
+- ⚠ stale source count '73' in report/UNMASKING.md (actual 77)
 
 ## Leg coverage (research present?)
 - AI core: ✓

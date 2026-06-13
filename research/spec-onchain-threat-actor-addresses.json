@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "title": "On-chain address tracking - threat actors, state actors, sanctioned entities, and government-seized wallets (OFAC SDN / FBI PSAs / Treasury / chain-forensics)",
+    "generated": "2026-06-12",
+    "frame": "Crypto's transparency cuts both ways: threat actors, governments, and sanctioned entities all hold ON-CHAIN addresses whose flows are publicly traceable. This block is the attribution layer - the documented address clusters and the authoritative published lists - so the persons/firm graph connects to verifiable on-chain identities. The point: state-grade theft (DPRK), sanctions evasion (Russia/Iran), mixing (Tornado Cash), and state SEIZURE (US government Bitcoin) are all legible on-chain, and the project should track them as a first-class data source rather than rely on press summaries.",
+    "WARNING": "Attribution grade matters. Government attributions (FBI PSA, OFAC SDN designation, Treasury, DOJ indictment) are HIGH-grade primary. Chain-forensics CLUSTERING (Chainalysis/Elliptic/TRM/Arkham) is probabilistic heuristic inference - strong but labeled. This block does NOT hand-transcribe long hex addresses (transcription-error risk); it cites the AUTHORITATIVE machine-readable lists (OFAC SDN crypto-address set; FBI PSA IOC lists) and records cluster-level facts (amount, date, attributor, method). 'Sanctioned' status is time-varying (e.g., Tornado Cash sanctioned 2022, vacated/lifted 2025) and is dated. Overlay edges (surveillance_security / regulatory_legal) excluded from the SCC/Z3/TLA+ proofs.",
+    "method": "OFAC SDN List (sanctions.gov; the SDN entries carry 'Digital Currency Address' fields - the canonical machine-readable source). FBI/CISA PSAs and joint cyber advisories (IOC address lists). Treasury press releases (designations). DOJ indictments/forfeitures (seizure wallets). Chain-forensics blogs (Chainalysis/Elliptic/TRM/Arkham) for clustering. Each cell graded by attribution source.",
+    "cross_refs": ["spec-unc-nk-attribution-map.json","spec-tornado-samourai.json","macro-stablecoin-failures-manipulation.json","spec-crypto-banking-debanking.json","geopolitics-russia-energy-arctic.json","spec-disclosures-surveillance.json"],
+    "ingest_target": "OFAC SDN crypto-address set is downloadable and machine-readable; a fetch_ofac.py (env-free) could pull the 'Digital Currency Address - XBT/ETH/...' fields into data/ofac_crypto_addresses.json for live cross-referencing against graph entities. Wired as a roadmap item, parallel to fetch_fec/fetch_tape."
+  },
+
+  "dprk_lazarus": {
+    "actor":"North Korea - Lazarus Group (a.k.a. TraderTraitor, APT38)",
+    "summary":"The most prolific state-grade crypto thief; proceeds fund the DPRK weapons program (per UN Panel of Experts and US Treasury). Operates through spearphish/supply-chain compromise, then launders via mixers and cross-chain bridges.",
+    "events":[
+      {"event":"Bybit hack","date":"2025-02-21","amount":"$1.5B (401,000 ETH)","method":"compromised a Safe{Wallet} developer machine; injected malicious JS into the multisig UI to alter transaction targets - the largest crypto heist ever.","attribution":"FBI PSA confirmed Lazarus/TraderTraitor; FBI PUBLISHED 51 Ethereum laundering addresses and urged providers to block them.","grade":"fact (FBI PSA primary)"},
+      {"event":"Ronin Network (Axie Infinity) bridge","date":"2022-03","amount":"~$625M","method":"compromised validator keys.","attribution":"OFAC added the Ronin-hack ETH address to the SDN list (Apr 2022) - the first time a specific hacker address was OFAC-sanctioned.","grade":"fact (OFAC SDN)"},
+      {"event":"Harmony Horizon bridge","date":"2022-06","amount":"~$100M","attribution":"FBI attributed to Lazarus; laundered via Tornado Cash and Railgun.","grade":"fact (FBI)"},
+      {"event":"Atomic Wallet / Stake.com / WazirX (cluster)","date":"2023-2024","amount":"$100M+ combined","attribution":"FBI/chain-forensics attributed multiple 2023-24 thefts to DPRK.","grade":"fact/contested (FBI + clustering)"}
+    ],
+    "address_source":"FBI PSA IOC lists (per-incident) + OFAC SDN 'Digital Currency Address' entries; cluster tracking by Chainalysis/Elliptic/Arkham.",
+    "grade":"fact (government attribution); specific laundering hops are clustering inference"
+  },
+
+  "russia": {
+    "summary":"Russian sanctions-evasion and cybercrime on-chain: sanctioned exchanges, darknet markets, and ransomware.",
+    "entities":[
+      {"name":"Garantex","detail":"Russia-based exchange OFAC-sanctioned (Apr 2022) for processing illicit/ransomware funds; its on-chain addresses are on the SDN list; international action (2025) seized infrastructure and froze ~$28M+ USDT.","grade":"fact (OFAC SDN)"},
+      {"name":"Hydra Market","detail":"The largest darknet market, OFAC-sanctioned and seized (Apr 2022, US-German action); SDN entry includes ~100+ crypto addresses.","grade":"fact (OFAC SDN + seizure)"},
+      {"name":"Ransomware (Conti, LockBit, etc.)","detail":"Russia-tolerated ransomware crews receive crypto to documented wallets; OFAC has sanctioned specific ransomware-linked addresses (e.g., Chatex, SUEX, Bitzlato).","grade":"fact (OFAC SDN)"}
+    ],
+    "grade":"fact (OFAC designations)"
+  },
+
+  "iran": {
+    "summary":"Iranian state-linked exchange and sanctions-evasion on-chain - and a politically-motivated counter-attack.",
+    "entities":[
+      {"name":"Nobitex","detail":"Iran's largest exchange; on 2025-06-18 the pro-Israel group Predatory Sparrow (Gonjeshke Darande) drained ~$90M and BURNED it to vanity/burner addresses with no private keys (a political act, not theft-for-profit). Treasury subsequently designated Nobitex for terror-finance/sanctions-evasion; chain-forensics (TRM/Chainalysis/Elliptic) documented Nobitex's links to IRGC-adjacent flows.","grade":"fact (Treasury + chain-forensics)"}
+    ],
+    "grade":"fact"
+  },
+
+  "mixers_and_sanctions_dynamics": {
+    "summary":"Mixers are the laundering chokepoint - and the legal status of sanctioning code has whipsawed.",
+    "items":[
+      {"name":"Tornado Cash","detail":"OFAC sanctioned it Aug 2022 (~$7B laundered since 2019, incl. DPRK funds), adding the smart-contract addresses to the SDN list - the first sanctioning of immutable code. The 5th Circuit VACATED the sanctions (Nov 2024, holding immutable smart contracts aren't sanctionable 'property'); Treasury LIFTED them Mar 21 2025. Co-developer Roman Storm prosecuted. The whole saga is the central test of whether code is sanctionable.","grade":"fact (OFAC + court record)"},
+      {"name":"Blender.io / Sinbad.io","detail":"Bitcoin mixers OFAC-sanctioned (2022/2023) for DPRK laundering; Sinbad assessed as a Blender successor.","grade":"fact (OFAC SDN)"},
+      {"name":"Samourai Wallet","detail":"Privacy wallet whose operators were arrested/charged (2024); see spec-tornado-samourai - the criminalization of privacy tooling.","grade":"fact (DOJ)"}
+    ],
+    "grade":"fact"
+  },
+
+  "government_seized_wallets": {
+    "summary":"The US government is itself a major on-chain holder via seizures - and is moving toward a strategic reserve.",
+    "items":[
+      {"event":"Bitfinex 2016 hack recovery","detail":"~120,000 BTC stolen in 2016; DOJ seized ~$3.6B (Feb 2022) and arrested Ilya Lichtenstein and Heather 'Razzlekhan' Morgan (both pleaded guilty 2023). The seized coins sit in government-controlled wallets, periodically moved (tracked on-chain).","grade":"fact (DOJ)"},
+      {"event":"Silk Road seizures","detail":"~$3.36B BTC seized from James Zhong (Nov 2022, the 'individual X' 2012 theft); plus the ~69,370 BTC from the 2020 forfeiture. Courts cleared the government to sell the Silk Road BTC (2025).","grade":"fact (DOJ)"},
+      {"event":"US holdings & Strategic Bitcoin Reserve","detail":"By 2024-25 the US government controlled on the order of ~200k BTC (~1% of supply) across seizures; a 2025 executive order established a Strategic Bitcoin Reserve (to retain seized BTC rather than sell). The state as a large, on-chain-visible BTC holder is itself a market and policy variable.","grade":"fact (DOJ holdings) + fact (EO); exact live balance varies"}
+    ],
+    "grade":"fact"
+  },
+
+  "edges": [
+    {"from":"Lazarus_Group","to":"Bybit","instrument":"surveillance_security","raw_instrument":"$1.5B/401k ETH heist via Safe multisig UI compromise (FBI: 51 laundering addresses)","amount_usd":1500000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: FBI-attributed DPRK theft, on-chain traced"},
+    {"from":"Lazarus_Group","to":"Ronin_Network","instrument":"surveillance_security","raw_instrument":"$625M bridge hack; OFAC-sanctioned the hacker ETH address","amount_usd":625000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: first OFAC-sanctioned hacker address"},
+    {"from":"Lazarus_Group","to":"Tornado_Cash","instrument":"surveillance_security","raw_instrument":"DPRK proceeds laundered through the mixer (basis for the 2022 sanction)","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: laundering chokepoint"},
+    {"from":"OFAC","to":"Tornado_Cash","instrument":"regulatory_legal","raw_instrument":"sanctioned Aug 2022 (code on SDN); 5th Cir vacated 2024; lifted Mar 2025","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: can code be sanctioned? - whipsaw"},
+    {"from":"OFAC","to":"Garantex","instrument":"regulatory_legal","raw_instrument":"SDN designation (2022) + 2025 infrastructure seizure / USDT freeze","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: Russia exchange sanctions-evasion"},
+    {"from":"Predatory_Sparrow","to":"Nobitex","instrument":"surveillance_security","raw_instrument":"~$90M drained and BURNED to vanity addresses (political), 2025-06-18; Treasury then designated Nobitex","amount_usd":90000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: state-on-state crypto strike (Israel-linked vs Iran)"},
+    {"from":"US_Government","to":"Bitfinex","instrument":"regulatory_legal","raw_instrument":"~$3.6B BTC seized from 2016 hack; Lichtenstein/Morgan convicted; held in gov wallets","amount_usd":3600000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: state as on-chain holder via seizure"},
+    {"from":"US_Government","to":"SINK_btc_reserve","instrument":"relationship","raw_instrument":"~200k BTC (~1% supply) from seizures; 2025 Strategic Bitcoin Reserve EO (retain, not sell)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-onchain-threat-actor-addresses.json","note":"OVERLAY: state BTC stockpile as policy/market variable"}
+  ],
+
+  "limits":"This is an ATTRIBUTION + SOURCE-POINTER layer, not a raw address dump. Government attributions (FBI/OFAC/Treasury/DOJ) are high-grade; chain-forensics clustering is labeled probabilistic. Literal hex addresses are NOT hand-transcribed (error risk) - the canonical machine-readable source is the OFAC SDN 'Digital Currency Address' set plus per-incident FBI PSA IOC lists, with a wired fetch_ofac.py roadmap to ingest them for live graph cross-referencing. Sanction status is time-varying and dated (Tornado Cash 2022->vacated 2024->lifted 2025). No private individuals are accused beyond those already charged/convicted in the public record."
+}

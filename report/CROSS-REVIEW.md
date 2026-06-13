@@ -31,12 +31,9 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-stablecoin-failures-manipulation.json` — related files by shared entities (verify cross-refs exist)
-- influence-congress-funding-compromise.json: 3 shared entities
-- spec-crypto-banking-debanking.json: 3 shared entities
-- macro-stablecoin-treasury-rail.json: 3 shared entities
-- spec-exchanges-asia.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- macro-official-data-integrity.json: 2 shared entities
+## Newest file `spec-onchain-threat-actor-addresses.json` — related files by shared entities (verify cross-refs exist)
+- spec-unc-nk-attribution-map.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- spec-tornado-samourai.json: 2 shared entities
+- geopolitics-allied-intel-nodes.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities

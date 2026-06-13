@@ -88,6 +88,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
+    "Bitfinex": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "BlackRock": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -114,6 +118,10 @@
     },
     "Broadcom": {
       "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "Bybit": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "ByteDance": {
@@ -288,6 +296,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Garantex": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Georgia_MoJ": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -404,6 +416,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Lazarus_Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Liberty Strategic Capital": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -480,6 +496,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Nobitex": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Nokia": {
       "sector": "telecom",
       "has_exogenous_revenue": true
@@ -544,6 +564,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Predatory_Sparrow": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Private credit / venture debt lenders": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -584,6 +608,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Ronin_Network": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SBI": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -617,6 +645,10 @@
       "has_exogenous_revenue": true
     },
     "SINK_bondmarket": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_btc_reserve": {
       "sector": "sink",
       "has_exogenous_revenue": true
     },
@@ -743,6 +775,10 @@
     "TornadoCash": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
+    },
+    "Tornado_Cash": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "TrailOfBits": {
       "sector": "security_research",
@@ -2498,6 +2534,110 @@
       "note": "$15B initial + $35B on conditions; led the $110B round."
     },
     {
+      "from": "Lazarus_Group",
+      "to": "Bybit",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "$1.5B/401k ETH heist via Safe multisig UI compromise (FBI: 51 laundering addresses)",
+      "amount_usd": 1500000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "Lazarus_Group",
+      "to": "Ronin_Network",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "$625M bridge hack; OFAC-sanctioned the hacker ETH address",
+      "amount_usd": 625000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "Lazarus_Group",
+      "to": "Tornado_Cash",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "DPRK proceeds laundered through the mixer (basis for the 2022 sanction)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Tornado_Cash",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned Aug 2022 (code on SDN); 5th Cir vacated 2024; lifted Mar 2025",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Garantex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SDN designation (2022) + 2025 infrastructure seizure / USDT freeze",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "Predatory_Sparrow",
+      "to": "Nobitex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$90M drained and BURNED to vanity addresses (political), 2025-06-18; Treasury then designated Nobitex",
+      "amount_usd": 90000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Bitfinex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$3.6B BTC seized from 2016 hack; Lichtenstein/Morgan convicted; held in gov wallets",
+      "amount_usd": 3600000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "SINK_btc_reserve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~200k BTC (~1% supply) from seizures; 2025 Strategic Bitcoin Reserve EO (retain, not sell)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-onchain-threat-actor-addresses.json",
+      "note": ""
+    },
+    {
       "from": "Google",
       "to": "Hedera",
       "instrument": "governance",
@@ -3708,10 +3848,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 211,
-    "num_edges": 220,
+    "num_nodes": 220,
+    "num_edges": 228,
     "num_financial_edges": 117,
-    "num_structural_edges": 103,
+    "num_structural_edges": 111,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3762,10 +3902,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -3774,16 +3910,20 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Anthropic",
@@ -3801,16 +3941,16 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -4002,6 +4142,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Bitfinex": {
+        "total_usd": 3600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BlackRock": {
         "total_usd": 3000000000,
         "circular_usd": 0,
@@ -4046,6 +4193,13 @@
       },
       "Broadcom": {
         "total_usd": 91000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bybit": {
+        "total_usd": 1500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4352,6 +4506,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Garantex": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Georgia_MoJ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4555,6 +4716,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lazarus_Group": {
+        "total_usd": 2125000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Liberty Strategic Capital": {
         "total_usd": 1000000000,
         "circular_usd": 0,
@@ -4688,6 +4856,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Nobitex": {
+        "total_usd": 90000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Nokia": {
         "total_usd": 1000000000,
         "circular_usd": 0,
@@ -4800,6 +4975,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Predatory_Sparrow": {
+        "total_usd": 90000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Private credit / venture debt lenders": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -4870,6 +5052,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ronin_Network": {
+        "total_usd": 625000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SBI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4928,6 +5117,13 @@
       },
       "SINK_bondmarket": {
         "total_usd": 48000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_btc_reserve": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5150,6 +5346,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tornado_Cash": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TrailOfBits": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -5214,7 +5417,7 @@
         "in_robust_core": false
       },
       "US_Government": {
-        "total_usd": 400000000,
+        "total_usd": 4000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5616,6 +5819,22 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 3,
+        "neighbor_sectors": [
+          "critical_minerals",
+          "other",
+          "sink"
+        ],
+        "n_neighbor_sectors": 3,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "CPI_Methodology",
         "degree": 4,
         "neighbor_sectors": [
@@ -5628,22 +5847,6 @@
         "source_files": 2,
         "layers": [
           "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "Meta",
-        "degree": 5,
-        "neighbor_sectors": [
-          "ai_data",
-          "chip_vendor",
-          "energy",
-          "sink"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 2,
-        "layers": [
-          "financial"
         ],
         "both_layers": false
       }
