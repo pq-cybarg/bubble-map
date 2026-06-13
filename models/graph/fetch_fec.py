@@ -21,26 +21,37 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 DATA = os.path.join(ROOT, "data")
 API = "https://api.open.fec.gov/v1"
 
-# Bounded, on-thesis default target set (committee chairs + key leverage members). Each entry is
-# (display name, FEC search query, preferred office H|S) so we lock onto the CONGRESSIONAL committee
-# (candidate_id starting with H/S), not a presidential committee (P) from a past White House run.
-TARGETS = [
-    ("Elizabeth Warren", "WARREN, ELIZABETH", "S"),
-    ("Tim Scott", "SCOTT, TIM", "S"),
-    ("Sherrod Brown", "BROWN, SHERROD", "S"),
-    ("Mike Crapo", "CRAPO, MICHAEL", "S"),
-    ("Cynthia Lummis", "LUMMIS, CYNTHIA", "S"),
-    ("French Hill", "HILL, FRENCH", "H"),
-    ("Maxine Waters", "WATERS, MAXINE", "H"),
-    ("Patrick McHenry", "MCHENRY, PATRICK", "H"),
-    ("Tom Emmer", "EMMER, TOM", "H"),
-    ("Ron Wyden", "WYDEN, RON", "S"),
-    ("Mark Warner", "WARNER, MARK", "S"),
-    ("Josh Hawley", "HAWLEY, JOSH", "S"),
-    ("Jim Jordan", "JORDAN, JIM", "H"),
-    ("Chuck Schumer", "SCHUMER, CHARLES", "S"),
-    ("John Thune", "THUNE, JOHN", "S"),
-]
+# Targets are derived DYNAMICALLY from data/persons.json: every profiled member of Congress
+# (domain "Legislature"). Each becomes (display name, search query, preferred office H|S) so we lock
+# onto the CONGRESSIONAL candidacy (candidate_id H/S), not a presidential committee from a WH run.
+# This auto-scales as more members are profiled - the money-map covers the whole roster, not a sample.
+# Query/office overrides for members whose plain-name fuzzy search misses or is ambiguous (FEC
+# stores "LAST, FIRST"); these use a cleaner query + forced chamber. Surname is still verified in
+# the picker so an override can never grab the wrong person.
+OVERRIDES = {
+    "Chuck Schumer": ("Schumer", "S"), "Mike Crapo": ("Crapo, Michael", "S"),
+    "Jim Jordan": ("Jordan, Jim", "H"), "Tom Emmer": ("Emmer", "H"),
+    "Tom Daschle": ("Daschle", "S"), "Bill Frist": ("Frist", "S"),
+    "Mike Oxley": ("Oxley", "H"), "Jack Reed": ("Reed, John", "S"),
+    "Mike Johnson": ("Johnson, James Michael", "H"),
+}
+def _targets():
+    try:
+        P = json.load(open(os.path.join(ROOT, "data", "persons.json")))
+    except Exception:
+        return []
+    out = []
+    for p in P.get("persons", []):
+        if "Legislature" not in p.get("domains", []):
+            continue
+        name = p["name"]
+        role = (p.get("role", "") + " " + name).lower()
+        office = "S" if "senat" in role else ("H" if any(k in role for k in
+                 ("repres", "house", "speaker", "ways and means", "financial services")) else "")
+        q, office = OVERRIDES.get(name, (name, office))
+        out.append((name, q, office))
+    return out
+TARGETS = _targets()
 
 def _get(path, params, retries=2):
     key = os.environ.get("FEC_API_KEY")
@@ -71,29 +82,37 @@ def main():
             "Industry/sector breakdowns require itemized-receipt entitlement; see OpenSecrets for "
             "curated sector aggregation.", "targets": TARGETS}, "candidates": []}
     for name, query, office in TARGETS:
-        # plain-name fuzzy search (the q param), valid sort key, filter office client-side.
-        srch = _get("/candidates/search", {"q": name, "per_page": 20, "sort": "-first_file_date"})
+        # fuzzy name search (q), then VERIFY surname (never grab the wrong person), then prefer chamber.
+        srch = _get("/candidates/search", {"q": query, "per_page": 20, "sort": "-first_file_date"})
         results = (srch or {}).get("results") or []
-        # Prefer the candidacy for the intended chamber (office H/S, candidate_id prefix H/S),
-        # most recently filed; fall back to any match rather than guess.
-        chamber = [r for r in results if (r.get("office") == office)
-                   or str(r.get("candidate_id", "")).startswith(office)]
-        pick = (chamber or results)
+        toks = name.replace("(", " ").replace(")", " ").split()
+        surname, first = toks[-1].lower(), toks[0].lower()
+        named = [r for r in results if surname in (r.get("name", "") or "").lower()]
+        # disambiguate common surnames: prefer results that ALSO contain the first name (FEC often
+        # carries the nickname in parens, e.g. REED, JOHN F (JACK)); fall back to surname-only.
+        fnamed = [r for r in named if first in (r.get("name", "") or "").lower()]
+        pool = fnamed or named   # require surname match (no blind fallback to wrong people)
+        chamber = [r for r in pool if (office and ((r.get("office") == office)
+                   or str(r.get("candidate_id", "")).startswith(office)))]
+        pick = chamber or pool
         if not pick:
-            print(f"  - {name}: no FEC candidate match (skipped, not guessed)")
+            print(f"  - {name}: no surname-verified FEC match (skipped, not guessed)")
             continue
         cid = pick[0].get("candidate_id")
         totals = _get(f"/candidate/{cid}/totals", {"per_page": 30, "sort": "-cycle"})
         rows = (totals or {}).get("results") or []
-        out["candidates"].append({
-            "name": name, "candidate_id": cid,
-            "cycles": [{"cycle": r.get("cycle"), "receipts": r.get("receipts"),
-                        "disbursements": r.get("disbursements"),
-                        "individual_itemized": r.get("individual_itemized_contributions"),
-                        "pac_contributions": r.get("other_political_committee_contributions")}
-                       for r in rows],
-        })
-        print(f"  + {name}: {len(rows)} cycles ({cid})")
+        cycles = [{"cycle": r.get("cycle"), "receipts": r.get("receipts"),
+                   "disbursements": r.get("disbursements"),
+                   "individual_itemized": r.get("individual_itemized_contributions"),
+                   "pac_contributions": r.get("other_political_committee_contributions")}
+                  for r in rows]
+        # drop matches with NO receipts-bearing cycle: an empty record is useless and is usually a
+        # wrong/ambiguous-surname match (better no overlay than wrong data).
+        if not any(c.get("receipts") for c in cycles):
+            print(f"  - {name}: matched {cid} but 0 receipts-bearing cycles (dropped, likely wrong/empty)")
+            time.sleep(0.4); continue
+        out["candidates"].append({"name": name, "candidate_id": cid, "cycles": cycles})
+        print(f"  + {name}: {len(cycles)} cycles ({cid})")
         time.sleep(0.6)  # be polite to the rate limiter
 
     path = os.path.join(DATA, "fec_summary.json")
