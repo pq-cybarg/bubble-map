@@ -22,7 +22,7 @@ Canonical numbers (from data/*.json — the source of truth):
 - ALL VALID
 
 ## Cross-document consistency flags
-- ⚠ stale source count '73' in report/UNMASKING.md (actual 78)
+- none — consistent
 
 ## Leg coverage (research present?)
 - AI core: ✓

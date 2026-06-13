@@ -18,7 +18,7 @@ Industrial forced-labor "pig butchering" (*sha zhu pan*) fraud from compounds in
 
 ## 3. Yim Leak (authorities-sourced; independent of Ryan; unadjudicated)
 A Cambodian tycoon — owner of **BIC Group / BIC Bank** (superyacht *Wanderlust*) — whom **Thai authorities** link to a scam/laundering network and whose assets they froze; he **denies** it.
-- **Fact:** Thai **AMLO froze ~฿8.3bn (~$240M)** in the **"Yim Leak–Ben Smith network"** (Ben Smith and Chen Zhi recur in adjacent Cambodia-linked cases, **but Yim Leak's network is not established as identical to the Prince Group compounds**). His name was **included in a draft** of the US "Dismantle Foreign Scam Syndicates Act," then **removed**.
+- **Fact (multi-source):** Thai **AMLO froze ~฿8.3bn** in the **"Yim Leak–Ben Smith network"** (Nation Thailand), **corroborated** by Thai Enquirer ("another 8.2 billion baht from Ben Smith and Yim Leak" — multiple/serial seizures), with investigative mapping by **Project Brazen/WhaleHunting** ("The Vanishing Princeling"). **But Yim Leak's network is not established as identical to the Prince Group compounds.** His name was **included in a draft** of the US "Dismantle Foreign Scam Syndicates Act," then **removed**.
 - He challenges the AMLO proceedings ("tarred by misleading information"); an aligned **"Myth vs Fact… Yim Leak"** PR push runs his counter-narrative — the documented context around which Ryan Kelly's offer allegation sits. **Guilt unadjudicated.**
 
 ## 4. Ryan Kelly's allegations (creator-alleged)
@@ -37,7 +37,14 @@ To prevent inferring connections nobody made:
 - **Yim Leak's guilt is not adjudicated**; he disputes it.
 - **Mezink is not accused/adjudicated** here; it's the named conduit in a single-source account.
 
-## 6. Limits
+## 6. Verification performed (2026-06-13)
+- **FARA eFile searched for "Mezink" → no registration found.** Mezink is **not** a registered foreign agent as of this pass.
+- **No independent reporting** corroborates the $25k offer or a Mezink↔Yim-Leak link — it remains **single-source** (the creator's video).
+- **Yim Leak's authorities-linkage → corroborated** across **Nation Thailand + Thai Enquirer** (serial AMLO seizures, the Ben Smith/Yim Leak network) and **Project Brazen/WhaleHunting** investigative reporting.
+- **Mezink corporate identity → confirmed**; no wrongdoing found.
+- *Parallel pattern (context, not evidence of this claim):* the 2024 **Tenet Media/RT** FARA case and reported paid-US-influencer programs show the shape such an offer would fit.
+
+## 7. Limits
 The scam-compound criminal core is high-grade primary. Yim Leak: AMLO freeze + bill-draft inclusion are fact; scam guilt unadjudicated/disputed. NCS FARA registration documented; "leaked plan" contested. Ryan Kelly's account is creator-alleged, single-source, uncorroborated this pass; Mezink is the named conduit, not adjudicated. **Chen Zhi** added to Persons (indicted/sanctioned); **Yim Leak and Ryan Kelly intentionally not given dossiers** (one unadjudicated-and-disputing; one a private creator who was the offer's target).
 
 *Sources: [DOJ — Chen Zhi](https://www.justice.gov/opa/pr/chairman-prince-group-indicted-operating-cambodian-forced-labor-scam-compounds-engaged), [CNBC — $15B seizure](https://www.cnbc.com/2025/10/14/bitcoin-doj-chen-zhi-pig-butchering-scam.html), [TRM — Kok An](https://www.trmlabs.com/resources/blog/ofac-sanctions-cambodian-senator-and-scam-center-network-targeting-americans-with-digital-asset-fraud), [Nation Thailand — AMLO ฿8.3bn / Yim Leak–Ben Smith](https://www.nationthailand.com/news/general/40064867), [Bangkok Post — Yim Leak response](https://www.bangkokpost.com/thailand/general/3150869/cambodian-tycoon-says-tarred-by-misleading-info), [Nation Thailand — Cambodia FARA info-war](https://www.nationthailand.com/news/general/40059832), Mezink via [Tracxn](https://tracxn.com/d/companies/mezink/__GJJT0lLLDVzZbufX8HB4udF5Vr_OEGo8zsJAKwtcZsU), and the creator video (YouTube Shorts L2HPAlXNjy4).*

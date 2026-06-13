@@ -33,7 +33,7 @@
   "yim_leak": {
     "summary":"A Cambodian tycoon (owner of BIC Group / BIC Bank; superyacht 'Wanderlust') whom THAI AUTHORITIES link to a scam/laundering network and whose assets they froze; he DENIES it; UNADJUDICATED. Authorities' linkage is INDEPENDENT of Ryan Kelly and is NOT established as the Prince Group Cambodian compounds.",
     "points":[
-      {"item":"Authorities' action (fact)","detail":"Thai AMLO FROZE ~THB8.3bn (~$240M) tied to the 'Yim Leak-Ben Smith network' (Ben Smith and Chen Zhi appear in adjacent Cambodia-linked laundering cases per Thai reporting, but Yim Leak's network is not established as identical to the Prince Group compounds). Yim Leak's name was included in a draft of the US 'Dismantle Foreign Scam Syndicates Act', then removed.","grade":"fact (AMLO freeze + bill draft); the scam guilt is reported allegation"},
+      {"item":"Authorities' action (fact, multi-source)","detail":"Thai AMLO froze assets tied to the 'Yim Leak-Ben Smith network' - reported by Nation Thailand (~THB8.3bn) and corroborated by Thai Enquirer ('another 8.2 billion baht from Ben Smith and Yim Leak'), indicating multiple/serial seizures. Investigative coverage by Project Brazen/WhaleHunting ('The Vanishing Princeling') maps the dynastic-alliance laundering network. Yim Leak's name was included in a draft of the US 'Dismantle Foreign Scam Syndicates Act', then removed. NOTE: Yim Leak's network is NOT established as identical to the Prince Group compounds - separate matters.","grade":"fact (AMLO seizures, multi-source + investigative coverage); scam guilt reported/unadjudicated"},
       {"item":"His response / reputation campaign","detail":"Yim Leak challenges the AMLO proceedings, says he was 'tarred by misleading information'; aligned PR pieces ('Myth vs Fact: What the international media got wrong about Cambodia's Yim Leak') run his counter-narrative. The existence of an organized pro-Yim-Leak reputation push is the documented context around which Ryan Kelly's offer allegation sits.","grade":"fact (he disputes; the PR campaign exists) - guilt UNADJUDICATED"}
     ],
     "grade":"authorities' action fact; scam guilt unadjudicated/disputed"
@@ -50,6 +50,17 @@
       {"item":"Mezink (corporate facts)","detail":"Mezink (mez.ink) is an AI influencer-marketing agency founded 2021 by Tarun Valecha and Mohit Garg, with a Singapore registered office (160 Robinson Road) and operations across India/SE-Asia (Tracxn/CBInsights/LinkedIn). The 'Singapore presentation, India principals' shape is consistent with the creator's characterization - but Mezink is NOT publicly adjudicated of any crime; it appears as the named conduit.","grade":"fact (corporate record); no wrongdoing adjudicated"}
     ],
     "grade":"creator-alleged (offer, subject, FARA/FTC application, interpretive-confidence reasoning) + fact (Mezink record, FARA/FTC frameworks, Tenet precedent)"
+  },
+
+  "verification_log": {
+    "date":"2026-06-13",
+    "checks":[
+      {"check":"FARA eFile (efile.fara.gov) for 'Mezink'","result":"No registration found. Mezink is not a FARA-registered foreign agent as of this pass.","grade":"fact (null result)"},
+      {"check":"Independent corroboration of Ryan Kelly's $25k offer / a Mezink<->Yim Leak link (news/web)","result":"None found. The offer and the Mezink-Yim-Leak connection remain single-source (the creator's own video).","grade":"fact (null result)"},
+      {"check":"Yim Leak authorities' linkage","result":"CORROBORATED across Nation Thailand + Thai Enquirer (AMLO seizures, Ben Smith/Yim Leak network) + Project Brazen investigative reporting.","grade":"fact (multi-source)"},
+      {"check":"Mezink corporate identity","result":"Confirmed: AI influencer-marketing automation platform, founded 2021 (Valecha/Garg), Singapore registered office + Jakarta/SE-Asia/India ops. No wrongdoing found.","grade":"fact"}
+    ],
+    "parallel_precedent":"Separately documented paid-US-influencer networks (the 2024 Tenet Media/RT FARA case; reported Israel-funded US influencer programs) show the pattern Ryan Kelly's offer would fit - context, not evidence of his specific claim."
   },
 
   "what_is_NOT_asserted": {
