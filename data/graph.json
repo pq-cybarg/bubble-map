@@ -76,6 +76,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Barney Frank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Bermuda_Captives": {
       "sector": "insurance",
       "has_exogenous_revenue": false
@@ -136,6 +140,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Cantor": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Chainlink": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
@@ -188,6 +196,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "Custodia_Bank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "DARPA": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
@@ -206,6 +218,10 @@
     },
     "DeutscheTelekom": {
       "sector": "telecom",
+      "has_exogenous_revenue": true
+    },
+    "Devin Nunes": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Disney": {
@@ -232,9 +248,21 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FTX": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Fairshake": {
       "sector": "political",
       "has_exogenous_revenue": false
+    },
+    "Farmington_Moonstone": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Federal Reserve": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Federal_Reserve": {
       "sector": "central_bank",
@@ -247,6 +275,10 @@
     "First_Brands": {
       "sector": "industrial",
       "has_exogenous_revenue": false
+    },
+    "Flagstar": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "GENIUS_Act": {
       "sector": "state",
@@ -296,6 +328,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "House Financial Services": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "IBM": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -320,8 +356,16 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "JPM_Coin": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "JPMorgan": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Jeb Hensarling": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Jefferies": {
@@ -359,6 +403,10 @@
     "Lazarus": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
+    },
+    "Liberty Strategic Capital": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "MGX": {
       "sector": "financier",
@@ -492,6 +540,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Phil Gramm": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Private credit / venture debt lenders": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -600,6 +652,18 @@
       "sector": "ai_data",
       "has_exogenous_revenue": true
     },
+    "Senate Banking Committee": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Signature_Bank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Silicon_Valley_Bank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "SilverLake": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -607,6 +671,10 @@
     "Silver_Physical": {
       "sector": "commodity",
       "has_exogenous_revenue": false
+    },
+    "Silvergate_Bank": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "SoftBank": {
       "sector": "financier",
@@ -656,8 +724,16 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Terraform_Labs": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Tether": {
       "sector": "stablecoin",
+      "has_exogenous_revenue": true
+    },
+    "Three_Arrows_Capital": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "TikTok_US": {
@@ -679,6 +755,14 @@
     "Trump": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Trump Media & Technology Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "UBS": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "UBS_OConnor": {
       "sector": "financier",
@@ -743,6 +827,10 @@
     "WorldLibertyFinancial": {
       "sector": "stablecoin",
       "has_exogenous_revenue": false
+    },
+    "World_Liberty_Financial": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Zillow_ZORI": {
       "sector": "data_provider",
@@ -1188,6 +1276,123 @@
       "note": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."
     },
     {
+      "from": "FDIC",
+      "to": "US_Banks",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "~24 'pause letters' discouraging crypto banking (FOIA 2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json,spec-sec-sdny-regulatory.json",
+      "note": ""
+    },
+    {
+      "from": "Federal Reserve",
+      "to": "Custodia_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "master-account + membership denial (2023, upheld)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Ripple",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SEC v. Ripple (Dec 2020); Torres split ruling (2023)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "JPMorgan",
+      "to": "JPM_Coin",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "bank dollar token (2019) -> JPMD deposit token on Base (2025), no SEC enforcement",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "FTX",
+      "to": "Silvergate_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTX/Alameda major client; SEN fiat rail",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "FTX",
+      "to": "Farmington_Moonstone",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "Alameda ~$11.5M equity into a tiny WA bank (2022)",
+      "amount_usd": 11500000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "Flagstar",
+      "to": "Signature_Bank",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquired Signature deposits/branches ex-crypto (FDIC, Mar 2023); ~$4B crypto deposits stranded",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "Liberty Strategic Capital",
+      "to": "Flagstar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Mnuchin-led ~$1B+ rescue of NYCB/Flagstar (2024 CRE crisis)",
+      "amount_usd": 1000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
+      "from": "Circle",
+      "to": "Silicon_Valley_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "$3.3B USDC reserves at SVB -> Mar 2023 depeg to ~$0.87",
+      "amount_usd": 3300000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-banking-debanking.json",
+      "note": ""
+    },
+    {
       "from": "MtGox",
       "to": "Creditors",
       "instrument": "repayment",
@@ -1459,6 +1664,110 @@
       "cancelable": false,
       "source_file": "fin-disney-openai-sora.json",
       "note": "C&D alleging copyright infringement on a 'massive scale' (training + distribution). Parallel C&Ds to Meta, Character.AI; Feb 2026 C&D to ByteDance Seedance 2.0."
+    },
+    {
+      "from": "Terraform_Labs",
+      "to": "SINK_investors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "UST/LUNA death spiral ~$40-60B wiped (May 2022)",
+      "amount_usd": 40000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Terraform_Labs",
+      "to": "Three_Arrows_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Terra contagion -> 3AC/Celsius/Voyager insolvencies",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "MGX",
+      "to": "Binance",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "~$2B investment settled in USD1 (WLFI/Trump-family stablecoin) - on-chain documented",
+      "amount_usd": 2000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "USD1",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Trump-family-interest DeFi venture issues USD1 stablecoin (2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Binance",
+      "to": "World_Liberty_Financial",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "USD1 reserve/float + CZ pardon proximity (2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Binance",
+      "to": "USD1",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Binance custodies ~87-89% of all USD1 supply (~$4.7B/$5.4B) - Arkham on-chain",
+      "amount_usd": 4700000000,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Cantor",
+      "to": "USD1",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USD1 distribution expansion into Cantor (Lutnick-linked) network",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Tether",
+      "to": "SINK_bondmarket",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USDT reserves shifted into US Treasuries -> marginal T-bill bid",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
     },
     {
       "from": "NSA",
@@ -1784,19 +2093,6 @@
       "cancelable": false,
       "source_file": "macro-firstbrands-ubs.json",
       "note": "Jefferies/Leucadia (Point Bonita) also exposed; second canary alongside Tricolor (subprime auto) in 2025."
-    },
-    {
-      "from": "FDIC",
-      "to": "US_Banks",
-      "instrument": "regulatory_legal",
-      "layer": "structural",
-      "raw_instrument": "pause_letters",
-      "amount_usd": null,
-      "status": "FOIA-released",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-sec-sdny-regulatory.json",
-      "note": "~2 dozen 'pause all crypto activity' letters; the documented core of 'Choke Point 2.0'."
     },
     {
       "from": "Coinbase",
@@ -2670,6 +2966,84 @@
       "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
     },
     {
+      "from": "UBS",
+      "to": "Phil Gramm",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "GLBA/CFMA author -> UBS Investment Bank vice-chairman",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
+      "from": "UBS",
+      "to": "Jeb Hensarling",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "House Financial Services chair -> UBS vice-chairman",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
+      "from": "Signature_Bank",
+      "to": "Barney Frank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Dodd-Frank co-author -> Signature Bank board (seized 2023)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
+      "from": "Trump Media & Technology Group",
+      "to": "Devin Nunes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "House Intel chair -> TMTG CEO (Bitcoin treasury / Truth.Fi)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
+      "from": "US_Banks",
+      "to": "Senate Banking Committee",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "securities/insurance/bank/real-estate PAC receipts above chamber median (per-member $ REQUIRES-INGEST)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
+      "from": "US_Banks",
+      "to": "House Financial Services",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'the cash committee' \u2014 finance-sector PAC concentration on the committee of jurisdiction",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-funding-compromise.json",
+      "note": ""
+    },
+    {
       "from": "GENIUS_Act",
       "to": "Stablecoins",
       "instrument": "other",
@@ -3334,10 +3708,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 189,
-    "num_edges": 198,
-    "num_financial_edges": 114,
-    "num_structural_edges": 84,
+    "num_nodes": 211,
+    "num_edges": 220,
+    "num_financial_edges": 117,
+    "num_structural_edges": 103,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3400,16 +3774,16 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -3435,6 +3809,12 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -3443,12 +3823,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -3607,6 +3981,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Barney Frank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bermuda_Captives": {
         "total_usd": 130000000000,
         "circular_usd": 0,
@@ -3615,7 +3996,7 @@
         "in_robust_core": false
       },
       "Binance": {
-        "total_usd": 2000000000,
+        "total_usd": 8700000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3712,6 +4093,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cantor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chainlink": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3727,7 +4115,7 @@
         "in_robust_core": false
       },
       "Circle": {
-        "total_usd": 74000000000,
+        "total_usd": 77300000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3803,6 +4191,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Custodia_Bank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DARPA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -3832,6 +4227,13 @@
         "in_robust_core": false
       },
       "DeutscheTelekom": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Devin Nunes": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -3880,8 +4282,29 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FTX": {
+        "total_usd": 11500000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Fairshake": {
         "total_usd": 195000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Farmington_Moonstone": {
+        "total_usd": 11500000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Federal Reserve": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3903,6 +4326,13 @@
       },
       "First_Brands": {
         "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Flagstar": {
+        "total_usd": 1000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -3992,6 +4422,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "House Financial Services": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IBM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4034,8 +4471,22 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "JPM_Coin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JPMorgan": {
         "total_usd": 3220000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jeb Hensarling": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4104,8 +4555,15 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Liberty Strategic Capital": {
+        "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MGX": {
-        "total_usd": 16000000000,
+        "total_usd": 18000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4335,6 +4793,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Phil Gramm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Private credit / venture debt lenders": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -4483,7 +4948,7 @@
         "in_robust_core": false
       },
       "SINK_investors": {
-        "total_usd": 30000000000,
+        "total_usd": 70000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4524,6 +4989,27 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Senate Banking Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Signature_Bank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Silicon_Valley_Bank": {
+        "total_usd": 3300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SilverLake": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4532,6 +5018,13 @@
         "in_robust_core": false
       },
       "Silver_Physical": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Silvergate_Bank": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -4622,8 +5115,22 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Terraform_Labs": {
+        "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tether": {
         "total_usd": 100000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Three_Arrows_Capital": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4664,6 +5171,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Trump Media & Technology Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UBS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UBS_OConnor": {
         "total_usd": 500000000,
         "circular_usd": 0,
@@ -4672,7 +5193,7 @@
         "in_robust_core": false
       },
       "USD1": {
-        "total_usd": 0,
+        "total_usd": 4700000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4770,6 +5291,13 @@
         "in_robust_core": false
       },
       "WorldLibertyFinancial": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "World_Liberty_Financial": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -4940,6 +5468,74 @@
         "both_layers": false
       },
       {
+        "node": "JPMorgan",
+        "degree": 5,
+        "neighbor_sectors": [
+          "commodity_market",
+          "crypto_infra",
+          "other",
+          "spv"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "MGX",
+        "degree": 8,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "exchange",
+          "spv"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Binance",
+        "degree": 6,
+        "neighbor_sectors": [
+          "financier",
+          "other",
+          "regulator",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Ripple",
+        "degree": 5,
+        "neighbor_sectors": [
+          "bank",
+          "financier",
+          "political",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -4957,55 +5553,6 @@
         "both_layers": false
       },
       {
-        "node": "Ripple",
-        "degree": 4,
-        "neighbor_sectors": [
-          "bank",
-          "financier",
-          "political",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "JPMorgan",
-        "degree": 4,
-        "neighbor_sectors": [
-          "commodity_market",
-          "crypto_infra",
-          "spv"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Binance",
-        "degree": 3,
-        "neighbor_sectors": [
-          "financier",
-          "regulator",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "Broadcom",
         "degree": 6,
         "neighbor_sectors": [
@@ -5013,22 +5560,6 @@
           "hyperscaler",
           "private_credit",
           "sink"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 3,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "MGX",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "exchange",
-          "spv"
         ],
         "n_neighbor_sectors": 4,
         "source_files": 3,
@@ -5070,6 +5601,21 @@
         "both_layers": false
       },
       {
+        "node": "US_Banks",
+        "degree": 5,
+        "neighbor_sectors": [
+          "other",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 2,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "CPI_Methodology",
         "degree": 4,
         "neighbor_sectors": [
@@ -5100,22 +5646,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "SEALSQ",
-        "degree": 6,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "pqc_quantum",
-          "semiconductor"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 1,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       }
     ]
   }

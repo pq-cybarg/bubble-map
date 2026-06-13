@@ -1,0 +1,141 @@
+{
+  "metadata": {
+    "title": "Committees of jurisdiction — chair timelines (1999–2025) + current (119th Congress) leadership",
+    "generated": "2026-06-12",
+    "note": "Roster-segmentation layer for the congressional funding/compromise block. Chair timelines and current chair/ranking are hand-verified and graded. Full rank-and-file rosters across 13 Congresses are REQUIRES-INGEST from Congress.gov committee membership data (fetch wired); a short high-confidence 'notable_current_members' set is included where verifiable. Nothing here is a compromise verdict — see research/influence-congress-funding-compromise.md.",
+    "source": "Congress.gov committee pages; House/Senate committee rosters; profiled chairs cross-reference data/persons.json.",
+    "ingest_target": "Congress.gov bulk committee-membership + history endpoints (per-Congress rosters, subcommittee assignments)."
+  },
+  "committees": [
+    {
+      "committee": "Senate Banking, Housing & Urban Affairs",
+      "jurisdiction": ["banks","Federal Reserve","SEC","CFPB","stablecoins","crypto market structure","housing finance","sanctions (financial)"],
+      "chair_timeline": [
+        {"years":"1999–2001","chair":"Phil Gramm (R)","grade":"fact"},
+        {"years":"2001–2003","chair":"Paul Sarbanes (D)","grade":"fact"},
+        {"years":"2003–2007","chair":"Richard Shelby (R)","grade":"fact"},
+        {"years":"2007–2011","chair":"Chris Dodd (D)","grade":"fact"},
+        {"years":"2011–2015","chair":"Tim Johnson (D)","grade":"fact"},
+        {"years":"2015–2017","chair":"Richard Shelby (R)","grade":"fact"},
+        {"years":"2017–2019","chair":"Mike Crapo (R)","grade":"fact"},
+        {"years":"2019–2021","chair":"Mike Crapo (R)","grade":"fact"},
+        {"years":"2021–2025","chair":"Sherrod Brown (D)","grade":"fact"},
+        {"years":"2025–","chair":"Tim Scott (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Tim Scott (R-SC)","ranking":"Elizabeth Warren (D-MA)","notable_current_members":["Cynthia Lummis (R-WY)","John Kennedy (R-LA)","Bernie Moreno (R-OH)","Mark Warner (D-VA)","Catherine Cortez Masto (D-NV)","Raphael Warnock (D-GA)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "House Financial Services",
+      "jurisdiction": ["banks","SEC/CFTC","CFPB","crypto (FIT21)","stablecoins (GENIUS)","insurance","housing","capital markets"],
+      "chair_timeline": [
+        {"years":"1995–2001","chair":"Jim Leach (R)","grade":"fact"},
+        {"years":"2001–2007","chair":"Mike Oxley (R)","grade":"fact"},
+        {"years":"2007–2011","chair":"Barney Frank (D)","grade":"fact"},
+        {"years":"2011–2013","chair":"Spencer Bachus (R)","grade":"fact"},
+        {"years":"2013–2019","chair":"Jeb Hensarling (R)","grade":"fact"},
+        {"years":"2019–2023","chair":"Maxine Waters (D)","grade":"fact"},
+        {"years":"2023–2025","chair":"Patrick McHenry (R)","grade":"fact"},
+        {"years":"2025–","chair":"French Hill (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"French Hill (R-AR)","ranking":"Maxine Waters (D-CA)","notable_current_members":["Tom Emmer (R-MN)","Bill Huizenga (R-MI)","Warren Davidson (R-OH)","Brad Sherman (D-CA)","Stephen Lynch (D-MA)","Sean Casten (D-IL)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "Senate Finance",
+      "jurisdiction": ["taxation","trade/tariffs","carried interest","Medicare/Social Security","customs"],
+      "chair_timeline": [
+        {"years":"2001–2003 / 2007–2014","chair":"Max Baucus (D) (intermittent)","grade":"fact"},
+        {"years":"2003–2007","chair":"Chuck Grassley (R)","grade":"fact"},
+        {"years":"2015–2021","chair":"Orrin Hatch (R) then Chuck Grassley (R)","grade":"fact"},
+        {"years":"2021–2025","chair":"Ron Wyden (D)","grade":"fact"},
+        {"years":"2025–","chair":"Mike Crapo (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Mike Crapo (R-ID)","ranking":"Ron Wyden (D-OR)","notable_current_members":["John Thune (R-SD)","Bill Cassidy (R-LA)","Elizabeth Warren (D-MA)","Catherine Cortez Masto (D-NV)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "House Ways & Means",
+      "jurisdiction": ["taxation","trade","tariffs","Social Security","Medicare"],
+      "chair_timeline": [
+        {"years":"1995–2001","chair":"Bill Archer (R)","grade":"fact"},
+        {"years":"2001–2007","chair":"Bill Thomas (R)","grade":"fact"},
+        {"years":"2007–2010","chair":"Charlie Rangel (D)","grade":"fact"},
+        {"years":"2011–2015","chair":"Dave Camp (R)","grade":"fact"},
+        {"years":"2015 / 2015–2017","chair":"Paul Ryan (R) then Kevin Brady (R)","grade":"fact"},
+        {"years":"2019–2023","chair":"Richard Neal (D)","grade":"fact"},
+        {"years":"2023–","chair":"Jason Smith (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Jason Smith (R-MO)","ranking":"Richard Neal (D-MA)","notable_current_members":["Vern Buchanan (R-FL)","Lloyd Smucker (R-PA)","Bill Pascrell-seat (D, succeeded)","Mike Thompson (D-CA)"],"roster_status":"leadership verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "Senate Judiciary",
+      "jurisdiction": ["antitrust","FISA/surveillance","Section 230","crypto enforcement","courts/nominations"],
+      "chair_timeline": [
+        {"years":"2001–2003 / 2007–2015","chair":"Patrick Leahy (D) (intermittent)","grade":"fact"},
+        {"years":"2003–2007 / 2015–2019","chair":"Chuck Grassley (R) / Orrin Hatch (R)","grade":"fact"},
+        {"years":"2019–2021","chair":"Lindsey Graham (R)","grade":"fact"},
+        {"years":"2021–2025","chair":"Dick Durbin (D)","grade":"fact"},
+        {"years":"2025–","chair":"Chuck Grassley (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Chuck Grassley (R-IA)","ranking":"Dick Durbin (D-IL)","notable_current_members":["Mike Lee (R-UT)","Josh Hawley (R-MO)","John Cornyn (R-TX)","Amy Klobuchar (D-MN)","Cory Booker (D-NJ)","Sheldon Whitehouse (D-RI)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "House Judiciary",
+      "jurisdiction": ["antitrust","Section 230","FISA","Big Tech 'weaponization'/censorship","crypto enforcement"],
+      "chair_timeline": [
+        {"years":"2001–2007","chair":"James Sensenbrenner (R)","grade":"fact"},
+        {"years":"2007–2011","chair":"John Conyers (D)","grade":"fact"},
+        {"years":"2011–2019","chair":"Bob Goodlatte (R) (from 2013)","grade":"fact"},
+        {"years":"2019–2023","chair":"Jerrold Nadler (D)","grade":"fact"},
+        {"years":"2023–","chair":"Jim Jordan (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Jim Jordan (R-OH)","ranking":"Jamie Raskin (D-MD)","notable_current_members":["Darrell Issa (R-CA)","Thomas Massie (R-KY)","Pramila Jayapal (D-WA)","Ted Lieu (D-CA)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "Senate Intelligence (SSCI)",
+      "jurisdiction": ["IC oversight","FISA 702","TikTok/RESTRICT","cyber attribution","covert action"],
+      "chair_timeline": [
+        {"years":"2007–2009","chair":"Jay Rockefeller (D)","grade":"fact"},
+        {"years":"2009–2015","chair":"Dianne Feinstein (D)","grade":"fact"},
+        {"years":"2015–2020","chair":"Richard Burr (R)","grade":"fact"},
+        {"years":"2021–2025","chair":"Mark Warner (D)","grade":"fact"},
+        {"years":"2025–","chair":"Tom Cotton (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Tom Cotton (R-AR)","ranking":"Mark Warner (D-VA)","notable_current_members":["Marco Rubio-seat (R, vacated for State)","Susan Collins (R-ME)","Ron Wyden (D-OR)","Martin Heinrich (D-NM)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "House Intelligence (HPSCI)",
+      "jurisdiction": ["IC oversight","FISA 702","covert action","cyber"],
+      "chair_timeline": [
+        {"years":"2004–2007","chair":"Pete Hoekstra (R)","grade":"fact"},
+        {"years":"2007–2011","chair":"Silvestre Reyes (D)","grade":"fact"},
+        {"years":"2011–2015","chair":"Mike Rogers (R-MI)","grade":"fact"},
+        {"years":"2015–2019","chair":"Devin Nunes (R)","grade":"fact"},
+        {"years":"2019–2023","chair":"Adam Schiff (D)","grade":"fact"},
+        {"years":"2023–","chair":"Mike Turner (R) then Rick Crawford (R, 2025)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Rick Crawford (R-AR)","ranking":"Jim Himes (D-CT)","notable_current_members":["Darin LaHood (R-IL)","Trent Kelly (R-MS)"],"roster_status":"leadership verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "Senate Armed Services (SASC)",
+      "jurisdiction": ["NDAA","military AI/autonomy","space","defense procurement","nominations"],
+      "chair_timeline": [
+        {"years":"2007–2015","chair":"Carl Levin (D)","grade":"fact"},
+        {"years":"2015–2018","chair":"John McCain (R)","grade":"fact"},
+        {"years":"2018–2021","chair":"Jim Inhofe (R)","grade":"fact"},
+        {"years":"2021–2025","chair":"Jack Reed (D)","grade":"fact"},
+        {"years":"2025–","chair":"Roger Wicker (R)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Roger Wicker (R-MS)","ranking":"Jack Reed (D-RI)","notable_current_members":["Tom Cotton (R-AR)","Joni Ernst (R-IA)","Kirsten Gillibrand (D-NY)","Elizabeth Warren (D-MA)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    },
+    {
+      "committee": "House Armed Services (HASC)",
+      "jurisdiction": ["NDAA","military AI/autonomy","space","defense procurement"],
+      "chair_timeline": [
+        {"years":"2011–2015","chair":"Buck McKeon (R)","grade":"fact"},
+        {"years":"2015–2019","chair":"Mac Thornberry (R)","grade":"fact"},
+        {"years":"2019–2023","chair":"Adam Smith (D)","grade":"fact"},
+        {"years":"2023–","chair":"Mike Rogers (R-AL)","grade":"fact"}
+      ],
+      "current_119th": {"chair":"Mike Rogers (R-AL)","ranking":"Adam Smith (D-WA)","notable_current_members":["Rob Wittman (R-VA)","Elise Stefanik (R-NY)","Ro Khanna (D-CA)","Seth Moulton (D-MA)"],"roster_status":"leadership+notable verified; full roster REQUIRES-INGEST"}
+    }
+  ]
+}

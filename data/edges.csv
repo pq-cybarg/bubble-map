@@ -23,6 +23,7 @@ Amazon,OpenAI,equity,50000000000,committed,False,False,fin-nvidia-openai.json
 Anthropic,SpaceX,compute_commitment,45000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
 SoftBank,OpenAI,equity,41000000000,closed,False,False,fin-nvidia-openai.json
 Apollo,Next-gen data centers / AI infrastructure,equity,40000000000,2025,False,False,macro-cre-privatecredit.json
+Terraform_Labs,SINK_investors,other,40000000000,closed,False,False,macro-stablecoin-failures-manipulation.json
 Google,Anthropic,equity,40000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
 OpenAI,Microsoft,revenue_share,38000000000,committed,False,False,fin-microsoft-openai.json
 SINK_lenders,Vantage,debt,38000000000,reported,False,False,fin-coreweave-oracle.json
@@ -62,7 +63,9 @@ Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
 MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
+Binance,USD1,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
 NVIDIA,CoreWeave,equity,3660000000,13F-~11pct,True,False,"spec-sec-filings-primary.json,fin-nvidia-openai.json,fin-coreweave-oracle.json"
+Circle,Silicon_Valley_Bank,other,3300000000,closed,False,False,spec-crypto-banking-debanking.json
 OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsoft-openai.json
 BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 NVIDIA,Nebius,equity,2700000000,13F,True,False,"spec-sec-filings-primary.json,fin-coreweave-oracle.json"
@@ -70,10 +73,12 @@ JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.jso
 Netherlands,Pertsev,regulatory_legal,2200000000,convicted-on-appeal,False,False,spec-tornado-samourai.json
 SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
 MGX,Binance,equity,2000000000,invested-settled-in-USD1,False,False,spec-exchanges-asia.json
+MGX,Binance,relationship,2000000000,closed,False,False,macro-stablecoin-failures-manipulation.json
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
 Apple,Globalstar,investment,1700000000,closed,False,False,spec-telecom-satellite.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
 NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
+Liberty Strategic Capital,Flagstar,other,1000000000,closed,False,False,spec-crypto-banking-debanking.json
 Disney,OpenAI,equity,1000000000,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 NVIDIA,Nokia,equity,1000000000,committed,False,False,fin-nvidia-openai.json
 JPMorgan,Metals_Futures,other,920000000,settled,False,False,macro-futures-vs-physical.json
@@ -90,6 +95,7 @@ a16z,Fairshake,pac_funding,70000000,given,False,False,spec-sec-sdny-regulatory.j
 Ripple,Fairshake,pac_funding,50000000,given,False,False,spec-sec-sdny-regulatory.json
 SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-sec-sdny-regulatory.json
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
+FTX,Farmington_Moonstone,equity,11500000,closed,False,False,spec-crypto-banking-debanking.json
 InQTel,Palantir,relationship,2000000,invested,False,False,spec-disclosures-surveillance.json
 Coinbase,FDIC,regulatory_legal,188440,won-fees,False,False,spec-sec-sdny-regulatory.json
 Microsoft,CoreWeave,revenue_share,,reported-10K,True,False,spec-sec-filings-primary.json
@@ -104,6 +110,12 @@ SpaceX,xAI,merger,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
 Meta,Oklo,compute_commitment,,committed,False,False,fin-meta-family.json
 Meta,Broadcom,compute_commitment,,committed,False,False,"fin-meta-family.json,fin-google-amazon-anthropic-meta.json"
+FDIC,US_Banks,regulatory_legal,,closed,False,False,"spec-crypto-banking-debanking.json,spec-sec-sdny-regulatory.json"
+Federal Reserve,Custodia_Bank,other,,closed,False,False,spec-crypto-banking-debanking.json
+SEC,Ripple,other,,closed,False,False,spec-crypto-banking-debanking.json
+JPMorgan,JPM_Coin,regulatory_legal,,closed,False,False,spec-crypto-banking-debanking.json
+FTX,Silvergate_Bank,other,,closed,False,False,spec-crypto-banking-debanking.json
+Flagstar,Signature_Bank,acquisition,,closed,False,False,spec-crypto-banking-debanking.json
 Trump,CZ,regulatory_legal,,granted,False,False,spec-exchanges-asia.json
 Binance,USD1,investment,,reported-disputed,False,False,spec-exchanges-asia.json
 MGX,TikTok_US,equity,,signed,False,False,spec-exchanges-asia.json
@@ -121,6 +133,11 @@ Contingent_Labor,Jobs_Headline,other,,structural,False,False,macro-gig-labor.jso
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
+Terraform_Labs,Three_Arrows_Capital,other,,closed,False,False,macro-stablecoin-failures-manipulation.json
+World_Liberty_Financial,USD1,relationship,,closed,False,False,macro-stablecoin-failures-manipulation.json
+Binance,World_Liberty_Financial,regulatory_legal,,closed,False,False,macro-stablecoin-failures-manipulation.json
+Cantor,USD1,other,,closed,False,False,macro-stablecoin-failures-manipulation.json
+Tether,SINK_bondmarket,other,,recurring,False,False,macro-stablecoin-failures-manipulation.json
 NSA,ATT,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 NSA,TechCompanies,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 DARPA,TrailOfBits,relationship,,published,False,False,spec-disclosures-surveillance.json
@@ -137,7 +154,6 @@ SDNY,RomanStorm,regulatory_legal,,partial-verdict-retrial-pending,False,False,sp
 SDNY,SamouraiWallet,regulatory_legal,,guilty-pleas-CountII,False,False,spec-tornado-samourai.json
 FinCEN,SamouraiWallet,regulatory_legal,,suppressed-until-2025-04,False,False,spec-tornado-samourai.json
 First_Brands,Jefferies,debt,,2025,False,False,macro-firstbrands-ubs.json
-FDIC,US_Banks,regulatory_legal,,FOIA-released,False,False,spec-sec-sdny-regulatory.json
 SEC,Ripple,regulatory_legal,,filed-then-Torres-2023,False,False,spec-sec-sdny-regulatory.json
 SEC,ConsenSys,regulatory_legal,,wells-then-charges,False,False,spec-sec-sdny-regulatory.json
 JPMorgan,ConsenSys,divestiture,,closed,False,False,spec-sec-sdny-regulatory.json
@@ -173,6 +189,12 @@ Google,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anth
 Anthropic,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
 AMD,OpenAI,warrant,,announced,True,False,fin-google-amazon-anthropic-meta.json
 MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+UBS,Phil Gramm,investment,,closed,False,False,influence-congress-funding-compromise.json
+UBS,Jeb Hensarling,other,,closed,False,False,influence-congress-funding-compromise.json
+Signature_Bank,Barney Frank,other,,closed,False,False,influence-congress-funding-compromise.json
+Trump Media & Technology Group,Devin Nunes,other,,closed,False,False,influence-congress-funding-compromise.json
+US_Banks,Senate Banking Committee,other,,recurring,False,False,influence-congress-funding-compromise.json
+US_Banks,House Financial Services,other,,recurring,False,False,influence-congress-funding-compromise.json
 GENIUS_Act,Stablecoins,other,,enacted,False,False,macro-stablecoin-treasury-rail.json
 WorldLibertyFinancial,GENIUS_Act,other,,flagged,False,False,macro-stablecoin-treasury-rail.json
 SEALSQ,ICALPS,acquisition,,closed,False,False,fin-sealsq-wisekey-global.json

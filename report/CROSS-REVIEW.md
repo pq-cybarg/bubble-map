@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 35 files
-- **Google** — 29 files
+- **Meta** — 37 files
+- **Google** — 30 files
 - **OpenAI** — 27 files
 - **Oracle** — 23 files
+- **Amazon** — 21 files
 - **Microsoft** — 20 files
-- **Amazon** — 20 files
 - **Stargate** — 16 files
 - **NVIDIA** — 16 files
 - **Anthropic** — 16 files
+- **FDIC** — 15 files
+- **Chainlink** — 14 files
 - **SpaceX** — 14 files
-- **Chainlink** — 12 files
-- **SoftBank** — 12 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `influence-operator-network.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 10 shared entities
-- spec-network-overlay.json: 9 shared entities
-- digitalid-corporate.json: 6 shared entities
-- fin-google-amazon-anthropic-meta.json: 6 shared entities
-- geopolitics-defense-industrial-base.json: 5 shared entities
-- spec-exchanges-asia.json: 5 shared entities
-- fin-gulf-sovereign-ai-capital.json: 5 shared entities
-- altcoin-lens.json: 4 shared entities
+## Newest file `macro-stablecoin-failures-manipulation.json` — related files by shared entities (verify cross-refs exist)
+- influence-congress-funding-compromise.json: 3 shared entities
+- spec-crypto-banking-debanking.json: 3 shared entities
+- macro-stablecoin-treasury-rail.json: 3 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- macro-official-data-integrity.json: 2 shared entities

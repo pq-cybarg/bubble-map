@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "title": "Congress as a funding/compromise surface — committees of jurisdiction, non-linear bill flow, and the documented money-and-leverage map (FEC / STOCK Act / LDA / Federal Register)",
+    "generated": "2026-06-12",
+    "frame": "The legislature is where the financial/AI/surveillance fights are won or lost in legalese. Map it as a system: (1) committees of jurisdiction = the chokepoints where each regulated industry's bills live; (2) bill flow is NON-LINEAR — a bill's operative terms are written, gutted, and reinserted in subcommittee markup, manager's amendments, conference, and lame-duck omnibus attachments, and these term-changes are the part that is routinely misreported; (3) members and their affiliates carry documented financial exposure (donations from the regulated industry, personal/again-household securities and real-estate holdings, debt, post-office employment) that constitutes LEVERAGE, not proof of a quid pro quo.",
+    "WARNING": "CRITICAL EVIDENTIARY DISCIPLINE. Donation + vote alignment is CORRELATION, not a bribe. Adjacency is NOT intent. This block builds a transparent LEVERAGE/EXPOSURE map from public records and grades every cell; it does NOT assert that any named member is 'bought' or 'compromised' as a legal fact. 'Degree of exposure' is a structural index (see compromise_rubric), explicitly labeled, never a corruption verdict. All overlay edges are EXCLUDED from the SCC/Z3/TLA+ proofs (instrument classes pac_funding / revolving_door / regulatory_legal are non-financial-flow overlay, per build_graph layer split). Dollar figures that are not yet ingested from primary FEC/disclosure data are marked REQUIRES-INGEST and NOT fabricated.",
+    "method": "Committee jurisdiction: House/Senate rules + Congress.gov. Bill flow & term-changes: Congress.gov bill histories, the Congressional Record, conference reports, and the Federal Register for the resulting rulemakings. Money: FEC bulk/API (candidate & committee financial summaries; receipts by industry), OpenSecrets/CRP sector aggregations, House Clerk & Senate financial disclosures (STOCK Act periodic transaction reports), Lobbying Disclosure Act (LDA) filings, and post-office employment records. Each finding graded fact|contested|weak|unsupported.",
+    "cross_refs": ["macro-bank-hierarchy.json","macro-private-credit-marks.json","macro-stablecoin-treasury-rail.json","macro-official-data-integrity.json","spec-disclosures-surveillance.json","influence-operator-network.json","macro-firstbrands-ubs.json","influence-tbi-policy.json"]
+  },
+
+  "compromise_rubric": {
+    "purpose": "A transparent, reproducible LEVERAGE/EXPOSURE index for a member on a given policy domain. It measures structural exposure to an interest, NOT guilt. Every component is a public-record fact; the composite is explicitly an interpretation.",
+    "components": [
+      "C1 Industry money: share of campaign receipts from the regulated industry's PACs/employees (FEC/OpenSecrets), relative to chamber median.",
+      "C2 Personal financial position: household securities/commodity/real-estate/debt holdings in or adjacent to the regulated industry (STOCK Act PTRs + annual disclosures); timing of trades vs. nonpublic committee information.",
+      "C3 Revolving door: prior employment in the regulated industry and/or post-office employment by it (the strongest, cleanest signal).",
+      "C4 Vote/term alignment: votes and — more tellingly — authored amendments that change a bill's operative terms in the industry's favor (the misreported layer).",
+      "C5 Family/affiliate & staff: household members, former staff who became lobbyists for the industry, and leadership-PAC donor overlap.",
+      "C6 External leverage: documented threats, kompromat, foreign-agent ties, or debt to interested parties (rare, high-grade-required; mostly unsupported and left so)."
+    ],
+    "interpretation": "High composite = high structural exposure = the member's incentives are aligned with the interest by construction. It is a HYPOTHESIS GENERATOR for where to read the primary record, not a verdict. C3 (revolving door) and C2 (well-timed personal trades) are the components that most often survive scrutiny; C1 alone is the weakest (industries donate to whoever sits on the committee, regardless of disposition)."
+  },
+
+  "committee_jurisdiction": [
+    {"committee":"Senate Banking, Housing & Urban Affairs","regulates":["banks","Fed","SEC","CFPB","stablecoins","crypto market structure","housing finance"],"graph_targets":["US_Banks","BlackRock","Blackstone","JPMorgan"],"why":"The Senate chokepoint for GLBA, Dodd-Frank, S.2155, and the 2025 stablecoin/market-structure bills. Top donor sectors historically: securities & investment, insurance, commercial banks, real estate.","grade":"fact"},
+    {"committee":"House Financial Services","regulates":["banks","SEC/CFTC","CFPB","crypto (FIT21)","stablecoins (GENIUS)","insurance","housing"],"graph_targets":["US_Banks","BlackRock","Blackstone","JPMorgan"],"why":"The House origin point for GLBA, SOX, Dodd-Frank, JOBS Act, FIT21, and the GENIUS stablecoin framework. 'The cash committee' — members are seated partly because the seat attracts finance money.","grade":"fact"},
+    {"committee":"Senate Finance / House Ways & Means","regulates":["taxation","trade","tariffs","Medicare/Social Security","carried interest"],"graph_targets":["SINK_capex","SINK_debt"],"why":"Tax/trade chokepoint — carried-interest treatment (private equity/hedge funds), R&D and depreciation rules (AI capex), tariff/export schedules (chips).","grade":"fact"},
+    {"committee":"House/Senate Judiciary","regulates":["antitrust","Section 230","surveillance (FISA)","crypto enforcement","Big Tech"],"graph_targets":["Google","Meta","Amazon","Apple"],"why":"Antitrust and platform-liability chokepoint; FISA reauthorization; the 'censorship' and child-safety investigations.","grade":"fact"},
+    {"committee":"House/Senate Intelligence","regulates":["IC oversight","FISA 702","TikTok/RESTRICT","cyber attribution"],"graph_targets":["SINK_surveillance"],"why":"The surveillance-authority and tech-supply-chain-security chokepoint; bulk-collection reauthorization.","grade":"fact"},
+    {"committee":"Senate/House Armed Services","regulates":["defense budget (NDAA)","military AI/autonomy","defense primes"],"graph_targets":["Defense_Primes","Palantir","Anduril"],"why":"The NDAA is the annual must-pass vehicle into which defense-AI, space, and procurement terms are written and amended.","grade":"fact"},
+    {"committee":"House Energy & Commerce / Senate Energy","regulates":["data-center power","grid","critical minerals","telecom/spectrum"],"graph_targets":["SINK_capex","MP_Materials"],"why":"Power-and-grid chokepoint for the AI buildout; permitting; spectrum for satellite/space datacenters.","grade":"fact"}
+  ],
+
+  "bill_flow": [
+    {
+      "bill":"Gramm-Leach-Bliley Act (Financial Services Modernization Act), 1999",
+      "committees":["House Banking (Leach)","Senate Banking (Gramm)","Commerce"],
+      "nonlinear_path":"Three competing House versions (Banking, Commerce, a leadership compromise) reconciled on the floor; the Senate Gramm bill differed sharply on Community Reinvestment Act (CRA) coverage; resolved only in a contentious conference where the CRA 'sunshine' and small-bank-exemption terms were the last-minute trade that let it pass.",
+      "key_term_changes":"The operative repeal (allowing bank/securities/insurance affiliation under a financial-holding-company umbrella) was never seriously in doubt; the FOUGHT terms were CRA scope and Fed-vs-Treasury (OTS/OCC) umbrella-supervisor authority. The 'firewall' language touted publicly was weaker than reported — functional regulation left systemic-risk oversight to no one, the gap 2008 exposed.",
+      "reported_vs_reality":"Reported as 'modernization removing Depression-era barriers.' Reality: it ratified conglomerates already assembled (Citicorp-Travelers, 1998) and created no systemic supervisor — the consequential omission, under-covered at the time.",
+      "associated_pois":["Phil Gramm","Jim Leach","Robert Rubin","Larry Summers","Bill Clinton"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"Commodity Futures Modernization Act (CFMA), 2000",
+      "committees":["House Agriculture","House Banking","Senate Agriculture","Senate Banking"],
+      "nonlinear_path":"A standalone bill went nowhere; the operative text was attached as a ~262-page rider to an 11,000-page omnibus appropriations bill in the December 2000 lame-duck session, after the election, with minimal floor debate.",
+      "key_term_changes":"The decisive term — the EXEMPTION of OTC derivatives and swaps from CFTC and SEC oversight (and the 'Enron loophole' exempting energy trading) — was inserted via the omnibus attachment, bypassing the committee scrutiny a standalone bill would have drawn. This is the canonical example of operative terms entering through a non-linear, low-visibility vehicle.",
+      "reported_vs_reality":"Barely reported as a discrete event; framed as technical 'legal certainty' for derivatives. Reality: it foreclosed the regulation Brooksley Born's CFTC had sought in 1998 and is the single clearest statutory antecedent of the 2008 OTC-derivatives blowup.",
+      "associated_pois":["Phil Gramm","Brooksley Born","Robert Rubin","Larry Summers","Alan Greenspan"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"Sarbanes-Oxley Act (SOX), 2002",
+      "committees":["Senate Banking (Sarbanes)","House Financial Services (Oxley)"],
+      "nonlinear_path":"A weak House bill (Oxley's original) and a far stronger Senate bill (Sarbanes) collided; the WorldCom collapse mid-process (June 2002) shifted leverage to the Senate version, which largely prevailed in conference — a rare case where an exogenous shock strengthened, rather than gutted, the operative terms.",
+      "key_term_changes":"The PCAOB, auditor-independence, and CEO/CFO-certification provisions were strengthened in conference under WorldCom pressure; the originally industry-friendly House terms were displaced.",
+      "reported_vs_reality":"Accurately reported as a tough response — one of the few. Limit: SOX targeted accounting fraud, not leverage/derivatives, so it did nothing to prevent 2008.",
+      "associated_pois":["Paul Sarbanes","Mike Oxley"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"Dodd-Frank Wall Street Reform and Consumer Protection Act, 2010",
+      "committees":["Senate Banking (Dodd)","House Financial Services (Frank)"],
+      "nonlinear_path":"~2,300 pages assembled under crisis pressure; the operative terms were fought in dozens of amendments — the Volcker Rule (added late, then riddled with exemptions), the Collins Amendment (capital), the Brown-Vitter size-cap (DEFEATED), the Durbin Amendment (debit interchange, added on the floor), and the Lincoln 'swaps push-out' (later largely repealed in 2014 via a Citigroup-drafted rider). It then required ~400 rulemakings, where the real fights migrated to the Federal Register.",
+      "key_term_changes":"The bill as PASSED was materially weaker than as INTRODUCED: the hard size-cap failed, the Volcker Rule gained loopholes, and key provisions (swaps push-out) were repealed within four years via must-pass spending bills. The CONSEQUENTIAL action then moved to agency rulemaking — the misreported layer, because press coverage stops at passage.",
+      "reported_vs_reality":"Reported as 'sweeping reform.' Reality: the strongest structural fixes (break-up authority, full swaps push-out) were removed or reversed; the framework's bite depended on rulemakings the next administration could (and did) soften.",
+      "associated_pois":["Chris Dodd","Barney Frank","Sherrod Brown","Elizabeth Warren","Richard Shelby"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"JOBS Act (Jumpstart Our Business Startups), 2012",
+      "committees":["House Financial Services","Senate Banking"],
+      "nonlinear_path":"Bipartisan, fast-tracked; a Senate amendment (Merkley-Bennet-Brown) tightened the crowdfunding investor protections, but the core deregulation of the IPO 'on-ramp' (reduced disclosure for 'emerging growth companies') survived.",
+      "key_term_changes":"Relaxed audit/disclosure requirements for newly public companies and legalized general solicitation — terms that quietly lowered the disclosure floor for the cohort of pre-IPO tech firms now central to the AI cycle.",
+      "reported_vs_reality":"Reported as 'helping startups.' Reality: it reduced the public-disclosure burden on exactly the high-growth firms whose opacity later mattered (the EGC on-ramp the AI-era unicorns used).",
+      "associated_pois":["Patrick McHenry"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"Economic Growth, Regulatory Relief and Consumer Protection Act (S.2155), 2018",
+      "committees":["Senate Banking (Crapo)","House Financial Services"],
+      "nonlinear_path":"A bipartisan Senate deal (Crapo + several Democrats) raised the systemic-bank (SIFI) threshold; a bloc of Banking Democrats provided the decisive votes despite progressive objection.",
+      "key_term_changes":"The single operative change — raising the enhanced-supervision threshold from $50B to $250B in assets — removed Silicon Valley Bank (~$210B at failure), Signature, and First Republic from the strictest stress-testing/liquidity regime. Directly implicated in the March-2023 failures.",
+      "reported_vs_reality":"Reported as 'relief for community banks.' Reality: the threshold change primarily benefited large regionals, not community banks, and the 2023 failures are the empirical test of that term.",
+      "associated_pois":["Mike Crapo","Richard Shelby"],
+      "grade":"fact (legislative history) + the 2023 causal link is contested"
+    },
+    {
+      "bill":"CHIPS and Science Act, 2022",
+      "committees":["Senate Commerce","House Science","Armed Services","Appropriations"],
+      "nonlinear_path":"Began as the broad USICA/COMPETES bills (industrial policy, research, trade); stripped down in conference to the ~$52B semiconductor subsidy + investment tax credit + guardrails on China expansion, with the broader competitiveness provisions dropped.",
+      "key_term_changes":"The China 'guardrail' terms (limits on recipients expanding advanced-node capacity in China) and the labor/childcare conditions were the fought terms; the subsidy size and the ITC were the durable core. Recipients (Intel, TSMC Arizona, Samsung, Micron) map directly to the chip-chokepoint block.",
+      "reported_vs_reality":"Reported as 'reshoring chips.' Reality: a direct state vendor-financing of the semiconductor supply chain — the same circular state-as-financier pattern the critical-minerals block documents.",
+      "associated_pois":["Chuck Schumer","C.C. Wei","Morris Chang"],
+      "grade":"fact (legislative history)"
+    },
+    {
+      "bill":"FIT21 / GENIUS Act (digital-asset market structure & stablecoins), 2024–2025",
+      "committees":["House Financial Services (McHenry/Hill)","House Agriculture","Senate Banking (Scott)"],
+      "nonlinear_path":"FIT21 split crypto jurisdiction between the SEC and CFTC, passing the House with bipartisan votes; the GENIUS stablecoin framework moved separately through Senate Banking; both reflect heavy industry engagement and a deliberate shift of authority away from the (then-Gensler) SEC enforcement model.",
+      "key_term_changes":"The decisive terms — WHICH tokens are 'commodities' (CFTC, lighter) vs 'securities' (SEC, heavier), and whether stablecoins must be 100% reserve-backed and yield-free (GENIUS) — were shaped with direct crypto-industry input (Coinbase, Circle, a16z). The classification line IS the whole game, and it was drawn toward the lighter regime.",
+      "reported_vs_reality":"Reported as 'finally regulating crypto.' Reality: the framework largely RATIFIES the industry's preferred jurisdictional split and reserve model; the 'regulation' is also a grant of legitimacy and a shield from the prior enforcement posture.",
+      "associated_pois":["Patrick McHenry","French Hill","Tim Scott","Cynthia Lummis","Tom Emmer","Brian Armstrong","Jeremy Allaire"],
+      "grade":"fact (legislative history) + interpretation labeled"
+    }
+  ],
+
+  "funding_compromise_findings": [
+    {"finding":"Revolving door, finance-committee chairs → regulated firms","detail":"Phil Gramm (Senate Banking chair, author of GLBA/CFMA) → vice-chairman of UBS Investment Bank. Jeb Hensarling (House Financial Services chair) → vice-chairman of UBS. John Dugan (OCC) → chairman of Citigroup. Robert Rubin (Treasury) → Citigroup. The chair-to-regulated-megabank move is the cleanest leverage signal (rubric C3).","graph_link":"UBS, Citigroup (see macro-firstbrands-ubs)","grade":"fact"},
+    {"finding":"Revolving door, member → exact firm later distressed","detail":"Barney Frank (co-author of Dodd-Frank) joined the board of Signature Bank, which regulators seized in March 2023 (a crypto-exposed bank, partly outside the strict regime S.2155 had relaxed). The author of post-crisis reform sitting on a board of a bank that failed in the next crisis is a documented irony, not a causal claim.","graph_link":"Signature Bank (2023 failures; macro-fdic, macro-bank-htm-marks)","grade":"fact"},
+    {"finding":"Member → aligned media/crypto-treasury vehicle","detail":"Devin Nunes (House Intelligence chair) → CEO of Trump Media & Technology Group, which pursued a Bitcoin-treasury strategy and the 'Truth.Fi' fintech venture. A direct line from intelligence-committee leadership to a politically aligned media-and-crypto-capital vehicle.","graph_link":"Trump Media (macro-stablecoin-treasury-rail)","grade":"fact"},
+    {"finding":"Congressional securities trading vs. committee information","detail":"Well-documented episodes: the Pelosi household's large, well-timed mega-cap tech option exercises (the focus of the bipartisan congressional-stock-trading-ban debate); Senator Richard Burr's (Intelligence chair) pandemic-timed equity sales in Feb 2020 (DOJ/SEC inquiry, closed without charges). These drove the STOCK Act enforcement and the proposed trading ban. Rubric C2.","graph_link":"macro-official-data-integrity","grade":"fact (the trades & inquiries are public record); intent unproven"},
+    {"finding":"Sector-donation concentration by committee seat","detail":"Members of the Banking / Financial Services committees receive securities-&-investment, insurance, commercial-bank, and real-estate PAC money at rates well above the chamber median — BECAUSE the seat regulates those industries. This is structural (C1) and is the WEAKEST evidence of disposition: the industry funds whoever holds the gavel-adjacent seats regardless of their votes. Specific per-member dollar totals are REQUIRES-INGEST (FEC/OpenSecrets) and are not asserted here without the primary pull.","graph_link":"US_Banks, BlackRock, Blackstone","grade":"fact (pattern); per-member figures REQUIRES-INGEST"},
+    {"finding":"Leadership PACs & lobbyist-staff pipeline","detail":"Committee chairs run leadership PACs that redistribute industry money to colleagues (buying intra-caucus influence), and their senior staff frequently become industry lobbyists (LDA-registered) who then negotiate the very bill terms described above. This staff/affiliate layer (rubric C5) is where the misreported term-changes are often drafted. Exhaustive staff→lobbyist mapping is REQUIRES-INGEST (LDA + House/Senate employment records).","graph_link":"influence-operator-network","grade":"fact (pattern); exhaustive map REQUIRES-INGEST"}
+  ],
+
+  "edges": [
+    {"from":"UBS","to":"Phil Gramm","instrument":"revolving_door","raw_instrument":"GLBA/CFMA author -> UBS Investment Bank vice-chairman","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof): regulator-to-regulated revolving door"},
+    {"from":"UBS","to":"Jeb Hensarling","instrument":"revolving_door","raw_instrument":"House Financial Services chair -> UBS vice-chairman","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof)"},
+    {"from":"Signature_Bank","to":"Barney Frank","instrument":"revolving_door","raw_instrument":"Dodd-Frank co-author -> Signature Bank board (seized 2023)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof): irony, not causation"},
+    {"from":"Trump Media & Technology Group","to":"Devin Nunes","instrument":"revolving_door","raw_instrument":"House Intel chair -> TMTG CEO (Bitcoin treasury / Truth.Fi)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof)"},
+    {"from":"US_Banks","to":"Senate Banking Committee","instrument":"pac_funding","raw_instrument":"securities/insurance/bank/real-estate PAC receipts above chamber median (per-member $ REQUIRES-INGEST)","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof): structural sector-donation pattern, weakest signal (C1)"},
+    {"from":"US_Banks","to":"House Financial Services","instrument":"pac_funding","raw_instrument":"'the cash committee' — finance-sector PAC concentration on the committee of jurisdiction","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"influence-congress-funding-compromise.json","note":"OVERLAY (non-proof)"}
+  ],
+
+  "limits": "What is HERE: the committee-jurisdiction map, the documented non-linear bill-flow histories with their misreported term-changes, the cleanest leverage findings (revolving door, named trading episodes, structural sector-donation patterns), and a transparent exposure rubric. What REQUIRES-INGEST (and is NOT fabricated): per-member FEC/OpenSecrets dollar totals by industry across 26 years; full STOCK Act periodic-transaction-report parsing; exhaustive staff→lobbyist (LDA) chains; per-member real-estate/debt disclosures. fetch_fec.py wires the FEC API (env-gated FEC_API_KEY, like the FINRA pattern) so the quantitative layer is reproducible without committing any key. The full ~2,000-member roster across 13 Congresses is delivered as a roster-data layer (data/congress_committees.json) plus this analytical block, not as 2,000 hand-authored dossiers — by design, and per the user's accepted roster-segmentation approach. NOTHING here asserts a member is corrupt; this is a leverage/exposure surface for reading the primary record."
+}
