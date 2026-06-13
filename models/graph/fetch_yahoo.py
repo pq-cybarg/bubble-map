@@ -16,7 +16,9 @@ import os, json, subprocess, shutil, urllib.request
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA=os.path.join(ROOT,"data"); os.makedirs(DATA,exist_ok=True)
 OUT=os.path.join(DATA,"yahoo_monthly.json")
-TICKERS=["MUB","CMF","NYF","HYD","LQD","HYG","VCSH","VCIT","VCLT"]
+TICKERS=["MUB","CMF","NYF","HYD","LQD","HYG","VCSH","VCIT","VCLT",
+         # equity SECTOR (GICS industry) ETFs for the industry cross-section (normalized price)
+         "XLK","XLF","XLE","XLV","XLU","XLI","XLP","XLY","XLB","XLRE","XLC","SMH"]
 BASE="https://query1.finance.yahoo.com/v8/finance/chart/"
 
 def _get(url):

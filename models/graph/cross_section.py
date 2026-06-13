@@ -161,12 +161,15 @@ def build():
         note="ICE BofA OAS by rating. Dispersion = the spread between quality buckets (credit discrimination).")
     if r: cs["credit_oas"]=r
 
-    # (1b) SOVEREIGN - 10Y yields across the developed bloc
-    SOV=[("US","DGS10"),("Germany","IRLTLT01DEM156N"),("UK","IRLTLT01GBM156N"),("France","IRLTLT01FRM156N"),
-         ("Italy","IRLTLT01ITM156N"),("Japan","IRLTLT01JPM156N"),("Canada","IRLTLT01CAM156N"),("Australia","IRLTLT01AUM156N")]
-    sov={lab:fm[sid] for lab,sid in SOV if sid in fm and fm[sid]}
-    r=ts_cross_section(sov,"Developed-market sovereign 10Y yield","% yield",
-        note="Cross-sectional dispersion = sovereign fragmentation; PC1 = the global rates common factor.")
+    # (1b) SOVEREIGN - 10Y yields across the FULL available cross-section (dynamic, up to 26 countries)
+    _CCNAME={"DE":"Germany","GB":"UK","FR":"France","IT":"Italy","JP":"Japan","CA":"Canada","AU":"Australia",
+             "ES":"Spain","NL":"Netherlands","BE":"Belgium","AT":"Austria","CH":"Switzerland","IE":"Ireland",
+             "PT":"Portugal","FI":"Finland","SE":"Sweden","NO":"Norway","DK":"Denmark","PL":"Poland",
+             "CZ":"Czechia","HU":"Hungary","KR":"Korea","NZ":"New Zealand","MX":"Mexico","CL":"Chile","GR":"Greece"}
+    SOV=[("US","DGS10")]+[(_CCNAME[cc],f"IRLTLT01{cc}M156N") for cc in _CCNAME]
+    sov={lab:fm[sid] for lab,sid in SOV if sid in fm and fm[sid] and len(fm[sid])>=120}
+    r=ts_cross_section(sov,"Sovereign 10Y yield (global cross-section)","% yield",
+        note=f"{len(sov)}-country cross-section. Dispersion = sovereign fragmentation; PC1 = the global rates common factor.")
     if r: cs["sovereign_10y"]=r
 
     # (1c) MUNICIPAL - per-state/segment ETF distribution yields

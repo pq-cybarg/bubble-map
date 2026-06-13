@@ -381,36 +381,52 @@ if _m and all(k in _m for k in ("BAA","AAA","DGS10")):
             note="FRED BAMLH0A0HYM2 (HY OAS) / BAMLC0A0CM (IG OAS). Range limited by the monthly series returned."),
           "Even on the available window, high-yield and investment-grade OAS sit near cycle lows — the corporate market is pricing minimal default risk into 2026."))
 
-# --- regional sovereign yields + a GDP-weighted global aggregate ---
-if _m and all(k in _m for k in ("DGS10","IRLTLT01DEM156N","IRLTLT01GBM156N","IRLTLT01JPM156N")):
-    cr=sorted(set(_m["DGS10"])&set(_m["IRLTLT01DEM156N"])&set(_m["IRLTLT01GBM156N"])&set(_m["IRLTLT01JPM156N"]))
-    us=[_m["DGS10"][d] for d in cr]; de=[_m["IRLTLT01DEM156N"][d] for d in cr]; gb=[_m["IRLTLT01GBM156N"][d] for d in cr]; jp=[_m["IRLTLT01JPM156N"][d] for d in cr]
-    # GDP weights (2024 nominal $tn, approx): US 29.2, JP 4.0, DE 4.7, GB 3.6 -> renormalized
-    W={"US":29.2,"JP":4.0,"DE":4.7,"GB":3.6}; tot=sum(W.values()); wU,wJ,wD,wG=W["US"]/tot,W["JP"]/tot,W["DE"]/tot,W["GB"]/tot
-    glob=[wU*us[i]+wJ*jp[i]+wD*de[i]+wG*gb[i] for i in range(len(cr))]
-    charts.append(("Regional sovereign 10Y + a GDP-weighted GLOBAL long rate",
-      monthly_line_chart("10Y government yields (%), monthly", cr, [("US",us),("UK",gb),("Germany",de),("Japan",jp),("GDP-weighted global",glob)], [AC2,"#9a6a1a","#1f6f43","#7b2d26",INK], ymin=-0.5,
-        note="FRED DGS10 (US) / IRLTLT01{DE,GB,JP}M156N. Global = GDP-weighted (US 70% / DE 11% / GB 9% / JP 10%, 2024 GDP)."),
-      "Subdividing by region shows the divergence the single 'US 10Y' hides: Japan sat near 0% under yield-curve-control while the US/UK ran 4%+; the GDP-weighted global long rate (black) rose from ~1% (2020) toward ~3% (2026) as Japan finally joined — the synchronized global repricing of duration, and the carry-unwind pressure (macro-carry-trades)."))
-
-# --- sub-regional sovereign aggregates (region -> subregion -> country) ---
-_REG=["DGS10","IRLTLT01CAM156N","IRLTLT01DEM156N","IRLTLT01GBM156N","IRLTLT01FRM156N","IRLTLT01ITM156N","IRLTLT01JPM156N","IRLTLT01AUM156N"]
-if _m and all(k in _m for k in _REG):
-    cs=sorted(set.intersection(*[set(_m[k]) for k in _REG]))
-    GDP={"US":29.2,"CA":2.2,"DE":4.7,"GB":3.6,"FR":3.2,"IT":2.4,"JP":4.0,"AU":1.8}  # 2024 nominal $tn, approx
-    SUBREG={"North America":[("DGS10","US"),("IRLTLT01CAM156N","CA")],
-            "Europe":[("IRLTLT01DEM156N","DE"),("IRLTLT01GBM156N","GB"),("IRLTLT01FRM156N","FR"),("IRLTLT01ITM156N","IT")],
-            "Asia-Pacific":[("IRLTLT01JPM156N","JP"),("IRLTLT01AUM156N","AU")]}
-    def wavg(members):
-        tw=sum(GDP[c] for _,c in members)
-        return [sum(GDP[c]*_m[k][cs[i]] for k,c in members)/tw for i in range(len(cs))]
-    subseries=[(name,wavg(mem)) for name,mem in SUBREG.items()]
-    allmem=[(k,c) for mem in SUBREG.values() for k,c in mem]
-    subseries.append(("Global (GDP-weighted)",wavg(allmem)))
-    charts.append(("Sovereign 10Y by SUB-REGION (GDP-weighted) — North America / Europe / Asia-Pacific",
-      monthly_line_chart("Sub-regional 10Y aggregates (%), monthly", cs, subseries, [AC2,"#1f6f43","#7b2d26",INK], ymin=-0.5,
-        note="FRED IRLTLT01* + DGS10; GDP-weighted within each sub-region (US/CA; DE/GB/FR/IT; JP/AU)."),
-      "Aggregating up the hierarchy (country -> sub-region -> global) shows Asia-Pacific dragged down for years by Japan's near-0% yield-curve-control, Europe weighed by the Bund, North America highest — then all converging UP into 2024-26 as Japan normalized. The weighted aggregate hides, then reveals, the synchronized duration repricing."))
+# --- EXPANDED sovereign 10Y cross-section: up to 26 countries -> 7 sub-regions + periphery spread ---
+# 2024 nominal GDP ($tn, approx) for GDP-weighting; FRED series = DGS10 for US, else IRLTLT01{cc}M156N.
+_GDP={"US":29.2,"CA":2.2,"MX":1.8,"DE":4.7,"FR":3.2,"NL":1.2,"BE":0.66,"AT":0.52,"IE":0.56,
+      "IT":2.4,"ES":1.7,"PT":0.29,"GR":0.25,"GB":3.6,"SE":0.61,"NO":0.50,"DK":0.42,"FI":0.31,
+      "PL":0.86,"CZ":0.34,"HU":0.22,"JP":4.0,"KR":1.9,"AU":1.8,"NZ":0.25,"CL":0.34}
+def _ser(cc): return "DGS10" if cc=="US" else f"IRLTLT01{cc}M156N"
+_PAL=["#1f4e79","#7b2d26","#1f6f43","#9a6a1a","#5e35b1","#138a8a","#8a5a2b","#c0392b","#6b3b16","#2e8b57","#d35400","#444"]
+if _m and ("DGS10" in _m) and ("IRLTLT01DEM156N" in _m):
+    _avail=[cc for cc in _GDP if _ser(cc) in _m and len(_m[_ser(cc)])>=120]
+    cs=sorted(set.intersection(*[set(_m[_ser(cc)]) for cc in _avail]))
+    SUBREG={"North America":["US","CA"],
+            "Core Europe":["DE","FR","NL","BE","AT"],
+            "Periphery Europe":["IT","ES","PT","GR","IE"],
+            "UK & Nordics":["GB","SE","NO","DK","FI"],
+            "Central/Eastern Europe":["PL","CZ","HU"],
+            "Asia-Pacific (developed)":["JP","KR","AU","NZ"],
+            "Latin America":["MX","CL"]}
+    def _wavg(ccs):
+        mem=[c for c in ccs if c in _avail]
+        if not mem: return None
+        tw=sum(_GDP[c] for c in mem)
+        return [sum(_GDP[c]*_m[_ser(c)][d] for c in mem)/tw for d in cs]
+    # (1) representative individual countries + a GDP-weighted GLOBAL over ALL available
+    glob=_wavg(_avail); ncc=len(_avail)
+    indiv=[(lab,[_m[_ser(cc)][d] for d in cs]) for cc,lab in
+           [("US","US"),("DE","Germany"),("IT","Italy"),("GB","UK"),("JP","Japan")] if cc in _avail]
+    charts.append((f"Regional sovereign 10Y + a GDP-weighted GLOBAL long rate ({ncc} countries)",
+      monthly_line_chart("10Y government yields (%), monthly", cs, indiv+[("GDP-weighted global",glob)],
+        _PAL[:len(indiv)]+[INK], ymin=-0.5,
+        note=f"FRED DGS10 (US) + IRLTLT01*M156N for {ncc} OECD countries; global = GDP-weighted across ALL {ncc}."),
+      f"The single 'US 10Y' hides a wide spread: Japan near 0% under yield-curve-control, Italy/periphery far above the Bund, the US/UK at 4%+. The GDP-weighted global long rate (black, now spanning {ncc} countries) rose from ~1% (2020) toward ~3% (2026) as Japan normalized — synchronized duration repricing + carry-unwind pressure (macro-carry-trades)."))
+    # (2) sub-regional aggregates (only sub-regions with available members)
+    subseries=[(name,_wavg(mem)) for name,mem in SUBREG.items() if _wavg(mem) is not None]
+    subseries.append(("Global (GDP-weighted)",glob))
+    charts.append(("Sovereign 10Y by SUB-REGION (GDP-weighted) — 7 blocs",
+      monthly_line_chart("Sub-regional 10Y aggregates (%), monthly", cs, subseries, _PAL[:len(subseries)], ymin=-0.5,
+        note="FRED IRLTLT01* + DGS10; GDP-weighted within each bloc: North America (US/CA), Core Europe (DE/FR/NL/BE/AT), Periphery (IT/ES/PT/GR/IE), UK&Nordics (GB/SE/NO/DK/FI), CEE (PL/CZ/HU), Asia-Pacific (JP/KR/AU/NZ), Latin America (MX/CL)."),
+      "Aggregating country -> sub-region -> global reveals the real fault lines the 'developed-market 10Y' blends away: Central/Eastern Europe and Latin America run structurally highest (EM risk premium), Periphery Europe above Core (the redenomination/fiscal premium), Asia-Pacific dragged down for years by Japan's near-0% YCC, then all converging UP into 2024-26 — the synchronized repricing of duration across blocs."))
+    # (3) European periphery & semi-core SPREAD over the Bund (the fragmentation divergence)
+    if "IT" in _avail:
+        sp=[(lab,[_m[_ser(cc)][d]-_m["IRLTLT01DEM156N"][d] for d in cs]) for cc,lab in
+            [("IT","Italy−DE"),("ES","Spain−DE"),("PT","Portugal−DE"),("GR","Greece−DE"),("IE","Ireland−DE"),("FR","France−DE")] if cc in _avail]
+        charts.append(("European FRAGMENTATION — periphery 10Y spread over the German Bund",
+          monthly_line_chart("Spread vs Bund (pp), monthly", cs, sp, _PAL[:len(sp)], ymin=-0.5,
+            note="FRED IRLTLT01{IT,ES,PT,GR,IE,FR} − IRLTLT01DE. The spread over Germany IS the market's redenomination/credit premium on each euro member."),
+          "The euro's hidden stress gauge: peripheral spreads over the Bund widen in every risk-off (2018 Italy, 2020 COVID, 2022-23 hiking) and compress when the ECB backstops. France's spread creeping toward the periphery (2024-26 fiscal/political risk) is the notable new divergence — the single 'euro 10Y' cannot show this."))
 
 # --- corporate by CREDIT QUALITY (full rating ladder) + EM corporate (regional credit) ---
 _RAT=["BAMLC0A1CAAA","BAMLC0A2CAA","BAMLC0A3CA","BAMLC0A4CBBB","BAMLH0A3HYC"]
@@ -457,6 +473,44 @@ if _y and all(t in _y for t in ("VCSH","VCIT","VCLT")):
       monthly_line_chart("IG corporate ETF distribution yield (%), monthly", ym2, [("Short (VCSH)",[yv['VCSH'][d] for d in ym2]),("Intermediate (VCIT)",[yv['VCIT'][d] for d in ym2]),("Long (VCLT)",[yv['VCLT'][d] for d in ym2])], ["#1f6f43",AC2,AC], ymin=0,
         note="Yahoo chart API: trailing-12mo dividends / price for Vanguard VCSH/VCIT/VCLT."),
       "The maturity dimension of corporate credit: long IG (VCLT) yields most and is the most rate-sensitive; the short/long gap widened as the curve moved — the corporate-credit analogue of the Treasury term structure."))
+
+# --- INDUSTRY cross-section: equity SECTOR ETFs, normalized price (rebased to 100) ---
+_SECT=[("XLK","Tech"),("SMH","Semiconductors"),("XLC","Comm svcs"),("XLY","Cons. discr."),("XLF","Financials"),
+       ("XLI","Industrials"),("XLV","Health care"),("XLP","Cons. staples"),("XLE","Energy"),
+       ("XLU","Utilities"),("XLB","Materials"),("XLRE","Real estate")]
+def _closes(etf):
+    return {m:etf[m].get("c") for m in sorted(etf) if etf[m].get("c")}
+_have_sect=[(t,lab) for t,lab in _SECT if _y and t in _y]
+if len(_have_sect)>=6:
+    cl={t:_closes(_y[t]) for t,_ in _have_sect}
+    sm=sorted(set.intersection(*[set(v) for v in cl.values()]))
+    def _rebase(t):
+        base=cl[t][sm[0]]; return [cl[t][d]/base*100 for d in sm]
+    series=[(lab,_rebase(t)) for t,lab in _have_sect]
+    charts.append((f"By INDUSTRY — US equity sector performance, rebased to 100 ({len(_have_sect)} GICS sectors)",
+      monthly_line_chart("Sector total-return index (rebased=100)", sm, series, _PAL+["#888","#b07","#0a7"], ymin=0,
+        note="Yahoo chart API: SPDR/VanEck sector ETFs (XLK/SMH/XLC/XLY/XLF/XLI/XLV/XLP/XLE/XLU/XLB/XLRE) monthly close, rebased to 100 at window start. Price index (excl. dividends)."),
+      "The industry cut the single 'S&P' hides: Tech and Semiconductors (SMH) ran away from the pack — the AI-capex bid concentrated in a handful of sectors — while utilities/staples/real-estate lagged. The dispersion between the top sector and the bottom IS the concentration the bubble thesis tracks; when one or two sectors carry the index, breadth is illusory (the equity analogue of the 91% credit common factor)."))
+
+# --- INDUSTRY dispersion over time: cross-sectional stdev of sector 12mo returns ---
+if len(_have_sect)>=6:
+    import statistics as _st
+    rets={t:None for t,_ in _have_sect}
+    # 12-mo trailing return per month per sector, then cross-sectional stdev each month
+    mser={t:_closes(_y[t]) for t,_ in _have_sect}
+    common=sorted(set.intersection(*[set(v) for v in mser.values()]))
+    disp_d=[]; disp_v=[]
+    for i in range(12,len(common)):
+        d=common[i]; r=[]
+        for t,_ in _have_sect:
+            p0=mser[t][common[i-12]]; p1=mser[t][d]
+            if p0: r.append((p1/p0-1)*100)
+        if len(r)>=6: disp_d.append(d); disp_v.append(_st.pstdev(r))
+    if disp_d:
+        charts.append(("Industry DISPERSION over time — cross-sectional stdev of sector 12-mo returns",
+          monthly_line_chart("Cross-sectional std of sector 12mo return (pp)", disp_d, [("dispersion (std)",disp_v)], [AC], ymin=0,
+            note="Std across the sector ETFs' trailing-12mo returns each month. High = sectors diverging (a few winners, narrow breadth); low = moving together."),
+          "When sector dispersion is HIGH the index is being carried by a narrow set (the 2023-26 AI/tech-and-semis surge); when LOW, sectors move as one (risk-on/off regimes). Dispersion is the breadth gauge behind the headline index level."))
 
 # --- borrowing cost by TYPE (sovereign / corporate / household-mortgage) ---
 if _m and all(k in _m for k in ("DGS10","BAA","MORTGAGE30US")):
@@ -556,7 +610,8 @@ if SIGNAL_TABLE: body.append(SIGNAL_TABLE)
 body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <p class=cap>The bond universe can be sliced along two axes — <b>geography</b> (region → sub-region → country → state → city → institution) and <b>type/quality</b> (sovereign, corporate-by-rating, household/mortgage, municipal, agency). What is charted here vs what requires other sources, stated plainly:</p>
 <table><thead><tr><th>Cut</th><th>Charted here?</th><th>Source</th></tr></thead><tbody>
-<tr><td>Region / sub-region / country (sovereign 10Y)</td><td><b>Yes</b> — US, CA, DE, GB, FR, IT, JP, AU, GDP-weighted to sub-region &amp; global</td><td>FRED IRLTLT01* + DGS10 (keyless CSV)</td></tr>
+<tr><td>Region / sub-region / country (sovereign 10Y)</td><td><b>Yes</b> — <b>25 countries → 7 GDP-weighted blocs</b> (North America, Core/Periphery Europe, UK&amp;Nordics, CEE, Asia-Pacific, Latin America) + a global aggregate + the <b>periphery-vs-Bund fragmentation</b> spread</td><td>FRED IRLTLT01*M156N (25 countries) + DGS10 (keyless CSV)</td></tr>
+<tr><td><b>Industry</b> (equity GICS sectors)</td><td><b>Yes</b> — 12 sectors rebased-to-100 + cross-sectional dispersion (the AI/tech/semis concentration)</td><td>Yahoo chart API (XLK/SMH/XLC/XLY/XLF/XLI/XLV/XLP/XLE/XLU/XLB/XLRE)</td></tr>
 <tr><td>Borrower type (sovereign / corporate / household)</td><td><b>Yes</b> (10Y / Baa / 30Y mortgage)</td><td>FRED DGS10 / BAA / MORTGAGE30US</td></tr>
 <tr><td>Corporate by credit quality (AAA→CCC ladder)</td><td><b>Yes</b> — full rating ladder (2023+)</td><td>FRED ICE BofA OAS by rating (BAMLC0A1CAAA … BAMLH0A3HYC)</td></tr>
 <tr><td>Corporate by region (Emerging-Market)</td><td><b>Yes</b> (2023+)</td><td>FRED BAMLEMPVPRIVSLCRPIUSOAS</td></tr>
@@ -567,7 +622,7 @@ body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <tr><td>Municipal by CITY / individual issuer</td><td><b>Proxied</b> — state ETFs above stand in</td><td>Full: <b>MSRB EMMA</b> per-CUSIP trade tape (free, but per-bond scraping)</td></tr>
 <tr><td>Per-institution (banks)</td><td><b>Yes — elsewhere in the repo</b></td><td>FDIC BankFind API → <code>models/graph/bank_exposure.py</code> (per-bank HTM/AFS, uninsured deposits)</td></tr>
 </tbody></table>
-<p class=cap>So the institution-level cut already exists (the bank model); the geography, credit-quality, and now the <b>real FINRA TRACE quality-tier</b> cuts are charted above; the only remaining gaps are <i>GICS-industry</i> corporate OAS and <i>city/per-issuer</i> muni granularity, both of which need a per-CUSIP feed (TRACE file download / MSRB EMMA) — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
+<p class=cap>So the institution-level cut already exists (the bank model); the geography (now <b>25 countries / 7 blocs</b>), credit-quality, the <b>real FINRA TRACE quality-tier</b>, and the <b>equity-industry (GICS sector)</b> cuts are charted above. The remaining gaps are <i>GICS-industry corporate OAS</i> (credit-by-industry — equity sectors stand in; full needs per-CUSIP TRACE mapped to SIC) and <i>city/per-issuer</i> muni granularity (state ETFs stand in; full needs MSRB EMMA), plus single-state munis beyond CA/NY where no liquid ETF exists — flagged rather than fabricated, per the project's zero-trust rule.</p>""")
 # ===== Cross-sectional analysis section =====
 _xs=None
 try: _xs=json.load(open(os.path.join(ROOT,"data","cross_section.json")))

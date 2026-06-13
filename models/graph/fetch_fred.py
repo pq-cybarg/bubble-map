@@ -19,6 +19,10 @@ SERIES=[("DGS2",True),("FEDFUNDS",False),("DGS3MO",True),("DGS10",True),("DFEDTA
         ("IRLTLT01DEM156N",False),("IRLTLT01GBM156N",False),("IRLTLT01JPM156N",False),
         ("IRLTLT01FRM156N",False),("IRLTLT01ITM156N",False),("IRLTLT01CAM156N",False),("IRLTLT01AUM156N",False),
         ("BAMLC0A1CAAA",True),("BAMLC0A4CBBB",True),("BAMLH0A3HYC",True),("MORTGAGE30US",True)]
+# Expanded sovereign 10Y cross-section (OECD long-term gov-bond yields, monthly, keyless). Any that
+# are discontinued/empty get skipped per-series (the loop is resilient); we use whatever returns.
+SERIES += [(f"IRLTLT01{cc}M156N", False) for cc in
+           ["ES","NL","BE","AT","CH","IE","PT","FI","SE","NO","DK","PL","CZ","HU","KR","NZ","MX","CL","GR"]]
 DAILY=["DGS2","EFFR","DGS3MO"]   # daily 2Y, daily effective fed funds (EFFR; DFF often 504s on fredgraph), daily 3M
 BASE="https://fred.stlouisfed.org/graph/fredgraph.csv"
 
@@ -59,7 +63,14 @@ def main():
     data={}; meta={"fetched": None, "source":"FRED keyless CSV (fredgraph.csv)", "cosd": COSD, "series_urls":{}}
     try:
         for sid,agg in SERIES:
-            vals,url=fetch(sid,agg); data[sid]=vals; meta["series_urls"][sid]=url; time.sleep(1.2)
+            try:
+                vals,url=fetch(sid,agg)
+                if vals: data[sid]=vals; meta["series_urls"][sid]=url
+                else: print(f"  (empty, skipped: {sid})")
+            except Exception as se:
+                print(f"  (skip {sid}: {se})")
+            time.sleep(1.0)
+        if not data: raise RuntimeError("no series returned")
         meta["fetched"]= "live-fetch (re-run fetch_fred.py to refresh)"
         json.dump({"meta":meta,"data":data}, open(OUT,"w"), indent=1)
         n=min(len(v) for v in data.values())
