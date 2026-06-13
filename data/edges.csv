@@ -46,6 +46,7 @@ OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.jso
 Private credit / venture debt lenders,Neoclouds,debt,18000000000,2025-2026,False,False,macro-cre-privatecredit.json
 PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
+US_Government,Prince_Group,other,15000000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
 Amazon,Globalstar,acquisition,11600000000,announced,False,False,spec-telecom-satellite.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
@@ -92,6 +93,7 @@ Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minera
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 NSA,Crypto_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
+AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Verizon,AST_SpaceMobile,investment,100000000,committed,False,False,spec-telecom-satellite.json
 Predatory_Sparrow,Nobitex,other,90000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 Coinbase,Fairshake,pac_funding,75000000,given,False,False,spec-sec-sdny-regulatory.json
@@ -101,7 +103,9 @@ SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
 FTX,Farmington_Moonstone,equity,11500000,closed,False,False,spec-crypto-banking-debanking.json
 InQTel,Palantir,relationship,2000000,invested,False,False,spec-disclosures-surveillance.json
+Cambodia,National_Consulting_Services,other,456000,recurring,False,False,spec-cambodia-scam-fara-paid-influence.json
 Coinbase,FDIC,regulatory_legal,188440,won-fees,False,False,spec-sec-sdny-regulatory.json
+Mezink,Ryan_Kelly,other,25000,alleged,False,False,spec-cambodia-scam-fara-paid-influence.json
 Microsoft,CoreWeave,revenue_share,,reported-10K,True,False,spec-sec-filings-primary.json
 Oracle,Stargate,compute_commitment,,RPO-523B,True,False,spec-sec-filings-primary.json
 Boskin_Commission,CPI_Methodology,other,,adopted,False,False,macro-official-data-integrity.json
@@ -222,6 +226,8 @@ BLS_NTRI,CPI_Rent,other,,leads_4q,False,False,macro-rent-cpi-divergence.json
 CPI_Rent,CPI_Methodology,other,,structural,False,False,macro-rent-cpi-divergence.json
 Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
 Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
+Prince_Group,SINK_scam_victims,other,,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
+Huione,Lazarus_Group,surveillance_security,,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 PrivateCredit_Funds,AI_Datacenters,debt,,marginal-lender,False,False,macro-private-credit-marks.json
 PrivateCredit_Funds,Retail_401k,other,,EO-opened,False,False,macro-private-credit-marks.json
 Bond_Market_2Y,Federal_Reserve,other,,co-moves-2Y-leads,False,False,macro-jobs-inflation-fed.json

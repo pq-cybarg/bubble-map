@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "Scam-compound complex, FARA reputation-laundering, and a paid-disinformation offer to an influencer (Prince Group/Huione/Kok An; Yim Leak; National Consulting Services; Mezink/Ryan Kelly)",
+    "generated": "2026-06-12",
+    "revised": "2026-06-13",
+    "frame": "Carefully separated strands - attribute each claim to its actual source; assert NO connections beyond what the evidence or a named source actually states. (1) CAMBODIAN SCAM-COMPOUND COMPLEX (high-grade, background): forced-labor pig-butchering operations - Prince Group/Chen Zhi, Huione, Kok An - plus the Cambodian GOVERNMENT's FARA-registered US 'information warfare' firm. (2) YIM LEAK (separate, authorities-sourced): a Cambodian tycoon (BIC Group/BIC Bank) whom THAI AUTHORITIES (AMLO) link to a scam/laundering network and whose assets they froze; he denies it; UNADJUDICATED. (3) RYAN KELLY'S ALLEGATIONS: the anti-scam creator says he was offered ~$25k via the agency Mezink to spread disinformation concerning Yim Leak, which he frames as FARA + FTC violations; he says his EXPERIENCE analyzing Cambodian scams bolsters his confidence in interpreting the offer. CRITICAL: Ryan Kelly does NOT assert that Yim Leak is connected to the Cambodian scam compounds - his Cambodia-scam expertise is an interpretive-credibility point, not a factual link. The ONLY Yim-Leak-to-scams linkage here is THAI AUTHORITIES', and even that is a distinct network, not established as the Prince Group compounds.",
+    "WARNING": "Grade + defamation + attribution discipline. The scam-compound criminal core (Chen Zhi/Prince Group, Huione, Kok An) is HIGH-grade primary (DOJ/OFAC/FinCEN). Yim Leak: the Thai AMLO ~THB8.3bn freeze and the bill-draft inclusion are FACT; his underlying guilt is UNADJUDICATED and he disputes it - allegation, not fact. NCS FARA registration is documented. Ryan Kelly's account (the $25k Mezink offer, its concerning Yim Leak, the FARA/FTC framing) is CREATOR-ALLEGED, single-source, NOT independently corroborated this pass. Mezink is the NAMED CONDUIT in that account, NOT an adjudicated wrongdoer. DO NOT INFER connections nobody asserts: Ryan does NOT tie Yim Leak to the Cambodian compounds; no established link ties Mezink to the Cambodian government / NCS / Prince Group; and authorities' Yim-Leak network is not established as the Prince Group compounds. Overlay edges excluded from the proofs.",
+    "method": "DOJ indictment + press release (Chen Zhi); US Treasury/OFAC (Prince Group 146 targets, Kok An) + FinCEN 311 (Huione); on-chain seizure (DOJ $15B BTC, OFAC BTC addresses - cross-ref fetch_ofac/spec-onchain-threat-actor-addresses); FARA registry (National Consulting Services, Inc.); Thai AMLO + regional reporting (Nation Thailand, Bangkok Post, Khaosod, Thai Examiner, The Diplomat); company records (Mezink via Tracxn/CBInsights/LinkedIn); the creator's own video (title 'I was offered $25k to lie to you', Ryan Kelly/YPR). Each cell graded and attributed.",
+    "cross_refs": ["spec-onchain-threat-actor-addresses.json","macro-stablecoin-failures-manipulation.json","influence-ad-censorship.json","influence-congress-funding-compromise.json","digitalid-orchestration-real-incentive.json","spec-unc-nk-attribution-map.json"]
+  },
+
+  "cambodian_scam_compounds": {
+    "summary":"Industrial forced-labor pig-butchering (sha zhu pan) fraud compounds in Cambodia/Myanmar/Laos targeting global (incl. US) victims, with a laundering layer and state-adjacent protection. This is BACKGROUND/CONTEXT - the domain Ryan Kelly has anti-scam expertise in - NOT, by any claim here, tied to Yim Leak.",
+    "operators":[
+      {"name":"Prince Group / Chen Zhi","detail":"DOJ INDICTED Chen Zhi for directing forced-labor scam compounds; OFAC sanctioned 146 Prince Group targets (Oct 2025); DOJ seized ~$15B BTC (largest forfeiture ever); OFAC named 4 Chen Zhi BTC addresses (~$1.8B). Jin Bei casino linked. Chen Zhi reportedly arrested and moved to China.","grade":"fact (DOJ/OFAC)"},
+      {"name":"Huione Group","detail":"FinCEN Section-311 designation cutting it off from the US financial system as a laundering hub for pig-butchering proceeds AND North Korean cyber-heist funds (ties to the DPRK laundering map).","grade":"fact (FinCEN/Treasury)"},
+      {"name":"Kok An","detail":"OFAC-sanctioned sitting Cambodian senator linked to a ~$10B scam-center network targeting Americans (state-adjacency).","grade":"fact (OFAC)"}
+    ],
+    "onchain":"The Chen Zhi/Prince Group and Huione BTC clusters are exactly the OFAC-designated, on-chain-traceable addresses fetch_ofac ingests (data/ofac_crypto_addresses.json).",
+    "grade":"fact (criminal core)"
+  },
+
+  "cambodia_government_fara_infowar": {
+    "summary":"The Cambodian GOVERNMENT's documented US reputation-laundering channel (distinct from any individual).",
+    "points":[
+      {"item":"National Consulting Services, Inc.","detail":"FARA-registered representative of the Cambodian government; contract signed 2025-02-19 by Don Benton (firm exec, ex-US official) and Koy Kuong (Cambodia's US ambassador); ~$38,000/month to build 'US backing for Cambodia', incl. outreach to Congressional influencers/committees.","grade":"fact (FARA filing)"},
+      {"item":"Alleged leaked plan","detail":"A Thai NGO and regional outlets alleged leaked documents describing a Cambodia-hired 'information warfare' plan; provenance contested.","grade":"contested (allegation via leak)"}
+    ],
+    "grade":"fact (FARA registration) + contested (leaked-plan specifics)",
+    "note":"No established link between NCS/the Cambodian government's campaign and either Yim Leak or Mezink - listed as a separate, documented reputation-laundering example, not a connected one."
+  },
+
+  "yim_leak": {
+    "summary":"A Cambodian tycoon (owner of BIC Group / BIC Bank; superyacht 'Wanderlust') whom THAI AUTHORITIES link to a scam/laundering network and whose assets they froze; he DENIES it; UNADJUDICATED. Authorities' linkage is INDEPENDENT of Ryan Kelly and is NOT established as the Prince Group Cambodian compounds.",
+    "points":[
+      {"item":"Authorities' action (fact)","detail":"Thai AMLO FROZE ~THB8.3bn (~$240M) tied to the 'Yim Leak-Ben Smith network' (Ben Smith and Chen Zhi appear in adjacent Cambodia-linked laundering cases per Thai reporting, but Yim Leak's network is not established as identical to the Prince Group compounds). Yim Leak's name was included in a draft of the US 'Dismantle Foreign Scam Syndicates Act', then removed.","grade":"fact (AMLO freeze + bill draft); the scam guilt is reported allegation"},
+      {"item":"His response / reputation campaign","detail":"Yim Leak challenges the AMLO proceedings, says he was 'tarred by misleading information'; aligned PR pieces ('Myth vs Fact: What the international media got wrong about Cambodia's Yim Leak') run his counter-narrative. The existence of an organized pro-Yim-Leak reputation push is the documented context around which Ryan Kelly's offer allegation sits.","grade":"fact (he disputes; the PR campaign exists) - guilt UNADJUDICATED"}
+    ],
+    "grade":"authorities' action fact; scam guilt unadjudicated/disputed"
+  },
+
+  "ryan_kelly_allegations": {
+    "summary":"Ryan Kelly's account: a paid-disinformation OFFER concerning Yim Leak, framed as FARA + FTC violations, with his Cambodian-scam analysis cited as the basis for his interpretive confidence (NOT as a claim that Yim Leak is part of those scams).",
+    "points":[
+      {"item":"The offer (creator-alleged)","detail":"Ryan Kelly ('Youth Pastor Ryan' / YPR), a US anti-scam creator, published a video titled 'I was offered $25k to lie to you' (#scam #disinformation #law #ryankelly #ypr), stating he was offered ~$25,000 to spread disinformation, with the influencer-marketing agency Mezink named as the conduit and the actual principals reportedly based in India despite a Singapore presentation.","grade":"CREATOR-ALLEGED, single-source; video specifics not transcript-verified this pass"},
+      {"item":"The offer concerned Yim Leak (per Ryan)","detail":"Per the creator, the disinformation he was asked to spread concerned Yim Leak (a narrative favorable to Yim Leak). This places Yim Leak in Ryan's allegations - as the SUBJECT of the offer - NOT as someone Ryan ties to the Cambodian scam compounds.","grade":"CREATOR-ALLEGED; independently uncorroborated"},
+      {"item":"His Cambodian-scam expertise = interpretive-confidence basis, NOT a network link","detail":"Ryan says his experience analyzing/examining Cambodian scams bolsters his claims - i.e., his accumulated scam-analysis experience gives him (in his view) higher precision/accuracy in INTERPRETING this offer. This is an EXPERIENTIAL/credibility point. He does NOT assert that Yim Leak is connected to the Cambodian scams.","grade":"creator's stated reasoning (interpretive confidence) - explicitly NOT a factual Yim-Leak<->Cambodia-scams link"},
+      {"item":"FARA framing","detail":"Paying a US influencer to push a FOREIGN principal's narrative without registering is a FARA felony; a foreign (Cambodian) subject/principal is what would make the offer a FARA matter, per Ryan. Precedent: the 2024 Tenet Media/RT indictment.","grade":"fact (framework + precedent); application to this offer is creator-alleged"},
+      {"item":"FTC framing","detail":"Separately, an undisclosed PAID endorsement/promotion violates FTC Act Sec.5 and the FTC Endorsement Guides regardless of the principal's nationality. Ryan frames the undisclosed-paid-disinformation offer as an FTC matter too.","grade":"fact (FTC framework); application creator-alleged"},
+      {"item":"Mezink (corporate facts)","detail":"Mezink (mez.ink) is an AI influencer-marketing agency founded 2021 by Tarun Valecha and Mohit Garg, with a Singapore registered office (160 Robinson Road) and operations across India/SE-Asia (Tracxn/CBInsights/LinkedIn). The 'Singapore presentation, India principals' shape is consistent with the creator's characterization - but Mezink is NOT publicly adjudicated of any crime; it appears as the named conduit.","grade":"fact (corporate record); no wrongdoing adjudicated"}
+    ],
+    "grade":"creator-alleged (offer, subject, FARA/FTC application, interpretive-confidence reasoning) + fact (Mezink record, FARA/FTC frameworks, Tenet precedent)"
+  },
+
+  "what_is_NOT_asserted": {
+    "purpose":"Explicit non-claims, to prevent inferring connections nobody made.",
+    "non_claims":[
+      "Ryan Kelly does NOT connect Yim Leak to the Cambodian scam compounds (Prince Group etc.). His Cambodia-scam experience is an interpretive-confidence point only.",
+      "No established link ties Mezink to the Cambodian government, National Consulting Services, or Prince Group.",
+      "Thai authorities' 'Yim Leak network' is NOT established as identical to the Prince Group Cambodian compounds - they are separate matters that may or may not overlap.",
+      "Yim Leak's guilt is NOT adjudicated; he disputes the allegations.",
+      "Mezink is NOT accused/adjudicated of a crime here; it is the named conduit in the creator's single-source account."
+    ]
+  },
+
+  "edges": [
+    {"from":"Prince_Group","to":"SINK_scam_victims","instrument":"surveillance_security","raw_instrument":"forced-labor pig-butchering crypto fraud; Chen Zhi DOJ-indicted","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: scam-compound criminal core"},
+    {"from":"US_Government","to":"Prince_Group","instrument":"regulatory_legal","raw_instrument":"DOJ ~$15B BTC seizure + OFAC 146 targets + 4 Chen Zhi BTC addresses","amount_usd":15000000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: on-chain seizure -> fetch_ofac cross-ref"},
+    {"from":"Huione","to":"Lazarus_Group","instrument":"surveillance_security","raw_instrument":"FinCEN 311: laundering hub for pig-butchering AND North Korean cyber-heist funds","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: ties SE-Asia scam economy to DPRK map"},
+    {"from":"Cambodia","to":"National_Consulting_Services","instrument":"pac_funding","raw_instrument":"FARA-registered info-war/lobbying contract ~$38k/mo (Don Benton x amb. Koy Kuong, 2025-02-19)","amount_usd":456000,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: Cambodian GOVERNMENT reputation-laundering; no established link to Yim Leak or Mezink"},
+    {"from":"AMLO_Thailand","to":"Yim_Leak","instrument":"regulatory_legal","raw_instrument":"froze ~THB8.3bn in the 'Yim Leak-Ben Smith network' (allegations unadjudicated; he disputes; not established as the Prince Group compounds)","amount_usd":240000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: authorities' action; INDEPENDENT of Ryan Kelly; guilt unadjudicated"},
+    {"from":"Mezink","to":"Ryan_Kelly","instrument":"relationship","raw_instrument":"creator-alleged ~$25k offer to spread disinformation concerning Yim Leak (single-source, uncorroborated); Ryan frames it as FARA+FTC","amount_usd":25000,"status":"alleged","declared_circular":false,"cancelable":false,"source_file":"spec-cambodia-scam-fara-paid-influence.json","note":"OVERLAY: creator-alleged; Mezink not adjudicated; offer SUBJECT = Yim Leak per Ryan"}
+  ],
+
+  "limits":"Scam-compound criminal core (Chen Zhi/Prince Group, Huione, Kok An) = high-grade primary. Yim Leak: AMLO ~THB8.3bn freeze + bill-draft inclusion are fact; scam guilt UNADJUDICATED and disputed. NCS FARA registration documented; 'leaked plan' contested. Ryan Kelly's account (the $25k Mezink offer, that it concerned Yim Leak, the FARA/FTC framing) is CREATOR-ALLEGED, single-source, uncorroborated this pass. EXPLICIT NON-CLAIMS (see what_is_NOT_asserted): Ryan does NOT tie Yim Leak to the Cambodian scam compounds (his Cambodia-scam experience is interpretive-confidence only); no established link ties Mezink to the Cambodian government/NCS/Prince Group; authorities' Yim-Leak network is not established as the Prince Group compounds. Mezink is the named conduit, not adjudicated. Persons: Chen Zhi added (indicted/sanctioned); Yim Leak and Ryan Kelly intentionally NOT given dossiers."
+}

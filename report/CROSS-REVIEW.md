@@ -24,16 +24,19 @@
 - **Stargate** — 16 files
 - **NVIDIA** — 16 files
 - **Anthropic** — 16 files
+- **Chainlink** — 15 files
 - **FDIC** — 15 files
-- **Chainlink** — 14 files
 - **SpaceX** — 14 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-onchain-threat-actor-addresses.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-cambodia-scam-fara-paid-influence.json` — related files by shared entities (verify cross-refs exist)
 - spec-unc-nk-attribution-map.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
+- geopolitics-allied-intel-nodes.json: 2 shared entities
 - spec-tornado-samourai.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
+- temporal-bridges.json: 2 shared entities
+- spec-onchain-threat-actor-addresses.json: 2 shared entities
 - spec-exchanges-asia.json: 1 shared entities
+- influence-tbi-policy.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities

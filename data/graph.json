@@ -16,6 +16,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "AMLO_Thailand": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ANOM": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -143,6 +147,10 @@
     "CZ": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Cambodia": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Canary": {
       "sector": "financier",
@@ -344,6 +352,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Huione": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "IBM": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -444,6 +456,10 @@
       "sector": "commodity_market",
       "has_exogenous_revenue": false
     },
+    "Mezink": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Microsoft": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -478,6 +494,10 @@
     },
     "NVIDIA": {
       "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "National_Consulting_Services": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Nebius": {
@@ -568,6 +588,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Prince_Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Private credit / venture debt lenders": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -609,6 +633,10 @@
       "has_exogenous_revenue": false
     },
     "Ronin_Network": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Ryan_Kelly": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -665,6 +693,10 @@
       "has_exogenous_revenue": true
     },
     "SINK_lenders": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_scam_victims": {
       "sector": "sink",
       "has_exogenous_revenue": true
     },
@@ -865,6 +897,10 @@
       "has_exogenous_revenue": false
     },
     "World_Liberty_Financial": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Yim_Leak": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -3743,6 +3779,84 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "Prince_Group",
+      "to": "SINK_scam_victims",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "forced-labor pig-butchering crypto fraud; Chen Zhi DOJ-indicted",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Prince_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DOJ ~$15B BTC seizure + OFAC 146 targets + 4 Chen Zhi BTC addresses",
+      "amount_usd": 15000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Huione",
+      "to": "Lazarus_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "FinCEN 311: laundering hub for pig-butchering AND North Korean cyber-heist funds",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Cambodia",
+      "to": "National_Consulting_Services",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FARA-registered info-war/lobbying contract ~$38k/mo (Don Benton x amb. Koy Kuong, 2025-02-19)",
+      "amount_usd": 456000,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
+      "from": "AMLO_Thailand",
+      "to": "Yim_Leak",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "froze ~THB8.3bn in the 'Yim Leak-Ben Smith network' (allegations unadjudicated; he disputes; not established as the Prince Group compounds)",
+      "amount_usd": 240000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Mezink",
+      "to": "Ryan_Kelly",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "creator-alleged ~$25k offer to spread disinformation concerning Yim Leak (single-source, uncorroborated); Ryan frames it as FARA+FTC",
+      "amount_usd": 25000,
+      "status": "alleged",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cambodia-scam-fara-paid-influence.json",
+      "note": ""
+    },
+    {
       "from": "PrivateCredit_Funds",
       "to": "AI_Datacenters",
       "instrument": "debt",
@@ -3848,10 +3962,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 220,
-    "num_edges": 228,
+    "num_nodes": 229,
+    "num_edges": 234,
     "num_financial_edges": 117,
-    "num_structural_edges": 111,
+    "num_structural_edges": 117,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -3910,20 +4024,20 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -3955,13 +4069,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -4015,6 +4129,13 @@
         "circularity_ratio": 0.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "AMLO_Thailand": {
+        "total_usd": 240000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "ANOM": {
         "total_usd": 0,
@@ -4235,6 +4356,13 @@
       },
       "CZ": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cambodia": {
+        "total_usd": 456000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4590,6 +4718,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Huione": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IBM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4765,6 +4900,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mezink": {
+        "total_usd": 25000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Microsoft": {
         "total_usd": 445500000000,
         "circular_usd": 426100000000,
@@ -4827,6 +4969,13 @@
         "circularity_ratio": 0.874,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "National_Consulting_Services": {
+        "total_usd": 456000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Nebius": {
         "total_usd": 22100000000,
@@ -4982,6 +5131,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Prince_Group": {
+        "total_usd": 15000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Private credit / venture debt lenders": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -5054,6 +5210,13 @@
       },
       "Ronin_Network": {
         "total_usd": 625000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ryan_Kelly": {
+        "total_usd": 25000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5156,6 +5319,13 @@
         "circularity_ratio": 0.445,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "SINK_scam_victims": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "SSA": {
         "total_usd": 0,
@@ -5417,7 +5587,7 @@
         "in_robust_core": false
       },
       "US_Government": {
-        "total_usd": 4000000000,
+        "total_usd": 19000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5502,6 +5672,13 @@
       },
       "World_Liberty_Financial": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Yim_Leak": {
+        "total_usd": 240000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5756,6 +5933,22 @@
         "both_layers": false
       },
       {
+        "node": "US_Government",
+        "degree": 4,
+        "neighbor_sectors": [
+          "critical_minerals",
+          "other",
+          "sink"
+        ],
+        "n_neighbor_sectors": 3,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Broadcom",
         "degree": 6,
         "neighbor_sectors": [
@@ -5812,22 +6005,6 @@
         ],
         "n_neighbor_sectors": 2,
         "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Government",
-        "degree": 3,
-        "neighbor_sectors": [
-          "critical_minerals",
-          "other",
-          "sink"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 2,
         "layers": [
           "financial",
           "structural"
