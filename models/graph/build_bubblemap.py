@@ -66,16 +66,27 @@ for name,meta in ents.items():
     nodes.append({"id":name,"sector":sec,"bucket":bucket,"deg":deg.get(name,0),
                   "scc": name in scc, "robust": name in scc_robust,
                   "blocks":sorted(blocks.get(name,[])),"persons":match_persons(name)})
+def _amt(v):
+    if not v: return ""
+    try: v=float(v)
+    except Exception: return ""
+    if v>=1e9: return f"${v/1e9:.1f}B"
+    if v>=1e6: return f"${v/1e6:.0f}M"
+    if v>=1e3: return f"${v/1e3:.0f}k"
+    return f"${v:.0f}"
 links=[{"source":e["from"],"target":e["to"],"layer":e.get("layer","financial"),
-        "instrument":e.get("raw_instrument") or e.get("instrument",""),"circular":bool(e.get("declared_circular")),
-        "cancelable":bool(e.get("cancelable")),"note":(e.get("note") or "")[:200],
+        "instrument":e.get("raw_instrument") or e.get("instrument",""),"iclass":e.get("instrument",""),
+        "circular":bool(e.get("declared_circular")),"cancelable":bool(e.get("cancelable")),
+        "note":(e.get("note") or "")[:240],"amount":_amt(e.get("amount_usd")),"status":e.get("status",""),
         "block":(e.get("source_file","")[:-5] if e.get("source_file","").endswith(".json") else "")} for e in edges]
+# first source-file (stub) per node, for the panel's primary block link
+SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","other":"infrastructure / other"}
 
 NAV=('<div class=nav><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a>'
  '<a href="charts.html">Charts</a><a href="research.html">Research</a><a href="persons.html">Persons</a>'
  '<a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a>'
  '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a></div>')
-legend="".join(f'<span class=lg><i style="background:{COLORS[b]}"></i>{html.escape(BLABEL[b])}</span>' for b in BLABEL)
+legend="".join(f'<span class=lg data-b="{b}"><i style="background:{COLORS[b]}"></i>{html.escape(BLABEL[b])}</span>' for b in BLABEL)
 
 HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><title>Bubble Map — the AI capital loop graph</title>
@@ -102,16 +113,28 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none}
+.lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
+.lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
+#tip{position:absolute;z-index:9;pointer-events:none;display:none;max-width:280px;background:#1c1b19f2;color:#f5f1e6;font-size:12px;line-height:1.45;padding:8px 10px;border-radius:7px;box-shadow:0 4px 14px #0004}
+#tip b{color:#f0c674}#tip .cl{color:#e07b6b}
+#btns{position:absolute;bottom:10px;right:14px;z-index:6;display:flex;gap:6px}
+#btns button{font:12px inherit;cursor:pointer;background:var(--paper);color:var(--ac2);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+#btns button:hover{background:#1f4e7910}
+line.hl{stroke:#1f4e79!important;opacity:.95!important}
+#panel .ea{color:#9a6a1a;font-weight:600}#panel .amt{color:#2e6b3e;font-weight:600}
 </style></head><body>__NAV__
 <div id=stage>
-<div id=hud><h1>Bubble Map</h1><div class=sub>the AI capital loop, as a graph &middot; drag bubbles &middot; scroll to zoom &middot; click for detail</div>
+<div id=hud><h1>Bubble Map</h1><div class=sub>the AI capital loop, as a graph &middot; drag bubbles &middot; scroll to zoom &middot; click a bubble to focus its network &middot; hover an edge for the deal</div>
 <input id=q placeholder="Find an entity&hellip;" autocomplete=off>
-<label class=tog><input type=checkbox id=tStruct checked> structural edges (governance/legal)</label>
+<label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
 <label class=tog><input type=checkbox id=tLab> show labels</label>
-<div id=legend>__LEGEND__</div></div>
+<div id=legend>__LEGEND__</div>
+<div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
-<div class=note>__N__ entities &middot; __E__ edges &middot; gold ring = the 11-firm circular core (Tarjan SCC) &middot; solid = financial flow, dashed = structural</div>
+<div id=tip></div>
+<div id=btns><button id=bFit>Fit to view</button><button id=bReset>Reset focus</button></div>
+<div class=note>__N__ entities &middot; __E__ edges &middot; gold ring = the circular core (Tarjan SCC) &middot; solid = financial flow, dashed = structural/overlay &middot; <b style=color:#c0392b>red</b> = declared circular</div>
 <svg id=g></svg></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
@@ -124,13 +147,29 @@ svg.append('defs').selectAll('marker').data(['fin','struct']).join('marker')
  .append('path').attr('d','M0,-4L8,0L0,4').attr('fill',d=>d==='fin'?'#9a8f78':'#cdc6b4');
 const id2n=new Map(NODES.map(n=>[n.id,n]));
 const pslug=s=>'p-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const tip=document.getElementById('tip');
+const lerp=(a,b)=>typeof a==='object'?a.id:a; // source/target id helper
 const link=root.append('g').selectAll('line').data(LINKS).join('line')
  .attr('stroke',d=>d.layer==='financial'?(d.circular?'#c0392b':'#9a8f78'):'#d8d0bd')
- .attr('stroke-width',d=>d.circular?1.7:(d.layer==='financial'?1.1:0.7))
+ .attr('stroke-width',d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75))
  .attr('stroke-dasharray',d=>d.layer==='structural'?'3,3':null).attr('opacity',.55)
  .attr('marker-end',d=>'url(#arr-'+(d.layer==='financial'?'fin':'struct')+')');
+// invisible wide hit-layer so thin edges are hoverable -> deal tooltip
+const linkHit=root.append('g').selectAll('line').data(LINKS).join('line')
+ .attr('stroke','transparent').attr('stroke-width',9).style('cursor','help')
+ .on('mouseover',(e,d)=>{const i=link.filter(x=>x===d);i.classed('hl',true);
+   tip.style.display='block';
+   tip.innerHTML=`<b>${lerp(d.source)} → ${lerp(d.target)}</b><br>${d.instrument||d.iclass||'—'}`
+    +(d.amount?` &nbsp;<span style="color:#7fd99a">${d.amount}</span>`:'')
+    +(d.status?` &middot; ${d.status}`:'')
+    +(d.circular?' <span class=cl>&middot; ↻ circular</span>':'')
+    +(d.cancelable?' &middot; cancelable':'')
+    +(d.note?`<br><span style="color:#cfc8b8">${d.note}</span>`:'')
+    +(d.block?`<br><span style="color:#9fb6d6">block: ${d.block}</span>`:'');})
+ .on('mousemove',e=>{tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+12)+'px';})
+ .on('mouseout',(e,d)=>{link.classed('hl',false);tip.style.display='none';});
 const rad=d=>4+Math.sqrt(d.deg)*2.2;
-const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>showPanel(d));
+const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{showPanel(d);egoFocus(d);});
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.id+'  ('+d.sector+', deg '+d.deg+')');
@@ -142,13 +181,19 @@ const sim=d3.forceSimulation(NODES)
  .force('center',d3.forceCenter(W()/2,H()/2)).force('collide',d3.forceCollide().radius(d=>rad(d)+3))
  .on('tick',tick);
 function tick(){
- link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+ const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+ px(link);px(linkHit);
  node.attr('transform',d=>`translate(${d.x},${d.y})`);
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
 }
+// node hover: enlarge + reveal its label
+node.on('mouseenter',function(e,d){d3.select(this).select('circle').attr('r',rad(d)+3);
+  d3.select(this).raise();})
+ .on('mouseleave',function(e,d){d3.select(this).select('circle').attr('r',rad(d));});
 node.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
-svg.call(d3.zoom().scaleExtent([.2,6]).on('zoom',e=>root.attr('transform',e.transform)));
+const zoomB=d3.zoom().scaleExtent([.2,6]).on('zoom',e=>root.attr('transform',e.transform));
+svg.call(zoomB);
 // controls
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
@@ -159,14 +204,15 @@ const q=document.getElementById('q');
 q.oninput=()=>{const s=q.value.trim().toLowerCase();
  node.select('circle').attr('stroke',d=>{if(s&&d.id.toLowerCase().includes(s))return '#1f4e79';return d.scc?'#d4a017':'#fffdf8';})
   .attr('stroke-width',d=>{if(s&&d.id.toLowerCase().includes(s))return 3.4;return d.scc?2.6:1;});};
-document.getElementById('close').onclick=()=>document.getElementById('panel').style.display='none';
-function neighbors(d){const ins=[],outs=[];LINKS.forEach(l=>{const s=typeof l.source==='object'?l.source.id:l.source,t=typeof l.target==='object'?l.target.id:l.target;
- if(s===d.id)outs.push({n:t,i:l.instrument,c:l.circular}); if(t===d.id)ins.push({n:s,i:l.instrument,c:l.circular});});return {ins,outs};}
+document.getElementById('close').onclick=()=>{document.getElementById('panel').style.display='none';clearEgo();soloB=null;};
+function neighbors(d){const ins=[],outs=[];LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);
+ if(s===d.id)outs.push({n:t,i:l.instrument||l.iclass,c:l.circular,a:l.amount}); if(t===d.id)ins.push({n:s,i:l.instrument||l.iclass,c:l.circular,a:l.amount});});
+ const key=z=>(z.a?1:0); outs.sort((p,q)=>key(q)-key(p)); ins.sort((p,q)=>key(q)-key(p)); return {ins,outs};}
 function showPanel(d){const p=document.getElementById('panel'),b=document.getElementById('pbody');
  const {ins,outs}=neighbors(d);
  const blk=d.blocks.map(x=>`<a href="r-${x}.html">${x}</a>`).join(' &middot; ')||'<span style="color:#6b665d">—</span>';
  const per=d.persons.length?d.persons.map(x=>`<a href="persons.html#${pslug(x)}">${x}</a>`).join(', '):'';
- const nb=a=>a.length?('<ul>'+a.slice(0,14).map(x=>`<li>${x.c?'<b style=color:#c0392b>↻</b> ':''}${x.n} <span style=color:#6b665d>(${x.i||'—'})</span></li>`).join('')+(a.length>14?`<li style=color:#6b665d>+${a.length-14} more…</li>`:'')+'</ul>'):'<div style="color:#6b665d;font-size:12px">—</div>';
+ const nb=a=>a.length?('<ul>'+a.slice(0,16).map(x=>`<li>${x.c?'<b class=ea>↻</b> ':''}<a href="bubblemap.html#node=${encodeURIComponent(x.n)}" onclick="event.preventDefault();focusNode('${x.n.replace(/'/g,"\\\\'")}');">${x.n}</a> <span style=color:#6b665d>(${x.i||'—'})</span>${x.a?` <span class=amt>${x.a}</span>`:''}</li>`).join('')+(a.length>16?`<li style=color:#6b665d>+${a.length-16} more…</li>`:'')+'</ul>'):'<div style="color:#6b665d;font-size:12px">—</div>';
  b.innerHTML=`<h2>${d.id}</h2><div class=pr>${d.sector} &middot; degree ${d.deg}${d.scc?' &middot; <b style=color:#9a6a1a>circular core'+(d.robust?' (robust)':' (via cancelable)')+'</b>':''}</div>`
   +`<span class=pill style="background:${COLORS[d.bucket]}">${d.bucket}</span>`
   +(per?`<div class=k>Key person</div><div>${per}</div>`:'')
@@ -174,11 +220,44 @@ function showPanel(d){const p=document.getElementById('panel'),b=document.getEle
   +`<div class=k>Inflows (${ins.length})</div>${nb(ins)}`
   +`<div class=k>Documented in</div><div style=font-size:12.5px>${blk}</div>`;
  p.style.display='block';}
-function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);
- node.select('circle').attr('stroke',n=>n===d?'#1f4e79':(n.scc?'#d4a017':'#fffdf8'))
-  .attr('stroke-width',n=>n===d?4.5:(n.scc?2.6:1));
- q.value='';}
-function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(m)setTimeout(()=>focusNode(decodeURIComponent(m[1])),500);}
+function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);egoFocus(d);q.value='';}
+// ----- adjacency for ego-focus -----
+const ADJ=new Map(NODES.map(n=>[n.id,new Set([n.id])]));
+LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);ADJ.get(s)&&ADJ.get(s).add(t);ADJ.get(t)&&ADJ.get(t).add(s);});
+let egoOn=null;
+function egoFocus(d){egoOn=d.id;const keep=ADJ.get(d.id)||new Set([d.id]);
+ node.style('opacity',n=>keep.has(n.id)?1:.08);
+ labels.style('display',n=>keep.has(n.id)?null:'none');
+ const vis=l=>keep.has(lerp(l.source))&&keep.has(lerp(l.target));
+ link.style('opacity',l=>vis(l)?.85:.04);
+ linkHit.style('pointer-events',l=>vis(l)?null:'none');
+ node.select('circle').attr('stroke',n=>n.id===d.id?'#1f4e79':(n.scc?'#d4a017':'#fffdf8'))
+  .attr('stroke-width',n=>n.id===d.id?4.5:(n.scc?2.6:1));}
+function clearEgo(){egoOn=null;
+ node.style('opacity',1);link.style('opacity',.55);linkHit.style('pointer-events',null);
+ if(!document.getElementById('tLab').checked)labels.style('display','none');
+ node.select('circle').attr('stroke',n=>n.scc?'#d4a017':'#fffdf8').attr('stroke-width',n=>n.scc?2.6:1);
+ document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
+// ----- clickable legend: isolate a sector bucket -----
+let soloB=null;
+document.querySelectorAll('.lg').forEach(el=>el.onclick=()=>{const b=el.dataset.b;
+ if(soloB===b){soloB=null;clearEgo();return;}
+ soloB=b;egoOn=null;
+ document.querySelectorAll('.lg').forEach(x=>{x.classList.toggle('solo',x.dataset.b===b);x.classList.toggle('off',x.dataset.b!==b);});
+ node.style('opacity',n=>n.bucket===b?1:.08);
+ const vis=l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));return (s&&s.bucket===b)||(t&&t.bucket===b);};
+ link.style('opacity',l=>vis(l)?.7:.04);});
+// ----- fit-to-view + reset -----
+function fit(){const xs=NODES.map(n=>n.x),ys=NODES.map(n=>n.y);
+ const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+ const w=x1-x0||1,h=y1-y0||1,pad=60;
+ const k=Math.min((W()-pad)/w,(H()-pad)/h,2.4);
+ const tx=W()/2-k*(x0+x1)/2,ty=H()/2-k*(y0+y1)/2;
+ svg.transition().duration(450).call(zoomB.transform,d3.zoomIdentity.translate(tx,ty).scale(k));}
+document.getElementById('bFit').onclick=fit;
+document.getElementById('bReset').onclick=()=>{clearEgo();soloB=null;document.getElementById('panel').style.display='none';};
+svg.on('dblclick.zoom',null).on('dblclick',()=>{clearEgo();soloB=null;});
+function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(m)setTimeout(()=>{focusNode(decodeURIComponent(m[1]));const d=id2n.get(decodeURIComponent(m[1]));if(d)egoFocus(d);},500);}
 window.addEventListener('hashchange',fromHash);fromHash();
 </script></body></html>"""
 HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
