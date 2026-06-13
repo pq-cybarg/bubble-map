@@ -105,7 +105,7 @@ def line_chart(title, series, ylab, colors, ymin=None, ymax=None, target=None, n
     if hi==lo: hi=lo+1
     def X(i): return L+pw*i/(len(YEARS)-1)
     def Y(v): return T+ph*(hi-v)/(hi-lo)
-    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
     s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
     # gridlines + y labels
     ticks=5
@@ -137,7 +137,7 @@ def bar_chart_years(title, head, rev, ylab, note=""):
     vals=[v for v in head+rev if v is not None]; lo=min(0,min(vals)); hi=max(vals)
     def Y(v): return T+ph*(hi-v)/(hi-lo)
     bw=pw/len(YEARS)*0.6
-    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
     s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
     y0=Y(0); s.append(f'<line x1="{L}" y1="{y0:.1f}" x2="{L+pw}" y2="{y0:.1f}" stroke="{MUT}"/>')
     for k in range(5+1):
@@ -164,7 +164,7 @@ def bar_chart_sectors(title, data, note=""):
     W=760; rowh=22; T=44; H=T+rowh*len(data)+30; L=200; R=40; pw=W-L-R
     vals=[v for _,v in data]; lo=min(0,min(vals)); hi=max(vals)
     def X(v): return L+pw*(v-lo)/(hi-lo)
-    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
     s.append(f'<text x="14" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
     x0=X(0); s.append(f'<line x1="{x0:.1f}" y1="{T-6}" x2="{x0:.1f}" y2="{T+rowh*len(data):.1f}" stroke="{MUT}"/>')
     for i,(name,v) in enumerate(data):
@@ -185,7 +185,7 @@ def monthly_line_chart(title, dates, series, colors, ylab="%", note="", ymin=Non
     n=len(dates)
     def X(i): return L+pw*i/(n-1)
     def Y(v): return T+ph*(hi-v)/(hi-lo)
-    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
     s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
     for k in range(6):
         v=lo+(hi-lo)*k/5; y=Y(v)
@@ -211,7 +211,7 @@ def daily_line_chart(title, dates, series, colors, ylab="%", note=""):
     n=len(dates)
     def X(i): return L+pw*i/(n-1)
     def Y(v): return T+ph*(hi-v)/(hi-lo)
-    s=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
     s.append(f'<text x="{L}" y="22" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
     for k in range(6):
         v=lo+(hi-lo)*k/5; y=Y(v)
