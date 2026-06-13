@@ -6739,6 +6739,514 @@
         "macro-stablecoin-failures-manipulation",
         "macro-stablecoin-treasury-rail"
       ]
+    },
+    {
+      "name": "Mario Draghi",
+      "role": "President, European Central Bank (2011–2019); PM of Italy (2021–2022)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance",
+        "State/Policy"
+      ],
+      "orgs": [
+        "European Central Bank"
+      ],
+      "bluf": "The central banker whose 'whatever it takes' (Jul 2012) ended the euro crisis with three words and no immediate spending. Assess with HIGH confidence he is the archetype of credible verbal intervention - and of the OMT/QE regime that anchored European asset prices for a decade.",
+      "drivers": "Institutional-survival conviction (saving the euro); technocratic mastery; credibility-as-tool.",
+      "worldview": "Central-bank credibility can substitute for fiscal action; the currency union must be defended at any cost.",
+      "decision_style": "Calculated, minimalist signaling backed by unlimited capacity (OMT was never used - the threat sufficed).",
+      "track_record": "'Whatever it takes' + OMT; negative rates and QE; later Italy PM and author of the 2024 EU-competitiveness report warning Europe is falling behind on tech/AI.",
+      "vulnerabilities": "The QE-forever critique; Europe's structural stagnation his report diagnosed.",
+      "relationships": "ECB lineage to Lagarde; counterpart to the Fed's post-2012 regime.",
+      "outlook": "On-thesis model of credibility-driven monetary backstops.",
+      "confidence": "HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-jobs-inflation-fed",
+        "macro-us-fiscal-trap"
+      ]
+    },
+    {
+      "name": "Haruhiko Kuroda",
+      "role": "Governor, Bank of Japan (2013–2023)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Bank of Japan"
+      ],
+      "bluf": "The architect of the most extreme monetary experiment in the developed world - QQE, negative rates, and yield-curve control. Assess with HIGH confidence the BoJ's decade of pinned JGB yields is the engine of the global yen carry trade, the single largest source of the cheap leverage the project tracks as a system-wide fragility.",
+      "drivers": "Deflation-defeat mission; reflationist conviction; institutional persistence.",
+      "worldview": "Aggressive, sustained easing can break a deflationary mindset where gradualism failed.",
+      "decision_style": "Bold, all-in (QQE 'bazooka', then YCC); tolerated a vast BoJ balance sheet (>100% of GDP) and distorted bond market.",
+      "track_record": "QQE (2013), negative rates (2016), yield-curve control (2016) capping the 10Y; the BoJ became the dominant JGB and a major ETF holder.",
+      "vulnerabilities": "The exit problem he bequeathed: unwinding YCC risks a global carry-unwind (the Aug-2024 shock previewed it).",
+      "relationships": "His regime is the upstream source of the yen-carry leverage feeding global risk assets; handed the exit to Ueda.",
+      "outlook": "On-thesis origin of the carry-trade leverage and the latent unwind risk.",
+      "confidence": "HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-us-fiscal-trap",
+        "macro-jobs-inflation-fed",
+        "spec-unwind-timing"
+      ]
+    },
+    {
+      "name": "Kazuo Ueda",
+      "role": "Governor, Bank of Japan (2023–)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Bank of Japan"
+      ],
+      "bluf": "The academic governor tasked with the most dangerous exit in finance - dismantling YCC and negative rates without detonating the yen carry trade. Assess with HIGH confidence his pace of normalization is a live global-risk variable, since a disorderly exit forces a worldwide carry unwind.",
+      "drivers": "Scholarly caution; financial-stability priority; aversion to a destabilizing shock.",
+      "worldview": "Normalize gradually; the exit must avoid triggering the very instability the long easing created.",
+      "decision_style": "Deliberate, communication-sensitive; ended negative rates and YCC cautiously; the Aug-2024 hike + market crash taught him the system's sensitivity.",
+      "track_record": "Ended negative rates and YCC (2024); incremental hikes; managing the yen and JGB normalization against carry-unwind risk.",
+      "vulnerabilities": "Caught between domestic inflation/yen weakness and the global carry-unwind tail risk.",
+      "relationships": "Inherited Kuroda's experiment; his moves ripple into global risk assets and the AI-equity leverage chain.",
+      "outlook": "On-thesis pivot for the carry-unwind timing risk.",
+      "confidence": "HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "spec-unwind-timing",
+        "macro-us-fiscal-trap"
+      ]
+    },
+    {
+      "name": "Mark Carney",
+      "role": "Governor, Bank of England (2013–2020) & Bank of Canada (2008–2013); PM of Canada (2025–)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance",
+        "State/Policy"
+      ],
+      "orgs": [
+        "Bank of England",
+        "Bank of Canada"
+      ],
+      "bluf": "The only person to run two G7 central banks, the architect of climate-finance (GFANZ), and now Canada's PM. Assess with MODERATE-HIGH confidence he embodies the fusion of central banking, climate-capital mobilization, and elected power - a singular monetary-to-political arc.",
+      "drivers": "Technocratic ambition; climate-finance conviction; crisis-management pedigree.",
+      "worldview": "Markets and central banks should be mobilized for systemic goals (stability, then climate transition).",
+      "decision_style": "Polished, forward-guidance-pioneering; built the net-zero-finance coalition (GFANZ).",
+      "track_record": "Steered Canada through 2008 and the UK through Brexit; pioneered forward guidance; chaired the FSB; launched GFANZ; UN climate-finance envoy; elected Canadian PM (2025).",
+      "vulnerabilities": "GFANZ fractured as banks exited; the central-banker-to-politician transition's credibility tests.",
+      "relationships": "FSB/central-bank network; climate-finance node tying capital allocation to policy.",
+      "outlook": "On-thesis figure for the central-bank-to-capital-mobilization-to-power pathway.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-us-fiscal-trap"
+      ]
+    },
+    {
+      "name": "Andrew Bailey",
+      "role": "Governor, Bank of England (2020–)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Bank of England"
+      ],
+      "bluf": "The BoE governor who managed the 2022 gilt/LDI crisis - the clearest recent demonstration that pension-fund leverage can force emergency central-bank intervention. Assess with MODERATE-HIGH confidence that episode is a template for hidden-leverage blowups in the non-bank financial system.",
+      "drivers": "Financial-stability mandate; institutional caution; crisis-containment focus.",
+      "worldview": "The central bank is the backstop of last resort when leverage in the shadows breaks.",
+      "decision_style": "Reactive-stabilizing; the Sep-2022 emergency gilt purchases (after the Truss mini-budget) halted an LDI doom-loop.",
+      "track_record": "COVID QE; 2022 inflation tightening; the LDI/gilt intervention; ongoing non-bank-leverage scrutiny.",
+      "vulnerabilities": "Criticized on inflation timing; the LDI crisis exposed pension-system fragility he then had to rescue.",
+      "relationships": "BoE lineage from Carney; the LDI episode is a non-bank-leverage cross-reference for the private-credit blocks.",
+      "outlook": "On-thesis case of hidden-leverage forcing central-bank rescue.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-private-credit-marks",
+        "macro-cre-privatecredit"
+      ]
+    },
+    {
+      "name": "Pan Gongsheng",
+      "role": "Governor, People's Bank of China (2023–)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance",
+        "Geopolitics"
+      ],
+      "orgs": [
+        "People's Bank of China"
+      ],
+      "bluf": "The PBOC governor steering Chinese monetary policy through the property-debt deflation and the yuan-internationalization push. Assess with MODERATE-HIGH confidence he is the counterpart node to the Fed in the dollar-vs-yuan and de-dollarization dynamics the project tracks.",
+      "drivers": "Party-aligned financial-stability mandate; yuan-internationalization goal; deflation/property-deleveraging management.",
+      "worldview": "Managed liberalization; gradual yuan internationalization (CIPS, mBridge) without losing capital control.",
+      "decision_style": "Controlled, gradualist; targeted easing amid the property bust; FX-stability defense.",
+      "track_record": "Managing the property-debt deflation, local-government debt, and yuan stability; advancing cross-border yuan settlement (CIPS) and the digital yuan (e-CNY).",
+      "vulnerabilities": "The property-debt overhang; the tension between stimulus and yuan stability; capital-flight pressure.",
+      "relationships": "Counterpart to Powell in the monetary-bloc contest; node in the CBDC/de-dollarization arc.",
+      "outlook": "On-thesis monetary node for the dollar-yuan and CBDC dynamics.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-stablecoin-treasury-rail",
+        "geopolitics-russia-energy-arctic",
+        "influence-china-tech"
+      ]
+    },
+    {
+      "name": "Elvira Nabiullina",
+      "role": "Governor, Bank of Russia (2013–)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance",
+        "Geopolitics"
+      ],
+      "orgs": [
+        "Bank of Russia"
+      ],
+      "bluf": "The technocrat who kept the Russian financial system functioning through the 2022 sanctions shock - capital controls, an emergency rate spike to 20%, and ruble stabilization. Assess with MODERATE-HIGH confidence she is the live case study in central-banking under maximal financial warfare.",
+      "drivers": "Technocratic professionalism; institutional duty under a regime she reportedly tried to leave; stability mandate.",
+      "worldview": "Orthodox central banking applied under siege; defend the currency and the banking system at all costs.",
+      "decision_style": "Decisive crisis-management (capital controls, rate spike, FX measures); reportedly sought to resign post-invasion but stayed.",
+      "track_record": "Cleaned up the Russian banking sector pre-war; managed the 2014 and 2022 sanctions shocks; built the SPFS payment-messaging alternative to SWIFT.",
+      "vulnerabilities": "Serving a sanctioned war economy; frozen reserves (~$300B) abroad; the moral-vs-technocratic tension.",
+      "relationships": "Counterpart in the financial-warfare/de-dollarization arc; SPFS/mBridge node.",
+      "outlook": "On-thesis case of central banking under sanctions and the SWIFT-alternative push.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-russia-energy-arctic",
+        "macro-stablecoin-treasury-rail"
+      ]
+    },
+    {
+      "name": "Raghuram Rajan",
+      "role": "Governor, Reserve Bank of India (2013–2016); IMF Chief Economist (2003–2007)",
+      "domains": [
+        "Regulator",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Reserve Bank of India",
+        "IMF"
+      ],
+      "bluf": "The economist who warned of systemic financial risk at Jackson Hole in 2005 - and was dismissed before being vindicated by 2008. Assess with HIGH confidence he is the credible Cassandra of financial fragility, a recurring intellectual reference for the kind of hidden-risk buildup the project maps.",
+      "drivers": "Analytical independence; willingness to be unpopular; systemic-risk focus.",
+      "worldview": "Financial innovation and incentives can build catastrophic hidden risk that markets and policymakers ignore until too late.",
+      "decision_style": "Rigorous, contrarian, candid; cleaned up Indian bank NPAs as RBI governor.",
+      "track_record": "The 2005 'Has Financial Development Made the World Riskier?' warning (mocked, then vindicated); RBI inflation-targeting and bank-cleanup; prolific public intellectual.",
+      "vulnerabilities": "Pushed out of the RBI amid political friction; the perennial fate of the early warner.",
+      "relationships": "Intellectual kin to Born/Bair/Burry as a vindicated risk-Cassandra.",
+      "outlook": "On-thesis reference for credible early warning of systemic fragility.",
+      "confidence": "HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-private-credit-marks",
+        "macro-bank-hierarchy"
+      ]
+    },
+    {
+      "name": "Mohammed bin Zayed Al Nahyan (MBZ)",
+      "role": "President of the UAE; Ruler of Abu Dhabi",
+      "domains": [
+        "Sovereign",
+        "Geopolitics",
+        "AI",
+        "Capital"
+      ],
+      "orgs": [
+        "UAE",
+        "G42",
+        "MGX",
+        "Mubadala",
+        "ADIA"
+      ],
+      "bluf": "The UAE president orchestrating one of the world's most aggressive sovereign AI-and-capital strategies - G42, MGX, Mubadala, ADIA - with his brother Tahnoon running the operational layer. Assess with HIGH confidence he is the apex node of the Gulf-sovereign-AI-capital loop the project tracks (USD1, Stargate-UAE, the Microsoft-G42 deal).",
+      "drivers": "Post-oil diversification imperative; strategic autonomy between the US and China; dynastic state-building.",
+      "worldview": "Convert hydrocarbon wealth into AI, compute, and capital influence; hedge between great powers.",
+      "decision_style": "Long-horizon, top-down, capital-deploying; centralizes strategy in the ruling family.",
+      "track_record": "Built ADIA/Mubadala into trillion-dollar funds; backed G42 (which took a $1.5B Microsoft investment and divested Huawei gear under US pressure); MGX (the $2B Binance/USD1 deal, Stargate-UAE); the AI campus ambitions.",
+      "vulnerabilities": "US-China balancing under CHIPS export controls; concentration and governance opacity; the USD1 conflict exposure.",
+      "relationships": "Brother of Tahnoon (profiled); ties to Trump-admin (MGX/USD1, Witkoff), Microsoft, OpenAI/Stargate, Nvidia.",
+      "outlook": "On-thesis apex of the Gulf-AI-capital strategy.",
+      "confidence": "HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "fin-gulf-sovereign-ai-capital",
+        "macro-stablecoin-failures-manipulation",
+        "geopolitics-chip-chokepoint-war"
+      ]
+    },
+    {
+      "name": "Emmanuel Macron",
+      "role": "President of France (2017–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "AI"
+      ],
+      "orgs": [
+        "France",
+        "European Union"
+      ],
+      "bluf": "The French president pushing 'European sovereignty' in tech, AI, and defense - backing Mistral AI and nuclear-powered compute as a third pole between the US and China. Assess with MODERATE-HIGH confidence he is the leading European-strategic-autonomy voice in the AI-capital and chip-dependency debates.",
+      "drivers": "European-autonomy conviction; reformist ambition; great-power-relevance aspiration for France/EU.",
+      "worldview": "Europe must build sovereign AI, energy, and defense capacity or be a vassal of the US and China.",
+      "decision_style": "Centralizing, initiative-heavy ('Jupiterian'); hosts AI summits; backs national champions (Mistral).",
+      "track_record": "EU strategic-autonomy push; Mistral AI backing; nuclear-energy revival for compute; the 2025 Paris AI Summit; domestic-reform turbulence.",
+      "vulnerabilities": "Domestic political weakness; the gap between sovereignty rhetoric and EU capability.",
+      "relationships": "EU node with von der Leyen/Lagarde; counterpart to US/China tech blocs.",
+      "outlook": "On-thesis voice for European AI/chip strategic autonomy.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-chip-chokepoint-war",
+        "influence-china-tech"
+      ]
+    },
+    {
+      "name": "Angela Merkel",
+      "role": "Chancellor of Germany (2005–2021)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Germany",
+        "European Union"
+      ],
+      "bluf": "The chancellor who anchored Europe through the euro and migration crises and bound German industry to Russian energy (Nord Stream) and Chinese demand. Assess with MODERATE-HIGH confidence her energy-and-trade dependencies are the structural backdrop of Europe's current strategic vulnerability.",
+      "drivers": "Scientific pragmatism; stability-and-consensus preference; export-economy stewardship.",
+      "worldview": "Trade and interdependence promote stability (Wandel durch Handel) - a thesis the Ukraine war falsified.",
+      "decision_style": "Cautious, incremental, consensus-driven ('Merkeling'); crisis-reactive.",
+      "track_record": "Euro-crisis austerity leadership; 2015 migration opening; Nord Stream 1 & 2 (Russian gas dependence); deep China trade ties; nuclear phase-out.",
+      "vulnerabilities": "The energy-dependence and China-exposure legacies now seen as strategic errors.",
+      "relationships": "Bound German industry to Russian energy and Chinese demand - the dependencies the geopolitics blocks track.",
+      "outlook": "Historical architect of Europe's energy/trade dependency backdrop.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-russia-energy-arctic",
+        "influence-china-tech"
+      ]
+    },
+    {
+      "name": "Friedrich Merz",
+      "role": "Chancellor of Germany (2025–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Germany",
+        "European Union"
+      ],
+      "bluf": "The former BlackRock Germany chairman turned chancellor, steering Germany's rearmament and a historic fiscal-brake loosening for defense and infrastructure. Assess with MODERATE confidence his finance-industry pedigree and the debt-brake reform mark a structural shift in European fiscal and defense posture.",
+      "drivers": "Atlanticist, pro-market conviction; finance-industry worldview; strategic-rearmament resolve.",
+      "worldview": "Germany must rearm, invest, and reassert leadership; market-friendly but willing to break fiscal orthodoxy for defense.",
+      "decision_style": "Assertive, business-fluent; pushed the constitutional debt-brake exemption for defense/infrastructure.",
+      "track_record": "BlackRock Germany chairman; long CDU rivalry with Merkel; chancellor (2025) loosening the debt brake for a major defense/infrastructure spend.",
+      "vulnerabilities": "The BlackRock/finance-industry optics; coalition management; the fiscal-shift risks.",
+      "relationships": "BlackRock tie connects to Fink (profiled); EU node.",
+      "outlook": "On-thesis for the European fiscal/defense-spending shift.",
+      "confidence": "MODERATE.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-defense-industrial-base",
+        "macro-us-fiscal-trap"
+      ]
+    },
+    {
+      "name": "Giorgia Meloni",
+      "role": "Prime Minister of Italy (2022–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy"
+      ],
+      "orgs": [
+        "Italy",
+        "European Union"
+      ],
+      "bluf": "The Italian PM who pulled Italy out of China's Belt and Road and positioned as a bridge between European, US, and Gulf interests. Assess with MODERATE confidence she is a pivotal swing figure in Europe's China-decoupling and Mediterranean-energy/AI alignment.",
+      "drivers": "Nationalist-conservative conviction; pragmatic Atlanticism; coalition-durability focus.",
+      "worldview": "Sovereigntist but pro-NATO/US; wary of China; Mediterranean-energy-hub ambition.",
+      "decision_style": "Pragmatic, alliance-balancing; exited BRI (2023) while courting US and Gulf capital.",
+      "track_record": "BRI exit; migration policy; energy diversification (the 'Mattei Plan' for Africa); pro-Ukraine.",
+      "vulnerabilities": "Italian debt and growth constraints; coalition politics.",
+      "relationships": "EU node; courts US/Gulf capital; China-decoupling swing.",
+      "outlook": "On-thesis swing figure in European China-decoupling.",
+      "confidence": "MODERATE.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "influence-china-tech",
+        "geopolitics-contested-resource-states"
+      ]
+    },
+    {
+      "name": "Luiz Inácio Lula da Silva",
+      "role": "President of Brazil (2023–; 2003–2010)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "Sovereign"
+      ],
+      "orgs": [
+        "Brazil",
+        "BRICS"
+      ],
+      "bluf": "The Brazilian president and leading voice for BRICS expansion and de-dollarization of trade. Assess with MODERATE-HIGH confidence he is a principal driver of the multipolar-currency and Global-South-realignment dynamics the project tracks as a dollar-system stressor.",
+      "drivers": "Global-South solidarity; developmentalist conviction; multipolar-order ambition.",
+      "worldview": "The dollar-centric order disadvantages the Global South; BRICS and local-currency trade are correctives.",
+      "decision_style": "Coalition-building, rhetorically bold on de-dollarization; pragmatic on domestic economy.",
+      "track_record": "BRICS expansion advocacy; local-currency-trade and 'BRICS currency' discussion; Amazon/critical-minerals stewardship; commodity-export economy.",
+      "vulnerabilities": "The gap between de-dollarization rhetoric and feasibility; domestic fiscal pressures.",
+      "relationships": "BRICS node with Xi/Putin/Modi/Ramaphosa; de-dollarization arc.",
+      "outlook": "On-thesis driver of de-dollarization/multipolar-currency pressure.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-russia-energy-arctic",
+        "macro-stablecoin-treasury-rail",
+        "macro-critical-minerals-equities"
+      ]
+    },
+    {
+      "name": "Prabowo Subianto",
+      "role": "President of Indonesia (2024–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "Sovereign"
+      ],
+      "orgs": [
+        "Indonesia"
+      ],
+      "bluf": "The Indonesian president commanding the world's dominant nickel supply and a downstreaming strategy for EV/battery minerals. Assess with MODERATE-HIGH confidence Indonesia's nickel-export policy under him is a critical-minerals chokepoint directly relevant to the battery/EV and critical-minerals blocks.",
+      "drivers": "Resource-nationalist developmentalism; strategic-autonomy ambition; military-strongman background.",
+      "worldview": "Indonesia should capture value by downstreaming its minerals, not exporting raw ore; hedge between powers.",
+      "decision_style": "Assertive, resource-leveraging; continued the nickel-ore export ban to force domestic processing (often via Chinese-partnered smelters).",
+      "track_record": "Nickel-ore export ban and downstreaming; courting US, China, and Gulf investment; defense-ministry background.",
+      "vulnerabilities": "Chinese dominance of the nickel-processing buildout; environmental and governance concerns.",
+      "relationships": "Critical-minerals chokepoint node; balances US/China/Gulf capital.",
+      "outlook": "On-thesis controller of the nickel supply chain.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "macro-critical-minerals-equities",
+        "geopolitics-contested-resource-states"
+      ]
+    },
+    {
+      "name": "Anwar Ibrahim",
+      "role": "Prime Minister of Malaysia (2022–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "AI"
+      ],
+      "orgs": [
+        "Malaysia"
+      ],
+      "bluf": "The Malaysian PM presiding over the Penang/Kulim semiconductor-packaging boom - the back-end assembly hub now central to the AI chip supply chain and the data-center buildout. Assess with MODERATE confidence Malaysia under him is a rising chokepoint in chip packaging and a magnet for AI-datacenter capital.",
+      "drivers": "Reformist-developmentalist conviction; non-aligned balancing; economic-modernization focus.",
+      "worldview": "Malaysia can capture AI-supply-chain value (packaging, data centers) by staying neutral between the US and China.",
+      "decision_style": "Coalition-balancing, investment-courting; attracts both US (Intel, GlobalFoundries) and Chinese capital.",
+      "track_record": "Penang/Kulim advanced-packaging investment wave; data-center FDI surge (Johor); semiconductor strategy; non-aligned diplomacy.",
+      "vulnerabilities": "US export-control pressure on Chinese transshipment; power/water constraints on data centers.",
+      "relationships": "Chip-packaging and data-center node; balances US/China.",
+      "outlook": "On-thesis rising node in chip back-end and AI infrastructure.",
+      "confidence": "MODERATE.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-chip-chokepoint-war",
+        "macro-ai-datacenter-water-siting",
+        "geopolitics-taiwan-silicon-shield"
+      ]
+    },
+    {
+      "name": "Lawrence Wong",
+      "role": "Prime Minister of Singapore (2024–)",
+      "domains": [
+        "Geopolitics",
+        "State/Policy",
+        "Macro/Finance",
+        "AI"
+      ],
+      "orgs": [
+        "Singapore"
+      ],
+      "bluf": "The Singapore PM and former finance minister steering the region's premier financial and AI-infrastructure hub. Assess with MODERATE confidence Singapore under him is a key neutral node for capital, chip transshipment scrutiny, and data-center siting in the US-China contest.",
+      "drivers": "Technocratic continuity; hub-economy stewardship; strict non-alignment.",
+      "worldview": "Singapore thrives as a trusted neutral hub; survival depends on balancing the great powers.",
+      "decision_style": "Methodical, consensus-PAP technocracy; financial-stability and rule-of-law emphasis.",
+      "track_record": "Finance minister through COVID; PM (2024); managing Singapore as a wealth, fintech, and AI-datacenter hub amid chip-transshipment scrutiny.",
+      "vulnerabilities": "Exposure to US-China decoupling; chip-re-export-control pressure; data-center power limits.",
+      "relationships": "Financial-hub and AI-infrastructure node; neutral broker.",
+      "outlook": "On-thesis neutral hub for capital and AI infrastructure.",
+      "confidence": "MODERATE.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "geopolitics-chip-chokepoint-war",
+        "spec-exchanges-asia",
+        "macro-ai-datacenter-water-siting"
+      ]
+    },
+    {
+      "name": "Warren Buffett",
+      "role": "Chairman & CEO, Berkshire Hathaway",
+      "domains": [
+        "Capital",
+        "Markets",
+        "Macro/Finance"
+      ],
+      "orgs": [
+        "Berkshire Hathaway"
+      ],
+      "bluf": "The value-investing patriarch whose record cash pile (>$300B+ by 2024-25) and equity-trimming are read as a market-top signal. Assess with MODERATE-HIGH confidence Berkshire's defensive positioning is a closely-watched contrarian indicator against the AI-equity exuberance the project maps.",
+      "drivers": "Margin-of-safety discipline; long-horizon patience; aversion to overpaying.",
+      "worldview": "Buy wonderful businesses at fair prices; fear when others are greedy; cash is optionality.",
+      "decision_style": "Patient, contrarian, valuation-anchored; lets cash build when nothing is cheap.",
+      "track_record": "Decades of compounding; the Apple stake (then trimmed); record cash build and net equity selling into 2024-25; succession to Greg Abel.",
+      "vulnerabilities": "Cash-drag in a melt-up; the 'too cautious' critique; age/succession.",
+      "relationships": "Contrarian counterweight to the AI-momentum operators; the cash-pile-as-signal node.",
+      "outlook": "On-thesis defensive/contrarian indicator against the bubble.",
+      "confidence": "MODERATE-HIGH.",
+      "grade": "fact + labeled interpretation",
+      "blocks": [
+        "fin-ai-efficiency-counter-thesis",
+        "macro-cross-sectional-analysis"
+      ]
+    },
+    {
+      "name": "George Soros",
+      "role": "Founder, Soros Fund Management & Open Society Foundations",
+      "domains": [
+        "Capital",
+        "Markets",
+        "State/Policy"
+      ],
+      "orgs": [
+        "Soros Fund Management",
+        "Open Society Foundations"
+      ],
+      "bluf": "The macro-trader whose theory of REFLEXIVITY - that perceptions and prices feed back on each other to create self-reinforcing booms and busts - is a direct intellectual frame for the project's analysis of the AI/credit reflexive loop. Assess with MODERATE confidence reflexivity is the most apt market-theory lens for the self-marking circular core.",
+      "drivers": "Reflexivity conviction; open-society ideology; macro-trading instinct.",
+      "worldview": "Markets are not efficient; participants' biased perceptions shape the fundamentals they then react to (reflexivity), producing bubbles and crashes.",
+      "decision_style": "Aggressive macro bets on reflexive turning points (the 1992 sterling break); fallibility-aware.",
+      "track_record": "'Broke the Bank of England' (1992); the Quantum Fund record; 'The Alchemy of Finance' (reflexivity); Open Society philanthropy (a frequent target of conspiracy narratives - noted and excluded from claims here).",
+      "vulnerabilities": "Politicized target of disinformation; reflexivity is a frame, not a timing tool.",
+      "relationships": "Intellectual frame for the project's reflexive-loop thesis (self-marked value, M1-M4 reflexive marks).",
+      "outlook": "On-thesis conceptual lens (reflexivity) for the bubble dynamics.",
+      "confidence": "MODERATE.",
+      "grade": "fact (theory & record) + labeled interpretation",
+      "blocks": [
+        "fin-openai-conversion-governance",
+        "macro-cross-sectional-analysis"
+      ]
     }
   ]
 }
