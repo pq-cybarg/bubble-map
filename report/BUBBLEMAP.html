@@ -30,6 +30,7 @@ text.lab{font-size:9px;fill:#3a382f;pointer-events:none}
 #btns{position:absolute;bottom:10px;right:14px;z-index:6;display:flex;gap:6px}
 #btns button{font:12px inherit;cursor:pointer;background:var(--paper);color:var(--ac2);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
 #btns button:hover{background:#1f4e7910}
+line{vector-effect:non-scaling-stroke}
 line.hl{stroke:#1f4e79!important;opacity:.95!important}
 #panel .ea{color:#9a6a1a;font-weight:600}#panel .amt{color:#2e6b3e;font-weight:600}
 </style></head><body><div class=nav><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="charts.html">Charts</a><a href="research.html">Research</a><a href="persons.html">Persons</a><a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a><a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a></div>
@@ -38,7 +39,7 @@ line.hl{stroke:#1f4e79!important;opacity:.95!important}
 <input id=q placeholder="Find an entity&hellip;" autocomplete=off>
 <label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
-<label class=tog><input type=checkbox id=tLab> show labels</label>
+<label class=tog><input type=checkbox id=tLab checked> show labels</label>
 <div id=legend><span class=lg data-b="ai"><i style="background:#1f4e79"></i>AI core</span><span class=lg data-b="capital"><i style="background:#7b2d26"></i>Capital / credit</span><span class=lg data-b="crypto"><i style="background:#b8860b"></i>Crypto</span><span class=lg data-b="defense"><i style="background:#2e8b57"></i>Defense / security</span><span class=lg data-b="state"><i style="background:#c0392b"></i>State / regulator</span><span class=lg data-b="commodity"><i style="background:#8a5a2b"></i>Commodities / energy</span><span class=lg data-b="identity"><i style="background:#5e35b1"></i>Identity / telecom</span><span class=lg data-b="macro"><i style="background:#138a8a"></i>Macro / data</span><span class=lg data-b="pqc"><i style="background:#6b3b16"></i>PQC / quantum</span><span class=lg data-b="person"><i style="background:#d35400"></i>Person</span><span class=lg data-b="other"><i style="background:#8a8378"></i>Infra / other</span></div>
 <div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
@@ -84,25 +85,42 @@ node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.id+'  ('+d.sector+', deg '+d.deg+')');
 const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('class','lab')
- .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.id).style('display','none');
+ .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.id);  // labels ON by default
+let fitted=false, curK=1, pendingFocus=null;
+const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
- .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?70:95).strength(.25))
- .force('charge',d3.forceManyBody().strength(-160))
- .force('center',d3.forceCenter(W()/2,H()/2)).force('collide',d3.forceCollide().radius(d=>rad(d)+3))
+ .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?52:72).strength(.3))
+ .force('charge',d3.forceManyBody().strength(-95).distanceMax(420))
+ .force('center',d3.forceCenter(W()/2,H()/2))
+ .force('x',d3.forceX(W()/2).strength(.06)).force('y',d3.forceY(H()/2).strength(.06))
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+4))
  .on('tick',tick);
 function tick(){
  const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
  px(link);px(linkHit);
  node.attr('transform',d=>`translate(${d.x},${d.y})`);
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
+ if(sim.alpha()<0.06){                                   // settled
+   if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
+   else if(!fitted){fitted=true; fit();}                  // else auto-frame (kills empty space)
+ }
 }
+// keep node/line sizes usable at any zoom: enlarge when zoomed OUT (k<1), constant lines via CSS
+function rescale(k){curK=k; const s=k<1?Math.min(1/k,3.2):1;
+ node.selectAll('circle').attr('r',d=>rad(d)*s).attr('stroke-width',d=>(d.scc?2.6:1)*s);
+ link.attr('stroke-width',d=>baseW(d)*s);
+ labels.style('font-size',(9*Math.min(s,2.2))+'px').attr('dx',d=>rad(d)*s+2);}
 // node hover: enlarge + reveal its label
-node.on('mouseenter',function(e,d){d3.select(this).select('circle').attr('r',rad(d)+3);
+node.on('mouseenter',function(e,d){d3.select(this).select('circle').attr('r',rad(d)*(curK<1?Math.min(1/curK,3.2):1)+3);
   d3.select(this).raise();})
- .on('mouseleave',function(e,d){d3.select(this).select('circle').attr('r',rad(d));});
-node.call(d3.drag().on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
- .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;}).on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
-const zoomB=d3.zoom().scaleExtent([.2,6]).on('zoom',e=>root.attr('transform',e.transform));
+ .on('mouseleave',function(e,d){d3.select(this).select('circle').attr('r',rad(d)*(curK<1?Math.min(1/curK,3.2):1));});
+// DRAG: container=root so pointer is in the ZOOMED data space (fixes 'grab makes it fly away');
+// pin where dropped so nodes stay put (Reset focus unpins).
+node.call(d3.drag().container(function(){return root.node();})
+ .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.12).restart();d.fx=d.x;d.fy=d.y;})
+ .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;})
+ .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);/* leave fx/fy: pinned where dropped */}));
+const zoomB=d3.zoom().scaleExtent([.35,6]).on('zoom',e=>{root.attr('transform',e.transform);rescale(e.transform.k);});
 svg.call(zoomB);
 // controls
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
@@ -130,7 +148,9 @@ function showPanel(d){const p=document.getElementById('panel'),b=document.getEle
   +`<div class=k>Inflows (${ins.length})</div>${nb(ins)}`
   +`<div class=k>Documented in</div><div style=font-size:12.5px>${blk}</div>`;
  p.style.display='block';}
-function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);egoFocus(d);q.value='';}
+function centerOn(d){const k=Math.max(curK,1.4);const tx=W()/2-k*d.x,ty=H()/2-k*d.y;
+ svg.transition().duration(550).call(zoomB.transform,d3.zoomIdentity.translate(tx,ty).scale(k));}
+function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);egoFocus(d);centerOn(d);q.value='';}
 // ----- adjacency for ego-focus -----
 const ADJ=new Map(NODES.map(n=>[n.id,new Set([n.id])]));
 LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);ADJ.get(s)&&ADJ.get(s).add(t);ADJ.get(t)&&ADJ.get(t).add(s);});
@@ -165,8 +185,13 @@ function fit(){const xs=NODES.map(n=>n.x),ys=NODES.map(n=>n.y);
  const tx=W()/2-k*(x0+x1)/2,ty=H()/2-k*(y0+y1)/2;
  svg.transition().duration(450).call(zoomB.transform,d3.zoomIdentity.translate(tx,ty).scale(k));}
 document.getElementById('bFit').onclick=fit;
-document.getElementById('bReset').onclick=()=>{clearEgo();soloB=null;document.getElementById('panel').style.display='none';};
+document.getElementById('bReset').onclick=()=>{clearEgo();soloB=null;document.getElementById('panel').style.display='none';
+ NODES.forEach(n=>{n.fx=null;n.fy=null;});fitted=false;sim.alpha(.5).restart();};  // unpin dropped nodes + re-settle/fit
 svg.on('dblclick.zoom',null).on('dblclick',()=>{clearEgo();soloB=null;});
-function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(m)setTimeout(()=>{focusNode(decodeURIComponent(m[1]));const d=id2n.get(decodeURIComponent(m[1]));if(d)egoFocus(d);},500);}
+function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(!m)return;
+ const id=decodeURIComponent(m[1]);
+ if(sim.alpha()<0.06){focusNode(id);}   // already settled -> focus + center now
+ else{pendingFocus=id;}                  // still settling -> focus when settled (tick)
+}
 window.addEventListener('hashchange',fromHash);fromHash();
 </script></body></html>
