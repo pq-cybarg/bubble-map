@@ -95,6 +95,18 @@ h1{margin:0 0 4px;font-size:30px;font-weight:600;font-family:Georgia,serif}
 .chip{font-size:12.5px;padding:5px 11px;border-radius:20px;border:1px solid var(--line);background:var(--paper);color:var(--mut);cursor:pointer;user-select:none}
 .chip.on{color:#fff;border-color:transparent}
 .count{color:var(--mut);font-size:13px;margin:10px 0 4px}
+#segnav{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.segchip{font-size:12px;padding:4px 10px;border-radius:7px;border:1px solid var(--line);background:var(--paper);color:#33312c;text-decoration:none;cursor:pointer}
+.segchip:hover{background:#1f4e7910;border-color:var(--ac2)}.segchip b{color:var(--ac2);margin-left:3px}
+.segtools{font-size:12px;color:var(--ac2);margin-top:7px}.segtools span{cursor:pointer}.segtools span:hover{text-decoration:underline}
+.seg{margin:18px 0 4px;scroll-margin-top:140px}
+.seghdr{font:600 15px Georgia,serif;color:#2a2823;margin:0 0 6px;padding:7px 2px;border-bottom:2px solid var(--line);cursor:pointer;user-select:none;position:sticky;top:0;background:var(--bg);z-index:2}
+.seghdr .caret{display:inline-block;transition:transform .15s;color:var(--mut);font-size:12px}
+.seg.collapsed .caret{transform:rotate(-90deg)}.seg.collapsed .segbody{display:none}
+.segcount{font:600 12px -apple-system,sans-serif;color:#fff;background:var(--ac2);border-radius:10px;padding:1px 8px;margin-left:6px;vertical-align:1px}
+.seg.nomatch{display:none}
+@keyframes pop{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.card.pop{animation:pop .2s ease}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:10px;margin:10px 0;overflow:hidden}
 .row{display:flex;align-items:center;gap:14px;padding:14px 16px;cursor:pointer}
 .row:hover{background:#fbf8f0}
@@ -118,8 +130,32 @@ h1{margin:0 0 4px;font-size:30px;font-weight:600;font-family:Georgia,serif}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:22px;color:var(--mut);font-size:13px;text-align:center}
 """
 
+# ---- segmentation: assign each profile ONE primary segment (priority order) for the roster view ----
+SEG_DEFS=[
+ ("regulators","Financial regulators — Fed · Treasury · SEC · CFTC · FDIC · OCC",lambda d:"Regulator" in d),
+ ("executive","Executive — Presidents & administrations",lambda d:"Executive" in d),
+ ("judiciary","Judiciary — the Supreme Court",lambda d:"Judiciary" in d),
+ ("intelligence","Intelligence — CIA · FBI · DNI",lambda d:"Intelligence" in d),
+ ("legislature","Congress — leadership, committees & members",lambda d:"Legislature" in d),
+ ("ai","AI labs, hyperscalers & chips",lambda d:"AI" in d),
+ ("crypto","Crypto & stablecoins",lambda d:"Crypto" in d),
+ ("capital","Capital, markets & macro-finance",lambda d:any(x in d for x in ("Capital","Markets","Macro/Finance"))),
+ ("defense","Defense & security",lambda d:"Defense" in d),
+ ("digitalid","Digital-ID & surveillance",lambda d:"Digital-ID" in d),
+ ("sovereign","Sovereign wealth & Gulf capital",lambda d:"Sovereign" in d),
+ ("geopolitics","Heads of state & geopolitics",lambda d:("Geopolitics" in d) or ("State/Policy" in d)),
+ ("other","Other",lambda d:True),
+]
+def segment_of(p):
+    d=set(p.get("domains",[]))
+    for key,_lab,test in SEG_DEFS:
+        if test(d): return key
+    return "other"
+SEG_LABEL={k:lab for k,lab,_ in SEG_DEFS}
+
 def card_html(i,p):
     doms=p.get("domains",[])
+    seg=segment_of(p)
     tags="".join(f'<span class=tag style="background:{dcolor(d)}">{html.escape(d)}</span>' for d in doms)
     body=[]
     for k,lab in FIELDS:
@@ -145,7 +181,7 @@ def card_html(i,p):
     av=dcolor(doms[0]) if doms else "#6b665d"
     hay=html.escape(" ".join([p.get("name",""),p.get("role",""),
         " ".join(p.get("orgs",[]))," ".join(doms),p.get("bluf","")]).lower())
-    return (f'<div class=card id="{slug(p.get("name",""))}" data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
+    return (f'<div class=card id="{slug(p.get("name",""))}" data-seg="{seg}" data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
             f'<div class=row onclick="this.parentNode.classList.toggle(\'open\')">'
             f'<div class=av style="background:{av}">{html.escape(initials(p.get("name","?")))}</div>'
             f'<div class=who><div class=nm>{html.escape(p.get("name",""))}</div>'
@@ -156,7 +192,20 @@ def card_html(i,p):
 
 alldoms=sorted({d for p in persons for d in p.get("domains",[])})
 chips="".join(f'<span class=chip data-d="{html.escape(d)}" style="--c:{dcolor(d)}">{html.escape(d)}</span>' for d in alldoms)
-cards="".join(card_html(i,p) for i,p in enumerate(persons))
+# group profiles into segments (the roster-segmentation view), preserving SEG_DEFS order
+from collections import defaultdict as _dd
+_buckets=_dd(list)
+for i,p in enumerate(persons): _buckets[segment_of(p)].append((i,p))
+seg_order=[k for k,_,_ in SEG_DEFS if _buckets.get(k)]
+segnav="".join(f'<a class=segchip href="#seg-{k}" data-seg="{k}">{html.escape(SEG_LABEL[k])}<b>{len(_buckets[k])}</b></a>' for k in seg_order)
+sections=""
+for k in seg_order:
+    body_cards="".join(card_html(i,p) for i,p in _buckets[k])
+    sections+=(f'<section class=seg id="seg-{k}" data-seg="{k}">'
+               f'<h3 class=seghdr onclick="this.parentNode.classList.toggle(\'collapsed\')">'
+               f'<span class=caret>&#9662;</span> {html.escape(SEG_LABEL[k])}'
+               f'<span class=segcount>{len(_buckets[k])}</span></h3>'
+               f'<div class=segbody>{body_cards}</div></section>')
 
 HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
@@ -171,38 +220,61 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <div class=controls>
 <input id=q type=search placeholder="Search name, role, organisation, or assessment&hellip;" autocomplete=off>
 <div class=chips id=chips>{chips}</div>
+<div id=segnav>{segnav}</div>
+<div class=segtools><span id=expandAll>Expand all</span> &middot; <span id=collapseAll>Collapse all</span> &middot; <span class=sub>{len(seg_order)} segments</span></div>
 </div>
 <div class=count id=count></div>
-<div id=list>{cards}</div>
+<div id=list>{sections}</div>
 <div class=empty id=empty style="display:none">No matching profiles.</div>
 </div>
 <footer>Behavioral &amp; strategic assessments from the public record &middot; not clinical diagnosis &middot; inference labeled, facts cited &middot; excluded from the formal proofs &middot; contact resistant@tuta.com</footer>
 <script>
 const cards=[...document.querySelectorAll('.card')], q=document.getElementById('q'),
- count=document.getElementById('count'), empty=document.getElementById('empty');
-let active=new Set();
+ count=document.getElementById('count'), empty=document.getElementById('empty'),
+ sections=[...document.querySelectorAll('.seg')];
+let active=new Set(), searching=false, booted=false;
 document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{{
  const d=c.dataset.d;
  if(active.has(d)){{active.delete(d);c.classList.remove('on');c.style.background='';}}
  else{{active.add(d);c.classList.add('on');c.style.background=c.style.getPropertyValue('--c');}}
  apply();}}));
 q.addEventListener('input',apply);
+// show a card with a one-shot fade-in only when it newly appears (cheap + smooth)
+function setShown(card,show){{
+ if(show){{ if(booted && card.style.display==='none'){{card.classList.add('pop');
+   card.addEventListener('animationend',()=>card.classList.remove('pop'),{{once:true}});}} card.style.display=''; }}
+ else card.style.display='none';
+}}
 function apply(){{
- const s=q.value.trim().toLowerCase(); let n=0;
+ const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; let n=0;
  cards.forEach(card=>{{
   const okText=!s||card.dataset.hay.includes(s);
   const doms=card.dataset.domains.split('|');
   const okDom=active.size===0||[...active].every(d=>doms.includes(d));
-  const show=okText&&okDom; card.style.display=show?'':'none'; if(show)n++;
+  const show=okText&&okDom; setShown(card,show); if(show)n++;
  }});
- count.textContent=n+' of '+cards.length+' profiles';
+ // per-section counts; hide empty sections; auto-expand sections with matches while searching
+ sections.forEach(sec=>{{
+  const vis=[...sec.querySelectorAll('.card')].filter(c=>c.style.display!=='none').length;
+  sec.classList.toggle('nomatch',vis===0);
+  sec.querySelector('.segcount').textContent=vis;
+  if(searching) sec.classList.remove('collapsed');
+ }});
+ count.textContent=n+' of '+cards.length+' profiles'+(searching?' (filtered)':'');
  empty.style.display=n?'none':'block';
 }}
-apply();
+apply(); booted=true;
+document.getElementById('expandAll').onclick=()=>sections.forEach(s=>s.classList.remove('collapsed'));
+document.getElementById('collapseAll').onclick=()=>sections.forEach(s=>s.classList.add('collapsed'));
+// segnav chip -> expand + smooth-scroll to its section
+document.querySelectorAll('.segchip').forEach(a=>a.addEventListener('click',e=>{{e.preventDefault();
+ const sec=document.getElementById('seg-'+a.dataset.seg); if(!sec)return;
+ sec.classList.remove('collapsed','nomatch'); sec.scrollIntoView({{behavior:'smooth',block:'start'}});}}));
 function openHash(){{if(!location.hash)return;const el=document.querySelector(location.hash);
  if(el&&el.classList.contains('card')){{q.value='';active.clear();
   document.querySelectorAll('.chip.on').forEach(c=>{{c.classList.remove('on');c.style.background='';}});apply();
-  el.classList.add('open');setTimeout(()=>el.scrollIntoView({{block:'center',behavior:'smooth'}}),60);}}}}
+  const sec=el.closest('.seg'); if(sec){{sec.classList.remove('collapsed','nomatch');}}
+  el.classList.add('open');setTimeout(()=>el.scrollIntoView({{block:'center',behavior:'smooth'}}),80);}}}}
 window.addEventListener('hashchange',openHash);openHash();
 </script></body></html>"""
 
