@@ -29,6 +29,27 @@ def load():
 
 D=load(); persons=D.get("persons",[]); meta=D.get("meta",{})
 
+# Optional FEC campaign-finance overlay (data/fec_summary.json from fetch_fec.py). Maps a member's
+# display name -> aggregate receipts / PAC totals so the dossier can show the real money on record.
+def _load_fec():
+    try: F=json.load(open(os.path.join(ROOT,"data","fec_summary.json")))
+    except Exception: return {}
+    out={}
+    for c in F.get("candidates",[]):
+        cyc=[x for x in c.get("cycles",[]) if x.get("receipts")]
+        if not cyc: continue
+        tot=sum(x.get("receipts") or 0 for x in cyc)
+        pac=sum(x.get("pac_contributions") or 0 for x in cyc)
+        out[c["name"]]={"cid":c.get("candidate_id"),"total":tot,"pac":pac,"n":len(cyc)}
+    return out
+FEC=_load_fec()
+def _usd(v):
+    v=v or 0
+    if v>=1e9: return f"${v/1e9:.1f}B"
+    if v>=1e6: return f"${v/1e6:.1f}M"
+    if v>=1e3: return f"${v/1e3:.0f}k"
+    return f"${v:.0f}"
+
 DOMAIN_COLORS={"AI":"#1f4e79","Capital":"#7b2d26","Crypto":"#b8860b","Defense":"#2e8b57",
  "Digital-ID":"#5e35b1","State/Policy":"#c0392b","Macro/Finance":"#138a8a","Sovereign":"#d35400",
  "Geopolitics":"#8a5a2b","Markets":"#6b3b16",
@@ -106,6 +127,12 @@ def card_html(i,p):
         if not v: continue
         cls="fld bluf" if k=="bluf" else "fld"
         body.append(f'<div class="{cls}"><div class=lab>{lab}</div><div class=val>{html.escape(str(v))}</div></div>')
+    fec=FEC.get(p.get("name",""))
+    if fec:
+        body.append(f'<div class="fld"><div class=lab>Campaign finance (FEC, primary)</div>'
+                    f'<div class=val>~{_usd(fec["total"])} total receipts across {fec["n"]} cycles; '
+                    f'~{_usd(fec["pac"])} from PACs &middot; FEC candidate <code>{html.escape(fec["cid"] or "")}</code>. '
+                    f'<span style="color:#6b665d">Public FEC totals (api.open.fec.gov); industry/sector breakdown requires itemized-receipt ingest — money is leverage/exposure, not proof of a quid pro quo (see r-influence-congress-funding-compromise).</span></div></div>')
     blocks=p.get("blocks",[])
     if blocks:
         links=" ".join((f'<a href="r-{html.escape(b)}.html">{html.escape(b)}</a>' if b in MD_HAVE

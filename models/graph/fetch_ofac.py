@@ -16,12 +16,20 @@ block's address layer as the documented source-pointer rather than a fabricated 
 import os, re, json, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA = os.path.join(ROOT, "data")
-# Primary + fallback locations for the SDN Advanced XML (OFAC has migrated hosts over time).
-URLS = [
-    "https://sanctionslistservice.ofac.treas.gov/api/download/sdn_advanced.xml",
-    "https://www.treasury.gov/ofac/downloads/sdn_advanced.xml",
-    "https://ofac.treasury.gov/system/files/126/sdn_advanced.xml",
-]
+# Both free OFAC Advanced XML lists, each with fallback hosts (OFAC has migrated hosts over time).
+# SDN = Specially Designated Nationals; CONS = Consolidated (non-SDN) Sanctions List. Crypto
+# addresses appear on BOTH. This is the FREE public coverage; see the coverage note in main().
+SOURCES = {
+    "SDN": [
+        "https://sanctionslistservice.ofac.treas.gov/api/download/sdn_advanced.xml",
+        "https://www.treasury.gov/ofac/downloads/sdn_advanced.xml",
+        "https://ofac.treasury.gov/system/files/126/sdn_advanced.xml",
+    ],
+    "CONS": [
+        "https://sanctionslistservice.ofac.treas.gov/api/download/cons_advanced.xml",
+        "https://www.treasury.gov/ofac/downloads/consolidated/cons_advanced.xml",
+    ],
+}
 # Conservative crypto-address patterns (avoid false positives; tuned to OFAC's listed asset types).
 PATTERNS = {
     "ETH/EVM": re.compile(r"\b0x[0-9a-fA-F]{40}\b"),
@@ -31,8 +39,8 @@ PATTERNS = {
     "LTC": re.compile(r"\b(?:ltc1[0-9ac-hj-np-z]{11,71}|[LM][a-km-zA-HJ-NP-Z1-9]{26,33})\b"),
 }
 
-def _download():
-    for url in URLS:
+def _download(urls):
+    for url in urls:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=90) as r:
@@ -41,37 +49,62 @@ def _download():
             print(f"  ! {url} -> {e}")
     return None, None
 
-def main():
-    text, src = _download()
-    if not text:
-        print("fetch_ofac.py: SDN Advanced XML unreachable - skipping (non-destructive).")
-        print("  The on-chain block cites the OFAC SDN 'Digital Currency Address' set as the")
-        print("  authoritative source; re-run when sanctionslistservice.ofac.treas.gov is reachable.")
-        return 0
-    # Sanity-check we actually got the SDN XML (not an error/redirect page).
-    if not re.search(r"sdn|DistinctParty|sanction|FeatureType", text, re.I) or len(text) < 50000:
-        print(f"fetch_ofac.py: downloaded content does not look like the SDN XML "
-              f"(len={len(text)}) - skipping (non-destructive).")
-        return 0
+def _extract(text):
     # In the Advanced XML the address VALUES live in Feature/VersionDetail elements, not next to
-    # the literal label, so scan the whole document with strict address patterns. The patterns are
-    # specific enough (0x+40hex; BTC base58/bech32; TRON/XMR/LTC) that structured XML IDs/UUIDs
-    # don't match. Restrict to text inside XML element values to further cut noise.
+    # the literal label, so scan element values with strict address patterns. The patterns are
+    # specific enough (0x+40hex; BTC base58/bech32; TRON/XMR/LTC) that structured XML IDs don't match.
     vals = re.findall(r">([^<>]{20,120})<", text)
     scan = "\n".join(v for v in vals if any(c.isalnum() for c in v))
-    if len(scan) < 1000:  # element-value extraction failed; fall back to whole doc
+    if len(scan) < 1000:
         scan = text
-    found = {}
+    out = {}
     for kind, pat in PATTERNS.items():
         for a in set(pat.findall(scan)):
-            found.setdefault(a, kind)
-    out = {"metadata": {"source": src, "note": "Addresses present on the OFAC SDN list "
-            "('Digital Currency Address' features), pattern-extracted. For authoritative party "
-            "attribution, resolve each against the full SDN entry.", "count": len(found)},
-           "addresses": [{"address": a, "asset_guess": k} for a, k in sorted(found.items())]}
+            out[a] = kind
+    return out
+
+def main():
+    found = {}      # address -> asset_guess
+    prov = {}       # address -> set of lists it appears on
+    srcs_used = []
+    for listname, urls in SOURCES.items():
+        text, src = _download(urls)
+        if not text:
+            print(f"  - {listname}: unreachable (skipped)")
+            continue
+        if not re.search(r"DistinctParty|sanction|FeatureType", text, re.I) or len(text) < 30000:
+            print(f"  - {listname}: content not recognizable as OFAC XML (len={len(text)}, skipped)")
+            continue
+        got = _extract(text)
+        for a, k in got.items():
+            found.setdefault(a, k); prov.setdefault(a, set()).add(listname)
+        srcs_used.append(f"{listname}:{src}")
+        print(f"  + {listname}: {len(got)} crypto addresses ({src})")
+    if not found:
+        print("fetch_ofac.py: no OFAC lists reachable - skipping (non-destructive). "
+              "The on-chain block cites the SDN/Consolidated 'Digital Currency Address' set as source.")
+        return 0
+    import collections
+    by_list = collections.Counter(tuple(sorted(s)) for s in prov.values())
+    out = {"metadata": {
+            "sources": srcs_used,
+            "count": len(found),
+            "by_list": {"+".join(k): v for k, v in by_list.items()},
+            "note": "Crypto addresses pattern-extracted from the FREE OFAC Advanced XML lists "
+                    "(SDN + Consolidated). For authoritative party/program attribution, resolve each "
+                    "against its full list entry.",
+            "COVERAGE_LIMITS": "This is the FREE-ACCESS FLOOR, not the full threat-actor address "
+                    "universe. It captures only addresses OFAC has formally DESIGNATED on the SDN/"
+                    "Consolidated lists. It does NOT include: (a) per-incident FBI/CISA PSA IOC "
+                    "address lists (e.g., the 51 Bybit-laundering ETH addresses) which are published "
+                    "separately; (b) un-sanctioned but attributed clusters tracked by commercial "
+                    "forensics (Chainalysis/Elliptic/TRM/Arkham), which are PAYWALLED; (c) addresses "
+                    "OFAC lists only in non-machine-readable formats. Treat counts as a lower bound."},
+           "addresses": [{"address": a, "asset_guess": k, "lists": sorted(prov[a])}
+                         for a, k in sorted(found.items())]}
     path = os.path.join(DATA, "ofac_crypto_addresses.json")
     json.dump(out, open(path, "w"), indent=2)
-    print(f"wrote {path} ({len(found)} SDN crypto addresses from {src})")
+    print(f"wrote {path} ({len(found)} OFAC crypto addresses; FREE-ACCESS FLOOR, not full universe)")
     return 0
 
 if __name__ == "__main__":
