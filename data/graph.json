@@ -124,12 +124,24 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "Broadridge": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Bybit": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
     "ByteDance": {
       "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
+    "CFTC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "CME": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "COMEX": {
@@ -170,6 +182,10 @@
     },
     "Circle": {
       "sector": "stablecoin",
+      "has_exogenous_revenue": true
+    },
+    "Citadel_Securities": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Coinbase": {
@@ -224,6 +240,14 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "DTCC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "DTC_Cede": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Defense_Primes": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -255,6 +279,10 @@
     "EeroQ": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "Euroclear": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "FBI": {
       "sector": "state_intel",
@@ -293,6 +321,10 @@
       "has_exogenous_revenue": false
     },
     "Flagstar": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Fnality": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -364,6 +396,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
+    "ICE": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ICIJ": {
       "sector": "journalism",
       "has_exogenous_revenue": false
@@ -406,6 +442,10 @@
     },
     "Kraken": {
       "sector": "exchange",
+      "has_exogenous_revenue": true
+    },
+    "LBMA": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "LBRY": {
@@ -486,6 +526,10 @@
     },
     "NSA": {
       "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
+    "NSCC": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "NSE_India": {
@@ -628,11 +672,19 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Robinhood": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "RomanStorm": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
     "Ronin_Network": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Russia": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -693,6 +745,10 @@
       "has_exogenous_revenue": true
     },
     "SINK_lenders": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_retail_flow": {
       "sector": "sink",
       "has_exogenous_revenue": true
     },
@@ -770,6 +826,10 @@
     },
     "Starlink_Subscribers": {
       "sector": "exogenous_source",
+      "has_exogenous_revenue": true
+    },
+    "Stellar": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Swift": {
@@ -3545,6 +3605,123 @@
       "note": "OpenAI's NET LOSS flows onto MSFT's income statement via equity method: $3.1B / $0.41 EPS hit in Q1 FY26, up 6x from $523M / $0.07 a year earlier. OpenAI's cash burn is now a visible, growing drag on Microsoft GAAP earnings."
     },
     {
+      "from": "DTC_Cede",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Cede & Co holds legal title to ~all US securities; DTCC owned by member banks",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "NSCC",
+      "to": "Robinhood",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$3.7B collateral call (Jan 28 2021) -> Robinhood restricted GME buying",
+      "amount_usd": 3700000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "Citadel_Securities",
+      "to": "SINK_retail_flow",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "~41-47% of US retail equity volume; ~$2.6B PFOF (2020-21)",
+      "amount_usd": 2600000000,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "ICE",
+      "to": "LBMA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ICE's IBA administers the LBMA Gold Price; ICE owns NYSE + clearing + MERS/Black Knight mortgage rails",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "Euroclear",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~\u20ac194B frozen Russian assets (85% of balance sheet); G7 windfall facility; confiscation debate; Russia $250B counter-claim",
+      "amount_usd": 194000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "DTCC",
+      "to": "Chainlink",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Smart NAV (CCIP) + tokenized-collateral platform",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "DTCC",
+      "to": "Stellar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tokenize DTC-custodied assets on Stellar (first public chain, ~H1 2027)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "Broadridge",
+      "to": "Fnality",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DLR (~$280B/day repo on Canton) settles vs Fnality tokenized central-bank reserves",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "CFTC",
+      "to": "CME",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "spoofing enforcement (Tower $67.4M; JPM $920M COMEX/Treasuries)",
+      "amount_usd": 67400000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
       "from": "CoreWeave",
       "to": "NVIDIA",
       "instrument": "gpu_purchase",
@@ -3962,10 +4139,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 229,
-    "num_edges": 234,
-    "num_financial_edges": 117,
-    "num_structural_edges": 117,
+    "num_nodes": 244,
+    "num_edges": 243,
+    "num_financial_edges": 118,
+    "num_structural_edges": 125,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4016,8 +4193,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -4028,14 +4205,24 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -4045,14 +4232,16 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
+        "Amazon",
+        "OpenAI",
         "NVIDIA",
-        "OpenAI"
+        "Anthropic"
       ],
       [
+        "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -4067,28 +4256,16 @@
         "Microsoft"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "Oracle",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -4319,6 +4496,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Broadridge": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bybit": {
         "total_usd": 1500000000,
         "circular_usd": 0,
@@ -4328,6 +4512,20 @@
       },
       "ByteDance": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CFTC": {
+        "total_usd": 67400000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CME": {
+        "total_usd": 67400000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4398,6 +4596,13 @@
       },
       "Circle": {
         "total_usd": 77300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Citadel_Securities": {
+        "total_usd": 2600000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4494,6 +4699,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DTCC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DTC_Cede": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Defense_Primes": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4545,6 +4764,13 @@
       },
       "EeroQ": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Euroclear": {
+        "total_usd": 194000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4615,6 +4841,13 @@
       },
       "Flagstar": {
         "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fnality": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4739,6 +4972,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ICE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ICIJ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -4811,6 +5051,13 @@
       },
       "Kraken": {
         "total_usd": 30000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LBMA": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4951,6 +5198,13 @@
       },
       "NSA": {
         "total_usd": 250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NSCC": {
+        "total_usd": 3700000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5201,6 +5455,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Robinhood": {
+        "total_usd": 3700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "RomanStorm": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -5210,6 +5471,13 @@
       },
       "Ronin_Network": {
         "total_usd": 625000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Russia": {
+        "total_usd": 194000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5319,6 +5587,13 @@
         "circularity_ratio": 0.445,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "SINK_retail_flow": {
+        "total_usd": 2600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "SINK_scam_victims": {
         "total_usd": 0,
@@ -5448,6 +5723,13 @@
       },
       "Starlink_Subscribers": {
         "total_usd": 11400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Stellar": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5934,13 +6216,13 @@
       },
       {
         "node": "US_Banks",
-        "degree": 5,
+        "degree": 6,
         "neighbor_sectors": [
           "other",
           "regulator"
         ],
         "n_neighbor_sectors": 2,
-        "source_files": 5,
+        "source_files": 6,
         "layers": [
           "financial",
           "structural"

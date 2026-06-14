@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "The market-plumbing & settlement control stack — who actually owns, clears, executes, custodies, and is re-platforming the world's assets",
+    "generated": "2026-06-13",
+    "frame": "Beneath the visible markets sits a CONCENTRATED, mostly-private infrastructure that legally owns, clears, executes, benchmarks, and custodies nearly everything — and is now being re-platformed onto tokenization rails by the same incumbents plus a few chosen chains. This block maps the full stack as a control layer, not three named utilities: (1) OWNERSHIP — Cede & Co / DTC hold legal title to ~all US securities; investors hold 'entitlements'. (2) CLEARING — NSCC/FICC/OCC and the CCP 'too-central-to-fail' concentration (the 2021 GameStop collateral call). (3) EXECUTION — Citadel Securities / PFOF concentrate retail order flow. (4) BENCHMARK+MORTGAGE — the ICE conglomerate (NYSE + clearing + the LBMA gold price + MERS/Black Knight mortgage rails). (5) CROSS-BORDER + WEAPONIZATION — Euroclear/Clearstream custody of central-bank reserves, SWIFT messaging, and the frozen-Russian-assets precedent. (6) METALS — LBMA/LPMCL unallocated 'paper gold'. (7) THE RE-PLATFORMING — DTCC→Chainlink/Stellar, Broadridge/Canton, Fnality, HQLAx, Hedera/R3 — who is building (and will control) the next settlement layer.",
+    "WARNING": "Grade discipline. The STRUCTURAL FACTS (Cede/DTC street-name; DTCC/OCC monopoly+SIFMU status; ICE's holdings; Euroclear's €194B frozen; Citadel's retail share; the tokenization deals; the GameStop NSCC call) are DOCUMENTED. The CONSPIRATORIAL CONCLUSIONS layered on top — the 'Great Taking' (that street-name custody is a plan to confiscate all assets in a collapse) and the 'naked-short counterfeit-shares' thesis — are FRINGE/CONTESTED and are recorded as such, NOT asserted. Concentration + opacity is the documented finding; coordinated malign intent is not. Overlay edges excluded from the proofs.",
+    "method": "Primary/authoritative where possible: DTCC/DTC docs + Wikipedia (Cede); House FSC GameStop report + reporting (NSCC $3.7B call); ICE press (LBMA price clearing, MERS/Ellie Mae/Black Knight); OCC/SEC SIFMU designation; CEPR/EU Parliament/CFR (Euroclear frozen assets); SWIFT/Banque de France; WFE/IMF (CCP procyclicality); Broadridge/Fnality/HQLAx/Digital Asset press (Canton); SEC/Wharton/The Trade (Citadel PFOF). Each cell graded.",
+    "cross_refs": ["altcoin-lens.json","macro-gold-silver-reprice.json","macro-oil-backwardation.json","macro-history-dereg-manipulation.json","macro-stablecoin-treasury-rail.json","geopolitics-russia-energy-arctic.json","macro-bank-hierarchy.json","fin-hedera-connections.json","commodities-metals.json"]
+  },
+
+  "ownership_layer": {
+    "title":"Who legally owns your shares — Cede & Co / DTC",
+    "facts":[
+      "Cede & Co. (the nominee of The Depository Trust Company, DTC) is listed as the REGISTERED OWNER of nearly all publicly-traded US shares; DTC holds them in 'street name' and the end investor is a BENEFICIAL owner holding a 'security entitlement', not direct legal title.",
+      "Voting rights and dividends flow FIRST to Cede & Co, then are passed onward to beneficial owners (via the broker/omnibus chain).",
+      "DTCC (parent of DTC/NSCC/FICC) is OWNED BY ITS MEMBERS — banks and broker-dealers; DTCC holds DTC's voting stock, participants hold non-voting. A private utility at the center of US securities."
+    ],
+    "contested":"The 'Great Taking' thesis (that street-name custody + the UCC Article 8 'security entitlement' framework is a deliberate setup to let secured creditors seize all client assets in a systemic collapse) is FRINGE/CONTESTED — the custody structure is real and documented; the confiscation-conspiracy conclusion is not established and is recorded, not asserted.",
+    "grade":"fact (Cede/DTC custody structure); contested (the 'Great Taking' conclusion)"
+  },
+
+  "clearing_layer": {
+    "title":"Clearing — NSCC/FICC/OCC and the CCP 'too-central-to-fail' concentration",
+    "facts":[
+      "NSCC (equities), FICC (fixed income), and OCC (options) are the central counterparties; OCC is the SOLE registered clearing agency for US exchange-listed options, designated a Systemically Important Financial Market Utility (SIFMU) in 2012. 'By centralizing risk, the CCP itself becomes a point of concentrated systemic risk.'",
+      "GameStop, Jan 28 2021: the NSCC issued Robinhood a ~$3.7B collateral call pre-market; Robinhood RESTRICTED buying of GME/AMC to cut its risk and raised emergency capital. The clearing layer's margin mechanic directly forced a halt to retail buying — a vivid demonstration of where power sits.",
+      "Mandatory central clearing (post-2008, Dodd-Frank) concentrated OTC-derivatives risk into CCPs; CCP margin models are PROCYCLICAL — margin spikes in stress (2020 dash-for-cash, 2022 LME nickel + UK LDI), amplifying liquidity pressure on members."
+    ],
+    "grade":"fact (SIFMU + GameStop call + procyclicality); systemic-risk magnitude is debated"
+  },
+
+  "execution_layer": {
+    "title":"Execution — Citadel Securities / payment-for-order-flow concentration",
+    "facts":[
+      "Citadel Securities executes ~41-47% of ALL US-listed retail equity volume; the top 3 wholesalers (Citadel ~41%, Virtu ~26%, G1 ~16%) handle >80% of US retail equity orders.",
+      "Payment-for-order-flow (PFOF): Citadel paid ~$2.6B for order flow across 2020-21 (most on options); brokers (Robinhood et al.) sell retail flow to wholesalers — the model the SEC (Gensler) scrutinized.",
+      "So the EXECUTION layer is as concentrated as ownership and clearing: a single firm internalizes ~half of US retail flow."
+    ],
+    "grade":"fact (market-share + PFOF figures); 'harm to retail' is contested"
+  },
+
+  "benchmark_mortgage_layer": {
+    "title":"The ICE conglomerate — exchange + clearing + benchmarks + the US mortgage rails",
+    "facts":[
+      "Intercontinental Exchange (ICE) owns the NYSE, ICE Clear (clearing), and ICE Benchmark Administration (IBA) — which administers LIBOR (historically), the LBMA GOLD PRICE, and ICE Swap Rate.",
+      "ICE also built ICE Mortgage Technology by acquiring MERS (2018 — the Mortgage Electronic Registration System that holds title-tracking for a huge share of US mortgages), Simplifile (2019), Ellie Mae (2020), and Black Knight (2023) — the dominant US mortgage origination + servicing data rails.",
+      "One company therefore spans equity exchange + clearing + the gold benchmark + the US mortgage registry/data stack — an extraordinary cross-market concentration."
+    ],
+    "grade":"fact (ICE holdings); 'conflict/control' interpretation labeled"
+  },
+
+  "crossborder_weaponization": {
+    "title":"Cross-border custody as a weapon — Euroclear/Clearstream, SWIFT, the frozen-Russian-assets precedent",
+    "facts":[
+      "Euroclear and Clearstream are the two International Central Securities Depositories (ICSDs); 103 central banks custody reserves at Euroclear, 70 at Clearstream — they are global chokepoints.",
+      "Euroclear holds ~€194B of immobilized/frozen Russian assets (≈85% of its balance sheet, Jun 2025); ~€210B Russian sovereign assets are immobilized under EU jurisdiction. The G7 used the WINDFALL interest to back a ~$50B Ukraine facility; full confiscation of the principal is debated — Euroclear/Belgium warn it would erode trust in EU markets and set a precedent. Russia obtained a Moscow-court order against Euroclear (~$250B claimed).",
+      "SWIFT (financial-messaging chokepoint) disconnected designated Russian entities in 2022 — the demonstration that the messaging layer is a sanctions weapon."
+    ],
+    "linkage":"This is the settlement layer as geopolitical weapon — and the strongest argument FOR de-dollarization / alternative rails (CIPS, mBridge, SPFS) the project tracks (geopolitics-russia-energy-arctic, macro-stablecoin-treasury-rail).",
+    "grade":"fact (frozen assets, SWIFT cutoff, the litigation); 'precedent erodes reserve trust' is documented-warning"
+  },
+
+  "metals_layer": {
+    "title":"Metals — LBMA/LPMCL unallocated 'paper gold'",
+    "facts":[
+      ">90% of wholesale precious-metals trading clears over UNALLOCATED 'loco London' accounts — the holder is an UNSECURED CREDITOR of the bullion bank, not the title-holder of specific metal. The LBMA Gold/Silver Price is administered by ICE's IBA.",
+      "The claims-vs-physical abstraction is the metals analogue of the securities street-name structure; it is stressed by the 2025-26 COMEX-LME dislocations and gold/silver backwardation (macro-oil-backwardation, commodities-metals)."
+    ],
+    "grade":"fact (unallocated model); 'systemic over-issuance/fraud' contested"
+  },
+
+  "the_replatforming": {
+    "title":"Who is building (and will control) the NEXT settlement layer",
+    "facts":[
+      "DTCC → CHAINLINK (Smart NAV pilot via CCIP, 2024, with JPMorgan/Franklin Templeton/BNY Mellon/State Street; tokenized-collateral platform 2026) and → STELLAR (tokenize DTC-custodied stocks/ETFs/Treasuries/bonds, first public chain, ~H1 2027).",
+      "BROADRIDGE Distributed Ledger Repo (DLR) — ~$280B/day repo on Canton DLT, the largest institutional tokenized-settlement platform; integrates with FNALITY for central-bank-reserve-backed cash settlement.",
+      "CANTON (built by Digital Asset, open-sourced, native Canton Coin) — a bank-backed DLT; FNALITY (backed by ~20 global institutions) settles in tokenized central-bank reserves; HQLAx (collateral mobility on Canton) underpins ~$15T daily; plus R3 Corda and HEDERA (council-governed, see fin-hedera-connections).",
+      "So the next settlement layer is being built by the SAME incumbent banks/utilities (DTCC, Broadridge, the Fnality/Canton consortia) plus a few chosen public chains (Stellar, Chainlink, Hedera) — concentration and control carry FORWARD into tokenization, not away from it."
+    ],
+    "grade":"fact (the platforms + deals); 'who controls the rails controls settlement' is the labeled thesis"
+  },
+
+  "synthesis":"The market-plumbing layer shares one pattern at every level — OWNERSHIP (Cede/DTC), CLEARING (NSCC/FICC/OCC), EXECUTION (Citadel), BENCHMARKS+MORTGAGE (ICE), CROSS-BORDER (Euroclear/Clearstream/SWIFT), METALS (LBMA): extreme CONCENTRATION, private/opaque governance, and a CLAIMS-VS-ASSET gap where you hold an entitlement, not the thing. It is the substrate under the entire edifice the project maps, it is demonstrably WEAPONIZABLE (GameStop margin call; frozen Russian reserves; SWIFT cutoff), and it is now being RE-PLATFORMED onto tokenization rails controlled by the same incumbents plus a handful of chosen chains. The documented finding is concentration + opacity + weaponizability; the fringe confiscation/counterfeit conspiracies are graded down and excluded.",
+
+  "edges": [
+    {"from":"DTC_Cede","to":"US_Banks","instrument":"relationship","raw_instrument":"Cede & Co holds legal title to ~all US securities; DTCC owned by member banks","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: ownership-abstraction control point"},
+    {"from":"NSCC","to":"Robinhood","instrument":"regulatory_legal","raw_instrument":"~$3.7B collateral call (Jan 28 2021) -> Robinhood restricted GME buying","amount_usd":3700000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: clearing-layer power over execution"},
+    {"from":"Citadel_Securities","to":"SINK_retail_flow","instrument":"relationship","raw_instrument":"~41-47% of US retail equity volume; ~$2.6B PFOF (2020-21)","amount_usd":2600000000,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: execution-layer concentration"},
+    {"from":"ICE","to":"LBMA","instrument":"relationship","raw_instrument":"ICE's IBA administers the LBMA Gold Price; ICE owns NYSE + clearing + MERS/Black Knight mortgage rails","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: cross-market conglomerate"},
+    {"from":"Euroclear","to":"Russia","instrument":"regulatory_legal","raw_instrument":"~€194B frozen Russian assets (85% of balance sheet); G7 windfall facility; confiscation debate; Russia $250B counter-claim","amount_usd":194000000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: settlement custody weaponized (de-dollarization driver)"},
+    {"from":"DTCC","to":"Chainlink","instrument":"relationship","raw_instrument":"Smart NAV (CCIP) + tokenized-collateral platform","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: re-platforming rail"},
+    {"from":"DTCC","to":"Stellar","instrument":"relationship","raw_instrument":"tokenize DTC-custodied assets on Stellar (first public chain, ~H1 2027)","amount_usd":null,"status":"announced","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: re-platforming rail"},
+    {"from":"Broadridge","to":"Fnality","instrument":"relationship","raw_instrument":"DLR (~$280B/day repo on Canton) settles vs Fnality tokenized central-bank reserves","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: bank-consortium next settlement layer"},
+    {"from":"CFTC","to":"CME","instrument":"regulatory_legal","raw_instrument":"spoofing enforcement (Tower $67.4M; JPM $920M COMEX/Treasuries)","amount_usd":67400000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: adjudicated futures manipulation"}
+  ],
+
+  "limits":"DOCUMENTED: Cede/DTC street-name custody; DTCC/OCC monopoly + SIFMU; the 2021 NSCC GameStop call; Citadel's ~41-47% retail share + PFOF; the ICE conglomerate's holdings; Euroclear's €194B frozen + the confiscation debate + the SWIFT cutoff; LBMA unallocated; CCP procyclicality; the Chainlink/Stellar/Broadridge/Canton/Fnality/HQLAx re-platforming. CONTESTED/FRINGE (graded down, NOT asserted): the 'Great Taking' asset-confiscation thesis and the 'naked-short counterfeit-shares' thesis (FTDs are real; the framing/magnitude disputed). The finding is CONCENTRATION + OPACITY + WEAPONIZABILITY; coordinated malign intent across the layers is not established. Overlay edges excluded from the SCC/Z3/TLA+ proofs. This is the deep, broad version replacing the earlier narrow DTCC/LBMA/CME draft."
+}

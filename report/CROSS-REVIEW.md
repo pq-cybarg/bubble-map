@@ -21,22 +21,22 @@
 - **Oracle** — 23 files
 - **Amazon** — 21 files
 - **Microsoft** — 20 files
+- **Chainlink** — 16 files
 - **Stargate** — 16 files
 - **NVIDIA** — 16 files
 - **Anthropic** — 16 files
 - **FDIC** — 16 files
-- **Chainlink** — 15 files
-- **SpaceX** — 14 files
+- **JPMorgan** — 14 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-fdic-foia-coinbase.json` — related files by shared entities (verify cross-refs exist)
-- influence-congress-funding-compromise.json: 2 shared entities
+## Newest file `spec-market-plumbing-control.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-sdny-regulatory.json: 5 shared entities
+- altcoin-lens.json: 5 shared entities
+- fin-hedera-connections.json: 4 shared entities
+- spec-exchanges-asia.json: 3 shared entities
+- fin-sealsq-wisekey-global.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- spec-crypto-sec-epstein.json: 2 shared entities
 - spec-crypto-banking-debanking.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- spec-network-overlay.json: 1 shared entities
-- blockchain-leg.json: 1 shared entities
-- temporal-bridges.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
