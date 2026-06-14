@@ -10790,6 +10790,472 @@
     "macro-jobs-inflation-fed",
     "macro-official-data-integrity"
    ]
+  },
+  {
+   "name": "Gina Raimondo",
+   "role": "US Secretary of Commerce (2021–2025); former Governor of Rhode Island",
+   "domains": [
+    "State/Policy",
+    "Geopolitics",
+    "AI"
+   ],
+   "orgs": [
+    "US Department of Commerce",
+    "BIS"
+   ],
+   "bluf": "The Commerce Secretary who became the chief architect of US chip statecraft — implementing the $52B CHIPS Act and the escalating BIS export controls that cut China off from advanced AI chips and EUV tools. Assess with HIGH confidence on her central role designing the chip-export-control regime the project tracks.",
+   "drivers": "US technological and chip-manufacturing leadership; out-competing China; reshoring fabrication.",
+   "worldview": "Pragmatic industrial-policy Democrat; wields export controls and subsidies as strategic tools.",
+   "decision_style": "Deal-driven, business-fluent, willing to tighten controls iteratively (the 2022/2023/2024 rule rounds).",
+   "track_record": "Ran the CHIPS Act awards (Intel, TSMC Arizona, Samsung, Micron) and the BIS Entity List / advanced-computing export controls that define the chip chokepoint; coordinated allied (Dutch/Japanese) tool restrictions.",
+   "vulnerabilities": "Controls' efficacy is contested (China workarounds, Huawei's 7nm); subsidy-allocation critiques.",
+   "relationships": "Counterpart to current Commerce/BIS leadership; her framework underlies the chip-war and Taiwan threads.",
+   "outlook": "The originating architect of the chip-export-control regime central to the geopolitics legs.",
+   "confidence": "HIGH (policy record).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "geopolitics-chip-chokepoint-war",
+    "geopolitics-taiwan-silicon-shield",
+    "macro-pqc-chips",
+    "influence-china-tech"
+   ]
+  },
+  {
+   "name": "Jakub Pachocki",
+   "role": "Chief Scientist, OpenAI (2024–present)",
+   "domains": [
+    "AI"
+   ],
+   "orgs": [
+    "OpenAI"
+   ],
+   "bluf": "OpenAI's chief scientist, who succeeded Ilya Sutskever and leads the research direction behind the frontier GPT/reasoning models at the center of the AI-capital thesis. Assess with HIGH confidence on his role steering OpenAI's core model research.",
+   "drivers": "Pushing AI capability frontiers; reasoning-model breakthroughs; OpenAI's research lead.",
+   "worldview": "Capability-forward researcher; believes scaling plus new training paradigms drive progress.",
+   "decision_style": "Research-driven, technically deep, lower public profile than predecessors.",
+   "track_record": "Led key OpenAI research efforts (reasoning/o-series lineage); elevated to chief scientist after Sutskever's departure.",
+   "vulnerabilities": "Research bets carry compute-cost and capability-plateau risk; central-person dependency.",
+   "relationships": "Successor to Sutskever; works under Altman/Brockman; core to the OpenAI node.",
+   "outlook": "His research roadmap underpins OpenAI's valuation and the compute-spend thesis.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-nvidia-openai",
+    "fin-microsoft-openai",
+    "fin-openai-conversion-governance",
+    "fin-ai-depreciation-debttrap"
+   ]
+  },
+  {
+   "name": "Noam Shazeer",
+   "role": "Co-lead, Google Gemini; co-founder, Character.AI; transformer co-author",
+   "domains": [
+    "AI",
+    "Capital"
+   ],
+   "orgs": [
+    "Google DeepMind",
+    "Character.AI"
+   ],
+   "bluf": "A co-author of the original 'Attention Is All You Need' transformer paper who founded Character.AI and returned to Google in a ~$2.7B 'acqui-hire' to help lead Gemini — a marquee example of the talent-and-capital reflexivity in AI. Assess with HIGH confidence on his foundational technical role and the Character.AI/Google deal.",
+   "drivers": "Frontier model leadership; foundational architecture legacy; large-scale deployment.",
+   "worldview": "Scaling-believer; foundational architect of the transformer era.",
+   "decision_style": "Brilliant builder; serial founder; returned to Big Tech via a structured talent deal.",
+   "track_record": "Co-invented the transformer (2017); built Character.AI; the 2024 Google deal (licensing + rehire) became a template for the 'reverse-acquihire' regulators now scrutinize.",
+   "vulnerabilities": "The acqui-hire structure draws antitrust scrutiny; key-person concentration.",
+   "relationships": "Returned to Google (Pichai/Hassabis); the deal pattern ties to the Big-Tech-AI consolidation thread.",
+   "outlook": "A node in both the transformer lineage and the AI-talent-consolidation dynamic.",
+   "confidence": "HIGH (record documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-google-amazon-anthropic-meta",
+    "fin-google-amazon-anthropic-meta",
+    "influence-meta-childsafety",
+    "fin-microsoft-openai"
+   ]
+  },
+  {
+   "name": "Aidan Gomez",
+   "role": "Co-founder & CEO, Cohere; transformer co-author",
+   "domains": [
+    "AI",
+    "Capital"
+   ],
+   "orgs": [
+    "Cohere"
+   ],
+   "bluf": "A co-author of the transformer paper (as an intern) who built Cohere into the leading enterprise-focused, cloud-agnostic foundation-model company. Assess with HIGH confidence on his foundational technical lineage and Cohere's enterprise-AI positioning.",
+   "drivers": "Enterprise AI adoption; foundational architecture legacy; an independent model lab.",
+   "worldview": "Pragmatic enterprise-AI builder; bets on business deployment over consumer hype.",
+   "decision_style": "Technically grounded, product-focused, partnership-driven (Oracle, Salesforce, sovereign deals).",
+   "track_record": "Co-invented the transformer; founded Cohere; raised at multi-billion valuations with cloud and sovereign-AI partnerships.",
+   "vulnerabilities": "Competes against far better-capitalized labs; enterprise-AI monetization is unproven at scale.",
+   "relationships": "Part of the transformer-author cohort; Cohere ties to Oracle/cloud and sovereign-AI threads.",
+   "outlook": "A node in the foundation-model competitive and sovereign-AI funding landscape.",
+   "confidence": "HIGH (record documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-google-amazon-anthropic-meta",
+    "fin-coreweave-oracle",
+    "fin-gulf-sovereign-ai-capital"
+   ]
+  },
+  {
+   "name": "Jan Leike",
+   "role": "Alignment lead, Anthropic (2024–present); former co-lead, OpenAI Superalignment",
+   "domains": [
+    "AI"
+   ],
+   "orgs": [
+    "Anthropic",
+    "OpenAI (former)"
+   ],
+   "bluf": "The safety researcher whose high-profile 2024 resignation from OpenAI's (dissolved) Superalignment team — warning that 'safety culture took a backseat to shiny products' — became a defining moment in the AI-safety-vs-commercialization debate, before he joined Anthropic. Assess with HIGH confidence on the resignation and its signal.",
+   "drivers": "AI alignment/safety; ensuring controllability of frontier systems; institutional safety priority.",
+   "worldview": "Safety-first researcher; skeptical that commercial pressure leaves room for adequate alignment work.",
+   "decision_style": "Principled, willing to resign publicly over priorities; research-driven.",
+   "track_record": "Co-led OpenAI Superalignment; resigned in 2024 (with Sutskever) as the team dissolved, publicly criticizing OpenAI's safety tradeoffs; joined Anthropic to continue alignment work.",
+   "vulnerabilities": "His critique is a single-source insider account; safety-vs-capability tension is unresolved.",
+   "relationships": "Ex-OpenAI, now Anthropic (Amodei); his exit is a key datapoint in the OpenAI-governance thread.",
+   "outlook": "A documentary marker of the safety-vs-commercialization fault line in the AI core.",
+   "confidence": "HIGH (public resignation documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-openai-conversion-governance",
+    "fin-microsoft-openai",
+    "influence-operator-network"
+   ]
+  },
+  {
+   "name": "Kevin Scott",
+   "role": "Chief Technology Officer, Microsoft (2017–present)",
+   "domains": [
+    "AI",
+    "Capital"
+   ],
+   "orgs": [
+    "Microsoft"
+   ],
+   "bluf": "Microsoft's CTO and the principal architect of its OpenAI partnership and the Azure AI-supercomputing buildout — arguably the single most consequential corporate-technical relationship in the AI-capital loop. Assess with HIGH confidence on his role designing the Microsoft-OpenAI compute-and-equity structure.",
+   "drivers": "Microsoft's AI leadership; the OpenAI alliance; Azure compute dominance.",
+   "worldview": "Pragmatic platform-builder; bets Microsoft's future on the OpenAI partnership and Copilot.",
+   "decision_style": "Engineering-deep, partnership-oriented, long-horizon infrastructure planner.",
+   "track_record": "Architected the Microsoft-OpenAI deal and the Azure supercomputers training GPT models; drives the Copilot product strategy.",
+   "vulnerabilities": "Deep dependency on OpenAI's trajectory; the partnership's governance/economics are contested.",
+   "relationships": "Counterpart to Altman/Nadella; the Microsoft-OpenAI edge is a central spoke of the bubble map.",
+   "outlook": "His partnership design is load-bearing for the entire circular-capital thesis.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-microsoft-openai",
+    "fin-nvidia-openai",
+    "fin-openai-conversion-governance",
+    "fin-ai-depreciation-debttrap"
+   ]
+  },
+  {
+   "name": "Bret Taylor",
+   "role": "Chairman of the Board, OpenAI (2023–present); co-founder & CEO, Sierra",
+   "domains": [
+    "AI",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "OpenAI (board)",
+    "Sierra",
+    "Salesforce (former)"
+   ],
+   "bluf": "The OpenAI board chair installed after the 2023 governance crisis, a Silicon Valley veteran (ex-Salesforce co-CEO, ex-Twitter chair, Google Maps co-creator) who also runs the AI-agent startup Sierra. Assess with HIGH confidence on his governance role and the conflict questions it raises.",
+   "drivers": "Stabilizing OpenAI governance; the for-profit conversion; building Sierra (AI agents).",
+   "worldview": "Pragmatic operator-investor; believes in commercial AI with workable governance.",
+   "decision_style": "Experienced board steward, deal-maker, founder-operator.",
+   "track_record": "Co-created Google Maps, co-led Salesforce, chaired Twitter through the Musk acquisition; now chairs OpenAI's board overseeing the contested nonprofit-to-PBC conversion while running Sierra.",
+   "vulnerabilities": "Running an AI startup while chairing OpenAI raises conflict-of-interest questions; the conversion is litigated/contested (Musk suit).",
+   "relationships": "Counterweight/partner to Altman; central to the OpenAI-conversion-governance thread.",
+   "outlook": "A pivotal governance node in the OpenAI restructuring the project examines.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-openai-conversion-governance",
+    "fin-microsoft-openai",
+    "influence-operator-network"
+   ]
+  },
+  {
+   "name": "Clement Delangue",
+   "role": "Co-founder & CEO, Hugging Face",
+   "domains": [
+    "AI",
+    "Capital"
+   ],
+   "orgs": [
+    "Hugging Face"
+   ],
+   "bluf": "CEO of Hugging Face, the dominant open-source AI model-and-dataset hub, positioning him as the chief counterweight to the closed frontier labs in the open-vs-closed AI debate. Assess with MODERATE-HIGH confidence on Hugging Face's central role in the open-model ecosystem.",
+   "drivers": "Democratizing AI; open-source model distribution; an alternative to closed labs.",
+   "worldview": "Open-source advocate; believes broad access beats concentrated frontier control.",
+   "decision_style": "Community-building, ecosystem-oriented, partnership-driven.",
+   "track_record": "Built Hugging Face into the default open-model/dataset platform; raised at a multi-billion valuation with backing from Nvidia, Google, Amazon, and others.",
+   "vulnerabilities": "Monetization vs. the open mission; dependency on the very Big-Tech backers it counterbalances.",
+   "relationships": "Backed by the AI-core firms; central to the open-model side of the AI-concentration debate.",
+   "outlook": "A node representing the open-source counterweight in the AI-capital landscape.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-google-amazon-anthropic-meta",
+    "fin-nvidia-openai",
+    "influence-operator-network"
+   ]
+  },
+  {
+   "name": "Rene Haas",
+   "role": "CEO, Arm Holdings (2022–present)",
+   "domains": [
+    "AI",
+    "Capital",
+    "Geopolitics"
+   ],
+   "orgs": [
+    "Arm Holdings",
+    "SoftBank"
+   ],
+   "bluf": "CEO of Arm, whose chip-architecture IP underpins virtually all mobile and a growing share of data-center/AI compute, and whose 2023 IPO made it a SoftBank-controlled bellwether of AI hardware value. Assess with HIGH confidence on Arm's structural centrality to the compute stack.",
+   "drivers": "Arm's expansion into data-center/AI compute; IP-licensing growth; SoftBank value creation.",
+   "worldview": "Ecosystem-platform strategist; pushes Arm from mobile into servers and AI accelerators.",
+   "decision_style": "Partnership-driven, licensing-savvy, navigates a complex customer-and-competitor web.",
+   "track_record": "Led Arm's 2023 IPO (SoftBank retains majority); expanding into Nvidia/Grace, custom-silicon, and data-center designs; entangled in US-China export sensitivities.",
+   "vulnerabilities": "SoftBank control overhang; customer-competitor conflicts; China-exposure of licensing.",
+   "relationships": "Owned by SoftBank (Son, present); supplies Nvidia and hyperscalers — a deep node in the chip stack.",
+   "outlook": "Structurally central to AI hardware and the chip-geopolitics threads.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "geopolitics-chip-chokepoint-war",
+    "fin-nvidia-openai",
+    "macro-pqc-chips",
+    "fin-spacex-spcx"
+   ]
+  },
+  {
+   "name": "Cristiano Amon",
+   "role": "CEO, Qualcomm (2021–present)",
+   "domains": [
+    "AI",
+    "Capital",
+    "Geopolitics"
+   ],
+   "orgs": [
+    "Qualcomm"
+   ],
+   "bluf": "CEO of Qualcomm, pushing the mobile-chip leader into on-device/edge AI and PC/automotive silicon while navigating heavy China-revenue exposure and the Arm licensing dispute. Assess with MODERATE-HIGH confidence on Qualcomm's role in the edge-AI and chip-geopolitics threads.",
+   "drivers": "Diversifying beyond smartphones; winning edge/on-device AI; PC and auto silicon.",
+   "worldview": "Platform-expansion strategist; bets on AI moving to the device edge.",
+   "decision_style": "Aggressive diversifier, litigation-experienced (the Arm dispute), partnership-driven.",
+   "track_record": "Drove Qualcomm into AI PCs (Snapdragon X), automotive, and edge AI; manages large China revenue and the Arm architecture-license fight.",
+   "vulnerabilities": "China-revenue concentration; Arm dependency/dispute; smartphone-cycle exposure.",
+   "relationships": "Customer/licensee of Arm (Haas); exposed to the chip-export and China threads.",
+   "outlook": "A node in the edge-AI and chip-geopolitics dynamics.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "geopolitics-chip-chokepoint-war",
+    "macro-pqc-chips",
+    "influence-china-tech"
+   ]
+  },
+  {
+   "name": "Mark Liu",
+   "role": "Former Chairman, TSMC (2018–2024)",
+   "domains": [
+    "AI",
+    "Geopolitics",
+    "Capital"
+   ],
+   "orgs": [
+    "TSMC"
+   ],
+   "bluf": "The TSMC chairman who steered the world's most critical chip foundry through the AI-demand surge, the US/Japan fab expansion, and the geopolitical glare of the Taiwan 'silicon shield.' Assess with HIGH confidence on his role in TSMC's global-expansion and geopolitical positioning.",
+   "drivers": "TSMC's process leadership; managing geopolitical risk; global fab diversification.",
+   "worldview": "Stewardship-minded; balanced Taiwan-centric manufacturing against US/Japan diversification pressure.",
+   "decision_style": "Measured, diplomatically careful on cross-strait and US-relations questions.",
+   "track_record": "Oversaw TSMC's Arizona, Japan (Kumamoto), and Germany fab commitments and the AI/HPC capacity ramp; publicly addressed the silicon-shield framing.",
+   "vulnerabilities": "Geopolitical concentration in Taiwan; the costs/risks of overseas fabs.",
+   "relationships": "Predecessor to current TSMC leadership; supplies Nvidia/Apple — the apex of the chip chokepoint.",
+   "outlook": "Central historical node in the Taiwan-silicon-shield and chip-war threads.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "geopolitics-taiwan-silicon-shield",
+    "geopolitics-chip-chokepoint-war",
+    "fin-nvidia-openai",
+    "macro-pqc-chips"
+   ]
+  },
+  {
+   "name": "Young Liu",
+   "role": "Chairman, Hon Hai / Foxconn (2019–present)",
+   "domains": [
+    "AI",
+    "Capital",
+    "Geopolitics"
+   ],
+   "orgs": [
+    "Hon Hai Precision (Foxconn)"
+   ],
+   "bluf": "Chairman of Foxconn, the world's largest electronics manufacturer, pivoting the iPhone-assembly giant into AI servers (a leading Nvidia GB200/AI-rack builder), EVs, and India/Mexico diversification. Assess with HIGH confidence on Foxconn's growing centrality to AI-server manufacturing.",
+   "drivers": "Foxconn's pivot to AI-server/EV manufacturing; geographic diversification; margin upgrade.",
+   "worldview": "Transformation strategist; moves Foxconn up the value chain from assembly to AI infrastructure.",
+   "decision_style": "Execution-focused, capacity-scaling, diversification-driven (India, Mexico, Vietnam).",
+   "track_record": "Leads Foxconn's AI-server ramp (a top Nvidia AI-rack assembler), EV ventures, and the shift of capacity out of China.",
+   "vulnerabilities": "China-concentration legacy; thin assembly margins; geopolitical supply-chain exposure.",
+   "relationships": "Key manufacturer for Nvidia AI systems; tied to the chip-supply and China-diversification threads.",
+   "outlook": "A manufacturing node in the AI-hardware buildout and supply-chain-shift dynamics.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "geopolitics-chip-chokepoint-war",
+    "fin-nvidia-openai",
+    "geopolitics-defense-industrial-base",
+    "macro-ai-power-grid-bottleneck"
+   ]
+  },
+  {
+   "name": "Brian Venturo",
+   "role": "Co-founder & Chief Strategy Officer (former CTO), CoreWeave",
+   "domains": [
+    "AI",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "CoreWeave"
+   ],
+   "bluf": "A co-founder of CoreWeave — the GPU-cloud 'neocloud' that pivoted from crypto mining to renting Nvidia capacity, became Nvidia-backed and OpenAI-contracted, and IPO'd in 2025 — embodying the debt-funded, circular AI-infrastructure trade. Assess with HIGH confidence on his role building the model the project flags as a leverage/circularity risk.",
+   "drivers": "Scaling GPU-cloud capacity; first-mover neocloud advantage; capturing AI-compute demand.",
+   "worldview": "Infrastructure-arbitrage builder; bet early and heavily (debt-financed) on GPU scarcity.",
+   "decision_style": "Aggressive, capacity-racing, leverage-tolerant.",
+   "track_record": "Co-founded CoreWeave (ex-crypto miner Atlantic Crypto); secured Nvidia investment, large Microsoft/OpenAI contracts, GPU-collateralized debt, and a 2025 IPO.",
+   "vulnerabilities": "Heavy debt load; customer concentration (Microsoft/OpenAI); GPU-collateral and depreciation risk — the core of the circularity critique.",
+   "relationships": "Nvidia-backed, OpenAI/Microsoft-contracted; a central spoke in the AI-capital loop.",
+   "outlook": "A defining node in the debt-funded, circular AI-infrastructure thesis.",
+   "confidence": "HIGH (role + structure documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-coreweave-oracle",
+    "fin-nvidia-openai",
+    "fin-ai-depreciation-debttrap",
+    "macro-cre-privatecredit"
+   ]
+  },
+  {
+   "name": "Chase Lochmiller",
+   "role": "Co-founder & CEO, Crusoe Energy",
+   "domains": [
+    "AI",
+    "Capital",
+    "State/Policy"
+   ],
+   "orgs": [
+    "Crusoe Energy"
+   ],
+   "bluf": "CEO of Crusoe Energy, which pivoted from flared-gas crypto mining to building large AI data centers (notably the Abilene, Texas 'Stargate'-linked campus), sitting squarely at the AI-compute-meets-energy nexus. Assess with MODERATE-HIGH confidence on Crusoe's role in the AI-data-center/energy buildout.",
+   "drivers": "Powering AI compute; energy-arbitrage data centers; capturing the buildout demand.",
+   "worldview": "Energy-and-compute integrator; bets that power siting is the binding AI constraint.",
+   "decision_style": "Opportunistic, capital-raising, infrastructure-racing.",
+   "track_record": "Built Crusoe from flared-gas mining into a major AI-data-center developer; tied to large Texas campuses associated with the Stargate/OpenAI-Oracle buildout; raised multi-billion financing.",
+   "vulnerabilities": "Capital intensity and power-procurement risk; demand-concentration on a few AI tenants.",
+   "relationships": "Linked to the Oracle/OpenAI 'Stargate' buildout; ties the AI-compute thread to the energy/power thread.",
+   "outlook": "A node at the AI-data-center-and-power intersection central to the energy leg.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-coreweave-oracle",
+    "energy-power",
+    "macro-ai-power-grid-bottleneck",
+    "macro-ai-datacenter-water-siting"
+   ]
+  },
+  {
+   "name": "Andrej Karpathy",
+   "role": "Founder, Eureka Labs; former Director of AI, Tesla; founding member, OpenAI",
+   "domains": [
+    "AI"
+   ],
+   "orgs": [
+    "Eureka Labs",
+    "Tesla (former)",
+    "OpenAI (former)"
+   ],
+   "bluf": "A founding OpenAI member and former Tesla AI director who is one of the most influential public explainers of how frontier models work, now building an AI-education startup. Assess with MODERATE-HIGH confidence on his outsized influence on AI understanding, distinct from corporate power.",
+   "drivers": "Advancing and explaining AI; education; technical clarity.",
+   "worldview": "Capability-realist; nuanced public voice on both potential and limits of LLMs.",
+   "decision_style": "Research-and-teaching oriented, independent, widely followed.",
+   "track_record": "Founding OpenAI researcher; built Tesla's Autopilot AI; widely-watched educational content; founded Eureka Labs.",
+   "vulnerabilities": "Influence is intellectual, not institutional; startup is early.",
+   "relationships": "Ex-OpenAI/Tesla (Musk/Altman orbit); a credibility-shaping voice on the AI thesis.",
+   "outlook": "A node shaping public/technical understanding of the AI capability debate.",
+   "confidence": "MODERATE-HIGH (influence interpreted; record documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-ai-efficiency-counter-thesis",
+    "fin-nvidia-openai",
+    "influence-operator-network"
+   ]
+  },
+  {
+   "name": "Michael Dell",
+   "role": "Chairman & CEO, Dell Technologies; founder",
+   "domains": [
+    "AI",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "Dell Technologies"
+   ],
+   "bluf": "Founder-CEO of Dell, a top supplier of AI servers (Nvidia-based) whose backlog became a closely-watched proxy for enterprise AI-infrastructure demand. Assess with MODERATE-HIGH confidence on Dell's role as an AI-server bellwether in the buildout.",
+   "drivers": "Dell's AI-server leadership; capital returns; founder legacy.",
+   "worldview": "Pragmatic hardware-scale operator; rides the AI-infrastructure capex wave.",
+   "decision_style": "Long-horizon founder-operator, capital-allocation-focused.",
+   "track_record": "Built Dell into a leading AI-server vendor (large Nvidia-GPU server backlog); the AI-server order book is a demand barometer.",
+   "vulnerabilities": "Thin server margins; demand-concentration and Nvidia-supply dependency; cyclicality.",
+   "relationships": "Nvidia-ecosystem supplier; AI-server backlog ties to the capex-and-depreciation thread.",
+   "outlook": "A hardware-demand node in the AI-infrastructure buildout.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-nvidia-openai",
+    "fin-ai-depreciation-debttrap",
+    "macro-cross-sectional-analysis"
+   ]
+  },
+  {
+   "name": "Matt Garman",
+   "role": "CEO, Amazon Web Services (2024–present)",
+   "domains": [
+    "AI",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "Amazon Web Services"
+   ],
+   "bluf": "The AWS chief steering the largest cloud provider's AI strategy — the Anthropic partnership, custom Trainium/Inferentia silicon, and the Bedrock model platform — a core hyperscaler node in the AI-capital loop. Assess with HIGH confidence on AWS's structural role in the AI buildout.",
+   "drivers": "AWS cloud/AI leadership; the Anthropic alliance; custom-silicon cost advantage.",
+   "worldview": "Platform-scale strategist; bets on owning both models (via Anthropic) and chips (Trainium).",
+   "decision_style": "Operationally deep (long-time AWS leader), partnership-and-infrastructure-driven.",
+   "track_record": "Leads AWS's Anthropic investment/partnership, Trainium/Inferentia chips, Bedrock, and the massive data-center capex.",
+   "vulnerabilities": "Capex intensity; Anthropic-dependency; competition with Microsoft/Google clouds.",
+   "relationships": "AWS's Anthropic stake is a central spoke; ties to the Big-Tech-AI and capex threads.",
+   "outlook": "A hyperscaler node anchoring one corner of the AI-capital loop.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "fin-google-amazon-anthropic-meta",
+    "fin-ai-depreciation-debttrap",
+    "macro-ai-power-grid-bottleneck"
+   ]
   }
  ]
 }
