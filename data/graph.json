@@ -268,6 +268,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Courts": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Creditors": {
       "sector": "creditor",
       "has_exogenous_revenue": false
@@ -283,6 +287,10 @@
     "Crypto_Standards": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "Crypto_legislation": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Custodia_Bank": {
       "sector": "other",
@@ -3183,6 +3191,32 @@
     },
     {
       "from": "China",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "long-game lens (Sun Tzu): enabling dollar alternatives erodes the incumbent's entrenchment without direct conflict",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-strategic-lenses.json",
+      "note": ""
+    },
+    {
+      "from": "Content_platforms",
+      "to": "US_political_system",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Simple-Sabotage lens: deniable degradation of cohesion/communication is the cheapest attack on trust (\u9053/\u4fe1)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-strategic-lenses.json,spec-manufactured-division.json",
+      "note": ""
+    },
+    {
+      "from": "China",
       "to": "CIPS",
       "instrument": "other",
       "layer": "structural",
@@ -4651,19 +4685,6 @@
       "note": ""
     },
     {
-      "from": "Content_platforms",
-      "to": "US_political_system",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "engagement-optimized amplification structurally rewards outrage/division (hate and counter-hate both)",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-manufactured-division.json",
-      "note": ""
-    },
-    {
       "from": "DTC_Cede",
       "to": "US_Banks",
       "instrument": "other",
@@ -4960,6 +4981,45 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
+      "from": "US_Congress",
+      "to": "Crypto_legislation",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "market-structure (CLARITY) stalled in a two-committee gauntlet (Banking 15-9; Ag separate draft); ethics + enforcement sticking points; GENIUS (stablecoins) passed Jul 2025",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-legislation-forcing.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Crypto_legislation",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "regulation-by-enforcement (SDNY Tornado/Samourai) fills the legislative vacuum the delay creates",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-legislation-forcing.json",
+      "note": ""
+    },
+    {
+      "from": "Courts",
+      "to": "Crypto_legislation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ripple/Torres + 5th-Cir Tornado vacatur create legal facts that pressure Congress to codify (forcing function)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-legislation-forcing.json",
       "note": ""
     },
     {
@@ -5406,10 +5466,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 304,
-    "num_edges": 322,
+    "num_nodes": 306,
+    "num_edges": 326,
     "num_financial_edges": 128,
-    "num_structural_edges": 194,
+    "num_structural_edges": 198,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5472,16 +5532,16 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -6015,6 +6075,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Courts": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Creditors": {
         "total_usd": 9000000000,
         "circular_usd": 0,
@@ -6038,6 +6105,13 @@
       },
       "Crypto_Standards": {
         "total_usd": 250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Crypto_legislation": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7875,6 +7949,23 @@
         "both_layers": true
       },
       {
+        "node": "China",
+        "degree": 8,
+        "neighbor_sectors": [
+          "commodity",
+          "defense",
+          "other",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 6,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "JPMorgan",
         "degree": 6,
         "neighbor_sectors": [
@@ -7924,22 +8015,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "China",
-        "degree": 7,
-        "neighbor_sectors": [
-          "commodity",
-          "defense",
-          "other",
-          "state"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 5,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "CoreWeave",

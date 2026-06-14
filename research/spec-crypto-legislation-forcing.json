@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "The crypto/blockchain legislation logjam — how delay is engineered, and the legitimate, legal mechanisms to force progress",
+    "generated": "2026-06-14",
+    "frame": "Why US legislation enshrining the legal usability of blockchain keeps stalling - and the documented, LEGITIMATE, LEGAL levers that force stalled legislation through. Read through the strategic lenses ([[spec-strategic-lenses]]): the delay pattern maps cleanly onto the Simple Sabotage manual (channels, committees, haggling over wording) and onto Sun Tzu's warning that prolonged conflict drains the side that lets it drag on. The counter, by the same lenses, is to FORCE TEMPO and RECTIFY NAMES (call the delay what it is) - via lawful procedure, not anything illegal. This block is analytical, not legal advice or advocacy for a particular substantive bill; it documents how the machine works and where the lawful pressure points are.",
+    "relevance": "Builds on [[spec-sdny-crypto-prosecution]] + [[spec-tornado-samourai]] (regulation-by-enforcement filling the legislative vacuum), [[spec-sec-sdny-regulatory]] (SEC posture), [[influence-congress-hfsc]] + [[influence-congress-funding-compromise]] (committee jurisdiction & money), [[macro-stablecoin-treasury-rail]] (the GENIUS Act that DID pass), and the strategic lenses.",
+    "sources": "CoinDesk, Latham US Crypto Policy Tracker, a16z crypto, Congress.gov (S.1582 GENIUS Act), Columbia STLR, DeFiRate (CLARITY committee vote). Full URLs in the rendered .md."
+  },
+  "the_state_of_play": {
+    "summary": "One bill passed (stablecoins); market-structure (the bigger prize) is grinding through a two-committee gauntlet.",
+    "points": [
+      {"item": "What passed", "detail": "The GENIUS Act (stablecoins) was signed 18 Jul 2025 - proof the logjam CAN break when a bill is narrow and has a coalition.", "grade": "fact"},
+      {"item": "The market-structure lineage", "detail": "FIT21 (HR 4763, House 2024) -> House CLARITY (HR 3633, 2025) -> Senate. The CLARITY Act tightens decentralization standards and aligns with GENIUS; it sets the SEC/CFTC jurisdictional split that is the core fight.", "grade": "fact"},
+      {"item": "Where it is stuck", "detail": "The Senate Banking Committee advanced CLARITY 15-9 (mid-May 2026), but the Senate AGRICULTURE Committee released its OWN draft for the CFTC-jurisdiction parts - two committees, two texts. Sticking points: a law-enforcement carve-out and an ETHICS provision (the Trump-family crypto conflict). Sen. Moreno warned that missing the floor by ~May 'effectively kills the bill for 2026'; a vote is needed by ~August.", "grade": "fact"},
+      {"item": "The vacuum is filled by enforcement", "detail": "While Congress stalls, the gap is filled by 'regulation by enforcement' - SDNY/DOJ prosecutions (Tornado Cash, Samourai) and SEC actions set de-facto rules case-by-case, the very uncertainty legislation would end ([[spec-sdny-crypto-prosecution]]).", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "the_delay_pattern_through_the_lenses": {
+    "summary": "The mechanics of delay are, almost line-for-line, the Simple Sabotage manual - which is exactly why naming them helps.",
+    "points": [
+      {"item": "Refer to committees / split jurisdiction", "detail": "Routing market structure through BOTH Banking and Agriculture (SEC vs CFTC turf) multiplies veto points and 'further study' - the manual's 'refer all matters to committees; make them as large as possible.'", "grade": "labeled interpretation (pattern match)"},
+      {"item": "Haggle over precise wording", "detail": "The ethics provision and law-enforcement carve-out become open-ended drafting fights - the manual's 'haggle over precise wordings.' (Note: the ethics concern is also a GENUINE policy issue, not pure obstruction - see non-claims.)", "grade": "labeled interpretation"},
+      {"item": "Insist on channels; run the clock", "detail": "Regular order + calendar scarcity + 'we need more time' run out the legislative clock toward the August forcing deadline - the manual's 'never permit short-cuts.'", "grade": "labeled interpretation"},
+      {"item": "Sun Tzu Ch.2 - delay drains the delayer's target", "detail": "Protracted uncertainty drains the US crypto industry (capital, talent, listings flee offshore) - but per Sun Tzu it also has costs for the system that tolerates ambiguity (legal risk, lost tax base, ceded standard-setting to other jurisdictions). Tempo is itself a lever.", "grade": "labeled interpretation"}
+    ]
+  },
+  "legitimate_forcing_mechanisms": {
+    "summary": "Lawful levers that force stalled legislation/regulation - the answer to 'how do we force progress, legally and legitimately.'",
+    "legislative": [
+      {"lever": "Discharge petition (House)", "detail": "218 signatures pulls a bill out of a stalling committee straight to the floor, bypassing leadership - the canonical anti-bottleneck tool.", "grade": "fact (procedure)"},
+      {"lever": "Attach to a must-pass vehicle", "detail": "Ride the NDAA, appropriations, or a debt-ceiling deal - narrow, agreed provisions move when the vehicle must pass.", "grade": "fact"},
+      {"lever": "Resolve the SEC/CFTC turf in ONE text", "detail": "A single unified bill (or a binding SEC-CFTC MOU on jurisdiction) removes the two-committee ping-pong that creates the delay surface.", "grade": "fact + interpretation"},
+      {"lever": "Self-imposed deadlines / sunsets", "detail": "Writing statutory deadlines and sunset clauses into the bill forces action and periodic re-decision rather than indefinite drift.", "grade": "fact"},
+      {"lever": "Cloture discipline + the calendar", "detail": "In the Senate, leadership floor time + filing cloture forces votes; the ~August window is a real forcing function to exploit.", "grade": "fact"}
+    ],
+    "judicial_and_regulatory": [
+      {"lever": "Courts as forcing function", "detail": "Precedents already pressure Congress to codify: the Ripple/Torres ruling (programmatic XRP sales not securities) and the 5th Circuit's Tornado Cash vacatur narrow agency overreach and create legal facts lawmakers must reconcile.", "grade": "fact"},
+      {"lever": "APA + petition-for-rulemaking with deadlines", "detail": "File petitions for rulemaking and, where an agency 'unreasonably delays,' seek relief under the Administrative Procedure Act (5 U.S.C. 706(1)) or mandamus to compel a decision - turning agency foot-dragging into a reviewable act.", "grade": "fact (procedure)"},
+      {"lever": "Congressional Review Act (CRA)", "detail": "A CRA resolution can overturn a hostile agency rule (precedent: the bipartisan repeal of the SEC's SAB 121 custody guidance) - a fast, majority-vote lever against regulatory obstruction.", "grade": "fact"}
+    ],
+    "federalism_and_civic": [
+      {"lever": "State preemption race", "detail": "State frameworks (Wyoming SPDIs / DAO law, and peers) create on-the-ground legality and interstate pressure that push federal action to harmonize rather than cede the field.", "grade": "fact"},
+      {"lever": "Rectify names - transparent scorecards", "detail": "Per Confucius 13.3: publicly NAME who is delaying and why (votes, holds, redlines), distinguishing genuine policy objections from obstruction. Sunlight + a clean public record is a legitimate pressure that also keeps the debate honest.", "grade": "fact + interpretation"},
+      {"lever": "Attack the strategy, not the army (Sun Tzu)", "detail": "Don't exhaust resources fighting every enforcement case; attack the root - the legal AMBIGUITY itself - and split the coalition by converting persuadable legislators (the 2 Banking-Committee Democrats -> a floor majority). Build alliances, force tempo, codify clarity.", "grade": "labeled interpretation"}
+    ]
+  },
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "GENIUS Act", "result": "Signed 18 Jul 2025 (S.1582; Congress.gov)."},
+      {"check": "CLARITY status", "result": "Senate Banking advanced 15-9 mid-May 2026; Senate Ag separate draft; ethics + law-enforcement sticking points; Moreno 'floor by May or dead for 2026' (CoinDesk/DeFiRate/Columbia STLR)."},
+      {"check": "Forcing levers exist", "result": "Discharge petition, CRA (SAB 121 repeal precedent), APA 706(1)/mandamus for agency delay, Ripple-Torres + 5th-Cir Tornado vacatur, state SPDI frameworks - all documented mechanisms."}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards - this is analysis, not advocacy or legal advice.",
+    "non_claims": [
+      "Nothing here advocates any ILLEGAL action - every lever listed is a lawful legislative/judicial/civic procedure.",
+      "It does NOT assert that all delay is bad-faith sabotage - the ethics provision (Trump-family crypto conflicts) and law-enforcement concerns are GENUINE policy issues; the lens describes the PATTERN, not the motive of any named member.",
+      "It does NOT advocate a particular substantive outcome of the bill - only maps how stalled legislation is lawfully forced to a decision.",
+      "It is NOT legal advice; procedures are described generally and would need counsel to execute.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "US_Congress", "to": "Crypto_legislation", "instrument": "regulatory_legal", "raw_instrument": "market-structure (CLARITY) stalled in a two-committee gauntlet (Banking 15-9; Ag separate draft); ethics + enforcement sticking points; GENIUS (stablecoins) passed Jul 2025", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-crypto-legislation-forcing.json", "note": "OVERLAY: legislative delay; excluded from proofs"},
+    {"from": "DOJ", "to": "Crypto_legislation", "instrument": "regulatory_legal", "raw_instrument": "regulation-by-enforcement (SDNY Tornado/Samourai) fills the legislative vacuum the delay creates", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-crypto-legislation-forcing.json", "note": "OVERLAY: enforcement-as-rulemaking; excluded from proofs"},
+    {"from": "Courts", "to": "Crypto_legislation", "instrument": "regulatory_legal", "raw_instrument": "Ripple/Torres + 5th-Cir Tornado vacatur create legal facts that pressure Congress to codify (forcing function)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-crypto-legislation-forcing.json", "note": "OVERLAY: judicial forcing function; excluded from proofs"}
+  ],
+  "limits": "Documents the engineered delay of US blockchain/market-structure legislation (one stablecoin bill passed; CLARITY grinding through a two-committee SEC/CFTC gauntlet with ethics + enforcement sticking points; regulation-by-enforcement filling the vacuum), maps the delay pattern onto the Simple Sabotage manual and Sun Tzu's economy-of-force lens, and catalogs the LEGITIMATE, LEGAL forcing levers: discharge petition, must-pass riders, unified-jurisdiction text, sunsets, cloture/calendar, courts (Ripple-Torres, Tornado vacatur), APA 706(1)/mandamus, the CRA (SAB 121 precedent), state preemption, and transparent name-the-delay scorecards. Analysis only - not advocacy, not legal advice, no illegal means; the ethics/enforcement objections are noted as genuine. Overlay edges excluded from the formal proofs. source: see verification_log and the rendered .md for full URLs."
+}

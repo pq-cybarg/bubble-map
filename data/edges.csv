@@ -218,6 +218,8 @@ SEC,LBRY,regulatory_legal,,won-LBRY-died,False,False,spec-sec-sdny-regulatory.js
 NVIDIA,PsiQuantum,other,,closed,False,False,macro-crqc-quantum-landscape.json
 JPMorgan,Quantinuum,other,,closed,False,False,macro-crqc-quantum-landscape.json
 US_Government,QuantumComputingInc,other,,closed,False,False,macro-crqc-quantum-landscape.json
+China,US_Treasuries,other,,open,False,False,spec-strategic-lenses.json
+Content_platforms,US_political_system,other,,open,False,False,"spec-strategic-lenses.json,spec-manufactured-division.json"
 China,CIPS,other,,open,False,False,spec-cross-border-settlement-rails.json
 CIPS,Swift,relationship,,open,False,False,spec-cross-border-settlement-rails.json
 China,mBridge,other,,open,False,False,spec-cross-border-settlement-rails.json
@@ -291,7 +293,6 @@ CFTC,Polymarket,other,,recurring,False,False,spec-prediction-markets.json
 CFTC,Kalshi,other,,closed,False,False,spec-prediction-markets.json
 Polymarket,USDC,other,,recurring,False,False,spec-prediction-markets.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
-Content_platforms,US_political_system,other,,open,False,False,spec-manufactured-division.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json
 DTCC,Chainlink,relationship,,closed,False,False,spec-market-plumbing-control.json
@@ -310,6 +311,9 @@ Apple,Broadcom,compute_commitment,,weak,False,False,spec-cross-system-contagion.
 Federal_Reserve,US_Banks,other,,contingent,False,False,spec-cross-system-contagion.json
 Federal_Reserve,US_Treasuries,other,,contingent,False,False,spec-cross-system-contagion.json
 China,Defense_Primes,other,,open,False,False,spec-cross-system-contagion.json
+US_Congress,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
+DOJ,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
+Courts,Crypto_legislation,other,,open,False,False,spec-crypto-legislation-forcing.json
 Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
 Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
 Prince_Group,SINK_scam_victims,other,,closed,False,False,spec-cambodia-scam-fara-paid-influence.json

@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 46 files
+- **Meta** — 47 files
 - **Google** — 31 files
 - **OpenAI** — 29 files
 - **Oracle** — 27 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-cross-border-settlement-rails.json` — related files by shared entities (verify cross-refs exist)
-- altcoin-lens.json: 5 shared entities
+## Newest file `spec-crypto-legislation-forcing.json` — related files by shared entities (verify cross-refs exist)
 - temporal-bridges.json: 5 shared entities
-- spec-asia-crypto-payments.json: 4 shared entities
-- spec-crypto-banking-debanking.json: 4 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- spec-market-plumbing-control.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
+- blockchain-leg.json: 3 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
+- spec-crypto-banking-debanking.json: 2 shared entities
+- influence-congress-hfsc.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
