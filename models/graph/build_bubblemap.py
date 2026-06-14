@@ -48,15 +48,16 @@ for e in edges:
             for x in (a,b): blocks.setdefault(x,set()).add(stub)
 
 # org/name -> person(s): match person.name==id, or any of person.orgs contains id (or id contains an org token)
+def _norm(x): return " ".join(x.lower().replace("_"," ").replace("/"," ").replace(","," ").split())
 def match_persons(node):
-    out=[]
-    nl=node.lower()
+    out=[]; nn=_norm(node)
+    if len(nn)<3: return []
     for p in P.get("persons",[]):
-        if p["name"].lower()==nl: out.append(p["name"]); continue
+        if _norm(p["name"])==nn: out.append(p["name"]); continue
         for o in p.get("orgs",[]):
-            ol=o.lower()
-            # token overlap: the node name appears in an org string or vice-versa (len>=3 guard)
-            if len(nl)>=3 and (nl in ol or any(tok==nl for tok in ol.replace("/"," ").replace(","," ").split())):
+            on=_norm(o)
+            # whole-phrase match (word-boundary) or a single org token equal to the node
+            if nn==on or (" "+nn+" ") in (" "+on+" ") or any(tok==nn for tok in on.split()):
                 out.append(p["name"]); break
     return sorted(set(out))
 
