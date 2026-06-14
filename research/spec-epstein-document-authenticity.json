@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "title": "Epstein document corpus — an AUTHENTICITY / provenance grading layer (treating forgery as a first-class variable)",
+    "generated": "2026-06-13",
+    "frame": "Per the standing instruction to assume an INDETERMINABLE share of the Epstein documents may be forgeries: this block does NOT catalog who-is-named or restate allegations. It is an EPISTEMICS layer that grades the document CORPUS by provenance, chain-of-custody, and verification — so any downstream reliance on a specific document carries an explicit authenticity grade. The documented record itself proves authenticity is a real variable: the DOJ expressly disclaims per-item authenticity, flagged a likely-FORGED letter inside the files, fabricated items circulate online, a marquee item (the 'birthday book' letter) is disputed by the named party, and redactions failed.",
+    "WARNING": "MAXIMUM discipline. This file grades DOCUMENTS, not people. It makes NO allegation against any living person and restates none. Where a living person is named it is ONLY to record their own PUBLIC dispute of a document's authenticity (e.g., a denial). Nothing here is treated as proven; nothing enters the SCC/Z3/TLA+ proofs. Court-unsealed/cryptographically-verified items rank high; estate-via-subpoena medium; anonymous/leaked low; social-circulating often fabricated. 'A document exists/was released' is NEVER the same as 'its contents are authentic or true.'",
+    "method": "House Oversight releases + the Epstein Files Transparency Act (HR 4405); DOJ justice.gov/epstein disclosures + the July-2025 FBI/DOJ memo; WSJ/NBC/AP/NPR/Britannica timelines; fact-checks (Factually, USA Today) on fabricated items; LMG Security / TIME on redaction failures; reporting that 4 experts found no fabrication in a specific leaked email cache while OTHER items lack provenance. Each tier graded.",
+    "cross_refs": ["spec-crypto-sec-epstein.json","temporal-bridges.json","spec-network-overlay.json","macro-official-data-integrity.json"]
+  },
+
+  "authenticity_rubric": {
+    "purpose":"A reproducible authenticity grade for any Epstein-corpus item, INDEPENDENT of whether its contents are flattering or damning.",
+    "factors":[
+      "P1 Provenance: court-unsealed (protective-order-vetted) > official DOJ/FBI production > estate-via-subpoena > media-published-original > anonymous leak > social-media image.",
+      "P2 Chain-of-custody: documented custody from origin to release vs. unknown handling.",
+      "P3 Technical verification: cryptographic signatures / email headers / metadata / forensic handwriting analysis present and clean vs. absent.",
+      "P4 Corroboration: independently corroborated by a second source/record vs. single-source.",
+      "P5 Internal consistency: dates/addresses/letterhead consistent vs. anomalous (the tell that exposed the Nassar forgery).",
+      "P6 Disputed-by-party: the named author/subject publicly affirms vs. denies authenticity (a denial does not prove forgery, but flags the item)."
+    ],
+    "output":"high | medium | low | likely-forged | fabricated. Default to LOWER when P1/P3 are weak. A release's bulk size or official channel does NOT raise an individual item's grade."
+  },
+
+  "tranches_by_provenance": [
+    {"tranche":"Court-unsealed (Giuffre v. Maxwell, S.D.N.Y., Judge Preska, 2024)","authenticity":"HIGH","why":"Filed under and vetted by court process / protective orders; the most reliable tier.","grade":"high"},
+    {"tranche":"DOJ/FBI official disclosures (justice.gov/epstein; the Jan-30-2026 release ~3M pages, 2,000 videos, 180,000 images; DOJ noted up to ~6M pages qualify)","authenticity":"HIGH provenance, but DOJ EXPRESSLY DISCLAIMS per-item authenticity","why":"Official channel, but the DOJ stated producing records does NOT affirm every document is authentic — and it investigated at least one as likely fake (see failures).","grade":"high-channel / per-item-disclaimed"},
+    {"tranche":"House Oversight ESTATE documents (20,000+ pages Nov 2025, via congressional subpoena to the Epstein estate; 3 Nov-2025 emails re a sitting official)","authenticity":"MEDIUM","why":"Obtained from a private estate, NOT court-sealed, NOT classified, NOT under protective order — so not court-vetted; provenance is the estate's files, authenticity per-item not independently established.","grade":"medium"},
+    {"tranche":"Media-published originals (e.g., the WSJ 'birthday book' reporting)","authenticity":"ITEM-DEPENDENT","why":"A reputable outlet's possession + analysis raises an item, but specific items can still be disputed (see the birthday letter).","grade":"item-dependent"},
+    {"tranche":"Anonymous leaks / unverified caches","authenticity":"LOW unless technically verified","why":"Some leaked email caches passed cryptographic/metadata checks (four experts: no meaningful fabrication evidence); OTHERS lack provenance and remain unverified — grade per item, not per cache.","grade":"low-default"},
+    {"tranche":"Social-media-circulating images","authenticity":"OFTEN FABRICATED","why":"Documented fabrications (e.g., fake 'Jimmy Kimmel' references not in the actual files); treat as fabricated until matched to an official source.","grade":"fabricated-default"}
+  ],
+
+  "documented_authenticity_failures": [
+    {"item":"The Epstein→Larry Nassar letter (likely FORGED, inside the files)","detail":"DOJ investigated an alleged Epstein letter to Larry Nassar that appears NOT authentic — wrong handwriting, wrong return address, and postmarked ~3 days AFTER Epstein died. A concrete forged/anomalous item present in the released material — proof the corpus is NOT uniformly authentic.","grade":"likely-forged (DOJ-flagged)"},
+    {"item":"The 'birthday book' letter (DISPUTED)","detail":"The named party (Trump) publicly denies the signature/voice are his; the Speaker echoed 'they say it's not [real]'; the WSJ published a professional analysis to the contrary; litigation followed. UNRESOLVED — recorded as disputed, with neither authenticity nor forgery established here.","grade":"disputed/unresolved"},
+    {"item":"Fabricated social items","detail":"Fact-checks confirmed fabricated images (e.g., a non-existent Jimmy Kimmel reference) circulating as if from the files.","grade":"fabricated"},
+    {"item":"Redaction failures","detail":"DOJ took DOWN thousands of documents after redactions failed and exposed victims' identities — a process failure that also shows the rapid mass-release pipeline is error-prone (and thus an alteration/handling-risk vector).","grade":"fact (process failure)"}
+  ],
+
+  "why_assume_indeterminate_forgeries": {
+    "reasoning":[
+      "The DOJ ITSELF disclaims per-item authenticity and has flagged at least one likely-forged item inside the files — so the official channel does not guarantee authenticity.",
+      "Rapid mass release under intense political pressure (millions of pages on a deadline) is a known vector for un-vetted, altered, or planted items slipping in.",
+      "The corpus mixes court-verified records, estate documents, anonymous leaks, and social fabrications in the public mind — and they are routinely conflated.",
+      "High political stakes create incentives in MULTIPLE directions to forge: to falsely implicate, to falsely exculpate (a forged item can be used to discredit a whole tranche), or to launder a true claim through a fake document.",
+      "Therefore: NO Epstein document should be treated as authentic by default; each requires its own provenance/verification grade, and a single proven forgery does not by itself discredit independently-verified items (nor vice-versa)."
+    ],
+    "grade":"methodological principle (documented basis)"
+  },
+
+  "application_to_project_threads": "The project's existing Epstein-adjacent items are ALREADY graded and quarantined (spec-crypto-sec-epstein: Black/Apollo facts STRONG, directed-influence SPECULATIVE; temporal-bridges: the Summers-OpenAI-board resignation after the House released correspondence — the RESIGNATION + the RELEASE are court/press-documented FACTS, independent of any single document's contents). This authenticity layer adds the rule: any reliance on a SPECIFIC released document must carry its provenance grade, and contents are never treated as true merely because a document was released. None of this is in the proofs.",
+
+  "edges": [
+    {"from":"DOJ","to":"Epstein_Files","instrument":"regulatory_legal","raw_instrument":"official disclosures (justice.gov/epstein; Jan-2026 ~3M-page release) WITH an express per-item authenticity disclaimer + a DOJ-flagged likely-forged item","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-epstein-document-authenticity.json","note":"OVERLAY: official channel != per-item authentic"},
+    {"from":"US_Congress","to":"Epstein_Files","instrument":"regulatory_legal","raw_instrument":"Epstein Files Transparency Act (HR 4405, 2025) + House Oversight estate subpoena (20,000+ pages, not court-vetted)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-epstein-document-authenticity.json","note":"OVERLAY: estate tranche = medium authenticity"}
+  ],
+
+  "limits":"This is an AUTHENTICITY/PROVENANCE methodology + a graded tranche map. It grades DOCUMENTS, not people; it makes and restates NO allegation against any living person (the only living-person mentions record a public authenticity DISPUTE, e.g., a denial). DOCUMENTED: the tranches and their provenance, the DOJ per-item disclaimer, the DOJ-flagged likely-forged Nassar letter, the disputed birthday letter, fabricated social items, and the redaction failures. The principle — assume an indeterminate share could be forged; grade each item; a release's official channel/bulk does not authenticate any single item — is a methodological stance, not a claim that the corpus is mostly fake (nor mostly real). Quarantined from the SCC/Z3/TLA+ proofs."
+}

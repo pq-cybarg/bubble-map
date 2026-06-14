@@ -304,6 +304,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Epstein_Files": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Ethereum": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2463,6 +2467,32 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Epstein_Files",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "official disclosures (justice.gov/epstein; Jan-2026 ~3M-page release) WITH an express per-item authenticity disclaimer + a DOJ-flagged likely-forged item",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-epstein-document-authenticity.json",
+      "note": ""
+    },
+    {
+      "from": "US_Congress",
+      "to": "Epstein_Files",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Epstein Files Transparency Act (HR 4405, 2025) + House Oversight estate subpoena (20,000+ pages, not court-vetted)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-epstein-document-authenticity.json",
       "note": ""
     },
     {
@@ -4638,10 +4668,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 268,
-    "num_edges": 274,
+    "num_nodes": 269,
+    "num_edges": 276,
     "num_financial_edges": 125,
-    "num_structural_edges": 149,
+    "num_structural_edges": 151,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4692,20 +4722,24 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -4713,7 +4747,8 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -4728,19 +4763,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -4757,7 +4781,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -4765,6 +4788,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5304,6 +5334,13 @@
         "in_robust_core": false
       },
       "EeroQ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Epstein_Files": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
