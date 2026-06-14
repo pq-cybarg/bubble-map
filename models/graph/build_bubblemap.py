@@ -255,7 +255,7 @@ function egoFocus(d){egoOn=d.id;const keep=ADJ.get(d.id)||new Set([d.id]);
   .attr('stroke-width',n=>n.id===d.id?4.5:(n.scc?2.6:1));}
 function clearEgo(){egoOn=null;
  node.style('opacity',1);link.style('opacity',.55);linkHit.style('pointer-events',null);
- if(!document.getElementById('tLab').checked)labels.style('display','none');
+ labels.style('display',document.getElementById('tLab').checked?null:'none');  // ALWAYS restore (fixes vanishing names)
  node.select('circle').attr('stroke',n=>n.scc?'#d4a017':'#fffdf8').attr('stroke-width',n=>n.scc?2.6:1);
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
 // ----- clickable legend: isolate a sector bucket -----
@@ -265,6 +265,7 @@ document.querySelectorAll('.lg').forEach(el=>el.onclick=()=>{const b=el.dataset.
  soloB=b;egoOn=null;
  document.querySelectorAll('.lg').forEach(x=>{x.classList.toggle('solo',x.dataset.b===b);x.classList.toggle('off',x.dataset.b!==b);});
  node.style('opacity',n=>n.bucket===b?1:.08);
+ labels.style('display',n=>(n.bucket===b&&document.getElementById('tLab').checked)?null:'none');
  const vis=l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));return (s&&s.bucket===b)||(t&&t.bucket===b);};
  link.style('opacity',l=>vis(l)?.7:.04);});
 // ----- fit-to-view + reset -----

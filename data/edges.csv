@@ -81,6 +81,7 @@ SpaceX,xAI,equity,2000000000,reported,True,False,fin-spacex-spcx.json
 MGX,Binance,equity,2000000000,invested-settled-in-USD1,False,False,spec-exchanges-asia.json
 MGX,Binance,relationship,2000000000,closed,False,False,macro-stablecoin-failures-manipulation.json
 NVIDIA,xAI,equity,2000000000,committed,True,False,fin-nvidia-openai.json
+ICE,Polymarket,investment,2000000000,closed,False,False,spec-prediction-markets.json
 Apple,Globalstar,investment,1700000000,closed,False,False,spec-telecom-satellite.json
 Lazarus_Group,Bybit,surveillance_security,1500000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
@@ -243,6 +244,11 @@ ApartmentList_ALNRI,CPI_Rent,other,,leads_~16mo,False,False,macro-rent-cpi-diver
 Zillow_ZORI,CPI_Rent,other,,leads,False,False,macro-rent-cpi-divergence.json
 BLS_NTRI,CPI_Rent,other,,leads_4q,False,False,macro-rent-cpi-divergence.json
 CPI_Rent,CPI_Methodology,other,,structural,False,False,macro-rent-cpi-divergence.json
+1789_Capital,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
+a16z,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
+CFTC,Polymarket,other,,recurring,False,False,spec-prediction-markets.json
+CFTC,Kalshi,other,,closed,False,False,spec-prediction-markets.json
+Polymarket,USDC,other,,recurring,False,False,spec-prediction-markets.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json
 DTCC,Chainlink,relationship,,closed,False,False,spec-market-plumbing-control.json

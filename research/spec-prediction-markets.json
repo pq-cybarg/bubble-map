@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Prediction markets — Polymarket / Kalshi: the CFTC accommodation, the ICE / Trump-family / a16z capital, election-integrity & insider concerns, and the reflexivity problem",
+    "generated": "2026-06-13",
+    "frame": "Prediction markets went from legal-grey novelty to a multi-billion-dollar, institutionally-backed asset class in 2025-26 — and they sit at the intersection of several threads the project already maps: the SAME market-infrastructure conglomerate (ICE) that owns NYSE/clearing/the LBMA gold price put $2B into Polymarket; Trump-family-linked capital (1789 Capital, Don Jr) and a16z are investors; the CFTC (now a one-commissioner agency) is writing accommodative rules — the same deregulatory pattern as the crypto reset; Polymarket settles on-chain in USDC; and there is a live election-integrity/insider/REFLEXIVITY problem (markets that can 'shape the outcomes they claim to forecast').",
+    "WARNING": "Grade discipline. The capital (ICE $2B, 1789/Don Jr, a16z), the valuations, the CFTC posture, and the 2024 'French whale' are DOCUMENTED. The election-MANIPULATION thesis (that whales/insiders move markets to shape perception) is CONTESTED — campaign-staffer insider betting is reported (NPR), the French-whale case Polymarket ruled a directional bet with no manipulation found; 'prediction markets manipulate elections' is a labeled concern, not a verdict. Conflicts (Don Jr advisory + an administration-friendly CFTC) are documented-structural, intent not asserted. Overlay edges excluded from the proofs.",
+    "method": "CFTC NPRM (Jun 2026) + rulebook filings; TechCrunch/CNBC/Decrypt/Axios (valuations, ICE $2B, 1789 Capital/Don Jr, CFTC chair Selig); NPR (campaign-staffer insider betting); Bloomberg/CBS 60 Minutes (the French whale); The Nerve (reflexivity). Each cell graded.",
+    "cross_refs": ["spec-market-plumbing-control.json","blockchain-leg.json","macro-stablecoin-treasury-rail.json","macro-stablecoin-failures-manipulation.json","spec-crypto-banking-debanking.json","influence-congress-funding-compromise.json","spec-network-overlay.json"]
+  },
+
+  "the_platforms": {
+    "kalshi":{"detail":"The first CFTC-regulated US event exchange (DCM); hosts legal US election/political and (now) sports event contracts; valuation surged to ~$5B (Oct 2025) and reportedly toward ~$11-22B (2026). Cash/USD-based, US-regulated.","grade":"fact"},
+    "polymarket":{"detail":"Crypto-native (settles in USDC on Polygon); historically OFFSHORE/outside US regulation after a 2022 CFTC settlement barred US users; the larger by election volume. Seeking CFTC approval to RE-OPEN to US traders (2026).","grade":"fact"}
+  },
+
+  "the_capital": [
+    {"item":"ICE → Polymarket $2B","detail":"Intercontinental Exchange (NYSE/ICE Clear/IBA-LBMA-gold-price parent) invested ~$2B in Polymarket (Oct 2025), valuing it ~$9-10B — directly wiring the market-infrastructure conglomerate (spec-market-plumbing-control) into prediction markets.","grade":"fact"},
+    {"item":"1789 Capital / Donald Trump Jr. → Polymarket","detail":"Polymarket took a strategic investment from 1789 Capital (Trump-Jr-backed VC) and added Donald Trump Jr. to its advisory board (Aug 2025) — a Trump-family financial tie to a market betting on political outcomes (echoing the USD1/WLFI conflict, macro-stablecoin-failures-manipulation).","grade":"fact"},
+    {"item":"a16z → Polymarket","detail":"Andreessen Horowitz is a long-time backer — the same crypto-capital network behind Fairshake/GENIUS (blockchain-leg).","grade":"fact"},
+    {"item":"Kalshi valuation","detail":"~$5B (Oct 2025) → reportedly $11-22B (2026); backers incl. crypto/VC and (reported) ICE-rival interest.","grade":"fact (range)"}
+  ],
+
+  "cftc_accommodation": {
+    "detail":"The CFTC is down to a SINGLE sitting commissioner — Chairman Michael Selig (four seats vacant). The agency WITHDREW its earlier restrictive prediction-market proposed rule and in Jun 2026 issued a 267-page NPRM that would ALLOW sports-event contracts and formalize the markets; Selig argues states LACK authority to police them (federal preemption) and that the CFTC 'supports lawful innovation.' Polymarket filed a US rulebook (Nov 2025) seeking re-entry.",
+    "oversight_pushback":"Congressional Democrats and Sen. Warren urged the CFTC to rein in sports betting/insider trading and questioned the regulatory retreat (incl. on Gemini/Polymarket).",
+    "pattern":"Same shape as the 2025 crypto reset (Atkins/Pham/Gould): a thinly-staffed, accommodation-minded commission fast-tracks an industry the prior regime restrained.",
+    "grade":"fact (CFTC posture + the oversight pushback)"
+  },
+
+  "integrity_insider_reflexivity": {
+    "concerns":[
+      {"item":"Insider betting by campaign staffers","detail":"NPR (2026): campaign staffers say they make 'thousands' betting on their OWN candidates — insider-information trading on political outcomes, largely outside securities-insider law.","grade":"fact (reported)"},
+      {"item":"The 2024 'French whale'","detail":"An anonymous French trader made $80M+ betting on a Trump 2024 win (placing rapid large bets that moved the displayed odds toward Trump). Polymarket investigated and found NO manipulation, calling it a directional bet. The EPISODE is fact; whether it 'shaped perception' is contested.","grade":"fact (the trade); manipulation NOT found"},
+      {"item":"Reflexivity — markets that shape what they forecast","detail":"Because displayed odds are widely cited as 'the forecast', a large bettor can move the headline probability and thereby influence sentiment/coverage — the reflexivity problem (Soros, spec-network-overlay): the market is not a passive mirror of the outcome. This is a structural concern, not proof any election was altered.","grade":"contested (structural concern, labeled)"}
+    ],
+    "grade":"fact (insider betting + whale) + contested (election-shaping)"
+  },
+
+  "edges": [
+    {"from":"ICE","to":"Polymarket","instrument":"equity","raw_instrument":"~$2B investment (Oct 2025), ~$9-10B valuation","amount_usd":2000000000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: market-infrastructure conglomerate -> prediction markets"},
+    {"from":"1789_Capital","to":"Polymarket","instrument":"equity","raw_instrument":"strategic investment + Donald Trump Jr. to advisory board (Aug 2025)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: Trump-family tie (cf USD1/WLFI)"},
+    {"from":"a16z","to":"Polymarket","instrument":"equity","raw_instrument":"long-time backer (same network as Fairshake/GENIUS)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: crypto-capital network"},
+    {"from":"CFTC","to":"Polymarket","instrument":"regulatory_legal","raw_instrument":"2022 settlement barred US users; 2026 NPRM + Polymarket US rulebook -> path to re-entry (one-commissioner CFTC)","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: accommodation pattern"},
+    {"from":"CFTC","to":"Kalshi","instrument":"regulatory_legal","raw_instrument":"DCM registration; election + sports event contracts allowed","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: first regulated US event exchange"},
+    {"from":"Polymarket","to":"USDC","instrument":"relationship","raw_instrument":"settles on-chain in USDC on Polygon","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-prediction-markets.json","note":"OVERLAY: prediction markets -> stablecoin rail"}
+  ],
+
+  "limits":"DOCUMENTED: the platforms, valuations, the ICE $2B + 1789/Don Jr + a16z capital, the one-commissioner CFTC's accommodative NPRM, the campaign-staffer insider betting (NPR), and the 2024 French-whale episode. CONTESTED/labeled (not asserted): that prediction markets manipulate/shape elections (the whale was ruled a directional bet; reflexivity is a structural concern). Conflicts (Don Jr advisory + an administration-friendly CFTC) are documented-structural; corrupt intent is not asserted. Overlay edges connect prediction markets to the market-plumbing (ICE), crypto-capital (a16z), Trump-family (1789), CFTC, and stablecoin (USDC) threads; the proof core is untouched."
+}

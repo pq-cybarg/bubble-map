@@ -1,5 +1,9 @@
 {
   "entities": {
+    "1789_Capital": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "AI data centers": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -468,6 +472,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "Kalshi": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Kaynes_SemiCon": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -657,6 +665,10 @@
       "has_exogenous_revenue": false
     },
     "Phil Gramm": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Polymarket": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -963,6 +975,10 @@
     "USD1": {
       "sector": "stablecoin",
       "has_exogenous_revenue": false
+    },
+    "USDC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "US_Allied_Military": {
       "sector": "defense",
@@ -3824,6 +3840,84 @@
       "note": "$306B aggregate unrealized securities loss (down from $684B 2023 peak); invisible while HTM held at cost, realized only if forced to sell (the SVB mechanism). BTFP backstop expired Mar 2024."
     },
     {
+      "from": "ICE",
+      "to": "Polymarket",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "~$2B investment (Oct 2025), ~$9-10B valuation",
+      "amount_usd": 2000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
+      "from": "1789_Capital",
+      "to": "Polymarket",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "strategic investment + Donald Trump Jr. to advisory board (Aug 2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
+      "from": "a16z",
+      "to": "Polymarket",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "long-time backer (same network as Fairshake/GENIUS)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
+      "from": "CFTC",
+      "to": "Polymarket",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2022 settlement barred US users; 2026 NPRM + Polymarket US rulebook -> path to re-entry (one-commissioner CFTC)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
+      "from": "CFTC",
+      "to": "Kalshi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DCM registration; election + sports event contracts allowed",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
+      "from": "Polymarket",
+      "to": "USDC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "settles on-chain in USDC on Polygon",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-prediction-markets.json",
+      "note": ""
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -4488,10 +4582,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 263,
-    "num_edges": 264,
-    "num_financial_edges": 122,
-    "num_structural_edges": 142,
+    "num_nodes": 267,
+    "num_edges": 270,
+    "num_financial_edges": 125,
+    "num_structural_edges": 145,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4542,22 +4636,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
       ],
@@ -4566,9 +4644,20 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -4581,16 +4670,21 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -4628,6 +4722,13 @@
       ]
     ],
     "circularity_exposure": {
+      "1789_Capital": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AI data centers": {
         "total_usd": 800000000000,
         "circular_usd": 0,
@@ -5371,7 +5472,7 @@
         "in_robust_core": false
       },
       "ICE": {
-        "total_usd": 0,
+        "total_usd": 2000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5441,6 +5542,13 @@
         "in_robust_core": false
       },
       "Jobs_Headline": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kalshi": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5778,6 +5886,13 @@
       },
       "Phil Gramm": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Polymarket": {
+        "total_usd": 2000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6310,6 +6425,13 @@
       },
       "USD1": {
         "total_usd": 4700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "USDC": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
