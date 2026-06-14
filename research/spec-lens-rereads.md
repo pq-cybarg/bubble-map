@@ -117,6 +117,15 @@ The genuine read surfaced **~30 concrete enhancements** — grouped:
 - **The method is the defense.** **正名** (rectification of names) — the project's grading discipline — is the countermeasure to the sabotage/disinformation it documents. The read found **no mislabeling** in the corpus.
 - **The corpus is sound; it has a backlog, not errors.** Every block re-read coherent; the ~30 gaps are *enhancements* (mostly "quantify a number the block points at" or "map a sequence"), not corrections.
 
+## Cluster syntheses (preserved from the first pass — still useful)
+*The cluster-level "so-what" reframings, kept for review alongside (not replaced by) the per-block read above.*
+- **AI capital-loop** (Confucius 12.7 + Sun Tzu economy-of-force): the proven "self-marked / solvent-only-while-flowing / insolvent-at-zero-inflow" facts are **bets on continued trust**; name **trust** as the single variable under HTM marks, AI marks, private-credit NAV, and the dollar — `self_marked_value` U3's "common factor" reads as a **common-trust factor**.
+- **Identity / data-integrity** (Analects 13.3 + 2.3): "control is the point, not an accident"; the defensible name wins the vote while the structural payoff would lose it — failures of **正名**. Elevate **rectification of names** to a *named* defensive doctrine (precise naming *is* the method).
+- **Division / influence** (Simple Sabotage + doomed-spies): "inflame all sides / can't tell foreign from self-inflicted" **is** the deniable human element; the prescribed **deniability is why attribution must stay graded**.
+- **Dollar / stablecoin / cross-border** (Sun Tzu attack-strategy+alliances): the dollar's **"army" (transactions) is intact** (89.2% of FX); erosion is in its **alliances/reserves** (73%→54%) — frame the GENIUS-Act push as defending the army while the alliances quietly erode.
+- **Geopolitics / chokepoints** (Five Factors): chokepoints = **地** (terrain); the REE **"faucet" = 天** (timing) weaponized; leverage **without war**.
+- **Macro / banking + roster** (trust 信/道): the self-marked-value machine breaks on a **trust shock**; *actionable* — key officeholder profiles could carry an explicit **"trust/legitimacy bearing"** line.
+
 ## What is NOT asserted
 - These are interpretation **over** the graded blocks; they add no factual claims and nothing to the proofs.
 - "One variable (trust)" is a **lens**, not a claim that a single actor engineers all of it.
