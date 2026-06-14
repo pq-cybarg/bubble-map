@@ -8730,6 +8730,557 @@
     "spec-market-plumbing-control",
     "spec-network-overlay"
    ]
+  },
+  {
+   "name": "Changpeng Zhao",
+   "role": "Founder & former CEO, Binance (2017–2023)",
+   "domains": [
+    "Crypto",
+    "Markets",
+    "Capital"
+   ],
+   "orgs": [
+    "Binance",
+    "BNB Chain"
+   ],
+   "bluf": "Founder of the world's largest crypto exchange, who pleaded guilty in 2023 to Bank Secrecy Act violations (failure to maintain an effective anti-money-laundering program) in a $4.3B DOJ/Treasury settlement and served four months. Assess with HIGH confidence on the guilty plea and settlement; his post-release re-emergence is a live variable.",
+   "drivers": "Market dominance; the 'CZ' personal brand; protecting Binance's global liquidity franchise.",
+   "worldview": "Crypto-maximalist, jurisdiction-arbitraging; long operated Binance without a fixed legal home ('Binance has no headquarters').",
+   "decision_style": "Fast, centralizing, founder-dominant; reportedly ran AML/compliance as secondary to growth.",
+   "track_record": "Built Binance into the dominant exchange; the 2023 plea and settlement is the largest crypto enforcement action to date; his November 2022 tweets helped trigger the FTX bank-run; remains BNB's largest holder and an active investor.",
+   "vulnerabilities": "The BSA conviction; persistent regulatory exposure across jurisdictions; concentration of BNB holdings.",
+   "relationships": "Rivalry-then-collapse dynamic with SBF/FTX; Binance's reach touches Tether, market-making, and the stablecoin-rail debate.",
+   "outlook": "His re-emergence and Binance's compliance trajectory are central to crypto-market-structure risk.",
+   "confidence": "HIGH (plea/settlement on record).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-sdny-crypto-prosecution",
+    "spec-exchanges-asia",
+    "spec-onchain-threat-actor-addresses"
+   ]
+  },
+  {
+   "name": "Richard Teng",
+   "role": "CEO, Binance (2023–present)",
+   "domains": [
+    "Crypto",
+    "Regulator",
+    "Markets"
+   ],
+   "orgs": [
+    "Binance",
+    "Abu Dhabi Global Market",
+    "Singapore MAS"
+   ],
+   "bluf": "The former regulator (Singapore MAS, Abu Dhabi Global Market) installed as Binance CEO after CZ's guilty plea to lead a compliance-forward reset. Assess with MODERATE-HIGH confidence his mandate is regulatory normalization while CZ retains ownership influence.",
+   "drivers": "Restoring Binance's regulatory standing; institutional legitimacy; continuity of the franchise.",
+   "worldview": "Compliance-oriented technocrat; believes engagement with regulators is survival.",
+   "decision_style": "Process-driven, regulator-fluent, deliberately low-key versus CZ's founder style.",
+   "track_record": "Headed markets at SGX and was a senior MAS/ADGM regulator before joining Binance; now steering its post-settlement compliance buildout and licensing push.",
+   "vulnerabilities": "Operates under the shadow of CZ's ownership and the firm's legacy exposure; credibility tied to whether the reset is real.",
+   "relationships": "Reports into a CZ-owned structure; counterpart to global regulators; relevant to the Gulf (ADGM) capital nexus.",
+   "outlook": "His success or failure determines whether the largest exchange becomes a compliant pillar or a recurring risk.",
+   "confidence": "MODERATE-HIGH (role documented; mandate interpreted).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-exchanges-asia",
+    "macro-stablecoin-failures-manipulation",
+    "fin-gulf-sovereign-ai-capital"
+   ]
+  },
+  {
+   "name": "Caroline Ellison",
+   "role": "CEO, Alameda Research (2021–2022)",
+   "domains": [
+    "Crypto",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "Alameda Research",
+    "FTX"
+   ],
+   "bluf": "The Alameda Research CEO whose cooperating testimony was central to Sam Bankman-Fried's fraud conviction; she pleaded guilty to seven counts and was sentenced to two years. Assess with HIGH confidence on the plea, cooperation, and her account of FTX's misuse of customer funds.",
+   "drivers": "Originally SBF-aligned ('effective altruism'); later cooperation and accountability.",
+   "worldview": "Quant-trader rationalism overlaid with EA utilitarian framing; deferred heavily to SBF.",
+   "decision_style": "Analytical but, by her own testimony, conflicted and directed by SBF on key decisions.",
+   "track_record": "Ran Alameda as it borrowed FTX customer deposits; pleaded guilty in late 2022; her detailed 2023 testimony (the 'Alameda balance sheet,' the secret borrowing) anchored the prosecution; sentenced to 24 months.",
+   "vulnerabilities": "The fraud admissions; her credibility rests on cooperation rather than exoneration.",
+   "relationships": "Former romantic and professional partner of SBF; co-defendant-turned-witness alongside Wang and Singh.",
+   "outlook": "A primary documentary source for how the FTX/Alameda commingling worked.",
+   "confidence": "HIGH (plea + sworn testimony).",
+   "grade": "fact",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-sdny-crypto-prosecution"
+   ]
+  },
+  {
+   "name": "Gary Wang",
+   "role": "Co-founder & CTO, FTX (2019–2022)",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "FTX",
+    "Alameda Research"
+   ],
+   "bluf": "FTX's co-founder and chief technology officer, who wrote the code giving Alameda its near-unlimited 'allow_negative' credit line on FTX, pleaded guilty, and cooperated; he received no prison time. Assess with HIGH confidence on the technical mechanism he implemented and his cooperation.",
+   "drivers": "Engineering execution; loyalty to SBF; later cooperation.",
+   "worldview": "Builder-engineer; implemented business directives without independent governance.",
+   "decision_style": "Technically dominant, deferential to SBF on product/financial decisions.",
+   "track_record": "Built the exchange's core software and the special back-door privileges for Alameda; pleaded guilty to fraud; testified for the prosecution; sentenced to time served.",
+   "vulnerabilities": "Authorship of the back-door code is the technical heart of the fraud case.",
+   "relationships": "Co-founder with SBF; cooperating co-defendant with Ellison and Singh.",
+   "outlook": "The engineering witness establishing how the customer-fund diversion was coded.",
+   "confidence": "HIGH (plea + testimony).",
+   "grade": "fact",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-sdny-crypto-prosecution"
+   ]
+  },
+  {
+   "name": "Nishad Singh",
+   "role": "Director of Engineering, FTX (2019–2022)",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "FTX",
+    "Alameda Research"
+   ],
+   "bluf": "FTX's head of engineering, who pleaded guilty to fraud and campaign-finance conspiracy, cooperated, and was sentenced to time served plus supervised release. Assess with HIGH confidence on the plea and his testimony about the shortfall and straw-donor scheme.",
+   "drivers": "Technical contribution; EA idealism; remorse and cooperation.",
+   "worldview": "Mission-driven engineer disillusioned upon discovering the customer-fund hole.",
+   "decision_style": "Conscientious but slow to act on red flags he later testified he saw.",
+   "track_record": "Helped run FTX engineering; was a conduit in the illegal political-donations scheme; pleaded guilty and testified; sentenced to time served.",
+   "vulnerabilities": "The straw-donor admissions tie FTX to the campaign-finance thread.",
+   "relationships": "Cooperating co-defendant alongside Ellison and Wang; reported to SBF.",
+   "outlook": "A witness linking FTX funds to political-influence spending.",
+   "confidence": "HIGH (plea + testimony).",
+   "grade": "fact",
+   "blocks": [
+    "spec-sdny-crypto-prosecution",
+    "influence-congress-funding-compromise",
+    "macro-stablecoin-failures-manipulation"
+   ]
+  },
+  {
+   "name": "Ryan Salame",
+   "role": "Co-CEO, FTX Digital Markets (Bahamas)",
+   "domains": [
+    "Crypto",
+    "State/Policy"
+   ],
+   "orgs": [
+    "FTX Digital Markets"
+   ],
+   "bluf": "The FTX executive who ran the Bahamas entity and was the firm's most visible Republican-side political donor, pleaded guilty to campaign-finance and unlicensed-money-transmitting conspiracies, and was sentenced to 7.5 years. Assess with HIGH confidence on the plea and the bipartisan donor scheme it exposed.",
+   "drivers": "Political influence-building; FTX's regulatory/relationship strategy; personal ventures.",
+   "worldview": "Operator/fixer; viewed political giving as strategic infrastructure.",
+   "decision_style": "Relationship-driven, deal-making, politically networked.",
+   "track_record": "Directed FTX's right-leaning political donations (paralleling SBF's left-leaning giving), ran the Bahamas hub; pleaded guilty and received one of the longest FTX sentences.",
+   "vulnerabilities": "The donor scheme is a core campaign-finance-compromise exhibit; the longest non-SBF sentence underscores culpability.",
+   "relationships": "FTX's political-spending counterpart to SBF; linked to the dual-track donation strategy.",
+   "outlook": "Key node connecting crypto-exchange money to both parties' political finance.",
+   "confidence": "HIGH (plea + sentence).",
+   "grade": "fact",
+   "blocks": [
+    "influence-congress-funding-compromise",
+    "spec-sdny-crypto-prosecution"
+   ]
+  },
+  {
+   "name": "Sam Trabucco",
+   "role": "Co-CEO, Alameda Research (2021–2022)",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "Alameda Research"
+   ],
+   "bluf": "Alameda's co-CEO who stepped back from day-to-day management months before the collapse, leaving Ellison in sole control; he was not charged. Assess with MODERATE confidence on his diminished role in the final period; his exact knowledge is not publicly adjudicated.",
+   "drivers": "Quant trading; lifestyle (publicly stepped back, bought a boat); low public profile post-collapse.",
+   "worldview": "Trader-quant; ambiguous public stance on the firm's failures.",
+   "decision_style": "Data-driven trading focus; receded from leadership before the crisis.",
+   "track_record": "Co-ran Alameda's trading; announced reduced involvement in August 2022; has largely avoided public comment and was not indicted.",
+   "vulnerabilities": "His pre-collapse exit and silence leave open questions; not a subject of charges.",
+   "relationships": "Alameda co-leader with Ellison under SBF's umbrella.",
+   "outlook": "A peripheral but unresolved figure in the Alameda timeline.",
+   "confidence": "MODERATE (limited public record; role interpreted).",
+   "grade": "weak",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-sdny-crypto-prosecution"
+   ]
+  },
+  {
+   "name": "Su Zhu",
+   "role": "Co-founder, Three Arrows Capital",
+   "domains": [
+    "Crypto",
+    "Capital",
+    "Macro/Finance"
+   ],
+   "orgs": [
+    "Three Arrows Capital"
+   ],
+   "bluf": "Co-founder of the crypto hedge fund Three Arrows Capital, whose June 2022 implosion — driven by leveraged bets including Terra/LUNA and a GBTC/stETH carry — cascaded into Celsius, Voyager, and BlockFi. Assess with HIGH confidence on 3AC's role as a primary 2022-contagion vector; he was detained in Singapore in 2023.",
+   "drivers": "Leveraged conviction bets; the 'supercycle' thesis; reputation as a macro-crypto sage.",
+   "worldview": "Crypto-permabull; believed in a perpetual bull 'supercycle,' which justified extreme leverage.",
+   "decision_style": "High-conviction, highly leveraged, opaque to creditors; evaded liquidators post-collapse.",
+   "track_record": "Ran 3AC's multi-billion book; the fund defaulted on loans across the lending complex, triggering systemic contagion; liquidators pursued him; detained in Singapore for non-cooperation.",
+   "vulnerabilities": "The leverage, the 'supercycle' miscall, and evasion of liquidators define the reputational damage.",
+   "relationships": "Counterparty to Genesis/DCG (Silbert), Celsius (Mashinsky), Voyager (Ehrlich); borrowed across the lending web.",
+   "outlook": "The canonical example of how concentrated leverage transmits crypto contagion.",
+   "confidence": "HIGH (default/contagion documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-onchain-threat-actor-addresses",
+    "macro-carry-trades"
+   ]
+  },
+  {
+   "name": "Kyle Davies",
+   "role": "Co-founder, Three Arrows Capital",
+   "domains": [
+    "Crypto",
+    "Capital",
+    "Macro/Finance"
+   ],
+   "orgs": [
+    "Three Arrows Capital"
+   ],
+   "bluf": "Su Zhu's 3AC co-founder, equally responsible for the leveraged book that collapsed in 2022 and for the post-failure evasion of creditors. Assess with HIGH confidence on shared responsibility; he claimed non-Singaporean status to complicate jurisdiction.",
+   "drivers": "Leveraged conviction; the supercycle thesis; avoiding liability.",
+   "worldview": "Crypto-permabull mirroring Zhu; dismissive of creditor claims post-collapse.",
+   "decision_style": "High-leverage, opaque, evasive with liquidators; later launched a claims-trading venture (OPNX) that itself faltered.",
+   "track_record": "Co-managed 3AC's collapse; resisted liquidators alongside Zhu; the failed OPNX 'bankruptcy claims' exchange compounded the reputational fallout.",
+   "vulnerabilities": "Evasion of creditors; the OPNX follow-on failure.",
+   "relationships": "Equal counterparty to the lending complex (Genesis, Celsius, Voyager); partnered with Zhu throughout.",
+   "outlook": "Second principal of the contagion-originating fund.",
+   "confidence": "HIGH (contagion + conduct documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-onchain-threat-actor-addresses",
+    "macro-carry-trades"
+   ]
+  },
+  {
+   "name": "Alex Mashinsky",
+   "role": "Founder & CEO, Celsius Network",
+   "domains": [
+    "Crypto",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "Celsius Network"
+   ],
+   "bluf": "Founder of the crypto lender Celsius, convicted in 2025 of securities and commodities fraud and market manipulation (of the CEL token) and sentenced to 12 years, after Celsius's 2022 freeze and bankruptcy wiped out depositors. Assess with HIGH confidence on the conviction and the deposit-loss harm.",
+   "drivers": "Personal brand ('unbank yourself'); CEL token value; aggressive yield promises.",
+   "worldview": "Crypto-populist; marketed Celsius as a safe high-yield bank alternative while taking outsized risk.",
+   "decision_style": "Promotional, risk-taking, by the verdict deceptive about Celsius's finances and CEL trading.",
+   "track_record": "Built Celsius to ~$25B in assets on unsustainable yields; froze withdrawals June 2022; filed bankruptcy; convicted 2025 of fraud and CEL manipulation; sentenced to 12 years.",
+   "vulnerabilities": "The fraud and manipulation conviction; the depositor losses; the gap between marketing and reality.",
+   "relationships": "Borrowed to/from the 3AC-era lending web; emblematic of the 2022 CeFi-lender collapse cohort.",
+   "outlook": "A central case in the algorithmic/CeFi-yield-failure and manipulation thread.",
+   "confidence": "HIGH (conviction on record).",
+   "grade": "fact",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-sdny-crypto-prosecution",
+    "macro-private-credit-marks"
+   ]
+  },
+  {
+   "name": "Stephen Ehrlich",
+   "role": "Co-founder & CEO, Voyager Digital",
+   "domains": [
+    "Crypto",
+    "Capital",
+    "Markets"
+   ],
+   "orgs": [
+    "Voyager Digital"
+   ],
+   "bluf": "CEO of the crypto broker Voyager Digital, which collapsed in 2022 after its loans to 3AC defaulted; the CFTC and FTC pursued charges alleging he misrepresented Voyager as safe and FDIC-insured. Assess with HIGH confidence on the collapse and the regulatory allegations; litigation outcomes are partly pending/settled.",
+   "drivers": "Brokerage growth; the 'safe, insured' marketing; high-yield customer acquisition.",
+   "worldview": "Retail-crypto-brokerage builder; downplayed counterparty and insurance risk.",
+   "decision_style": "Growth-focused; relied on a concentrated, ultimately fatal 3AC exposure.",
+   "track_record": "Grew Voyager on retail deposits, lent heavily to 3AC, froze and went bankrupt in 2022; CFTC/FTC actions alleged deceptive 'FDIC-insured' claims (the FDIC issued a cease-and-desist on those representations).",
+   "vulnerabilities": "The false-insurance marketing is a direct tie to the FDIC-misrepresentation and depositor-harm themes.",
+   "relationships": "Major 3AC counterparty; part of the 2022 lender-collapse cluster with Celsius and BlockFi.",
+   "outlook": "Links the crypto-failure thread to FDIC-insurance-misrepresentation enforcement.",
+   "confidence": "HIGH (collapse + regulatory actions documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-crypto-banking-debanking",
+    "macro-fdic"
+   ]
+  },
+  {
+   "name": "Daniel Shin",
+   "role": "Co-founder, Terraform Labs / Chai",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "Terraform Labs",
+    "Chai",
+    "Terra"
+   ],
+   "bluf": "Co-founder, with Do Kwon, of Terraform Labs and the Terra ecosystem whose UST algorithmic stablecoin and LUNA collapsed in May 2022 (~$40B+ destroyed), triggering the broader crypto contagion; he faces South Korean proceedings. Assess with HIGH confidence on the collapse; individual culpability is being adjudicated.",
+   "drivers": "Payments adoption (Chai); the Terra ecosystem's growth; the algorithmic-stablecoin vision.",
+   "worldview": "Fintech-payments founder who co-architected the reflexive UST/LUNA mint-burn design.",
+   "decision_style": "Builder-promoter; left day-to-day Terra leadership to Kwon before the collapse.",
+   "track_record": "Co-created Terra/UST/LUNA; the May 2022 de-peg and death spiral is the largest algorithmic-stablecoin failure on record; indicted/charged in South Korea (fraud/capital-markets allegations).",
+   "vulnerabilities": "The UST design's reflexivity; ongoing Korean prosecution; disputed knowledge of the risks.",
+   "relationships": "Co-founder relationship with Do Kwon (present in roster); the collapse cascaded into 3AC, Celsius, Voyager.",
+   "outlook": "The originating event of the 2022 stablecoin-contagion the project documents.",
+   "confidence": "HIGH (collapse documented); culpability adjudicating.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "spec-onchain-threat-actor-addresses",
+    "spec-exchanges-asia"
+   ]
+  },
+  {
+   "name": "Giancarlo Devasini",
+   "role": "CFO and Chairman, Tether / Bitfinex",
+   "domains": [
+    "Crypto",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Tether",
+    "Bitfinex",
+    "iFinex"
+   ],
+   "bluf": "The reclusive financial architect of Tether (USDT) — the dominant ~$140B+ stablecoin — and Bitfinex, who controls the reserve strategy now heavily weighted to US Treasuries. Assess with MODERATE-HIGH confidence he is the central decision-maker over the largest stablecoin's reserves; reserve composition history is partly contested.",
+   "drivers": "Tether's profitability and reserve strategy; discretion/low profile; preserving the USDT franchise.",
+   "worldview": "Pragmatic financier; built USDT into a systemic dollar-proxy and a major Treasury buyer.",
+   "decision_style": "Secretive, control-oriented, financially aggressive (large BTC and gold holdings, equity stakes).",
+   "track_record": "Drove Tether/Bitfinex finances through the 2019 NYAG inquiry (settled, no admission) and the CFTC reserve-misrepresentation settlement (2021); steered reserves toward T-bills, making Tether a notable sovereign-debt holder.",
+   "vulnerabilities": "History of reserve-disclosure settlements; opacity; concentration of control and the systemic footprint of USDT.",
+   "relationships": "Partners with Ardoino (present) and van der Velde; Tether's Treasury holdings tie directly to the stablecoin-Treasury-rail thread.",
+   "outlook": "The single most consequential individual over stablecoin reserve policy and its Treasury linkage.",
+   "confidence": "MODERATE-HIGH (role + settlements documented; reserve detail partly opaque).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "macro-stablecoin-treasury-rail",
+    "spec-onchain-threat-actor-addresses"
+   ]
+  },
+  {
+   "name": "Jean-Louis van der Velde",
+   "role": "Former CEO, Tether / Bitfinex (now advisor)",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "Tether",
+    "Bitfinex",
+    "iFinex"
+   ],
+   "bluf": "The longtime public-facing CEO of Tether and Bitfinex during the period of the NYAG and CFTC actions, who transitioned to an advisory role as Ardoino took the Tether CEO seat. Assess with MODERATE confidence on his executive role; operational control is widely attributed more to Devasini.",
+   "drivers": "Corporate stewardship of the Tether/Bitfinex complex; managing legal exposure.",
+   "worldview": "Crypto-finance operator; maintained the firms through repeated regulatory scrutiny.",
+   "decision_style": "Low-profile administrator; deferred financial strategy to Devasini.",
+   "track_record": "Served as CEO through the 2019–2021 enforcement period; the firms settled with the NYAG (2021) and CFTC without major admissions; later moved to advisory as leadership reshuffled.",
+   "vulnerabilities": "Association with the disclosure-settlement era; limited public transparency.",
+   "relationships": "Long-running partnership with Devasini and Ardoino atop the Tether/Bitfinex structure.",
+   "outlook": "Continuity figure in the dominant-stablecoin governance the project tracks.",
+   "confidence": "MODERATE (role documented; control attributed elsewhere).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "macro-stablecoin-treasury-rail"
+   ]
+  },
+  {
+   "name": "Stuart Hoegner",
+   "role": "General Counsel, Tether / Bitfinex",
+   "domains": [
+    "Crypto",
+    "Regulator",
+    "Markets"
+   ],
+   "orgs": [
+    "Tether",
+    "Bitfinex"
+   ],
+   "bluf": "Tether's longtime general counsel, the legal architect of its responses to the NYAG, CFTC, and the years-long debate over USDT's reserve backing and attestations (versus a full audit). Assess with MODERATE-HIGH confidence on his central role in Tether's legal/disclosure posture.",
+   "drivers": "Defending Tether's legal position; managing the reserves-transparency narrative; regulatory survival.",
+   "worldview": "Crypto-industry lawyer; frames attestations as adequate and full audits as impractical.",
+   "decision_style": "Combative in litigation/PR; controls the messaging on reserve composition.",
+   "track_record": "Steered Tether through the NYAG settlement and CFTC action; oversees the quarterly attestation regime that critics say falls short of an audit.",
+   "vulnerabilities": "The audit-versus-attestation gap; the disclosure-settlement history.",
+   "relationships": "Legal counterpart to Devasini and Ardoino; key voice in the reserve-transparency dispute.",
+   "outlook": "Central to whether the largest stablecoin's backing is ever fully verified.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "macro-stablecoin-treasury-rail",
+    "spec-sec-sdny-regulatory"
+   ]
+  },
+  {
+   "name": "Stuart Alderoty",
+   "role": "Chief Legal Officer, Ripple",
+   "domains": [
+    "Crypto",
+    "Regulator",
+    "Markets"
+   ],
+   "orgs": [
+    "Ripple",
+    "XRP"
+   ],
+   "bluf": "Ripple's chief legal officer, who led the multi-year defense against the SEC's XRP suit and turned the partial 2023 ruling (programmatic XRP sales not securities) into the crypto industry's signature legal win. Assess with HIGH confidence on his role steering the landmark case.",
+   "drivers": "Winning the SEC case; establishing favorable crypto-securities precedent; Ripple's legitimacy.",
+   "worldview": "Aggressive defense litigator; frames the SEC's approach as 'regulation by enforcement.'",
+   "decision_style": "Combative, public-facing, precedent-focused; weaponized discovery (the 'Hinman emails').",
+   "track_record": "Directed the Ripple v. SEC defense (2020–2024); secured the Torres ruling distinguishing programmatic from institutional sales; surfaced the Hinman speech documents central to the fairness critique.",
+   "vulnerabilities": "The case is partly a Ripple-interest narrative; the precedent's reach is contested.",
+   "relationships": "Works with Garlinghouse (present); his case is a centerpiece of the SEC-crypto-regulation thread.",
+   "outlook": "His litigation reshaped the US crypto-securities perimeter the project tracks.",
+   "confidence": "HIGH (litigation record).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-sec-sdny-regulatory",
+    "spec-crypto-sec-epstein",
+    "spec-sdny-crypto-prosecution",
+    "macro-stablecoin-treasury-rail"
+   ]
+  },
+  {
+   "name": "David Schwartz",
+   "role": "CTO, Ripple; XRP Ledger architect ('JoelKatz')",
+   "domains": [
+    "Crypto",
+    "Markets"
+   ],
+   "orgs": [
+    "Ripple",
+    "XRP Ledger"
+   ],
+   "bluf": "Ripple's chief technology officer and one of the original architects of the XRP Ledger, a key technical voice in the consensus-versus-mining and cross-border-settlement debates. Assess with HIGH confidence on his technical authorship; claims about XRP's settlement role are partly promotional.",
+   "drivers": "Technical credibility; the XRP Ledger's adoption for payments/settlement; engineering legacy.",
+   "worldview": "Crypto-engineer pragmatist; champions consensus ledgers for institutional settlement over proof-of-work.",
+   "decision_style": "Technical, communicative (active under 'JoelKatz'), product-focused.",
+   "track_record": "Co-designed the XRP Ledger and its consensus protocol; long-tenured Ripple technologist through the SEC fight and the bank-settlement pivot.",
+   "vulnerabilities": "Association with XRP-price-linked messaging; settlement-adoption claims outrun current usage.",
+   "relationships": "Technical counterpart to Garlinghouse and Alderoty; relevant to the DTCC/settlement-rail connections in the plumbing thread.",
+   "outlook": "A technical node in the institutional-settlement-rail narrative.",
+   "confidence": "HIGH (technical record); some claims promotional.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-stablecoin-treasury-rail",
+    "fin-hedera-connections"
+   ]
+  },
+  {
+   "name": "Charles Cascarilla",
+   "role": "Co-founder & CEO, Paxos",
+   "domains": [
+    "Crypto",
+    "Macro/Finance",
+    "Markets"
+   ],
+   "orgs": [
+    "Paxos",
+    "BUSD",
+    "PYUSD",
+    "Pax Gold"
+   ],
+   "bluf": "CEO of Paxos, the regulated issuer behind Binance's BUSD, PayPal's PYUSD, and Pax Gold, who navigated the 2023 SEC Wells notice and NYDFS order to wind down BUSD. Assess with HIGH confidence on Paxos's central, regulated role in the stablecoin-issuance stack.",
+   "drivers": "Building 'regulated' stablecoin/tokenization rails; institutional partnerships; compliance as differentiator.",
+   "worldview": "Regulation-forward fintech founder; positions Paxos as the compliant alternative to Tether.",
+   "decision_style": "Institutionally oriented, partnership-driven, regulator-engaging.",
+   "track_record": "Issued BUSD (ordered wound down by NYDFS in 2023 amid an SEC Wells notice arguing BUSD was a security), launched PYUSD with PayPal, and runs Pax Gold; a core node in the regulated-stablecoin debate.",
+   "vulnerabilities": "The BUSD wind-down and SEC Wells notice; dependence on partner brands (Binance, PayPal).",
+   "relationships": "Issuer for Binance (BUSD) and PayPal (PYUSD); central to the stablecoin-Treasury-rail and SEC-jurisdiction threads.",
+   "outlook": "A pivotal figure in whether 'regulated' stablecoins become the dominant dollar rail.",
+   "confidence": "HIGH (regulatory record).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-treasury-rail",
+    "macro-stablecoin-failures-manipulation",
+    "spec-sec-sdny-regulatory",
+    "commodities-metals"
+   ]
+  },
+  {
+   "name": "Zach Witkoff",
+   "role": "Co-founder, World Liberty Financial (WLFI / USD1 stablecoin)",
+   "domains": [
+    "Crypto",
+    "State/Policy",
+    "Capital"
+   ],
+   "orgs": [
+    "World Liberty Financial",
+    "USD1"
+   ],
+   "bluf": "Co-founder of World Liberty Financial — the Trump-family-linked crypto venture behind the USD1 stablecoin — and son of Trump envoy Steve Witkoff, placing him at the intersection of the administration, crypto issuance, and the documented USD1 deposit/collateral questions. Assess with MODERATE-HIGH confidence on the role and the political linkage; specific allegations are partly contested and partly on-chain-verifiable.",
+   "drivers": "Building the WLFI/USD1 franchise; leveraging family and political proximity; first-mover advantage in a friendly regime.",
+   "worldview": "Crypto-entrepreneur operating inside a uniquely favorable political environment.",
+   "decision_style": "Deal-driven, relationship-leveraging, fast-moving in a permissive regulatory window.",
+   "track_record": "Co-launched WLFI and the USD1 stablecoin; USD1 figured in a high-profile foreign-investment/exchange deal; the project's token sales and the issuer's collateral/deposit handling are the subject of on-chain scrutiny the project examines directly.",
+   "vulnerabilities": "Conflict-of-interest exposure given the administration linkage; on-chain transparency of USD1 reserves/flows; regulatory-favoritism perception.",
+   "relationships": "Son of Steve Witkoff (present); WLFI ties to the Trump family; USD1 sits squarely in the stablecoin-policy and conflict-of-interest threads.",
+   "outlook": "A focal node where political power, stablecoin issuance, and on-chain verification intersect.",
+   "confidence": "MODERATE-HIGH (role/linkage documented; specific claims on-chain-checkable and partly contested).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-stablecoin-failures-manipulation",
+    "macro-stablecoin-treasury-rail",
+    "spec-onchain-threat-actor-addresses",
+    "influence-congress-funding-compromise"
+   ]
+  },
+  {
+   "name": "Christian Sewing",
+   "role": "CEO, Deutsche Bank (2018–present)",
+   "domains": [
+    "Capital",
+    "Macro/Finance",
+    "Markets"
+   ],
+   "orgs": [
+    "Deutsche Bank"
+   ],
+   "bluf": "CEO of Deutsche Bank, the systemically important European lender historically entangled with US AML penalties, the Trump-lending relationship, and the Epstein-account compliance failures (for which DB paid a NYDFS fine). Assess with HIGH confidence on the institution's documented exposures; his personal involvement in legacy matters is largely as the post-hoc reformer.",
+   "drivers": "Restoring Deutsche Bank's stability and reputation; de-risking the balance sheet; profitability.",
+   "worldview": "Conservative restructurer; pivoted DB away from its riskiest investment-banking footprint.",
+   "decision_style": "Disciplined, cost-focused, compliance-emphasizing after years of scandal.",
+   "track_record": "Led DB's turnaround; the bank's legacy includes the Russian 'mirror trades' AML penalty, the Trump-lending relationship after other banks withdrew, and the 2020 NYDFS fine over Epstein-related compliance lapses.",
+   "vulnerabilities": "Legacy AML/compliance scandals; the politically sensitive Trump and Epstein account histories.",
+   "relationships": "DB's lending and compliance history connects to the Trump-finance, Epstein, and bank-exposure threads.",
+   "outlook": "A node linking a G-SIB to several of the project's politically sensitive finance threads.",
+   "confidence": "HIGH (institutional record); personal role mainly as reformer.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-bank-htm-marks",
+    "spec-epstein-document-authenticity",
+    "macro-history-dereg-manipulation"
+   ]
   }
  ]
 }
