@@ -85,7 +85,8 @@ SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds",
 NAV=('<div class=nav><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a>'
  '<a href="charts.html">Charts</a><a href="research.html">Research</a><a href="persons.html">Persons</a>'
  '<a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a>'
- '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a></div>')
+ '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a>'
+ '<a href="https://github.com/pq-cybarg/bubble-map">Source &#8599;</a></div>')
 legend="".join(f'<span class=lg data-b="{b}"><i style="background:{COLORS[b]}"></i>{html.escape(BLABEL[b])}</span>' for b in BLABEL)
 
 HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
@@ -93,7 +94,8 @@ HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
 <style>
 :root{--bg:#faf8f2;--paper:#fffdf8;--ink:#1c1b19;--mut:#6b665d;--line:#e4ddcc;--ac:#7b2d26;--ac2:#1f4e79}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
-.nav{background:var(--paper);border-bottom:1px solid var(--line);padding:10px 18px;font-size:14px}
+.nav{background:var(--paper);border-bottom:1px solid var(--line);padding:10px 18px;font-size:14px;text-align:center}
+.nav a{margin:0 9px!important}
 .nav a{color:var(--ac2);text-decoration:none;margin-right:16px}.nav a.active{font-weight:700}.nav a:hover{text-decoration:underline}
 #stage{position:relative;width:100%;height:calc(100vh - 41px);overflow:hidden}
 svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}

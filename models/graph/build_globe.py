@@ -117,17 +117,15 @@ LEGEND=[("choke","adversary / physical chokepoint"),("supply","allied supply res
         ("frontier","contested resource state"),("intel","allied intel / compute / data chokepoint"),
         ("policy","policy node"),("threat","threat actor")]
 
-NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 22px;font-size:14px;'
-     'font-family:-apple-system,Segoe UI,Roboto,sans-serif">'
-     '<a href="index.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Home</a>'
-     '<a href="dashboard.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Dashboard</a>'
-     '<a href="charts.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Charts</a>'
-     '<a href="research.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Research</a>'
-     '<a href="persons.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Persons</a>'
-     '<a href="bubblemap.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Bubble Map</a>'
-     '<a href="methodology.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Methodology</a>'
-     '<a href="glossary.html" style="color:#1f4e79;text-decoration:none;margin-right:18px">Glossary</a>'
-     '<a href="globe.html" style="color:#1f4e79;text-decoration:none;font-weight:600">Globe</a></div>')
+def _navlinks(active=""):
+    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+           ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
+           ("methodology.html","Methodology"),("glossary.html","Glossary"),
+           ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
+    a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{t}</a>'
+    return ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 16px;'
+            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>')
+NAV=_navlinks("Globe")
 
 # __NAV__ is replaced per-target (site nav for docs, empty for the stand-alone report copy)
 HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>

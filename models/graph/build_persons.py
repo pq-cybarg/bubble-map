@@ -57,12 +57,15 @@ DOMAIN_COLORS={"AI":"#1f4e79","Capital":"#7b2d26","Crypto":"#b8860b","Defense":"
  "Intelligence":"#37474f","Legislature":"#7a4a6e"}
 def dcolor(d): return DOMAIN_COLORS.get(d,"#6b665d")
 
-NAV=('<div class=nav><div class=wrap style="padding:0">'
- '<a href="index.html">Home</a><a href="dashboard.html">Dashboard</a><a href="charts.html">Charts</a>'
- '<a href="research.html">Research</a><a href="persons.html" class=active>Persons</a>'
- '<a href="bubblemap.html">Bubble Map</a>'
- '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a><a href="globe.html">Globe</a>'
- '</div></div>')
+def _navlinks(active=""):
+    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+           ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
+           ("methodology.html","Methodology"),("glossary.html","Glossary"),
+           ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
+    a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{html.escape(t)}</a>'
+    return ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 16px;'
+            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>')
+NAV=_navlinks("Persons")
 
 # rows of the dossier body, in display order, with their label
 FIELDS=[("bluf","Bottom line"),("drivers","Drivers & motivations"),("worldview","Worldview & origins"),
@@ -143,19 +146,23 @@ SEG_DEFS=[
  ("defense","Defense & security",lambda d:"Defense" in d),
  ("digitalid","Digital-ID & surveillance",lambda d:"Digital-ID" in d),
  ("sovereign","Sovereign wealth & Gulf capital",lambda d:"Sovereign" in d),
- ("geopolitics","Heads of state & geopolitics",lambda d:("Geopolitics" in d) or ("State/Policy" in d)),
+ ("geopolitics","Heads of state & geopolitics",lambda d:"Geopolitics" in d),
+ ("statepolicy","State & policy",lambda d:"State/Policy" in d),
  ("other","Other",lambda d:True),
 ]
-def segment_of(p):
+def segments_of(p):
+    """ALL segments a person belongs to (a person in multiple domains shows under EACH category).
+    'other' only if nothing else matches."""
     d=set(p.get("domains",[]))
-    for key,_lab,test in SEG_DEFS:
-        if test(d): return key
-    return "other"
+    segs=[k for k,_lab,test in SEG_DEFS if k!="other" and test(d)]
+    return segs or ["other"]
+def segment_of(p):  # primary segment = first match (kept for the avatar colour etc.)
+    return segments_of(p)[0]
 SEG_LABEL={k:lab for k,lab,_ in SEG_DEFS}
 
-def card_html(i,p):
+def card_html(i,p,seg=None,primary=True):
     doms=p.get("domains",[])
-    seg=segment_of(p)
+    if seg is None: seg=segment_of(p)
     tags="".join(f'<span class=tag style="background:{dcolor(d)}">{html.escape(d)}</span>' for d in doms)
     body=[]
     for k,lab in FIELDS:
@@ -181,7 +188,9 @@ def card_html(i,p):
     av=dcolor(doms[0]) if doms else "#6b665d"
     hay=html.escape(" ".join([p.get("name",""),p.get("role",""),
         " ".join(p.get("orgs",[]))," ".join(doms),p.get("bluf","")]).lower())
-    return (f'<div class=card id="{slug(p.get("name",""))}" data-seg="{seg}" data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
+    base=slug(p.get("name",""))
+    cid=base if primary else f'{base}--{seg}'   # primary keeps the canonical anchor; duplicates get unique ids
+    return (f'<div class=card id="{cid}" data-person="{base}" data-seg="{seg}" data-domains="{html.escape("|".join(doms))}" data-hay="{hay}">'
             f'<div class=row onclick="this.parentNode.classList.toggle(\'open\')">'
             f'<div class=av style="background:{av}">{html.escape(initials(p.get("name","?")))}</div>'
             f'<div class=who><div class=nm>{html.escape(p.get("name",""))}</div>'
@@ -192,15 +201,18 @@ def card_html(i,p):
 
 alldoms=sorted({d for p in persons for d in p.get("domains",[])})
 chips="".join(f'<span class=chip data-d="{html.escape(d)}" style="--c:{dcolor(d)}">{html.escape(d)}</span>' for d in alldoms)
-# group profiles into segments (the roster-segmentation view), preserving SEG_DEFS order
+# group profiles into segments (MULTI-category: a person shows under EVERY segment they belong to),
+# preserving SEG_DEFS order. The first segment is 'primary' (keeps the canonical #anchor id).
 from collections import defaultdict as _dd
 _buckets=_dd(list)
-for i,p in enumerate(persons): _buckets[segment_of(p)].append((i,p))
+for i,p in enumerate(persons):
+    segs=segments_of(p)
+    for k in segs: _buckets[k].append((i,p,k==segs[0]))
 seg_order=[k for k,_,_ in SEG_DEFS if _buckets.get(k)]
 segnav="".join(f'<a class=segchip href="#seg-{k}" data-seg="{k}">{html.escape(SEG_LABEL[k])}<b>{len(_buckets[k])}</b></a>' for k in seg_order)
 sections=""
 for k in seg_order:
-    body_cards="".join(card_html(i,p) for i,p in _buckets[k])
+    body_cards="".join(card_html(i,p,k,primary) for i,p,primary in _buckets[k])
     sections+=(f'<section class=seg id="seg-{k}" data-seg="{k}">'
                f'<h3 class=seghdr onclick="this.parentNode.classList.toggle(\'collapsed\')">'
                f'<span class=caret>&#9662;</span> {html.escape(SEG_LABEL[k])}'
@@ -245,13 +257,14 @@ function setShown(card,show){{
    card.addEventListener('animationend',()=>card.classList.remove('pop'),{{once:true}});}} card.style.display=''; }}
  else card.style.display='none';
 }}
+const TOTAL_PEOPLE=new Set(cards.map(c=>c.dataset.person)).size;  // distinct persons (cards are multi-category)
 function apply(){{
- const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; let n=0;
+ const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; const shownPeople=new Set();
  cards.forEach(card=>{{
   const okText=!s||card.dataset.hay.includes(s);
   const doms=card.dataset.domains.split('|');
   const okDom=active.size===0||[...active].every(d=>doms.includes(d));
-  const show=okText&&okDom; setShown(card,show); if(show)n++;
+  const show=okText&&okDom; setShown(card,show); if(show)shownPeople.add(card.dataset.person);
  }});
  // per-section counts; hide empty sections; auto-expand sections with matches while searching
  sections.forEach(sec=>{{
@@ -260,7 +273,8 @@ function apply(){{
   sec.querySelector('.segcount').textContent=vis;
   if(searching) sec.classList.remove('collapsed');
  }});
- count.textContent=n+' of '+cards.length+' profiles'+(searching?' (filtered)':'');
+ const n=shownPeople.size;
+ count.textContent=n+' of '+TOTAL_PEOPLE+' people'+(searching?' (filtered) · people appear under every category they belong to':' · shown under every category they belong to');
  empty.style.display=n?'none':'block';
 }}
 apply(); booted=true;

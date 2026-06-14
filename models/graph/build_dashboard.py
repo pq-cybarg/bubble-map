@@ -183,7 +183,8 @@ if xs and xs.get("cross_sections"):
       f"<h3 style='font-size:16px;margin:18px 0 4px'>Cross-layer connectors (bridging score)</h3>{gc_t}")
 
 CSS="""body{background:#faf8f2;color:#1c1b19;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:0 0 60px}
-header{background:#fffdf8;padding:26px 32px;border-bottom:1px solid #e4ddcc}
+header{background:#fffdf8;padding:26px 0;border-bottom:1px solid #e4ddcc}
+.hwrap{max-width:1100px;margin:0 auto;padding:0 24px}
 h1{margin:0;font-size:25px;color:#1c1b19;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
 h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin-top:34px;font-family:Georgia,'Iowan Old Style',serif;font-weight:600}
 .thesis{font-size:15.5px;color:#33312c;background:#fffdf8;border:1px solid #e4ddcc;border-left:4px solid #7b2d26;padding:14px 18px;margin:16px 0}
@@ -207,9 +208,9 @@ KPIS=f"""<span class=k><b>{an.get('core_scc_robust_size','?')}</b>firm circular 
 <span class=k><b>{nmodels}</b>runnable models</span>"""
 
 HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI Earnings Bubble</title><style>{CSS}</style></head>
-<body><header><h1>Unmasking the AI Earnings Bubble &mdash; control dashboard</h1>
+<body><header><div class=hwrap><h1>Unmasking the AI Earnings Bubble &mdash; control dashboard</h1>
 <div class=muted>Formally-verified analysis &middot; auto-generated from live <code>data/*.json</code> on {BUILD_DATE} &middot; reproduce: <code>bash run_all.sh</code> &middot; every figure carries a source URL in the matching <code>research/*.json</code></div>
-<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#xsec>Cross-section</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></header>
+<nav><a href=#verdicts>Proof verdicts</a><a href=#core>Circular core</a><a href=#connectors>Connectors</a><a href=#choke>Chokepoints</a><a href=#gold>Gold lens</a><a href=#weavers>Weavers</a><a href=#banks>Banks</a><a href=#xsec>Cross-section</a><a href=#overlays>Overlays</a><a href=#verify>Primary sources</a><a href=#src>Sources</a></nav></div></header>
 <main>
 <div class=thesis>A circular capital loop &mdash; firms booking each other's spending as revenue, solvent only while external capital keeps flowing &mdash; gated by physical chokepoints it cannot buy past on the timeline (compute capital, China rare earths, Russian enrichment, the power grid), and embedded in measurement and control layers (official statistics, paper commodity prices, and the identity / surveillance / political-money rails) that determine whether it can be seen and questioned. The financial core is machine-verified; every other layer is evidence-graded and excluded from the proofs. Not one cabal &mdash; recurring operators rebuilding the dot-com (vendor financing), Enron (off-balance-sheet SPVs), and LTCM (interconnected leverage) structures in the least-regulated venue.</div>
 {KPIS}
@@ -241,19 +242,23 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 
 open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 
-# ---- mirror to docs/ (GitHub Pages) with a back-link to the hub ----
+# ---- canonical site nav (centered, full destination set + Source) — shared across all pages ----
+GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
+def navlinks(active=""):
+    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+           ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
+           ("methodology.html","Methodology"),("glossary.html","Glossary"),
+           ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
+    a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{t}</a>'
+    return ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 16px;'
+            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>')
+NAVBAR=navlinks("Research")   # used by the rendered research block pages + the research index
+
+# ---- mirror to docs/ (GitHub Pages) ----
 DOCS=os.path.join(ROOT,"docs")
 if os.path.isdir(DOCS):
-    backnav='<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 32px;font-family:-apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Home</a><a href="dashboard.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px;font-weight:600">Dashboard</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Charts</a><a href="research.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Research</a><a href="persons.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Persons</a><a href="bubblemap.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Bubble Map</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;font-size:13px;margin-right:16px">Glossary</a><a href="globe.html" style="color:#1f4e79;text-decoration:none;font-size:13px">Globe</a></div>'
-    docs_html=HTML.replace("<body>","<body>"+backnav,1)
+    docs_html=HTML.replace("<body>","<body>"+navlinks("Dashboard"),1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
-
-    # ---- additional pages: research index + methodology ----
-    GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
-    def navlinks(active=""):
-        items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),("persons.html","Persons"),("bubblemap.html","Bubble Map"),("methodology.html","Methodology"),("glossary.html","Glossary"),("globe.html","Globe")]
-        return "".join(f'<a href="{h}" style="color:#1f4e79;text-decoration:none;margin-right:16px{";font-weight:600" if t==active else ""}">{t}</a>' for h,t in items)
-    NAVBAR=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 32px;font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">'+navlinks()+'</div>')
     PCSS=("body{background:#faf8f2;color:#1c1b19;font:18px/1.72 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;margin:0;padding:0 0 60px}"
           "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:34px;margin:26px 0 4px}"
           "h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:7px;margin-top:34px;font-family:Georgia,serif;font-weight:600;font-size:24px}"
@@ -368,7 +373,7 @@ if os.path.isdir(DOCS):
     print(f"  rendered {npages} research blocks as on-site pages (docs/r-*.html)")
 
     METH=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Methodology</title><style>{PCSS}</style></head>"
-          f"<body>{NAVBAR}<main><h1>Methodology</h1>"
+          f"<body>{navlinks('Methodology')}<main><h1>Methodology</h1>"
           "<h2>How it is built</h2><p>Each finding is a structured <code>research/*.json</code> (entities, directed edges, amounts, status, and source URLs) plus a <code>.md</code> write-up. "
           "<code>models/graph/build_graph.py</code> consolidates the edges into <code>data/graph.json</code> and runs the Tarjan SCC. The Z3, TLA+, and Alloy models read that data. "
           "The dashboard, this site, and the reports are generated from the same data.</p>"
@@ -421,7 +426,7 @@ if os.path.isdir(DOCS):
     ]
     gl="".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(d)}</dd>" for t,d in GLOSSARY)
     GL_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Glossary</title><style>{PCSS}</style></head>"
-             f"<body>{NAVBAR}<main><h1>Glossary</h1>"
+             f"<body>{navlinks('Glossary')}<main><h1>Glossary</h1>"
              "<p class=muted>Plain-language definitions of the technical terms used across the project.</p>"
              f"<dl>{gl}</dl></main></body></html>")
     open(os.path.join(DOCS,"glossary.html"),"w").write(GL_HTML)

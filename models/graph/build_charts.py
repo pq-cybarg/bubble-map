@@ -582,16 +582,15 @@ if _tape and _tape.get("corporate_breadth"):
                   "Where the dollars actually traded: the high-yield share of corporate volume. A real, tape-sourced risk-appetite gauge to read alongside the spread charts above."))
 
 # ---- page ----
-NAV=('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 22px;font-size:13px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">'
-     '<a href="index.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Home</a>'
-     '<a href="dashboard.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Dashboard</a>'
-     '<a href="charts.html" style="color:#1f4e79;text-decoration:none;margin-right:16px;font-weight:600">Charts</a>'
-     '<a href="research.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Research</a>'
-     '<a href="persons.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Persons</a>'
-     '<a href="bubblemap.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Bubble Map</a>'
-     '<a href="methodology.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Methodology</a>'
-     '<a href="glossary.html" style="color:#1f4e79;text-decoration:none;margin-right:16px">Glossary</a>'
-     '<a href="globe.html" style="color:#1f4e79;text-decoration:none">Globe</a></div>')
+def _navlinks(active=""):
+    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+           ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
+           ("methodology.html","Methodology"),("glossary.html","Glossary"),
+           ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
+    a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{t}</a>'
+    return ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 16px;'
+            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>')
+NAV=_navlinks("Charts")
 CSS=("body{background:#faf8f2;color:#1c1b19;font:17px/1.7 Georgia,'Iowan Old Style','Palatino Linotype',serif;margin:0;padding:0 0 60px}"
      "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:32px;margin:26px 0 4px}"
      "h2{color:#7b2d26;font-family:Georgia,serif;font-weight:600;font-size:21px;margin:34px 0 2px;border-bottom:1px solid #e4ddcc;padding-bottom:6px}"
