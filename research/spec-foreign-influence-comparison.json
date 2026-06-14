@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "title": "Comparative foreign-influence channels in the US (and allies), and the perception-vs-reality narrative layer (FARA spending; lobbying; campaign finance; institutional funding; influence/cyber ops)",
+    "generated": "2026-06-14",
+    "frame": "A deliberately neutral, evidence-graded comparison of how different FOREIGN STATES AND ORGANIZATIONS seek influence in the US (and allied states) - and the separate, documented question of how the PERCEPTION of each actor's influence is shaped. This is about states, lobbies, and operations and their disclosed CHANNELS - never about peoples or religions, and never asserting a 'control' conspiracy. The central, source-backed insight: different actors use different channels, so any single metric (FARA dollars, campaign finance, university gifts, or covert ops) ranks them differently - which is exactly why both 'X dominates everything' and 'X is just one of many' can mislead depending on the metric chosen. Legal lobbying, foreign-state media, institutional philanthropy, covert influence/cyber operations, and designated terror financing are EXPLICITLY DIFFERENT CATEGORIES and are not equated.",
+    "relevance": "Connects the roster's foreign-money threads: Gulf AI capital [[fin-gulf-sovereign-ai-capital]] (Qatar QIA in xAI/Anthropic; Saudi PIF/UAE MGX), the FARA mechanism [[spec-cambodia-scam-fara-paid-influence]] / [[influence-congress-funding-compromise]], the contested pro-Israel-lobby claim already flagged in [[spec-uk-labour-tbi-influence]], the Epstein-Barak-Mandelson ties [[spec-epstein-document-authenticity]], and Iran's documented on-chain/cyber activity [[spec-onchain-threat-actor-addresses]] / [[geopolitics-contested-resource-states]].",
+    "sources": "OpenSecrets Foreign Lobby Watch, Quincy Institute, Washington Examiner/Denver Gazette (FARA totals), Forward / Common Dreams / Military.com (AIPAC FARA debate + Massie bill), FDD / Quincy / Free Beacon / JPost (Qatar), DOJ indictment Sep 2024 + congressional CRS (Iran/IRGC), NCRI/IFMAT (contested NIAC claims). Full URLs in the rendered .md."
+  },
+  "the_data_raw_spend": {
+    "summary": "By disclosed FARA spending, the top foreign spenders are NOT who popular perception assumes - and raw spend is a poor proxy for effective influence.",
+    "points": [
+      {"item": "2024 FARA ranking", "detail": "Japan was the single largest FARA spender (~$48.5M, 2024); Saudi Arabia, China, and South Korea also outspent Israel and Qatar, which had once been the top foreign spenders. So by lobbying dollars, no single Middle East actor dominates.", "grade": "fact (OpenSecrets/Quincy)"},
+      {"item": "Raw spend != effective influence", "detail": "China spent the most cumulatively (~$418M since 2016) but the vast majority funded two state-media outlets with negligible US audiences and almost nothing on traditional lobbying or campaigns - so the headline number overstates effective influence. The metric chosen drives the ranking.", "grade": "fact + labeled interpretation"},
+      {"item": "FARA undercounts", "detail": "DOJ FARA data omits unregistered foreign agents and does not capture domestic lobbies or campaign-finance channels - the largest gaps for actors that operate outside FARA (below).", "grade": "fact (DOJ caveat)"}
+    ]
+  },
+  "channel_taxonomy": {
+    "summary": "Influence runs through at least six distinct channels; comparing actors requires naming the channel.",
+    "channels": [
+      {"channel": "FARA-registered lobbying/PR", "who": "Gulf states (Qatar, Saudi, UAE), Japan, South Korea", "grade": "fact"},
+      {"channel": "Foreign-state media", "who": "China (state outlets), Qatar (Al Jazeera - under a 2020 DOJ FARA order it has not complied with)", "grade": "fact"},
+      {"channel": "Domestic lobby + campaign finance (NOT FARA-registered)", "who": "pro-Israel advocacy (AIPAC) - operates as a US domestic lobby and campaign-finance force, not a registered foreign agent; the focus of the recurring (and contested) FARA-registration debate and Rep. Massie's AIPAC Act", "grade": "fact (the channel + debate)"},
+      {"channel": "Institutional funding (universities / think tanks)", "who": "Qatar (~$4.7B to US universities 2001-2021; Brookings and other think tanks), China (Confucius Institutes, historically)", "grade": "fact"},
+      {"channel": "Covert influence / cyber / coercion ops", "who": "Iran (IRGC hack-and-leak vs the 2024 campaign, DOJ-indicted; assassination plots), Russia", "grade": "fact (DOJ indictments)"},
+      {"channel": "Designated terror financing / propaganda", "who": "ISIS, Hamas, and other US-designated groups - a LAW-ENFORCEMENT/sanctions category, categorically distinct from lobbying", "grade": "fact (OFAC/DOJ designations)"}
+    ]
+  },
+  "per_actor": {
+    "israel_pro_israel_lobby": "Pro-Israel influence runs mainly through a DOMESTIC lobby (AIPAC) and campaign finance/endorsements, NOT FARA-registered foreign-agent lobbying - so it is large on the campaign-finance metric but not the top FARA spender. Whether AIPAC should register under FARA is a long-running, unresolved legal-political debate (Massie's bill; petitions that never gained DOJ traction); non-registration is a documented status, not proof of illegality. grade: fact (channel + debate); 'control' framing rejected.",
+    "qatar": "The clearest big-spender across MULTIPLE channels: ~$235-250M on FARA lobbying/PR since 2016 (the most FARA-registered meetings of any country, 2021-2025), ~$4.7B to US universities, think-tank funding (Brookings), and Al Jazeera (under an uncomplied-with 2020 DOJ FARA order). Ties the roster via QIA stakes in xAI and the Anthropic Series G. grade: fact.",
+    "saudi_uae": "Major FARA spenders AND the dominant Gulf AI-capital allocators (PIF/HUMAIN, MGX) - their influence is increasingly via capital deployment into the AI core ([[fin-gulf-sovereign-ai-capital]]) as much as lobbying. grade: fact.",
+    "iran": "Two very different things must be separated: (1) DOCUMENTED IRGC cyber/influence and coercion operations - e.g., the Sep-2024 DOJ indictment of IRGC members for a hack-and-leak against the Trump campaign, and assassination plots (fact); and (2) CONTESTED claims of an 'Iran lobby' (e.g., FARA allegations against NIAC) which are CRITIC-SOURCED and NOT DOJ findings (contested/unsupported). Conflating the two is a common error. grade: fact (ops) + contested (lobby claims).",
+    "china": "Heaviest cumulative FARA spend but concentrated in low-audience state media; little traditional lobbying/campaign activity; its real leverage is economic (chip/REE chokepoints, TikTok) not Washington lobbying. grade: fact.",
+    "jihadist_groups": "ISIS/Hamas-type influence is designated terror financing and propaganda - a sanctions/law-enforcement matter, NOT lobbying, and not comparable to the legal channels above. grade: fact (designations)."
+  },
+  "the_perception_layer": {
+    "summary": "Whose interest it serves for people to believe one actor is more (or less) influential than it is - the core perception question - is itself answerable from documented dynamics, without conspiracy.",
+    "points": [
+      {"item": "Overstating an ADVERSARY (Iran, China)", "detail": "serves hawkish/defense and security-state interests (justifies budgets, sanctions, surveillance) and domestic political mobilization - real operations exist, but threat-inflation is a documented bureaucratic incentive.", "grade": "labeled interpretation"},
+      {"item": "Overstating an ALLY's lobby (the 'Israel lobby')", "detail": "cuts two ways: it can serve legitimate accountability/transparency arguments (the FARA-registration debate), but in bad-faith forms it shades into antisemitic 'control' conspiracy. The honest treatment keeps the legal-lobby-accountability question strictly separate from, and rejects, the conspiracy framing.", "grade": "labeled interpretation"},
+      {"item": "Understating influence", "detail": "serves the influencer and its domestic partners - hence Qatar's preference for university/think-tank channels (low salience) and Al Jazeera's FARA non-compliance, and AIPAC's domestic-lobby posture (outside FARA disclosure).", "grade": "labeled interpretation"},
+      {"item": "The metric trap", "detail": "Because actors use different channels, a single metric is weaponizable: 'Israel isn't even the top FARA spender' (true) and 'the Israel lobby dominates Congress' (true on campaign-finance/endorsement metrics) are both deployable to mislead. The corrective is to name the channel and the metric every time.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "2024 FARA top spenders", "result": "Japan ~$48.5M #1; Saudi/China/South Korea outspent Israel & Qatar (OpenSecrets/Quincy/Washington Examiner)."},
+      {"check": "AIPAC FARA status", "result": "Not FARA-registered; Massie AIPAC Act + recurring petitions; debate unresolved (Forward/Common Dreams/Military.com)."},
+      {"check": "Qatar footprint", "result": "~$235-250M FARA since 2016; ~$4.7B to US universities; Al Jazeera 2020 DOJ FARA order uncomplied; QIA in xAI/Anthropic (FDD/Quincy/JPost)."},
+      {"check": "Iran ops vs lobby", "result": "DOJ Sep-2024 IRGC hack-and-leak indictment (fact); NIAC FARA allegations are critic-sourced, not DOJ findings (CRS/NCRI/IFMAT)."}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Explicit non-claims - essential for a charged topic.",
+    "non_claims": [
+      "Nothing here concerns any PEOPLE or RELIGION - only states, governments, lobbies, and named organizations and their disclosed channels.",
+      "No 'control' or single-cabal conspiracy is asserted about ANY actor (Israel, the Gulf, Iran, China, or others).",
+      "AIPAC's non-registration under FARA is a documented legal-status/debate, NOT an assertion of illegality.",
+      "The 'Iran lobby'/NIAC FARA allegations are recorded as CONTESTED, critic-sourced claims - not DOJ findings - and no individual is accused.",
+      "Legal lobbying, state media, institutional philanthropy, covert ops, and designated terror financing are DIFFERENT CATEGORIES and are explicitly not equated or ranked on one scale.",
+      "These edges are OVERLAY/context (relationship / surveillance_security) and are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Qatar", "to": "Anthropic", "instrument": "relationship", "raw_instrument": "QIA participation in the Anthropic Series G (Gulf capital into the AI core)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": true, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: Gulf-capital influence channel; excluded from proofs"},
+    {"from": "Qatar", "to": "xAI", "instrument": "relationship", "raw_instrument": "QIA reported stake in xAI (Gulf capital into the AI core)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": true, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: Gulf-capital influence channel; excluded from proofs"},
+    {"from": "Qatar", "to": "US_universities_thinktanks", "instrument": "relationship", "raw_instrument": "~$4.7B to US universities (2001-2021) + think-tank funding (Brookings); Al Jazeera 2020 DOJ FARA order uncomplied", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: institutional-funding influence channel; excluded from proofs"},
+    {"from": "AIPAC", "to": "US_Congress", "instrument": "relationship", "raw_instrument": "domestic pro-Israel lobby + campaign finance/endorsements (NOT FARA-registered; Massie FARA-reform bill contested)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: domestic-lobby/campaign-finance channel; excluded from proofs"},
+    {"from": "Iran_IRGC", "to": "US_political_system", "instrument": "surveillance_security", "raw_instrument": "DOJ-indicted Sep-2024 hack-and-leak vs the Trump campaign; assassination plots (documented covert ops)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: documented covert-ops channel; excluded from proofs"},
+    {"from": "Saudi_Arabia_state", "to": "US_Congress", "instrument": "relationship", "raw_instrument": "major FARA-registered lobbying/PR; influence increasingly via AI-capital deployment (PIF/MGX)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-foreign-influence-comparison.json", "note": "OVERLAY: FARA-lobbying channel; excluded from proofs"}
+  ],
+  "limits": "A neutral, evidence-graded comparison of foreign-influence CHANNELS (FARA lobbying, state media, domestic lobby + campaign finance, institutional funding, covert ops, designated terror financing) and the documented perception/narrative dynamics around them. Key facts: by FARA dollars Japan/Saudi/China/Korea/Qatar lead, not Israel (whose channel is a domestic lobby + campaign finance); raw spend overstates effective influence (China state media); Qatar spans the most channels; Iran's covert ops are DOJ-documented while 'Iran lobby' claims are contested. Different channels are not equated. Connects to the Gulf-AI-capital, FARA, Epstein-ties, and Iran-ops threads. Overlay edges excluded from the formal proofs. source: see verification_log and the rendered .md for full URLs."
+}

@@ -12,6 +12,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AIPAC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "AI_Datacenters": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -480,6 +484,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "Iran_IRGC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Iran_nuclear_program": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -755,6 +763,10 @@
     "QCEW_Benchmark": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "Qatar": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Quantinuum": {
       "sector": "other",
@@ -1071,6 +1083,14 @@
     "US_Treasuries": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "US_political_system": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "US_universities_thinktanks": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Ucore": {
       "sector": "other",
@@ -2211,6 +2231,84 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-stablecoin-failures-manipulation.json",
+      "note": ""
+    },
+    {
+      "from": "Qatar",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "QIA participation in the Anthropic Series G (Gulf capital into the AI core)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Qatar",
+      "to": "xAI",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "QIA reported stake in xAI (Gulf capital into the AI core)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Qatar",
+      "to": "US_universities_thinktanks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$4.7B to US universities (2001-2021) + think-tank funding (Brookings); Al Jazeera 2020 DOJ FARA order uncomplied",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "AIPAC",
+      "to": "US_Congress",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "domestic pro-Israel lobby + campaign finance/endorsements (NOT FARA-registered; Massie FARA-reform bill contested)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Iran_IRGC",
+      "to": "US_political_system",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DOJ-indicted Sep-2024 hack-and-leak vs the Trump campaign; assassination plots (documented covert ops)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia_state",
+      "to": "US_Congress",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "major FARA-registered lobbying/PR; influence increasingly via AI-capital deployment (PIF/MGX)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
       "note": ""
     },
     {
@@ -4971,10 +5069,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 283,
-    "num_edges": 295,
-    "num_financial_edges": 127,
-    "num_structural_edges": 168,
+    "num_nodes": 288,
+    "num_edges": 301,
+    "num_financial_edges": 128,
+    "num_structural_edges": 173,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5025,28 +5123,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -5066,12 +5164,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
@@ -5080,6 +5172,12 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -5127,6 +5225,13 @@
       },
       "AI data-center SPVs / hyperscaler projects": {
         "total_usd": 27000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AIPAC": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5951,6 +6056,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Iran_IRGC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Iran_nuclear_program": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6428,6 +6540,13 @@
         "in_robust_core": false
       },
       "QCEW_Benchmark": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Qatar": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6987,6 +7106,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_political_system": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "US_universities_thinktanks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ucore": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7163,6 +7296,25 @@
         "both_layers": true
       },
       {
+        "node": "Anthropic",
+        "degree": 12,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "other",
+          "sink",
+          "space_real_economy"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SpaceX",
         "degree": 11,
         "neighbor_sectors": [
@@ -7231,24 +7383,6 @@
         ],
         "n_neighbor_sectors": 5,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Anthropic",
-        "degree": 11,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "sink",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"
