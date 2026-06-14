@@ -4203,126 +4203,126 @@
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 4.22
+     "bridge_score": 4.35
     },
     {
      "node": "NVIDIA",
      "degree": 20,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 3.98
+     "bridge_score": 3.96
     },
     {
      "node": "OpenAI",
-     "degree": 17,
+     "degree": 18,
      "n_neighbor_sectors": 6,
-     "both_layers": false,
-     "bridge_score": 2.32
+     "both_layers": true,
+     "bridge_score": 2.93
     },
     {
      "node": "SpaceX",
      "degree": 11,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 2.07
-    },
-    {
-     "node": "Anthropic",
-     "degree": 11,
-     "n_neighbor_sectors": 5,
-     "both_layers": true,
-     "bridge_score": 1.01
+     "bridge_score": 1.97
     },
     {
      "node": "Oracle",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": false,
-     "bridge_score": 0.93
+     "bridge_score": 0.8
+    },
+    {
+     "node": "Anthropic",
+     "degree": 11,
+     "n_neighbor_sectors": 5,
+     "both_layers": true,
+     "bridge_score": 0.78
+    },
+    {
+     "node": "US_Banks",
+     "degree": 9,
+     "n_neighbor_sectors": 5,
+     "both_layers": true,
+     "bridge_score": 0.34
     },
     {
      "node": "US_Government",
      "degree": 8,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": 0.38
+     "bridge_score": 0.12
     },
     {
      "node": "CoreWeave",
      "degree": 10,
      "n_neighbor_sectors": 5,
      "both_layers": false,
-     "bridge_score": 0.3
+     "bridge_score": 0.06
     },
     {
      "node": "Google",
      "degree": 7,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": 0.16
+     "bridge_score": -0.1
     },
     {
      "node": "MGX",
      "degree": 8,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -0.15
+     "bridge_score": -0.47
+    },
+    {
+     "node": "Stargate",
+     "degree": 8,
+     "n_neighbor_sectors": 4,
+     "both_layers": true,
+     "bridge_score": -0.47
     },
     {
      "node": "JPMorgan",
      "degree": 6,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -0.58
-    },
-    {
-     "node": "Binance",
-     "degree": 6,
-     "n_neighbor_sectors": 4,
-     "both_layers": true,
-     "bridge_score": -0.58
+     "bridge_score": -0.92
     },
     {
      "node": "Ripple",
      "degree": 5,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -0.79
+     "bridge_score": -1.14
+    },
+    {
+     "node": "Broadcom",
+     "degree": 7,
+     "n_neighbor_sectors": 4,
+     "both_layers": false,
+     "bridge_score": -1.2
     },
     {
      "node": "MP_Materials",
      "degree": 4,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.0
+     "bridge_score": -1.36
     },
     {
-     "node": "Broadcom",
+     "node": "Binance",
      "degree": 6,
+     "n_neighbor_sectors": 3,
+     "both_layers": true,
+     "bridge_score": -1.51
+    },
+    {
+     "node": "China",
+     "degree": 5,
      "n_neighbor_sectors": 4,
      "both_layers": false,
-     "bridge_score": -1.08
-    },
-    {
-     "node": "Coinbase",
-     "degree": 4,
-     "n_neighbor_sectors": 3,
-     "both_layers": true,
-     "bridge_score": -1.53
-    },
-    {
-     "node": "PrivateCredit_Funds",
-     "degree": 4,
-     "n_neighbor_sectors": 3,
-     "both_layers": true,
-     "bridge_score": -1.53
-    },
-    {
-     "node": "US_Banks",
-     "degree": 6,
-     "n_neighbor_sectors": 2,
-     "both_layers": true,
-     "bridge_score": -1.63
+     "bridge_score": -1.64
     }
    ]
   },

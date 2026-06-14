@@ -12,6 +12,16 @@ DOCS=os.path.join(ROOT,"docs"); REP=os.path.join(ROOT,"report")
 def slug(name): return "p-"+re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
 import glob as _glob
 MD_HAVE=set(os.path.basename(f)[:-3] for f in _glob.glob(os.path.join(ROOT,"research","*.md")))
+# stub -> readable block title (so "Documented in" shows human names, not slugs)
+BTITLE={}
+for _bf in _glob.glob(os.path.join(ROOT,"research","*.json")):
+    try:
+        import json as _json
+        BTITLE[os.path.basename(_bf)[:-5]]=(_json.load(open(_bf)).get("metadata",{}).get("title") or "")
+    except Exception: pass
+def _btitle(stub):
+    t=BTITLE.get(stub) or stub
+    return (t[:70]+"…") if len(t)>72 else t
 try: ENT_IDS=set(json.load(open(os.path.join(ROOT,"data","graph.json"))).get("entities",{}).keys())
 except Exception: ENT_IDS=set()
 def graph_nodes(p):
@@ -178,8 +188,8 @@ def card_html(i,p,seg=None,primary=True):
                     f'<span style="color:#6b665d">Public FEC totals (api.open.fec.gov); industry/sector breakdown requires itemized-receipt ingest — money is leverage/exposure, not proof of a quid pro quo (see r-influence-congress-funding-compromise).</span></div></div>')
     blocks=p.get("blocks",[])
     if blocks:
-        links=" ".join((f'<a href="r-{html.escape(b)}.html">{html.escape(b)}</a>' if b in MD_HAVE
-                        else f'<code>{html.escape(b)}</code>') for b in blocks)
+        links=" &middot; ".join((f'<a href="r-{html.escape(b)}.html">{html.escape(_btitle(b))}</a>' if b in MD_HAVE
+                        else f'{html.escape(_btitle(b))}') for b in blocks)
         body.append(f'<div class=src><b>Documented in:</b> {links}</div>')
     gn=graph_nodes(p)
     if gn:

@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "title": "Cross-system contagion & interconnection map - the transmission channels that link the otherwise-siloed bubbles (crypto<->Treasury<->banks<->AI marks; yen carry<->AI core; chip<->private credit; China leverage; the Fed circuit-breaker)",
+    "generated": "2026-06-14",
+    "frame": "The other blocks each map one subsystem; this block draws the EDGES BETWEEN them - the transmission channels along which a shock in one bubble propagates to the others. All edges here are STRUCTURAL OVERLAY (relationship / regulatory_legal): directional transmission links, not new money-flows, so they enrich the bubble map and connector analysis but are EXCLUDED from the SCC / Z3 / TLA+ proofs (which run on the financial layer only). Each channel is evidence-graded; the contagion is a documented mechanism, the firing of it is contingent. Also canonicalizes three figures that appear inconsistently across blocks, and states the highest-value open questions plainly.",
+    "relevance": "Interleaves [[macro-stablecoin-treasury-rail]] + [[macro-stablecoin-failures-manipulation]] + [[macro-bank-htm-marks]] + [[spec-unwind-timing]] (the crypto->Treasury->bank cascade); [[macro-carry-trades]] + [[fin-microsoft-openai]] (yen-carry into the AI core via SoftBank); [[fin-google-amazon-anthropic-meta]] + [[macro-cre-privatecredit]] (chip<->private-credit financing); [[geopolitics-chip-chokepoint-war]] + [[spec-rare-earth-statecraft]] + [[geopolitics-defense-industrial-base]] (China leverage); and adds the Fed as the circuit-breaker node absent elsewhere.",
+    "sources": "Synthesis of the cited blocks above plus primary reconciliations (NVIDIA/OpenAI: nvidianews + Fortune Feb-2026; Oracle RPO: Oracle Q1-FY26 release 2025-09-09; Anthropic Series G: anthropic.com + TechCrunch 2026-02-12). Full URLs in the rendered .md."
+  },
+  "channel_crypto_treasury_bank": {
+    "summary": "The most important missing cascade: a stablecoin run forces a Treasury-bill fire-sale, which spikes yields, which reopens bank held-to-maturity losses, which contracts credit into the AI buildout. Crypto, Treasuries, banks, and AI capex are one system, not four.",
+    "mechanism": "Stablecoins (Tether ~$140B+, USDC) hold their reserves overwhelmingly in T-bills. A loss of peg / redemption run forces fire-sale of T-bills -> yields spike at the front end -> the move up in rates deepens banks' unrealized HTM losses (already ~$300B+ and re-widening) -> stressed banks pull credit / raise equity -> the marginal lender to the AI/data-center buildout retrenches, pressuring the very marks ([[fin-ai-depreciation-debttrap]]) the core depends on. The chain is directional and well-evidenced as a mechanism; whether it fires depends on a peg break (the trigger).",
+    "grade": "fact (each link individually documented) + contingent (the cascade firing)"
+  },
+  "channel_yen_carry_ai_core": {
+    "summary": "The yen carry trade is the hidden funding leg under the AI buildout: cheap yen funds crowded global longs and SoftBank's capital, so a BOJ-driven carry unwind transmits straight into the AI core.",
+    "mechanism": "Japan's near-zero rates made the yen the world's funding currency; as JGB yields escape yield-curve control (0% -> ~2.66% in 2026), the carry cost rises and crowded carry-funded longs unwind ([[macro-carry-trades]]). SoftBank - a major OpenAI/Stargate financier - is yen-funded and yen-refinancing-exposed; a carry unwind raises its cost of capital and refinancing risk exactly as its AI commitments peak. So a Tokyo rates move is an AI-core funding shock.",
+    "grade": "fact (carry mechanism; SoftBank yen exposure) + contingent (unwind magnitude/timing)"
+  },
+  "channel_chip_private_credit": {
+    "summary": "Chip vendors are now also infrastructure financiers, fusing the semiconductor and private-credit bubbles: Broadcom's XPU compute-financing platform (with Apollo/Blackstone) and Meta's Blue Owl JV route private credit into the same buildout the chips serve.",
+    "mechanism": "Broadcom (custom XPUs for Google/Meta/OpenAI/Anthropic + two unnamed customers, analyst-flagged Apple/ByteDance) launched a ~$35B+ XPU compute-financing platform with Apollo/Blackstone; Meta funds Hyperion via a Blue Owl SPV. Private-credit capital ([[macro-cre-privatecredit]] / [[macro-private-credit-marks]]) thus finances the data centers that buy the chips - a second circular structure beside the equity loop, and a second place a private-credit mark-down would bite.",
+    "grade": "fact (the platforms) + labeled interpretation (the circularity read)"
+  },
+  "channel_china_leverage": {
+    "summary": "With the fragmented China nodes merged, one China actor now visibly holds multiple chokepoints over the Western AI/defense stack simultaneously - rare earths, chip inputs, undersea-cable and comms exposure - which is the point: the leverage is concentrated, not diffuse.",
+    "mechanism": "The same China node gates rare-earth/magnet supply to defense primes and the AI hardware chain ([[spec-rare-earth-statecraft]] / [[macro-critical-minerals]]), is the prime suspect in Baltic/Taiwan undersea-cable cuts and the Royal Mint Court comms-siting exposure ([[geopolitics-cables-space-layer]]), and runs the export-licensing 'faucet' on/off ([[geopolitics-chip-chokepoint-war]]). Merging the node makes the single-actor concentration legible across the map.",
+    "grade": "fact (the individual chokepoints) + labeled interpretation (concentration as deliberate leverage)"
+  },
+  "channel_fed_circuit_breaker": {
+    "summary": "The Fed is the missing node in the unwind scenarios: every cascade above can be interrupted (or amplified) by Fed policy - rate cuts, QE restart, or an emergency facility like a reopened BTFP - so any unwind thesis that assumes policy inaction is incomplete.",
+    "mechanism": "If the crypto->Treasury->bank cascade fires, the Fed's playbook is a backstop: a BTFP-style facility lets banks borrow against par (suppressing the HTM-forced-sale spiral), and QE / rate cuts cap the yield spike. This does not prevent the loss - it socializes and delays it - but it changes the timing and form of any unwind. The trigger panel ([[spec-unwind-timing]]) should be read against this reaction function.",
+    "grade": "fact (the tools exist + precedent: BTFP 2023) + contingent (whether/when deployed)"
+  },
+  "reconciliations": {
+    "summary": "Three figures appear in more than one form across blocks; the canonical values, for consistency.",
+    "items": [
+      {"figure": "NVIDIA -> OpenAI investment", "canonical": "The '$100B' was a milestone-linked LETTER OF INTENT (22 Sep 2025), tied to deploying 10GW; NVIDIA's Huang later called it 'never a commitment.' The CLOSED figure is $30B direct equity, as part of OpenAI's ~$110B round at a $730B pre-money valuation (27 Feb 2026; SoftBank +$30B, Amazon +$50B). Cite $30B as closed; treat $100B as a lapsed LOI. Canonical in [[fin-nvidia-openai]].", "grade": "fact"},
+      {"figure": "Oracle RPO", "canonical": "$455B remaining performance obligations at end of Q1 FY2026 (quarter ended 31 Aug 2025; reported 9 Sep 2025), up +359% YEAR-OVER-YEAR (vs ~$99B a year earlier), driven by four multi-billion contracts across three customers (OpenAI/xAI/Meta/NVIDIA/AMD). The $317B figure is the PRIOR QUARTER (Q4 FY2025, ended 31 May 2025) - so $317B->$455B is the QoQ step and +359% is the YoY rate; not a discrepancy once the periods are labeled.", "grade": "fact"},
+      {"figure": "Anthropic Series G", "canonical": "Closed 12 Feb 2026 at $350B PRE-money / $380B POST-money; the round expanded from a ~$20B target to $30B final on demand (led by GIC and Coatue). So '$350B' and '$380B' are pre vs post, and '$10-30B' is target vs final - both pairs are the same event, not conflicting rounds.", "grade": "fact"}
+    ]
+  },
+  "open_questions": {
+    "summary": "The highest-value questions the corpus cannot yet answer from public sources, with what would resolve each. These are genuine investigative gaps, stated so they are not mistaken for settled facts.",
+    "items": [
+      {"q": "What are the termination/notice terms on the cancelable AI-compute deals (SpaceX<->Google $920M/mo; OpenAI<->Oracle/CoreWeave)?", "resolves_with": "the contracts or 10-K/S-1 commitment disclosures; determines how fast the robust SCC can shed nodes.", "grade": "open"},
+      {"q": "What performance milestones gate Google's contingent $30B in Anthropic (of the headline $40B)?", "resolves_with": "a 13-D/round disclosure; determines whether a miss collapses the second funding ring.", "grade": "open"},
+      {"q": "What is CoreWeave's debt maturity schedule (~$21.4B; $6.7B current), and which bullets hit in 2026-27 as the Microsoft revenue share falls below 50%?", "resolves_with": "CoreWeave 10-K MD&A; determines refinancing-cliff risk.", "grade": "open"},
+      {"q": "Are Broadcom's two unnamed XPU customers Apple and/or ByteDance (a US export-control question)?", "resolves_with": "Broadcom earnings disclosure or Apple/ByteDance capex confirmation.", "grade": "open"},
+      {"q": "How large is SoftBank's yen-denominated refinancing need across 2026-27 relative to its AI commitments?", "resolves_with": "SoftBank debt schedule; sizes the carry-unwind transmission.", "grade": "open"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Explicit non-claims.",
+    "non_claims": [
+      "These transmission edges are NOT new money-flows and do NOT enter the formal proofs - they are structural-overlay channels for reading propagation.",
+      "It is NOT asserted that any cascade WILL fire - each is a documented mechanism whose trigger is contingent (and, for the Fed channel, potentially interrupted).",
+      "The China-concentration read is leverage/exposure, not an assertion of intent to use every chokepoint.",
+      "The reconciliations correct labeling/period/stage confusion; they do not allege error by any source."
+    ]
+  },
+  "edges": [
+    {"from": "Stablecoins", "to": "US_Treasuries", "instrument": "relationship", "raw_instrument": "stablecoin reserves are T-bill-concentrated; a run forces fire-sale (transmission channel)", "amount_usd": null, "status": "contingent", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY transmission: crypto->Treasury; excluded from proofs"},
+    {"from": "Tether", "to": "US_Treasuries", "instrument": "relationship", "raw_instrument": "~$140B+ reserves heavily in T-bills; single-issuer concentration in the Treasury bid", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY transmission; excluded from proofs"},
+    {"from": "US_Treasuries", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "a yield spike deepens bank HTM unrealized losses (~$300B+ and re-widening) - mark-reversal channel", "amount_usd": null, "status": "contingent", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY transmission: Treasury->banks; excluded from proofs"},
+    {"from": "US_Banks", "to": "SINK_lenders", "instrument": "relationship", "raw_instrument": "stressed banks contract credit to the AI/data-center buildout (the marginal lender retrenches)", "amount_usd": null, "status": "contingent", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY transmission: banks->AI credit; excluded from proofs"},
+    {"from": "SoftBank", "to": "Stargate", "instrument": "relationship", "raw_instrument": "yen-carry-funded capital into the AI buildout - a Tokyo rates move is an AI-core funding shock", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: carry->core funding channel; excluded from proofs"},
+    {"from": "SoftBank", "to": "OpenAI", "instrument": "relationship", "raw_instrument": "SoftBank yen-refinancing exposure sits under its OpenAI commitments (carry-unwind transmission)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: carry exposure; excluded from proofs"},
+    {"from": "Apple", "to": "Broadcom", "instrument": "relationship", "raw_instrument": "analyst-flagged as one of Broadcom's two unnamed custom-XPU customers (unconfirmed) - links Apple capex to the XPU stack", "amount_usd": null, "status": "weak", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: unconfirmed customer link; excluded from proofs"},
+    {"from": "Federal_Reserve", "to": "US_Banks", "instrument": "regulatory_legal", "raw_instrument": "circuit-breaker: a BTFP-style facility lets banks borrow at par, suppressing the HTM forced-sale spiral (precedent: 2023)", "amount_usd": null, "status": "contingent", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: Fed circuit-breaker; excluded from proofs"},
+    {"from": "Federal_Reserve", "to": "US_Treasuries", "instrument": "regulatory_legal", "raw_instrument": "circuit-breaker: QE / rate cuts cap a yield spike (socializes and delays the loss, changing unwind timing)", "amount_usd": null, "status": "contingent", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: Fed circuit-breaker; excluded from proofs"},
+    {"from": "China", "to": "Defense_Primes", "instrument": "relationship", "raw_instrument": "rare-earth/magnet + antimony chokepoint over the defense-industrial base (export-licensing faucet)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-system-contagion.json", "note": "OVERLAY: China leverage over defense; excluded from proofs"}
+  ],
+  "limits": "A TRANSMISSION-CHANNEL overlay that interleaves the otherwise-siloed subsystem blocks - it adds directional, structural edges (no cycles, excluded from the financial SCC and the Z3/TLA+ proofs) plus a reconciliations index and a plainly-stated open-questions list. Each channel's individual links are documented facts; the cascade firing is contingent and, for the Fed channel, potentially interrupted. No new money-flows are asserted. source: see the cited blocks and the rendered .md for full URLs."
+}

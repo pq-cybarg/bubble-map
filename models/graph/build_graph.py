@@ -36,6 +36,12 @@ ALIAS = {
  "US commercial banks":"US_Banks",
  "SpaceX":"SpaceX","SpaceX_IPO_Public_Markets":"SpaceX_IPO_Public","Starlink_Subscribers":"Starlink_Subscribers",
  "US_Government":"US_Government","MP_Materials":"MP_Materials","Defense_Primes":"Defense_Primes","Apple":"Apple",
+ # de-fragmentation merges (same entity referenced under two spellings across blocks -> one node, interleaving the subgraphs)
+ "China_state":"China","China (PRC)":"China","PRC":"China",
+ "Russia_elite_environment":"Russia","Russian_state":"Russia",
+ "TornadoCash":"Tornado_Cash","SamouraiWallet":"Samourai_Wallet",
+ "WorldLibertyFinancial":"World_Liberty_Financial","WLFI":"World_Liberty_Financial","USD1":"World_Liberty_Financial",
+ "Federal Reserve":"Federal_Reserve","FederalReserve":"Federal_Reserve","FOMC":"Federal_Reserve",
 }
 def canon(n):
     n=(n or "?").strip()

@@ -60,10 +60,76 @@ def match_persons(node):
                 out.append(p["name"]); break
     return sorted(set(out))
 
+# ---- readable display labels (canonical underscore IDs -> human names) ----
+ACR={"US","AI","SEC","CFTC","FDIC","OCC","FOMC","DTCC","LBMA","CME","ICE","JPM","MGX","GIC","CIC","REE",
+ "HALEU","XPU","TPU","USD1","WLFI","IPO","SPV","NRO","FBI","CIA","DNI","PIF","UAE","UK","EU","PRC","HBM",
+ "RPO","ETF","NSA","GCHQ","MI5","MI6","BIS","ECB","BOJ","RBI","RBA","BOC","NK","DPRK","IRGC","TSMC","ASML",
+ "AMD","ARM","FTX","JV","NPC","OER","CPI","PCE","GDP","SETT"}
+MIXED={"CoreWeave","OpenAI","SpaceX","BlackRock","BlueOwl","xAI","iFinex","SoftBank","WiseKey","SEALSQ",
+ "DeepSeek","ByteDance","NVIDIA","macOS","iPhone","YouTube","WhatsApp"}
+LABELS={  # explicit overrides (sinks, SPVs, compounds)
+ "SINK_lenders":"Lenders","SINK_bondmarket":"Bond market","SINK_debt":"Debt / balance sheet",
+ "SINK_capex":"Capex","SINK_backlog":"AI backlog","SINK_investors":"Investors",
+ "SINK_treasury_basis":"Treasury basis trade","SINK_scam_victims":"Scam victims",
+ "US_Treasuries":"US Treasuries","US_Banks":"US banks","US_Government":"US government",
+ "MP_Materials":"MP Materials","Apollo_Blackstone":"Apollo / Blackstone","Defense_Primes":"Defense primes",
+ "World_Liberty_Financial":"World Liberty Financial (USD1)","Meta_Hyperion_SPV":"Meta Hyperion SPV",
+ "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
+ "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
+ "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
+ "Government_of_Gujarat":"Government of Gujarat","Spanish_Government_SETT":"Spanish government (SETT)",
+ "UK_Labour_government":"UK Labour government","UK_government_cloud":"UK government (cloud)",
+ "China":"China","Russia":"Russia","Liberty Strategic Capital":"Liberty Strategic Capital"}
+def disp_label(nid):
+    if nid in LABELS: return LABELS[nid]
+    if nid in MIXED: return nid
+    s=nid[5:] if nid.startswith("SINK_") else nid
+    parts=s.replace("_"," ").split()
+    out=[]
+    for p in parts:
+        if p in MIXED: out.append(p)
+        elif p.upper() in ACR: out.append(p.upper())
+        elif p.isupper() and len(p)>1: out.append(p)  # already an acronym
+        else: out.append(p[:1].upper()+p[1:])
+    return " ".join(out)
+
+# ---- stub -> readable block title (for "documented in") ----
+TITLES={}
+for _f in glob.glob(os.path.join(ROOT,"research","*.json")):
+    try: TITLES[os.path.basename(_f)[:-5]]=(json.load(open(_f)).get("metadata",{}).get("title") or "")[:120]
+    except Exception: pass
+
+# ---- per-node cross-project description ----
+BDESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","other":"infrastructure / other"}
+out_e={}; in_e={}
+for e in edges:
+    out_e.setdefault(e["from"],[]).append(e); in_e.setdefault(e["to"],[]).append(e)
+def node_desc(name,bucket):
+    L=disp_label(name)
+    bits=[f"<b>{html.escape(L)}</b> — {BDESC.get(bucket,'')}."]
+    if name in scc:
+        bits.append("Part of the <b>circular core</b> (Tarjan SCC)" + (" — robust." if name in scc_robust else ", via a cancelable link."))
+    oe=sorted(out_e.get(name,[]),key=lambda x:(x.get("amount_usd") or 0),reverse=True)
+    ie=sorted(in_e.get(name,[]),key=lambda x:(x.get("amount_usd") or 0),reverse=True)
+    def cp(es,verb,dirn):
+        seen=[]
+        for e in es:
+            other=disp_label(e[dirn]); instr=e.get("instrument","")
+            if other not in [s[0] for s in seen]: seen.append((other,instr))
+            if len(seen)>=3: break
+        if not seen: return ""
+        return verb+" "+", ".join(f"{o} ({i})" for o,i in seen)
+    flow=[s for s in (cp(oe,"Funds/supplies","to"),cp(ie,"Funded/supplied by","from")) if s]
+    if flow: bits.append("; ".join(flow)+".")
+    blks=[TITLES.get(b,b) for b in sorted(blocks.get(name,[]))][:4]
+    if blks: bits.append("Documented in: "+ "; ".join(html.escape(b) for b in blks)+".")
+    return " ".join(bits)
+
 nodes=[]
 for name,meta in ents.items():
     sec=(meta or {}).get("sector","other"); bucket=SEC2BUCKET.get(sec,"other")
-    nodes.append({"id":name,"sector":sec,"bucket":bucket,"deg":deg.get(name,0),
+    nodes.append({"id":name,"label":disp_label(name),"desc":node_desc(name,bucket),
+                  "sector":sec,"bucket":bucket,"deg":deg.get(name,0),
                   "scc": name in scc, "robust": name in scc_robust,
                   "blocks":sorted(blocks.get(name,[])),"persons":match_persons(name)})
 def _amt(v):
@@ -108,6 +174,8 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 .lg{font-size:11px;color:#33312c;white-space:nowrap}.lg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle}
 #panel{position:absolute;top:12px;right:14px;z-index:6;width:300px;max-height:calc(100% - 24px);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:none;box-shadow:0 6px 22px #0002}
 #panel h2{margin:0 0 2px;font:600 17px Georgia,serif}#panel .pr{color:var(--mut);font-size:12px;margin-bottom:8px}
+#panel .desc{font-size:12.5px;line-height:1.55;color:#33312c;margin:10px 0 4px;border-top:1px solid var(--line);padding-top:9px}
+#panel .desc b{color:#1c1b19}
 #panel .k{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ac);font-weight:700;margin:11px 0 3px}
 #panel a{color:var(--ac2);text-decoration:none}#panel a:hover{text-decoration:underline}
 #panel .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;color:#fff;margin:0 4px 4px 0}
@@ -141,7 +209,9 @@ line.hl{stroke:#1f4e79!important;opacity:.95!important}
 <svg id=g></svg></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
-const NODES=__NODES__, LINKS=__LINKS__, COLORS=__COLORS__;
+const NODES=__NODES__, LINKS=__LINKS__, COLORS=__COLORS__, BTITLE=__BTITLE__;
+const NLABEL={}; NODES.forEach(n=>NLABEL[n.id]=n.label||n.id);
+const blockLink=s=>`<a href="r-${s}.html">${BTITLE[s]?BTITLE[s].replace(/&/g,'&amp;').replace(/</g,'&lt;'):s}</a>`;
 const W=()=>document.getElementById('stage').clientWidth, H=()=>document.getElementById('stage').clientHeight;
 const svg=d3.select('#g'); const root=svg.append('g');
 svg.append('defs').selectAll('marker').data(['fin','struct']).join('marker')
@@ -175,9 +245,9 @@ const rad=d=>4+Math.sqrt(d.deg)*2.2;
 const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{showPanel(d);egoFocus(d);});
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
-node.append('title').text(d=>d.id+'  ('+d.sector+', deg '+d.deg+')');
+node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
 const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('class','lab')
- .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.id);  // labels ON by default
+ .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.label);  // labels ON by default
 let fitted=false, curK=1, pendingFocus=null;
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
@@ -221,20 +291,22 @@ document.getElementById('tLab').onchange=e=>labels.style('display',e.target.chec
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
 const q=document.getElementById('q');
+const _match=(d,s)=>s&&((d.id.toLowerCase().includes(s))||((d.label||'').toLowerCase().includes(s)));
 q.oninput=()=>{const s=q.value.trim().toLowerCase();
- node.select('circle').attr('stroke',d=>{if(s&&d.id.toLowerCase().includes(s))return '#1f4e79';return d.scc?'#d4a017':'#fffdf8';})
-  .attr('stroke-width',d=>{if(s&&d.id.toLowerCase().includes(s))return 3.4;return d.scc?2.6:1;});};
+ node.select('circle').attr('stroke',d=>{if(_match(d,s))return '#1f4e79';return d.scc?'#d4a017':'#fffdf8';})
+  .attr('stroke-width',d=>{if(_match(d,s))return 3.4;return d.scc?2.6:1;});};
 document.getElementById('close').onclick=()=>{document.getElementById('panel').style.display='none';clearEgo();soloB=null;};
 function neighbors(d){const ins=[],outs=[];LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);
  if(s===d.id)outs.push({n:t,i:l.instrument||l.iclass,c:l.circular,a:l.amount}); if(t===d.id)ins.push({n:s,i:l.instrument||l.iclass,c:l.circular,a:l.amount});});
  const key=z=>(z.a?1:0); outs.sort((p,q)=>key(q)-key(p)); ins.sort((p,q)=>key(q)-key(p)); return {ins,outs};}
 function showPanel(d){const p=document.getElementById('panel'),b=document.getElementById('pbody');
  const {ins,outs}=neighbors(d);
- const blk=d.blocks.map(x=>`<a href="r-${x}.html">${x}</a>`).join(' &middot; ')||'<span style="color:#6b665d">—</span>';
+ const blk=d.blocks.map(blockLink).join(' &middot; ')||'<span style="color:#6b665d">—</span>';
  const per=d.persons.length?d.persons.map(x=>`<a href="persons.html#${pslug(x)}">${x}</a>`).join(', '):'';
- const nb=a=>a.length?('<ul>'+a.slice(0,16).map(x=>`<li>${x.c?'<b class=ea>↻</b> ':''}<a href="bubblemap.html#node=${encodeURIComponent(x.n)}" onclick="event.preventDefault();focusNode('${x.n.replace(/'/g,"\\\\'")}');">${x.n}</a> <span style=color:#6b665d>(${x.i||'—'})</span>${x.a?` <span class=amt>${x.a}</span>`:''}</li>`).join('')+(a.length>16?`<li style=color:#6b665d>+${a.length-16} more…</li>`:'')+'</ul>'):'<div style="color:#6b665d;font-size:12px">—</div>';
- b.innerHTML=`<h2>${d.id}</h2><div class=pr>${d.sector} &middot; degree ${d.deg}${d.scc?' &middot; <b style=color:#9a6a1a>circular core'+(d.robust?' (robust)':' (via cancelable)')+'</b>':''}</div>`
+ const nb=a=>a.length?('<ul>'+a.slice(0,16).map(x=>`<li>${x.c?'<b class=ea>↻</b> ':''}<a href="bubblemap.html#node=${encodeURIComponent(x.n)}" onclick="event.preventDefault();focusNode('${x.n.replace(/'/g,"\\\\'")}');">${NLABEL[x.n]||x.n}</a> <span style=color:#6b665d>(${x.i||'—'})</span>${x.a?` <span class=amt>${x.a}</span>`:''}</li>`).join('')+(a.length>16?`<li style=color:#6b665d>+${a.length-16} more…</li>`:'')+'</ul>'):'<div style="color:#6b665d;font-size:12px">—</div>';
+ b.innerHTML=`<h2>${d.label}</h2><div class=pr>${d.sector} &middot; degree ${d.deg}${d.scc?' &middot; <b style=color:#9a6a1a>circular core'+(d.robust?' (robust)':' (via cancelable)')+'</b>':''}</div>`
   +`<span class=pill style="background:${COLORS[d.bucket]}">${d.bucket}</span>`
+  +(d.desc?`<div class=desc>${d.desc}</div>`:'')
   +(per?`<div class=k>Key person</div><div>${per}</div>`:'')
   +`<div class=k>Outflows (${outs.length})</div>${nb(outs)}`
   +`<div class=k>Inflows (${ins.length})</div>${nb(ins)}`
@@ -291,6 +363,7 @@ window.addEventListener('hashchange',fromHash);fromHash();
 HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
       .replace("__N__",str(len(nodes))).replace("__E__",str(len(links)))
       .replace("__NODES__",json.dumps(nodes)).replace("__LINKS__",json.dumps(links))
+      .replace("__BTITLE__",json.dumps(TITLES))
       .replace("__COLORS__",json.dumps(COLORS)))
 open(os.path.join(DOCS,"bubblemap.html"),"w").write(HTML)
 print(f"wrote docs/bubblemap.html ({len(HTML)} bytes) - {len(nodes)} nodes, {len(links)} links, {len(scc)} in core")
