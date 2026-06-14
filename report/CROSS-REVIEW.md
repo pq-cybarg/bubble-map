@@ -23,20 +23,20 @@
 - **Microsoft** — 20 files
 - **NVIDIA** — 18 files
 - **Chainlink** — 16 files
+- **JPMorgan** — 16 files
 - **Stargate** — 16 files
 - **Anthropic** — 16 files
 - **FDIC** — 16 files
-- **JPMorgan** — 15 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-prediction-markets.json` — related files by shared entities (verify cross-refs exist)
-- blockchain-leg.json: 4 shared entities
-- altcoin-lens.json: 4 shared entities
-- temporal-bridges.json: 3 shared entities
-- spec-exchanges-asia.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
-- spec-network-overlay.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- digitalid-corporate.json: 2 shared entities
+## Newest file `spec-sdny-crypto-prosecution.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 4 shared entities
+- spec-unc-nk-attribution-map.json: 2 shared entities
+- spec-cambodia-scam-fara-paid-influence.json: 2 shared entities
+- spec-onchain-threat-actor-addresses.json: 2 shared entities
+- spec-tornado-samourai.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- spec-crypto-banking-debanking.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities

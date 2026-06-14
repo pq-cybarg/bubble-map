@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "SDNY/DOJ crypto-privacy prosecution practices — Samourai, Roman Storm/Tornado Cash, Pertsev, and the broader money-transmitter/developer-liability pattern (NEUTRAL, graded)",
+    "generated": "2026-06-13",
+    "frame": "A deliberately NEUTRAL map of how SDNY and DOJ have prosecuted crypto-PRIVACY software — presenting BOTH the prosecution's rationale (real laundering, incl. DPRK; the unlicensed-money-transmitter statute) AND the defense/critique (FinCEN's own view that non-custodial software isn't a money transmitter; an alleged Brady non-disclosure; a DOJ policy memo rejecting this model that SDNY proceeded against anyway; the 'criminalizing neutral code' / developer-liability chilling effect; a jury that hung on the serious counts). The point is the PATTERN and its tensions, graded — not a 'corruption' verdict.",
+    "WARNING": "Grade + neutrality discipline. The case facts (charges, the FinCEN Aug-2023 call, the Brady motion + its denial, the Blanche memo, the verdicts/sentences, Pertsev's Dutch conviction) are DOCUMENTED. 'Malicious prosecution / corruption' is the user's FRAMING — recorded as a question, NOT asserted as a finding. The COUNTERWEIGHT (Tornado Cash laundered $1B+ incl. for Lazarus/DPRK; real victim harm) is given equal billing. Both sides graded; no verdict on intent. Overlay edges excluded from the proofs.",
+    "method": "DOJ/SDNY + IRS-CI press; CoinDesk/Bitcoin Magazine/crypto.news (the FinCEN call + Brady motion); Mayer Brown/Nat-Law-Review (verdict analysis); Dutch court reporting (Pertsev); Coin Center (the code/privacy critique); FinCEN 2019 guidance. Each cell graded; prosecution and defense positions both stated.",
+    "cross_refs": ["spec-tornado-samourai.json","spec-onchain-threat-actor-addresses.json","spec-crypto-banking-debanking.json","spec-sec-sdny-regulatory.json","macro-stablecoin-failures-manipulation.json"]
+  },
+
+  "samourai_wallet": {
+    "case":"US v. Rodriguez & Hill (SDNY) — Keonne Rodriguez & William Lonergan Hill, founders of the non-custodial Bitcoin mixing wallet Samourai; charged Apr 2024 with conspiracy to commit money laundering + conspiracy to operate an unlicensed money-transmitting business.",
+    "prosecution_view":"Samourai's Whirlpool/Ricochet features were used to launder proceeds (DOJ alleged >$100M of criminal proceeds, incl. dark-market/fraud funds); operating as an unlicensed money transmitter.",
+    "defense_and_documented_tensions":[
+      {"item":"FinCEN's own view (the exculpatory call)","detail":"On an Aug 23 2023 call, FinCEN personnel told prosecutors they did NOT believe Samourai was a 'money transmitting business' because the wallet is NON-CUSTODIAL (consistent with FinCEN's 2019 guidance that anonymizing-software providers / non-custodial wallets are generally not money transmitters). Charges were filed ~6 months later anyway.","grade":"fact (per court filings)"},
+      {"item":"Alleged Brady violation","detail":"The defense argued DOJ withheld that exculpatory FinCEN call for ~14 months; moved to dismiss (May 2025). The motion was DENIED without a written opinion.","grade":"fact (motion + denial)"},
+      {"item":"The Blanche memo vs continuation","detail":"In Apr 2025 DOJ (Deputy AG Todd Blanche) disbanded the National Cryptocurrency Enforcement Team and directed prosecutors to STOP targeting mixing/tumbling services and non-custodial wallets for users' conduct. Samourai prosecutors sought a 16-day extension to consider dropping — but did NOT drop the case.","grade":"fact"}
+    ],
+    "outcome":"Rodriguez and Hill pleaded guilty and were sentenced to 5 and 4 years (Judge Denise Cote, Nov 2025) — i.e., the prosecution proceeded to conviction despite FinCEN's stated view AND the DOJ policy memo rejecting this model.",
+    "grade":"fact (charges, FinCEN call, Brady denial, Blanche memo, sentences); 'malicious prosecution' is the user's framing, not asserted"
+  },
+
+  "roman_storm_tornado_cash": {
+    "case":"US v. Roman Storm (SDNY) — Tornado Cash co-developer; tried 2025.",
+    "verdict":"Aug 6 2025: jury CONVICTED Storm on conspiracy to operate an unlicensed money-transmitting business, but HUNG (after Allen charges, ~4 days) on the more serious counts — conspiracy to commit money laundering and conspiracy to violate sanctions. Mar 9 2026: DOJ requested a RETRIAL on the deadlocked counts (proposed Oct 2026).",
+    "prosecution_view":"Tornado Cash was used to launder >$1B incl. funds from the DPRK/Lazarus Ronin hack; Storm knowingly operated/profited from an unlicensed transmitting business.",
+    "defense_and_critique":[
+      {"item":"Immutable, non-custodial code","detail":"Tornado Cash smart contracts are immutable and non-custodial — the developers don't hold user funds; the defense/Coin Center argue prosecuting this is 'criminalizing the publication of software code' and neutral privacy tooling.",
+       "grade":"fact (the legal argument); developer-liability question UNSETTLED"},
+      {"item":"FinCEN-opinion relevance disputed","detail":"SDNY argued the FinCEN/Samourai opinion was 'irrelevant' to the Storm case — a contested legal position the defense rejected.","grade":"fact (the dispute)"},
+      {"item":"The hung counts","detail":"The jury's inability to convict on money-laundering/sanctions conspiracy is itself a data point on the theory's strength.","grade":"fact"}
+    ],
+    "grade":"fact (split verdict + retrial request); the developer-liability precedent is genuinely unsettled"
+  },
+
+  "pertsev_netherlands": {
+    "detail":"Tornado Cash co-developer Alexey Pertsev was convicted in the Netherlands (May 2024), sentenced to 64 months for facilitating ~$1.2B of laundering (Jul 2019–Aug 2022); a judge characterized Tornado Cash as primarily a criminal tool. Released pending appeal (electronic monitor, 2025).",
+    "grade":"fact (Dutch conviction); appeal ongoing"
+  },
+
+  "broader_pattern": {
+    "title":"Beyond the three cases — the pattern and its tensions",
+    "points":[
+      {"item":"The money-transmitter theory on non-custodial software","detail":"The core legal move is applying the unlicensed-money-transmitter statute to software whose developers never custody funds — in tension with FinCEN's 2019 guidance. Whether that theory is valid is the central, unsettled question across Samourai/Storm.","grade":"contested (legal theory)"},
+      {"item":"The OFAC Tornado Cash sanction (separate track)","detail":"OFAC sanctioned the Tornado Cash smart contracts (Aug 2022 — first sanctioning of immutable code); the 5th Circuit VACATED it (Nov 2024) and Treasury lifted it (Mar 2025) — a court rejecting the parallel sanctions theory even as the criminal cases proceeded (spec-onchain-threat-actor-addresses).","grade":"fact"},
+      {"item":"Chilling effect on privacy tooling","detail":"The prosecutions coincided with privacy-wallet/mixer operators (e.g., Wasabi/zkSNACKs, Phoenix) restricting or exiting the US — a documented chilling effect on lawful-privacy software, regardless of intent.","grade":"fact (the exits)"},
+      {"item":"Selective-enforcement question","detail":"Critics note incumbent banks were permitted to run dollar tokens (JPM Coin) while crypto-native privacy devs faced criminal charges (cf the Ripple-vs-JPM-Coin asymmetry, spec-crypto-banking-debanking) — a selective-enforcement CONCERN, graded, not a proven claim.","grade":"contested"},
+      {"item":"Policy whipsaw","detail":"The 2025 deregulatory posture (Blanche memo, OFAC vacatur, the SEC/CFTC crypto reset) sits awkwardly beside SDNY continuing Samourai to a guilty plea — the executive saying 'stop' while a US Attorney's office proceeded.","grade":"fact (the tension)"}
+    ]
+  },
+
+  "the_counterweight": "For neutrality: the harm was real. Tornado Cash processed >$1B of illicit flows including the DPRK/Lazarus Ronin proceeds; Samourai mixed criminal proceeds; both Pertsev (Dutch) and Storm (one count) were convicted by juries/courts. The defensible prosecution interest is real money-laundering and sanctions evasion — the dispute is whether the money-transmitter/developer-liability THEORY is the lawful way to reach it, and whether the conduct of these specific prosecutions (the FinCEN non-disclosure, proceeding against the policy memo) was proper. Both sides are stated; neither 'corruption' nor 'pure persecution' is asserted as a finding.",
+
+  "edges": [
+    {"from":"SDNY","to":"Samourai_Wallet","instrument":"regulatory_legal","raw_instrument":"money-laundering + unlicensed-money-transmitter prosecution (2024); 5/4-yr sentences (2025) despite FinCEN's non-custodial view + the Blanche memo","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-sdny-crypto-prosecution.json","note":"OVERLAY: proceeded against agency guidance + DOJ policy"},
+    {"from":"SDNY","to":"Tornado_Cash","instrument":"regulatory_legal","raw_instrument":"US v. Roman Storm: convicted unlicensed-money-transmitting; HUNG on laundering/sanctions; retrial sought (2026)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-sdny-crypto-prosecution.json","note":"OVERLAY: developer-liability precedent unsettled"},
+    {"from":"FinCEN","to":"Samourai_Wallet","instrument":"regulatory_legal","raw_instrument":"Aug-2023 call: FinCEN viewed non-custodial Samourai as NOT a money transmitter (2019-guidance-consistent); disclosure delayed ~14mo (Brady motion, denied)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-sdny-crypto-prosecution.json","note":"OVERLAY: the exculpatory tension"},
+    {"from":"Lazarus_Group","to":"Tornado_Cash","instrument":"surveillance_security","raw_instrument":"the counterweight: DPRK laundered Ronin/hack proceeds through the mixer (>$1B total illicit)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-sdny-crypto-prosecution.json","note":"OVERLAY: real harm (neutrality)"}
+  ],
+
+  "limits":"DOCUMENTED: the charges, the Aug-2023 FinCEN call + the denied Brady motion, the Blanche memo, the Samourai 5/4-yr sentences, the Storm split verdict + retrial request, Pertsev's Dutch conviction, the OFAC vacatur, the privacy-tool exits. NEUTRALITY: the prosecution interest (real DPRK/laundering harm; jury/court convictions) is given equal weight to the defense critique (FinCEN's own view; Brady; criminalizing non-custodial code; proceeding against the policy memo). NOT asserted: that the prosecutions were 'corrupt' or 'malicious' (the user's framing, recorded as the open question) — nor that they were clearly proper. The developer-liability/money-transmitter THEORY is genuinely unsettled law. Overlay edges excluded from the proofs."
+}

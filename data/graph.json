@@ -840,6 +840,10 @@
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
     },
+    "Samourai_Wallet": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "ScaleAI": {
       "sector": "ai_data",
       "has_exogenous_revenue": true
@@ -2408,6 +2412,58 @@
       "cancelable": false,
       "source_file": "spec-tornado-samourai.json",
       "note": "64 months for laundering ~$2.2B; multi-jurisdiction developer-liability question."
+    },
+    {
+      "from": "SDNY",
+      "to": "Samourai_Wallet",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "money-laundering + unlicensed-money-transmitter prosecution (2024); 5/4-yr sentences (2025) despite FinCEN's non-custodial view + the Blanche memo",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "SDNY",
+      "to": "Tornado_Cash",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "US v. Roman Storm: convicted unlicensed-money-transmitting; HUNG on laundering/sanctions; retrial sought (2026)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "FinCEN",
+      "to": "Samourai_Wallet",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Aug-2023 call: FinCEN viewed non-custodial Samourai as NOT a money transmitter (2019-guidance-consistent); disclosure delayed ~14mo (Brady motion, denied)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "Lazarus_Group",
+      "to": "Tornado_Cash",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the counterweight: DPRK laundered Ronin/hack proceeds through the mixer (>$1B total illicit)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
     },
     {
       "from": "First_Brands",
@@ -4582,10 +4638,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 267,
-    "num_edges": 270,
+    "num_nodes": 268,
+    "num_edges": 274,
     "num_financial_edges": 125,
-    "num_structural_edges": 145,
+    "num_structural_edges": 149,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4644,8 +4700,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -4656,8 +4712,13 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -4668,11 +4729,6 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -6186,6 +6242,13 @@
         "in_robust_core": false
       },
       "SamouraiWallet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Samourai_Wallet": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
