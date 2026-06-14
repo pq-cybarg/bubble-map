@@ -49,8 +49,14 @@ The FDIC dropped the problem-bank **asset total**, but that's cosmetic — the f
 
 > **Opacity of the aggregate ≠ opacity of the facts.** The per-bank RC-B + FDIC API rebuild the exact number that was withdrawn (`bank_exposure.py` does), and FHLB advances / discount-window spikes / CDS / uninsured-deposit share give independent stress signals.
 
+## The aggregate hides the tail — per-bank HTM concentration *(computed, FDIC Q1 2026, n=194 — `data/bank_exposure.json`)*
+Running the reconstruction above on the top-194 banks: HTM unrealized loss totals **~$209B against ~$2,265B equity (9.2% system-wide)** — reassuring in aggregate, **alarming in the tail**:
+- **Concentration:** the **top 5 banks hold ~73%** of the HTM dollar loss, **top 10 ~86%, top 20 ~93%** (Herfindahl of the HTM-$ share ≈ **0.19** vs 0.005 for an even split). It is a handful of balance sheets, not a diffuse condition.
+- **Ranked by HTM loss / equity (the SVB ratio):** USAA Federal Savings **~50%**, Charles Schwab Bank **~43%**, Bank of Hawaii **~35%**, **Bank of America ~34% (and the largest in dollars, ~$81B)**, Schwab Premier ~27%, Morgan Stanley Private Bank ~23%, Wells Fargo ~19%. **24 banks ≥10% of equity, 9 ≥20%, 4 ≥30%, 1 ≥50%.**
+- **The shape is the SVB setup by name:** the most exposed are **deposit-gathering, securities-heavy** institutions (USAA, Schwab) plus the two biggest GSIBs in dollar terms (BofA, Wells) — solvent at par, materially impaired at market, realized only on a forced sale.
+
 ## Posture
-Read "book equity" and HTM "held-to-par" as the **most solvent admissible presentation**, and stress-test at market (AFS + HTM marked) and under forced-sale — not at cost.
+Read "book equity" and HTM "held-to-par" as the **most solvent admissible presentation**, and stress-test at market (AFS + HTM marked) and under forced-sale — not at cost. **Read the *aggregate* the same way: the 9.2% system figure is itself a flattering framing of a tail where named banks sit at 30–50% of equity.**
 
 ## Where this sits in the larger pattern *(updated 2026-06-11)*
 HTM amortized cost is the **first of five** self-marked numbers: bank securities (here), AI fair-value marks ([[fin-google-amazon-anthropic-meta]]), private-credit NAVs ([[macro-private-credit-marks]]), insurance captive marks ([[spec-insurance-bermuda]]), and AI-compute depreciation ([[fin-ai-depreciation-debttrap]]). The [[self_marked_value]] proof (U1–U4) shows the four balance-sheet marks are one defect whose gaps **correlate under a common factor**, so "diversified across asset classes" is false; the [cross-sectional analysis](https://pq-cybarg.github.io/bubble-map/charts.html#xsec) measures that factor at **~91%** of credit-spread variance. The bank-HTM hole is the original instance (SVB, 2023) — and the same rate move that re-opens it is the common factor that simultaneously prices the other four.
