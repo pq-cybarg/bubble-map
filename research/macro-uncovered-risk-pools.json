@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "title": "Below-threshold & out-of-scope risk pools — credit unions, private credit/NDFIs, ILCs, the Farm Credit System, foreign-bank US branches, and the suppressed FDIC problem-bank total",
+    "generated": "2026-06-14",
+    "frame": "The FDIC bank aggregate is one slice of US credit. This block maps the comparable HTM/CRE/duration/credit risk that sits OUTSIDE or BELOW that lens - a different regulator, a smaller size cut, or no public disclosure at all - so the 'banks look clean' read isn't mistaken for 'the system is clean.' Real figures where public; flagged where opaque. Companion to [[macro-fdic]] (the coverage-gaps section) and [[macro-bank-htm-marks]] (the per-bank tail) and [[macro-cre-privatecredit]] (the NDFI chain).",
+    "relevance": "Closes the coverage-gap dig from [[macro-fdic]] section 5; stacks the parallel pools against the FDIC bank number; feeds the self-marked-value and CRE/duration threads with the uncovered reservoirs.",
+    "sources": "NCUA Quarterly Data Summaries / press (2025); Ceto (CU failures); Fed FEDS note + NY Fed Teller Window + Morgan Stanley/With Intelligence (private credit/BDC); CRS R46489 + Wikipedia + ICBA (ILCs); Farm Credit Funding / FCS combined results (FCS); Federal Reserve IBA release (foreign-bank branches); Wolf Street (FDIC problem-bank-total suppression). Full URLs in the rendered .md."
+  },
+  "credit_unions": {
+    "summary": "A ~$2.43T parallel banking system under a DIFFERENT regulator (NCUA), entirely absent from FDIC data - and now in its worst failure cluster in years.",
+    "points": [
+      {"item": "Size & capital", "detail": "Federally-insured credit unions held ~$2.43T in assets at Q4 2025 (+$126B / +5.4% YoY); aggregate net-worth ratio ~11.26% (up YoY) - well-capitalized in aggregate.", "grade": "fact (NCUA)"},
+      {"item": "Rising stress", "detail": "Delinquency climbed through 2025: 91bp (Q2) -> 95bp (Q3) -> 103bp (Q4), up ~5bp YoY; CRE/non-commercial-RE delinquency ~88bp (Q4, +10bp YoY).", "grade": "fact (NCUA)"},
+      {"item": "Failure cluster", "detail": "6 credit-union failures Apr-Aug 2025 - the largest cluster in ~7 years, ending a near-two-year stretch with no liquidations; all small (largest ~$58.5M) with weak profitability + deteriorating credit + governance gaps.", "grade": "fact (NCUA/Ceto)"},
+      {"item": "Why it's a blind spot", "detail": "CUs file NCUA Call Report Form 5300 (not FDIC), carry their own HTM/AFS unrealized securities losses and CRE/member-business-lending concentration, and are CECL-covered - none of it in the FDIC aggregate the bubble thesis usually cites.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "private_credit_ndfi": {
+    "summary": "The largest uncovered reservoir - the risk that MIGRATED off bank balance sheets, now ~$1.7-3T and the home of AI-datacenter financing.",
+    "points": [
+      {"item": "Size", "detail": "US private credit ~$1.7T (some scopes $2.3-3T at start-2025), projected ~$5T by 2029 (Morgan Stanley) - up ~5x since 2009.", "grade": "fact (range; scope-dependent)"},
+      {"item": "Vehicles", "detail": "BDCs (listed + non-traded) ~$500B; private-wealth vehicles (BDCs/interval/tender funds) >$400B; evergreen private-credit funds ~$644B (Jun 2025, +28% H1). Manager-set NAVs - the third self-marked number ([[macro-private-credit-marks]]).", "grade": "fact"},
+      {"item": "Bank linkage", "detail": "Banks lend to NDFIs ~$1.97T (Fed) - so bank risk didn't vanish, it moved one step out and became opaque; this is exactly where AI-datacenter SPV financing lives ([[macro-cre-privatecredit]]).", "grade": "fact"}
+    ]
+  },
+  "industrial_loan_companies": {
+    "summary": "FDIC-INSURED but Fed-UNSUPERVISED - the charter loophole that lets commercial/fintech firms own a bank without consolidated supervision.",
+    "points": [
+      {"item": "Size", "detail": "Total ILC assets ~$247.7B (2025), up from ~$25.1B (1997); ~23 active charters; 6 ILCs over $10B; the largest ~$116.3B.", "grade": "fact (CRS/Wikipedia)"},
+      {"item": "The loophole", "detail": "ILCs are FDIC-insured yet their commercial parents escape Federal Reserve consolidated (bank-holding-company) supervision - the basis of the ICBA's 'close the loophole' campaign and the fintech (Square/etc.) and retail/auto interest in the charter.", "grade": "fact + contested (policy)"}
+    ]
+  },
+  "farm_credit_system": {
+    "summary": "A federal GSE lending complex for agriculture - off the FDIC map, exposed to farmland values and ag commodity cycles.",
+    "points": [
+      {"item": "Size", "detail": "The Farm Credit System (a government-sponsored enterprise, funded via the Federal Farm Credit Banks Funding Corp) held roughly ~$188B farm real-estate loans + ~$81B non-real-estate farm loans at year-end 2024 (a ~$400B+ asset GSE).", "grade": "fact (FCS/Fed)"},
+      {"item": "Exposure", "detail": "Concentrated in farmland values and ag commodity cycles; a farmland-price correction or a trade-war ag shock is its tail - distinct from the bank/CRE map.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "foreign_bank_us_branches": {
+    "summary": "US branches/agencies of foreign banks - a large dollar-funding/repo node tracked by the Fed, separate from the FDIC bank set.",
+    "points": [
+      {"item": "Size & role", "detail": "US branches and agencies of foreign banking organizations hold ~$2T+ in US assets (Fed IBA release), heavily involved in wholesale dollar funding and repo - a transmission node for offshore-dollar stress, not in the FDIC domestic-bank aggregate.", "grade": "fact (Fed IBA); exact total in the release"}
+    ]
+  },
+  "suppressed_problem_bank_total": {
+    "summary": "Even within FDIC scope, the size of the troubled set is now hidden.",
+    "points": [
+      {"item": "The blackout", "detail": "Since Q4 2024 - the first time since 1990 - the FDIC publishes only the problem-bank COUNT (~54), not the ASSET total, citing the risk that disclosure could trigger a 'disorderly run.' The distribution is deliberately below disclosure; the per-bank reconstruction in [[macro-bank-htm-marks]] partly recovers it.", "grade": "fact"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Stack the pools: the FDIC bank number is a floor, not the system.",
+    "points": [
+      {"item": "The uncovered stack", "detail": "Beyond the FDIC bank aggregate sit ~$2.43T credit unions (rising delinquency + a 7-yr-high failure cluster), ~$1.7-3T private credit/NDFIs (manager-marked, AI-datacenter-heavy), ~$248B ILCs (insured-but-unsupervised), a ~$400B+ Farm Credit GSE, and ~$2T+ foreign-bank US branches - each carrying its own HTM/CRE/duration/credit risk, mostly outside the lens the 'banks look clean' read uses.", "grade": "fact + labeled interpretation"},
+      {"item": "Why it matters", "detail": "The same rate/credit common factor ([[macro-cross-sectional-analysis]], ~91%) that prices the bank HTM hole also prices credit-union securities books, private-credit NAVs, and farmland - so 'the banks are fine' understates a correlated, larger pool. Credit unions and private credit are the two biggest, and both show rising stress now.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim any of these pools is insolvent or failing system-wide - credit unions and the FCS are well-capitalized in aggregate; the point is they are UNCOVERED by the usual FDIC lens and carry correlated risk.",
+      "Private-credit size is scope-dependent ($1.7T-$3T); the range is stated rather than a false-precise single number.",
+      "The ILC 'loophole' framing is a documented policy debate (ICBA et al.), not an assertion of wrongdoing by any ILC.",
+      "Foreign-bank-branch and FCS exact totals live in their primary releases; figures here are as-reported approximations.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Credit_Unions", "to": "US_household_credit", "instrument": "relationship", "raw_instrument": "~$2.43T NCUA parallel system; rising delinquency (103bp) + 6 failures 2025 (7-yr-high); own HTM/CRE risk, outside FDIC data", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-uncovered-risk-pools.json", "note": "OVERLAY: uncovered pool; excluded from proofs"},
+    {"from": "US_Banks", "to": "PrivateCredit_Funds", "instrument": "relationship", "raw_instrument": "~$1.97T bank lending to NDFIs - risk migrated off-balance-sheet into manager-marked private credit (~$1.7-3T)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-uncovered-risk-pools.json", "note": "OVERLAY: risk migration; excluded from proofs"},
+    {"from": "ILCs", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "~$248B FDIC-insured but Fed-unsupervised charters (the loophole) - a parallel insured-deposit pool", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-uncovered-risk-pools.json", "note": "OVERLAY: supervision gap; excluded from proofs"},
+    {"from": "Foreign_Bank_US_Branches", "to": "SINK_lenders", "instrument": "relationship", "raw_instrument": "~$2T+ US branches/agencies of foreign banks - wholesale dollar-funding/repo node (Fed IBA), outside the FDIC set", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-uncovered-risk-pools.json", "note": "OVERLAY: offshore-dollar transmission; excluded from proofs"}
+  ],
+  "limits": "Maps the credit-risk pools below or outside the FDIC bank lens, with real figures: credit unions ~$2.43T (NCUA; delinquency 103bp, 6 failures 2025 = 7-yr-high cluster); private credit/NDFIs ~$1.7-3T (BDCs ~$500B, evergreen $644B, bank-to-NDFI $1.97T); ILCs ~$248B (FDIC-insured/Fed-unsupervised loophole, 23 charters, largest ~$116B); the Farm Credit System GSE (~$188B farm-RE + ~$81B non-RE loans, YE2024); foreign-bank US branches ~$2T+ (Fed IBA); and the FDIC's suppressed problem-bank ASSET total (count-only since Q4 2024). The FDIC bank number is a floor; credit unions and private credit are the two biggest uncovered reservoirs, both showing rising stress. Overlay edges excluded from the proofs. source: see verification-log-equivalent sources + the rendered .md.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Credit unions", "result": "$2.43T assets, NW 11.26%, delinquency 103bp Q4-2025; 6 failures Apr-Aug 2025 = largest in ~7yr (NCUA Q4-2025 / Ceto)."},
+      {"check": "Private credit", "result": "~$1.7-3T market, ~$5T by 2029 (MS); BDCs ~$500B; evergreen $644B (Jun-2025); bank-to-NDFI ~$1.97T (Fed)."},
+      {"check": "ILCs", "result": "~$247.7B total (2025), 23 charters, largest ~$116.3B; FDIC-insured/Fed-unsupervised loophole (CRS R46489)."},
+      {"check": "FCS / FBO / FDIC blackout", "result": "FCS ~$188B RE + ~$81B non-RE farm loans YE2024; foreign-bank US branches ~$2T+ (Fed IBA); FDIC problem-bank asset total suppressed since Q4-2024 (Wolf Street)."}
+    ]
+  }
+}

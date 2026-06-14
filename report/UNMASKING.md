@@ -47,7 +47,7 @@ It is the same defect four times: a self-chosen valuation that holds until reali
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 96 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **306 nodes, 326 directed edges.**
+Consolidating 97 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **310 nodes, 330 directed edges.**
 
 Each edge is tagged with a **layer**: **128 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **198 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 

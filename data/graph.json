@@ -272,6 +272,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Credit_Unions": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Creditors": {
       "sector": "creditor",
       "has_exogenous_revenue": false
@@ -404,6 +408,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Foreign_Bank_US_Branches": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -487,6 +495,10 @@
     "ICIJ": {
       "sector": "journalism",
       "has_exogenous_revenue": false
+    },
+    "ILCs": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "InQTel": {
       "sector": "state_intel",
@@ -1143,6 +1155,10 @@
     "US_Treasuries": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "US_household_credit": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "US_political_system": {
       "sector": "other",
@@ -5257,6 +5273,58 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "Credit_Unions",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$2.43T NCUA parallel system; rising delinquency (103bp) + 6 failures 2025 (7-yr-high); own HTM/CRE risk, outside FDIC data",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-uncovered-risk-pools.json",
+      "note": ""
+    },
+    {
+      "from": "US_Banks",
+      "to": "PrivateCredit_Funds",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "~$1.97T bank lending to NDFIs - risk migrated off-balance-sheet into manager-marked private credit (~$1.7-3T)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-uncovered-risk-pools.json",
+      "note": ""
+    },
+    {
+      "from": "ILCs",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$248B FDIC-insured but Fed-unsupervised charters (the loophole) - a parallel insured-deposit pool",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-uncovered-risk-pools.json",
+      "note": ""
+    },
+    {
+      "from": "Foreign_Bank_US_Branches",
+      "to": "SINK_lenders",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$2T+ US branches/agencies of foreign banks - wholesale dollar-funding/repo node (Fed IBA), outside the FDIC set",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-uncovered-risk-pools.json",
+      "note": ""
+    },
+    {
       "from": "Prince_Group",
       "to": "SINK_scam_victims",
       "instrument": "other",
@@ -5466,10 +5534,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 306,
-    "num_edges": 326,
-    "num_financial_edges": 128,
-    "num_structural_edges": 198,
+    "num_nodes": 310,
+    "num_edges": 330,
+    "num_financial_edges": 129,
+    "num_structural_edges": 201,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5521,10 +5589,6 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -5532,16 +5596,20 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -5561,12 +5629,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
@@ -5581,6 +5643,12 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -6082,6 +6150,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Credit_Unions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Creditors": {
         "total_usd": 9000000000,
         "circular_usd": 0,
@@ -6313,6 +6388,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Foreign_Bank_US_Branches": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GARM_WFA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6454,6 +6536,13 @@
         "in_robust_core": false
       },
       "ICIJ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ILCs": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7608,6 +7697,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_household_credit": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_political_system": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7778,6 +7874,25 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 11,
+        "neighbor_sectors": [
+          "central_bank",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -7851,24 +7966,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 9,
-        "neighbor_sectors": [
-          "central_bank",
-          "other",
-          "regulator",
-          "sink",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -8017,6 +8114,23 @@
         "both_layers": true
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 5,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "insurance",
+          "retail"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -8051,31 +8165,15 @@
         "both_layers": true
       },
       {
-        "node": "SoftBank",
-        "degree": 5,
+        "node": "SINK_lenders",
+        "degree": 7,
         "neighbor_sectors": [
-          "ai_lab",
-          "other",
-          "spv"
+          "bank",
+          "neocloud",
+          "other"
         ],
         "n_neighbor_sectors": 3,
         "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Binance",
-        "degree": 6,
-        "neighbor_sectors": [
-          "financier",
-          "other",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 3,
         "layers": [
           "financial",
           "structural"
