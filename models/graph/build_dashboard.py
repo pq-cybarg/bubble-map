@@ -17,6 +17,21 @@ xs=load("cross_section.json")
 
 # ---- derive key metrics ----
 an=g.get("analysis",{})
+# readable display labels for canonical underscore node IDs (mirror of build_bubblemap)
+_ACR={"US","AI","SEC","CFTC","FDIC","OCC","FOMC","DTCC","LBMA","CME","ICE","JPM","MGX","GIC","CIC","REE","HALEU","XPU","TPU","USD1","WLFI","IPO","SPV","NRO","FBI","CIA","DNI","PIF","UAE","UK","EU","PRC","HBM","RPO","ETF","TSMC","ASML","AMD","ARM","FTX","JV","NK","DPRK"}
+_MIXED={"CoreWeave","OpenAI","SpaceX","BlackRock","BlueOwl","xAI","SoftBank","SEALSQ","DeepSeek","ByteDance","NVIDIA"}
+_LAB={"SINK_lenders":"Lenders","SINK_bondmarket":"Bond market","SINK_debt":"Debt / balance sheet","SINK_capex":"Capex","SINK_backlog":"AI backlog","SINK_investors":"Investors","SINK_treasury_basis":"Treasury basis trade","US_Treasuries":"US Treasuries","US_Banks":"US banks","US_Government":"US government","MP_Materials":"MP Materials","Apollo_Blackstone":"Apollo / Blackstone","Defense_Primes":"Defense primes","World_Liberty_Financial":"World Liberty Financial (USD1)","Meta_Hyperion_SPV":"Meta Hyperion SPV","Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet"}
+def dlabel(nid):
+    if nid in _LAB: return _LAB[nid]
+    if nid in _MIXED: return nid
+    s=nid[5:] if nid.startswith("SINK_") else nid
+    out=[]
+    for p in s.replace("_"," ").split():
+        if p in _MIXED: out.append(p)
+        elif p.upper() in _ACR: out.append(p.upper())
+        elif p.isupper() and len(p)>1: out.append(p)
+        else: out.append(p[:1].upper()+p[1:])
+    return " ".join(out)
 core=an.get("core_scc_all",[]); robust=an.get("core_scc_robust_excl_cancelable",[])
 cancel_only=an.get("nodes_only_circular_via_cancelable",[])
 ncyc=an.get("num_elementary_cycles","?"); nself=an.get("nvidia_self_funding",{})
@@ -127,7 +142,7 @@ def tbl(headers,rows):
     return f"<table><thead><tr>{h}</tr></thead><tbody>{r}</tbody></table>"
 
 verd=tbl(["Engine","What it shows","Verdict"],VERDICTS)
-conn_rows=[[c["node"],c["degree"],c["n_neighbor_sectors"],c["source_files"],
+conn_rows=[[dlabel(c["node"]),c["degree"],c["n_neighbor_sectors"],c["source_files"],
             "financial+structural" if c["both_layers"] else (c["layers"][0] if c.get("layers") else "—"),
             ", ".join(c["neighbor_sectors"][:7])] for c in an.get("top_cross_layer_connectors",[])[:12]]
 conn_t=tbl(["Node","Degree","Sectors bridged","Source files","Layers","Neighbor sectors"],conn_rows)
@@ -216,8 +231,8 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 {KPIS}
 <h2 id=verdicts>Formal verdicts (every engine)</h2>{verd}
 <h2 id=core>The circular core</h2>
-<p><b>Robust core SCC ({an.get('core_scc_robust_size','?')}):</b> {html.escape(", ".join(robust))}.<br>
-<b>Circular only via cancelable edges:</b> {html.escape(", ".join(cancel_only)) or '—'} (SpaceX: operationally separable, financially cross-held by Google's ~$100B stake).</p>
+<p><b>Robust core SCC ({an.get('core_scc_robust_size','?')}):</b> {html.escape(", ".join(dlabel(x) for x in robust))}.<br>
+<b>Circular only via cancelable edges:</b> {html.escape(", ".join(dlabel(x) for x in cancel_only)) or '—'} (SpaceX: operationally separable, financially cross-held by Google's ~$100B stake).</p>
 <p class=muted>Edges split into a <b>financial layer</b> ({an.get('num_financial_edges','?')} capital/credit/compute flows) and a <b>structural layer</b> ({an.get('num_structural_edges','?')} governance/legal/security/ownership relationships). The SCC computed over the financial layer alone equals the SCC over all edges (<code>structural_edges_add_no_cycle = {an.get('structural_edges_add_no_cycle','?')}</code>): the circular core rests on capital flows; the graded structural edges add no cycle.</p>
 <h2 id=connectors>Cross-layer connectors</h2>
 <p class=muted>Nodes ranked by distinct neighbor-sectors bridged (degree, source-files, and whether they span both layers). This quantifies the bridge nodes that tie the financial core to the surrounding layers.</p>{conn_t}
@@ -331,13 +346,33 @@ if os.path.isdir(DOCS):
             out.append(f"<p>{inline(' '.join(buf))}</p>")
         return "\n".join(out)
 
-    groups={}
+    def _slug_words(s):
+        return " ".join(w.upper() if w.upper() in _ACR else w.capitalize() for w in s.replace("-"," ").split())
+    def _md_h1(stub):
+        p=os.path.join(RES,stub+".md")
+        if os.path.exists(p):
+            for ln in open(p):
+                if ln.startswith("# "): return ln[2:].strip()
+        return ""
+    def _plain(md):
+        t=_re.sub(r'\[([^\]]+)\]\([^)]+\)',r'\1',md)
+        t=_re.sub(r'[#>*_`|]',' ',t); t=_re.sub(r'https?://\S+',' ',t); t=_re.sub(r'\s+',' ',t)
+        return t.strip()
+    def _rtitle(base):
+        stub=base[:-5]
+        try: t=json.load(open(os.path.join(RES,base))).get("metadata",{}).get("title")
+        except Exception: t=None
+        return t or _md_h1(stub) or _slug_words(stub)
+
+    groups={}; SEARCHIDX=[]
     for fn in sorted(glob.glob(os.path.join(RES,"*.json"))):
-        base=os.path.basename(fn)
-        try: d=json.load(open(fn)); title=d.get("metadata",{}).get("title",base)
-        except: title=base
-        nsrc=open(fn).read().count("http")
+        base=os.path.basename(fn); stub=base[:-5]
+        title=_rtitle(base)
+        raw=open(fn).read(); nsrc=raw.count("http")
         groups.setdefault(section(base),[]).append((base,title,nsrc))
+        mdp=os.path.join(RES,stub+".md")
+        ex=_plain(open(mdp).read())[:800] if os.path.exists(mdp) else _plain(raw)[:600]
+        SEARCHIDX.append({"s":stub,"t":title,"x":ex,"p":stub in md_stubs,"sec":section(base)})
 
     # render each .md write-up as an on-site, themed, interlinked page  ->  docs/r-<stub>.html
     npages=0
@@ -345,8 +380,7 @@ if os.path.isdir(DOCS):
         stub=os.path.basename(fn)[:-3]
         try: md=open(fn).read()
         except Exception: continue
-        try: title=json.load(open(os.path.join(RES,stub+".json"))).get("metadata",{}).get("title",stub) if os.path.exists(os.path.join(RES,stub+".json")) else stub
-        except Exception: title=stub
+        title=_rtitle(stub+".json") if os.path.exists(os.path.join(RES,stub+".json")) else (_md_h1(stub) or _slug_words(stub))
         srcbar=(f'<p class=muted style="border-top:1px solid #e4ddcc;margin-top:30px;padding-top:12px">'
                 f'<a href="research.html">&larr; Research index</a> &middot; structured data: '
                 f'<a href="{GH}{stub}.json">{stub}.json</a>'
@@ -357,18 +391,38 @@ if os.path.isdir(DOCS):
             f"<body>{NAVBAR}<main>{md2html(md)}{srcbar}</main></body></html>")
         open(os.path.join(DOCS,f"r-{stub}.html"),"w").write(PG); npages+=1
 
-    body=[f"<p class=muted>{nres_json} cited research blocks. Each is a readable on-site page (rendered from its <code>.md</code>) and links to its structured data (<code>.json</code>, with every source URL) on GitHub. Generated {BUILD_DATE}.</p>"]
+    body=[f'<p class=muted>{nres_json} cited research blocks. Each is a readable on-site page (rendered from its <code>.md</code>) and links to its structured data (<code>.json</code>, with every source URL) on GitHub. Generated {BUILD_DATE}.</p>']
+    body.append('<input id=rq type=search placeholder="Search the research — titles &amp; content (approximate matches, ranked)…" autocomplete=off '
+                'style="width:100%;box-sizing:border-box;padding:11px 14px;font-size:15px;border:1px solid #e4ddcc;border-radius:9px;background:#fffdf8;margin:6px 0 4px;font-family:-apple-system,Segoe UI,Roboto,sans-serif">')
+    body.append('<div id=rresults style="display:none"></div><div id=rgroups>')
     for sec in sorted(groups):
         body.append(f"<h2>{html.escape(sec)} ({len(groups[sec])})</h2>")
         for base,title,nsrc in groups[sec]:
             stub=base[:-5]
             page=f'<a href="r-{stub}.html"><b>{html.escape(title)}</b></a>' if stub in md_stubs else f'<b>{html.escape(title)}</b>'
-            body.append(f'<div class=b>{page}<br>'
+            body.append(f'<div class=b data-stub="{stub}">{page}<br>'
                         f'<span class=muted>~{nsrc} source links · </span>'
                         + (f'<a href="r-{stub}.html">read on site</a> · ' if stub in md_stubs else '')
                         + f'<a href="{GH}{base}">data (.json)</a> · <a href="{GH}{stub}.md">write-up (.md)</a></div>')
-    RES_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Research index</title><style>{PCSS}</style></head>"
-              f"<body>{NAVBAR}<main><h1>Research index</h1>{''.join(body)}</main></body></html>")
+    body.append('</div>')
+    RSTYLE=("<style>main .b a{text-decoration:none}main .b a:hover{text-decoration:underline}"
+            "main h1{border:none}#rgroups h2,#rresults h2{border-bottom:none;padding-bottom:0;font-size:21px}"
+            "#rq:focus{outline:none;border-color:#1f4e79}.b{transition:border-color .12s}.b:hover{border-color:#c9bfa5}</style>")
+    RSCRIPT=("<script>const IDX="+json.dumps(SEARCHIDX)+";"
+     "function bg(s){const o=[];s=s.toLowerCase();for(let i=0;i<s.length-1;i++)o.push(s.slice(i,i+2));return o;}"
+     "function dice(a,b){const A=bg(a),B=bg(b);if(!A.length||!B.length)return 0;const m={};A.forEach(g=>m[g]=(m[g]||0)+1);let x=0;B.forEach(g=>{if(m[g]>0){x++;m[g]--;}});return 2*x/(A.length+B.length);}"
+     "function sc(q,it){q=q.toLowerCase().trim();if(!q)return 0;const tl=it.t.toLowerCase(),hay=(it.t+' '+it.x).toLowerCase();"
+     "if(tl.includes(q))return 2;if(hay.includes(q))return 1.4;const qt=q.split(/\\s+/).filter(w=>w.length>=2);let h=0;qt.forEach(w=>{if(hay.includes(w))h++;});"
+     "const cov=qt.length?h/qt.length:0,d=dice(q,tl);return Math.max(cov,d*0.95,cov>0?cov+d*0.3:0);}"
+     "const TH=0.34;function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}"
+     "function run(){const q=document.getElementById('rq').value,g=document.getElementById('rgroups'),r=document.getElementById('rresults');"
+     "if(!q.trim()){g.style.display='';r.style.display='none';r.innerHTML='';return;}"
+     "const m=IDX.map(it=>[sc(q,it),it]).filter(x=>x[0]>=TH).sort((a,b)=>b[0]-a[0]);g.style.display='none';r.style.display='';"
+     "r.innerHTML='<p class=muted>'+m.length+' match'+(m.length==1?'':'es')+' for \"'+esc(q)+'\" (ranked by similarity)</p>'+"
+     "(m.length?m.map(([s,it])=>'<div class=b>'+(it.p?'<a href=\"r-'+it.s+'.html\"><b>'+esc(it.t)+'</b></a>':'<b>'+esc(it.t)+'</b>')+'<br><span class=muted>'+esc(it.sec)+' · similarity '+s.toFixed(2)+'</span></div>').join(''):'<p class=muted>No matches above the similarity threshold — try fewer or different words.</p>');}"
+     "document.getElementById('rq').addEventListener('input',run);</script>")
+    RES_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Research index</title><style>{PCSS}</style>{RSTYLE}</head>"
+              f"<body>{NAVBAR}<main><h1>Research index</h1>{''.join(body)}</main>{RSCRIPT}</body></html>")
     open(os.path.join(DOCS,"research.html"),"w").write(RES_HTML)
     print(f"  rendered {npages} research blocks as on-site pages (docs/r-*.html)")
 
