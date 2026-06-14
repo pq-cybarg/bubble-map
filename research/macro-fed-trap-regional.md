@@ -1,6 +1,6 @@
 # The Fed's impossible position + regional divergence + hidden leverage
 
-*Built 2026-06-07 from `models/z3/fed_policy_trap.py`, `models/graph/regional_leverage.py` (reading `data/bank_exposure.json`). This is the formalization of the user's thesis: a single policy rate cannot fix a multi-dimensional (regional × sectoral × global) divergence.*
+*Built 2026-06-07 from `models/z3/fed_policy_trap.py`, `models/graph/regional_leverage.py` (reading `data/bank_exposure.json`). This is the formalization of the thesis: a single policy rate cannot fix a multi-dimensional (regional × sectoral × global) divergence.*
 
 ## 1. The monetary-policy trap (Tinbergen, proven UNSAT)
 To stabilize N independent targets you need ≥ N independent instruments. The Fed has ~1 (the funds rate; ~2 with the balance sheet). The targets pull in opposite directions:
@@ -22,7 +22,7 @@ To stabilize N independent targets you need ≥ N independent instruments. The F
 **Conclusion:** monetary policy cannot *fix* a divergence crisis — it can only **choose which part of the system to sacrifice.** That is the formal trap, and it is why "raise or lower the rate" has no solution.
 
 ## 2. Regional divergence (the empirical input)
-Aggregating the top-200 banks by state (`regional_leverage.py`): **average CRE-concentration/Tier-1 ranges 37% → 336% across states** — a **~300-point dispersion** (KY 351%, SC 349%, WV 339%, MT 336% at the top; coastal/large-bank states far lower). Bank stress is **geographically divergent**: the CRE/HTM pain concentrates in specific states/regions while the AI-driven asset inflation concentrates in others (coastal tech hubs). A single national rate is the wrong tool for a map this uneven — the cities/suburbs/rural and state-by-state divergence the user observed is real in the call-report data.
+Aggregating the top-200 banks by state (`regional_leverage.py`): **average CRE-concentration/Tier-1 ranges 37% → 336% across states** — a **~300-point dispersion** (KY 351%, SC 349%, WV 339%, MT 336% at the top; coastal/large-bank states far lower). Bank stress is **geographically divergent**: the CRE/HTM pain concentrates in specific states/regions while the AI-driven asset inflation concentrates in others (coastal tech hubs). A single national rate is the wrong tool for a map this uneven — the cities/suburbs/rural and state-by-state divergence observed is real in the call-report data.
 
 ## 3. Hidden vs surfaced leverage (the masked risk)
 `reported_leverage = assets/equity`; `hidden_leverage = assets/(equity + HTM_loss + AFS_loss)` (mark securities losses to capital). The gap is the un-marked HTM hole:

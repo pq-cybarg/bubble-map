@@ -21,7 +21,7 @@
 ## 3. SEC Division of Corporation Finance — the quiet lever
 Corp Fin's comment letters, no-action posture, and staff bulletins are where consequential disclosure calls are made.
 - **SAB 121 (2022)** forced firms custodying crypto to put it **on-balance-sheet** — a major disincentive for banks to custody crypto; **rescinded as SAB 122 in 2025**. A documented, reversible **staff-level lever** with industry-wide effect. **Fact.**
-- The user's "corruption around Corp Fin in former regimes" points at **selective gatekeeping**; the documented mechanism is **staff guidance used as policy** (SAB 121, no-action). Specific corrupt-intent allegations against named officials are **not substantiated** in the public record — left **unsupported**, not fabricated.
+- The "corruption around Corp Fin in former regimes" points at **selective gatekeeping**; the documented mechanism is **staff guidance used as policy** (SAB 121, no-action). Specific corrupt-intent allegations against named officials are **not substantiated** in the public record — left **unsupported**, not fabricated.
 
 ## 4. The crypto-bank failure nodes
 - **Silvergate** — the original crypto bank (SEN rail); heavy FTX/Alameda exposure; ran after FTX and self-liquidated Mar 2023. **First domino.**

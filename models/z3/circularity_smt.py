@@ -120,7 +120,7 @@ print("     cash-negative. The core SURVIVES ONLY while fresh external capital k
 print("     That is the formal signature of a bubble: solvency conditional on continued inflow.")
 
 # ----------------------------------------------------------------------
-banner("T5  SPACEX IS SEPARABLE FROM THE CORE  (validates the user's prior)")
+banner("T5  SPACEX IS SEPARABLE FROM THE CORE  (validates the separability thesis)")
 # (a) SpaceX standalone: exogenous Starlink/launch revenue covers its own obligations
 s=Solver()
 spx_rev=Real('SpaceX_exogenous_rev'); s.add(spx_rev>=15)   # Starlink+launch run-rate

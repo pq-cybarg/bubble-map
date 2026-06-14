@@ -40,7 +40,7 @@ Every major fiscal incentive points one way: **understate inflation, flatter out
 | **Politics** | strong-jobs/low-inflation headline benefits the incumbent (the 2025 firing shows it's treated as a political object) |
 | **Modern twist** | GENIUS-Act stablecoin→Treasury rail (`blockchain-leg`) manufactures forced demand for the debt the data flatters |
 
-## What I will not claim (discipline)
+## What is not claimed (discipline)
 - **ShadowStats** adds a *fixed constant* to official CPI; it re-collects no prices and implies price levels inconsistent with observed nominal GDP/wages. **WEAK/UNSUPPORTED** as a number, even if its direction overlaps the real critiques.
 - **No evidence of fabricated microdata.** The defensible case is methodology + revision-timing + collection degradation + incentive alignment + political pressure — *not* invented numbers. Conflating the two discredits the real case.
 

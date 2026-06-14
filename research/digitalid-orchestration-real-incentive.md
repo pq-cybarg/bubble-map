@@ -2,7 +2,7 @@
 
 *Compiled 2026-06-10. Overlay — evidence-graded (`fact | contested | weak | unsupported`), excluded from the formal proofs. Synthesizes [[digitalid-worldcoin-eid-convergence]]; cross-refs `macro-stablecoin-treasury-rail`, `spec-sec-sdny-regulatory` (debanking), `macro-bank-htm-marks` (the debt backdrop), and [[reject-age-verification]]. Intent is never inferred from adjacency.*
 
-You asked for the reason that **doesn't** make the news — the one beyond "protect children / stop fraud / bank the unbanked," the one parents sympathize with. Here is the honest version, with the line between *provable* and *inferred* kept visible throughout. The single most important fact: **the architects state the control capability themselves.** We don't have to guess.
+Below is the reason that **doesn't** make the news — the one beyond "protect children / stop fraud / bank the unbanked," the one parents sympathize with. Here is the honest version, with the line between *provable* and *inferred* kept visible throughout. The single most important fact: **the architects state the control capability themselves.** We don't have to guess.
 
 ## Who is actually coordinating it
 This is not one room. It is a **stack of mutually reinforcing institutions**, each building a piece (all **fact** as to existence):

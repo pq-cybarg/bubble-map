@@ -15,10 +15,10 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 39 files
+- **Meta** — 41 files
 - **Google** — 30 files
 - **OpenAI** — 28 files
-- **Oracle** — 24 files
+- **Oracle** — 25 files
 - **Amazon** — 21 files
 - **Microsoft** — 20 files
 - **NVIDIA** — 18 files
@@ -31,11 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-onchain-threat-actor-addresses.json` — related files by shared entities (verify cross-refs exist)
-- spec-unc-nk-attribution-map.json: 2 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 2 shared entities
-- spec-tornado-samourai.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
+## Newest file `spec-uk-labour-tbi-influence.json` — related files by shared entities (verify cross-refs exist)
+- spec-network-overlay.json: 7 shared entities
+- influence-tbi-policy.json: 5 shared entities
+- altcoin-lens.json: 5 shared entities
+- digitalid-orchestration-real-incentive.json: 4 shared entities
+- temporal-bridges.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- digitalid-corporate.json: 3 shared entities
+- spec-crypto-sec-epstein.json: 3 shared entities

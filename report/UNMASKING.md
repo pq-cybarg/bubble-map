@@ -47,7 +47,7 @@ It is the same defect four times: a self-chosen valuation that holds until reali
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 84 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **269 nodes, 276 directed edges.**
+Consolidating 87 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **290 nodes, 289 directed edges.**
 
 Each edge is tagged with a **layer**: **114 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **84 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
 
@@ -144,7 +144,7 @@ The "defense contractor" leg of the original five-sector thesis resolves to a **
 Power is the binding physical constraint on the whole AI+defense buildout, and it carries a *second* adversary chokepoint:
 - **Power-adequacy proof (`models/z3/power_adequacy.py` P1, UNSAT):** AI data-center new-firm-power demand exceeds new firm supply every year through 2028 (2026: ~18 GW supply vs ~25 GW demand; 2028: ~34 vs ~80 — the gap *widens*). Data centers went from **4.4% of US electricity (2023) to 6.7–12% by 2028** and are ~half of all US load growth to 2030; **PJM capacity hit the cap three auctions running ($333/MW-day)**. The relief valve is behind-the-meter gas — itself walled by GE Vernova's **~80 GW turbine backlog into 2029** (CCGT lead times 5–7 yrs).
 - **HALEU chokepoint (`power_adequacy.py` P2, UNSAT):** the hyperscaler nuclear/SMR PPAs (MSFT–TMI $16B/835 MW ~2028; Amazon–Talen 1.9 GW; Google–Kairos, Meta–Oklo SMRs ~2030) depend on **HALEU fuel that was ~100% Russian**; domestic Centrus is only ~900 kg/yr. **Russia controls ~44% of global enrichment** → US fuel independence not until ~2028-29. This is the **energy analog of the China rare-earth chokepoint**.
-- **The two-rival vise:** the AI+defense complex is physically gated by **China (rare earths) *and* Russia (uranium enrichment) simultaneously** — constraints dollars can't lift on the timeline, mirroring OpenAI's solvency-UNSAT and the Fed's no-feasible-rate-UNSAT. The user-flagged **TMC / CRML / LAES-WKEY / SPCX** are the narrative-adjacent supplier vehicles (battery/grid metals, REE, quantum-sat chips, Starshield/Starlink) riding this story (graded in `macro-critical-minerals` / `macro-pqc-chips` / `fin-spacex-spcx`).
+- **The two-rival vise:** the AI+defense complex is physically gated by **China (rare earths) *and* Russia (uranium enrichment) simultaneously** — constraints dollars can't lift on the timeline, mirroring OpenAI's solvency-UNSAT and the Fed's no-feasible-rate-UNSAT. The **TMC / CRML / LAES-WKEY / SPCX** are the narrative-adjacent supplier vehicles (battery/grid metals, REE, quantum-sat chips, Starshield/Starlink) riding this story (graded in `macro-critical-minerals` / `macro-pqc-chips` / `fin-spacex-spcx`).
 
 ### 5.3 The blockchain leg — now wired into the fiscal core (set aside at the start, reincorporated)
 Blockchain is no longer a separate "5th sector"; under the 2025 GENIUS Act its systemic role became **monetary** (`models/graph/blockchain_web.py`):

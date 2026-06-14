@@ -100,6 +100,7 @@ Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.
 Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minerals.json
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
+Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
 NSA,Crypto_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
 AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Verizon,AST_SpaceMobile,investment,100000000,committed,False,False,spec-telecom-satellite.json
@@ -110,6 +111,7 @@ CFTC,CME,regulatory_legal,67400000,closed,False,False,spec-market-plumbing-contr
 Ripple,Fairshake,pac_funding,50000000,given,False,False,spec-sec-sdny-regulatory.json
 SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-sec-sdny-regulatory.json
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
+Saudi_Arabia_state,Tony_Blair_Institute,other,12000000,open,False,True,spec-uk-labour-tbi-influence.json
 FTX,Farmington_Moonstone,equity,11500000,closed,False,False,spec-crypto-banking-debanking.json
 InQTel,Palantir,relationship,2000000,invested,False,False,spec-disclosures-surveillance.json
 Cambodia,National_Consulting_Services,other,456000,recurring,False,False,spec-cambodia-scam-fara-paid-influence.json
@@ -131,6 +133,10 @@ QCEW_Benchmark,Jobs_Headline,other,,recurring,False,False,macro-official-data-in
 Federal_Reserve,PCE,other,,structural,False,False,macro-official-data-integrity.json
 SpaceX,xAI,merger,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
+Card_networks,Content_platforms,other,,open,False,False,spec-censorship-finance-adtech.json
+GARM_WFA,Disfavored_platforms,other,,closed,False,False,spec-censorship-finance-adtech.json
+CCDH,Content_platforms,other,,open,False,False,spec-censorship-finance-adtech.json
+FTC,Card_networks,other,,open,False,False,spec-censorship-finance-adtech.json
 Meta,Oklo,compute_commitment,,committed,False,False,fin-meta-family.json
 Meta,Broadcom,compute_commitment,,committed,False,False,"fin-meta-family.json,fin-google-amazon-anthropic-meta.json"
 Vistra,SINK_capex,other,,recurring,False,False,fin-meta-family.json
@@ -182,6 +188,10 @@ SDNY,Samourai_Wallet,regulatory_legal,,closed,False,False,spec-sdny-crypto-prose
 SDNY,Tornado_Cash,regulatory_legal,,closed,False,False,spec-sdny-crypto-prosecution.json
 FinCEN,Samourai_Wallet,relationship,,closed,False,False,spec-sdny-crypto-prosecution.json
 Lazarus_Group,Tornado_Cash,other,,closed,False,False,spec-sdny-crypto-prosecution.json
+Tony_Blair_Institute,UK_Labour_government,other,,open,False,True,spec-uk-labour-tbi-influence.json
+Oracle,UK_government_cloud,compute_commitment,,open,False,False,spec-uk-labour-tbi-influence.json
+Waheed_Alli,Keir_Starmer,surveillance_security,,open,False,True,spec-uk-labour-tbi-influence.json
+China_state,UK_comms_infrastructure,other,,open,False,False,spec-uk-labour-tbi-influence.json
 DOJ,Epstein_Files,other,,closed,False,False,spec-epstein-document-authenticity.json
 US_Congress,Epstein_Files,regulatory_legal,,closed,False,False,spec-epstein-document-authenticity.json
 First_Brands,Jefferies,debt,,2025,False,False,macro-firstbrands-ubs.json
@@ -246,6 +256,9 @@ SEALSQ,WeCan_Group,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,SEALCOIN,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,WISeART,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 WISeSat,SpaceX,relationship,,rideshare-customer,False,False,fin-sealsq-wisekey-global.json
+Israel_state,Iran_nuclear_program,other,,open,False,False,spec-anomalous-deaths-disappearances.json
+Russia_elite_environment,Russian_energy_executives,other,,open,False,False,spec-anomalous-deaths-disappearances.json
+Boeing_safety_dispute,Boeing_whistleblowers,regulatory_legal,,open,False,False,spec-anomalous-deaths-disappearances.json
 ApartmentList_ALNRI,CPI_Rent,other,,leads_~16mo,False,False,macro-rent-cpi-divergence.json
 Zillow_ZORI,CPI_Rent,other,,leads,False,False,macro-rent-cpi-divergence.json
 BLS_NTRI,CPI_Rent,other,,leads_4q,False,False,macro-rent-cpi-divergence.json

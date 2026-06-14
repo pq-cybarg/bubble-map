@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Financial and advertiser deplatforming: payment-network content control, ad-boycott alliances (GARM), and content-moderation NGOs (CCDH)",
+    "generated": "2026-06-14",
+    "frame": "The 'censorship' layer that operates through commercial chokepoints rather than the state directly: (1) PAYMENT NETWORKS (Visa/Mastercard/PayPal/Stripe) that can cut merchants off from the financial system - content control via card-network rules; (2) ADVERTISER ALLIANCES (GARM, under the WFA) that coordinated brand-safety standards alleged to function as a platform boycott; (3) CONTENT-MODERATION NGOs (Center for Countering Digital Hate) that pressure platforms and advertisers to deplatform. Each strand is graded; the through-line is INWARD pressure (platforms/merchants pressured to remove content) and OUTWARD pressure (networks/NGOs projecting standards). Both the deplatforming AND the antitrust/anti-SLAPP backlash are recorded - this is a contested arena, not a settled one.",
+    "relevance": "Deepens [[influence-ad-censorship]]; connects to [[spec-crypto-banking-debanking]] (financial deplatforming / Chokepoint 2.0), [[age-verification-abolition]] (payment-driven age/content gating), and the UK influence map [[spec-uk-labour-tbi-influence]] (CCDH's UK origin). The 2026 FTC debanking warning letters were issued by [[Andrew Ferguson]].",
+    "sources": "Deadline, CNBC, TechCrunch, Marketing Week, Variety, NBC News, FTC press release (Mar 2026), Banking Dive, Reclaim the Net, gaming/press coverage of Steam/itch.io, House Judiciary Committee. Full URLs in the rendered .md."
+  },
+  "strand_payment_networks": {
+    "summary": "Card networks and processors are a financial chokepoint: by writing and enforcing acceptance rules, Visa/Mastercard/PayPal/Stripe can effectively remove legal-but-disfavored merchants from the economy - pressure that runs both ways (activist campaigns pressuring networks; networks pressuring platforms).",
+    "points": [
+      {"item": "The mechanism", "detail": "Card-network brand-protection rules (e.g., Mastercard Rule 5.12.7, targeting transactions that 'may damage the goodwill' of the brand) let processors demand platforms remove content or lose payment access. This converts private acceptance policy into de-facto content regulation.", "grade": "fact (network rules)"},
+      {"item": "Adult-content platforms", "detail": "Visa/Mastercard pressure drove Pornhub/MindGeek to purge unverified content (2020-21) and OnlyFans to (briefly) announce a 2021 explicit-content ban it reversed after backlash. In 2025, Steam and itch.io delisted/hid hundreds of adult games citing processor pressure (Mastercard 5.12.7; Stripe/PayPal flags), amplified by the activist group Collective Shout.", "grade": "fact (platform statements)"},
+      {"item": "Political / other deplatforming", "detail": "Historical cases include the 2010 Visa/Mastercard/PayPal blockade of WikiLeaks donations and processor cutoffs of gun retailers and disfavored merchants. Stripe was reported to have cut off Trump campaign payments after Jan 6, 2021.", "grade": "fact (documented cases)"},
+      {"item": "The regulatory turn (2025-2026)", "detail": "After a Trump August 2025 executive order barring politicized 'debanking,' FTC Chairman Andrew Ferguson issued March 2026 warning letters to the CEOs of PayPal, Stripe, Visa, and Mastercard over denying service based on political/religious views - flipping the same chokepoint into an anti-censorship enforcement lever. Ties to [[spec-crypto-banking-debanking]].", "grade": "fact (FTC press release)"}
+    ]
+  },
+  "strand_garm_advertiser_alliance": {
+    "summary": "GARM (Global Alliance for Responsible Media), a WFA initiative, set industry 'brand-safety' standards; X and Rumble alleged it functioned as an illegal advertiser boycott, and it shut down in 2024 amid litigation and a congressional probe.",
+    "points": [
+      {"item": "What GARM was", "detail": "Founded 2019 under the World Federation of Advertisers to help brands avoid ads next to 'harmful' content; set common brand-safety definitions adopted across the ad ecosystem (members included Unilever, Mars, CVS).", "grade": "fact"},
+      {"item": "The antitrust suit", "detail": "In Aug 2024 X (and later Rumble) sued the WFA/GARM and members alleging an 'illegal boycott' to withhold ad revenue from disfavored platforms in violation of US competition law.", "grade": "fact (litigation)"},
+      {"item": "Congressional probe + shutdown", "detail": "The US House Judiciary Committee investigated whether GARM coordinated to limit conservative content; GARM/WFA discontinued GARM in Aug 2024, citing that the litigation had drained its resources.", "grade": "fact (House Judiciary; WFA statement)"},
+      {"item": "Framing", "detail": "Whether GARM's standards-setting was lawful brand-safety coordination or an unlawful boycott is genuinely contested and was being litigated; the shutdown reflects litigation cost, not an adjudicated finding of guilt. Both the deplatforming concern and the antitrust-overreach concern are real.", "grade": "contested"}
+    ]
+  },
+  "strand_ccdh_and_moderation_ngos": {
+    "summary": "The Center for Countering Digital Hate (CCDH) and similar content-moderation/brand-safety NGOs pressure platforms and advertisers to deplatform - effective advocacy to some, a 'censorship-by-proxy' apparatus to critics.",
+    "points": [
+      {"item": "CCDH", "detail": "UK-founded, now US-based NGO led by Imran Ahmed (a former UK Labour adviser); produces research on online 'hate'/misinformation and its STAR regulatory framework, and campaigns for platform accountability and advertiser action. Musk's X sued CCDH in 2023; a federal judge dismissed the suit in 2024 as an attempt to punish the group's research (an anti-SLAPP-style outcome). CCDH says it takes no funding from tech companies, governments, or their affiliates; X alleged competitor/government-affiliated funding - unproven.", "grade": "fact (lawsuit dismissed) + contested (funding allegations)"},
+      {"item": "CCDH funding & scrutiny", "detail": "2021 tax records show CCDH raised ~$1.47m, ~75% routed through the Schwab Charitable donor-advised fund (a pass-through critics call 'dark money'). Rep. Jim Jordan subpoenaed CCDH (Aug 2023) for its funder lists and its communications with platforms and federal agencies, alleging Biden-administration coordination; CCDH resisted. Notably, CCDH was co-founded in the UK (2018) by Morgan McSweeney - later Keir Starmer's Downing Street chief of staff - linking the content-moderation NGO directly to the UK Labour leadership ([[spec-uk-labour-tbi-influence]]). Partisan-source allegations (IRS-filing misstatements; foreign-government coordination) are contested and not independently established.", "grade": "fact (Schwab-DAF funding; Jordan subpoena; McSweeney co-founding) + contested (dark-money/coordination characterizations)"},
+      {"item": "Adjacent organizations", "detail": "A broader ecosystem performs similar functions: NewsGuard (source 'reliability' ratings), the Global Disinformation Index (GDI, ad-revenue 'risk' lists), Stop Hate for Profit (the ADL-led 2020 advertiser boycott of Facebook), and the Conscious Advertising Network. Critics group these as a 'censorship-industrial complex'; defenders frame them as brand-safety and anti-disinformation.", "grade": "fact (orgs exist) + contested (characterization)"},
+      {"item": "Framing", "detail": "These NGOs hold no state power; their leverage is reputational and advertiser-facing. The dispute is whether coordinated pressure on advertisers/platforms is legitimate civil-society advocacy or an extra-legal deplatforming mechanism. Recorded as a contested arena, with the legal record (CCDH suit dismissed; GARM suit pending/dropped) noted.", "grade": "labeled interpretation"}
+    ]
+  },
+  "synthesis": {
+    "summary": "One pattern: control of speech/commerce via private chokepoints, and a sharp 2024-2026 backlash.",
+    "points": [
+      {"item": "The chokepoint logic", "detail": "Payment networks, advertiser alliances, and moderation NGOs each sit at a commercial chokepoint (money, ad revenue, reputation) through which legal-but-disfavored content/merchants can be removed without a state act. That is the 'censorship-by-proxy' concern.", "grade": "fact + labeled interpretation"},
+      {"item": "The backlash", "detail": "2024-2026 saw a coordinated reversal: X/Rumble antitrust suits (GARM collapsed), X v. CCDH (dismissed), and the Trump EO + FTC debanking letters re-aiming the financial chokepoint against deplatforming. The arena is actively contested in courts, Congress, and regulators - this block tracks both sides without declaring a winner.", "grade": "fact"}
+    ]
+  },
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "GARM shutdown", "result": "WFA discontinued GARM Aug 2024 after X antitrust suit; House Judiciary probe (Deadline/CNBC/Marketing Week)."},
+      {"check": "X v. CCDH", "result": "Federal judge dismissed X's suit in 2024 as intended to punish CCDH's research (Variety/NBC)."},
+      {"check": "Mastercard Rule 5.12.7 / Steam-itch.io", "result": "Valve and itch.io cited payment-processor pressure for 2025 adult-content delistings; Collective Shout campaign (gaming/press coverage)."},
+      {"check": "FTC debanking letters", "result": "FTC Chairman Andrew Ferguson, March 2026, warned PayPal/Stripe/Visa/Mastercard re politicized debanking, following Trump's Aug 2025 EO (FTC press release/Banking Dive)."}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Explicit non-claims.",
+    "non_claims": [
+      "It is NOT asserted that GARM was adjudicated an illegal boycott - the suits were not resolved on the merits; the shutdown reflects litigation cost.",
+      "It is NOT asserted that CCDH is government- or competitor-funded - X's allegation is unproven and CCDH denies it; the suit against CCDH was dismissed.",
+      "It is NOT asserted that payment networks act on government orders - the documented mechanism is private acceptance rules and activist pressure (with the separate, documented Chokepoint-2.0 debanking debate handled in spec-crypto-banking-debanking).",
+      "Characterizing these actors collectively as a 'censorship-industrial complex' is a contested framing, recorded as such, not asserted as fact.",
+      "These edges are OVERLAY/context (regulatory_legal / relationship) and are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Card_networks", "to": "Content_platforms", "instrument": "regulatory_legal", "raw_instrument": "acceptance rules (e.g., Mastercard 5.12.7) used to force content removal; Steam/itch.io 2025, Pornhub/OnlyFans 2020-21", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-censorship-finance-adtech.json", "note": "OVERLAY: financial-chokepoint content control; excluded from proofs"},
+    {"from": "GARM_WFA", "to": "Disfavored_platforms", "instrument": "relationship", "raw_instrument": "brand-safety standards alleged as ad boycott (X/Rumble antitrust); GARM shut Aug 2024", "amount_usd": null, "status": "closed", "declared_circular": false, "cancelable": false, "source_file": "spec-censorship-finance-adtech.json", "note": "OVERLAY: advertiser-alliance pressure; contested; excluded from proofs"},
+    {"from": "CCDH", "to": "Content_platforms", "instrument": "relationship", "raw_instrument": "research + advertiser/platform pressure for deplatforming; X suit dismissed 2024", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-censorship-finance-adtech.json", "note": "OVERLAY: NGO advocacy pressure; excluded from proofs"},
+    {"from": "FTC", "to": "Card_networks", "instrument": "regulatory_legal", "raw_instrument": "Mar 2026 Ferguson warning letters re politicized debanking (post Aug-2025 EO)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-censorship-finance-adtech.json", "note": "OVERLAY: regulatory counter-pressure; excluded from proofs"}
+  ],
+  "limits": "Maps the commercial-chokepoint speech/commerce-control arena: payment networks (acceptance rules), advertiser alliances (GARM), and moderation NGOs (CCDH + adjacents). Documented facts: the GARM shutdown + X/Rumble suits + House Judiciary probe; the X v. CCDH dismissal; the Mastercard-5.12.7-driven 2025 game delistings; the 2026 FTC debanking letters. Contested: whether GARM was an unlawful boycott (unresolved), CCDH's funding (denied/unproven), and the 'censorship-industrial complex' characterization. Both deplatforming and antitrust-overreach concerns are recorded. Overlay edges excluded from the formal proofs. source: see verification_log and rendered .md for full URLs."
+}

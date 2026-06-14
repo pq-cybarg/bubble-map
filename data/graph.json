@@ -124,6 +124,14 @@
       "sector": "defense",
       "has_exogenous_revenue": true
     },
+    "Boeing_safety_dispute": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Boeing_whistleblowers": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Bond_Market_2Y": {
       "sector": "macro_factor",
       "has_exogenous_revenue": false
@@ -146,6 +154,10 @@
     },
     "ByteDance": {
       "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
+    "CCDH": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "CFTC": {
@@ -192,12 +204,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Card_networks": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Chainlink": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
     "China": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "China_state": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Circle": {
@@ -222,6 +242,10 @@
     },
     "ConsenSys": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": true
+    },
+    "Content_platforms": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Contingent_Labor": {
@@ -288,6 +312,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Disfavored_platforms": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Disney": {
       "sector": "ip_rightsholder",
       "has_exogenous_revenue": true
@@ -324,6 +352,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FTC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "FTX": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -357,6 +389,10 @@
       "has_exogenous_revenue": true
     },
     "Fnality": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -452,6 +488,14 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "Iran_nuclear_program": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Israel_state": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "JPM_Coin": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -484,6 +528,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Keir_Starmer": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Kraken": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -507,6 +555,10 @@
     "Lambda": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Larry_Ellison": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Lazarus": {
       "sector": "threat_actor",
@@ -752,6 +804,14 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Russia_elite_environment": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Russian_energy_executives": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Ryan_Kelly": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -845,6 +905,10 @@
       "has_exogenous_revenue": false
     },
     "Samourai_Wallet": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Saudi_Arabia_state": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -948,6 +1012,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Tony_Blair_Institute": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "TornadoCash": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -978,6 +1046,18 @@
     },
     "UBS_OConnor": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "UK_Labour_government": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "UK_comms_infrastructure": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "UK_government_cloud": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "USD1": {
@@ -1043,6 +1123,10 @@
     "WISeSat": {
       "sector": "satellite",
       "has_exogenous_revenue": false
+    },
+    "Waheed_Alli": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "WeCan_Group": {
       "sector": "crypto_infra",
@@ -1441,6 +1525,58 @@
       "cancelable": false,
       "source_file": "fin-spacex-spcx.json",
       "note": "SpaceX reportedly invested ~$2B in xAI; intra-Musk-empire capital. 'Colossus' is xAI's supercomputer - SpaceX reselling xAI/NVIDIA compute is the Musk-cluster's own mini-loop."
+    },
+    {
+      "from": "Card_networks",
+      "to": "Content_platforms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "acceptance rules (e.g., Mastercard 5.12.7) used to force content removal; Steam/itch.io 2025, Pornhub/OnlyFans 2020-21",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-censorship-finance-adtech.json",
+      "note": ""
+    },
+    {
+      "from": "GARM_WFA",
+      "to": "Disfavored_platforms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "brand-safety standards alleged as ad boycott (X/Rumble antitrust); GARM shut Aug 2024",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-censorship-finance-adtech.json",
+      "note": ""
+    },
+    {
+      "from": "CCDH",
+      "to": "Content_platforms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research + advertiser/platform pressure for deplatforming; X suit dismissed 2024",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-censorship-finance-adtech.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "Card_networks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Mar 2026 Ferguson warning letters re politicized debanking (post Aug-2025 EO)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-censorship-finance-adtech.json",
+      "note": ""
     },
     {
       "from": "US_Banks",
@@ -2467,6 +2603,84 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "Larry_Ellison",
+      "to": "Tony_Blair_Institute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~\u00a3257m donated/pledged since 2021 (Larry Ellison Foundation)",
+      "amount_usd": 330000000,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Tony_Blair_Institute",
+      "to": "UK_Labour_government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading external advocate of UK national digital-ID; advisory influence",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Oracle",
+      "to": "UK_government_cloud",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "cloud contracts: Home Office, MoD, FCO, NHS - would-be beneficiary of national digital-ID",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia_state",
+      "to": "Tony_Blair_Institute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$10-12m for Vision 2030 advisory; continued post-Khashoggi",
+      "amount_usd": 12000000,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Waheed_Alli",
+      "to": "Keir_Starmer",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "largest personal donor; gifts/accommodation; Downing St pass; Lords-rules breach",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "China_state",
+      "to": "UK_comms_infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Royal Mint Court mega-embassy approved over City of London fibre; listening-post warnings",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uk-labour-tbi-influence.json",
       "note": ""
     },
     {
@@ -3861,6 +4075,45 @@
       "note": "WISeSat buys rideshare slots on SpaceX Falcon 9 Transporter missions (21st sat, Transporter-16, Mar 30 2026, Vandenberg). CUSTOMER relationship ONLY - explicitly NOT a SpaceX strategic partnership/investment. Prevents over-stating the SpaceX link."
     },
     {
+      "from": "Israel_state",
+      "to": "Iran_nuclear_program",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attributed targeted-killing campaign of nuclear scientists (Fakhrizadeh 2020 + >=4 since 2007); widely reported, not officially claimed",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-anomalous-deaths-disappearances.json",
+      "note": ""
+    },
+    {
+      "from": "Russia_elite_environment",
+      "to": "Russian_energy_executives",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "unexplained sustained death cluster since 2022 (Lukoil/Gazprom/Transneft); NO established perpetrator",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-anomalous-deaths-disappearances.json",
+      "note": ""
+    },
+    {
+      "from": "Boeing_safety_dispute",
+      "to": "Boeing_whistleblowers",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "two whistleblower deaths during litigation, 2024 (Barnett ruled suicide; Dean infection); underlying retaliation/safety claims independent",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-anomalous-deaths-disappearances.json",
+      "note": ""
+    },
+    {
       "from": "ApartmentList_ALNRI",
       "to": "CPI_Rent",
       "instrument": "other",
@@ -4668,10 +4921,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 269,
-    "num_edges": 276,
-    "num_financial_edges": 125,
-    "num_structural_edges": 151,
+    "num_nodes": 290,
+    "num_edges": 289,
+    "num_financial_edges": 126,
+    "num_structural_edges": 163,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4722,33 +4975,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Amazon",
         "Anthropic"
       ],
       [
-        "NVIDIA",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -4763,8 +5011,13 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
         "OpenAI",
-        "Microsoft"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -4779,8 +5032,15 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -4788,13 +5048,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5025,6 +5278,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Boeing_safety_dispute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Boeing_whistleblowers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bond_Market_2Y": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -5061,6 +5328,13 @@
         "in_robust_core": false
       },
       "ByteDance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CCDH": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5144,6 +5418,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Card_networks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chainlink": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -5153,6 +5434,13 @@
       },
       "China": {
         "total_usd": 86000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_state": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5194,6 +5482,13 @@
         "in_robust_core": false
       },
       "ConsenSys": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Content_platforms": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5312,6 +5607,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Disfavored_platforms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Disney": {
         "total_usd": 1000000000,
         "circular_usd": 0,
@@ -5375,6 +5677,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FTC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FTX": {
         "total_usd": 11500000,
         "circular_usd": 0,
@@ -5432,6 +5741,13 @@
         "in_robust_core": false
       },
       "Fnality": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GARM_WFA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5599,6 +5915,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Iran_nuclear_program": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Israel_state": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JPM_Coin": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -5655,6 +5985,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Keir_Starmer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kraken": {
         "total_usd": 30000000,
         "circular_usd": 0,
@@ -5696,6 +6033,13 @@
         "circularity_ratio": 1.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Larry_Ellison": {
+        "total_usd": 330000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Lazarus": {
         "total_usd": 7600000000,
@@ -6124,6 +6468,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Russia_elite_environment": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Russian_energy_executives": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ryan_Kelly": {
         "total_usd": 25000,
         "circular_usd": 0,
@@ -6287,6 +6645,13 @@
       },
       "Samourai_Wallet": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Saudi_Arabia_state": {
+        "total_usd": 12000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6467,6 +6832,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tony_Blair_Institute": {
+        "total_usd": 342000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TornadoCash": {
         "total_usd": 7600000000,
         "circular_usd": 0,
@@ -6518,6 +6890,27 @@
       },
       "UBS_OConnor": {
         "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UK_Labour_government": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UK_comms_infrastructure": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UK_government_cloud": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6629,6 +7022,13 @@
         "in_robust_core": false
       },
       "WISeSat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Waheed_Alli": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6763,6 +7163,25 @@
         "both_layers": true
       },
       {
+        "node": "Oracle",
+        "degree": 8,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "other",
+          "private_credit",
+          "sink",
+          "spv"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 5,
+        "layers": [
+          "financial"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "US_Government",
         "degree": 8,
         "neighbor_sectors": [
@@ -6850,24 +7269,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Oracle",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "private_credit",
-          "sink",
-          "spv"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 4,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       },
       {
         "node": "MGX",

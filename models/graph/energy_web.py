@@ -21,7 +21,7 @@ POWER_DEALS=[
  ("Oracle","SMR (3 reactors)","SMR",1000,None,"gigawatt datacenter design"),
  ("Crusoe","GE Vernova","gas turbines",None,None,"19 turbines ordered (behind-the-meter gas)"),
 ]
-# speculative supplier vehicles riding the energy/defense/minerals narrative (user-flagged)
+# speculative supplier vehicles riding the energy/defense/minerals narrative 
 SPEC_SUPPLIERS={
  "TMC":"deep-sea Ni/Cu/Co/Mn nodules - BATTERY/grid metals; Trump seabed EO; pre-commercial",
  "CRML":"Tanbreez Greenland REE - magnets for grid/defense; pre-revenue (~2028-29)",
