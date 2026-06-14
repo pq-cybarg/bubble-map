@@ -11966,6 +11966,466 @@
     "age-verification-abolition",
     "digitalid-orchestration-real-incentive"
    ]
+  },
+  {
+   "name": "Frank La Salla",
+   "role": "President & CEO, DTCC (2022–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "DTCC"
+   ],
+   "bluf": "CEO of the Depository Trust & Clearing Corporation — the largely invisible utility that clears and settles the vast majority of US securities transactions (hundreds of trillions annually) and now drives the T+1 settlement shift and tokenized-collateral pilots. Assess with HIGH confidence on DTCC's structural centrality to US market plumbing.",
+   "drivers": "Settlement-system resilience and modernization; T+1; tokenization/DLT collateral.",
+   "worldview": "Infrastructure-utility steward; sees DTCC as the neutral backbone, cautiously adopting DLT.",
+   "decision_style": "Operationally focused, risk-averse, industry-coordinating.",
+   "track_record": "Led the 2024 US move to T+1 settlement; runs DTCC's tokenized-collateral and DLT pilots (incl. Chainlink-linked Smart NAV work) — the connective tissue between TradFi and tokenization.",
+   "vulnerabilities": "Single-point-of-failure concentration; opacity; the DLT-integration governance questions the project probes.",
+   "relationships": "The hub of the market-plumbing thread; DTCC's DLT pilots intersect the Chainlink/Stellar connections examined.",
+   "outlook": "The central node in the post-trade settlement-and-tokenization analysis.",
+   "confidence": "HIGH (institutional role).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "blockchain-leg",
+    "macro-stablecoin-treasury-rail"
+   ]
+  },
+  {
+   "name": "Michael Bodson",
+   "role": "Former President & CEO, DTCC (2012–2022)",
+   "domains": [
+    "Markets",
+    "Macro/Finance"
+   ],
+   "orgs": [
+    "DTCC (former)"
+   ],
+   "bluf": "The long-serving former DTCC chief who steered post-crisis clearing reforms, the GameStop-episode margin spike, and the initial push toward shortened settlement and DLT exploration. Assess with HIGH confidence on his role shaping the modern clearing/settlement regime.",
+   "drivers": "Clearing-system stability; post-2008 reform; settlement modernization.",
+   "worldview": "Risk-management-first utility steward; advanced central clearing and shorter settlement.",
+   "decision_style": "Steady, reform-driven, industry-consensus-building.",
+   "track_record": "Ran DTCC for a decade incl. the 2021 meme-stock margin-call controversy and the groundwork for T+1 and DLT pilots.",
+   "vulnerabilities": "The 2021 margin-spike controversy fed retail distrust of the plumbing; concentration concerns.",
+   "relationships": "Predecessor to La Salla; the GameStop margin episode is a key market-plumbing datapoint.",
+   "outlook": "Historical node in the clearing-and-settlement plumbing thread.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-history-dereg-manipulation"
+   ]
+  },
+  {
+   "name": "Terrence Duffy",
+   "role": "Chairman & CEO, CME Group (2016–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "CME Group"
+   ],
+   "bluf": "CEO of CME Group, the world's largest derivatives exchange and clearinghouse — futures and options on rates, equities, energy, metals, and crypto — a systemic node in price discovery and central clearing. Assess with HIGH confidence on CME's centrality to global derivatives and the futures-vs-physical dynamics the project tracks.",
+   "drivers": "CME's derivatives dominance; clearinghouse integrity; expanding into crypto/Treasuries.",
+   "worldview": "Market-structure defender; champions central clearing and listed-derivatives transparency.",
+   "decision_style": "Combative, long-tenured, regulatory-savvy (ex-floor trader).",
+   "track_record": "Built CME into the dominant futures/clearing complex incl. SOFR, gold/silver, oil, equity-index, and Bitcoin/Ether futures; manages the clearinghouse risk waterfall.",
+   "vulnerabilities": "Clearinghouse concentration risk; the futures-vs-physical (paper-vs-metal) critique in metals.",
+   "relationships": "Counterpart to ICE (Sprecher); central to the market-plumbing, metals, and futures threads.",
+   "outlook": "A systemic node in derivatives price-discovery and clearing.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-futures-vs-physical",
+    "commodities-metals",
+    "macro-oil-backwardation"
+   ]
+  },
+  {
+   "name": "Jeffrey Sprecher",
+   "role": "Founder, Chair & CEO, Intercontinental Exchange (ICE); Chairman, NYSE",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Intercontinental Exchange",
+    "NYSE"
+   ],
+   "bluf": "The founder of ICE, who built an energy-trading startup into a global exchange-and-data empire that owns the NYSE, key clearinghouses, and the mortgage-data pipeline (Ellie Mae/Black Knight). Assess with HIGH confidence on his role assembling a dominant exchange/data/plumbing conglomerate.",
+   "drivers": "Building and consolidating market infrastructure; data/analytics monetization; vertical integration.",
+   "worldview": "Acquisitive market-structure capitalist; sees exchanges + data + clearing + mortgage as one stack.",
+   "decision_style": "Aggressive dealmaker, vertically integrating, long-horizon.",
+   "track_record": "Founded ICE (2000); acquired NYSE, energy/commodity clearing, and the mortgage-tech stack (Ellie Mae, Black Knight); co-founded Bakkt (crypto).",
+   "vulnerabilities": "Antitrust scrutiny of the mortgage-data consolidation; concentration of market infrastructure.",
+   "relationships": "Counterpart to CME (Duffy); spouse of Senator Kelly Loeffler; ICE touches energy, metals, equities, and crypto plumbing.",
+   "outlook": "A central node in the exchange/data/clearing-concentration thread.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-oil-backwardation",
+    "commodities-metals",
+    "macro-cre-privatecredit"
+   ]
+  },
+  {
+   "name": "Adena Friedman",
+   "role": "Chair & CEO, Nasdaq (2017–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "AI"
+   ],
+   "orgs": [
+    "Nasdaq"
+   ],
+   "bluf": "CEO of Nasdaq, transforming the exchange into a markets-technology, anti-financial-crime, and index/data company that also licenses its trading and surveillance tech to other exchanges worldwide. Assess with HIGH confidence on Nasdaq's role as both a venue and a market-infrastructure-technology vendor.",
+   "drivers": "Nasdaq's pivot to fintech/SaaS; anti-financial-crime tech; index and data growth.",
+   "worldview": "Technology-platform strategist; sees Nasdaq as infrastructure-and-software, not just a venue.",
+   "decision_style": "Strategic, acquisitive (Adenza/Verafin), execution-focused.",
+   "track_record": "Led Nasdaq's shift toward market-tech, surveillance, and anti-fin-crime (Verafin), index licensing, and AI in trading systems; oversees major tech listings.",
+   "vulnerabilities": "Conflict optics of selling surveillance/trading tech to the exchanges it competes with; listings-quality debates.",
+   "relationships": "Peer to Sprecher/Duffy; surveillance-tech ties touch the disclosures-surveillance thread.",
+   "outlook": "A node spanning the exchange, market-tech, and surveillance-infrastructure layers.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "spec-disclosures-surveillance",
+    "macro-cross-sectional-analysis"
+   ]
+  },
+  {
+   "name": "Lynn Martin",
+   "role": "President, New York Stock Exchange (2022–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance"
+   ],
+   "orgs": [
+    "NYSE",
+    "Intercontinental Exchange"
+   ],
+   "bluf": "President of the NYSE (an ICE company), overseeing the listing venue at the symbolic center of US equity markets and its data/index businesses during the AI-driven mega-cap concentration. Assess with MODERATE-HIGH confidence on her role over the premier listing venue.",
+   "drivers": "NYSE's listings leadership; data/index growth; market-quality and resilience.",
+   "worldview": "Market-structure pragmatist; defends the floor-plus-electronic hybrid model.",
+   "decision_style": "Data-driven (came up through ICE Data), execution-focused.",
+   "track_record": "Leads NYSE listings, the closing-auction mechanics, and NYSE data/indices amid record mega-cap concentration; manages outage-resilience after past glitches.",
+   "vulnerabilities": "Operational-resilience scrutiny; reliance on ICE's vertical stack.",
+   "relationships": "Reports into Sprecher's ICE; venue for the mega-caps central to the bubble thesis.",
+   "outlook": "A node over the primary US equity-listing venue.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-cross-sectional-analysis"
+   ]
+  },
+  {
+   "name": "David Schwimmer",
+   "role": "CEO, London Stock Exchange Group (2018–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "AI"
+   ],
+   "orgs": [
+    "London Stock Exchange Group",
+    "LCH",
+    "Refinitiv",
+    "Microsoft"
+   ],
+   "bluf": "CEO of LSEG, which owns the dominant interest-rate clearinghouse (LCH) and, via the Refinitiv acquisition and a deep Microsoft partnership, became a data-and-analytics powerhouse — fusing market plumbing, data, and AI. Assess with HIGH confidence on LSEG's role across clearing, data, and AI infrastructure.",
+   "drivers": "LSEG's data/analytics scale; LCH clearing leadership; the Microsoft-AI partnership.",
+   "worldview": "Data-and-infrastructure strategist (ex-Goldman); bets on clearing + data + AI convergence.",
+   "decision_style": "Deal-driven (Refinitiv), partnership-oriented (Microsoft equity stake), execution-focused.",
+   "track_record": "Acquired Refinitiv; struck a 10-year Microsoft cloud/AI deal (with MSFT taking a ~4% stake); runs LCH, the dominant swaps clearinghouse.",
+   "vulnerabilities": "Clearing concentration (LCH); the Big-Tech-dependency of core market data via Microsoft.",
+   "relationships": "Microsoft partner; LCH ties to the rates-plumbing thread; data-and-AI convergence node.",
+   "outlook": "A node fusing clearing, market data, and Big-Tech AI infrastructure.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-carry-trades",
+    "fin-microsoft-openai"
+   ]
+  },
+  {
+   "name": "Stephane Boujnah",
+   "role": "CEO & Chairman, Euronext (2015–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Geopolitics"
+   ],
+   "orgs": [
+    "Euronext"
+   ],
+   "bluf": "CEO of Euronext, the pan-European exchange that consolidated multiple national bourses and brought clearing in-house, championing European capital-markets sovereignty against US/UK infrastructure dominance. Assess with MODERATE-HIGH confidence on Euronext's role in European market consolidation.",
+   "drivers": "European capital-markets sovereignty; exchange consolidation; in-house clearing.",
+   "worldview": "European-autonomy advocate; argues the EU needs its own market infrastructure.",
+   "decision_style": "Consolidation-driven, politically attuned, acquisitive (Borsa Italiana).",
+   "track_record": "Built Euronext via acquisitions (Borsa Italiana/Milan, Oslo, Dublin) and migrated clearing in-house; pushes the EU savings-and-investment-union agenda.",
+   "vulnerabilities": "Integration complexity; competition with LSEG/Deutsche Borse; fragmentation legacy.",
+   "relationships": "European counterpart to LSEG/ICE; tied to the market-plumbing and EU-fragmentation threads.",
+   "outlook": "A node in European market-infrastructure consolidation.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-carry-trades"
+   ]
+  },
+  {
+   "name": "David Solomon",
+   "role": "Chairman & CEO, Goldman Sachs (2018–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Goldman Sachs"
+   ],
+   "bluf": "CEO of Goldman Sachs, steering the premier investment bank through a failed consumer pivot back to its trading/advisory/asset-management core amid the AI-capital and private-credit booms. Assess with HIGH confidence on Goldman's central role in capital markets and the operator-network's finance node.",
+   "drivers": "Goldman's market leadership; refocusing on core strengths; partnership culture.",
+   "worldview": "Markets-and-advisory traditionalist (after the Marcus retreat); leans into private credit and AI.",
+   "decision_style": "Decisive, image-attentive, refocusing after the consumer misstep.",
+   "track_record": "Led Goldman through the Apple Card/Marcus retreat; expanded asset/wealth management and private credit; advises on the AI mega-deals.",
+   "vulnerabilities": "The consumer-banking losses; the Goldman-government revolving-door legacy.",
+   "relationships": "Apex of the Goldman network (ties to many roster officials); central to capital-markets and private-credit threads.",
+   "outlook": "A node anchoring the bank/capital-markets layer of the map.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-cre-privatecredit",
+    "macro-private-credit-marks",
+    "spec-network-overlay",
+    "macro-bank-htm-marks"
+   ]
+  },
+  {
+   "name": "Jane Fraser",
+   "role": "CEO, Citigroup (2021–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Citigroup"
+   ],
+   "bluf": "The first woman to lead a major US bank, executing a sweeping restructuring of Citigroup and its central role in Treasury clearing, FX, and emerging-market flows. Assess with HIGH confidence on Citi's systemic role in global dollar plumbing.",
+   "drivers": "Citi's simplification and returns; fixing regulatory/consent-order issues; global transaction banking.",
+   "worldview": "Restructuring pragmatist; refocuses Citi on services/transaction banking and wealth.",
+   "decision_style": "Disciplined, restructuring-driven, regulator-engaging.",
+   "track_record": "Leads Citi's multi-year reorganization (exiting consumer markets), its Treasury/clearing and FX dominance, and remediation of risk/controls consent orders.",
+   "vulnerabilities": "Long-running regulatory consent orders; execution risk on the turnaround.",
+   "relationships": "Systemic in dollar/Treasury plumbing; tied to the bank-exposure and dollar-rail threads.",
+   "outlook": "A node in the global-dollar-clearing and bank layers.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-bank-htm-marks",
+    "spec-market-plumbing-control",
+    "macro-stablecoin-treasury-rail"
+   ]
+  },
+  {
+   "name": "Brian Moynihan",
+   "role": "Chair & CEO, Bank of America (2010–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Bank of America"
+   ],
+   "bluf": "The long-serving CEO of Bank of America, whose enormous held-to-maturity bond book made it the poster child for the unrealized-loss problem the project's HTM analysis examines. Assess with HIGH confidence on BofA's centrality to the bank-duration-risk thread.",
+   "drivers": "BofA's scale and stability; deposit franchise; 'responsible growth.'",
+   "worldview": "Conservative-growth banker; held large long-duration securities for yield.",
+   "decision_style": "Steady, long-tenured, risk-and-capital-focused.",
+   "track_record": "Led BofA post-crisis; accumulated one of the largest HTM securities portfolios, carrying massive unrealized losses as rates rose (a focus of the HTM-marks analysis).",
+   "vulnerabilities": "The unrealized HTM losses; deposit-beta and rate-risk exposure.",
+   "relationships": "Systemic deposit institution; the HTM book is a core exhibit in the bank-fragility thread.",
+   "outlook": "A central node in the bank-duration-risk and HTM-marks analysis.",
+   "confidence": "HIGH (role + balance-sheet documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-bank-htm-marks",
+    "macro-fdic",
+    "macro-us-fiscal-trap"
+   ]
+  },
+  {
+   "name": "Charlie Scharf",
+   "role": "CEO, Wells Fargo (2019–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Wells Fargo"
+   ],
+   "bluf": "CEO of Wells Fargo, leading its recovery from the fake-accounts scandal and the Fed's asset cap — a case study in post-misconduct bank regulation relevant to the supervision and consumer-finance threads. Assess with MODERATE-HIGH confidence on his role and the regulatory-remediation arc.",
+   "drivers": "Lifting the Fed asset cap; remediation; restoring Wells's franchise.",
+   "worldview": "Turnaround-and-controls banker (ex-Visa/BNY); focuses on risk infrastructure.",
+   "decision_style": "Disciplined, remediation-driven, cost-focused.",
+   "track_record": "Led Wells through consent-order remediation toward (and the 2025 lifting of) the Fed's unprecedented asset cap imposed after the fake-accounts scandal.",
+   "vulnerabilities": "The scandal legacy; consumer-harm and controls history.",
+   "relationships": "Systemic bank; the asset-cap saga ties to the supervision/enforcement threads.",
+   "outlook": "A node in the bank-misconduct-and-supervision thread.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-bank-htm-marks",
+    "macro-history-dereg-manipulation",
+    "spec-crypto-banking-debanking"
+   ]
+  },
+  {
+   "name": "Robin Vince",
+   "role": "President & CEO, BNY (Bank of New York Mellon) (2022–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "BNY"
+   ],
+   "bluf": "CEO of BNY, the world's largest custodian (~$50T under custody/administration) and a backbone of Treasury settlement, tri-party repo, and — increasingly — digital-asset custody. Assess with HIGH confidence on BNY's structural role in securities custody and the repo/Treasury plumbing.",
+   "drivers": "BNY's custody/settlement dominance; platform modernization; digital-asset custody.",
+   "worldview": "Infrastructure-platform strategist (ex-Goldman risk); positions BNY as the resilient backbone.",
+   "decision_style": "Risk-management-focused, modernization-driven.",
+   "track_record": "Leads BNY's custody, tri-party repo, Treasury-clearing, and its move into crypto/digital-asset custody and tokenization.",
+   "vulnerabilities": "Custody concentration; the repo-plumbing systemic role; digital-asset-custody novelty risk.",
+   "relationships": "Core of the custody/repo plumbing; digital-custody ties to the stablecoin/tokenization threads.",
+   "outlook": "A node anchoring securities custody and the repo-and-Treasury plumbing.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-stablecoin-treasury-rail",
+    "macro-us-fiscal-trap"
+   ]
+  },
+  {
+   "name": "Ronald O'Hanley",
+   "role": "Chairman & CEO, State Street (2018–present)",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "State Street",
+    "State Street Global Advisors"
+   ],
+   "bluf": "CEO of State Street, a top-three global custodian and, via SSGA (SPDR/the original ETF), one of the 'Big Three' index managers whose combined ownership concentrates corporate voting power across the AI mega-caps. Assess with HIGH confidence on State Street's dual custody-and-index-ownership role.",
+   "drivers": "State Street's custody and index/ETF leadership; the 'Big Three' ownership franchise.",
+   "worldview": "Index-and-custody-scale steward; manages the universal-owner stewardship dilemma.",
+   "decision_style": "Institutional, stewardship-focused, scale-driven.",
+   "track_record": "Leads State Street custody and SSGA (SPDR ETFs); part of the Big-Three (with BlackRock/Vanguard) concentrated ownership of the mega-caps; navigates the ESG-stewardship backlash.",
+   "vulnerabilities": "Concentrated-ownership/voting-power concerns; ESG-stewardship political crossfire.",
+   "relationships": "Big-Three index node (with Fink/BlackRock); ties to the concentration thread.",
+   "outlook": "A node in the index-ownership-concentration and custody plumbing.",
+   "confidence": "HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "macro-cross-sectional-analysis",
+    "spec-market-plumbing-control",
+    "fin-google-amazon-anthropic-meta"
+   ]
+  },
+  {
+   "name": "Vincent Viola",
+   "role": "Founder & Chairman, Virtu Financial; former NYMEX chairman",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Capital"
+   ],
+   "orgs": [
+    "Virtu Financial"
+   ],
+   "bluf": "The founder of Virtu, a dominant high-frequency electronic market-maker, and former NYMEX chairman — a key figure in the electronic-market-making layer that intermediates much of modern price formation. Assess with MODERATE-HIGH confidence on Virtu's role in HFT/market-making plumbing.",
+   "drivers": "Electronic market-making dominance; liquidity provision; trading-technology edge.",
+   "worldview": "Speed-and-technology-first market structure; defends HFT as liquidity-providing.",
+   "decision_style": "Aggressive, technology-driven, exchange-experienced (ex-NYMEX chair).",
+   "track_record": "Built Virtu into a top market-maker (famous for near-perfect trading-day records); influential in the payment-for-order-flow and market-structure debates.",
+   "vulnerabilities": "PFOF and HFT-fairness critiques (the GameStop-era scrutiny); concentration of liquidity provision.",
+   "relationships": "Counterpart to Citadel Securities (Griffin); central to the market-microstructure plumbing thread.",
+   "outlook": "A node in the electronic-market-making and order-flow plumbing.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-cross-sectional-analysis"
+   ]
+  },
+  {
+   "name": "Douglas Cifu",
+   "role": "CEO, Virtu Financial",
+   "domains": [
+    "Markets",
+    "Macro/Finance"
+   ],
+   "orgs": [
+    "Virtu Financial"
+   ],
+   "bluf": "Co-founder and CEO of Virtu, the operational leader of the HFT market-maker and an outspoken defender of payment-for-order-flow and electronic market structure in the post-GameStop debates. Assess with MODERATE confidence on his role as the public-facing market-structure advocate.",
+   "drivers": "Virtu's market-making business; defending PFOF/electronic structure; regulatory engagement.",
+   "worldview": "Market-structure defender; argues retail gets better execution via wholesalers.",
+   "decision_style": "Combative, articulate, regulation-engaging.",
+   "track_record": "Runs Virtu day-to-day; prominent in the SEC market-structure-reform and PFOF debates.",
+   "vulnerabilities": "PFOF-conflict critiques; HFT-fairness perception.",
+   "relationships": "Operational counterpart to Viola; tied to the order-flow plumbing and SEC-reform threads.",
+   "outlook": "A node in the order-flow/market-structure debate.",
+   "confidence": "MODERATE (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control"
+   ]
+  },
+  {
+   "name": "Don Wilson",
+   "role": "Founder & CEO, DRW Holdings",
+   "domains": [
+    "Markets",
+    "Macro/Finance",
+    "Crypto"
+   ],
+   "orgs": [
+    "DRW Holdings",
+    "Cumberland"
+   ],
+   "bluf": "The founder of DRW, a major proprietary trading firm whose Cumberland arm is one of the largest institutional crypto market-makers, bridging traditional derivatives trading and digital-asset liquidity. Assess with MODERATE-HIGH confidence on DRW/Cumberland's role in crypto and derivatives market-making.",
+   "drivers": "Proprietary-trading edge; crypto market-making (Cumberland); derivatives liquidity.",
+   "worldview": "Risk-taking prop-trading capitalist; early, durable bet on crypto liquidity.",
+   "decision_style": "Quantitative, risk-tolerant, low public profile.",
+   "track_record": "Built DRW across futures/options and fixed income; Cumberland became a top crypto OTC/market-maker; faced (and contested) a CFTC bitcoin-manipulation case it won.",
+   "vulnerabilities": "Crypto-market-making conflict/manipulation scrutiny (the CFTC case it defeated); opacity.",
+   "relationships": "Bridges TradFi prop trading and crypto liquidity; tied to the crypto-market-structure and plumbing threads.",
+   "outlook": "A node linking proprietary derivatives trading and crypto market-making.",
+   "confidence": "MODERATE-HIGH (role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-market-plumbing-control",
+    "macro-stablecoin-failures-manipulation",
+    "macro-futures-vs-physical"
+   ]
   }
  ]
 }
