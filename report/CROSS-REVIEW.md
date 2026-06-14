@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `blockchain-leg.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 7 shared entities
-- altcoin-lens.json: 6 shared entities
-- spec-sec-sdny-regulatory.json: 6 shared entities
-- spec-exchanges-asia.json: 6 shared entities
-- spec-network-overlay.json: 5 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- spec-crypto-banking-debanking.json: 4 shared entities
-- influence-operator-network.json: 3 shared entities
+## Newest file `spec-rare-earth-statecraft.json` — related files by shared entities (verify cross-refs exist)
+- macro-critical-minerals-equities.json: 2 shared entities
+- macro-critical-minerals.json: 2 shared entities
+- macro-quantum-computing.json: 1 shared entities
+- defense-rare-earth.json: 1 shared entities
+- fin-sealsq-wisekey-global.json: 1 shared entities
+- spec-network-overlay.json: 1 shared entities
+- geopolitics-contested-resource-states.json: 1 shared entities
+- energy-power.json: 1 shared entities

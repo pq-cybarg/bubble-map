@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "Rare-earth statecraft — China's on/off export 'faucet', predatory pricing, the allied supply-response cohort (Tanbreez/Ucore/MP/REalloys), and the knowledge-transfer question",
+    "generated": "2026-06-13",
+    "frame": "Two questions, dug deep: (1) WHY does China keep toggling the REE export faucet on and off? (answer: it is a calibrated leverage instrument — partial controls maximize coercion while minimizing the incentive for substitution, plus a decades-long predatory-pricing strategy that bankrupts Western competitors so dependence persists). (2) Did Western processing know-how (CRML's Tanbreez → Ucore) derive from Chinese students in Europe-funded REE research? — investigated; the SPECIFIC claim is UNVERIFIED and the documented record points the OTHER way (Ucore says its RapidSX was built from first-principles, China-free; the EU is now demanding tech transfer FROM China). The general knowledge-transfer RISK is real and documented; the specific Tanbreez/Ucore allegation is not.",
+    "WARNING": "Grade discipline + no defamation. The faucet/leverage/predatory-pricing history is DOCUMENTED (2010 Japan halt; 2023-25 controls; Molycorp bankruptcy; price differentials). The knowledge-transfer claim about a specific Chinese student linking Europe-funded REE research to Tanbreez/Ucore is UNVERIFIED — NO public corroboration found, and NO individual is named or accused here. The documented counter-evidence (Ucore RapidSX 'no Chinese technology transfer at any step'; EU pushing reverse transfer) is recorded. The general academic-knowledge-transfer risk is stated as a category, not as a proven case. Overlay edges excluded from the proofs.",
+    "method": "GMF (Rare Earth Statecraft), CSIS, IEA, ECB occasional paper, Small Wars Journal (predatory pricing), SCMP (EU tech-transfer), CRML/Ucore/REalloys press + GlobeNewswire, Chemistry World (separation tech). Companion to defense-rare-earth, macro-critical-minerals, geopolitics-contested-resource-states.",
+    "cross_refs": ["defense-rare-earth.json","macro-critical-minerals.json","macro-critical-minerals-equities.json","geopolitics-contested-resource-states.json","geopolitics-chip-chokepoint-war.json","influence-china-tech.json"]
+  },
+
+  "why_the_faucet_toggles": {
+    "question":"Why does China repeatedly turn REE exports on and off rather than a clean embargo or clean open market?",
+    "documented_reasons":[
+      {"reason":"Calibrated coercion (partial > total)","detail":"Partial/targeted controls impose large costs on adversaries while AVOIDING a full embargo that would trigger rapid Western substitution/reshoring and erode China's leverage. The 2025 controls cut exports sharply but did NOT cease them — by design.","grade":"fact"},
+      {"reason":"Reward-compliant / punish-adversary","detail":"A licensing regime lets Beijing reward partners and restrict adversaries case-by-case — converting export control into an active geopolitical-influence instrument (Dec 2025: foreign-military end-users denied).","grade":"fact"},
+      {"reason":"Counter-leverage vs US chip controls","detail":"The 2023-25 REE/gallium/germanium/antimony controls were explicitly a counter to US semiconductor export curbs — the symmetric chokepoint trade (chips vs minerals).","grade":"fact"},
+      {"reason":"Predatory price control (keep substitution uneconomic)","detail":"Decades-long strategy: lure Western firms to collaborate, then RESET prices below cost to bankrupt them (Molycorp/Mountain Pass bankruptcy 2015). Because China controls the price, no Western competitor's economics survive long — so toggling supply/price keeps dependence structural, not just tactical.","grade":"fact"}
+    ],
+    "history":[
+      "2010: Senkaku/Diaoyu dispute -> China unofficially halted REE shipments to Japan for ~2 months (the original demonstration of the weapon).",
+      "2023-2024: controls on gallium, germanium, antimony, graphite, then heavy REEs -> counter to US chip curbs.",
+      "Apr 4 2025: licenses required on 7 heavy REEs + magnets; Apr-May exports to the US fell sharply; carmakers cut utilization; European REE prices reached up to ~6x Chinese prices.",
+      "Nov 7 2025 Trump-Xi: broad controls paused 1 year but military-end-use denials RETAINED (defense-rare-earth)."
+    ],
+    "control":"China ~60% of mining, ~92% of processing/production — the chokepoint is PROCESSING/separation, not ore.",
+    "grade":"fact (well-documented statecraft)"
+  },
+
+  "allied_supply_response": {
+    "note":"The Western answer is a state-funded cohort racing the ~2028 horizon (the circular state-financier structure of macro-critical-minerals).",
+    "nodes":[
+      {"name":"Critical Metals Corp (CRML) / Tanbreez","detail":"NASDAQ: CRML; owns the Tanbreez REE project in Greenland (took full control 2025). Signed a 10-yr offtake (~10,000 t/yr concentrate, ~10% of initial production) with Ucore, and a 15%-of-production offtake with REalloys (NASDAQ: BLBX).","grade":"fact"},
+      {"name":"Ucore Rare Metals","detail":"DoD/Pentagon-FUNDED rare-earth processor; building a commercial RapidSX separation machine in Louisiana. Ucore states its RapidSX was 'built from core physics and chemistry — requiring NO Chinese technology transfer at any step.'","grade":"fact (incl. the China-free claim, per Ucore)"},
+      {"name":"MP Materials","detail":"Mountain Pass; DoD largest shareholder + $110/kg NdPr floor + 10-yr offtake + Apple recycled-magnet deal (see macro-critical-minerals).","grade":"fact"},
+      {"name":"REalloys","detail":"US vertically-integrated rare-earth/magnet company; took 15% Tanbreez offtake.","grade":"fact"}
+    ],
+    "grade":"fact"
+  },
+
+  "knowledge_transfer_question": {
+    "claim_investigated":"That Chinese students involved in Europe-funded REE studies — including one overlapping the development of REE processing techniques at CRML's Tanbreez/Ucore — were a knowledge-transfer vector.",
+    "finding":"UNVERIFIED — no public corroboration found this pass. NO individual is named or accused. On the contrary, the documented record points the OTHER way: (a) Ucore explicitly states its RapidSX separation tech was developed from first principles with NO Chinese technology transfer; (b) the EU in 2025 is DEMANDING technology transfer FROM Chinese investors (reverse direction), because China RESTRICTS the diffusion of its processing know-how abroad to protect its advantage. So the specific Tanbreez/Ucore allegation is not supported, and the prevailing flow is China-guarding-knowledge, not China-seeding-it.",
+    "general_risk_documented":"Separately and generally, academic knowledge-transfer in dual-use materials science IS a documented category of concern (China's lead in rare-earth materials science is described as 'dual-use'; talent-program and research-security debates are real). That GENERAL risk is recorded as a category — NOT as a proven case against Tanbreez/Ucore or any person.",
+    "what_would_change_it":"Named, sourced documentation tying a specific researcher's Europe-funded REE work to Tanbreez/Ucore processing IP (e.g., patents, publications, employment records) — none found; provide a source and it can be graded up.",
+    "grade":"UNVERIFIED (specific claim); fact (the documented counter-evidence + the general-category risk)"
+  },
+
+  "edges": [
+    {"from":"China","to":"Japan","instrument":"regulatory_legal","raw_instrument":"2010 Senkaku dispute -> ~2-month unofficial REE export halt (first weaponization)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: REE statecraft precedent"},
+    {"from":"China","to":"US_Government","instrument":"regulatory_legal","raw_instrument":"2023-25 REE/gallium/antimony controls counter to US chip curbs; Apr-2025 7-heavy-REE licenses; military-end-use denials","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: chips-vs-minerals chokepoint trade"},
+    {"from":"US_Government","to":"Ucore","instrument":"equity","raw_instrument":"DoD funding for the RapidSX separation commercial machine (Louisiana)","amount_usd":null,"status":"committed","declared_circular":true,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: state-as-financier supply response"},
+    {"from":"Critical_Metals_Corp","to":"Ucore","instrument":"offtake","raw_instrument":"10-yr Tanbreez (Greenland) offtake ~10,000 t/yr (~10% of production)","amount_usd":null,"status":"committed","declared_circular":false,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: Greenland REE -> US processing"},
+    {"from":"Critical_Metals_Corp","to":"REalloys","instrument":"offtake","raw_instrument":"15%-of-production Tanbreez offtake","amount_usd":null,"status":"committed","declared_circular":false,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: allied magnet supply"},
+    {"from":"Critical_Metals_Corp","to":"MP_Materials","instrument":"relationship","raw_instrument":"allied US/Greenland rare-earth supply-response cohort (vs China processing chokepoint)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-rare-earth-statecraft.json","note":"OVERLAY: connects the cohort to the existing minerals web"}
+  ],
+
+  "limits":"DOCUMENTED: China's calibrated on/off REE statecraft (2010 Japan; 2023-25 controls; military denials), the predatory-pricing model that bankrupted Molycorp, the ~60%/~92% mining/processing dominance, and the allied supply-response cohort (CRML/Tanbreez, DoD-funded Ucore RapidSX, MP, REalloys). UNVERIFIED + NOT asserted: the specific Chinese-student/Europe-funded-research → Tanbreez/Ucore knowledge-transfer claim (no public corroboration; documented counter-evidence that Ucore's RapidSX is China-free and that the EU is demanding reverse transfer; no individual named). The general academic-knowledge-transfer risk is recorded only as a category. Overlay edges connect the supply-response cohort into the existing minerals web; the proof core is untouched."
+}

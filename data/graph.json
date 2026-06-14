@@ -236,6 +236,10 @@
       "sector": "creditor",
       "has_exogenous_revenue": false
     },
+    "Critical_Metals_Corp": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Crusoe": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
@@ -446,6 +450,10 @@
     },
     "JPMorgan": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Japan": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Jeb Hensarling": {
@@ -693,6 +701,10 @@
       "has_exogenous_revenue": true
     },
     "QuantumComputingInc": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "REalloys": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -980,6 +992,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "Ucore": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "VanLoon": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1141,6 +1157,84 @@
       "cancelable": false,
       "source_file": "spec-sec-filings-primary.json",
       "note": "REVERSE sign: Amazon booked a ~$9.5B Q3-2025 GAIN marking up its Anthropic stake (fair-value) after Anthropic's $183B round - circular paper income (vs Microsoft's equity-method OpenAI losses)."
+    },
+    {
+      "from": "China",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2010 Senkaku dispute -> ~2-month unofficial REE export halt (first weaponization)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "US_Government",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "2023-25 REE/gallium/antimony controls counter to US chip curbs; Apr-2025 7-heavy-REE licenses; military-end-use denials",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Ucore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DoD funding for the RapidSX separation commercial machine (Louisiana)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Critical_Metals_Corp",
+      "to": "Ucore",
+      "instrument": "offtake",
+      "layer": "financial",
+      "raw_instrument": "10-yr Tanbreez (Greenland) offtake ~10,000 t/yr (~10% of production)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Critical_Metals_Corp",
+      "to": "REalloys",
+      "instrument": "offtake",
+      "layer": "financial",
+      "raw_instrument": "15%-of-production Tanbreez offtake",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Critical_Metals_Corp",
+      "to": "MP_Materials",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "allied US/Greenland rare-earth supply-response cohort (vs China processing chokepoint)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
     },
     {
       "from": "Boskin_Commission",
@@ -4394,10 +4488,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 259,
-    "num_edges": 258,
-    "num_financial_edges": 120,
-    "num_structural_edges": 138,
+    "num_nodes": 263,
+    "num_edges": 264,
+    "num_financial_edges": 122,
+    "num_structural_edges": 142,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4448,12 +4542,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -4462,10 +4560,6 @@
       [
         "CoreWeave",
         "NVIDIA"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -4477,11 +4571,6 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
@@ -4489,8 +4578,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -4501,14 +4589,20 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -4947,6 +5041,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Critical_Metals_Corp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crusoe": {
         "total_usd": 1825000000,
         "circular_usd": 1825000000,
@@ -5313,6 +5414,13 @@
       },
       "JPMorgan": {
         "total_usd": 3220000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Japan": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5746,6 +5854,13 @@
         "in_robust_core": false
       },
       "QuantumComputingInc": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "REalloys": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6249,6 +6364,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ucore": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanLoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6419,6 +6541,24 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 8,
+        "neighbor_sectors": [
+          "ai_data",
+          "critical_minerals",
+          "other",
+          "sink",
+          "state"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Anthropic",
         "degree": 11,
         "neighbor_sectors": [
@@ -6508,23 +6648,6 @@
         "both_layers": false
       },
       {
-        "node": "US_Government",
-        "degree": 6,
-        "neighbor_sectors": [
-          "ai_data",
-          "critical_minerals",
-          "other",
-          "sink"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "MGX",
         "degree": 8,
         "neighbor_sectors": [
@@ -6593,6 +6716,23 @@
         "both_layers": false
       },
       {
+        "node": "MP_Materials",
+        "degree": 4,
+        "neighbor_sectors": [
+          "defense",
+          "hyperscaler",
+          "other",
+          "state"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
         "degree": 6,
         "neighbor_sectors": [
@@ -6654,22 +6794,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Stargate",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bank",
-          "financier",
-          "hyperscaler"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 3,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       }
     ]
   }
