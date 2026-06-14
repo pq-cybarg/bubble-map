@@ -1357,7 +1357,7 @@
       "status": "closed",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-crypto-banking-debanking.json,spec-sec-sdny-regulatory.json",
+      "source_file": "spec-crypto-banking-debanking.json,spec-sec-sdny-regulatory.json,spec-fdic-foia-coinbase.json",
       "note": ""
     },
     {
@@ -2176,7 +2176,7 @@
       "status": "won-fees",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-sec-sdny-regulatory.json",
+      "source_file": "spec-sec-sdny-regulatory.json,spec-fdic-foia-coinbase.json",
       "note": "Coinbase/History Associates FOIA suit forced disclosure; FDIC paid $188,440 fees + FOIA overhaul (Feb 2026); Judge Ana Reyes."
     },
     {
@@ -4016,6 +4016,10 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -4032,15 +4036,6 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -4048,6 +4043,11 @@
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -5933,6 +5933,21 @@
         "both_layers": false
       },
       {
+        "node": "US_Banks",
+        "degree": 5,
+        "neighbor_sectors": [
+          "other",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 2,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Government",
         "degree": 4,
         "neighbor_sectors": [
@@ -5995,21 +6010,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "US_Banks",
-        "degree": 5,
-        "neighbor_sectors": [
-          "other",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 2,
-        "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "CPI_Methodology",

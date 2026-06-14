@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "FDIC accountability — the Coinbase/History Associates FOIA fight, the court-found disclosure violation, and the 'pause letter' campaign (with social-claim caveats)",
+    "generated": "2026-06-13",
+    "frame": "Companion to spec-crypto-banking-debanking: the SPECIFIC accountability arc that forced the Operation-Chokepoint-2.0 'pause letters' into the open — a multi-year FOIA battle Coinbase funded (via History Associates), a court ruling that the FDIC VIOLATED FOIA, a fee award + FOIA-policy overhaul, and an unresolved claim that the FDIC withheld/omitted additional letters. Separates the VERIFIABLE record (court docket, FDIC OIG, the released letters, the settlement) from UNVERIFIED social-media corruption claims (e.g., the @fdic_exposed account).",
+    "WARNING": "Grade discipline. The FOIA litigation, the court's adverse finding, the fee award, the FDIC OIG report, and the released pause letters are DOCUMENTED facts. The broader 'FDIC corruption' characterization and specific claims circulated on social accounts (e.g., @fdic_exposed on X) are UNVERIFIED social-media claims — recorded as claims-to-test, NOT asserted. Coordinated-campaign INTENT ('Chokepoint 2.0') remains contested (the discouraging posture is documented; a single orchestrated directive is not adjudicated). Overlay edges excluded from the proofs.",
+    "method": "Coinbase v. FDIC / History Associates Inc. v. FDIC FOIA docket; FDIC Office of Inspector General (2023) report on crypto pause letters; the released letters (FOIA productions); reporting (The Block, Banking Dive, Cointelegraph, Decrypt, CoinGape); Coinbase CLO Paul Grewal public statements. Social-media claims flagged and not asserted.",
+    "cross_refs": ["spec-crypto-banking-debanking.json","macro-fdic.json","macro-bank-htm-marks.json","macro-stablecoin-treasury-rail.json","influence-congress-funding-compromise.json"]
+  },
+
+  "foia_arc": [
+    {"item":"The suit","detail":"Coinbase funded a FOIA campaign via the research firm History Associates Inc., which sued the FDIC (June 2024) seeking the 'pause letters' and related crypto-debanking records.","grade":"fact"},
+    {"item":"The pause letters","detail":"Per the FDIC's own OIG (2023), the FDIC sent 'pause letters' to banks between ~Mar 2022 and May 2023 asking them not to expand crypto-related activities and to provide more information. FOIA productions released ~23 letters (initially heavily redacted, later less so).","grade":"fact (OIG + FOIA productions)"},
+    {"item":"The omitted-documents claim","detail":"History Associates stated (Jan 2025) the FDIC 'may have omitted additional pause letters entirely' and that at least ~150 documents responsive to its FOIA request were not handed over — an unresolved completeness dispute.","grade":"fact (the claim was made on the docket); whether docs were improperly withheld is contested"},
+    {"item":"The court ruling + settlement","detail":"A court found the FDIC VIOLATED FOIA; (Feb 2026) the FDIC agreed to pay Coinbase/History Associates ~$188,440 in legal fees and to OVERHAUL its FOIA policies, concluding the multi-year battle. Coinbase CLO Paul Grewal said the letters 'give credence' to Chokepoint-2.0 claims.","grade":"fact (court finding + settlement)"},
+    {"item":"2025 policy reversal","detail":"In 2025 the new FDIC leadership (acting chair Travis Hill) rescinded the restrictive crypto guidance and the pause posture — an implicit confirmation the discouraging posture had existed (see spec-crypto-banking-debanking).","grade":"fact"}
+  ],
+
+  "other_documented_fdic_conduct": [
+    {"item":"Toxic-workplace report → Gruenberg resignation","detail":"An independent report (2024) found a toxic/harassment workplace culture at the FDIC; Chair Martin Gruenberg announced resignation amid the fallout. A documented governance failure (distinct from the crypto issue).","grade":"fact"},
+    {"item":"2023 systemic-risk exception","detail":"The FDIC + Treasury + Fed invoked the systemic-risk exception to backstop ALL SVB/Signature depositors (Mar 2023) — a discretionary, contested use of authority (moral-hazard debate). See macro-fdic.","grade":"fact (action); characterization contested"}
+  ],
+
+  "social_media_claims": {
+    "note":"The user references an X/Twitter account (@fdic_exposed) aggregating FDIC-misconduct claims. Treated as an UNVERIFIED social-media source.",
+    "discipline":"Specific claims from such accounts are NOT asserted here. Where a social claim overlaps a DOCUMENTED fact (the pause letters, the FOIA violation, the workplace report), the documented source is cited instead. Where a social claim is uncorroborated, it is left as a claim-to-test, not a finding.",
+    "grade":"unverified (social) — excluded from findings unless independently documented"
+  },
+
+  "edges": [
+    {"from":"Coinbase","to":"FDIC","instrument":"regulatory_legal","raw_instrument":"FOIA suit (via History Associates) forcing release of ~23 'pause letters'; court found FDIC violated FOIA; ~$188k fee award + FOIA overhaul (2026)","amount_usd":188440,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-fdic-foia-coinbase.json","note":"OVERLAY: accountability litigation; corruption framing contested"},
+    {"from":"FDIC","to":"US_Banks","instrument":"regulatory_legal","raw_instrument":"~23+ 'pause letters' (Mar 2022-May 2023) discouraging crypto banking; omitted-documents claim unresolved","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-fdic-foia-coinbase.json","note":"OVERLAY: documented discouraging posture (Chokepoint-2.0 intent contested)"}
+  ],
+
+  "limits":"VERIFIABLE: the FOIA litigation, the court's adverse finding, the ~$188k fee award + FOIA-policy overhaul, the FDIC OIG report, the released pause letters, the 2025 policy reversal, and the toxic-workplace report that ended Gruenberg's tenure. NOT asserted: the broad 'FDIC corruption' verdict and uncorroborated @fdic_exposed-style social claims (recorded as claims-to-test only); and coordinated 'Chokepoint 2.0' INTENT (the posture is documented, an orchestrated directive is not adjudicated). This block is the accountability companion to spec-crypto-banking-debanking; the financial/proof core is untouched."
+}
