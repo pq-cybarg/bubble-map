@@ -1,6 +1,63 @@
 {
-  "metadata":{"title":"Blockchain leg - policy-capture loop + stablecoin deficit rail","generated":"2026-06-07","provenance":"Web-verified (CNBC/Bessent, BeInCrypto, DefiLlama, Axios/CNBC Fairshake, Treasury press). Grading links spec-crypto-sec-epstein.json.","model":"models/graph/blockchain_web.py"},
-  "stablecoin_treasury":{"mktcap_now_usd_b":315,"usdt_usd_b":189,"usdc_usd_b":78,"tbills_bought_usd_b":109,"bessent_treasury_demand_usd_b":2000,"bessent_mktcap_2030_usd_b":3000,"bessent_savings_per_yr_usd_b":114,"source":["https://www.cnbc.com/2025/06/21/how-the-stablecoin-bill-gives-treasury-secretary-bessent-a-new-tool-to-fund-the-us-deficit.html","https://beincrypto.com/genius-act-stablecoins-treasury-purchases-2025/"]},
-  "fairshake_pac":{"war_chest_2026_usd_m":193,"spent_2024_usd_m":133,"funders":["a16z","Coinbase","Ripple","Jump Crypto","Uniswap Labs"],"source":["https://www.axios.com/2026/01/28/crypto-coinbase-fairshake-pac","https://cointelegraph.com/news/crypto-pac-fairshake-contributions-us-midterms"]},
-  "finding":"Blockchain is wired into the fiscal core: GENIUS forces stablecoins to hold Treasuries, making stablecoin growth a structural new buyer of US debt (deficit-financing rail) per Treasury Sec Bessent; and a Fairshake-funded policy-capture loop (industry money -> Congress -> GENIUS/CLARITY -> token value -> money). BTC is one of few assets UP in gold (real adoption); selective-enforcement/threat-actor threads graded in spec-crypto-sec-epstein.json."
+ "metadata": {
+  "title": "Blockchain leg - policy-capture loop + stablecoin deficit rail",
+  "generated": "2026-06-07",
+  "provenance": "Web-verified (CNBC/Bessent, BeInCrypto, DefiLlama, Axios/CNBC Fairshake, Treasury press). Grading links spec-crypto-sec-epstein.json.",
+  "model": "models/graph/blockchain_web.py"
+ },
+ "stablecoin_treasury": {
+  "mktcap_now_usd_b": 315,
+  "usdt_usd_b": 189,
+  "usdc_usd_b": 78,
+  "tbills_bought_usd_b": 109,
+  "bessent_treasury_demand_usd_b": 2000,
+  "bessent_mktcap_2030_usd_b": 3000,
+  "bessent_savings_per_yr_usd_b": 114,
+  "source": [
+   "https://www.cnbc.com/2025/06/21/how-the-stablecoin-bill-gives-treasury-secretary-bessent-a-new-tool-to-fund-the-us-deficit.html",
+   "https://beincrypto.com/genius-act-stablecoins-treasury-purchases-2025/"
+  ]
+ },
+ "fairshake_pac": {
+  "war_chest_2026_usd_m": 193,
+  "spent_2024_usd_m": 133,
+  "funders": [
+   "a16z",
+   "Coinbase",
+   "Ripple",
+   "Jump Crypto",
+   "Uniswap Labs"
+  ],
+  "source": [
+   "https://www.axios.com/2026/01/28/crypto-coinbase-fairshake-pac",
+   "https://cointelegraph.com/news/crypto-pac-fairshake-contributions-us-midterms"
+  ]
+ },
+ "finding": "Blockchain is wired into the fiscal core: GENIUS forces stablecoins to hold Treasuries, making stablecoin growth a structural new buyer of US debt (deficit-financing rail) per Treasury Sec Bessent; and a Fairshake-funded policy-capture loop (industry money -> Congress -> GENIUS/CLARITY -> token value -> money). BTC is one of few assets UP in gold (real adoption); selective-enforcement/threat-actor threads graded in spec-crypto-sec-epstein.json.",
+ "edges": [
+  {
+   "from": "US_Congress",
+   "to": "CLARITY",
+   "instrument": "regulatory_legal",
+   "raw_instrument": "CLARITY Act — crypto market-structure (House-passed 2025), splits SEC/CFTC jurisdiction",
+   "amount_usd": null,
+   "status": "closed",
+   "declared_circular": false,
+   "cancelable": false,
+   "source_file": "blockchain-leg.json",
+   "note": "legislation node"
+  },
+  {
+   "from": "Coinbase",
+   "to": "CLARITY",
+   "instrument": "relationship",
+   "raw_instrument": "crypto industry (Coinbase/Fairshake) lobbied for the CLARITY market-structure framework",
+   "amount_usd": null,
+   "status": "closed",
+   "declared_circular": false,
+   "cancelable": false,
+   "source_file": "blockchain-leg.json",
+   "note": "industry<->legislation (Fairshake loop)"
+  }
+ ]
 }

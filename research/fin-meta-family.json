@@ -1,18 +1,127 @@
 {
-  "metadata": {
-    "title": "Meta / Facebook family - consolidated AI-cluster node (Scale AI, Superintelligence Labs, Hyperion, nuclear, MTIA)",
-    "generated": "2026-06-07",
-    "provenance": "Web-verified (Motley Fool, Maginative, Utility Dive, Data Center Frontier, about.fb.com, Tom's Hardware). Consolidates Meta's role previously split across fin-google-amazon-anthropic-meta.json + influence-meta-childsafety.json + energy_web.",
-    "cross_refs": ["influence-meta-childsafety.json (covert age-verification astroturf + litigation - the influence leg)", "macro-cre-privatecredit.json (Hyperion off-balance-sheet)", "energy-power.json (Meta nuclear)", "fin-google-amazon-anthropic-meta.json (Broadcom MTIA / Gulf capital)"]
+ "metadata": {
+  "title": "Meta / Facebook family - consolidated AI-cluster node (Scale AI, Superintelligence Labs, Hyperion, nuclear, MTIA)",
+  "generated": "2026-06-07",
+  "provenance": "Web-verified (Motley Fool, Maginative, Utility Dive, Data Center Frontier, about.fb.com, Tom's Hardware). Consolidates Meta's role previously split across fin-google-amazon-anthropic-meta.json + influence-meta-childsafety.json + energy_web.",
+  "cross_refs": [
+   "influence-meta-childsafety.json (covert age-verification astroturf + litigation - the influence leg)",
+   "macro-cre-privatecredit.json (Hyperion off-balance-sheet)",
+   "energy-power.json (Meta nuclear)",
+   "fin-google-amazon-anthropic-meta.json (Broadcom MTIA / Gulf capital)"
+  ]
+ },
+ "entities": [
+  {
+   "name": "Meta",
+   "family": [
+    "Facebook",
+    "Instagram",
+    "WhatsApp",
+    "Threads",
+    "Reality Labs",
+    "Meta AI / Llama",
+    "Meta Superintelligence Labs (MSL)"
+   ],
+   "role": "hyperscaler + AI-core spender",
+   "notes": "Capex Q3-2025 $19.37B; FY2025 $70-72B; 2026 guided higher; $30B bond (Oct 2025).",
+   "source": [
+    "https://www.fool.com/investing/2025/07/10/is-metas-143-billion-bet-on-scale-ai-too-little-to/"
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "Meta",
+   "to": "ScaleAI",
+   "instrument": "equity",
+   "amount_usd": 14300000000,
+   "date": "2025-06",
+   "status": "closed",
+   "circular": false,
+   "source": [
+    "https://www.maginative.com/article/meta-bets-14-3-billion-on-scale-ai-and-its-ceo-to-lead-new-superintelligence-lab/"
+   ],
+   "confidence": "high",
+   "notes": "$14.3B for ~49% of Scale AI; Scale CEO Alexandr Wang now leads Meta Superintelligence Labs (MSL). Scale ~$29B valuation. Meta owns ~half the data-labeler that serves the WHOLE AI cluster (incl. Meta's rivals) - a semi-circular, conflicted position that reshaped the data-labeling market."
   },
-  "entities": [
-    {"name": "Meta", "family": ["Facebook","Instagram","WhatsApp","Threads","Reality Labs","Meta AI / Llama","Meta Superintelligence Labs (MSL)"], "role": "hyperscaler + AI-core spender", "notes": "Capex Q3-2025 $19.37B; FY2025 $70-72B; 2026 guided higher; $30B bond (Oct 2025).", "source": ["https://www.fool.com/investing/2025/07/10/is-metas-143-billion-bet-on-scale-ai-too-little-to/"]}
-  ],
-  "edges": [
-    {"from": "Meta", "to": "ScaleAI", "instrument": "equity", "amount_usd": 14300000000, "date": "2025-06", "status": "closed", "circular": false, "source": ["https://www.maginative.com/article/meta-bets-14-3-billion-on-scale-ai-and-its-ceo-to-lead-new-superintelligence-lab/"], "confidence": "high", "notes": "$14.3B for ~49% of Scale AI; Scale CEO Alexandr Wang now leads Meta Superintelligence Labs (MSL). Scale ~$29B valuation. Meta owns ~half the data-labeler that serves the WHOLE AI cluster (incl. Meta's rivals) - a semi-circular, conflicted position that reshaped the data-labeling market."},
-    {"from": "Meta", "to": "Oklo", "instrument": "compute_commitment", "amount_usd": null, "date": "2026-01", "status": "committed", "circular": false, "source": ["https://www.utilitydive.com/news/meta-nuclear-deal-oklo-vistra-terrapower-ai-data-centers/809215/"], "confidence": "high", "notes": "Meta nuclear deals with Oklo + Vistra + TerraPower for up to 6.6 GW by 2035 (part of the energy leg / SMR thread)."},
-    {"from": "Meta", "to": "Broadcom", "instrument": "compute_commitment", "amount_usd": null, "date": "2026-04", "status": "committed", "circular": false, "source": ["https://about.fb.com/news/2026/04/meta-partners-with-broadcom-to-co-develop-custom-ai-silicon/"], "confidence": "high", "notes": "Co-develop 4 generations of MTIA custom AI silicon in 2 years (new chip every <=6 months). Broadcom is one of its 6 XPU customers (Google/Meta/OpenAI/Anthropic +2)."},
-    {"from": "BlueOwl", "to": "Meta_Hyperion_SPV", "instrument": "debt", "amount_usd": 27000000000, "date": "2025-10", "status": "closed", "circular": false, "source": ["https://www.datacenterfrontier.com/hyperscale/article/55325337/metas-27b-hyperion-campus-a-new-blueprint-for-ai-infrastructure-finance"], "confidence": "high", "notes": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."}
-  ],
-  "assessment": "Meta is a top-tier AI-core node whose distinctive features are (1) the $14.3B/~49% Scale AI stake (owning the cluster's data-labeler - conflicted/semi-circular), (2) the $27B Blue Owl off-balance-sheet Hyperion SPV (the cleanest 'Enron-lineage' structure in the AI buildout, projected >$200B), (3) a multi-gigawatt nuclear procurement (Oklo/Vistra/TerraPower, 6.6GW) and Broadcom MTIA custom silicon, and (4) the influence leg - covertly funding age-verification astroturf while opposing KOSA (influence-meta-childsafety.json). It sits at the intersection of the AI-core, energy, off-balance-sheet-credit, and identity-control threads."
+  {
+   "from": "Meta",
+   "to": "Oklo",
+   "instrument": "compute_commitment",
+   "amount_usd": null,
+   "date": "2026-01",
+   "status": "committed",
+   "circular": false,
+   "source": [
+    "https://www.utilitydive.com/news/meta-nuclear-deal-oklo-vistra-terrapower-ai-data-centers/809215/"
+   ],
+   "confidence": "high",
+   "notes": "Meta nuclear deals with Oklo + Vistra + TerraPower for up to 6.6 GW by 2035 (part of the energy leg / SMR thread)."
+  },
+  {
+   "from": "Meta",
+   "to": "Broadcom",
+   "instrument": "compute_commitment",
+   "amount_usd": null,
+   "date": "2026-04",
+   "status": "committed",
+   "circular": false,
+   "source": [
+    "https://about.fb.com/news/2026/04/meta-partners-with-broadcom-to-co-develop-custom-ai-silicon/"
+   ],
+   "confidence": "high",
+   "notes": "Co-develop 4 generations of MTIA custom AI silicon in 2 years (new chip every <=6 months). Broadcom is one of its 6 XPU customers (Google/Meta/OpenAI/Anthropic +2)."
+  },
+  {
+   "from": "BlueOwl",
+   "to": "Meta_Hyperion_SPV",
+   "instrument": "debt",
+   "amount_usd": 27000000000,
+   "date": "2025-10",
+   "status": "closed",
+   "circular": false,
+   "source": [
+    "https://www.datacenterfrontier.com/hyperscale/article/55325337/metas-27b-hyperion-campus-a-new-blueprint-for-ai-infrastructure-finance"
+   ],
+   "confidence": "high",
+   "notes": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."
+  },
+  {
+   "from": "NVIDIA",
+   "to": "TerraPower",
+   "instrument": "investment",
+   "raw_instrument": "NVentures in $650M raise (with Bill Gates/HD Hyundai; prior SK Inc/SK Innovation, +$1B) — Natrium reactor for data-center power",
+   "amount_usd": 650000000,
+   "status": "closed",
+   "declared_circular": false,
+   "cancelable": false,
+   "source_file": "fin-meta-family.json",
+   "note": "AI-core capital -> nuclear power (energy-power)"
+  },
+  {
+   "from": "Vistra",
+   "to": "SINK_capex",
+   "instrument": "relationship",
+   "raw_instrument": "nuclear/gas power utility (acq. Energy Harbor nuclear) supplying AI-data-center power demand",
+   "amount_usd": null,
+   "status": "recurring",
+   "declared_circular": false,
+   "cancelable": false,
+   "source_file": "fin-meta-family.json",
+   "note": "power supply to the AI buildout (energy-power)"
+  },
+  {
+   "from": "US_Government",
+   "to": "ScaleAI",
+   "instrument": "relationship",
+   "raw_instrument": "DoD defense-AI contracts (e.g., Thunderforge); Meta ~$14B for 49% stake",
+   "amount_usd": null,
+   "status": "closed",
+   "declared_circular": false,
+   "cancelable": false,
+   "source_file": "fin-meta-family.json",
+   "note": "state<->AI data-labeling (also Meta-owned)"
+  }
+ ],
+ "assessment": "Meta is a top-tier AI-core node whose distinctive features are (1) the $14.3B/~49% Scale AI stake (owning the cluster's data-labeler - conflicted/semi-circular), (2) the $27B Blue Owl off-balance-sheet Hyperion SPV (the cleanest 'Enron-lineage' structure in the AI buildout, projected >$200B), (3) a multi-gigawatt nuclear procurement (Oklo/Vistra/TerraPower, 6.6GW) and Broadcom MTIA custom silicon, and (4) the influence leg - covertly funding age-verification astroturf while opposing KOSA (influence-meta-childsafety.json). It sits at the intersection of the AI-core, energy, off-balance-sheet-credit, and identity-control threads."
 }

@@ -18,25 +18,25 @@
 - **Meta** — 37 files
 - **Google** — 30 files
 - **OpenAI** — 27 files
-- **Oracle** — 23 files
+- **Oracle** — 24 files
 - **Amazon** — 21 files
 - **Microsoft** — 20 files
+- **NVIDIA** — 18 files
 - **Chainlink** — 16 files
 - **Stargate** — 16 files
-- **NVIDIA** — 16 files
 - **Anthropic** — 16 files
 - **FDIC** — 16 files
-- **JPMorgan** — 14 files
+- **JPMorgan** — 15 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- CLARITY, PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
+- PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-market-plumbing-control.json` — related files by shared entities (verify cross-refs exist)
-- spec-sec-sdny-regulatory.json: 5 shared entities
-- altcoin-lens.json: 5 shared entities
-- fin-hedera-connections.json: 4 shared entities
-- spec-exchanges-asia.json: 3 shared entities
-- fin-sealsq-wisekey-global.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- spec-crypto-sec-epstein.json: 2 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
+## Newest file `blockchain-leg.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 7 shared entities
+- altcoin-lens.json: 6 shared entities
+- spec-sec-sdny-regulatory.json: 6 shared entities
+- spec-exchanges-asia.json: 6 shared entities
+- spec-network-overlay.json: 5 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-crypto-banking-debanking.json: 4 shared entities
+- influence-operator-network.json: 3 shared entities

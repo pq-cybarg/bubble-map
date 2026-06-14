@@ -112,7 +112,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #panel ul{margin:4px 0;padding-left:18px}#panel li{font-size:12.5px;margin:2px 0}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
-text.lab{font-size:9px;fill:#3a382f;pointer-events:none}
+text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
 .lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
 .lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
 #tip{position:absolute;z-index:9;pointer-events:none;display:none;max-width:280px;background:#1c1b19f2;color:#f5f1e6;font-size:12px;line-height:1.45;padding:8px 10px;border-radius:7px;box-shadow:0 4px 14px #0004}
@@ -179,11 +179,11 @@ const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('c
 let fitted=false, curK=1, pendingFocus=null;
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
- .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?52:72).strength(.3))
- .force('charge',d3.forceManyBody().strength(-95).distanceMax(420))
+ .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?64:88).strength(.28))
+ .force('charge',d3.forceManyBody().strength(-140).distanceMax(520))
  .force('center',d3.forceCenter(W()/2,H()/2))
  .force('x',d3.forceX(W()/2).strength(.06)).force('y',d3.forceY(H()/2).strength(.06))
- .force('collide',d3.forceCollide().radius(d=>rad(d)+4))
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+13).strength(.9))
  .on('tick',tick);
 function tick(){
  const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);

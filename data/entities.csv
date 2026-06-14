@@ -18,6 +18,8 @@ Apollo_Blackstone,private_credit,True,False,False,0.0
 Apple,hyperscaler,True,False,False,0.0
 BLS,statistical_agency,True,False,False,0.0
 BLS_NTRI,statistic,False,False,False,0.0
+BNY_Mellon,other,True,False,False,0.0
+Bank_of_England,other,True,False,False,0.0
 Banks,other,True,False,False,0.0
 Barney Frank,other,True,False,False,0.0
 Bermuda_Captives,insurance,False,False,False,0.0
@@ -34,6 +36,8 @@ Broadridge,other,True,False,False,0.0
 Bybit,other,True,False,False,0.0
 ByteDance,bigtech_asia,True,False,False,0.0
 CFTC,other,True,False,False,0.0
+CLARITY,other,True,False,False,0.0
+CLS_Bank,other,True,False,False,0.0
 CME,other,True,False,False,0.0
 COMEX,exchange,True,False,False,0.0
 CPI_Methodology,statistic,False,False,False,0.0
@@ -69,6 +73,7 @@ Disney,ip_rightsholder,True,False,False,0.0
 Disney_Studios_Coalition,ip_rightsholder,True,False,False,0.0
 Dual_Mandate,statistic,False,False,False,0.0
 EeroQ,pqc_quantum,False,False,False,0.0
+Ethereum,other,True,False,False,0.0
 Euroclear,other,True,False,False,0.0
 FBI,state_intel,True,False,False,0.0
 FDIC,regulator,True,False,False,0.0
@@ -93,6 +98,7 @@ Government_of_Gujarat,state,True,False,False,0.0
 HKDA,stablecoin,False,False,False,0.0
 Hashgraph_Association,dlt,False,False,False,0.0
 Hedera,dlt,True,False,False,0.0
+Hedge_Funds,other,True,False,False,0.0
 Hiero_LFDT,dlt,False,False,False,0.0
 House Financial Services,other,True,False,False,0.0
 Huione,other,True,False,False,0.0
@@ -133,7 +139,7 @@ NRO,state_intel,True,False,False,0.0
 NSA,state_intel,True,False,False,0.0
 NSCC,other,True,False,False,0.0
 NSE_India,financial_infra,True,False,False,0.0
-NVIDIA,chip_vendor,True,True,True,0.874
+NVIDIA,chip_vendor,True,True,True,0.867
 National_Consulting_Services,other,True,False,False,0.0
 Nebius,neocloud,False,False,False,0.0
 Neoclouds,other,True,False,False,0.0
@@ -163,7 +169,10 @@ Private-credit funds,other,True,False,False,0.0
 Private-credit funds / asset managers,other,True,False,False,0.0
 Private-credit market,other,True,False,False,0.0
 PrivateCredit_Funds,private_credit,True,False,False,0.0
+PsiQuantum,other,True,False,False,0.0
 QCEW_Benchmark,statistic,False,False,False,0.0
+Quantinuum,other,True,False,False,0.0
+QuantumComputingInc,other,True,False,False,0.0
 Rate_Shock,macro_factor,False,False,False,0.0
 Retail_401k,retail,False,False,False,0.0
 Ripple,crypto_infra,True,False,False,0.0
@@ -184,10 +193,13 @@ SINK_bondmarket,sink,True,False,False,0.0
 SINK_btc_reserve,sink,True,False,False,0.0
 SINK_capex,sink,True,False,False,0.0
 SINK_debt,sink,True,False,False,0.0
+SINK_fx,sink,True,False,False,0.0
 SINK_investors,sink,True,False,False,0.0
 SINK_lenders,sink,True,True,True,0.445
+SINK_repo,sink,True,False,False,0.0
 SINK_retail_flow,sink,True,False,False,0.0
 SINK_scam_victims,sink,True,False,False,0.0
+SINK_treasury_basis,sink,True,False,False,0.0
 SSA,statistical_agency,True,False,False,0.0
 SaltTyphoon,threat_actor,False,False,False,0.0
 SamouraiWallet,privacy_tool,False,False,False,0.0
@@ -211,6 +223,7 @@ Swift,financial_infra,True,False,False,0.0
 TMobile,telecom,True,False,False,0.0
 TechCompanies,tech,True,False,False,0.0
 Telesat,satellite,True,False,False,0.0
+TerraPower,other,True,False,False,0.0
 Terraform_Labs,other,True,False,False,0.0
 Tether,stablecoin,True,False,False,0.0
 Three_Arrows_Capital,other,True,False,False,0.0
@@ -226,6 +239,7 @@ UBS_OConnor,financier,True,False,False,0.0
 USD1,stablecoin,False,False,False,0.0
 US_Allied_Military,defense,True,False,False,0.0
 US_Banks,bank,True,False,False,0.0
+US_Congress,other,True,False,False,0.0
 US_Government,state,True,False,False,0.0
 US_Tariff_Policy,state,True,False,False,0.0
 US_Telecoms,telecom,True,False,False,0.0
@@ -233,6 +247,7 @@ US_Treasuries,statistic,False,False,False,0.0
 VanLoon,person,False,False,False,0.0
 Vantage,neocloud,False,False,False,0.0
 Verizon,telecom,True,False,False,0.0
+Vistra,other,True,False,False,0.0
 WISeART,other,True,False,False,0.0
 WISeSat,satellite,False,False,False,0.0
 WeCan_Group,crypto_infra,False,False,False,0.0

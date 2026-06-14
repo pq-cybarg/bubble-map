@@ -15,8 +15,13 @@
       "Voting rights and dividends flow FIRST to Cede & Co, then are passed onward to beneficial owners (via the broker/omnibus chain).",
       "DTCC (parent of DTC/NSCC/FICC) is OWNED BY ITS MEMBERS — banks and broker-dealers; DTCC holds DTC's voting stock, participants hold non-voting. A private utility at the center of US securities."
     ],
-    "contested":"The 'Great Taking' thesis (that street-name custody + the UCC Article 8 'security entitlement' framework is a deliberate setup to let secured creditors seize all client assets in a systemic collapse) is FRINGE/CONTESTED — the custody structure is real and documented; the confiscation-conspiracy conclusion is not established and is recorded, not asserted.",
-    "grade":"fact (Cede/DTC custody structure); contested (the 'Great Taking' conclusion)"
+    "legal_mechanics":[
+      "UCC Article 8 was REVISED in 1994 to formalize the 'security entitlement' concept: the investor holds a pro-rata contractual claim against the securities intermediary, not titled property in specific shares.",
+      "David Webb's 'The Great Taking' argues these revisions (and harmonizing instruments) converted owners into 'entitlement holders' whose claim is WEAKER in the intermediary's insolvency, and that secured-creditor 'safe harbor' priorities could let a secured party/intermediary treat pooled client securities as collateral ahead of clients in a systemic collapse.",
+      "State-level bills to amend the UCC entitlement/secured-creditor language have been introduced/testified (e.g., North Dakota SB 2364, 2025, with Webb testifying) — i.e., the legal debate is real and active, even though the confiscation OUTCOME is unproven."
+    ],
+    "contested":"The 'Great Taking' THESIS (that this is a DELIBERATE setup to seize all client assets in a collapse) is FRINGE/CONTESTED. What is DOCUMENTED: the 1994 UCC Article 8 entitlement framework, the secured-creditor safe harbors, and the active state-bill debate. What is NOT established: a coordinated confiscation plan — recorded, not asserted.",
+    "grade":"fact (Cede/DTC + UCC Article 8 mechanics + active state-bill debate); contested (the 'deliberate Great Taking' conclusion)"
   },
 
   "clearing_layer": {
@@ -27,6 +32,16 @@
       "Mandatory central clearing (post-2008, Dodd-Frank) concentrated OTC-derivatives risk into CCPs; CCP margin models are PROCYCLICAL — margin spikes in stress (2020 dash-for-cash, 2022 LME nickel + UK LDI), amplifying liquidity pressure on members."
     ],
     "grade":"fact (SIFMU + GameStop call + procyclicality); systemic-risk magnitude is debated"
+  },
+
+  "funding_plumbing": {
+    "title":"Funding plumbing — the repo, FX-settlement, and basis-trade single points of failure",
+    "facts":[
+      "TRI-PARTY REPO: after JPMorgan exited the business (by ~2018), BNY Mellon became the SOLE tri-party repo settlement agent for the US — clearing/settling ~$2T+/day of repo (it already held ~80-85% before JPM left). A single bank's operational failure could freeze the funding of most US (and global) broker-dealers — a textbook single-point-of-failure.",
+      "FX SETTLEMENT: CLS Bank is the SOLE multi-currency FX settlement system (payment-versus-payment across the major currencies); a BIS study found it cuts FX settlement risk by ~96%. Another concentrated utility the whole FX market depends on.",
+      "THE TREASURY BASIS TRADE: hedge funds arb cash Treasuries vs futures, funded with high-leverage repo; their share of Treasury cash holdings hit ~10.3% (Q1 2025, above the pre-pandemic ~9.4% peak). Fed Gov. Lisa Cook, the OFR, and the BoE Financial Policy Committee flag it as a SYSTEMIC vulnerability in the $30T Treasury market — leverage + low margin + short-term-repo reliance that can flip from liquidity-provider to crash-transmitter (the Mar-2020 dash-for-cash precedent)."
+    ],
+    "grade":"fact (BNY monopoly, CLS, basis-trade share + regulator warnings); systemic-trigger TIMING not forecastable"
   },
 
   "execution_layer": {
@@ -54,7 +69,8 @@
     "facts":[
       "Euroclear and Clearstream are the two International Central Securities Depositories (ICSDs); 103 central banks custody reserves at Euroclear, 70 at Clearstream — they are global chokepoints.",
       "Euroclear holds ~€194B of immobilized/frozen Russian assets (≈85% of its balance sheet, Jun 2025); ~€210B Russian sovereign assets are immobilized under EU jurisdiction. The G7 used the WINDFALL interest to back a ~$50B Ukraine facility; full confiscation of the principal is debated — Euroclear/Belgium warn it would erode trust in EU markets and set a precedent. Russia obtained a Moscow-court order against Euroclear (~$250B claimed).",
-      "SWIFT (financial-messaging chokepoint) disconnected designated Russian entities in 2022 — the demonstration that the messaging layer is a sanctions weapon."
+      "SWIFT (financial-messaging chokepoint) disconnected designated Russian entities in 2022 — the demonstration that the messaging layer is a sanctions weapon.",
+      "The windfall interest on the frozen assets is itself TAXED IN BELGIUM — generating a multi-billion windfall for the Belgian Treasury — which is part of why Belgium resists full confiscation (it both profits from and bears the legal risk of the immobilized pool)."
     ],
     "linkage":"This is the settlement layer as geopolitical weapon — and the strongest argument FOR de-dollarization / alternative rails (CIPS, mBridge, SPFS) the project tracks (geopolitics-russia-energy-arctic, macro-stablecoin-treasury-rail).",
     "grade":"fact (frozen assets, SWIFT cutoff, the litigation); 'precedent erodes reserve trust' is documented-warning"
@@ -75,7 +91,9 @@
       "DTCC → CHAINLINK (Smart NAV pilot via CCIP, 2024, with JPMorgan/Franklin Templeton/BNY Mellon/State Street; tokenized-collateral platform 2026) and → STELLAR (tokenize DTC-custodied stocks/ETFs/Treasuries/bonds, first public chain, ~H1 2027).",
       "BROADRIDGE Distributed Ledger Repo (DLR) — ~$280B/day repo on Canton DLT, the largest institutional tokenized-settlement platform; integrates with FNALITY for central-bank-reserve-backed cash settlement.",
       "CANTON (built by Digital Asset, open-sourced, native Canton Coin) — a bank-backed DLT; FNALITY (backed by ~20 global institutions) settles in tokenized central-bank reserves; HQLAx (collateral mobility on Canton) underpins ~$15T daily; plus R3 Corda and HEDERA (council-governed, see fin-hedera-connections).",
-      "So the next settlement layer is being built by the SAME incumbent banks/utilities (DTCC, Broadridge, the Fnality/Canton consortia) plus a few chosen public chains (Stellar, Chainlink, Hedera) — concentration and control carry FORWARD into tokenization, not away from it."
+      "DTCC's own DLT build-out: PROJECT ION (a DLT settlement platform running in live parallel production, designed for netted T+0 as well as T+1/T+2) and PROJECT WHITNEY (private-market tokenization — notably prototyped on the PUBLIC Ethereum network with ERC-20 tokens + an off-chain compliance oracle + a backup stock record). The US moved to T+1 settlement in 2024, and Jan-2026 SEC guidance opened a regulatory pathway for DTC securities-tokenization services.",
+      "FNALITY holds an OMNIBUS ACCOUNT at the BANK OF ENGLAND (a new account type the BoE created in 2021) so its settlement tokens are backed by actual central-bank reserves; Lloyds, Santander and UBS have used Fnality tokenized central-bank money for margin settlement, and Euroclear is an investor — i.e., central banks themselves are wiring into the bank-consortium tokenization layer.",
+      "So the next settlement layer is being built by the SAME incumbent banks/utilities (DTCC, Broadridge, the Fnality/Canton consortia, with central-bank omnibus accounts) plus a few chosen public chains (Stellar, Chainlink, Hedera, and even public Ethereum for Whitney) — concentration and control carry FORWARD into tokenization, not away from it. (Investigative commentators e.g. Whitney Webb frame this as a 'tokenize everything' agenda — flagged as commentary, not asserted.)"
     ],
     "grade":"fact (the platforms + deals); 'who controls the rails controls settlement' is the labeled thesis"
   },
@@ -91,7 +109,12 @@
     {"from":"DTCC","to":"Chainlink","instrument":"relationship","raw_instrument":"Smart NAV (CCIP) + tokenized-collateral platform","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: re-platforming rail"},
     {"from":"DTCC","to":"Stellar","instrument":"relationship","raw_instrument":"tokenize DTC-custodied assets on Stellar (first public chain, ~H1 2027)","amount_usd":null,"status":"announced","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: re-platforming rail"},
     {"from":"Broadridge","to":"Fnality","instrument":"relationship","raw_instrument":"DLR (~$280B/day repo on Canton) settles vs Fnality tokenized central-bank reserves","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: bank-consortium next settlement layer"},
-    {"from":"CFTC","to":"CME","instrument":"regulatory_legal","raw_instrument":"spoofing enforcement (Tower $67.4M; JPM $920M COMEX/Treasuries)","amount_usd":67400000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: adjudicated futures manipulation"}
+    {"from":"CFTC","to":"CME","instrument":"regulatory_legal","raw_instrument":"spoofing enforcement (Tower $67.4M; JPM $920M COMEX/Treasuries)","amount_usd":67400000,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: adjudicated futures manipulation"},
+    {"from":"BNY_Mellon","to":"SINK_repo","instrument":"relationship","raw_instrument":"sole US tri-party repo settlement agent (~$2T+/day after JPMorgan exited 2018)","amount_usd":2000000000000,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: funding single-point-of-failure"},
+    {"from":"CLS_Bank","to":"SINK_fx","instrument":"relationship","raw_instrument":"sole multi-currency FX settlement (PvP); cuts FX settlement risk ~96%","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: FX settlement monopoly utility"},
+    {"from":"Hedge_Funds","to":"SINK_treasury_basis","instrument":"debt","raw_instrument":"Treasury cash-futures basis trade: ~10.3% of Treasury cash, high repo leverage; Fed/OFR/BoE flag systemic","amount_usd":null,"status":"recurring","declared_circular":true,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: leveraged systemic vulnerability in the $30T Treasury market"},
+    {"from":"Fnality","to":"Bank_of_England","instrument":"relationship","raw_instrument":"omnibus account at the BoE backs Fnality settlement tokens with central-bank reserves (Lloyds/Santander/UBS margin; Euroclear investor)","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: central banks wiring into the bank-consortium tokenization layer"},
+    {"from":"DTCC","to":"Ethereum","instrument":"relationship","raw_instrument":"Project Whitney prototyped private-market tokenization on PUBLIC Ethereum (ERC-20 + compliance oracle); Project Ion DLT settlement live-parallel","amount_usd":null,"status":"closed","declared_circular":false,"cancelable":false,"source_file":"spec-market-plumbing-control.json","note":"OVERLAY: incumbent settlement onto public chain"}
   ],
 
   "limits":"DOCUMENTED: Cede/DTC street-name custody; DTCC/OCC monopoly + SIFMU; the 2021 NSCC GameStop call; Citadel's ~41-47% retail share + PFOF; the ICE conglomerate's holdings; Euroclear's €194B frozen + the confiscation debate + the SWIFT cutoff; LBMA unallocated; CCP procyclicality; the Chainlink/Stellar/Broadridge/Canton/Fnality/HQLAx re-platforming. CONTESTED/FRINGE (graded down, NOT asserted): the 'Great Taking' asset-confiscation thesis and the 'naked-short counterfeit-shares' thesis (FTDs are real; the framing/magnitude disputed). The finding is CONCENTRATION + OPACITY + WEAPONIZABILITY; coordinated malign intent across the layers is not established. Overlay edges excluded from the SCC/Z3/TLA+ proofs. This is the deep, broad version replacing the earlier narrow DTCC/LBMA/CME draft."

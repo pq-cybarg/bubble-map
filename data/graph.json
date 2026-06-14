@@ -76,6 +76,14 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "BNY_Mellon": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Bank_of_England": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Banks": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -137,6 +145,14 @@
       "has_exogenous_revenue": true
     },
     "CFTC": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "CLARITY": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "CLS_Bank": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -280,6 +296,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Ethereum": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Euroclear": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -374,6 +394,10 @@
     },
     "Hedera": {
       "sector": "dlt",
+      "has_exogenous_revenue": true
+    },
+    "Hedge_Funds": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Hiero_LFDT": {
@@ -656,9 +680,21 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "PsiQuantum": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "QCEW_Benchmark": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "Quantinuum": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "QuantumComputingInc": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Rate_Shock": {
       "sector": "macro_factor",
@@ -740,6 +776,10 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SINK_fx": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
     "SINK_investors": {
       "sector": "sink",
       "has_exogenous_revenue": true
@@ -748,11 +788,19 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SINK_repo": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
     "SINK_retail_flow": {
       "sector": "sink",
       "has_exogenous_revenue": true
     },
     "SINK_scam_victims": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
+    "SINK_treasury_basis": {
       "sector": "sink",
       "has_exogenous_revenue": true
     },
@@ -848,6 +896,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "TerraPower": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Terraform_Labs": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -908,6 +960,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "US_Congress": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "US_Government": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -934,6 +990,10 @@
     },
     "Verizon": {
       "sector": "telecom",
+      "has_exogenous_revenue": true
+    },
+    "Vistra": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "WISeART": {
@@ -1406,6 +1466,45 @@
       "cancelable": false,
       "source_file": "fin-meta-family.json",
       "note": "$27B off-balance-sheet JV (Blue Owl 80% / Meta 20%, PIMCO/BlackRock-anchored private credit) for Hyperion, Louisiana - projected total >$200B, 4,000 acres, 10 gas plants 7+GW. The off-balance-sheet template (Enron-SPV lineage)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "TerraPower",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NVentures in $650M raise (with Bill Gates/HD Hyundai; prior SK Inc/SK Innovation, +$1B) \u2014 Natrium reactor for data-center power",
+      "amount_usd": 650000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": ""
+    },
+    {
+      "from": "Vistra",
+      "to": "SINK_capex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "nuclear/gas power utility (acq. Energy Harbor nuclear) supplying AI-data-center power demand",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "ScaleAI",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "DoD defense-AI contracts (e.g., Thunderforge); Meta ~$14B for 49% stake",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-meta-family.json",
+      "note": ""
     },
     {
       "from": "FDIC",
@@ -2381,6 +2480,71 @@
       "cancelable": false,
       "source_file": "spec-sec-sdny-regulatory.json",
       "note": "~$50M to Fairshake (2023-24 cycle). a16z+Coinbase+Ripple ~ $169M war chest; ~91% win rate."
+    },
+    {
+      "from": "BlackRock",
+      "to": "PsiQuantum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "led PsiQuantum $1B Series E (2025) with Nvidia NVentures/Temasek/QIA/Morgan Stanley; $7B valuation",
+      "amount_usd": 1000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "NVIDIA",
+      "to": "PsiQuantum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NVentures in the $1B Series E (photonic fault-tolerant)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "NVIDIA",
+      "to": "Quantinuum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NVentures in $600M @ $10B (Sep 2025); IPO filed $12.7B (2026)",
+      "amount_usd": 600000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Quantinuum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "existing shareholder (Honeywell majority owner; Mitsui/Quanta also in)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "QuantumComputingInc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NASA Goddard prime contract (Dirac-3) + NIST TFLN photonic-chip contract; acq. Luminar Semiconductor",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
     },
     {
       "from": "PE_Insurers",
@@ -3722,6 +3886,71 @@
       "note": ""
     },
     {
+      "from": "BNY_Mellon",
+      "to": "SINK_repo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sole US tri-party repo settlement agent (~$2T+/day after JPMorgan exited 2018)",
+      "amount_usd": 2000000000000,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "CLS_Bank",
+      "to": "SINK_fx",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sole multi-currency FX settlement (PvP); cuts FX settlement risk ~96%",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "Hedge_Funds",
+      "to": "SINK_treasury_basis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Treasury cash-futures basis trade: ~10.3% of Treasury cash, high repo leverage; Fed/OFR/BoE flag systemic",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "Fnality",
+      "to": "Bank_of_England",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "omnibus account at the BoE backs Fnality settlement tokens with central-bank reserves (Lloyds/Santander/UBS margin; Euroclear investor)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
+      "from": "DTCC",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Project Whitney prototyped private-market tokenization on PUBLIC Ethereum (ERC-20 + compliance oracle); Project Ion DLT settlement live-parallel",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-market-plumbing-control.json",
+      "note": ""
+    },
+    {
       "from": "CoreWeave",
       "to": "NVIDIA",
       "instrument": "gpu_purchase",
@@ -4099,6 +4328,32 @@
       "note": "Neither 2% inflation nor full employment (U-6) held while the rate path moved; Z3 macro-fed-trap shows no single feasible rate exists."
     },
     {
+      "from": "US_Congress",
+      "to": "CLARITY",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CLARITY Act \u2014 crypto market-structure (House-passed 2025), splits SEC/CFTC jurisdiction",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "blockchain-leg.json",
+      "note": ""
+    },
+    {
+      "from": "Coinbase",
+      "to": "CLARITY",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "crypto industry (Coinbase/Fairshake) lobbied for the CLARITY market-structure framework",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "blockchain-leg.json",
+      "note": ""
+    },
+    {
       "from": "US_Government",
       "to": "MP_Materials",
       "instrument": "equity",
@@ -4139,10 +4394,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 244,
-    "num_edges": 243,
-    "num_financial_edges": 118,
-    "num_structural_edges": 125,
+    "num_nodes": 259,
+    "num_edges": 258,
+    "num_financial_edges": 120,
+    "num_structural_edges": 138,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -4193,6 +4448,10 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
@@ -4209,10 +4468,16 @@
         "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -4224,12 +4489,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -4241,12 +4502,6 @@
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -4412,6 +4667,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BNY_Mellon": {
+        "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bank_of_England": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Banks": {
         "total_usd": 306000000000,
         "circular_usd": 0,
@@ -4448,7 +4717,7 @@
         "in_robust_core": false
       },
       "BlackRock": {
-        "total_usd": 3000000000,
+        "total_usd": 4000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4519,6 +4788,20 @@
       },
       "CFTC": {
         "total_usd": 67400000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CLARITY": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CLS_Bank": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -4769,6 +5052,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ethereum": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Euroclear": {
         "total_usd": 194000000000,
         "circular_usd": 0,
@@ -4931,6 +5221,13 @@
         "in_robust_core": false
       },
       "Hedera": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hedge_Funds": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5218,9 +5515,9 @@
         "in_robust_core": false
       },
       "NVIDIA": {
-        "total_usd": 152369000000,
+        "total_usd": 153619000000,
         "circular_usd": 133169000000,
-        "circularity_ratio": 0.874,
+        "circularity_ratio": 0.867,
         "in_core_scc": true,
         "in_robust_core": true
       },
@@ -5427,7 +5724,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PsiQuantum": {
+        "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "QCEW_Benchmark": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Quantinuum": {
+        "total_usd": 600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QuantumComputingInc": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5574,6 +5892,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SINK_fx": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_investors": {
         "total_usd": 70000000000,
         "circular_usd": 0,
@@ -5588,6 +5913,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "SINK_repo": {
+        "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_retail_flow": {
         "total_usd": 2600000000,
         "circular_usd": 0,
@@ -5596,6 +5928,13 @@
         "in_robust_core": false
       },
       "SINK_scam_victims": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SINK_treasury_basis": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -5763,6 +6102,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TerraPower": {
+        "total_usd": 650000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Terraform_Labs": {
         "total_usd": 40000000000,
         "circular_usd": 0,
@@ -5868,6 +6214,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Congress": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Government": {
         "total_usd": 19000000000,
         "circular_usd": 0,
@@ -5912,6 +6265,13 @@
       },
       "Verizon": {
         "total_usd": 100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Vistra": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -5997,6 +6357,26 @@
     },
     "top_cross_layer_connectors": [
       {
+        "node": "NVIDIA",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "space_real_economy",
+          "telecom"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -6032,25 +6412,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 17,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "space_real_economy",
-          "telecom"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"
@@ -6112,6 +6473,23 @@
         "both_layers": false
       },
       {
+        "node": "JPMorgan",
+        "degree": 6,
+        "neighbor_sectors": [
+          "commodity_market",
+          "crypto_infra",
+          "other",
+          "spv"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Oracle",
         "degree": 7,
         "neighbor_sectors": [
@@ -6130,16 +6508,16 @@
         "both_layers": false
       },
       {
-        "node": "JPMorgan",
-        "degree": 5,
+        "node": "US_Government",
+        "degree": 6,
         "neighbor_sectors": [
-          "commodity_market",
-          "crypto_infra",
+          "ai_data",
+          "critical_minerals",
           "other",
-          "spv"
+          "sink"
         ],
         "n_neighbor_sectors": 4,
-        "source_files": 4,
+        "source_files": 5,
         "layers": [
           "financial",
           "structural"
@@ -6230,12 +6608,12 @@
         "both_layers": true
       },
       {
-        "node": "US_Government",
+        "node": "Coinbase",
         "degree": 4,
         "neighbor_sectors": [
-          "critical_minerals",
           "other",
-          "sink"
+          "political",
+          "regulator"
         ],
         "n_neighbor_sectors": 3,
         "source_files": 3,
@@ -6290,22 +6668,6 @@
         "source_files": 3,
         "layers": [
           "financial"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "CPI_Methodology",
-        "degree": 4,
-        "neighbor_sectors": [
-          "commission",
-          "regulator",
-          "statistic",
-          "statistical_agency"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 2,
-        "layers": [
-          "structural"
         ],
         "both_layers": false
       }
