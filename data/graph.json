@@ -76,6 +76,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Asia_local_currency_stablecoins": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "BLS": {
       "sector": "statistical_agency",
       "has_exogenous_revenue": true
@@ -508,6 +512,18 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Japan_LDP": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Japan_megabanks": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Japan_society": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Jeb Hensarling": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -529,6 +545,10 @@
       "has_exogenous_revenue": true
     },
     "Keir_Starmer": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Korea_chaebol_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -716,6 +736,10 @@
       "sector": "defense_tech",
       "has_exogenous_revenue": true
     },
+    "PayPay": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Pertsev": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -808,6 +832,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Russia_state": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Russian_energy_executives": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -818,6 +846,10 @@
     },
     "SBI": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "SBI_Holdings": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "SDNY": {
@@ -904,6 +936,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Sanseito": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Saudi_Arabia_state": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -972,6 +1008,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "StraitsX": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Swift": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -986,6 +1026,10 @@
     },
     "Telesat": {
       "sector": "satellite",
+      "has_exogenous_revenue": true
+    },
+    "Tenet_Media": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "TerraPower": {
@@ -1029,6 +1073,10 @@
       "has_exogenous_revenue": false
     },
     "Trump Media & Technology Group": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Turkey_state": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -1096,6 +1144,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Unification_Church": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "VanLoon": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1137,6 +1189,10 @@
       "has_exogenous_revenue": true
     },
     "Yim_Leak": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Zenko_Kurishita": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -1517,6 +1573,84 @@
       "cancelable": false,
       "source_file": "fin-spacex-spcx.json",
       "note": "SpaceX reportedly invested ~$2B in xAI; intra-Musk-empire capital. 'Colossus' is xAI's supercomputer - SpaceX reselling xAI/NVIDIA compute is the Musk-cluster's own mini-loop."
+    },
+    {
+      "from": "SBI_Holdings",
+      "to": "Ripple",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "central Asia Ripple/XRP partner; RLUSD to Japan; JPYSC trust-bank yen stablecoin",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
+    },
+    {
+      "from": "Japan_megabanks",
+      "to": "Stablecoins",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "MUFG/SMBC/Mizuho Progmat PoC - ~\u00a51T B2B yen stablecoin by 2028 (keiretsu incumbents building the rail)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
+    },
+    {
+      "from": "Korea_chaebol_platforms",
+      "to": "Stablecoins",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Samsung/Naver/Kakao + bank alliances distributing KRW stablecoins (incumbent capture of the rail)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
+    },
+    {
+      "from": "StraitsX",
+      "to": "Ripple",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "XSGD (MAS-regulated SGD stablecoin) issued on the XRP Ledger; Grab/Alipay+ production payments",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
+    },
+    {
+      "from": "SoftBank",
+      "to": "PayPay",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "SoftBank-backed dominant Japanese QR/e-money app now alongside regulated stablecoins",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
+    },
+    {
+      "from": "Asia_local_currency_stablecoins",
+      "to": "Stablecoins",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "JPY/KRW/SGD stablecoins as monetary-sovereignty bids vs USD-stablecoin (USDC/RLUSD) dollar-extension",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asia-crypto-payments.json",
+      "note": ""
     },
     {
       "from": "Card_networks",
@@ -2304,6 +2438,45 @@
       "instrument": "other",
       "layer": "structural",
       "raw_instrument": "major FARA-registered lobbying/PR; influence increasingly via AI-capital deployment (PIF/MGX)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Russia_state",
+      "to": "Tenet_Media",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "~$10M via RT employees to a US media co paying 6 right-wing influencers; DOJ FARA + money-laundering indictment Sep-2024",
+      "amount_usd": 10000000,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Qatar",
+      "to": "Trump",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$400M jet gift (2025) to serve as Air Force One, then to the Trump library foundation; emoluments-clause concern",
+      "amount_usd": 400000000,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Turkey_state",
+      "to": "US_Congress",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "covert-lobbying conviction (Flynn Intel/Bijan Kian re Gulen) + Ballard Partners ~$4M (embassy + Halkbank)",
       "amount_usd": null,
       "status": "open",
       "declared_circular": false,
@@ -3807,6 +3980,45 @@
       "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
     },
     {
+      "from": "Unification_Church",
+      "to": "Japan_LDP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decades of church-LDP ties (\u2248half of LDP lawmakers per its own survey); campaign volunteers; court-ordered dissolution 2025 after the Abe assassination",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-politics-social.json",
+      "note": ""
+    },
+    {
+      "from": "Sanseito",
+      "to": "Japan_society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'Japanese First' anti-foreigner populism (2->15 seats, 2025) exploiting economic/immigration anxiety - a domestic division vector",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-politics-social.json",
+      "note": ""
+    },
+    {
+      "from": "Zenko_Kurishita",
+      "to": "Card_networks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Japanese free-speech politician publicly analyzing payment-processor/card-network censorship - links the financial-deplatforming thread",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-politics-social.json",
+      "note": ""
+    },
+    {
       "from": "UBS",
       "to": "Phil Gramm",
       "instrument": "investment",
@@ -4325,6 +4537,32 @@
       "cancelable": false,
       "source_file": "fin-microsoft-openai.json",
       "note": "OpenAI's NET LOSS flows onto MSFT's income statement via equity method: $3.1B / $0.41 EPS hit in Q1 FY26, up 6x from $523M / $0.07 a year earlier. OpenAI's cash burn is now a visible, growing drag on Microsoft GAAP earnings."
+    },
+    {
+      "from": "Russia_state",
+      "to": "US_political_system",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "documented inflame-all-sides division operations (IRA 2016; Tenet/RT 2024) - polarization as the goal",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-manufactured-division.json",
+      "note": ""
+    },
+    {
+      "from": "Content_platforms",
+      "to": "US_political_system",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "engagement-optimized amplification structurally rewards outrage/division (hate and counter-hate both)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-manufactured-division.json",
+      "note": ""
     },
     {
       "from": "DTC_Cede",
@@ -5069,10 +5307,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 288,
-    "num_edges": 301,
+    "num_nodes": 302,
+    "num_edges": 315,
     "num_financial_edges": 128,
-    "num_structural_edges": 173,
+    "num_structural_edges": 187,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5123,15 +5361,23 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -5140,21 +5386,13 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Microsoft",
+        "NVIDIA",
         "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
@@ -5166,12 +5404,6 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -5188,7 +5420,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5196,6 +5427,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5337,6 +5575,13 @@
       },
       "Apple": {
         "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Asia_local_currency_stablecoins": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6098,6 +6343,27 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Japan_LDP": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Japan_megabanks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Japan_society": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jeb Hensarling": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6134,6 +6400,13 @@
         "in_robust_core": false
       },
       "Keir_Starmer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Korea_chaebol_platforms": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6462,6 +6735,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PayPay": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pertsev": {
         "total_usd": 2200000000,
         "circular_usd": 0,
@@ -6547,7 +6827,7 @@
         "in_robust_core": false
       },
       "Qatar": {
-        "total_usd": 0,
+        "total_usd": 400000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6623,6 +6903,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Russia_state": {
+        "total_usd": 10000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Russian_energy_executives": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6638,6 +6925,13 @@
         "in_robust_core": false
       },
       "SBI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SBI_Holdings": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6791,6 +7085,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sanseito": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Saudi_Arabia_state": {
         "total_usd": 12000000,
         "circular_usd": 0,
@@ -6910,6 +7211,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "StraitsX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Swift": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6933,6 +7241,13 @@
       },
       "Telesat": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tenet_Media": {
+        "total_usd": 10000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7002,13 +7317,20 @@
         "in_robust_core": false
       },
       "Trump": {
-        "total_usd": 0,
+        "total_usd": 400000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
         "in_robust_core": false
       },
       "Trump Media & Technology Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Turkey_state": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7127,6 +7449,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Unification_Church": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanLoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7199,6 +7528,13 @@
       },
       "Yim_Leak": {
         "total_usd": 240000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zenko_Kurishita": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7408,6 +7744,24 @@
         "both_layers": true
       },
       {
+        "node": "Ripple",
+        "degree": 7,
+        "neighbor_sectors": [
+          "bank",
+          "financier",
+          "other",
+          "political",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "JPMorgan",
         "degree": 6,
         "neighbor_sectors": [
@@ -7459,23 +7813,6 @@
         "both_layers": true
       },
       {
-        "node": "Ripple",
-        "degree": 5,
-        "neighbor_sectors": [
-          "bank",
-          "financier",
-          "political",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -7503,6 +7840,22 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "SoftBank",
+        "degree": 5,
+        "neighbor_sectors": [
+          "ai_lab",
+          "other",
+          "spv"
+        ],
+        "n_neighbor_sectors": 3,
+        "source_files": 4,
         "layers": [
           "financial",
           "structural"
@@ -7538,22 +7891,6 @@
         "source_files": 4,
         "layers": [
           "financial"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "China",
-        "degree": 5,
-        "neighbor_sectors": [
-          "commodity",
-          "defense",
-          "other",
-          "state"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 4,
-        "layers": [
-          "structural"
         ],
         "both_layers": false
       }

@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Asian crypto & stablecoin payment ecosystems — Japan, South Korea, Singapore, Philippines, Indonesia: competing rails, currency-sovereignty vs dollar stablecoins, the escape from payment-processor control, and keiretsu/chaebol involvement",
+    "generated": "2026-06-14",
+    "frame": "How crypto and (especially) STABLECOIN payment rails are being built across Asia - the competing national models, who controls them (banks vs tech giants vs exchanges), the local-currency-vs-US-dollar-stablecoin contest (monetary sovereignty), and crypto's use to route AROUND card-network / payment-processor control. Five markets with starkly different postures. Evidence-graded; connects the Asia story to the project's stablecoin-Treasury-rail and payment-censorship threads.",
+    "relevance": "Extends [[macro-stablecoin-treasury-rail]] (USD-stablecoin demand vs local-currency sovereignty), [[spec-censorship-finance-adtech]] (crypto rails to escape payment-processor control - the link Japan's Kurishita raises in [[spec-japan-politics-social]]), and [[spec-exchanges-asia]] (the exchange layer). Ties roster nodes Ripple, SBI, SoftBank, and the Stablecoins node into the Asia map.",
+    "sources": "CryptoNews/DLNews/The Block/Korea Times (regional stablecoin race), Bitcoin.com/CryptoTimes/Forrester (Japan PSA + JPYC), Ripple/StraitsX/The Asian Banker (XSGD), Cointelegraph/Seoulz (Korea won), Coins.ph/GCash (Philippines), Chambers/RootData/OJK (Indonesia). Full URLs in the rendered .md."
+  },
+  "japan_stablecoin_stack": {
+    "summary": "The most institutionally-built market on earth: Japan's 2023 Payment Services Act created three legal stablecoin lanes (banks, fund-transfer providers, trust companies) and has now activated ALL THREE.",
+    "points": [
+      {"item": "Regulatory base", "detail": "The 2023 PSA amendment classified fiat-pegged stablecoins as 'Electronic Payment Instruments,' issuable only by banks, licensed fund-transfer providers, or trust companies (further refinements by June 2026). USDC became the first approved USD stablecoin (Mar 2025, via SBI).", "grade": "fact"},
+      {"item": "JPYC (fund-transfer lane)", "detail": "JPYC Inc. launched Japan's first regulated yen stablecoin (Oct 2025) on Avalanche/Ethereum/Polygon, 1:1-backed, no transaction fees; the FSA classified it under the same payment-services framework as PayPay and Rakuten Pay (Apr 2026) - mainstreaming it next to the dominant QR/e-money apps.", "grade": "fact"},
+      {"item": "Megabanks (bank lane)", "detail": "MUFG, SMBC, and Mizuho (the keiretsu-descended megabanks) launched a joint PoC (Mar 2026) via the Progmat platform, targeting ~¥1T B2B stablecoin issuance by 2028 across 300,000+ corporate clients; the three are coordinating toward a yen stablecoin by ~2027.", "grade": "fact"},
+      {"item": "SBI / trust lane + Ripple", "detail": "SBI Holdings + Startale launched JPYSC (Feb 2026, via SBI Shinsei Trust Bank) for institutional/cross-border use; SBI and Ripple plan to bring RLUSD to Japan - SBI is the central Ripple/XRP partner in Asia.", "grade": "fact"}
+    ]
+  },
+  "south_korea": {
+    "summary": "A retail-frenzy market racing to legalize a won stablecoin, with tech-giant (and chaebol) ecosystems as the distribution layer.",
+    "points": [
+      {"item": "Won-stablecoin legislation", "detail": "The ruling Democratic Party's Digital Asset Basic Act (proposed Jun 2025; expected to pass 2026) would let Korean firms issue KRW stablecoins for the first time in ~9 years; BDACS's KRW1 (Sep 2025, on Avalanche) was an early fully-collateralized won token.", "grade": "fact"},
+      {"item": "Chaebol / tech-giant distribution", "detail": "Banks are allying with Naver, Kakao, and Samsung to embed stablecoins into their super-app ecosystems - a 'retail-powered' model (e.g., global K-pop fans buying tickets/merch with tech-giant tokens). Samsung is a classic chaebol; Kakao/Naver are newer platform giants with chaebol-scale reach.", "grade": "fact + labeled interpretation"},
+      {"item": "Exchange culture", "detail": "Korea has one of the world's most intense retail crypto cultures (Upbit, Bithumb; the historical 'kimchi premium'), making it a demand engine but also a volatility/protection concern for regulators.", "grade": "fact"}
+    ]
+  },
+  "singapore": {
+    "summary": "The regulated regional hub: MAS built a single-currency-stablecoin framework early, and XSGD is in real payment production.",
+    "points": [
+      {"item": "XSGD / StraitsX / MAS", "detail": "StraitsX (a MAS-licensed Major Payment Institution) issues XSGD, 1:1-backed with reserves at DBS and Standard Chartered; XSGD/XUSD are among the first recognized as substantially compliant with MAS's Single-Currency Stablecoin (SCS) framework. XSGD launched on the XRP Ledger (May 2025).", "grade": "fact"},
+      {"item": "Production payments", "detail": "StraitsX's partnership with Grab and Alipay+ lets Singapore consumers pay at Grab merchants via their e-wallets, settled in XSGD - a rare real-world stablecoin-at-checkout case.", "grade": "fact"},
+      {"item": "Hub posture", "detail": "MAS's clear, early framework makes Singapore the credible regulated base for Asian stablecoin/tokenization activity - the regulatory contrast to looser or trade-only regimes.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "philippines": {
+    "summary": "A remittance/financial-inclusion market: crypto rails carry overseas-worker money around legacy correspondent-banking fees.",
+    "points": [
+      {"item": "GCash + Coins.ph", "detail": "GCash (the dominant e-wallet) and Coins.ph (crypto + remittances) interoperate; the Philippines' huge OFW remittance economy uses crypto/stablecoin rails for cheaper, faster cross-border transfers vs SWIFT/Western Union, cashing out via banks, e-wallets, and pawnshop padala centers.", "grade": "fact"},
+      {"item": "Inclusion angle", "detail": "Crypto here is less speculation than utility: remittances and banking the underbanked - a different value proposition from Japan's institutional rails or Korea's retail trading.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "indonesia": {
+    "summary": "A large-adoption, trade-yes / pay-no market: crypto is a regulated investment asset but barred as a means of payment.",
+    "points": [
+      {"item": "Regulatory shift", "detail": "Oversight moved from the commodity regulator Bappebti to the financial regulator OJK (Jan 2025), classifying crypto as a digital financial asset; a 0.21% transaction tax and a whitelist of ~29 licensed platforms.", "grade": "fact"},
+      {"item": "Dual status", "detail": "~14.6M crypto investors (a top-3 global adoption rank in Q1 2025) - yet crypto is legal to TRADE but illegal to USE AS PAYMENT, since the Currency Law makes only the rupiah legal tender. Adoption-high, payment-blocked.", "grade": "fact"}
+    ]
+  },
+  "the_divides_and_competition": {
+    "summary": "Asia is not one crypto opinion - it is several competing models and a currency-sovereignty contest.",
+    "points": [
+      {"item": "Who controls the rail", "detail": "Bank/institutional-led (Japan megabanks, SBI), tech-giant/chaebol-led (Korea's Naver/Kakao/Samsung; Japan's SoftBank-backed PayPay, Rakuten), exchange-led (Korea's Upbit/Bithumb), and inclusion/remittance utilities (Philippines). Different power centers capture the rail in each market.", "grade": "fact + labeled interpretation"},
+      {"item": "Local-currency vs USD stablecoins (sovereignty)", "detail": "The core contest: USD stablecoins (USDC/RLUSD) extend dollar dominance and the Treasury bid ([[macro-stablecoin-treasury-rail]]), while JPY/KRW/SGD stablecoins are bids for MONETARY SOVEREIGNTY - keeping settlement and seigniorage onshore. Japan/Korea/Singapore are deliberately building local-currency rails partly to avoid dollar-stablecoin capture.", "grade": "fact + labeled interpretation"},
+      {"item": "Ripple/XRPL's heavy Asia footprint", "detail": "Ripple is unusually embedded in Asia (SBI partnership; StraitsX's XSGD on the XRP Ledger), making XRPL a recurring settlement layer across these markets - a roster cross-link ([[blockchain-leg]]).", "grade": "fact"}
+    ]
+  },
+  "escape_from_payment_processor_control": {
+    "summary": "A throughline the project tracks: crypto/stablecoin rails let merchants and users route AROUND card-network/payment-processor content control.",
+    "points": [
+      {"item": "The motive", "detail": "Where Visa/Mastercard/PayPal/Stripe can de-platform legal-but-disfavored merchants ([[spec-censorship-finance-adtech]]), stablecoin/crypto rails offer a censorship-resistant alternative - a driver of adoption among creators and adult/independent merchants in Asia (the concern Japan's Zenko Kurishita publicly raises, [[spec-japan-politics-social]]).", "grade": "fact + labeled interpretation"},
+      {"item": "The counter-pull", "detail": "But regulated, bank/trust-issued stablecoins (Japan's three lanes; Singapore's SCS) reimpose KYC/compliance at the issuer - so 'escape the processor' can become 'onboard to a new, equally-permissioned rail.' Whether crypto delivers censorship-resistance or just a new gatekeeper is the open question.", "grade": "labeled interpretation"}
+    ]
+  },
+  "keiretsu_chaebol_and_government": {
+    "summary": "The old industrial-financial groups are central - and governments treat stablecoins as both opportunity and control surface.",
+    "points": [
+      {"item": "Japan keiretsu/megabanks", "detail": "MUFG (Mitsubishi), SMBC (Sumitomo Mitsui), Mizuho - the megabank descendants of the pre-war zaibatsu/post-war keiretsu - plus SoftBank (PayPay) and Rakuten dominate the issuance and distribution lanes. The incumbents, not disruptors, are building Japan's stablecoin rail.", "grade": "fact + labeled interpretation"},
+      {"item": "Korean chaebol/platform giants", "detail": "Samsung (classic chaebol) and the platform giants Naver/Kakao anchor Korea's distribution - again, incumbents capturing the new rail.", "grade": "fact + labeled interpretation"},
+      {"item": "Government posture", "detail": "Regulators frame local-currency stablecoins as monetary-sovereignty and payments-modernization tools, while the licensing regimes (issuer whitelists, single-issuer frameworks) also concentrate CONTROL over who can issue programmable money - the same dual-use (enablement + control) the project flags in the digital-ID/CBDC threads.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Japan 3 lanes + JPYC", "result": "PSA 2023 (3 issuer types); JPYC launched Oct 2025, FSA-classified Apr 2026 alongside PayPay/Rakuten Pay; megabanks Progmat PoC Mar 2026; SBI/Startale JPYSC Feb 2026; USDC approved Mar 2025 (Bitcoin.com/CryptoTimes/Forrester)."},
+      {"check": "Korea won stablecoin", "result": "Digital Asset Basic Act proposed Jun 2025, expected 2026; Naver/Kakao/Samsung bank alliances; BDACS KRW1 Sep 2025 (Cointelegraph/Korea Times/Seoulz)."},
+      {"check": "Singapore XSGD", "result": "StraitsX MAS-licensed, 1:1 at DBS/StanChart; on XRPL May 2025; Grab + Alipay+ production payments; MAS SCS framework (Ripple/StraitsX/Asian Banker)."},
+      {"check": "Philippines / Indonesia", "result": "GCash + Coins.ph remittance rails; Indonesia oversight Bappebti->OJK Jan 2025, ~14.6M investors, trade-legal/pay-illegal (Coins.ph/Chambers/RootData)."}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim that any of these stablecoins/rails has failed or is fraudulent - this maps the competing ecosystems and their postures.",
+      "No claim that crypto definitively escapes payment-processor control - regulated issuance can re-impose the same gatekeeping (stated as the open question).",
+      "Keiretsu/chaebol involvement is documented corporate participation, not an assertion of collusion.",
+      "These edges are OVERLAY/context and are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "SBI_Holdings", "to": "Ripple", "instrument": "relationship", "raw_instrument": "central Asia Ripple/XRP partner; RLUSD to Japan; JPYSC trust-bank yen stablecoin", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: Asia stablecoin partnership; excluded from proofs"},
+    {"from": "Japan_megabanks", "to": "Stablecoins", "instrument": "relationship", "raw_instrument": "MUFG/SMBC/Mizuho Progmat PoC - ~¥1T B2B yen stablecoin by 2028 (keiretsu incumbents building the rail)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: bank-issued local-currency stablecoin; excluded from proofs"},
+    {"from": "Korea_chaebol_platforms", "to": "Stablecoins", "instrument": "relationship", "raw_instrument": "Samsung/Naver/Kakao + bank alliances distributing KRW stablecoins (incumbent capture of the rail)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: tech-giant/chaebol distribution; excluded from proofs"},
+    {"from": "StraitsX", "to": "Ripple", "instrument": "relationship", "raw_instrument": "XSGD (MAS-regulated SGD stablecoin) issued on the XRP Ledger; Grab/Alipay+ production payments", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: Singapore SGD rail on XRPL; excluded from proofs"},
+    {"from": "SoftBank", "to": "PayPay", "instrument": "relationship", "raw_instrument": "SoftBank-backed dominant Japanese QR/e-money app now alongside regulated stablecoins", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: payments distribution; excluded from proofs"},
+    {"from": "Asia_local_currency_stablecoins", "to": "Stablecoins", "instrument": "relationship", "raw_instrument": "JPY/KRW/SGD stablecoins as monetary-sovereignty bids vs USD-stablecoin (USDC/RLUSD) dollar-extension", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-asia-crypto-payments.json", "note": "OVERLAY: sovereignty-vs-dollar contest; excluded from proofs"}
+  ],
+  "limits": "Maps Asia's competing crypto/stablecoin PAYMENT ecosystems: Japan's three-lane bank/trust/fund-transfer stack (JPYC, megabank Progmat, SBI/Ripple), Korea's won-stablecoin race via chaebol/tech-giant distribution and retail exchanges, Singapore's MAS-regulated XSGD hub on XRPL, the Philippines' remittance/inclusion rails (GCash/Coins.ph), and Indonesia's trade-legal/pay-illegal regime - plus the local-currency-vs-USD-stablecoin sovereignty contest, the escape-from-payment-processor-control throughline (open question whether regulated issuance just re-imposes gatekeeping), and keiretsu/chaebol incumbent capture. Connects to the stablecoin-Treasury, payment-censorship, and Asia-exchanges threads. Overlay edges excluded from the formal proofs. source: see verification_log and the rendered .md for full URLs."
+}

@@ -99,6 +99,7 @@ First_Brands,UBS_OConnor,debt,500000000,2025,False,False,macro-firstbrands-ubs.j
 Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.json
 Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minerals.json
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
+Qatar,Trump,other,400000000,open,False,False,spec-foreign-influence-comparison.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
 NSA,Crypto_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
@@ -113,6 +114,7 @@ SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
 Saudi_Arabia_state,Tony_Blair_Institute,other,12000000,open,False,True,spec-uk-labour-tbi-influence.json
 FTX,Farmington_Moonstone,equity,11500000,closed,False,False,spec-crypto-banking-debanking.json
+Russia_state,Tenet_Media,surveillance_security,10000000,open,False,False,spec-foreign-influence-comparison.json
 InQTel,Palantir,relationship,2000000,invested,False,False,spec-disclosures-surveillance.json
 Cambodia,National_Consulting_Services,other,456000,recurring,False,False,spec-cambodia-scam-fara-paid-influence.json
 Coinbase,FDIC,regulatory_legal,188440,won-fees,False,False,"spec-sec-sdny-regulatory.json,spec-fdic-foia-coinbase.json"
@@ -133,6 +135,12 @@ QCEW_Benchmark,Jobs_Headline,other,,recurring,False,False,macro-official-data-in
 Federal_Reserve,PCE,other,,structural,False,False,macro-official-data-integrity.json
 SpaceX,xAI,merger,,merged,True,False,fin-spacex-spcx.json
 SpaceX,NVIDIA,gpu_purchase,,implied,True,True,fin-spacex-spcx.json
+SBI_Holdings,Ripple,relationship,,open,False,False,spec-asia-crypto-payments.json
+Japan_megabanks,Stablecoins,relationship,,open,False,False,spec-asia-crypto-payments.json
+Korea_chaebol_platforms,Stablecoins,relationship,,open,False,False,spec-asia-crypto-payments.json
+StraitsX,Ripple,relationship,,open,False,False,spec-asia-crypto-payments.json
+SoftBank,PayPay,relationship,,open,False,False,spec-asia-crypto-payments.json
+Asia_local_currency_stablecoins,Stablecoins,relationship,,open,False,False,spec-asia-crypto-payments.json
 Card_networks,Content_platforms,other,,open,False,False,spec-censorship-finance-adtech.json
 GARM_WFA,Disfavored_platforms,other,,closed,False,False,spec-censorship-finance-adtech.json
 CCDH,Content_platforms,other,,open,False,False,spec-censorship-finance-adtech.json
@@ -174,6 +182,7 @@ Qatar,US_universities_thinktanks,other,,open,False,False,spec-foreign-influence-
 AIPAC,US_Congress,other,,open,False,False,spec-foreign-influence-comparison.json
 Iran_IRGC,US_political_system,other,,open,False,False,spec-foreign-influence-comparison.json
 Saudi_Arabia_state,US_Congress,other,,open,False,False,spec-foreign-influence-comparison.json
+Turkey_state,US_Congress,regulatory_legal,,open,False,False,spec-foreign-influence-comparison.json
 NSA,ATT,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 NSA,TechCompanies,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 DARPA,TrailOfBits,relationship,,published,False,False,spec-disclosures-surveillance.json
@@ -240,6 +249,9 @@ Google,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anth
 Anthropic,Broadcom,compute_commitment,,announced,False,False,fin-google-amazon-anthropic-meta.json
 AMD,OpenAI,warrant,,announced,True,False,fin-google-amazon-anthropic-meta.json
 MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
+Unification_Church,Japan_LDP,other,,closed,False,False,spec-japan-politics-social.json
+Sanseito,Japan_society,other,,open,False,False,spec-japan-politics-social.json
+Zenko_Kurishita,Card_networks,other,,open,False,False,spec-japan-politics-social.json
 UBS,Phil Gramm,investment,,closed,False,False,influence-congress-funding-compromise.json
 UBS,Jeb Hensarling,other,,closed,False,False,influence-congress-funding-compromise.json
 Signature_Bank,Barney Frank,other,,closed,False,False,influence-congress-funding-compromise.json
@@ -271,6 +283,8 @@ a16z,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
 CFTC,Polymarket,other,,recurring,False,False,spec-prediction-markets.json
 CFTC,Kalshi,other,,closed,False,False,spec-prediction-markets.json
 Polymarket,USDC,other,,recurring,False,False,spec-prediction-markets.json
+Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
+Content_platforms,US_political_system,other,,open,False,False,spec-manufactured-division.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json
 DTCC,Chainlink,relationship,,closed,False,False,spec-market-plumbing-control.json

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Manufactured division — how public opinion is steered toward group hatred (antisemitism, anti-Palestinian, anti-Asian/anti-Chinese) and contested social fault lines (Japan: KuToo, Toyoko Kids, free-speech politics)",
+    "generated": "2026-06-14",
+    "frame": "The companion to the foreign-influence comparison: how influence operations and political actors manufacture or amplify DIVISION and GROUP HATRED - and whose interest that serves. Stated plainly and even-handedly: antisemitism, anti-Palestinian/anti-Muslim racism, and anti-Asian / anti-Chinese racism are ALL real, ALL harmful, and ALL exploited - this block does not rank victimhood, endorse any hatred, or treat any group's targeting as lesser. It documents the MECHANISM (inflame multiple sides for chaos or mobilization) and the incentives, evidence-graded. It also adds a country case - Japan - of contested social fault lines (women's-labor KuToo, the at-risk Toyoko Kids youth, and free-speech / anti-censorship politics) where division and social stress are being fought over.",
+    "relevance": "Extends [[spec-foreign-influence-comparison]] (the perception layer) and [[influence-ad-censorship]]; the Japan free-speech / payment-censorship strand links to [[spec-censorship-finance-adtech]] and [[age-verification-abolition]]; the division-amplification mechanism connects to the documented Russia/Tenet and disinformation-for-hire cases.",
+    "sources": "DOJ (Tenet/RT), Meta/Forbidden Stories (disinfo-for-hire), ADL / civil-rights and academic reporting on antisemitism & anti-Asian/anti-Palestinian hate trends; Wikipedia/France24/SCMP/Al Jazeera (KuToo), Wikipedia/Japan Today/Unseen Japan/Pediatrics Intl (Toyoko Kids), Wikipedia/CDPJ records (Zenko Kurishita). Full URLs in the rendered .md."
+  },
+  "the_mechanism": {
+    "summary": "Division is manufactured the same way regardless of which group is targeted - the playbook is channel-agnostic.",
+    "points": [
+      {"item": "Inflame ALL sides", "detail": "Documented influence ops (e.g., Russia's Internet Research Agency in 2016, and the 2024 Tenet Media/RT case) deliberately pushed content to OPPOSITE sides of the same wedge issue - pro- and anti- the same cause - because the goal is polarization and distrust, not any single position. Hatred against a group and backlash to that hatred are both fuel.", "grade": "fact (DOJ/Senate Intel findings)"},
+      {"item": "Algorithmic amplification", "detail": "Engagement-optimized platforms structurally amplify the most outraging content; hate and counter-hate both maximize engagement, so the rails reward division independent of any actor's intent.", "grade": "fact + labeled interpretation"},
+      {"item": "Disinfo-for-hire", "detail": "Commercial influence firms ([[spec-foreign-influence-comparison]]) sell wedge-amplification to states/parties/corporations, making the manufacturer often a contractor - which obscures who benefits.", "grade": "fact"}
+    ]
+  },
+  "targeted_groups_evenhanded": {
+    "summary": "Each of these hatreds is real and surging; each is also exploited by actors whose aim is division or distraction, not the welfare of anyone.",
+    "groups": [
+      {"target": "Jewish people / antisemitism", "detail": "Antisemitism (real, rising) is exploited in TWO opposite directions: bad-faith 'globalist/control' conspiracy weaponizes legitimate criticism of a state into hatred of a people; and accusations of antisemitism are sometimes weaponized to shut down legitimate criticism of the Israeli government's policy. Both distortions harm Jewish people and honest debate.", "grade": "fact (the hatred) + labeled interpretation (the two distortions)"},
+      {"target": "Palestinians / Arabs / Muslims", "detail": "Anti-Palestinian racism and Islamophobia (real, rising) are exploited to dehumanize and to justify policy, while genuine solidarity is sometimes smeared as extremism. The dehumanization and the smear are both division tools.", "grade": "fact (the hatred) + labeled interpretation"},
+      {"target": "Asians / Chinese", "detail": "Anti-Asian hate (which spiked during COVID) and anti-Chinese sentiment are exploited by threat-inflation politics ([[influence-china-tech]]): legitimate concern about the PRC state is blurred into hostility toward Chinese and Asian PEOPLE - serving hawkish mobilization while harming a diaspora.", "grade": "fact (the hatred) + labeled interpretation"}
+    ],
+    "core_distinction": "The through-line and the firewall: legitimate criticism of a STATE or GOVERNMENT is not hatred of a PEOPLE - and conflating the two (in either direction) is the manufacturing move. This block insists on that distinction throughout."
+  },
+  "whose_interest": {
+    "summary": "Division pays specific actors - naming them is the point, without conspiracy.",
+    "points": [
+      {"item": "Foreign adversaries", "detail": "Russia/others sow chaos and erode social cohesion and trust in institutions (documented).", "grade": "fact"},
+      {"item": "Domestic political entrepreneurs", "detail": "Wedge issues mobilize bases, raise money, and win primaries - the AIPAC-UDP primaries and the influencer economy both reward taking the most polarizing stance.", "grade": "labeled interpretation"},
+      {"item": "Platforms & the attention economy", "detail": "Engagement revenue rises with outrage; the business model is structurally pro-division.", "grade": "fact + labeled interpretation"},
+      {"item": "Distraction from the material story", "detail": "Identity-wedge conflict crowds out attention to the capital/power structures this project documents (the AI-capital loop, the fiscal trap, the control rails) - division as a distraction from class/structural questions.", "grade": "labeled interpretation"}
+    ]
+  },
+  "japan_case": {
+    "summary": "Japan is treated as a full country-case of strained social unity - party fragmentation, foreign-linked influence (Unification Church), the demographic crunch, youth in crisis (Toyoko Kids, karoshi, hikikomori), the KuToo gender fault line, and cross-party free-expression politics (Zenko Kurishita, Taro Yamada) - in the dedicated block [[spec-japan-politics-social]].",
+    "grade": "see spec-japan-politics-social"
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Essential guards for a charged topic.",
+    "non_claims": [
+      "This block does NOT rank victimhood, endorse any hatred, or treat any group's targeting as lesser - antisemitism, anti-Palestinian/anti-Muslim, and anti-Asian/anti-Chinese hatred are all real and all condemned.",
+      "It does NOT assert a single cabal manufactures division - it documents a channel-agnostic mechanism and the actors it pays.",
+      "It does NOT conflate criticism of a state/government with hatred of a people - and treats that conflation (in any direction) as the manipulation to be exposed.",
+      "These edges are OVERLAY/context and are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Russia_state", "to": "US_political_system", "instrument": "surveillance_security", "raw_instrument": "documented inflame-all-sides division operations (IRA 2016; Tenet/RT 2024) - polarization as the goal", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-manufactured-division.json", "note": "OVERLAY: division-amplification; excluded from proofs"},
+    {"from": "Content_platforms", "to": "US_political_system", "instrument": "relationship", "raw_instrument": "engagement-optimized amplification structurally rewards outrage/division (hate and counter-hate both)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-manufactured-division.json", "note": "OVERLAY: attention-economy division incentive; excluded from proofs"}
+  ],
+  "limits": "An evidence-graded, even-handed treatment of how public opinion is steered toward group hatred (antisemitism, anti-Palestinian/anti-Muslim, anti-Asian/anti-Chinese - all real, none ranked or endorsed) via a channel-agnostic inflame-all-sides mechanism, plus the actors division pays, plus a Japan country-case of contested social fault lines (KuToo, Toyoko Kids) and free-speech/anti-censorship politics (Kurishita, with disclosed positive-interest bias and no fabricated links). Connects to the foreign-influence, ad-censorship, and payment-censorship threads. Overlay edges excluded from the formal proofs. source: see verification_log-equivalent sources in the rendered .md for full URLs."
+}

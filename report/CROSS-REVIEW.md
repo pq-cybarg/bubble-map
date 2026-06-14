@@ -15,15 +15,15 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 43 files
+- **Meta** — 45 files
 - **Google** — 31 files
 - **OpenAI** — 29 files
-- **Oracle** — 26 files
+- **Oracle** — 27 files
 - **Amazon** — 22 files
 - **Microsoft** — 21 files
 - **NVIDIA** — 19 files
+- **Chainlink** — 18 files
 - **Anthropic** — 18 files
-- **Chainlink** — 17 files
 - **Stargate** — 17 files
 - **JPMorgan** — 16 files
 - **FDIC** — 16 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-foreign-influence-comparison.json` — related files by shared entities (verify cross-refs exist)
-- fin-gulf-sovereign-ai-capital.json: 5 shared entities
-- spec-exchanges-asia.json: 5 shared entities
-- fin-google-amazon-anthropic-meta.json: 5 shared entities
-- influence-operator-network.json: 4 shared entities
-- spec-crypto-sec-epstein.json: 4 shared entities
-- spec-unwind-timing.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
+## Newest file `spec-asia-crypto-payments.json` — related files by shared entities (verify cross-refs exist)
+- altcoin-lens.json: 5 shared entities
+- temporal-bridges.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- fin-hedera-connections.json: 4 shared entities
+- spec-sec-sdny-regulatory.json: 4 shared entities
+- spec-crypto-banking-debanking.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- blockchain-leg.json: 3 shared entities
