@@ -34,14 +34,15 @@ The most prolific state-grade thief; proceeds fund the DPRK weapons program (UN 
 - **Silk Road** — **~$3.36B** seized from James Zhong (Nov 2022) + the 2020 ~69,370 BTC forfeiture; courts cleared the government to **sell** (2025). *Fact.*
 - **US holdings & Strategic Bitcoin Reserve** — by 2024–25 the government controlled on the order of **~200k BTC (~1% of supply)**; a **2025 executive order** established a **Strategic Bitcoin Reserve** (retain seized BTC, don't sell). The state is now a large, **on-chain-visible** BTC holder — a market and policy variable. *Fact.*
 
-## 7. Limits & ingest — and the free-access ceiling (important)
+## 7. Limits & ingest — a designation-scope floor, not an access limit (important)
 This is an **attribution + source-pointer** layer, not a raw address dump. Government attributions are high-grade; clustering is labeled. `fetch_ofac.py` (env-free) ingests the **free OFAC Advanced XML** (SDN + Consolidated) into `data/ofac_crypto_addresses.json` — **757 addresses** (522 BTC / 127 TRON / 97 ETH / 10 LTC / 1 XMR), all from the SDN list (the Consolidated list carries none).
 
-**The 757 is a FREE-ACCESS FLOOR, not the full universe.** It captures only addresses OFAC has **formally designated**. It deliberately does **not** include:
-- **(a)** per-incident **FBI/CISA PSA IOC lists** — e.g., the **51 Bybit-laundering ETH addresses** the FBI published separately — authoritative but absent from the SDN XML;
-- **(b)** un-sanctioned-but-attributed clusters tracked by **commercial forensics (Chainalysis/Elliptic/TRM/Arkham)** — **paywalled**, and how most DPRK/laundering hops are actually traced;
-- **(c)** anything OFAC publishes only in non-machine-readable form.
+**OFAC's own data is *not* access-limited.** The full SDN and Consolidated lists — **including the "Digital Currency Address" crypto fields** — are freely downloadable in **CSV, XML, and Advanced-XML** (all machine-readable) and searchable for free. Current canonical endpoints (verified 2026-06): the bulk **Sanctions List Service** (`sanctionslistservice.ofac.treas.gov/api/download/{sdn.csv, sdn.xml, sdn_advanced.xml, cons_advanced.xml, …}`, which now 302-redirect to a signed S3 download), the **SDN** and **Consolidated** list portals (`sanctionslist.ofac.treas.gov/Home/SdnList` · `/Home/ConsolidatedList`), the **other-lists index** (`ofac.treasury.gov/other-ofac-sanctions-lists`), and the free **search UI** (`sanctionssearch.ofac.treas.gov`).
 
-So the on-chain identity picture here is a **lower bound**; full coverage requires the FBI PSA IOC feeds **plus a paid forensics subscription**. Sanction status is also dated (Tornado Cash 2022 → vacated 2024 → lifted 2025), so a static list overstates what is *currently* sanctioned.
+**So the 757 is a *designation-scope* floor, not a paywall floor.** It is a lower bound because it captures only addresses OFAC has **formally designated** — not because OFAC withholds data. It deliberately does **not** include:
+- **(a)** per-incident **FBI/CISA PSA IOC lists** — e.g., the **51 Bybit-laundering ETH addresses** the FBI published separately — authoritative and **also free**, but published outside the SDN XML;
+- **(b)** un-sanctioned-but-attributed clusters tracked by **commercial forensics (Chainalysis/Elliptic/TRM/Arkham)** — **paywalled**, and how most DPRK/laundering hops are actually traced.
+
+So the on-chain identity picture here is a **lower bound**: full coverage adds the (free) FBI PSA IOC feeds **plus a paid forensics subscription** for un-designated clusters. Sanction status is also dated (Tornado Cash 2022 → vacated 2024 → lifted 2025), so a static list overstates what is *currently* designated.
 
 *Verification sources: [FBI/Bybit attribution](https://www.picussecurity.com/resource/blog/fbi-north-korean-lazarus-group-bybit-crypto-heist), [Tornado Cash sanctions lifted](https://www.venable.com/insights/publications/2025/04/a-legal-whirlwind-settles), [Silk Road $3.36B](https://www.occrp.org/en/news/us-doj-announces-historic-336b-crypto-seizure), [Nobitex hack](https://www.elliptic.co/blog/iranian-crypto-exchange-nobitex-hacked-pro-israel-group), [US BTC holdings](https://bitcoinmagazine.com/markets/us-government-continues-bitcoin-seizures-controls-nearly-1-of-circulating-supply-).*

@@ -19,6 +19,17 @@ DATA = os.path.join(ROOT, "data")
 # Both free OFAC Advanced XML lists, each with fallback hosts (OFAC has migrated hosts over time).
 # SDN = Specially Designated Nationals; CONS = Consolidated (non-SDN) Sanctions List. Crypto
 # addresses appear on BOTH. This is the FREE public coverage; see the coverage note in main().
+#
+# Current canonical entry points (verified reachable 2026-06; all FREE, no key):
+#   - Sanctions List Service (bulk): https://sanctionslistservice.ofac.treas.gov/api/download/<file>
+#       <file> in {sdn.csv, sdn.xml, sdn_advanced.xml, cons.csv, cons.xml, cons_advanced.xml, ...}.
+#       These now 302-redirect to a short-lived signed S3 URL (urllib follows redirects automatically).
+#   - SDN list portal:          https://sanctionslist.ofac.treas.gov/Home/SdnList
+#   - Consolidated list portal: https://sanctionslist.ofac.treas.gov/Home/ConsolidatedList
+#   - Other OFAC lists index:   https://ofac.treasury.gov/other-ofac-sanctions-lists
+#   - Free web search UI:       https://sanctionssearch.ofac.treas.gov/
+# The SDN/Consolidated data (incl. the "Digital Currency Address" crypto fields) is fully available
+# for free in CSV, XML, and Advanced-XML (machine-readable). It is NOT paywalled or access-limited.
 SOURCES = {
     "SDN": [
         "https://sanctionslistservice.ofac.treas.gov/api/download/sdn_advanced.xml",
@@ -91,15 +102,23 @@ def main():
             "count": len(found),
             "by_list": {"+".join(k): v for k, v in by_list.items()},
             "note": "Crypto addresses pattern-extracted from the FREE OFAC Advanced XML lists "
-                    "(SDN + Consolidated). For authoritative party/program attribution, resolve each "
+                    "(SDN + Consolidated), downloaded via the Treasury Sanctions List Service "
+                    "(sanctionslistservice.ofac.treas.gov; also free as CSV/XML and via the "
+                    "sanctionslist.ofac.treas.gov portals and the sanctionssearch.ofac.treas.gov "
+                    "search UI). For authoritative party/program attribution, resolve each address "
                     "against its full list entry.",
-            "COVERAGE_LIMITS": "This is the FREE-ACCESS FLOOR, not the full threat-actor address "
-                    "universe. It captures only addresses OFAC has formally DESIGNATED on the SDN/"
-                    "Consolidated lists. It does NOT include: (a) per-incident FBI/CISA PSA IOC "
-                    "address lists (e.g., the 51 Bybit-laundering ETH addresses) which are published "
-                    "separately; (b) un-sanctioned but attributed clusters tracked by commercial "
-                    "forensics (Chainalysis/Elliptic/TRM/Arkham), which are PAYWALLED; (c) addresses "
-                    "OFAC lists only in non-machine-readable formats. Treat counts as a lower bound."},
+            "COVERAGE_LIMITS": "OFAC's own data is NOT access-limited: the full SDN and Consolidated "
+                    "lists — including the 'Digital Currency Address' crypto fields — are freely "
+                    "downloadable in CSV, XML, and Advanced-XML (machine-readable) and searchable "
+                    "for free. The 757 here is still a LOWER BOUND on the threat-actor address "
+                    "universe, but for reasons OTHER than OFAC availability: it captures only "
+                    "addresses OFAC has formally DESIGNATED, and deliberately excludes (a) per-incident "
+                    "FBI/CISA PSA IOC address lists (e.g., the 51 Bybit-laundering ETH addresses), "
+                    "published separately but also free; and (b) un-sanctioned but attributed clusters "
+                    "tracked by commercial forensics (Chainalysis/Elliptic/TRM/Arkham), which ARE "
+                    "paywalled. Sanction status is also time-varying (e.g., Tornado Cash: sanctioned "
+                    "2022 -> vacated 2024 -> lifted 2025), so a static list overstates what is "
+                    "CURRENTLY designated."},
            "addresses": [{"address": a, "asset_guess": k, "lists": sorted(prov[a])}
                          for a, k in sorted(found.items())]}
     path = os.path.join(DATA, "ofac_crypto_addresses.json")
