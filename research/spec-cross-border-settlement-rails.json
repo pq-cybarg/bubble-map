@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "Cross-border settlement rails — the dollar-bypass stack (CIPS, Project mBridge, e-CNY, BRICS Pay) vs the dollar-extension rail (USD stablecoins/SWIFT), and the reality of de-dollarization",
+    "generated": "2026-06-14",
+    "frame": "The macro counterpart to the Asia-stablecoin map: two competing futures for cross-border money. (1) A DOLLAR-BYPASS stack - China's CIPS messaging/settlement network, the multi-CBDC Project mBridge (live 2025, bypassing SWIFT), the e-CNY, and BRICS Pay - built partly to insulate trade from US sanctions. (2) A DOLLAR-EXTENSION rail - USD stablecoins (USDC/RLUSD/USDT) on public chains plus SWIFT, which deepen dollar usage and the Treasury bid. Evidence-graded, with an explicit reality-check: de-dollarization is real at the MARGINS (reserves, bilateral trade) but the dollar's transactional dominance is intact or rising. The US GENIUS-Act stablecoin push reads partly as a counter-move to defend dollar primacy against the bypass stack.",
+    "relevance": "Interleaves [[macro-stablecoin-treasury-rail]] (USD-stablecoin dollar-extension), [[spec-market-plumbing-control]] (SWIFT/DTCC), [[fin-gulf-sovereign-ai-capital]] (UAE/Saudi as mBridge members), [[geopolitics-russia-energy-arctic]] (Russia's sanctions-driven bypass), [[macro-us-fiscal-trap]] (dollar/Treasury stakes), and [[spec-asia-crypto-payments]] (the retail/payments layer).",
+    "sources": "BIS Innovation Hub (mBridge), HKMA, Reuters (BIS step-back), CSIS / Statrys / FXC Intelligence / Wikipedia (CIPS), Modern Diplomacy / watcher.guru (BRICS), BIS Triennial FX Survey 2025 (dollar share). Full URLs in the rendered .md."
+  },
+  "swift_incumbent": {
+    "summary": "SWIFT is the incumbent messaging layer - and its use as a sanctions weapon is exactly what spurred the challengers.",
+    "points": [
+      {"item": "Scale", "detail": "SWIFT connects 11,500+ institutions and remains the dominant cross-border messaging standard.", "grade": "fact"},
+      {"item": "Sanctions weapon", "detail": "Cutting Russian banks off SWIFT (2022) demonstrated the dollar/SWIFT system's coercive power - the explicit motive for adversaries and even some partners to build alternatives.", "grade": "fact + labeled interpretation"},
+      {"item": "Co-opt, not just compete", "detail": "SWIFT signed an MOU to work alongside CIPS - treating it as a partner to interoperate with rather than a pure rival.", "grade": "fact"}
+    ]
+  },
+  "cips_china_network": {
+    "summary": "China's Cross-Border Interbank Payment System is the fastest-growing dollar-alternative settlement network - large in flow, still small in reach.",
+    "points": [
+      {"item": "Scale & growth", "detail": "CIPS processed ~RMB 175T (~$24.5T) in 2024, ~38% CAGR 2016-2024; by end-2025, 193 direct + 1,573 indirect participants across 124 countries.", "grade": "fact"},
+      {"item": "The Apr-2025 spike", "detail": "CIPS briefly surpassed SWIFT's single-day throughput, processing ~$1.76T on 16 Apr 2025 - a symbolic milestone, though SWIFT's institution count (11,500+) still dwarfs CIPS's reach.", "grade": "fact"},
+      {"item": "Sanctions-resilience role", "detail": "CIPS lets China and partners (notably Russia) settle trade outside dollar/SWIFT exposure - the practical core of de-dollarization at the transaction layer.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "mbridge_multi_cbdc": {
+    "summary": "The most consequential dollar-bypass experiment: a live multi-CBDC platform that settles cross-border without SWIFT - and is now majority Gulf-and-China-run.",
+    "points": [
+      {"item": "Members", "detail": "Founding/core central banks: China (PBoC), Hong Kong (HKMA), Thailand, UAE (CBUAE); Saudi Arabia (SAMA) joined as a full participant Jun 2024. Observer central banks across SE Asia, the Middle East, and Africa.", "grade": "fact"},
+      {"item": "Live & bypassing SWIFT", "detail": "mBridge went live in 2025 as the first commercial cross-border CBDC settlement system, enabling near-instant settlement that bypasses SWIFT; it has processed ~RMB 387B (~$55B), ~95% of it in DIGITAL YUAN.", "grade": "fact"},
+      {"item": "BIS step-back", "detail": "The BIS (which incubated mBridge via its HK hub) reportedly moved to step back from the project (late 2024), leaving China and Gulf states to steward a dollar-bypass rail - a notable governance shift.", "grade": "fact (reported) + labeled interpretation"},
+      {"item": "Gulf cross-link", "detail": "UAE + Saudi membership ties mBridge directly to the project's Gulf-sovereign-capital thread - the same states deploying AI capital are building the dollar-bypass settlement layer.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "brics_dedollar": {
+    "summary": "A broader BRICS de-dollarization agenda - real in bilateral trade and reserves, aspirational in a common currency.",
+    "points": [
+      {"item": "BRICS Pay", "detail": "A BRICS cross-border payments system demoed late 2024, in early pilot - intended to link members' national systems outside the dollar.", "grade": "fact (pilot)"},
+      {"item": "Bilateral local-currency settlement", "detail": "Russia reported ~90% of its trade within the bloc now settles in national currencies (yuan-heavy) - sanctions-forced de-dollarization that is genuine at the trade layer.", "grade": "fact"},
+      {"item": "Common currency = aspirational", "detail": "A 'BRICS currency' remains rhetoric, not reality; gold accumulation by member central banks is the more concrete reserve-diversification move.", "grade": "contested / labeled interpretation"}
+    ]
+  },
+  "reality_check": {
+    "summary": "The essential corrective: de-dollarization is real at the margins but the dollar's transactional dominance is intact - both the hype and the dismissal mislead.",
+    "points": [
+      {"item": "Transactional dominance intact", "detail": "The BIS 2025 Triennial Survey found the USD on one side of 89.2% of all FX transactions (April 2025), UP from 88.4% in 2022 - no transactional displacement.", "grade": "fact"},
+      {"item": "Reserve share eroding", "detail": "The dollar's share of global reserves fell from ~73% (2001) to ~54% (2025) - a real, slow diversification (into other currencies and gold), not collapse.", "grade": "fact"},
+      {"item": "Where de-dollarization is real", "detail": "Bilateral sanctioned-trade settlement (Russia-China), reserve diversification, and oil-trade pricing experiments - margins, not the core. Structural barriers (capital controls, RMB non-convertibility, trust, network effects) keep the dollar dominant.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "the_two_rails_contest": {
+    "summary": "The strategic frame: a private dollar-extension rail vs a state dollar-bypass rail - and US policy is now consciously playing the first to defend the dollar.",
+    "points": [
+      {"item": "Dollar-extension (private)", "detail": "USD stablecoins (USDC/RLUSD/USDT) on public chains push dollar usage and Treasury demand globally ([[macro-stablecoin-treasury-rail]]); the GENIUS Act institutionalizes this. A market-led defense of dollar primacy.", "grade": "fact + labeled interpretation"},
+      {"item": "Dollar-bypass (state)", "detail": "CIPS + mBridge + e-CNY + BRICS Pay are state-led rails to settle outside the dollar/SWIFT - sovereignty and sanctions-resilience, but with the same state-control/programmability concerns the project flags for CBDCs.", "grade": "fact + labeled interpretation"},
+      {"item": "Why it matters", "detail": "If USD stablecoins win, the fiscal-trap Treasury bid gets a new buyer base; if the bypass stack scales, the US loses a coercive lever and a funding channel. Both are dual-use control rails, just for different states.", "grade": "labeled interpretation"}
+    ]
+  },
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "mBridge", "result": "Live 2025, bypasses SWIFT; members PBoC/HKMA/Thailand/UAE + Saudi (SAMA, Jun 2024); ~RMB 387B (~$55B) processed, ~95% e-CNY; BIS reported step-back late 2024 (BIS/HKMA/Reuters/Modern Diplomacy)."},
+      {"check": "CIPS", "result": "~RMB 175T (~$24.5T) 2024; 38% CAGR; 193 direct/1,573 indirect, 124 countries end-2025; ~$1.76T single-day 16 Apr 2025 briefly > SWIFT; SWIFT-CIPS MOU (CSIS/Statrys/FXC/Wikipedia)."},
+      {"check": "Dollar dominance", "result": "BIS Triennial 2025: USD on 89.2% of FX (up from 88.4% 2022); reserve share ~73%->~54% (2001->2025)."},
+      {"check": "BRICS", "result": "BRICS Pay demoed late 2024 (early pilot); Russia ~90% intra-bloc trade in national currencies; common currency aspirational (Modern Diplomacy/watcher.guru)."}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "It is NOT asserted that the dollar is being displaced - transactional dominance is intact (89.2% of FX); de-dollarization is real only at the margins (reserves, sanctioned bilateral trade).",
+      "It is NOT asserted that mBridge/CIPS have achieved scale parity with SWIFT - they remain far smaller in reach.",
+      "Sanctions-resilience is described as a documented motive, not an endorsement; the same bypass rails carry the same state-control concerns as Western CBDCs.",
+      "A 'BRICS currency' is recorded as aspirational rhetoric, not an existing instrument.",
+      "These edges are OVERLAY/context and are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "China", "to": "CIPS", "instrument": "relationship", "raw_instrument": "PBoC-run dollar-alternative settlement network (~$24.5T 2024; 124 countries; briefly briefly surpassed SWIFT Apr-2025)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: dollar-bypass rail; excluded from proofs"},
+    {"from": "CIPS", "to": "Swift", "instrument": "relationship", "raw_instrument": "rival-and-partner: briefly surpassed SWIFT single-day; SWIFT-CIPS interoperability MOU", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: settlement-rail competition; excluded from proofs"},
+    {"from": "China", "to": "mBridge", "instrument": "relationship", "raw_instrument": "multi-CBDC platform live 2025, bypasses SWIFT, ~95% e-CNY", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: multi-CBDC bypass rail; excluded from proofs"},
+    {"from": "Saudi_Arabia_state", "to": "mBridge", "instrument": "relationship", "raw_instrument": "SAMA joined mBridge as full participant (Jun 2024) - Gulf state on the dollar-bypass rail", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: Gulf-China settlement cross-link; excluded from proofs"},
+    {"from": "Russia", "to": "CIPS", "instrument": "relationship", "raw_instrument": "post-SWIFT-cutoff settlement via CIPS / national currencies (~90% intra-bloc trade non-dollar)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: sanctions-driven bypass; excluded from proofs"},
+    {"from": "mBridge", "to": "Swift", "instrument": "relationship", "raw_instrument": "bypasses SWIFT for cross-border CBDC settlement - the dollar-bypass alternative to the incumbent rail", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: bypass-vs-incumbent; excluded from proofs"},
+    {"from": "Stablecoins", "to": "Swift", "instrument": "relationship", "raw_instrument": "USD-stablecoin dollar-extension rail as the private counter to the state bypass stack (defends dollar primacy)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "spec-cross-border-settlement-rails.json", "note": "OVERLAY: dollar-extension vs bypass; excluded from proofs"}
+  ],
+  "limits": "Maps the cross-border settlement contest: the state dollar-BYPASS stack (CIPS, Project mBridge live-2025-bypassing-SWIFT with ~95% e-CNY and Saudi/UAE membership, e-CNY, BRICS Pay) vs the private dollar-EXTENSION rail (USD stablecoins + SWIFT), with the reality-check that the dollar is still on 89.2% of FX even as its reserve share fell to ~54%. De-dollarization is real at the margins, not the core. Interleaves the stablecoin-Treasury, market-plumbing, Gulf-sovereign, and Russia-energy threads; the US stablecoin push reads partly as a dollar-defense counter-move. Overlay edges excluded from the formal proofs. source: see verification_log and the rendered .md for full URLs."
+}

@@ -172,6 +172,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CIPS": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "CLARITY": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1202,6 +1206,10 @@
     },
     "a16z": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "mBridge": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "xAI": {
@@ -3171,6 +3179,97 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-crqc-quantum-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "CIPS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PBoC-run dollar-alternative settlement network (~$24.5T 2024; 124 countries; briefly briefly surpassed SWIFT Apr-2025)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "CIPS",
+      "to": "Swift",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "rival-and-partner: briefly surpassed SWIFT single-day; SWIFT-CIPS interoperability MOU",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "mBridge",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "multi-CBDC platform live 2025, bypasses SWIFT, ~95% e-CNY",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia_state",
+      "to": "mBridge",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SAMA joined mBridge as full participant (Jun 2024) - Gulf state on the dollar-bypass rail",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "CIPS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "post-SWIFT-cutoff settlement via CIPS / national currencies (~90% intra-bloc trade non-dollar)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "mBridge",
+      "to": "Swift",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bypasses SWIFT for cross-border CBDC settlement - the dollar-bypass alternative to the incumbent rail",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Stablecoins",
+      "to": "Swift",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "USD-stablecoin dollar-extension rail as the private counter to the state bypass stack (defends dollar primacy)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-border-settlement-rails.json",
       "note": ""
     },
     {
@@ -5307,10 +5406,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 302,
-    "num_edges": 315,
+    "num_nodes": 304,
+    "num_edges": 322,
     "num_financial_edges": 128,
-    "num_structural_edges": 187,
+    "num_structural_edges": 194,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5361,7 +5460,19 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -5369,30 +5480,18 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -5404,6 +5503,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -5420,6 +5525,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5427,13 +5533,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -5743,6 +5842,13 @@
       },
       "CFTC": {
         "total_usd": 67400000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CIPS": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7554,6 +7660,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "mBridge": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "xAI": {
         "total_usd": 4000000000,
         "circular_usd": 0,
@@ -7813,6 +7926,22 @@
         "both_layers": true
       },
       {
+        "node": "China",
+        "degree": 7,
+        "neighbor_sectors": [
+          "commodity",
+          "defense",
+          "other",
+          "state"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 5,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -7877,22 +8006,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Broadcom",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_lab",
-          "hyperscaler",
-          "private_credit",
-          "sink"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 4,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       }
     ]
   }
