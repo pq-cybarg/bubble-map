@@ -2,7 +2,7 @@ from,to,instrument,amount_usd,status,declared_circular,cancelable,source_file
 BNY_Mellon,SINK_repo,other,2000000000000,recurring,False,False,spec-market-plumbing-control.json
 US_Banks,Nondepository financial institutions,debt,1972670000000,2026-04,False,False,macro-cre-privatecredit.json
 Stablecoins,US_Treasuries,other,1000000000000,projected,False,False,macro-stablecoin-treasury-rail.json
-Private-credit market,AI data centers,debt,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
+Private-credit market,AI_Datacenters,debt,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
 Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 OpenAI,Microsoft,compute_commitment,250000000000,committed,True,False,"fin-nvidia-openai.json,fin-microsoft-openai.json"
@@ -11,7 +11,7 @@ PrivateCredit_Funds,PE_Insurers,other,180000000000,deployed,True,False,spec-insu
 PrivateCredit_Funds,Insurers_Annuities,other,180000000000,deployed,False,False,macro-private-credit-marks.json
 Microsoft,OpenAI,equity,135000000000,closed-definitive,True,False,fin-microsoft-openai.json
 PE_Insurers,Bermuda_Captives,other,130000000000,ceded-offshore,True,False,spec-insurance-bermuda.json
-US_Banks,Private-credit funds,debt,123000000000,2024-12,False,False,macro-cre-privatecredit.json
+US_Banks,PrivateCredit_Funds,debt,123000000000,2024-12,False,False,"macro-cre-privatecredit.json,macro-uncovered-risk-pools.json"
 Meta,SINK_capex,capex,115000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
 Google,SpaceX,equity,100000000000,held,False,False,fin-spacex-spcx.json
 NVIDIA,OpenAI,equity,100000000000,signed-LOI,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
@@ -29,7 +29,7 @@ Terraform_Labs,SINK_investors,other,40000000000,closed,False,False,macro-stablec
 Google,Anthropic,equity,40000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
 OpenAI,Microsoft,revenue_share,38000000000,committed,False,False,fin-microsoft-openai.json
 SINK_lenders,Vantage,debt,38000000000,reported,False,False,fin-coreweave-oracle.json
-Private-credit funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progress),False,False,macro-cre-privatecredit.json
+PrivateCredit_Funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progress),False,False,macro-cre-privatecredit.json
 Apollo_Blackstone,Broadcom,compute_commitment,35000000000,announced,False,False,fin-google-amazon-anthropic-meta.json
 Google,SpaceX,compute_commitment,30000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
 Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-amazon-anthropic-meta.json
@@ -59,7 +59,7 @@ Anthropic,Amazon,equity_method_loss,9500000000,mark-to-market-GAIN,True,False,sp
 MtGox,Creditors,repayment,9000000000,in-progress,False,False,spec-exchanges-asia.json
 SINK_lenders,CoreWeave,debt,8500000000,closed,False,False,fin-coreweave-oracle.json
 NVIDIA,Intel,equity,7900000000,13F-largest,False,False,spec-sec-filings-primary.json
-Lazarus,Tornado_Cash,surveillance_security,7600000000,documented,False,False,spec-tornado-samourai.json
+Lazarus_Group,Tornado_Cash,surveillance_security,7600000000,documented,False,False,spec-tornado-samourai.json
 Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
 MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
@@ -305,6 +305,10 @@ SEALSQ,WeCan_Group,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,SEALCOIN,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 Hashgraph_Association,WISeART,equity,,invested,False,False,fin-sealsq-wisekey-global.json
 WISeSat,SpaceX,relationship,,rideshare-customer,False,False,fin-sealsq-wisekey-global.json
+SEALSQ,SEALKAYNESQ,other,,open,False,False,fin-sealsq-wisekey-global.json
+Kaynes_SemiCon,SEALKAYNESQ,other,,open,False,False,fin-sealsq-wisekey-global.json
+SEALSQ,SEALSQ_Murcia_Hub,other,,open,False,False,fin-sealsq-wisekey-global.json
+SEALSQ,SEALCOIN,other,,open,False,False,fin-sealsq-wisekey-global.json
 Israel_state,Iran_nuclear_program,other,,open,False,False,spec-anomalous-deaths-disappearances.json
 Russia,Russian_energy_executives,other,,open,False,False,spec-anomalous-deaths-disappearances.json
 Boeing_safety_dispute,Boeing_whistleblowers,regulatory_legal,,open,False,False,spec-anomalous-deaths-disappearances.json
@@ -369,7 +373,6 @@ FFCB_Funding,Farm_Credit_System,other,,open,False,False,macro-farm-credit-system
 Farm_Credit_System,US_Farmland,other,,open,False,False,macro-farm-credit-system.json
 CoBank,Rural_Infrastructure,other,,open,False,False,macro-farm-credit-system.json
 Credit_Unions,US_household_credit,other,,open,False,False,macro-uncovered-risk-pools.json
-US_Banks,PrivateCredit_Funds,debt,,open,False,False,macro-uncovered-risk-pools.json
 Foreign_Bank_US_Branches,SINK_lenders,other,,open,False,False,macro-uncovered-risk-pools.json
 Google,Device_Age_Attestation,other,,open,False,False,digitalid-os-hardware-stack.json
 Apple,Device_Age_Attestation,other,,open,False,False,digitalid-os-hardware-stack.json

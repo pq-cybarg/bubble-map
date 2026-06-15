@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-uncovered-risk-pools.json` — related files by shared entities (verify cross-refs exist)
-- macro-history-dereg-manipulation.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- spec-unwind-timing.json: 2 shared entities
-- macro-oil-backwardation.json: 2 shared entities
-- macro-hidden-sovereign-debt.json: 2 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
-- macro-private-credit-bdc-stress.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
+## Newest file `macro-cross-sectional-analysis.json` — related files by shared entities (verify cross-refs exist)
+- spec-crypto-banking-debanking.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- macro-bank-htm-marks.json: 1 shared entities
+- macro-stablecoin-failures-manipulation.json: 1 shared entities
+- macro-ilcs.json: 1 shared entities
+- macro-private-credit-bdc-stress.json: 1 shared entities
+- spec-sdny-crypto-prosecution.json: 1 shared entities
+- macro-oil-backwardation.json: 1 shared entities

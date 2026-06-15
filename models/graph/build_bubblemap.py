@@ -72,6 +72,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "SINK_lenders":"Lenders","SINK_bondmarket":"Bond market","SINK_debt":"Debt / balance sheet",
  "SINK_capex":"Capex","SINK_backlog":"AI backlog","SINK_investors":"Investors",
  "SINK_treasury_basis":"Treasury basis trade","SINK_scam_victims":"Scam victims",
+ "AI_Datacenters":"AI data centers","PrivateCredit_Funds":"Private-credit funds","Lazarus_Group":"Lazarus Group",
  "US_Treasuries":"US Treasuries","US_Banks":"US banks","US_Government":"US government",
  "MP_Materials":"MP Materials","Apollo_Blackstone":"Apollo / Blackstone","Defense_Primes":"Defense primes",
  "World_Liberty_Financial":"World Liberty Financial (USD1)","Meta_Hyperion_SPV":"Meta Hyperion SPV",

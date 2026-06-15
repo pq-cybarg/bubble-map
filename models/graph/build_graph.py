@@ -42,6 +42,10 @@ ALIAS = {
  "TornadoCash":"Tornado_Cash","SamouraiWallet":"Samourai_Wallet",
  "WorldLibertyFinancial":"World_Liberty_Financial","WLFI":"World_Liberty_Financial","USD1":"World_Liberty_Financial",
  "Federal Reserve":"Federal_Reserve","FederalReserve":"Federal_Reserve","FOMC":"Federal_Reserve",
+ # duplicate-node merges (same entity under two spellings -> one bubble)
+ "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
+ "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
+ "Private-credit funds":"PrivateCredit_Funds","Private credit funds":"PrivateCredit_Funds",
 }
 def canon(n):
     n=(n or "?").strip()
@@ -125,7 +129,7 @@ NODE_META = {
  "Government_of_Gujarat":("state",True),"Spanish_Government_SETT":("state",True),"Georgia_MoJ":("state",True),
  "NSA":("state_intel",True),"FBI":("state_intel",True),"DARPA":("state_intel",True),"NRO":("state_intel",True),"InQTel":("state_intel",True),
  "Palantir":("defense_tech",True),"ANOM":("surveillance",False),"Crypto_Standards":("standards",False),"US_Allied_Military":("defense",True),
- "SaltTyphoon":("threat_actor",False),"Lazarus":("threat_actor",False),"Boeing":("defense",True),
+ "SaltTyphoon":("threat_actor",False),"Lazarus":("threat_actor",False),"Lazarus_Group":("threat_actor",False),"Boeing":("defense",True),
  # PACs / journalism / offshore
  "Fairshake":("political",False),"ICIJ":("journalism",False),"Offshore_Finance":("offshore",False),
  # statistical agencies / statistics / data-integrity layer

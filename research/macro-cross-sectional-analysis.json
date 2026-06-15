@@ -18,6 +18,14 @@
   "sovereign_fragmentation": "Sovereign-yield dispersion across a currency/region bloc as a fragmentation gauge (euro-area periphery literature).",
   "relative_value": "z-score / percentile vs own history as desk-standard relative value."
  },
+ "stress_test_factor_reversal": {
+  "summary": "What the ~91% PC1 common factor REVERSING does - the asymmetric stress case (#49).",
+  "diversification_is_illusory_quantified": "For n equal-weight segments with average pairwise correlation rho, portfolio variance / single-name variance = 1/n + (1-1/n)*rho. US credit ladder (n=5, rho=0.88) => 0.904: holding all five rating buckets removes only ~9.6% of variance (vs ~80% for a zero-correlation 5-name basket); effective independent bets ~= 1/0.904 ~= 1.1. On a reversal there is almost no cushion - AAA->BBB->CCC widen together.",
+  "compression_is_the_pre_stress_tell": "Dispersion compresses in calm, blows out in stress. Municipal and TRACE-breadth read COMPRESSED now while US credit reads ELEVATED - the highest-PC1 segments are priced most for calm; compressed dispersion historically PRECEDES the blow-out. The cross-section is primed, not relieved.",
+  "reversal_is_the_self_marked_forcing_event": "self_marked_value U3 proves the four self-marked gaps (bank HTM, AI fair-value marks, private-credit NAV, insurance captives) co-move under a common factor and cannot be netted; a PC1 credit reversal is that factor turning, pricing all four at once - no asset-class diversification either.",
+  "honest_scope": "The LEVEL of stress on a reversal is not forecastable (date unknowable, spec-unwind-timing); the math fixes the SHAPE - a one-factor reversal is undiversified across both the credit cross-section (~1.1 effective bets) and the four self-marked asset classes (U3), so the loss is correlated, simultaneous, and un-hedgeable by holding 'many different credits.'",
+  "grade": "fact (rho=0.88 / PC1=91% inputs + the diversification arithmetic) + labeled interpretation (the reversal scenario)"
+ },
  "disagreement_with_literature": "Mean-variance portfolio theory assumes that holding many different credits diversifies idiosyncratic risk away. When PC1 explains most of the cross-sectional variance (segments move as one), that diversification is illusory at the system level. The measured US-credit PC1 share (~91%) and average pairwise correlation (~0.88) on monthly OAS changes are the empirical agreement with the project's self-marked-value claim (models/z3/self_marked_value.py U1-U4: the gaps correlate under a common factor; there is no netting; carrying value is forced to converge on a forcing event). Reported, not hidden.",
   "key_results_2026_06_10": {
   "credit_oas": {"segments": 5, "avg_pairwise_corr": 0.883, "pc1_share": 0.908, "dispersion_now": "elevated"},

@@ -4,10 +4,6 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
-    "AI data centers": {
-      "sector": "other",
-      "has_exogenous_revenue": true
-    },
     "AI data-center SPVs / hyperscaler projects": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -704,13 +700,9 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
-    "Lazarus": {
+    "Lazarus_Group": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
-    },
-    "Lazarus_Group": {
-      "sector": "other",
-      "has_exogenous_revenue": true
     },
     "Liberty Strategic Capital": {
       "sector": "other",
@@ -921,10 +913,6 @@
       "has_exogenous_revenue": true
     },
     "Private credit / venture debt lenders": {
-      "sector": "other",
-      "has_exogenous_revenue": true
-    },
-    "Private-credit funds": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -1935,7 +1923,7 @@
     },
     {
       "from": "US_Banks",
-      "to": "Private-credit funds",
+      "to": "PrivateCredit_Funds",
       "instrument": "debt",
       "layer": "financial",
       "raw_instrument": "committed credit lines to private-credit obligors",
@@ -1943,7 +1931,7 @@
       "status": "2024-12",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "macro-cre-privatecredit.json",
+      "source_file": "macro-cre-privatecredit.json,macro-uncovered-risk-pools.json",
       "note": "Specifically the PC slice inside NDFI; vs ~$1.6T Tier-1 capital."
     },
     {
@@ -1960,7 +1948,7 @@
       "note": "Meta Hyperion JV: ~$27B debt + ~$2.5B equity; Blue Owl 80%/Meta 20%; PIMCO ~$18B, BlackRock ~$3B. Largest private-credit deal ever. Some reports $29-30B."
     },
     {
-      "from": "Private-credit funds",
+      "from": "PrivateCredit_Funds",
       "to": "Anthropic AI infrastructure",
       "instrument": "debt",
       "layer": "financial",
@@ -2000,7 +1988,7 @@
     },
     {
       "from": "Private-credit market",
-      "to": "AI data centers",
+      "to": "AI_Datacenters",
       "instrument": "debt",
       "layer": "financial",
       "raw_instrument": "projected datacenter private-credit financing",
@@ -2974,7 +2962,7 @@
       "note": "Immutable smart contracts not 'property' under IEEPA; OFAC overstepped."
     },
     {
-      "from": "Lazarus",
+      "from": "Lazarus_Group",
       "to": "Tornado_Cash",
       "instrument": "surveillance_security",
       "layer": "structural",
@@ -4976,6 +4964,58 @@
       "note": "WISeSat buys rideshare slots on SpaceX Falcon 9 Transporter missions (21st sat, Transporter-16, Mar 30 2026, Vandenberg). CUSTOMER relationship ONLY - explicitly NOT a SpaceX strategic partnership/investment. Prevents over-stating the SpaceX link."
     },
     {
+      "from": "SEALSQ",
+      "to": "SEALKAYNESQ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SEALKAYNESQ is the SEALSQ + Kaynes Semicon post-quantum semiconductor JV (India) - SEALSQ is a JV parent",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "corporate structure: JV/subsidiary link to parent SEALSQ"
+    },
+    {
+      "from": "Kaynes_SemiCon",
+      "to": "SEALKAYNESQ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Kaynes Semicon is the other parent of the SEALKAYNESQ PQC-semiconductor JV",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "corporate structure: JV/subsidiary link to parent SEALSQ"
+    },
+    {
+      "from": "SEALSQ",
+      "to": "SEALSQ_Murcia_Hub",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SEALSQ_Murcia_Hub is SEALSQ's Murcia (Spain) chip/PQC hub - a SEALSQ site",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "corporate structure: JV/subsidiary link to parent SEALSQ"
+    },
+    {
+      "from": "SEALSQ",
+      "to": "SEALCOIN",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SEALCOIN is SEALSQ's IoT/DePIN token initiative (built on Hedera) - a SEALSQ venture",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-sealsq-wisekey-global.json",
+      "note": "corporate structure: JV/subsidiary link to parent SEALSQ"
+    },
+    {
       "from": "Israel_state",
       "to": "Iran_nuclear_program",
       "instrument": "other",
@@ -6146,19 +6186,6 @@
       "note": ""
     },
     {
-      "from": "US_Banks",
-      "to": "PrivateCredit_Funds",
-      "instrument": "debt",
-      "layer": "financial",
-      "raw_instrument": "~$1.97T bank lending to NDFIs - risk migrated off-balance-sheet into manager-marked private credit (~$1.7-3T)",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-uncovered-risk-pools.json",
-      "note": ""
-    },
-    {
       "from": "Foreign_Bank_US_Branches",
       "to": "SINK_lenders",
       "instrument": "other",
@@ -6589,10 +6616,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 356,
-    "num_edges": 397,
-    "num_financial_edges": 130,
-    "num_structural_edges": 267,
+    "num_nodes": 353,
+    "num_edges": 400,
+    "num_financial_edges": 129,
+    "num_structural_edges": 271,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6643,6 +6670,18 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -6655,28 +6694,6 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
@@ -6684,8 +6701,12 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI",
-        "Microsoft"
+        "Oracle"
       ],
       [
         "Amazon",
@@ -6704,6 +6725,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -6736,13 +6763,6 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "AI data centers": {
-        "total_usd": 800000000000,
-        "circular_usd": 0,
-        "circularity_ratio": 0.0,
-        "in_core_scc": false,
-        "in_robust_core": false
-      },
       "AI data-center SPVs / hyperscaler projects": {
         "total_usd": 27000000000,
         "circular_usd": 0,
@@ -6758,7 +6778,7 @@
         "in_robust_core": false
       },
       "AI_Datacenters": {
-        "total_usd": 0,
+        "total_usd": 800000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7961,15 +7981,8 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "Lazarus": {
-        "total_usd": 7600000000,
-        "circular_usd": 0,
-        "circularity_ratio": 0.0,
-        "in_core_scc": false,
-        "in_robust_core": false
-      },
       "Lazarus_Group": {
-        "total_usd": 2125000000,
+        "total_usd": 9725000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8346,13 +8359,6 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "Private-credit funds": {
-        "total_usd": 159000000000,
-        "circular_usd": 0,
-        "circularity_ratio": 0.0,
-        "in_core_scc": false,
-        "in_robust_core": false
-      },
       "Private-credit funds / asset managers": {
         "total_usd": 27000000000,
         "circular_usd": 0,
@@ -8368,7 +8374,7 @@
         "in_robust_core": false
       },
       "PrivateCredit_Funds": {
-        "total_usd": 360000000000,
+        "total_usd": 519000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9232,7 +9238,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Banks",
-        "degree": 19,
+        "degree": 18,
         "neighbor_sectors": [
           "bank",
           "central_bank",
@@ -9263,6 +9269,26 @@
           "other",
           "space_real_economy",
           "telecom"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "PrivateCredit_Funds",
+        "degree": 8,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "retail"
         ],
         "n_neighbor_sectors": 7,
         "source_files": 6,
@@ -9361,25 +9387,6 @@
           "ip_rightsholder",
           "space_real_economy",
           "surveillance"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
-          "retail"
         ],
         "n_neighbor_sectors": 6,
         "source_files": 5,
