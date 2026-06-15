@@ -18,7 +18,7 @@
 - **Meta** — 52 files
 - **Google** — 33 files
 - **OpenAI** — 30 files
-- **Oracle** — 27 files
+- **Oracle** — 28 files
 - **FDIC** — 24 files
 - **Chainlink** — 22 files
 - **Microsoft** — 22 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-tornado-samourai.json` — related files by shared entities (verify cross-refs exist)
-- spec-unc-nk-attribution-map.json: 2 shared entities
-- spec-onchain-threat-actor-addresses.json: 2 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- spec-exchanges-asia.json: 1 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
+## Newest file `digitalid-corporate.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 10 shared entities
+- spec-network-overlay.json: 10 shared entities
+- spec-cross-system-contagion.json: 8 shared entities
+- spec-exchanges-asia.json: 8 shared entities
+- spec-sec-filings-primary.json: 7 shared entities
+- fin-coreweave-oracle.json: 7 shared entities
+- fin-google-amazon-anthropic-meta.json: 7 shared entities
+- geopolitics-allied-intel-nodes.json: 6 shared entities
