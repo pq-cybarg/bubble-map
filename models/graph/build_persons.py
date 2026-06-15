@@ -81,7 +81,7 @@ NAV=_navlinks("Persons")
 FIELDS=[("bluf","Bottom line"),("drivers","Drivers & motivations"),("worldview","Worldview & origins"),
         ("decision_style","Decision-making & risk"),("track_record","Track record"),
         ("vulnerabilities","Vulnerabilities & levers"),("relationships","Relationships & rivalries"),
-        ("outlook","Outlook & indicators"),("confidence","Confidence"),("grade","Grading")]
+        ("outlook","Outlook & indicators"),("legitimacy_bearing","Trust / legitimacy bearing"),("confidence","Confidence"),("grade","Grading")]
 
 def initials(name):
     parts=[p for p in name.replace("(","").replace(")","").split() if p[:1].isalpha()]
