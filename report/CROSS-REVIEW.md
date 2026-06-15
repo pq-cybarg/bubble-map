@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-us-fiscal-trap.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-border-settlement-rails.json: 2 shared entities
-- macro-stablecoin-treasury-rail.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- spec-market-plumbing-control.json: 1 shared entities
-- macro-jobs-inflation-fed.json: 1 shared entities
-- macro-cre-privatecredit.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
+## Newest file `spec-market-plumbing-control.json` — related files by shared entities (verify cross-refs exist)
+- altcoin-lens.json: 8 shared entities
+- fin-hedera-connections.json: 5 shared entities
+- spec-sec-sdny-regulatory.json: 5 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- temporal-bridges.json: 4 shared entities
+- commodities-metals.json: 3 shared entities
+- macro-cre-privatecredit.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
