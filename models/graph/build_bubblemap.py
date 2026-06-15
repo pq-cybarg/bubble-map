@@ -179,7 +179,16 @@ HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
 svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #hud{position:absolute;top:12px;left:14px;z-index:5;max-width:300px;background:#fffdf8e8;border:1px solid var(--line);border-radius:9px;padding:12px 14px}
 #hud h1{font:600 16px Georgia,serif;margin:0 0 2px}.sub{color:var(--mut);font-size:11.5px;margin-bottom:9px}
-#q{width:100%;padding:8px 10px;font-size:13px;border:1px solid var(--line);border-radius:6px;margin-bottom:8px;font-family:inherit}
+#q{width:100%;padding:8px 10px;font-size:13px;border:1px solid var(--line);border-radius:6px;margin-bottom:0;font-family:inherit}
+#qres{max-height:300px;overflow:auto;margin:4px 0 8px;border-radius:6px;border:1px solid var(--line);display:none;background:#fffdf8}
+#qres.on{display:block}
+#qres .ri{padding:6px 9px;cursor:pointer;border-bottom:1px solid #efe9da;font-size:12.5px;line-height:1.3}
+#qres .ri:last-child{border-bottom:none}
+#qres .ri:hover,#qres .ri.sel{background:#1f4e7912}
+#qres .ri b{color:#1f4e79}
+#qres .ri .rm{color:var(--mut);font-size:11px}
+#qres .ri .rs{float:right;color:#9a8f78;font-size:10.5px;margin-left:6px}
+#qres .rnone{padding:7px 9px;color:var(--mut);font-size:12px}
 .tog{display:block;font-size:12.5px;color:#33312c;margin:4px 0;cursor:pointer;user-select:none}
 .tog input{vertical-align:-1px;margin-right:6px}
 #legend{display:flex;flex-wrap:wrap;gap:3px 10px;margin-top:9px}
@@ -208,7 +217,8 @@ line.hl{stroke:#1f4e79!important;opacity:.95!important}
 </style></head><body>__NAV__
 <div id=stage>
 <div id=hud><h1>Bubble Map</h1><div class=sub>the AI capital loop, as a graph &middot; drag bubbles &middot; scroll to zoom &middot; click a bubble to focus its network &middot; hover an edge for the deal</div>
-<input id=q placeholder="Find an entity&hellip;" autocomplete=off>
+<input id=q placeholder="Find an entity or person&hellip;" autocomplete=off>
+<div id=qres></div>
 <label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
 <label class=tog><input type=checkbox id=tLab checked> show labels</label>
@@ -302,11 +312,51 @@ document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
 document.getElementById('tLab').onchange=e=>labels.style('display',e.target.checked?null:'none');
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
-const q=document.getElementById('q');
-const _match=(d,s)=>s&&((d.id.toLowerCase().includes(s))||((d.label||'').toLowerCase().includes(s)));
-q.oninput=()=>{const s=q.value.trim().toLowerCase();
- node.select('circle').attr('stroke',d=>{if(_match(d,s))return '#1f4e79';return d.scc?'#d4a017':'#fffdf8';})
-  .attr('stroke-width',d=>{if(_match(d,s))return 3.4;return d.scc?2.6:1;});};
+const q=document.getElementById('q'), qres=document.getElementById('qres');
+// ---- fuzzy search: ranked, clickable, and indexes PERSONS + descriptions ----
+const _strip=h=>(h||'').replace(/<[^>]*>/g,' ').replace(/&[a-z]+;/g,' ');
+const _norm=s=>(s||'').toLowerCase().replace(/[_\\/]/g,' ').replace(/[^a-z0-9 ]/g,' ').replace(/\\s+/g,' ').trim();
+const _bg=s=>{s=_norm(s).replace(/ /g,'');const o=[];for(let i=0;i<s.length-1;i++)o.push(s.slice(i,i+2));return o;};
+const _dice=(a,b)=>{if(!a.length||!b.length)return 0;const m={};a.forEach(x=>m[x]=(m[x]||0)+1);let h=0;b.forEach(x=>{if(m[x]>0){m[x]--;h++;}});return 2*h/(a.length+b.length);};
+NODES.forEach(d=>{d._lab=_norm(d.label);d._id=_norm(d.id);d._per=(d.persons||[]).map(_norm);
+  d._desc=_norm(_strip(d.desc));d._blk=(d.blocks||[]).map(s=>_norm(BTITLE[s]||s)).join(' ');d._lbg=_bg(d.label);});
+function scoreNode(d,qn,qbg,qtok){
+  let sc=Math.max(d._lab.includes(qn)?0.96:0, _dice(qbg,d._lbg), d._id.includes(qn)?0.9:0);
+  const hay=d._lab+' '+d._id+' '+d._desc+' '+d._blk; let tk=0;
+  qtok.forEach(t=>{if(t.length>1&&hay.includes(t))tk++;}); if(qtok.length)sc=Math.max(sc,tk/qtok.length*0.82);
+  let pbest=0,via=''; d._per.forEach((p,i)=>{let ptk=0;qtok.forEach(t=>{if(t.length>1&&p.includes(t))ptk++;});
+    const psc=Math.max(p.includes(qn)?0.97:_dice(qbg,_bg(p)), qtok.length?ptk/qtok.length*0.9:0);
+    if(psc>pbest){pbest=psc;via=d.persons[i];}});
+  return pbest>sc?{s:pbest,via:'person:'+via}:{s:sc,via:''};
+}
+let qsel=-1, qhits=[];
+function resetStroke(){node.select('circle').attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);}
+function markSel(){Array.from(qres.querySelectorAll('.ri')).forEach((el,i)=>el.classList.toggle('sel',i===qsel));}
+function pickHit(d){focusNode(d.id);qres.className='';qres.innerHTML='';qhits=[];}
+function runSearch(){
+  const raw=q.value.trim();
+  if(raw.length<2){qres.className='';qres.innerHTML='';qhits=[];resetStroke();return;}
+  const qn=_norm(raw),qbg=_bg(raw),qtok=qn.split(' ').filter(Boolean),TH=0.30;
+  qhits=NODES.map(d=>{const r=scoreNode(d,qn,qbg,qtok);return {d,s:r.s,via:r.via};})
+    .filter(x=>x.s>=TH).sort((a,b)=>b.s-a.s).slice(0,12);
+  qres.className='on';
+  if(!qhits.length){qres.innerHTML='<div class=rnone>No match &ge;30% similarity. Try a partial name.</div>';resetStroke();return;}
+  qsel=0;
+  qres.innerHTML=qhits.map((x,i)=>{const vp=x.via.indexOf('person:')===0?` &middot; ${x.via.slice(7)}`:'';
+    return `<div class=ri data-i="${i}"><span class=rs>${Math.round(x.s*100)}%</span><b>${x.d.label}</b> <span class=rm>${x.d.sector}${vp}</span></div>`;}).join('');
+  Array.from(qres.querySelectorAll('.ri')).forEach(el=>el.onclick=()=>pickHit(qhits[+el.dataset.i].d));
+  markSel();
+  const hit=new Set(qhits.map(x=>x.d.id));
+  node.select('circle').attr('stroke',d=>hit.has(d.id)?'#1f4e79':(d.scc?'#d4a017':'#fffdf8'))
+    .attr('stroke-width',d=>hit.has(d.id)?3.4:(d.scc?2.6:1));
+}
+q.oninput=runSearch;
+q.onkeydown=e=>{if(!qhits.length)return;
+  if(e.key==='ArrowDown'){e.preventDefault();qsel=Math.min(qsel+1,qhits.length-1);markSel();}
+  else if(e.key==='ArrowUp'){e.preventDefault();qsel=Math.max(qsel-1,0);markSel();}
+  else if(e.key==='Enter'){e.preventDefault();if(qhits[qsel])pickHit(qhits[qsel].d);}
+  else if(e.key==='Escape'){q.value='';runSearch();}};
+document.addEventListener('click',e=>{if(!e.target.closest('#hud'))qres.className='';});
 document.getElementById('close').onclick=()=>{document.getElementById('panel').style.display='none';clearEgo();soloB=null;};
 function neighbors(d){const ins=[],outs=[];LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);
  if(s===d.id)outs.push({n:t,i:l.instrument||l.iclass,c:l.circular,a:l.amount}); if(t===d.id)ins.push({n:s,i:l.instrument||l.iclass,c:l.circular,a:l.amount});});
