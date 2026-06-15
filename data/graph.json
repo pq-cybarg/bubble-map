@@ -3688,6 +3688,32 @@
       "note": ""
     },
     {
+      "from": "GENIUS_Act",
+      "to": "US_Contingent_Liabilities",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "legislated captive stablecoin T-bill demand (~$109B bought 2025) engineered to fund the over-indebted, contingent-liability-laden sovereign as foreign central banks rotate to gold - the US's private-rail answer to the fiscal trap",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-us-fiscal-trap.json",
+      "note": ""
+    },
+    {
+      "from": "EUDI_Wallet",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "the EU's public CBDC+wallet rail (eIDAS by ~end-2026, Digital Euro pending) is the parallel route to the same programmable-money+identity endpoint the US reaches via private stablecoins - convergent 2025-27 timing",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-us-fiscal-trap.json",
+      "note": ""
+    },
+    {
       "from": "China",
       "to": "Developing_State_Infrastructure",
       "instrument": "other",
@@ -6368,9 +6394,9 @@
   ],
   "analysis": {
     "num_nodes": 346,
-    "num_edges": 383,
+    "num_edges": 385,
     "num_financial_edges": 130,
-    "num_structural_edges": 253,
+    "num_structural_edges": 255,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6421,16 +6447,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Microsoft",
@@ -6441,8 +6467,13 @@
         "Anthropic"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -6453,23 +6484,6 @@
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -6484,16 +6498,28 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],

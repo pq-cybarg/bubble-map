@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `digitalid-device-ownership-erosion.json` — related files by shared entities (verify cross-refs exist)
-- spec-sec-filings-primary.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- fin-ai-depreciation-debttrap.json: 3 shared entities
-- commodities-metals.json: 3 shared entities
-- spec-supplychain-shaihulud-extortion.json: 3 shared entities
-- fin-coreweave-oracle.json: 3 shared entities
-- digitalid-corporate.json: 3 shared entities
-- macro-ai-power-grid-bottleneck.json: 3 shared entities
+## Newest file `macro-us-fiscal-trap.json` — related files by shared entities (verify cross-refs exist)
+- spec-cross-border-settlement-rails.json: 2 shared entities
+- macro-stablecoin-treasury-rail.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- digitalid-orchestration-real-incentive.json: 2 shared entities
+- spec-market-plumbing-control.json: 1 shared entities
+- macro-jobs-inflation-fed.json: 1 shared entities
+- macro-cre-privatecredit.json: 1 shared entities
+- altcoin-lens.json: 1 shared entities
