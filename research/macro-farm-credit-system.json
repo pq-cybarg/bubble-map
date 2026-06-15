@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "The Farm Credit System - a ~$544B agricultural GSE off the FDIC map, on a plateauing farmland collateral base into a farm-income downturn",
+    "generated": "2026-06-15",
+    "frame": "A deep dig into the Farm Credit System (FCS): a privately-owned, federally-chartered cooperative GSE that is the single largest US agricultural lender (~45.8% of all farm debt), funded by ~$459B of joint-and-several Systemwide Debt Securities with implicit (not explicit) federal backing - entirely off the FDIC bank map. The structure is 4 Farm Credit Banks (CoBank dominant) + ~55 associations. Its risk is highly correlated: one sector (US agriculture), heavy commodity/export dependence (soy/corn/cotton to China), and a borrower base hit simultaneously by the 2024-25 income downturn, record farm debt, and a tariff shock larger than 2018-19 - so far cushioned by still-rising (but decelerating) farmland values and large ad-hoc government payments. The deep companion to [[macro-uncovered-risk-pools]] section 4.",
+    "relevance": "Completes the uncovered-pools arc for the Farm Credit System: a ~$544B GSE with a ~$459B joint-and-several debt complex, a plateauing farmland collateral base, and deteriorating credit (NPAs nearly doubled in dollars in ~12 months) into a China-tariff ag shock - correlated tail risk outside the bank lens.",
+    "sources": "Federal Farm Credit Banks Funding Corp (FFCB) information statement / investor presentation / earnings; Farm Credit Administration (FCA); CoBank / AgriBank / AgFirst / Farm Credit Bank of Texas reports; USDA NASS Land Values + ERS farm-income/debt; American Farm Bureau (Chapter 12 bankruptcies); FCSIC; farmdoc/Missouri RaFF (ag-debt share); Investigate Midwest / Fortune (China tariff). Full URLs in the rendered .md.",
+    "note": "WebFetch unavailable; figures from search surfacing of primary docs. Material correction vs the earlier macro-uncovered framing: total assets ~$544B (not ~$400B+) and FFCB systemwide debt ~$459B (Aug 2025, up >30% since 2021, not ~$400B); gross loans ~$428.9B. The $544B total-assets figure appeared in a single snippet and should be confirmed against the 2024 Annual Information Statement (graded contested). 2025 net farm income's +37% jump is heavily distorted by one-time government payments - not organic strength."
+  },
+  "size_capital": {
+    "summary": "A ~$544B GSE funding a buffer above its ~$429B loan book.",
+    "points": [
+      {"item": "Size + income", "detail": "Total assets ~$544.4B (YE2024, contested - confirm vs the AIS); gross loans $428.9B; system capital $78.8B (+$5.5B YoY); net income $7.80B (FY2024, up from $7.45B). Net interest margin 2.41% (vs ~3.52% for ag community banks) - the GSE funding advantage. The ~$115B gap between assets and loans is the investment/liquidity portfolio.", "grade": "fact (capital/income/NIM) + contested (total-assets figure)"}
+    ]
+  },
+  "structure": {
+    "summary": "Four Farm Credit Banks + ~55 associations; CoBank dominates and uniquely lends to rural infrastructure.",
+    "points": [
+      {"item": "The four FCBs", "detail": "CoBank (~$209B total assets; record FY2024 net income $1.635B) > AgriBank (~$165B loans / ~$200B assets) >> AgFirst (~$48B) > Farm Credit Bank of Texas (~$39.5B). Association counts (Mar 2026): AgFirst 16, CoBank 16, FCB Texas 12, AgriBank 11.", "grade": "fact + contested (AgFirst/AgriBank vintage mix)"},
+      {"item": "CoBank's distinct role", "detail": "Beyond wholesale funding to its affiliated associations, CoBank lends DIRECTLY to agribusiness cooperatives AND to rural electric/water/communications/broadband cooperatives in all 50 states - >75% of US electric distribution coops bank with CoBank. So the FCS is not purely a farm lender; CoBank is a rural-infrastructure financier too.", "grade": "fact"}
+    ]
+  },
+  "ffcb_funding": {
+    "summary": "A ~$459B joint-and-several GSE debt complex with implicit federal backing.",
+    "points": [
+      {"item": "Systemwide debt", "detail": "The Federal Farm Credit Banks Funding Corporation issues the System's consolidated Systemwide Debt Securities - ~$459B outstanding (Aug 2025), up >$100B (+30%) since 2021. These are joint-and-several obligations of the 4 banks, NOT obligations of or guaranteed by the US government (implicit GSE backing only). The Farm Credit System Insurance Corporation (FCSIC, 1988) insures timely principal/interest on the debt.", "grade": "fact"}
+    ]
+  },
+  "farmland_and_credit": {
+    "summary": "The collateral base is still rising but decelerating; credit metrics are deteriorating off a low base into a tariff shock.",
+    "points": [
+      {"item": "Farmland + farm debt", "detail": "US cropland value $5,830/acre (2025, +4.7%); all farm real estate $4,350/acre (+4.3%) - still appreciating but at a single-digit, decelerating pace (a plateau, not a decline). Farm-sector debt set a record (>$0.5T in 2023; forecast +5.2% to $624.7B in 2026). Net farm income forecast +37% to $179.8B (2025) - but that jump is heavily distorted by one-time government payments; underlying crop receipts are weak on low corn/soy prices.", "grade": "fact + contested (income framing)"},
+      {"item": "Deteriorating credit", "detail": "FCS nonperforming assets $4.4B at Sep 30 2025 = 1.00% of loans (up from $3.5B/0.81% at YE2024 and 0.64% a year prior) - nearly doubled in dollars in ~12 months off a very low base; 30+ day delinquencies ~0.39% (flat); charge-offs ~$272M YTD 2025 vs ~$158M prior-year (+72%). Chapter 12 farm bankruptcies: 216 (2024, +55%) -> 315 (2025, +46%), two straight increases (still below the 2019 peak of 599).", "grade": "fact"}
+    ]
+  },
+  "concentration_tail": {
+    "summary": "Highly correlated, single-sector, China-export-exposed - cushioned for now by land values and government payments.",
+    "points": [
+      {"item": "The tail", "detail": "FCS held ~45.8% of all US ag debt (2023) - the largest ag lender. Credit deterioration is concentrated in tree nuts, wine/grapes, cotton, rice. The dominant macro risk is the China tariff/boycott: US ag exports to China down >$6.8B (~73%) since Jan 2025, total 2025/26 China-tariff losses ~$14.9B (~41% larger than 2018/19); China is >50% of US soybean exports (up to 70% of North Dakota's crop). A Nov-2025 deal (China to buy 12 MMT soy Nov-Dec + 25 MMT/yr through 2028) offers partial relief. The buffer holding off a credit event: still-elevated land collateral, ad-hoc government payments, and the FCSIC + joint-and-several structure.", "grade": "fact + contested (Nov-2025 deal follow-through)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "A large, off-FDIC GSE on a plateauing collateral base into a correlated ag shock.",
+    "points": [
+      {"item": "Read", "detail": "The Farm Credit System is a ~$544B GSE funding ~$459B of implicitly-backed joint-and-several debt entirely outside the FDIC lens, dominant in one correlated sector. Its collateral (farmland) is still rising but decelerating; its credit is deteriorating (NPAs ~doubled in dollars in a year, charge-offs +72%) into a China-tariff ag shock larger than 2018-19 - held together so far by land values and government payments. A correlated, single-sector tail in the uncovered stack ([[macro-uncovered-risk-pools]]); CoBank also makes it a rural-infrastructure lender.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim the FCS is in distress - it is well-capitalized ($78.8B) and profitable ($7.80B); the point is correlated single-sector risk + deteriorating credit + a plateauing collateral base into a tariff shock.",
+      "Total assets ~$544B is single-snippet-sourced (contested); confirm vs the 2024 Annual Information Statement. AgFirst/AgriBank figures mix vintages.",
+      "2025 net farm income's +37% is government-payment-distorted, not organic.",
+      "FCS debt is NOT US-government-guaranteed (implicit GSE backing only).",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "FFCB_Funding", "to": "Farm_Credit_System", "instrument": "relationship", "raw_instrument": "~$459B Systemwide funding securities (consolidated, joint-and-several; +30% since 2021; implicit GSE backing, FCSIC-insured, NOT US-guaranteed) funding a ~$544B agricultural GSE", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-farm-credit-system.json", "note": "OVERLAY: GSE debt complex; excluded from proofs"},
+    {"from": "Farm_Credit_System", "to": "US_Farmland", "instrument": "relationship", "raw_instrument": "farm real-estate mortgage financing collateralized by farmland ($5,830/ac cropland 2025, decelerating); ~45.8% of all US ag credit; NPAs 1.00% (Sep 2025) up from 0.64%, charge-offs +72% into the China tariff shock", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-farm-credit-system.json", "note": "OVERLAY: farmland collateral / ag-cycle tail; excluded from proofs"},
+    {"from": "CoBank", "to": "Rural_Infrastructure", "instrument": "relationship", "raw_instrument": "wholesale + direct financing to electric/water/communications/broadband cooperatives in all 50 states (>75% of US electric distribution coops) - the FCS's non-farm rural-infrastructure exposure", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-farm-credit-system.json", "note": "OVERLAY: rural-infrastructure channel; excluded from proofs"}
+  ],
+  "limits": "Deep dig on the Farm Credit System: ~$544B total assets (contested) / $428.9B gross loans / $78.8B capital / $7.80B net income (FY2024); structure (CoBank ~$209B > AgriBank ~$200B >> AgFirst ~$48B > FCB Texas ~$39.5B + ~55 associations); FFCB ~$459B joint-and-several Systemwide Debt (implicit GSE, FCSIC-insured); farmland $5,830/ac (decelerating); farm debt record $624.7B (2026 forecast); NPAs 1.00% (Sep 2025, up from 0.64%), charge-offs +72%, Chapter 12 bankruptcies 216->315; ~45.8% of US ag debt; China tariff shock (~$14.9B losses). CoBank's rural-infrastructure role. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-15",
+    "checks": [
+      {"check": "Size/capital", "result": "~$544B assets (contested), $428.9B loans, $78.8B capital, $7.80B FY2024 net income, NIM 2.41% (FFCB/FCA)."},
+      {"check": "Structure", "result": "CoBank ~$209B, AgriBank ~$165B loans/~$200B, AgFirst ~$48B, FCB Texas ~$39.5B; ~55 associations; CoBank lends rural utilities (>75% of electric coops)."},
+      {"check": "Funding", "result": "FFCB ~$459B Systemwide Debt (Aug 2025, +30% since 2021); joint-and-several; FCSIC-insured; not US-guaranteed."},
+      {"check": "Farmland/credit", "result": "Cropland $5,830/ac (+4.7%, 2025); farm debt $624.7B (2026f); NPAs $4.4B/1.00% (Sep 2025); charge-offs +72%; Ch.12 bankruptcies 216->315; ~45.8% ag-debt share; China ag exports -73%."}
+    ]
+  }
+}

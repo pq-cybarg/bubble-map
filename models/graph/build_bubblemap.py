@@ -100,7 +100,11 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Developing_State_Infrastructure":"Developing-state infrastructure","Distressed_Sovereigns":"Distressed sovereigns (swap-line)",
  "LGFV_Debt":"China LGFV debt","US_Contingent_Liabilities":"US contingent liabilities",
  # device-ownership erosion -> OS identity
- "Device_Ownership_Erosion":"Device-ownership erosion","AI_Native_OS":"AI-native OS","Age_Assurance_Issuers":"Age-assurance issuers"}
+ "Device_Ownership_Erosion":"Device-ownership erosion","AI_Native_OS":"AI-native OS","Age_Assurance_Issuers":"Age-assurance issuers",
+ # uncovered-pool deep digs
+ "Corporate_Credit_Unions":"Corporate credit unions","NCUSIF":"NCUSIF (CU insurance fund)","BDCs":"BDCs",
+ "Commercial_Parents":"Commercial / fintech parents","Farm_Credit_System":"Farm Credit System","FFCB_Funding":"FFCB Funding Corp",
+ "US_Farmland":"US farmland","CoBank":"CoBank","Rural_Infrastructure":"Rural infrastructure (coops)","Japanese_Banks":"Japanese banks"}
 def disp_label(nid):
     if nid in LABELS: return LABELS[nid]
     if nid in MIXED: return nid

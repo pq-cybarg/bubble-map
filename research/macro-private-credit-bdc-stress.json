@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "title": "Private credit / BDC stress signals - the public-price vs private-mark gap, PIK income, redemption gates, and the bank-to-NDFI chain",
+    "generated": "2026-06-15",
+    "frame": "A deep dig into the STRESS SIGNALS inside private credit (beyond the ~$1.7-3T size), focused on the tells that the manager-set NAVs are too high: listed BDCs trade ~20% below NAV while non-traded BDCs hold marks near par; PIK (payment-in-kind) income is ~12% and rising; defaults are climbing (Fitch PCDR 5.8%) even as reported non-accruals stay optically low (because impaired loans get restructured with PIK, not marked non-accrual); the same loan is marked 9 points apart by two lenders (Medallia); retail money is being channelled in (the Aug-2025 401k EO + ~$431-500B evergreen funds with 5%/quarter gates) just as redemption requests spike (Blue Owl OTIC 40.7%, Cliffwater ~14%). The deep companion to [[macro-private-credit-marks]] and [[macro-cre-privatecredit]]; the third self-marked number in [[self_marked_value]].",
+    "relevance": "Completes the uncovered-pools arc for private credit with the live 2025-26 stress evidence; sharpens the self-marked-value thread (the market is voting ~20% below the managers' marks); maps the bank-to-NDFI chain that carries the risk back to GSIBs.",
+    "sources": "Listed/non-traded BDC filings + Octus/Mercer/InvestmentNews (discount-to-NAV); S&P Global + Benzinga (PIK); Fitch PCDR + KBRA KMDM (defaults); FDIC NDFI-lending analysis + ABA Banking Journal + FA-Mag (bank-to-NDFI); White House EO 14330 + Dakota/MSCI (evergreen) + iQ-EQ (liquidity mismatch); CNBC/Globe & Mail/Seeking Alpha (Blue Owl/Cliffwater gates); Octus (Medallia marks; First Brands BDC exposure). Full URLs in the rendered .md.",
+    "note": "WebFetch unavailable; figures from search surfacing of the cited sources. Corrections: the ~$644B sometimes cited as 'evergreen' is actually Ares Management firm AUM - the evergreen/interval universe is ~$431-500B. Bank NDFI loans are ~$1.32T funded (FDIC Q3-2025) + ~$987B unfunded = ~$2.3T (the ~$1.97T figure sits between funded-only and funded-plus-commitments). Both sides are live: Moody's/KBRA argue marks may OVERstate stress and non-accruals stay low - graded contested."
+  },
+  "discount_to_nav": {
+    "summary": "The market is voting ~20% below the managers' marks - and only the vehicles WITHOUT a daily market vote stay near par.",
+    "points": [
+      {
+        "item": "The signal",
+        "detail": "Listed BDCs trade at roughly a 20% average discount to NAV in 2025-26, some large names near ~50%; Blue Owl (OBDC) ~21% (price $11.77 vs NAV $14.89, Sept 2025); FS Specialty Lending ~27%; Barings ~23%; even Ares Capital (ARCC), historically a premium name, slipped to a slight discount (~-4%). Non-traded BDCs hold 'more stable valuations near par' - the core public-price/private-mark gap.",
+        "grade": "fact (named BDCs) + contested (the ~20% sector average)"
+      },
+      {
+        "item": "Cross-lender mark gap",
+        "detail": "Medallia: HPS marked the loan at 69c (Feb 2026) while Blackstone Secured Lending marked the SAME credit at 77.75c of par (Dec 2025) - a ~9-point gap on one loan, the cleanest evidence that 'NAV' is a chosen number. A recurring pattern: a senior loan deeply discounted/non-accrual while a second (often PIK) loan to the same borrower is held at par.",
+        "grade": "fact (Medallia) + contested (the general pattern)"
+      }
+    ]
+  },
+  "managers_and_pik": {
+    "summary": "A few giants dominate; income quality is deteriorating under the surface.",
+    "points": [
+      {
+        "item": "Largest vehicles",
+        "detail": "BCRED (Blackstone Private Credit Fund) is the largest BDC of any kind - $82.2B total investments / $47.6B NAV (Dec 2025), a perpetual non-traded vehicle; ARCC (Ares Capital) the largest LISTED BDC (~$30.7B assets); OBDC (Blue Owl) #2 listed (>$18B); OCIC (Blue Owl Credit Income) ~$36B non-traded; HLEND (HPS), GCRED (Golub ~$8.6B). Ares Management firm AUM $644.3B.",
+        "grade": "fact"
+      },
+      {
+        "item": "PIK + defaults",
+        "detail": "PIK (payment-in-kind, interest accrued not paid in cash) was ~11.7% of BDC-held loans (Q2 2024, +2pts YoY) and rising - a marks-quality red flag, since BDCs must distribute 90% of income whether cash or PIK ('covered, not collected'). Fitch's private-credit default rate hit 5.8% TTM (Jan 2026); ~65% of 2025 defaults were distressed restructurings and 7 of 11 default events introduced PIK in lieu of cash interest. Reported non-accruals stay optically low (<~1.5%) precisely because impaired loans get restructured with PIK rather than marked non-accrual.",
+        "grade": "fact (S&P/Fitch/KBRA) + labeled interpretation (the low-non-accrual mechanism)"
+      }
+    ]
+  },
+  "bank_to_ndfi": {
+    "summary": "The risk runs back to the GSIBs via fast-growing loans and undrawn credit lines.",
+    "points": [
+      {
+        "item": "Scale + composition",
+        "detail": "Banks held ~$1.32T of funded loans to non-depository financial institutions (FDIC, Q3 2025) + ~$987B of unfunded commitments (~$2.3T combined); the segment grew ~50% in 2024-25 (vs ~4% for total bank loans). ~57% to credit intermediaries, ~24% to PE funds (capital-call/subscription lines). JPMorgan ~$50B, Wells Fargo ~$36-85B (to funds), Citi ~$22B. The Fed flags the shift toward credit LINES (vs term loans) as raising liquidity-call interconnection risk.",
+        "grade": "fact (FDIC/Fed/FA-Mag)"
+      }
+    ]
+  },
+  "retail_and_gates": {
+    "summary": "Retail money is being channelled into gated, illiquid vehicles - just as redemptions spike.",
+    "points": [
+      {
+        "item": "The on-ramp",
+        "detail": "Executive Order 14330 'Democratizing Access to Alternative Assets for 401(k) Investors' (Aug 7 2025) directs the DOL to ease PE/private-credit access in defined-contribution plans (proposed rule advancing April 2026). The evergreen/interval-fund universe is ~$431-500B (252 vehicles, +30% in 12 months) - NOT the ~$644B sometimes cited (that's Ares firm AUM).",
+        "grade": "fact + contested ($644B conflation)"
+      },
+      {
+        "item": "The mismatch + the gates firing",
+        "detail": "Evergreen funds cap redemptions at ~5%/quarter while a 401(k) target-date fund trades daily - the core liquidity mismatch. In Q1 2026 the gates fired: Blue Owl OTIC (tech, $6.2B) saw redemption requests of 40.7% of shares, OCIC ($36B) 21.9%, OBDC II 17% (moved to wind-down); the firm filled only ~5%. Cliffwater CCLFX ($33B) ~14% (record). BlackRock/Morgan Stanley reportedly triggered gates too (weak). Private credit's first real liquidity test.",
+        "grade": "fact (Blue Owl/Cliffwater) + weak (BlackRock)"
+      }
+    ]
+  },
+  "stress_events": {
+    "summary": "First Brands and the marks disputes are the cracks; the bull case is that non-accruals are still low.",
+    "points": [
+      {
+        "item": "First Brands / Tricolor",
+        "detail": "First Brands (Ch.11, Sept 28 2025): 15 BDCs hold ~$237M combined (~0.05% of ~$503B BDC AUM) - small direct BDC hit, but UBS ~$500M and Jefferies ~$715M exposed via factoring/funds ([[macro-consumer-abs-subprime]]). Tricolor (Ch.7) was largely bank-financed, little BDC exposure. The fear is what these reveal about under-verification, not the direct BDC loss.",
+        "grade": "fact"
+      },
+      {
+        "item": "The honest other side",
+        "detail": "Moody's (June 2026) and KBRA (Q1 2026) argue BDC marks may OVERstate stress and that non-accruals remain low; Lincoln is launching more-frequent (monthly) valuation indices. The thesis 'marks are too high' is graded CONTESTED, not fact - the discount/redemption/PIK data argue stress is building; the non-accrual/Moody's data argue it isn't yet acute.",
+        "grade": "contested"
+      }
+    ]
+  },
+  "synthesis": {
+    "summary": "The market votes ~20% below the managers - the self-marked number, live.",
+    "points": [
+      {
+        "item": "Read",
+        "detail": "Private credit is the third self-marked number ([[self_marked_value]], [[macro-private-credit-marks]]): the listed-BDC discount is the market pricing the same loans ~20% below where managers carry them, PIK + restructure-don't-mark keeps reported non-accruals low, retail money is being gated in, and the exposure runs back to the GSIBs via ~$2.3T of loans+lines. Whether that is overstated or understated stress is genuinely contested - but the GAP between the public vote and the private mark is the signal the corpus has argued for all along.",
+        "grade": "labeled interpretation"
+      }
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim private credit is currently in crisis - non-accruals are low and Moody's/KBRA argue marks may overstate stress; the point is the public-price/private-mark GAP plus rising PIK and redemption gates.",
+      "The ~20% sector-average discount and the general cross-lender-mark pattern are graded contested; named cases (OBDC, Medallia, Blue Owl gates) are fact.",
+      "Bank NDFI exposure is ~$1.32T funded / ~$2.3T with commitments - the ~$1.97T figure is definition-dependent.",
+      "The ~$644B 'evergreen' figure is Ares firm AUM; the evergreen universe is ~$431-500B.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {
+      "from": "US_Banks",
+      "to": "BDCs",
+      "instrument": "relationship",
+      "raw_instrument": "~$1.32T funded NDFI lending + ~$987B unfunded subscription lines (FDIC Q3-2025; JPM ~$50B, WFC ~$85B to funds) - GSIB balance-sheet exposure to the BDC / direct-lending complex via callable, undrawn lines",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-bdc-stress.json",
+      "note": "OVERLAY: bank-to-NDFI chain; excluded from proofs"
+    },
+    {
+      "from": "Retail_401k",
+      "to": "BDCs",
+      "instrument": "relationship",
+      "raw_instrument": "perpetual/evergreen + non-traded BDC shares with ~5%/quarter redemption gates (EO 14330 Aug-2025; ~$431-500B evergreen AUM) - daily-liquidity expectations funding gated illiquid direct-lending books; gates fired Q1-2026 (Blue Owl OTIC 40.7%, Cliffwater ~14%)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-bdc-stress.json",
+      "note": "OVERLAY: liquidity mismatch; excluded from proofs"
+    }
+  ],
+  "limits": "Deep dig on private-credit/BDC stress: listed BDCs ~20% below NAV (OBDC ~21%, some ~50%) vs non-traded near par; Medallia marked 9pts apart by two lenders; PIK ~11.7% and rising; Fitch PCDR 5.8%, ~65% of defaults distressed restructurings (7/11 introduced PIK); non-accruals optically low (restructure-don't-mark); bank NDFI loans ~$1.32T funded / ~$2.3T with commitments (JPM $50B, WFC $85B); EO 14330 + ~$431-500B evergreen with 5%/qtr gates that FIRED Q1-2026 (Blue Owl OTIC 40.7%, Cliffwater ~14%); First Brands ~$237M BDC exposure. Both directions contested (Moody's/KBRA: marks may overstate). Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-15",
+    "checks": [
+      {
+        "check": "Discount-to-NAV",
+        "result": "Listed BDCs ~20% avg below NAV; OBDC ~21% (Sept 2025); Medallia 69c (HPS) vs 77.75c (BXSL); non-traded near par (Octus/Mercer/InvestmentNews)."
+      },
+      {
+        "check": "PIK/defaults",
+        "result": "PIK ~11.7% (Q2 2024, S&P); Fitch PCDR 5.8% (Jan 2026); 65% of defaults restructurings, 7/11 added PIK; non-accruals <1.5%."
+      },
+      {
+        "check": "Bank-NDFI",
+        "result": "$1.32T funded + $987B unfunded (FDIC Q3-2025); +50% 2024-25; JPM $50B, WFC $85B, Citi $22B."
+      },
+      {
+        "check": "Retail/gates",
+        "result": "EO 14330 (Aug 7 2025); evergreen ~$431-500B (Dakota/MSCI); Blue Owl OTIC 40.7% / OCIC 21.9% redemption requests, Cliffwater ~14% (Q1 2026)."
+      }
+    ]
+  }
+}

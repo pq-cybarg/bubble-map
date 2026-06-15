@@ -469,9 +469,9 @@
     "Chile",
     "Greece"
    ],
-   "n_dates": 134,
+   "n_dates": 135,
    "date_first": "2015-01",
-   "date_last": "2026-03",
+   "date_last": "2026-04",
    "dispersion": [
     {
      "date": "2015-01",
@@ -548,7 +548,7 @@
     {
      "date": "2015-11",
      "mean": 1.839,
-     "std": 1.611,
+     "std": 1.612,
      "min": -0.311,
      "max": 7.41,
      "range": 7.721
@@ -579,7 +579,7 @@
     },
     {
      "date": "2016-03",
-     "mean": 1.673,
+     "mean": 1.674,
      "std": 1.921,
      "min": -0.387,
      "max": 9.12,
@@ -628,7 +628,7 @@
     {
      "date": "2016-09",
      "mean": 1.362,
-     "std": 1.873,
+     "std": 1.872,
      "min": -0.522,
      "max": 8.34,
      "range": 8.862
@@ -652,14 +652,14 @@
     {
      "date": "2016-12",
      "mean": 1.779,
-     "std": 1.664,
+     "std": 1.665,
      "min": -0.135,
      "max": 6.94,
      "range": 7.075
     },
     {
      "date": "2017-01",
-     "mean": 1.803,
+     "mean": 1.802,
      "std": 1.663,
      "min": -0.072,
      "max": 7.04,
@@ -771,7 +771,7 @@
     },
     {
      "date": "2018-03",
-     "mean": 1.741,
+     "mean": 1.742,
      "std": 1.209,
      "min": 0.045,
      "max": 4.493,
@@ -796,7 +796,7 @@
     {
      "date": "2018-06",
      "mean": 1.767,
-     "std": 1.318,
+     "std": 1.317,
      "min": -0.012,
      "max": 4.577,
      "range": 4.589
@@ -1075,7 +1075,7 @@
     },
     {
      "date": "2021-05",
-     "mean": 0.968,
+     "mean": 0.969,
      "std": 1.016,
      "min": -0.224,
      "max": 3.711,
@@ -1419,7 +1419,7 @@
     },
     {
      "date": "2024-12",
-     "mean": 3.261,
+     "mean": 3.263,
      "std": 1.406,
      "min": 0.317,
      "max": 6.44,
@@ -1539,393 +1539,401 @@
     },
     {
      "date": "2026-03",
-     "mean": 3.778,
-     "std": 1.266,
+     "mean": 3.781,
+     "std": 1.265,
      "min": 0.4,
      "max": 7.13,
      "range": 6.73
+    },
+    {
+     "date": "2026-04",
+     "mean": 3.8,
+     "std": 1.159,
+     "min": 0.45,
+     "max": 6.27,
+     "range": 5.82
     }
    ],
    "dispersion_now": {
-    "std": 1.266,
-    "z_vs_history": -0.4,
-    "pct_of_history": 33.0,
-    "reading": "mid-range"
+    "std": 1.159,
+    "z_vs_history": -0.72,
+    "pct_of_history": 20.0,
+    "reading": "compressed"
    },
    "relative_value": {
     "US": {
-     "latest": 4.25,
-     "mean": 4.198,
-     "std": 0.284,
-     "z": 0.18,
-     "pct": 88.0,
+     "latest": 4.32,
+     "mean": 4.222,
+     "std": 0.255,
+     "z": 0.38,
+     "pct": 91.0,
      "window": 36
     },
     "Germany": {
-     "latest": 2.91,
-     "mean": 2.497,
-     "std": 0.211,
-     "z": 1.96,
+     "latest": 3.001,
+     "mean": 2.515,
+     "std": 0.225,
+     "z": 2.16,
      "pct": 100.0,
      "window": 36
     },
     "UK": {
-     "latest": 4.701,
-     "mean": 4.344,
-     "std": 0.275,
-     "z": 1.3,
+     "latest": 4.821,
+     "mean": 4.376,
+     "std": 0.26,
+     "z": 1.71,
      "pct": 100.0,
      "window": 36
     },
     "France": {
-     "latest": 3.601,
-     "mean": 3.168,
-     "std": 0.248,
-     "z": 1.74,
+     "latest": 3.675,
+     "mean": 3.19,
+     "std": 0.258,
+     "z": 1.88,
      "pct": 100.0,
      "window": 36
     },
     "Italy": {
-     "latest": 3.733,
-     "mean": 3.8,
-     "std": 0.353,
-     "z": -0.19,
-     "pct": 83.0,
+     "latest": 3.818,
+     "mean": 3.789,
+     "std": 0.345,
+     "z": 0.08,
+     "pct": 84.0,
      "window": 36
     },
     "Japan": {
-     "latest": 2.345,
-     "mean": 1.161,
-     "std": 0.531,
-     "z": 2.23,
+     "latest": 2.515,
+     "mean": 1.22,
+     "std": 0.56,
+     "z": 2.31,
      "pct": 100.0,
      "window": 36
     },
     "Canada": {
-     "latest": 3.441,
-     "mean": 3.34,
-     "std": 0.252,
-     "z": 0.4,
-     "pct": 93.0,
+     "latest": 3.483,
+     "mean": 3.358,
+     "std": 0.243,
+     "z": 0.52,
+     "pct": 94.0,
      "window": 36
     },
     "Australia": {
-     "latest": 4.926,
-     "mean": 4.274,
-     "std": 0.316,
-     "z": 2.07,
+     "latest": 4.969,
+     "mean": 4.319,
+     "std": 0.294,
+     "z": 2.21,
      "pct": 100.0,
      "window": 36
     },
     "Spain": {
-     "latest": 3.386,
-     "mean": 3.281,
-     "std": 0.212,
-     "z": 0.5,
-     "pct": 92.0,
+     "latest": 3.449,
+     "mean": 3.282,
+     "std": 0.213,
+     "z": 0.79,
+     "pct": 96.0,
      "window": 36
     },
     "Netherlands": {
-     "latest": 3.016,
-     "mean": 2.766,
-     "std": 0.18,
-     "z": 1.39,
+     "latest": 3.15,
+     "mean": 2.778,
+     "std": 0.191,
+     "z": 1.94,
      "pct": 99.0,
      "window": 36
     },
     "Belgium": {
-     "latest": 3.51,
-     "mean": 3.104,
-     "std": 0.2,
-     "z": 2.03,
-     "pct": 99.0,
+     "latest": 3.59,
+     "mean": 3.119,
+     "std": 0.215,
+     "z": 2.19,
+     "pct": 100.0,
      "window": 36
     },
     "Austria": {
-     "latest": 3.24,
-     "mean": 2.985,
-     "std": 0.182,
-     "z": 1.4,
+     "latest": 3.303,
+     "mean": 2.993,
+     "std": 0.189,
+     "z": 1.64,
      "pct": 99.0,
      "window": 36
     },
     "Switzerland": {
-     "latest": 0.4,
-     "mean": 0.558,
-     "std": 0.288,
-     "z": -0.55,
-     "pct": 75.0,
+     "latest": 0.45,
+     "mean": 0.54,
+     "std": 0.275,
+     "z": -0.33,
+     "pct": 77.0,
      "window": 36
     },
     "Ireland": {
-     "latest": 3.197,
-     "mean": 2.853,
-     "std": 0.187,
-     "z": 1.83,
+     "latest": 3.241,
+     "mean": 2.866,
+     "std": 0.198,
+     "z": 1.9,
      "pct": 99.0,
      "window": 36
     },
     "Portugal": {
-     "latest": 3.37,
-     "mean": 3.092,
-     "std": 0.194,
-     "z": 1.43,
+     "latest": 3.43,
+     "mean": 3.098,
+     "std": 0.201,
+     "z": 1.65,
      "pct": 94.0,
      "window": 36
     },
     "Finland": {
-     "latest": 3.322,
-     "mean": 2.996,
-     "std": 0.185,
-     "z": 1.77,
+     "latest": 3.384,
+     "mean": 3.007,
+     "std": 0.196,
+     "z": 1.93,
      "pct": 99.0,
      "window": 36
     },
     "Sweden": {
-     "latest": 2.764,
-     "mean": 2.434,
-     "std": 0.269,
+     "latest": 2.785,
+     "mean": 2.446,
+     "std": 0.275,
      "z": 1.23,
      "pct": 97.0,
      "window": 36
     },
     "Norway": {
-     "latest": 4.258,
-     "mean": 3.752,
-     "std": 0.273,
-     "z": 1.85,
+     "latest": 4.286,
+     "mean": 3.785,
+     "std": 0.267,
+     "z": 1.88,
      "pct": 100.0,
      "window": 36
     },
     "Denmark": {
-     "latest": 2.791,
-     "mean": 2.501,
-     "std": 0.257,
-     "z": 1.13,
-     "pct": 97.0,
+     "latest": 2.888,
+     "mean": 2.509,
+     "std": 0.264,
+     "z": 1.43,
+     "pct": 99.0,
      "window": 36
     },
     "Poland": {
      "latest": 5.58,
-     "mean": 5.535,
-     "std": 0.26,
-     "z": 0.17,
+     "mean": 5.522,
+     "std": 0.244,
+     "z": 0.24,
      "pct": 79.0,
      "window": 36
     },
     "Czechia": {
-     "latest": 4.724,
-     "mean": 4.239,
-     "std": 0.271,
-     "z": 1.79,
+     "latest": 4.738,
+     "mean": 4.242,
+     "std": 0.275,
+     "z": 1.8,
      "pct": 98.0,
      "window": 36
     },
     "Hungary": {
-     "latest": 7.13,
-     "mean": 6.864,
-     "std": 0.461,
-     "z": 0.58,
-     "pct": 88.0,
+     "latest": 6.27,
+     "mean": 6.807,
+     "std": 0.396,
+     "z": -1.36,
+     "pct": 67.0,
      "window": 36
     },
     "Korea": {
-     "latest": 3.728,
-     "mean": 3.266,
-     "std": 0.407,
-     "z": 1.14,
+     "latest": 3.737,
+     "mean": 3.277,
+     "std": 0.414,
+     "z": 1.11,
      "pct": 95.0,
      "window": 36
     },
     "New Zealand": {
-     "latest": 4.64,
-     "mean": 4.573,
-     "std": 0.282,
-     "z": 0.24,
-     "pct": 93.0,
+     "latest": 4.68,
+     "mean": 4.589,
+     "std": 0.27,
+     "z": 0.33,
+     "pct": 94.0,
      "window": 36
     },
     "Chile": {
-     "latest": 5.556,
-     "mean": 5.699,
-     "std": 0.283,
-     "z": -0.51,
-     "pct": 72.0,
+     "latest": 5.465,
+     "mean": 5.697,
+     "std": 0.285,
+     "z": -0.82,
+     "pct": 67.0,
      "window": 36
     },
     "Greece": {
-     "latest": 3.71,
-     "mean": 3.511,
-     "std": 0.302,
-     "z": 0.66,
-     "pct": 51.0,
+     "latest": 3.78,
+     "mean": 3.499,
+     "std": 0.281,
+     "z": 1.0,
+     "pct": 53.0,
      "window": 36
     }
    },
    "ranking": [
     {
      "segment": "Hungary",
-     "latest": 7.13,
-     "z": 0.58,
-     "pct": 88.0
+     "latest": 6.27,
+     "z": -1.36,
+     "pct": 67.0
     },
     {
      "segment": "Poland",
      "latest": 5.58,
-     "z": 0.17,
+     "z": 0.24,
      "pct": 79.0
     },
     {
      "segment": "Chile",
-     "latest": 5.556,
-     "z": -0.51,
-     "pct": 72.0
+     "latest": 5.465,
+     "z": -0.82,
+     "pct": 67.0
     },
     {
      "segment": "Australia",
-     "latest": 4.926,
-     "z": 2.07,
+     "latest": 4.969,
+     "z": 2.21,
+     "pct": 100.0
+    },
+    {
+     "segment": "UK",
+     "latest": 4.821,
+     "z": 1.71,
      "pct": 100.0
     },
     {
      "segment": "Czechia",
-     "latest": 4.724,
-     "z": 1.79,
+     "latest": 4.738,
+     "z": 1.8,
      "pct": 98.0
     },
     {
-     "segment": "UK",
-     "latest": 4.701,
-     "z": 1.3,
-     "pct": 100.0
-    },
-    {
      "segment": "New Zealand",
-     "latest": 4.64,
-     "z": 0.24,
-     "pct": 93.0
-    },
-    {
-     "segment": "Norway",
-     "latest": 4.258,
-     "z": 1.85,
-     "pct": 100.0
+     "latest": 4.68,
+     "z": 0.33,
+     "pct": 94.0
     },
     {
      "segment": "US",
-     "latest": 4.25,
-     "z": 0.18,
-     "pct": 88.0
+     "latest": 4.32,
+     "z": 0.38,
+     "pct": 91.0
+    },
+    {
+     "segment": "Norway",
+     "latest": 4.286,
+     "z": 1.88,
+     "pct": 100.0
     },
     {
      "segment": "Italy",
-     "latest": 3.733,
-     "z": -0.19,
-     "pct": 83.0
-    },
-    {
-     "segment": "Korea",
-     "latest": 3.728,
-     "z": 1.14,
-     "pct": 95.0
+     "latest": 3.818,
+     "z": 0.08,
+     "pct": 84.0
     },
     {
      "segment": "Greece",
-     "latest": 3.71,
-     "z": 0.66,
-     "pct": 51.0
+     "latest": 3.78,
+     "z": 1.0,
+     "pct": 53.0
+    },
+    {
+     "segment": "Korea",
+     "latest": 3.737,
+     "z": 1.11,
+     "pct": 95.0
     },
     {
      "segment": "France",
-     "latest": 3.601,
-     "z": 1.74,
+     "latest": 3.675,
+     "z": 1.88,
      "pct": 100.0
     },
     {
      "segment": "Belgium",
-     "latest": 3.51,
-     "z": 2.03,
-     "pct": 99.0
+     "latest": 3.59,
+     "z": 2.19,
+     "pct": 100.0
     },
     {
      "segment": "Canada",
-     "latest": 3.441,
-     "z": 0.4,
-     "pct": 93.0
+     "latest": 3.483,
+     "z": 0.52,
+     "pct": 94.0
     },
     {
      "segment": "Spain",
-     "latest": 3.386,
-     "z": 0.5,
-     "pct": 92.0
+     "latest": 3.449,
+     "z": 0.79,
+     "pct": 96.0
     },
     {
      "segment": "Portugal",
-     "latest": 3.37,
-     "z": 1.43,
+     "latest": 3.43,
+     "z": 1.65,
      "pct": 94.0
     },
     {
      "segment": "Finland",
-     "latest": 3.322,
-     "z": 1.77,
+     "latest": 3.384,
+     "z": 1.93,
      "pct": 99.0
     },
     {
      "segment": "Austria",
-     "latest": 3.24,
-     "z": 1.4,
+     "latest": 3.303,
+     "z": 1.64,
      "pct": 99.0
     },
     {
      "segment": "Ireland",
-     "latest": 3.197,
-     "z": 1.83,
+     "latest": 3.241,
+     "z": 1.9,
      "pct": 99.0
     },
     {
      "segment": "Netherlands",
-     "latest": 3.016,
-     "z": 1.39,
+     "latest": 3.15,
+     "z": 1.94,
      "pct": 99.0
     },
     {
      "segment": "Germany",
-     "latest": 2.91,
-     "z": 1.96,
+     "latest": 3.001,
+     "z": 2.16,
      "pct": 100.0
     },
     {
      "segment": "Denmark",
-     "latest": 2.791,
-     "z": 1.13,
-     "pct": 97.0
+     "latest": 2.888,
+     "z": 1.43,
+     "pct": 99.0
     },
     {
      "segment": "Sweden",
-     "latest": 2.764,
+     "latest": 2.785,
      "z": 1.23,
      "pct": 97.0
     },
     {
      "segment": "Japan",
-     "latest": 2.345,
-     "z": 2.23,
+     "latest": 2.515,
+     "z": 2.31,
      "pct": 100.0
     },
     {
      "segment": "Switzerland",
-     "latest": 0.4,
-     "z": -0.55,
-     "pct": 75.0
+     "latest": 0.45,
+     "z": -0.33,
+     "pct": 77.0
     }
    ],
    "common_factor": {
     "n": 26,
     "basis": "monthly change (Delta) - Collin-Dufresne-Goldstein-Martin",
-    "avg_pairwise_corr": 0.604,
-    "pc1_eigenvalue": 16.826,
-    "pc1_share": 0.647,
+    "avg_pairwise_corr": 0.602,
+    "pc1_eigenvalue": 16.794,
+    "pc1_share": 0.646,
     "matrix": {
      "US": {
       "US": 1.0,
@@ -1942,14 +1950,14 @@
       "Austria": 0.7,
       "Switzerland": 0.33,
       "Ireland": 0.64,
-      "Portugal": 0.44,
+      "Portugal": 0.45,
       "Finland": 0.69,
       "Sweden": 0.73,
       "Norway": 0.69,
       "Denmark": 0.66,
       "Poland": 0.62,
-      "Czechia": 0.63,
-      "Hungary": 0.5,
+      "Czechia": 0.64,
+      "Hungary": 0.49,
       "Korea": 0.78,
       "New Zealand": 0.8,
       "Chile": 0.47,
@@ -1968,16 +1976,16 @@
       "Netherlands": 0.97,
       "Belgium": 0.95,
       "Austria": 0.96,
-      "Switzerland": 0.51,
+      "Switzerland": 0.52,
       "Ireland": 0.92,
       "Portugal": 0.71,
       "Finland": 0.95,
       "Sweden": 0.85,
       "Norway": 0.63,
       "Denmark": 0.9,
-      "Poland": 0.63,
-      "Czechia": 0.67,
-      "Hungary": 0.57,
+      "Poland": 0.62,
+      "Czechia": 0.68,
+      "Hungary": 0.55,
       "Korea": 0.77,
       "New Zealand": 0.73,
       "Chile": 0.35,
@@ -2005,7 +2013,7 @@
       "Denmark": 0.73,
       "Poland": 0.57,
       "Czechia": 0.59,
-      "Hungary": 0.56,
+      "Hungary": 0.54,
       "Korea": 0.74,
       "New Zealand": 0.68,
       "Chile": 0.39,
@@ -2018,7 +2026,7 @@
       "France": 1.0,
       "Italy": 0.8,
       "Japan": 0.41,
-      "Canada": 0.67,
+      "Canada": 0.68,
       "Australia": 0.75,
       "Spain": 0.92,
       "Netherlands": 0.96,
@@ -2033,7 +2041,7 @@
       "Denmark": 0.87,
       "Poland": 0.63,
       "Czechia": 0.69,
-      "Hungary": 0.61,
+      "Hungary": 0.59,
       "Korea": 0.74,
       "New Zealand": 0.72,
       "Chile": 0.37,
@@ -2058,13 +2066,13 @@
       "Finland": 0.75,
       "Sweden": 0.6,
       "Norway": 0.38,
-      "Denmark": 0.69,
+      "Denmark": 0.7,
       "Poland": 0.52,
       "Czechia": 0.58,
-      "Hungary": 0.6,
+      "Hungary": 0.58,
       "Korea": 0.57,
       "New Zealand": 0.54,
-      "Chile": 0.32,
+      "Chile": 0.31,
       "Greece": 0.41
      },
      "Japan": {
@@ -2077,7 +2085,7 @@
       "Canada": 0.36,
       "Australia": 0.43,
       "Spain": 0.32,
-      "Netherlands": 0.4,
+      "Netherlands": 0.41,
       "Belgium": 0.38,
       "Austria": 0.39,
       "Switzerland": 0.45,
@@ -2085,42 +2093,42 @@
       "Portugal": 0.24,
       "Finland": 0.37,
       "Sweden": 0.39,
-      "Norway": 0.37,
+      "Norway": 0.36,
       "Denmark": 0.33,
       "Poland": 0.13,
       "Czechia": 0.2,
-      "Hungary": 0.14,
-      "Korea": 0.32,
+      "Hungary": 0.1,
+      "Korea": 0.31,
       "New Zealand": 0.39,
-      "Chile": 0.26,
+      "Chile": 0.25,
       "Greece": 0.1
      },
      "Canada": {
       "US": 0.87,
       "Germany": 0.73,
       "UK": 0.68,
-      "France": 0.67,
+      "France": 0.68,
       "Italy": 0.48,
       "Japan": 0.36,
       "Canada": 1.0,
       "Australia": 0.85,
       "Spain": 0.6,
       "Netherlands": 0.7,
-      "Belgium": 0.67,
+      "Belgium": 0.68,
       "Austria": 0.67,
       "Switzerland": 0.37,
       "Ireland": 0.66,
-      "Portugal": 0.48,
+      "Portugal": 0.49,
       "Finland": 0.69,
       "Sweden": 0.74,
       "Norway": 0.71,
       "Denmark": 0.66,
-      "Poland": 0.59,
+      "Poland": 0.6,
       "Czechia": 0.61,
-      "Hungary": 0.47,
+      "Hungary": 0.46,
       "Korea": 0.75,
       "New Zealand": 0.81,
-      "Chile": 0.45,
+      "Chile": 0.46,
       "Greece": 0.06
      },
      "Australia": {
@@ -2141,11 +2149,11 @@
       "Portugal": 0.56,
       "Finland": 0.74,
       "Sweden": 0.77,
-      "Norway": 0.66,
+      "Norway": 0.65,
       "Denmark": 0.69,
       "Poland": 0.61,
       "Czechia": 0.61,
-      "Hungary": 0.47,
+      "Hungary": 0.46,
       "Korea": 0.78,
       "New Zealand": 0.85,
       "Chile": 0.43,
@@ -2173,7 +2181,7 @@
       "Denmark": 0.83,
       "Poland": 0.6,
       "Czechia": 0.66,
-      "Hungary": 0.6,
+      "Hungary": 0.58,
       "Korea": 0.69,
       "New Zealand": 0.65,
       "Chile": 0.33,
@@ -2185,7 +2193,7 @@
       "UK": 0.79,
       "France": 0.96,
       "Italy": 0.74,
-      "Japan": 0.4,
+      "Japan": 0.41,
       "Canada": 0.7,
       "Australia": 0.74,
       "Spain": 0.89,
@@ -2197,11 +2205,11 @@
       "Portugal": 0.74,
       "Finland": 0.94,
       "Sweden": 0.81,
-      "Norway": 0.62,
+      "Norway": 0.61,
       "Denmark": 0.91,
       "Poland": 0.61,
       "Czechia": 0.67,
-      "Hungary": 0.59,
+      "Hungary": 0.56,
       "Korea": 0.75,
       "New Zealand": 0.71,
       "Chile": 0.32,
@@ -2214,7 +2222,7 @@
       "France": 0.97,
       "Italy": 0.81,
       "Japan": 0.38,
-      "Canada": 0.67,
+      "Canada": 0.68,
       "Australia": 0.74,
       "Spain": 0.94,
       "Netherlands": 0.96,
@@ -2228,8 +2236,8 @@
       "Norway": 0.6,
       "Denmark": 0.9,
       "Poland": 0.64,
-      "Czechia": 0.68,
-      "Hungary": 0.63,
+      "Czechia": 0.69,
+      "Hungary": 0.61,
       "Korea": 0.75,
       "New Zealand": 0.72,
       "Chile": 0.36,
@@ -2256,8 +2264,8 @@
       "Norway": 0.6,
       "Denmark": 0.9,
       "Poland": 0.64,
-      "Czechia": 0.68,
-      "Hungary": 0.63,
+      "Czechia": 0.69,
+      "Hungary": 0.61,
       "Korea": 0.77,
       "New Zealand": 0.72,
       "Chile": 0.37,
@@ -2265,7 +2273,7 @@
      },
      "Switzerland": {
       "US": 0.33,
-      "Germany": 0.51,
+      "Germany": 0.52,
       "UK": 0.44,
       "France": 0.51,
       "Italy": 0.36,
@@ -2281,12 +2289,12 @@
       "Portugal": 0.38,
       "Finland": 0.43,
       "Sweden": 0.45,
-      "Norway": 0.47,
+      "Norway": 0.48,
       "Denmark": 0.4,
       "Poland": 0.29,
-      "Czechia": 0.34,
-      "Hungary": 0.28,
-      "Korea": 0.4,
+      "Czechia": 0.35,
+      "Hungary": 0.27,
+      "Korea": 0.39,
       "New Zealand": 0.42,
       "Chile": 0.12,
       "Greece": 0.18
@@ -2313,20 +2321,20 @@
       "Denmark": 0.84,
       "Poland": 0.59,
       "Czechia": 0.64,
-      "Hungary": 0.58,
+      "Hungary": 0.57,
       "Korea": 0.72,
       "New Zealand": 0.7,
       "Chile": 0.32,
       "Greece": 0.31
      },
      "Portugal": {
-      "US": 0.44,
+      "US": 0.45,
       "Germany": 0.71,
       "UK": 0.54,
       "France": 0.78,
       "Italy": 0.78,
       "Japan": 0.24,
-      "Canada": 0.48,
+      "Canada": 0.49,
       "Australia": 0.56,
       "Spain": 0.87,
       "Netherlands": 0.74,
@@ -2341,7 +2349,7 @@
       "Denmark": 0.66,
       "Poland": 0.54,
       "Czechia": 0.52,
-      "Hungary": 0.54,
+      "Hungary": 0.52,
       "Korea": 0.53,
       "New Zealand": 0.54,
       "Chile": 0.24,
@@ -2369,7 +2377,7 @@
       "Denmark": 0.9,
       "Poland": 0.63,
       "Czechia": 0.68,
-      "Hungary": 0.59,
+      "Hungary": 0.57,
       "Korea": 0.76,
       "New Zealand": 0.7,
       "Chile": 0.36,
@@ -2396,8 +2404,8 @@
       "Norway": 0.67,
       "Denmark": 0.77,
       "Poland": 0.57,
-      "Czechia": 0.61,
-      "Hungary": 0.5,
+      "Czechia": 0.62,
+      "Hungary": 0.49,
       "Korea": 0.73,
       "New Zealand": 0.74,
       "Chile": 0.38,
@@ -2409,34 +2417,34 @@
       "UK": 0.67,
       "France": 0.6,
       "Italy": 0.38,
-      "Japan": 0.37,
+      "Japan": 0.36,
       "Canada": 0.71,
-      "Australia": 0.66,
+      "Australia": 0.65,
       "Spain": 0.48,
-      "Netherlands": 0.62,
+      "Netherlands": 0.61,
       "Belgium": 0.6,
       "Austria": 0.6,
-      "Switzerland": 0.47,
+      "Switzerland": 0.48,
       "Ireland": 0.58,
       "Portugal": 0.4,
       "Finland": 0.56,
       "Sweden": 0.67,
       "Norway": 1.0,
-      "Denmark": 0.54,
+      "Denmark": 0.53,
       "Poland": 0.51,
       "Czechia": 0.5,
-      "Hungary": 0.5,
+      "Hungary": 0.48,
       "Korea": 0.64,
       "New Zealand": 0.68,
       "Chile": 0.48,
-      "Greece": 0.1
+      "Greece": 0.09
      },
      "Denmark": {
       "US": 0.66,
       "Germany": 0.9,
       "UK": 0.73,
       "France": 0.87,
-      "Italy": 0.69,
+      "Italy": 0.7,
       "Japan": 0.33,
       "Canada": 0.66,
       "Australia": 0.69,
@@ -2449,11 +2457,11 @@
       "Portugal": 0.66,
       "Finland": 0.9,
       "Sweden": 0.77,
-      "Norway": 0.54,
+      "Norway": 0.53,
       "Denmark": 1.0,
-      "Poland": 0.57,
+      "Poland": 0.56,
       "Czechia": 0.63,
-      "Hungary": 0.58,
+      "Hungary": 0.56,
       "Korea": 0.73,
       "New Zealand": 0.67,
       "Chile": 0.31,
@@ -2461,12 +2469,12 @@
      },
      "Poland": {
       "US": 0.62,
-      "Germany": 0.63,
+      "Germany": 0.62,
       "UK": 0.57,
       "France": 0.63,
       "Italy": 0.52,
       "Japan": 0.13,
-      "Canada": 0.59,
+      "Canada": 0.6,
       "Australia": 0.61,
       "Spain": 0.6,
       "Netherlands": 0.61,
@@ -2478,18 +2486,18 @@
       "Finland": 0.63,
       "Sweden": 0.57,
       "Norway": 0.51,
-      "Denmark": 0.57,
+      "Denmark": 0.56,
       "Poland": 1.0,
       "Czechia": 0.82,
-      "Hungary": 0.71,
+      "Hungary": 0.69,
       "Korea": 0.63,
       "New Zealand": 0.61,
       "Chile": 0.43,
       "Greece": 0.29
      },
      "Czechia": {
-      "US": 0.63,
-      "Germany": 0.67,
+      "US": 0.64,
+      "Germany": 0.68,
       "UK": 0.59,
       "France": 0.69,
       "Italy": 0.58,
@@ -2498,50 +2506,50 @@
       "Australia": 0.61,
       "Spain": 0.66,
       "Netherlands": 0.67,
-      "Belgium": 0.68,
-      "Austria": 0.68,
-      "Switzerland": 0.34,
+      "Belgium": 0.69,
+      "Austria": 0.69,
+      "Switzerland": 0.35,
       "Ireland": 0.64,
       "Portugal": 0.52,
       "Finland": 0.68,
-      "Sweden": 0.61,
+      "Sweden": 0.62,
       "Norway": 0.5,
       "Denmark": 0.63,
       "Poland": 0.82,
       "Czechia": 1.0,
-      "Hungary": 0.67,
+      "Hungary": 0.65,
       "Korea": 0.69,
       "New Zealand": 0.64,
       "Chile": 0.44,
       "Greece": 0.29
      },
      "Hungary": {
-      "US": 0.5,
-      "Germany": 0.57,
-      "UK": 0.56,
-      "France": 0.61,
-      "Italy": 0.6,
-      "Japan": 0.14,
-      "Canada": 0.47,
-      "Australia": 0.47,
-      "Spain": 0.6,
-      "Netherlands": 0.59,
-      "Belgium": 0.63,
-      "Austria": 0.63,
-      "Switzerland": 0.28,
-      "Ireland": 0.58,
-      "Portugal": 0.54,
-      "Finland": 0.59,
-      "Sweden": 0.5,
-      "Norway": 0.5,
-      "Denmark": 0.58,
-      "Poland": 0.71,
-      "Czechia": 0.67,
+      "US": 0.49,
+      "Germany": 0.55,
+      "UK": 0.54,
+      "France": 0.59,
+      "Italy": 0.58,
+      "Japan": 0.1,
+      "Canada": 0.46,
+      "Australia": 0.46,
+      "Spain": 0.58,
+      "Netherlands": 0.56,
+      "Belgium": 0.61,
+      "Austria": 0.61,
+      "Switzerland": 0.27,
+      "Ireland": 0.57,
+      "Portugal": 0.52,
+      "Finland": 0.57,
+      "Sweden": 0.49,
+      "Norway": 0.48,
+      "Denmark": 0.56,
+      "Poland": 0.69,
+      "Czechia": 0.65,
       "Hungary": 1.0,
-      "Korea": 0.56,
-      "New Zealand": 0.54,
+      "Korea": 0.55,
+      "New Zealand": 0.53,
       "Chile": 0.49,
-      "Greece": 0.32
+      "Greece": 0.31
      },
      "Korea": {
       "US": 0.78,
@@ -2549,14 +2557,14 @@
       "UK": 0.74,
       "France": 0.74,
       "Italy": 0.57,
-      "Japan": 0.32,
+      "Japan": 0.31,
       "Canada": 0.75,
       "Australia": 0.78,
       "Spain": 0.69,
       "Netherlands": 0.75,
       "Belgium": 0.75,
       "Austria": 0.77,
-      "Switzerland": 0.4,
+      "Switzerland": 0.39,
       "Ireland": 0.72,
       "Portugal": 0.53,
       "Finland": 0.76,
@@ -2565,7 +2573,7 @@
       "Denmark": 0.73,
       "Poland": 0.63,
       "Czechia": 0.69,
-      "Hungary": 0.56,
+      "Hungary": 0.55,
       "Korea": 1.0,
       "New Zealand": 0.76,
       "Chile": 0.48,
@@ -2593,7 +2601,7 @@
       "Denmark": 0.67,
       "Poland": 0.61,
       "Czechia": 0.64,
-      "Hungary": 0.54,
+      "Hungary": 0.53,
       "Korea": 0.76,
       "New Zealand": 1.0,
       "Chile": 0.44,
@@ -2604,9 +2612,9 @@
       "Germany": 0.35,
       "UK": 0.39,
       "France": 0.37,
-      "Italy": 0.32,
-      "Japan": 0.26,
-      "Canada": 0.45,
+      "Italy": 0.31,
+      "Japan": 0.25,
+      "Canada": 0.46,
       "Australia": 0.43,
       "Spain": 0.33,
       "Netherlands": 0.32,
@@ -2645,11 +2653,11 @@
       "Portugal": 0.47,
       "Finland": 0.25,
       "Sweden": 0.18,
-      "Norway": 0.1,
+      "Norway": 0.09,
       "Denmark": 0.23,
       "Poland": 0.29,
       "Czechia": 0.29,
-      "Hungary": 0.32,
+      "Hungary": 0.31,
       "Korea": 0.15,
       "New Zealand": 0.18,
       "Chile": 0.13,
@@ -3539,14 +3547,14 @@
     {
      "date": "2026-06",
      "mean": 3.364,
-     "std": 0.601,
+     "std": 0.6,
      "min": 2.947,
-     "max": 4.255,
-     "range": 1.308
+     "max": 4.254,
+     "range": 1.307
     }
    ],
    "dispersion_now": {
-    "std": 0.601,
+    "std": 0.6,
     "z_vs_history": -0.65,
     "pct_of_history": 1.0,
     "reading": "compressed"
@@ -3577,10 +3585,10 @@
      "window": 24
     },
     "HY muni (HYD)": {
-     "latest": 4.255,
+     "latest": 4.254,
      "mean": 4.513,
      "std": 0.132,
-     "z": -1.95,
+     "z": -1.96,
      "pct": 2.0,
      "window": 24
     }
@@ -3588,8 +3596,8 @@
    "ranking": [
     {
      "segment": "HY muni (HYD)",
-     "latest": 4.255,
-     "z": -1.95,
+     "latest": 4.254,
+     "z": -1.96,
      "pct": 2.0
     },
     {
@@ -4200,122 +4208,122 @@
    "ranking": [
     {
      "node": "US_Banks",
-     "degree": 18,
+     "degree": 19,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 3.99
+     "bridge_score": 4.16
     },
     {
      "node": "Hedera",
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 3.64
+     "bridge_score": 3.59
     },
     {
      "node": "NVIDIA",
      "degree": 20,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 3.26
+     "bridge_score": 3.21
     },
     {
      "node": "OpenAI",
      "degree": 18,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 2.24
+     "bridge_score": 2.19
     },
     {
      "node": "SpaceX",
      "degree": 11,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 1.28
+     "bridge_score": 1.26
     },
     {
      "node": "Anthropic",
      "degree": 12,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 0.92
+     "bridge_score": 0.89
     },
     {
      "node": "US_Government",
      "degree": 9,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 0.26
+     "bridge_score": 0.24
     },
     {
      "node": "Oracle",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": false,
-     "bridge_score": 0.12
+     "bridge_score": 0.11
     },
     {
      "node": "Google",
      "degree": 8,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 0.04
+     "bridge_score": 0.02
     },
     {
      "node": "China",
      "degree": 10,
      "n_neighbor_sectors": 6,
      "both_layers": false,
-     "bridge_score": -0.02
+     "bridge_score": -0.04
     },
     {
      "node": "PrivateCredit_Funds",
      "degree": 7,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -0.18
+     "bridge_score": -0.19
     },
     {
      "node": "Ripple",
      "degree": 7,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -0.76
+     "bridge_score": -0.78
     },
     {
      "node": "Microsoft",
      "degree": 9,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -0.91
+     "bridge_score": -0.93
+    },
+    {
+     "node": "Federal_Reserve",
+     "degree": 8,
+     "n_neighbor_sectors": 5,
+     "both_layers": false,
+     "bridge_score": -1.06
     },
     {
      "node": "MGX",
      "degree": 8,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.13
+     "bridge_score": -1.15
     },
     {
      "node": "Stargate",
      "degree": 8,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.13
-    },
-    {
-     "node": "Federal_Reserve",
-     "degree": 7,
-     "n_neighbor_sectors": 5,
-     "both_layers": false,
-     "bridge_score": -1.26
+     "bridge_score": -1.15
     },
     {
      "node": "JPMorgan",
      "degree": 6,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.57
+     "bridge_score": -1.58
     },
     {
      "node": "Apple",
@@ -4333,106 +4341,114 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Japan",
-     "latest": 2.345,
+     "latest": 2.515,
      "units": "% yield",
-     "rv_z": 2.23,
+     "rv_z": 2.31,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Australia",
-     "latest": 4.926,
+     "latest": 4.969,
      "units": "% yield",
-     "rv_z": 2.07,
+     "rv_z": 2.21,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Belgium",
-     "latest": 3.51,
+     "latest": 3.59,
      "units": "% yield",
-     "rv_z": 2.03,
-     "pct": 99.0
+     "rv_z": 2.19,
+     "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Germany",
-     "latest": 2.91,
+     "latest": 3.001,
      "units": "% yield",
-     "rv_z": 1.96,
+     "rv_z": 2.16,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Norway",
-     "latest": 4.258,
+     "segment": "Netherlands",
+     "latest": 3.15,
      "units": "% yield",
-     "rv_z": 1.85,
-     "pct": 100.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Ireland",
-     "latest": 3.197,
-     "units": "% yield",
-     "rv_z": 1.83,
+     "rv_z": 1.94,
      "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Czechia",
-     "latest": 4.724,
+     "segment": "Finland",
+     "latest": 3.384,
      "units": "% yield",
-     "rv_z": 1.79,
-     "pct": 98.0
+     "rv_z": 1.93,
+     "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Finland",
-     "latest": 3.322,
+     "segment": "Ireland",
+     "latest": 3.241,
      "units": "% yield",
-     "rv_z": 1.77,
+     "rv_z": 1.9,
      "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "France",
-     "latest": 3.601,
+     "latest": 3.675,
      "units": "% yield",
-     "rv_z": 1.74,
+     "rv_z": 1.88,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Norway",
+     "latest": 4.286,
+     "units": "% yield",
+     "rv_z": 1.88,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Czechia",
+     "latest": 4.738,
+     "units": "% yield",
+     "rv_z": 1.8,
+     "pct": 98.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "UK",
+     "latest": 4.821,
+     "units": "% yield",
+     "rv_z": 1.71,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Portugal",
-     "latest": 3.37,
+     "latest": 3.43,
      "units": "% yield",
-     "rv_z": 1.43,
+     "rv_z": 1.65,
      "pct": 94.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Austria",
-     "latest": 3.24,
+     "latest": 3.303,
      "units": "% yield",
-     "rv_z": 1.4,
+     "rv_z": 1.64,
      "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Netherlands",
-     "latest": 3.016,
+     "segment": "Denmark",
+     "latest": 2.888,
      "units": "% yield",
-     "rv_z": 1.39,
+     "rv_z": 1.43,
      "pct": 99.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "UK",
-     "latest": 4.701,
-     "units": "% yield",
-     "rv_z": 1.3,
-     "pct": 100.0
     },
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
@@ -4445,7 +4461,7 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Sweden",
-     "latest": 2.764,
+     "latest": 2.785,
      "units": "% yield",
      "rv_z": 1.23,
      "pct": 97.0
@@ -4453,26 +4469,26 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Korea",
-     "latest": 3.728,
+     "latest": 3.737,
      "units": "% yield",
-     "rv_z": 1.14,
+     "rv_z": 1.11,
      "pct": 95.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Denmark",
-     "latest": 2.791,
+     "segment": "Greece",
+     "latest": 3.78,
      "units": "% yield",
-     "rv_z": 1.13,
-     "pct": 97.0
+     "rv_z": 1.0,
+     "pct": 53.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Greece",
-     "latest": 3.71,
+     "segment": "Spain",
+     "latest": 3.449,
      "units": "% yield",
-     "rv_z": 0.66,
-     "pct": 51.0
+     "rv_z": 0.79,
+     "pct": 96.0
     },
     {
      "cross_section": "US corporate credit",
@@ -4484,35 +4500,35 @@
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Hungary",
-     "latest": 7.13,
-     "units": "% yield",
-     "rv_z": 0.58,
-     "pct": 88.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Spain",
-     "latest": 3.386,
-     "units": "% yield",
-     "rv_z": 0.5,
-     "pct": 92.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Canada",
-     "latest": 3.441,
+     "latest": 3.483,
      "units": "% yield",
-     "rv_z": 0.4,
-     "pct": 93.0
+     "rv_z": 0.52,
+     "pct": 94.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "US",
+     "latest": 4.32,
+     "units": "% yield",
+     "rv_z": 0.38,
+     "pct": 91.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "New Zealand",
-     "latest": 4.64,
+     "latest": 4.68,
+     "units": "% yield",
+     "rv_z": 0.33,
+     "pct": 94.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Poland",
+     "latest": 5.58,
      "units": "% yield",
      "rv_z": 0.24,
-     "pct": 93.0
+     "pct": 79.0
     },
     {
      "cross_section": "Corporate breadth by quality tier (FINRA TRACE advance/decline ratio)",
@@ -4532,19 +4548,11 @@
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "US",
-     "latest": 4.25,
+     "segment": "Italy",
+     "latest": 3.818,
      "units": "% yield",
-     "rv_z": 0.18,
-     "pct": 88.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Poland",
-     "latest": 5.58,
-     "units": "% yield",
-     "rv_z": 0.17,
-     "pct": 79.0
+     "rv_z": 0.08,
+     "pct": 84.0
     },
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
@@ -4572,19 +4580,11 @@
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Italy",
-     "latest": 3.733,
+     "segment": "Switzerland",
+     "latest": 0.45,
      "units": "% yield",
-     "rv_z": -0.19,
-     "pct": 83.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Chile",
-     "latest": 5.556,
-     "units": "% yield",
-     "rv_z": -0.51,
-     "pct": 72.0
+     "rv_z": -0.33,
+     "pct": 77.0
     },
     {
      "cross_section": "US corporate credit",
@@ -4596,11 +4596,11 @@
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Switzerland",
-     "latest": 0.4,
+     "segment": "Chile",
+     "latest": 5.465,
      "units": "% yield",
-     "rv_z": -0.55,
-     "pct": 75.0
+     "rv_z": -0.82,
+     "pct": 67.0
     },
     {
      "cross_section": "US corporate credit",
@@ -4627,34 +4627,42 @@
      "pct": 6.0
     },
     {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Hungary",
+     "latest": 6.27,
+     "units": "% yield",
+     "rv_z": -1.36,
+     "pct": 67.0
+    },
+    {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "HY muni (HYD)",
-     "latest": 4.255,
+     "latest": 4.254,
      "units": "% dist. yield",
-     "rv_z": -1.95,
+     "rv_z": -1.96,
      "pct": 2.0
     }
    ],
    "common_factor_by_cross_section": {
     "credit_oas": 0.908,
-    "sovereign_10y": 0.647,
+    "sovereign_10y": 0.646,
     "muni_yield": 0.695,
     "trace_breadth": 0.871
    },
    "most_stressed": {
     "cross_section": "Sovereign 10Y yield (global cross-section)",
     "segment": "Japan",
-    "latest": 2.345,
+    "latest": 2.515,
     "units": "% yield",
-    "rv_z": 2.23,
+    "rv_z": 2.31,
     "pct": 100.0
    },
    "least_stressed": {
     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
     "segment": "HY muni (HYD)",
-    "latest": 4.255,
+    "latest": 4.254,
     "units": "% dist. yield",
-    "rv_z": -1.95,
+    "rv_z": -1.96,
     "pct": 2.0
    }
   }

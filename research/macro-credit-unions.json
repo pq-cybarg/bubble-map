@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "title": "Credit unions, up close - the per-CU tail, CRE/MBL concentration, the 2025 failure cluster, and the corporate-CU settlement backbone (NCUA, not FDIC)",
+    "generated": "2026-06-15",
+    "frame": "A deep dig beneath the reassuring ~11.26% aggregate net-worth ratio of the ~$2.4T credit-union system. The real structure: a numerically real but economically tiny problem-CU tail (125 CAMELS-4/5 CUs hold only ~$5.5B); extreme concentration at the top (Navy Federal alone ~$181B); a CRE/member-business-lending growth channel into the broader CRE stress; the worst failure cluster since 2018 (6 in a 4-month 2025 window, continuing into 2026); a single-point corporate-CU settlement/liquidity tier (the layer that collapsed in 2009-10); and an NCUSIF now BELOW its normal operating level. The deep companion to [[macro-uncovered-risk-pools]] section 1. The system files NCUA Form 5300, not FDIC - so none of this is in the bank lens.",
+    "relevance": "Completes the uncovered-pools arc for credit unions: separates the tiny problem-CU tail from the real risks (top concentration, the corporate-CU single point, NCUSIF below NOL, CRE/MBL growth). Feeds the FDIC-lens-is-a-floor thesis ([[macro-fdic]]).",
+    "sources": "NCUA 2025 Annual Report + Q4 2025 system performance + NCUSIF Q4 2025 results + 2026 supervisory priorities + closure press releases; S&P Global Market Intelligence (failures 7-yr high; MBL/CRE; undercapitalized count); Ceto (failures); NCUA OIG (failure costs); cutoday (merger analysis); Bankrate/MX (largest CUs); Federal Register (TCCUSF closing); Wikipedia/American Banker (2009-10 corporate collapse). Full URLs in the rendered .md.",
+    "note": "WebFetch was unavailable; figures are from search surfacing of primary NCUA pages + authoritative trade/agency reporting. The largest-2025-failure asset size ($58.5M per Ceto/S&P vs ~$21.9M for the named failures) is an unreconciled discrepancy; no system-wide CU AFS/HTM unrealized-loss dollar figure was retrievable (the main data gap)."
+  },
+  "baseline_and_tail": {
+    "summary": "Aggregate looks fine; the problem-CU tail is tiny in dollars; the real concentration is at the TOP.",
+    "points": [
+      {"item": "System", "detail": "4,287 natural-person + 11 corporate credit unions insured by the NCUSIF at 12/31/2025 (down from 4,411 a year earlier; ~4,250 by Q1 2026); aggregate net-worth ratio 11.26% (Q4 2025, up from 11.07%).", "grade": "fact (NCUA)"},
+      {"item": "The problem-CU tail (small)", "detail": "125 CAMELS-4/5 'problem' CUs hold only ~$5.5B (~0.2% of system assets) at Q4 2025 (down from 131/$5.4B); 653 CAMELS-3 CUs. Reported undercapitalized (<7% net worth) counts are period-specific and disputed (7 in one Q4-2025 merger analysis vs '40 undercapitalized' in an earlier S&P framing).", "grade": "fact (problem-CU) + contested (undercapitalized count)"},
+      {"item": "The real concentration (top)", "detail": "Navy Federal alone ~$181B (14M+ members) - the single largest concentration; State Employees' (NC) ~$53B; the top-10 CUs hold ~$456B assets / ~$393B deposits. The systemic exposure is the giants, not the failing small CUs.", "grade": "fact"},
+      {"item": "The data gap", "detail": "NCUA notes CU equity still reflects unrealized losses on long-duration securities bought in the low-rate era that 'may limit balance-sheet flexibility under stress,' but no system-wide AFS/HTM dollar figure was retrievable - the biggest open number (would require the Q4-2025 Data Summary / aggregated 5300).", "grade": "weak (qualitative; no $ figure)"}
+    ]
+  },
+  "cre_mbl": {
+    "summary": "A growing CRE/member-business-lending channel into the broader CRE stress.",
+    "points": [
+      {"item": "MBL cap + total", "detail": "Member-business loans are capped at 12.25% of assets (1998 Act; waivers/exclusions exist); total MBL outstanding $80.95B at 6/30/2025. Average CRE = 52.72% of net worth (2025) - low-risk on average, with a localized office-refi tail.", "grade": "fact (S&P/CUNA)"},
+      {"item": "Fast growth", "detail": "Multifamily originations +50% YoY (~$9B, 12mo to Sep 2025); other CRE +34% to $30.9B; non-RE commercial +18% to $7.1B - CUs are growing into CRE as banks pull back.", "grade": "fact (S&P)"}
+    ]
+  },
+  "failure_cluster": {
+    "summary": "The worst failure cluster since 2018 - six in four months, continuing into 2026.",
+    "points": [
+      {"item": "2025 cluster", "detail": "6 CU failures Apr 30-Aug 29 2025 - the most since 2018 (10) - after ZERO in 2024; total NCUSIF cost $18.4M; 2 attributable to internal fraud (NCUA OIG). Named: Unilever FCU (NJ, fraud, ~$8.4M cost), Butler Heritage (OH), Eastern Kentucky FCU (~$5.3M), Soul Community FCU (GA, ~$308k, failed ~6mo after charter), Copper & Glass (PA, ~$5.3M), Members First of Maryland (~$21.9M, Aug 29).", "grade": "fact (NCUA/Ceto/S&P/OIG)"},
+      {"item": "The size discrepancy", "detail": "Ceto and S&P state the largest 2025 failure had $58.5M in assets, but the named failures top out at ~$21.9M (Members First) - an unreconciled discrepancy (unnamed institution, or peak/historical assets).", "grade": "contested"},
+      {"item": "2026 continuation", "detail": "People Trust Community FCU (North Little Rock AR) liquidated ~Apr 30 2026 (insolvency + FCU Act violations); Copper & Glass closure also dated to Apr 2026 in some NCUA press (date straddles 2025/2026 sources). The cluster did not stop at 2025.", "grade": "fact (events) + contested (Copper & Glass date)"}
+    ]
+  },
+  "corporate_tier": {
+    "summary": "The corporate-CU layer is the system's settlement/liquidity backbone - and the layer that actually blew up in 2009-10.",
+    "points": [
+      {"item": "The 2009-10 collapse", "detail": "U.S. Central FCU (~$32B) and WesCorp (~$25B, >1,000 member CUs) were conserved Mar 2009; corporate losses ~$30B (~1/3 of the system's ~$90B capital), driven by private-label MBS. The Temporary Corporate CU Stabilization Fund charged CUs $4.8B in assessments (2009-13), recovered ~$5B via litigation, and closed Oct 2017 (rolled into the NCUSIF).", "grade": "fact"},
+      {"item": "The current tier (single point of dependence)", "detail": "11 corporate CUs remain (Q4 2025); the largest - Catalyst, Alloya, Corporate One, Vizo Financial - provide settlement, correspondent funding, emergency liquidity, and FedNow/real-time-payments rails to ~4,287 natural-person CUs (they jointly acquired the Aptys payments platform). Post-2010 Part 704 reforms sharply restricted their investment powers, so the residual risk is concentration/settlement dependency + thin retained earnings (Alloya ~$299M total capital / $44M retained; Catalyst ~$205M / $43M), not a 2009-style MBS book.", "grade": "fact (structure) + contested (capital figures, single source) + weak (no acute current distress)"}
+    ]
+  },
+  "delinquency_ncusif": {
+    "summary": "Rising delinquency and an insurance fund below its operating level.",
+    "points": [
+      {"item": "Credit trends", "detail": "Delinquency 103bp (Q4 2025, +5bp YoY); net charge-offs 78bp (-2bp YoY); loan-to-share 83.2%. Insured shares grew +$83B/+4.7%.", "grade": "fact (NCUA)"},
+      {"item": "NCUSIF below NOL", "detail": "The Share Insurance Fund held $24.1B at 12/31/2025 with an equity ratio of 1.30% - BELOW the 1.33% Normal Operating Level (statutory range 1.20-1.50%). Implied insured shares ~$1.78T. The buffer absorbing the failure tail is itself below target.", "grade": "fact + weak (insured-shares figure derived)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "The tail is tiny in dollars; the real risks are concentration, the corporate single-point, and an under-target fund.",
+    "points": [
+      {"item": "Read", "detail": "'Credit unions are well-capitalized in aggregate' is true and misleading. The structural risks are: (1) extreme top concentration (Navy Federal ~$181B; top-10 ~$456B); (2) the corporate-CU settlement/liquidity tier as a single point of dependence (the layer that actually failed in 2009-10); (3) an NCUSIF below its operating level; (4) a growing CRE/MBL channel; and (5) an un-quantified securities-unrealized-loss overhang. Same defect as the bank lens - the aggregate flatters a concentrated, partly-opaque tail outside the FDIC system.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim the CU system is undercapitalized - it is well-capitalized in aggregate (11.26%); the point is concentration + the corporate single-point + the under-NOL fund + an unquantified securities overhang.",
+      "The largest-2025-failure size ($58.5M vs $21.9M) and the Copper & Glass closure date are contested/unreconciled.",
+      "No system-wide CU AFS/HTM unrealized-loss dollar figure is asserted - it was not retrievable (the main gap).",
+      "Corporate-CU capital figures rest on a single secondary source (contested); no acute current corporate distress is asserted.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Corporate_Credit_Unions", "to": "Credit_Unions", "instrument": "relationship", "raw_instrument": "settlement / correspondent liquidity / FedNow rails - 11 corporates intermediate payments + backup liquidity for ~4,287 CUs (the single-point tier that collapsed in 2009-10: US Central $32B + WesCorp $25B)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-credit-unions.json", "note": "OVERLAY: settlement single-point; excluded from proofs"},
+    {"from": "Credit_Unions", "to": "NCUSIF", "instrument": "relationship", "raw_instrument": "~$1.78T insured shares on a $24.1B fund with a 1.30% fund ratio - BELOW the 1.33% normal operating level; the buffer absorbing the 2025-26 failure cluster is under target", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-credit-unions.json", "note": "OVERLAY: insurance buffer below NOL; excluded from proofs"},
+    {"from": "Credit_Unions", "to": "CRE_Market", "instrument": "relationship", "raw_instrument": "member-business/CRE lending ($80.95B MBL, capped 12.25% of assets; multifamily originations +50% YoY) - a growth channel into the broader CRE stress as banks pull back", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-credit-unions.json", "note": "OVERLAY: CRE growth channel; excluded from proofs"}
+  ],
+  "limits": "Deep dig on credit unions: 4,287 CUs, 11.26% aggregate net worth; problem tail tiny (125 CAMELS-4/5 ~$5.5B) vs top concentration (Navy Federal ~$181B, top-10 ~$456B); CRE/MBL channel ($80.95B MBL, multifamily +50% YoY); the 2025 failure cluster (6 in 4 months, $18.4M cost, 2 fraud) continuing into 2026; the corporate-CU tier (2009-10 collapse US Central $32B/WesCorp $25B/~$30B losses/$4.8B TCCUSF; current 11 corporates as settlement single-point); delinquency 103bp; NCUSIF $24.1B at a 1.30% equity ratio BELOW the 1.33% NOL. The system-wide securities unrealized-loss figure is the main gap. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-15",
+    "checks": [
+      {"check": "Baseline/tail", "result": "4,287 CUs + 11 corporates; NW 11.26%; 125 CAMELS-4/5 ~$5.5B; Navy Federal ~$181B, top-10 ~$456B (NCUA/Bankrate)."},
+      {"check": "CRE/MBL", "result": "MBL $80.95B (6/30/2025), cap 12.25%; CRE 52.72% of NW; multifamily +50% YoY (S&P)."},
+      {"check": "Failures", "result": "6 in 2025 (Apr-Aug), $18.4M NCUSIF cost, 2 fraud (OIG); largest size $58.5M vs $21.9M discrepancy; People Trust + Copper & Glass 2026."},
+      {"check": "Corporate/NCUSIF", "result": "2009-10: US Central $32B + WesCorp $25B, ~$30B losses, $4.8B TCCUSF; 11 corporates now (Catalyst/Alloya/Corporate One/Vizo); NCUSIF $24.1B, 1.30% equity ratio below 1.33% NOL."}
+    ]
+  }
+}

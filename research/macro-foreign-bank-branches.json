@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "title": "Foreign-bank US branches & agencies (~$3T+) - the FBO dollar-funding node, the yen-carry channel, and the IHC ring-fence gap",
+    "generated": "2026-06-15",
+    "frame": "A deep dig into US branches and agencies of foreign banks (FBOs): a ~$3.0-3.4T book (NOT the '$2T+' usually cited) that is NOT FDIC-insured, funded through wholesale dollar markets and intra-firm 'net due to related offices,' and concentrated ~87% in New York. It is the transmission node for offshore-dollar stress. The sharpest live channel is Japanese: Japanese banks hold the largest US-resident claims of any banking system and fund USD assets (Treasuries, CLOs, leveraged loans) synthetically via yen/FX swaps - so the BoJ's rate-hike path (out of negative rates Mar 2024 -> ~0.75% Dec 2025) drove the Aug-5-2024 carry-trade unwind and forced Norinchukin's ~$63B bond sale. Crucially, the Dodd-Frank IHC ring-fence EXCLUDES branches - so the ~$3T branch book sits outside the consolidated US capital/liquidity regime. The deep companion to [[macro-uncovered-risk-pools]] section 5.",
+    "relevance": "Completes the uncovered-pools arc for foreign-bank branches: corrects the size (~$3T+), maps the yen-carry / synthetic-dollar-funding channel into US Treasuries, and flags the IHC gap that leaves the branch book outside the US consolidated regime - an offshore-dollar transmission node in the uncovered stack.",
+    "sources": "Federal Reserve IBA ('Assets and Liabilities of US Branches and Agencies of Foreign Banks') + H.8 + FRED (TLAFRIW027NBOG); BIS CGFS (Japanese-bank US claims; FX-swap funding); CNBC/Reuters/Bloomberg (BoJ path, Aug-2024 unwind, Norinchukin); NBER (2020 swap-line usage); Fed (FIMA repo); Cornell/Harvard Law (Reg YY IHC). Full URLs in the rendered .md.",
+    "note": "WebFetch unavailable; aggregate totals are primary Fed series (solid), but the exact cash/securities/loans/net-due split and per-bank-by-country dollar sizes are weak (the Fed publishes aggregates, not a per-parent league table - harden via FR Y-7Q/IHC filings). The '$2T+' premise is outdated (actual ~$3.0-3.4T)."
+  },
+  "size_funding": {
+    "summary": "~$3T+, NY-concentrated, wholesale-funded, FDIC-uninsured.",
+    "points": [
+      {"item": "Size", "detail": "US branches/agencies of foreign banks held ~$3.04T in US assets (Fed IBA, Sep 30 2024), with New York ~87% (~$2.64T). The broader 'foreign-related institutions' H.8 series was ~$3.39T (Mar 2026). The node has grown well past the commonly-cited '$2T+' (was ~$2.88T mid-2022).", "grade": "fact (Fed IBA/FRED)"},
+      {"item": "Funding fragility", "detail": "Branches are NOT FDIC-insured and have no retail deposit base; they fund through wholesale channels - large-time/brokered deposits, fed funds/repo, and 'net due to related institutions' (intra-firm parent funding). The funding is confidence-sensitive and dollar-denominated. (Exact cash/securities/loans/net-due dollar split is weak - needs H.8 Table 10.)", "grade": "fact + weak (line-item split)"}
+    ]
+  },
+  "by_country": {
+    "summary": "Japanese banks dominate; Canadians/Europeans operate more via IHC-held subsidiaries.",
+    "points": [
+      {"item": "The footprint", "detail": "Japanese banks hold the LARGEST claims on US residents of any banking system (BIS), ahead of UK banks - MUFG, SMBC, Mizuho (MUFG sold Union Bank's California retail to U.S. Bancorp in 2022, shifting toward wholesale/branch + securities). Canadian (TD, RBC, BMO, Scotiabank) and European (Barclays, Deutsche, BNP Paribas, Credit Agricole, Santander) operate largely via IHC-held bank subsidiaries; Chinese banks (ICBC, BoC, CCB) have a smaller NY-branch footprint. Per-bank US-asset dollar sizes are weak (the Fed publishes aggregates, not a league table).", "grade": "fact (ordering) + weak (per-bank sizes)"}
+    ]
+  },
+  "yen_carry": {
+    "summary": "The live channel: Japanese banks fund US assets synthetically via yen, so BoJ normalization transmits to the Treasury/CLO market.",
+    "points": [
+      {"item": "The BoJ path + the unwind", "detail": "BoJ exited negative rates Mar 2024 (-0.1% -> 0), hiked to 0.25% (Jul 31 2024), held 0.5% through mid-2025, then hiked to a 30-year-high ~0.75% (Dec 19 2025; 10y JGB past 2%). The Jul-2024 hike triggered the Aug-5-2024 carry-trade unwind: the Nikkei fell -12.4% (worst day since 1987), the yen surged, and yen-funded leveraged longs (esp. US tech) force-unwound.", "grade": "fact"},
+      {"item": "Norinchukin", "detail": "Norinchukin announced (Jun 2024) it would sell ~Y10 trillion (~$63B) of US Treasuries + European sovereigns (~1/6 of its global portfolio) to stem unrealized losses (~Y2.19T at Mar 2024; bonds ~56% of portfolio); it posted a ~$12.6B FY2024 net loss and replaced its CEO (Feb 2025). The concrete case of a Japanese institution force-selling Treasuries on the rate turn.", "grade": "fact"},
+      {"item": "The systemic channel", "detail": "Japanese banks run USD assets > USD liabilities, so they rely on SYNTHETIC dollar funding (FX swaps / the cross-currency basis) - off-balance-sheet forward dollar obligations not in standard debt stats (BIS/IMF flag this as a hidden vulnerability). Rising yen rates + a weaker basis raise their USD funding cost and pressure their Treasury/CLO/leveraged-loan demand - a transmission line from BoJ policy to the US Treasury market.", "grade": "fact (mechanism)"}
+    ]
+  },
+  "repo_fed_ihc": {
+    "summary": "FBOs are the IOR-arbitrage / repo intermediaries the Fed backstops - and their branch book sits outside the IHC ring-fence.",
+    "points": [
+      {"item": "IOR arbitrage + repo", "detail": "FBOs account for the bulk of IORB arbitrage: not FDIC-insured and under looser leverage rules, they borrow cheaply (esp. from FHLBs / fed funds) and park reserves at the Fed to earn IORB - driving large branch cash balances; they are marginal repo intermediaries (the FHLB<->FBO fed-funds/repo substitution).", "grade": "fact"},
+      {"item": "Fed backstop", "detail": "Fed central-bank dollar swap lines peaked ~$449B (late May 2020; ~$598B in the 2008 GFC) - 82% of 2020 usage was BoJ + ECB, i.e. funding non-US banks' dollar books; the FIMA repo facility (Mar 2020, standing since Jul 2021) lets foreign central banks repo Treasuries for dollars - backstops for this same FBO dollar-funding node.", "grade": "fact"},
+      {"item": "The IHC gap", "detail": "Dodd-Frank Reg YY requires an FBO with >=$50B in US NON-branch assets to form a US Intermediate Holding Company (Basel III capital, CCAR/DFAST, liquidity). But the threshold counts non-branch assets only - BRANCHES AND AGENCIES ARE EXCLUDED from the IHC and its consolidated regime. So the ~$3T branch book sits OUTSIDE the US ring-fence, funded intra-firm and via wholesale dollar markets - the regulatory gap that makes it the systemic pressure point.", "grade": "fact"}
+    ]
+  },
+  "synthesis": {
+    "summary": "A ~$3T offshore-dollar node outside the US ring-fence, wired to the Treasury market through the yen.",
+    "points": [
+      {"item": "Read", "detail": "Foreign-bank US branches are a ~$3.0-3.4T, NY-concentrated, FDIC-uninsured, wholesale-funded node OUTSIDE the Dodd-Frank IHC ring-fence. The sharpest live risk is the yen-carry/synthetic-dollar channel: Japanese banks (the largest US claimants) fund Treasuries/CLOs via FX swaps, so BoJ normalization (-> ~0.75% Dec 2025) transmits straight to the US Treasury market (Aug-2024 unwind; Norinchukin's ~$63B forced sale). It is the offshore-dollar transmission line in the uncovered stack ([[macro-uncovered-risk-pools]]), and the Fed's swap-line/FIMA backstops exist precisely because of it.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim of current FBO distress - the point is the size (~$3T+, not $2T), the wholesale-funding fragility, the yen-carry transmission, and the IHC exclusion of branches.",
+      "Per-bank by-country dollar sizes are weak (Fed publishes aggregates); the cash/securities/loans/net-due split is weak (needs H.8 Table 10).",
+      "The '$2T+' premise is outdated; actual ~$3.0-3.4T.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Japanese_Banks", "to": "US_Treasuries", "instrument": "relationship", "raw_instrument": "synthetic USD funding (FX swaps / yen carry) -> Treasury/CLO/leveraged-finance holdings; the largest US-resident claims of any banking system; Norinchukin force-sold ~$63B of Treasuries/EU sovereigns (2024) on the BoJ rate turn", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-foreign-bank-branches.json", "note": "OVERLAY: yen-carry transmission to the Treasury market; excluded from proofs"},
+    {"from": "Foreign_Bank_US_Branches", "to": "Repo_Market", "instrument": "relationship", "raw_instrument": "~$3.0-3.4T FDIC-uninsured, NY-concentrated book funded via wholesale repo/fed-funds + intra-firm 'net due'; IORB arbitrage (FHLB<->FBO substitution); outside the Dodd-Frank IHC ring-fence (branches excluded)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-foreign-bank-branches.json", "note": "OVERLAY: offshore-dollar funding node; excluded from proofs"},
+    {"from": "Federal_Reserve", "to": "Foreign_Bank_US_Branches", "instrument": "relationship", "raw_instrument": "central-bank USD swap lines (~$449B 2020 peak, 82% BoJ/ECB) + the FIMA repo facility - official dollar-liquidity support for the foreign-bank dollar-funding node", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-foreign-bank-branches.json", "note": "OVERLAY: official dollar backstop; excluded from proofs"}
+  ],
+  "limits": "Deep dig on foreign-bank US branches: ~$3.04T (IBA Sep 2024) / ~$3.39T (H.8 Mar 2026), NY ~87%, FDIC-uninsured, wholesale-funded (corrects the '$2T+' framing); Japanese-bank dominance (largest US claims; MUFG/SMBC/Mizuho); the yen-carry/synthetic-dollar channel (BoJ -0.1%->~0.75% Dec 2025; Aug-5-2024 unwind Nikkei -12.4%; Norinchukin ~$63B forced sale / ~$12.6B FY2024 loss); IORB arbitrage + repo intermediation; Fed swap-line (~$449B 2020, 82% BoJ/ECB) + FIMA backstops; the IHC ring-fence EXCLUDING branches. Per-bank and line-item splits are weak (Fed aggregates only). Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-15",
+    "checks": [
+      {"check": "Size", "result": "~$3.04T US branch/agency assets (Fed IBA Sep 2024), NY ~87%; ~$3.39T foreign-related (H.8/FRED Mar 2026); >'$2T+' framing."},
+      {"check": "Japan/yen-carry", "result": "BoJ -0.1%->0.25% (Jul 2024)->~0.75% (Dec 2025); Aug-5-2024 Nikkei -12.4%; Norinchukin ~$63B sale, ~Y2.19T unrealized loss, ~$12.6B FY2024 loss, CEO replaced (Bloomberg/Reuters)."},
+      {"check": "Fed/IHC", "result": "Swap lines ~$449B (2020, 82% BoJ/ECB, NBER); FIMA repo (2020/2021); Reg YY IHC $50B non-branch threshold EXCLUDES branches (Cornell/Harvard Law)."}
+    ]
+  }
+}

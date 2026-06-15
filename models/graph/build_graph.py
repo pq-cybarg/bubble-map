@@ -166,6 +166,10 @@ NODE_META = {
  "LGFV_Debt":("creditor",False),"US_Contingent_Liabilities":("creditor",False),
  # device-ownership erosion -> OS identity (overlay)
  "Device_Ownership_Erosion":("surveillance",False),"AI_Native_OS":("tech",False),"Age_Assurance_Issuers":("surveillance",False),
+ # uncovered-pool deep digs (overlay)
+ "Corporate_Credit_Unions":("bank",True),"NCUSIF":("regulator",True),"BDCs":("private_credit",True),
+ "Commercial_Parents":("industrial",False),"Farm_Credit_System":("financial_infra",True),"FFCB_Funding":("financial_infra",True),
+ "US_Farmland":("commodity",False),"CoBank":("bank",True),"Rural_Infrastructure":("industrial",False),"Japanese_Banks":("bank",True),
 }
 
 edges=[]

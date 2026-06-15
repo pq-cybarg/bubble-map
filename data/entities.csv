@@ -23,6 +23,7 @@ Apollo,private_credit,True,False,False,0.0
 Apollo_Blackstone,private_credit,True,False,False,0.0
 Apple,hyperscaler,True,False,False,0.0
 Asia_local_currency_stablecoins,other,True,False,False,0.0
+BDCs,private_credit,True,False,False,0.0
 BLS,statistical_agency,True,False,False,0.0
 BLS_NTRI,statistic,False,False,False,0.0
 BNPL_Phantom_Debt,private_credit,False,False,False,0.0
@@ -65,14 +66,17 @@ Chainlink,crypto_infra,True,False,False,0.0
 China,state,True,False,False,0.0
 Circle,stablecoin,True,False,False,0.0
 Citadel_Securities,other,True,False,False,0.0
+CoBank,bank,True,False,False,0.0
 Coinbase,exchange,True,False,False,0.0
 ColibriTD,pqc_quantum,False,False,False,0.0
+Commercial_Parents,industrial,False,False,False,0.0
 Congress,state,True,False,False,0.0
 ConsenSys,crypto_infra,True,False,False,0.0
 Content_platforms,other,True,False,False,0.0
 Contingent_Labor,labor,False,False,False,0.0
 Copper,commodity,False,False,False,0.0
 CoreWeave,neocloud,False,True,True,0.714
+Corporate_Credit_Unions,bank,True,False,False,0.0
 Courts,other,True,False,False,0.0
 Credit_Unions,bank,True,False,False,0.0
 Creditors,creditor,False,False,False,0.0
@@ -104,11 +108,13 @@ Ethereum,other,True,False,False,0.0
 Euroclear,other,True,False,False,0.0
 FBI,state_intel,True,False,False,0.0
 FDIC,regulator,True,False,False,0.0
+FFCB_Funding,financial_infra,True,False,False,0.0
 FHLB_System,financial_infra,True,False,False,0.0
 FTC,other,True,False,False,0.0
 FTX,other,True,False,False,0.0
 Fairshake,political,False,False,False,0.0
 Family_Offices,financier,True,False,False,0.0
+Farm_Credit_System,financial_infra,True,False,False,0.0
 Farmington_Moonstone,other,True,False,False,0.0
 Federal_Reserve,central_bank,True,False,False,0.0
 Federal_Transfers,state,True,False,False,0.0
@@ -152,6 +158,7 @@ Japan,other,True,False,False,0.0
 Japan_LDP,other,True,False,False,0.0
 Japan_megabanks,other,True,False,False,0.0
 Japan_society,other,True,False,False,0.0
+Japanese_Banks,bank,True,False,False,0.0
 Jeb Hensarling,other,True,False,False,0.0
 Jefferies,bank,True,False,False,0.0
 Jobs_Headline,statistic,False,False,False,0.0
@@ -187,6 +194,7 @@ Mortgage_Market,financial_infra,True,False,False,0.0
 Mortgage_REITs,financier,True,False,False,0.0
 MtGox,exchange,False,False,False,0.0
 Municipal_Debt,financial_infra,True,False,False,0.0
+NCUSIF,regulator,True,False,False,0.0
 NRO,state_intel,True,False,False,0.0
 NSA,state_intel,True,False,False,0.0
 NSCC,other,True,False,False,0.0
@@ -240,6 +248,7 @@ Ripple,crypto_infra,True,False,False,0.0
 Robinhood,other,True,False,False,0.0
 RomanStorm,person,False,False,False,0.0
 Ronin_Network,other,True,False,False,0.0
+Rural_Infrastructure,industrial,False,False,False,0.0
 Russia,other,True,False,False,0.0
 Russia_state,other,True,False,False,0.0
 Russian_energy_executives,other,True,False,False,0.0
@@ -320,6 +329,7 @@ US_Allied_Military,defense,True,False,False,0.0
 US_Banks,bank,True,False,False,0.0
 US_Congress,other,True,False,False,0.0
 US_Contingent_Liabilities,creditor,False,False,False,0.0
+US_Farmland,commodity,False,False,False,0.0
 US_Government,state,True,False,False,0.0
 US_Tariff_Policy,state,True,False,False,0.0
 US_Telecoms,telecom,True,False,False,0.0

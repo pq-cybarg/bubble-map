@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "title": "Industrial loan companies (ILCs), enumerated - the FDIC-insured/Fed-unsupervised charter, its commercial parents, and the 2025-26 approval wave",
+    "generated": "2026-06-15",
+    "frame": "A deep dig into the ILC charter: 23 active industrial banks holding ~$247.4B (Mar 2025), FDIC-insured yet their commercial/fintech parents escape Federal Reserve consolidated (bank-holding-company) supervision - the breach of the separation of banking and commerce. UBS Bank USA alone (~$116B) is ~47% of the sector and larger than Signature Bank was when it failed. After a long drought, the FDIC under the current board approved a WAVE of commercial-parent ILCs in 2025-26 (Ford, GM, Stellantis, Edward Jones, Thrivent) with PayPal, Affirm and Nissan pending - the most active period since the mid-2000s. The deep companion to [[macro-uncovered-risk-pools]] section 3.",
+    "relevance": "Completes the uncovered-pools arc for ILCs: enumerates the charters + parents + assets, documents the loophole and the 2020 Part 354 patch, and flags the 2025-26 approval wave + the July-2025 FDIC RFI signalling possible loosening - a parallel insured-deposit pool growing outside Fed BHC oversight.",
+    "sources": "FDIC RFI on industrial banks (Federal Register, Jul 21 2025) + FDIC press; CRS R46489; Utah DFI; Better Markets; ICBA white paper; Holland & Knight (Part 354); CSBS; GAO-12-160; Banking Dive / FDIC press (Ford/GM/Stellantis/Edward Jones approvals); company/bank financial pages. Full URLs in the rendered .md.",
+    "note": "WebFetch unavailable; figures from search surfacing of FDIC/CRS/Utah DFI/trade press. Corrections to common assumptions: Morgan Stanley is NOT an ILC (converted to a BHC in 2008, as did Goldman/GMAC); EnerBank was acquired by Regions (2021); USAA uses a federal savings bank, not an ILC; the oft-cited '~$25B in 1997' baseline is weak (the cleanly documented baseline is ~$165B in 2020). Per-bank assets mix 2024/2025 vintages; the long tail of ~9 sub-$1B charters is not fully enumerated (needs live FDIC BankFind)."
+  },
+  "aggregate": {
+    "summary": "23 charters, ~$247B, one bank ~half the sector.",
+    "points": [
+      {"item": "Size + concentration", "detail": "23 active industrial banks with ~$247.4B aggregate assets (Mar 31 2025, FDIC RFI); 6 ILCs >=$10B, 8 between $1-10B, 9 under $1B. The largest, UBS Bank USA (~$116.3B), is ~47% of the sector and larger than Signature Bank at its 2023 failure. Grew from ~$165B (Mar 2020).", "grade": "fact (FDIC/CRS)"},
+      {"item": "Where chartered", "detail": "Utah charters the bulk (~16-17 industrial banks, ~$220B at Mar 2025); also Nevada, California, Colorado, Hawaii, Indiana, Minnesota.", "grade": "fact (Utah DFI)"}
+    ]
+  },
+  "the_loophole": {
+    "summary": "FDIC-insured, Fed-unsupervised parent - the separation-of-banking-and-commerce breach.",
+    "points": [
+      {"item": "Origin + effect", "detail": "CEBA 1987 closed the 'nonbank bank' loophole but carved out ILCs from the Bank Holding Company Act 'bank' definition (state-chartered + FDIC-insured as of Mar 5 1987, meeting one of: no demand deposits, <$100M assets, or no change of control). Effect: the ILC gets the federal deposit-insurance safety net while its commercial/fintech PARENT escapes Federal Reserve consolidated (BHC) supervision (GAO-12-160; CRS R46489).", "grade": "fact"},
+      {"item": "Moratoria + the 2020 patch", "detail": "FDIC moratorium Aug 2006 (after Walmart's bid); Dodd-Frank 3-yr moratorium (2010-13). The FDIC's 2020 final rule (12 CFR Part 354, effective Apr 2021) requires parent written commitments / capital-and-liquidity 'source of strength' - but does NOT impose Fed consolidated oversight. The July-2025 FDIC RFI on ILCs and their parents signals possible loosening; the ICBA ('Close the Shadow Banking Loophole Act') campaigns to amend the BHCA to close it.", "grade": "fact + contested (policy direction)"}
+    ]
+  },
+  "enumerated_charters": {
+    "summary": "The named charters, parents and assets (largest six >=$10B marked).",
+    "points": [
+      {"item": "UBS Bank USA", "detail": "Parent UBS (Swiss bank); ~$116.3B (Mar 2025); Utah; the largest ILC by far. [>=$10B]", "grade": "fact"},
+      {"item": "Sallie Mae Bank", "detail": "Parent SLM Corp; ~$29.6B (Sep 2025); Utah. [>=$10B]", "grade": "fact"},
+      {"item": "Optum Bank", "detail": "Parent UnitedHealth Group (Optum); ~$20B (Dec 2025); Utah. [>=$10B]", "grade": "fact"},
+      {"item": "Beal Bank USA", "detail": "Parent Beal Financial Corp (Andrew Beal); ~$18.0B (Dec 2024); Nevada. [>=$10B]", "grade": "fact"},
+      {"item": "Toyota Financial Savings Bank", "detail": "Parent Toyota Financial Services; ~$15-16B (2025-26); Nevada. [>=$10B]", "grade": "fact"},
+      {"item": "Comenity Capital Bank", "detail": "Parent Bread Financial (fmr Alliance Data); ~$13.3B (Dec 2024); Utah. [>=$10B]", "grade": "fact"},
+      {"item": "BMW Bank of North America", "detail": "Parent BMW; ~$12.0B (Dec 2023); Utah.", "grade": "fact (2023 vintage)"},
+      {"item": "Celtic / Medallion / Square / Pitney Bowes / WebBank / Nelnet / Thrivent", "detail": "Celtic Bank (Celtic Investment) ~$3.4B; Medallion Bank (Medallion Financial) ~$2.6B; Square Financial Services (Block) ~$816M; The Pitney Bowes Bank ~$806M; WebBank (Steel Partners) ~$2-3B (figures conflict); Nelnet Bank (approved 2020); Thrivent Bank (opened Jun 2025, Utah's 16th). The remaining ~9 sub-$1B charters (e.g., First Electronic, WEX Bank, Eaglemark/Harley, LCA, TAB Bank, Finance Factors) round out the 23.", "grade": "fact + weak (WebBank/Nelnet exact; long-tail composition)"}
+    ]
+  },
+  "approval_wave": {
+    "summary": "The most active ILC period since the mid-2000s - commercial parents pouring in.",
+    "points": [
+      {"item": "Approved 2025-26", "detail": "Ford Credit Bank (Ford) + GM Financial Bank (GM) conditionally approved ~Jan 2026; Stellantis Bank USA approved May 2026; Edward Jones approved; Thrivent Bank opened Jun 2025. After a long drought, the FDIC under the current board cleared a wave of COMMERCIAL-parent ILCs.", "grade": "fact (FDIC/Banking Dive)"},
+      {"item": "Pending / withdrawn", "detail": "Pending: Nissan Bank U.S. (Jun 2025), PayPal (Dec 2025), Affirm Bank (BNPL, Jan 2026; ICBA opposes). Withdrawn historically: Rakuten (Japan), Brex, Walmart, GM's first attempt (then refiled, approved). The auto-finance and fintech rush is the live story.", "grade": "fact"}
+    ]
+  },
+  "stress": {
+    "summary": "The charter's parent-risk has blown up before.",
+    "points": [
+      {"item": "Fremont Investment & Loan", "detail": "A ~$13B California ILC and top-10 subprime lender: FDIC cease-and-desist on subprime (Mar 2007), Prompt Corrective Action directive (Mar 2008), parent Fremont General Chapter 11 (Jun 2008), deposits sold to CapitalSource - the marquee ILC parent-risk event. A 1999 ILC failure was tied to unregulated parent borrowing with no federal supervisor able to ensure parent strength.", "grade": "fact + contested (1999 specifics)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "A growing insured-deposit pool outside Fed BHC oversight, expanding fastest just as the patch may loosen.",
+    "points": [
+      {"item": "Read", "detail": "The ILC charter extends the federal deposit-insurance safety net to commercial/fintech parents the Fed does not consolidatedly supervise - a documented breach of banking/commerce separation, concentrated ~half in one bank (UBS Bank USA). It is growing fastest (Ford/GM/Stellantis/Edward Jones approved; PayPal/Affirm/Nissan pending) precisely as the July-2025 FDIC RFI signals the 2020 patch may loosen. A parallel insured-deposit pool in the uncovered stack ([[macro-uncovered-risk-pools]]).", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "The 'loophole' is a documented policy debate (ICBA et al.), not an allegation of wrongdoing by any ILC.",
+      "Per-bank assets mix 2024/2025 vintages; WebBank/Nelnet exact figures and the ~9 sub-$1B long tail are weak (need live FDIC BankFind).",
+      "Morgan Stanley is NOT an ILC (BHC since 2008); EnerBank acquired by Regions (2021); USAA uses a federal savings bank.",
+      "The '~$25B in 1997' baseline is weak; the documented baseline is ~$165B (2020).",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Commercial_Parents", "to": "ILCs", "instrument": "relationship", "raw_instrument": "ownership + Part 354 source-of-strength commitments; commercial/fintech parents (UBS, Block, Ford, GM, Stellantis, PayPal-pending) own FDIC-insured ILCs without Fed consolidated (BHC) supervision - the loophole", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-ilcs.json", "note": "OVERLAY: banking/commerce-separation breach; excluded from proofs"},
+    {"from": "ILCs", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "~$247.4B FDIC-insured deposits (23 charters; UBS Bank USA ~$116B ~47% of sector) - a parallel insured-deposit pool growing via the 2025-26 commercial-parent approval wave", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-ilcs.json", "note": "OVERLAY: insured-deposit pool; excluded from proofs"}
+  ],
+  "limits": "Enumerated ILC dig: 23 charters / ~$247.4B (Mar 2025); UBS Bank USA ~$116B (~47%, > Signature at failure); the CEBA-1987 loophole (FDIC-insured, Fed-unsupervised parent), the 2006/2010 moratoria, the 2020 Part 354 patch, the Jul-2025 FDIC RFI; named charters + parents + assets (UBS/Sallie Mae/Optum/Beal/Toyota/Comenity/BMW + the smaller tier); the 2025-26 approval wave (Ford, GM, Stellantis, Edward Jones, Thrivent approved; PayPal, Affirm, Nissan pending); the Fremont 2008 parent-risk precedent. Corrections: Morgan Stanley not an ILC; EnerBank acquired; USAA not an ILC. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-15",
+    "checks": [
+      {"check": "Aggregate", "result": "23 ILCs / ~$247.4B (Mar 2025, FDIC RFI); UBS Bank USA ~$116.3B; grew from ~$165B (2020)."},
+      {"check": "Loophole", "result": "CEBA 1987 BHCA carve-out; 2006/2010 moratoria; 2020 Part 354 source-of-strength; Jul-2025 FDIC RFI; ICBA campaign."},
+      {"check": "Charters", "result": "UBS $116B, Sallie Mae $29.6B, Optum ~$20B, Beal $18B, Toyota ~$15-16B, Comenity $13.3B, BMW $12B (2023); Square $816M, Pitney Bowes $806M, Medallion $2.6B, Celtic $3.4B."},
+      {"check": "Approval wave", "result": "Ford/GM (conditional Jan 2026), Stellantis (May 2026), Edward Jones, Thrivent (Jun 2025); pending PayPal/Affirm/Nissan; Fremont 2008 precedent."}
+    ]
+  }
+}

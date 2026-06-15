@@ -18,25 +18,25 @@
 - **Meta** — 52 files
 - **Google** — 33 files
 - **OpenAI** — 30 files
+- **FDIC** — 29 files
 - **Oracle** — 28 files
-- **FDIC** — 24 files
 - **Chainlink** — 22 files
 - **Microsoft** — 22 files
 - **Amazon** — 22 files
 - **NVIDIA** — 19 files
+- **JPMorgan** — 18 files
 - **Anthropic** — 18 files
-- **JPMorgan** — 17 files
 - **Stargate** — 17 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `digitalid-corporate.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 10 shared entities
-- spec-network-overlay.json: 10 shared entities
-- spec-cross-system-contagion.json: 8 shared entities
-- spec-exchanges-asia.json: 8 shared entities
-- spec-sec-filings-primary.json: 7 shared entities
-- fin-coreweave-oracle.json: 7 shared entities
-- fin-google-amazon-anthropic-meta.json: 7 shared entities
-- geopolitics-allied-intel-nodes.json: 6 shared entities
+## Newest file `macro-uncovered-risk-pools.json` — related files by shared entities (verify cross-refs exist)
+- macro-history-dereg-manipulation.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities
+- spec-unwind-timing.json: 2 shared entities
+- macro-oil-backwardation.json: 2 shared entities
+- macro-hidden-sovereign-debt.json: 2 shared entities
+- spec-crypto-banking-debanking.json: 2 shared entities
+- macro-private-credit-bdc-stress.json: 2 shared entities
+- macro-cre-privatecredit.json: 2 shared entities

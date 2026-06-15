@@ -96,6 +96,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "BDCs": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
     "BLS": {
       "sector": "statistical_agency",
       "has_exogenous_revenue": true
@@ -264,12 +268,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CoBank": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "Coinbase": {
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
     "ColibriTD": {
       "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Commercial_Parents": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Congress": {
@@ -295,6 +307,10 @@
     "CoreWeave": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Corporate_Credit_Unions": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
     },
     "Courts": {
       "sector": "other",
@@ -420,6 +436,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FFCB_Funding": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "FHLB_System": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -438,6 +458,10 @@
     },
     "Family_Offices": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Farm_Credit_System": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
     "Farmington_Moonstone": {
@@ -612,6 +636,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Japanese_Banks": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "Jeb Hensarling": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -750,6 +778,10 @@
     },
     "Municipal_Debt": {
       "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
+    "NCUSIF": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "NRO": {
@@ -963,6 +995,10 @@
     "Ronin_Network": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Rural_Infrastructure": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Russia": {
       "sector": "other",
@@ -1282,6 +1318,10 @@
     },
     "US_Contingent_Liabilities": {
       "sector": "creditor",
+      "has_exogenous_revenue": false
+    },
+    "US_Farmland": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "US_Government": {
@@ -2999,6 +3039,32 @@
       "note": "64 months for laundering ~$2.2B; multi-jurisdiction developer-liability question."
     },
     {
+      "from": "US_Banks",
+      "to": "BDCs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$1.32T funded NDFI lending + ~$987B unfunded subscription lines (FDIC Q3-2025; JPM ~$50B, WFC ~$85B to funds) - GSIB balance-sheet exposure to the BDC / direct-lending complex via callable, undrawn lines",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-bdc-stress.json",
+      "note": ""
+    },
+    {
+      "from": "Retail_401k",
+      "to": "BDCs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "perpetual/evergreen + non-traded BDC shares with ~5%/quarter redemption gates (EO 14330 Aug-2025; ~$431-500B evergreen AUM) - daily-liquidity expectations funding gated illiquid direct-lending books; gates fired Q1-2026 (Blue Owl OTIC 40.7%, Cliffwater ~14%)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-private-credit-bdc-stress.json",
+      "note": ""
+    },
+    {
       "from": "SDNY",
       "to": "Tornado_Cash",
       "instrument": "regulatory_legal",
@@ -3230,6 +3296,32 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-epstein-document-authenticity.json",
+      "note": ""
+    },
+    {
+      "from": "Commercial_Parents",
+      "to": "ILCs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership + Part 354 source-of-strength commitments; commercial/fintech parents (UBS, Block, Ford, GM, Stellantis, PayPal-pending) own FDIC-insured ILCs without Fed consolidated (BHC) supervision - the loophole",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ilcs.json",
+      "note": ""
+    },
+    {
+      "from": "ILCs",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$247.4B FDIC-insured deposits (23 charters; UBS Bank USA ~$116B ~47% of sector) - a parallel insured-deposit pool growing via the 2025-26 commercial-parent approval wave",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ilcs.json,macro-uncovered-risk-pools.json",
       "note": ""
     },
     {
@@ -5677,6 +5769,45 @@
       "note": ""
     },
     {
+      "from": "Japanese_Banks",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "synthetic USD funding (FX swaps / yen carry) -> Treasury/CLO/leveraged-finance holdings; the largest US-resident claims of any banking system; Norinchukin force-sold ~$63B of Treasuries/EU sovereigns (2024) on the BoJ rate turn",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-foreign-bank-branches.json",
+      "note": ""
+    },
+    {
+      "from": "Foreign_Bank_US_Branches",
+      "to": "Repo_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$3.0-3.4T FDIC-uninsured, NY-concentrated book funded via wholesale repo/fed-funds + intra-firm 'net due'; IORB arbitrage (FHLB<->FBO substitution); outside the Dodd-Frank IHC ring-fence (branches excluded)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-foreign-bank-branches.json",
+      "note": ""
+    },
+    {
+      "from": "Federal_Reserve",
+      "to": "Foreign_Bank_US_Branches",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "central-bank USD swap lines (~$449B 2020 peak, 82% BoJ/ECB) + the FIMA repo facility - official dollar-liquidity support for the foreign-bank dollar-funding node",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-foreign-bank-branches.json",
+      "note": ""
+    },
+    {
       "from": "CoreWeave",
       "to": "NVIDIA",
       "instrument": "gpu_purchase",
@@ -5963,6 +6094,45 @@
       "note": ""
     },
     {
+      "from": "FFCB_Funding",
+      "to": "Farm_Credit_System",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$459B Systemwide funding securities (consolidated, joint-and-several; +30% since 2021; implicit GSE backing, FCSIC-insured, NOT US-guaranteed) funding a ~$544B agricultural GSE",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-farm-credit-system.json",
+      "note": ""
+    },
+    {
+      "from": "Farm_Credit_System",
+      "to": "US_Farmland",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "farm real-estate mortgage financing collateralized by farmland ($5,830/ac cropland 2025, decelerating); ~45.8% of all US ag credit; NPAs 1.00% (Sep 2025) up from 0.64%, charge-offs +72% into the China tariff shock",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-farm-credit-system.json",
+      "note": ""
+    },
+    {
+      "from": "CoBank",
+      "to": "Rural_Infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "wholesale + direct financing to electric/water/communications/broadband cooperatives in all 50 states (>75% of US electric distribution coops) - the FCS's non-farm rural-infrastructure exposure",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-farm-credit-system.json",
+      "note": ""
+    },
+    {
       "from": "Credit_Unions",
       "to": "US_household_credit",
       "instrument": "other",
@@ -5989,24 +6159,11 @@
       "note": ""
     },
     {
-      "from": "ILCs",
-      "to": "US_Banks",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "~$248B FDIC-insured but Fed-unsupervised charters (the loophole) - a parallel insured-deposit pool",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-uncovered-risk-pools.json",
-      "note": ""
-    },
-    {
       "from": "Foreign_Bank_US_Branches",
       "to": "SINK_lenders",
       "instrument": "other",
       "layer": "structural",
-      "raw_instrument": "~$2T+ US branches/agencies of foreign banks - wholesale dollar-funding/repo node (Fed IBA), outside the FDIC set",
+      "raw_instrument": "~$3.0-3.4T US branches/agencies of foreign banks - wholesale dollar-funding/repo node (Fed IBA), outside the FDIC set",
       "amount_usd": null,
       "status": "open",
       "declared_circular": false,
@@ -6262,6 +6419,45 @@
       "note": ""
     },
     {
+      "from": "Corporate_Credit_Unions",
+      "to": "Credit_Unions",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "settlement / correspondent liquidity / FedNow rails - 11 corporates intermediate payments + backup liquidity for ~4,287 CUs (the single-point tier that collapsed in 2009-10: US Central $32B + WesCorp $25B)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-credit-unions.json",
+      "note": ""
+    },
+    {
+      "from": "Credit_Unions",
+      "to": "NCUSIF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$1.78T insured shares on a $24.1B fund with a 1.30% fund ratio - BELOW the 1.33% normal operating level; the buffer absorbing the 2025-26 failure cluster is under target",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-credit-unions.json",
+      "note": ""
+    },
+    {
+      "from": "Credit_Unions",
+      "to": "CRE_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-business/CRE lending ($80.95B MBL, capped 12.25% of assets; multifamily originations +50% YoY) - a growth channel into the broader CRE stress as banks pull back",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-credit-unions.json",
+      "note": ""
+    },
+    {
       "from": "BaaS_Middleware",
       "to": "Sponsor_Banks",
       "instrument": "other",
@@ -6393,10 +6589,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 346,
-    "num_edges": 385,
+    "num_nodes": 356,
+    "num_edges": 397,
     "num_financial_edges": 130,
-    "num_structural_edges": 255,
+    "num_structural_edges": 267,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6447,33 +6643,38 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -6483,19 +6684,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -6506,8 +6696,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -6695,6 +6891,13 @@
         "in_robust_core": false
       },
       "Asia_local_currency_stablecoins": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BDCs": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6995,6 +7198,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CoBank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Coinbase": {
         "total_usd": 75188440,
         "circular_usd": 0,
@@ -7003,6 +7213,13 @@
         "in_robust_core": false
       },
       "ColibriTD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Commercial_Parents": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7050,6 +7267,13 @@
         "circularity_ratio": 0.714,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Corporate_Credit_Unions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Courts": {
         "total_usd": 0,
@@ -7268,6 +7492,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FFCB_Funding": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FHLB_System": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7297,6 +7528,13 @@
         "in_robust_core": false
       },
       "Family_Offices": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Farm_Credit_System": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7604,6 +7842,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Japanese_Banks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jeb Hensarling": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7843,6 +8088,13 @@
         "in_robust_core": false
       },
       "Municipal_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NCUSIF": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8215,6 +8467,13 @@
       },
       "Ronin_Network": {
         "total_usd": 625000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rural_Infrastructure": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8780,6 +9039,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Farmland": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Government": {
         "total_usd": 19000000000,
         "circular_usd": 0,
@@ -8966,7 +9232,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Banks",
-        "degree": 18,
+        "degree": 19,
         "neighbor_sectors": [
           "bank",
           "central_bank",
@@ -8979,7 +9245,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 14,
+        "source_files": 16,
         "layers": [
           "financial",
           "structural"
@@ -9216,6 +9482,23 @@
         "both_layers": true
       },
       {
+        "node": "Federal_Reserve",
+        "degree": 8,
+        "neighbor_sectors": [
+          "bank",
+          "financial_infra",
+          "macro_factor",
+          "other",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 6,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "JPMorgan",
         "degree": 6,
         "neighbor_sectors": [
@@ -9248,23 +9531,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Federal_Reserve",
-        "degree": 7,
-        "neighbor_sectors": [
-          "bank",
-          "financial_infra",
-          "macro_factor",
-          "other",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 5,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "MGX",

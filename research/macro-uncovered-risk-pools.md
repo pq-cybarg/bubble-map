@@ -24,8 +24,8 @@ The risk that **migrated off bank balance sheets** — and where AI-datacenter f
 - A GSE lending complex (funded via the Federal Farm Credit Banks Funding Corp) holding roughly **~$188B farm real-estate + ~$81B non-RE farm loans** at YE2024 — a **~$400B+ asset** GSE.
 - **Exposure:** concentrated in **farmland values and ag commodity cycles**; a farmland correction or trade-war ag shock is its tail — distinct from the bank/CRE map.
 
-## 5. Foreign-bank US branches (a ~$2T+ dollar-funding node)
-- US **branches/agencies of foreign banks** hold **~$2T+** in US assets (Fed **IBA** release), heavily in **wholesale dollar funding and repo** — a transmission node for offshore-dollar stress, outside the FDIC domestic-bank set.
+## 5. Foreign-bank US branches (a ~$3.0-3.4T dollar-funding node)
+- US **branches/agencies of foreign banks** hold **~$3.0-3.4T** in US assets (Fed **IBA** release), heavily in **wholesale dollar funding and repo** — a transmission node for offshore-dollar stress, outside the FDIC domestic-bank set.
 
 ## 6. The suppressed problem-bank total (hidden even within FDIC scope)
 - Since **Q4 2024 — the first time since 1990** — the FDIC publishes only the problem-bank **count** (~54), not the **asset total**, citing the risk of a "disorderly run." The distribution is deliberately below disclosure; the per-bank reconstruction in [[macro-bank-htm-marks]] partly recovers it.
@@ -39,15 +39,15 @@ Each pool below now has its own deep-dig block. **Most share the SAME underlying
 | Money market funds | **~$7.9T** | constant-NAV, run-prone, no FDIC; dominates repo + ~40% of T-bills | [[macro-money-market-funds]] |
 | Municipal / public finance | **~$4.2T** | ~48% household-held; pension + CRE + federal-cut crowd-out | [[macro-municipal-public-finance]] |
 | Family offices | **~$3.1T** | adviser exemption; swap-hidden leverage (Archegos); 10B-1 fix withdrawn | [[macro-family-offices]] |
-| Credit unions | **~$2.43T** | different regulator (NCUA); own HTM/CRE; 7-yr-high failure cluster | (above) |
-| Foreign-bank US branches | **~$2T+** | wholesale dollar-funding/repo node | (above) |
-| Private credit / NDFIs | **~$1.7–3T** | manager-marked NAVs; AI-datacenter-heavy; bank-to-NDFI ~$1.97T | [[macro-cre-privatecredit]] |
+| Credit unions | **~$2.43T** | different regulator (NCUA); own HTM/CRE; 7-yr-high failure cluster | [[macro-credit-unions]] |
+| Foreign-bank US branches | **~$3.0-3.4T** | wholesale dollar-funding/repo node; yen-carry channel | [[macro-foreign-bank-branches]] |
+| Private credit / NDFIs | **~$1.7–3T** | manager-marked NAVs; listed BDCs ~20% below NAV; bank-to-NDFI ~$1.32T | [[macro-cre-privatecredit]] · [[macro-private-credit-bdc-stress]] |
 | Hedge funds (basis trade) | **~$2.3T long Treasuries** | near-zero-haircut repo leverage in the $30T Treasury market; top-10 ~18:1 | [[macro-treasury-basis-trade]] |
 | Pensions (US public + LDI) | **~$1.27T unfunded; ~⅓ illiquid** | leveraged LDI (UK 2022); self-marked alts; net outflow | [[macro-pensions-ldi]] |
 | Mortgage REITs / REITs | **~$200B mREITs; >$4.5T CRE** | repo-funded ~6–9x on the same MBS banks/Fed hold | [[macro-mortgage-reits]] |
 | Consumer / auto ABS & subprime | **~$358B 2025 ABS; ~$400B invisible BNPL** | off-balance-sheet; subprime tail at 32-yr highs; collateral fraud | [[macro-consumer-abs-subprime]] |
-| Farm Credit System | **~$400B+** | GSE off the FDIC map; farmland/ag exposure | (above) |
-| Industrial loan companies | **~$248B** | FDIC-insured but Fed-unsupervised parents | (above) |
+| Farm Credit System | **~$544B** | GSE off the FDIC map; farmland/ag + China-tariff exposure | [[macro-farm-credit-system]] |
+| Industrial loan companies | **~$248B** | FDIC-insured but Fed-unsupervised parents; 2025-26 approval wave | [[macro-ilcs]] |
 | Fintech / BaaS / neobanks | tech-scale deposits | "FDIC-insured" conditional on a private ledger (Synapse: ~$85–96M lost) | [[macro-fintech-baas]] |
 
 **Honest tally:** the cleanly-sized, low-overlap pools alone (MMFs, agency/GSE complex, munis, credit unions, private credit, foreign-bank branches, family offices, ILCs, Farm Credit) sum to **~$33–37T outside the FDIC domestic-bank deposit lens — itself comparable to the ~$24T FDIC-insured bank asset base.** This is an order-of-magnitude **floor, not a precise sum**: the pools overlap heavily (MMFs/hedge funds/pensions all hold the same Treasuries; mREITs/banks/Fed hold the same agency MBS; pensions hold the private credit), so the real systemic point is the **shared collateral**, not the dollar total.
