@@ -13,5 +13,18 @@
 - **Tornado Cash / Roman Storm** — SDNY, **mixed verdict Aug 6 2025**: guilty of conspiracy to run an unlicensed money-transmitting business; **jury deadlocked** on money-laundering and sanctions conspiracies. DOJ moved (Mar 9 2026) to **retry** the deadlocked counts (~Oct 2026).
 - **International** — **Alexey Pertsev** convicted in the **Netherlands** (May 14 2024), **64 months**; released to monitoring Feb 2025, detained again pending appeal. Co-founder **Roman Semenov** OFAC-designated + charged, at large. *Developer liability is being litigated across jurisdictions.*
 
+## Emotional impact vs structural impact *(kept separate)*
+The case must rest on **structure, not sympathy** — so the two axes are split, and only one is load-bearing.
+
+**Emotional axis (real, but bracketed — *not* the argument).** Sympathy pulls both ways: open-source developers imprisoned for publishing non-custodial code (the "code is speech" cry; Pertsev 64mo, Samourai 5y/4y, Storm one count) **vs** the real victims of DPRK/Lazarus theft laundered through these tools (>$7.6B through Tornado Cash). Sympathy is not evidence; it's set aside so neither a "persecuted heroes" nor a "just launderers" framing gets to decide.
+
+**Structural axis (load-bearing).**
+1. **Developer-liability precedent** — does publishing immutable, non-custodial code create money-transmitter liability? Left **unsettled but chilling**: Storm convicted on the transmitter count while the jury **hung** on laundering/sanctions; Samourai ended in a plea (no appellate ruling); Pertsev convicted abroad. The theory advanced **without a clean appellate test**.
+2. **The law lagged the courts** — the OFAC immutable-code theory was **rejected** (*Van Loon*; delisting Mar 2025) and FinCEN's own guidance **contradicted** the Samourai theory — yet the prosecutions proceeded to conviction/plea anyway.
+3. **Chilling / US privacy-tool exit** — privacy wallets/mixers restricted or left the US (Wasabi/zkSNACKs, Phoenix); the realized effect is the **disappearance of compliant US financial-privacy tooling**.
+4. **Entrenchment of identified rails** — removing disintermediated privacy leaves only identified, intermediated, attestable rails — the same end-state as the digital-ID/device-attestation stack ([[digitalid-os-hardware-stack]]) and the incumbent re-platforming ([[spec-market-plumbing-control]] / [[spec-sdny-crypto-prosecution]] §6).
+
+**Why the separation matters:** a sympathy-based case collapses the moment a defendant is unsympathetic or a victim is named. A **structure-based** case is robust — **the anonymity option-set narrows regardless of any individual's guilt or innocence.** *(Dispositions/chilling/court-rejections are fact; the entrenchment read is labeled interpretation; intent not asserted.)*
+
 ## Why it belongs in this corpus
 This is the cleanest **privacy-vs-surveillance** case study here: the **same state apparatus** that pushes **digital-ID / age-verification surveillance** (`digitalid-*`, `age-verification-abolition`) simultaneously **criminalizes financial-privacy tooling** — on theories courts and agencies **partly rejected** — while **real Lazarus laundering** supplies the justification. It plugs straight into the **SDNY / "regulation by prosecution"** thread (`spec-sec-sdny-regulatory`) and the **DPRK/Lazarus** thread (Tasks #5/#7). Overlay only — never used in the formal proofs.
