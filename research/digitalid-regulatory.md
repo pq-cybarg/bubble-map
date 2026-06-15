@@ -76,7 +76,7 @@
 - **Instrument:** Regulation (EU) 2024/1183 (eIDAS 2.0) establishing the European Digital Identity Framework.
 - **Key dates:** In force 2024; **Member States must offer EUDI Wallets to all citizens by end of 2026**.
 - **Mandated:** Each Member State must make available at least one EUDI Wallet; large platforms/relying parties must accept it for authentication where strong user identification is required.
-- **Tech required:** Interoperable digital identity wallet; selective disclosure; supports age attestation.
+- **Tech required:** Interoperable digital identity wallet; selective disclosure; supports age attestation. **The hardware enforcement layer** — the secure-element (WSCD) binding required for "high" assurance, and the dependency on Google/Apple device attestation — is mapped in [[digitalid-os-hardware-stack]].
 - **Status:** Toolbox / Architecture Reference Framework being finalised; national wallet rollouts ramping into 2026.
 - **Sources:**
   - https://digital-strategy.ec.europa.eu/en/policies/eudi-wallet-toolbox

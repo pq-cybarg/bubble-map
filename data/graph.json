@@ -20,6 +20,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "AI_Native_OS": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "AMD": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -39,6 +43,10 @@
     "ATT": {
       "sector": "telecom",
       "has_exogenous_revenue": true
+    },
+    "Age_Assurance_Issuers": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Agency_MBS_Market": {
       "sector": "financial_infra",
@@ -348,7 +356,15 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Developing_State_Infrastructure": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Device_Age_Attestation": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Device_Ownership_Erosion": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
@@ -367,6 +383,10 @@
     "Disney_Studios_Coalition": {
       "sector": "ip_rightsholder",
       "has_exogenous_revenue": true
+    },
+    "Distressed_Sovereigns": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Dual_Mandate": {
       "sector": "statistic",
@@ -635,6 +655,10 @@
     "LG": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "LGFV_Debt": {
+      "sector": "creditor",
+      "has_exogenous_revenue": false
     },
     "LSEG": {
       "sector": "financial_infra",
@@ -1255,6 +1279,10 @@
     "US_Congress": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "US_Contingent_Liabilities": {
+      "sector": "creditor",
+      "has_exogenous_revenue": false
     },
     "US_Government": {
       "sector": "state",
@@ -3660,6 +3688,71 @@
       "note": ""
     },
     {
+      "from": "China",
+      "to": "Developing_State_Infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "collateralized/resource-backed lending with escrow liens + confidentiality/cross-default/no-Paris-Club terms; converts to operational control on distress (Laos national grid 90% lease, Angola oil escrow, Hambantota 99-yr lease) - ~$385B hidden, ~50% missing from World Bank DRS",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
+      "from": "PBoC",
+      "to": "Distressed_Sovereigns",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$240B off-book rescue lending (~$170B RMB swap lines) as lender of last resort, rolled over for years outside IMF/World Bank disclosure; props FX reserves (Argentina, Pakistan)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
+      "from": "LGFV_Debt",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$7-9T off-budget local-government financing vehicles (augmented deficit ~13-14% of GDP, IMF 2025) - hidden inside China's own books",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "US_Contingent_Liabilities",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "off the ~$38T headline: GSE MBS ~$7.7T + FHLB ~$1.2T + FDIC DIF $153.9B vs >$10T insured + Fed deferred asset $243B + ~$78-80T 75-yr social-insurance gap (FRUSG total liabilities $45.5T / net -$39.9T)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
+      "from": "US_Contingent_Liabilities",
+      "to": "SINK_debt",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contingent in normal times, on-book in a crisis - 2008 GSE conservatorship, 2020 ESF/Fed facilities, 2023 SVB rescue each converted off-book exposure into Treasury/Fed cost",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
       "from": "NVIDIA",
       "to": "OpenAI",
       "instrument": "equity",
@@ -4892,6 +4985,84 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-treasury-basis-trade.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "Device_Ownership_Erosion",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Windows 11 TPM 2.0/Secure Boot/CPU hard requirement + mandatory Microsoft account + Store ads + Windows 10 EOL (Oct 2025; ESU $30 or MS-account-gated 'free') stranding ~240-400M PCs",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "Device_Ownership_Erosion",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "parts-pairing/serialization gating genuine-part repair (Oregon banned it 2025); bootloader/attestation as the ownership-control root",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
+      "note": ""
+    },
+    {
+      "from": "Device_Ownership_Erosion",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "locked bootloaders + secure boot + Pluton -> hardware attestation chain that gates payments/DRM/age-gated services to blessed, account-linked devices (third-party parts + custom ROMs fail integrity)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "AI_Native_OS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Copilot + Recall (screenshot-everything; 2024 backlash, rebuilt 2025) bind personalization/memory to a central account identity - the new account lock-in",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Native_OS",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the account-bound AI assistant becomes the OS entry point, deepening the identity binding that the attestation/age layer rides on",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
+      "note": ""
+    },
+    {
+      "from": "Age_Assurance_Issuers",
+      "to": "Device_Age_Attestation",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "issue device-bound credentials only AFTER collecting government ID / passport-NFC / face scan; ZK hides the birthdate from the website, not from the issuer; enrollment honeypots leaked (Discord ~70k IDs, Tea ~72k; AEPD fined Yoti EUR950k)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-device-ownership-erosion.json",
       "note": ""
     },
     {
@@ -6196,10 +6367,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 339,
-    "num_edges": 372,
+    "num_nodes": 346,
+    "num_edges": 383,
     "num_financial_edges": 130,
-    "num_structural_edges": 242,
+    "num_structural_edges": 253,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6250,6 +6421,10 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -6258,16 +6433,12 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -6279,14 +6450,14 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -6297,14 +6468,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -6371,6 +6542,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "AI_Native_OS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AMD": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6401,6 +6579,13 @@
       },
       "ATT": {
         "total_usd": 20000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Age_Assurance_Issuers": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6945,7 +7130,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Developing_State_Infrastructure": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Device_Age_Attestation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Device_Ownership_Erosion": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6974,6 +7173,13 @@
         "in_robust_core": false
       },
       "Disney_Studios_Coalition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Distressed_Sovereigns": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7443,6 +7649,13 @@
         "in_robust_core": false
       },
       "LG": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LGFV_Debt": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8534,6 +8747,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Contingent_Liabilities": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Government": {
         "total_usd": 19000000000,
         "circular_usd": 0,
@@ -8761,6 +8981,25 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 9,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "other",
+          "sink",
+          "state"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -8879,6 +9118,24 @@
         "both_layers": true
       },
       {
+        "node": "China",
+        "degree": 10,
+        "neighbor_sectors": [
+          "commodity",
+          "creditor",
+          "defense",
+          "other",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 7,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Oracle",
         "degree": 8,
         "neighbor_sectors": [
@@ -8896,24 +9153,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "US_Government",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_data",
-          "critical_minerals",
-          "other",
-          "sink",
-          "state"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Ripple",
@@ -8934,21 +9173,21 @@
         "both_layers": true
       },
       {
-        "node": "China",
-        "degree": 8,
+        "node": "Apple",
+        "degree": 5,
         "neighbor_sectors": [
-          "commodity",
-          "defense",
-          "other",
-          "state",
-          "statistic"
+          "chip_vendor",
+          "critical_minerals",
+          "satellite",
+          "surveillance"
         ],
-        "n_neighbor_sectors": 5,
-        "source_files": 6,
+        "n_neighbor_sectors": 4,
+        "source_files": 5,
         "layers": [
+          "financial",
           "structural"
         ],
-        "both_layers": false
+        "both_layers": true
       },
       {
         "node": "JPMorgan",
@@ -8968,16 +9207,16 @@
         "both_layers": true
       },
       {
-        "node": "Apple",
-        "degree": 4,
+        "node": "Microsoft",
+        "degree": 9,
         "neighbor_sectors": [
-          "chip_vendor",
-          "critical_minerals",
-          "satellite",
-          "surveillance"
+          "ai_lab",
+          "neocloud",
+          "surveillance",
+          "tech"
         ],
         "n_neighbor_sectors": 4,
-        "source_files": 4,
+        "source_files": 5,
         "layers": [
           "financial",
           "structural"
@@ -9034,23 +9273,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "CoreWeave",
-        "degree": 10,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "private_credit",
-          "sink"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 3,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       }
     ]
   }

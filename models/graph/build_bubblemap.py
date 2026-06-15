@@ -95,7 +95,12 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  # digital-ID OS/hardware layer
  "EUDI_Wallet":"EU Digital Identity Wallet","Device_Age_Attestation":"Device / OS age attestation",
  "Secure_Element_Vendors":"Secure-element / eUICC vendors","Alternative_OS_Exclusion":"Alternative-OS exclusion",
- "UK_Digital_ID":"UK digital ID (BritCard / One Login)","Labour_Together":"Labour Together"}
+ "UK_Digital_ID":"UK digital ID (BritCard / One Login)","Labour_Together":"Labour Together",
+ # hidden / off-book sovereign debt
+ "Developing_State_Infrastructure":"Developing-state infrastructure","Distressed_Sovereigns":"Distressed sovereigns (swap-line)",
+ "LGFV_Debt":"China LGFV debt","US_Contingent_Liabilities":"US contingent liabilities",
+ # device-ownership erosion -> OS identity
+ "Device_Ownership_Erosion":"Device-ownership erosion","AI_Native_OS":"AI-native OS","Age_Assurance_Issuers":"Age-assurance issuers"}
 def disp_label(nid):
     if nid in LABELS: return LABELS[nid]
     if nid in MIXED: return nid

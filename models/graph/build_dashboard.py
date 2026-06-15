@@ -333,11 +333,17 @@ if os.path.isdir(DOCS):
                 out.append(f"<blockquote>{inline(' '.join(buf))}</blockquote>"); continue
             if bullet(ln):
                 buf=[]
-                while i<len(lines) and bullet(lines[i]): buf.append(inline(_re.sub(r'^\s*[-*]\s','',lines[i]))); i+=1
+                while i<len(lines):
+                    if bullet(lines[i]): buf.append(inline(_re.sub(r'^\s*[-*]\s','',lines[i]))); i+=1
+                    elif lines[i].strip()=="" and i+1<len(lines) and bullet(lines[i+1]): i+=1  # blank line between items stays in the list
+                    else: break
                 out.append("<ul>"+"".join(f"<li>{b}</li>" for b in buf)+"</ul>"); continue
             if numbered(ln):
                 buf=[]
-                while i<len(lines) and numbered(lines[i]): buf.append(inline(_re.sub(r'^\s*\d+\.\s','',lines[i]))); i+=1
+                while i<len(lines):
+                    if numbered(lines[i]): buf.append(inline(_re.sub(r'^\s*\d+\.\s','',lines[i]))); i+=1
+                    elif lines[i].strip()=="" and i+1<len(lines) and numbered(lines[i+1]): i+=1  # blank line between items stays in the same <ol> (fixes 1,1,1 restart)
+                    else: break
                 out.append("<ol>"+"".join(f"<li>{b}</li>" for b in buf)+"</ol>"); continue
             if ln.strip()=="": i+=1; continue
             buf=[ln]; i+=1

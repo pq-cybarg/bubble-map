@@ -15,14 +15,14 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 50 files
-- **Google** — 32 files
+- **Meta** — 52 files
+- **Google** — 33 files
 - **OpenAI** — 30 files
 - **Oracle** — 27 files
+- **FDIC** — 23 files
 - **Chainlink** — 22 files
+- **Microsoft** — 22 files
 - **Amazon** — 22 files
-- **FDIC** — 22 files
-- **Microsoft** — 21 files
 - **NVIDIA** — 19 files
 - **Anthropic** — 18 files
 - **JPMorgan** — 17 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `digitalid-os-hardware-stack.json` — related files by shared entities (verify cross-refs exist)
-- spec-unc-nk-attribution-map.json: 1 shared entities
-- spec-supplychain-shaihulud-extortion.json: 1 shared entities
-- fin-microsoft-openai.json: 1 shared entities
-- macro-ai-power-grid-bottleneck.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- commodities-metals.json: 1 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
+## Newest file `digitalid-device-ownership-erosion.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities
+- fin-ai-depreciation-debttrap.json: 3 shared entities
+- commodities-metals.json: 3 shared entities
+- spec-supplychain-shaihulud-extortion.json: 3 shared entities
+- fin-coreweave-oracle.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- macro-ai-power-grid-bottleneck.json: 3 shared entities

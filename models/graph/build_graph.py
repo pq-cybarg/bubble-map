@@ -161,6 +161,11 @@ NODE_META = {
  "EUDI_Wallet":("standards",False),"Device_Age_Attestation":("surveillance",False),
  "Secure_Element_Vendors":("semiconductor",True),"Alternative_OS_Exclusion":("surveillance",False),
  "UK_Digital_ID":("state",False),"Labour_Together":("political",False),
+ # hidden / off-book sovereign debt (overlay)
+ "Developing_State_Infrastructure":("state",False),"Distressed_Sovereigns":("state",False),
+ "LGFV_Debt":("creditor",False),"US_Contingent_Liabilities":("creditor",False),
+ # device-ownership erosion -> OS identity (overlay)
+ "Device_Ownership_Erosion":("surveillance",False),"AI_Native_OS":("tech",False),"Age_Assurance_Issuers":("surveillance",False),
 }
 
 edges=[]

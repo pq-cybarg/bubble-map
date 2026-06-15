@@ -242,6 +242,11 @@ Municipal_Debt,Pension_Funds,other,,open,False,False,macro-municipal-public-fina
 CRE_Market,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
 Federal_Transfers,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
 Municipal_Debt,US_household_credit,other,,open,False,False,macro-municipal-public-finance.json
+China,Developing_State_Infrastructure,other,,open,False,False,macro-hidden-sovereign-debt.json
+PBoC,Distressed_Sovereigns,other,,open,False,False,macro-hidden-sovereign-debt.json
+LGFV_Debt,China,other,,open,False,False,macro-hidden-sovereign-debt.json
+US_Government,US_Contingent_Liabilities,other,,open,False,False,macro-hidden-sovereign-debt.json
+US_Contingent_Liabilities,SINK_debt,other,,open,False,False,macro-hidden-sovereign-debt.json
 NVIDIA,Mistral,equity,,closed,True,False,fin-nvidia-openai.json
 OpenAI,AMD,warrant,,committed,False,False,fin-nvidia-openai.json
 OpenAI,Broadcom,compute_commitment,,committed,False,False,"fin-nvidia-openai.json,fin-google-amazon-anthropic-meta.json"
@@ -304,6 +309,12 @@ CPI_Rent,CPI_Methodology,other,,structural,False,False,macro-rent-cpi-divergence
 Hedge_Funds,Treasury_Market,other,,open,False,False,macro-treasury-basis-trade.json
 Hedge_Funds,Repo_Market,other,,open,False,False,macro-treasury-basis-trade.json
 Repo_Market,Treasury_Market,other,,open,False,False,macro-treasury-basis-trade.json
+Microsoft,Device_Ownership_Erosion,other,,open,False,False,digitalid-device-ownership-erosion.json
+Apple,Device_Ownership_Erosion,other,,open,False,False,digitalid-device-ownership-erosion.json
+Device_Ownership_Erosion,Device_Age_Attestation,other,,open,False,False,digitalid-device-ownership-erosion.json
+Microsoft,AI_Native_OS,other,,open,False,False,digitalid-device-ownership-erosion.json
+AI_Native_OS,Device_Age_Attestation,other,,open,False,False,digitalid-device-ownership-erosion.json
+Age_Assurance_Issuers,Device_Age_Attestation,surveillance_security,,open,False,False,digitalid-device-ownership-erosion.json
 1789_Capital,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
 a16z,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
 CFTC,Polymarket,other,,recurring,False,False,spec-prediction-markets.json

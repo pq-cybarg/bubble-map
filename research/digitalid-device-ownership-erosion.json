@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "title": "Device-ownership erosion to OS-bound identity - right-to-repair, Windows 'Mac-ification', the Windows 10 forced cutover, AI-native OS lock-in, and the catch that ZK age-proofs still require PII at enrollment",
+    "generated": "2026-06-14",
+    "frame": "A single trust chain is being assembled from the silicon up: locked bootloaders + parts-pairing + secure boot erode device OWNERSHIP; Windows is closing (mandatory Microsoft account, TPM 2.0, the Windows-10 end-of-life cutover stranding hundreds of millions of PCs); AI-native OS features bind personalization and compute to a cloud identity; and on top of it all sits OS-level identity/age-assurance enforced by device attestation - so only a 'blessed,' account-linked, attested device can fully participate (payments, DRM, age-gated services). The privacy promise is hollow: even ZERO-KNOWLEDGE age proofs require surrendering a government ID, passport-NFC read, or face scan to the ISSUER at enrollment; ZK only hides the birthdate from the website, and device-binding defeats true anonymity. Companion to [[digitalid-os-hardware-stack]] (the enforcement layer) and [[digitalid-orchestration-real-incentive]] (the why).",
+    "relevance": "Grounds WHY incumbents are the chokepoint at the device layer and connects the ownership-erosion / repair / Windows / AI-OS threads to the identity stack; supplies the rigorous 'ZK does not save it' argument (PII at enrollment) that backs the project's reject-age-verification stance ([[age-verification-abolition]]).",
+    "sources": "iFixit/Repair.org/PIRG + EU Directive (EU) 2024/1799 + CA SB 244/Oregon SB 1596/Colorado (right-to-repair); FTC 'Nixing the Fix' + FTC/MN/IL v. Deere (2025); Microsoft/BleepingComputer/Tom's Hardware/Neowin (Windows account, TPM 2.0, Pluton, Win10 EOL/ESU, Store ads, 24H2 breakage); DoublePulsar/TechSpot/GeekWire (Recall); Apple security blog (Private Cloud Compute); EU age-verification blueprint + Google Wallet ZKP + EFF + Brave + AEPD (Yoti EUR950k) + TechCrunch (Discord/Tea breaches). Full URLs in the rendered .md.",
+    "note": "Stranded-PC (~240-400M) and e-waste (~1.06B lb) figures are analyst/advocacy estimates (weak); KB5063878 SSD causation and Pluton lock-in are contested."
+  },
+  "ownership_erosion": {
+    "summary": "You increasingly hold a license to a device the vendor still controls - parts-pairing, locked bootloaders, in-hardware subscriptions, and remote bricking.",
+    "points": [
+      {"item": "Parts-pairing / serialization", "detail": "Apple pairs component serials (screen, battery, camera, Face ID) to the logic board, so genuine-part swaps trigger warnings/loss of function unless Apple 'authorizes' them; John Deere restricts diagnostic/calibration software to dealers so farmers can't complete repairs. Oregon's SB 1596 (2024) became the first state law to BAN parts-pairing for devices made on/after 1 Jan 2025.", "grade": "fact"},
+      {"item": "Subscriptions + bricking", "detail": "In-hardware subscriptions (BMW heated seats, ~$18/mo - dropped Sept 2023 after backlash; Mercedes ~$1,200/yr to unlock factory-capable acceleration; the Snoo bassinet paywalled features, dead on resale); remote bricking (Spotify Car Thing bricked Dec 2024, told owners to discard it); Nintendo's 2025 terms reserve the right to render a Switch 'permanently unusable' for modification.", "grade": "fact + contested (Nintendo 'brick' framing)"},
+      {"item": "Locked bootloaders", "detail": "US/Canada Snapdragon Samsung devices generally can't unlock the bootloader; unlocking trips the Knox e-fuse permanently, disabling Samsung Pay/Secure Folder - justified by DRM/payments attestation. The bootloader lock is the same hardware-attestation root that later gates identity.", "grade": "fact"}
+    ]
+  },
+  "right_to_repair": {
+    "summary": "The countervailing movement is winning laws - but parts-pairing and attestation blunt them.",
+    "points": [
+      {"item": "Laws", "detail": "EU Right to Repair Directive (EU) 2024/1799 (in force Jul 2024; transposition by Jul 2026) mandates affordable repair, parts/tools/info, and bars software techniques that impede repair. US: California SB 244 (effective Jul 2024, 7-year parts/docs for >$100 goods); Oregon's parts-pairing ban; Colorado (wheelchairs, farm equipment, parts-pairing). FTC 'Nixing the Fix' (2021) found 'scant evidence' repair limits are justified by safety.", "grade": "fact"},
+      {"item": "John Deere enforcement", "detail": "The 2023 AFBF-Deere MOU (no enforcement mechanism, 30-day exit) was followed by FTC + Minnesota + Illinois suing Deere (Jan 2025) for monopolizing repair; the court denied Deere's motion to dismiss (June 2025); a ~$99M class-action settlement reported 2026 with a second suit pending.", "grade": "fact + contested (2026 settlement terms via trade press)"},
+      {"item": "Self-repair programs criticized", "detail": "Right to Repair Europe argues Apple's Self Service Repair fails as genuine R2R because parts-pairing/serialization and post-repair 'authorization' still gate function and make repairs uneconomic; France opened an investigation into parts-pairing as a possible deceptive practice. The repair laws and the attestation chain pull in opposite directions.", "grade": "contested (advocacy critique)"}
+    ]
+  },
+  "windows_closing": {
+    "summary": "Windows is being closed toward an account-bound, attested appliance - and the Windows-10 cutover forces the move.",
+    "points": [
+      {"item": "Mandatory account + TPM + Pluton", "detail": "Windows 11 requires a Microsoft Account at setup (the local-account bypass scripts are being removed), plus TPM 2.0, UEFI Secure Boot, and a supported-CPU list; the Microsoft-designed Pluton security processor shifts the root-of-trust toward Microsoft (lock-in fears partly rebutted - Linux still boots - but the control-shift critique stands). KB5036980 (Apr 2024) put Store/Copilot ads in the Start menu by default.", "grade": "fact + contested (Pluton lock-in)"},
+      {"item": "Windows 10 forced cutover", "detail": "Windows 10 support ended 14 Oct 2025. Consumer Extended Security Updates run only to 13 Oct 2026 via three paths: free IF you sync settings to a Microsoft Account, 1,000 Microsoft Rewards points, or a one-time $30 (the 'free' path forces an account + cloud sync). An estimated ~240-400M PCs can't meet the Windows 11 bar (analyst/advocacy estimates), drawing e-waste criticism (~1.06B lb cited).", "grade": "fact (EOL/ESU) + weak (stranded-PC/e-waste estimates)"},
+      {"item": "24H2 breakage", "detail": "Windows 11 24H2 caused BSODs on DRAM-less NVMe SSDs (Oct 2024, fixed via firmware); the Aug-2025 update KB5063878 was linked by community testing to SSDs/HDDs disappearing and possible data corruption under sustained writes (Phison/WD responded; Microsoft reported difficulty reproducing - causation contested). The forced cutover is happening while updates are visibly breaking machines.", "grade": "fact (24H2 SSD BSOD) + contested (KB5063878 causation)"}
+    ]
+  },
+  "ai_native_os": {
+    "summary": "AI-native OS features make the cloud-bound account the OS entry point - the new lock-in.",
+    "points": [
+      {"item": "Recall + Copilot", "detail": "Microsoft Recall (announced May 2024, Copilot+ PCs) screenshots the screen into a searchable index; early builds captured passwords/financial data unencrypted, forcing a June-2024 pull and an April-2025 relaunch (VBS enclaves, AES-256-GCM, Windows Hello, opt-in) - but a searchable screen-history honeypot persists. Copilot is woven into the OS.", "grade": "fact"},
+      {"item": "Apple / Google", "detail": "Apple Intelligence runs on-device with overflow to 'Private Cloud Compute' (Secure Enclave, attested, stateless) but is gated to recent Apple silicon + the Apple account; Google's Gemini is increasingly the default Android assistant tied to a Google account. The assistant's memory/personalization is bound to a cloud identity, raising switching costs beyond traditional OS lock-in.", "grade": "fact (architecture) + contested (lock-in framing)"}
+    ]
+  },
+  "zk_still_needs_pii": {
+    "summary": "The decisive catch: even ZERO-KNOWLEDGE age verification requires surrendering PII to the issuer first - ZK hides the birthdate from the website, not from the issuer, and device-binding defeats anonymity.",
+    "points": [
+      {"item": "How the ZK age-proof actually works", "detail": "Credential-based age verification is two steps: (1) an ISSUER (government / mobile-OS / bank) verifies the user's real identity and date of birth - via passport-NFC, ID scan, bank KYC, or facial age estimation - and signs a credential; (2) ONLY THEN can the holder present a ZK 'over-18' proof to a website without revealing the birthdate. So PII is disclosed to the issuer even when concealed from the relying party. Confirmed by the EU age-verification blueprint and Google's own Wallet-ZKP description (2025).", "grade": "fact (EU blueprint; Google)"},
+      {"item": "Every enrollment method requires PII", "detail": "Per the EU blueprint, onboarding is via eIDs, passports/ID cards, national identity providers, bank KYC, or MNO SIM-issuance identity - all PII. Even 'facial age estimation' (Yoti) PROCESSES A BIOMETRIC: Spain's AEPD fined Yoti EUR950k (Mar 2026) for unlawful biometric processing, invalid consent, and excessive retention - rejecting the vendor's claim that age estimation isn't special-category data.", "grade": "fact (EU blueprint; AEPD ruling)"},
+      {"item": "The enrollment honeypot is real", "detail": "Discord's age-verification vendor (5CA) breach exposed ~70,000 government-ID images (Oct 2025); the Tea app leaked ~72,000 images incl. ID photos + selfies (and ~1.1M messages, Jul 2025). The PII surrendered at enrollment is a concrete breach surface, not hypothetical - and Discord expanded mandatory verification anyway (EFF, 2026).", "grade": "fact"},
+      {"item": "The honest framing", "detail": "ZK reduces disclosure to the RELYING PARTY but not to the ISSUER; it requires trusting the issuer + a hardware-attested device/wallet; and unlinkability + privacy-preserving revocation are optional/forthcoming, not shipped by default. Device-binding/attestation means access is never truly anonymous - the only zero-PII option is no verification (EFF, Brave). A reported case had Yoti flag a GrapheneOS user during a console age check - privacy-seeking penalized.", "grade": "fact (EFF/Brave) + weak (GrapheneOS-flag case single-source)"}
+    ]
+  },
+  "convergence": {
+    "summary": "It is one trust chain, not separate stories.",
+    "points": [
+      {"item": "The chain", "detail": "Locked bootloaders + parts-pairing (ownership erosion) -> secure boot + Pluton + hardware-backed attestation (Play Integrity, Apple App Attest) -> OS-bound identity/age-assurance: only a blessed, account-linked, attested device can fully participate. This structurally PENALIZES repair (third-party parts break attestation) and OS freedom (custom ROMs fail integrity, [[digitalid-os-hardware-stack]]), and turns the device itself into the enforcement point for the control rail in [[digitalid-orchestration-real-incentive]].", "grade": "labeled interpretation (synthesis of fact-graded components)"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "Secure boot, attestation, and on-device AI are genuine security/utility features - the point is they ALSO compose into an ownership/anonymity-eroding chokepoint.",
+      "Stranded-PC (~240-400M) and e-waste (~1.06B lb) are analyst/advocacy estimates (weak); KB5063878 SSD data-loss causation and Pluton 'lock-in' are contested.",
+      "No claim that ZK is broken cryptographically - the claim is narrower and stronger: ZK does not remove the enrollment-side PII disclosure to the issuer, and device-binding defeats anonymity.",
+      "No motive is imputed to any vendor; effects, incentives, and the composed capability are documented, intent is not inferred.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Microsoft", "to": "Device_Ownership_Erosion", "instrument": "relationship", "raw_instrument": "Windows 11 TPM 2.0/Secure Boot/CPU hard requirement + mandatory Microsoft account + Store ads + Windows 10 EOL (Oct 2025; ESU $30 or MS-account-gated 'free') stranding ~240-400M PCs", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: OS closing / forced cutover; excluded from proofs"},
+    {"from": "Apple", "to": "Device_Ownership_Erosion", "instrument": "relationship", "raw_instrument": "parts-pairing/serialization gating genuine-part repair (Oregon banned it 2025); bootloader/attestation as the ownership-control root", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: repair erosion; excluded from proofs"},
+    {"from": "Device_Ownership_Erosion", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "locked bootloaders + secure boot + Pluton -> hardware attestation chain that gates payments/DRM/age-gated services to blessed, account-linked devices (third-party parts + custom ROMs fail integrity)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: the trust chain to OS identity; excluded from proofs"},
+    {"from": "Microsoft", "to": "AI_Native_OS", "instrument": "relationship", "raw_instrument": "Copilot + Recall (screenshot-everything; 2024 backlash, rebuilt 2025) bind personalization/memory to a central account identity - the new account lock-in", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: AI-OS lock-in; excluded from proofs"},
+    {"from": "AI_Native_OS", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "the account-bound AI assistant becomes the OS entry point, deepening the identity binding that the attestation/age layer rides on", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: identity binding; excluded from proofs"},
+    {"from": "Age_Assurance_Issuers", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "issue device-bound credentials only AFTER collecting government ID / passport-NFC / face scan; ZK hides the birthdate from the website, not from the issuer; enrollment honeypots leaked (Discord ~70k IDs, Tea ~72k; AEPD fined Yoti EUR950k)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-device-ownership-erosion.json", "note": "OVERLAY: ZK-still-needs-PII; excluded from proofs"}
+  ],
+  "limits": "Maps the device-up trust chain: ownership erosion (parts-pairing, locked bootloaders, in-hardware subscriptions, remote bricking) vs right-to-repair (EU Directive 2024/1799, CA SB 244, Oregon parts-pairing ban, FTC v. Deere); Windows closing (mandatory MS account, TPM 2.0, Pluton, Store ads) + the Windows-10 EOL forced cutover (Oct 2025; ESU $30/account-gated; ~240-400M PCs stranded - estimate) + 24H2 breakage; AI-native OS lock-in (Recall, Apple Intelligence, Gemini); and the decisive catch that ZK age-proofs still require PII to the ISSUER at enrollment (EU blueprint; Google Wallet ZKP; AEPD EUR950k Yoti; Discord/Tea breaches; EFF/Brave). Stranded-PC/e-waste figures and KB5063878 causation are weak/contested. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Ownership/repair", "result": "Apple parts-pairing + Apple's Apr-2024 response; Oregon SB 1596 parts-pairing ban (2025); EU Directive 2024/1799; CA SB 244; FTC+MN+IL v. Deere (Jan 2025, motion to dismiss denied Jun 2025)."},
+      {"check": "Windows", "result": "Win11 mandatory MS account/TPM 2.0/Pluton; Start-menu ads (KB5036980); Win10 EOL 14 Oct 2025, consumer ESU to 13 Oct 2026 ($30/Rewards/account-sync); ~240-400M stranded (estimate); 24H2 SSD BSOD + KB5063878 (contested)."},
+      {"check": "AI-OS", "result": "Recall announced May 2024, pulled Jun 2024, relaunched Apr 2025; Apple Private Cloud Compute; Gemini default Android assistant."},
+      {"check": "ZK-PII", "result": "EU blueprint + Google Wallet ZKP: issuer verifies ID/DOB before any ZK proof; AEPD fined Yoti EUR950k (Mar 2026, biometric); Discord ~70k IDs / Tea ~72k breaches; EFF/Brave: only zero-PII option is no verification."}
+    ]
+  }
+}
