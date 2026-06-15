@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "title": "Digital ID at the OS / app-store / hardware layer - the device-attestation enforcement chokepoint (eIDAS EUDI wallet, Google Play Integrity, Apple Declared Age Range, secure elements)",
+    "generated": "2026-06-14",
+    "frame": "Digital identity and age verification are being pushed DOWN from websites/software to the OPERATING SYSTEM, APP STORE, and HARDWARE layers, where enforcement is binding and anonymity is hard. The EU's eIDAS 2.0 wallet must bind credentials to a certified secure element (WSCD) for 'high' assurance; the EU's age-verification app and app-store age laws route the duty through Google's Play Integrity and Apple's App Attest / Declared Age Range; and the Google-Apple mobile-OS duopoly becomes the de facto age-attestation authority. This is the technical enforcement layer under the policy wave in [[digitalid-regulatory]] and the UK push in [[spec-uk-labour-tbi-influence]]. Companion to [[digitalid-orchestration-real-incentive]] and [[age-verification-abolition]].",
+    "relevance": "Closes the 'software-only' gap in the digital-ID coverage: maps the OS/hardware enforcement layer (secure elements, device attestation, the app-store duopoly) that turns a digital-ID credential from optional into binding. Connects the UK/EU digital-ID legs to the existing Google/Apple nodes and to the hardware supply chain.",
+    "sources": "EU Digital Identity ARF (GitHub eudi-doc-architecture-and-reference-framework) + eudi.dev; EU Commission digital-strategy (age-verification blueprint v1 Jul 2025 / v2 Oct 2025); Regulation (EU) 2024/1183; Android & Apple developer docs (Play Integrity, Credential Manager, Keystore/StrongBox attestation, Play Age Signals, DeviceCheck/App Attest, Declared Age Range); Chrome Digital Credentials API; Ofcom (Online Safety Act HEAA); Utah SB 142 / Texas / Louisiana App Store Accountability Acts; GSMA RSP/eUICC; Security Explorations (eSIM); GrapheneOS. Full URLs in the rendered .md.",
+    "note": "WebFetch was blocked during research; figures are from search extracts of the cited primary sources. Some exact dates (EUDI deadline month; iOS 26 GA) graded contested."
+  },
+  "eudi_wallet_hardware_binding": {
+    "summary": "The EU wallet must bind credentials to certified hardware (a WSCD) to reach 'high' assurance - the hardware root of trust, mandatory for member states to offer by ~end-2026.",
+    "points": [
+      {"item": "WSCD is the hardware root of trust", "detail": "The Architecture & Reference Framework defines the Wallet Secure Cryptographic Device (WSCD) as trusted hardware providing a secure environment for keys; the wallet provider must ensure access to a WSCD secure enough to achieve Level of Assurance 'High' (which the Regulation mandates for the wallet).", "grade": "fact (EUDI ARF)"},
+      {"item": "Four WSCD types", "detail": "Remote (an HSM run by the wallet provider) or local internal (integrated in the device - 'eSIM/eUICC and eSE') or local external (a smartcard/hardware token when device hardware is insufficient). Device-binding is proven via the Wallet Unit Attestation (WUA)/Wallet Trust Evidence (WTE) proof-of-possession.", "grade": "fact (EUDI ARF / eudi.dev)"},
+      {"item": "Mandatory availability", "detail": "Regulation (EU) 2024/1183 entered into force May 2024; member states must make >=1 EUDI Wallet available free to citizens within 24 months of the implementing acts - widely reported as end-2026. Use is voluntary and alternatives must remain (the exact month is contested across legal summaries).", "grade": "fact (Regulation) + contested (exact deadline month)"}
+    ]
+  },
+  "eu_age_verification_app": {
+    "summary": "The EU's white-label age-verification app routes device/app integrity through Google and Apple - the dependency that makes the duopoly the enforcer.",
+    "points": [
+      {"item": "Blueprint + pilots", "detail": "The Commission released the white-label age-verification blueprint on 14 Jul 2025 (enhanced v2 Oct 2025), built by the Scytales + T-Systems (T-Scy) consortium; 2025 pilots in Denmark, France, Greece, Italy, Spain (Cyprus/Ireland named as front-runners). It uses zero-knowledge proofs so a user proves 'over 18' without revealing date of birth.", "grade": "fact (EU Commission)"},
+      {"item": "Google/Apple dependency", "detail": "The reference Android app's technical spec plans to integrate Google's Play Integrity API (checks Google-licensed OS, Play-Store install, device security) - which excludes GrapheneOS/LineageOS/custom ROMs; future versions reference Apple App Attestation. v2 adds support for the W3C Digital Credentials API 'increasingly becoming available in modern operating systems.' Scytales said integrity checks 'should not be restricted' to Google/Apple APIs and key attestation is 'likely' supported - but Play Integrity remained the documented path (contested).", "grade": "fact (planned integration) + contested (Google-free alternative is stated intent, not shipped)"}
+    ]
+  },
+  "android_layer": {
+    "summary": "Android pushes attestation, on-device mDL, hardware keystore, and OS-level age signals.",
+    "points": [
+      {"item": "Play Integrity + hardware signals", "detail": "Play Integrity (replaced SafetyNet; migration ended 20 May 2025) verifies that requests come from a genuine app on a certified Android device; from May 2025 Google required hardware-backed security signals for stronger checks, making it harder for rooted/custom-ROM devices to pass.", "grade": "fact (Android docs)"},
+      {"item": "Credential Manager + mDL + keystore attestation", "detail": "Android supports on-device IDs via the Identity Credential API + ISO 18013-5 mDL, presented through Credential Manager; hardware-backed Keystore attestation reports the security level as Software, TrustedEnvironment (TEE), or StrongBox (a dedicated secure element). The W3C Digital Credentials API shipped stable in Chrome 141 (Sept 2025), letting websites request mDL presentation for identity AND age.", "grade": "fact (Android/Chrome docs)"},
+      {"item": "Play Age Signals API", "detail": "A Google Play client API giving developers users' age-related signals (verification status, supervision level, age range); rollout began for users in Brazil 17 Mar 2026, with US states (Utah May 2026, Louisiana Jul 2026) next - OS/store-level age determination feeding all downstream apps.", "grade": "fact (Android docs)"}
+    ]
+  },
+  "apple_layer": {
+    "summary": "Apple added OS-level age sharing (Declared Age Range) on top of Secure-Enclave attestation.",
+    "points": [
+      {"item": "Declared Age Range API", "detail": "Introduced at WWDC 2025 / iOS 26: apps request an age bracket (under-13 / 13-15 / 16+) without the birth date (which 'stays with Apple'); a Feb-2026 update returns the age-assurance method and whether regulatory requirements apply, targeting Brazil, Australia, Singapore, Utah, Louisiana. Trade analysis frames it as Apple quietly making the device the age-check authority.", "grade": "fact (Apple) + contested (the 'quiet device-level' framing is analysis)"},
+      {"item": "App Attest / Secure Enclave", "detail": "App Attest (DeviceCheck framework, since iOS 14) generates a key pair held in the Secure Enclave; Apple signs an attestation that the key came from a genuine Apple device and embeds a hash of the app identity. App Store age-rating bands were overhauled in 2025 with per-country age requirements.", "grade": "fact (Apple docs)"}
+    ]
+  },
+  "appstore_mandates_duopoly": {
+    "summary": "App Store Accountability laws and the OSA place the verification duty on Apple/Google - concentrating enforcement at two private gatekeepers.",
+    "points": [
+      {"item": "App Store Accountability Acts", "detail": "Utah SB 142 (first in the US; effective 7 May 2025, compliance 6 May 2026) requires app-store providers to verify a user's age category at account creation, tie minors to a parent account, and obtain verifiable parental consent. Texas (effective 1 Jan 2026) and Louisiana followed - all placing the age/consent duty on the app-store operator.", "grade": "fact (state statutes)"},
+      {"item": "UK Online Safety Act HEAA", "detail": "From 25 Jul 2025 platforms with adult content must deploy 'highly effective age assurance'; by Feb 2026 Ofcom had opened investigations into 90+ services; fines up to £18m or 10% of global turnover plus blocking orders.", "grade": "fact (Ofcom)"},
+      {"item": "The duopoly chokepoint", "detail": "App-store laws + Play Age Signals + Declared Age Range concentrate enforcement at the two mobile-OS gatekeepers: the OS/store becomes the age-attestation authority for all downstream apps and (via the Digital Credentials API) websites.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "sim_hardware_layer": {
+    "summary": "The SIM/eSIM/secure-element layer is a parallel hardware root - GSMA-rooted, and not unbreakable.",
+    "points": [
+      {"item": "eSIM/eUICC as a WSCD", "detail": "eSIMs are remotely provisioned via GSMA RSP; every certified eSIM chains to the GSMA root CA, and the ARF lists eSIM/eUICC as a valid local WSCD for the EU wallet. Telco-hosted eUICC/HSM has been proposed (academically) as a credentialing root of trust.", "grade": "fact (GSMA/ARF) + weak (telco-root proposal)"},
+      {"item": "Not unbreakable", "detail": "In 2025 Security Explorations demonstrated a hack against a consumer GSMA eUICC / Kigen eSIM, extracting private ECC keys identifying the card - undermining the 'non-extractable hardware' premise for that case.", "grade": "fact (researcher disclosure; scope developing)"}
+    ]
+  },
+  "civil_liberties": {
+    "summary": "Device attestation as web/app gatekeeping forecloses anonymity, sideloading, and alternative operating systems.",
+    "points": [
+      {"item": "Alternative-OS exclusion", "detail": "Play Integrity's strong checks depend on hardware key attestation tied to Google services, which can treat GrapheneOS/custom ROMs as uncertified; apps have already blocked access on modified firmware including GrapheneOS. Apps CAN whitelist alternative-OS keys via the standard hardware-attestation API, but Play Integrity does not by default.", "grade": "fact (GrapheneOS docs/precedent)"},
+      {"item": "Attestation-as-gatekeeping", "detail": "Once websites and apps require device attestation for age/identity, only 'approved' OS+hardware combinations can access services - ending anonymity and threatening sideloading and alternative OSes. The EU age-verification-app Google-dependency row is the concrete flashpoint.", "grade": "contested (advocacy/analysis)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "The credential is only as binding as the hardware that holds it and the OS that checks it - and that layer is two companies plus a certified-silicon supply chain.",
+    "points": [
+      {"item": "Why it matters", "detail": "The digital-ID/age-verification debate is usually framed at the policy/website level, but enforcement is migrating to the device: eIDAS 'high' assurance REQUIRES a certified secure element; the EU age app and US app-store laws route the duty through Google's Play Integrity and Apple's App Attest/Declared Age Range; and the W3C Digital Credentials API lets any website demand an OS-issued credential. That makes the Google-Apple mobile-OS duopoly the de facto identity/age authority and turns 'optional' digital ID (UK, [[spec-uk-labour-tbi-influence]]) into something the device can make binding - while attestation quietly excludes anonymity and alternative OSes.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim that secure-element binding or device attestation is inherently malicious - it is genuine security engineering; the point is that it ALSO becomes an access-control chokepoint.",
+      "No claim that the EU wallet or UK digital ID is currently mandatory at the OS level - the enforcement capability exists and is being mandated piecemeal (app-store laws), not (yet) universally.",
+      "Exact dates (EUDI availability month; iOS 26 GA; per-jurisdiction Play Age Signals rollout) are snippet-sourced and graded contested.",
+      "Weak/under-sourced: Titan M2/Tensor branding, the EU AV-app '2-minute hack', Samsung Knox/TPM age tie-in, a directly-attributable EFF quote.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Google", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "Play Integrity API (hardware-backed signals required since May 2025) + Play Age Signals API + Credential Manager/mDL + W3C Digital Credentials API in Chrome 141 - Android side of the age-attestation chokepoint", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: enforcement chokepoint; excluded from proofs"},
+    {"from": "Apple", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "App Attest/DeviceCheck via Secure Enclave + Declared Age Range API (iOS 26) + App Store age-rating bands - Apple side of the age-attestation chokepoint", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: enforcement chokepoint; excluded from proofs"},
+    {"from": "EUDI_Wallet", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "the EU age-verification app plans Play Integrity + Apple App Attest; v2 uses the W3C Digital Credentials API - the EU wallet/age app depends on the duopoly's device attestation", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: dependency on duopoly; excluded from proofs"},
+    {"from": "UK_Digital_ID", "to": "Device_Age_Attestation", "instrument": "relationship", "raw_instrument": "GOV.UK Wallet and Online Safety Act 'highly effective age assurance' ride the mobile-OS/app-store layer - UK digital ID depends on the same device chokepoint", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: dependency on duopoly; excluded from proofs"},
+    {"from": "EUDI_Wallet", "to": "Secure_Element_Vendors", "instrument": "relationship", "raw_instrument": "eIDAS 2.0 ARF requires binding to a certified WSCD (secure enclave / eSE / eUICC / HSM / smartcard) for Level of Assurance High - legal mandate flowing down to certified secure-element hardware", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: hardware mandate; excluded from proofs"},
+    {"from": "Device_Age_Attestation", "to": "Alternative_OS_Exclusion", "instrument": "relationship", "raw_instrument": "hardware-backed attestation (StrongBox/TEE; Secure Enclave) gates app/web access and can exclude GrapheneOS/custom ROMs and sideloading - the anonymity/alt-OS cost", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "digitalid-os-hardware-stack.json", "note": "OVERLAY: civil-liberties cost; excluded from proofs"}
+  ],
+  "limits": "Maps the OS/app-store/hardware enforcement layer for digital ID and age verification: eIDAS 2.0 EUDI wallet WSCD/secure-element binding for LoA High (mandatory ~end-2026); the EU age-verification app's dependency on Google Play Integrity + Apple App Attest; Android (Play Integrity, Credential Manager/mDL, StrongBox attestation, Play Age Signals, Chrome Digital Credentials API) and Apple (Declared Age Range, App Attest/Secure Enclave); App Store Accountability Acts (Utah/Texas/Louisiana) + UK OSA shifting the duty to the duopoly; the SIM/eSIM/eUICC layer (GSMA-rooted, and the 2025 Kigen eUICC key extraction); and the alternative-OS-exclusion cost. Overlay edges excluded from proofs; several dates graded contested (WebFetch was unavailable during research).",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "EUDI WSCD", "result": "ARF: WSCD required for LoA High; types remote-HSM/local-eSE-eUICC/external-smartcard; Reg 2024/1183, wallets by ~end-2026."},
+      {"check": "EU age app", "result": "Blueprint Jul 2025 (v2 Oct 2025), Scytales+T-Systems; pilots DK/FR/GR/IT/ES; ZK over-18; plans Play Integrity + App Attest."},
+      {"check": "Android/Apple", "result": "Play Integrity HW signals req. May 2025; Play Age Signals (Brazil 17 Mar 2026); Chrome 141 Digital Credentials API; Apple Declared Age Range (iOS 26 / WWDC 2025), App Attest via Secure Enclave."},
+      {"check": "Mandates/duopoly/SIM", "result": "Utah SB142 (eff. 7 May 2025), Texas (1 Jan 2026), Louisiana ASAAs; UK OSA HEAA from 25 Jul 2025 (90+ Ofcom probes); GSMA eUICC; Security Explorations Kigen eSIM key extraction (2025); GrapheneOS exclusion precedent."}
+    ]
+  }
+}

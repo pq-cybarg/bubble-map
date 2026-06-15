@@ -44,6 +44,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "Alternative_OS_Exclusion": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Amazon": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -344,6 +348,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Device_Age_Attestation": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Devin Nunes": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -362,6 +370,10 @@
     },
     "Dual_Mandate": {
       "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "EUDI_Wallet": {
+      "sector": "standards",
       "has_exogenous_revenue": false
     },
     "EeroQ": {
@@ -627,6 +639,10 @@
     "LSEG": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Labour_Together": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Lambda": {
       "sector": "neocloud",
@@ -1044,6 +1060,10 @@
       "sector": "ai_data",
       "has_exogenous_revenue": true
     },
+    "Secure_Element_Vendors": {
+      "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
     "Senate Banking Committee": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1199,6 +1219,10 @@
     "UBS_OConnor": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "UK_Digital_ID": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "UK_LDI_Funds": {
       "sector": "financier",
@@ -3112,6 +3136,45 @@
       "status": "open",
       "declared_circular": false,
       "cancelable": false,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Labour_Together",
+      "to": "UK_Labour_government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "June-2025 'BritCard' digital-ID paper (authors incl. Kirsty Innes, ex-TBI); founded by McSweeney - advocacy pipeline into No.10",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "UK_Labour_government",
+      "to": "UK_Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mandatory digital ID announced Sep 2025 -> made optional Jan 2026 after a ~2.9M-signature petition; on the GOV.UK One Login backbone",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
+      "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Tony_Blair_Institute",
+      "to": "UK_Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading external advocate (TBI Sep-2025 'super ID' paper); Ellison/Oracle funding + Whitehall contracts = structural conflict",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
       "note": ""
     },
@@ -5755,6 +5818,84 @@
       "note": ""
     },
     {
+      "from": "Google",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Play Integrity API (hardware-backed signals required since May 2025) + Play Age Signals API + Credential Manager/mDL + W3C Digital Credentials API in Chrome 141 - Android side of the age-attestation chokepoint",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "App Attest/DeviceCheck via Secure Enclave + Declared Age Range API (iOS 26) + App Store age-rating bands - Apple side of the age-attestation chokepoint",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
+      "from": "EUDI_Wallet",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the EU age-verification app plans Play Integrity + Apple App Attest; v2 uses the W3C Digital Credentials API - the EU wallet/age app depends on the duopoly's device attestation",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
+      "from": "UK_Digital_ID",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GOV.UK Wallet and Online Safety Act 'highly effective age assurance' ride the mobile-OS/app-store layer - UK digital ID depends on the same device chokepoint",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
+      "from": "EUDI_Wallet",
+      "to": "Secure_Element_Vendors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "eIDAS 2.0 ARF requires binding to a certified WSCD (secure enclave / eSE / eUICC / HSM / smartcard) for Level of Assurance High - legal mandate flowing down to certified secure-element hardware",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
+      "from": "Device_Age_Attestation",
+      "to": "Alternative_OS_Exclusion",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "hardware-backed attestation (StrongBox/TEE; Secure Enclave) gates app/web access and can exclude GrapheneOS/custom ROMs and sideloading - the anonymity/alt-OS cost",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-os-hardware-stack.json",
+      "note": ""
+    },
+    {
       "from": "Prince_Group",
       "to": "SINK_scam_victims",
       "instrument": "other",
@@ -6055,10 +6196,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 333,
-    "num_edges": 363,
+    "num_nodes": 339,
+    "num_edges": 372,
     "num_financial_edges": 130,
-    "num_structural_edges": 233,
+    "num_structural_edges": 242,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6109,12 +6250,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
         "Amazon",
@@ -6125,10 +6266,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -6145,13 +6291,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -6166,22 +6313,16 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -6266,6 +6407,13 @@
         "in_robust_core": false
       },
       "Agency_MBS_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Alternative_OS_Exclusion": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6797,6 +6945,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Device_Age_Attestation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Devin Nunes": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6826,6 +6981,13 @@
         "in_robust_core": false
       },
       "Dual_Mandate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EUDI_Wallet": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7288,6 +7450,13 @@
         "in_robust_core": false
       },
       "LSEG": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Labour_Together": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8022,6 +8191,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Secure_Element_Vendors": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Senate Banking Committee": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8290,6 +8466,13 @@
       },
       "UBS_OConnor": {
         "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UK_Digital_ID": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8638,6 +8821,25 @@
         "both_layers": true
       },
       {
+        "node": "Google",
+        "degree": 8,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "dlt",
+          "ip_rightsholder",
+          "space_real_economy",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 7,
         "neighbor_sectors": [
@@ -8714,24 +8916,6 @@
         "both_layers": true
       },
       {
-        "node": "Google",
-        "degree": 7,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "dlt",
-          "ip_rightsholder",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "Ripple",
         "degree": 7,
         "neighbor_sectors": [
@@ -8777,6 +8961,23 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Apple",
+        "degree": 4,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "critical_minerals",
+          "satellite",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 4,
         "layers": [
           "financial",
           "structural"
@@ -8850,23 +9051,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "MP_Materials",
-        "degree": 4,
-        "neighbor_sectors": [
-          "defense",
-          "hyperscaler",
-          "other",
-          "state"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       }
     ]
   }

@@ -16,12 +16,12 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 50 files
-- **Google** — 31 files
+- **Google** — 32 files
 - **OpenAI** — 30 files
 - **Oracle** — 27 files
+- **Chainlink** — 22 files
 - **Amazon** — 22 files
 - **FDIC** — 22 files
-- **Chainlink** — 21 files
 - **Microsoft** — 21 files
 - **NVIDIA** — 19 files
 - **Anthropic** — 18 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-uncovered-risk-pools.json` — related files by shared entities (verify cross-refs exist)
-- macro-history-dereg-manipulation.json: 3 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
-- influence-congress-funding-compromise.json: 2 shared entities
-- influence-ad-censorship.json: 2 shared entities
-- spec-unwind-timing.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- macro-oil-backwardation.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
+## Newest file `digitalid-os-hardware-stack.json` — related files by shared entities (verify cross-refs exist)
+- spec-unc-nk-attribution-map.json: 1 shared entities
+- spec-supplychain-shaihulud-extortion.json: 1 shared entities
+- fin-microsoft-openai.json: 1 shared entities
+- macro-ai-power-grid-bottleneck.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- commodities-metals.json: 1 shared entities
+- spec-unwind-timing.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities

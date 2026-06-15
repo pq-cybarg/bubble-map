@@ -157,6 +157,10 @@ NODE_META = {
  "Subprime_Auto_ABS":("private_credit",False),"Tricolor_Holdings":("private_credit",False),"BNPL_Phantom_Debt":("private_credit",False),
  "Municipal_Debt":("financial_infra",True),"Federal_Transfers":("state",True),"US_household_credit":("retail",True),
  "Credit_Unions":("bank",True),"ILCs":("bank",True),"Foreign_Bank_US_Branches":("bank",True),
+ # digital-ID OS/hardware enforcement layer (overlay)
+ "EUDI_Wallet":("standards",False),"Device_Age_Attestation":("surveillance",False),
+ "Secure_Element_Vendors":("semiconductor",True),"Alternative_OS_Exclusion":("surveillance",False),
+ "UK_Digital_ID":("state",False),"Labour_Together":("political",False),
 }
 
 edges=[]
