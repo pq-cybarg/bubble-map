@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "title": "Pensions and LDI - the retirement balance sheet inside private markets, and the UK 2022 doom-loop precedent",
+    "generated": "2026-06-14",
+    "frame": "Pension funds are a multi-trillion retirement pool that has migrated ~a third of the two largest US funds into manager-marked illiquids and uses leveraged liability-driven investing (LDI) that already broke once - the UK September 2022 gilt doom-loop. This block documents the LDI precedent, the US public-pension alternatives shift, the denominator/self-marking problem, and the demographic drawdown. Companion to [[macro-uncovered-risk-pools]], [[macro-private-credit-marks]], and [[self_marked_value]].",
+    "relevance": "Adds the pension pool to the uncovered stack; connects the self-marked-value thread to retirement balance sheets; supplies the LDI leverage precedent for the Fed-reaction and contagion threads; feeds the municipal block (pension crowd-out).",
+    "sources": "Bank of England + SUERF/Parliament (UK LDI 2022); The Pensions Regulator (250bp buffer); Equable State of Pensions 2025; Pew (alts shift); CalPERS/CalSTRS investment disclosures; Milliman PFI (corporate DB); PBGC FY2024; Jefferies H1-2025 Secondary Market Review; S&P Global (PE over-allocation). Full URLs in the rendered .md."
+  },
+  "uk_ldi_2022": {
+    "summary": "A leveraged hedge strategy turned a gilt sell-off into a self-reinforcing collateral spiral - the live precedent.",
+    "points": [
+      {"item": "The doom loop", "detail": "The 23 Sep 2022 'mini-budget' spiked 30yr gilt yields ~120bp+ in days; leveraged LDI funds posted gilts as collateral, so falling gilt prices triggered margin calls -> forced gilt selling -> higher yields -> more calls (the Bank of England's 'vicious spiral').", "grade": "fact (BoE)"},
+      {"item": "Size and backstop", "detail": "UK DB liabilities hedged via LDI grew ~£400bn (2011) to ~£1.5T (2020) - roughly two-thirds of UK GDP. The BoE announced gilt buying up to £5bn/day (the '£65bn' headline = the 13-day ceiling) but ACTUALLY bought ~£19.3bn - the backstop worked mostly via announcement.", "grade": "fact"},
+      {"item": "Forced flows + reform", "detail": "BoE staff estimate margin/collateral calls >£70bn and forced LDI gilt sales >£36bn over 23 Sep-14 Oct 2022. Aftermath: TPR/FPC require leveraged LDI to hold a >=250bp yield-resilience buffer plus an operational buffer. A 2025 gilt sell-off re-tested it - wider buffers held without BoE intervention.", "grade": "fact + contested (2025 re-test)"}
+    ]
+  },
+  "us_public_pension_alts": {
+    "summary": "Roughly a third of the two largest US funds now sits in valuation-priced illiquids to chase a ~6.9% assumption.",
+    "points": [
+      {"item": "Funding status", "detail": "US state/local plans: aggregate funded ratio ~80% (2024) improving to ~82.5% (2025); unfunded ~$1.27T (2025, down from $1.54T). FY2025 returns averaged ~9.5% vs an assumed ~6.9% - the improvement is return-driven, not structural, so it reverses in a drawdown.", "grade": "fact (Equable)"},
+      {"item": "The alternatives shift", "detail": "Alts rose from ~11% (2006) to ~26% (2016) to ~34% (2022) of public-pension portfolios as public equity fell below 50% - plans took illiquidity/asset risk to hit the assumed return.", "grade": "fact (Pew)"},
+      {"item": "The two largest funds", "detail": "CalPERS (~$556B, Jun 30 2025): private equity ~17.7%, real assets ~13.1%, private debt ~3.8% (new private-credit sleeve target ~8%) - ~34% illiquid. CalSTRS (~$370B): private equity 15.1%, real estate 12.8% - ~28% illiquid. Roughly a third of each sits in marks, not prices.", "grade": "fact (CalPERS/CalSTRS)"}
+    ]
+  },
+  "denominator_problem": {
+    "summary": "Pension books carry manager-marked NAVs - the same self-marked defect, on the retirement balance sheet.",
+    "points": [
+      {"item": "Manager-marked NAVs", "detail": "Private-market values in pension books are manager/valuation-priced, not market-priced - directly the self-marked-value theme ([[self_marked_value]], [[macro-private-credit-marks]]). Stale private marks lag public drawdowns, pushing funds OVER their PE targets: >50% of US plans were over-allocated to PE in 2025 filings (S&P Global).", "grade": "fact"},
+      {"item": "Realizable vs marked", "detail": "H1-2025 secondaries: average LP portfolios traded ~90% of NAV, buyout ~94%, tail-end (>10yr) funds below 75%, distressed sellers 25%+ discounts (Jefferies) - direct evidence the NAV marks overstate realizable value.", "grade": "fact (Jefferies)"}
+    ]
+  },
+  "corporate_and_drawdown": {
+    "summary": "Corporate DB is overfunded (and offloading to insurers); public DB is in net outflow.",
+    "points": [
+      {"item": "Corporate DB (the opposite sign)", "detail": "Milliman 100 funded ratio ~108% (end-2025) - corporate plans are OVERfunded, driving LDI de-risking and pension risk transfer (annuity buyouts that relocate liabilities onto life insurers, [[spec-insurance-bermuda]]). Do not conflate with underfunded public plans (~82%).", "grade": "fact (Milliman)"},
+      {"item": "Demographic drawdown", "detail": "Public plans run net cash outflow ~1.7% of assets (2024); mature plans (retirees > active contributors) rely on returns/asset sales to pay benefits. Negative cash flow + illiquid alts means stress can force sales of the LIQUID sleeve (or secondaries at a discount), since privates can't be sold at NAV.", "grade": "fact + weak (forced-sale inference)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Leverage that already broke once, plus self-marked illiquids on the retirement balance sheet.",
+    "points": [
+      {"item": "Why it matters", "detail": "Pensions are where leveraged rate-hedging (LDI, proven fragile in 2022) and manager-marked illiquids (the self-marked-value defect) meet the household's retirement claim. The same rate/credit common factor ([[macro-cross-sectional-analysis]], ~91%) that prices the bank HTM hole and private-credit NAVs also prices pension alts and gilt/Treasury LDI collateral - and the demographic outflow removes the buy-and-hold cushion.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim US public pensions are insolvent - aggregate funded ratio ~82%; the point is leverage (LDI) and self-marked illiquids plus net outflow, not present insolvency.",
+      "The UK '£65bn' is the BoE ceiling; actual purchases were ~£19.3bn - the distinction is stated, not the headline.",
+      "Corporate DB (~108%) and public DB (~82%) cut opposite directions and are not conflated.",
+      "Forced-selling-in-stress is graded weak (analytical), not a realized loss event.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Pension_Funds", "to": "PrivateCredit_Funds", "instrument": "relationship", "raw_instrument": "direct-lending allocations (CalPERS ~8% target, CalSTRS adding ~2%) - the fastest-growing pension sleeve, manager-marked NAVs", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-pensions-ldi.json", "note": "OVERLAY: self-marked allocation; excluded from proofs"},
+    {"from": "Pension_Funds", "to": "PrivateEquity_Funds", "instrument": "relationship", "raw_instrument": "LP commitments to manager-marked PE/real-asset interests (~34% of CalPERS, ~28% of CalSTRS illiquid; >50% of US plans over PE target via the denominator effect)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-pensions-ldi.json", "note": "OVERLAY: denominator/self-marking; excluded from proofs"},
+    {"from": "UK_LDI_Funds", "to": "Treasury_Market", "instrument": "relationship", "raw_instrument": "leveraged gilt collateral (~£1.5T hedged) - the 2022 doom loop forced >£36bn of gilt selling on margin calls; 250bp+ buffer reform; same sovereign-collateral fragility as US Treasuries", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-pensions-ldi.json", "note": "OVERLAY: LDI collateral spiral; excluded from proofs"},
+    {"from": "Pension_Funds", "to": "Life_Insurers", "instrument": "relationship", "raw_instrument": "pension risk transfer / annuity buyouts (corporate LDI de-risking relocates liabilities onto life insurers and their captive marks)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-pensions-ldi.json", "note": "OVERLAY: liability relocation; excluded from proofs"}
+  ],
+  "limits": "Documents the UK Sep-2022 LDI doom loop (~£1.5T hedged; calls >£70bn; forced sales >£36bn; BoE ceiling £65bn / actual ~£19.3bn; 250bp buffer reform); US public-pension alts shift (~5% 2000 -> ~35% 2022; CalPERS ~34% / CalSTRS ~28% illiquid; unfunded ~$1.27T; ~82% funded); the manager-marked NAV/denominator problem (>50% over PE target; secondaries 75-94% of NAV); corporate DB overfunded (~108%) offloading to insurers; and net-outflow demographic drawdown. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "UK LDI", "result": "~£1.5T hedged (2020); calls >£70bn, forced sales >£36bn (BoE/SUERF); BoE bought ~£19.3bn of a £65bn ceiling; 250bp buffer (TPR Apr 2023)."},
+      {"check": "US public pensions", "result": "Funded ~80% (2024) -> ~82.5% (2025); unfunded ~$1.27T; alts ~35% (2022); CalPERS ~$556B/PE 17.7%; CalSTRS ~$370B/PE 15.1%."},
+      {"check": "Self-marking", "result": ">50% of plans over PE target (S&P 2025); secondaries avg ~90% of NAV, tail <75% (Jefferies H1-2025)."},
+      {"check": "Corporate/drawdown", "result": "Milliman 100 ~108% (end-2025); pension risk transfer to insurers; public plans net outflow ~1.7%/yr."}
+    ]
+  }
+}

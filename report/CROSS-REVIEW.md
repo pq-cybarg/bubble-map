@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 48 files
+- **Meta** — 50 files
 - **Google** — 31 files
 - **OpenAI** — 30 files
 - **Oracle** — 27 files
 - **Amazon** — 22 files
+- **FDIC** — 22 files
+- **Chainlink** — 21 files
 - **Microsoft** — 21 files
-- **Chainlink** — 19 files
 - **NVIDIA** — 19 files
 - **Anthropic** — 18 files
-- **FDIC** — 18 files
+- **JPMorgan** — 17 files
 - **Stargate** — 17 files
-- **JPMorgan** — 16 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
 ## Newest file `macro-uncovered-risk-pools.json` — related files by shared entities (verify cross-refs exist)
-- influence-ad-censorship.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 3 shared entities
 - spec-crypto-banking-debanking.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
 - influence-congress-funding-compromise.json: 2 shared entities
+- influence-ad-censorship.json: 2 shared entities
+- spec-unwind-timing.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
+- macro-oil-backwardation.json: 2 shared entities
 - macro-cre-privatecredit.json: 2 shared entities
-- spec-sec-filings-primary.json: 1 shared entities

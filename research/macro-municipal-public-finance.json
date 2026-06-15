@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Municipal and public finance - the ~$4.2T public-balance-sheet tail where CRE, pensions and federal cuts converge",
+    "generated": "2026-06-14",
+    "frame": "The ~$4.2T municipal market is held ~48% by households, so distress lands on retirement balance sheets, not bank capital. Munis rarely default outright (IG ~0.1%); the risk is a grinding crowd-out as ~$1.27T of unfunded pensions + OPEB, back-loaded CRE-assessment erosion (the urban doom loop), and a ~$1T/decade federal-transfer withdrawal hit the same budgets at once - the public backstop itself now stretched. Companion to [[macro-uncovered-risk-pools]], [[macro-pensions-ldi]], and [[macro-cre-privatecredit]].",
+    "relevance": "Adds the public-balance-sheet tail to the uncovered stack; ties the pensions block (crowd-out) and the CRE block (assessment-lag doom loop) to municipal credit; documents federal-funding-cut transmission to state/local solvency.",
+    "sources": "SIFMA municipal statistics; Bond Buyer (holder mix); Equable + Pew + Reason (pensions); WTTW (Chicago) + S&P (outlooks); PROMESA board (Puerto Rico); MMA (impairments); PREA + comptroller/city reports (urban doom loop); KFF/Commonwealth/Pew (Medicaid cuts); Bond Buyer + Fitch (hospital/higher-ed). Full URLs in the rendered .md."
+  },
+  "market_holders": {
+    "summary": "~$4.2T, ~48% household-held - a diffuse, retail/retirement loss pool.",
+    "points": [
+      {"item": "Size + issuance", "detail": "~$4.2T outstanding (SIFMA, Q4 2024); record issuance ($513.6B in 2024, +33%; $162.8B in Q2 2025). Revenue bonds are ~60% of new issuance - more idiosyncratic credit risk than GO.", "grade": "fact (SIFMA)"},
+      {"item": "Holders", "detail": "Households ~48% (direct + SMAs), mutual funds 21%, insurers 9%, banks/CUs 9%, ETFs 4%, MMFs 3%, foreign 3% (Sept 2025). Banks+CUs fell ~19% since 2022 (rate hit + the TCJA weakening the muni tax shield). Household dominance means distress transmits to retail/retirement balance sheets, not bank capital.", "grade": "fact (Bond Buyer/Fed)"}
+    ]
+  },
+  "pension_crowd_out": {
+    "summary": "Statutorily senior pension costs ratchet up faster than revenue - the Chicago loop.",
+    "points": [
+      {"item": "The national gap", "detail": "State/local unfunded pensions ~$1.27T (2025 est., Equable; ~$1.48T market-value, Reason); unfunded OPEB ~22% of long-term liabilities. Worst states (Pew, % own-source revenue): Illinois 197%, New Jersey 162%, Mississippi 150%, Connecticut 148%, Kentucky 135%.", "grade": "fact (Pew/Equable) + contested (Reason measure)"},
+      {"item": "Chicago", "detail": "~$35.9B owed to 4 funds (2024); police/fire ~24.5% funded, municipal ~26% - among the worst-funded large cities. A 2025 police/fire pension boost worsened the fiscal condition; S&P revised the outlook to negative (Nov 2025). The canonical loop: pension law -> negative outlook -> higher borrowing cost -> tighter budget.", "grade": "fact (WTTW/S&P)"}
+    ]
+  },
+  "cre_doom_loop": {
+    "summary": "Falling office values cut property-tax assessments with a 2-3 year lag - the urban doom loop.",
+    "points": [
+      {"item": "Mechanism + cases", "detail": "Office vacancy -> lower assessed value -> lower property-tax levy -> revenue shortfall, concentrated in office-dependent downtowns. San Francisco: record 36.6% office vacancy (Q1 2024), a structural deficit (~$936M cumulative over FY2027-28; ~$296M + ~$640M). NYC: office = 20.6% of the property-tax levy (FY2025), out-year gaps up to ~$10B (FY2027). >=20 of the 25 most populous cities reported FY2026 budget gaps; finance-officer optimism fell 64%->45% (NLC 2025).", "grade": "fact + contested (office-value projections)"},
+      {"item": "Back-loaded", "detail": "Assessment lag means 2022-2024 CRE value losses hit municipal revenue in 2025-2027 - the loop is back-loaded and correlated with the separate CRE/bank block ([[macro-cre-privatecredit]]).", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "federal_and_revenue_tails": {
+    "summary": "Federal cuts plus deteriorating revenue-bond sectors hit simultaneously.",
+    "points": [
+      {"item": "Federal-funding withdrawal", "detail": "H.R.1 reconciliation cuts federal Medicaid >$1T over 10 years (~$88B/yr minimum), +11.8M uninsured (KFF/Commonwealth). States must backfill or cut, transmitting stress to local GO/revenue credits - the specific risk NYC and rating agencies cite for out-year gaps.", "grade": "fact"},
+      {"item": "Revenue-bond tails", "detail": "Record hospital issuance ($41.3B 2025, +22%) into a weakening sector (S&P 2024: 41 downgrades vs 30 upgrades, Medicaid-exposed); 21 higher-ed institutions defaulted/near-default last year (Fitch 'deteriorating'; a ~12-point enrollment drop 2025-2030); senior living defaults 2-4%/yr and charter schools >1%/yr drove a 15-year-high impairment count in 2024-2025 (MMA: 63 impairments 2024).", "grade": "fact (Bond Buyer/Fitch/MMA)"},
+      {"item": "Precedents", "detail": "Puerto Rico (PROMESA 2016): >$70B debt + >$55B unfunded pensions, the largest US public-debt restructuring (cut to ~$37B). Detroit 2013: ~$18B. These bound the tail; the present risk is correlated fiscal stress, not a single cliff.", "grade": "fact"}
+    ]
+  },
+  "synthesis": {
+    "summary": "The ultimate backstop is itself stretched.",
+    "points": [
+      {"item": "Why it matters", "detail": "Public balance sheets have repeatedly been the system's backstop (2008, COVID, the 2023 bank backstops). The muni tail's significance is that the backstop is now itself stretched: ~$1.27T pensions + OPEB + back-loaded CRE-assessment erosion + a ~$1T/decade federal-transfer withdrawal converge on the same budgets. The danger is correlated fiscal stress and austerity (IG default stays ~0.1%), not a Lehman-style default - and it lands on the household (48% of munis), the same household carrying the consumer-credit tail.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim of mass municipal default - IG muni default stays ~0.1%; the tail is correlated fiscal stress/austerity and slow repricing, not a default cliff.",
+      "Office-value -26% (2025) is a forecast (contested); national OPEB total rests on Pew's dated FY2019 $680B (weak); NJ's exact pension figure is contested.",
+      "Total outstanding is the Q4 2024 SIFMA print (~$4.2T); a clean Q1 2026 figure was not isolated.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Municipal_Debt", "to": "Pension_Funds", "instrument": "relationship", "raw_instrument": "statutorily senior pension/OPEB contributions (~$1.27T unfunded) crowd out budgets; Chicago ~$35.9B owed, S&P negative outlook (2025) - the pension->credit loop", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-municipal-public-finance.json", "note": "OVERLAY: pension crowd-out; excluded from proofs"},
+    {"from": "CRE_Market", "to": "Municipal_Debt", "instrument": "relationship", "raw_instrument": "property-tax-assessment doom loop: office vacancy (SF 36.6%) -> lower assessed value -> revenue shortfall (SF ~$936M over FY2027-28, NYC up to ~$10B); 2-3yr back-loaded lag", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-municipal-public-finance.json", "note": "OVERLAY: assessment-lag doom loop; excluded from proofs"},
+    {"from": "Federal_Transfers", "to": "Municipal_Debt", "instrument": "relationship", "raw_instrument": "federal Medicaid cuts >$1T/10yr (~$88B/yr) force state backfill or cuts, transmitting to local GO/revenue credits (NYC out-year gaps)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-municipal-public-finance.json", "note": "OVERLAY: federal-funding withdrawal; excluded from proofs"},
+    {"from": "Municipal_Debt", "to": "US_household_credit", "instrument": "relationship", "raw_instrument": "households hold ~48% of munis (direct + SMAs) - muni distress lands on retail/retirement balance sheets, the same household carrying the consumer-credit tail", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-municipal-public-finance.json", "note": "OVERLAY: retail loss pool; excluded from proofs"}
+  ],
+  "limits": "Documents the ~$4.2T muni market (~48% household-held, ~60% revenue bonds); pension crowd-out (~$1.27T unfunded; Illinois 197% of revenue; Chicago ~$35.9B, S&P negative 2025); the CRE-assessment doom loop (SF 36.6% vacancy / ~$936M FY2027-28 gap; NYC office 20.6% of levy / ~$10B out-year gaps; >=20 of 25 big cities in deficit); federal Medicaid cuts >$1T/10yr; revenue-bond tails (hospital $41.3B issuance into 41 downgrades; 21 higher-ed defaults; enrollment cliff); precedents (Puerto Rico >$70B, Detroit ~$18B). Overlay edges excluded from proofs; several figures contested/weak.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Market/holders", "result": "~$4.2T outstanding (SIFMA Q4 2024); households ~48%, banks/CUs 9% (-19% since 2022); issuance $513.6B 2024."},
+      {"check": "Pensions", "result": "~$1.27T unfunded (Equable 2025); Illinois 197%/NJ 162% of revenue (Pew); Chicago ~$35.9B, S&P negative (Nov 2025)."},
+      {"check": "Doom loop", "result": "SF office vacancy 36.6% (Q1 2024), ~$936M FY2027-28 gap; NYC office 20.6% of levy, ~$10B FY2027 gap; >=20/25 cities in deficit (NLC)."},
+      {"check": "Federal/revenue", "result": "Medicaid cut >$1T/10yr (~$88B/yr); hospital $41.3B issuance, 41 downgrades; 21 higher-ed defaults; PR >$70B / Detroit ~$18B."}
+    ]
+  }
+}

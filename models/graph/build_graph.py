@@ -146,6 +146,17 @@ NODE_META = {
  "CZ":("person",False),"Pertsev":("person",False),"RomanStorm":("person",False),"Trump":("person",False),"VanLoon":("person",False),
  "Netherlands":("state",True),"TechCompanies":("tech",True),"Oklo":("energy",True),"TrailOfBits":("security_research",False),
  "Jefferies":("bank",True),"First_Brands":("industrial",False),"Creditors":("creditor",False),
+ # uncovered / out-of-scope risk pools (overlay context; not part of the AI SCC)
+ "Money_Market_Funds":("financier",True),"Repo_Market":("financial_infra",True),"Treasury_Market":("financial_infra",True),
+ "Hedge_Funds":("financier",True),"Pension_Funds":("financier",True),"PrivateEquity_Funds":("private_credit",True),
+ "UK_LDI_Funds":("financier",True),"Life_Insurers":("insurance",True),
+ "GSEs_FannieFreddie":("financial_infra",True),"FHLB_System":("financial_infra",True),"Mortgage_Market":("financial_infra",True),
+ "Family_Offices":("financier",True),"Prime_Brokers":("bank",True),
+ "Mortgage_REITs":("financier",True),"Agency_MBS_Market":("financial_infra",True),"CRE_Market":("financial_infra",True),
+ "BaaS_Middleware":("financial_infra",False),"Sponsor_Banks":("bank",True),"Neobanks":("financial_infra",False),
+ "Subprime_Auto_ABS":("private_credit",False),"Tricolor_Holdings":("private_credit",False),"BNPL_Phantom_Debt":("private_credit",False),
+ "Municipal_Debt":("financial_infra",True),"Federal_Transfers":("state",True),"US_household_credit":("retail",True),
+ "Credit_Unions":("bank",True),"ILCs":("bank",True),"Foreign_Bank_US_Branches":("bank",True),
 }
 
 edges=[]

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "Hedge funds and the Treasury basis trade - leverage near record highs in the world's most important market",
+    "generated": "2026-06-14",
+    "frame": "Leveraged hedge funds have become a dominant marginal buyer of US Treasuries via the cash-futures basis trade - long cash Treasuries, short futures, financed in repo at near-zero haircuts. The trade is near 2024 record size, the funds run ~18:1 at the top, and the March-2020 unwind required a ~$1T+ Fed intervention. This block sizes the trade with the OFR's own caveat (it cannot be precisely measured), the repo dependence, the regulator warnings, and the central-clearing mandate. Companion to [[macro-uncovered-risk-pools]] and [[macro-money-market-funds]].",
+    "relevance": "Adds the Treasury-market leverage node to the uncovered stack; explains why a rate-volatility shock transmits through forced deleveraging into the same repo/bill plumbing the MMFs dominate; documents the 2026-2027 central-clearing phase-in.",
+    "sources": "OFR 2025 Annual Report + Hedge Fund Monitor; Fed FEDS Note 'Cross-Border Trail of the Treasury Basis Trade' (Oct 2025); Fed Financial Stability Report (Nov 2025); FSB NBFI-leverage final report (Jul 2025); CFTC Mixon/Orlov basis-trade paper; SEC central-clearing rule + Feb-2025 extension; DTCC/FICC. Full URLs in the rendered .md."
+  },
+  "trade_size": {
+    "summary": "Near 2024 all-time highs - but no clean proxy exists, by the OFR's own admission.",
+    "points": [
+      {"item": "Leveraged-fund short futures (the proxy)", "detail": "Leveraged-fund short positions in Treasury futures sit near 2024 all-time highs; the Fed shows gross shorts peaking ~$1.4T late 2024, ~$1.2T at end-2024 (vs ~$0.8T at the 2019 peak). Press cites ~$1T (CFTC, <=10yr, Mar 2025) to $1-2T gross notional.", "grade": "fact (positions)"},
+      {"item": "The measurement caveat", "detail": "OFR, verbatim: 'Available data do not support precise measurement of the basis trade.' Any single '$X trillion basis trade' figure should carry this caveat - it is the load-bearing honesty point.", "grade": "fact (OFR caveat)"},
+      {"item": "Hedge-fund long Treasury exposure", "detail": "~$2.3T of long Treasury exposure as of March 2025 (OFR Hedge Fund Monitor) - some of it the cash leg of relative-value/basis trades.", "grade": "fact (OFR)"}
+    ]
+  },
+  "mechanics_leverage": {
+    "summary": "Cash-futures arbitrage financed in repo at near-zero haircuts; concentrated and fragile.",
+    "points": [
+      {"item": "The structure", "detail": "Long cash Treasury + short Treasury future, the cash leg financed via (often overnight) repo continuously rolled to delivery. Three fragility vectors (CFTC/Fed): rate/funding volatility, variation-margin calls on the futures, and initial-margin hikes - all three were 'salient and pronounced in March 2020.'", "grade": "fact"},
+      {"item": "Leverage and concentration", "detail": "Fed FSR (Nov 2025), on Q3-2024 data: the top-10 hedge funds account for ~40% of total repo borrowing at ~18:1 leverage; 73.8% of hedge-fund repo was at zero/negative haircut (Q4 2022, latest granular). Qualifying-hedge-fund average leverage ~2.6:1, but macro/relative-value funds run >6:1 - the tail is where the basis trade lives.", "grade": "fact (Fed FSR / OFR Form PF)"},
+      {"item": "Repo dependence", "detail": "Hedge-fund repo borrowing surged ~154% (Q4 2022 -> Q2 2025) to ~$3.1T; Treasury-collateral repo >=$1.4T. The trade is only as stable as overnight repo rollover and haircut discipline.", "grade": "fact (OFR)"}
+    ]
+  },
+  "march_2020_precedent": {
+    "summary": "The unwind already happened once and broke the Treasury market.",
+    "points": [
+      {"item": "The dysfunction", "detail": "10yr yields surged from 54bp (Mar 9) to 119bp (Mar 18) 2020 'in part because of an unwinding by hedge funds of the Treasury cash-futures basis trade' (OFR); the FSB estimates ~$90B of basis positions force-unwound; hedge funds sold ~$426B of Treasuries in early March.", "grade": "fact (OFR/FSB)"},
+      {"item": "The intervention", "detail": "The Fed offered ~$1.5T of repo to primary dealers (Mar 12) and bought ~$1T of Treasuries in the first ~3 weeks - market-function purchases that became QE. The Treasury market needed a central-bank buyer of last resort to absorb the deleveraging.", "grade": "fact"}
+    ]
+  },
+  "who_holds_it": {
+    "summary": "Cayman-domiciled hedge funds are now the second-largest absorber of net Treasury issuance.",
+    "points": [
+      {"item": "Cayman trail", "detail": "Cayman-domiciled hedge-fund Treasury holdings reached ~$1.8T end-2024; these funds absorbed $1,225B of net Treasury issuance Jan-2022 to Dec-2024 - second only to US domestic ($2,069B) and ahead of other foreign private ($1,161B), while the Fed ran off -$1,208B in QT (Fed FEDS Note, Oct 2025).", "grade": "fact (Fed)"}
+    ]
+  },
+  "clearing_and_warnings": {
+    "summary": "The central-clearing mandate is the structural fix; regulators flag the leverage but lean against an imminent blowup.",
+    "points": [
+      {"item": "Central-clearing mandate", "detail": "SEC mandate (compliance extended Feb 2025): eligible cash Treasury trades clear by Dec 31, 2026; eligible Treasury repo by June 30, 2027 (FICC/CME as CCPs). FICC's Sponsored Service is already ~$938B/day (+74%). Clearing forces previously-bilateral near-zero-haircut trades into CCP margining - reducing fire-sale contagion but concentrating risk in the CCP.", "grade": "fact (SEC/DTCC)"},
+      {"item": "Regulator warnings", "detail": "OFR 2025: 'Hedge fund leverage is near all-time highs.' Fed FSR (Nov 2025): basis traders 'have become an important source of Treasury demand but one that is relatively sensitive to interest rate volatility and funding market stability'; HF leverage 'as high as it has been since comprehensive data have been collected.' FSB (Jul 2025): 9 NBFI-leverage recommendations, citing near-zero repo haircuts.", "grade": "fact"},
+      {"item": "The honest tension", "detail": "The OFR and Nov-2025 FSR lean AGAINST an 'April-2025 unwind' narrative: hedge-fund Treasury-collateral repo stayed >=$1.4T with no large decline and use of cheapest-to-deliver collateral rose - the opposite of an unwind. The concern is structural (haircuts, ~18:1 top-fund leverage, $3.1T repo dependence), not a confirmed recent blowup.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Record leverage in the market that prices everything else.",
+    "points": [
+      {"item": "Why it matters", "detail": "The basis trade concentrates record leverage in the $30T Treasury market - the discount rate for the entire AI-capex/credit complex. A rate-volatility shock (which the AI-debt issuance wall feeds through long rates, [[macro-fdic]]) forces deleveraging into the same repo/bill plumbing the MMFs dominate ([[macro-money-market-funds]]) - a correlated amplifier, not a diversifier.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No single precise basis-trade size is asserted - the OFR states it cannot be precisely measured; figures are position proxies with ranges.",
+      "No claim of a confirmed 2025 unwind - the latest OFR/Fed data point against one; the risk is structural.",
+      "The '50-100x' headline trade-level leverage is a near-zero-haircut strategy figure, not an OFR fund-level statistic (fund-level top-10 ~18:1).",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Hedge_Funds", "to": "Treasury_Market", "instrument": "relationship", "raw_instrument": "cash-futures basis trade: ~$2.3T long Treasury exposure (Mar 2025) / short futures near 2024 record; Cayman funds absorbed $1,225B of net issuance 2022-24, the 2nd-largest buyer", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-treasury-basis-trade.json", "note": "OVERLAY: Treasury-market leverage; excluded from proofs"},
+    {"from": "Hedge_Funds", "to": "Repo_Market", "instrument": "relationship", "raw_instrument": "repo financing of the cash leg: HF repo borrowing ~$3.1T (Q2 2025, +154%), Treasury-collateral repo >=$1.4T, 73.8% at zero/negative haircut; overnight rollover risk", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-treasury-basis-trade.json", "note": "OVERLAY: repo dependence; excluded from proofs"},
+    {"from": "Repo_Market", "to": "Treasury_Market", "instrument": "relationship", "raw_instrument": "SEC central-clearing mandate (cash by Dec-2026, repo by Jun-2027) routes the basis trade through FICC/CME CCPs - concentrating margin risk while reducing settlement-fail contagion", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-treasury-basis-trade.json", "note": "OVERLAY: clearing plumbing; excluded from proofs"}
+  ],
+  "limits": "Sizes the Treasury basis trade with the OFR's own 'cannot be precisely measured' caveat: leveraged-fund short futures near 2024 highs (~$1T+ gross (some measures ~$1.2-1.4T)), ~$2.3T HF long Treasury exposure (Mar 2025); top-10 funds ~40% of repo at ~18:1; HF repo ~$3.1T, Treasury-collateral >=$1.4T at near-zero haircut; the March-2020 unwind (~$90B forced, ~$1T+ Fed buying); Cayman funds absorbed $1,225B of net issuance 2022-24; central clearing phases in 2026-27. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Size", "result": "Short futures near 2024 highs (~$1T+ gross (some measures ~$1.2-1.4T), Fed); ~$2.3T HF long Treasuries (OFR Mar 2025); OFR caveat: not precisely measurable."},
+      {"check": "Leverage/repo", "result": "Top-10 ~40% of repo at ~18:1 (Fed FSR Nov 2025); HF repo ~$3.1T (+154%), Treasury-collateral >=$1.4T, 73.8% zero/neg haircut."},
+      {"check": "March 2020", "result": "10yr 54->119bp; ~$90B unwound (FSB); ~$426B HF Treasury sales; Fed ~$1.5T repo + ~$1T purchases."},
+      {"check": "Holders/clearing", "result": "Cayman HFs ~$1.8T, absorbed $1,225B net issuance 2022-24 (Fed); SEC clearing cash Dec-2026 / repo Jun-2027; FICC sponsored ~$938B/day."}
+    ]
+  }
+}

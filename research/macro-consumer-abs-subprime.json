@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "title": "Consumer and auto ABS and subprime - the household-credit tail, and the collateral-fraud failure mode (Tricolor, First Brands)",
+    "generated": "2026-06-14",
+    "frame": "Total US household debt hit ~$18.8T (Q1 2026) with a benign 4.8% aggregate delinquency that masks a stressed subprime tail: subprime auto 60+ day delinquency at a 32-year high (6.74%), repossessions at 2009 levels, student-loan delinquency re-priced from ~0 to 7.7%+, and ~$400B of invisible BNPL 'phantom debt.' Tricolor and First Brands (both 2025) showed the failure mode is collateral fraud in the securitization/factoring funding chain, not just borrower default. Companion to [[macro-uncovered-risk-pools]] and [[macro-cre-privatecredit]].",
+    "relevance": "Adds the household-credit tail to the uncovered stack; the Tricolor/First Brands double-pledge cases tie the subprime tail to bank warehouse lines and private-credit/ABS opacity (the self-marked, under-verified funding chain).",
+    "sources": "NY Fed Household Debt & Credit (Q1 2026, released May 2026); DOJ-SDNY (Tricolor + First Brands charges); CNBC (JPMorgan writedown); Fitch Auto ABS index; Cox Automotive (repossessions); Affirm/Klarna filings; CFPB BNPL market report; GlobalCapital/Asset Securitization Report (ABS issuance). Full URLs in the rendered .md."
+  },
+  "collateral_fraud_cases": {
+    "summary": "Tricolor and First Brands: same pattern weeks apart - collateral double-pledged across financiers.",
+    "points": [
+      {"item": "Tricolor", "detail": "Subprime auto lender (to undocumented/thin-file borrowers) filed Chapter 7 ~Sept 2025 amid 'systemic levels of fraud.' DOJ (Dec 2025) charged the CEO/COO with running a 'continuing financial crimes enterprise,' allegedly double-pledging collateral (the trustee's forensic review identified ~$548M double-pledged across ~31,000 loans; the broader alleged fraud is larger) and using duplicate VINs and falsified loan tapes to raise billions. JPMorgan took a ~$170M writedown (Q3 2025); Fifth Third flagged ~$200M potential; Barclays also exposed.", "grade": "fact (DOJ/CNBC) + contested (Fifth Third $200M)"},
+      {"item": "First Brands", "detail": "Auto-parts supplier (Chapter 11, Sept 28, 2025): ~$5B sales but >$9B liabilities and $12M cash. ~$3.0B of invoices sold to factors, ~$2.5B unmatched to real sales (fabricated/double-pledged receivables). DOJ-SDNY charges; ex-CFO pleaded guilty (Mar 2026); Jefferies' Point Bonita flagged ~$715M at risk.", "grade": "fact (DOJ)"},
+      {"item": "What they revealed", "detail": "The subprime-auto-ABS and trade-finance/factoring chains relied on lender trust in self-reported loan tapes/invoices; the SAME collateral pledged across multiple warehouse lines/factors went undetected - a collateral-verification failure at the FUNDING layer, the same trust-the-self-report defect this project tracks in marks.", "grade": "fact + labeled interpretation"}
+    ]
+  },
+  "auto_stress": {
+    "summary": "Subprime auto is the canary - delinquency at a 32-year high, repos at 2009 levels.",
+    "points": [
+      {"item": "Size + delinquency", "detail": "Total US auto debt ~$1.69T (Q1 2026, NY Fed). Subprime auto 60+ day delinquency 6.74% (Dec 2025, Fitch) - a 32-year series high. Auto flow into serious (90+) delinquency ~2.94% (Q1 2025), steady into 2026.", "grade": "fact (NY Fed/Fitch)"},
+      {"item": "Repossessions", "detail": "~1.73M vehicles repossessed in 2024 (Cox) - highest since 2009, +16% YoY; 2025 projected >3M (a projection, graded weak). Auto default rate 3.13% (2024), highest since 2011.", "grade": "fact (2024) + weak (2025 projection)"}
+    ]
+  },
+  "cards_bnpl_student": {
+    "summary": "A K-shaped consumer: prime current, subprime/young/BNPL stressed.",
+    "points": [
+      {"item": "Cards", "detail": "Credit-card balances ~$1.25T (Q1 2026); flow into serious delinquency ~7.04% (Q1 2025), early-delinquency transition ~8.6% (Q1 2026) - elevated but plateauing; stress concentrated in subprime/lower-income.", "grade": "fact + contested (bifurcation interpretation)"},
+      {"item": "BNPL phantom debt", "detail": "BNPL US GMV ~$122B (2025); outstanding balances estimated >$400B are largely INVISIBLE to credit bureaus, understating true household leverage. 47% of BNPL users reported a late payment in the past year (LendingTree, Mar 2026, up from 41%); ~8% have used BNPL for groceries (DoorDash/Klarna). Affirm 30+ day delinquency ~2.8%; Klarna trades below its Sept-2025 IPO price with rising credit losses.", "grade": "contested ($400B/47% are survey/secondary) + fact (Affirm/Klarna filings)"},
+      {"item": "Student loans", "detail": "~$1.66T total; the pandemic on-ramp ended Sept 2024 and servicers resumed bureau reporting Feb 2025 - 90+ day delinquency jumped to ~7.74% of student debt (Q1 2025) from <1%, with >2.2M borrowers seeing scores fall >100 points; the national average score fell ~717->715, the sharpest one-year drop since the Great Recession.", "grade": "fact (NY Fed) + contested (score specifics)"}
+    ]
+  },
+  "abs_chain": {
+    "summary": "Record ABS issuance disperses the risk off bank balance sheets - and obscures collateral quality.",
+    "points": [
+      {"item": "Issuance + buyers", "detail": "Total US ABS ~$358B YTD 2025 (+16.8%, auto-driven; record); auto ABS ~$127B; unsecured consumer-loan ABS set records. Subprime auto + unsecured consumer credit is originated, warehoused by banks (JPMorgan, Fifth Third, Barclays), then securitized off balance sheet into ABS bought by asset managers/insurers reaching for yield - banks retain warehouse-line tail risk (the Tricolor channel).", "grade": "fact + contested (chain description)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "A benign aggregate over a stressed, opaque tail.",
+    "points": [
+      {"item": "Why it matters", "detail": "Household debt is at a record $18.8T with a placid 4.8% aggregate delinquency - but the tail is at multi-decade highs (subprime auto 6.74%, student 7.7%+, BNPL late incidence 47%) and ~$400B of leverage is invisible. Tricolor/First Brands show the acute failure mode is collateral fraud in the funding chain - the same 'trust the self-reported number' defect that runs through the bank HTM, private-credit NAV, and pension-mark threads. The off-balance-sheet ABS chain disperses the loss beyond the originating bank while hiding collateral quality.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim of system-wide household-credit insolvency - aggregate delinquency is benign; the point is a stressed, partly-invisible subprime tail plus a collateral-fraud failure mode.",
+      "BNPL '~$400B phantom debt' and '47% late' rest on survey/secondary sources (graded contested); the >3M-2025-repossession figure is a projection (weak).",
+      "Tricolor's double-pledge (~$548M per the trustee's review) is distinct from JPMorgan's ~$170M writedown - not conflated; Fifth Third's ~$200M is potential, not finalized.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Subprime_Auto_ABS", "to": "US_household_credit", "instrument": "relationship", "raw_instrument": "auto ABS / warehouse financing (~$1.69T auto balances; subprime 60+ delinquency 6.74% Dec 2025, a 32-yr high; repos at 2009 levels)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-consumer-abs-subprime.json", "note": "OVERLAY: household-credit tail; excluded from proofs"},
+    {"from": "Tricolor_Holdings", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "warehouse financing against double-pledged auto collateral (~$548M per trustee; ~31,000 loans); JPMorgan ~$170M writedown, Fifth Third ~$200M, Barclays - collateral-fraud failure in the funding chain", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-consumer-abs-subprime.json", "note": "OVERLAY: collateral-fraud channel; excluded from proofs"},
+    {"from": "First_Brands", "to": "PrivateCredit_Funds", "instrument": "relationship", "raw_instrument": "trade-finance/factoring receivables (~$2.5B fabricated invoices, multi-factor double-pledge) - factoring/private-lending opacity, the Tricolor pattern in trade finance", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-consumer-abs-subprime.json", "note": "OVERLAY: factoring fraud; excluded from proofs"},
+    {"from": "BNPL_Phantom_Debt", "to": "US_household_credit", "instrument": "relationship", "raw_instrument": "unreported installment financing (~$400B est., largely invisible to bureaus) - understates true household leverage; 47% of users reported a late payment (2026)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-consumer-abs-subprime.json", "note": "OVERLAY: invisible leverage; excluded from proofs"}
+  ],
+  "limits": "Documents the household-credit tail: total debt ~$18.8T (Q1 2026), aggregate delinquency 4.8% over a stressed tail - subprime auto 6.74% (32-yr high), repos ~1.73M (2024, 2009 levels), cards ~$1.25T, student ~$1.66T with 90+ delinquency ~7.74% (Q1 2025), BNPL ~$122B GMV / ~$400B invisible / 47% late; the Tricolor (~$548M double-pledged per trustee, JPMorgan ~$170M) and First Brands (~$2.5B fabricated invoices) collateral-fraud cases; and record ABS issuance (~$358B 2025) dispersing risk off-balance-sheet. Overlay edges excluded from proofs; several figures contested/weak.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Fraud cases", "result": "Tricolor Ch.7 ~Sept 2025, DOJ Dec 2025, ~$548M double-pledged (trustee), JPMorgan ~$170M; First Brands Ch.11 Sept 28 2025, ~$2.5B fabricated invoices, CFO guilty Mar 2026."},
+      {"check": "Auto", "result": "Auto debt ~$1.69T (Q1 2026); subprime 60+ 6.74% (Dec 2025, Fitch, 32-yr high); ~1.73M repos 2024 (Cox)."},
+      {"check": "Cards/BNPL/student", "result": "Cards ~$1.25T; BNPL ~$122B GMV / ~$400B invisible / 47% late; student ~$1.66T, 90+ ~7.74% (Q1 2025)."},
+      {"check": "ABS chain", "result": "Total ABS ~$358B 2025 (+16.8%); auto ABS ~$127B; banks warehouse then securitize off-balance-sheet."}
+    ]
+  }
+}

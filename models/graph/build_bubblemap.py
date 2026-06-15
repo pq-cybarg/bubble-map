@@ -80,7 +80,18 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
  "Government_of_Gujarat":"Government of Gujarat","Spanish_Government_SETT":"Spanish government (SETT)",
  "UK_Labour_government":"UK Labour government","UK_government_cloud":"UK government (cloud)",
- "China":"China","Russia":"Russia","Liberty Strategic Capital":"Liberty Strategic Capital"}
+ "China":"China","Russia":"Russia","Liberty Strategic Capital":"Liberty Strategic Capital",
+ # uncovered / out-of-scope risk pools
+ "Money_Market_Funds":"Money market funds","Repo_Market":"Repo market","Treasury_Market":"Treasury market",
+ "Hedge_Funds":"Hedge funds","Pension_Funds":"Pension funds","PrivateEquity_Funds":"Private equity funds",
+ "UK_LDI_Funds":"UK LDI funds","Life_Insurers":"Life insurers",
+ "GSEs_FannieFreddie":"GSEs (Fannie / Freddie)","FHLB_System":"FHLB system","Mortgage_Market":"Mortgage market",
+ "Family_Offices":"Family offices","Prime_Brokers":"Prime brokers",
+ "Mortgage_REITs":"Mortgage REITs","Agency_MBS_Market":"Agency MBS market","CRE_Market":"CRE market",
+ "BaaS_Middleware":"BaaS middleware","Sponsor_Banks":"Sponsor banks","Neobanks":"Neobanks",
+ "Subprime_Auto_ABS":"Subprime auto ABS","Tricolor_Holdings":"Tricolor Holdings","BNPL_Phantom_Debt":"BNPL phantom debt",
+ "Municipal_Debt":"Municipal debt","Federal_Transfers":"Federal transfers","US_household_credit":"US household credit",
+ "Credit_Unions":"Credit unions","ILCs":"ILCs","Foreign_Bank_US_Branches":"Foreign-bank US branches"}
 def disp_label(nid):
     if nid in LABELS: return LABELS[nid]
     if nid in MIXED: return nid

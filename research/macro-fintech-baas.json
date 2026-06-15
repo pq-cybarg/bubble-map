@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "Fintech, Banking-as-a-Service and neobanks - the Synapse collapse and the 'FDIC-insured' ledger trap",
+    "generated": "2026-06-14",
+    "frame": "Most neobanks are not banks - they ride a handful of small sponsor banks through middleware that keeps the sub-ledger of who owns what. When Synapse failed (2024), ~100,000+ customers were frozen and ~$85-96M went missing despite 'FDIC-insured' marketing, because pass-through insurance covers BANK failure, not a middleware/ledger collapse. A former FDIC Chair as trustee still could not find the money. This block maps the model, the insurance gap, the sponsor-bank consent-order wave, and the 2025 repeat (Solid). Companion to [[macro-uncovered-risk-pools]] and [[macro-bank-htm-marks]].",
+    "relevance": "Adds the tech-mediated-deposit node to the uncovered stack; shows 'deposits look insured' is conditional on a private ledger that is the single point of failure; the concentration of fintech programs on a few sponsor banks is a contagion channel back into the FDIC system.",
+    "sources": "CNBC/Banking Dive/American Banker/Bloomberg Law (Synapse + trustee McWilliams); FDIC Part 328 + custodial-recordkeeping NPR; OCC/Fed/FDIC July-2024 joint statement; Fed Evolve C&D; CFPB ($46.2M payout); SEC S-1 (Chime); company disclosures; FintechFutures (Solid 2025). Full URLs in the rendered .md.",
+    "note": "Synapse shortfall is ~$85-96M (the $65M floor in earlier framing is below all sourced figures); the case was dismissed Nov 2025."
+  },
+  "synapse_collapse": {
+    "summary": "A middleware ledger failure that froze 100,000+ users and lost up to ~$96M.",
+    "points": [
+      {"item": "The model", "detail": "Synapse Financial Technologies (Chapter 11, April 2024) sat between fintech apps (Yotta, Juno, Copper) and partner banks (Evolve, AMG, American, Lineage), routing customer money into pooled 'for-benefit-of' (FBO) accounts while keeping the per-customer sub-ledger itself.", "grade": "fact"},
+      {"item": "The shortfall", "detail": ">100,000 customers frozen from May 2024; end users were owed ~$265M but partner banks held only ~$180M - a shortfall first reported at ~$85M (trustee Jelena McWilliams, former FDIC Chair, June 2024), later widened to 'up to ~$95M.' Evolve said it had moved >$300M of balances to other partner banks while severing the relationship - a key reconciliation rupture.", "grade": "fact + contested (range)"},
+      {"item": "Unrecoverable", "detail": "The trustee - with subpoena power - still could not determine where the money went; the bankruptcy was DISMISSED Nov 2025, the estate administratively insolvent with no bidders. Reconciliation opacity is the failure mode.", "grade": "fact"}
+    ]
+  },
+  "insurance_gap": {
+    "summary": "'FDIC-insured' was true of the bank and false of the outcome.",
+    "points": [
+      {"item": "The gap", "detail": "Pass-through FDIC insurance covers BANK failure only - NOT fintech/middleware failure or a ledger shortfall, and it requires records identifying beneficial owners (which Synapse lacked). No partner bank failed, so insurance never triggered; customers' belief that funds were 'FDIC-insured' did not protect them.", "grade": "fact"},
+      {"item": "Rulemaking response", "detail": "FDIC amended Part 328 (false-advertising/misrepresentation of insured status; compliance Jan 2025) and proposed 'Recordkeeping for Custodial Accounts' (Oct 2024) requiring banks to keep beneficial-owner records for FBO accounts - but as of mid-2026 NO final custodial rule has been published. OCC/Fed/FDIC issued a July-2024 joint statement warning third-party arrangements can mislead consumers about FDIC coverage.", "grade": "fact + contested (final-rule status)"},
+      {"item": "Partial bailout", "detail": "The CFPB allocated ~$46.2M from its Civil Penalty Fund to Synapse/Evolve victims (approved Nov 2025) - roughly half the frozen amount, the first-ever fintech 'bailout' via the CPF.", "grade": "fact"}
+    ]
+  },
+  "sponsor_bank_wave": {
+    "summary": "Hundreds of fintech programs ride a few small sponsor banks - and the regulators came for them.",
+    "points": [
+      {"item": "Consent-order cluster", "detail": "At least 8 BaaS sponsor banks hit with FDIC/OCC/Fed orders in 2024: Evolve (Fed C&D, June 2024), Cross River (FDIC, 2023), Blue Ridge (OCC 'troubled condition,' 2024 - exited BaaS, displacing ~70 fintech partners), Lineage, Piermont, Sutton (FDIC, Feb 2024), Thread (FDIC, May 2024). BaaS banks were ~18% of FDIC enforcement actions since Jan 2024.", "grade": "fact + contested (tally method)"},
+      {"item": "Concentration", "detail": "A single sponsor bank often supports hundreds of fintech programs; one order or BaaS exit cascades to millions of end users (Blue Ridge -> ~70 partners). The pool is small banks carrying tech-scale deposit bases.", "grade": "fact + weak (program-count estimates)"}
+    ]
+  },
+  "neobank_scale": {
+    "summary": "The big names are apps on top of sponsor banks, not banks.",
+    "points": [
+      {"item": "Who rides whom", "detail": "Chime (>8.6M active members; IPO June 2025, ~$864M raised) holds deposits at The Bancorp Bank and Stride Bank. Cash App (~57M users) uses Sutton Bank / Wells Fargo pass-through. Dave rides a sponsor bank (FTC sued it Nov 2024). Varo is the ONLY neobank with its own OCC national charter (2020) - and its deposits (~$300M) and losses are deteriorating.", "grade": "fact + contested (Dave/Varo framing)"},
+      {"item": "2025 repeat", "detail": "Solid Financial Technologies (BaaS middleware, $330M valuation, >100 fintech programs) filed Chapter 11 in April 2025 - the Synapse pattern again, a year later.", "grade": "fact"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Deposits look insured; the private ledger is the single point of failure.",
+    "points": [
+      {"item": "Why it matters", "detail": "BaaS turned 'FDIC-insured' into a marketing claim conditional on accurate beneficial-owner records and a solvent middleware - neither guaranteed. Tech-mediated balances flow across pooled FBO accounts at multiple small sponsor banks via a private sub-ledger; severing one relationship can break reconciliation system-wide, and a former-FDIC-Chair trustee still could not find the money. The same trust-the-ledger defect that this project documents in self-marked balance sheets appears here as literal missing deposits.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim that pass-through FDIC insurance is invalid - it works when a BANK fails and records are accurate; the gap is middleware/ledger failure.",
+      "The Synapse shortfall is ~$85-96M (a range that grew over time); the custodial-recordkeeping rule was NOT finalized as of mid-2026.",
+      "Choice Bank / First Fed could not be confirmed as having 2023-2025 BaaS consent orders; the confirmed set is Cross River, Blue Ridge, Lineage, Piermont, Sutton, Thread, Evolve.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "BaaS_Middleware", "to": "Sponsor_Banks", "instrument": "relationship", "raw_instrument": "pooled for-benefit-of (FBO) custodial deposits + a private sub-ledger; reconciliation failure (Synapse) froze 100,000+ users and lost ~$85-96M; repeated by Solid (2025)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-fintech-baas.json", "note": "OVERLAY: ledger single-point-of-failure; excluded from proofs"},
+    {"from": "Neobanks", "to": "Sponsor_Banks", "instrument": "relationship", "raw_instrument": "pass-through FBO deposits - Chime (Bancorp/Stride), Cash App (Sutton/Wells), Dave; most neobanks are apps on a few small sponsor banks, not banks", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-fintech-baas.json", "note": "OVERLAY: fintech-on-bank dependence; excluded from proofs"},
+    {"from": "Sponsor_Banks", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "small FDIC-insured sponsor banks carrying tech-scale deposit bases and hundreds of fintech programs each; ~8 hit with 2024 consent orders, one exit (Blue Ridge) displaced ~70 partners", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-fintech-baas.json", "note": "OVERLAY: concentration into the insured system; excluded from proofs"}
+  ],
+  "limits": "Documents the Synapse collapse (Ch.11 Apr 2024; 100,000+ frozen; owed ~$265M vs ~$180M held = ~$85-96M shortfall; trustee McWilliams; dismissed Nov 2025; CFPB ~$46.2M partial payout); the pass-through-insurance gap (covers bank failure only) and FDIC Part 328 + unfinalized custodial-recordkeeping rule; ~8 sponsor-bank consent orders in 2024 (Evolve/Cross River/Blue Ridge/Lineage/Piermont/Sutton/Thread); neobank scale (Chime/Cash App/Dave ride sponsor banks; Varo the lone chartered one, deteriorating); Solid's 2025 repeat. Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Synapse", "result": "Ch.11 Apr 2024; >100k frozen; owed ~$265M vs ~$180M held; shortfall ~$85M->~$95M; dismissed Nov 2025 (Bloomberg Law/CNBC)."},
+      {"check": "Insurance gap", "result": "Pass-through covers bank failure only; FDIC Part 328 compliance Jan 2025; custodial-recordkeeping NPR Oct 2024 not finalized; CFPB ~$46.2M (Nov 2025)."},
+      {"check": "Sponsor banks", "result": "Evolve Fed C&D Jun 2024; Blue Ridge OCC Jan 2024 (~70 partners displaced); Cross River/Lineage/Piermont/Sutton/Thread; ~18% of FDIC actions."},
+      {"check": "Neobanks/repeat", "result": "Chime IPO Jun 2025 (~$864M); Cash App ~57M; Varo lone charter (~$300M deposits, falling); Solid Ch.11 Apr 2025."}
+    ]
+  }
+}

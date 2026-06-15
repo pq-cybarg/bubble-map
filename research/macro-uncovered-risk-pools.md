@@ -30,8 +30,30 @@ The risk that **migrated off bank balance sheets** — and where AI-datacenter f
 ## 6. The suppressed problem-bank total (hidden even within FDIC scope)
 - Since **Q4 2024 — the first time since 1990** — the FDIC publishes only the problem-bank **count** (~54), not the **asset total**, citing the risk of a "disorderly run." The distribution is deliberately below disclosure; the per-bank reconstruction in [[macro-bank-htm-marks]] partly recovers it.
 
+## The total uncovered stack — ~$33–37T outside the FDIC bank lens
+Each pool below now has its own deep-dig block. **Most share the SAME underlying collateral** — Treasuries, agency MBS, private-credit NAVs — so the load-bearing point is *correlation*, not a clean sum.
+
+| Pool | Size | Lens gap | Block |
+|---|---|---|---|
+| GSE + FHLB + agency complex | **~$11T** | quasi-sovereign housing finance on ~43x capital; FHLB super-lien ahead of FDIC | [[macro-gses-fhlb]] |
+| Money market funds | **~$7.9T** | constant-NAV, run-prone, no FDIC; dominates repo + ~40% of T-bills | [[macro-money-market-funds]] |
+| Municipal / public finance | **~$4.2T** | ~48% household-held; pension + CRE + federal-cut crowd-out | [[macro-municipal-public-finance]] |
+| Family offices | **~$3.1T** | adviser exemption; swap-hidden leverage (Archegos); 10B-1 fix withdrawn | [[macro-family-offices]] |
+| Credit unions | **~$2.43T** | different regulator (NCUA); own HTM/CRE; 7-yr-high failure cluster | (above) |
+| Foreign-bank US branches | **~$2T+** | wholesale dollar-funding/repo node | (above) |
+| Private credit / NDFIs | **~$1.7–3T** | manager-marked NAVs; AI-datacenter-heavy; bank-to-NDFI ~$1.97T | [[macro-cre-privatecredit]] |
+| Hedge funds (basis trade) | **~$2.3T long Treasuries** | near-zero-haircut repo leverage in the $30T Treasury market; top-10 ~18:1 | [[macro-treasury-basis-trade]] |
+| Pensions (US public + LDI) | **~$1.27T unfunded; ~⅓ illiquid** | leveraged LDI (UK 2022); self-marked alts; net outflow | [[macro-pensions-ldi]] |
+| Mortgage REITs / REITs | **~$200B mREITs; >$4.5T CRE** | repo-funded ~6–9x on the same MBS banks/Fed hold | [[macro-mortgage-reits]] |
+| Consumer / auto ABS & subprime | **~$358B 2025 ABS; ~$400B invisible BNPL** | off-balance-sheet; subprime tail at 32-yr highs; collateral fraud | [[macro-consumer-abs-subprime]] |
+| Farm Credit System | **~$400B+** | GSE off the FDIC map; farmland/ag exposure | (above) |
+| Industrial loan companies | **~$248B** | FDIC-insured but Fed-unsupervised parents | (above) |
+| Fintech / BaaS / neobanks | tech-scale deposits | "FDIC-insured" conditional on a private ledger (Synapse: ~$85–96M lost) | [[macro-fintech-baas]] |
+
+**Honest tally:** the cleanly-sized, low-overlap pools alone (MMFs, agency/GSE complex, munis, credit unions, private credit, foreign-bank branches, family offices, ILCs, Farm Credit) sum to **~$33–37T outside the FDIC domestic-bank deposit lens — itself comparable to the ~$24T FDIC-insured bank asset base.** This is an order-of-magnitude **floor, not a precise sum**: the pools overlap heavily (MMFs/hedge funds/pensions all hold the same Treasuries; mREITs/banks/Fed hold the same agency MBS; pensions hold the private credit), so the real systemic point is the **shared collateral**, not the dollar total.
+
 ## Synthesis — the FDIC bank number is a floor, not the system
-Stack the pools beyond the FDIC bank aggregate: **~$2.43T credit unions** (rising delinquency + a 7-yr-high failure cluster), **~$1.7–3T private credit/NDFIs** (manager-marked, AI-datacenter-heavy), **~$248B ILCs** (insured-but-unsupervised), a **~$400B+ Farm Credit GSE**, and **~$2T+ foreign-bank US branches** — each with its own HTM/CRE/duration/credit risk, mostly outside the lens "banks look clean" relies on. The **same ~91% common factor** ([[macro-cross-sectional-analysis]]) that prices the bank HTM hole also prices credit-union securities, private-credit NAVs, and farmland — so "the banks are fine" understates a **correlated, larger pool.** Credit unions and private credit are the two biggest, and both show rising stress now.
+The **same ~91% common factor** ([[macro-cross-sectional-analysis]]) that prices the bank HTM hole also prices credit-union securities, private-credit NAVs, pension alts, mortgage-REIT books, MMF/hedge-fund Treasuries, and farmland — so "the banks are fine" understates a **correlated pool that mostly shares the same Treasuries, agency MBS and self-marked NAVs.** Credit unions and private credit show rising stress now; the rest is latent until a rate or credit shock prices them together.
 
 ## What is NOT asserted
 - No claim any pool is insolvent system-wide — CUs and the FCS are well-capitalized in aggregate; the point is they're **uncovered** by the FDIC lens and carry **correlated** risk.

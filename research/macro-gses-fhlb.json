@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "title": "GSEs and the FHLB system - an ~$11T quasi-sovereign housing-finance pool outside the FDIC lens",
+    "generated": "2026-06-14",
+    "frame": "Fannie Mae and Freddie Mac guarantee ~$7.7T of agency MBS on ~$179B of combined net worth (~43x), have sat in conservatorship since 2008, and face a 2025-2026 privatization/release debate. The Federal Home Loan Bank system is the ~$1.18T 'lender of next-to-last-resort' that SVB/Signature/First Republic ran to before failing in 2023, with a super-lien ahead of the FDIC. Together with agency debt this is an ~$11T quasi-sovereign pool largely outside the FDIC deposit lens. Companion to [[macro-uncovered-risk-pools]], [[macro-mortgage-reits]], and [[macro-bank-htm-marks]].",
+    "relevance": "Adds the largest single quasi-sovereign housing-finance pool to the uncovered stack; the FHLB advance node links directly back into the FDIC-insured banks (the 2023 pre-failure tell); the conservatorship-release debate is a live 2026 policy/event risk.",
+    "sources": "Fannie/Freddie Q3-Q4 2025 financials + SEC filings; FHFA conservatorship; Treasury SPSPA amendment; CNN/HousingWire (2025-26 IPO debate); Stanford SIEPR + Moody's (rate impact); FHLB Office of Finance Q3-2025; GAO-26-107373 + GAO-24-106957 (2023 failures); FHFA 'FHLBank System at 100'; SIFMA agency debt; Fed agency-MBS holdings. Full URLs in the rendered .md.",
+    "note": "The combined guaranteed book is ~$7.7T (Fannie ~$4.1T + Freddie ~$3.6T); the round '$8.2T' overstates Freddie."
+  },
+  "gse_size_capital": {
+    "summary": "An ~$7.7T guaranteed book on ~$179B of capital - structurally thin (~43x).",
+    "points": [
+      {"item": "The book", "detail": "Fannie ~$4.1T guaranty book (Q3 2025; single-family ~$3.59T + multifamily ~$521B) and Freddie ~$3.6T guaranteed portfolio (~$3.67T total mortgage portfolio, YE2025) => ~$7.7T combined. (The ~$7T figure was the 2018-2020 era; the round '$8.2T' overstates Freddie - its book is ~$3.5-3.7T, not $4.1T.)", "grade": "fact (Fannie/Freddie)"},
+      {"item": "Thin capital", "detail": "Combined net worth ~$179.4B at year-end 2025 (Fannie $109.0B + Freddie $70.4B) - ~2.3% of the ~$7.7T book, i.e. ~43x leverage. Both posted record profits (Fannie FY2025 net income $14.4B; Freddie $10.7B) but remain far below the ERCF risk-based requirement (combined regulatory shortfall >$100B).", "grade": "fact + contested (ERCF figure varies by definition)"},
+      {"item": "Conservatorship + Treasury claim", "detail": "Both in FHFA conservatorship since Sept 2008 (17+ years). Treasury's senior-preferred liquidation preference was ~$341B combined at year-end 2024 and GROWS as retained capital adds to it - a claim ahead of common/junior preferred.", "grade": "fact"}
+    ]
+  },
+  "release_debate": {
+    "summary": "A 2025-2026 partial-IPO push that keeps slipping - a live policy/event risk.",
+    "points": [
+      {"item": "The push", "detail": "Trump (May 21, 2025) said he was giving 'very serious consideration' to taking Fannie/Freddie public; FHFA Director Bill Pulte's plan would keep them in conservatorship while selling up to ~5% (a partial IPO, not full release). Officials floated a ~$1T combined valuation (widely doubted).", "grade": "fact + contested (valuation)"},
+      {"item": "Slippage", "detail": "As of June 5, 2026 the plan faces 'new uncertainty'; Pulte's added role as acting DNI is expected to delay the spin-off (Wedbush: unlikely before the 2026 midterms). H.R. 1209 directs Treasury to prepare release proposals.", "grade": "fact + weak (legislation)"},
+      {"item": "Rate impact", "detail": "Removing the implicit guarantee could add ~50bp (Stanford SIEPR) of MBS risk premium, with total mortgage-rate impact estimated 20-80bp depending on whether an explicit priced backstop replaces it (Zandi: +20-40bp). A 5%-float sale with the backstop intact may change little; a true exit would not.", "grade": "contested (estimate range)"}
+    ]
+  },
+  "fhlb_system": {
+    "summary": "The ~$1.18T 'lender of next-to-last-resort' the 2023 failures ran to - with a super-lien ahead of the FDIC.",
+    "points": [
+      {"item": "Size", "detail": "FHLB consolidated obligations ~$1.18T (Q3 2025); total system assets ~$3.55T; advances outstanding ~$677B (year-end 2025). ~93% of US banks (4,104 of 4,424, June 2025) are members; >3/4 have borrowed at least once.", "grade": "fact (FHLB OF)"},
+      {"item": "The 2023 tell", "detail": "System advances surged ~37% in Q1 2023 to a record (~$0.8-1.0T; GAO cites a ~$1.04T system peak) - large banks were 97% of the increase. SVB was FHLB-SF's largest advance holder ($15B at end-2022, peaking ~$30B by failure in March 2023); Signature ~$11.3B at FHLB-NY; First Republic $28.1B at 3/31/2023. All three failed within weeks; the FHLBs were repaid in full (advances exit before the FDIC).", "grade": "fact (GAO)"},
+      {"item": "Super-lien (contested)", "detail": "FHLB advances carry statutory repayment priority ahead of the FDIC, raising resolution costs. GAO (2026) notes the super-lien's practical force has DIMINISHED since 2001 UCC changes; prepayment fees still raise resolution cost. FHFA's 'FHLBank System at 100' report (Nov 2023) recommends tightening the mission and raising housing contributions.", "grade": "contested (GAO caveat)"}
+    ]
+  },
+  "aggregate_pool": {
+    "summary": "Stack the components: an ~$11T agency/GSE securities complex with implicit/explicit federal support, mostly outside the FDIC lens - but wired back into banks.",
+    "points": [
+      {"item": "The stack", "detail": "~$7.7T GSE guaranteed MBS + ~$1.18T FHLB consolidated obligations + ~$2.1T agency debt (SIFMA, Q2 2025) + Ginnie-wrapped MBS => order ~$11T of agency/GSE paper with implicit/explicit federal support, largely outside the FDIC deposit-insurance lens.", "grade": "contested (summation; no single source)"},
+      {"item": "Wired back into banks + the Fed", "detail": "Banks/thrifts held ~$2.28T MBS (Q4 2024); the Fed held ~$2.7T agency MBS (~30% of the ~$9.2T market) at its QT-era peak, ~$2.2T now. So the 'uncovered' pool is the same collateral that marks bank balance sheets (the HTM channel) and that the Fed itself backstops - the opposite of diversification.", "grade": "fact"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Quasi-sovereign, thinly capitalized, and inseparable from the bank book.",
+    "points": [
+      {"item": "Why it matters", "detail": "The GSE/FHLB complex is the implicit-guarantee layer under the mortgage market: ~$7.7T guaranteed on ~$179B of capital, an FHLB system that funded the 2023 failures right up to receivership, and a release debate that could reprice mortgages. It is 'outside the FDIC lens' only on paper - the same agency MBS sits in bank AFS/HTM books and on the Fed's balance sheet, so a rate shock prices all three at once.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim Fannie/Freddie are insolvent - both are profitable and building capital; the point is structural thinness (~43x) and the live release/repricing risk.",
+      "The ~$11T aggregate is a summation of separately-sourced components, graded contested; no single source publishes it.",
+      "The FHLB super-lien is contested (GAO finds it eroded since 2001), not an unqualified FDIC-subordination.",
+      "ERCF shortfall figures vary by definition (with/without buffers, senior-preferred treatment); only the direction (>$100B gap) is solid.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "FHLB_System", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "secured advances (~$677B outstanding 2025; 2023 record surge ~$0.8-1.0T) with super-lien priority ahead of the FDIC; SVB/Signature/First Republic were top borrowers right before failing", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-gses-fhlb.json", "note": "OVERLAY: lender-of-next-to-last-resort; excluded from proofs"},
+    {"from": "GSEs_FannieFreddie", "to": "Mortgage_Market", "instrument": "relationship", "raw_instrument": "~$7.7T guaranteed agency MBS on ~$179B combined net worth (~43x) backing the conforming mortgage market; conservatorship-release could reprice rates +20-80bp", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-gses-fhlb.json", "note": "OVERLAY: guaranteed housing finance; excluded from proofs"},
+    {"from": "Federal_Reserve", "to": "GSEs_FannieFreddie", "instrument": "relationship", "raw_instrument": "the Fed held ~$2.3T agency MBS (~30% of the market) before QT - central-bank holder of the same GSE-guaranteed paper that sits in bank books", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-gses-fhlb.json", "note": "OVERLAY: central-bank holder; excluded from proofs"},
+    {"from": "GSEs_FannieFreddie", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "banks/thrifts held ~$2.28T agency MBS (Q4 2024) - the GSE-guaranteed pool is the same collateral that marks bank AFS/HTM books (the rate-shock channel)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-gses-fhlb.json", "note": "OVERLAY: shared MBS collateral; excluded from proofs"}
+  ],
+  "limits": "Sizes the GSE/FHLB pool: Fannie+Freddie ~$7.7T guaranteed book (Fannie ~$4.1T + Freddie ~$3.6T) on ~$179B net worth (~43x), conservatorship since 2008, Treasury senior-preferred ~$341B and growing, a 2025-26 partial-IPO/release debate (rate impact ~20-80bp); FHLB ~$1.18T consolidated obligations / ~$677B advances (2023 record surge ~$0.8-1.0T), the 2023-failure borrowers, super-lien (GAO: eroded). Aggregate agency/GSE complex ~$11T, with ~$2.28T in bank books and ~$2.7T at the Fed's QT-era peak (~$2.2T now). Overlay edges excluded from proofs; aggregate and ERCF figures graded contested.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "GSE size/capital", "result": "~$7.7T combined book (Fannie ~$4.1T + Freddie ~$3.6T); net worth $109.0B (Fannie) + $70.4B (Freddie) = ~$179.4B YE2025 (~43x); Treasury senior preferred ~$341B (YE2024)."},
+      {"check": "Release debate", "result": "Trump 5/21/2025 'serious consideration'; Pulte ~5% partial IPO in conservatorship; slipping (CNN 6/5/2026); rate impact 20-80bp (SIEPR/Zandi)."},
+      {"check": "FHLB", "result": "~$1.18T consolidated obligations / ~$3.55T assets / ~$677B advances (2025); 2023 record surge ~$0.8-1.0T (GAO ~$1.04T); SVB $15B (->~$30B at failure), Signature ~$11.3B, First Republic $28.1B (GAO)."},
+      {"check": "Aggregate/linkage", "result": "~$11T agency/GSE complex (summation); banks held ~$2.28T MBS (Q4 2024); Fed ~$2.7T QT-era peak (~30%), ~$2.2T now."}
+    ]
+  }
+}

@@ -40,6 +40,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Agency_MBS_Market": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "Amazon": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -88,9 +92,17 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "BNPL_Phantom_Debt": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
     "BNY_Mellon": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "BaaS_Middleware": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
     },
     "Bank_of_England": {
       "sector": "other",
@@ -200,6 +212,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "CRE_Market": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "CZ": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -273,7 +289,7 @@
       "has_exogenous_revenue": true
     },
     "Credit_Unions": {
-      "sector": "other",
+      "sector": "bank",
       "has_exogenous_revenue": true
     },
     "Creditors": {
@@ -372,6 +388,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FHLB_System": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "FTC": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -384,12 +404,20 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Family_Offices": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Farmington_Moonstone": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
     "Federal_Reserve": {
       "sector": "central_bank",
+      "has_exogenous_revenue": true
+    },
+    "Federal_Transfers": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "FinCEN": {
@@ -409,7 +437,7 @@
       "has_exogenous_revenue": true
     },
     "Foreign_Bank_US_Branches": {
-      "sector": "other",
+      "sector": "bank",
       "has_exogenous_revenue": true
     },
     "GARM_WFA": {
@@ -422,6 +450,10 @@
     },
     "GIC": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "GSEs_FannieFreddie": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
     "Garantex": {
@@ -465,7 +497,7 @@
       "has_exogenous_revenue": true
     },
     "Hedge_Funds": {
-      "sector": "other",
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "Hiero_LFDT": {
@@ -497,7 +529,7 @@
       "has_exogenous_revenue": false
     },
     "ILCs": {
-      "sector": "other",
+      "sector": "bank",
       "has_exogenous_revenue": true
     },
     "InQTel": {
@@ -616,6 +648,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Life_Insurers": {
+      "sector": "insurance",
+      "has_exogenous_revenue": true
+    },
     "MGX": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -656,9 +692,25 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Money_Market_Funds": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Mortgage_Market": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
+    "Mortgage_REITs": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "MtGox": {
       "sector": "exchange",
       "has_exogenous_revenue": false
+    },
+    "Municipal_Debt": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
     },
     "NRO": {
       "sector": "state_intel",
@@ -686,6 +738,10 @@
     },
     "Nebius": {
       "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Neobanks": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
     "Neoclouds": {
@@ -764,6 +820,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Pension_Funds": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Pertsev": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -778,6 +838,10 @@
     },
     "Predatory_Sparrow": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Prime_Brokers": {
+      "sector": "bank",
       "has_exogenous_revenue": true
     },
     "Prince_Group": {
@@ -801,6 +865,10 @@
       "has_exogenous_revenue": true
     },
     "PrivateCredit_Funds": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "PrivateEquity_Funds": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
@@ -831,6 +899,10 @@
     "Rate_Shock": {
       "sector": "macro_factor",
       "has_exogenous_revenue": false
+    },
+    "Repo_Market": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
     },
     "Retail_401k": {
       "sector": "retail",
@@ -1012,6 +1084,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Sponsor_Banks": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "Stablecoins": {
       "sector": "stablecoin",
       "has_exogenous_revenue": false
@@ -1035,6 +1111,10 @@
     "StraitsX": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Subprime_Auto_ABS": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": false
     },
     "Swift": {
       "sector": "financial_infra",
@@ -1092,6 +1172,14 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "Treasury_Market": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
+    "Tricolor_Holdings": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
     "Trump": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1109,6 +1197,10 @@
       "has_exogenous_revenue": true
     },
     "UBS_OConnor": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "UK_LDI_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
     },
@@ -1157,7 +1249,7 @@
       "has_exogenous_revenue": false
     },
     "US_household_credit": {
-      "sector": "other",
+      "sector": "retail",
       "has_exogenous_revenue": true
     },
     "US_political_system": {
@@ -2036,6 +2128,45 @@
       "note": ""
     },
     {
+      "from": "Family_Offices",
+      "to": "Prime_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "total-return swaps (synthetic prime brokerage) - hidden-leverage/hidden-concentration channel; family-office adviser exemption + 13F's exclusion of swaps make aggregate positions invisible (Archegos pattern; TRS volumes ~2x 2024)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-family-offices.json",
+      "note": ""
+    },
+    {
+      "from": "Prime_Brokers",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "concentrated counterparty exposure to single leveraged family offices; Archegos = >$10B prime-broker losses (Credit Suisse ~$5.5B, a driver of its failure); no cross-broker visibility (FSB Jul 2025)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-family-offices.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Family_Offices",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory gap: Family Office Rule (2011) removes adviser registration/Form PF; 13F excludes swaps; Rule 10B-1 swap-position disclosure WITHDRAWN June 2025 - the Archegos fix abandoned",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-family-offices.json",
+      "note": ""
+    },
+    {
       "from": "MtGox",
       "to": "Creditors",
       "instrument": "repayment",
@@ -2855,6 +2986,58 @@
       "note": ""
     },
     {
+      "from": "Mortgage_REITs",
+      "to": "Repo_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "short-term repo financing rolled <90 days at ~6-9x leverage; margin calls forced Invesco Mortgage to dump $16.2B of MBS in Q1 2020 - the fire-sale amplifier",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-mortgage-reits.json",
+      "note": ""
+    },
+    {
+      "from": "Mortgage_REITs",
+      "to": "Agency_MBS_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$200B agency MBS (Annaly+AGNC) - the same collateral banks (~$3.0T) and the Fed (~$2.3T) hold; forced mREIT selling marks down bank books simultaneously",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-mortgage-reits.json",
+      "note": ""
+    },
+    {
+      "from": "Agency_MBS_Market",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "banks held ~$3.0T agency MBS; an mREIT fire sale into this market marks down bank AFS/HTM (the SVB-style channel)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-mortgage-reits.json",
+      "note": ""
+    },
+    {
+      "from": "Mortgage_REITs",
+      "to": "CRE_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commercial mREITs (BXMT ~36% office (2024), STWD ~$10B CRE) hold transitional/floating-rate CRE credit meeting the 2026-27 maturity wall ($0.9-1.1T/yr) at 6-7% refi rates",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-mortgage-reits.json",
+      "note": ""
+    },
+    {
       "from": "Larry_Ellison",
       "to": "Tony_Blair_Institute",
       "instrument": "other",
@@ -3360,6 +3543,58 @@
       "cancelable": false,
       "source_file": "spec-insurance-bermuda.json",
       "note": "~$180B insurance capital into private credit (2025); the PE owner both originates the credit and owns the insurer that holds it - vertical/circular integration."
+    },
+    {
+      "from": "Municipal_Debt",
+      "to": "Pension_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "statutorily senior pension/OPEB contributions (~$1.27T unfunded) crowd out budgets; Chicago ~$35.9B owed, S&P negative outlook (2025) - the pension->credit loop",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-municipal-public-finance.json",
+      "note": ""
+    },
+    {
+      "from": "CRE_Market",
+      "to": "Municipal_Debt",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "property-tax-assessment doom loop: office vacancy (SF 36.6%) -> lower assessed value -> revenue shortfall (SF ~$936M over FY2027-28, NYC up to ~$10B); 2-3yr back-loaded lag",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-municipal-public-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Federal_Transfers",
+      "to": "Municipal_Debt",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal Medicaid cuts >$1T/10yr (~$88B/yr) force state backfill or cuts, transmitting to local GO/revenue credits (NYC out-year gaps)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-municipal-public-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Municipal_Debt",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "households hold ~48% of munis (direct + SMAs) - muni distress lands on retail/retirement balance sheets, the same household carrying the consumer-credit tail",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-municipal-public-finance.json",
+      "note": ""
     },
     {
       "from": "NVIDIA",
@@ -4558,6 +4793,45 @@
       "note": "Shelter (rent + OER) ~1/3 of CPI; a ~1yr-lagged largest component drives the headline at every turning point."
     },
     {
+      "from": "Hedge_Funds",
+      "to": "Treasury_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cash-futures basis trade: ~$2.3T long Treasury exposure (Mar 2025) / short futures near 2024 record; Cayman funds absorbed $1,225B of net issuance 2022-24, the 2nd-largest buyer",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-treasury-basis-trade.json",
+      "note": ""
+    },
+    {
+      "from": "Hedge_Funds",
+      "to": "Repo_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "repo financing of the cash leg: HF repo borrowing ~$3.1T (Q2 2025, +154%), Treasury-collateral repo >=$1.4T, 73.8% at zero/negative haircut; overnight rollover risk",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-treasury-basis-trade.json",
+      "note": ""
+    },
+    {
+      "from": "Repo_Market",
+      "to": "Treasury_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SEC central-clearing mandate (cash by Dec-2026, repo by Jun-2027) routes the basis trade through FICC/CME CCPs - concentrating margin risk while reducing settlement-fail contagion",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-treasury-basis-trade.json",
+      "note": ""
+    },
+    {
       "from": "Rate_Shock",
       "to": "Banks",
       "instrument": "other",
@@ -5000,6 +5274,58 @@
       "note": ""
     },
     {
+      "from": "Money_Market_Funds",
+      "to": "Repo_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$7.9T pool; dominant cash supplier to repo; ON-RRP drained from >$2.5T to ~$22B, removing the shock absorber so funding stress now hits SOFR directly",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-money-market-funds.json",
+      "note": ""
+    },
+    {
+      "from": "Money_Market_Funds",
+      "to": "Treasury_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MMFs hold ~40% of outstanding T-bills - largest marginal buyer absorbing the deficit-driven supply surge; a redemption wave forces bill liquidation",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-money-market-funds.json",
+      "note": ""
+    },
+    {
+      "from": "Stablecoins",
+      "to": "Treasury_Market",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "GENIUS-mandated T-bill/repo reserves (~$109B bought 2025) put stablecoins into the same collateral pool as MMFs - a shared fire-sale channel on a run",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-money-market-funds.json",
+      "note": ""
+    },
+    {
+      "from": "Money_Market_Funds",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MMFs compete with bank deposits for cash; rate-driven flows into MMFs drain deposit funding (the SVB-era deposit-flight channel)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-money-market-funds.json",
+      "note": ""
+    },
+    {
       "from": "US_Congress",
       "to": "Crypto_legislation",
       "instrument": "regulatory_legal",
@@ -5036,6 +5362,58 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-crypto-legislation-forcing.json",
+      "note": ""
+    },
+    {
+      "from": "FHLB_System",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "secured advances (~$677B outstanding 2025; 2023 record surge ~$0.8-1.0T) with super-lien priority ahead of the FDIC; SVB/Signature/First Republic were top borrowers right before failing",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gses-fhlb.json",
+      "note": ""
+    },
+    {
+      "from": "GSEs_FannieFreddie",
+      "to": "Mortgage_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$7.7T guaranteed agency MBS on ~$179B combined net worth (~43x) backing the conforming mortgage market; conservatorship-release could reprice rates +20-80bp",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gses-fhlb.json",
+      "note": ""
+    },
+    {
+      "from": "Federal_Reserve",
+      "to": "GSEs_FannieFreddie",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the Fed held ~$2.3T agency MBS (~30% of the market) before QT - central-bank holder of the same GSE-guaranteed paper that sits in bank books",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gses-fhlb.json",
+      "note": ""
+    },
+    {
+      "from": "GSEs_FannieFreddie",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "banks/thrifts held ~$2.28T agency MBS (Q4 2024) - the GSE-guaranteed pool is the same collateral that marks bank AFS/HTM books (the rate-shock channel)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-gses-fhlb.json",
       "note": ""
     },
     {
@@ -5273,6 +5651,58 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "Subprime_Auto_ABS",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "auto ABS / warehouse financing (~$1.69T auto balances; subprime 60+ delinquency 6.74% Dec 2025, a 32-yr high; repos at 2009 levels)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-consumer-abs-subprime.json",
+      "note": ""
+    },
+    {
+      "from": "Tricolor_Holdings",
+      "to": "US_Banks",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "warehouse financing against double-pledged auto collateral (~$548M per trustee; ~31,000 loans); JPMorgan ~$170M writedown, Fifth Third ~$200M, Barclays - collateral-fraud failure in the funding chain",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-consumer-abs-subprime.json",
+      "note": ""
+    },
+    {
+      "from": "First_Brands",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "trade-finance/factoring receivables (~$2.5B fabricated invoices, multi-factor double-pledge) - factoring/private-lending opacity, the Tricolor pattern in trade finance",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-consumer-abs-subprime.json",
+      "note": ""
+    },
+    {
+      "from": "BNPL_Phantom_Debt",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "unreported installment financing (~$400B est., largely invisible to bureaus) - understates true household leverage; 47% of users reported a late payment (2026)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-consumer-abs-subprime.json",
+      "note": ""
+    },
+    {
       "from": "Credit_Unions",
       "to": "US_household_credit",
       "instrument": "other",
@@ -5442,6 +5872,97 @@
       "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
     },
     {
+      "from": "Pension_Funds",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "direct-lending allocations (CalPERS ~8% target, CalSTRS adding ~2%) - the fastest-growing pension sleeve, manager-marked NAVs",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pensions-ldi.json",
+      "note": ""
+    },
+    {
+      "from": "Pension_Funds",
+      "to": "PrivateEquity_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "LP commitments to manager-marked PE/real-asset interests (~34% of CalPERS, ~28% of CalSTRS illiquid; >50% of US plans over PE target via the denominator effect)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pensions-ldi.json",
+      "note": ""
+    },
+    {
+      "from": "UK_LDI_Funds",
+      "to": "Treasury_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leveraged gilt collateral (~\u00a31.5T hedged) - the 2022 doom loop forced >\u00a336bn of gilt selling on margin calls; 250bp+ buffer reform; same sovereign-collateral fragility as US Treasuries",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pensions-ldi.json",
+      "note": ""
+    },
+    {
+      "from": "Pension_Funds",
+      "to": "Life_Insurers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "pension risk transfer / annuity buyouts (corporate LDI de-risking relocates liabilities onto life insurers and their captive marks)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pensions-ldi.json",
+      "note": ""
+    },
+    {
+      "from": "BaaS_Middleware",
+      "to": "Sponsor_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "pooled for-benefit-of (FBO) custodial deposits + a private sub-ledger; reconciliation failure (Synapse) froze 100,000+ users and lost ~$85-96M; repeated by Solid (2025)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-fintech-baas.json",
+      "note": ""
+    },
+    {
+      "from": "Neobanks",
+      "to": "Sponsor_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "pass-through FBO deposits - Chime (Bancorp/Stride), Cash App (Sutton/Wells), Dave; most neobanks are apps on a few small sponsor banks, not banks",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-fintech-baas.json",
+      "note": ""
+    },
+    {
+      "from": "Sponsor_Banks",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "small FDIC-insured sponsor banks carrying tech-scale deposit bases and hundreds of fintech programs each; ~8 hit with 2024 consent orders, one exit (Blue Ridge) displaced ~70 partners",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-fintech-baas.json",
+      "note": ""
+    },
+    {
       "from": "Bond_Market_2Y",
       "to": "Federal_Reserve",
       "instrument": "other",
@@ -5534,10 +6055,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 310,
-    "num_edges": 330,
-    "num_financial_edges": 129,
-    "num_structural_edges": 201,
+    "num_nodes": 333,
+    "num_edges": 363,
+    "num_financial_edges": 130,
+    "num_structural_edges": 233,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -5588,12 +6109,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -5604,12 +6125,12 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -5617,14 +6138,14 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -5635,8 +6156,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -5647,8 +6168,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -5744,6 +6265,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Agency_MBS_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Amazon": {
         "total_usd": 196100000000,
         "circular_usd": 184500000000,
@@ -5828,8 +6356,22 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BNPL_Phantom_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BNY_Mellon": {
         "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BaaS_Middleware": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6018,6 +6560,13 @@
         "in_robust_core": false
       },
       "CPI_Rent": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CRE_Market": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6325,6 +6874,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FHLB_System": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FTC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -6346,6 +6902,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Family_Offices": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Farmington_Moonstone": {
         "total_usd": 11500000,
         "circular_usd": 0,
@@ -6354,6 +6917,13 @@
         "in_robust_core": false
       },
       "Federal_Reserve": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Federal_Transfers": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6410,6 +6980,13 @@
         "in_robust_core": false
       },
       "GIC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GSEs_FannieFreddie": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -6752,6 +7329,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Life_Insurers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MGX": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -6822,8 +7406,36 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Money_Market_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mortgage_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mortgage_REITs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MtGox": {
         "total_usd": 9000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Municipal_Debt": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -6873,6 +7485,13 @@
       },
       "Nebius": {
         "total_usd": 22100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Neobanks": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7011,6 +7630,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Pension_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pertsev": {
         "total_usd": 2200000000,
         "circular_usd": 0,
@@ -7034,6 +7660,13 @@
       },
       "Predatory_Sparrow": {
         "total_usd": 90000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Prime_Brokers": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7076,6 +7709,13 @@
       },
       "PrivateCredit_Funds": {
         "total_usd": 360000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PrivateEquity_Funds": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7125,6 +7765,13 @@
       },
       "Rate_Shock": {
         "total_usd": 306000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Repo_Market": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7445,6 +8092,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sponsor_Banks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stablecoins": {
         "total_usd": 1000000000000,
         "circular_usd": 0,
@@ -7481,6 +8135,13 @@
         "in_robust_core": false
       },
       "StraitsX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Subprime_Auto_ABS": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7585,6 +8246,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Treasury_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tricolor_Holdings": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Trump": {
         "total_usd": 400000000,
         "circular_usd": 0,
@@ -7615,6 +8290,13 @@
       },
       "UBS_OConnor": {
         "total_usd": 500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UK_LDI_Funds": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7854,6 +8536,28 @@
     },
     "top_cross_layer_connectors": [
       {
+        "node": "US_Banks",
+        "degree": 18,
+        "neighbor_sectors": [
+          "bank",
+          "central_bank",
+          "financial_infra",
+          "financier",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 14,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "NVIDIA",
         "degree": 20,
         "neighbor_sectors": [
@@ -7867,25 +8571,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 11,
-        "neighbor_sectors": [
-          "central_bank",
-          "other",
-          "private_credit",
-          "regulator",
-          "sink",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"
@@ -7943,6 +8628,25 @@
           "other",
           "sink",
           "space_real_economy"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "PrivateCredit_Funds",
+        "degree": 7,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "retail"
         ],
         "n_neighbor_sectors": 6,
         "source_files": 5,
@@ -8080,6 +8784,23 @@
         "both_layers": true
       },
       {
+        "node": "Federal_Reserve",
+        "degree": 7,
+        "neighbor_sectors": [
+          "bank",
+          "financial_infra",
+          "macro_factor",
+          "other",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 5,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "MGX",
         "degree": 8,
         "neighbor_sectors": [
@@ -8114,23 +8835,6 @@
         "both_layers": true
       },
       {
-        "node": "PrivateCredit_Funds",
-        "degree": 5,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "insurance",
-          "retail"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "CoreWeave",
         "degree": 10,
         "neighbor_sectors": [
@@ -8158,22 +8862,6 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "SINK_lenders",
-        "degree": 7,
-        "neighbor_sectors": [
-          "bank",
-          "neocloud",
-          "other"
-        ],
-        "n_neighbor_sectors": 3,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"

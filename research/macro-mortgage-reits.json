@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "title": "Mortgage REITs and REITs - the levered, repo-funded MBS holder that already fire-sold in 2020",
+    "generated": "2026-06-14",
+    "frame": "Mortgage REITs borrow short in repo to hold long-duration agency MBS at ~6-9x leverage, hedged with swaps - the same agency MBS that banks (~$3.0T) and the Fed (~$2.3T) hold. A rate/spread shock crushes book value and forces margin-driven MBS selling into that shared market; in March 2020 Invesco Mortgage went from ~$22B to ~$1.6B in ~10 weeks and only unlimited Fed MBS buying stopped the cascade. Commercial mREITs add the CRE-credit channel into the 2026-2027 maturity wall. Companion to [[macro-uncovered-risk-pools]], [[macro-gses-fhlb]], [[macro-cre-privatecredit]], and [[macro-bank-htm-marks]].",
+    "relevance": "Adds the levered-MBS fire-sale amplifier to the uncovered stack; the shared-collateral channel ties mREITs directly to the bank HTM/AFS marks and the Fed's MBS book; commercial mREITs link to the CRE maturity wall.",
+    "sources": "Annaly + AGNC 2022-2026 SEC filings/releases; Invesco Mortgage (IVR) March-2020 8-K/10-Q; BXMT + STWD 2024-2025 filings; Nareit fact sheet (May 2025); MBA + S&P (CRE maturity wall); Urban Institute April-2025 Chartbook (agency-MBS holders); FSOC 2024 Annual Report; NY Fed (May 2025). Full URLs in the rendered .md."
+  },
+  "model_channel": {
+    "summary": "Borrow short, hold long, lever ~6-9x - a fire-sale amplifier in the bank/Fed MBS market.",
+    "points": [
+      {"item": "Mechanics", "detail": "Agency mREITs borrow via repo (rolled <90 days) to hold long-duration agency MBS at ~6-9x leverage, hedged with swaps/Treasury futures. Annaly Q1 2026 economic leverage 5.7x (GAAP 7.3x); AGNC Q3 2025 'at risk' leverage 7.6x.", "grade": "fact"},
+      {"item": "The rate-shock pipe", "detail": "Rising long rates + MBS spread widening crush book value; repo rollover + margin calls force MBS sales into the SAME market held by banks (~$3.0T) and the Fed (~$2.3T, ~30% of the ~$9.2T agency-MBS market). mREIT forced selling marks down bank AFS/HTM books simultaneously - the 2020 transmission.", "grade": "fact (mechanism)"}
+    ]
+  },
+  "agency_mreits": {
+    "summary": "Two giants, ~$200B of agency MBS combined, with brutal 2022 drawdowns on record.",
+    "points": [
+      {"item": "Annaly (NLY)", "detail": "~$107B total portfolio (~$92B liquid agency), Q1 2026; book value/share $19.82. In 2022 BV/sh fell ~15% in Q1 alone and ~18% in Q3 (first loss in >1yr) on Fed hikes + MBS spread widening.", "grade": "fact"},
+      {"item": "AGNC", "detail": "~$91B investment portfolio (Q3 2025; 95% 30yr fixed); 'at risk' leverage 7.6x -> 7.2x (Q4 2025); tangible BV/sh $8.28. 2022 economic return -28.4%; tangible BV/sh fell from $15.75 (YE2021) to $8.70 (YE2023), -45% - 2022 was the worst year for the US MBS index since 1976.", "grade": "fact"}
+    ]
+  },
+  "march_2020": {
+    "summary": "The proof-of-concept: margin calls forced MBS dumping until the Fed became the buyer.",
+    "points": [
+      {"item": "Invesco Mortgage (IVR)", "detail": "After meeting calls through Fri Mar 20, 2020, IVR notified counterparties on Mon Mar 23 it could NOT fund that day's margin calls and delayed declared dividends. It sold $16.2B of MBS/CRT and repaid $11.2B of repo in Q1; the portfolio collapsed from $21.9B (YE2019) to ~$1.6B by 5/31/2020.", "grade": "fact (IVR filings)"},
+      {"item": "The backstop", "detail": "The margin-call cascade forced sector-wide MBS dumping and blew out spreads until the Fed announced unlimited MBS QE on Mar 23, 2020. Other mREITs (AG Mortgage etc.) suspended dividends/sold assets in the same window. The explicit precedent: the Fed is the buyer of last resort in the same MBS market that marks the banks.", "grade": "fact (IVR) + contested (peer specifics)"}
+    ]
+  },
+  "commercial_mreits": {
+    "summary": "The CRE-credit channel into the maturity wall.",
+    "points": [
+      {"item": "BXMT / STWD", "detail": "Blackstone Mortgage Trust cut its dividend 24% (to $0.47, Q3 2024) and carries ~36% office (2024) in book; Starwood Property Trust holds ~$10B of CRE loans with $680M of reserves (FY2025). These are transitional/floating-rate CRE lenders meeting the maturity wall at higher refi rates.", "grade": "fact + contested (STWD 'never cut' marketing claim)"},
+      {"item": "The maturity wall", "detail": "CRE/multifamily maturities: ~$875B due 2026 per MBA (17% of balances) vs ~$1.148T per S&P - cite both (methodologies differ); >$4T total 2025-2029. Loans from ~5 years ago at 3-4% refinance into 6-7%. Total listed-REIT equity market cap >$1.4T (Nareit, May 2025); REITs own >$4.5T of CRE.", "grade": "contested (maturity figures) + fact (REIT size)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "Levered, repo-funded holders of the same collateral that prices the banks.",
+    "points": [
+      {"item": "Why it matters", "detail": "mREITs concentrate leverage on the exact agency MBS that banks and the Fed hold - so a rate shock forces a levered repo unwind into the market that marks bank balance sheets (the SVB-style AFS/HTM channel and the 2020 fire-sale channel are the same pipe). The same long-rate common factor ([[macro-bank-htm-marks]], [[macro-cross-sectional-analysis]]) hits mREIT book value, bank securities marks, and the GSE/Fed MBS book at once. Commercial mREITs add the CRE-credit leg into the 2026-2027 maturity wall.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim a major mREIT is currently failing - the point is the levered fire-sale mechanism and shared collateral, with 2020 and 2022 as the realized precedents.",
+      "CRE maturity-wall figures are contested (MBA ~$875B vs S&P ~$1.148T for 2026) - both are cited rather than one.",
+      "March-2020 peer specifics beyond Invesco Mortgage are graded contested.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Mortgage_REITs", "to": "Repo_Market", "instrument": "relationship", "raw_instrument": "short-term repo financing rolled <90 days at ~6-9x leverage; margin calls forced Invesco Mortgage to dump $16.2B of MBS in Q1 2020 - the fire-sale amplifier", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-mortgage-reits.json", "note": "OVERLAY: levered repo funding; excluded from proofs"},
+    {"from": "Mortgage_REITs", "to": "Agency_MBS_Market", "instrument": "relationship", "raw_instrument": "~$200B agency MBS (Annaly+AGNC) - the same collateral banks (~$3.0T) and the Fed (~$2.3T) hold; forced mREIT selling marks down bank books simultaneously", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-mortgage-reits.json", "note": "OVERLAY: shared-collateral fire sale; excluded from proofs"},
+    {"from": "Agency_MBS_Market", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "banks held ~$3.0T agency MBS; an mREIT fire sale into this market marks down bank AFS/HTM (the SVB-style channel)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-mortgage-reits.json", "note": "OVERLAY: marks-transmission to banks; excluded from proofs"},
+    {"from": "Mortgage_REITs", "to": "CRE_Market", "instrument": "relationship", "raw_instrument": "commercial mREITs (BXMT ~36% office (2024), STWD ~$10B CRE) hold transitional/floating-rate CRE credit meeting the 2026-27 maturity wall ($0.9-1.1T/yr) at 6-7% refi rates", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-mortgage-reits.json", "note": "OVERLAY: CRE-credit channel; excluded from proofs"}
+  ],
+  "limits": "Documents the mREIT model (repo-funded, ~6-9x; Annaly ~$107B/5.7x, AGNC ~$91B/7.6x); 2022 drawdowns (AGNC tangible BV -45% 2021-2023); the March-2020 fire sale (Invesco Mortgage $21.9B -> ~$1.6B in ~10 weeks; Fed unlimited MBS QE Mar 23); commercial mREITs (BXMT -24% dividend, ~36% office (2024); STWD $680M reserves) into the CRE maturity wall ($875B MBA / $1.148T S&P for 2026); shared agency-MBS collateral (banks ~$3.0T, Fed ~$2.3T of ~$9.2T). Overlay edges excluded from proofs; maturity figures contested.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Model/size", "result": "Annaly ~$107B/econ leverage 5.7x (Q1 2026); AGNC ~$91B/'at risk' 7.6x (Q3 2025); ~6-9x repo-funded agency MBS."},
+      {"check": "Drawdowns", "result": "AGNC 2022 econ return -28.4%; tangible BV/sh $15.75->$8.70 (-45%, 2021-2023); Annaly 2022 BV -15% Q1 / -18% Q3."},
+      {"check": "March 2020", "result": "Invesco Mortgage could not meet Mar 23 calls; sold $16.2B MBS; portfolio $21.9B->~$1.6B; Fed unlimited MBS QE Mar 23 2020."},
+      {"check": "Commercial/wall", "result": "BXMT -24% dividend (Q3 2024), ~36% office (2024); STWD ~$10B CRE, $680M reserves; maturity wall $875B (MBA)/$1.148T (S&P) 2026; agency MBS banks ~$3.0T/Fed ~$2.3T."}
+    ]
+  }
+}

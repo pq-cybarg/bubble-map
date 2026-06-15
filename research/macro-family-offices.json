@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "title": "Family offices and the Archegos lesson - ~$3.1T of unregistered, swap-hidden leverage whose disclosure fix was withdrawn",
+    "generated": "2026-06-14",
+    "frame": "Family offices manage ~$3.1T globally (8,030 single-family offices, 2024) under a Dodd-Frank exemption from adviser registration, so their leverage and concentration are largely invisible. Archegos (2021) showed how total-return swaps stack three opacity layers - and the SEC's direct fix, Rule 10B-1, was formally WITHDRAWN in June 2025. The gap was abandoned, not closed, while swap volumes roughly doubled. Companion to [[macro-uncovered-risk-pools]] and [[self_marked_value]].",
+    "relevance": "Adds the opaque-leverage node to the uncovered stack; the hidden-leverage-via-swaps mechanism is the same disclosure failure that recurs across the project; the 2025 withdrawal of 10B-1 is a documented regression in transparency.",
+    "sources": "Deloitte Private family-office landscape (Sept 2024); UBS + Goldman family-office reports (2025); SEC Family Office Rule (2011); DOJ-SDNY Hwang release; FIA 'Archegos Rules'; freewritings.law (10B-1 withdrawal Jun 2025); FSB NBFI-leverage final report (Jul 2025); Basel CCR guidelines (Dec 2024); Finadium/Morgan Stanley (TRS growth). Full URLs in the rendered .md.",
+    "note": "User's '~$6T' is above the current ~$3.1T (2024) figure; $5.4T is a 2030 projection. Hwang was sentenced Nov 2024, not 2025."
+  },
+  "size_growth": {
+    "summary": "~$3.1T and rising fast - and projected to keep climbing.",
+    "points": [
+      {"item": "AUM", "detail": "Global single-family-office AUM ~$3.1T (2024, Deloitte), projected +73% to ~$5.4T by 2030. The '$5-9T' upper end is a projection, not a current figure.", "grade": "fact (Deloitte)"},
+      {"item": "Count", "detail": "8,030 single-family offices globally in 2024, up from 6,130 in 2019 (+31%); North America 3,180 (largest region) ~ roughly $1.2-1.5T of the global pool. Average ~$386M AUM (Deloitte); larger institutional SFOs average ~$1.1B (UBS sample).", "grade": "fact + weak (US-only derived)"}
+    ]
+  },
+  "regulatory_gap": {
+    "summary": "Exempt from adviser registration - so leverage and positions are largely invisible.",
+    "points": [
+      {"item": "The exemption", "detail": "SEC Family Office Rule 202(a)(11)(G)-1 (adopted June 2011 under Dodd-Frank S.409) excludes qualifying family offices from the 'investment adviser' definition - no Form ADV, generally no Form PF.", "grade": "fact (SEC)"},
+      {"item": "13F's swap blind spot", "detail": "Form 13F (holders of >$100M in 13(f) securities) covers only long US-listed equity/options and EXCLUDES swaps/synthetic exposure - so leverage built via total-return swaps is invisible even where a 13F is filed. This is the core opacity channel.", "grade": "fact"}
+    ]
+  },
+  "archegos": {
+    "summary": "One family office, ~$36B equity, ~$160B synthetic exposure - and no one could see it.",
+    "points": [
+      {"item": "Scale + structure", "detail": "Bill Hwang's Archegos held ~$36B of assets but built ~$160B of market exposure (~4-5x) almost entirely through total-return swaps spread across prime brokers who could not see each other's positions, in concentrated names (ViacomCBS, Discovery, GSX, Baidu). Synthetic exposure fell outside 13F - the market could not see the concentration.", "grade": "fact"},
+      {"item": "The losses", "detail": ">$10B total prime-broker losses: Credit Suisse ~$5.5B (a driver of its later instability), Nomura ~$2.9B, Morgan Stanley ~$0.9-1B, UBS ~$0.86B; ~$100B+ of market value erased. (Per-bank figures beyond CS/total are bank disclosures - graded contested.)", "grade": "contested"},
+      {"item": "Verdict", "detail": "Hwang convicted (July 2024, 10 counts) and sentenced to 18 years on Nov 20, 2024 (SDNY); CFO Patrick Halligan convicted and sentenced Jan 2025. The lesson: swaps + the family-office exemption + no aggregate prime-broker view stack THREE opacity layers.", "grade": "fact"}
+    ]
+  },
+  "fix_withdrawn": {
+    "summary": "The direct fix was proposed, then formally withdrawn - the gap is open as of 2026.",
+    "points": [
+      {"item": "Rule 10B-1 abandoned", "detail": "The SEC proposed Rule 10B-1 (Dec 2021) for prompt public reporting of large security-based swap positions, explicitly tied to Archegos - then FORMALLY WITHDREW it in June 2025 among a batch of Gensler-era proposals. As of mid-2026 there is still no public large-swap-position disclosure regime: the systemic lesson was un-learned at the rulemaking level.", "grade": "fact"},
+      {"item": "What did get adopted", "detail": "The SEC adopted security-based swap antifraud rules (Rule 9j-1, 2023) - but those address fraud, NOT position transparency. Form 13F was never expanded to capture synthetic exposure. The exact Archegos hole remains.", "grade": "fact + contested"}
+    ]
+  },
+  "trend": {
+    "summary": "The opaque, leveraged configuration that produced Archegos is EXPANDING while its fix was withdrawn.",
+    "points": [
+      {"item": "Swap volumes doubling", "detail": "US-equity total-return-swap trading volumes roughly doubled vs 2024 (as of Sept 2025); synthetic prime-brokerage is growing ~25%/yr. Morgan Stanley's prime brokerage drove equities revenue +35% YoY to ~$4.12B (Q3 2025) citing record prime-brokerage balances.", "grade": "fact + contested (25% CAGR)"},
+      {"item": "Risk appetite up", "detail": "Goldman 2025: family offices ~42% in alternatives, 34% plan to cut cash into risk assets, 39% raising private equity - rising risk appetite in a still-unregistered pool. FSB (Jul 2025) cites Archegos by name as hidden-leverage-via-TRS and recommends concentration-based measures and better authority visibility.", "grade": "fact (Goldman/FSB)"}
+    ]
+  },
+  "synthesis": {
+    "summary": "The transparency lesson was withdrawn, not learned.",
+    "points": [
+      {"item": "Why it matters", "detail": "Archegos proved that a single unregistered family office can build nine-figure-billions of hidden, concentrated leverage through swaps and blow up multiple banks - and the SEC's specific fix was withdrawn in 2025 while swap volumes doubled and banks leaned harder into the leveraged-counterparty business. This is the project's recurring defect (self-marked, undisclosed positions) in its purest counterparty-risk form, and the guardrail moved backward.", "grade": "labeled interpretation"}
+    ]
+  },
+  "what_is_NOT_asserted": {
+    "purpose": "Guards.",
+    "non_claims": [
+      "No claim any specific family office is currently over-levered like Archegos - the point is structural invisibility plus an adverse trend, not a named present exposure.",
+      "Current global SFO AUM is ~$3.1T (2024); $5.4T is a 2030 projection; the US-only ~$1.2-1.5T is derived, not reported.",
+      "Per-bank Archegos losses beyond Credit Suisse (~$5.5B) and the >$10B total are bank disclosures, graded contested.",
+      "Overlay edges are EXCLUDED from the SCC / Z3 / TLA+ proofs."
+    ]
+  },
+  "edges": [
+    {"from": "Family_Offices", "to": "Prime_Brokers", "instrument": "relationship", "raw_instrument": "total-return swaps (synthetic prime brokerage) - hidden-leverage/hidden-concentration channel; family-office adviser exemption + 13F's exclusion of swaps make aggregate positions invisible (Archegos pattern; TRS volumes ~2x 2024)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-family-offices.json", "note": "OVERLAY: hidden-leverage channel; excluded from proofs"},
+    {"from": "Prime_Brokers", "to": "US_Banks", "instrument": "relationship", "raw_instrument": "concentrated counterparty exposure to single leveraged family offices; Archegos = >$10B prime-broker losses (Credit Suisse ~$5.5B, a driver of its failure); no cross-broker visibility (FSB Jul 2025)", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-family-offices.json", "note": "OVERLAY: counterparty concentration; excluded from proofs"},
+    {"from": "SEC", "to": "Family_Offices", "instrument": "relationship", "raw_instrument": "regulatory gap: Family Office Rule (2011) removes adviser registration/Form PF; 13F excludes swaps; Rule 10B-1 swap-position disclosure WITHDRAWN June 2025 - the Archegos fix abandoned", "amount_usd": null, "status": "open", "declared_circular": false, "cancelable": false, "source_file": "macro-family-offices.json", "note": "OVERLAY: withdrawn disclosure rule; excluded from proofs"}
+  ],
+  "limits": "Sizes the family-office pool (~$3.1T, 8,030 SFOs, 2024 Deloitte; $5.4T 2030 projection); the adviser-registration exemption (2011) and 13F swap blind spot; Archegos (~$36B -> ~$160B synthetic, >$10B PB losses incl. Credit Suisse ~$5.5B; Hwang 18yr Nov 2024); the formal withdrawal of Rule 10B-1 (June 2025) leaving the gap open; and the adverse trend (TRS volumes ~2x 2024, synthetic PB ~25%/yr, record PB balances, rising family-office risk appetite). Overlay edges excluded from proofs.",
+  "verification_log": {
+    "date": "2026-06-14",
+    "checks": [
+      {"check": "Size", "result": "~$3.1T global SFO AUM (2024, Deloitte); 8,030 SFOs (+31% since 2019); $5.4T 2030 projection; avg $386M (Deloitte) / $1.1B (UBS)."},
+      {"check": "Gap", "result": "Family Office Rule 202(a)(11)(G)-1 (2011, Dodd-Frank S.409) - no ADV/Form PF; 13F excludes swaps."},
+      {"check": "Archegos", "result": "~$36B -> ~$160B via TRS; >$10B PB losses (CS ~$5.5B, Nomura ~$2.9B); Hwang convicted Jul 2024, 18yr Nov 20 2024."},
+      {"check": "Fix/trend", "result": "Rule 10B-1 proposed Dec 2021, WITHDRAWN June 2025; 9j-1 antifraud only; TRS volumes ~2x 2024; FSB Jul 2025 cites Archegos."}
+    ]
+  }
+}

@@ -40,5 +40,7 @@ The FDIC aggregate is the *visible* layer; several pools of comparable risk are 
 
 > The honest read: the FDIC number is a floor on the *banking* slice of a larger pool. Credit unions and NDFIs are the two biggest uncovered reservoirs of the same HTM/CRE/duration risk; the suppressed problem-bank asset total is the deliberately-hidden distribution.
 
+Each of these pools is now mapped in its own block — see [[macro-uncovered-risk-pools]] for the full stack (~$33–37T outside this lens) and the deep digs: [[macro-money-market-funds]], [[macro-treasury-basis-trade]], [[macro-pensions-ldi]], [[macro-gses-fhlb]], [[macro-family-offices]], [[macro-fintech-baas]], [[macro-mortgage-reits]], [[macro-consumer-abs-subprime]], and [[macro-municipal-public-finance]].
+
 ## Read for the bubble thesis
 The banking system is **not in acute distress**, but it carries two slow-burn vulnerabilities that the AI-capex story plugs into: (1) a **$325B unrealized-loss sensitivity to rates** — and the AI buildout is issuing a wall of new corporate/datacenter debt that pressures long rates; (2) the real CRE/credit risk has **migrated off bank balance sheets into nonbanks/private credit** — which is exactly where AI-datacenter financing now lives (see `macro-cre-privatecredit.md`: bank loans to NDFIs ~$1.97T). The banks look clean partly because the risk moved to where the AI money is.
