@@ -17,6 +17,17 @@ The clearest case that **the state plays the same circular role for minerals tha
 ## 2. The China chokepoint
 China controls **~70% of mining and the dominant majority of refining/separation and magnet-making** — and has demonstrated **export controls** as leverage (the 2023–25 gallium/germanium/antimony/REE restrictions). That is the binding constraint the Z3 `defense_chokepoint` proof formalizes (REE independence UNSAT until ~2028).
 
+## 2b. Annual volumes — defense vs AI *(added 2026-06-16, #48)*
+Quantifying the physical tonnage, and splitting demand between the **defense** leg (low-tonnage, high-criticality, no substitute) and the **AI/electrification** leg (high-tonnage bulk). *Mine/processing shares are fact; the demand split is a labeled estimate.*
+
+| Mineral | World mine | China share | The chokepoint |
+|---|---|---|---|
+| **Rare earths** | ~**390,000 t REO** mined (2025, USGS o.o.m.) | ~**70% mine**, ~**90% separation/magnets**, ~**100% heavy-REE** | the binding constraint is **separation**, not ore — exactly the step weaponized Apr-2025 |
+| **Antimony** | ~**83,000 t** mined (2023, USGS) | ~**48% mine**, ~**90% refined** | the US had **no domestic mined antimony** pre-Stibnite; Dec-2024 ban drove ~$25k→~$60k/t (~$51.8k Jun-2026) |
+
+- **Defense — criticality, not tonnage.** A platform needs *kilograms*: REE magnets in missile fin actuators, radar, the F-35 (Adamas estimate **~23 kg** SmCo/NdFeB per airframe — the widely-cited "920 lb per F-35" figure is **contested**, it conflates whole-program magnet mass), Virginia/Columbia subs, drones; antimony in primers, armor-piercing rounds, night-vision/IR. Tiny mass, but a supply cut **halts production**.
+- **AI/electrification — the volume driver.** NdFeB magnets in datacenter cooling/HVAC motors, grid build-out, EV traction and wind, plus **copper** for power/interconnect (cross-ref `macro-futures-vs-physical`). AI/electrification is the **tonnage**; defense is the **criticality** — and both draw on the *same* China-controlled separation step.
+
 ## 3. The speculative tail
 The strategic narrative has pulled a cohort of junior-miner equities (Critical Metals/Tanbreez, USA Rare Earth, Ucore, etc.) — real strategic need, but **narrative-driven valuations**; graded accordingly in the equities cohort (see `macro-critical-minerals-equities`).
 

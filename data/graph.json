@@ -72,6 +72,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Antimony": {
+      "sector": "commodity",
+      "has_exogenous_revenue": true
+    },
     "ApartmentList_ALNRI": {
       "sector": "data_provider",
       "has_exogenous_revenue": false
@@ -322,6 +326,10 @@
     },
     "Critical_Metals_Corp": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Crude_Oil": {
+      "sector": "commodity",
       "has_exogenous_revenue": true
     },
     "Crusoe": {
@@ -888,6 +896,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Perpetua_Resources": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
     "Pertsev": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -954,6 +966,10 @@
     },
     "REalloys": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Rare_Earths": {
+      "sector": "commodity",
       "has_exogenous_revenue": true
     },
     "Rate_Shock": {
@@ -1341,11 +1357,15 @@
       "has_exogenous_revenue": true
     },
     "Ucore": {
-      "sector": "other",
-      "has_exogenous_revenue": true
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": false
     },
     "Unification_Church": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "United_States_Antimony": {
+      "sector": "critical_minerals",
       "has_exogenous_revenue": true
     },
     "VanLoon": {
@@ -2531,6 +2551,58 @@
       "cancelable": false,
       "source_file": "macro-gig-labor.json",
       "note": "Gig invisible to CES payroll; CPS counts >=1hr/wk as employed; multiple-jobholders inflate the jobs count -> headline stronger than lived reality (ties the CES-CPS divergence + -911k benchmark)."
+    },
+    {
+      "from": "China",
+      "to": "Rare_Earths",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "auto-deny foreign-military licensing on six separated REEs (~90% of processing)",
+      "amount_usd": null,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": "the binding chokepoint is SEPARATION, retained under case-by-case licensing"
+    },
+    {
+      "from": "China",
+      "to": "Antimony",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "export licensing + military-end-user ban (~90% of refined antimony)",
+      "amount_usd": null,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": "Dec-2024 ban; suspended Nov-2025 but licensing + mil-end-user ban retained"
+    },
+    {
+      "from": "Rare_Earths",
+      "to": "Defense_Primes",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "NdFeB magnets for missiles / F-35 / radar / drones (military-critical, no substitute)",
+      "amount_usd": null,
+      "status": "demand",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": "low tonnage, high criticality"
+    },
+    {
+      "from": "Antimony",
+      "to": "Defense_Primes",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "ammunition primers / armor-hardening / night-vision IR optics (military-critical)",
+      "amount_usd": null,
+      "status": "demand",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals.json",
+      "note": "no domestic mined US source pre-Stibnite"
     },
     {
       "from": "Disney",
@@ -5380,6 +5452,97 @@
       "note": ""
     },
     {
+      "from": "US_Government",
+      "to": "Perpetua_Resources",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Pentagon DPA Title III grant + EXIM financing for the only mined US antimony source (Stibnite, Idaho; 2029 ops)",
+      "amount_usd": 2900000000,
+      "status": "approved",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "state-anchored builder; EXIM $2.9B (May 2026) + DPA Title III $59.2M + DOTC $22.4M"
+    },
+    {
+      "from": "US_Government",
+      "to": "United_States_Antimony",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Pentagon antimony supply contract + DPA Title III grant (only NA mil-spec smelter)",
+      "amount_usd": 350000000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "~$350M defense+industrial contracts; DPA Title III $27M (Feb 2026)"
+    },
+    {
+      "from": "US_Government",
+      "to": "Ucore",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "DoD grant to bring RapidSX REE separation to commercial scale (the China-dominated midstream step)",
+      "amount_usd": 18400000,
+      "status": "committed",
+      "declared_circular": true,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "$18.4M DoD; Louisiana SMC separates the six controlled REEs"
+    },
+    {
+      "from": "Perpetua_Resources",
+      "to": "Antimony",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Stibnite Idaho - the only mined US antimony source (2029)",
+      "amount_usd": null,
+      "status": "developing",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "gold pays for the mine; antimony is the strategic point"
+    },
+    {
+      "from": "United_States_Antimony",
+      "to": "Antimony",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Thompson Falls smelter - only NA mil-spec antimony refining (6x expansion)",
+      "amount_usd": null,
+      "status": "operating",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "the midstream refining bottleneck the Perpetua/imported feed needs"
+    },
+    {
+      "from": "Ucore",
+      "to": "Rare_Earths",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "RapidSX separation of the six China-controlled REEs (Pr/Nd/Sm/Gd/Tb/Dy)",
+      "amount_usd": null,
+      "status": "developing",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "attacks the separation chokepoint, not mining"
+    },
+    {
+      "from": "MP_Materials",
+      "to": "Rare_Earths",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Mountain Pass - only scaled US REE mine + Fort Worth NdFeB magnets",
+      "amount_usd": null,
+      "status": "operating",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-critical-minerals-equities.json",
+      "note": "the one de-risked allied REE play"
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -5820,6 +5983,45 @@
       "cancelable": false,
       "source_file": "spec-crypto-legislation-forcing.json",
       "note": ""
+    },
+    {
+      "from": "Iran_IRGC",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "de-facto Strait of Hormuz closure (Feb-2026 conflict); ~20% of seaborne oil transits",
+      "amount_usd": null,
+      "status": "event",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-oil-backwardation.json",
+      "note": "the upside-tail driver - the Apr-2026 ~$117 spike"
+    },
+    {
+      "from": "Russia",
+      "to": "Crude_Oil",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned Russian crude (Rosneft/Lukoil, Oct-22-2025) redirected to China/India at a discount",
+      "amount_usd": null,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-oil-backwardation.json",
+      "note": "~70% of Russian crude restricted - a floor support via removed barrels"
+    },
+    {
+      "from": "Saudi_Arabia_state",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "OPEC+ production policy defends a ~$60-70 Brent floor (fiscal break-even ~$85)",
+      "amount_usd": null,
+      "status": "active",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-oil-backwardation.json",
+      "note": "the defended-floor mechanism modeled in oil.floor_model"
     },
     {
       "from": "FHLB_System",
@@ -6681,10 +6883,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 353,
-    "num_edges": 405,
+    "num_nodes": 358,
+    "num_edges": 419,
     "num_financial_edges": 129,
-    "num_structural_edges": 276,
+    "num_structural_edges": 290,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6735,6 +6937,18 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -6743,20 +6957,8 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -6774,18 +6976,6 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -6794,7 +6984,19 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -6942,6 +7144,13 @@
       },
       "Anthropic AI infrastructure": {
         "total_usd": 36000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Antimony": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7382,6 +7591,13 @@
         "in_robust_core": false
       },
       "Critical_Metals_Corp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Crude_Oil": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8375,6 +8591,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Perpetua_Resources": {
+        "total_usd": 2900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pertsev": {
         "total_usd": 2200000000,
         "circular_usd": 0,
@@ -8488,6 +8711,13 @@
         "in_robust_core": false
       },
       "REalloys": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rare_Earths": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9118,7 +9348,7 @@
         "in_robust_core": false
       },
       "US_Government": {
-        "total_usd": 19000000000,
+        "total_usd": 22268400000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9167,7 +9397,7 @@
         "in_robust_core": false
       },
       "Ucore": {
-        "total_usd": 0,
+        "total_usd": 18400000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9175,6 +9405,13 @@
       },
       "Unification_Church": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "United_States_Antimony": {
+        "total_usd": 350000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9365,7 +9602,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 9,
+        "degree": 12,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -9375,7 +9612,7 @@
           "state"
         ],
         "n_neighbor_sectors": 6,
-        "source_files": 7,
+        "source_files": 8,
         "layers": [
           "financial",
           "structural"
@@ -9443,6 +9680,24 @@
         "both_layers": true
       },
       {
+        "node": "China",
+        "degree": 12,
+        "neighbor_sectors": [
+          "commodity",
+          "creditor",
+          "defense",
+          "other",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 8,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Google",
         "degree": 8,
         "neighbor_sectors": [
@@ -9480,24 +9735,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "China",
-        "degree": 10,
-        "neighbor_sectors": [
-          "commodity",
-          "creditor",
-          "defense",
-          "other",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 7,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Oracle",
@@ -9624,16 +9861,17 @@
         "both_layers": true
       },
       {
-        "node": "Microsoft",
-        "degree": 9,
+        "node": "MP_Materials",
+        "degree": 5,
         "neighbor_sectors": [
-          "ai_lab",
-          "neocloud",
-          "surveillance",
-          "tech"
+          "commodity",
+          "defense",
+          "hyperscaler",
+          "other",
+          "state"
         ],
-        "n_neighbor_sectors": 4,
-        "source_files": 5,
+        "n_neighbor_sectors": 5,
+        "source_files": 3,
         "layers": [
           "financial",
           "structural"

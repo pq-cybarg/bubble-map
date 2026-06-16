@@ -3212,9 +3212,9 @@
      "date": "2022-12",
      "mean": 2.829,
      "std": 1.195,
-     "min": 2.106,
+     "min": 2.107,
      "max": 4.616,
-     "range": 2.51
+     "range": 2.509
     },
     {
      "date": "2023-01",
@@ -3546,10 +3546,10 @@
     },
     {
      "date": "2026-06",
-     "mean": 3.364,
+     "mean": 3.36,
      "std": 0.6,
-     "min": 2.947,
-     "max": 4.254,
+     "min": 2.943,
+     "max": 4.25,
      "range": 1.307
     }
    ],
@@ -3561,34 +3561,34 @@
    },
    "relative_value": {
     "CA (CMF)": {
-     "latest": 2.947,
+     "latest": 2.943,
      "mean": 2.941,
      "std": 0.098,
-     "z": 0.06,
+     "z": 0.03,
      "pct": 87.0,
      "window": 24
     },
     "NY (NYF)": {
-     "latest": 3.086,
+     "latest": 3.082,
      "mean": 2.958,
      "std": 0.103,
-     "z": 1.24,
-     "pct": 99.0,
+     "z": 1.2,
+     "pct": 97.0,
      "window": 24
     },
     "National (MUB)": {
-     "latest": 3.169,
+     "latest": 3.165,
      "mean": 3.165,
      "std": 0.07,
-     "z": 0.06,
-     "pct": 90.0,
+     "z": 0.0,
+     "pct": 88.0,
      "window": 24
     },
     "HY muni (HYD)": {
-     "latest": 4.254,
-     "mean": 4.513,
+     "latest": 4.25,
+     "mean": 4.512,
      "std": 0.132,
-     "z": -1.96,
+     "z": -1.98,
      "pct": 2.0,
      "window": 24
     }
@@ -3596,26 +3596,26 @@
    "ranking": [
     {
      "segment": "HY muni (HYD)",
-     "latest": 4.254,
-     "z": -1.96,
+     "latest": 4.25,
+     "z": -1.98,
      "pct": 2.0
     },
     {
      "segment": "National (MUB)",
-     "latest": 3.169,
-     "z": 0.06,
-     "pct": 90.0
+     "latest": 3.165,
+     "z": 0.0,
+     "pct": 88.0
     },
     {
      "segment": "NY (NYF)",
-     "latest": 3.086,
-     "z": 1.24,
-     "pct": 99.0
+     "latest": 3.082,
+     "z": 1.2,
+     "pct": 97.0
     },
     {
      "segment": "CA (CMF)",
-     "latest": 2.947,
-     "z": 0.06,
+     "latest": 2.943,
+     "z": 0.03,
      "pct": 87.0
     }
    ],
@@ -4211,126 +4211,126 @@
      "degree": 18,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 3.96
+     "bridge_score": 3.91
     },
     {
      "node": "Hedera",
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 3.63
+     "bridge_score": 3.62
     },
     {
      "node": "NVIDIA",
      "degree": 20,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 3.17
+     "bridge_score": 3.06
     },
     {
      "node": "OpenAI",
      "degree": 18,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 2.11
+     "bridge_score": 2.0
     },
     {
      "node": "SpaceX",
      "degree": 11,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 1.18
+     "bridge_score": 1.15
+    },
+    {
+     "node": "US_Government",
+     "degree": 12,
+     "n_neighbor_sectors": 6,
+     "both_layers": true,
+     "bridge_score": 0.72
     },
     {
      "node": "Anthropic",
      "degree": 12,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 0.78
+     "bridge_score": 0.72
     },
     {
      "node": "PrivateCredit_Funds",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 0.52
+     "bridge_score": 0.51
     },
     {
-     "node": "US_Government",
-     "degree": 9,
+     "node": "China",
+     "degree": 12,
      "n_neighbor_sectors": 6,
-     "both_layers": true,
-     "bridge_score": 0.12
+     "both_layers": false,
+     "bridge_score": 0.22
     },
     {
      "node": "Oracle",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": false,
-     "bridge_score": 0.02
-    },
-    {
-     "node": "CoreWeave",
-     "degree": 11,
-     "n_neighbor_sectors": 5,
-     "both_layers": true,
-     "bridge_score": -0.05
+     "bridge_score": 0.01
     },
     {
      "node": "Google",
      "degree": 8,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -0.1
+     "bridge_score": -0.12
     },
     {
-     "node": "China",
-     "degree": 10,
-     "n_neighbor_sectors": 6,
-     "both_layers": false,
-     "bridge_score": -0.16
+     "node": "CoreWeave",
+     "degree": 11,
+     "n_neighbor_sectors": 5,
+     "both_layers": true,
+     "bridge_score": -0.13
     },
     {
      "node": "Ripple",
      "degree": 7,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -0.93
-    },
-    {
-     "node": "Microsoft",
-     "degree": 9,
-     "n_neighbor_sectors": 4,
-     "both_layers": true,
-     "bridge_score": -1.11
+     "bridge_score": -0.97
     },
     {
      "node": "xAI",
      "degree": 6,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -1.16
+     "bridge_score": -1.19
     },
     {
      "node": "Federal_Reserve",
      "degree": 8,
      "n_neighbor_sectors": 5,
      "both_layers": false,
-     "bridge_score": -1.21
+     "bridge_score": -1.26
+    },
+    {
+     "node": "MP_Materials",
+     "degree": 5,
+     "n_neighbor_sectors": 5,
+     "both_layers": true,
+     "bridge_score": -1.4
     },
     {
      "node": "JPMorgan",
      "degree": 6,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.77
+     "bridge_score": -1.82
     },
     {
      "node": "Apple",
      "degree": 5,
      "n_neighbor_sectors": 4,
      "both_layers": true,
-     "bridge_score": -1.99
+     "bridge_score": -2.04
     }
    ]
   },
@@ -4451,19 +4451,19 @@
      "pct": 99.0
     },
     {
-     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-     "segment": "NY (NYF)",
-     "latest": 3.086,
-     "units": "% dist. yield",
-     "rv_z": 1.24,
-     "pct": 99.0
-    },
-    {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Sweden",
      "latest": 2.785,
      "units": "% yield",
      "rv_z": 1.23,
+     "pct": 97.0
+    },
+    {
+     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
+     "segment": "NY (NYF)",
+     "latest": 3.082,
+     "units": "% dist. yield",
+     "rv_z": 1.2,
      "pct": 97.0
     },
     {
@@ -4557,18 +4557,18 @@
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "CA (CMF)",
-     "latest": 2.947,
+     "latest": 2.943,
      "units": "% dist. yield",
-     "rv_z": 0.06,
+     "rv_z": 0.03,
      "pct": 87.0
     },
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "National (MUB)",
-     "latest": 3.169,
+     "latest": 3.165,
      "units": "% dist. yield",
-     "rv_z": 0.06,
-     "pct": 90.0
+     "rv_z": 0.0,
+     "pct": 88.0
     },
     {
      "cross_section": "Corporate breadth by quality tier (FINRA TRACE advance/decline ratio)",
@@ -4637,9 +4637,9 @@
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "HY muni (HYD)",
-     "latest": 4.254,
+     "latest": 4.25,
      "units": "% dist. yield",
-     "rv_z": -1.96,
+     "rv_z": -1.98,
      "pct": 2.0
     }
    ],
@@ -4660,9 +4660,9 @@
    "least_stressed": {
     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
     "segment": "HY muni (HYD)",
-    "latest": 4.254,
+    "latest": 4.25,
     "units": "% dist. yield",
-    "rv_z": -1.96,
+    "rv_z": -1.98,
     "pct": 2.0
    }
   }

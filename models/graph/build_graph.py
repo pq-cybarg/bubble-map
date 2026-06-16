@@ -174,6 +174,10 @@ NODE_META = {
  "Corporate_Credit_Unions":("bank",True),"NCUSIF":("regulator",True),"BDCs":("private_credit",True),
  "Commercial_Parents":("industrial",False),"Farm_Credit_System":("financial_infra",True),"FFCB_Funding":("financial_infra",True),
  "US_Farmland":("commodity",False),"CoBank":("bank",True),"Rural_Infrastructure":("industrial",False),"Japanese_Banks":("bank",True),
+ # commodities / energy physical-chokepoint cluster (overlay; deliberately NOT part of the AI SCC)
+ "Crude_Oil":("commodity",True),"Antimony":("commodity",True),"Rare_Earths":("commodity",True),
+ "Perpetua_Resources":("critical_minerals",False),"United_States_Antimony":("critical_minerals",True),
+ "Ucore":("critical_minerals",False),
 }
 
 edges=[]

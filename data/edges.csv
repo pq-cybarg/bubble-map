@@ -73,6 +73,7 @@ US_Government,Bitfinex,other,3600000000,closed,False,False,spec-onchain-threat-a
 Circle,Silicon_Valley_Bank,other,3300000000,closed,False,False,spec-crypto-banking-debanking.json
 OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsoft-openai.json
 BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+US_Government,Perpetua_Resources,relationship,2900000000,approved,True,False,macro-critical-minerals-equities.json
 NVIDIA,Nebius,equity,2700000000,13F,True,False,"spec-sec-filings-primary.json,fin-coreweave-oracle.json"
 Citadel_Securities,SINK_retail_flow,equity,2600000000,recurring,False,False,spec-market-plumbing-control.json
 JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
@@ -101,6 +102,7 @@ Apple,MP_Materials,offtake,500000000,committed,False,False,macro-critical-minera
 Crusoe,SINK_lenders,debt,425000000,outstanding,False,False,fin-coreweave-oracle.json
 Qatar,Trump,other,400000000,open,False,False,spec-foreign-influence-comparison.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
+US_Government,United_States_Antimony,relationship,350000000,committed,True,False,macro-critical-minerals-equities.json
 Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
 NSA,Crypto_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
 AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
@@ -112,6 +114,7 @@ CFTC,CME,regulatory_legal,67400000,closed,False,False,spec-market-plumbing-contr
 Ripple,Fairshake,pac_funding,50000000,given,False,False,spec-sec-sdny-regulatory.json
 SEC,Kraken,regulatory_legal,30000000,settled-staking-then-sued,False,False,spec-sec-sdny-regulatory.json
 ATT,AST_SpaceMobile,investment,20000000,committed,False,False,spec-telecom-satellite.json
+US_Government,Ucore,relationship,18400000,committed,True,False,macro-critical-minerals-equities.json
 Saudi_Arabia_state,Tony_Blair_Institute,other,12000000,open,False,True,spec-uk-labour-tbi-influence.json
 FTX,Farmington_Moonstone,equity,11500000,closed,False,False,spec-crypto-banking-debanking.json
 Russia_state,Tenet_Media,surveillance_security,10000000,open,False,False,spec-foreign-influence-comparison.json
@@ -177,6 +180,10 @@ US_Tariff_Policy,Copper,other,,event,False,False,macro-futures-vs-physical.json
 COMEX,Silver_Physical,other,,stressed,False,False,macro-futures-vs-physical.json
 Gig_Platforms,Contingent_Labor,other,,enforced,False,False,macro-gig-labor.json
 Contingent_Labor,Jobs_Headline,other,,structural,False,False,macro-gig-labor.json
+China,Rare_Earths,relationship,,active,False,False,macro-critical-minerals.json
+China,Antimony,relationship,,active,False,False,macro-critical-minerals.json
+Rare_Earths,Defense_Primes,relationship,,demand,False,False,macro-critical-minerals.json
+Antimony,Defense_Primes,relationship,,demand,False,False,macro-critical-minerals.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
@@ -335,6 +342,10 @@ a16z,Polymarket,investment,,closed,False,False,spec-prediction-markets.json
 CFTC,Polymarket,other,,recurring,False,False,spec-prediction-markets.json
 CFTC,Kalshi,other,,closed,False,False,spec-prediction-markets.json
 Polymarket,USDC,other,,recurring,False,False,spec-prediction-markets.json
+Perpetua_Resources,Antimony,other,,developing,False,False,macro-critical-minerals-equities.json
+United_States_Antimony,Antimony,other,,operating,False,False,macro-critical-minerals-equities.json
+Ucore,Rare_Earths,other,,developing,False,False,macro-critical-minerals-equities.json
+MP_Materials,Rare_Earths,relationship,,operating,False,False,macro-critical-minerals-equities.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json
@@ -361,6 +372,9 @@ Money_Market_Funds,US_Banks,other,,open,False,False,macro-money-market-funds.jso
 US_Congress,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
 DOJ,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
 Courts,Crypto_legislation,other,,open,False,False,spec-crypto-legislation-forcing.json
+Iran_IRGC,Crude_Oil,other,,event,False,False,macro-oil-backwardation.json
+Russia,Crude_Oil,regulatory_legal,,active,False,False,macro-oil-backwardation.json
+Saudi_Arabia_state,Crude_Oil,other,,active,False,False,macro-oil-backwardation.json
 FHLB_System,US_Banks,other,,open,False,False,macro-gses-fhlb.json
 GSEs_FannieFreddie,Mortgage_Market,other,,open,False,False,macro-gses-fhlb.json
 Federal_Reserve,GSEs_FannieFreddie,other,,open,False,False,macro-gses-fhlb.json
