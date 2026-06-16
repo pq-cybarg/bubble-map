@@ -28,6 +28,20 @@
 *Claim: the Ethereum Foundation is tied to Ant Group / CCP / China.* **Grade: early ties REAL but DATED; control thesis WEAK/UNSUPPORTED.**
 - Early Ethereum had real China ties (Wanxiang Blockchain Labs funding/early ecosystem; some founders' China activity). **Those ties are dated; a present-day "CCP control" thesis is weak/unsupported** and is not asserted.
 
+## 4b. A full-disclosure standard for SEC staff conflicts *(added 2026-06-16, #62)*
+The Hinman thread isn't just an anecdote — it exposes a **disclosure gap** worth a concrete fix. *The rule-gap + Hinman facts are fact; the proposed standard is a labeled normative proposal.*
+
+**The gap:** existing rules — OGE Form 278e financial disclosure, 18 USC 208 recusal, the STOCK Act, post-employment cooling-off — **did not surface or prevent** a continuing **~$1.6M Simpson Thacher pension** (an **EEA member** firm) while Hinman made a **market-moving "ETH is not a security" speech**, then **returned to that firm**. It became public only via the **litigation-forced "Hinman emails."** The rules miss (a) the income source's **industry-association** ties, (b) the market impact of **speeches/guidance** (vs trades), and (c) **contemporaneous** publication.
+
+**Proposed standard:**
+1. **Contemporaneous** public disclosure of *all* continuing income/pension/deferred-comp from former (and prospective) employers — published *at the time* of a market-moving statement, not buried in an annual form.
+2. **Association-level** recusal triggers — keyed to the income source's industry memberships (EEA), not just direct holdings.
+3. **Statement-impact logging** — for any guidance/speech moving an asset's regulatory status, a published log of which assets it touches and the official's financial nexus to each.
+4. **Payor cooling-off** — a no-return-to-payor window matched to the pension horizon (a live $1.6M stream is a *current* tie).
+5. **Proactive publication** of the deliberative record behind market-moving guidance on a defined lag — so the "Hinman emails" surface *by default, not by subpoena.*
+
+**The principle:** the corpus's core defect applied to *regulatory* conflicts — opacity in the least-scrutinized venue (a speech, a pension, an association) lets a market-moving discretionary act escape the disclosure a trade would trigger. The cure is the same as the surveillance-disclosure sibling (`spec-disclosures-surveillance`, #63): **contemporaneous bulk disclosure by default**, not litigation-forced release.
+
 ## 5. Why this is quarantined
 These threads are **suggestive and partly documented**, but each fails the project's bar for the formal core: either the *facts* are strong while the *intent* is contested (Hinman, Black), or the *lineage* is real while *coordination* is unsupported (McCaleb), or the ties are *dated* (Ethereum/China). Keeping them here — graded, sourced, **out of the SCC/Z3/TLA+ proofs** — is the discipline that lets the proven core stay proven. See `spec-network-overlay`, `temporal-bridges`.
 

@@ -63,5 +63,18 @@
       "source": ["https://technode.com/2016/07/21/company-bringing-ethereum-chinese-tech-giants/", "https://www.ledgerinsights.com/china-ant-blockchain-open-alliance/"]
     }
   ],
+  "full_disclosure_standard": {
+    "summary": "#62 - the standard that WOULD have surfaced the Hinman-type conflict proactively, instead of via litigation discovery. The current-rule gap is fact; the proposed standard is a labeled normative proposal (not a claim of existing law).",
+    "the_gap": "Existing SEC staff conflict rules - OGE Form 278e financial disclosure, 18 USC 208 recusal, the STOCK Act, post-employment cooling-off - did NOT surface or prevent the documented Hinman situation: a continuing ~$1.6M pension from Simpson Thacher (an Enterprise Ethereum Alliance member) WHILE making a market-moving 'ETH is not a security' speech, then RETURNING to that firm. The conflict became public only through the litigation-forced 'Hinman emails,' not proactive disclosure. The rules miss (a) industry-ASSOCIATION ties of an income source, (b) the market impact of guidance/speeches (vs trades), and (c) contemporaneous publication.",
+    "proposed_standard": [
+      "(1) CONTEMPORANEOUS public disclosure of ALL continuing income/pension/deferred-comp streams from former (and prospective) employers - not just holdings - published at the time of any market-moving statement, not buried in an annual OGE form.",
+      "(2) ASSOCIATION-LEVEL recusal triggers: recusal/disclosure keyed to the industry-association memberships (e.g., EEA) of the income source, not only direct securities holdings - the Simpson-Thacher/EEA nexus would have tripped it.",
+      "(3) STATEMENT-IMPACT logging: for any official guidance or speech that moves an asset/network's regulatory status, a published log of which assets it touches and the official's financial nexus to each.",
+      "(4) PAYOR cooling-off: a no-return-to-payor window matched to the pension/deferred-comp horizon (a continuing $1.6M stream is a live tie, not a past one).",
+      "(5) PROACTIVE publication of the internal deliberative record behind market-moving guidance, on a defined lag - so the 'Hinman emails' surface by default, not by subpoena."
+    ],
+    "the_principle": "It is the corpus's core defect applied to REGULATORY conflicts: opacity in the least-scrutinized venue (a speech, a continuing pension, an association membership) lets a market-moving discretionary act escape the disclosure that would attach to a trade. The cure is the same as the surveillance-disclosure sibling (#63, spec-disclosures-surveillance): CONTEMPORANEOUS BULK DISCLOSURE by default rather than litigation-forced, after-the-fact release.",
+    "grade": "the rule-gap + Hinman facts FACT; the proposed standard is a labeled normative proposal"
+  },
   "overall_verdict": "These are four REAL factual cores joined mainly by overlapping people and institutions (Hinman/Simpson Thacher/EEA; McCaleb across three crypto ventures; Black/Epstein/Apollo; ConsenSys/EEA/China). The honest reading: a milieu of regulatory discretion, concentrated elite networks, and recurring institutions - NOT a demonstrated single coordinated conspiracy. Exactly ONE thread (Black->Epstein->Apollo) connects to the proven AI-capex financing core, and even there only as association. Everything in this file is an OVERLAY; none of it is used in the formal proofs (graph/Z3/TLA+)."
 }
