@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-official-data-integrity.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 3 shared entities
-- macro-money-market-funds.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
-- macro-stablecoin-failures-manipulation.json: 2 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- influence-congress-funding-compromise.json: 2 shared entities
-- fin-meta-family.json: 1 shared entities
+## Newest file `macro-rent-cpi-divergence.json` — related files by shared entities (verify cross-refs exist)

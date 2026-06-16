@@ -27,6 +27,21 @@
     ],
     "source": ["https://millershah.com/blog/irs-misclassified-workers/","https://www.tax1099.com/blog/employee-misclassification-how-it-costs-gig-economy-companies/"]
   },
+  "wage_benefit_loss": {
+    "summary": "#51 - quantify the per-worker 1099/gig penalty vs an equivalent W-2 full-time job. Component figures are fact (BLS ECEC, KFF, Vanguard, SSA); the composite markup is transparent arithmetic.",
+    "components": {
+      "benefit_share_of_comp": "BLS ECEC (Mar 2026): benefits = 30.1% of total private-industry compensation ($14.01/hr benefits on $46.61 total; wages 69.9%). So W-2 TOTAL comp ~= 1.43x cash wage - the benefits a cash-only 1099 worker never receives.",
+      "employer_payroll_tax": "FICA 15.3% is split 7.65% employer / 7.65% employee; a 1099 worker pays the FULL 15.3% SECA themselves - an extra ~7.65% employer-side bite out of pocket (partially offset by the SE deduction + 92.35% base). 2026 SS wage base $184,500; Medicare uncapped.",
+      "employer_health": "KFF 2025: avg employer premium contribution ~$7,800/yr single ($9,325 total) and $20,143/yr family ($26,993 total; worker pays $6,850). 1099 workers buy their own.",
+      "employer_401k": "Vanguard How America Saves 2025: avg employer match ~4.6% of pay (median 4.0%); nonmatching contributions avg 5.3%. 1099 workers get $0 employer match.",
+      "paid_leave": "BLS ECEC: paid leave ~$3.44/hr ~= 7.5% of total comp (vacation/holiday/sick/personal). 1099 = zero.",
+      "ui_workers_comp": "1099 workers are generally excluded from unemployment insurance and workers' compensation (no employer SUTA/FUTA or comp coverage). GAO (dated, illustrative): only ~17% of contingent workers in an employer pension vs ~64% of standard full-time."
+    },
+    "the_markup": "Because benefits ~= 30% of total comp, a W-2 worker's total comp ~= 1.43x cash wage; a cash-only 1099 worker must gross ~40-43% MORE just to match total compensation, and absorb the employer 7.65% FICA on top -> roughly ~50% more gross in the full-benefits (family-coverage) case. Equivalently: a gig worker forgoes ~30% of equivalent total compensation PLUS self-funds the ~7.65% employer payroll tax.",
+    "net_earnings_reality": "After expenses, gig hourly often lands below W-2 equivalents: UC Berkeley Labor Center (2024) on passenger/delivery drivers; Illinois EPI ~$12.72/hr (Chicago Uber/Lyft after expenses); EPI ~$9.21/hr-equivalent (below minimum wage in 13 of 20 major markets). The contested MIT '$3.37/hr' figure is avoided.",
+    "grade": "components FACT (BLS ECEC Mar-2026, KFF 2025, Vanguard 2025, SSA 2026; a few exacts flagged for primary re-pull); the ~30%+7.65% / ~50%-markup framing is transparent arithmetic; net-pay studies vary by metro/method",
+    "source": ["https://www.bls.gov/news.release/ecec.nr0.htm","https://www.kff.org/health-costs/2025-employer-health-benefits-survey/","https://workplace.vanguard.com/insights-and-research/report/how-america-saves-2025.html","https://laborcenter.berkeley.edu/wp-content/uploads/2024/05/Gig-Passenger-and-Delivery-Driver-Pay-in-Five-Metro-Areas.pdf","https://www.gao.gov/products/hehs-00-76"]
+  },
   "statistical_distortion": {
     "grade": "mechanism FACT; magnitude uncertain",
     "points": [
@@ -35,6 +50,14 @@
       "MULTIPLE JOBHOLDERS: one person with two payroll jobs counts as two 'jobs' in CES - so the jobs-added headline can rise while the number of employed PEOPLE (CPS) stagnates (the CES-CPS divergence seen in 2024-25 alongside the -911k benchmark, macro-official-data-integrity).",
       "Net effect: gig/contingent work lets the labor headline look stronger and tighter than the lived experience of precarious, benefit-less, multi-job income - the same headline-vs-reality gap as shelter CPI."
     ]
+  },
+  "hidden_underemployment": {
+    "summary": "#51 - the 'hidden U-6 equivalent': the published broad measure plus the gig-quality layer it cannot see. Headline counts are fact (BLS May-2026); the quality-adjusted bound is an illustrative, double-count-flagged range (not false precision).",
+    "published_measures_may_2026": {"U3_headline":"4.3%","U6_broadest":"8.1% (unemployed + marginally attached + involuntary part-time)","involuntary_part_time":"4.8M (part-time for economic reasons)","multiple_jobholders":"5.2% of employed (~8.3-8.6M)","want_a_job_NILF":"6.2M","marginally_attached":"1.7M","discouraged":"486k"},
+    "the_gig_layer_u6_misses": "U-6 already counts involuntary part-timers and the marginally attached, but it counts a RELUCTANT INDEPENDENT (someone whose primary income is gig/1099 who would prefer a W-2 job) as FULLY EMPLOYED. McKinsey: ~62% of independents say they'd prefer permanent employment (2016 Independent Work); 'Reluctants' = 14% of independent workers (2022 American Opportunity Survey), with ~36% of the employed (~58M) doing some independent work. So on the order of ~8M reluctant primary-income independents sit inside 'employed' that a quality measure would treat as underemployed.",
+    "honest_bound": "Layering the reluctant-independent share onto U-6 implies a labor-QUALITY-adjusted underemployment materially above the published 8.1% - plausibly into low-double-digits - BUT the components overlap (some reluctant independents are already in U-6's involuntary-part-time or secondary-income, not slack), so a single precise number would be false precision. The defensible claim: U-6 (8.1%) is a FLOOR on broad slack; counting benefit-less involuntary gig as underemployment pushes it several points higher, but the exact figure is definition-dependent.",
+    "grade": "headline counts FACT (BLS May-2026; multiple-jobholder headcount flagged for FRED re-pull); McKinsey shares are 2016/2022 vintages (labeled); the quality-adjusted bound is illustrative, not precise",
+    "source": ["https://www.bls.gov/news.release/empsit.nr0.htm","https://www.mckinsey.com/featured-insights/sustainable-inclusive-growth/future-of-america/freelance-side-hustles-and-gigs-many-more-americans-have-become-independent-workers"]
   },
   "bubble_link": "The AI build-out (the proven core) is simultaneously a labor story: AI targets exactly the knowledge/creative/customer-service tasks that gig platforms intermediate, while gig work is the buffer absorbing displaced or underemployed workers without benefits or job security. A 'strong jobs' headline built partly on multiple-jobholders and gig hours can coexist with deteriorating labor quality - which the bubble's productivity narrative needs to obscure.",
   "edges": [
