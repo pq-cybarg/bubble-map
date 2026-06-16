@@ -22,5 +22,19 @@ HK subsea-cable landing has **stagnated since 2017**: Beijing's opaque licensing
 ## Greenland & the Arctic — the northern chokepoint
 The Arctic is the new militarized surveillance frontier: **NATO "Arctic Sentry" (early 2026)**; Finland + Sweden accession gives NATO continuous Barents coastline; Russia rebuilt **Kola Peninsula / Novaya Zemlya** bases + a modernized submarine fleet; **Northern Sea Route** traffic grew ~40% (2013–25). Greenland's **Pituffik** + the **GIUK gap** are the Western early-warning chokepoints; China is a self-declared "Near-Arctic State" (**fact**). **Read:** the Arctic fuses every thread — materials (Greenland REE, [[geopolitics-contested-resource-states]]), military (subs, GIUK), intelligence (early-warning radar, undersea cables), shipping (NSR).
 
+## Chokepoint-loss propagation tree *(added 2026-06-16, #59)*
+For each node, what cascades **if it is lost** — ordered by substitutability × speed. *Node facts are fact; loss severities are a labeled model grounded in `defense_chokepoint` (independence infeasible to ~2028), `power_adequacy`, and `macro-carry-trades`.*
+
+| Node | If lost | Substitute | Recover | Into the AI-capex core |
+|---|---|---|---|---|
+| **Korea HBM** (SK Hynix + Samsung) | every accelerator build **STOPS** | Micron ~21% (itself JP/TW-exposed) | years | **catastrophic, fast** |
+| **Taiwan** (TSMC logic + CoWoS packaging) | logic **and** packaging gone → whole stack halts | **none near-term** (defense_chokepoint UNSAT to ~2028) | many years | **catastrophic** — least-substitutable |
+| **Japan** (materials + yen carry) | materials starve fabs **+** carry unwind raises cost of capital | few JP firms; no substitute funding rail | months / immediate | **dual** supply + funding shock (the BEAR trigger) |
+| **Pine Gap** (signals) | US loses ~⅓-globe satellite intel + strike targeting | partial via other stations | degraded immediately | strategic blackout, not direct financial |
+| **Singapore cables** | Asia-Europe-US data disrupted | reroute (capacity-limited); HK bifurcating away | weeks-months | **recoverable** — latency/cost, not a halt |
+| **REE / HALEU** | magnets/heavy-REE + SMR fuel | none to ~2028-29 | ~2028-29 (state-anchored builders) | **slow-burn** constraint |
+
+**The classification.** Two axes order it — *substitutability* × *speed*. The **unrecoverable + fast** losses are **Korea HBM** and **Taiwan logic/packaging**: no alternative on the build's timeline, and a stop there *stops the core* — not a markdown, a **halt**. Singapore cables are **recoverable** (reroutable). REE/HALEU **slow-burn** (constrain, not halt). The **Japan/carry** channel is the one that transmits as a pure **financial** shock (funding cost) rather than a physical stop. **The 11-firm loop silently assumes every one stays open** — and the two most catastrophic have no near-term substitute.
+
 ## The pattern
 The allied map is a set of **physical chokepoints on the things the AI economy runs on**: **signals** (Pine Gap), **compute** (Korea/Japan HBM + Taiwan packaging), **data** (Singapore cables vs Hong Kong's bifurcation), and the **Arctic** frontier. Every one is a single-point dependency outside the 11-firm loop's control — the rare-earth/HALEU lesson, applied to information and compute. **Intelligence dominance and compute dependence run through the same few allies.**
