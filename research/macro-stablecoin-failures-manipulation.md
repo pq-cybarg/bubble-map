@@ -31,7 +31,21 @@
 - **Wash trading.** Studies/enforcement find large fractions of reported crypto volume are wash trades — inflating apparent depth. **Fact (pattern).**
 - **Alameda/FTX.** A dominant market-maker that used FTX customer funds (SBF **convicted Nov 2023**). The lesson: **one actor as exchange + market-maker + token issuer** is the manipulation-enabling configuration. **Fact (convicted).**
 
-## 4. Honest limits
+## 4. Custody-concentration monitor *(added 2026-06-16, #65)*
+Generalizing the cases into a **monitoring framework** — across every documented failure the common variable is **concentration**, so tracking these six metrics makes the danger legible *before* the peg breaks. *Current readings fact (on-chain/attestation, Jun-2026); thresholds a labeled model.*
+
+| Metric | Current reading | Danger threshold | What it flags |
+|---|---|---|---|
+| **Float concentration** (1 venue's % of supply) | **USD1: Binance ~87–89%** (~$4.7B/$5.4B) | >50% = single point of failure; >80% = the token *is* that venue's instrument | a venue freeze/failure breaks the peg or traps the float |
+| **Reserve-custodian concentration** | USDC had **$3.3B at SVB** → depeg; USD1 via BitGo + gov MMFs | any single uninsured bank holding a material share | the SVB lesson — a "fully-reserved" coin breaks if the reserve *bank* breaks |
+| **Issuer concentration of the Treasury bid** | **Tether >$100B** (~18th-largest US-debt holder) | one issuer > sovereign-scale share of the marginal bid | a single-issuer run becomes a Treasury-market event |
+| **Audit vs attestation** | Tether: **attestation, no full audit** | no full audit on a sovereign-scale issuer | NYAG/CFTC precedent — "fully backed" was adjudicated false for the past |
+| **Redemption-access** | par redemption ~ authorized participants only | narrow AP set + concentrated float | retail can't redeem at par in a run — defended by few, broken by many |
+| **Chain concentration** | most supply on 1–2 chains | supermajority on one chain | a chain halt/exploit freezes that share |
+
+**Synthesis:** USDC/SVB (custodian), Terra (single mechanism), USD1 (87–89% float at Binance), Tether (single-issuer bid + attestation-only) — *concentration converts an idiosyncratic counterparty failure into a peg break.* A custody-concentration monitor is the cheapest early-warning gauge. **USD1 is the live red flag:** a president's-family token whose float is ~88% at one pardoned-founder exchange, fed a $2B Gulf-sovereign flow, with reserve interest accruing to the issuer.
+
+## 4b. Honest limits
 Algorithmic unwinds and adjudicated cases (Terra/Do Kwon, Tether NYAG/CFTC, FTX/SBF) are hard facts. **The USD1/WLFI collateral concentration is on-chain-documented (Arkham), not speculative** — verified this pass. The corrupt-*intent* characterization (incl. the CZ-pardon proximity) is **labeled interpretation**, left contested rather than asserted. Current Tether full-backing rests on **attestation, not audit**. **Do Kwon** and **Justin Sun** are added to the Persons tab; SBF and the Gulf/Trump/Lutnick nodes already exist.
 
 *Sources for the on-chain verification: Arkham Intelligence via [Forbes/crypto.news](https://crypto.news/binance-trump-usd1-stablecoin-concentration-2026/) and [DL News](https://www.dlnews.com/articles/markets/binance-now-custodies-89-pct-of-trump-family-stablecoin-usd1/); contract on [Etherscan](https://etherscan.io/token/0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d); deal confirmation [Cointelegraph](https://cointelegraph.com/news/eric-trump-usd1-used-2-b-mgx-investment-binance) / [Fortune](https://fortune.com/crypto/2025/05/07/world-liberty-financial-wlfi-trump-binance-mgx-stablecoin-deal/).*
