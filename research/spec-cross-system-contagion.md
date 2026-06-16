@@ -19,6 +19,20 @@ Merging the fragmented China nodes makes one actor's **concentration of chokepoi
 ## 5. The Fed circuit-breaker *(the missing node)*
 Every cascade above can be **interrupted or amplified** by Fed policy, so any unwind thesis that assumes policy inaction is incomplete. If the crypto→Treasury→bank cascade fires, the playbook is a **BTFP-style facility** (banks borrow at par, suppressing the HTM forced-sale spiral) plus **QE / cuts** to cap the yield spike. This does not prevent the loss — it **socializes and delays** it — but it changes the timing and form of any unwind. Read the trigger panel ([[spec-unwind-timing]]) against this reaction function. New edges: `Federal_Reserve→US_Banks`, `Federal_Reserve→US_Treasuries`.
 
+## The Fed reaction-function decision-tree *(added 2026-06-16, #57)*
+The circuit-breaker node, made formal: given **which** cascade fires, what the Fed does, in what order, gated by what. *Tools + precedents are fact; thresholds + branch model are labeled. The binding constraint is the inflation gate — the Z3 "no single rate fits the targets" ([[macro-fed-trap-regional]]) rendered as a tree.*
+
+| Trigger (symptom) | Tool order (cheapest→most) | Threshold | Precedent | Cost |
+|---|---|---|---|---|
+| **B1 Funding-market stress** — repo/front-end bill yield spikes (stablecoin run dumps bills; basis-trade unwind clogs repo) | SRF → expand → outright bill buys | SOFR-IORB blows out | 2019 repo; SRF permanent 2021 | low-signaling, fast; doesn't touch solvency |
+| **B2 Bank solvency / deposit run** — yield spike reopens HTM (~$300B+); SVB-mode realization | discount window → **BTFP-style par lending** → FDIC systemic-risk exception | a bank fails / uninsured outflows accelerate | **BTFP Mar-2023** | **socializes** the mark; moral hazard |
+| **B3 Treasury-market dysfunction** — dealers can't absorb the fire-sale | **QE restart** → SLR/eSLR relief (ties [[macro-history-dereg-manipulation]] #77) | liquidity breaks / failed-auction tail | Mar-2020 dash-for-cash + SLR exclusion | balance-sheet expansion; SLR lever already half-pulled (eSLR cut Nov-2025) |
+| **B4 Broad credit contraction / recession** — banks pull AI credit; unemployment rises | **rate cuts** → guidance | labor breaks (U-3; cf. [[macro-gig-labor]] hidden slack) | every easing cycle | slowest; collides with the inflation gate |
+
+**The inflation gate (the binding constraint).** With CPI ~4.2% ([[macro-official-data-integrity]]), easing to backstop the cascade reignites inflation while holding to fight inflation lets the cascade run — the Fed can't cap the yield spike, protect bank capital, *and* hold inflation with one rate (the Z3 UNSAT result). So the reaction function is **asymmetric**: liquidity tools **B1–B3** fire **fast** (framed as "plumbing, not stimulus"); the rate-cut lever **B4** is inflation-gated and fires **slow**.
+
+**Terminal insight.** The Fed never *prevents* the loss in any branch — it **socializes and delays** it (B2/B3) or **trades inflation** for it (B4). So the unwind's timing/form is set by **which constraint binds first**: a plumbing break (fast, inflationary), a solvency break (par-lending, moral hazard), or a labor break (cuts, gated). Any unwind thesis assuming policy *inaction* is incomplete; any assuming a *clean rescue* ignores the inflation gate.
+
 ## Cross-file reconciliations (canonical values)
 - **NVIDIA → OpenAI.** The "$100B" was a **milestone-linked letter of intent** (22 Sep 2025), later called "never a commitment" by Huang; the **closed** figure is **$30B direct equity**, part of OpenAI's ~$110B round at a **$730B pre-money** valuation (27 Feb 2026; SoftBank +$30B, Amazon +$50B). Canonical in [[fin-nvidia-openai]].
 - **Oracle RPO.** **$455B** at end of **Q1 FY2026** (quarter ended 31 Aug 2025; reported 9 Sep 2025), **+359% YoY** (vs ~$99B a year earlier). The **$317B** is the **prior quarter** (Q4 FY2025) — so $317B→$455B is the QoQ step and +359% is the YoY rate; no discrepancy once periods are labeled.

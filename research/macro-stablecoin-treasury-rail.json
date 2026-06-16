@@ -53,6 +53,25 @@
     ],
     "source": ["https://www.bis.org/publ/work1270.pdf","https://www.ecb.europa.eu/press/financial-stability-publications/fsr/focus/2025/html/ecb.fsrbox202511_05~63636227b4.en.html"]
   },
+  "rollover_derate_duration_model": {
+    "summary": "#56 - model the ROLLOVER, the DE-RATE break, and the DURATION ASSUMPTION the rail rests on. Mechanics are fact; the break scenarios are labeled interpretation (the same systemic concern BIS/ECB/S&P flag).",
+    "rollover_mechanics": {
+      "point": "Stablecoin reserves sit at the SHORTEST tenor (cash, T-bill repo, <=3-month bills), so the entire reserve stack must be ROLLED constantly - a ~3-month bill stack rolls ~4x/yr, repo/overnight far more. As the Treasury front-loads BILL issuance to meet the stablecoin + Fed bid (StanChart: ~$1T fresh bill demand by 2028 vs a ~$900B supply gap), the weighted-average maturity of the FEDERAL debt shortens - so a larger share of $37.6T must be refinanced each year at the prevailing rate.",
+      "consequence": "Cheaper coupons now, but more frequent rate-RESET: a captive front-end buyer lowers today's borrowing cost while raising the fraction of the debt exposed to the next rate move. The rail trades duration for current cost.",
+      "grade": "fact (bill tenor + front-loading direction) + projection (StanChart magnitudes)"
+    },
+    "the_derate_break": {
+      "point": "The captive bid is procyclical and rate-sensitive, so it can weaken exactly when the Treasury has grown dependent on it:",
+      "scenarios": ["(1) FED CUTS / yield compression: stablecoin reserve yield is the issuer's economic engine; falling bill yields erode issuer revenue and the relative appeal of holding non-yield-bearing stablecoins vs money funds - growth stalls or reverses, thinning the marginal bid as bills must still be rolled.","(2) CRYPTO RISK-OFF / depeg: a loss of peg or mass redemption forces the issuer to SELL bills fast (the Blockchain_Stablecoin->Treasuries_Fiscal contagion edge) - a stablecoin run becomes a Treasury-market shock; proponents say bills are liquid enough, BIS/ECB/S&P disagree.","(3) ROLLOVER INTO THIN DEMAND: if redemptions and a roll date coincide, the issuer is a forced seller into its own roll - selling bills to fund redemptions while the Treasury needs buyers for new bills."],
+      "grade": "contested-analytical (the break direction is real; timing/severity unforecastable, cf. spec-unwind-timing)"
+    },
+    "the_duration_assumption": {
+      "point": "The rail's load-bearing assumption is that stablecoin AUM is STICKY, permanent funding. But a stablecoin is redeemable-on-demand (overnight-callable) money - a demand-deposit-like liability backing a perpetually-rolling bill stack. That is maturity transformation at SOVEREIGN scale: instantly-redeemable claims funding the government's front-end rollover.",
+      "the_self_marked_number": "'Stablecoin AUM is stable' is the chosen number here - the same defect as bank HTM marks, AI fair-value, private-credit NAV, and GPU useful-life (self_marked_value): a value held above its realizable, run-exposed level until a forcing event (here, mass redemption). It is the SVB mismatch logic relocated to the sovereign funding base - the 'deposit' is the token, the 'asset' is the bill, and the marginal Treasury holder now holds callable money.",
+      "grade": "mechanism fact (redeemable-on-demand); the 'stickiness' critique is labeled interpretation"
+    },
+    "read": "The rail doesn't just manufacture demand - it CHANGES THE TERM STRUCTURE of how the deficit is funded: shorter, faster-rolling, and backed by callable money whose stability is assumed, not guaranteed. It lowers cost today and raises rollover/rate-reset and run risk tomorrow, with the marginal holder swapped from foreign central banks (sticky, official) to private, lightly-audited issuers (callable, procyclical)."
+  },
   "edges": [
     {"from":"GENIUS_Act","to":"Stablecoins","instrument":"reserve_mandate","amount_usd":null,"date":"2025-07","status":"enacted","circular":false,"cancelable":false,"confidence":"high","source":["https://www.congress.gov/bill/119th-congress/senate-bill/1582/text"],"notes":"1:1 reserves limited to T-bills/repo/cash -> stablecoin growth = mandated T-bill demand, by law."},
     {"from":"Tether","to":"US_Treasuries","instrument":"reserve_holding","amount_usd":100000000000,"date":"2025","status":"held","circular":false,"cancelable":false,"confidence":"high","source":["https://finance.yahoo.com/news/stablecoin-giant-tether-now-holds-115119171.html"],"notes":">$100B T-bills (~79% of reserves in Treasuries); more US debt than UAE/Germany - sovereign-scale, lightly-audited."},
