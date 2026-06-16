@@ -40,6 +40,28 @@ Every major fiscal incentive points one way: **understate inflation, flatter out
 | **Politics** | strong-jobs/low-inflation headline benefits the incumbent (the 2025 firing shows it's treated as a political object) |
 | **Modern twist** | GENIUS-Act stablecoin→Treasury rail (`blockchain-leg`) manufactures forced demand for the debt the data flatters |
 
+## The honest recompute under 1990s methodology *(added 2026-06-16, #52)*
+Actually *computing* the headline under pre-1998 methods — the disciplined way, **not** ShadowStats' add-a-constant.
+
+**CPI.** Current CPI-U **+4.2%** (12 mo to May 2026; core +2.9%). The documented per-change deltas vs 1990s methods: **geometric-mean substitution (1999) ~0.2 pp/yr**; **upper-level substitution via chaining ~0.25 pp/yr**; **hedonics — no clean number** (used on ~7.5% of items, net effect small/ambiguous; *don't* assign it a figure). BLS's own **R-CPI-U-RS** (today's methods run backward) shows a **~0.45 pp/yr** gap over 1978–98, shrinking to **≤0.2 pp** lately. So **1990s methods → CPI ≈ 4.4–4.7%, not the 7–8% ShadowStats sells.** OER is a **1983 scope choice, not a 1990s methodology change** — present its home-price-vs-OER spread (~50%, FHFA) *separately*.
+
+**Unemployment.** **U-3 4.3%**, **U-6 8.1%** (May 2026); "not in labor force, want a job" **~6.2M**. The **1994 CPS redesign** added a 12-month-look-back + availability test, cutting *discouraged* from ~1.1–1.2M (1993) to ~541k (Q1 1994) — but those people were **reclassified into the 6.2M "want a job" pool, not erased**. U-6 and "want a job" *are* the transparent broad measures. LFPR **~62.4%** vs the **67.3%** 2000 peak (~5 pp gap) is **largely demographic**; the honesty check is **prime-age (25–54) LFPR ~83.4–83.9%, near a record high** — which argues *against* a large hidden-slack claim.
+
+**Bottom line:** the methodology games move **tenths of a point** — real and fiscally convenient, but second-order. The first-order gap between the official story and lived experience is **debasement**, which a CPI denominated in the debased unit cannot show — so price it in metal:
+
+## The hard-money lens — gold-oz AND silver-oz *at the time of measure* *(added 2026-06-16)*
+Each magnitude denominated in the metal price **contemporaneous with the data point**. *Metal/nominal series fact; ratios arithmetic; debasement read labeled; the 2026 spot is geopolitically elevated (Hormuz) — stress-tested on calmer 2024 averages below.*
+
+| In ounces (at time of measure) | 1998 | now (2024–26) | change |
+|---|---|---|---|
+| **Median household income** | ~**132 gold-oz** / ~7,019 silver-oz | ~**19.2 gold-oz** / ~1,189 silver-oz | **−7× in gold**, ~−6× in silver |
+| **Median home price** | ~**518 gold-oz** / ~27,527 silver-oz | ~**95 gold-oz** / ~5,877 silver-oz | **−5.5× in gold**, ~−4.7× in silver |
+| **S&P 500** | ~**4.18 gold-oz** / ~221.9 silver-oz | ~**1.73 gold-oz** / ~107.3 silver-oz | **−2.5× in gold** (despite ~6× *nominal*) |
+
+- **Gold/silver ratio** across the same dates: **53 (1998) → 86 (2020) → 62 (2026)** — silver cheapened to gold for two decades, then ran harder in the 2026 spike.
+- **Spike-robustness:** on the calmer **2024-average** gold ($2,388), the direction holds — income ~35 gold-oz (vs 132 = **~3.8× collapse**), home ~173 gold-oz (vs 518 = **~3× cheaper**). The wage/home erosion is **not** an artifact of the 2026 spot.
+- **The point:** in *nominal dollars* wages, homes and stocks all rose; **priced in metal at the time of measure, a year's wages and a median home fell by multiples, and even the S&P shrank against gold.** That is the erosion the CPI-decimal debate can't see.
+
 ## What is not claimed (discipline)
 - **ShadowStats** adds a *fixed constant* to official CPI; it re-collects no prices and implies price levels inconsistent with observed nominal GDP/wages. **WEAK/UNSUPPORTED** as a number, even if its direction overlaps the real critiques.
 - **No evidence of fabricated microdata.** The defensible case is methodology + revision-timing + collection degradation + incentive alignment + political pressure — *not* invented numbers. Conflating the two discredits the real case.

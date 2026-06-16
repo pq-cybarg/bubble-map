@@ -19,6 +19,24 @@
 - **2018 — EGRRCPA** raises the enhanced-supervision/SIFI threshold **$50B → $250B**, exempting SVB and dozens of mid-size banks from regular stress testing and enhanced liquidity/resolution. **SVB CEO Greg Becker had lobbied for this since 2015.**
 - **2023 — consequence:** **SVB (~$209–220B, below the $250B line) failed having escaped enhanced oversight** — the direct dereg→failure causal chain. Critics (Warren/Porter, Roosevelt Institute) tie the rollback to the collapse. *(Causal weight is contested; the threshold change is fact — cross-ref `influence-congress-funding-compromise` S.2155.)*
 
+## 2b. Which post-2008 dereg enabled which 2025-26 structure *(added 2026-06-16, #77)*
+The chain above is bank-tailoring; the fuller map ties **each specific deregulatory (or deliberate non-regulatory) action** to the modern structure it enabled and the block that documents it. *Actions/dates are fact (cross-checked); the "enabled" mapping is labeled interpretation. The dominant signature is **deregulation by gap** — declining to extend prudential/disclosure rules to nonbanks — not repeal.*
+
+| Enabler | The action (date) | 2025-26 structure | Block |
+|---|---|---|---|
+| **Private-credit / NDFI gap** | Dodd-Frank capital/leverage/stress regime applies to **banks, not** BDCs/direct lenders; no consolidated leverage limit; Fed only began **reporting** NDFI exposure (2026) | the **~$1.7T+** private-credit market + bank→NDFI→datacenter-SPV chain | `macro-cre-privatecredit`, `macro-private-credit-bdc-stress` |
+| **Retail access to alts** | **Aug 7 2025 EO** on 401(k) alternatives + DOL rule; **accredited-investor expansion** (eff Dec 8 2020), never inflation-indexed | private credit reaching 401(k)/retail | `macro-private-credit-bdc-stress` |
+| **GENIUS Act** | signed **Jul 18 2025 (P.L. 119-27)**; 1:1 HQLA reserves, monthly disclosure | stablecoins as a **captive short-Treasury buyer** | `blockchain-leg`, `macro-us-fiscal-trap`, `macro-official-data-integrity` |
+| **Volcker 2.0** | covered-funds amendments final **Jul 31 2020** — VC/credit-fund exclusions | banks back inside VC/private-credit funds | `macro-cre-privatecredit` |
+| **SLR relief** | 2020 COVID Treasury/reserve exclusion (lapsed Mar 2021); **eSLR cut final Nov 25 2025** (buffer = 50% of Method-1 surcharge) | dealer balance sheet for the **~$1T Treasury basis trade** | `macro-treasury-basis-trade` |
+| **AOCI opt-out + HTM** | Basel III US final rule (Jul 2013): non-advanced banks **opt out** of AFS-through-capital; HTM unmarked | the hidden **HTM hole** (−$325B 2026Q1) / SVB failure mode | `macro-bank-htm-marks`, `macro-fdic` |
+| **Basel III Endgame retreat** | proposed Jul 27 2023 (~16–20% more capital) → **rescinded + weaker re-proposal Mar 19 2026** | thin big-bank buffers as exposure grows | `macro-bank-htm-marks` |
+| **ILC loophole** | BHC-Act carve-out (**CEBA 1987**); Dodd-Frank moratorium lapsed; 23 charters, ~$247.7B | commercial/fintech firms owning FDIC banks outside Fed supervision | `macro-ilcs` |
+| **Family-office exemption** | SEC Rule 202(a)(11)(G)-1 (**Jun 2011**), no leverage disqualifier; the Archegos fix **Rule 10B-1 proposed Dec 2021, never finalized** | hidden swap leverage (Archegos 2021, ~$10B+ losses) | `macro-family-offices` |
+| **EGRRCPA 2018** | **May 24 2018**, SIFI $50B→$250B | the mid-size-bank tail outside enhanced oversight (SVB) | `macro-fdic` |
+
+**Two signatures.** (1) **Deregulation by gap, not repeal** — the heaviest items (private-credit carve-out, family-office exemption) are *non-actions*; the most relevant Archegos fix (Rule 10B-1) was proposed and abandoned. (2) A **2025-26 coordinated capital-relief wave** — eSLR cut (Nov 2025), Basel III Endgame rescinded + re-proposed weaker (Mar 2026), the GENIUS Treasury-reserve rail — all loosen capital/leverage and expand Treasury intermediation **at once**, thinning buffers exactly as the AI-debt wave, the HTM hole, and private-credit exposure all grow. *(A primary-document pass should lock the EO number and CFR rule numbers verbatim before any identifier is relied on; magnitudes ~$1.7T / ~$1T are approximate.)*
+
 ## 3. The market-manipulation record (venues move, the pattern repeats)
 - **JPMorgan precious-metals & Treasuries spoofing (2008–2016):** hundreds of thousands of spoof orders in gold/silver/platinum/palladium/Treasury futures. **Record $920.2M settlement (Sep 29 2020, DOJ+CFTC+SEC)**; traders Nowak & Smith convicted (2022). Venue: COMEX/CME, US Treasuries. **Fact (adjudicated).**
 - **LME nickel / Tsingshan short squeeze (Mar 2022):** Xiang Guangda's Tsingshan held a massive nickel short; a squeeze spiked prices and the **LME suspended trading and cancelled ~$12B of trades** (highly controversial; litigation followed). Separately, JPMorgan held LME nickel warrants that turned out to be **"bags of rocks"** (fake, 2023). Venue: London Metal Exchange. **Fact.**
