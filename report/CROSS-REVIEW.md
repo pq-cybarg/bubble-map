@@ -20,10 +20,10 @@
 - **OpenAI** — 30 files
 - **FDIC** — 30 files
 - **Oracle** — 28 files
+- **Microsoft** — 23 files
 - **Chainlink** — 22 files
-- **Microsoft** — 22 files
 - **Amazon** — 22 files
-- **NVIDIA** — 20 files
+- **NVIDIA** — 21 files
 - **Stargate** — 19 files
 - **JPMorgan** — 18 files
 - **Anthropic** — 18 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-asia-crypto-payments.json` — related files by shared entities (verify cross-refs exist)
-- altcoin-lens.json: 5 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- temporal-bridges.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- spec-cross-border-settlement-rails.json: 4 shared entities
-- fin-hedera-connections.json: 4 shared entities
-- spec-crypto-banking-debanking.json: 4 shared entities
-- spec-sec-sdny-regulatory.json: 4 shared entities
+## Newest file `spec-exchanges-asia.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 15 shared entities
+- fin-hedera-connections.json: 12 shared entities
+- altcoin-lens.json: 11 shared entities
+- spec-crypto-sec-epstein.json: 11 shared entities
+- fin-google-amazon-anthropic-meta.json: 11 shared entities
+- spec-sec-sdny-regulatory.json: 10 shared entities
+- fin-coreweave-oracle.json: 10 shared entities
+- spec-cross-system-contagion.json: 10 shared entities
