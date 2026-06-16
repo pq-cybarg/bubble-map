@@ -14,6 +14,43 @@
   "fuel": "The 'clean firm power' answers both have chokepoints: nuclear/SMR fuel (HALEU) is ~Russia-gated (geopolitics-russia-energy-arctic; power_adequacy P2 UNSAT to ~2029), and gas needs turbines + pipelines that are themselves backlogged. status: fact."
  },
  "the_workaround": "Because the grid can't connect them in time, hyperscalers go 'BRING YOUR OWN POWER' (BYOP) - behind-the-meter on-site generation (gas turbines, fuel cells, nuclear restarts like Three Mile Island, SMRs). This bypasses the HV-transformer + interconnection bottleneck but (a) still needs turbines/fuel that are backlogged/gated, and (b) moves the AI build off the regulated grid into self-supplied power - privatizing the energy chokepoint. status: fact + interpretation.",
+ "most_stranded_ranking": {
+  "summary": "#50 - rank the hyperscalers/neoclouds by exposure to power-STRANDING: lots of announced compute vs little SECURED firm power, worst for those who LEASE and don't self-generate. 2026 capex + secured-power facts are fact; the ranking is a labeled interpretation.",
+  "the_tell": "Nadella, on record: 'you may actually have a bunch of chips sitting in inventory that I can't plug in ... it's not a compute glut, but a power and warm-shell glut' - the binding constraint flipped from GPUs to POWER. status: fact.",
+  "ranking_most_to_least_exposed": [
+   {"rank":1,"who":"Oracle / Stargate","capex_2026":"~$50B (raised ~$15B)","secured_power":"claims ~10 GW secured over 3yr, >90% PARTNER-funded; LEASES datacenters, does not self-generate; Abilene off-grid gas via Crusoe (29 GE Vernova turbines ~1 GW)","stranding_signal":"scrapped a planned 600 MW Abilene expansion; thinnest balance-sheet cushion; single-customer (OpenAI) concentration","grade":"fact (capex/10GW/600MW cut) + interpretation (rank)"},
+   {"rank":2,"who":"CoreWeave / neoclouds","capex_2026":"~$30-35B (>2x 2025), 100% tied to signed contracts","secured_power":"only ~850 MW ACTIVE vs >3.1 GW CONTRACTED end-2025 (energization gap); pure lessee","stranding_signal":"capex tied to contracts + circular Nvidia financing ($2B) = if power slips, contracted capex strands","grade":"fact (850MW/3.1GW) + interpretation"},
+   {"rank":3,"who":"Microsoft","capex_2026":"~$190B; $11.1B datacenter LEASES in one quarter","secured_power":"Constellation Three Mile Island / Crane 835 MW nuclear PPA (restart ~2028)","stranding_signal":"STRONGEST direct evidence - Nadella 'chips I can't plug in'; TD Cowen ~2 GW lease walk-away (mostly non-binding LOIs per SemiAnalysis) + 1.5 GW self-build freeze - but strongest balance sheet","grade":"fact (Nadella + 2GW/1.5GW) + interpretation"},
+   {"rank":4,"who":"Meta","capex_2026":"~$125-145B","secured_power":"MOST self-reliant near-term: Hyperion (Richland Parish LA) funds 10 Entergy gas plants >7 GW + 2.5 GW renewables; phase-1 ~1.5 GW late-2027, ~5 GW by 2030","stranding_signal":"enormous CONCENTRATED single-site bet ($27B Blue Owl JV), but its risk is execution/permitting, not procurement","grade":"fact (capex + gas plants) + interpretation"},
+   {"rank":5,"who":"Amazon / AWS","capex_2026":"~$200B (all Amazon, mostly AWS)","secured_power":"best power-MATCHED: Talen/Susquehanna up to 1,920 MW nuclear through 2042, front-of-meter spring 2026; diversified sites; Trainium cuts capex","stranding_signal":"customer-committed 'substantial portion' of 2026 capex - low near-term stranding","grade":"fact"},
+   {"rank":6,"who":"Google / Alphabet","capex_2026":"~$175-185B (8-K)","secured_power":"most efficient TPU fleet + strong balance sheet; clean-power deals are LONG-dated/speculative (Kairos SMR first reactor ~2030, fleet 500 MW by 2035; Commonwealth fusion 200 MW early-2030s)","stranding_signal":"lowest near-term stranding; relies on grid+PPAs until the SMR/fusion bets mature","grade":"fact"}
+  ],
+  "read": "The split is balance-sheet + self-generation. The LESSEES who don't generate (Oracle, CoreWeave) are most exposed - their announced capex strands if contracted power doesn't energize. The cash-rich self-generators (Meta gas, Amazon nuclear) carry execution risk, not procurement risk. Microsoft is the on-record proof that even the strongest balance sheet has GPUs it cannot power."
+ },
+ "idle_gpu_cost_model": {
+  "summary": "#50 - quantify the cost of a GPU sitting idle (no power). The arithmetic is fact; the input ranges are sourced; the 'honest ~3yr economic life' is the contested assumption (cf. fin-ai-depreciation-debttrap).",
+  "inputs": {
+   "gb200_nvl72_rack": "~$3.0M / rack, 72 Blackwell GPUs -> ~$41,700/GPU; rack power ~120-132 kW (NVIDIA nominal 120 kW)",
+   "h100": "~$25-40k/GPU (mid ~$30k); 8-GPU H200 server ~$315k",
+   "useful_life": "accounting 6yr (MSFT/AMZN/GOOG extended from 3-4) vs economic ~2-3yr (Burry; entropic half-life)",
+   "rental_opportunity_cost": "neocloud on-demand H100 ~$1.5-2/GPU-hr; B200/GB200 ~$3/hr; hyperscaler on-demand H100 ~$7/hr (AWS ~$6.88, Azure ~$7-12)",
+   "cluster_power": "a 100k-GB200 cluster needs ~150-180 MW for GPUs (~250-500 MW all-in; GPUs ~40% of datacenter power)"
+  },
+  "model": {
+   "carrying_cost_per_gb200_gpu_per_day": "$41,700 / 1,095 days (3yr) = ~$38.1 depreciation + 10% WACC ($41,700*0.10/365 = ~$11.4) = ~$49.5/GPU/day - ACCRUES whether the GPU runs or not",
+   "per_rack_per_day": "~$2,740 depreciation + ~$822 carry = ~$3,562/day per idle GB200 rack",
+   "forgone_revenue_per_gpu_per_day": "at ~$3/GPU-hr neocloud = ~$72/GPU/day (the opportunity cost on top of carry)",
+   "accounting_understatement": "at the 6yr accounting life carry drops to ~$30.4/GPU/day - i.e. the books show ~$30/day while the honest 3yr economic cost is ~$49.5/day; the ~$19/day gap IS the depreciation trap, made physical by idleness"
+  },
+  "stranded_100k_cluster": {
+   "capital": "100k GPUs ~= 1,389 GB200 racks ~= $4.17B of fast-depreciating silicon",
+   "carrying_burn_idle": "~$49.5/GPU/day * 100,000 = ~$4.95M/DAY (~$1.81B/yr) burned while the cluster sits unpowered",
+   "incl_forgone_revenue": "+ ~$7.2M/day forgone rental = up to ~$12M/day total economic cost of a fully idle 100k-GB200 cluster",
+   "h100_comparison": "a 100k-H100 cluster (~$30k each, 3yr) ~= $3.56M/day carrying"
+  },
+  "read": "Power is on a 3-5yr delivery clock; GPUs depreciate on a ~2-3yr clock. A cluster that arrives before its power strands ~$5M/DAY in pure carry (up to ~$12M/day with forgone revenue) on a $4.2B asset that is aging out the entire time it waits. This is the depreciation trap (fin-ai-depreciation-debttrap) expressed physically: the asset decays whether or not it can be plugged in, so a power delay is a direct, compounding capital loss - and Nadella's 'chips I can't plug in' is that loss being taken in real time.",
+  "grade": "arithmetic FACT; input ranges sourced; 3yr economic-life assumption CONTESTED"
+ },
  "why_it_matters": "(1) It is the physical mirror of the financial thesis: the $650B+ capex and the $1.4T of OpenAI compute commitments (fin-microsoft-openai) assume power that is on a 3-5 year delivery clock the 2026-2027 buildout cannot meet - so a large share of announced capacity is, like the marks, a promise ahead of deliverable substance. (2) It compounds the DEPRECIATION trap (fin-ai-depreciation-debttrap): GPUs that age in ~2-3 years sitting idle waiting for power they can't get is stranded, fast-depreciating capital. (3) It hands leverage to whoever controls turbines (a few firms), transformers (a strained global supply incl. China), and fuel (Russia/HALEU, gas) - the energy chokepoint behind the compute chokepoint.",
  "sources": [
   {"name": "Digital Watch - Power hardware shortages delaying AI datacenter expansion despite record investment", "url": "https://dig.watch/updates/power-hardware-shortages-are-delaying-ai-data-centre-expansion-despite-record-investment"},
@@ -21,7 +58,18 @@
   {"name": "pv magazine USA - US transformer market: lead times extend to four years", "url": "https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/"},
   {"name": "Tech Fund - Power bottlenecks & the AI data center", "url": "https://www.techinvestments.io/p/power-bottlenecks-and-the-ai-data"},
   {"name": "EnkiAI - Data center power crisis 2026: the grid bottleneck", "url": "https://enkiai.com/data-center/data-center-power-crisis-2026-the-grid-bottleneck/"},
-  {"name": "NPC Electric - Power transformers: the hidden bottleneck in AI compute expansion", "url": "https://www.npcelectric.com/news/power-transformers-the-hidden-bottleneck-in-ai-compute-expansion-and-data-center-power-demand.html"}
+  {"name": "NPC Electric - Power transformers: the hidden bottleneck in AI compute expansion", "url": "https://www.npcelectric.com/news/power-transformers-the-hidden-bottleneck-in-ai-compute-expansion-and-data-center-power-demand.html"},
+  {"name": "Tom's Hardware - Nadella: chips sitting in inventory I can't plug in", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-ceo-says-the-company-doesnt-have-enough-electricity-to-install-all-the-ai-gpus-in-its-inventory"},
+  {"name": "Utility Dive - Constellation Three Mile Island / Crane 835 MW PPA with Microsoft", "url": "https://www.utilitydive.com/news/constellation-three-mile-island-nuclear-power-plant-microsoft-data-center-ppa/727652/"},
+  {"name": "Utility Dive - Talen/Amazon Susquehanna nuclear up to 1,920 MW", "url": "https://www.utilitydive.com/news/talen-amazon-aws-susquehanna-nuclear-data-centert/750440/"},
+  {"name": "Tom's Hardware - Meta to fund seven gas plants for 7 GW Louisiana datacenter (Hyperion)", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/meta-will-fund-seven-new-gas-plants-to-power-its-7gw-louisiana-data-center"},
+  {"name": "DCD - Oracle stood up 400 MW, secured 10 GW (>90% partner-funded), leases rather than builds", "url": "https://www.datacenterdynamics.com/en/news/oracle-stood-up-400mw-of-data-center-capacity-in-latest-quarter-has-secured-10gw-of-power-for-the-next-three-years/"},
+  {"name": "DCD - CoreWeave 850 MW active vs 3.1 GW contracted; 2026 capex to double", "url": "https://www.datacenterdynamics.com/en/news/coreweave-aims-to-add-5gw-more-data-center-capacity-by-2030-anticipates-capex-in-2026-to-double/"},
+  {"name": "SemiAnalysis - Microsoft's datacenter freeze (2 GW LOI walk-away + 1.5 GW self-build freeze)", "url": "https://newsletter.semianalysis.com/p/microsofts-datacenter-freeze"},
+  {"name": "Techi - GB200 NVL72 rack ~$3M / 72 GPUs", "url": "https://www.techi.com/nvidia-gb200-nvl72-earnings-q1-ai-rack/"},
+  {"name": "Spheron - 2026 GPU cloud pricing comparison (H100/H200/B200 rental rates)", "url": "https://www.spheron.network/blog/gpu-cloud-pricing-comparison-2026/"},
+  {"name": "SemiAnalysis - 100,000 H100 clusters: power, network topology (>150 MW)", "url": "https://newsletter.semianalysis.com/p/100000-h100-clusters-power-network"},
+  {"name": "Epoch AI - GPUs ~40% of AI datacenter power usage", "url": "https://epoch.ai/data-insights/gpus-power-usage-in-ai-data-centers"}
  ],
  "edges": []
 }

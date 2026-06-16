@@ -28,6 +28,25 @@
       "https://seekingalpha.com/article/4895552-sealsq-quantum-growth-setup-with-cash-backed-undervaluation"
     ]
   },
+  "pipeline_vs_announced": {
+   "summary": "#76 - separate what SEALSQ/WISeKey actually SHIPS and EARNS from what is merely ANNOUNCED. The decisive finding: the revenue-generating pipeline is almost entirely LEGACY pre-quantum secure-element/PKI/ASIC business (~$18.3M 2025); the entire PQC/quantum/space/crypto stack that justifies the valuation is ANNOUNCED or IN-BUILD, not yet shipping at scale. Revenue figures are fact (preliminary 2025); commercial-status reads are graded.",
+   "shipping_now_revenue": {
+    "items": ["Legacy secure-element / secure-MCU products (VaultIC family) + INeS PKI provisioning - the actual ~$18.3M 2025 revenue base (pre-quantum secure chips + identity services)","IC'ALPS (Grenoble ASIC design house) - operating, ~$3.5M revenue contribution post-acquisition","WISeID / PKI digital-identity services - operating","WISeSat - 21 picosats actually in orbit (real hardware; revenue still minimal)"],
+    "read": "This is REAL but it is NOT the quantum story - it is a small legacy secure-chip + identity + ASIC-services business. ~$18.3M total, growing 66% off a tiny base, still loss-making (-$34M).",
+    "grade": "fact (preliminary 2025 revenue; IC'ALPS contribution disclosed)"
+   },
+   "in_build_certification_pending": {
+    "items": ["QS7001 post-quantum secure element - the actual PQC product (ML-KEM/ML-DSA); in sampling/early qualification, not yet at volume revenue","SEALKAYNESQ India OSAT (Sanand, Gujarat) - facility inaugurated Apr 2026; commercial production TARGETED H2-2026 after Common-Criteria certification","Murcia Quantum Edge Hub (EUR40M; EUR20M Spanish state) - under build","EeroQ / ColibriTD stakes - the two finalized SEALQUANTUM investments (real equity, pre-product)"],
+    "read": "Capex/state money committed and buildings real, but ZERO certified PQC volume revenue yet. The QS7001 is the bridge item: a real chip in early ramp, the one thing that could turn the narrative into product.",
+    "grade": "fact (facilities/stakes exist) + contested (commercial timing/volume)"
+   },
+   "announced_aspirational_only": {
+    "items": ["Government of Gujarat 300-million-unit/year MoU - a memorandum + target capacity, not contracted output","Miraex acquisition - LETTER OF INTENT (non-binding)","100-satellite quantum-comms constellation by 2033 - long-dated target","QSOC (Quantum Spatial Orbital Cloud) - announced commercial concept","SEALQUANTUM up-to-$35M program - a budget (2 of N investments finalized)","'Quantum Made in USA' / 'Quantum Corridor' - strategy/branding labels"],
+    "read": "These are intentions - MoUs, LOIs, target capacities, dated visions, and branding. They are the bulk of the press velocity and carry NO current revenue. Treat as optionality, not output.",
+    "grade": "intention (vendor-issued announcements; no certified output or revenue)"
+   },
+   "bottom_line": "The valuation rests on the ANNOUNCED quantum/PQC/space/crypto stack; the EARNINGS rest on the legacy ~$18.3M secure-chip/PKI/ASIC base. The gap between the two - bridged only by the QS7001 ramp and the India JV certification - IS the speculative thesis. Same pattern as macro-quantum-computing (IonQ revenue vs the announced roadmap) and altcoin-lens narrative-beta."
+  },
   "global_footprint": [
     {
       "country": "Switzerland",

@@ -19,6 +19,17 @@
 ## Financials (the tell)
 2025 revenue **$18.3M (+66%)**, net loss **−$34.2M**, operating loss **−$39.8M**, cash **~$417.7M** end-2025. The cash pile is **~23× revenue and dilution-/treasury-raised, not earned** — the multi-country footprint is being *bought* with shareholder capital while the business loses ~$34M on ~$18M.
 
+## Pipeline vs announced — what actually ships and earns *(added 2026-06-16, #76)*
+The decisive split. SEALSQ's **revenue** comes almost entirely from a **legacy, pre-quantum** secure-chip / identity / ASIC business; the **quantum/PQC/space/crypto stack that justifies the valuation is announced or in-build, not shipping at scale.**
+
+| Tier | What's in it | Revenue today |
+|---|---|---|
+| **Shipping now (real)** | Legacy secure-element / secure-MCU (VaultIC) + INeS PKI provisioning; **IC'ALPS** ASIC services (~$3.5M); WISeID identity; **21 WISeSat picosats in orbit** | **~$18.3M** (the whole company; +66% off a tiny base, still −$34M net) |
+| **In build / certification-pending** | **QS7001** post-quantum secure element (sampling/early ramp — the *bridge* item); **SEALKAYNESQ** India OSAT (inaugurated Apr 2026, commercial **H2-2026** post-CC cert); Murcia hub (€40M); EeroQ/ColibriTD stakes | ~$0 certified PQC volume yet |
+| **Announced / aspirational only** | Gujarat **300M-unit/yr MoU**; **Miraex LOI** (non-binding); **100-sat constellation by 2033**; **QSOC** concept; SEALQUANTUM **$35M** budget; "Quantum Made in USA" branding | none |
+
+**Bottom line:** the valuation rests on the *announced* stack; the *earnings* rest on the legacy ~$18.3M base. The gap — bridged only by the **QS7001 ramp** and the **India JV certification** — *is* the speculative thesis. Same shape as `macro-quantum-computing` (IonQ revenue vs roadmap) and `altcoin-lens` narrative-beta.
+
 ## "And others" — PQC peers
 - **PQShield** (Oxford) — ~$65.3M raised; customers **AMD, Microchip, Collins Aerospace, Lattice, Toyota/Denso** → deeper *customer* credibility than SEALSQ, venture- (not microcap-) funded.
 - **Crypto Quantique** (UK) — quantum-tunneling device entropy/RoT for IoT (Intel Ignite, EIC, BGF).
