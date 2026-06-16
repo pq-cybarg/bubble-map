@@ -55,6 +55,21 @@
       {"item": "Why it matters", "detail": "If USD stablecoins win, the fiscal-trap Treasury bid gets a new buyer base; if the bypass stack scales, the US loses a coercive lever and a funding channel. Both are dual-use control rails, just for different states.", "grade": "labeled interpretation"}
     ]
   },
+  "forced_vs_chosen_flows": {
+    "summary": "#60 - classify each bypass flow as SANCTIONS-FORCED (committed, irreversible near-term) vs STRATEGICALLY-CHOSEN (optionality/hedge, reversible, dual-track). The distinction is the whole strategic picture: forced flows are the bypass stack's DURABLE base; chosen flows are its GROWTH potential but are contingent and can evaporate. Flows/figures are fact; the forced/chosen classification is labeled analysis.",
+    "forced": [
+      {"actor": "Russia", "flow": "post-2022 SWIFT cutoff -> ~90% of intra-bloc trade in national currencies (yuan-heavy) via CIPS; energy sold in non-dollar", "why_forced": "no access to dollar/SWIFT - the bypass is load-bearing for the economy, not a choice", "reversibility": "irreversible while sanctioned; a captive, committed base", "grade": "fact (flow) + labeled (forced)"},
+      {"actor": "Iran", "flow": "oil/trade settled outside the dollar (yuan, barter, crypto); Nobitex/IRGC-adjacent rails (cross-ref spec-onchain-threat-actor-addresses)", "why_forced": "comprehensive sanctions leave no dollar option", "reversibility": "irreversible while sanctioned", "grade": "fact + labeled"}
+    ],
+    "chosen": [
+      {"actor": "China", "flow": "builds CIPS (~$24.5T 2024) + mBridge (~95% e-CNY) + e-CNY + BRICS Pay - yet remains deeply dollar-integrated (still holds Treasuries, trades in USD)", "why_chosen": "sovereignty + sanctions-INSURANCE + a coercive lever - optionality, NOT necessity; keeps BOTH rails", "reversibility": "reversible/dual-track - China can dial bypass usage up or down", "grade": "fact (rails) + labeled (chosen)"},
+      {"actor": "Gulf states (UAE, Saudi)", "flow": "join mBridge (SAMA Jun-2024) AND hold dollars/Treasuries AND deploy AI capital in USD (fin-gulf-sovereign-ai-capital)", "why_chosen": "pure hedging - a foot on each rail; optionality maximization, no compulsion", "reversibility": "fully reversible - the clearest 'chosen' case", "grade": "fact + labeled"},
+      {"actor": "BRICS (broad)", "flow": "BRICS Pay pilot; common-currency rhetoric; reserve diversification into gold", "why_chosen": "aspirational optionality + reserve hedging, not transactional necessity", "reversibility": "reversible/aspirational", "grade": "contested + labeled"}
+    ],
+    "the_strategic_asymmetry": "The bypass stack's DURABLE demand = the FORCED flows (Russia/Iran) - small in global terms but committed and irreversible. Its GROWTH potential = the CHOSEN flows (China/Gulf/BRICS) - far larger but CONTINGENT: they persist only while building optionality stays cheap and using the bypass isn't costly. This is why the dollar's transactional dominance (89.2% of FX) coexists with a real bypass build-out: most of the build-out is reversible hedging, not committed exit.",
+    "the_feedback_risk": "The dangerous dynamic for the dollar: each sanctions action that FORCES a flow also incentivizes CHOSEN hedging by everyone watching - sanctions overuse converts reversible hedges into permanent exits (chosen -> forced). The US dollar-defense via USD stablecoins (the GENIUS-Act extension rail) is aimed precisely at the CHOSEN column: keep the dollar attractive/convenient enough that optionality-seekers don't migrate. So the contest is won or lost on the chosen flows, and lost fastest by sanctioning so broadly that 'chosen' becomes 'forced.'",
+    "grade": "flows + figures FACT (verification_log); the forced/chosen classification + the feedback-risk are labeled analysis"
+  },
   "verification_log": {
     "date": "2026-06-14",
     "checks": [

@@ -24,6 +24,17 @@ China's **Cross-Border Interbank Payment System** processed **~RMB 175T (~$24.5T
 - **Reserve share eroding:** the dollar's reserve share fell from **~73% (2001) to ~54% (2025)** — slow diversification, not collapse.
 - **Where it's real:** sanctioned bilateral trade, reserve diversification, oil-pricing experiments — **margins, not the core**. Capital controls, RMB non-convertibility, trust, and network effects keep the dollar dominant.
 
+## Forced vs chosen flows *(added 2026-06-16, #60)*
+The strategic key the two-rails frame needs: which bypass flows are **sanctions-FORCED** (committed, irreversible) vs **strategically-CHOSEN** (optionality/hedge, reversible). *Flows are fact; the classification is labeled analysis.*
+
+| | Actors | The flow | Why | Reversibility |
+|---|---|---|---|---|
+| **FORCED** | **Russia, Iran** | ~90% intra-bloc trade in national currencies via CIPS; oil sold non-dollar | no dollar/SWIFT access — the bypass is **load-bearing**, not a choice | **irreversible** while sanctioned — a captive, committed base |
+| **CHOSEN** | **China, Gulf (UAE/Saudi), BRICS** | builds CIPS/mBridge/e-CNY/BRICS Pay **while still holding dollars/Treasuries & trading USD** | sovereignty + sanctions-**insurance** + optionality; a foot on each rail | **reversible/dual-track** — dial-able up or down |
+
+- **The asymmetry:** the bypass stack's **durable** demand is the **forced** flows (small but committed); its **growth** potential is the **chosen** flows (large but contingent — they persist only while building optionality stays cheap). That's why the dollar at **89.2% of FX** coexists with a real bypass build-out: most of it is **reversible hedging, not committed exit**.
+- **The feedback risk:** every sanctions action that *forces* a flow also incentivizes *chosen* hedging by everyone watching — **sanctions overuse converts reversible hedges into permanent exits (chosen → forced).** The US dollar-defense via USD stablecoins targets exactly the **chosen** column (keep the dollar convenient so optionality-seekers don't migrate). The contest is **won or lost on the chosen flows** — and lost fastest by sanctioning so broadly that "chosen" becomes "forced."
+
 ## The two-rails contest (the strategic frame)
 - **Dollar-extension (private):** USD stablecoins (USDC/RLUSD/USDT) push dollar usage and **Treasury demand** ([[macro-stablecoin-treasury-rail]]); the **GENIUS Act** institutionalizes it — a market-led **defense of dollar primacy**.
 - **Dollar-bypass (state):** CIPS + mBridge + e-CNY + BRICS Pay settle **outside** the dollar/SWIFT — sovereignty and sanctions-resilience, but carrying the **same state-control/programmability** concerns the project flags for CBDCs.
