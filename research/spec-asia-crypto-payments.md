@@ -32,6 +32,17 @@ Oversight moved from **Bappebti → OJK** (Jan 2025); crypto is a regulated **di
 ## Escape from payment-processor control (the throughline)
 Where card networks/processors can de-platform legal-but-disfavored merchants ([[spec-censorship-finance-adtech]]), stablecoin/crypto rails offer a **censorship-resistant alternative** — a real adoption driver for creators and independent merchants (the concern Japan's **Zenko Kurishita** raises, [[spec-japan-politics-social]]). **The open question:** regulated, bank/trust-issued stablecoins re-impose KYC/compliance at the issuer, so "escape the processor" can become "onboard a new, equally-permissioned rail." Whether crypto delivers censorship-resistance or just a **new gatekeeper** is unresolved.
 
+## Which issuers are actually censorable *(added 2026-06-16, #64)*
+The concrete answer to the open question above. *Freeze-function/reserve facts are documented; the issuer ranking is labeled analysis.* Censorability runs on four mechanisms: an on-chain **admin freeze/blacklist** in the token; the **reserve-bank** chokepoint; **KYC at mint/redemption**; and **jurisdiction** (a regulated issuer has a *legal duty* to honor freeze orders).
+
+| Tier | Issuers | Why |
+|---|---|---|
+| **Highly censorable** (freeze + regulated + KYC + duty) | **USDC** (Circle freezes on OFAC/LE order — the reference case), **RLUSD**, and **all of Asia's regulated local-currency coins** — Japan's bank/trust lanes (MUFG/SMBC/Mizuho Progmat, SBI JPYSC) + JPYC, Singapore **XSGD/StraitsX**, Korea's bank-issued KRW | freeze function **and** a legal duty to use it; KYC at the issuer; reserves in regulated banks. **Token-level** freeze — *more* granular than a card network freezing an account |
+| **Censorable but selective** | **USDT** (Tether) | has a freeze function and has frozen billions, but offshore and **discretionary** — censorable by Tether, not cleanly by any one government |
+| **Least censorable** (no central freeze) — rare & compromised | **DAI** (decentralized) — *but now holds USDC in reserves, so it inherits USDC's censorability*; algorithmic (but the category keeps failing) | truly freeze-resistant coins are scarce, and the main one leaks censorship-resistance via its USDC backing |
+
+**This resolves the throughline:** the **regulated** stablecoin rails — all of Asia's local-currency builds plus USDC/RLUSD — are **more** censorable than the card networks they're pitched to escape (a programmable token-level freeze *on top of* KYC and a banking chokepoint). "Escape Visa/Mastercard" → "**onboard to an equally-or-more-permissioned rail**" is confirmed for the regulated stack; genuine censorship-resistance requires **leaving regulated fiat-backed stablecoins entirely**.
+
 ## Keiretsu / chaebol & government
 The **old industrial-financial groups are central**: Japan's zaibatsu/keiretsu-descended megabanks (MUFG/SMBC/Mizuho) + SoftBank/Rakuten; Korea's Samsung + Naver/Kakao. Incumbents — not disruptors — capture the new rail. And governments frame local-currency stablecoins as sovereignty/modernization tools while the **licensing regimes concentrate control** over who may issue programmable money — the same **dual-use (enablement + control)** the project flags in the digital-ID/CBDC threads.
 
