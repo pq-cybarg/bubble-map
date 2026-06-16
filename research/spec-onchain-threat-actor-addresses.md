@@ -34,6 +34,18 @@ The most prolific state-grade thief; proceeds fund the DPRK weapons program (UN 
 - **Silk Road** — **~$3.36B** seized from James Zhong (Nov 2022) + the 2020 ~69,370 BTC forfeiture; courts cleared the government to **sell** (2025). *Fact.*
 - **US holdings & Strategic Bitcoin Reserve** — by 2024–25 the government controlled on the order of **~200k BTC (~1% of supply)**; a **2025 executive order** established a **Strategic Bitcoin Reserve** (retain seized BTC, don't sell). The state is now a large, **on-chain-visible** BTC holder — a market and policy variable. *Fact.*
 
+## 6b. Tiering: systemic-risk vs sanctions *(added 2026-06-16, #67)*
+The clusters above sit on **two axes that are routinely conflated** — *sanctions status* (formal coverage) and *systemic risk* (threat to the system). **The headline finding is that they diverge:** the highest-systemic-risk actor has the *least* complete formal coverage, so a sanctions-list-only view under-weights the biggest risks. *Attributions graded as above; the tiering is a labeled analytic ranking.*
+
+| Tier | Clusters | The point |
+|---|---|---|
+| **T1 — max risk, INCOMPLETE coverage** | **DPRK/Lazarus** (Bybit $1.5B, Ronin $625M): state-grade, funds weapons — but Ronin is SDN, the 51 Bybit addresses are FBI-PSA (*not* SDN), most hops are forensics-only. **Mixers** (Tornado Cash): the scaled laundering chokepoint, **currently UN-sanctioned** (vacated 2024 / lifted Mar 2025). | **the divergence** — max systemic risk, min formal coverage |
+| **T2 — high risk, WELL-covered** | Russia evasion exchanges/markets (**Garantex, Hydra**, SUEX/Chatex/Bitzlato): SDN-designated **and** seized | sanctions ≈ risk (and partly contained) |
+| **T3 — designated but NEUTRALIZED** | **Iran/Nobitex**: Treasury-designated, but the $90M was **burned** to keyless addresses (a political strike) | designation > residual risk |
+| **T4 — large balance, LOW threat** | **US-gov seized wallets** (~200k BTC; Strategic Bitcoin Reserve) | size ≠ threat — a market/policy variable |
+
+**The monitoring lesson:** tracking only the SDN list (the **757**) misses the two most systemically dangerous clusters — the **forensics-tracked-not-designated DPRK hops** and the **currently-lifted Tornado Cash chokepoint**. A risk-tiered monitor must **union three sources** — SDN (`fetch_ofac.py`) + FBI/CISA PSA IOC lists + commercial forensics — and weight by *systemic risk*, not designation status. The "can code be sanctioned?" whipsaw means the formal list will keep **lagging the actual risk surface.**
+
 ## 7. Limits & ingest — a designation-scope floor, not an access limit (important)
 This is an **attribution + source-pointer** layer, not a raw address dump. Government attributions are high-grade; clustering is labeled. `fetch_ofac.py` (env-free) ingests the **free OFAC Advanced XML** (SDN + Consolidated) into `data/ofac_crypto_addresses.json` — **757 addresses** (522 BTC / 127 TRON / 97 ETH / 10 LTC / 1 XMR), all from the SDN list (the Consolidated list carries none).
 
