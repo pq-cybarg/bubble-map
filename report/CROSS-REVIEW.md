@@ -25,18 +25,18 @@
 - **Amazon** — 22 files
 - **NVIDIA** — 19 files
 - **JPMorgan** — 18 files
+- **Stargate** — 18 files
 - **Anthropic** — 18 files
-- **Stargate** — 17 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-cross-sectional-analysis.json` — related files by shared entities (verify cross-refs exist)
-- spec-crypto-banking-debanking.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- macro-bank-htm-marks.json: 1 shared entities
-- macro-stablecoin-failures-manipulation.json: 1 shared entities
-- macro-ilcs.json: 1 shared entities
-- macro-private-credit-bdc-stress.json: 1 shared entities
-- spec-sdny-crypto-prosecution.json: 1 shared entities
-- macro-oil-backwardation.json: 1 shared entities
+## Newest file `macro-cre-privatecredit.json` — related files by shared entities (verify cross-refs exist)
+- fin-google-amazon-anthropic-meta.json: 12 shared entities
+- spec-cross-system-contagion.json: 11 shared entities
+- fin-gulf-sovereign-ai-capital.json: 9 shared entities
+- fin-coreweave-oracle.json: 9 shared entities
+- macro-history-dereg-manipulation.json: 9 shared entities
+- spec-sec-filings-primary.json: 8 shared entities
+- fin-nvidia-openai.json: 7 shared entities
+- sec-filings.json: 7 shared entities

@@ -70,6 +70,20 @@ The bridge: **bank balance sheets → NDFI loans → private-credit funds/BDCs �
 - **Anthropic (in progress, 2026):** Apollo + Blackstone arranging **~$36B** debt financing. Source: [HedgeCo](https://hedgeco.net/news/06/2026/blackstone-and-apollo-work-on-36-billion-anthropic-debt-deal.html).
 - **GPU-backed loans (collateralized by chips):** CoreWeave **$7.5B**, Fluidstack **$10B**, Lambda **$500M**, plus Crusoe facilities; Stargate (OpenAI/Oracle/Crusoe/Lancium-Blackstone) trillion-dollar buildout. Sources: [Debt Serious](https://debtserious.substack.com/p/round-46-apollo-blackstone-gpu-backed); [Quinn Emanuel](https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/); [PitchBook](https://pitchbook.com/news/articles/ai-venture-debt-gpu-chip-backed-loans).
 
+### Institution-level map (named SPV ← private credit ← arranging bank) *(added 2026-06-15, #47)*
+The dominant 2025-26 pattern is **deconsolidation** — hyperscalers keep mega-builds *off* their balance sheets via 80/20 JVs, GPU-leasing SPVs, and project-finance JVs, while the leveraged borrowers carry the visible debt:
+
+| SPV / borrower | Size | Private-credit / lenders | Arranger / structure | On/off sponsor BS |
+|---|---|---|---|---|
+| **Meta — Hyperion** (LA) | ~$29.5B (~$27B debt + $2.5B eq) | **Blue Owl 80%**, **PIMCO** buys the placed bonds (A+, mat. 2049) | **Morgan Stanley** arranger; 80/20 JV SPV | **OFF** Meta |
+| **OpenAI/Stargate — Crusoe Abilene** (TX) | ~$15B (incl. $11.6B, May 2025) | **Blue Owl** + Primary Digital | project-finance JV; Oracle supplies compute ($18B Oracle bonds, Sept 2025) | OFF OpenAI (Oracle bonds ON Oracle) |
+| **CoreWeave** | DDTL 4.0 **$8.5B** (+ earlier $2.3B) | **Blackstone Credit** anchor; Magnetar, Coatue, BlackRock, PIMCO, Carlyle | GPU/contract-collateralized delayed-draw (1st IG-rated GPU financing) | **ON** CoreWeave (the leveraged borrower) |
+| **xAI — Colossus 2** (Memphis) | ~$20B (~$12.5B debt) | **Apollo, Diameter, Valor**; Nvidia ~$2B equity | SPV buys GPUs, leases to xAI 5yr (lease-to-own) | **OFF** xAI |
+| **Vantage / Nebius** | Vantage $5.75B green + €640M ABS; Nebius $4.3B (contract-backed) | banks + ABS investors | green loans + data-center ABS | mixed |
+
+- **The bank back-end (GSIB → NDFI).** Banks arrange the bonds/loans and lend ~**$1.3-1.4T** to the NDFIs that fund the SPVs (top private-credit lenders, Jun-2025: **Wells Fargo $59.7B, BofA $33.2B, PNC $29.5B, Citi $25.8B, JPMorgan $22.2B, Goldman $21.7B**; the Big Four each hold >$100B of total NDFI loans, ~47.8% of the segment), then **offload via synthetic risk transfer (SRT)** and ABS. **Morgan Stanley** leads the hyperscaler-bond league table.
+- **The seam.** System risk concentrates at the **bank → NDFI → GPU-SPV** seam: the hyperscaler's name is off the debt, the private-credit manager holds a self-marked loan ([[macro-private-credit-bdc-stress]]) against a ~3-yr-life GPU financed over 5-19 yr ([[fin-ai-depreciation-debttrap]]), and the GSIB sits one step back via callable lines + SRT. *(Aggregate trillions are forecasts/composites — contested; the named JV/facility structures are confirmed by filings/PR/rating agencies.)*
+
 ### The pipeline size
 - **Outstanding loans to AI-related companies surged from ~zero to >$200B in a few years; Morgan Stanley projects ~$800B of additional datacenter private-credit financing over the next two years.** Sources: [Quinn Emanuel](https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/); [CommercialSearch](https://www.commercialsearch.com/news/whos-funding-the-data-center-boom/). Ares' Blair Jacobson: third-party datacenter investment alone could be a **~$900B market**; 144 real-asset funds tracking ~$200B targeted capital. Source: [HedgeCo](https://hedgeco.net/news/05/2026/private-equity-chases-the-data-center-supercycle.html).
 

@@ -28,6 +28,24 @@
    "us_concentration": "US operational datacenters reportedly exceed all other countries combined / ~10x Germany. status: weak (magnitude unverified here)."
   }
  },
+ "unified_useful_life_table_2026": {
+  "summary": "Per-company audit of disclosed server/GPU useful life + earnings effect, and the unified forward rate (#54). Disclosed lives are fact; economic-life and Burry overstatement figures are contested.",
+  "by_company": [
+   {"company": "Microsoft", "life": "6yr (was 4-5)", "change": "FY23 (eff. Jul 2022)", "effect": "~$3.7B FY23 benefit", "grade": "fact"},
+   {"company": "Alphabet/Google", "life": "servers 6yr; network 6yr", "change": "Jan 2023", "effect": "~$3.9B FY23 lower depreciation / ~$3.0B higher net income", "grade": "fact"},
+   {"company": "Amazon/AWS", "life": "6yr (2022) -> a SUBSET back to 5yr (Jan 2025)", "change": "REVERSAL Jan 2025, cites AI/ML pace", "effect": "~$700M FY25 op-income hit + ~$920M early-retirement (~$1.3B total)", "grade": "fact"},
+   {"company": "Meta", "life": "~5.5yr (4->4.5->5->5.5)", "change": "Jan 2025", "effect": "~$2.9B FY25 lower depreciation", "grade": "fact"},
+   {"company": "Oracle", "life": "~5yr", "change": "2023", "effect": "central to the OCI-margin/earnings-quality debate", "grade": "weak"},
+   {"company": "CoreWeave", "life": "GPUs 6yr", "change": "since 2023", "effect": "shifting to 4yr adds ~$315M/qtr -> flips to a loss", "grade": "contested"},
+   {"company": "Nebius", "life": "GPUs 4yr", "change": "current", "effect": "~50% higher depreciation rate than CoreWeave", "grade": "fact"},
+   {"company": "Lambda", "life": "GPUs ~5yr", "change": "current", "effect": "between the two", "grade": "weak"}
+  ],
+  "amazon_reversal": "Amazon is the ONLY hyperscaler to publicly CUT a useful-life category (6->5yr, Jan 2025), citing 'an increased pace of technology development, particularly in artificial intelligence and machine learning' - an inside-the-filings admission the extend-life trend is reversing.",
+  "coreweave_vs_nebius": "Identical neocloud models, GPUs over 6yr (CoreWeave) vs 4yr (Nebius) - a ~50% depreciation-rate gap from the useful-life CHOICE alone; at 4yr CoreWeave's reported operating profit flips negative.",
+  "burry_critique": "Scion (Nov 2025): ~$176B understated depreciation 2026-28; Oracle ~26.9%, Meta ~20.8% overstated by 2028; ~$1.1B Nvidia+Palantir puts (later wound down). Nvidia rebuttal (Kress: 6-yr-old A100s 'still at full utilization') vs Burry (utilization != value; older chips far less power-efficient). All changes disclosed prospectively - 'fraud' is rhetorical/contested.",
+  "unified_forward_rate": "Cluster ~6yr accounting life vs a defensible ~3-4yr blended GPU economic life (training-edge ~1.5-2yr; inference tail ~3-4yr) vs Nvidia's ~annual cadence (Hopper->Blackwell->Rubin). Marking GPU-heavy fleets from ~6yr to ~3-4yr raises annual depreciation ~50-100% on the affected base. Key tension: accounting life is set on BLENDED fleets (incl. 15+yr shell/power); GPUs are the fast-decaying subset the blended life masks (the D2/D4 mechanism).",
+  "grade": "disclosed lives + dollar guides FACT; economic-life + Burry overstatement CONTESTED; not legally adjudicated."
+ },
  "the_mechanism_formalized": {
   "duration_mismatch": "If asset economic life La (~3yr GPUs) < financing tenor Ld (5-7yr bonds, 15-19yr leases), there is an interval (La, Ld) where the asset book value is zero but the debt is still outstanding - a residual liability with no asset. Even if the planned revenue materializes, the thing it was borrowed to buy is gone before the loan is repaid.",
   "depreciation_is_timing": "Total depreciation over an asset's life is fixed (=capex); a longer assumed life only DEFERS expense and inflates current profit, leaving an un-depreciated residual that must be written off at retirement (a catch-up). No life choice avoids both near-term losses and the eventual writedown.",

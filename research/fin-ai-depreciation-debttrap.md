@@ -14,6 +14,25 @@ justdario's thesis: the US AI buildout is **debt-financed, fast-depreciating, wi
 
 **Geopolitical color (weaker).** China's ~**$295bn** state-directed AI buildout (80%+ domestic semiconductors) — roughly one year of Google's spend (**contested**, single-source figure). US operational datacenters reportedly exceed all other countries combined / ~10× Germany (**weak**, magnitude unverified here).
 
+## The cluster's unified useful-life table + forward rate *(added 2026-06-15, #54)*
+A per-company audit of the disclosed server/GPU useful life and its earnings effect:
+
+| Company | Server/GPU useful life | Key change | Disclosed effect |
+|---|---|---|---|
+| **Microsoft** | 6 yr (was 4–5) | FY23 (eff. Jul 2022) | ~**$3.7B** FY23 benefit (CFO guide) |
+| **Alphabet/Google** | servers 6 yr; network 6 yr | Jan 2023 | ~**$3.9B** FY23 lower depreciation / ~$3.0B higher net income |
+| **Amazon/AWS** | 6 yr (2022) → a subset **back to 5 yr** (Jan 2025) | **reversal Jan 2025**, cites AI/ML pace | ~**$700M** FY25 op-income hit + ~$920M early-retirement (~$1.3B total) |
+| **Meta** | ~**5.5 yr** (4 → 4.5 → 5 → 5.5) | Jan 2025 | ~**$2.9B** FY25 lower depreciation |
+| **Oracle** | ~5 yr | 2023 | central to the OCI-margin / earnings-quality debate |
+| **CoreWeave** | GPUs **6 yr** | since 2023 | shifting to 4 yr adds ~$315M/qtr → **flips to a loss** |
+| **Nebius** | GPUs **4 yr** | current | ~50% higher depreciation rate than CoreWeave |
+| **Lambda** | GPUs ~5 yr | current | between the two |
+
+- **The Amazon reversal is the tell.** Amazon is the **only** hyperscaler to publicly *cut* a useful-life category (6→5 yr, Jan 2025), its filing citing *"an increased pace of technology development, particularly in … artificial intelligence and machine learning"* — an **inside-the-filings admission** that the extend-life / harvest-profit trend is reversing.
+- **The CoreWeave-vs-Nebius natural experiment.** Identical neocloud business models, GPUs over **6 yr (CoreWeave) vs 4 yr (Nebius)** — a ~50% depreciation-rate gap from the useful-life *choice* alone; at 4 yr CoreWeave's reported operating profit flips negative. The cleanest demonstration that useful-life *manufactures* profitability.
+- **Burry/Scion (Nov 2025), graded.** ~**$176B** understated depreciation 2026-2028; Oracle earnings overstated ~**26.9%**, Meta ~**20.8%** by 2028; ~$1.1B notional Nvidia+Palantir puts (later wound down, fund closed). **Nvidia's rebuttal** (Kress: six-year-old A100s "still running at full utilization") vs Burry (utilization ≠ value; older chips far less power-efficient → continued use reflects scarcity, not retained value). **All changes are disclosed estimate changes (prospective)** — "fraud" is rhetorical/contested, not adjudicated.
+- **The unified forward rate.** The cluster sits at a **~6-yr accounting life** for servers/GPUs while a defensible **blended GPU economic life is ~3–4 yr** (training-edge ~1.5–2 yr; inference tail ~3–4 yr) against Nvidia's ~annual cadence (Hopper→Blackwell→Rubin). Marking GPU-heavy fleets from ~6 yr to ~3–4 yr raises annual depreciation **~50–100%** on the affected base. **Key tension:** the accounting life is set on *blended* fleets (incl. 15+-yr data-center shell/power); the GPUs are the fast-decaying subset the blended life **masks** — exactly the D2/D4 mechanism below.
+
 ## The mechanism, formalized (`models/z3/depreciation_trap.py`)
 - **D1 (SAT)** — a long *assumed* life makes the same asset print a profit: `profit = revenue − opex − capex/life`. The life is the **free parameter**.
 - **D2 (UNSAT)** — the true, shorter economic life **strictly lowers** profit; the overstatement is structural, = `capex·(1/Lₜᵣᵤₑ − 1/Lᵦₒₒₖ)` ≈ **$2.9B/yr** for one MSFT-like GPU tranche, **~$176B** industry-wide 2026–2028.

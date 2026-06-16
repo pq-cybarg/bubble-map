@@ -6,7 +6,10 @@
       "value": 1972.67,
       "unit": "USD billions",
       "date": "2026-04",
-      "source": ["https://fred.stlouisfed.org/series/LNFACBM027SBOG", "https://www.federalreserve.gov/releases/h8/current/default.htm"],
+      "source": [
+        "https://fred.stlouisfed.org/series/LNFACBM027SBOG",
+        "https://www.federalreserve.gov/releases/h8/current/default.htm"
+      ],
       "notes": "The hidden bank exposure to nonbanks. ~$324B Jan-2015 -> ~$1.0T Jan-2024 -> ~$1.97T Apr-2026. Broad bucket: mortgage cos, REITs, BDCs, finance cos, broker-dealers, securitization vehicles AND private-credit/PE funds."
     },
     {
@@ -14,7 +17,9 @@
       "value": 1983.72,
       "unit": "USD billions",
       "date": "2026-05-27",
-      "source": ["https://fred.stlouisfed.org/series/LNFACBW027NBOG"],
+      "source": [
+        "https://fred.stlouisfed.org/series/LNFACBW027NBOG"
+      ],
       "notes": "Weekly H.8 print, not seasonally adjusted."
     },
     {
@@ -22,7 +27,10 @@
       "value": 21.9,
       "unit": "percent (CAGR)",
       "date": "2010-2024",
-      "source": ["https://www.fdic.gov/analysis/bank-lending-nondepository-financial-institutions.pdf", "https://www.stlouisfed.org/on-the-economy/2025/jun/banking-analytics-growing-connection-bank-nonbank-sectors"],
+      "source": [
+        "https://www.fdic.gov/analysis/bank-lending-nondepository-financial-institutions.pdf",
+        "https://www.stlouisfed.org/on-the-economy/2025/jun/banking-analytics-growing-connection-bank-nonbank-sectors"
+      ],
       "notes": "Fastest-growing bank loan category, ~3x the next-fastest. ~$1.14T Q1-2025 per FDIC/Call Report."
     },
     {
@@ -30,7 +38,9 @@
       "value": 123,
       "unit": "USD billions",
       "date": "2024-12",
-      "source": ["https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html"],
+      "source": [
+        "https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html"
+      ],
       "notes": "Specific bank->private-credit slice vs ~$1.6T Tier-1 capital of participating banks. Much smaller than the broad NDFI line."
     },
     {
@@ -38,7 +48,11 @@
       "value": 1700,
       "unit": "USD billions (range 1500-2000)",
       "date": "2024-2025",
-      "source": ["https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-characteristics-and-risks-20240223.html", "https://www.fsb.org/uploads/P060526.pdf", "https://qz.com/jamie-dimon-jpmorgan-shareholder-letter-geopolitics-ai-bank-regulations-040626"],
+      "source": [
+        "https://www.federalreserve.gov/econres/notes/feds-notes/private-credit-characteristics-and-risks-20240223.html",
+        "https://www.fsb.org/uploads/P060526.pdf",
+        "https://qz.com/jamie-dimon-jpmorgan-shareholder-letter-geopolitics-ai-bank-regulations-040626"
+      ],
       "notes": "Up from ~$300B (2010). Dimon cites $1.8T; FSB $1.5-2.0T end-2024; direct lending ~$800B (half). Forecast ~$2.64T by 2029."
     },
     {
@@ -46,7 +60,9 @@
       "value": 3085.63,
       "unit": "USD billions",
       "date": "2026-04",
-      "source": ["https://fred.stlouisfed.org/series/CREACBM027NBOG"],
+      "source": [
+        "https://fred.stlouisfed.org/series/CREACBM027NBOG"
+      ],
       "notes": "On-balance-sheet bank CRE; multifamily-heavy."
     },
     {
@@ -54,7 +70,9 @@
       "value": 1.56,
       "unit": "percent",
       "date": "2026-Q1",
-      "source": ["https://fred.stlouisfed.org/series/DRCRELEXFACBS"],
+      "source": [
+        "https://fred.stlouisfed.org/series/DRCRELEXFACBS"
+      ],
       "notes": "Up from ~1.42% (2024-Q2). Bank book lags the office-heavy CMBS book."
     },
     {
@@ -62,7 +80,9 @@
       "value": 957,
       "unit": "USD billions",
       "date": "2025",
-      "source": ["https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"],
+      "source": [
+        "https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"
+      ],
       "notes": "MBA. +3% vs $929B that matured in 2024. ~24% of office loans come due in 2025."
     },
     {
@@ -70,7 +90,9 @@
       "value": 875,
       "unit": "USD billions",
       "date": "2026",
-      "source": ["https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"],
+      "source": [
+        "https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"
+      ],
       "notes": "17% of the $5.0T outstanding. S&P alt: $1.148T in 2026."
     },
     {
@@ -78,7 +100,9 @@
       "value": 1260,
       "unit": "USD billions",
       "date": "2027",
-      "source": ["https://www.spglobal.com/market-intelligence/en/news-insights/research/commercial-real-estate-maturity-wall-950b-in-2024-peaks-in-2027"],
+      "source": [
+        "https://www.spglobal.com/market-intelligence/en/news-insights/research/commercial-real-estate-maturity-wall-950b-in-2024-peaks-in-2027"
+      ],
       "notes": "S&P: peaks 2027 at ~$1.26T ($1.257T); $950B in 2024. Principal frames total as ~$2T wall."
     },
     {
@@ -86,7 +110,9 @@
       "value": 30,
       "unit": "USD billions",
       "date": "2026",
-      "source": ["https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"],
+      "source": [
+        "https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"
+      ],
       "notes": "~30% of maturing office loans on properties worth less than the debt (IMF GFSR)."
     },
     {
@@ -94,7 +120,10 @@
       "value": 11.76,
       "unit": "percent",
       "date": "2025-10",
-      "source": ["https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/", "https://www.commercialsearch.com/news/cmbs-delinquency-rates/"],
+      "source": [
+        "https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/",
+        "https://www.commercialsearch.com/news/cmbs-delinquency-rates/"
+      ],
       "notes": "All-time record (Trepp), +63bps m/m, vs 11.08% Jun / 11.66% Aug 2025. >$1.7B office loans newly delinquent in Oct."
     },
     {
@@ -102,7 +131,9 @@
       "value": 7.46,
       "unit": "percent",
       "date": "2025-10",
-      "source": ["https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/"],
+      "source": [
+        "https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/"
+      ],
       "notes": "Trepp, +23bps m/m."
     },
     {
@@ -110,7 +141,9 @@
       "value": -37,
       "unit": "percent",
       "date": "2022-spring to 2024-11",
-      "source": ["https://www.greenstreet.com/resources/pricing-index/"],
+      "source": [
+        "https://www.greenstreet.com/resources/pricing-index/"
+      ],
       "notes": "Green Street CPPI office. Core all-property CPPI ~-24% from peak."
     },
     {
@@ -118,7 +151,9 @@
       "value": -52,
       "unit": "percent",
       "date": "2025",
-      "source": ["https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"],
+      "source": [
+        "https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi"
+      ],
       "notes": "MSCI/RCA CPPI CBD office; older/subprime assets worse. Brackets requested -30% to -50% range at the deep end."
     },
     {
@@ -126,7 +161,9 @@
       "value": 19,
       "unit": "percent (approx)",
       "date": "2025",
-      "source": ["https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"],
+      "source": [
+        "https://www.mba.org/news-and-research/newsroom/blog-post/commercial-real-estate-loan-maturity-volumes"
+      ],
       "notes": "Demand ~30% below pre-pandemic."
     },
     {
@@ -134,7 +171,9 @@
       "value": 468,
       "unit": "percent",
       "date": "2024-Q3",
-      "source": ["https://commercialobserver.com/2024/02/how-cre-loans-threaten-new-york-community-bank-and-other-regionals-in-2024/"],
+      "source": [
+        "https://commercialobserver.com/2024/02/how-cre-loans-threaten-new-york-community-bank-and-other-regionals-in-2024/"
+      ],
       "notes": "Trigger of Jan-2024 regional-bank scare. >300% is the FDIC/interagency concentration red flag."
     },
     {
@@ -142,7 +181,9 @@
       "value": 1900,
       "unit": "count (approx)",
       "date": "2024",
-      "source": ["https://commercialobserver.com/2024/02/how-cre-loans-threaten-new-york-community-bank-and-other-regionals-in-2024/"],
+      "source": [
+        "https://commercialobserver.com/2024/02/how-cre-loans-threaten-new-york-community-bank-and-other-regionals-in-2024/"
+      ],
       "notes": "Per Fitch. Other flagged: Valley National ~479%, Washington Federal ~363%, Bank OZK ~355%."
     },
     {
@@ -150,7 +191,10 @@
       "value": 800,
       "unit": "USD billions (projection)",
       "date": "2026 (Morgan Stanley proj.)",
-      "source": ["https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/", "https://www.commercialsearch.com/news/whos-funding-the-data-center-boom/"],
+      "source": [
+        "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/",
+        "https://www.commercialsearch.com/news/whos-funding-the-data-center-boom/"
+      ],
       "notes": "Morgan Stanley projection, not realized. Ares cites ~$900B TAM for third-party DC investment."
     },
     {
@@ -158,7 +202,9 @@
       "value": 200,
       "unit": "USD billions (>200)",
       "date": "2026",
-      "source": ["https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/"],
+      "source": [
+        "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/"
+      ],
       "notes": "From ~zero a few years ago. Includes GPU-backed loans."
     },
     {
@@ -166,7 +212,9 @@
       "value": 310,
       "unit": "USD billions (>150 held + ~160 pipeline)",
       "date": "2026",
-      "source": ["https://hedgeco.net/news/04/2026/data-center-frenzy-blackstones-150-billion-bet-signals-a-new-era-in-ai-infrastructure.html"],
+      "source": [
+        "https://hedgeco.net/news/04/2026/data-center-frenzy-blackstones-150-billion-bet-signals-a-new-era-in-ai-infrastructure.html"
+      ],
       "notes": "Schwarzman: >$150B DCs globally + ~$160B prospective pipeline; 'largest investor in AI-related infrastructure.'"
     }
   ],
@@ -177,7 +225,10 @@
       "instrument": "H.8 'loans to NDFIs' (warehouse, subscription/NAV, repo, term loans)",
       "amount_usd": 1972670000000,
       "date": "2026-04",
-      "source": ["https://fred.stlouisfed.org/series/LNFACBM027SBOG", "https://www.federalreserve.gov/releases/h8/current/default.htm"],
+      "source": [
+        "https://fred.stlouisfed.org/series/LNFACBM027SBOG",
+        "https://www.federalreserve.gov/releases/h8/current/default.htm"
+      ],
       "notes": "Broadest top-of-chain bank exposure. ~6x growth since 2015. Bucket includes mortgage cos/REITs/BDCs/securitization plus private-credit & PE funds."
     },
     {
@@ -186,7 +237,9 @@
       "instrument": "committed credit lines to private-credit obligors",
       "amount_usd": 123000000000,
       "date": "2024-12",
-      "source": ["https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html"],
+      "source": [
+        "https://www.federalreserve.gov/econres/notes/feds-notes/bank-lending-to-private-credit-size-characteristics-and-financial-stability-implications-20250523.html"
+      ],
       "notes": "Specifically the PC slice inside NDFI; vs ~$1.6T Tier-1 capital."
     },
     {
@@ -195,7 +248,10 @@
       "instrument": "project-finance bonds + direct loans (off-balance-sheet JVs/SPVs)",
       "amount_usd": 27000000000,
       "date": "2025-10",
-      "source": ["https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/", "https://www.gtlaw.com/en/news/2025/10/press-releases/greenberg-traurig-represents-pimco-in-massive-debt-financing-deal-for-hyperion-data-center-project"],
+      "source": [
+        "https://about.fb.com/news/2025/10/meta-blue-owl-capital-develop-hyperion-data-center/",
+        "https://www.gtlaw.com/en/news/2025/10/press-releases/greenberg-traurig-represents-pimco-in-massive-debt-financing-deal-for-hyperion-data-center-project"
+      ],
       "notes": "Meta Hyperion JV: ~$27B debt + ~$2.5B equity; Blue Owl 80%/Meta 20%; PIMCO ~$18B, BlackRock ~$3B. Largest private-credit deal ever. Some reports $29-30B."
     },
     {
@@ -204,7 +260,9 @@
       "instrument": "debt financing (in progress)",
       "amount_usd": 36000000000,
       "date": "2026 (in progress)",
-      "source": ["https://hedgeco.net/news/06/2026/blackstone-and-apollo-work-on-36-billion-anthropic-debt-deal.html"],
+      "source": [
+        "https://hedgeco.net/news/06/2026/blackstone-and-apollo-work-on-36-billion-anthropic-debt-deal.html"
+      ],
       "notes": "Reported/in-progress; size may change."
     },
     {
@@ -213,7 +271,9 @@
       "instrument": "direct lending + equity",
       "amount_usd": 40000000000,
       "date": "2025",
-      "source": ["https://markets.financialcontent.com/stocks/article/finterra-2026-2-20-apollo-global-management-apo-the-architect-of-the-new-private-credit-frontier"],
+      "source": [
+        "https://markets.financialcontent.com/stocks/article/finterra-2026-2-20-apollo-global-management-apo-the-architect-of-the-new-private-credit-frontier"
+      ],
       "notes": ">$40B deployed in 2025; $3.5B Valor/xAI; majority stake Stream Data Centers."
     },
     {
@@ -222,7 +282,11 @@
       "instrument": "GPU-backed / chip-collateralized loans",
       "amount_usd": 18000000000,
       "date": "2025-2026",
-      "source": ["https://debtserious.substack.com/p/round-46-apollo-blackstone-gpu-backed", "https://pitchbook.com/news/articles/ai-venture-debt-gpu-chip-backed-loans", "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/"],
+      "source": [
+        "https://debtserious.substack.com/p/round-46-apollo-blackstone-gpu-backed",
+        "https://pitchbook.com/news/articles/ai-venture-debt-gpu-chip-backed-loans",
+        "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/"
+      ],
       "notes": "Sum of named facilities: CoreWeave $7.5B + Fluidstack $10B + Lambda $0.5B (+ Crusoe, unsized). Collateral = depreciating GPUs."
     },
     {
@@ -231,16 +295,79 @@
       "instrument": "projected datacenter private-credit financing",
       "amount_usd": 800000000000,
       "date": "2026 (Morgan Stanley 2yr projection)",
-      "source": ["https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/", "https://www.commercialsearch.com/news/whos-funding-the-data-center-boom/"],
+      "source": [
+        "https://www.quinnemanuel.com/the-firm/publications/client-alert-emerging-litigation-risks-in-financing-ai-data-centers-boom/",
+        "https://www.commercialsearch.com/news/whos-funding-the-data-center-boom/"
+      ],
       "notes": "PROJECTION, not realized. Indicates scale of intended chain expansion."
+    },
+    {
+      "from": "BlueOwl",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "80/20 JV financing the Hyperion datacenter (~$29.5B; Blue Owl 80% / Meta 20%); off Meta's balance sheet (Morgan Stanley arranged)",
+      "amount_usd": null,
+      "date": "2025",
+      "notes": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "PIMCO",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "bought the privately-placed Hyperion securities (A+, maturing 2049)",
+      "amount_usd": null,
+      "date": "2025",
+      "notes": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "Blackstone",
+      "to": "CoreWeave",
+      "instrument": "$8.5B GPU-backed delayed-draw financing (DDTL 4.0; first IG-rated GPU-backed financing) + earlier $2.3B (Magnetar/Blackstone)",
+      "amount_usd": null,
+      "date": "2025",
+      "notes": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "Apollo",
+      "to": "xAI",
+      "instrument": "~$12.5B GPU SPV (Apollo/Diameter/Valor) buys Nvidia chips and leases them to xAI 5yr (Colossus 2); off xAI's balance sheet; Nvidia ~$2B participation",
+      "amount_usd": null,
+      "date": "2025",
+      "notes": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "BlueOwl",
+      "to": "Crusoe",
+      "instrument": "~$15B Stargate Abilene project-finance JV (Blue Owl + Primary Digital) for OpenAI's Stargate datacenters",
+      "amount_usd": null,
+      "date": "2025",
+      "notes": "institution-level datacenter-SPV map (#47); structural overlay"
     }
   ],
   "warnings": [
-    {"source": "IMF GFSR Apr-2026", "claim": "AI value-chain 'circular financing'; nonbank/private-credit interconnectedness rising; ~$30B maturing office loans underwater", "url": "https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"},
-    {"source": "FSB May-2026", "claim": "private credit's complex interlinkages with banks, leverage, valuation opacity, tech-sector concentration; 'banks are a critical node'", "url": "https://www.fsb.org/uploads/P060526.pdf"},
-    {"source": "BIS/BCBS", "claim": "supervisory work on banks' interconnections with NBFIs", "url": "https://www.bis.org/bcbs/publ/d598.pdf"},
-    {"source": "Jamie Dimon / JPMorgan Oct-2025 & Apr-2026", "claim": "'one cockroach...probably more'; private credit 'worse than people think' at cycle turn; AI capex a 2026 risk", "url": "https://qz.com/jamie-dimon-jpmorgan-shareholder-letter-geopolitics-ai-bank-regulations-040626"},
-    {"source": "OFR Mar-2026", "claim": "building tools to measure counterparty exposures to private credit (the chain is hard to see end-to-end)", "url": "https://www.financialresearch.gov/briefs/files/OFRBrief-26-02-measuring-counterparty-exposures-private-credit.pdf"}
+    {
+      "source": "IMF GFSR Apr-2026",
+      "claim": "AI value-chain 'circular financing'; nonbank/private-credit interconnectedness rising; ~$30B maturing office loans underwater",
+      "url": "https://www.imf.org/-/media/files/publications/gfsr/2026/april/english/text.pdf"
+    },
+    {
+      "source": "FSB May-2026",
+      "claim": "private credit's complex interlinkages with banks, leverage, valuation opacity, tech-sector concentration; 'banks are a critical node'",
+      "url": "https://www.fsb.org/uploads/P060526.pdf"
+    },
+    {
+      "source": "BIS/BCBS",
+      "claim": "supervisory work on banks' interconnections with NBFIs",
+      "url": "https://www.bis.org/bcbs/publ/d598.pdf"
+    },
+    {
+      "source": "Jamie Dimon / JPMorgan Oct-2025 & Apr-2026",
+      "claim": "'one cockroach...probably more'; private credit 'worse than people think' at cycle turn; AI capex a 2026 risk",
+      "url": "https://qz.com/jamie-dimon-jpmorgan-shareholder-letter-geopolitics-ai-bank-regulations-040626"
+    },
+    {
+      "source": "OFR Mar-2026",
+      "claim": "building tools to measure counterparty exposures to private credit (the chain is hard to see end-to-end)",
+      "url": "https://www.financialresearch.gov/briefs/files/OFRBrief-26-02-measuring-counterparty-exposures-private-credit.pdf"
+    }
   ],
   "unverifiable_notes": [
     "The NDFI ~$1.97T is a broad bucket; the datacenter-specific bank exposure inside it is NOT separately published (core measurement gap; OFR still building it).",

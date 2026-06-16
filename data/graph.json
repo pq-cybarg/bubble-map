@@ -2000,6 +2000,71 @@
       "note": "PROJECTION, not realized. Indicates scale of intended chain expansion."
     },
     {
+      "from": "BlueOwl",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "80/20 JV financing the Hyperion datacenter (~$29.5B; Blue Owl 80% / Meta 20%); off Meta's balance sheet (Morgan Stanley arranged)",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "PIMCO",
+      "to": "Meta_Hyperion_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bought the privately-placed Hyperion securities (A+, maturing 2049)",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "Blackstone",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "$8.5B GPU-backed delayed-draw financing (DDTL 4.0; first IG-rated GPU-backed financing) + earlier $2.3B (Magnetar/Blackstone)",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "Apollo",
+      "to": "xAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$12.5B GPU SPV (Apollo/Diameter/Valor) buys Nvidia chips and leases them to xAI 5yr (Colossus 2); off xAI's balance sheet; Nvidia ~$2B participation",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
+      "from": "BlueOwl",
+      "to": "Crusoe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$15B Stargate Abilene project-finance JV (Blue Owl + Primary Digital) for OpenAI's Stargate datacenters",
+      "amount_usd": null,
+      "status": "2025",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "institution-level datacenter-SPV map (#47); structural overlay"
+    },
+    {
       "from": "Meta",
       "to": "ScaleAI",
       "instrument": "equity",
@@ -6617,9 +6682,9 @@
   ],
   "analysis": {
     "num_nodes": 353,
-    "num_edges": 400,
+    "num_edges": 405,
     "num_financial_edges": 129,
-    "num_structural_edges": 271,
+    "num_structural_edges": 276,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6670,18 +6735,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -6694,14 +6747,16 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -6709,16 +6764,14 @@
         "Oracle"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -6731,6 +6784,18 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -9454,6 +9519,42 @@
         "both_layers": false
       },
       {
+        "node": "xAI",
+        "degree": 6,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "other",
+          "private_credit",
+          "space_real_economy"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "CoreWeave",
+        "degree": 11,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "private_credit",
+          "sink"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 7,
         "neighbor_sectors": [
@@ -9533,40 +9634,6 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "MGX",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "exchange",
-          "spv"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Stargate",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bank",
-          "financier",
-          "hyperscaler"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"
