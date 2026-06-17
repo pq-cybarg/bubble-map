@@ -33,10 +33,10 @@
 
 ## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
 - digitalid-corporate.json: 9 shared entities
-- spec-disclosures-surveillance.json: 7 shared entities
-- temporal-bridges.json: 7 shared entities
-- spec-network-overlay.json: 7 shared entities
-- macro-crqc-quantum-landscape.json: 7 shared entities
 - macro-pqc-chips.json: 7 shared entities
-- influence-congress-funding-compromise.json: 6 shared entities
-- altcoin-lens.json: 6 shared entities
+- spec-network-overlay.json: 7 shared entities
+- spec-disclosures-surveillance.json: 7 shared entities
+- macro-crqc-quantum-landscape.json: 7 shared entities
+- temporal-bridges.json: 7 shared entities
+- fin-hedera-connections.json: 6 shared entities
+- spec-uk-labour-tbi-influence.json: 6 shared entities
