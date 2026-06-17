@@ -62,6 +62,19 @@ for leg,stub in legs.items():
 nosrc=[os.path.basename(f) for f in glob.glob(ROOT+"/research/*.json") if '"source"' not in open(f).read() and '"sources"' not in open(f).read() and 'source' not in open(f).read().lower()]
 out.append("\n## Research files lacking any 'source' field")
 out.append("- none" if not nosrc else "\n".join("- "+x for x in nosrc))
+# composition/division-fallacy advisory: collective-noun + intent/belief verb.
+# ADVISORY ONLY (not counted in flags). Verify each hit is institutional ACTION (attributable)
+# or a graded/attributed claim - NOT an unhedged assertion of a unitary institutional MIND
+# (composition: parts->whole intent; division: whole->parts intent). Names the guard so it stays clean.
+_collectives=r"China|Beijing|the CCP|the NSA|the Fed|the government|the state|Labour|Wall ?Street|the banks|the architects|the West|the EU|Moscow|Washington|the CIA|the FBI|the Treasury|the regime|the elite"
+_intent=r"wants?|wanted|intends?|intended|seeks?|fears?|believes?|hopes?|desires?|aims? to|plans? to|wishes?|is trying to|are trying to"
+_cd=re.compile(r"\b("+_collectives+r")\s+("+_intent+r")\b", re.I)
+cdhits=[]
+for f in sorted(glob.glob(ROOT+"/research/*.json")):
+    for m in _cd.finditer(open(f,encoding="utf-8",errors="ignore").read()):
+        cdhits.append(f"{os.path.basename(f)}: '{m.group(0)}'")
+out.append("\n## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)")
+out.append("- none" if not cdhits else "\n".join("- ⚑ "+h for h in cdhits)+f"\n  ({len(cdhits)} advisory hit(s) to verify)")
 open(os.path.join(ROOT,"report","AUDIT.md"),"w").write("\n".join(out))
 print("\n".join(out))
 print("\n[AUDIT] flags:",len(flags),"| bad json:",len(bad),"| models:",nmodels,"| research:",nres)

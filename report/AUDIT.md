@@ -40,3 +40,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Research files lacking any 'source' field
 - none
+
+## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)
+- ⚑ digitalid-orchestration-real-incentive.json: 'the NSA wants'
+  (1 advisory hit(s) to verify)
