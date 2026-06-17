@@ -120,6 +120,11 @@ A concrete "good version" (re-derived in discussion): **decentralized private ro
 5. **Usability** — reuse self-links (your caveat); good defaults + wallet UX are load-bearing.
 6. **Ecosystem adoption** — issuers/verifiers/wallets must all support unlinkable presentation.
 
+### Named corroboration — Vitalik's zkID (2025), and the one piece he's missing
+**Vitalik Buterin's "zkID" essay (28 Jun 2025)** independently reaches this design: **against enforced one-identity-per-person, for pluralistic (multiple unlinkable) identities** — *"pseudonymity generally requires having multiple accounts."* He also lists what **ZK does *not* fix** (reinforcing the ZKP-escape-hatch above): one-per-person still kills pseudonymity; a government can **coerce** the secret-reveal (he cites the US already requiring visa applicants to make social media public); strict one-per-person is **fragile**. His proposed fix — **pluralistic identity sized so you hold "N identities at a cost of N²"** — is a partial answer to the Sybil-vs-anonymity hard problem.
+
+**The distinction (your additive contribution):** Vitalik's pluralism is the **social/Sybil layer** (how *many* identities). It does **not** include the **forward-secret ratchet / one-time-signature / rotatable post-quantum hash-root** (XMSS-like) — the **key-management + PQ + rotation layer**. The two **compose**: pluralism (social) + ratchet-rotatable-PQ root (crypto) = a more complete design than either alone. Full profile in [[spec-vitalik-buterin-thought]].
+
 ### Are Bitcoin / EC-crypto projects "red herrings"?
 *Split it: decline the intent, keep the effect.*
 - **Decline "designed as a distraction"** (unsupported intent/coordination claim). Occam: Bitcoin (2008, secp256k1 ECDSA) solved a *different* real problem (decentralized, censorship-resistant money), used EC because it was the standard efficient scheme then, and attention followed the **money**, not a plot. The private-money alternative existed *first* and lost on its own — **Chaum's DigiCash/eCash failed commercially in the 1990s, ~15 years before Bitcoin** — so Bitcoin can't have been built to bury it; QRL exists and is marginal from network effects, not suppression. And "crypto projects" aren't a unitary agent (composition fallacy).

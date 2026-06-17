@@ -15,11 +15,11 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 52 files
+- **Meta** — 53 files
 - **Google** — 35 files
+- **OpenAI** — 31 files
 - **FDIC** — 31 files
-- **OpenAI** — 30 files
-- **Oracle** — 29 files
+- **Oracle** — 30 files
 - **Microsoft** — 25 files
 - **Chainlink** — 23 files
 - **Amazon** — 22 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-corporate.json: 9 shared entities
-- macro-pqc-chips.json: 8 shared entities
-- macro-crqc-quantum-landscape.json: 8 shared entities
-- fin-hedera-connections.json: 7 shared entities
-- altcoin-lens.json: 7 shared entities
-- spec-network-overlay.json: 7 shared entities
-- temporal-bridges.json: 7 shared entities
-- spec-disclosures-surveillance.json: 7 shared entities
+## Newest file `spec-prediction-markets.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-leg.json: 4 shared entities
+- altcoin-lens.json: 4 shared entities
+- spec-network-overlay.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
+- temporal-bridges.json: 3 shared entities
+- spec-exchanges-asia.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- digitalid-corporate.json: 2 shared entities
