@@ -10,6 +10,16 @@
 - **CRQC vs RSA-2048:** ~**2030 ±3**, but resource estimates fell from **~20M qubits → <1M → possibly ~100k** (2025-26 papers) — the clock is moving toward us.
 - **Harvest-Now-Decrypt-Later (NSA, 2021):** adversaries are **collecting encrypted data now** to decrypt later. ~**95–100% of government-classified** and ~**98–100% of healthcare** data encrypted today is exposed to retroactive decryption. *The damage to long-lived secrets is already incurred; only the decryption is deferred.*
 
+## HNDL's integrity twin — "Trust Now, Forge Later" (TNFL)
+HNDL breaks **confidentiality** (collect ciphertext now, decrypt later). Its twin breaks **integrity**: once a CRQC (Shor) derives private keys from public keys, previously-issued **digital signatures become forgeable** — old certificates, signed identity assertions, and ePassport Passive-Authentication signatures can be **retroactively forged/impersonated**. HNDL breaks secrecy; **TNFL breaks authentication — which is exactly what a digital ID is *for*.** This is the mechanism under the **identity-proof paradox** in `spec-uk-labour-tbi-influence` (#68): the credential's whole value inverts into impersonability at Q-Day.
+
+## Digital-ID PQC migration status — almost nothing is quantum-safe yet *(added 2026-06-16)*
+*Empirical backing for the identity-proof paradox (#68) and "governments change slower than the threat." Web-verified 2026-06 (prompted by a shared Grok exchange whose checkable claims all verify).* **As of mid-2026 essentially no major deployed national/consumer digital-ID system is post-quantum** — the vast majority still run **RSA/ECC**.
+
+- **Still classical (the majority):** the **EU EUDI Wallet** (eIDAS 2.0 prototypes use RSA/ECC; ENISA EU-wide cert only *after* 2026 — yet offered to all citizens 2026, businesses must accept from 2027, i.e. **mass rollout on breakable crypto**); **ICAO eMRTDs** (Doc 9303 Passive Authentication = RSA/ECDSA; quantum-safe update in progress, deployed docs classical); **national eIDs** (Estonia, India **Aadhaar**) and most **blockchain DIDs/SSI**.
+- **Ahead (pilots/enablers, not deployed national IDs):** the **GSA PIV PQC experiment** with Unifyia (Dilithium L2/3/5 + hybrid — an *experiment*, with OS/browser/hardware auth gaps); **Microsoft SymCrypt** shipping **ML-KEM + ML-DSA in production** (Azure/M365/Win11/Server 2025, Nov-2025) with **AD CS ML-DSA cert issuance GA May 2026** — PQC reaching the **PKI backend**; **SEALSQ QS7001** post-quantum secure-element chip (the corpus's own `fin-sealsq-wisekey-global` / `macro-pqc-chips` node — real silicon, early ramp); **Wultra PQA** (vendor claim).
+- **So what:** the migration is **barely begun for the exact systems being mandated now**. Every credential issued today on classical crypto is a **TNFL liability** (forgeable post-Q-Day), and re-issuing at population scale after a break is the **bootstrap-without-a-trusted-anchor** problem in #68. The things that are ahead are *backends* (Microsoft PKI), *experiments* (GSA), or *chips* (SEALSQ) — not the national wallets.
+
 ## The geopolitical race
 | Power | Spend | Edge |
 |---|---|---|
@@ -23,7 +33,7 @@ Increasingly **military** (sensing/PNT for GPS-denied navigation, secure comms, 
 
 ## The counter-migration (deadlines)
 - **NSA CNSA 2.0:** NSS quantum-safe by **Jan 2027**, app-layer **2030**, full infra **2035**.
-- **NIST:** RSA-2048/ECC deprecated **2030**, disallowed **2035** (FIPS 203/204/205 replace them).
+- **NIST:** RSA-2048/ECC deprecated **2030**, disallowed **2035**. Replacements **FIPS 203 (ML-KEM), 204 (ML-DSA), 205 (SLH-DSA)** finalized Aug 2024; **HQC** (code-based backup KEM) selected **Mar 11 2025** (draft 2026 / finalize ~2027); **FN-DSA (Falcon)** in process.
 - **EU:** national strategies + crypto inventories by **end-2026**; critical financial infra PQC by **2030** (DORA/NIS2/PCI-DSS 4.0).
 - **G7** (US Treasury + Bank of England) urging banks/insurers/exchanges; **Trump 2026 Cyber Strategy** mandates PQC. Hybrid (classical+PQC) dominates rollouts.
 

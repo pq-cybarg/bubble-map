@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-cambodia-scam-fara-paid-influence.json` — related files by shared entities (verify cross-refs exist)
-- geopolitics-allied-intel-nodes.json: 2 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- spec-unc-nk-attribution-map.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- spec-onchain-threat-actor-addresses.json: 2 shared entities
-- spec-tornado-samourai.json: 2 shared entities
-- spec-crypto-banking-debanking.json: 1 shared entities
-- influence-congress-funding-compromise.json: 1 shared entities
+## Newest file `macro-crqc-quantum-landscape.json` — related files by shared entities (verify cross-refs exist)
+- fin-hedera-connections.json: 9 shared entities
+- fin-google-amazon-anthropic-meta.json: 8 shared entities
+- spec-exchanges-asia.json: 8 shared entities
+- altcoin-lens.json: 7 shared entities
+- spec-cross-system-contagion.json: 7 shared entities
+- fin-meta-family.json: 7 shared entities
+- spec-telecom-satellite.json: 7 shared entities
+- fin-sealsq-wisekey-global.json: 7 shared entities

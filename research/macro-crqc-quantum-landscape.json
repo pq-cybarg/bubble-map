@@ -26,9 +26,33 @@
  "harvest_now_decrypt_later": {
   "grade": "STRONG (NSA-confirmed)",
   "fact": "NSA (Aug 2021): 'Adversaries may be collecting encrypted data now, waiting for the day when quantum computers can decrypt it.' Analysis of 100+ sources: ~95-100% of government-classified and ~98-100% of healthcare data encrypted TODAY is exposed to retroactive decryption. The damage to long-lived secrets is ALREADY being locked in - this is the key point: the loss is happening now, the decryption is deferred.",
+  "tnfl_the_integrity_twin": "HNDL is the CONFIDENTIALITY threat (collect ciphertext now, decrypt later). Its INTEGRITY twin is 'Trust Now, Forge Later' (TNFL): once a CRQC (Shor) derives private keys from public keys, previously-issued DIGITAL SIGNATURES become FORGEABLE - so old certificates, signed identity assertions, and ePassport Passive-Authentication signatures can be retroactively forged/impersonated. HNDL breaks secrecy; TNFL breaks AUTHENTICATION - and authentication is exactly what a digital ID is for. This is the mechanism behind the identity-proof paradox in spec-uk-labour-tbi-influence (#68): the credential's whole value inverts into impersonability at Q-Day. grade: fact (Shor breaks RSA/ECC signatures) + labeled (the 'forge later' framing).",
   "source": [
    "https://labs.cloudsecurityalliance.org/research/ai-infrastructure-post-quantum-harvest-now-decrypt-later-v1/",
-   "https://thequantuminsider.com/2026/05/01/harvest-now-decrypt-later-why-should-you-care/"
+   "https://thequantuminsider.com/2026/05/01/harvest-now-decrypt-later-why-should-you-care/",
+   "https://www.zerotier.com/blog/harvest-now-decrypt-later-the-breach-already-happened-you-just-havent-seen-it-yet/"
+  ]
+ },
+ "digital_id_pqc_migration_status": {
+  "summary": "How far the DIGITAL-ID world actually is from quantum-safe, as of mid-2026: essentially NO major deployed national/consumer digital-ID system is post-quantum; the vast majority still run RSA/ECC (breakable by Shor). A handful of pilots/enablers are ahead. This is the empirical backing for the identity-proof paradox (spec-uk-labour-tbi-influence #68) and the 'governments change slower than the threat' point. Web-verified 2026-06 (prompted by a shared Grok exchange whose checkable claims verify).",
+  "still_classical_the_majority": [
+   "EU EUDI Wallet (eIDAS 2.0): current prototypes/implementations use RSA/ECC; PQC is only in discussion/recommendation; ENISA EU-wide certification only after 2026 - NOT live with PQC (offered to all citizens 2026, businesses must accept from 2027 - i.e. mass rollout on classical crypto).",
+   "ICAO eMRTDs (ePassports): Doc 9303 Passive Authentication relies on RSA/ECDSA Document-Signer signatures; ICAO is updating Doc 9303 for quantum-safe algorithms but most deployed documents remain classical.",
+   "National eIDs (Estonia, India Aadhaar, etc.) and most blockchain DIDs/SSI: generally still on quantum-vulnerable crypto, with hybrid-PQC research ongoing."
+  ],
+  "ahead_pilots_and_enablers": [
+   "GSA PIV PQC experiment (with Unifyia): tested issuing/managing federal PIV credentials with Dilithium (ML-DSA L2/3/5) alongside classical + hybrid (Ed25519) - an EXPERIMENT, not production; authentication hit OS/browser/hardware ecosystem gaps. (idmanagement.gov)",
+   "Microsoft SymCrypt: ships ML-KEM + ML-DSA in PRODUCTION across Azure/M365/Windows 11/Server 2025 (Nov-2025 update); AD Certificate Services ML-DSA certificate issuance GENERALLY AVAILABLE May 2026 - PQC reaching the PKI BACKEND many ID systems rely on. AWS KMS also supports ML-DSA.",
+   "SEALSQ QS7001 post-quantum secure element: a hardware-rooted PQC identity chip (the corpus's own node - fin-sealsq-wisekey-global / macro-pqc-chips, the WISeID/'sovereign ID' play) - real silicon, early ramp (#76 pipeline-vs-announced).",
+   "Wultra Post-Quantum Authentication (PQA): a vendor claiming NIST-PQC-integrated user-auth for banks/fintech/eIDAS 2.0 - vendor claim, grade accordingly."
+  ],
+  "the_so_what": "The migration is barely begun for the exact systems being mandated NOW: a population is being onboarded to the EUDI Wallet and to national digital IDs on RSA/ECC while the NIST deadlines (deprecate 2030, disallow 2035) and the compressing CRQC estimate (<1M qubits) close in. Every credential issued today on classical crypto is a TNFL liability - forgeable post-Q-Day - and re-issuing at population scale after a break is the bootstrap-without-a-trusted-anchor problem in #68. The pilots that are ahead are backends (Microsoft PKI), experiments (GSA), or hardware chips (SEALSQ QS7001) - not the deployed national wallets.",
+  "grade": "deployment status (EUDI/ICAO/Aadhaar classical; GSA experiment; Microsoft SymCrypt/ADCS GA; HQC) FACT (web-verified); Wultra a vendor claim; the identity-proof-paradox linkage labeled",
+  "source": [
+   "https://www.idmanagement.gov/experiments/gsa-pqc-experiment/",
+   "https://techcommunity.microsoft.com/blog/microsoft-security-blog/post-quantum-cryptography-apis-now-generally-available-on-microsoft-platforms/4469093",
+   "https://thequantumspace.org/2025/09/09/navigating-quantum-resistance-in-the-eudi-wallet/",
+   "https://www.secureidentityalliance.org/insights/preparing-for-post-quantum-cryptography-in-identity-documents/"
   ]
  },
  "national_programs": {
@@ -75,7 +99,7 @@
  },
  "counter_migration": {
   "NSA_CNSA_2_0": "New National Security Systems quantum-safe by Jan 1 2027; application-layer by 2030; full infrastructure by 2035.",
-  "NIST": "RSA-2048 / ECC P-256 deprecated 2030; ALL quantum-vulnerable public-key disallowed by 2035 (FIPS 203/204/205 are the replacements).",
+  "NIST": "RSA-2048 / ECC P-256 deprecated 2030; ALL quantum-vulnerable public-key disallowed by 2035. Replacements: FIPS 203 (ML-KEM/Kyber), 204 (ML-DSA/Dilithium), 205 (SLH-DSA/SPHINCS+), all finalized Aug 2024; HQC (code-based) selected Mar 11 2025 as a BACKUP KEM (distinct math from ML-KEM's lattices), draft 2026 / finalize ~2027; FN-DSA (Falcon) in process.",
   "EU": "Coordinated PQC roadmap: national strategies + crypto inventories by end-2026; critical financial infrastructure PQC by end-2030; DORA + NIS2 + PCI-DSS 4.0 force key-management upgrades.",
   "G7": "G7 Cyber Expert Group (co-chaired US Treasury + Bank of England) urging banks/insurers/exchanges to accelerate PQC.",
   "US_exec": "Trump 2026 Cyber Strategy places PQC alongside zero-trust/AI-defense/cloud modernization for federal networks.",
