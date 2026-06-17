@@ -132,6 +132,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Battery_REE_Tech_Export_Controls": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Bermuda_Captives": {
       "sector": "insurance",
       "has_exogenous_revenue": false
@@ -216,6 +220,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CNGR": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "COMEX": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -258,6 +266,10 @@
     },
     "China": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "China_Scholarship_Council": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Circle": {
@@ -568,6 +580,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Huayou_Cobalt": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Huione": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -650,6 +666,10 @@
     },
     "Jefferies": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Jiangmen_Changxin": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Jobs_Headline": {
@@ -1228,6 +1248,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Tesla": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Tether": {
       "sector": "stablecoin",
       "has_exogenous_revenue": true
@@ -1359,6 +1383,10 @@
     "Ucore": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": false
+    },
+    "Umicore": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Unification_Church": {
       "sector": "other",
@@ -5543,6 +5571,71 @@
       "note": "the one de-risked allied REE play"
     },
     {
+      "from": "China",
+      "to": "China_Scholarship_Council",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state study-abroad program; documented >=2yr return, ~quarterly embassy reporting, China-based financially-liable guarantors, loyalty terms",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-research-security-tech-transfer.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Battery_REE_Tech_Export_Controls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Dec-2023 REE-processing controls; Jul-15-2025 licenses on 8 battery technologies; Oct-9-2025 sweeping REE technology controls (guarding the processing lead)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-research-security-tech-transfer.json",
+      "note": ""
+    },
+    {
+      "from": "Umicore",
+      "to": "Jiangmen_Changxin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "multi-entity ~2-decade Jiangmen cobalt-refinery + NMC cathode/precursor JV cluster (partner ownership unconfirmed)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-research-security-tech-transfer.json",
+      "note": ""
+    },
+    {
+      "from": "Huayou_Cobalt",
+      "to": "Tesla",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "shared Chinese cobalt/nickel + precursor supplier to multiple Western OEMs (also Ford, VW)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-research-security-tech-transfer.json",
+      "note": ""
+    },
+    {
+      "from": "CNGR",
+      "to": "Tesla",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "shared Chinese ternary-precursor supplier to many Western/Korean cell makers (LG, Samsung SDI, also CATL)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-research-security-tech-transfer.json",
+      "note": ""
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -6883,10 +6976,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 358,
-    "num_edges": 419,
+    "num_nodes": 365,
+    "num_edges": 424,
     "num_financial_edges": 129,
-    "num_structural_edges": 290,
+    "num_structural_edges": 295,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -6941,15 +7034,7 @@
         "Anthropic"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -6961,9 +7046,22 @@
         "NVIDIA"
       ],
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -6971,9 +7069,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -6991,12 +7090,6 @@
         "CoreWeave",
         "NVIDIA",
         "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -7254,6 +7347,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Battery_REE_Tech_Export_Controls": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bermuda_Captives": {
         "total_usd": 130000000000,
         "circular_usd": 0,
@@ -7401,6 +7501,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CNGR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "COMEX": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7473,6 +7580,13 @@
       },
       "China": {
         "total_usd": 86000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_Scholarship_Council": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8017,6 +8131,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Huayou_Cobalt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Huione": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8158,6 +8279,13 @@
         "in_robust_core": false
       },
       "Jefferies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jiangmen_Changxin": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9172,6 +9300,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tesla": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tether": {
         "total_usd": 100000000000,
         "circular_usd": 0,
@@ -9403,6 +9538,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Umicore": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Unification_Church": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9620,6 +9762,24 @@
         "both_layers": true
       },
       {
+        "node": "China",
+        "degree": 14,
+        "neighbor_sectors": [
+          "commodity",
+          "creditor",
+          "defense",
+          "other",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 9,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -9678,24 +9838,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "China",
-        "degree": 12,
-        "neighbor_sectors": [
-          "commodity",
-          "creditor",
-          "defense",
-          "other",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 8,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Google",

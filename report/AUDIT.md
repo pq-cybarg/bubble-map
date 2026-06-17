@@ -14,7 +14,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Inventory
 - models: 38 (z3 .py: 10) + TLA + Alloy
-- research: 115 json / 119 md
+- research: 116 json / 120 md
 - data outputs: 21
 - reports: 9
 
@@ -42,5 +42,4 @@ Canonical numbers (from data/*.json — the source of truth):
 - none
 
 ## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)
-- ⚑ digitalid-orchestration-real-incentive.json: 'the NSA wants'
-  (1 advisory hit(s) to verify)
+- none

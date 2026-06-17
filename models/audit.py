@@ -69,9 +69,13 @@ out.append("- none" if not nosrc else "\n".join("- "+x for x in nosrc))
 _collectives=r"China|Beijing|the CCP|the NSA|the Fed|the government|the state|Labour|Wall ?Street|the banks|the architects|the West|the EU|Moscow|Washington|the CIA|the FBI|the Treasury|the regime|the elite"
 _intent=r"wants?|wanted|intends?|intended|seeks?|fears?|believes?|hopes?|desires?|aims? to|plans? to|wishes?|is trying to|are trying to"
 _cd=re.compile(r"\b("+_collectives+r")\s+("+_intent+r")\b", re.I)
+_mentionq=set("'‘’")  # single quotes = the phrase is MENTIONED/quoted (e.g. rejecting "'the NSA wants X' is a fiction"), not ASSERTED
 cdhits=[]
 for f in sorted(glob.glob(ROOT+"/research/*.json")):
-    for m in _cd.finditer(open(f,encoding="utf-8",errors="ignore").read()):
+    txt=open(f,encoding="utf-8",errors="ignore").read()
+    for m in _cd.finditer(txt):
+        if m.start()>0 and txt[m.start()-1] in _mentionq:
+            continue  # quoted mention, not an asserted unitary mind -> skip false positive
         cdhits.append(f"{os.path.basename(f)}: '{m.group(0)}'")
 out.append("\n## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)")
 out.append("- none" if not cdhits else "\n".join("- ⚑ "+h for h in cdhits)+f"\n  ({len(cdhits)} advisory hit(s) to verify)")
