@@ -34,6 +34,20 @@ Programmability **is** control over *when, where, and how* money can be spent. W
 ## Why it can't be said aloud
 Each structural incentive — *fund the debt machine via repression, condition access on compliance, manage the AI-driven income/data transition, de-anonymize speech* — **fails in open debate.** So it is sold as inclusion, fraud-reduction, and child-safety, which **win** in open debate. **That gap — between the reason that wins the vote and the payoff that solves the powerful's actual problems — is the "real reason."** The capability is dual-use; the architects have stated the control half on the record; the honest claim is that **control is the point, not an accident.**
 
+## The PQC escape hatch — necessary, not sufficient *(added 2026-06-16)*
+The proponent's **strongest technical defense** (e.g. Grok's bottom line on the quantum objection): *"don't abandon digital ID — just mandate post-quantum crypto + crypto-agility now."* It's **necessary but not sufficient.** *Crypto facts are fact ([[macro-crqc-quantum-landscape]]); the synthesis is labeled.*
+
+- **Why necessary:** classical-crypto digital ID is a genuine liability — a CRQC makes old signatures forgeable (**TNFL**) and harvested data decryptable (**HNDL**), so migrating to **FIPS 203/204/205 + HQC** is required. The defense is right that far.
+- **Why *not* sufficient — it fixes the crypto layer and leaves every structural objection standing:**
+  1. **Centralization untouched** — PQC *encrypts* the store, it doesn't *decentralize* it. A quantum-safe centralized biometric database is still a honeypot and a single point of coercion (incentive 2). Better crypto on a centralized rail is a **better-defended chokepoint**, not a smaller one.
+  2. **Non-revocable biometrics** — PQC can't make a leaked face reissuable.
+  3. **Bootstrap-without-a-trusted-anchor** — the population-scale recovery problem (the identity-proof paradox, [[spec-uk-labour-tbi-influence]] #68) recurs whenever any root is compromised.
+  4. **The deployment lag is the disproof** — mid-2026, *essentially nothing deployed is PQC*; the EUDI Wallet ships to all EU citizens on RSA/ECC. "We'll just migrate" is already failing on the exact systems being mandated.
+  5. **Open-model exploitation** — PQC doesn't reduce the value of, or access to, a centralized identity dataset for AI-driven correlation/deanonymization.
+  6. **It *strengthens* the control rail** — a quantum-safe, more-trusted ID rail makes the programmable-money / conditioned-access capability (Carstens' "absolute control") **more** robust, not less.
+- **The capex kicker:** the mandated migration (NIST 2030/2035, CNSA 2.0, EU crypto-inventories) is *also* a deadline-driven, population-scale **compliance-capex windfall** for the same rail-builders (Oracle, Microsoft PKI, the PKI/HSM vendors, **SEALSQ's QS7001**). So "just migrate to PQC" simultaneously **fails to answer the centralization critique and enriches the rail-builders** — necessary security work and a manufactured-demand vendor event are the same line item (see [[macro-pqc-chips]]).
+- **Honest boundary:** PQC migration *is* good security; the only claim is that it's **not a sufficient answer to centralization/coercion — security ≠ desirability.** A perfectly quantum-safe centralized identity rail is still a centralized identity rail.
+
 ## The honest boundary (what this does and does not claim)
 - **Provable / asserted:** the actors, the documents, the **convergence calendar** (eIDAS 2.0 wallets + Digital Euro + Chat Control trilogues all landing **2026–27**), the **programmability/control capability** (Carstens, on record), the **debanking precedent**, **China as the existing extreme**, and that the **AI-builders also build the ID layer**.
 - **Not provable / not asserted:** a single coordinating cabal; that *every* actor shares the dark motive; that the dystopian use is *inevitable* rather than *enabled*.

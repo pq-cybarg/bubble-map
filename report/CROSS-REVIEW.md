@@ -16,14 +16,14 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 52 files
-- **Google** — 33 files
+- **Google** — 34 files
 - **OpenAI** — 30 files
 - **FDIC** — 30 files
-- **Oracle** — 28 files
-- **Microsoft** — 23 files
+- **Oracle** — 29 files
+- **Microsoft** — 25 files
 - **Chainlink** — 22 files
 - **Amazon** — 22 files
-- **NVIDIA** — 21 files
+- **NVIDIA** — 22 files
 - **Stargate** — 19 files
 - **JPMorgan** — 18 files
 - **Anthropic** — 18 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-crqc-quantum-landscape.json` — related files by shared entities (verify cross-refs exist)
-- fin-hedera-connections.json: 9 shared entities
-- fin-google-amazon-anthropic-meta.json: 8 shared entities
-- spec-exchanges-asia.json: 8 shared entities
-- altcoin-lens.json: 7 shared entities
+## Newest file `macro-pqc-chips.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 10 shared entities
+- fin-hedera-connections.json: 8 shared entities
+- energy-power.json: 7 shared entities
 - spec-cross-system-contagion.json: 7 shared entities
-- fin-meta-family.json: 7 shared entities
-- spec-telecom-satellite.json: 7 shared entities
-- fin-sealsq-wisekey-global.json: 7 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- spec-sec-filings-primary.json: 6 shared entities
+- sec-filings.json: 6 shared entities
+- spec-exchanges-asia.json: 6 shared entities
