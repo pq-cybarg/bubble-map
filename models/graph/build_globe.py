@@ -38,11 +38,15 @@ POINTS=[
  ["Seoul (HBM)",37.57,126.98,"intel","SK Hynix + Samsung dominate HBM - the memory chokepoint every Nvidia/hyperscaler AI accelerator needs. The key ALLIED compute dependency."],
  ["Singapore (subsea cables)",1.35,103.82,"intel","~28 subsea cables + ~13 planned - the SE-Asia data chokepoint ('Silk Road of the digital economy'); allied-leaning."],
  ["Hong Kong (bifurcation)",22.32,114.17,"intel","China's AI+Finance testbed; subsea-cable landing stagnant since 2017 (cables route away) - the live internet bifurcation into US vs China rails."],
+ ["Japan (Micron HBM + chip materials)",34.39,132.46,"intel","Even 'US' HBM (Micron) is FABBED in Hiroshima + packaged in Taiwan; Japan dominates chip materials/photoresists + hosts TSMC Kumamoto/Rapidus - the HBM + materials chokepoint AND the yen-carry rail (geopolitics-allied-intel-nodes; macro-carry-trades)."],
+ ["Shanghai (SGE physical metals)",31.23,121.47,"settlement","Shanghai Gold Exchange - the EASTERN physical gold/silver bid pulling metal out of Western paper markets (~12-13% premium); the paper-vs-physical fracture (macro-futures-vs-physical)."],
  # --- threat actors (magenta) ---
  ["North Korea (Lazarus)",39.0,125.7,"threat","DPRK/Lazarus crypto theft (Ronin/Bybit, ~$7.6B cited) laundered via Tornado Cash on Ethereum."],
+ ["Cambodia (scam compounds)",11.56,104.92,"threat","Industrial-scale 'pig-butchering' scam compounds (Sihanoukville/Phnom Penh): trafficked labor + crypto laundering routed to Western victims/exchanges; FARA/sanctions exposure (spec-cambodia-scam-fara)."],
  # --- allied supply responses (green) ---
  ["ASML (Veldhoven, NL)",51.42,5.4,"supply","The SOLE maker of EUV lithography (~100% of EUV) - the upstream equipment chokepoint; barred from China; reported remote kill switch on TSMC's machines (geopolitics-chip-chokepoint-war)."],
  ["Zeiss SMT (Oberkochen, DE)",48.78,10.1,"supply","Sole supplier of ASML's EUV optics - ~80% of all chips made with Zeiss optics + ASML systems. A monopoly under the monopoly."],
+ ["Aachen DE (RWTH IME - EU REE processing)",50.78,6.08,"supply","EU EURARE eudialyte/HREE processing R&D (RWTH Aachen IME): the dry-digestion/silica-gel-prevention route + 100L scale-up. A documented allied-processing knowledge node - and the site of EU-funded, openly-published work whose UNPUBLISHED tacit scale-up know-how is the real value; a Chinese-Government-scholarship researcher was lead experimenter (capability transfer documented; witting espionage NOT asserted) - spec-rare-earth-statecraft."],
  ["Greenland (CRML/Tanbreez)",60.9,-45.9,"supply","Critical Metals Corp REE; pre-revenue ~2028-29; US/EXIM interest."],
  ["Australia (Lynas REE)",-31.95,115.86,"supply","Lynas - largest ex-China REE; the allied supply response."],
  ["Mountain Pass CA (MP)",35.48,-115.53,"supply","MP Materials - DoD is the LARGEST shareholder (~15%) + 10-yr $110/kg NdPr price floor + Apple $500M; '10X' magnet plant ~2028."],
@@ -79,6 +83,8 @@ POINTS=[
  ["SEALSQ (Murcia, Spain)",37.99,-1.13,"pqc","SEALSQ European semiconductor / PQC personalization site."],
  ["SEALSQ (Gujarat, India)",22.31,72.14,"pqc","SEALSQ India PQC/secure-element expansion."],
  ["SEALSQ (Arizona, US)",33.45,-112.07,"pqc","SEALSQ US PQC/secure-chip footprint."],
+ ["Tallinn (Estonia eID / ROCA)",59.44,24.75,"pqc","Estonia's national eID - the 2017 ROCA flaw forced re-issuance of ~760k cards: the live cautionary tale for crypto-agility + post-quantum migration of digital-ID infrastructure (macro-crqc-quantum-landscape)."],
+ ["Paris (ANSSI PQC)",48.85,2.35,"pqc","France's ANSSI - among the most aggressive national post-quantum migration mandates (hybrid PQC, transition timelines); the EU counter-migration pole (macro-crqc-quantum-landscape)."],
  # --- policy nodes (violet) ---
  ["London (LBMA/TBI)",51.5,-0.12,"policy","LBMA gold; Tony Blair Institute -> UK digital ID; Ofcom."],
  ["Basel (BIS)",47.55,7.59,"policy","BIS Project Agora - the Western tokenized 'unified ledger'."],
@@ -107,6 +113,8 @@ ARCS=[
  [46.2,6.14,33.45,-112.07,"pqc","SEALSQ Geneva -> global PQC build-out"],
  [37.57,126.98,37.77,-122.4,"flow","Korea HBM -> US AI core (the allied compute dependency)"],
  [10.5,-66.9,38.9,-77.0,"frontier","Venezuela oil seizure -> US (resource access by force)"],
+ [34.39,132.46,37.77,-122.4,"intel","Japan HBM/materials -> US AI core (allied compute dependency)"],
+ [11.56,104.92,40.7,-74.0,"threat","Cambodia scam compounds -> Western victims / exchanges"],
 ]
 COLORS={"choke":"#c0392b","threat":"#b5179e","supply":"#2e8b57","capital":"#1f4e79","policy":"#7b3fb5",
         "datacenter":"#b8860b","flow":"#8a7a5c","settlement":"#138a8a","insurance":"#b5179e","pqc":"#8a5a2b",
