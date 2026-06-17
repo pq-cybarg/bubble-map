@@ -17,11 +17,11 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 52 files
 - **Google** — 35 files
+- **FDIC** — 31 files
 - **OpenAI** — 30 files
-- **FDIC** — 30 files
 - **Oracle** — 29 files
 - **Microsoft** — 25 files
-- **Chainlink** — 22 files
+- **Chainlink** — 23 files
 - **Amazon** — 22 files
 - **NVIDIA** — 22 files
 - **Stargate** — 19 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `macro-crqc-quantum-landscape.json` — related files by shared entities (verify cross-refs exist)
-- macro-pqc-chips.json: 10 shared entities
-- fin-hedera-connections.json: 9 shared entities
-- fin-google-amazon-anthropic-meta.json: 8 shared entities
-- spec-exchanges-asia.json: 8 shared entities
-- fin-meta-family.json: 7 shared entities
-- spec-cross-system-contagion.json: 7 shared entities
-- altcoin-lens.json: 7 shared entities
-- fin-sealsq-wisekey-global.json: 7 shared entities
+## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-corporate.json: 9 shared entities
+- spec-disclosures-surveillance.json: 7 shared entities
+- temporal-bridges.json: 7 shared entities
+- spec-network-overlay.json: 7 shared entities
+- macro-crqc-quantum-landscape.json: 7 shared entities
+- macro-pqc-chips.json: 7 shared entities
+- influence-congress-funding-compromise.json: 6 shared entities
+- altcoin-lens.json: 6 shared entities
