@@ -119,12 +119,17 @@
   "NSA_CNSA_2_0": "New National Security Systems quantum-safe by Jan 1 2027; application-layer by 2030; full infrastructure by 2035.",
   "NIST": "RSA-2048 / ECC P-256 deprecated 2030; ALL quantum-vulnerable public-key disallowed by 2035. Replacements: FIPS 203 (ML-KEM/Kyber), 204 (ML-DSA/Dilithium), 205 (SLH-DSA/SPHINCS+), all finalized Aug 2024; HQC (code-based) selected Mar 11 2025 as a BACKUP KEM (distinct math from ML-KEM's lattices), draft 2026 / finalize ~2027; FN-DSA (Falcon) in process.",
   "EU": "Coordinated PQC roadmap: national strategies + crypto inventories by end-2026; critical financial infrastructure PQC by end-2030; DORA + NIS2 + PCI-DSS 4.0 force key-management upgrades.",
+  "France_ANSSI": "The most aggressive mover: ANSSI calls PQC 'the most promising path', updated its cryptographic-approval doctrine Mar 2025, and from 2027 will STOP CERTIFYING security products that lack quantum-resistant encryption, targeting FULL transition by 2030 (announced 16 Jun 2026, France Quantum conf, Samih Souissi) - PQC integration becomes MANDATORY at qualification entry from 2027 for certain product types. First CC certs already issued: Thales MultiApp 5.2 Premium PQC SMART CARD (29 Sep 2025) + Samsung S3SSE2A microcontroller (1 Oct 2025); CEA-Leti approved to evaluate PQC; hybrid supported; PG-083 mechanisms guide updated. REALITY CHECK: a Mar-2025 ANSSI study found 38 surveyed organizations had NO transition plan at all (the deployment-lag, digital_id_pqc_migration_status). Note: the policy says nothing about crypto/digital assets, though Bitcoin/Ethereum rest on ECC. status: fact.",
+  "EU_EUCC": "ENISA's EUCC (EU Common Criteria certification scheme) Guidelines on Cryptography v2 (6 May 2025), v3 in public review through Jul 2026 - the cryptographic-mechanism baseline products must meet for EU CC certification, the channel through which PQC requirements reach certified ICT/identity products (eIDAS/EUDI hardware). status: fact.",
   "G7": "G7 Cyber Expert Group (co-chaired US Treasury + Bank of England) urging banks/insurers/exchanges to accelerate PQC.",
   "US_exec": "Trump 2026 Cyber Strategy places PQC alongside zero-trust/AI-defense/cloud modernization for federal networks.",
   "approach": "Hybrid (classical + PQC) dominates 2026 enterprise rollouts.",
   "source": [
    "https://www.cryptomathic.com/a-bankers-guide-to-quantum-safe-cryptography-part-1-the-compliance-mandate-for-pqc-migration-cryptomathic",
-   "https://thequantuminsider.com/2026/05/08/post-quantum-migration-timelines-government-industry-impact/"
+   "https://thequantuminsider.com/2026/05/08/post-quantum-migration-timelines-government-industry-impact/",
+   "https://cyber.gouv.fr/actualites/pour-lanssi-la-cryptographie-post-quantique-post-quantum-cryptography-ou-pqc-represente-la-voie-la-plus-prometteuse",
+   "https://cryptobriefing.com/france-quantum-safe-encryption-certification/",
+   "https://certification.enisa.europa.eu/publications/eucc-guidelines-cryptography_en"
   ]
  },
  "city_and_infrastructure_layer": {

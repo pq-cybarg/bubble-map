@@ -2,7 +2,7 @@
 
 *Built 2026-06-13 from `research/spec-rare-earth-statecraft.json`. Verified: GMF (Rare Earth Statecraft), CSIS, IEA, ECB occasional paper, Small Wars Journal (predatory pricing), SCMP, Chemistry World, CRML/Ucore/REalloys press. Companion to `defense-rare-earth`, `macro-critical-minerals`.*
 
-> **Two questions, dug deep.** **(1) Why does China keep toggling the REE faucet on and off?** — it's a *calibrated leverage instrument*, plus a decades-long *predatory-pricing* strategy. **(2) Did Western processing know-how (CRML's Tanbreez → Ucore) come from Chinese students in Europe-funded REE research?** — investigated; the specific claim is **unverified**, and the documented record points the *other* way.
+> **Two questions, dug deep.** **(1) Why does China keep toggling the REE faucet on and off?** — it's a *calibrated leverage instrument*, plus a decades-long *predatory-pricing* strategy. **(2) Could a China-linked student in Europe-funded REE research have exfiltrated *European* processing secrets to China (espionage, witting or unwitting)?** — investigated; **unverified**, and the steal-incentive is weak (China already leads processing). *The earlier version had this direction backwards; corrected in §3.*
 >
 > **Grade + no defamation.** The faucet/predatory-pricing history is documented. The knowledge-transfer allegation is **unverified — no public corroboration, no individual named or accused.**
 
@@ -20,16 +20,18 @@
 - **MP Materials** — Mountain Pass; DoD largest shareholder + $110/kg NdPr floor + 10-yr offtake + Apple recycled-magnet deal (`macro-critical-minerals`).
 - The same **state-as-circular-financier** structure as the broader minerals thread.
 
-## 3. The knowledge-transfer question — investigated, unverified
-**Claim:** that Chinese students in Europe-funded REE studies (incl. one overlapping Tanbreez/Ucore processing-technique development) were a transfer vector.
+## 3. The knowledge-transfer question — *direction corrected*, investigated, unverified
+**Corrected framing (the prior pass had the direction backwards):** the hypothesis is whether a **China-linked student in Europe-funded REE research** could have been an **espionage vector — witting *or* unwitting — for *European* processing secrets flowing *to* China (exfiltration).** *Not* "did Chinese know-how seed the West" (the reverse, which the earlier version mistakenly answered).
 
-**Finding: UNVERIFIED — no public corroboration found, no individual named or accused.** The documented record points the **other way**:
-- **Ucore explicitly states RapidSX was developed from first principles, China-free.**
-- The **EU in 2025 is *demanding* technology transfer *from* Chinese investors** (reverse direction) precisely because **China restricts the diffusion of its processing know-how abroad** to protect its advantage.
+**Finding: UNVERIFIED** — no public case names such a transfer; **no individual named or accused.** Two honest qualifiers on the corrected (exfiltration) direction:
+1. **The steal-incentive is weak.** The valuable processing know-how runs the *other* way: **China leads REE processing (~90% of separation/refining)**; Europe/allies are the laggards trying to catch up, so Europe holds few processing secrets *superior to China's* worth exfiltrating. The documented flow is **China guarding its lead** (it restricts diffusion; the EU is *demanding* transfer *from* China).
+2. **Narrow exception:** specific allied innovations (Ucore's **RapidSX** solvent-free separation, niche chemistries) could *in principle* be targets — but no public source ties any individual's Europe-funded work to such a transfer.
 
-So the prevailing flow is **China guarding knowledge, not seeding it**, and the specific Tanbreez/Ucore allegation isn't supported. *Separately and generally,* academic knowledge-transfer in dual-use materials science **is** a documented *category* of concern (China's rare-earth materials-science lead is "dual-use"; research-security/talent-program debates are real) — recorded as a **category, not a proven case** against Tanbreez/Ucore or anyone.
+**Witting vs unwitting matters:** the *unwitting* version largely collapses into **normal academic diffusion** (publication, collaboration, trained researchers changing jobs) — that's how science works, not espionage. The *witting* (deliberate-exfiltration) version is the serious allegation, and it's **unverified**; intent is **not asserted** of anyone.
 
-**What would change it:** named, sourced documentation tying a specific researcher's Europe-funded REE work to Tanbreez/Ucore IP (patents/publications/employment) — none found; provide a source and it can be graded up.
+**Critical guard:** the general dual-use research-security concern is real *as a category* — but it must **not** be generalized to "Chinese students" as a class. That's a **division fallacy** (a class-level concern doesn't transfer to any individual) **and** a discriminatory generalization; it's an institutional risk-management topic, not grounds to suspect anyone by nationality.
+
+**What would change it:** named, sourced documentation tying a *specific* researcher's Europe-funded REE work to a transfer of European processing IP to China (court filing/indictment, patent/publication/employment trail) — none found; provide a source and it can be graded up.
 
 ## 4. Limits
 Documented: the calibrated statecraft, the predatory-pricing model, the ~60%/~92% dominance, and the allied cohort (CRML/Tanbreez, DoD-funded Ucore RapidSX, MP, REalloys — now wired into the minerals web). **Unverified and not asserted:** the specific knowledge-transfer claim (counter-evidence recorded; no person named). Overlay edges excluded from the proofs.
