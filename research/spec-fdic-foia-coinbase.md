@@ -11,6 +11,15 @@
 - **The ruling + settlement:** a court **found the FDIC violated FOIA**; in **Feb 2026 the FDIC agreed to pay ~$188,440 in legal fees and to overhaul its FOIA policies**, ending the multi-year battle. Coinbase CLO **Paul Grewal** said the letters **"give credence"** to Chokepoint-2.0 claims.
 - **2025 reversal:** new FDIC leadership (acting chair **Travis Hill**) rescinded the restrictive crypto guidance — an implicit confirmation the posture had existed (`spec-crypto-banking-debanking`).
 
+## 1b. The pause-letter sequence — orchestrated or emergent? *(added 2026-06-16, #58)*
+Recovering the **sequence + count** and testing whether the campaign was **orchestrated** or **emergent**. *Count/window + interagency dates are fact; the verdict is labeled.*
+
+- **Count + window:** **~23 letters released**, sent **~Mar 2022 → May 2023** (FDIC OIG + FOIA productions). History Associates' claim that **~150 responsive docs were withheld** (and letters possibly omitted) means the recovered count is a **FLOOR** — at least 23, plausibly more.
+- **Sequence anchors:** the cluster tracks the 2022–23 crypto stress + coordinated guidance — mid-2022 Terra/3AC/Celsius; **FTX (Nov 2022)**; the **Jan 3 2023** interagency statement (Fed/FDIC/OCC) on crypto-asset risks; the **Feb 23 2023** liquidity statement. Letters begin ~Mar 2022 and **intensify into Jan–May 2023**; the posture is **rescinded in 2025** (Hill).
+- **Orchestrated evidence:** a **common template** (OIG: "pause"/don't-expand + provide info); **clustered timing** in one ~14-month window; **alignment** with the coordinated Jan/Feb-2023 statements; the **wholesale 2025 reversal** implies a coherent stance existed.
+- **Emergent evidence:** the OIG framed them as **examiner supervisory letters** (case-by-case); bank circumstances varied; **no single written "debank crypto" directive** was produced.
+- **Verdict:** **orchestrated at the posture/guidance level, executed through individually-issued examiner letters (emergent at the per-bank level)** — the same *deliberate-strategy / opportunistic-execution* shape as the MGX judgment (#78). A written **"Chokepoint 2.0" directive** stays **contested/unadjudicated**; and the ~150-doc dispute makes the recovered sequence a documented **floor**.
+
 ## 2. Other documented FDIC conduct (distinct from crypto)
 - **Toxic-workplace report → Gruenberg resignation (2024):** an independent report found a harassment/toxic culture; Chair **Martin Gruenberg** resigned amid the fallout — a documented governance failure.
 - **2023 systemic-risk exception:** the FDIC/Treasury/Fed backstopped **all** SVB/Signature depositors — a discretionary, contested use of authority (moral-hazard debate; `macro-fdic`).

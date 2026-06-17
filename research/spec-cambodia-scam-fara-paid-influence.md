@@ -44,6 +44,19 @@ To prevent inferring connections nobody made:
 - **Mezink corporate identity → confirmed**; no wrongdoing found.
 - *Parallel pattern (context, not evidence of this claim):* the 2024 **Tenet Media/RT** FARA case and reported paid-US-influencer programs show the shape such an offer would fit.
 
+## 6b. Shell-company + FARA check on Mezink — result *(added 2026-06-16, #69)*
+The retroactive check, structured to a conclusion. **Both come back NEGATIVE** — Mezink is a real operating firm (not a shell) and is not FARA-registered. *Registry/corporate facts + the FARA null are fact; "not a shell" is a graded reading of the indicators.*
+
+| Shell indicator tested | Finding | Signal |
+|---|---|---|
+| Dated incorporation + registry presence | founded **2021**; Singapore office (160 Robinson Road) + India/SE-Asia ops; on Tracxn/CBInsights/LinkedIn | **negative** (registered, profiled — not paper-only) |
+| Named, traceable principals | founders **Tarun Valecha & Mohit Garg** (public) | **negative** (identifiable, not nominees) |
+| Real product + operations | a functioning **AI influencer-marketing SaaS** across India/Jakarta/SE-Asia | **negative** (operating, not dormant) |
+| "Singapore presentation / India principals" (the creator's flag) | a common, legitimate India-SE-Asia SaaS structure | **inconclusive/benign** (optics, not a front) |
+
+- **FARA:** eFile search for "Mezink" → **no registration found.** Not a registered foreign agent.
+- **Conclusion:** the checks **do not surface a hidden-front or unregistered-foreign-agent finding.** What remains is a **single-source creator allegation** that Mezink was the conduit for a paid-disinformation offer concerning Yim Leak — which, *if substantiated*, could raise FARA (foreign principal) and FTC (undisclosed paid endorsement) questions (precedent: Tenet Media/RT 2024) — but the offer is uncorroborated and **Mezink is the named conduit, not an adjudicated wrongdoer. The honest result is a clean check, not an indictment.**
+
 ## 7. Limits
 The scam-compound criminal core is high-grade primary. Yim Leak: AMLO freeze + bill-draft inclusion are fact; scam guilt unadjudicated/disputed. NCS FARA registration documented; "leaked plan" contested. Ryan Kelly's account is creator-alleged, single-source, uncorroborated this pass; Mezink is the named conduit, not adjudicated. **Chen Zhi** added to Persons (indicted/sanctioned); **Yim Leak and Ryan Kelly intentionally not given dossiers** (one unadjudicated-and-disputing; one a private creator who was the offer's target).
 
