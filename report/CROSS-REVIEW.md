@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-crypto-sec-epstein.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 11 shared entities
-- fin-hedera-connections.json: 9 shared entities
-- altcoin-lens.json: 8 shared entities
-- spec-cross-system-contagion.json: 8 shared entities
-- spec-sec-sdny-regulatory.json: 7 shared entities
-- temporal-bridges.json: 7 shared entities
-- fin-google-amazon-anthropic-meta.json: 7 shared entities
-- macro-gig-labor.json: 5 shared entities
+## Newest file `spec-disclosures-surveillance.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 5 shared entities
+- spec-crypto-sec-epstein.json: 4 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-network-overlay.json: 4 shared entities
+- fin-hedera-connections.json: 3 shared entities
+- altcoin-lens.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities

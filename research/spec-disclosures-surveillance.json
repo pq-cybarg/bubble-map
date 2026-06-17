@@ -60,6 +60,19 @@
     "thesis_significance": "The elite-finance OPACITY pole: the same era that built mass citizen surveillance left elite offshore wealth structurally hidden until leaks. Ties the shadow-finance/private-credit opacity thread (macro-cre-privatecredit) and the 'rules favor incumbents' theme.",
     "source": ["https://www.icij.org/investigations/pandora-papers/", "https://offshoreleaks.icij.org/"]
   },
+  "bulk_disclosure_standard": {
+    "summary": "#63 - the cure for the documented surveillance/opacity asymmetry: contemporaneous BULK DISCLOSURE of government requests to platforms. The asymmetry is fact; the proposed standard is a labeled normative proposal, content-NEUTRAL (it discloses the requests, it does not adjudicate whether any was coercion).",
+    "the_problem": "Government requests TO platforms - content flags/takedowns (the Twitter-Files jawboning channels), data demands (FISA 702/PRISM), and NSLs with GAG ORDERS - surface only slowly, partially, or never: via leaks (Twitter Files), whistleblowers (Klein/Snowden), or litigation. Self-published 'transparency reports' are aggregate, delayed, and self-selected. Meanwhile ordinary people are surveilled granularly in real time - the asymmetry.",
+    "proposed_standard": [
+      "(1) REAL-TIME (or short-lag) PUBLIC LOG of every government request to a platform to flag/remove/deprioritize content or hand over data: agency, date, legal basis, scope, content category - redacted ONLY for genuine active-investigation necessity, with a DEFAULT DECLASSIFICATION CLOCK.",
+      "(2) END GAG ORDERS BY DEFAULT (NSLs): a sunset/declassification clock so the gag expires and the request becomes public - the warrant-canary logic formalized into a positive disclosure DUTY on the recipient.",
+      "(3) MACHINE-READABLE, STANDARDIZED format (an EDGAR-for-government-requests), not annual PDF transparency reports - so the record is queryable, not buried.",
+      "(4) INDEPENDENT AUDIT that 'released == complete' - the Epstein lesson (~6.5M pages nominally released, <1% fully processed): nominal release != readable/complete.",
+      "(5) SYMMETRY PRINCIPLE: if the citizen's data is collected in near-real time, the government's demands on platforms should be disclosed in near-real time."
+    ],
+    "the_principle": "Same cure as the SEC-conflict sibling (#62, spec-crypto-sec-epstein): DISCLOSE BY DEFAULT, not by subpoena or leak. And it inherits this block's two honesty disciplines - the standard is CONTENT-NEUTRAL (Murthy v. Missouri was a STANDING dismissal, not a merits ruling; some viral 'flagging' claims did NOT hold, so a disclosure regime must surface the requests for scrutiny without pre-judging coercion) and it does not assume malign intent (NSA authored the trusted SHA-2; Dual_EC is the documented bad case). It is the structural counter to the asymmetry, not an accusation.",
+    "grade": "the asymmetry + the documented opacity FACT; the proposed bulk-disclosure standard is a labeled normative proposal"
+  },
   "edges": [
     {"from": "NSA", "to": "Crypto_Standards", "instrument": "bullrun_backdoor", "amount_usd": 250000000, "date": "2013-revealed", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/Bullrun_(decryption_program)", "https://en.wikipedia.org/wiki/Dual_EC_DRBG"], "notes": "~$250M/yr to insert backdoors; Dual_EC_DRBG NIST standard backdoored then withdrawn. The mandated-weakness proof."},
     {"from": "NSA", "to": "ATT", "instrument": "backbone_tap_641A", "amount_usd": null, "date": "2003-2006revealed", "status": "documented", "circular": false, "cancelable": false, "confidence": "high", "source": ["https://en.wikipedia.org/wiki/Room_641A"], "notes": "Room 641A fiber splitters copy internet backbone to NSA (Narus); Mark Klein whistleblower. Same telecom layer Salt Typhoon breached (spec-telecom-satellite)."},

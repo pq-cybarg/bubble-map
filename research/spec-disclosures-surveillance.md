@@ -23,5 +23,19 @@ Internal docs showed routine govt↔platform channels (FBI, CISA, White House, C
 ### 5. Offshore leaks — *STRONG*
 **Pandora Papers** (ICIJ, 2021): 35 world leaders, 330+ officials, 91 countries; **810,000+** offshore entities in the ICIJ database. The elite-finance opacity pole (`macro-cre-privatecredit`).
 
+## The cure: contemporaneous bulk disclosure of govt platform requests *(added 2026-06-16, #63)*
+The structural counter to the asymmetry — sibling to the SEC-conflict standard (`spec-crypto-sec-epstein`, #62). *The asymmetry is fact; the standard is a labeled, **content-neutral** proposal — it discloses the requests, it does not adjudicate whether any was coercion.*
+
+**The problem:** government requests *to* platforms — content flags/takedowns (the jawboning channels), data demands (FISA 702/PRISM), and **NSLs with gag orders** — surface only via leaks, whistleblowers, or litigation; "transparency reports" are aggregate, delayed, self-selected. Citizens are surveilled in real time; the demands on platforms are opaque.
+
+**Proposed standard:**
+1. **Real-time (short-lag) public log** of every government request to flag/remove/deprioritize content or hand over data — agency, date, legal basis, scope, category — redacted *only* for genuine active-investigation necessity, with a **default declassification clock.**
+2. **End gag orders by default** — a sunset clock so NSL gags expire and the request becomes public (the warrant-canary logic as a positive **duty**).
+3. **Machine-readable, standardized** (an *EDGAR-for-government-requests*), not annual PDFs.
+4. **Independent audit that "released = complete"** — the Epstein lesson (<1% processed): nominal release ≠ readable.
+5. **Symmetry:** if the citizen's data is collected in near-real time, the government's demands on platforms should be disclosed in near-real time.
+
+**Principle:** disclose **by default, not by subpoena or leak** — and inherit this block's disciplines: **content-neutral** (Murthy was standing-only; surface the requests for scrutiny without pre-judging coercion) and **no assumed malign intent** (NSA wrote the trusted SHA-2; Dual_EC is the bad case). It's the structural answer to the asymmetry, not an accusation.
+
 ## Verdict
 One asymmetry: **mandated surveillance of citizens** (PRISM, Room 641A, CALEA→Salt Typhoon, ANOM, Chainalysis) + **speech jawboning** vs **elite-finance opacity** (Pandora) and **slow, partial** powerful-network disclosure (Epstein). Every mandated backdoor or weakened standard (Dual_EC/Bullrun; CALEA→Salt Typhoon) proves the spine: **you cannot build surveillance access only the good guys can use** — the same argument as `age-verification-abolition`. Two disciplines enforced: Murthy was a *standing* dismissal (don't over-claim), and *NSA touching crypto isn't automatically malign*. The on-thesis hero is **independent verification** (Trail of Bits) — what this repo does.
