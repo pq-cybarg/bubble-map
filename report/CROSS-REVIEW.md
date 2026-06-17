@@ -34,9 +34,9 @@
 ## Newest file `spec-rare-earth-statecraft.json` — related files by shared entities (verify cross-refs exist)
 - macro-critical-minerals.json: 2 shared entities
 - macro-critical-minerals-equities.json: 2 shared entities
-- macro-quantum-computing.json: 1 shared entities
-- defense-rare-earth.json: 1 shared entities
 - spec-network-overlay.json: 1 shared entities
+- defense-rare-earth.json: 1 shared entities
+- macro-quantum-computing.json: 1 shared entities
 - fin-sealsq-wisekey-global.json: 1 shared entities
 - energy-power.json: 1 shared entities
 - geopolitics-contested-resource-states.json: 1 shared entities
