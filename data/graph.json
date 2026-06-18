@@ -248,6 +248,14 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "CVS_Caremark": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "CVS_Health": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "CZ": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -277,6 +285,10 @@
       "has_exogenous_revenue": true
     },
     "China_Scholarship_Council": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Cigna": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -449,6 +461,10 @@
       "has_exogenous_revenue": true
     },
     "Euroclear": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Express_Scripts": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -740,6 +756,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "LexisNexis_Risk_Solutions": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Liberty Strategic Capital": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -893,6 +913,10 @@
       "has_exogenous_revenue": false
     },
     "Open_Source_Ecosystem": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "OptumRx": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -1405,6 +1429,10 @@
       "has_exogenous_revenue": true
     },
     "Unification_Church": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "UnitedHealth": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
@@ -6497,6 +6525,71 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "OptumRx",
+      "to": "UnitedHealth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PBM vertically integrated under insurer; spread pricing + affiliated-pharmacy specialty markups",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disability-healthcare-insurance-extraction.json",
+      "note": ""
+    },
+    {
+      "from": "Express_Scripts",
+      "to": "Cigna",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PBM under insurer; rebate-aggregator opacity; PXDX bulk denial at the insurer",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disability-healthcare-insurance-extraction.json",
+      "note": ""
+    },
+    {
+      "from": "CVS_Caremark",
+      "to": "CVS_Health",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PBM + insurer (Aetna) + retail pharmacy under one parent",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disability-healthcare-insurance-extraction.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "CVS_Caremark",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "interim PBM staff reports (2024/2025) + insulin rebating suit; 6 PBMs ~95% of US prescriptions",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disability-healthcare-insurance-extraction.json",
+      "note": ""
+    },
+    {
+      "from": "LexisNexis_Risk_Solutions",
+      "to": "UnitedHealth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "health-data + readmission/socioeconomic risk-score feed for pricing/underwriting (surveillance pricing)",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disability-healthcare-insurance-extraction.json",
+      "note": ""
+    },
+    {
       "from": "Subprime_Auto_ABS",
       "to": "US_household_credit",
       "instrument": "other",
@@ -7031,10 +7124,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 369,
-    "num_edges": 427,
+    "num_nodes": 376,
+    "num_edges": 432,
     "num_financial_edges": 130,
-    "num_structural_edges": 297,
+    "num_structural_edges": 302,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7101,12 +7194,12 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Microsoft",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Anthropic",
@@ -7132,14 +7225,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -7605,6 +7698,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CVS_Caremark": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CVS_Health": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CZ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7655,6 +7762,13 @@
         "in_robust_core": false
       },
       "China_Scholarship_Council": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cigna": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -7957,6 +8071,13 @@
       },
       "Euroclear": {
         "total_usd": 194000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Express_Scripts": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8466,6 +8587,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LexisNexis_Risk_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Liberty Strategic Capital": {
         "total_usd": 1000000000,
         "circular_usd": 0,
@@ -8733,6 +8861,13 @@
         "in_robust_core": true
       },
       "Open_Source_Ecosystem": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OptumRx": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9629,6 +9764,13 @@
         "in_robust_core": false
       },
       "Unification_Church": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UnitedHealth": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
