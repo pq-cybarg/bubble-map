@@ -68,7 +68,7 @@ DOMAIN_COLORS={"AI":"#1f4e79","Capital":"#7b2d26","Crypto":"#b8860b","Defense":"
 def dcolor(d): return DOMAIN_COLORS.get(d,"#6b665d")
 
 def _navlinks(active=""):
-    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+    items=[("index.html","Home"),("atlas.html","Atlas"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
            ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
            ("methodology.html","Methodology"),("glossary.html","Glossary"),
            ("https://github.com/pq-cybarg/bubble-map","Source ↗")]

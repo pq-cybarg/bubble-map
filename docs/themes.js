@@ -1,0 +1,114 @@
+/* themes.js — the meta-layer powering the flagship landing and the Atlas.
+   One curated source of truth: the ~14 thematic systems of the investigation,
+   placed on a single axis (machine / concentration  ->  antidote / distribution),
+   how they connect, the scrollytelling beats, and the corpus stats.
+   Hand-curated overlay on top of the 118 research blocks; not auto-generated. */
+
+window.CORPUS = { blocks: 118, nodes: 376, edges: 432, scc: 12, sccRobust: 11 };
+
+/* group -> colour. machine/core = warm reds, capital = blue, lens = purple, antidote = green. */
+window.GROUPS = {
+  core:     { color: "#b8341f", label: "the machine — core" },
+  machine:  { color: "#cf5230", label: "the machine — chokepoints & extraction" },
+  capital:  { color: "#1f4e79", label: "capital & flows" },
+  lens:     { color: "#6c3483", label: "the lens — epistemics" },
+  antidote: { color: "#1f8a5b", label: "the antidote — distribution" }
+};
+
+/* ax in [-1 .. +1] : -1 = maximum concentration, +1 = the distributing antidote.
+   The force layout maps ax to x, so the picture itself reads left(machine)->right(antidote). */
+window.THEMES = [
+  { id:"ai-loop",     label:"AI capital loop",                 group:"core",     ax:-0.92, r:36,
+    stat:"11-firm robust circular core (SCC)",
+    blurb:"The machine-verified ring of circular financing among the AI majors — the loop the project is named for.",
+    href:"bubblemap.html" },
+  { id:"minerals",    label:"Critical minerals & rare-earth statecraft", group:"machine", ax:-0.82, r:27,
+    stat:"China ~92% of REE processing",
+    blurb:"The on/off export 'faucet', predatory pricing that bankrupts rivals, and the allied supply scramble.",
+    href:"r-spec-rare-earth-statecraft.html" },
+  { id:"compute",     label:"Compute & chip chokepoints",      group:"machine", ax:-0.74, r:24,
+    stat:"~95% advanced chips: Taiwan",
+    blurb:"TSMC, ASML's EUV monopoly, HBM memory — the physical bottlenecks the whole build rides on.",
+    href:"globe.html" },
+  { id:"defense",     label:"Defense & geopolitics",           group:"machine", ax:-0.64, r:23,
+    stat:"the arsenal is gated by REE",
+    blurb:"The 2026 conflicts, contested-resource states, the silicon shield, the state as circular financier.",
+    href:"globe.html" },
+  { id:"insurance",   label:"Insurance & healthcare extraction", group:"machine", ax:-0.55, r:23,
+    stat:"1.2 seconds per denied claim",
+    blurb:"PBM rent, algorithmic denial-as-margin, surveillance pricing — landing hardest on the disabled.",
+    href:"r-spec-disability-healthcare-insurance-extraction.html" },
+  { id:"control",     label:"Surveillance, digital ID & control", group:"machine", ax:-0.47, r:25,
+    stat:"the identity-proof paradox",
+    blurb:"Digital-ID orchestration, the real incentive behind it, and the coercion vectors a quantum break opens.",
+    href:"r-digitalid-orchestration-real-incentive.html" },
+  { id:"capital",     label:"Sovereign & private capital",     group:"capital", ax:-0.34, r:25,
+    stat:"MGX / PIF behind all three labs",
+    blurb:"Gulf sovereign wealth and private credit — the marginal external capital the loop requires.",
+    href:"dashboard.html" },
+  { id:"banking",     label:"Banking, credit & CRE",           group:"capital", ax:-0.28, r:22,
+    stat:"the private-credit mark machine",
+    blurb:"FDIC exposure, commercial real estate, and the cross-system contagion paths.",
+    href:"charts.html" },
+  { id:"stablecoin",  label:"Stablecoins & settlement rails",  group:"capital", ax:-0.20, r:20,
+    stat:"Tether reserves > some sovereigns",
+    blurb:"The GENIUS Act routes stablecoin reserves into T-bills — a legislated Treasury-demand rail.",
+    href:"research.html" },
+  { id:"legitimacy",  label:"Influence, legitimacy & power",   group:"capital", ax:-0.12, r:21,
+    stat:"legitimacy as spendable capital",
+    blurb:"The people and institutions — moral authority treated as a resource that abuse forfeits.",
+    href:"persons.html" },
+  { id:"hardmoney",   label:"Official data & hard money",      group:"lens",    ax:0.10, r:19,
+    stat:"priced in gold- AND silver-oz",
+    blurb:"Data-integrity audits, the rent/CPI divergence, and the hard-money lens at the time of measure.",
+    href:"research.html" },
+  { id:"techtransfer",label:"Research-security & tech-transfer", group:"lens",  ax:0.16, r:21,
+    stat:"open science as the leak",
+    blurb:"CSC's coercive terms, entanglement, the absorb→guard flip; capability transfer vs. witting intent.",
+    href:"r-spec-research-security-tech-transfer.html" },
+  { id:"epistemic",   label:"Epistemic collapse",              group:"lens",    ax:0.23, r:23,
+    stat:"when verifying costs more than producing",
+    blurb:"The reproducibility crisis, AI eval-gaming, and the arXiv / open-source / bug-bounty integrity floods.",
+    href:"r-spec-reproducibility-crisis.html" },
+  { id:"antidote",    label:"The antidote",                    group:"antidote",ax:0.95, r:32,
+    stat:"verify, don't trust",
+    blurb:"Post-quantum + decentralized, unlinkable identity, d/acc, formal verification — distribute power, deny the single winner.",
+    href:"r-spec-vitalik-buterin-thought.html" }
+];
+
+/* connections — how the systems feed each other; the through-line made visible. */
+window.LINKS = [
+  { s:"capital",     t:"ai-loop",     rel:"funds" },
+  { s:"ai-loop",     t:"compute",     rel:"rides on" },
+  { s:"ai-loop",     t:"minerals",    rel:"needs the hardware" },
+  { s:"minerals",    t:"defense",     rel:"gates the arsenal" },
+  { s:"compute",     t:"defense",     rel:"dual-use" },
+  { s:"defense",     t:"capital",     rel:"state-as-financier" },
+  { s:"capital",     t:"banking",     rel:"credit channel" },
+  { s:"capital",     t:"stablecoin",  rel:"reserve rail" },
+  { s:"banking",     t:"hardmoney",   rel:"priced vs. gold" },
+  { s:"ai-loop",     t:"insurance",   rel:"AI denial tools" },
+  { s:"insurance",   t:"control",     rel:"data extraction" },
+  { s:"control",     t:"legitimacy",  rel:"power" },
+  { s:"legitimacy",  t:"ai-loop",     rel:"governance & legitimacy" },
+  { s:"ai-loop",     t:"epistemic",   rel:"eval-gaming inflates" },
+  { s:"epistemic",   t:"techtransfer",rel:"the verify-cost wall" },
+  { s:"minerals",    t:"techtransfer",rel:"tech-transfer surface" },
+  { s:"stablecoin",  t:"legitimacy",  rel:"capture risk" },
+  { s:"antidote",    t:"control",     rel:"counters" },
+  { s:"antidote",    t:"ai-loop",     rel:"decentralizes" },
+  { s:"antidote",    t:"epistemic",   rel:"verify-don't-trust" },
+  { s:"antidote",    t:"techtransfer",rel:"structural defense" }
+];
+
+/* the on-ramp — four beats, weaving the four framings into one argument. */
+window.BEATS = [
+  { k:"01", h:"The brakes came off.",
+    p:"Distance and coordination cost once limited how much power could concentrate. Technology removed those brakes. Now capital, control, and capability accumulate at once — with nothing to slow them." },
+  { k:"02", h:"A dozen systems. One shape.",
+    p:"The AI capital loop, the mineral chokepoints, the surveillance-and-ID layer, the extraction stack, the epistemic commons — trace them and the same figure keeps appearing: concentration, mapped." },
+  { k:"03", h:"When verifying costs more than producing, trust collapses.",
+    p:"Across science, software, security, and the AI evals themselves — once it's cheaper to generate a plausible claim than to check it, every open system floods. You can no longer tell the real from the fabricated." },
+  { k:"04", h:"The antidote is structural.",
+    p:"Not a hero, not a regulator, not a better spy hunt. Verify, don't trust. Distribute power. Deny the single winner — by design, regardless of who's in the room." }
+];

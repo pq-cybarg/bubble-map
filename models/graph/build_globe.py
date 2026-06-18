@@ -126,7 +126,7 @@ LEGEND=[("choke","adversary / physical chokepoint"),("supply","allied supply res
         ("policy","policy node"),("threat","threat actor")]
 
 def _navlinks(active=""):
-    items=[("index.html","Home"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
+    items=[("index.html","Home"),("atlas.html","Atlas"),("dashboard.html","Dashboard"),("charts.html","Charts"),("research.html","Research"),
            ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),
            ("methodology.html","Methodology"),("glossary.html","Glossary"),
            ("https://github.com/pq-cybarg/bubble-map","Source ↗")]

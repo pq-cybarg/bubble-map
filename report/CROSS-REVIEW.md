@@ -33,10 +33,10 @@
 
 ## Newest file `spec-vitalik-buterin-thought.json` — related files by shared entities (verify cross-refs exist)
 - digitalid-orchestration-real-incentive.json: 5 shared entities
-- macro-crqc-quantum-landscape.json: 4 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- macro-cre-privatecredit.json: 4 shared entities
 - macro-pqc-chips.json: 4 shared entities
-- fin-ai-depreciation-debttrap.json: 3 shared entities
-- spec-network-overlay.json: 3 shared entities
-- spec-sec-filings-primary.json: 3 shared entities
+- macro-crqc-quantum-landscape.json: 4 shared entities
+- macro-cre-privatecredit.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- spec-disclosures-surveillance.json: 3 shared entities
+- spec-telecom-satellite.json: 3 shared entities
+- fin-coreweave-oracle.json: 3 shared entities

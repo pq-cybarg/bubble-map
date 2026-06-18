@@ -174,7 +174,7 @@ links=[{"source":e["from"],"target":e["to"],"layer":e.get("layer","financial"),
 # first source-file (stub) per node, for the panel's primary block link
 SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","other":"infrastructure / other"}
 
-NAV=('<div class=nav><a href="index.html">Home</a><a href="dashboard.html">Dashboard</a>'
+NAV=('<div class=nav><a href="index.html">Home</a><a href="atlas.html">Atlas</a><a href="dashboard.html">Dashboard</a>'
  '<a href="charts.html">Charts</a><a href="research.html">Research</a><a href="persons.html">Persons</a>'
  '<a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a>'
  '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a>'

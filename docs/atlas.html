@@ -1,0 +1,172 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Atlas — Bubble Map</title>
+<meta name=description content="The full-screen constellation of the investigation: every system, placed on the concentration-to-distribution spine, and how they connect.">
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<style>
+:root{--bg:#0e0d0c;--bg2:#171511;--cream:#faf8f2;--ink:#1c1b19;--accent:#7b2d26;--link:#1f4e79;
+  --muted:#9a8f7c;--line:#2a2620;--red:#cf5230;--blue:#4a86c8;--purple:#a06cc4;--green:#3fb985;--core:#e0654a;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#e8e2d4;overflow:hidden;
+  font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+a{color:#7fb0e0;text-decoration:none}
+#topbar{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;gap:10px;
+  padding:10px 14px;background:linear-gradient(180deg,rgba(14,13,12,.95),rgba(14,13,12,.0));flex-wrap:wrap}
+.brand{font-family:Georgia,serif;font-weight:700;color:#e0654a;font-size:17px;margin-right:6px}
+.brand a{color:#e0654a}
+#search{background:#1d1a15;border:1px solid #36312a;color:#efe9da;border-radius:8px;
+  padding:8px 11px;font:14px/1 -apple-system,sans-serif;width:200px}
+#search::placeholder{color:#7a715f}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:600 11px/1 -apple-system,sans-serif;letter-spacing:.04em;padding:6px 10px;border-radius:20px;
+  border:1px solid #3a342b;color:#cfc6b4;cursor:pointer;user-select:none;background:#17150f}
+.chip.off{opacity:.32;text-decoration:line-through}
+.chip .d{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.spacer{flex:1}
+.tlink{color:#cfc6b4;padding:7px 10px;border-radius:7px;font-weight:600}
+.tlink:hover{background:#1d1a15}
+#hint{position:fixed;bottom:12px;left:14px;color:#6f6757;font-size:12.5px;z-index:5;pointer-events:none}
+svg{display:block;width:100vw;height:100vh}
+line.lnk{stroke:#5a513f;stroke-opacity:.5}
+line.lnk.lit{stroke:#e0654a;stroke-opacity:.95;stroke-width:2px}
+.node{cursor:pointer}
+.node circle{stroke:#0e0d0c;stroke-width:2}
+.node text{font:600 13px/1.1 -apple-system,sans-serif;fill:#ece6d8;pointer-events:none;
+  paint-order:stroke;stroke:#0e0d0c;stroke-width:3.5px}
+.dim{opacity:.12!important}
+.relabel{font:600 11px/1 -apple-system,sans-serif;fill:#b9ad95;pointer-events:none;opacity:0;transition:opacity .2s}
+.relabel.show{opacity:.85}
+/* axis guide */
+.axis-g text{fill:#5a5446;font:600 12px/1 -apple-system,sans-serif}
+.axis-g line{stroke:#241f18}
+/* panel */
+.panel{position:fixed;top:0;right:0;height:100%;width:min(380px,90%);background:var(--cream);color:var(--ink);
+  box-shadow:-14px 0 40px rgba(0,0,0,.5);transform:translateX(101%);
+  transition:transform .32s cubic-bezier(.4,0,.2,1);padding:54px 22px 22px;overflow:auto;z-index:30}
+.panel.open{transform:none}
+.panel .x{position:absolute;top:12px;right:14px;cursor:pointer;color:#6b665d;font-size:22px;background:none;border:0}
+.panel .tag{display:inline-block;font:600 11px/1 -apple-system,sans-serif;letter-spacing:.1em;text-transform:uppercase;
+  color:#fff;padding:5px 9px;border-radius:20px;margin-bottom:12px}
+.panel h3{margin:0 0 8px;font:600 24px/1.15 Georgia,serif}
+.panel .stat{font:20px/1.2 Georgia,serif;color:var(--accent);margin:0 0 12px}
+.panel p{color:#33312c;font-size:16px;line-height:1.6;margin:0 0 16px}
+.panel .conns{border-top:1px solid #e4ddcc;padding-top:12px}
+.panel .conns h4{margin:0 0 8px;font:600 12px/1 -apple-system,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#6b665d}
+.panel .conns a{display:block;padding:5px 0;color:#1c1b19;font-size:15px}
+.panel .conns a span{color:#6b665d}
+.panel .go{display:inline-block;margin-top:4px;background:var(--accent);color:#fff;font-weight:600;
+  padding:11px 16px;border-radius:8px}
+@media(max-width:600px){#search{width:130px}.brand{font-size:15px}}
+</style></head>
+<body>
+
+<div id=topbar>
+  <span class=brand>◉ <a href="index.html">Bubble Map</a> · Atlas</span>
+  <input id=search placeholder="search systems…" autocomplete=off>
+  <div class=chips id=chips></div>
+  <span class=spacer></span>
+  <a class=tlink href="bubblemap.html">Full 376-node graph →</a>
+  <a class=tlink href="index.html">Home</a>
+</div>
+
+<svg id=svg></svg>
+<div id=hint>drag to move · scroll to zoom · hover to isolate · click to dive · left = concentration, right = the antidote</div>
+<div class=panel id=panel></div>
+
+<script>
+const C=window.CORPUS, G=window.GROUPS, TH=window.THEMES, LK=window.LINKS;
+/* brighter palette for dark bg */
+const DARKCOL={core:"#e0654a",machine:"#e8744a",capital:"#4a86c8",lens:"#a06cc4",antidote:"#3fb985"};
+const col=d=>DARKCOL[d.group];
+
+const svg=d3.select('#svg');
+let W=innerWidth,H=innerHeight;
+svg.attr('viewBox',[0,0,W,H]);
+const gZoom=svg.append('g');
+const zoom=d3.zoom().scaleExtent([.4,3.5]).on('zoom',ev=>gZoom.attr('transform',ev.transform));
+svg.call(zoom);
+
+/* axis guide */
+const axg=gZoom.append('g').attr('class','axis-g');
+axg.append('line').attr('x1',40).attr('x2',W-40).attr('y1',H-46).attr('y2',H-46);
+axg.append('text').attr('x',46).attr('y',H-54).text('◄ concentration · the machine');
+axg.append('text').attr('x',W-46).attr('y',H-54).attr('text-anchor','end').text('the antidote · distribution ►');
+
+const links=LK.map(l=>({source:l.s,target:l.t,rel:l.rel}));
+const lsel=gZoom.append('g').selectAll('line').data(links).join('line').attr('class','lnk').attr('stroke-width',1.4);
+const relsel=gZoom.append('g').selectAll('text').data(links).join('text').attr('class','relabel')
+  .attr('text-anchor','middle').text(d=>d.rel);
+
+const nsel=gZoom.append('g').selectAll('g').data(TH).join('g').attr('class','node');
+nsel.append('circle').attr('r',d=>d.r*1.15).attr('fill',col).attr('fill-opacity',.9);
+nsel.append('text').attr('text-anchor','middle').attr('dy',d=>d.r*1.15+15)
+  .each(function(d){const t=d3.select(this),words=d.label.split(' ');let line='',lines=[];
+    words.forEach(w=>{if((line+w).length>16){lines.push(line.trim());line=w+' ';}else line+=w+' ';});
+    lines.push(line.trim());if(lines.length>2)lines=[lines[0],lines.slice(1).join(' ')];
+    lines.forEach((ln,i)=>t.append('tspan').attr('x',0).attr('dy',i?14:0).text(ln));});
+
+const sim=d3.forceSimulation(TH)
+  .force('link',d3.forceLink(links).id(d=>d.id).distance(120).strength(.32))
+  .force('charge',d3.forceManyBody().strength(-900))
+  .force('x',d3.forceX(d=>W*(0.5+0.44*d.ax)).strength(.92))
+  .force('y',d3.forceY(H/2-10).strength(.08))
+  .force('collide',d3.forceCollide(d=>d.r*1.15+30))
+  .on('tick',tick);
+function tick(){
+  TH.forEach(d=>{d.x=Math.max(60,Math.min(W-60,d.x));d.y=Math.max(70,Math.min(H-70,d.y));});
+  lsel.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+  relsel.attr('x',d=>(d.source.x+d.target.x)/2).attr('y',d=>(d.source.y+d.target.y)/2-3);
+  nsel.attr('transform',d=>`translate(${d.x},${d.y})`);
+}
+nsel.call(d3.drag()
+  .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
+  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;})
+  .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+
+const neigh=new Map(TH.map(d=>[d.id,new Set([d.id])]));
+links.forEach(l=>{neigh.get(l.source.id||l.source).add(l.target.id||l.target);
+  neigh.get(l.target.id||l.target).add(l.source.id||l.source);});
+function focus(id){const n=neigh.get(id);
+  nsel.classed('dim',d=>!n.has(d.id));
+  lsel.classed('dim',d=>!(d.source.id===id||d.target.id===id)).classed('lit',d=>d.source.id===id||d.target.id===id);
+  relsel.classed('show',d=>d.source.id===id||d.target.id===id).classed('dim',d=>!(d.source.id===id||d.target.id===id));}
+function clearFocus(){nsel.classed('dim',false);lsel.classed('dim',false).classed('lit',false);relsel.classed('show',false).classed('dim',false);}
+nsel.on('mouseenter',(e,d)=>focus(d.id)).on('mouseleave',()=>{if(!panel.classList.contains('open'))clearFocus();});
+
+const panel=document.getElementById('panel');
+function openPanel(d){focus(d.id);
+  const conns=links.filter(l=>l.source.id===d.id||l.target.id===d.id).map(l=>{
+    const o=l.source.id===d.id?l.target:l.source,rel=l.source.id===d.id?l.rel:('← '+l.rel);
+    return `<a href="${o.href}"><b style="color:${col(o)}">●</b> ${o.label} <span>· ${rel}</span></a>`;}).join('');
+  panel.innerHTML=`<button class=x onclick="closePanel()">×</button>
+    <span class=tag style="background:${col(d)}">${G[d.group].label}</span>
+    <h3>${d.label}</h3><div class=stat>${d.stat}</div><p>${d.blurb}</p>
+    <a class=go href="${d.href}">Open this thread →</a>
+    <div class=conns><h4>Connects to</h4>${conns}</div>`;
+  panel.classList.add('open');}
+function closePanel(){panel.classList.remove('open');clearFocus();}
+window.closePanel=closePanel;
+nsel.on('click',(e,d)=>{e.stopPropagation();openPanel(d);});
+svg.on('click',closePanel);
+
+/* group filter chips */
+const chips=document.getElementById('chips');const active=new Set(Object.keys(G));
+Object.entries(G).forEach(([k,v])=>{const c=document.createElement('span');c.className='chip';
+  c.innerHTML=`<span class=d style="background:${DARKCOL[k]}"></span>${v.label.split(' — ')[0]}`;
+  c.onclick=()=>{active.has(k)?active.delete(k):active.add(k);c.classList.toggle('off');applyFilter();};
+  chips.appendChild(c);});
+function applyFilter(){const q=search.value.trim().toLowerCase();
+  nsel.style('display',d=>{const okG=active.has(d.group);
+    const okQ=!q||d.label.toLowerCase().includes(q)||d.blurb.toLowerCase().includes(q)||d.stat.toLowerCase().includes(q);
+    return (okG&&okQ)?null:'none';});
+  const vis=new Set(TH.filter(d=>active.has(d.group)&&(!q||d.label.toLowerCase().includes(q)||d.blurb.toLowerCase().includes(q)||d.stat.toLowerCase().includes(q))).map(d=>d.id));
+  lsel.style('display',d=>vis.has(d.source.id)&&vis.has(d.target.id)?null:'none');
+  relsel.style('display',d=>vis.has(d.source.id)&&vis.has(d.target.id)?null:'none');}
+const search=document.getElementById('search');search.addEventListener('input',applyFilter);
+
+addEventListener('resize',()=>{W=innerWidth;H=innerHeight;svg.attr('viewBox',[0,0,W,H]);
+  axg.select('line').attr('x2',W-40).attr('y1',H-46).attr('y2',H-46);
+  axg.selectAll('text').attr('y',H-54);axg.select('text:last-child').attr('x',W-46);
+  sim.force('x',d3.forceX(d=>W*(0.5+0.44*d.ax)).strength(.92)).force('y',d3.forceY(H/2-10).strength(.08)).alpha(.5).restart();});
+</script>
+</body></html>
