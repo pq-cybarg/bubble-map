@@ -31,4 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-disability-healthcare-insurance-extraction.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-research-security-tech-transfer.json` — related files by shared entities (verify cross-refs exist)
