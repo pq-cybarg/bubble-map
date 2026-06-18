@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "title": "When verification costs more than production: the reproducibility crisis, AI eval-gaming, and the integrity floods drowning science, open source, and security",
+    "generated": "2026-06-18",
+    "frame": "One mechanism, five collapses. THE LAW: an open or trust-based system stays healthy only while producing a contribution costs more than verifying it. Generative AI drove the cost of PRODUCING plausible artifacts (papers, pull requests, bug reports, benchmark-beating outputs) toward zero while the cost of VERIFYING them did not move - so the backpressure that gated every open system disappears, and the gate buckles. The same asymmetry is visible in: (1) science's reproducibility/fraud crisis (pre-existing, now AI-accelerated); (2) AI's OWN eval crisis (benchmark contamination => unfalsifiable capability claims that feed the bubble); (3) scientific publishing (arXiv restricting review/position papers, Oct 2025); (4) open-source maintenance (AI-slop PR floods; project shutdowns); (5) security (bug-bounty programs DDoS'd by hallucinated reports; curl quitting HackerOne). This is also the resolution of the 'deliberately-degraded process' question in spec-research-security-tech-transfer: when verification cost exceeds production cost you cannot distinguish honest-but-fragile from poisoned from fraudulent - which is the crisis itself.",
+    "WARNING": "Grade discipline. The replication/fraud statistics are cited with their ranges and disagreements (NOT a single scary number). The AI-causation of the publishing/OSS/security floods is well-documented (named projects, dated policies, maintainer statements). 'AI will end open bug bounties / open submission' is reported prediction + early evidence, graded as such, not certainty. Composition/division guard: 'AI' here is a tool lowering production cost, not an agent with intent; the harms are emergent from incentives, not a coordinating plan. No individual blamed.",
+    "method": "C&EN (replication-crisis coverage); Nature (replication protocols; fraud-outpacing); Northwestern 2025 fraud-network study; arXiv blog (Oct 31 2025 CS review/position-paper policy) + 404 Media/Decrypt; Cybernews/The New Stack/BleepingComputer/Heise/Hackaday (curl + Daniel Stenberg, HackerOne); DEV/LeadDev/AllThingsOpen/CodeRabbit (OSS AI-slop PR floods; Jazzband, Godot, Ghostty); arXiv surveys on benchmark data contamination (2406.04244; 2503.16402) + BenchLM. Companion to spec-research-security-tech-transfer (the degradation hypothesis routes here) and the AI-bubble blocks.",
+    "cross_refs": ["spec-research-security-tech-transfer.json"]
+  },
+
+  "the_thesis_backpressure_collapse": {
+    "the_law":"Every open, trust-based system (peer review, open-source contribution, coordinated vulnerability disclosure, public preprint servers, capability benchmarks) implicitly relied on EFFORT AS BACKPRESSURE: producing a plausible submission cost roughly as much as, or more than, evaluating it, so the submission rate self-limited and reviewers could keep up.",
+    "what_broke":"Generative AI collapsed the cost of PRODUCING plausible artifacts toward zero while leaving the cost of VERIFYING them roughly fixed (a human still has to read, reproduce, or test). The effort asymmetry inverts: one contributor + an agent can emit 5-50 plausible items in the time a maintainer evaluates one. The gate floods.",
+    "why_it_generalizes":"This is not five separate problems; it is one mechanism (verification_cost > production_cost) hitting five trust-based systems. Wherever 'looks legitimate' is cheap and 'is legitimate' is expensive to confirm, the system degrades toward noise - and the degradation is INDISTINGUISHABLE, item by item, from honest error or deliberate sabotage (see degradation_hypothesis_resolution).",
+    "grade":"strong synthesis (the mechanism is explicitly named by affected maintainers - Hashimoto's 'effort-based backpressure', Stenberg's 'AI is DDoSing open source'); the five instances below are each independently documented"
+  },
+
+  "science_replication_and_fraud": {
+    "replication_rates":"Large replication efforts find LOW robust reproduction: ~10-25% of preclinical/life-science effects reproduce robustly (many only partially; a majority fail); behavioral science is better at ~50%. The debate over whether '55% is too low' is itself live (Rubin) - graded as contested-magnitude, documented-direction.",
+    "fabrication":"A 2024 meta-analysis across ~75,000 studies estimated as many as 1 IN 7 may be at least partially fabricated (prior estimates were lower, ~2-8%) - so the magnitude is contested but non-trivial under any estimate.",
+    "trend_worsening":"A 2025 Northwestern study found the publication of FRAUDULENT science is OUTPACING the growth of legitimate publication, with organized fraud networks (paper mills) - i.e. the integrity problem is accelerating, not receding.",
+    "root_causes":"Positive-result/publication bias + underpowered studies + selective reporting + analytical flexibility => 'most published research findings are false' (Ioannidis' classic result). These predate AI; AI ACCELERATES them (cheap plausible manuscripts, AI-assisted paper mills).",
+    "grade":"fact (the crisis and its root causes are long-documented); contested-magnitude (exact replication % and fabrication % vary by field/method); fact (the 2025 fraud-outpacing finding)"
+  },
+
+  "the_ai_eval_mirror": {
+    "the_irony":"AI is not just the accelerant of others' integrity crises - it has its OWN, and a severe one, because the capability claims driving the bubble rest on benchmarks that are themselves contaminated/unreproducible.",
+    "benchmark_contamination":"Data contamination (benchmark questions/answers leaking into training data) inflates scores by ~5-15+ points; the SAME model weights swing 10-20 points depending on the eval harness; frontier models can reproduce gold patches/problem statements VERBATIM from just a task ID; performance drops sharply when questions are perturbed - 'every popular static benchmark is contaminated to some degree.'",
+    "why_it_feeds_the_bubble":"If headline capability numbers are inflated and harness-dependent, then 'the models are improving exponentially' is partly an artifact of measurement - an UNFALSIFIABLE-in-practice claim that justifies capex. This is the reproducibility crisis wearing an AI badge: production of impressive numbers is cheap; independent verification (clean, held-out, perturbed eval) is expensive and rare.",
+    "grade":"fact (contamination magnitude and harness-swing are documented in multiple 2024-2025 surveys/studies); inference (the degree to which inflated benchmarks specifically prop up bubble capex - directionally supported, not quantified)"
+  },
+
+  "arxiv_the_gate_buckles": {
+    "the_event":"Oct 31 2025: arXiv announced its Computer Science category will NO LONGER accept review articles, surveys, and position papers UNLESS already accepted at a journal/conference through successful peer review - reversing a long-standing moderator-discretion practice.",
+    "the_cause":"A flood of AI-generated review/survey papers (reportedly hundreds per month). Moderator Thomas G. Dietterich: 'We were driven to this decision by a big increase in LLM-assisted survey papers' and 'We don't have the moderator resources to examine these submissions.' Framed widely as 'yet another open submission process killed by LLMs.'",
+    "significance":"arXiv is the open preprint backbone of CS/physics/math. A 34-year-old open-submission norm partially closed because verification (moderation) could not scale against near-free production. The gate didn't fail at the math - it failed at the throughput.",
+    "grade":"fact (dated arXiv policy + named moderator statement + multiple outlets)"
+  },
+
+  "oss_slop_flood": {
+    "the_pattern":"Open-source maintainers are drowning in AI-generated pull requests and issues: verbose changes with nonsensical descriptions, contributions submitters cannot explain when questioned. ~96% of codebases depend on open source, so the maintainer layer is load-bearing for the whole software economy.",
+    "casualties":[
+      "Jazzband (a major Python project collective) shut down entirely, its lead maintainer citing unsustainable AI-spam PR/issue volume.",
+      "Godot engine (Remi Verschelde): triaging AI slop described as 'draining and demoralizing.'",
+      "Ghostty (Mitchell Hashimoto), Jan 2026: restricted AI-generated contributions to pre-approved issues/existing maintainers, explicitly because 'agentic programming has removed the effort-based backpressure that previously limited low-quality submissions.'"
+    ],
+    "the_named_mechanism":"Maintainers themselves name the cause: throughput asymmetry. A contributor+agent emits many PRs/day; review that took 15 minutes now takes a full day when facing 20-50 slop items/week. Unpaid triage crowds out genuine contributions and accelerates burnout. Tooling responses (e.g. SlopGuard) try to score/quarantine AI-slop PRs - an arms race.",
+    "grade":"fact (named projects, dated policies, maintainer statements)"
+  },
+
+  "bug_bounty_collapse": {
+    "the_case":"curl (Daniel Stenberg) is the canonical case. Pre-AI: ~1 security report/week. 2025: one new report every ~48 hours (volume doubled, quality cratered). ~1 in 5 bounty submissions were 'AI slop' - reports in confident, polite prose with ZERO substance: hallucinated APIs and functions that don't exist (e.g. an HTTP/3 'stream dependency cycle exploit' with fabricated GDB sessions/register dumps referencing a function not present in curl).",
+    "the_response":"curl shut its HackerOne bug bounty (Feb 2026), reopened when quality briefly improved, then paused vulnerability reports entirely (July 2026). Stenberg: 'AI is DDoSing open source.'",
+    "the_new_twist":"Even as models improved and reports became technically accurate, a NEW failure mode emerged: DUPLICATES - different researchers prompt the same AI, get the same answer, and submit identical reports, multiplying maintainer evaluation load. Accuracy did not solve the throughput asymmetry; it relocated it.",
+    "significance":"Coordinated vulnerability disclosure - a pillar of defensive security - depends on signal/noise being manageable. When noise is free to generate and signal is expensive to verify, the channel degrades; the predicted endpoint is the death of open, unpaid bug bounties.",
+    "grade":"fact (curl/Stenberg statements, dated program changes, multiple outlets); prediction (the broader death of open bug bounties) graded as reported-forecast + early evidence"
+  },
+
+  "degradation_hypothesis_resolution": {
+    "the_link":"This block is where the 'deliberately-degraded process' question (spec-research-security-tech-transfer) resolves. The reason you CANNOT distinguish a deliberately-poisoned process from an honest-but-non-reproducible one is the SAME reason you cannot distinguish an AI-slop bug report from a real one without doing the full verification: when verification cost exceeds production cost, the categories collapse into each other at the point of observation.",
+    "consequence":"Intent becomes unrecoverable from the artifact alone (sabotage vs fraud vs honest-fragility vs hallucination all LOOK alike). So - exactly as in the research-security block - the rational posture is INTENT-INDEPENDENT: re-introduce verification/backpressure (reproduce before trusting; proof-of-effort for contributions; provenance; gated submission) rather than try to read minds from outputs.",
+    "grade":"strong synthesis (follows directly from the named mechanism)"
+  },
+
+  "what_reintroduces_backpressure": {
+    "responses":[
+      "GATING: arXiv-style 'must pass peer review first' for low-novelty content; pre-approval for contributions (Ghostty).",
+      "PROVENANCE + PROOF-OF-EFFORT: require disclosure of AI assistance, reproducible artifacts, or a human-attestation/stake that costs the submitter something.",
+      "VERIFY-DON'T-TRUST: independent reproduction/perturbed evals before relying on a result or a benchmark number (the AI-eval fix mirrors the science fix).",
+      "ECONOMIC RE-PRICING: paying reviewers/maintainers (the unpaid-triage layer is the actual bottleneck), or charging submitters to restore cost symmetry.",
+      "DETECTION ARMS-RACE (weakest): AI-slop classifiers (SlopGuard) - useful but adversarial and gameable."
+    ],
+    "the_caution":"All of these RE-CLOSE openness to some degree - the cost of the flood is the partial loss of the open commons (open preprints, open contribution, open disclosure). That is the real societal price, and it is already being paid.",
+    "grade":"fact (each response is observed in the wild); the trade-off (flood-control vs open-commons erosion) is the honest framing"
+  },
+
+  "edges": [
+    {"from":"AI_Generated_Content","to":"Scientific_Publishing","instrument":"relationship","raw_instrument":"LLM-generated review/survey/position-paper flood -> arXiv CS restricts (Oct-2025); moderation throughput overwhelmed","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-reproducibility-crisis.json","note":"OVERLAY: backpressure collapse (publishing)"},
+    {"from":"AI_Generated_Content","to":"Open_Source_Ecosystem","instrument":"relationship","raw_instrument":"AI-slop PRs + hallucinated bug reports -> curl exits HackerOne, Jazzband shutdown, maintainer burnout","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-reproducibility-crisis.json","note":"OVERLAY: backpressure collapse (OSS + security)"},
+    {"from":"AI_Generated_Content","to":"AI_Benchmarks","instrument":"relationship","raw_instrument":"benchmark data contamination inflates capability scores (5-15+ pts; 10-20pt harness swing) feeding bubble capex","amount_usd":null,"status":"recurring","declared_circular":false,"cancelable":false,"source_file":"spec-reproducibility-crisis.json","note":"OVERLAY: AI's own reproducibility crisis"}
+  ],
+
+  "limits":"DOCUMENTED: the science replication/fabrication crisis and its acceleration (with contested magnitudes stated as such); benchmark data contamination and harness-dependence; the dated arXiv CS policy (Oct 31 2025) and its stated cause; the named OSS casualties (Jazzband/Godot/Ghostty) and the maintainer-named 'effort-based backpressure' mechanism; the curl/HackerOne bug-bounty collapse and the duplicate-report twist. GRADED AS PREDICTION (not certainty): the broader death of open bug bounties / open submission. SYNTHESIS (not a separately-proven claim): that one mechanism (verification_cost > production_cost) underlies all five, and that it is the same wall that makes deliberate sabotage indistinguishable from honest non-reproducibility. Composition/division guard: 'AI' is a cost-shifting tool, not an intending agent; harms are emergent from incentives. Overlay edges connect the integrity-collapse nodes; the financial proof core is untouched."
+}

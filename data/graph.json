@@ -12,9 +12,17 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Benchmarks": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "AI_Datacenters": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
+    },
+    "AI_Generated_Content": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "AI_Native_OS": {
       "sector": "tech",
@@ -884,6 +892,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Open_Source_Ecosystem": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "Oracle": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -1142,6 +1154,10 @@
     },
     "ScaleAI": {
       "sector": "ai_data",
+      "has_exogenous_revenue": true
+    },
+    "Scientific_Publishing": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "Secure_Element_Vendors": {
@@ -3748,6 +3764,45 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-strategic-lenses.json,spec-manufactured-division.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Generated_Content",
+      "to": "Scientific_Publishing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "LLM-generated review/survey/position-paper flood -> arXiv CS restricts (Oct-2025); moderation throughput overwhelmed",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-reproducibility-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Generated_Content",
+      "to": "Open_Source_Ecosystem",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AI-slop PRs + hallucinated bug reports -> curl exits HackerOne, Jazzband shutdown, maintainer burnout",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-reproducibility-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Generated_Content",
+      "to": "AI_Benchmarks",
+      "instrument": "capex",
+      "layer": "financial",
+      "raw_instrument": "benchmark data contamination inflates capability scores (5-15+ pts; 10-20pt harness swing) feeding bubble capex",
+      "amount_usd": null,
+      "status": "recurring",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-reproducibility-crisis.json",
       "note": ""
     },
     {
@@ -6976,10 +7031,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 365,
-    "num_edges": 424,
-    "num_financial_edges": 129,
-    "num_structural_edges": 295,
+    "num_nodes": 369,
+    "num_edges": 427,
+    "num_financial_edges": 130,
+    "num_structural_edges": 297,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7034,7 +7089,15 @@
         "Anthropic"
       ],
       [
-        "Microsoft",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -7042,21 +7105,8 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "AMD",
+        "Microsoft",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
       ],
       [
         "Anthropic",
@@ -7064,15 +7114,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -7083,13 +7132,19 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -7137,8 +7192,22 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "AI_Benchmarks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AI_Datacenters": {
         "total_usd": 800000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Generated_Content": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8663,6 +8732,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Open_Source_Ecosystem": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Oracle": {
         "total_usd": 335000000000,
         "circular_usd": 300000000000,
@@ -9113,6 +9189,13 @@
       },
       "ScaleAI": {
         "total_usd": 14300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Scientific_Publishing": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
