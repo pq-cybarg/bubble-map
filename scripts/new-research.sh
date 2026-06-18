@@ -15,4 +15,5 @@ python3 models/graph/cross_section.py >/dev/null 2>&1 || true # cross-sectional 
 python3 models/graph/build_charts.py >/dev/null
 python3 models/graph/build_persons.py >/dev/null   # Persons of Interest dossier tab
 python3 models/graph/build_bubblemap.py >/dev/null # interactive funding-graph bubble map
+python3 models/graph/build_theme_index.py          # theme->blocks index for the flagship/atlas zoom
 echo "==> Re-review done. Read report/AUDIT.md + report/CROSS-REVIEW.md and reconcile flags before committing."

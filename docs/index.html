@@ -110,11 +110,12 @@ line.lnk{stroke:#bcae90;stroke-opacity:.45;transition:stroke-opacity .2s,stroke 
 
 /* ---- situation board ---- */
 .board{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:22px}
-.tile{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+.tile{position:relative;display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
   padding:16px 16px 18px;border-top:4px solid var(--g);transition:transform .15s,box-shadow .15s}
 .tile:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.08)}
-.tile .gl{font:600 11px/1 -apple-system,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--g)}
-.tile h3{margin:7px 0 6px;font-size:19px;color:var(--ink)}
+.tile .viz{position:absolute;top:13px;right:13px;opacity:.95}
+.tile .gl{font:600 11px/1 -apple-system,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--g);padding-right:52px}
+.tile h3{margin:7px 0 6px;font-size:19px;color:var(--ink);padding-right:52px}
 .tile .s{font-family:Georgia,serif;color:var(--accent);font-size:16px;margin:0 0 8px}
 .tile p{margin:0;color:#4a463f;font-size:14.5px;line-height:1.55}
 .tile .more{margin-top:10px;color:var(--link);font:600 13px/1 -apple-system,sans-serif}
@@ -200,7 +201,7 @@ footer a{margin:0 8px}
     <h2 style="color:#f6f1e6">Where the machine breaks.</h2>
     <p class=intro style="color:#cfc8b8">The financial core isn't argued — it's machine-verified (Tarjan SCC, Z3, TLA+, Alloy). These are the numbers the proofs bite on.</p>
     <div class=figs>
-      <div class=fig><div class=n>11-firm</div><div class=l>machine-verified circular core (Tarjan SCC) — 12-firm full, 11-firm robust excluding cancelable contracts</div></div>
+      <div class=fig><div class=n>11-firm</div><div class=l>the AI majors financing one another in a closed loop — machine-proven circular, not merely alleged</div></div>
       <div class=fig><div class=n>$1.03T</div><div class=l>external capital OpenAI needs — Z3-unsatisfiable without it (theorem T3)</div></div>
       <div class=fig><div class=n>-81%</div><div class=l>a US home priced in gold since 1998 — the hard-money lens</div></div>
       <div class=fig><div class=n>+1985%</div><div class=l>NVDA priced in gold &nbsp;·&nbsp; vs <b>-69%</b> for the S&amp;P 500 in gold</div></div>
@@ -260,6 +261,7 @@ footer a{margin:0 8px}
   </div>
 </footer>
 
+<script src="themes.js"></script>
 <script>
 const C=window.CORPUS, G=window.GROUPS, TH=window.THEMES, LK=window.LINKS, BEATS=window.BEATS;
 sb.textContent=C.blocks; sn.textContent=C.nodes; se.textContent=C.edges;
@@ -346,11 +348,32 @@ svg.on('click',closePanel);
 addEventListener('resize',()=>{const nw=host.clientWidth;if(Math.abs(nw-W)>40){W=nw;H=svg.node().clientHeight;
   svg.attr('viewBox',[0,0,W,H]);sim.force('x',d3.forceX(d=>W*(0.5+0.43*d.ax)).strength(.9)).alpha(.5).restart();}});
 
-/* ---- situation board ---- */
+/* ---- situation board (with per-theme mini-viz) ---- */
+const VIZ=window.VIZ||{};
+function makeViz(t,v,c){const S=46,cx=23,cy=23;
+  if(t==='ring'){let s='';const R=15;for(let i=0;i<v;i++){const a=-Math.PI/2+i*2*Math.PI/v;
+    s+=`<circle cx="${(cx+R*Math.cos(a)).toFixed(1)}" cy="${(cy+R*Math.sin(a)).toFixed(1)}" r="2.6" fill="${c}"/>`;}
+    return `<svg width="${S}" height="${S}">${s}<circle cx="${cx}" cy="${cy}" r="3.4" fill="none" stroke="${c}" stroke-width="1.4"/></svg>`;}
+  if(t==='bar'){const w=38,x=4,y=22,p=Math.max(2,Math.min(100,v));
+    return `<svg width="${S}" height="${S}"><text x="${x}" y="15" font-size="11" font-weight="700" fill="${c}" font-family="-apple-system,sans-serif">${v}%</text>`+
+    `<rect x="${x}" y="${y}" width="${w}" height="7" rx="3.5" fill="${c}" fill-opacity="0.18"/>`+
+    `<rect x="${x}" y="${y}" width="${(w*p/100).toFixed(1)}" height="7" rx="3.5" fill="${c}"/></svg>`;}
+  if(t==='gauge'){const p=Math.max(0,Math.min(100,v)),a=Math.PI*(1-p/100),r=15,bY=31;
+    return `<svg width="${S}" height="${S}"><path d="M8 ${bY} A15 15 0 0 1 38 ${bY}" fill="none" stroke="${c}" stroke-opacity="0.22" stroke-width="4"/>`+
+    `<path d="M8 ${bY} A15 15 0 0 1 ${(cx+r*Math.cos(a)).toFixed(1)} ${(bY-r*Math.sin(a)).toFixed(1)}" fill="none" stroke="${c}" stroke-width="4"/>`+
+    `<line x1="${cx}" y1="${bY}" x2="${(cx+13*Math.cos(a)).toFixed(1)}" y2="${(bY-13*Math.sin(a)).toFixed(1)}" stroke="${c}" stroke-width="2"/></svg>`;}
+  if(t==='pulse'){let s='';for(let i=1;i<=v;i++)s+=`<circle cx="${cx}" cy="${cy}" r="${i*5+1}" fill="none" stroke="${c}" stroke-width="1.6" stroke-opacity="${(1-i*0.18).toFixed(2)}"/>`;
+    return `<svg width="${S}" height="${S}"><circle cx="${cx}" cy="${cy}" r="2.6" fill="${c}"/>${s}</svg>`;}
+  if(t==='spark'){const pts=v>=0?"4,32 14,25 22,27 31,15 42,9":"4,16 12,29 20,13 29,30 42,22";
+    return `<svg width="${S}" height="${S}"><polyline points="${pts}" fill="none" stroke="${c}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/></svg>`;}
+  if(t==='scale'){return `<svg width="${S}" height="${S}"><line x1="9" y1="16" x2="37" y2="16" stroke="${c}" stroke-width="2"/><line x1="23" y1="16" x2="23" y2="34" stroke="${c}" stroke-width="2"/><path d="M19 34 h8" stroke="${c}" stroke-width="2"/><circle cx="9" cy="22" r="4" fill="none" stroke="${c}" stroke-width="1.8"/><circle cx="37" cy="22" r="4" fill="${c}"/></svg>`;}
+  if(t==='shield'){return `<svg width="${S}" height="${S}"><path d="M23 6 L37 11 V24 C37 31 31 37 23 40 C15 37 9 31 9 24 V11 Z" fill="none" stroke="${c}" stroke-width="2"/><path d="M17 23 l4 4 l8 -9" fill="none" stroke="${c}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>`;}
+  return '';}
 const board=document.getElementById('board');
 TH.forEach(d=>{const a=document.createElement('a');a.className='tile';a.href=d.href;
   a.style.setProperty('--g',col(d));
-  a.innerHTML=`<div class=gl>${G[d.group].label.split(' — ')[0]}</div><h3>${d.label}</h3>
+  const vz=VIZ[d.id]?`<span class=viz>${makeViz(VIZ[d.id].type,VIZ[d.id].val,col(d))}</span>`:'';
+  a.innerHTML=`${vz}<div class=gl>${G[d.group].label.split(' — ')[0]}</div><h3>${d.label}</h3>
     <div class=s>${d.stat}</div><p>${d.blurb}</p><div class=more>Open →</div>`;
   board.appendChild(a);});
 </script>

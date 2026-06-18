@@ -112,3 +112,22 @@ window.BEATS = [
   { k:"04", h:"The antidote is structural.",
     p:"Not a hero, not a regulator, not a better spy hunt. Verify, don't trust. Distribute power. Deny the single winner — by design, regardless of who's in the room." }
 ];
+
+/* mini-viz per theme for the situation board. Schematic glyphs; bars use the real % from the stat.
+   types: ring(val=count) · bar(val=percent) · spark(val=+1 up / -1 volatile) · pulse(val=ring count) · shield · scale */
+window.VIZ = {
+  "ai-loop":     { type:"ring",  val:11 },
+  "minerals":    { type:"bar",   val:92 },
+  "compute":     { type:"bar",   val:95 },
+  "defense":     { type:"pulse", val:3 },
+  "insurance":   { type:"gauge", val:88 },
+  "control":     { type:"pulse", val:4 },
+  "capital":     { type:"spark", val:1 },
+  "banking":     { type:"spark", val:-1 },
+  "stablecoin":  { type:"bar",   val:70 },
+  "legitimacy":  { type:"ring",  val:7 },
+  "hardmoney":   { type:"scale", val:0 },
+  "techtransfer":{ type:"pulse", val:2 },
+  "epistemic":   { type:"spark", val:1 },
+  "antidote":    { type:"shield",val:0 }
+};

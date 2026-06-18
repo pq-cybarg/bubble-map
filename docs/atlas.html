@@ -56,6 +56,12 @@ line.lnk.lit{stroke:#e0654a;stroke-opacity:.95;stroke-width:2px}
 .panel .conns a span{color:#6b665d}
 .panel .go{display:inline-block;margin-top:4px;background:var(--accent);color:#fff;font-weight:600;
   padding:11px 16px;border-radius:8px}
+.panel .blocks{border-top:1px solid #e4ddcc;padding-top:12px;margin-top:14px}
+.panel .blocks h4{margin:0 0 8px;font:600 12px/1 -apple-system,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#6b665d}
+.panel .blocks a{display:block;padding:4px 0;font-size:14px;color:#1c1b19;line-height:1.4}
+.panel .blocks a:hover{color:var(--accent)}
+.sat circle{stroke:#0e0d0c;stroke-width:1.5;cursor:pointer}
+line.satlnk{stroke:#6f6757;stroke-opacity:.5}
 @media(max-width:600px){#search{width:130px}.brand{font-size:15px}}
 </style></head>
 <body>
@@ -73,6 +79,7 @@ line.lnk.lit{stroke:#e0654a;stroke-opacity:.95;stroke-width:2px}
 <div id=hint>drag to move · scroll to zoom · hover to isolate · click to dive · left = concentration, right = the antidote</div>
 <div class=panel id=panel></div>
 
+<script src="themes.js"></script>
 <script>
 const C=window.CORPUS, G=window.GROUPS, TH=window.THEMES, LK=window.LINKS;
 /* brighter palette for dark bg */
@@ -133,18 +140,43 @@ function focus(id){const n=neigh.get(id);
 function clearFocus(){nsel.classed('dim',false);lsel.classed('dim',false).classed('lit',false);relsel.classed('show',false).classed('dim',false);}
 nsel.on('mouseenter',(e,d)=>focus(d.id)).on('mouseleave',()=>{if(!panel.classList.contains('open'))clearFocus();});
 
+/* theme -> member research blocks (auto-grouped index), for the zoom */
+let THEMEBLOCKS={};
+fetch('theme-blocks.json').then(r=>r.json()).then(j=>THEMEBLOCKS=j).catch(()=>{});
+const gSat=gZoom.append('g');
+let pinned=null;
+function clearSats(){gSat.selectAll('*').remove();}
+function spawnSats(d){clearSats();const blocks=THEMEBLOCKS[d.id]||[];if(!blocks.length)return;
+  const show=blocks.slice(0,16);
+  show.forEach((b,i)=>{const ring=Math.floor(i/9),inRing=Math.min(9,show.length-ring*9),idx=i-ring*9;
+    const ang=-Math.PI/2+idx*2*Math.PI/inRing,R=66+ring*42;
+    const x=d.x+R*Math.cos(ang),y=d.y+R*Math.sin(ang);
+    gSat.append('line').attr('class','satlnk').attr('x1',d.x).attr('y1',d.y).attr('x2',x).attr('y2',y);
+    const g=gSat.append('g').attr('class','sat').attr('transform',`translate(${x},${y})`)
+      .on('click',(e)=>{e.stopPropagation();location.href=b.h;});
+    g.append('title').text(b.t);
+    g.append('circle').attr('r',5.5).attr('fill',col(d)).attr('fill-opacity',.88);});
+  if(blocks.length>16){const g=gSat.append('g').attr('transform',`translate(${d.x},${d.y+ (66+42*2)})`);
+    g.append('text').attr('text-anchor','middle').attr('fill','#9a8f7c').attr('font-size','11').text('+'+(blocks.length-16)+' more in panel ↗');}
+}
 const panel=document.getElementById('panel');
-function openPanel(d){focus(d.id);
+function openPanel(d){
+  if(pinned){pinned.fx=null;pinned.fy=null;} pinned=d; d.fx=d.x; d.fy=d.y;  /* pin so satellites stay aligned */
+  focus(d.id); spawnSats(d);
   const conns=links.filter(l=>l.source.id===d.id||l.target.id===d.id).map(l=>{
     const o=l.source.id===d.id?l.target:l.source,rel=l.source.id===d.id?l.rel:('← '+l.rel);
     return `<a href="${o.href}"><b style="color:${col(o)}">●</b> ${o.label} <span>· ${rel}</span></a>`;}).join('');
+  const blocks=THEMEBLOCKS[d.id]||[];
+  const blist=blocks.length?`<div class=blocks><h4>Research blocks · ${blocks.length}</h4>`+
+    blocks.map(b=>`<a href="${b.h}">› ${b.t}</a>`).join('')+`</div>`:'';
   panel.innerHTML=`<button class=x onclick="closePanel()">×</button>
     <span class=tag style="background:${col(d)}">${G[d.group].label}</span>
     <h3>${d.label}</h3><div class=stat>${d.stat}</div><p>${d.blurb}</p>
     <a class=go href="${d.href}">Open this thread →</a>
-    <div class=conns><h4>Connects to</h4>${conns}</div>`;
+    <div class=conns><h4>Connects to</h4>${conns}</div>${blist}`;
   panel.classList.add('open');}
-function closePanel(){panel.classList.remove('open');clearFocus();}
+function closePanel(){panel.classList.remove('open');clearFocus();clearSats();
+  if(pinned){pinned.fx=null;pinned.fy=null;pinned=null;}}
 window.closePanel=closePanel;
 nsel.on('click',(e,d)=>{e.stopPropagation();openPanel(d);});
 svg.on('click',closePanel);
