@@ -22,7 +22,7 @@ Canonical numbers (from data/*.json — the source of truth):
 - ALL VALID
 
 ## Cross-document consistency flags
-- ⚠ stale model count '36' in report/EXECUTIVE-SUMMARY.md (actual ~39)
+- none — consistent
 
 ## Leg coverage (research present?)
 - AI core: ✓
