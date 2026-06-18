@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-vitalik-buterin-thought.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 5 shared entities
-- macro-pqc-chips.json: 4 shared entities
-- macro-crqc-quantum-landscape.json: 4 shared entities
-- macro-cre-privatecredit.json: 4 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- spec-disclosures-surveillance.json: 3 shared entities
-- spec-telecom-satellite.json: 3 shared entities
-- fin-coreweave-oracle.json: 3 shared entities
+## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-corporate.json: 9 shared entities
+- macro-crqc-quantum-landscape.json: 8 shared entities
+- macro-pqc-chips.json: 8 shared entities
+- fin-hedera-connections.json: 7 shared entities
+- spec-disclosures-surveillance.json: 7 shared entities
+- altcoin-lens.json: 7 shared entities
+- spec-network-overlay.json: 7 shared entities
+- temporal-bridges.json: 7 shared entities

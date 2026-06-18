@@ -133,6 +133,22 @@ A concrete "good version" (re-derived in discussion): **decentralized private ro
 
 **Bottom line:** this *is* the good version — decentralized, unlinkable, domain-separated, PQ-rootable — and the crypto has existed for **~40 years.** So the binding constraint is **not cryptography; it's governance**: will the system be *mandated* to interoperate on unlinkable, decentralized, domain-separated terms, or will status/uniqueness/break-glass pressures collapse it back to a linkable centralized anchor? Which returns to the win condition: **lock this architecture into law/standards before the centralized rail becomes the default by exhaustion.** A genuinely viable vector — bounded by policy, not math.
 
+## The honeypot, realized — two live cases (no quantum required)
+
+The block warns that centralizing identity data builds a honeypot. Two recent breaches instantiate it — not via a quantum break, but by ordinary theft:
+
+- **Texas, 2026-06-18** — a government breach exposed **3M+ people's** records: **driver's-license info and passport numbers** (plus emails, phones, addresses), through the vendor for the **Parks & Wildlife hunting-and-fishing license** system. No ransom reported; no attribution.
+- **European Commission "Europa.eu", disclosed 2026-03-27** — the **ShinyHunters** group exfiltrated **~350 GB** (mail dumps, databases, contracts) from the cloud hosting Europa.eu, exposing data from **~30 EU entities** (the Commission says core internal systems were not hit).
+
+Together they instantiate five of this block's claims:
+1. **Aggregation = honeypot** — centralizing data makes one high-value target (*"whoever has the information has the power"*).
+2. **Every system becomes an identity honeypot** — a *fishing-license* system held passports; the surface is the whole sprawl.
+3. **Third-party / supply-chain vector** — both came through the **vendor/cloud** layer, not the front door.
+4. **The static-credential / identity-proof paradox** — license and passport numbers are **non-rotatable**; once stolen, permanently compromised — exactly what rotatable, unlinkable, minimal-disclosure identity dissolves.
+5. **The architect can't secure itself** — the **European Commission**, the very body building the EU **eIDAS 2.0** digital-ID wallet, couldn't keep its own public infrastructure unbreached. *"Trust the central issuer to hold it safely"* fails at the source.
+
+**The lesson:** this is the plaintext, *no-quantum-required* version of harvest-now — the centralized-aggregation model fails by **ordinary breach** long before Q-Day, and that failure mode is precisely what a decentralized/unlinkable/rotatable architecture prevents. *Data you don't aggregate can't be stolen in bulk; credentials you can rotate survive their own exposure.* Empirical support for the antidote — no claim of intent required. **Grade: fact** (both breaches reported); the five-way mapping is labeled analysis.
+
 ## The honest boundary (what this does and does not claim)
 - **Provable / asserted:** the actors, the documents, the **convergence calendar** (eIDAS 2.0 wallets + Digital Euro + Chat Control trilogues all landing **2026–27**), the **programmability/control capability** (Carstens, on record), the **debanking precedent**, **China as the existing extreme**, and that the **AI-builders also build the ID layer**.
 - **Not provable / not asserted:** a single coordinating cabal; that *every* actor shares the dark motive; that the dystopian use is *inevitable* rather than *enabled*.
