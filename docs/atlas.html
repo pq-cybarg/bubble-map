@@ -76,7 +76,7 @@ line.satlnk{stroke:#6f6757;stroke-opacity:.5}
 </div>
 
 <svg id=svg></svg>
-<div id=hint>drag to move · scroll to zoom · hover to isolate · click to dive · left = concentration, right = the antidote</div>
+<div id=hint>drag to move · scroll to zoom · hover to isolate · click to dive · left = concentration, right = proposed countermeasures</div>
 <div class=panel id=panel></div>
 
 <script src="themes.js"></script>
@@ -97,7 +97,7 @@ svg.call(zoom);
 const axg=gZoom.append('g').attr('class','axis-g');
 axg.append('line').attr('x1',40).attr('x2',W-40).attr('y1',H-46).attr('y2',H-46);
 axg.append('text').attr('x',46).attr('y',H-54).text('◄ concentration · the machine');
-axg.append('text').attr('x',W-46).attr('y',H-54).attr('text-anchor','end').text('the antidote · distribution ►');
+axg.append('text').attr('x',W-46).attr('y',H-54).attr('text-anchor','end').text('distribution · countermeasures ►');
 
 const links=LK.map(l=>({source:l.s,target:l.t,rel:l.rel}));
 const lsel=gZoom.append('g').selectAll('line').data(links).join('line').attr('class','lnk').attr('stroke-width',1.4);

@@ -12,7 +12,7 @@ window.GROUPS = {
   machine:  { color: "#cf5230", label: "the machine — chokepoints & extraction" },
   capital:  { color: "#1f4e79", label: "capital & flows" },
   lens:     { color: "#6c3483", label: "the lens — epistemics" },
-  antidote: { color: "#1f8a5b", label: "the antidote — distribution" }
+  antidote: { color: "#1f8a5b", label: "countermeasures — distribution (proposed)" }
 };
 
 /* ax in [-1 .. +1] : -1 = maximum concentration, +1 = the distributing antidote.
@@ -70,10 +70,10 @@ window.THEMES = [
     stat:"when verifying costs more than producing",
     blurb:"The reproducibility crisis, AI eval-gaming, and the arXiv / open-source / bug-bounty integrity floods.",
     href:"r-spec-reproducibility-crisis.html" },
-  { id:"antidote",    label:"The antidote",                    group:"antidote",ax:0.95, r:32,
-    stat:"verify, don't trust",
-    blurb:"Post-quantum + decentralized, unlinkable identity, d/acc, formal verification — distribute power, deny the single winner.",
-    href:"r-spec-vitalik-buterin-thought.html" }
+  { id:"antidote",    label:"Decentralization & countermeasures", group:"antidote",ax:0.95, r:30,
+    stat:"proposed, contested — not a proven cure",
+    blurb:"The class of countervailing designs: post-quantum + decentralized, unlinkable, rotatable identity; open verification; distributed control. Drawn from a long lineage (Chaum, Merkle/cypherpunk, NIST PQC, and many others) — graded as proposed countermeasures, not an endorsed solution or any one thinker's blueprint.",
+    href:"r-digitalid-orchestration-real-incentive.html" }
 ];
 
 /* connections — how the systems feed each other; the through-line made visible. */
@@ -109,8 +109,8 @@ window.BEATS = [
     p:"The AI capital loop, the mineral chokepoints, the surveillance-and-ID layer, the extraction stack, the epistemic commons — trace them and the same figure keeps appearing: concentration, mapped." },
   { k:"03", h:"When verifying costs more than producing, trust collapses.",
     p:"Across science, software, security, and the AI evals themselves — once it's cheaper to generate a plausible claim than to check it, every open system floods. You can no longer tell the real from the fabricated." },
-  { k:"04", h:"The antidote is structural.",
-    p:"Not a hero, not a regulator, not a better spy hunt. Verify, don't trust. Distribute power. Deny the single winner — by design, regardless of who's in the room." }
+  { k:"04", h:"If there's a counter, it's structural.",
+    p:"Not a hero, not a regulator, not a better spy hunt — and not any one thinker's blueprint. The proposed counters are structural: distribute power, verify rather than trust, deny the single winner by design. Contested and unproven — the honest end of the map, not a promised cure." }
 ];
 
 /* mini-viz per theme for the situation board. Schematic glyphs; bars use the real % from the stat.
