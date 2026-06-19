@@ -55,6 +55,14 @@ and the macro, commodity, banking, and political-economy systems around it.
 Forward-looking items (SpaceX pricing, BOJ June hike), reversible "commitments" (Disney proved it), and unverified specifics are flagged in-line. Bilateral interbank exposures are not public; intent of named actors is not inferred from outcomes. See the honesty ledger in `report/UNMASKING.md §9`.
 
 ## Disclaimer
+This repository and the published site are **independent research, analysis, and opinion** offered for public-interest discussion and education. They are **not** financial, legal, or investment advice.
+
+**Automated / LLM-assisted grading — hallucination risk.** The evidence gradings (`fact | contested | weak | unsupported`) and much of the synthesis are produced with the help of large language models and automated tooling. **LLM output can be wrong or hallucinated.** A "fact" grade is an automated, best-effort assessment of public sources — **not** a guarantee of truth. Verify any figure against its cited primary source before relying on it. Only the explicitly-marked **proof core** is machine-verified (Z3 / TLA+ / Alloy); everything else is interpretive overlay.
+
+**No accusations; public records + good-faith interpretation.** Statements about identifiable people or organizations are drawn from public records and presented as **opinion and analysis, not assertions of fact** — and specifically **not** allegations of criminal conduct, fraud, or other unlawful behavior by any named party. Intent is **never** inferred from association or adjacency; where wrongdoing or intent would be the claim, it is marked unverified and not asserted. Behavioral notes on public figures are interpretation of the public record, not clinical diagnosis.
+
+**Good faith & corrections.** This is a good-faith effort that may contain errors. If you are named or referenced and believe something is inaccurate, unfair, or should be removed, please open an issue on this repository and it will be reviewed and corrected promptly.
+
 Structural analysis, not financial advice. Figures are cited to public sources; speculative threads are graded and kept out of the formal proofs.
 
 ## Age verification: steelmanned & refuted (`zkage/` + the brief)

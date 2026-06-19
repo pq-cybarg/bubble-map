@@ -74,7 +74,7 @@ def _navlinks(active=""):
            ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
     a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{html.escape(t)}</a>'
     return ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:11px 16px;'
-            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>')
+            'font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">'+"".join(a(h,t) for h,t in items)+'</div>'+'<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:6px 16px;border-bottom:1px solid #e4ddcc">Independent research &amp; opinion. Gradings are automated / LLM-assisted and may contain errors or hallucinations; nothing here is a statement of fact, financial advice, or an accusation of wrongdoing by any party. Claims about identifiable people or organizations reflect public records + good-faith interpretation; intent is not inferred from association. Behavioral notes are interpretation of the public record, not clinical diagnosis. <a href="methodology.html" style="color:#6b665d;text-decoration:underline">Methodology &amp; disclaimer</a>.</div>')
 NAV=_navlinks("Persons")
 
 # rows of the dossier body, in display order, with their label
