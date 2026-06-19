@@ -26,12 +26,31 @@
 "b": "spec-vitalik-buterin-thought"
 }
 ],
-"control": [
+"infofinance": [
+{
+"t": "Prediction markets — Polymarket / Kalshi: the CFTC accommodation, the ICE / Trump-family / a16z capital, election-integrity & insider concerns, and the reflexivity problem",
+"h": "r-spec-prediction-markets.html",
+"b": "spec-prediction-markets"
+}
+],
+"censorship": [
 {
 "t": "Collective Commercial Action as a Censorship / Deplatforming Lever",
 "h": "r-influence-ad-censorship.html",
 "b": "influence-ad-censorship"
 },
+{
+"t": "Financial & advertiser deplatforming — payment networks, ad alliances, moderation NGOs",
+"h": "r-spec-censorship-finance-adtech.html",
+"b": "spec-censorship-finance-adtech"
+},
+{
+"t": "Manufactured division — steering opinion toward group hatred, and contested social fault lines",
+"h": "r-spec-manufactured-division.html",
+"b": "spec-manufactured-division"
+}
+],
+"control": [
 {
 "t": "Device-ownership erosion → OS-bound identity — repair, the Windows cutover, AI-native OS, and the ZK-still-needs-PII catch",
 "h": "r-digitalid-device-ownership-erosion.html",
@@ -51,11 +70,6 @@
 "t": "Disclosures & surveillance overlay",
 "h": "r-spec-disclosures-surveillance.html",
 "b": "spec-disclosures-surveillance"
-},
-{
-"t": "Financial & advertiser deplatforming — payment networks, ad alliances, moderation NGOs",
-"h": "r-spec-censorship-finance-adtech.html",
-"b": "spec-censorship-finance-adtech"
 },
 {
 "t": "Global Digital Identity + Age Verification / Age Assurance Regulatory Wave (2023-2026)",
@@ -79,11 +93,6 @@
 }
 ],
 "epistemic": [
-{
-"t": "Prediction markets — Polymarket / Kalshi: the CFTC accommodation, the ICE / Trump-family / a16z capital, election-integrity & insider concerns, and the reflexivity problem",
-"h": "r-spec-prediction-markets.html",
-"b": "spec-prediction-markets"
-},
 {
 "t": "Re-reading the corpus under the strategic lenses — full block-by-block findings",
 "h": "r-spec-lens-rereads.html",
@@ -139,11 +148,69 @@
 "b": "spec-rare-earth-statecraft"
 }
 ],
+"energy": [
+{
+"t": "Energy / power leg — the AI + defense power bottleneck, nuclear/SMR PPAs, the turbine wall, and the Russia-enrichment chokepoint",
+"h": "r-energy-power.html",
+"b": "energy-power"
+},
+{
+"t": "Russia — energy, nuclear fuel & the Arctic: the chokepoints sanctions re-routed, not closed",
+"h": "r-geopolitics-russia-energy-arctic.html",
+"b": "geopolitics-russia-energy-arctic"
+},
+{
+"t": "The AI power & grid bottleneck — transformers, turbines, interconnection, fuel",
+"h": "r-macro-ai-power-grid-bottleneck.html",
+"b": "macro-ai-power-grid-bottleneck"
+}
+],
 "compute": [
 {
 "t": "Taiwan & TSMC — the silicon shield, and whether Arizona actually de-risks it",
 "h": "r-geopolitics-taiwan-silicon-shield.html",
 "b": "geopolitics-taiwan-silicon-shield"
+}
+],
+"space": [
+{
+"t": "Telecom + satellite / ground-station / TV-network layer — the connectivity rail",
+"h": "r-spec-telecom-satellite.html",
+"b": "spec-telecom-satellite"
+},
+{
+"t": "The physical information layer — undersea cables & the space/ISR layer",
+"h": "r-geopolitics-cables-space-layer.html",
+"b": "geopolitics-cables-space-layer"
+}
+],
+"threat": [
+{
+"t": "Foreign-bank US branches (~$3T+) — the dollar-funding node, the yen carry, and the IHC gap",
+"h": "r-macro-foreign-bank-branches.html",
+"b": "macro-foreign-bank-branches"
+},
+{
+"t": "The attribution layer: how UNC#### clusters graduate, and where North Korea fits",
+"h": "r-spec-unc-nk-attribution-map.html",
+"b": "spec-unc-nk-attribution-map"
+}
+],
+"scams": [
+{
+"t": "Scam-compound complex, FARA reputation-laundering, and a paid-disinformation offer to an influencer",
+"h": "r-spec-cambodia-scam-fara-paid-influence.html",
+"b": "spec-cambodia-scam-fara-paid-influence"
+},
+{
+"t": "SDNY/DOJ crypto-privacy prosecution practices — Samourai, Roman Storm/Tornado Cash, Pertsev, and the broader pattern (neutral)",
+"h": "r-spec-sdny-crypto-prosecution.html",
+"b": "spec-sdny-crypto-prosecution"
+},
+{
+"t": "Tornado Cash & Samourai Wallet — privacy-tool prosecutions and the code-is-speech axis",
+"h": "r-spec-tornado-samourai.html",
+"b": "spec-tornado-samourai"
 }
 ],
 "defense": [
@@ -158,44 +225,14 @@
 "b": "geopolitics-contested-resource-states"
 },
 {
-"t": "Energy / power leg — the AI + defense power bottleneck, nuclear/SMR PPAs, the turbine wall, and the Russia-enrichment chokepoint",
-"h": "r-energy-power.html",
-"b": "energy-power"
-},
-{
-"t": "Foreign-bank US branches (~$3T+) — the dollar-funding node, the yen carry, and the IHC gap",
-"h": "r-macro-foreign-bank-branches.html",
-"b": "macro-foreign-bank-branches"
-},
-{
 "t": "India — the swing power: DPI template, chips, Russian oil, and the US minerals tilt",
 "h": "r-geopolitics-india-swing-power.html",
 "b": "geopolitics-india-swing-power"
 },
 {
-"t": "Russia — energy, nuclear fuel & the Arctic: the chokepoints sanctions re-routed, not closed",
-"h": "r-geopolitics-russia-energy-arctic.html",
-"b": "geopolitics-russia-energy-arctic"
-},
-{
-"t": "Telecom + satellite / ground-station / TV-network layer — the connectivity rail",
-"h": "r-spec-telecom-satellite.html",
-"b": "spec-telecom-satellite"
-},
-{
-"t": "The attribution layer: how UNC#### clusters graduate, and where North Korea fits",
-"h": "r-spec-unc-nk-attribution-map.html",
-"b": "spec-unc-nk-attribution-map"
-},
-{
 "t": "The defense-industrial base — empty magazines, China's grip on the reload, and the defense-tech wave",
 "h": "r-geopolitics-defense-industrial-base.html",
 "b": "geopolitics-defense-industrial-base"
-},
-{
-"t": "The physical information layer — undersea cables & the space/ISR layer",
-"h": "r-geopolitics-cables-space-layer.html",
-"b": "geopolitics-cables-space-layer"
 },
 {
 "t": "The two-sided chip-chokepoint war — Western equipment vs China's materials (and who's racing to break it)",
@@ -220,6 +257,38 @@
 "b": "spec-insurance-bermuda"
 }
 ],
+"contagion": [
+{
+"t": "Cross-system contagion & interconnection — the channels between the bubbles",
+"h": "r-spec-cross-system-contagion.html",
+"b": "spec-cross-system-contagion"
+},
+{
+"t": "First Brands → UBS/O'Connor — the off-balance-sheet canary",
+"h": "r-macro-firstbrands-ubs.html",
+"b": "macro-firstbrands-ubs"
+},
+{
+"t": "Hedge funds & the Treasury basis trade — record leverage in the market that prices everything",
+"h": "r-macro-treasury-basis-trade.html",
+"b": "macro-treasury-basis-trade"
+},
+{
+"t": "On the timing of a violent unwind — certain vs uncertain",
+"h": "r-spec-unwind-timing.html",
+"b": "spec-unwind-timing"
+},
+{
+"t": "Pensions & LDI — the retirement balance sheet inside private markets",
+"h": "r-macro-pensions-ldi.html",
+"b": "macro-pensions-ldi"
+},
+{
+"t": "The Fed's impossible position + regional divergence + hidden leverage",
+"h": "r-macro-fed-trap-regional.html",
+"b": "macro-fed-trap-regional"
+}
+],
 "banking": [
 {
 "t": "Bank securities marks under zero-trust — \"held to par\" is a choice, not a price",
@@ -242,11 +311,6 @@
 "b": "macro-credit-unions"
 },
 {
-"t": "Cross-system contagion & interconnection — the channels between the bubbles",
-"h": "r-spec-cross-system-contagion.html",
-"b": "spec-cross-system-contagion"
-},
-{
 "t": "FDIC accountability — the Coinbase/History Associates FOIA fight, the court-found disclosure violation, and the \"pause letter\" campaign",
 "h": "r-spec-fdic-foia-coinbase.html",
 "b": "spec-fdic-foia-coinbase"
@@ -262,19 +326,9 @@
 "b": "macro-fintech-baas"
 },
 {
-"t": "First Brands → UBS/O'Connor — the off-balance-sheet canary",
-"h": "r-macro-firstbrands-ubs.html",
-"b": "macro-firstbrands-ubs"
-},
-{
 "t": "GSEs & the FHLB system — an ~$11T quasi-sovereign pool outside the FDIC lens",
 "h": "r-macro-gses-fhlb.html",
 "b": "macro-gses-fhlb"
-},
-{
-"t": "Hedge funds & the Treasury basis trade — record leverage in the market that prices everything",
-"h": "r-macro-treasury-basis-trade.html",
-"b": "macro-treasury-basis-trade"
 },
 {
 "t": "Historical bubble analogues, the post-2008 deregulation chain, and market-manipulation enforcement",
@@ -332,11 +386,6 @@
 "b": "macro-farm-credit-system"
 },
 {
-"t": "The Fed's impossible position + regional divergence + hidden leverage",
-"h": "r-macro-fed-trap-regional.html",
-"b": "macro-fed-trap-regional"
-},
-{
 "t": "US bank hierarchical exposure — the vulnerable subset, HTM vs AFS, and the stablecoin squeeze",
 "h": "r-macro-bank-hierarchy.html",
 "b": "macro-bank-hierarchy"
@@ -389,11 +438,6 @@
 "b": "spec-onchain-threat-actor-addresses"
 },
 {
-"t": "SDNY/DOJ crypto-privacy prosecution practices — Samourai, Roman Storm/Tornado Cash, Pertsev, and the broader pattern (neutral)",
-"h": "r-spec-sdny-crypto-prosecution.html",
-"b": "spec-sdny-crypto-prosecution"
-},
-{
 "t": "SEC / SDNY / FDIC crypto regulatory-capture, FOIA disclosures & the Ripple-timing question",
 "h": "r-spec-sec-sdny-regulatory.html",
 "b": "spec-sec-sdny-regulatory"
@@ -422,11 +466,6 @@
 "t": "The stablecoin → Treasury deficit rail",
 "h": "r-macro-stablecoin-treasury-rail.html",
 "b": "macro-stablecoin-treasury-rail"
-},
-{
-"t": "Tornado Cash & Samourai Wallet — privacy-tool prosecutions and the code-is-speech axis",
-"h": "r-spec-tornado-samourai.html",
-"b": "spec-tornado-samourai"
 }
 ],
 "capital": [
@@ -444,11 +483,6 @@
 "t": "Hidden, off-book & contingent sovereign debt — undisclosed lending, infrastructure liens, and the off-balance-sheet stack",
 "h": "r-macro-hidden-sovereign-debt.html",
 "b": "macro-hidden-sovereign-debt"
-},
-{
-"t": "Pensions & LDI — the retirement balance sheet inside private markets",
-"h": "r-macro-pensions-ldi.html",
-"b": "macro-pensions-ldi"
 },
 {
 "t": "The datacenter water, siting & ratepayer chokepoints — and the orbital escape",
@@ -493,11 +527,6 @@
 "b": "spec-japan-politics-social"
 },
 {
-"t": "Manufactured division — steering opinion toward group hatred, and contested social fault lines",
-"h": "r-spec-manufactured-division.html",
-"b": "spec-manufactured-division"
-},
-{
 "t": "Meta / Facebook / Instagram: Child-Safety & Online-Harms — Litigation and Policy Record",
 "h": "r-influence-meta-childsafety.html",
 "b": "influence-meta-childsafety"
@@ -506,11 +535,6 @@
 "t": "OpenAI's for-profit conversion & the $1.4T-vs-$25B gap",
 "h": "r-fin-openai-conversion-governance.html",
 "b": "fin-openai-conversion-governance"
-},
-{
-"t": "Scam-compound complex, FARA reputation-laundering, and a paid-disinformation offer to an influencer",
-"h": "r-spec-cambodia-scam-fara-paid-influence.html",
-"b": "spec-cambodia-scam-fara-paid-influence"
 },
 {
 "t": "SEC EDGAR Primary-Source Figures — AI-Capex Cluster",
@@ -592,11 +616,6 @@
 "b": "fin-microsoft-openai"
 },
 {
-"t": "On the timing of a violent unwind — certain vs uncertain",
-"h": "r-spec-unwind-timing.html",
-"b": "spec-unwind-timing"
-},
-{
 "t": "SpaceX / SPCX IPO + cancelable AI-compute deals (Google, Anthropic)",
 "h": "r-fin-spacex-spcx.html",
 "b": "fin-spacex-spcx"
@@ -610,11 +629,6 @@
 "t": "The AI Neocloud + Stargate Debt & Capacity-Commitment Circularity",
 "h": "r-fin-coreweave-oracle.html",
 "b": "fin-coreweave-oracle"
-},
-{
-"t": "The AI power & grid bottleneck — transformers, turbines, interconnection, fuel",
-"h": "r-macro-ai-power-grid-bottleneck.html",
-"b": "macro-ai-power-grid-bottleneck"
 },
 {
 "t": "The efficiency counter-thesis — DeepSeek, Jevons, and China's domestic AI stack",
