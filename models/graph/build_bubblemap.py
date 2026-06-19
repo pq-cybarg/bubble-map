@@ -176,7 +176,7 @@ SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds",
 
 NAV=('<div class=nav><a href="index.html">Home</a><a href="atlas.html">Atlas</a><a href="dashboard.html">Dashboard</a>'
  '<a href="charts.html">Charts</a><a href="research.html">Research</a><a href="persons.html">Persons</a>'
- '<a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a>'
+ '<a href="bubblemap.html" class=active>Bubble Map</a><a href="globe.html">Globe</a><a href="lenses.html">Lenses</a>'
  '<a href="methodology.html">Methodology</a><a href="glossary.html">Glossary</a>'
  '<a href="https://github.com/pq-cybarg/bubble-map">Source &#8599;</a></div>'
  '<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:6px 16px;border-bottom:1px solid #e4ddcc">Independent research &amp; opinion. Gradings are automated / LLM-assisted and may contain errors or hallucinations; nothing here is a statement of fact, financial advice, or an accusation of wrongdoing by any party. Claims about identifiable people or organizations reflect public records + good-faith interpretation; intent is not inferred from association. <a href="methodology.html" style="color:#6b665d;text-decoration:underline">Methodology &amp; disclaimer</a>.</div>')
