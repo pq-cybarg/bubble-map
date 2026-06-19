@@ -93,6 +93,7 @@ def layer_of(ic): return "financial" if ic in FINANCIAL_CLASSES else "structural
 
 NODE_META = {
  "NIST":("standards",False),"Cryptography_Standards":("standards",False),"ANTHROPIC_INVESTORS":("financier",False),
+ "David_Sacks":("person",False),"Bitcoin_Strategic_Reserve":("crypto_infra",False),
  "NVIDIA":("chip_vendor",True),"AMD":("chip_vendor",True),"Broadcom":("chip_vendor",True),"Intel":("chip_vendor",True),
  "OpenAI":("ai_lab",False),"Anthropic":("ai_lab",False),"xAI":("ai_lab",False),"Mistral":("ai_lab",False),
  "Microsoft":("hyperscaler",True),"Google":("hyperscaler",True),"Amazon":("hyperscaler",True),"Meta":("hyperscaler",True),

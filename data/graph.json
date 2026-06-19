@@ -156,6 +156,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
+    "Bitcoin_Strategic_Reserve": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "Bitfinex": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -399,6 +403,10 @@
     "DTC_Cede": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "David_Sacks": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Defense_Primes": {
       "sector": "defense",
@@ -1694,6 +1702,123 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "47th US President \u2014 heads the executive branch (appointments, executive orders, DOJ/agencies)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "Trump Media & Technology Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controlling shareholder of TMTG (Truth Social parent)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "World_Liberty_Financial",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "Trump-family crypto venture (WLFI governance token + the USD1 stablecoin)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "MGX",
+      "to": "Binance",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Abu Dhabi MGX's ~$2B Binance deal settled in USD1 \u2014 the Trump-family stablecoin (the CZ-pardon / USD1 / MGX nexus)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "GENIUS_Act",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "signed the GENIUS Act into law \u2014 the stablecoin / Treasury-demand rail",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "Bitcoin_Strategic_Reserve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "executive order establishing the US Strategic Bitcoin Reserve (Mar 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "Stargate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "announced the ~$500B Stargate AI-infrastructure SPV at the White House (Jan 2025)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "Trump",
+      "to": "David_Sacks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "appointed White House AI & Crypto Czar",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
+      "note": ""
+    },
+    {
+      "from": "David_Sacks",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "White House AI & Crypto Czar \u2014 shapes federal AI/crypto policy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-operator-network.json",
       "note": ""
     },
     {
@@ -7145,10 +7270,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 378,
-    "num_edges": 433,
+    "num_nodes": 380,
+    "num_edges": 442,
     "num_financial_edges": 130,
-    "num_structural_edges": 303,
+    "num_structural_edges": 312,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7199,10 +7324,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -7217,6 +7338,10 @@
       [
         "CoreWeave",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -7238,6 +7363,12 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -7248,12 +7379,6 @@
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -7553,6 +7678,13 @@
       },
       "Binance": {
         "total_usd": 8700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bitcoin_Strategic_Reserve": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7979,6 +8111,13 @@
         "in_robust_core": false
       },
       "DTC_Cede": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "David_Sacks": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9963,6 +10102,26 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 14,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "other",
+          "person",
+          "sink",
+          "state"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "NVIDIA",
         "degree": 20,
         "neighbor_sectors": [
@@ -9996,25 +10155,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Government",
-        "degree": 12,
-        "neighbor_sectors": [
-          "ai_data",
-          "creditor",
-          "critical_minerals",
-          "other",
-          "sink",
-          "state"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"
@@ -10157,6 +10297,24 @@
         "both_layers": true
       },
       {
+        "node": "Stargate",
+        "degree": 9,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bank",
+          "financier",
+          "hyperscaler",
+          "person"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "xAI",
         "degree": 6,
         "neighbor_sectors": [
@@ -10255,24 +10413,6 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "MP_Materials",
-        "degree": 5,
-        "neighbor_sectors": [
-          "commodity",
-          "defense",
-          "hyperscaler",
-          "other",
-          "state"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 3,
         "layers": [
           "financial",
           "structural"

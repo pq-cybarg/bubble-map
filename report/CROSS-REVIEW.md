@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-disclosures-surveillance.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 7 shared entities
-- macro-crqc-quantum-landscape.json: 5 shared entities
-- macro-pqc-chips.json: 4 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- spec-network-overlay.json: 4 shared entities
-- spec-crypto-sec-epstein.json: 4 shared entities
-- spec-vitalik-buterin-thought.json: 3 shared entities
-- spec-uk-labour-tbi-influence.json: 3 shared entities
+## Newest file `influence-operator-network.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 11 shared entities
+- spec-network-overlay.json: 9 shared entities
+- influence-congress-funding-compromise.json: 7 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- digitalid-corporate.json: 6 shared entities
+- spec-cross-system-contagion.json: 5 shared entities
+- fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- spec-exchanges-asia.json: 5 shared entities
