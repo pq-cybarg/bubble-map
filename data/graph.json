@@ -40,6 +40,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "ANTHROPIC_INVESTORS": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "AST_SpaceMobile": {
       "sector": "satellite",
       "has_exogenous_revenue": false
@@ -368,13 +372,13 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
-    "Crypto_Standards": {
-      "sector": "standards",
-      "has_exogenous_revenue": false
-    },
     "Crypto_legislation": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Cryptography_Standards": {
+      "sector": "standards",
+      "has_exogenous_revenue": false
     },
     "Custodia_Bank": {
       "sector": "other",
@@ -831,6 +835,10 @@
     "NCUSIF": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "NIST": {
+      "sector": "standards",
+      "has_exogenous_revenue": false
     },
     "NRO": {
       "sector": "state_intel",
@@ -2938,7 +2946,7 @@
     },
     {
       "from": "NSA",
-      "to": "Crypto_Standards",
+      "to": "Cryptography_Standards",
       "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "bullrun_backdoor",
@@ -2948,6 +2956,19 @@
       "cancelable": false,
       "source_file": "spec-disclosures-surveillance.json",
       "note": "~$250M/yr to insert backdoors; Dual_EC_DRBG NIST standard backdoored then withdrawn. The mandated-weakness proof."
+    },
+    {
+      "from": "NIST",
+      "to": "Cryptography_Standards",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-disclosures-surveillance.json",
+      "note": "NIST publishes US cryptography standards incl. the post-quantum suite FIPS 203 (ML-KEM) / 204 (ML-DSA) / 205 (SLH-DSA); the standards body whose Dual_EC_DRBG was subverted via NSA Bullrun. The legitimate publisher and the offensive subverter meet on the same node."
     },
     {
       "from": "NSA",
@@ -4705,7 +4726,7 @@
       "note": "MGX (UAE sovereign) co-led. Round total $30B / $380B post-money."
     },
     {
-      "from": "SINK_investors",
+      "from": "ANTHROPIC_INVESTORS",
       "to": "Anthropic",
       "instrument": "other",
       "layer": "structural",
@@ -7124,10 +7145,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 376,
-    "num_edges": 432,
+    "num_nodes": 378,
+    "num_edges": 433,
     "num_financial_edges": 130,
-    "num_structural_edges": 302,
+    "num_structural_edges": 303,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7178,6 +7199,22 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -7186,25 +7223,9 @@
         "NVIDIA"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -7212,14 +7233,20 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -7231,12 +7258,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -7244,13 +7272,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -7329,6 +7350,13 @@
       },
       "ANOM": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ANTHROPIC_INVESTORS": {
+        "total_usd": 30000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7908,15 +7936,15 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
-      "Crypto_Standards": {
-        "total_usd": 250000000,
+      "Crypto_legislation": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "Crypto_legislation": {
-        "total_usd": 0,
+      "Cryptography_Standards": {
+        "total_usd": 250000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8720,6 +8748,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NIST": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NRO": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9246,7 +9281,7 @@
         "in_robust_core": false
       },
       "SINK_investors": {
-        "total_usd": 70000000000,
+        "total_usd": 40000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10046,25 +10081,6 @@
         "both_layers": true
       },
       {
-        "node": "Anthropic",
-        "degree": 12,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "other",
-          "sink",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "Google",
         "degree": 8,
         "neighbor_sectors": [
@@ -10121,6 +10137,24 @@
           "financial"
         ],
         "both_layers": false
+      },
+      {
+        "node": "Anthropic",
+        "degree": 12,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "other",
+          "space_real_economy"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
       },
       {
         "node": "xAI",

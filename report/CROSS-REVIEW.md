@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - PsiQuantum, Quantinuum, QuantumComputingInc, ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-reproducibility-crisis.json` — related files by shared entities (verify cross-refs exist)
-- macro-gig-labor.json: 2 shared entities
-- spec-uk-labour-tbi-influence.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- geopolitics-contested-resource-states.json: 2 shared entities
-- spec-crypto-sec-epstein.json: 2 shared entities
-- influence-tbi-policy.json: 2 shared entities
-- spec-asia-crypto-payments.json: 2 shared entities
+## Newest file `spec-disclosures-surveillance.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-orchestration-real-incentive.json: 7 shared entities
+- macro-crqc-quantum-landscape.json: 5 shared entities
+- macro-pqc-chips.json: 4 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-network-overlay.json: 4 shared entities
+- spec-crypto-sec-epstein.json: 4 shared entities
+- spec-vitalik-buterin-thought.json: 3 shared entities
+- spec-uk-labour-tbi-influence.json: 3 shared entities

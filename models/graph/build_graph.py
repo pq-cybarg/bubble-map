@@ -32,7 +32,7 @@ ALIAS = {
  "blackstone":"Blackstone","Blackstone":"Blackstone","BLUEOWL":"BlueOwl","PIMCO":"PIMCO","BLACKROCK":"BlackRock",
  "APOLLO_BLACKSTONE":"Apollo_Blackstone","Apollo":"Apollo","GIC":"GIC","jpmorgan":"JPMorgan",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
- "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom","ANTHROPIC_INVESTORS":"SINK_investors",
+ "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
  "SpaceX":"SpaceX","SpaceX_IPO_Public_Markets":"SpaceX_IPO_Public","Starlink_Subscribers":"Starlink_Subscribers",
  "US_Government":"US_Government","MP_Materials":"MP_Materials","Defense_Primes":"Defense_Primes","Apple":"Apple",
@@ -92,6 +92,7 @@ FINANCIAL_CLASSES={"equity","debt","compute_commitment","gpu_purchase","backstop
 def layer_of(ic): return "financial" if ic in FINANCIAL_CLASSES else "structural"
 
 NODE_META = {
+ "NIST":("standards",False),"Cryptography_Standards":("standards",False),"ANTHROPIC_INVESTORS":("financier",False),
  "NVIDIA":("chip_vendor",True),"AMD":("chip_vendor",True),"Broadcom":("chip_vendor",True),"Intel":("chip_vendor",True),
  "OpenAI":("ai_lab",False),"Anthropic":("ai_lab",False),"xAI":("ai_lab",False),"Mistral":("ai_lab",False),
  "Microsoft":("hyperscaler",True),"Google":("hyperscaler",True),"Amazon":("hyperscaler",True),"Meta":("hyperscaler",True),

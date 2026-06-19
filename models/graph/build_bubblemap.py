@@ -70,7 +70,7 @@ MIXED={"CoreWeave","OpenAI","SpaceX","BlackRock","BlueOwl","xAI","iFinex","SoftB
  "DeepSeek","ByteDance","NVIDIA","macOS","iPhone","YouTube","WhatsApp"}
 LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "SINK_lenders":"Lenders","SINK_bondmarket":"Bond market","SINK_debt":"Debt / balance sheet",
- "SINK_capex":"Capex","SINK_backlog":"AI backlog","SINK_investors":"Investors",
+ "SINK_capex":"Capex","SINK_backlog":"AI backlog","SINK_investors":"Wiped investors (Terra/LUNA)","ANTHROPIC_INVESTORS":"Anthropic investors",
  "SINK_treasury_basis":"Treasury basis trade","SINK_scam_victims":"Scam victims",
  "AI_Datacenters":"AI data centers","PrivateCredit_Funds":"Private-credit funds","Lazarus_Group":"Lazarus Group",
  "US_Treasuries":"US Treasuries","US_Banks":"US banks","US_Government":"US government",

@@ -33,7 +33,7 @@ PrivateCredit_Funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progre
 Apollo_Blackstone,Broadcom,compute_commitment,35000000000,announced,False,False,fin-google-amazon-anthropic-meta.json
 Google,SpaceX,compute_commitment,30000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
 Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-amazon-anthropic-meta.json
-SINK_investors,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+ANTHROPIC_INVESTORS,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 SINK_bondmarket,Meta,debt,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Private-credit funds / asset managers,AI data-center SPVs / hyperscaler projects,debt,27000000000,2025-10,False,False,macro-cre-privatecredit.json
 BlueOwl,Meta_Hyperion_SPV,debt,27000000000,closed,False,False,fin-meta-family.json
@@ -104,7 +104,7 @@ Qatar,Trump,other,400000000,open,False,False,spec-foreign-influence-comparison.j
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 US_Government,United_States_Antimony,relationship,350000000,committed,True,False,macro-critical-minerals-equities.json
 Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
-NSA,Crypto_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
+NSA,Cryptography_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
 AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Verizon,AST_SpaceMobile,investment,100000000,committed,False,False,spec-telecom-satellite.json
 Predatory_Sparrow,Nobitex,other,90000000,closed,False,False,spec-onchain-threat-actor-addresses.json
@@ -198,6 +198,7 @@ AIPAC,US_Congress,other,,open,False,False,spec-foreign-influence-comparison.json
 Iran_IRGC,US_political_system,other,,open,False,False,spec-foreign-influence-comparison.json
 Saudi_Arabia_state,US_Congress,other,,open,False,False,spec-foreign-influence-comparison.json
 Turkey_state,US_Congress,regulatory_legal,,open,False,False,spec-foreign-influence-comparison.json
+NIST,Cryptography_Standards,other,,documented,False,False,spec-disclosures-surveillance.json
 NSA,ATT,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 NSA,TechCompanies,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 DARPA,TrailOfBits,relationship,,published,False,False,spec-disclosures-surveillance.json
