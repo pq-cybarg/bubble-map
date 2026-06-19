@@ -24,6 +24,14 @@ blockquote cite{display:block;font-style:normal;font-size:13.5px;color:var(--mut
 .app p{margin:0}
 .lead{font-size:19px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:20px 0}
 ul{margin:12px 0;padding-left:22px} li{margin:7px 0}
+.strat .g{font:700 13px/1.3 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.04em;margin:18px 0 6px;text-transform:uppercase;color:var(--accent)}
+.strat ol{display:grid;grid-template-columns:repeat(auto-fill,minmax(212px,1fr));gap:10px;margin:4px 0 8px;padding:0;list-style:none}
+.strat ol:nth-of-type(1){--gc:#1f8a5b}.strat ol:nth-of-type(2){--gc:#2e8b57}.strat ol:nth-of-type(3){--gc:#1f4e79}.strat ol:nth-of-type(4){--gc:#9a6a1a}.strat ol:nth-of-type(5){--gc:#b5651d}.strat ol:nth-of-type(6){--gc:#a93226}
+.strat li{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gc,#7b2d26);border-radius:8px;padding:9px 12px;margin:0;font-size:12.5px;line-height:1.5;color:#4a463f;transition:transform .12s,box-shadow .12s}
+.strat li:hover{transform:translateY(-2px);box-shadow:0 7px 18px rgba(0,0,0,.07)}
+.strat li .zh{font:600 19px/1.2 Georgia,serif;color:var(--accent)}
+.strat li .en{font-weight:600;font-size:13.5px;color:var(--ink)}
+.strat li .cx{display:block;margin-top:5px;color:var(--note);font-size:11.5px}
 .toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 20px;margin:22px 0;font-size:15.5px;column-count:2;column-gap:28px}
 .toc a{display:block;padding:2.5px 0;color:var(--link);text-decoration:none;break-inside:avoid}
 .toc .h{font-weight:700;color:var(--accent);margin-top:9px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
@@ -95,7 +103,63 @@ footer{color:var(--muted);font:14.5px/1.7 Georgia,serif;border-top:2px solid var
 
 <h3 id=stratagems>2. The Thirty-Six Stratagems — <span class=zh>三十六計</span></h3>
 <p class=life>China, Ming–Qing compilation of much older folk-strategy — a catalogue of deception and indirection.</p>
-<p>Where Sun Tzu gives doctrine, the Thirty-Six Stratagems give a <em>menu</em> of concrete ruses, and several map disturbingly well onto modern statecraft and corporate maneuver. <b>瞞天過海</b> (deceive the heavens to cross the sea) — hide the move inside the routine, in plain sight. <b>圍魏救趙</b> (besiege Wèi to rescue Zhào) — strike the undefended center of gravity rather than the strong point. <b>借刀殺人</b> (kill with a borrowed knife) — destroy a rival using a third party's hand, keeping your own clean. <b>趁火打劫</b> (loot a burning house) — press hardest during the rival's crisis. <b>笑裏藏刀</b> (a knife behind a smile) — coercion dressed as partnership. <b>反客為主</b> (turn the guest into the host) — enter as a minority partner and end up in control.</p>
+<p>Where Sun Tzu gives doctrine, the Thirty-Six Stratagems give a <em>menu</em> of concrete ruses — folk-strategy distilled into a numbered catalogue, traditionally arranged in <b>six sets of six</b>, graded from a position of strength down to desperation. The full list, with the ones that map onto modern statecraft and corporate maneuver flagged <span class=cx>[like this]</span>:</p>
+<div class=strat>
+  <div class=g>勝戰計 · Winning stratagems (you hold the advantage)</div>
+  <ol>
+    <li><span class=zh>瞞天過海</span> — <span class=en>Deceive the heavens to cross the sea:</span> hide the move inside the routine, in plain sight. <span class=cx>[a control rail named "protection"]</span></li>
+    <li><span class=zh>圍魏救趙</span> — <span class=en>Besiege Wèi to rescue Zhào:</span> strike the undefended center of gravity, not the strong point.</li>
+    <li><span class=zh>借刀殺人</span> — <span class=en>Kill with a borrowed knife:</span> destroy a rival through a third party's hand, keeping yours clean. <span class=cx>[proxies / sanctions evasion]</span></li>
+    <li><span class=zh>以逸待勞</span> — <span class=en>Wait at ease for the weary enemy:</span> let him exhaust himself; choose the moment. <span class=cx>[predatory-pricing attrition]</span></li>
+    <li><span class=zh>趁火打劫</span> — <span class=en>Loot a burning house:</span> press hardest during the rival's crisis. <span class=cx>[crisis procurement of the centralized rail]</span></li>
+    <li><span class=zh>聲東擊西</span> — <span class=en>Clamor east, strike west:</span> misdirection.</li>
+  </ol>
+  <div class=g>敵戰計 · Enemy-dealing (confrontation)</div>
+  <ol start=7>
+    <li><span class=zh>無中生有</span> — <span class=en>Create something from nothing:</span> manufacture a convincing illusion. <span class=cx>[deepfakes; fabricated reports]</span></li>
+    <li><span class=zh>暗渡陳倉</span> — <span class=en>Secretly cross at Chencang:</span> an overt feint covering the real, covert advance.</li>
+    <li><span class=zh>隔岸觀火</span> — <span class=en>Watch the fire from the far bank:</span> let rivals destroy each other; wait.</li>
+    <li><span class=zh>笑裏藏刀</span> — <span class=en>Hide a knife behind a smile:</span> hostility dressed as friendship. <span class=cx>[coercion-as-partnership]</span></li>
+    <li><span class=zh>李代桃僵</span> — <span class=en>Let the plum die for the peach:</span> sacrifice a lesser piece to save the greater.</li>
+    <li><span class=zh>順手牽羊</span> — <span class=en>Lead away the goat in passing:</span> seize incidental advantages as they appear.</li>
+  </ol>
+  <div class=g>攻戰計 · Attacking (offensive)</div>
+  <ol start=13>
+    <li><span class=zh>打草驚蛇</span> — <span class=en>Beat the grass to startle the snake:</span> provoke a reaction to flush out the hidden.</li>
+    <li><span class=zh>借屍還魂</span> — <span class=en>Borrow a corpse to return the soul:</span> revive a defunct form or entity for your ends.</li>
+    <li><span class=zh>調虎離山</span> — <span class=en>Lure the tiger off the mountain:</span> separate the enemy from his stronghold/advantage.</li>
+    <li><span class=zh>欲擒故縱</span> — <span class=en>To catch, first let go:</span> give room so he lowers his guard or overextends.</li>
+    <li><span class=zh>拋磚引玉</span> — <span class=en>Toss a brick to draw jade:</span> bait with something small to gain something valuable.</li>
+    <li><span class=zh>擒賊擒王</span> — <span class=en>To take the bandits, seize their king:</span> target the leadership / the center.</li>
+  </ol>
+  <div class=g>混戰計 · Chaos (the melee)</div>
+  <ol start=19>
+    <li><span class=zh>釜底抽薪</span> — <span class=en>Take the firewood from under the cauldron:</span> remove the <em>source</em> of the enemy's strength. <span class=cx>[the chokepoint move]</span></li>
+    <li><span class=zh>混水摸魚</span> — <span class=en>Muddy the water to seize the fish:</span> create confusion, then exploit it.</li>
+    <li><span class=zh>金蟬脫殼</span> — <span class=en>The golden cicada sheds its shell:</span> slip away leaving a decoy/appearance behind. <span class=cx>[keep the shell, move the substance]</span></li>
+    <li><span class=zh>關門捉賊</span> — <span class=en>Shut the door to catch the thief:</span> encircle and cut off escape before striking.</li>
+    <li><span class=zh>遠交近攻</span> — <span class=en>Befriend the distant, attack the near:</span> alliance geometry.</li>
+    <li><span class=zh>假道伐虢</span> — <span class=en>Borrow the road to conquer Guó:</span> gain passage through a third party, then turn on them. <span class=cx>[the access / host trap — JV market-access]</span></li>
+  </ol>
+  <div class=g>併戰計 · Proximate / combined (absorbing an ally)</div>
+  <ol start=25>
+    <li><span class=zh>偷梁換柱</span> — <span class=en>Steal the beams, swap the pillars:</span> covertly replace the substance while the appearance stands. <span class=cx>[reflexive marks; captive-reinsurance "transfer"]</span></li>
+    <li><span class=zh>指桑罵槐</span> — <span class=en>Point at the mulberry, revile the locust:</span> discipline or threaten by indirect example.</li>
+    <li><span class=zh>假癡不癲</span> — <span class=en>Feign folly without losing balance:</span> play the fool to be underestimated.</li>
+    <li><span class=zh>上屋抽梯</span> — <span class=en>Lure onto the roof, draw away the ladder:</span> commit the enemy where there is no retreat.</li>
+    <li><span class=zh>樹上開花</span> — <span class=en>Flowers on a barren tree:</span> fake strength with borrowed display. <span class=cx>[借勢 — manufactured momentum]</span></li>
+    <li><span class=zh>反客為主</span> — <span class=en>Turn the guest into the host:</span> enter subordinate, end up in control. <span class=cx>[the JV partner becomes the controller]</span></li>
+  </ol>
+  <div class=g>敗戰計 · Desperate (losing) stratagems</div>
+  <ol start=31>
+    <li><span class=zh>美人計</span> — <span class=en>The beauty trap:</span> temptation / the honey trap.</li>
+    <li><span class=zh>空城計</span> — <span class=en>The empty-city ruse:</span> bluff with apparent emptiness or strength (Zhuge Liang's open gates).</li>
+    <li><span class=zh>反間計</span> — <span class=en>Turn the enemy's spies / sow discord:</span> set them against each other. <span class=cx>[disinformation; dividing alliances]</span></li>
+    <li><span class=zh>苦肉計</span> — <span class=en>The self-injury ruse:</span> harm yourself to win the enemy's trust.</li>
+    <li><span class=zh>連環計</span> — <span class=en>The chain of stratagems:</span> link ruses so each enables the next. <span class=cx>[layered, multi-stage operations]</span></li>
+    <li><span class=zh>走為上</span> — <span class=en>If all else fails, retreat:</span> "of the thirty-six, fleeing is the supreme stratagem" — preserve the force to fight again.</li>
+  </ol>
+</div>
 <div class="app t"><span class=lab>How it reads their strategy</span><p>The technology-transfer JV is <b>反客為主</b> in slow motion (market access for know-how; the partner ends up holding the capability). Crisis-procurement of a centralized control rail is <b>趁火打劫</b>. Sanctions-evasion via third countries and proxies is <b>借刀殺人</b>. "Confidential partnership" pretexts in deepfake fraud are <b>笑裏藏刀</b>. Naming a surveillance rail "protection" is <b>瞞天過海</b>.</p></div>
 <div class="app c"><span class=lab>Caveat</span><p>A stratagem catalogue is a pattern-library, not evidence: matching a move to a ruse is <em>interpretation</em>, never proof of intent. Used to recognize a shape, not to convict.</p></div>
 
