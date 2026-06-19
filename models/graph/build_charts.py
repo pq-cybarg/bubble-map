@@ -27,6 +27,10 @@ def load_tape():
     try: return json.load(open(os.path.join(ROOT,"data","tape_trace.json")))
     except Exception: return None
 
+def load_fdic():
+    try: return json.load(open(os.path.join(ROOT,"data","fdic_qbp.json")))
+    except Exception: return None
+
 def ttm_yield(etf):
     """trailing-12-month distribution yield (%) per month: sum(last 12 divs)/close*100."""
     months=sorted(etf); out={}
@@ -606,6 +610,35 @@ for h,svg,cap in charts:
     body.append(f'<h2>{esc(h)}</h2>'); body.append(svg); body.append(f'<p class=cap>{cap}</p>')
 if TRIGGER_PANEL: body.append(TRIGGER_PANEL)
 if SIGNAL_TABLE: body.append(SIGNAL_TABLE)
+
+# --- FDIC Quarterly Banking Profile (multi-year comparative) ---
+FD=load_fdic()
+if FD and FD.get("quarters"):
+    q=FD["quarters"]; S=FD["series"]
+    _mn={"1":"01","2":"04","3":"07","4":"10"}
+    dates=[f'{x.split("-Q")[0]}-{_mn[x.split("-Q")[1]]}' for x in q]
+    def fser(name,key): return (name,[(v if v is not None else 0) for v in S.get(key,[])])
+    C1,C2,C3,C4=AC,AC2,"#1f6f43","#9a6a1a"
+    fb=[f'<h2 id="fdic">FDIC Quarterly Banking Profile — the banking system, {q[0]}–{q[-1]}</h2>',
+        f'<p class=src>Industry aggregates summed quarter-by-quarter from FDIC institution call reports '
+        f'({esc(FD.get("source",""))}); ratios computed from the sums (ROA asset-weighted, ROE equity-weighted, '
+        f'NIM earning-asset-weighted; charge-off rate annualized). Companion: '
+        f'<a href="https://github.com/pq-cybarg/bubble-map/blob/main/research/macro-fdic.md">macro-fdic</a>.</p>']
+    fb.append(monthly_line_chart("Industry net income — quarterly ($B)",dates,[fser("Net income $B","net_income_b")],[C1],"$B"))
+    fb.append('<p class=cap>The headline QBP number by quarter — the COVID-2020 collapse and rebound, and the 2023–24 path, in one line.</p>')
+    fb.append(monthly_line_chart("Profitability & margin — ROA and net interest margin (%)",dates,[fser("ROA %","roa"),fser("NIM %","nim")],[C1,C2],"%"))
+    fb.append('<p class=cap>Return on assets (asset-weighted) and net interest margin (earning-asset-weighted) — margin compression then the higher-rate widening.</p>')
+    fb.append(monthly_line_chart("Return on equity (%)",dates,[fser("ROE %","roe")],[C2],"%"))
+    fb.append('<p class=cap>Equity-weighted industry ROE across the cycle.</p>')
+    fb.append(monthly_line_chart("Credit quality — noncurrent-loan rate &amp; net charge-off rate (%, annualized)",dates,[fser("Noncurrent %","noncurrent_rate"),fser("Net charge-offs %","nco_rate")],[C1,C4],"%"))
+    fb.append('<p class=cap>The post-GFC cleanup to historic lows — watch any recent uptick (CRE / consumer).</p>')
+    fb.append(monthly_line_chart("Reserve coverage — loan-loss reserves ÷ noncurrent loans (%)",dates,[fser("Coverage %","coverage")],[C3],"%"))
+    fb.append('<p class=cap>How far reserves cover currently-noncurrent loans; the 2020 reserve build (CECL + COVID) stands out.</p>')
+    fb.append(monthly_line_chart("Consolidation — number of FDIC-insured institutions",dates,[fser("Institutions","institutions")],[C1],"#"))
+    fb.append('<p class=cap>The steady decline — a system concentrating into fewer, larger banks.</p>')
+    fb.append(monthly_line_chart("Industry scale — total assets &amp; deposits ($T)",dates,[fser("Assets $T","assets_t"),fser("Deposits $T","deposits_t")],[C2,C3],"$T"))
+    fb.append('<p class=cap>Balance-sheet growth, including the 2020–21 deposit surge.</p>')
+    body.append("".join(fb))
 body.append("""<h2>Breakdown framework &amp; data provenance</h2>
 <p class=cap>The bond universe can be sliced along two axes — <b>geography</b> (region → sub-region → country → state → city → institution) and <b>type/quality</b> (sovereign, corporate-by-rating, household/mortgage, municipal, agency). What is charted here vs what requires other sources, stated plainly:</p>
 <table><thead><tr><th>Cut</th><th>Charted here?</th><th>Source</th></tr></thead><tbody>
