@@ -1,31 +1,41 @@
 <!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>Strategic Lenses — Bubble Map</title>
-<meta name=description content="The strategic and epistemic lenses this project reads through — Sun Tzu, the OSS Simple Sabotage Field Manual, Confucius, and our own grading discipline — so you can read the strategy too: theirs and ours.">
+<meta name=description content="The strategic and epistemic lenses this investigation reads through — Sun Tzu, the OSS Simple Sabotage Field Manual, Confucius, Clausewitz, Boyd, Schelling, Goodhart, and the falsifiability discipline — read at depth, applied to their strategy and disciplined onto ours.">
 <style>
-:root{--cream:#faf8f2;--ink:#1c1b19;--accent:#7b2d26;--link:#1f4e79;--line:#e4ddcc;--muted:#6b665d;--card:#fffdf8;--panel:#f3eedf}
+:root{--cream:#faf8f2;--ink:#1c1b19;--accent:#7b2d26;--link:#1f4e79;--line:#e4ddcc;--muted:#6b665d;--card:#fffdf8;--panel:#f3eedf;--theirs:#a93226;--ours:#1f6f43}
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.72 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif}
-a{color:var(--link)}
-main{max-width:880px;margin:0 auto;padding:0 22px 70px}
-h1{font:600 34px/1.15 Georgia,serif;margin:26px 0 6px}
-h2{color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:7px;margin:40px 0 6px;font:600 24px/1.2 Georgia,serif}
-.sub{color:var(--muted);font-size:16px;margin:0 0 6px}
-.lead{font-size:19px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);padding:14px 18px;margin:18px 0}
-.lens{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0}
-.lens h3{margin:0 0 4px;font:600 20px/1.25 Georgia,serif}
-.lens .zh{color:var(--accent);font-weight:400}
-.lens .q{font-style:italic;color:#33312c;border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:10px 0}
-.row{margin:9px 0;font-size:16.5px}
-.row b{font:600 11.5px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:inline-block;min-width:74px;vertical-align:top;margin-right:6px}
-.theirs b{color:#a93226}.ours b{color:#1f6f43}
-.lens .more{margin-top:10px;font:600 14px/1 -apple-system,sans-serif}
+body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.78 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif}
+main{max-width:760px;margin:0 auto;padding:0 22px 80px}
+h1{font:600 38px/1.12 Georgia,serif;margin:30px 0 6px;letter-spacing:-.01em}
+.deck{font-size:20px;color:#33312c;margin:0 0 8px}
+h2{color:var(--accent);font:600 27px/1.2 Georgia,serif;margin:52px 0 4px;padding-top:14px;border-top:2px solid var(--line)}
+h2 .n{color:var(--muted);font-size:18px;font-weight:400}
+h3{font:600 22px/1.3 Georgia,serif;margin:34px 0 2px}
+h3 .zh{color:var(--accent);font-weight:400;font-size:19px}
+.life{color:var(--muted);font-size:14px;font-style:italic;margin:0 0 10px}
+p{margin:14px 0}
+blockquote{margin:16px 0;padding:10px 0 10px 18px;border-left:3px solid var(--accent);
+  font-style:italic;color:#33312c;font-size:18.5px}
+blockquote cite{display:block;font-style:normal;font-size:13.5px;color:var(--muted);margin-top:6px}
+.app{margin:14px 0;padding:12px 16px;border-radius:8px;background:var(--card);border:1px solid var(--line)}
+.app.t{border-left:4px solid var(--theirs)} .app.o{border-left:4px solid var(--ours)}
+.app .lab{font:700 11.5px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.09em;text-transform:uppercase;display:block;margin-bottom:5px}
+.app.t .lab{color:var(--theirs)} .app.o .lab{color:var(--ours)}
+.app p{margin:0}
+.lead{font-size:19px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:20px 0}
+ul{margin:12px 0;padding-left:22px} li{margin:7px 0}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 20px;margin:22px 0;font-size:16px;column-count:2;column-gap:28px}
+.toc a{display:block;padding:3px 0;color:var(--link);text-decoration:none;break-inside:avoid}
+.toc .h{font-weight:700;color:var(--accent);margin-top:8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:15px}
 .nav{background:#fffdf8;border-bottom:1px solid var(--line);padding:11px 16px;font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center}
 .nav a{margin:0 9px;color:var(--link);text-decoration:none;white-space:nowrap}
 .nav a.cur{color:var(--accent);font-weight:700}
 .disc{background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:6px 16px;border-bottom:1px solid var(--line)}
 .disc a{color:#6b665d}
-footer{color:var(--muted);font:14px/1.7 -apple-system,sans-serif;border-top:1px solid var(--line);margin-top:40px;padding-top:18px}
+footer{color:var(--muted);font:14.5px/1.7 Georgia,serif;border-top:2px solid var(--line);margin-top:50px;padding-top:20px}
+@media(max-width:620px){.toc{column-count:1}}
 </style></head>
 <body>
 <div class=nav>
@@ -39,79 +49,105 @@ footer{color:var(--muted);font:14px/1.7 -apple-system,sans-serif;border-top:1px 
 
 <main>
 <h1>Strategic Lenses</h1>
-<p class=sub>The frameworks this project reads through — so you can read the strategy yourself. <b>Theirs and ours.</b></p>
+<p class=deck>The frameworks this investigation reads through — read at depth, not as quotations. How each one reads <b>their</b> strategy, and how it disciplines <b>ours</b>.</p>
 
-<div class=lead>Every block in this investigation is read through a small set of <b>lenses</b>: old strategic texts that explain how contested systems are actually won, and the epistemic discipline that keeps the reading honest. Two ideas recur. <b>The decisive variable is legitimacy / trust</b>, not arms or money. And <b>the cheapest way to win is to erode a rival's cohesion, alliances, and strategy</b> — not to fight its army. These are <b>interpretive lenses and graded interpretation</b>, not claims of proven coordinated intent. Depth versions: <a href="r-spec-strategic-lenses.html">Strategic reading lenses</a> &amp; the <a href="r-spec-lens-rereads.html">block-by-block re-read</a>.</div>
+<div class=lead>A lens is not decoration; it is a way of extracting signal from a flood of facts. This investigation reads every block through a fixed set of them. Two findings recur so often they function as load-bearing claims. First: in a contested system the decisive variable is not arms or money but <b>legitimacy and trust</b> — Sun Tzu's 道, Confucius's 信, Clausewitz's moral forces. Second: the cheapest way to win is to <b>erode a rival's cohesion, alliances, and strategy</b>, never to fight its army. Everything below is interpretive lens and <em>graded interpretation</em> — a way of seeing, not a claim of proven coordinated intent. The classical texts were read in full and verified before use (citations at the end); the epistemic lenses are applied to <em>this project</em> as strictly as to anyone it examines.</div>
 
-<h2>I. The classical lenses</h2>
-
-<div class=lens>
-  <h3>Sun Tzu — <span class=zh>孫子兵法 (The Art of War)</span></h3>
-  <p class=q>"To subdue the enemy without fighting is the acme of skill." (不戰而屈人之兵)</p>
-  <div class=row><b>What</b>The Five Factors open with <b>道 — the Way</b> (whether the people are in accord with the ruler: legitimacy/cohesion), before timing, position, command, and method. Win by attacking the enemy's <b>strategy and alliances</b>, not its army; use <b>economy of force</b>; and prize <b>foreknowledge</b> (ch. XIII, the Use of Spies) as the decisive asset.</div>
-  <div class="row theirs"><b>Theirs</b>The calibrated rare-earth "faucet" + predatory pricing <i>is</i> subdue-without-fighting — bankrupt rivals with no shooting war; foreknowledge of competitors' costs and timelines times the strike (Molycorp's weaknesses were in its public filings).</div>
-  <div class="row ours"><b>Ours</b>The <b>modern inversion of the spy chapter</b>: Sun Tzu needed spies because foreknowledge was scarce; open societies now <i>broadcast</i> their dispositions (filings, publications, conferences), so the foreknowledge edge accrues <b>for free, without spies</b>. The answer is therefore <b>structural</b> — deny the value — not hunt an undetectable individual.</div>
-  <div class=more><a href="r-spec-rare-earth-statecraft.html">→ rare-earth statecraft (competitive intelligence)</a></div>
+<div class=toc>
+  <span class=h>I · Classical strategy</span>
+  <a href="#suntzu">1. Sun Tzu — The Art of War</a>
+  <a href="#sabotage">2. OSS Simple Sabotage Field Manual</a>
+  <a href="#confucius">3. Confucius — the Analects</a>
+  <span class=h>II · Modern strategy &amp; decision</span>
+  <a href="#clausewitz">4. Clausewitz — friction &amp; the center of gravity</a>
+  <a href="#boyd">5. Boyd — the OODA loop</a>
+  <a href="#schelling">6. Schelling — commitment &amp; coercion</a>
+  <a href="#goodhart">7. Goodhart &amp; Campbell — measures as targets</a>
+  <span class=h>III · The epistemic discipline</span>
+  <a href="#falsifiability">8. Falsifiability / galaxy-brain resistance</a>
+  <a href="#compdiv">9. Composition &amp; division</a>
+  <a href="#bayes">10. Base rates &amp; Bayesian weight</a>
+  <a href="#trust">11. Verify, don't trust</a>
+  <a href="#collapse">12. The verification-collapse law</a>
+  <a href="#hardmoney">13. The hard-money lens</a>
+  <a href="#grading">14. Grading &amp; the proof core</a>
 </div>
 
-<div class=lens>
-  <h3>The OSS <span class=zh>Simple Sabotage Field Manual</span> (1944)</h3>
-  <p class=q>"…make faulty decisions, adopt an uncooperative attitude, and induce others to follow suit."</p>
-  <div class=row><b>What</b>A declassified OSS manual that weaponizes <b>normal-looking behavior</b> — insisting on proper channels, referring matters to committees, perfectionism, exaggerated caution — to degrade an organization <b>deniably</b>. The genius is that the sabotage is indistinguishable from ordinary diligence.</div>
-  <div class="row theirs"><b>Theirs</b>The template for deniable friction: slow a rival's progress while looking merely thorough or risk-averse.</div>
-  <div class="row ours"><b>Ours — the caution</b>That same indistinguishability makes it an <b>offensive</b> tool and a <b>useless, dangerous detection lens</b>: "they're cautious, therefore sabotage" is <b>unfalsifiable</b>. We use the manual to understand the <i>playbook</i> — <b>never to accuse an individual</b> (that way lies the China-Initiative profiling error).</div>
-  <div class=more><a href="r-spec-research-security-tech-transfer.html">→ research-security &amp; tech-transfer</a></div>
-</div>
+<h2>I. Classical strategy</h2>
 
-<div class=lens>
-  <h3>Confucius — <span class=zh>論語 (the Analects)</span></h3>
-  <p class=q>"必也正名乎 — what is necessary is to rectify names." (13.3) · "民無信不立 — without the people's trust, [the state] cannot stand." (12.7)</p>
-  <div class=row><b>What</b><b>正名 (rectification of names):</b> if names are not correct, language does not accord with the truth of things, and nothing can succeed. <b>12.7:</b> a state may give up arms, then food, but <b>trust (信)</b> is the one thing it cannot do without. <b>2.3:</b> lead by virtue, not coercion.</div>
-  <div class="row theirs"><b>Theirs</b>Control through <b>corrupted names</b> — euphemism that forecloses debate ("age verification," "core socialist values," "for the children"): name a control rail as protection and you cannot argue about it as control.</div>
-  <div class="row ours"><b>Ours</b>The project's own method — <b>evidence-grading, refusing fabricated names, judging the claim not the source</b> — <i>is</i> 正名, the Confucian defense. Trust/legitimacy is the center of gravity the whole map keeps returning to.</div>
-  <div class=more><a href="r-spec-lens-rereads.html">→ the block-by-block re-read</a></div>
-</div>
+<h3 id=suntzu>1. Sun Tzu — <span class=zh>孫子兵法 · The Art of War</span></h3>
+<p class=life>China, c. 5th century BCE — thirteen chapters; the foundational text of indirect strategy. Read the full text (all 13 chapters, Giles translation + commentary): <a href="https://suntzusaid.com/">suntzusaid.com</a>.</p>
+<blockquote>"To fight and conquer in all your battles is not supreme excellence; supreme excellence consists in breaking the enemy's resistance without fighting."<cite>不戰而屈人之兵 — Ch. III, Attack by Stratagem</cite></blockquote>
+<p>Sun Tzu is misread as a book about battle. It is a book about <em>not</em> needing one. Its architecture is a descending hierarchy of victory (Ch. III): the highest form is to <b>balk the enemy's plans</b>; the next, to <b>prevent the junction of his forces</b> — i.e., break his alliances; only then to attack his army; and the worst, most wasteful option is to besiege fortified cities. Force is the last resort of a failed strategy, not its expression.</p>
+<p>The book opens (Ch. I) with the <b>Five Constant Factors</b> by which any contest is appraised, and it lists them in order of priority: <b>道 (the Moral Law / the Way)</b> — whether the people are in complete accord with their ruler, i.e. <em>legitimacy and cohesion</em> — then <b>天 (Heaven: timing, season)</b>, <b>地 (Earth: terrain, position, distance)</b>, <b>將 (the Commander: wisdom, sincerity, benevolence, courage, strictness)</b>, and <b>法 (Method &amp; discipline: organization and logistics)</b>. Legitimacy is named <em>first</em>. A force whose people are not with it has already lost the decisive factor before the others are even weighed.</p>
+<p>Two further doctrines do most of the analytical work here. <b>Deception (詭道):</b> "all warfare is based on deception" — appear unable when able, inactive when active, far when near. And <b>shih (勢)</b>, the strategic configuration of accumulated power released at the decisive moment — the difference between water and a flood. Partial, calibrated pressure that preserves your leverage beats a total commitment that spends it.</p>
+<p>Finally, the last chapter (XIII, <b>用間 — the Use of Spies</b>) elevates <b>foreknowledge</b> above all: what lets the wise commander "strike and conquer" is knowledge of the enemy's dispositions, and that "cannot be elicited from spirits, nor from analogy, nor by calculation — it must be obtained from men who know the enemy's situation." He taxonomizes five classes (local 因間, inward 內間, converted/double 反間, doomed 死間, surviving 生間), prizing the <em>converted</em> spy as the hinge of the whole apparatus.</p>
+<div class="app t"><span class=lab>How it reads their strategy</span><p>China's rare-earth statecraft is Sun Tzu run forward: a <b>calibrated faucet</b> (partial controls, not embargo — preserving leverage = <em>shih</em>) and a decades-long <b>predatory-pricing</b> campaign that bankrupts Western rivals with no shooting war — <em>subduing the enemy without fighting</em>. The pricing kill is timed to a competitor's weakest moment — <em>foreknowledge-driven striking</em>.</p></div>
+<div class="app o"><span class=lab>How it disciplines ours — the modern inversion</span><p>Sun Tzu needed spies <em>because</em> foreknowledge was scarce and dear. Today open societies <b>broadcast</b> their dispositions — earnings calls, SEC filings, conference talks. The foreknowledge edge now accrues <b>for free, without a spy</b> (Molycorp's vulnerabilities were in its 10-K). So the rational defense is <b>structural</b> — deny the value, decide what is published vs. protected — not hunt an undetectable individual. (See <a href="r-spec-rare-earth-statecraft.html">rare-earth statecraft</a>.)</p></div>
 
-<h2>II. Our discipline (the epistemic lenses)</h2>
-<p class=sub>The classical lenses say <i>what</i> to look for; these keep the looking honest — and are applied to <b>ourselves</b> as strictly as to anyone else.</p>
+<h3 id=sabotage>2. The OSS <span class=zh>Simple Sabotage Field Manual</span> (1944)</h3>
+<p class=life>US Office of Strategic Services, Jan 1944; CIA-declassified 2008 — sabotage by ordinary people, using no tools.</p>
+<blockquote>"Insist on doing everything through 'channels.' Never permit short-cuts to be taken in order to expedite decisions… Refer all matters to committees, for 'further study and consideration.' Attempt to make the committees as large as possible — never less than five."<cite>OSS, Simple Sabotage Field Manual (1944), §11 — General Interference with Organizations and Production</cite></blockquote>
+<p>The manual's brilliance is that it requires no explosives. It teaches insiders to degrade an organization with <b>normal-looking behavior</b>, so the damage is cumulative, plausibly innocent, and nearly impossible to attribute. Its managerial section reads like satire of any real bureaucracy: <em>insist that everything be done through "channels"; make long speeches; refer all matters to committees, "as large as possible — never less than five"; haggle over precise wordings; reopen settled questions; bring up irrelevant issues; worry about the propriety of every decision.</em> Its worker section: <em>work slowly, contrive interruptions, "misunderstand" instructions, do poor work and blame the tools.</em></p>
+<p>The deep point is the source of its power: it works <b>precisely because the behaviors are indistinguishable from honest diligence and ordinary institutional friction.</b> That is a feature for the saboteur — it grants deniability.</p>
+<div class="app t"><span class=lab>How it reads their strategy</span><p>It is the template for <b>deniable degradation</b>: slow a rival's progress while appearing merely thorough, cautious, or process-bound. A useful frame for understanding how any actor could retard a competitor's industrial scale-up without a fingerprint.</p></div>
+<div class="app o"><span class=lab>How it disciplines ours — the detection-impossibility corollary</span><p>The same indistinguishability that makes it a good <em>offensive</em> tool makes it a <b>useless and dangerous detection lens</b>. "They went through proper channels, therefore sabotage" is <b>unfalsifiable</b> — every observation confirms it, so it proves nothing — and it convicts the conscientious. Worse, organizational friction is <b>over-determined</b> by entirely mundane causes (Parkinson's law, risk-aversion, real safety rules): institutions rot the same way with no enemy at all. So we use the manual to understand the <em>playbook</em> and <b>never to accuse a person</b> — the precise error of the discredited "China Initiative." (See <a href="r-spec-research-security-tech-transfer.html">research-security</a>.)</p></div>
 
-<div class=lens>
-  <h3>Galaxy-brain resistance / the unfalsifiability guard</h3>
-  <p class=q>"If your arguments can justify anything, then your arguments imply nothing." (Buterin, 2025)</p>
-  <div class=row><b>Rule</b>A theory that explains <b>every</b> observation — and every <i>absence</i> of evidence — explains nothing. The moment "no evidence" gets recoded as "proof of sophistication," the claim has become unfalsifiable and must be set down (as a permanent open possibility, not a finding).</div>
-  <div class=more><a href="r-spec-vitalik-buterin-thought.html">→ Vitalik's corpus</a> · <a href="r-spec-reproducibility-crisis.html">→ verification collapse</a></div>
-</div>
+<h3 id=confucius>3. Confucius — <span class=zh>論語 · the Analects</span></h3>
+<p class=life>China, compiled c. 5th–3rd century BCE — the recorded sayings; a theory of order grounded in trust and truthful naming.</p>
+<blockquote>"If names be not correct, language is not in accordance with the truth of things. If language is not in accordance with the truth of things, affairs cannot be carried on to success."<cite>必也正名乎 — Analects 13.3 (Legge)</cite></blockquote>
+<p>Three passages carry the lens. <b>13.3 — 正名 (the rectification of names):</b> asked what he would do first to govern, Confucius answers, rectify the names. If names are corrupt, speech detaches from reality, undertakings fail, rites and music falter, and "the people do not know how to move hand or foot." Political order <em>begins</em> with truthful naming; euphemism is the first instrument of misrule.</p>
+<p><b>12.7 — what a state cannot do without:</b> asked about government, he names three essentials — sufficient food, sufficient weapons, and the trust of the people. Forced to give one up, give up weapons; forced again, give up food — "from of old, death has been the lot of all men, but <b>without the people's trust the state cannot stand</b>" (民無信不立). Trust is the irreducible factor; everything else is negotiable. <b>2.3:</b> lead by laws and punishment and the people evade with no sense of shame; lead by virtue and ritual and they acquire a sense of shame and become good — coercion versus legitimacy, stated plainly.</p>
+<div class="app t"><span class=lab>How it reads their strategy</span><p>Control through <b>corrupted names</b> — naming a control rail as protection so it cannot be argued about as control: "age verification," "for the children," "core socialist values." Once the name is accepted, the debate is foreclosed. This is the violation 13.3 warns of, used deliberately.</p></div>
+<div class="app o"><span class=lab>How it disciplines ours</span><p>The project's own method — <b>evidence grading, refusing fabricated names, judging the claim not the source</b> — <em>is</em> 正名, the Confucian defense, turned on the analysis itself. And 12.7 is the corpus's recurring discovery stated 2,500 years early: across every thread the center of gravity is <b>trust / legitimacy (信)</b>. (See the <a href="r-spec-lens-rereads.html">block-by-block re-read</a>.)</p></div>
 
-<div class=lens>
-  <h3>The composition / division fallacy guard</h3>
-  <div class=row><b>Rule</b>Don't give a collective a unitary mind (<b>composition</b>: "China wants…") or impute the whole's traits to an individual (<b>division</b>: suspecting a person by nationality). <b>Institutional action ≠ institutional mind</b>; a documented national-capability transfer ≠ any individual's intent. An advisory lint in <code>audit.py</code> flags collective-intent phrasing.</div>
-</div>
+<h2>II. Modern strategy &amp; decision <span class=n>— the same logic, formalized</span></h2>
 
-<div class=lens>
-  <h3>Verify, don't trust (trust models)</h3>
-  <div class=row><b>Rule</b>Minimize and <b>distribute</b> trust; rely on open math and architecture, not on trusting — or blanket-distrusting — any actor. Where intent is unrecoverable, the defense is <b>intent-independent</b>: reproduce before relying; reintroduce backpressure; deny the single point of failure.</div>
-</div>
+<h3 id=clausewitz>4. Clausewitz — friction &amp; the center of gravity</h3>
+<p class=life>Prussia, <i>On War</i> (1832, posthumous) — the dialectical theory of real, not idealized, war.</p>
+<p>Clausewitz supplies three indispensable tools. <b>War is the continuation of policy by other means</b> — coercion is never an end; it serves a political aim, which is why the rare-earth and chip controls are read as <em>policy instruments</em>, not tantrums. <b>Friction</b> — the accumulation of small, mundane resistances that make "even the simplest thing difficult" — is why we do <em>not</em> need a saboteur to explain a stalled program; friction is the null hypothesis. And the <b>center of gravity (Schwerpunkt)</b> — "the hub of all power and movement, on which everything depends" — is the analytical demand to find the one thing whose collapse collapses the rest. Across this investigation that hub keeps resolving to the same place as Sun Tzu's 道 and Confucius's 信: <b>legitimacy and trust</b>, the thing that, once forfeited, takes the structure with it.</p>
 
-<div class=lens>
-  <h3>The verification-collapse law</h3>
-  <div class=row><b>Rule</b>When <b>producing</b> a plausible artifact becomes cheaper than <b>verifying</b> it, every open/trust-based system floods — science, AI evals, scientific publishing, open source, security, and even a live face on a video call. "Looks legitimate" goes free; "is legitimate" stays expensive.</div>
-  <div class=more><a href="r-spec-reproducibility-crisis.html">→ the reproducibility/integrity collapse</a></div>
-</div>
+<h3 id=boyd>5. Boyd — the OODA loop</h3>
+<p class=life>John Boyd, USAF strategist, 20th c. — observe → orient → decide → act, and the contest of tempo.</p>
+<p>Boyd's insight is that competitors run a loop — <b>observe, orient, decide, act</b> — and victory goes to whoever operates <em>inside</em> the other's loop: faster, and (the part everyone forgets) with better <b>orientation</b>, the interpretive step that turns observation into meaning. Most attacks that matter are attacks on orientation — feeding the adversary observations that corrupt how it makes sense of the world. The AI-slop floods and the Arup deepfake are pure OODA attacks: they don't break the target's <em>action</em>, they poison the <b>observe/orient</b> stage so the decision is wrong while feeling fully justified — and they do it at a tempo defenders cannot match because producing the false observation is now nearly free.</p>
 
-<div class=lens>
-  <h3>The hard-money lens</h3>
-  <div class=row><b>Rule</b>Re-denominate value in <b>gold- and silver-ounces at the time of measure</b>, and report the gold/silver ratio — to separate real gains from debasement (a US home is ~−81% in gold since 1998). An overlay for perspective, never part of the formal proofs.</div>
-  <div class=more><a href="r-macro-gold-silver-reprice.html">→ the gold/silver reprice</a></div>
-</div>
+<h3 id=schelling>6. Schelling — commitment &amp; coercion</h3>
+<p class=life>Thomas Schelling, <i>The Strategy of Conflict</i> (1960) — game theory for adversaries who must also coordinate.</p>
+<p>Schelling reframes conflict as bargaining. Power comes not from capability but from <b>credible commitment</b> — visibly binding yourself so the other side must yield; from <b>focal points</b> that coordinate expectations without communication; and from "<b>the threat that leaves something to chance</b>," where calibrated, partly-uncontrolled risk coerces more reliably than a precise threat. The on/off export faucet is textbook Schelling: a partial, repeated, deliberately-uncertain squeeze that keeps the adversary's economics permanently hostage — coercion through managed risk, not a single decisive blow. It is also why a price <em>floor</em> (a credible public commitment, e.g. a guaranteed NdPr price) is a real strategic move and not just a subsidy.</p>
 
-<div class=lens>
-  <h3>Evidence grading &amp; the proof core</h3>
-  <div class=row><b>Rule</b>Every claim is graded <b>fact · contested · weak · unsupported</b>; <b>intent is never inferred from adjacency</b>; and only the explicitly-marked, machine-verified core (Z3 / TLA+ / Alloy) carries the weight of "proven" — everything else is interpretive overlay.</div>
-  <div class=more><a href="methodology.html">→ methodology</a></div>
-</div>
+<h3 id=goodhart>7. Goodhart's &amp; Campbell's laws — when a measure becomes a target</h3>
+<p class=life>Charles Goodhart (1975) / Donald T. Campbell (1976) — why metrics corrupt under pressure.</p>
+<blockquote>"When a measure becomes a target, it ceases to be a good measure."<cite>Goodhart's law (Strathern's formulation)</cite></blockquote>
+<p>The moment a number is used to steer or reward, the system optimizes the number rather than the thing it was meant to track, and the measure decouples from reality. This is the engine beneath three corpus threads at once: <b>AI benchmark gaming</b> (contamination inflates the score, not the capability), <b>official-data divergence</b> (a headline figure massaged toward a convenient direction), and <b>reflexive marks</b> (a "value" chosen because it is the value being reported). Campbell's sharper version adds the corruption pressure scales with the stakes — which is why the most load-bearing numbers in the bubble are the most likely to be hollow.</p>
+
+<h2>III. The epistemic discipline <span class=n>— turned on ourselves first</span></h2>
+
+<h3 id=falsifiability>8. Falsifiability / galaxy-brain resistance</h3>
+<blockquote>"If your arguments can justify anything, then your arguments imply nothing."<cite>Vitalik Buterin, 2025 — restating Popper's criterion</cite></blockquote>
+<p>Popper's demarcation: a claim is meaningful to the extent it forbids something — that it could, in principle, be proven wrong. Buterin's "galaxy-brain resistance" is the operational test: prefer reasoning frameworks that <em>cannot</em> be bent to reach whatever conclusion you already wanted. The failure mode we guard against is the <b>unfalsifiability ratchet</b>: a theory where the <em>absence</em> of evidence is recoded as proof ("no trace — that's how sophisticated it is"). At that point every possible observation confirms the theory, which means none of them does. The honest move is to set such a claim down as a <b>permanent open possibility — non-adjudicable, asserted neither way</b> — not to treat it as a finding. We walked an entire thread to exactly that endpoint and stopped there on purpose.</p>
+
+<h3 id=compdiv>9. The composition &amp; division fallacy guard</h3>
+<p>Two mirror errors. <b>Composition:</b> attributing to a whole the properties of its parts — giving a collective a single mind ("China wants…", "the market believes…"). <b>Division:</b> attributing to a part the properties of the whole — suspecting an individual because of a category they belong to. The discipline: <b>institutional action is documented; an institutional "mind" is not asserted.</b> A documented national-capability transfer is not any individual's intent; a state's strategy is not any one citizen's loyalty. An advisory lint in <code>models/audit.py</code> flags collective-intent phrasing so it gets re-examined before it ships.</p>
+
+<h3 id=bayes>10. Base rates &amp; Bayesian weight</h3>
+<p>A claim's plausibility is its prior times the evidence's likelihood ratio — and the most common error is <b>base-rate neglect</b>: a story so vivid it crowds out how rare the thing actually is. The right question is never "could this be true?" (almost anything could) but "how much does what I observe move the odds <em>relative to the mundane explanation</em>?" Observations that the innocent and guilty cases produce <em>equally</em> (e.g. "a competent engineer with a normal career") carry a likelihood ratio near 1 — they are inert; they cannot move the posterior, however suggestive they feel. Extraordinary claims require evidence that the ordinary explanation would <em>not</em> have produced.</p>
+
+<h3 id=trust>11. Verify, don't trust (trust models)</h3>
+<p>Trust is best modeled as an N-of-M assumption: how many parties must behave, out of how many, for a system to hold. The healthiest end is <b>0-of-N / 1-of-N</b> — needing no one, or any single honest party — versus the fragile <b>1-of-1</b> of centralization. The practical corollary, used throughout: where intent is unrecoverable, the defense must be <b>intent-independent</b> — reproduce before relying, reintroduce backpressure, deny the single point of failure, lean on open math and architecture rather than on trusting (or blanket-distrusting) any actor. You do not have to read minds if you do not have to trust them.</p>
+
+<h3 id=collapse>12. The verification-collapse law</h3>
+<p>An open or trust-based system stays healthy only while <b>producing</b> a contribution costs at least as much as <b>verifying</b> it. Generative AI drove production cost toward zero while verification cost held — so the backpressure that gated every open system fails. The same inversion now hits science, AI's own evals, scientific publishing, open source, security, and even a live face on a video call (the Arup deepfake-CFO fraud). Wherever "looks legitimate" is cheap and "is legitimate" is expensive to confirm, the channel floods — and, critically, the flood is <b>indistinguishable, item by item, from honest error or deliberate sabotage</b>, which is why intent becomes unrecoverable and the defense must be structural. (See <a href="r-spec-reproducibility-crisis.html">the collapse, in full</a>.)</p>
+
+<h3 id=hardmoney>13. The hard-money lens</h3>
+<p>Re-denominate value in <b>gold- and silver-ounces at the time of measure</b>, and report the gold/silver ratio — a deliberately austere yardstick that separates real gains from monetary debasement. Measured in gold, a US home is roughly <b>−81%</b> since 1998 and the broad market <b>−69%</b> since 2000, while a genuine concentration of real value (NVIDIA, <b>+1,985%</b>) stands out precisely because most "gains" do not survive the change of unit. It is an <em>overlay for perspective</em>, never part of the formal proofs. (See <a href="r-macro-gold-silver-reprice.html">the reprice</a>.)</p>
+
+<h3 id=grading>14. Grading &amp; the proof core</h3>
+<p>The discipline that binds the rest. Every claim carries a grade — <b>fact · contested · weak · unsupported</b>; <b>intent is never inferred from adjacency</b>; and only the explicitly-marked, machine-verified core (Z3 / TLA+ / Alloy) carries the weight of "proven." Everything else — including everything on this page — is interpretive overlay, offered as analysis and opinion, gradeable and corrigible. The lenses tell you <em>where</em> to look; the grading keeps the looking honest. (See <a href="methodology.html">methodology</a>.)</p>
 
 <footer>
-The convergence: across all of these, the contested variable is <b>legitimacy / trust (信 / 道)</b>, and the project's own refusal to misname things <i>is</i> the defense it describes. Read the depth versions — <a href="r-spec-strategic-lenses.html">Strategic reading lenses</a> and the <a href="r-spec-lens-rereads.html">block-by-block re-read</a> — for the verified texts and full citations (Sun Tzu via Giles/Columbia; the OSS manual via Project Gutenberg #26184 / CIA 2008; the Analects 12.7 / 13.3 / 2.3 / 15.24 via Legge/Lau/Slingerland).
+<b>The convergence.</b> Read at depth, these frameworks point the same way: the contested variable in every system here is <b>legitimacy and trust</b> — Sun Tzu's 道, Confucius's 信, Clausewitz's moral forces, the center of gravity — and the decisive move is to erode or defend <em>cohesion</em>, not to win a fight. The project's own refusal to misname things is, in the end, the very defense it describes.
+<br><br>
+<b>Texts, verified before use:</b> Sun Tzu, <i>The Art of War</i> — full reader (all 13 chapters, Giles translation + per-line commentary) at <a href="https://suntzusaid.com/">suntzusaid.com</a> (also Columbia &amp; Chinese sources; later strategists — Clausewitz, Boyd, the <i>Thirty-Six Stratagems</i> — extend the same indirect-strategy tradition); the OSS <i>Simple Sabotage Field Manual</i> (1944; Project Gutenberg #26184; CIA-declassified 2008); the <i>Analects</i> 2.3 / 12.7 / 13.3 / 15.24 (Legge, Lau, Slingerland + Chinese source); Clausewitz, <i>On War</i> (Howard/Paret); Boyd's OODA briefings; Schelling, <i>The Strategy of Conflict</i> (1960); Goodhart (1975) / Campbell (1976); Popper, <i>The Logic of Scientific Discovery</i>. Depth blocks: <a href="r-spec-strategic-lenses.html">Strategic reading lenses</a> · <a href="r-spec-lens-rereads.html">the block-by-block re-read</a>.
 </footer>
 </main>
 </body></html>
