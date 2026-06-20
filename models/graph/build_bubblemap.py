@@ -28,7 +28,7 @@ BUCKET={ "ai":["ai_lab","hyperscaler","chip_vendor","ai_infra","neocloud","semic
  "commodity":["commodity","commodity_market","critical_minerals","energy","industrial","space_real_economy"],
  "identity":["surveillance","privacy_tool","standards","ip_rightsholder","telecom","satellite","journalism"],
  "macro":["macro_factor","statistic","labor","labor_platform","data_provider","retail"],
- "pqc":["pqc_quantum"], "person":["person"], "other":["other","spv","offshore"] }
+ "pqc":["pqc_quantum","research"], "person":["person"], "other":["other","spv","offshore"] }
 SEC2BUCKET={s:b for b,ss in BUCKET.items() for s in ss}
 COLORS={"ai":"#1f4e79","capital":"#7b2d26","crypto":"#b8860b","defense":"#2e8b57","state":"#c0392b",
  "commodity":"#8a5a2b","identity":"#5e35b1","macro":"#138a8a","pqc":"#6b3b16","person":"#d35400","other":"#8a8378"}
@@ -79,6 +79,10 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "AI_Infrastructure_Partnership":"AI Infrastructure Partnership","Aligned_Data_Centers":"Aligned Data Centers",
  "IBIT":"IBIT (iShares Bitcoin Trust)","GIP":"Global Infrastructure Partners","HPS":"HPS Investment Partners",
  "Aladdin":"Aladdin (risk engine, ~$25T)",
+ # quantum competitive landscape
+ "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
+ "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
+ "USTC":"USTC / CAS (China)","RIKEN":"RIKEN (Japan)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

@@ -68,6 +68,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "Alice_Bob": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "Aligned_Data_Centers": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -118,6 +122,14 @@
     },
     "Asia_local_currency_stablecoins": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Atom_Computing": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Australia": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "BDCs": {
@@ -416,6 +428,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "D_Wave": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": true
+    },
     "David_Sacks": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -470,6 +486,10 @@
     },
     "EUDI_Wallet": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "EU_Quantum_Flagship": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "EeroQ": {
@@ -560,6 +580,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "Fujitsu": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
+    },
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -591,6 +615,10 @@
     "Gig_Platforms": {
       "sector": "labor_platform",
       "has_exogenous_revenue": false
+    },
+    "GlobalFoundries": {
+      "sector": "semiconductor",
+      "has_exogenous_revenue": true
     },
     "Globalstar": {
       "sector": "satellite",
@@ -632,6 +660,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Honeywell": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "House Financial Services": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -668,6 +700,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "IQM": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "InQTel": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
@@ -678,6 +714,10 @@
     },
     "Intel": {
       "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
+    "IonQ": {
+      "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
     "Iran_IRGC": {
@@ -940,6 +980,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "OQC": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "Offshore_Finance": {
       "sector": "offshore",
       "has_exogenous_revenue": false
@@ -964,6 +1008,14 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Origin_Quantum": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Oxford_Ionics": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "PBoC": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -983,6 +1035,10 @@
     "Palantir": {
       "sector": "defense_tech",
       "has_exogenous_revenue": true
+    },
+    "Pasqal": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
     },
     "PayPay": {
       "sector": "other",
@@ -1048,12 +1104,24 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "QIA": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Qatar": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "QuEra": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Quandela": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "Quantinuum": {
-      "sector": "other",
+      "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
     "QuantumComputingInc": {
@@ -1063,6 +1131,10 @@
     "REalloys": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "RIKEN": {
+      "sector": "research",
+      "has_exogenous_revenue": false
     },
     "Rare_Earths": {
       "sector": "commodity",
@@ -1079,6 +1151,10 @@
     "Retail_401k": {
       "sector": "retail",
       "has_exogenous_revenue": false
+    },
+    "Rigetti": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": true
     },
     "Ripple": {
       "sector": "crypto_infra",
@@ -1316,6 +1392,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Temasek": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Tenet_Media": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1412,6 +1492,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "USTC": {
+      "sector": "research",
+      "has_exogenous_revenue": false
+    },
     "US_Allied_Military": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -1486,6 +1570,10 @@
     },
     "Vantage": {
       "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Vector_Atomic": {
+      "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
     "Verizon": {
@@ -4183,6 +4271,370 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-municipal-public-finance.json",
+      "note": ""
+    },
+    {
+      "from": "IonQ",
+      "to": "Oxford_Ionics",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquisition of Oxford Ionics (UK trapped-ion) \u2014 announced Jun 2025, closed Sep 2025",
+      "amount_usd": 1075000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "IonQ",
+      "to": "Vector_Atomic",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "announced intent to acquire Vector Atomic (quantum sensing/timing)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Honeywell",
+      "to": "Quantinuum",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "majority owner \u2014 Honeywell Quantum Solutions + Cambridge Quantum merger formed Quantinuum",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "NVIDIA",
+      "to": "IonQ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CUDA-Q / DGX Quantum hybrid quantum-classical integration partner",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Google",
+      "to": "QuEra",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-led QuEra $230M financing (early 2025) with SoftBank \u2014 neutral-atom hedge",
+      "amount_usd": 230000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "SoftBank",
+      "to": "QuEra",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-led QuEra $230M financing (early 2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "Atom_Computing",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "neutral-atom partnership \u2014 joint logical-qubit milestones via Azure Quantum",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "Quantinuum",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "Azure Quantum partner; 2024 logical-qubit demo (4 logical from 30 physical)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "IonQ",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "reported ~$2B quantum program taking EQUITY STAKES in pure-plays (May 2026) \u2014 state-as-shareholder (cf. MP Materials / Intel)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Rigetti",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "reported ~$2B quantum program equity stakes (May 2026)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "D_Wave",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "reported ~$2B quantum program equity stakes (May 2026)",
+      "amount_usd": null,
+      "status": "announced",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "DARPA",
+      "to": "PsiQuantum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DARPA US2QC Phase 3 (Nov 2025) / Quantum Benchmarking Initiative selection",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "PsiQuantum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Dept of Commerce ~$100M letter of intent (May 2026); Illinois Quantum & Microelectronics Park anchor (~$500M state)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Australia",
+      "to": "PsiQuantum",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "~A$1B (Queensland + federal) subsidy anchoring the Brisbane utility-scale quantum site",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "GlobalFoundries",
+      "to": "PsiQuantum",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "manufactures PsiQuantum's Omega silicon-photonic chipset on 300mm wafers (New York) \u2014 quantum runs through classical fab chokepoints",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "Temasek",
+      "to": "PsiQuantum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-led the $1B Series E (2025, $7B valuation)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "QIA",
+      "to": "PsiQuantum",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Qatar Investment Authority participated in the $1B Series E (2025)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Origin_Quantum",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "state-backed commercial national champion \u2014 Wukong cloud + 180-qubit Wukong-180 (2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "USTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USTC/CAS \u2014 Zuchongzhi 3.0 (105-qubit superconducting) + Jiuzhang photonic supremacy line",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "RIKEN",
+      "to": "Quantinuum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployed Quantinuum 'Reimei' (H1) for hybrid quantum-HPC at Wako",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "RIKEN",
+      "to": "IBM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "156-qubit IBM Heron processor deployed at the Kobe facility",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "RIKEN",
+      "to": "Fujitsu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "256-qubit superconducting (2025) -> 1,000-qubit target (2026) at Fujitsu Technology Park",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "NVIDIA",
+      "to": "RIKEN",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "supercomputers for AI + quantum (CUDA-Q / DGX Quantum hybrid)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "EU_Quantum_Flagship",
+      "to": "Pasqal",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EUR1B Quantum Flagship ecosystem \u2014 Pasqal (France, neutral-atom; Bleichroeder SPAC)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "EU_Quantum_Flagship",
+      "to": "IQM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EUR1B Quantum Flagship ecosystem \u2014 IQM (Finland, superconducting)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "EU_Quantum_Flagship",
+      "to": "Quandela",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EUR1B Quantum Flagship ecosystem \u2014 Quandela (France, photonic)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "EU_Quantum_Flagship",
+      "to": "Alice_Bob",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EUR1B Quantum Flagship ecosystem \u2014 Alice & Bob (France, cat-qubit superconducting)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
+      "note": ""
+    },
+    {
+      "from": "EU_Quantum_Flagship",
+      "to": "OQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "UK/EU ecosystem \u2014 Oxford Quantum Circuits (superconducting)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-quantum-computing-competitive-landscape.json",
       "note": ""
     },
     {
@@ -7489,10 +7941,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 386,
-    "num_edges": 457,
-    "num_financial_edges": 136,
-    "num_structural_edges": 321,
+    "num_nodes": 408,
+    "num_edges": 485,
+    "num_financial_edges": 148,
+    "num_structural_edges": 337,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7543,22 +7995,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -7567,9 +8003,20 @@
         "NVIDIA"
       ],
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -7582,16 +8029,15 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -7608,7 +8054,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -7616,6 +8061,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -7748,6 +8200,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Alice_Bob": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Aligned_Data_Centers": {
         "total_usd": 40000000000,
         "circular_usd": 0,
@@ -7833,6 +8292,20 @@
         "in_robust_core": false
       },
       "Asia_local_currency_stablecoins": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Atom_Computing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Australia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8357,6 +8830,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "D_Wave": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "David_Sacks": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8449,6 +8929,13 @@
         "in_robust_core": false
       },
       "EUDI_Wallet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EU_Quantum_Flagship": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8609,6 +9096,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Fujitsu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GARM_WFA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8665,6 +9159,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GlobalFoundries": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Globalstar": {
         "total_usd": 13300000000,
         "circular_usd": 0,
@@ -8680,7 +9181,7 @@
         "in_robust_core": false
       },
       "Google": {
-        "total_usd": 200000000000,
+        "total_usd": 200230000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8729,6 +9230,13 @@
         "in_robust_core": false
       },
       "Hiero_LFDT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Honeywell": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8798,6 +9306,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IQM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "InQTel": {
         "total_usd": 2000000,
         "circular_usd": 0,
@@ -8814,6 +9329,13 @@
       },
       "Intel": {
         "total_usd": 12900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IonQ": {
+        "total_usd": 1075000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9274,6 +9796,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "OQC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Offshore_Finance": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9316,6 +9845,20 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Origin_Quantum": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Oxford_Ionics": {
+        "total_usd": 1075000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PBoC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9346,6 +9889,13 @@
       },
       "Palantir": {
         "total_usd": 2000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pasqal": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9463,8 +10013,29 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "QIA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Qatar": {
         "total_usd": 400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QuEra": {
+        "total_usd": 230000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Quandela": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9485,6 +10056,13 @@
         "in_robust_core": false
       },
       "REalloys": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RIKEN": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9513,6 +10091,13 @@
         "in_robust_core": false
       },
       "Retail_401k": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rigetti": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9932,6 +10517,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Temasek": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tenet_Media": {
         "total_usd": 10000000,
         "circular_usd": 0,
@@ -10100,6 +10692,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "USTC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Allied_Military": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10228,6 +10827,13 @@
       },
       "Vantage": {
         "total_usd": 38000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Vector_Atomic": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10364,19 +10970,42 @@
       },
       {
         "node": "NVIDIA",
-        "degree": 21,
+        "degree": 23,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
           "hyperscaler",
           "neocloud",
           "other",
+          "pqc_quantum",
+          "research",
           "space_real_economy",
           "spv",
           "telecom"
         ],
+        "n_neighbor_sectors": 10,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "China",
+        "degree": 16,
+        "neighbor_sectors": [
+          "commodity",
+          "creditor",
+          "defense",
+          "other",
+          "pqc_quantum",
+          "research",
+          "state",
+          "statistic"
+        ],
         "n_neighbor_sectors": 8,
-        "source_files": 7,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"
@@ -10385,18 +11014,59 @@
       },
       {
         "node": "US_Government",
-        "degree": 14,
+        "degree": 18,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
           "critical_minerals",
           "other",
           "person",
+          "pqc_quantum",
           "sink",
           "state"
         ],
+        "n_neighbor_sectors": 8,
+        "source_files": 10,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Microsoft",
+        "degree": 13,
+        "neighbor_sectors": [
+          "ai_lab",
+          "financial_infra",
+          "neocloud",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech"
+        ],
         "n_neighbor_sectors": 7,
-        "source_files": 9,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Google",
+        "degree": 9,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "dlt",
+          "ip_rightsholder",
+          "pqc_quantum",
+          "space_real_economy",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 6,
         "layers": [
           "financial",
           "structural"
@@ -10424,24 +11094,6 @@
         "both_layers": true
       },
       {
-        "node": "China",
-        "degree": 14,
-        "neighbor_sectors": [
-          "commodity",
-          "creditor",
-          "defense",
-          "other",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 9,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -10462,25 +11114,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Microsoft",
-        "degree": 11,
-        "neighbor_sectors": [
-          "ai_lab",
-          "financial_infra",
-          "neocloud",
-          "spv",
-          "surveillance",
-          "tech"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "OpenAI",
@@ -10514,25 +11147,6 @@
         ],
         "n_neighbor_sectors": 6,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Google",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "dlt",
-          "ip_rightsholder",
-          "space_real_economy",
-          "surveillance"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 5,
         "layers": [
           "financial",
           "structural"
@@ -10616,6 +11230,24 @@
         "both_layers": true
       },
       {
+        "node": "JPMorgan",
+        "degree": 6,
+        "neighbor_sectors": [
+          "commodity_market",
+          "crypto_infra",
+          "other",
+          "pqc_quantum",
+          "spv"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 5,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stargate",
         "degree": 9,
         "neighbor_sectors": [
@@ -10662,24 +11294,6 @@
         ],
         "n_neighbor_sectors": 4,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Ripple",
-        "degree": 7,
-        "neighbor_sectors": [
-          "bank",
-          "financier",
-          "other",
-          "political",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"

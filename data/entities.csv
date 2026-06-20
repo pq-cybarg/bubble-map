@@ -16,6 +16,7 @@ ATT,telecom,True,False,False,0.0
 Age_Assurance_Issuers,surveillance,False,False,False,0.0
 Agency_MBS_Market,financial_infra,True,False,False,0.0
 Aladdin,financial_infra,False,False,False,0.0
+Alice_Bob,pqc_quantum,False,False,False,0.0
 Aligned_Data_Centers,ai_infra,False,False,False,0.0
 Alternative_OS_Exclusion,surveillance,False,False,False,0.0
 Amazon,hyperscaler,True,True,True,0.941
@@ -29,6 +30,8 @@ Apollo,private_credit,True,False,False,0.0
 Apollo_Blackstone,private_credit,True,False,False,0.0
 Apple,hyperscaler,True,False,False,0.0
 Asia_local_currency_stablecoins,other,True,False,False,0.0
+Atom_Computing,pqc_quantum,False,False,False,0.0
+Australia,state,True,False,False,0.0
 BDCs,private_credit,True,False,False,0.0
 BLS,statistical_agency,True,False,False,0.0
 BLS_NTRI,statistic,False,False,False,0.0
@@ -103,6 +106,7 @@ DARPA,state_intel,True,False,False,0.0
 DOJ,regulator,True,False,False,0.0
 DTCC,other,True,False,False,0.0
 DTC_Cede,other,True,False,False,0.0
+D_Wave,pqc_quantum,True,False,False,0.0
 David_Sacks,person,False,False,False,0.0
 Defense_Primes,defense,True,False,False,0.0
 Dell,tech,True,False,False,0.0
@@ -117,6 +121,7 @@ Disney_Studios_Coalition,ip_rightsholder,True,False,False,0.0
 Distressed_Sovereigns,state,False,False,False,0.0
 Dual_Mandate,statistic,False,False,False,0.0
 EUDI_Wallet,standards,False,False,False,0.0
+EU_Quantum_Flagship,state,False,False,False,0.0
 EeroQ,pqc_quantum,False,False,False,0.0
 Epstein_Files,other,True,False,False,0.0
 Ethereum,other,True,False,False,0.0
@@ -139,6 +144,7 @@ First_Brands,industrial,False,False,False,0.0
 Flagstar,other,True,False,False,0.0
 Fnality,other,True,False,False,0.0
 Foreign_Bank_US_Branches,bank,True,False,False,0.0
+Fujitsu,tech,True,False,False,0.0
 GARM_WFA,other,True,False,False,0.0
 GENIUS_Act,state,False,False,False,0.0
 GIC,financier,True,False,False,0.0
@@ -147,6 +153,7 @@ GSEs_FannieFreddie,financial_infra,True,False,False,0.0
 Garantex,other,True,False,False,0.0
 Georgia_MoJ,state,True,False,False,0.0
 Gig_Platforms,labor_platform,False,False,False,0.0
+GlobalFoundries,semiconductor,True,False,False,0.0
 Globalstar,satellite,True,False,False,0.0
 Gold,commodity,False,False,False,0.0
 Google,hyperscaler,True,False,False,0.0
@@ -157,6 +164,7 @@ Hashgraph_Association,dlt,False,False,False,0.0
 Hedera,dlt,True,False,False,0.0
 Hedge_Funds,financier,True,False,False,0.0
 Hiero_LFDT,dlt,False,False,False,0.0
+Honeywell,industrial,True,False,False,0.0
 House Financial Services,other,True,False,False,0.0
 Huayou_Cobalt,other,True,False,False,0.0
 Huione,other,True,False,False,0.0
@@ -166,9 +174,11 @@ ICALPS,pqc_quantum,True,False,False,0.0
 ICE,other,True,False,False,0.0
 ICIJ,journalism,False,False,False,0.0
 ILCs,bank,True,False,False,0.0
+IQM,pqc_quantum,False,False,False,0.0
 InQTel,state_intel,True,False,False,0.0
 Insurers_Annuities,insurance,True,False,False,0.0
 Intel,chip_vendor,True,False,False,0.0
+IonQ,pqc_quantum,True,False,False,0.0
 Iran_IRGC,other,True,False,False,0.0
 Iran_nuclear_program,other,True,False,False,0.0
 Israel_state,other,True,False,False,0.0
@@ -234,17 +244,21 @@ Nomura,bank,True,False,False,0.0
 Nondepository financial institutions,other,True,False,False,0.0
 Nscale,neocloud,False,False,False,0.0
 OFAC,regulator,True,False,False,0.0
+OQC,pqc_quantum,False,False,False,0.0
 Offshore_Finance,offshore,False,False,False,0.0
 Oklo,energy,True,False,False,0.0
 OpenAI,ai_lab,False,True,True,0.93
 Open_Source_Ecosystem,other,True,False,False,0.0
 OptumRx,other,True,False,False,0.0
 Oracle,hyperscaler,True,True,True,0.896
+Origin_Quantum,pqc_quantum,False,False,False,0.0
+Oxford_Ionics,pqc_quantum,False,False,False,0.0
 PBoC,regulator,True,False,False,0.0
 PCE,statistic,False,False,False,0.0
 PE_Insurers,insurance,True,False,False,0.0
 PIMCO,private_credit,True,False,False,0.0
 Palantir,defense_tech,True,False,False,0.0
+Pasqal,pqc_quantum,False,False,False,0.0
 PayPay,other,True,False,False,0.0
 Pension_Funds,financier,True,False,False,0.0
 Perpetua_Resources,critical_minerals,False,False,False,0.0
@@ -261,14 +275,19 @@ PrivateCredit_Funds,private_credit,True,False,False,0.0
 PrivateEquity_Funds,private_credit,True,False,False,0.0
 PsiQuantum,other,True,False,False,0.0
 QCEW_Benchmark,statistic,False,False,False,0.0
+QIA,financier,True,False,False,0.0
 Qatar,other,True,False,False,0.0
-Quantinuum,other,True,False,False,0.0
+QuEra,pqc_quantum,False,False,False,0.0
+Quandela,pqc_quantum,False,False,False,0.0
+Quantinuum,pqc_quantum,True,False,False,0.0
 QuantumComputingInc,other,True,False,False,0.0
 REalloys,other,True,False,False,0.0
+RIKEN,research,False,False,False,0.0
 Rare_Earths,commodity,True,False,False,0.0
 Rate_Shock,macro_factor,False,False,False,0.0
 Repo_Market,financial_infra,True,False,False,0.0
 Retail_401k,retail,False,False,False,0.0
+Rigetti,pqc_quantum,True,False,False,0.0
 Ripple,crypto_infra,True,False,False,0.0
 Robinhood,other,True,False,False,0.0
 RomanStorm,person,False,False,False,0.0
@@ -328,6 +347,7 @@ Swift,financial_infra,True,False,False,0.0
 TMobile,telecom,True,False,False,0.0
 TechCompanies,tech,True,False,False,0.0
 Telesat,satellite,True,False,False,0.0
+Temasek,financier,True,False,False,0.0
 Tenet_Media,other,True,False,False,0.0
 TerraPower,other,True,False,False,0.0
 Terraform_Labs,other,True,False,False,0.0
@@ -352,6 +372,7 @@ UK_Labour_government,other,True,False,False,0.0
 UK_comms_infrastructure,other,True,False,False,0.0
 UK_government_cloud,other,True,False,False,0.0
 USDC,other,True,False,False,0.0
+USTC,research,False,False,False,0.0
 US_Allied_Military,defense,True,False,False,0.0
 US_Banks,bank,True,False,False,0.0
 US_Congress,other,True,False,False,0.0
@@ -371,6 +392,7 @@ UnitedHealth,other,True,False,False,0.0
 United_States_Antimony,critical_minerals,True,False,False,0.0
 VanLoon,person,False,False,False,0.0
 Vantage,neocloud,False,False,False,0.0
+Vector_Atomic,pqc_quantum,False,False,False,0.0
 Verizon,telecom,True,False,False,0.0
 Vistra,other,True,False,False,0.0
 WISeART,other,True,False,False,0.0

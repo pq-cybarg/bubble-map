@@ -34,6 +34,14 @@ ALIAS = {
  "Aladdin":"Aladdin","ALADDIN":"Aladdin","AIP":"AI_Infrastructure_Partnership","AI Infrastructure Partnership":"AI_Infrastructure_Partnership",
  "GIP":"GIP","Global Infrastructure Partners":"GIP","HPS":"HPS","HPS Investment Partners":"HPS",
  "IBIT":"IBIT","iShares Bitcoin Trust":"IBIT","Aligned":"Aligned_Data_Centers","Aligned Data Centers":"Aligned_Data_Centers",
+ # quantum competitive landscape
+ "IonQ":"IonQ","IONQ":"IonQ","Rigetti":"Rigetti","RGTI":"Rigetti","D-Wave":"D_Wave","DWave":"D_Wave","QBTS":"D_Wave","D_Wave":"D_Wave",
+ "Quantinuum":"Quantinuum","QuEra":"QuEra","Atom Computing":"Atom_Computing","AtomComputing":"Atom_Computing","Atom_Computing":"Atom_Computing",
+ "Pasqal":"Pasqal","IQM":"IQM","Quandela":"Quandela","Alice & Bob":"Alice_Bob","Alice and Bob":"Alice_Bob","Alice_Bob":"Alice_Bob","OQC":"OQC","Xanadu":"Xanadu",
+ "Oxford Ionics":"Oxford_Ionics","Oxford_Ionics":"Oxford_Ionics","Vector Atomic":"Vector_Atomic","Vector_Atomic":"Vector_Atomic",
+ "Origin Quantum":"Origin_Quantum","OriginQuantum":"Origin_Quantum","Origin_Quantum":"Origin_Quantum","USTC":"USTC",
+ "RIKEN":"RIKEN","Riken":"RIKEN","Fujitsu":"Fujitsu","Honeywell":"Honeywell","GlobalFoundries":"GlobalFoundries","GLOBALFOUNDRIES":"GlobalFoundries","GF":"GlobalFoundries",
+ "Temasek":"Temasek","QIA":"QIA","Qatar Investment Authority":"QIA","Australia":"Australia","EU Quantum Flagship":"EU_Quantum_Flagship",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -120,6 +128,14 @@ NODE_META = {
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
+ # quantum competitive landscape — public pure-plays (exogenous=public-market revenue) + private builders + research/state
+ "IonQ":("pqc_quantum",True),"Rigetti":("pqc_quantum",True),"D_Wave":("pqc_quantum",True),"Quantinuum":("pqc_quantum",True),
+ "QuEra":("pqc_quantum",False),"Pasqal":("pqc_quantum",False),"Atom_Computing":("pqc_quantum",False),"IQM":("pqc_quantum",False),
+ "Quandela":("pqc_quantum",False),"Alice_Bob":("pqc_quantum",False),"OQC":("pqc_quantum",False),"Xanadu":("pqc_quantum",False),
+ "Oxford_Ionics":("pqc_quantum",False),"Vector_Atomic":("pqc_quantum",False),"Origin_Quantum":("pqc_quantum",False),
+ "USTC":("research",False),"RIKEN":("research",False),"Fujitsu":("tech",True),"Honeywell":("industrial",True),
+ "GlobalFoundries":("semiconductor",True),"Temasek":("financier",True),"QIA":("financier",True),
+ "Australia":("state",True),"EU_Quantum_Flagship":("state",False),
  "ColibriTD":("pqc_quantum",False),"Miraex":("pqc_quantum",False),"Kaynes_SemiCon":("semiconductor",True),"SEALKAYNESQ":("pqc_quantum",False),
  "IBM":("tech",True),"LG":("tech",True),"Dell":("tech",True),"ScaleAI":("ai_data",True),
  # telecom + satellite
