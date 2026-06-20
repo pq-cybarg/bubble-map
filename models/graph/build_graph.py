@@ -63,6 +63,21 @@ ALIAS = {
  "LayerZero":"LayerZero","Wormhole":"Wormhole","WYST":"WYST","Wyoming":"Wyoming","DTCC":"DTCC","ICE":"ICE","Intercontinental Exchange":"ICE",
  "MAS":"MAS","Citadel Securities":"Citadel_Securities","Citadel_Securities":"Citadel_Securities","Securitize":"Securitize",
  "Uniswap":"Uniswap","VanEck":"VanEck","Hamilton Lane":"Hamilton_Lane","Hamilton_Lane":"Hamilton_Lane",
+ # crypto-enforcement actors (persons + bodies)
+ "Gary Gensler":"Gary_Gensler","Gensler":"Gary_Gensler","Gary_Gensler":"Gary_Gensler","William Hinman":"William_Hinman","Hinman":"William_Hinman","William_Hinman":"William_Hinman",
+ "Jay Clayton":"Jay_Clayton","Clayton":"Jay_Clayton","Jay_Clayton":"Jay_Clayton","Damian Williams":"Damian_Williams","Damian_Williams":"Damian_Williams",
+ "Caroline Crenshaw":"Caroline_Crenshaw","Caroline_Crenshaw":"Caroline_Crenshaw","Elizabeth Warren":"Elizabeth_Warren","Warren":"Elizabeth_Warren","Elizabeth_Warren":"Elizabeth_Warren",
+ "Letitia James":"Letitia_James","Letitia_James":"Letitia_James","Rostin Behnam":"Rostin_Behnam","Rostin_Behnam":"Rostin_Behnam",
+ "Paul Atkins":"Paul_Atkins","Paul_Atkins":"Paul_Atkins","Hester Peirce":"Hester_Peirce","Hester_Peirce":"Hester_Peirce","John Deaton":"John_Deaton","John_Deaton":"John_Deaton",
+ "Brad Garlinghouse":"Brad_Garlinghouse","Brad_Garlinghouse":"Brad_Garlinghouse","Stuart Alderoty":"Stuart_Alderoty","Stuart_Alderoty":"Stuart_Alderoty",
+ "SEC Crypto Task Force":"SEC_Crypto_Task_Force","SEC_Crypto_Task_Force":"SEC_Crypto_Task_Force","NCET":"NCET",
+ "Operation Choke Point 2.0":"Operation_Choke_Point_2","Operation_Choke_Point_2":"Operation_Choke_Point_2","Simpson Thacher":"Simpson_Thacher","Simpson_Thacher":"Simpson_Thacher",
+ # crypto founders / builders + projects
+ "David Schwartz":"David_Schwartz","David_Schwartz":"David_Schwartz","JoelKatz":"David_Schwartz","Jed McCaleb":"Jed_McCaleb","Jed_McCaleb":"Jed_McCaleb",
+ "Arthur Britto":"Arthur_Britto","Arthur_Britto":"Arthur_Britto","Evan Cheng":"Evan_Cheng","Evan_Cheng":"Evan_Cheng","Sam Blackshear":"Sam_Blackshear","Sam_Blackshear":"Sam_Blackshear",
+ "Keonne Rodriguez":"Keonne_Rodriguez","Keonne_Rodriguez":"Keonne_Rodriguez","William L Hill":"William_L_Hill","William Lonergan Hill":"William_L_Hill","William_L_Hill":"William_L_Hill",
+ "Zooko":"Zooko_Wilcox","Zooko Wilcox":"Zooko_Wilcox","Zooko_Wilcox":"Zooko_Wilcox","Jeremy Kauffman":"Jeremy_Kauffman","Jeremy_Kauffman":"Jeremy_Kauffman",
+ "Zcash":"Zcash","ZEC":"Zcash","Electric Coin Company":"Electric_Coin_Company","Electric_Coin_Company":"Electric_Coin_Company","ECC":"Electric_Coin_Company","Odysee":"Odysee",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -165,6 +180,15 @@ NODE_META = {
  "LayerZero":("crypto_infra",False),"Wormhole":("crypto_infra",False),"WYST":("stablecoin",False),"Wyoming":("state",True),
  "DTCC":("financial_infra",True),"ICE":("exchange",True),"MAS":("regulator",True),"Citadel_Securities":("financier",True),
  "Securitize":("crypto_infra",True),"Uniswap":("crypto_infra",False),"VanEck":("financier",True),"Hamilton_Lane":("financier",True),
+ # crypto-enforcement actors (persons) + bodies
+ "Gary_Gensler":("person",False),"William_Hinman":("person",False),"Jay_Clayton":("person",False),"Damian_Williams":("person",False),
+ "Caroline_Crenshaw":("person",False),"Elizabeth_Warren":("person",False),"Letitia_James":("person",False),"Rostin_Behnam":("person",False),
+ "Paul_Atkins":("person",False),"Hester_Peirce":("person",False),"John_Deaton":("person",False),"Brad_Garlinghouse":("person",False),"Stuart_Alderoty":("person",False),
+ "SEC_Crypto_Task_Force":("regulator",False),"NCET":("regulator",False),"Operation_Choke_Point_2":("state",False),"Simpson_Thacher":("other",False),
+ # crypto founders / builders (persons) + projects
+ "David_Schwartz":("person",False),"Jed_McCaleb":("person",False),"Arthur_Britto":("person",False),"Evan_Cheng":("person",False),"Sam_Blackshear":("person",False),
+ "Keonne_Rodriguez":("person",False),"William_L_Hill":("person",False),"Zooko_Wilcox":("person",False),"Jeremy_Kauffman":("person",False),
+ "Zcash":("privacy_tool",False),"Electric_Coin_Company":("crypto_infra",False),"Odysee":("crypto_infra",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

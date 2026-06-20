@@ -92,6 +92,15 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "VeChain_Foundation":"VeChain Foundation","XRPL_EVM":"XRPL EVM sidechain","Xahau":"Xahau (XRPL sidechain)",
  "WYST":"WYST (Wyoming stable token)","Citadel_Securities":"Citadel Securities","Hamilton_Lane":"Hamilton Lane","MAS":"MAS (Singapore) / Project Guardian",
  "ICE":"ICE / NYSE","DTCC":"DTCC",
+ # crypto-enforcement actors
+ "Gary_Gensler":"Gary Gensler (ex-SEC chair)","William_Hinman":"William Hinman (ex-SEC)","Jay_Clayton":"Jay Clayton (ex-SEC / SDNY)","Damian_Williams":"Damian Williams (ex-SDNY)",
+ "Caroline_Crenshaw":"Caroline Crenshaw (SEC)","Elizabeth_Warren":"Sen. Elizabeth Warren","Letitia_James":"Letitia James (NY AG)","Rostin_Behnam":"Rostin Behnam (CFTC)",
+ "Paul_Atkins":"Paul Atkins (SEC chair)","Hester_Peirce":"Hester Peirce ('Crypto Mom')","John_Deaton":"John Deaton (XRP advocate)","Brad_Garlinghouse":"Brad Garlinghouse (Ripple CEO)",
+ "Stuart_Alderoty":"Stuart Alderoty (Ripple CLO)","SEC_Crypto_Task_Force":"SEC Crypto Task Force","NCET":"DOJ NCET (disbanded 2025)","Operation_Choke_Point_2":"Operation Choke Point 2.0","Simpson_Thacher":"Simpson Thacher (Hinman's firm)",
+ # crypto founders / builders
+ "David_Schwartz":"David Schwartz (XRPL/Ripple CTO)","Jed_McCaleb":"Jed McCaleb (XRPL/Stellar/Mt.Gox)","Arthur_Britto":"Arthur Britto (XRPL co-creator)",
+ "Evan_Cheng":"Evan Cheng (Mysten CEO)","Sam_Blackshear":"Sam Blackshear (Move/Sui)","Keonne_Rodriguez":"Keonne Rodriguez (Samourai)","William_L_Hill":"William L. Hill (Samourai)",
+ "Zooko_Wilcox":"Zooko Wilcox (Zcash/ECC)","Electric_Coin_Company":"Electric Coin Company (Zcash)","Jeremy_Kauffman":"Jeremy Kauffman (LBRY)","Odysee":"Odysee (LBRY video)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

@@ -1,0 +1,36 @@
+# The war on crypto — the enforcement actors: Gensler, Hinman, Clayton, Damian Williams, Warren, the privacy-tool prosecutions, Choke Point 2.0, and the 2025 reversal
+
+*Built 2026-06-20 from `research/spec-crypto-enforcement-actors.json`. The **people** behind the enforcement the corpus already mapped at the institution level. Companion to `spec-sec-sdny-regulatory`, `spec-sdny-crypto-prosecution`, `spec-crypto-banking-debanking`, `spec-crypto-legislation-forcing`, `spec-crypto-sec-epstein`, `spec-blockchain-ecosystem`.*
+
+> **Frame.** SEC→Ripple/Coinbase/Kraken/Binance/ConsenSys and SDNY→Tornado Cash/Samourai were already in the graph. This block adds the **principals** — those who drove crypto enforcement 2017-2025, those who **reversed** it in 2025, and the **defenders** — because the project maps *who sits where* without imputing intent. The finding is a **pendulum**: aggressive "regulation by enforcement" (some catching real fraud, some contested overreach with a documented conflict at its center), then a near-total 2025 reversal.
+>
+> **Discipline.** Each action graded **on its own merits, not by the actor's team.** Real fraud (SBF/FTX) → reasonable. Novel developer-liability / code-as-speech theories (Tornado Cash) → contested. The Hinman appearance-of-conflict → a documented **ethics question, not proven corruption.** "Whether reasonable or not" means **both** are in scope and labeled. No corrupt intent is asserted against any individual. Overlay; excluded from the proofs.
+
+## 1. The enforcers
+
+- **Gary Gensler** — SEC Chair (Apr 2021–Jan 2025). "Regulation by enforcement": 100+ crypto actions; the position that nearly all tokens **except Bitcoin** are securities; suits against **Coinbase, Kraken, Binance**; **refused to say clearly whether ETH is a security** in testimony — the fair-notice ambiguity firms cite. *Grade: anti-fraud actions reasonable; regulate-by-lawsuit-without-rulemaking contested (courts split — the Ripple programmatic-sales ruling went against the SEC).*
+- **William Hinman** — SEC Director, Corporation Finance (2017-2020). His **14 Jun 2018 speech** declared **BTC & ETH "sufficiently decentralized" → not securities**, the carve-out the market relied on. The **"Hinman documents"** became central to *SEC v. Ripple* (selective-treatment / fair-notice; a court ordered them unsealed). **Documented conflict question:** while at the SEC he continued receiving **multi-million-dollar payments from his former firm Simpson Thacher** (an Enterprise Ethereum Alliance member), flagged as an **appearance-of-conflict** by the SEC IG and Empower Oversight (FOIA). *Grade: the speech, the payments, and the IG concern are fact; actual corruption is **not** asserted.*
+- **Jay Clayton** — SEC Chair (2017–Dec 2020). **Filed *SEC v. Ripple* on 22 Dec 2020**, his final days. The irony: later appointed **US Attorney for the SDNY (2025)** — the man who launched the signature SEC crypto case now **runs the signature crypto-prosecution office.** *Grade: fact; the revolving-position note is structural, not an allegation.*
+- **Damian Williams** — US Attorney, SDNY (2021-2025). The marquee prosecutions: **SBF/FTX** (real, adjudicated fraud → reasonable), Eisenberg/Mango Markets, and **US v. Roman Storm** (Tornado Cash — convicted on transmitting, **hung** on laundering/sanctions; contested developer-liability). *Grade: mixed by case.*
+- **Caroline Crenshaw** — SEC Commissioner, the dissenting **pro-enforcement** voice; renomination stalled (2025). *Fact.*
+- **Elizabeth Warren** — Senator; the "anti-crypto army" framing; the Digital Asset Anti-Money-Laundering Act; a leading voice for **debanking** (Choke Point 2.0). *Fact (positions); right/wrong not adjudicated.*
+- **Letitia James** — NY AG; the **KuCoin suit (2023) argued ETH IS a security** — a state-level position in direct tension with Hinman's federal carve-out. *Fact.*
+- **Rostin Behnam** — CFTC Chair; pushed **CFTC (commodity) jurisdiction** — the SEC-vs-CFTC turf fight that left firms without clear rules. *Fact.*
+
+## 2. The Choke Point layer (debanking, not lawsuits)
+
+**Operation Choke Point 2.0** (term: Nic Carter) — the alleged coordinated **debanking** of crypto via **FDIC "pause letters"**, Fed/OCC reputational-risk guidance, surfaced through Coinbase's FOIA litigation (`spec-crypto-banking-debanking`). It cut crypto off from **banking** rather than suing it. *Grade: the pause-letters are fact (FOIA-released); "coordinated operation" is contested framing.*
+
+## 3. The 2025 reversal
+
+The pendulum swung hard: **Paul Atkins** became SEC Chair (pro-crypto); the SEC **dropped or settled** its cases against **Coinbase, Ripple, Kraken, ConsenSys, Robinhood, Uniswap, OpenSea, Gemini**; **Hester Peirce** ("Crypto Mom," the long-time Gensler dissenter) was put in charge of a new **SEC Crypto Task Force**; DOJ's **NCET** (National Cryptocurrency Enforcement Team) was effectively **disbanded** (Apr 2025 Blanche memo: DOJ "is not a digital-asset enforcer"); and the **GENIUS Act** + market-structure bills moved. *Grade: fact.* The honest read: a **regime reversal, not a vindication** — the same conduct went from prosecuted to permitted **on a political clock.**
+
+## 4. The defenders (for balance)
+
+**John Deaton** (amicus for ~**75,000 XRP holders** in *SEC v. Ripple*; ran against Warren in 2024, lost) and the broader **fair-notice / major-questions** argument that agencies expanded jurisdiction without Congressional authorization. **Courts partially agreed** — the Ripple programmatic-sales ruling; **Grayscale v. SEC** (spot-ETF denial "arbitrary and capricious"). *Fact.*
+
+## 5. The honest reading
+
+Map the **positions, not the motives.** There **was** real fraud (FTX) warranting prosecution; there **was** contested overreach (developer liability for privacy code; enforcement without rulemaking; a carve-out authored by an official with a documented appearance-of-conflict); and there **was** a wholesale political reversal flipping the same conduct from illegal to fine. Assigning **corrupt intent** to any individual is **out of scope and unsupported** — the analysis stops at **who held which office, what they did, and how it grades on a reasonable↔overreach spectrum.** The **pendulum itself** — enforcement and de-enforcement both tracking the administration rather than a stable rule of law — **is the finding.**
+
+*Sources: [Reuters — Gensler to step down](https://www.reuters.com/legal/sec-chair-gary-gensler-step-down-2025-01-20/); [CoinDesk — Hinman documents unsealed](https://www.coindesk.com/policy/2023/06/13/hinman-documents-released-in-sec-v-ripple-case/); [Empower Oversight — Hinman/Simpson Thacher](https://empowr.us/empower-oversight-sec-hinman/); [Reuters — Clayton to SDNY](https://www.reuters.com/legal/trump-pick-jay-clayton-us-attorney-sdny-2024-11-14/); [Reuters — Roman Storm verdict](https://www.reuters.com/legal/tornado-cash-roman-storm-verdict-2025/); [Reuters — SEC drops crypto cases (2025)](https://www.reuters.com/legal/sec-drops-crypto-cases-2025/); [NY AG — People v. KuCoin](https://ag.ny.gov/press-release/2023/attorney-general-james-sues-cryptocurrency-platform-kucoin); [CoinDesk — DOJ disbands NCET](https://www.coindesk.com/policy/2025/04/08/doj-disbands-crypto-enforcement-team/).*

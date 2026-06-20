@@ -32,6 +32,14 @@ Ripple spent **~$2.45B** on acquisitions in 2025 and built a full stack:
 
 **Mysten Labs** (ex-Meta **Diem/Novi** engineers) created **Sui**, a Move-language L1. It raised a **~$300M Series B at >$2B** — **led by FTX Ventures** (with a16z), a funding source later disgraced in the **FTX collapse** (`spec-crypto-sec-epstein`). A reminder that elite pedigree + big capital is **not** validation. The Sui ecosystem includes **Walrus** (decentralized storage, ~$140M token sale). **Grade: fact.**
 
+## 3a. The founders & builders (the people behind the chains)
+
+- **XRPL creators** — the XRP Ledger (2011-12) was built by **David Schwartz** (Ripple CTO, "JoelKatz"), **Jed McCaleb**, and **Arthur Britto**. McCaleb's arc *is* crypto history: he created **Mt. Gox** (2010) before selling it, co-founded **Ripple**, then left to found **Stellar** — one person links XRPL, Stellar, and the Mt. Gox collapse.
+- **Mysten / Sui** — ex-Meta **Diem/Novi** engineers: **Evan Cheng** (CEO), **Sam Blackshear** (creator of the **Move** language) — the "Diem diaspora" that also produced Aptos.
+- **Prosecuted privacy developers** — **Roman Storm** (Tornado Cash) and **Keonne Rodriguez + William Lonergan Hill** (Samourai Wallet) face DOJ cases on a **contested** developer-liability theory (presumed innocent except where adjudicated; `spec-sdny-crypto-prosecution`). **Zcash** — built by the **Electric Coin Company** (**Zooko Wilcox**) on zk-SNARK shielded transactions — is the cryptographically strongest, **non-prosecuted** contrast.
+- **LBRY / Odysee** — **Jeremy Kauffman's** LBRY was sued (and effectively bankrupted) by the SEC over token sales; its video front-end **Odysee** spun out to survive. The clearest case of enforcement killing a *builder* rather than a *fraud* (`spec-crypto-enforcement-actors`).
+- **CZ** founded **Binance** (DOJ guilty plea 2023; later pardoned).
+
 ## 4. The post-quantum fault line — where this leg meets the quantum leg
 
 - **The problem.** Bitcoin, Ethereum, and nearly every major chain sign with **ECDSA (secp256k1)** and expose public keys on-chain (reused addresses especially). Shor's algorithm on a CRQC derives the **private key from the public key** — every exposed-key balance becomes **forgeable/stealable at Q-Day**. This is the **"Trust Now, Forge Later" (TNFL)** threat from `macro-crqc` applied to **~$T of on-chain value**. (ANSSI's quantum doctrine notably says *nothing* about crypto-assets even though they rest on ECC.)

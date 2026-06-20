@@ -17,9 +17,9 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 56 files
 - **Google** — 37 files
+- **FDIC** — 32 files
 - **Oracle** — 31 files
 - **OpenAI** — 31 files
-- **FDIC** — 31 files
 - **Chainlink** — 27 files
 - **Microsoft** — 27 files
 - **Amazon** — 24 files
@@ -32,11 +32,11 @@
 - ScaleAI, TerraPower, Vistra
 
 ## Newest file `spec-blockchain-ecosystem.json` — related files by shared entities (verify cross-refs exist)
-- altcoin-lens.json: 12 shared entities
-- spec-exchanges-asia.json: 11 shared entities
-- spec-sec-sdny-regulatory.json: 10 shared entities
+- altcoin-lens.json: 13 shared entities
+- spec-exchanges-asia.json: 12 shared entities
+- spec-sec-sdny-regulatory.json: 11 shared entities
 - fin-hedera-connections.json: 10 shared entities
-- temporal-bridges.json: 7 shared entities
-- digitalid-corporate.json: 7 shared entities
-- spec-cross-system-contagion.json: 7 shared entities
+- spec-crypto-sec-epstein.json: 8 shared entities
 - influence-congress-funding-compromise.json: 7 shared entities
+- temporal-bridges.json: 7 shared entities
+- spec-network-overlay.json: 7 shared entities
