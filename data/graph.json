@@ -120,6 +120,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Arweave": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
     "Asia_local_currency_stablecoins": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -131,6 +135,10 @@
     "Australia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Axelar": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "BDCs": {
       "sector": "private_credit",
@@ -154,6 +162,10 @@
     },
     "BaaS_Middleware": {
       "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
+    "Band_Protocol": {
+      "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
     "Bank_of_England": {
@@ -312,6 +324,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Chainlink_Labs": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "China": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -329,7 +345,7 @@
       "has_exogenous_revenue": true
     },
     "Citadel_Securities": {
-      "sector": "other",
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "CoBank": {
@@ -376,6 +392,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "Cosmos": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
     "Courts": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -421,7 +441,7 @@
       "has_exogenous_revenue": true
     },
     "DTCC": {
-      "sector": "other",
+      "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
     "DTC_Cede": {
@@ -434,6 +454,10 @@
     },
     "David_Sacks": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "DePIN_Storage": {
+      "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
     "Defense_Primes": {
@@ -501,8 +525,12 @@
       "has_exogenous_revenue": true
     },
     "Ethereum": {
-      "sector": "other",
-      "has_exogenous_revenue": true
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "Ethereum_Foundation": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
     },
     "Euroclear": {
       "sector": "other",
@@ -560,9 +588,17 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Filecoin": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
     "FinCEN": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "Financial_Privacy": {
+      "sector": "privacy_tool",
+      "has_exogenous_revenue": false
     },
     "First_Brands": {
       "sector": "industrial",
@@ -572,12 +608,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Flare": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
     "Fnality": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
     "Foreign_Bank_US_Branches": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Franklin_Templeton": {
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "Fujitsu": {
@@ -644,6 +688,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "Hamilton_Lane": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Hashgraph_Association": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -689,7 +737,7 @@
       "has_exogenous_revenue": true
     },
     "ICE": {
-      "sector": "other",
+      "sector": "exchange",
       "has_exogenous_revenue": true
     },
     "ICIJ": {
@@ -700,6 +748,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "IPFS": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "IQM": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -707,6 +759,10 @@
     "InQTel": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
+    },
+    "Infura": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "Insurers_Annuities": {
       "sector": "insurance",
@@ -828,6 +884,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "LayerZero": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "Lazarus_Group": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -844,6 +904,14 @@
       "sector": "insurance",
       "has_exogenous_revenue": true
     },
+    "Linea": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "MAS": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
     "MGX": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -855,6 +923,10 @@
     "Meta": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
+    },
+    "MetaMask": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "Meta_Hyperion_SPV": {
       "sector": "spv",
@@ -884,6 +956,14 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Mochimo": {
+      "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
+    "Monero": {
+      "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
     "Money_Market_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -903,6 +983,10 @@
     "Municipal_Debt": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Mysten_Labs": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "NCUSIF": {
       "sector": "regulator",
@@ -1008,6 +1092,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Oracle_Interop": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "Origin_Quantum": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -1096,6 +1184,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "Protocol_Labs": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "PsiQuantum": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1107,6 +1199,14 @@
     "QIA": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "QRL": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "QRL_Foundation": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
     },
     "Qatar": {
       "sector": "other",
@@ -1136,6 +1236,10 @@
       "sector": "research",
       "has_exogenous_revenue": false
     },
+    "RLUSD": {
+      "sector": "stablecoin",
+      "has_exogenous_revenue": false
+    },
     "Rare_Earths": {
       "sector": "commodity",
       "has_exogenous_revenue": true
@@ -1157,6 +1261,10 @@
       "has_exogenous_revenue": true
     },
     "Ripple": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": true
+    },
+    "Ripple_Prime": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
@@ -1224,6 +1332,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "SEDA": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "SINK_backlog": {
       "sector": "sink",
       "has_exogenous_revenue": true
@@ -1280,6 +1392,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Salvium": {
+      "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
     "Samourai_Wallet": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1304,9 +1420,17 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Securitize": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": true
+    },
     "Senate Banking Committee": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Sia": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
     },
     "Signature_Bank": {
       "sector": "other",
@@ -1331,6 +1455,10 @@
     "SoftBank": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Solana": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
     },
     "SpaceX": {
       "sector": "space_real_economy",
@@ -1365,8 +1493,12 @@
       "has_exogenous_revenue": true
     },
     "Stellar": {
-      "sector": "other",
-      "has_exogenous_revenue": true
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "Stellar_Development_Foundation": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
     },
     "StraitsX": {
       "sector": "other",
@@ -1374,6 +1506,10 @@
     },
     "Subprime_Auto_ABS": {
       "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
+    "Sui": {
+      "sector": "dlt",
       "has_exogenous_revenue": false
     },
     "Swift": {
@@ -1556,6 +1692,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Uniswap": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "UnitedHealth": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1564,12 +1704,24 @@
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
     },
+    "VanEck": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "VanLoon": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
     "Vantage": {
       "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "VeChain": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "VeChain_Foundation": {
+      "sector": "dlt",
       "has_exogenous_revenue": false
     },
     "Vector_Atomic": {
@@ -1584,6 +1736,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Vitalik": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "WISeART": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1592,9 +1748,17 @@
       "sector": "satellite",
       "has_exogenous_revenue": false
     },
+    "WYST": {
+      "sector": "stablecoin",
+      "has_exogenous_revenue": false
+    },
     "Waheed_Alli": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Walrus": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "WeCan_Group": {
       "sector": "crypto_infra",
@@ -1608,9 +1772,41 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Wormhole": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Wyoming": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "XRPL": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "XRPLF": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "XRPL_EVM": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "XRPL_Labs": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Xahau": {
+      "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
     "Yim_Leak": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Zano": {
+      "sector": "privacy_tool",
+      "has_exogenous_revenue": false
     },
     "Zenko_Kurishita": {
       "sector": "other",
@@ -5925,6 +6121,955 @@
       "note": ""
     },
     {
+      "from": "Ethereum_Foundation",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "non-profit steward of the Ethereum protocol; funds core dev/research; large ETH treasury",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Vitalik",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder / intellectual figurehead of Ethereum (see spec-vitalik-buterin-thought)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "ConsenSys",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Joe Lubin (ETH co-founder) firm \u2014 commercial spine of Ethereum",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "ConsenSys",
+      "to": "MetaMask",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds MetaMask \u2014 dominant self-custody wallet (~100M+ users); forthcoming MetaMask token",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "ConsenSys",
+      "to": "Infura",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates Infura \u2014 RPC/node infrastructure much of Ethereum/dapps depend on (centralization chokepoint)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "ConsenSys",
+      "to": "Linea",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "builds Linea zkEVM L2; LINEA token launched Sep 2025 (~9.36B to ~750k wallets)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Linea",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "zkEVM rollup settling to Ethereum L1",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Linea",
+      "to": "Swift",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a leading L2 in SWIFT tokenization/settlement experiments (11,500+ institutions)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Chainlink",
+      "to": "Ethereum",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "primary oracle/CCIP infrastructure for Ethereum tokenization",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "Ripple_Prime",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquisition of Hidden Road prime broker ($1.25B, closed 24 Oct 2025); rebranded Ripple Prime; clears >$3T/yr for 300+ institutions",
+      "amount_usd": 1250000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "created and is principal contributor to the XRP Ledger",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "RLUSD",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "issuer of RLUSD stablecoin (collateral across Ripple Prime; cf. macro-stablecoin-treasury-rail)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple_Prime",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "moving post-trade settlement onto the XRP Ledger \u2014 vertical integration",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "XRPLF",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "XRP Ledger Foundation \u2014 independent non-profit supporting the open-source protocol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "XRPL_Labs",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds Xaman wallet (ex-Xumm) + Xahau sidechain on/around the XRP Ledger",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Mysten_Labs",
+      "to": "Sui",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "creator of Sui (Move-language L1); ex-Meta Diem/Novi team",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "a16z",
+      "to": "Mysten_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "participated in the ~$300M Series B at >$2B (round led by FTX Ventures)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "QRL_Foundation",
+      "to": "QRL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "QRL Stiftung (Switzerland) stewards the Quantum Resistant Ledger",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "QRL",
+      "to": "NIST",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "signs with XMSS hash-based signatures standardized by NIST SP 800-208 \u2014 quantum-safe by construction (the migration most chains have NOT done)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Protocol_Labs",
+      "to": "IPFS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built IPFS \u2014 content-addressed P2P storage protocol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Protocol_Labs",
+      "to": "Filecoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built Filecoin (FIL) \u2014 blockchain incentive layer paying nodes to store IPFS content",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Filecoin",
+      "to": "IPFS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FIL incentive layer for IPFS storage/pinning",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Mysten_Labs",
+      "to": "Walrus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built Walrus decentralized storage (~$140M token sale); Sui ecosystem",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Walrus",
+      "to": "Sui",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "settles/anchors on the Sui L1",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Solana",
+      "to": "Arweave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "archives ledger history to Arweave's permaweb",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "IPFS",
+      "to": "DePIN_Storage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "part of the decentralized-storage (DePIN) layer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Filecoin",
+      "to": "DePIN_Storage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decentralized-storage (DePIN) layer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Arweave",
+      "to": "DePIN_Storage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decentralized-storage (DePIN) layer \u2014 permaweb",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Sia",
+      "to": "DePIN_Storage",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "decentralized-storage (DePIN) layer \u2014 cloud-storage marketplace",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Walrus",
+      "to": "DePIN_Storage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decentralized-storage (DePIN) layer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Stellar_Development_Foundation",
+      "to": "Stellar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "non-profit steward of the Stellar network",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Franklin_Templeton",
+      "to": "Stellar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "runs the BENJI tokenized money-market fund on Stellar \u2014 TradFi tokenization on-chain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Circle",
+      "to": "Stellar",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "USDC stablecoin issued on Stellar (multi-chain)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Zano",
+      "to": "Financial_Privacy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "confidential-assets privacy L1 (ex-Boolberry; ring signatures + hybrid PoS)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Monero",
+      "to": "Financial_Privacy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dominant privacy coin (ring signatures / stealth addresses / RingCT)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Tornado_Cash",
+      "to": "Financial_Privacy",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Ethereum mixer (OFAC-sanctioned; Storm/Pertsev prosecutions) \u2014 dual-use privacy tool",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Samourai_Wallet",
+      "to": "Financial_Privacy",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Bitcoin privacy wallet/mixer (DOJ prosecution) \u2014 dual-use privacy tool",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Salvium",
+      "to": "Financial_Privacy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Monero-fork privacy coin + DeFi yield",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Mochimo",
+      "to": "Financial_Privacy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "post-quantum coin with privacy features (WOTS+ hash-based signatures)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Mochimo",
+      "to": "NIST",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "WOTS+ hash-based post-quantum signatures (same XMSS/hash-based family NIST standardized) \u2014 a PQ-native chain like QRL",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Chainlink_Labs",
+      "to": "Chainlink",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "builds the Chainlink oracle/CCIP network",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Chainlink",
+      "to": "Oracle_Interop",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "oracle + cross-chain (CCIP) data layer for tokenization",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Band_Protocol",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BandChain oracle (Cosmos-SDK)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "SEDA",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "modular oracle/data layer (Cosmos-SDK)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Flare",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EVM L1 with enshrined oracles (FTSO) + FAssets",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Axelar",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cross-chain interoperability hub",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Band_Protocol",
+      "to": "Cosmos",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BandChain built with the Cosmos SDK",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "SEDA",
+      "to": "Cosmos",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built with the Cosmos SDK",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Axelar",
+      "to": "Cosmos",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Cosmos-SDK interop hub on IBC",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Flare",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FLR airdropped to XRP holders; FAssets bring XRP on-chain \u2014 XRPL-community tie",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Axelar",
+      "to": "XRPL_EVM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "interop bridge to the XRPL EVM sidechain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "XRPL_Labs",
+      "to": "Xahau",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds the Xahau smart-contract ('Hooks') sidechain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Xahau",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "smart-contract sidechain of the XRP Ledger",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "XRPL_EVM",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ethereum-compatible (Peersyst/Ripple) sidechain of the XRP Ledger",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "VeChain_Foundation",
+      "to": "VeChain",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "steward of VeChainThor \u2014 enterprise supply-chain/RWA L1",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "LayerZero",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "omnichain messaging protocol (cross-chain interop layer)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Wormhole",
+      "to": "Oracle_Interop",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "omnichain messaging / cross-chain bridge (35+ chains, $60B+ volume)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Wyoming",
+      "to": "WYST",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "first US state-issued stablecoin (102% cash+Treasuries; interest -> School Foundation Fund); later Frontier/FRNT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "WYST",
+      "to": "LayerZero",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployed omnichain via LayerZero OFT (ETH/Solana/Avalanche/Polygon); LayerZero chosen from 31 vendors via RFQ/RFP",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "DTCC",
+      "to": "LayerZero",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploring LayerZero 'Zero' chain for tokenization/collateral scalability",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "ICE",
+      "to": "LayerZero",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NYSE parent examining 24/7 trading + tokenized collateral on 'Zero'",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Google",
+      "to": "LayerZero",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "Google Cloud partnership on AI-agent micropayments / programmable money for machine economies",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "MAS",
+      "to": "LayerZero",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MAS Project Guardian tokenization participation (Singapore)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Citadel_Securities",
+      "to": "LayerZero",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "backs the institutional 'Zero' blockchain for global markets (Feb 2026)",
+      "amount_usd": null,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Wormhole",
+      "to": "XRPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ripple partnership (Jun 2025) \u2014 interop for the XRP Ledger across 35+ chains",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Wormhole",
+      "to": "XRPL_EVM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "interop for the XRPL EVM sidechain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Wormhole",
+      "to": "Sui",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NTT (Native Token Transfer) framework extended to Sui",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Securitize",
+      "to": "Wormhole",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "powers multichain tokenized funds via Wormhole",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "Securitize",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "issues its tokenized fund (BUIDL) via Securitize \u2014 multichain through Wormhole",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Apollo",
+      "to": "Securitize",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tokenized credit fund via Securitize",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "VanEck",
+      "to": "Securitize",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tokenized fund via Securitize",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Hamilton_Lane",
+      "to": "Securitize",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tokenized private-markets fund via Securitize",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
+      "from": "Uniswap",
+      "to": "Wormhole",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "selected Wormhole as secure cross-chain bridge (Uniswap denied LayerZero over security)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blockchain-ecosystem.json",
+      "note": ""
+    },
+    {
       "from": "ApartmentList_ALNRI",
       "to": "CPI_Rent",
       "instrument": "other",
@@ -7941,10 +9086,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 408,
-    "num_edges": 485,
-    "num_financial_edges": 148,
-    "num_structural_edges": 337,
+    "num_nodes": 457,
+    "num_edges": 558,
+    "num_financial_edges": 151,
+    "num_structural_edges": 407,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7995,14 +9140,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -8011,17 +9148,20 @@
         "Anthropic"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
       [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Anthropic",
@@ -8036,14 +9176,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -8058,16 +9197,22 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -8291,6 +9436,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Arweave": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Asia_local_currency_stablecoins": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8306,6 +9458,13 @@
         "in_robust_core": false
       },
       "Australia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Axelar": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8348,6 +9507,13 @@
         "in_robust_core": false
       },
       "BaaS_Middleware": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Band_Protocol": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8627,6 +9793,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chainlink_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "China": {
         "total_usd": 86000000000,
         "circular_usd": 0,
@@ -8739,6 +9912,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cosmos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Courts": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8838,6 +10018,13 @@
         "in_robust_core": false
       },
       "David_Sacks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DePIN_Storage": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -8963,6 +10150,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ethereum_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Euroclear": {
         "total_usd": 194000000000,
         "circular_usd": 0,
@@ -9061,7 +10255,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Filecoin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FinCEN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Financial_Privacy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9082,6 +10290,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Flare": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Fnality": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9090,6 +10305,13 @@
         "in_robust_core": false
       },
       "Foreign_Bank_US_Branches": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Franklin_Templeton": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9208,6 +10430,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hamilton_Lane": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hashgraph_Association": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9306,6 +10535,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IPFS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IQM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9315,6 +10551,13 @@
       },
       "InQTel": {
         "total_usd": 2000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Infura": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9530,6 +10773,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LayerZero": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lazarus_Group": {
         "total_usd": 9725000000,
         "circular_usd": 0,
@@ -9558,6 +10808,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Linea": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MAS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MGX": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -9574,6 +10838,13 @@
       },
       "Meta": {
         "total_usd": 159300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MetaMask": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -9628,6 +10899,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mochimo": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Monero": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Money_Market_Funds": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9657,6 +10942,13 @@
         "in_robust_core": false
       },
       "Municipal_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mysten_Labs": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -9845,6 +11137,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Oracle_Interop": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Origin_Quantum": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -9999,6 +11298,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Protocol_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PsiQuantum": {
         "total_usd": 1000000000,
         "circular_usd": 0,
@@ -10014,6 +11320,20 @@
         "in_robust_core": false
       },
       "QIA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QRL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QRL_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10069,6 +11389,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "RLUSD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Rare_Earths": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10105,7 +11432,14 @@
         "in_robust_core": false
       },
       "Ripple": {
-        "total_usd": 50000000,
+        "total_usd": 1300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ripple_Prime": {
+        "total_usd": 1250000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10223,6 +11557,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SEDA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_backlog": {
         "total_usd": 56000000000,
         "circular_usd": 0,
@@ -10321,6 +11662,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Salvium": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Samourai_Wallet": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10363,7 +11711,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Securitize": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Senate Banking Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10407,6 +11769,13 @@
       },
       "SoftBank": {
         "total_usd": 60000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Solana": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10475,6 +11844,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stellar_Development_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "StraitsX": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10483,6 +11859,13 @@
         "in_robust_core": false
       },
       "Subprime_Auto_ABS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sui": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10804,6 +12187,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Uniswap": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UnitedHealth": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10818,6 +12208,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "VanEck": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanLoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10827,6 +12224,20 @@
       },
       "Vantage": {
         "total_usd": 38000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "VeChain": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "VeChain_Foundation": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10853,6 +12264,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Vitalik": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WISeART": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10867,7 +12285,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "WYST": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Waheed_Alli": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Walrus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10895,8 +12327,64 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Wormhole": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Wyoming": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRPL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRPLF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRPL_EVM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRPL_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Xahau": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Yim_Leak": {
         "total_usd": 240000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zano": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -11034,6 +12522,27 @@
         "both_layers": true
       },
       {
+        "node": "Google",
+        "degree": 10,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "crypto_infra",
+          "dlt",
+          "ip_rightsholder",
+          "pqc_quantum",
+          "space_real_economy",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Microsoft",
         "degree": 13,
         "neighbor_sectors": [
@@ -11054,19 +12563,20 @@
         "both_layers": true
       },
       {
-        "node": "Google",
-        "degree": 9,
+        "node": "Ripple",
+        "degree": 10,
         "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
+          "bank",
+          "crypto_infra",
           "dlt",
-          "ip_rightsholder",
-          "pqc_quantum",
-          "space_real_economy",
-          "surveillance"
+          "financier",
+          "other",
+          "political",
+          "regulator",
+          "stablecoin"
         ],
-        "n_neighbor_sectors": 7,
-        "source_files": 6,
+        "n_neighbor_sectors": 8,
+        "source_files": 5,
         "layers": [
           "financial",
           "structural"
@@ -11174,6 +12684,25 @@
         "both_layers": true
       },
       {
+        "node": "BlackRock",
+        "degree": 9,
+        "neighbor_sectors": [
+          "crypto_infra",
+          "financial_infra",
+          "other",
+          "private_credit",
+          "spv",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Oracle",
         "degree": 8,
         "neighbor_sectors": [
@@ -11211,25 +12740,6 @@
         "both_layers": true
       },
       {
-        "node": "BlackRock",
-        "degree": 8,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "financial_infra",
-          "other",
-          "private_credit",
-          "spv",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "JPMorgan",
         "degree": 6,
         "neighbor_sectors": [
@@ -11248,6 +12758,26 @@
         "both_layers": true
       },
       {
+        "node": "LayerZero",
+        "degree": 7,
+        "neighbor_sectors": [
+          "crypto_infra",
+          "exchange",
+          "financial_infra",
+          "financier",
+          "hyperscaler",
+          "regulator",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 1,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stargate",
         "degree": 9,
         "neighbor_sectors": [
@@ -11259,41 +12789,6 @@
         ],
         "n_neighbor_sectors": 5,
         "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "CoreWeave",
-        "degree": 11,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "private_credit",
-          "sink"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "MGX",
-        "degree": 10,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "exchange",
-          "spv"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"

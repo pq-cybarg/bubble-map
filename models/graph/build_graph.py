@@ -42,6 +42,27 @@ ALIAS = {
  "Origin Quantum":"Origin_Quantum","OriginQuantum":"Origin_Quantum","Origin_Quantum":"Origin_Quantum","USTC":"USTC",
  "RIKEN":"RIKEN","Riken":"RIKEN","Fujitsu":"Fujitsu","Honeywell":"Honeywell","GlobalFoundries":"GlobalFoundries","GLOBALFOUNDRIES":"GlobalFoundries","GF":"GlobalFoundries",
  "Temasek":"Temasek","QIA":"QIA","Qatar Investment Authority":"QIA","Australia":"Australia","EU Quantum Flagship":"EU_Quantum_Flagship",
+ # blockchain ecosystem
+ "Ethereum":"Ethereum","ETH":"Ethereum","Ethereum_Foundation":"Ethereum_Foundation","Ethereum Foundation":"Ethereum_Foundation","EF":"Ethereum_Foundation",
+ "Consensys":"ConsenSys","ConsenSys":"ConsenSys","CONSENSYS":"ConsenSys","MetaMask":"MetaMask","Metamask":"MetaMask","Infura":"Infura","Linea":"Linea",
+ "Mysten Labs":"Mysten_Labs","Mysten":"Mysten_Labs","Mysten_Labs":"Mysten_Labs","Sui":"Sui",
+ "QRL":"QRL","Quantum Resistant Ledger":"QRL","QRL Foundation":"QRL_Foundation","QRL_Foundation":"QRL_Foundation",
+ "XRPL":"XRPL","XRP Ledger":"XRPL","XRPLF":"XRPLF","XRP Ledger Foundation":"XRPLF","XRPL Labs":"XRPL_Labs","XRPL_Labs":"XRPL_Labs",
+ "Ripple Prime":"Ripple_Prime","Hidden Road":"Ripple_Prime","Ripple_Prime":"Ripple_Prime","RLUSD":"RLUSD","Vitalik":"Vitalik","Vitalik Buterin":"Vitalik","Solana":"Solana","SOL":"Solana",
+ # decentralized storage + stellar + privacy
+ "Protocol Labs":"Protocol_Labs","Protocol_Labs":"Protocol_Labs","IPFS":"IPFS","Filecoin":"Filecoin","FIL":"Filecoin","Arweave":"Arweave","AR":"Arweave",
+ "Sia":"Sia","Siacoin":"Sia","Walrus":"Walrus","DePIN_Storage":"DePIN_Storage",
+ "Stellar":"Stellar","XLM":"Stellar","Stellar Development Foundation":"Stellar_Development_Foundation","Stellar_Development_Foundation":"Stellar_Development_Foundation","SDF":"Stellar_Development_Foundation",
+ "Franklin Templeton":"Franklin_Templeton","Franklin_Templeton":"Franklin_Templeton","Zano":"Zano","Monero":"Monero","XMR":"Monero","Financial_Privacy":"Financial_Privacy",
+ # oracles / interop / sidechains / more L1s / more privacy-PQ coins
+ "Chainlink Labs":"Chainlink_Labs","Chainlink_Labs":"Chainlink_Labs","Band Protocol":"Band_Protocol","Band_Protocol":"Band_Protocol","BAND":"Band_Protocol",
+ "SEDA":"SEDA","Flare":"Flare","FLR":"Flare","Axelar":"Axelar","AXL":"Axelar","Oracle_Interop":"Oracle_Interop",
+ "Cosmos":"Cosmos","ATOM":"Cosmos","VeChain":"VeChain","VET":"VeChain","VeChain Foundation":"VeChain_Foundation","VeChain_Foundation":"VeChain_Foundation",
+ "Xahau":"Xahau","XRPL EVM":"XRPL_EVM","XRPL_EVM":"XRPL_EVM","Salvium":"Salvium","Mochimo":"Mochimo",
+ # omnichain interop + state/institutional collabs
+ "LayerZero":"LayerZero","Wormhole":"Wormhole","WYST":"WYST","Wyoming":"Wyoming","DTCC":"DTCC","ICE":"ICE","Intercontinental Exchange":"ICE",
+ "MAS":"MAS","Citadel Securities":"Citadel_Securities","Citadel_Securities":"Citadel_Securities","Securitize":"Securitize",
+ "Uniswap":"Uniswap","VanEck":"VanEck","Hamilton Lane":"Hamilton_Lane","Hamilton_Lane":"Hamilton_Lane",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -125,6 +146,25 @@ NODE_META = {
  "TornadoCash":("privacy_tool",False),"SamouraiWallet":("privacy_tool",False),"USD1":("stablecoin",False),"HKDA":("stablecoin",False),
  # DLT / crypto-infra
  "Hedera":("dlt",True),"Hashgraph_Association":("dlt",False),"Hiero_LFDT":("dlt",False),"Chainlink":("crypto_infra",True),
+ # blockchain ecosystem — protocols (dlt) + dev shops/infra (crypto_infra) + foundations
+ "Ethereum":("dlt",False),"Ethereum_Foundation":("dlt",False),"MetaMask":("crypto_infra",False),"Infura":("crypto_infra",False),
+ "Linea":("crypto_infra",False),"Mysten_Labs":("crypto_infra",False),"Sui":("dlt",False),"Solana":("dlt",False),
+ "QRL":("dlt",False),"QRL_Foundation":("dlt",False),"XRPL":("dlt",False),"XRPLF":("dlt",False),"XRPL_Labs":("crypto_infra",False),
+ "Ripple_Prime":("crypto_infra",True),"RLUSD":("stablecoin",False),"Vitalik":("person",False),
+ # decentralized storage (DePIN) + stellar + privacy
+ "Protocol_Labs":("crypto_infra",False),"IPFS":("crypto_infra",False),"Filecoin":("dlt",False),"Arweave":("dlt",False),
+ "Sia":("dlt",False),"Walrus":("crypto_infra",False),"DePIN_Storage":("crypto_infra",False),
+ "Stellar":("dlt",False),"Stellar_Development_Foundation":("dlt",False),"Franklin_Templeton":("financier",True),
+ "Zano":("privacy_tool",False),"Monero":("privacy_tool",False),"Financial_Privacy":("privacy_tool",False),
+ "Salvium":("privacy_tool",False),"Mochimo":("privacy_tool",False),
+ # oracles / interop / sidechains / alt-L1s
+ "Chainlink_Labs":("crypto_infra",False),"Band_Protocol":("crypto_infra",False),"SEDA":("crypto_infra",False),"Flare":("dlt",False),
+ "Axelar":("crypto_infra",False),"Oracle_Interop":("crypto_infra",False),"Cosmos":("dlt",False),"VeChain":("dlt",False),
+ "VeChain_Foundation":("dlt",False),"Xahau":("dlt",False),"XRPL_EVM":("dlt",False),
+ # omnichain interop + state/institutional collabs
+ "LayerZero":("crypto_infra",False),"Wormhole":("crypto_infra",False),"WYST":("stablecoin",False),"Wyoming":("state",True),
+ "DTCC":("financial_infra",True),"ICE":("exchange",True),"MAS":("regulator",True),"Citadel_Securities":("financier",True),
+ "Securitize":("crypto_infra",True),"Uniswap":("crypto_infra",False),"VanEck":("financier",True),"Hamilton_Lane":("financier",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
