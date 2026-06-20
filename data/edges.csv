@@ -27,6 +27,7 @@ SoftBank,OpenAI,equity,41000000000,closed,False,False,fin-nvidia-openai.json
 Apollo,Next-gen data centers / AI infrastructure,equity,40000000000,2025,False,False,macro-cre-privatecredit.json
 Terraform_Labs,SINK_investors,other,40000000000,closed,False,False,macro-stablecoin-failures-manipulation.json
 Google,Anthropic,equity,40000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
+AI_Infrastructure_Partnership,Aligned_Data_Centers,acquisition,40000000000,committed,False,False,spec-blackrock-aladdin-concentration.json
 OpenAI,Microsoft,revenue_share,38000000000,committed,False,False,fin-microsoft-openai.json
 SINK_lenders,Vantage,debt,38000000000,reported,False,False,fin-coreweave-oracle.json
 PrivateCredit_Funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progress),False,False,macro-cre-privatecredit.json
@@ -50,6 +51,8 @@ PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon
 Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
 US_Government,Prince_Group,other,15000000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
+BlackRock,GIP,acquisition,12500000000,closed,False,False,spec-blackrock-aladdin-concentration.json
+BlackRock,HPS,debt,12000000000,closed,False,False,spec-blackrock-aladdin-concentration.json
 Amazon,Globalstar,acquisition,11600000000,announced,False,False,spec-telecom-satellite.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
@@ -364,6 +367,18 @@ China,Battery_REE_Tech_Export_Controls,other,,recurring,False,False,spec-researc
 Umicore,Jiangmen_Changxin,other,,committed,False,False,spec-research-security-tech-transfer.json
 Huayou_Cobalt,Tesla,other,,recurring,False,False,spec-research-security-tech-transfer.json
 CNGR,Tesla,other,,recurring,False,False,spec-research-security-tech-transfer.json
+BlackRock,Aladdin,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
+Aladdin,Amazon,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
+Aladdin,Microsoft,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
+BlackRock,AI_Infrastructure_Partnership,other,,committed,False,False,spec-blackrock-aladdin-concentration.json
+GIP,AI_Infrastructure_Partnership,other,,committed,False,False,spec-blackrock-aladdin-concentration.json
+Microsoft,AI_Infrastructure_Partnership,equity,,committed,False,False,spec-blackrock-aladdin-concentration.json
+MGX,AI_Infrastructure_Partnership,other,,committed,False,False,spec-blackrock-aladdin-concentration.json
+NVIDIA,AI_Infrastructure_Partnership,compute_commitment,,committed,False,False,spec-blackrock-aladdin-concentration.json
+xAI,AI_Infrastructure_Partnership,compute_commitment,,committed,False,False,spec-blackrock-aladdin-concentration.json
+BlackRock,IBIT,relationship,,documented,False,False,spec-blackrock-aladdin-concentration.json
+IBIT,Coinbase,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
+BlackRock,Circle,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json

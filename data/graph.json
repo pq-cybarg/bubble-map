@@ -24,6 +24,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Infrastructure_Partnership": {
+      "sector": "spv",
+      "has_exogenous_revenue": false
+    },
     "AI_Native_OS": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -59,6 +63,14 @@
     "Agency_MBS_Market": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Aladdin": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
+    "Aligned_Data_Centers": {
+      "sector": "ai_infra",
+      "has_exogenous_revenue": false
     },
     "Alternative_OS_Exclusion": {
       "sector": "surveillance",
@@ -560,6 +572,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "GIP": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
     "GSEs_FannieFreddie": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -596,6 +612,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": false
     },
+    "HPS": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
     "Hashgraph_Association": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -623,6 +643,10 @@
     "Huione": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "IBIT": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "IBM": {
       "sector": "tech",
@@ -5865,6 +5889,201 @@
       "note": ""
     },
     {
+      "from": "BlackRock",
+      "to": "Aladdin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates the Aladdin risk & portfolio platform \u2014 monitors ~$25T across 1,000+ institutions incl. central banks (~7-8% of global financial assets), ~98% retention, ~$2B annual contract value",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "Aladdin",
+      "to": "Amazon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Aladdin brought to Amazon hyperscale infrastructure (Dec 2025); Amazon Treasury an early platform user \u2014 risk monitor of ~$25T concentrating on one hyperscaler",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "Aladdin",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Aladdin distributed on Microsoft platform since 2022 \u2014 second hyperscaler dependency for the ~$25T risk monitor",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "GIP",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquisition of Global Infrastructure Partners (closed 1 Oct 2024) \u2014 ~$170B infrastructure AUM: data-centres, energy, transport",
+      "amount_usd": 12500000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "HPS",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "acquisition of HPS Investment Partners (closed 1 Jul 2025) \u2014 creates a ~$220B private-credit franchise",
+      "amount_usd": 12000000000,
+      "status": "closed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder/organizer of the AI Infrastructure Partnership (AIP) \u2014 risk/portfolio role alongside GIP",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "GIP",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Global Infrastructure Partners co-leads AIP \u2014 contributes datacentre/energy infrastructure expertise",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "AIP partner \u2014 hyperscaler member of the ~$30B-equity AI-infrastructure vehicle",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "MGX",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AIP partner \u2014 Abu Dhabi sovereign-tech capital member",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "NVIDIA",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "AIP technology partner \u2014 supplies the accelerators the vehicle's datacentres deploy",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "xAI",
+      "to": "AI_Infrastructure_Partnership",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "AIP partner/anchor tenant \u2014 compute demand for the vehicle's datacentres",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Infrastructure_Partnership",
+      "to": "Aligned_Data_Centers",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "AIP-led acquisition of Aligned Data Centers (~$40B, 2025) \u2014 the vehicle's flagship asset",
+      "amount_usd": 40000000000,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "IBIT",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "issuer of IBIT (iShares Bitcoin Trust) ETF \u2014 fastest-growing ETF in history; a top BlackRock revenue line",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "IBIT",
+      "to": "Coinbase",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Coinbase Custody holds IBIT's underlying bitcoin \u2014 single-custodian concentration",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
+      "from": "BlackRock",
+      "to": "Circle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "manages the Circle Reserve Fund holding the bulk of USDC's US-Treasury reserves",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-blackrock-aladdin-concentration.json",
+      "note": ""
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -7270,10 +7489,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 380,
-    "num_edges": 442,
-    "num_financial_edges": 130,
-    "num_structural_edges": 312,
+    "num_nodes": 386,
+    "num_edges": 457,
+    "num_financial_edges": 136,
+    "num_structural_edges": 321,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -7336,20 +7555,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -7361,6 +7575,11 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -7452,6 +7671,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "AI_Infrastructure_Partnership": {
+        "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AI_Native_OS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -7510,6 +7736,20 @@
       },
       "Agency_MBS_Market": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aladdin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aligned_Data_Centers": {
+        "total_usd": 40000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -7698,7 +7938,7 @@
         "in_robust_core": false
       },
       "BlackRock": {
-        "total_usd": 4000000000,
+        "total_usd": 28500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -8390,6 +8630,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GIP": {
+        "total_usd": 12500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GSEs_FannieFreddie": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8453,6 +8700,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "HPS": {
+        "total_usd": 12000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hashgraph_Association": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -8496,6 +8750,13 @@
         "in_robust_core": false
       },
       "Huione": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IBIT": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10102,6 +10363,27 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 21,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "space_real_economy",
+          "spv",
+          "telecom"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Government",
         "degree": 14,
         "neighbor_sectors": [
@@ -10115,26 +10397,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "space_real_economy",
-          "telecom"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"
@@ -10202,6 +10464,25 @@
         "both_layers": false
       },
       {
+        "node": "Microsoft",
+        "degree": 11,
+        "neighbor_sectors": [
+          "ai_lab",
+          "financial_infra",
+          "neocloud",
+          "spv",
+          "surveillance",
+          "tech"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "OpenAI",
         "degree": 18,
         "neighbor_sectors": [
@@ -10210,6 +10491,25 @@
           "hyperscaler",
           "ip_rightsholder",
           "neocloud",
+          "spv"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "xAI",
+        "degree": 7,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "other",
+          "private_credit",
+          "space_real_economy",
           "spv"
         ],
         "n_neighbor_sectors": 6,
@@ -10297,6 +10597,25 @@
         "both_layers": true
       },
       {
+        "node": "BlackRock",
+        "degree": 8,
+        "neighbor_sectors": [
+          "crypto_infra",
+          "financial_infra",
+          "other",
+          "private_credit",
+          "spv",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stargate",
         "degree": 9,
         "neighbor_sectors": [
@@ -10305,24 +10624,6 @@
           "financier",
           "hyperscaler",
           "person"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "xAI",
-        "degree": 6,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "other",
-          "private_credit",
-          "space_real_economy"
         ],
         "n_neighbor_sectors": 5,
         "source_files": 5,
@@ -10351,6 +10652,23 @@
         "both_layers": true
       },
       {
+        "node": "MGX",
+        "degree": 10,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "exchange",
+          "spv"
+        ],
+        "n_neighbor_sectors": 4,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 7,
         "neighbor_sectors": [
@@ -10362,57 +10680,6 @@
         ],
         "n_neighbor_sectors": 5,
         "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Apple",
-        "degree": 5,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "critical_minerals",
-          "satellite",
-          "surveillance"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Federal_Reserve",
-        "degree": 8,
-        "neighbor_sectors": [
-          "bank",
-          "financial_infra",
-          "macro_factor",
-          "other",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 6,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "JPMorgan",
-        "degree": 6,
-        "neighbor_sectors": [
-          "commodity_market",
-          "crypto_infra",
-          "other",
-          "spv"
-        ],
-        "n_neighbor_sectors": 4,
-        "source_files": 5,
         "layers": [
           "financial",
           "structural"
