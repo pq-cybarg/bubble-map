@@ -132,6 +132,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": true
     },
+    "Apartheid_Honorary_Whites": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "ApartmentList_ALNRI": {
       "sector": "data_provider",
       "has_exogenous_revenue": false
@@ -320,6 +324,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CDP_Japan": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "CFTC": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -414,6 +422,10 @@
     },
     "Celsius": {
       "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Chaebol": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Chainlink": {
@@ -603,6 +615,10 @@
     "Dell": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "Democratic_Party_Korea": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "DeutscheTelekom": {
       "sector": "telecom",
@@ -888,6 +904,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Hanwha": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Hapag_Lloyd": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -916,6 +936,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Host_Club_Debt": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "House Financial Services": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -926,6 +950,10 @@
     },
     "Huione": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Hyundai": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "IBIT": {
@@ -1049,12 +1077,16 @@
       "has_exogenous_revenue": true
     },
     "Japan": {
-      "sector": "other",
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Japan_LDP": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Japan_Sex_Industry": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Japan_megabanks": {
       "sector": "other",
@@ -1112,6 +1144,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Kabukicho": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Kalshi": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1130,6 +1166,10 @@
     },
     "Keonne_Rodriguez": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Komeito": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Korea_chaebol_platforms": {
@@ -1154,6 +1194,10 @@
     },
     "LBRY": {
       "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "LDP": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "LG": {
@@ -1192,6 +1236,14 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Lee_Family": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Lee_Jae_myung": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Letitia_James": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1215,6 +1267,10 @@
     "Logistics_3PL": {
       "sector": "logistics",
       "has_exogenous_revenue": false
+    },
+    "Lotte": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "MAS": {
       "sector": "regulator",
@@ -1279,6 +1335,14 @@
     "Mistral": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
+    },
+    "Mitsubishi": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Mitsui": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Mochimo": {
       "sector": "privacy_tool",
@@ -1491,6 +1555,10 @@
     "Pension_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "People_Power_Party": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Perpetua_Resources": {
       "sector": "critical_minerals",
@@ -1760,6 +1828,10 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SK_Group": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "SK_Hynix": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1800,6 +1872,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Samsung_Group": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Sanseito": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1836,9 +1912,17 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Shigeru_Ishiba": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Shin_Etsu": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
+    },
+    "Shinzo_Abe": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Shipping_Chokepoints": {
       "sector": "logistics",
@@ -1880,9 +1964,21 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Soka_Gakkai": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "Solana": {
       "sector": "dlt",
       "has_exogenous_revenue": false
+    },
+    "South_Africa": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "South_Korea": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "SpaceX": {
       "sector": "space_real_economy",
@@ -1959,6 +2055,10 @@
     "Sui": {
       "sector": "dlt",
       "has_exogenous_revenue": false
+    },
+    "Sumitomo": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Swift": {
       "sector": "financial_infra",
@@ -2039,6 +2139,10 @@
     "Tornado_Cash": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Toyoko_Kids": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "TrailOfBits": {
       "sector": "security_research",
@@ -2169,8 +2273,8 @@
       "has_exogenous_revenue": true
     },
     "Unification_Church": {
-      "sector": "other",
-      "has_exogenous_revenue": true
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Uniswap": {
       "sector": "crypto_infra",
@@ -2304,8 +2408,16 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Yoon_Suk_yeol": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "ZEISS_SMT": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "Zaibatsu_Keiretsu": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Zano": {
@@ -6591,6 +6703,435 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Group",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the largest chaebol ('Republic of Samsung')",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Hyundai",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "automotive/industrial chaebol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "SK_Group",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chaebol (SK Hynix parent)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "LG",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "electronics/chemicals chaebol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Lotte",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "retail/chemicals chaebol (Korea-Japan)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Hanwha",
+      "to": "Chaebol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "defense/chemicals/finance chaebol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Lee_Family",
+      "to": "Samsung_Group",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "founding family controls via cross-shareholdings; Jay Y. Lee convicted then pardoned (Park bribery scandal)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Group",
+      "to": "Samsung_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chaebol parent of the semiconductor foundry (cf. spec-semiconductor-logistics-standards)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Chaebol",
+      "to": "South_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "outsized share of national GDP/exports \u2014 structural state-capture risk",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Lee_Family",
+      "to": "South_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Samsung-linked bribery central to the 2016-17 Park Geun-hye impeachment",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Mitsubishi",
+      "to": "Zaibatsu_Keiretsu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "former zaibatsu -> bank-centered keiretsu",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Mitsui",
+      "to": "Zaibatsu_Keiretsu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "former zaibatsu -> keiretsu",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Sumitomo",
+      "to": "Zaibatsu_Keiretsu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "former zaibatsu -> keiretsu",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Zaibatsu_Keiretsu",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cross-shareholding industrial groups structuring corporate Japan",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "LDP",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dominant ruling party since 1955; 2023-24 slush-fund scandal (~\u00a5600M-970M unreported)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Komeito",
+      "to": "LDP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "long-standing coalition partner",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Soka_Gakkai",
+      "to": "Komeito",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lay-Buddhist organization backing Komeito",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Unification_Church",
+      "to": "LDP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decades-long ties exposed after the Abe assassination (forced-donation abuses alleged)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Shinzo_Abe",
+      "to": "LDP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "former PM; leader of the Seiwa-kai faction (slush-fund center)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Shinzo_Abe",
+      "to": "Unification_Church",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "assassinated Jul 2022 by Yamagami over a Unification-Church grudge; the event exposed the ties",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Shigeru_Ishiba",
+      "to": "LDP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "LDP leader/PM in the post-scandal period",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "CDP_Japan",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Constitutional Democratic Party \u2014 main opposition",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "People_Power_Party",
+      "to": "South_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conservative party (Yoon)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Democratic_Party_Korea",
+      "to": "South_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "liberal party (Lee Jae-myung)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Yoon_Suk_yeol",
+      "to": "People_Power_Party",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "president; declared martial law 3 Dec 2024; impeached, arrested, removed (Apr 2025), indicted for insurrection",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Lee_Jae_myung",
+      "to": "Democratic_Party_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DP leader",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Japan",
+      "to": "Apartheid_Honorary_Whites",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Japanese nationals classified 'honorary whites' to enable Japan-South Africa trade under apartheid",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Apartheid_Honorary_Whites",
+      "to": "South_Africa",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "apartheid-era trade arrangement (Japan among SA's largest partners despite sanctions)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Kabukicho",
+      "to": "Japan_Sex_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Shinjuku red-light district \u2014 locus of the documented harms",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Host_Club_Debt",
+      "to": "Japan_Sex_Industry",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "'urikake' debt trap pushing women toward prostitution; Mar-2025 regulation + no-credit policy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Toyoko_Kids",
+      "to": "Kabukicho",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "runaway/at-risk youth congregating near the Toho building \u2014 OTC overdoses, exploitation",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Toyoko_Kids",
+      "to": "Host_Club_Debt",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "at-risk youth drawn into the host-club / debt / exploitation cycle",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
+      "note": ""
+    },
+    {
+      "from": "Japan_Sex_Industry",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the regulated/unregulated fuzoku economy and its harms",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-east-asia-conglomerates-politics.json",
       "note": ""
     },
     {
@@ -11756,10 +12297,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 585,
-    "num_edges": 724,
-    "num_financial_edges": 164,
-    "num_structural_edges": 560,
+    "num_nodes": 613,
+    "num_edges": 757,
+    "num_financial_edges": 166,
+    "num_structural_edges": 591,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -11811,27 +12352,27 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -11851,26 +12392,26 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -12121,6 +12662,13 @@
         "in_robust_core": false
       },
       "Antimony": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apartheid_Honorary_Whites": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -12456,6 +13004,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CDP_Japan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CFTC": {
         "total_usd": 67400000,
         "circular_usd": 0,
@@ -12618,6 +13173,13 @@
         "in_robust_core": false
       },
       "Celsius": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chaebol": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -12947,6 +13509,13 @@
         "in_robust_core": false
       },
       "Dell": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Democratic_Party_Korea": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13450,6 +14019,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hanwha": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hapag_Lloyd": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13499,6 +14075,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Host_Club_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "House Financial Services": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13514,6 +14097,13 @@
         "in_robust_core": false
       },
       "Huione": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hyundai": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13744,6 +14334,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Japan_Sex_Industry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Japan_megabanks": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13842,6 +14439,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Kabukicho": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kalshi": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13871,6 +14475,13 @@
         "in_robust_core": false
       },
       "Keonne_Rodriguez": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Komeito": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13913,6 +14524,13 @@
         "in_robust_core": false
       },
       "LBRY": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LDP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13982,6 +14600,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lee_Family": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Lee_Jae_myung": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Letitia_James": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14018,6 +14650,13 @@
         "in_robust_core": false
       },
       "Logistics_3PL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Lotte": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14130,6 +14769,20 @@
         "in_robust_core": false
       },
       "Mistral": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mitsubishi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mitsui": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14501,6 +15154,13 @@
         "in_robust_core": false
       },
       "Pension_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "People_Power_Party": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14976,6 +15636,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SK_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SK_Hynix": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -15046,6 +15713,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Samsung_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sanseito": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -15109,7 +15783,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shigeru_Ishiba": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shin_Etsu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Shinzo_Abe": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15186,7 +15874,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Soka_Gakkai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Solana": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "South_Africa": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "South_Korea": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15320,6 +16029,13 @@
         "in_robust_core": false
       },
       "Sui": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sumitomo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15461,6 +16177,13 @@
       },
       "Tornado_Cash": {
         "total_usd": 7600000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Toyoko_Kids": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -15928,7 +16651,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Yoon_Suk_yeol": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ZEISS_SMT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zaibatsu_Keiretsu": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

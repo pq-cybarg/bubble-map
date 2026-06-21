@@ -107,6 +107,14 @@ ALIAS = {
  "ISO":"ISO","IEC":"IEC","ISO/IEC JTC1":"ISO_IEC_JTC1","ISO IEC JTC1":"ISO_IEC_JTC1","ISO_IEC_JTC1":"ISO_IEC_JTC1","SC 42":"SC42_AI","SC42":"SC42_AI","SC42_AI":"SC42_AI","SC 27":"SC27_Security","SC27":"SC27_Security","SC27_Security":"SC27_Security",
  "IEEE":"IEEE","ITU":"ITU","ETSI":"ETSI","3GPP":"3GPP","SEMI":"SEMI","JEDEC":"JEDEC","ANSI":"ANSI","BIPM":"BIPM","Codex Alimentarius":"Codex_Alimentarius","Codex_Alimentarius":"Codex_Alimentarius","Standards_Bodies":"Standards_Bodies",
  "GHTF":"GHTF","IMDRF":"IMDRF","ISO 13485":"ISO_13485","ISO_13485":"ISO_13485","ISO 14971":"ISO_14971","ISO_14971":"ISO_14971","Medical_Device_Standards":"Medical_Device_Standards",
+ # East Asia — conglomerates + politics + social-harm
+ "South Korea":"South_Korea","South_Korea":"South_Korea","Japan":"Japan","South Africa":"South_Africa","South_Africa":"South_Africa",
+ "Chaebol":"Chaebol","Samsung Group":"Samsung_Group","Samsung_Group":"Samsung_Group","Hyundai":"Hyundai","SK Group":"SK_Group","SK_Group":"SK_Group","Lotte":"Lotte","Hanwha":"Hanwha","Lee Family":"Lee_Family","Lee_Family":"Lee_Family",
+ "Zaibatsu":"Zaibatsu_Keiretsu","Keiretsu":"Zaibatsu_Keiretsu","Zaibatsu_Keiretsu":"Zaibatsu_Keiretsu","Mitsubishi":"Mitsubishi","Mitsui":"Mitsui","Sumitomo":"Sumitomo",
+ "LDP":"LDP","Liberal Democratic Party":"LDP","Komeito":"Komeito","Soka Gakkai":"Soka_Gakkai","Soka_Gakkai":"Soka_Gakkai","Unification Church":"Unification_Church","Unification_Church":"Unification_Church","CDP":"CDP_Japan","CDP_Japan":"CDP_Japan",
+ "Shinzo Abe":"Shinzo_Abe","Shinzo_Abe":"Shinzo_Abe","Shigeru Ishiba":"Shigeru_Ishiba","Shigeru_Ishiba":"Shigeru_Ishiba",
+ "People Power Party":"People_Power_Party","People_Power_Party":"People_Power_Party","Democratic Party Korea":"Democratic_Party_Korea","Democratic_Party_Korea":"Democratic_Party_Korea","Yoon Suk Yeol":"Yoon_Suk_yeol","Yoon Suk-yeol":"Yoon_Suk_yeol","Yoon_Suk_yeol":"Yoon_Suk_yeol","Lee Jae-myung":"Lee_Jae_myung","Lee Jae myung":"Lee_Jae_myung","Lee_Jae_myung":"Lee_Jae_myung",
+ "Apartheid_Honorary_Whites":"Apartheid_Honorary_Whites","Kabukicho":"Kabukicho","Toyoko Kids":"Toyoko_Kids","Toyoko_Kids":"Toyoko_Kids","Host Club Debt":"Host_Club_Debt","Host_Club_Debt":"Host_Club_Debt","Japan_Sex_Industry":"Japan_Sex_Industry",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -242,6 +250,13 @@ NODE_META = {
  "ISO":("standards",False),"IEC":("standards",False),"ISO_IEC_JTC1":("standards",False),"SC42_AI":("standards",False),"SC27_Security":("standards",False),
  "IEEE":("standards",False),"ITU":("standards",False),"ETSI":("standards",False),"3GPP":("standards",False),"SEMI":("standards",False),"JEDEC":("standards",False),"ANSI":("standards",False),"BIPM":("standards",False),"Codex_Alimentarius":("standards",False),"Standards_Bodies":("standards",False),
  "GHTF":("standards",False),"IMDRF":("standards",False),"ISO_13485":("standards",False),"ISO_14971":("standards",False),"Medical_Device_Standards":("standards",False),
+ # East Asia — conglomerates + politics + social-harm
+ "South_Korea":("state",True),"Japan":("state",True),"South_Africa":("state",True),
+ "Chaebol":("industrial",False),"Samsung_Group":("industrial",True),"Hyundai":("industrial",True),"SK_Group":("industrial",True),"Lotte":("industrial",True),"Hanwha":("industrial",True),"Lee_Family":("person",False),
+ "Zaibatsu_Keiretsu":("industrial",False),"Mitsubishi":("industrial",True),"Mitsui":("industrial",True),"Sumitomo":("industrial",True),
+ "LDP":("political",False),"Komeito":("political",False),"Soka_Gakkai":("political",False),"Unification_Church":("political",False),"CDP_Japan":("political",False),"Shinzo_Abe":("person",False),"Shigeru_Ishiba":("person",False),
+ "People_Power_Party":("political",False),"Democratic_Party_Korea":("political",False),"Yoon_Suk_yeol":("person",False),"Lee_Jae_myung":("person",False),
+ "Apartheid_Honorary_Whites":("state",False),"Kabukicho":("other",False),"Toyoko_Kids":("other",False),"Host_Club_Debt":("other",False),"Japan_Sex_Industry":("other",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

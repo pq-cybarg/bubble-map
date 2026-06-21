@@ -116,6 +116,11 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "CMA_CGM":"CMA CGM","Hapag_Lloyd":"Hapag-Lloyd","Ocean_Shipping":"Ocean shipping (carriers)","Logistics_3PL":"3PL / freight forwarders","Kuehne_Nagel":"Kuehne+Nagel",
  "Suez_Canal":"Suez Canal","Panama_Canal":"Panama Canal","Strait_of_Malacca":"Strait of Malacca","Strait_of_Hormuz":"Strait of Hormuz","Taiwan_Strait":"Taiwan Strait","Shipping_Chokepoints":"Maritime chokepoints",
  "ISO_IEC_JTC1":"ISO/IEC JTC 1","SC42_AI":"ISO/IEC SC 42 (AI standards)","SC27_Security":"ISO/IEC SC 27 (security)","Standards_Bodies":"Standards bodies","Codex_Alimentarius":"Codex Alimentarius","Medical_Device_Standards":"Medical-device standards","ISO_13485":"ISO 13485","ISO_14971":"ISO 14971",
+ # East Asia
+ "South_Korea":"South Korea","South_Africa":"South Africa","Samsung_Group":"Samsung Group (chaebol)","SK_Group":"SK Group","Lee_Family":"Lee family (Samsung)","Zaibatsu_Keiretsu":"Zaibatsu / keiretsu",
+ "LDP":"LDP (Japan)","Soka_Gakkai":"Soka Gakkai","Unification_Church":"Unification Church","CDP_Japan":"CDP (Japan opposition)","Shinzo_Abe":"Shinzo Abe","Shigeru_Ishiba":"Shigeru Ishiba",
+ "People_Power_Party":"People Power Party (Korea)","Democratic_Party_Korea":"Democratic Party (Korea)","Yoon_Suk_yeol":"Yoon Suk Yeol","Lee_Jae_myung":"Lee Jae-myung",
+ "Apartheid_Honorary_Whites":"Apartheid 'honorary whites'","Toyoko_Kids":"Toyoko kids","Host_Club_Debt":"Host-club debt trap","Japan_Sex_Industry":"Japan sex industry (harms)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
