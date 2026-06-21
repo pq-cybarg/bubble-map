@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-crypto-collapse-cluster.json` — related files by shared entities (verify cross-refs exist)
-- spec-network-overlay.json: 3 shared entities
-- spec-exchanges-asia.json: 2 shared entities
-- digitalid-corporate.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- spec-blockchain-ecosystem.json: 2 shared entities
-- blockchain-leg.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
+## Newest file `spec-crypto-market-makers-political.json` — related files by shared entities (verify cross-refs exist)
+- spec-blockchain-ecosystem.json: 5 shared entities
+- spec-network-overlay.json: 5 shared entities
+- temporal-bridges.json: 5 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- blockchain-leg.json: 4 shared entities
+- spec-sec-sdny-regulatory.json: 4 shared entities
+- spec-sdny-crypto-prosecution.json: 4 shared entities

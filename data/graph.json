@@ -468,6 +468,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Crypto_Market_Makers": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "Crypto_legislation": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -475,6 +479,10 @@
     "Cryptography_Standards": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "Cumberland_DRW": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
     },
     "Custodia_Bank": {
       "sector": "other",
@@ -724,6 +732,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "GSR": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Garantex": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -896,6 +908,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "Jane_Street": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Japan": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -948,6 +964,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Jump_Crypto": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Justin_Sun": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -955,6 +975,10 @@
     "Kalshi": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Kanav_Kariya": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Kaynes_SemiCon": {
       "sector": "semiconductor",
@@ -1696,6 +1720,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Tai_Mo_Shan": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "TechCompanies": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -1963,6 +1991,10 @@
     "Winklevoss_Twins": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Wintermute": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
     },
     "World_Liberty_Financial": {
       "sector": "other",
@@ -5126,6 +5158,214 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-hidden-sovereign-debt.json",
+      "note": ""
+    },
+    {
+      "from": "Jump_Crypto",
+      "to": "Terraform_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "secretly propped the TerraUSD peg (May 2021) for ~$1.28B in discounted LUNA; SEC $123M (Tai Mo Shan) + ~$4B administrator clawback suit",
+      "amount_usd": 1280000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Tai_Mo_Shan",
+      "to": "Jump_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Jump subsidiary charged by the SEC over UST misrepresentations",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Tai_Mo_Shan",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "$123M settlement (disgorgement + interest + penalty) for misleading investors about UST",
+      "amount_usd": 123000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "CFTC",
+      "to": "Jump_Crypto",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "CFTC investigation into Jump's crypto trading/investing activity",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Kanav_Kariya",
+      "to": "Jump_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "president of Jump Crypto during the Terra period",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Jane_Street",
+      "to": "Sam_Bankman_Fried",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SBF was a Jane Street trader before founding Alameda/FTX (the quant pedigree)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Jane_Street",
+      "to": "Caroline_Ellison",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ellison was a Jane Street trader before joining Alameda",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Jump_Crypto",
+      "to": "Crypto_Market_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the crypto market-making oligopoly",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Wintermute",
+      "to": "Crypto_Market_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "major algorithmic market-maker / OTC desk",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Cumberland_DRW",
+      "to": "Crypto_Market_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DRW's crypto market-making arm",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "GSR",
+      "to": "Crypto_Market_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "global crypto market-maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Jane_Street",
+      "to": "Crypto_Market_Makers",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "TradFi quant firm active in crypto liquidity (and the FTX/ETF ecosystem)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Jump_Crypto",
+      "to": "Fairshake",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "backer of the Fairshake crypto super-PAC",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Uniswap",
+      "to": "Fairshake",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Uniswap Labs backer of Fairshake",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Gemini",
+      "to": "Fairshake",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Gemini (Winklevoss) backer of Fairshake",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
+      "note": ""
+    },
+    {
+      "from": "Fairshake",
+      "to": "Congress",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$193M (2026 cycle) to elect pro-crypto candidates / defeat skeptics (e.g. Sherrod Brown 2024) \u2014 market power -> political power",
+      "amount_usd": 193000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-market-makers-political.json",
       "note": ""
     },
     {
@@ -10291,10 +10531,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 508,
-    "num_edges": 635,
-    "num_financial_edges": 153,
-    "num_structural_edges": 482,
+    "num_nodes": 516,
+    "num_edges": 651,
+    "num_financial_edges": 158,
+    "num_structural_edges": 493,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -10345,15 +10585,19 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -10361,12 +10605,13 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -10381,25 +10626,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -10410,7 +10644,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -10418,6 +10651,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -11153,7 +11393,7 @@
         "in_robust_core": false
       },
       "Congress": {
-        "total_usd": 0,
+        "total_usd": 193000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -11250,6 +11490,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Crypto_Market_Makers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crypto_legislation": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -11259,6 +11506,13 @@
       },
       "Cryptography_Standards": {
         "total_usd": 250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cumberland_DRW": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -11552,7 +11806,7 @@
         "in_robust_core": false
       },
       "Fairshake": {
-        "total_usd": 195000000,
+        "total_usd": 388000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -11692,6 +11946,13 @@
         "in_robust_core": false
       },
       "GSEs_FannieFreddie": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GSR": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -11999,6 +12260,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jane_Street": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Japan": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -12090,6 +12358,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jump_Crypto": {
+        "total_usd": 1280000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Justin_Sun": {
         "total_usd": 75000000,
         "circular_usd": 0,
@@ -12098,6 +12373,13 @@
         "in_robust_core": false
       },
       "Kalshi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kanav_Kariya": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13022,7 +13304,7 @@
         "in_robust_core": false
       },
       "SEC": {
-        "total_usd": 30000000,
+        "total_usd": 153000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -13399,6 +13681,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tai_Mo_Shan": {
+        "total_usd": 123000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TechCompanies": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13435,7 +13724,7 @@
         "in_robust_core": false
       },
       "Terraform_Labs": {
-        "total_usd": 40000000000,
+        "total_usd": 41280000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -13868,6 +14157,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Wintermute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "World_Liberty_Financial": {
         "total_usd": 4775000000,
         "circular_usd": 0,
@@ -14167,6 +14463,26 @@
         "both_layers": true
       },
       {
+        "node": "SEC",
+        "degree": 18,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "dlt",
+          "exchange",
+          "financier",
+          "person",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -14299,25 +14615,6 @@
         "source_files": 5,
         "layers": [
           "financial"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "SEC",
-        "degree": 17,
-        "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "dlt",
-          "exchange",
-          "financier",
-          "person",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 5,
-        "layers": [
-          "structural"
         ],
         "both_layers": false
       },

@@ -88,6 +88,10 @@ ALIAS = {
  "Alameda":"Alameda_Research","Alameda Research":"Alameda_Research","Alameda_Research":"Alameda_Research","Celsius":"Celsius","Voyager":"Voyager","BlockFi":"BlockFi",
  "Genesis":"Genesis","DCG":"DCG","Digital Currency Group":"DCG","Grayscale":"Grayscale","Gemini":"Gemini","Gemini Earn":"Gemini_Earn","Gemini_Earn":"Gemini_Earn",
  "Tron":"Tron","TRX":"Tron","BitMEX":"BitMEX","3AC":"Three_Arrows_Capital","Three Arrows Capital":"Three_Arrows_Capital",
+ # crypto market-makers + political money
+ "Jump Crypto":"Jump_Crypto","Jump Trading":"Jump_Crypto","Jump":"Jump_Crypto","Jump_Crypto":"Jump_Crypto","Tai Mo Shan":"Tai_Mo_Shan","Tai_Mo_Shan":"Tai_Mo_Shan",
+ "Jane Street":"Jane_Street","Jane_Street":"Jane_Street","Wintermute":"Wintermute","Cumberland":"Cumberland_DRW","Cumberland DRW":"Cumberland_DRW","Cumberland_DRW":"Cumberland_DRW","DRW":"Cumberland_DRW",
+ "GSR":"GSR","Crypto_Market_Makers":"Crypto_Market_Makers","Kanav Kariya":"Kanav_Kariya","Kanav_Kariya":"Kanav_Kariya",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -206,6 +210,9 @@ NODE_META = {
  "Alameda_Research":("crypto_firm",False),"Celsius":("crypto_firm",False),"Voyager":("crypto_firm",False),"BlockFi":("crypto_firm",False),
  "Genesis":("crypto_firm",False),"DCG":("financier",False),"Grayscale":("financier",True),"Gemini":("exchange",True),"Gemini_Earn":("crypto_firm",False),
  "Tron":("dlt",False),"BitMEX":("exchange",True),
+ # crypto market-makers + political money
+ "Jump_Crypto":("financier",True),"Tai_Mo_Shan":("financier",False),"Jane_Street":("financier",True),"Wintermute":("financier",True),
+ "Cumberland_DRW":("financier",True),"GSR":("financier",True),"Crypto_Market_Makers":("financier",False),"Kanav_Kariya":("person",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

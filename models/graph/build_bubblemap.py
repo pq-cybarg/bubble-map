@@ -106,6 +106,9 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Barry_Silbert":"Barry Silbert (DCG)","Su_Zhu":"Su Zhu (3AC)","Kyle_Davies":"Kyle Davies (3AC)","Brian_Armstrong":"Brian Armstrong (Coinbase)",
  "Winklevoss_Twins":"Winklevoss twins (Gemini)","Justin_Sun":"Justin Sun (Tron)","Arthur_Hayes":"Arthur Hayes (BitMEX)",
  "Alameda_Research":"Alameda Research","Gemini_Earn":"Gemini Earn","DCG":"Digital Currency Group",
+ # crypto market-makers + political money
+ "Jump_Crypto":"Jump Crypto","Tai_Mo_Shan":"Tai Mo Shan (Jump sub)","Jane_Street":"Jane Street","Cumberland_DRW":"Cumberland (DRW)",
+ "Crypto_Market_Makers":"Crypto market-makers","Kanav_Kariya":"Kanav Kariya (Jump)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

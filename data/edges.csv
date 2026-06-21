@@ -92,6 +92,7 @@ Apple,Globalstar,investment,1700000000,closed,False,False,spec-telecom-satellite
 Lazarus_Group,Bybit,surveillance_security,1500000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
 NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
+Jump_Crypto,Terraform_Labs,other,1280000000,documented,False,False,spec-crypto-market-makers-political.json
 Ripple,Ripple_Prime,acquisition,1250000000,closed,False,False,spec-blockchain-ecosystem.json
 IonQ,Oxford_Ionics,acquisition,1075000000,closed,False,False,spec-quantum-computing-competitive-landscape.json
 Liberty Strategic Capital,Flagstar,other,1000000000,closed,False,False,spec-crypto-banking-debanking.json
@@ -115,6 +116,8 @@ Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labou
 NSA,Cryptography_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
 AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Google,QuEra,other,230000000,closed,False,False,spec-quantum-computing-competitive-landscape.json
+Fairshake,Congress,other,193000000,documented,False,False,spec-crypto-market-makers-political.json
+SEC,Tai_Mo_Shan,investment,123000000,documented,False,False,spec-crypto-market-makers-political.json
 Verizon,AST_SpaceMobile,investment,100000000,committed,False,False,spec-telecom-satellite.json
 Predatory_Sparrow,Nobitex,other,90000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 Coinbase,Fairshake,pac_funding,75000000,given,False,False,spec-sec-sdny-regulatory.json
@@ -314,6 +317,19 @@ PBoC,Distressed_Sovereigns,other,,open,False,False,macro-hidden-sovereign-debt.j
 LGFV_Debt,China,other,,open,False,False,macro-hidden-sovereign-debt.json
 US_Government,US_Contingent_Liabilities,other,,open,False,False,macro-hidden-sovereign-debt.json
 US_Contingent_Liabilities,SINK_debt,other,,open,False,False,macro-hidden-sovereign-debt.json
+Tai_Mo_Shan,Jump_Crypto,other,,documented,False,False,spec-crypto-market-makers-political.json
+CFTC,Jump_Crypto,investment,,open,False,False,spec-crypto-market-makers-political.json
+Kanav_Kariya,Jump_Crypto,other,,documented,False,False,spec-crypto-market-makers-political.json
+Jane_Street,Sam_Bankman_Fried,other,,documented,False,False,spec-crypto-market-makers-political.json
+Jane_Street,Caroline_Ellison,other,,documented,False,False,spec-crypto-market-makers-political.json
+Jump_Crypto,Crypto_Market_Makers,other,,documented,False,False,spec-crypto-market-makers-political.json
+Wintermute,Crypto_Market_Makers,other,,documented,False,False,spec-crypto-market-makers-political.json
+Cumberland_DRW,Crypto_Market_Makers,other,,documented,False,False,spec-crypto-market-makers-political.json
+GSR,Crypto_Market_Makers,other,,documented,False,False,spec-crypto-market-makers-political.json
+Jane_Street,Crypto_Market_Makers,relationship,,documented,False,False,spec-crypto-market-makers-political.json
+Jump_Crypto,Fairshake,investment,,documented,False,False,spec-crypto-market-makers-political.json
+Uniswap,Fairshake,investment,,documented,False,False,spec-crypto-market-makers-political.json
+Gemini,Fairshake,investment,,documented,False,False,spec-crypto-market-makers-political.json
 NVIDIA,Mistral,equity,,closed,True,False,fin-nvidia-openai.json
 OpenAI,AMD,warrant,,committed,False,False,fin-nvidia-openai.json
 OpenAI,Broadcom,compute_commitment,,committed,False,False,"fin-nvidia-openai.json,fin-google-amazon-anthropic-meta.json"
