@@ -92,6 +92,21 @@ ALIAS = {
  "Jump Crypto":"Jump_Crypto","Jump Trading":"Jump_Crypto","Jump":"Jump_Crypto","Jump_Crypto":"Jump_Crypto","Tai Mo Shan":"Tai_Mo_Shan","Tai_Mo_Shan":"Tai_Mo_Shan",
  "Jane Street":"Jane_Street","Jane_Street":"Jane_Street","Wintermute":"Wintermute","Cumberland":"Cumberland_DRW","Cumberland DRW":"Cumberland_DRW","Cumberland_DRW":"Cumberland_DRW","DRW":"Cumberland_DRW",
  "GSR":"GSR","Crypto_Market_Makers":"Crypto_Market_Makers","Kanav Kariya":"Kanav_Kariya","Kanav_Kariya":"Kanav_Kariya",
+ # semiconductor supply chain
+ "ASML":"ASML","Carl Zeiss SMT":"ZEISS_SMT","Zeiss SMT":"ZEISS_SMT","ZEISS":"ZEISS_SMT","Zeiss":"ZEISS_SMT","ZEISS_SMT":"ZEISS_SMT","Cymer":"Cymer",
+ "TSMC":"TSMC","TSM":"TSMC","Samsung Foundry":"Samsung_Foundry","Samsung":"Samsung_Foundry","Samsung_Foundry":"Samsung_Foundry","SMIC":"SMIC","Nikon":"Nikon","Canon":"Canon",
+ "Applied Materials":"Applied_Materials","AMAT":"Applied_Materials","Applied_Materials":"Applied_Materials","Lam Research":"Lam_Research","Lam_Research":"Lam_Research","Tokyo Electron":"Tokyo_Electron","TEL":"Tokyo_Electron","Tokyo_Electron":"Tokyo_Electron","KLA":"KLA",
+ "Semiconductor_Equipment":"Semiconductor_Equipment","Shin-Etsu":"Shin_Etsu","Shin Etsu":"Shin_Etsu","Shin_Etsu":"Shin_Etsu","SUMCO":"SUMCO","JSR":"JSR","Tokyo Ohka":"Tokyo_Ohka","TOK":"Tokyo_Ohka","Tokyo_Ohka":"Tokyo_Ohka","Semiconductor_Materials":"Semiconductor_Materials",
+ "Synopsys":"Synopsys","Cadence":"Cadence","Siemens EDA":"Siemens_EDA","Siemens_EDA":"Siemens_EDA","Mentor":"Siemens_EDA","Arm":"Arm","ARM":"Arm","EDA_Tools":"EDA_Tools",
+ "CoWoS":"CoWoS","ASE":"ASE","Amkor":"Amkor","JCET":"JCET","OSAT":"OSAT","SK Hynix":"SK_Hynix","SK_Hynix":"SK_Hynix","Hynix":"SK_Hynix","Micron":"Micron","HBM":"HBM",
+ # logistics / shipping
+ "Maersk":"Maersk","MSC":"MSC","CMA CGM":"CMA_CGM","CMA_CGM":"CMA_CGM","Hapag-Lloyd":"Hapag_Lloyd","Hapag Lloyd":"Hapag_Lloyd","Hapag_Lloyd":"Hapag_Lloyd","COSCO":"COSCO","Ocean_Shipping":"Ocean_Shipping",
+ "DHL":"DHL","Kuehne+Nagel":"Kuehne_Nagel","Kuehne Nagel":"Kuehne_Nagel","Kuehne_Nagel":"Kuehne_Nagel","DSV":"DSV","FedEx":"FedEx","UPS":"UPS","Logistics_3PL":"Logistics_3PL",
+ "Suez Canal":"Suez_Canal","Suez_Canal":"Suez_Canal","Panama Canal":"Panama_Canal","Panama_Canal":"Panama_Canal","Strait of Malacca":"Strait_of_Malacca","Strait_of_Malacca":"Strait_of_Malacca","Strait of Hormuz":"Strait_of_Hormuz","Strait_of_Hormuz":"Strait_of_Hormuz","Taiwan Strait":"Taiwan_Strait","Taiwan_Strait":"Taiwan_Strait","Shipping_Chokepoints":"Shipping_Chokepoints",
+ # standards bodies
+ "ISO":"ISO","IEC":"IEC","ISO/IEC JTC1":"ISO_IEC_JTC1","ISO IEC JTC1":"ISO_IEC_JTC1","ISO_IEC_JTC1":"ISO_IEC_JTC1","SC 42":"SC42_AI","SC42":"SC42_AI","SC42_AI":"SC42_AI","SC 27":"SC27_Security","SC27":"SC27_Security","SC27_Security":"SC27_Security",
+ "IEEE":"IEEE","ITU":"ITU","ETSI":"ETSI","3GPP":"3GPP","SEMI":"SEMI","JEDEC":"JEDEC","ANSI":"ANSI","BIPM":"BIPM","Codex Alimentarius":"Codex_Alimentarius","Codex_Alimentarius":"Codex_Alimentarius","Standards_Bodies":"Standards_Bodies",
+ "GHTF":"GHTF","IMDRF":"IMDRF","ISO 13485":"ISO_13485","ISO_13485":"ISO_13485","ISO 14971":"ISO_14971","ISO_14971":"ISO_14971","Medical_Device_Standards":"Medical_Device_Standards",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -213,6 +228,20 @@ NODE_META = {
  # crypto market-makers + political money
  "Jump_Crypto":("financier",True),"Tai_Mo_Shan":("financier",False),"Jane_Street":("financier",True),"Wintermute":("financier",True),
  "Cumberland_DRW":("financier",True),"GSR":("financier",True),"Crypto_Market_Makers":("financier",False),"Kanav_Kariya":("person",False),
+ # semiconductor supply chain (sector 'semiconductor' -> AI bucket)
+ "ASML":("semiconductor",True),"ZEISS_SMT":("semiconductor",False),"Cymer":("semiconductor",False),"TSMC":("semiconductor",True),"Samsung_Foundry":("semiconductor",True),"SMIC":("semiconductor",True),
+ "Nikon":("semiconductor",True),"Canon":("semiconductor",True),"Applied_Materials":("semiconductor",True),"Lam_Research":("semiconductor",True),"Tokyo_Electron":("semiconductor",True),"KLA":("semiconductor",True),"Semiconductor_Equipment":("semiconductor",False),
+ "Shin_Etsu":("semiconductor",True),"SUMCO":("semiconductor",True),"JSR":("semiconductor",True),"Tokyo_Ohka":("semiconductor",True),"Semiconductor_Materials":("semiconductor",False),
+ "Synopsys":("semiconductor",True),"Cadence":("semiconductor",True),"Siemens_EDA":("semiconductor",True),"Arm":("semiconductor",True),"EDA_Tools":("semiconductor",False),
+ "CoWoS":("semiconductor",False),"ASE":("semiconductor",True),"Amkor":("semiconductor",True),"JCET":("semiconductor",True),"OSAT":("semiconductor",False),"SK_Hynix":("semiconductor",True),"Micron":("semiconductor",True),"HBM":("semiconductor",False),
+ # logistics / shipping (sector 'logistics' -> commodity bucket)
+ "Maersk":("logistics",True),"MSC":("logistics",True),"CMA_CGM":("logistics",True),"Hapag_Lloyd":("logistics",True),"COSCO":("logistics",True),"Ocean_Shipping":("logistics",False),
+ "DHL":("logistics",True),"Kuehne_Nagel":("logistics",True),"DSV":("logistics",True),"FedEx":("logistics",True),"UPS":("logistics",True),"Logistics_3PL":("logistics",False),
+ "Suez_Canal":("logistics",False),"Panama_Canal":("logistics",False),"Strait_of_Malacca":("logistics",False),"Strait_of_Hormuz":("logistics",False),"Taiwan_Strait":("logistics",False),"Shipping_Chokepoints":("logistics",False),
+ # standards bodies (sector 'standards' -> identity bucket)
+ "ISO":("standards",False),"IEC":("standards",False),"ISO_IEC_JTC1":("standards",False),"SC42_AI":("standards",False),"SC27_Security":("standards",False),
+ "IEEE":("standards",False),"ITU":("standards",False),"ETSI":("standards",False),"3GPP":("standards",False),"SEMI":("standards",False),"JEDEC":("standards",False),"ANSI":("standards",False),"BIPM":("standards",False),"Codex_Alimentarius":("standards",False),"Standards_Bodies":("standards",False),
+ "GHTF":("standards",False),"IMDRF":("standards",False),"ISO_13485":("standards",False),"ISO_14971":("standards",False),"Medical_Device_Standards":("standards",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

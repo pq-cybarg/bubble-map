@@ -29,6 +29,7 @@ BUCKET={ "ai":["ai_lab","hyperscaler","chip_vendor","ai_infra","neocloud","semic
  "identity":["surveillance","privacy_tool","standards","ip_rightsholder","telecom","satellite","journalism"],
  "macro":["macro_factor","statistic","labor","labor_platform","data_provider","retail"],
  "pqc":["pqc_quantum","research"], "person":["person"], "other":["other","spv","offshore"] }
+BUCKET["commodity"].append("logistics")
 SEC2BUCKET={s:b for b,ss in BUCKET.items() for s in ss}
 COLORS={"ai":"#1f4e79","capital":"#7b2d26","crypto":"#b8860b","defense":"#2e8b57","state":"#c0392b",
  "commodity":"#8a5a2b","identity":"#5e35b1","macro":"#138a8a","pqc":"#6b3b16","person":"#d35400","other":"#8a8378"}
@@ -109,6 +110,12 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  # crypto market-makers + political money
  "Jump_Crypto":"Jump Crypto","Tai_Mo_Shan":"Tai Mo Shan (Jump sub)","Jane_Street":"Jane Street","Cumberland_DRW":"Cumberland (DRW)",
  "Crypto_Market_Makers":"Crypto market-makers","Kanav_Kariya":"Kanav Kariya (Jump)",
+ # semiconductor / logistics / standards
+ "ZEISS_SMT":"Carl Zeiss SMT (EUV optics)","Semiconductor_Equipment":"Semiconductor equipment (WFE)","Semiconductor_Materials":"Semiconductor materials","EDA_Tools":"EDA tools / IP",
+ "CoWoS":"CoWoS (advanced packaging)","HBM":"HBM (high-bandwidth memory)","Samsung_Foundry":"Samsung Foundry","SK_Hynix":"SK Hynix","Applied_Materials":"Applied Materials","Lam_Research":"Lam Research","Tokyo_Electron":"Tokyo Electron","Tokyo_Ohka":"Tokyo Ohka","Shin_Etsu":"Shin-Etsu","Siemens_EDA":"Siemens EDA",
+ "CMA_CGM":"CMA CGM","Hapag_Lloyd":"Hapag-Lloyd","Ocean_Shipping":"Ocean shipping (carriers)","Logistics_3PL":"3PL / freight forwarders","Kuehne_Nagel":"Kuehne+Nagel",
+ "Suez_Canal":"Suez Canal","Panama_Canal":"Panama Canal","Strait_of_Malacca":"Strait of Malacca","Strait_of_Hormuz":"Strait of Hormuz","Taiwan_Strait":"Taiwan Strait","Shipping_Chokepoints":"Maritime chokepoints",
+ "ISO_IEC_JTC1":"ISO/IEC JTC 1","SC42_AI":"ISO/IEC SC 42 (AI standards)","SC27_Security":"ISO/IEC SC 27 (security)","Standards_Bodies":"Standards bodies","Codex_Alimentarius":"Codex Alimentarius","Medical_Device_Standards":"Medical-device standards","ISO_13485":"ISO 13485","ISO_14971":"ISO 14971",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
