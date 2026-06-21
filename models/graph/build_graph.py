@@ -78,6 +78,16 @@ ALIAS = {
  "Keonne Rodriguez":"Keonne_Rodriguez","Keonne_Rodriguez":"Keonne_Rodriguez","William L Hill":"William_L_Hill","William Lonergan Hill":"William_L_Hill","William_L_Hill":"William_L_Hill",
  "Zooko":"Zooko_Wilcox","Zooko Wilcox":"Zooko_Wilcox","Zooko_Wilcox":"Zooko_Wilcox","Jeremy Kauffman":"Jeremy_Kauffman","Jeremy_Kauffman":"Jeremy_Kauffman",
  "Zcash":"Zcash","ZEC":"Zcash","Electric Coin Company":"Electric_Coin_Company","Electric_Coin_Company":"Electric_Coin_Company","ECC":"Electric_Coin_Company","Odysee":"Odysee",
+ # 2022 collapse cluster — persons
+ "SBF":"Sam_Bankman_Fried","Sam Bankman-Fried":"Sam_Bankman_Fried","Sam Bankman Fried":"Sam_Bankman_Fried","Sam_Bankman_Fried":"Sam_Bankman_Fried",
+ "Caroline Ellison":"Caroline_Ellison","Caroline_Ellison":"Caroline_Ellison","Do Kwon":"Do_Kwon","Do_Kwon":"Do_Kwon","DoKwon":"Do_Kwon",
+ "Alex Mashinsky":"Alex_Mashinsky","Mashinsky":"Alex_Mashinsky","Alex_Mashinsky":"Alex_Mashinsky","Barry Silbert":"Barry_Silbert","Barry_Silbert":"Barry_Silbert",
+ "Su Zhu":"Su_Zhu","Su_Zhu":"Su_Zhu","Kyle Davies":"Kyle_Davies","Kyle_Davies":"Kyle_Davies","Brian Armstrong":"Brian_Armstrong","Brian_Armstrong":"Brian_Armstrong",
+ "Winklevoss":"Winklevoss_Twins","Winklevoss Twins":"Winklevoss_Twins","Winklevoss_Twins":"Winklevoss_Twins","Justin Sun":"Justin_Sun","Justin_Sun":"Justin_Sun","Arthur Hayes":"Arthur_Hayes","Arthur_Hayes":"Arthur_Hayes",
+ # 2022 collapse cluster — firms
+ "Alameda":"Alameda_Research","Alameda Research":"Alameda_Research","Alameda_Research":"Alameda_Research","Celsius":"Celsius","Voyager":"Voyager","BlockFi":"BlockFi",
+ "Genesis":"Genesis","DCG":"DCG","Digital Currency Group":"DCG","Grayscale":"Grayscale","Gemini":"Gemini","Gemini Earn":"Gemini_Earn","Gemini_Earn":"Gemini_Earn",
+ "Tron":"Tron","TRX":"Tron","BitMEX":"BitMEX","3AC":"Three_Arrows_Capital","Three Arrows Capital":"Three_Arrows_Capital",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -189,6 +199,13 @@ NODE_META = {
  "David_Schwartz":("person",False),"Jed_McCaleb":("person",False),"Arthur_Britto":("person",False),"Evan_Cheng":("person",False),"Sam_Blackshear":("person",False),
  "Keonne_Rodriguez":("person",False),"William_L_Hill":("person",False),"Zooko_Wilcox":("person",False),"Jeremy_Kauffman":("person",False),
  "Zcash":("privacy_tool",False),"Electric_Coin_Company":("crypto_infra",False),"Odysee":("crypto_infra",False),
+ # 2022 collapse cluster — persons + firms
+ "Sam_Bankman_Fried":("person",False),"Caroline_Ellison":("person",False),"Do_Kwon":("person",False),"Alex_Mashinsky":("person",False),
+ "Barry_Silbert":("person",False),"Su_Zhu":("person",False),"Kyle_Davies":("person",False),"Brian_Armstrong":("person",False),
+ "Winklevoss_Twins":("person",False),"Justin_Sun":("person",False),"Arthur_Hayes":("person",False),
+ "Alameda_Research":("crypto_firm",False),"Celsius":("crypto_firm",False),"Voyager":("crypto_firm",False),"BlockFi":("crypto_firm",False),
+ "Genesis":("crypto_firm",False),"DCG":("financier",False),"Grayscale":("financier",True),"Gemini":("exchange",True),"Gemini_Earn":("crypto_firm",False),
+ "Tron":("dlt",False),"BitMEX":("exchange",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

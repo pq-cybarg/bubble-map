@@ -101,6 +101,11 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "David_Schwartz":"David Schwartz (XRPL/Ripple CTO)","Jed_McCaleb":"Jed McCaleb (XRPL/Stellar/Mt.Gox)","Arthur_Britto":"Arthur Britto (XRPL co-creator)",
  "Evan_Cheng":"Evan Cheng (Mysten CEO)","Sam_Blackshear":"Sam Blackshear (Move/Sui)","Keonne_Rodriguez":"Keonne Rodriguez (Samourai)","William_L_Hill":"William L. Hill (Samourai)",
  "Zooko_Wilcox":"Zooko Wilcox (Zcash/ECC)","Electric_Coin_Company":"Electric Coin Company (Zcash)","Jeremy_Kauffman":"Jeremy Kauffman (LBRY)","Odysee":"Odysee (LBRY video)",
+ # 2022 collapse cluster
+ "Sam_Bankman_Fried":"Sam Bankman-Fried (FTX)","Caroline_Ellison":"Caroline Ellison (Alameda)","Do_Kwon":"Do Kwon (Terra)","Alex_Mashinsky":"Alex Mashinsky (Celsius)",
+ "Barry_Silbert":"Barry Silbert (DCG)","Su_Zhu":"Su Zhu (3AC)","Kyle_Davies":"Kyle Davies (3AC)","Brian_Armstrong":"Brian Armstrong (Coinbase)",
+ "Winklevoss_Twins":"Winklevoss twins (Gemini)","Justin_Sun":"Justin Sun (Tron)","Arthur_Hayes":"Arthur Hayes (BitMEX)",
+ "Alameda_Research":"Alameda Research","Gemini_Earn":"Gemini Earn","DCG":"Digital Currency Group",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

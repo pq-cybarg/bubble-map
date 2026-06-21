@@ -68,6 +68,14 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "Alameda_Research": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Alex_Mashinsky": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Alice_Bob": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -121,6 +129,10 @@
       "has_exogenous_revenue": true
     },
     "Arthur_Britto": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Arthur_Hayes": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -184,6 +196,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Barry_Silbert": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Battery_REE_Tech_Export_Controls": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -193,6 +209,10 @@
       "has_exogenous_revenue": false
     },
     "Binance": {
+      "sector": "exchange",
+      "has_exogenous_revenue": true
+    },
+    "BitMEX": {
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
@@ -211,6 +231,10 @@
     "Blackstone": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
+    },
+    "BlockFi": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
     },
     "BlueOwl": {
       "sector": "private_credit",
@@ -237,6 +261,10 @@
       "has_exogenous_revenue": false
     },
     "Brad_Garlinghouse": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Brian_Armstrong": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -330,6 +358,14 @@
     },
     "Caroline_Crenshaw": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Caroline_Ellison": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Celsius": {
+      "sector": "crypto_firm",
       "has_exogenous_revenue": false
     },
     "Chainlink": {
@@ -448,6 +484,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "DCG": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "DOJ": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -522,6 +562,10 @@
     },
     "Distressed_Sovereigns": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Do_Kwon": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Dual_Mandate": {
@@ -688,6 +732,18 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Gemini": {
+      "sector": "exchange",
+      "has_exogenous_revenue": true
+    },
+    "Gemini_Earn": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Genesis": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
     "Georgia_MoJ": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -714,6 +770,10 @@
     },
     "Government_of_Gujarat": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "Grayscale": {
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "HKDA": {
@@ -888,6 +948,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Justin_Sun": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Kalshi": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -911,6 +975,10 @@
     "Kraken": {
       "sector": "exchange",
       "has_exogenous_revenue": true
+    },
+    "Kyle_Davies": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "LBMA": {
       "sector": "other",
@@ -1484,6 +1552,10 @@
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
     },
+    "Sam_Bankman_Fried": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Sam_Blackshear": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1604,6 +1676,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Su_Zhu": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Subprime_Auto_ABS": {
       "sector": "private_credit",
       "has_exogenous_revenue": false
@@ -1682,6 +1758,10 @@
     },
     "Tricolor_Holdings": {
       "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
+    "Tron": {
+      "sector": "dlt",
       "has_exogenous_revenue": false
     },
     "Trump": {
@@ -1840,6 +1920,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Voyager": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
     "WISeART": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1873,6 +1957,10 @@
       "has_exogenous_revenue": false
     },
     "William_L_Hill": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Winklevoss_Twins": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -9708,6 +9796,435 @@
       "note": "Neither 2% inflation nor full employment (U-6) held while the rate path moved; Z3 macro-fed-trap shows no single feasible rate exists."
     },
     {
+      "from": "Sam_Bankman_Fried",
+      "to": "FTX",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder/CEO of FTX \u2014 convicted of fraud, 25-year sentence (2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Sam_Bankman_Fried",
+      "to": "Alameda_Research",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owner of Alameda Research (FTX's sibling hedge fund)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Caroline_Ellison",
+      "to": "Alameda_Research",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CEO of Alameda; cooperating witness; 2-year sentence + ~$11B forfeiture",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "FTX",
+      "to": "Alameda_Research",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commingled ~$8B of FTX CUSTOMER deposits into Alameda \u2014 the core fraud mechanism",
+      "amount_usd": 8000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Do_Kwon",
+      "to": "Terraform_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder of Terraform Labs (Terra/LUNA) \u2014 15-year sentence (2025); the first domino",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Alex_Mashinsky",
+      "to": "Celsius",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "CEO of Celsius \u2014 pleaded guilty; 12-year sentence (2025); CFTC lifetime ban",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Barry_Silbert",
+      "to": "DCG",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder/CEO of Digital Currency Group",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Su_Zhu",
+      "to": "Three_Arrows_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder of 3AC (~$10B fund that blew up on Luna/GBTC leverage)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Kyle_Davies",
+      "to": "Three_Arrows_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder of 3AC",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Three_Arrows_Capital",
+      "to": "Genesis",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "3AC default blew a hole in Genesis's loan book",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Three_Arrows_Capital",
+      "to": "Voyager",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "3AC default triggered Voyager bankruptcy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Three_Arrows_Capital",
+      "to": "BlockFi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "3AC exposure contributed to BlockFi distress",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "DCG",
+      "to": "Genesis",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "parent of Genesis; Genesis's Delaware suit alleges DCG/Silbert drained ~$2.1-3.3B via reckless loans (NYAG settlement)",
+      "amount_usd": 2100000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "DCG",
+      "to": "Grayscale",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DCG subsidiary; Grayscale runs GBTC and won Grayscale v. SEC",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Gemini",
+      "to": "Gemini_Earn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ran the Gemini Earn yield program through Genesis (froze; NYAG suit)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Genesis",
+      "to": "Gemini_Earn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Genesis was the lender behind Gemini Earn; froze ~$900M of customer funds",
+      "amount_usd": 900000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "FTX",
+      "to": "BlockFi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTX 'rescued' BlockFi then both collapsed (Nov 2022)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Celsius",
+      "to": "SINK_investors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "frozen/lost retail depositor funds",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Voyager",
+      "to": "SINK_investors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "frozen/lost retail depositor funds",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "FTX",
+      "to": "SINK_investors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$8B customer shortfall \u2014 wiped retail and institutional holders",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Three_Arrows_Capital",
+      "to": "SINK_investors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$10B fund liquidation cascaded losses to creditors/LPs",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SDNY",
+      "to": "Sam_Bankman_Fried",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "convicted on 7 fraud/conspiracy counts; 25-year sentence",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SDNY",
+      "to": "Caroline_Ellison",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "cooperating plea; 2-year sentence + ~$11B forfeiture",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SDNY",
+      "to": "Alex_Mashinsky",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "guilty plea; 12-year sentence",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SDNY",
+      "to": "Do_Kwon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "extradited; 15-year sentence (2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Brian_Armstrong",
+      "to": "Coinbase",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder/CEO of Coinbase (survivor \u2014 no commingling)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Winklevoss_Twins",
+      "to": "Gemini",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founders of Gemini (Gemini Earn froze via Genesis; NYAG settled)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Justin_Sun",
+      "to": "Tron",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder of Tron (SEC fraud/manipulation suit)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Justin_Sun",
+      "to": "World_Liberty_Financial",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "invested ~$75M in the Trump-linked WLF and became an advisor; SEC case paused 2025 \u2014 documented conflict-of-timing",
+      "amount_usd": 75000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Tron",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "fraud + market-manipulation suit vs Tron/Sun; paused 2025",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Grayscale",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Grayscale v. SEC \u2014 spot-BTC-ETF denial ruled 'arbitrary and capricious'; Grayscale won",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "Arthur_Hayes",
+      "to": "BitMEX",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "co-founder of BitMEX (BSA guilty plea 2022; pardoned by Trump 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "BitMEX",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Bank Secrecy Act prosecution of BitMEX/founders (2020-22)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-collapse-cluster.json",
+      "note": ""
+    },
+    {
       "from": "US_Congress",
       "to": "CLARITY",
       "instrument": "other",
@@ -9774,10 +10291,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 486,
-    "num_edges": 602,
-    "num_financial_edges": 151,
-    "num_structural_edges": 451,
+    "num_nodes": 508,
+    "num_edges": 635,
+    "num_financial_edges": 153,
+    "num_structural_edges": 482,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -9828,24 +10345,24 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -9869,8 +10386,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -9881,8 +10398,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -10033,6 +10550,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Alameda_Research": {
+        "total_usd": 8000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Alex_Mashinsky": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Alice_Bob": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10125,6 +10656,13 @@
         "in_robust_core": false
       },
       "Arthur_Britto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arthur_Hayes": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10236,6 +10774,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Barry_Silbert": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Battery_REE_Tech_Export_Controls": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10252,6 +10797,13 @@
       },
       "Binance": {
         "total_usd": 8700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BitMEX": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10280,6 +10832,13 @@
       },
       "Blackstone": {
         "total_usd": 7500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BlockFi": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -10328,6 +10887,13 @@
         "in_robust_core": false
       },
       "Brad_Garlinghouse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brian_Armstrong": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10489,6 +11055,20 @@
         "in_robust_core": false
       },
       "Caroline_Crenshaw": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Caroline_Ellison": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Celsius": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -10698,6 +11278,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DCG": {
+        "total_usd": 2100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DOJ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10831,6 +11418,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Do_Kwon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Dual_Mandate": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -10951,7 +11545,7 @@
         "in_robust_core": false
       },
       "FTX": {
-        "total_usd": 11500000,
+        "total_usd": 8011500000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -11118,6 +11712,27 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Gemini": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gemini_Earn": {
+        "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Genesis": {
+        "total_usd": 3000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Georgia_MoJ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -11161,6 +11776,13 @@
         "in_robust_core": false
       },
       "Government_of_Gujarat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Grayscale": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -11468,6 +12090,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Justin_Sun": {
+        "total_usd": 75000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kalshi": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -11505,6 +12134,13 @@
       },
       "Kraken": {
         "total_usd": 30000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kyle_Davies": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -12511,6 +13147,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sam_Bankman_Fried": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sam_Blackshear": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -12721,6 +13364,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Su_Zhu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Subprime_Auto_ABS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -12855,6 +13505,13 @@
         "in_robust_core": false
       },
       "Tricolor_Holdings": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tron": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13134,6 +13791,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Voyager": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WISeART": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13197,8 +13861,15 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Winklevoss_Twins": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "World_Liberty_Financial": {
-        "total_usd": 4700000000,
+        "total_usd": 4775000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -13595,6 +14266,24 @@
         "both_layers": true
       },
       {
+        "node": "Coinbase",
+        "degree": 8,
+        "neighbor_sectors": [
+          "crypto_infra",
+          "other",
+          "person",
+          "political",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 5,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Oracle",
         "degree": 8,
         "neighbor_sectors": [
@@ -13610,6 +14299,25 @@
         "source_files": 5,
         "layers": [
           "financial"
+        ],
+        "both_layers": false
+      },
+      {
+        "node": "SEC",
+        "degree": 17,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "dlt",
+          "exchange",
+          "financier",
+          "person",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 5,
+        "layers": [
+          "structural"
         ],
         "both_layers": false
       },
@@ -13632,24 +14340,6 @@
         "both_layers": true
       },
       {
-        "node": "Coinbase",
-        "degree": 7,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "other",
-          "person",
-          "political",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "JPMorgan",
         "degree": 6,
         "neighbor_sectors": [
@@ -13661,26 +14351,6 @@
         ],
         "n_neighbor_sectors": 5,
         "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "LayerZero",
-        "degree": 7,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "exchange",
-          "financial_infra",
-          "financier",
-          "hyperscaler",
-          "regulator",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 1,
         "layers": [
           "financial",
           "structural"
