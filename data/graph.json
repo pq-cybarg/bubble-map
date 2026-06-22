@@ -40,6 +40,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "ALPHV_BlackCat": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "AMD": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -58,6 +62,18 @@
     },
     "ANTHROPIC_INVESTORS": {
       "sector": "financier",
+      "has_exogenous_revenue": false
+    },
+    "APT28_FancyBear": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "APT29_CozyBear": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "APT_State_Actors": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "ASE": {
@@ -126,6 +142,10 @@
     },
     "Amkor": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
+    "Anduril": {
+      "sector": "defense_tech",
       "has_exogenous_revenue": true
     },
     "Annuity_Holders": {
@@ -364,6 +384,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "CALEA_Backdoor": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "CCDH": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -468,6 +492,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Cellebrite": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Celsius": {
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
@@ -516,6 +544,14 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Cl0p": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Clearview_AI": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "CoBank": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -542,6 +578,10 @@
     },
     "Commercial_Parents": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Commercial_Spyware": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Congress": {
@@ -592,6 +632,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CrowdStrike": {
+      "sector": "security_research",
+      "has_exogenous_revenue": true
+    },
     "Crude_Oil": {
       "sector": "commodity",
       "has_exogenous_revenue": true
@@ -620,8 +664,16 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Cyber_Defense": {
+      "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
     "Cymer": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "Cytrox": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "DARPA": {
@@ -775,6 +827,10 @@
     "Epstein_Files": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Equation_Group": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
     },
     "Eric_Hartford": {
       "sector": "person",
@@ -1081,7 +1137,7 @@
       "has_exogenous_revenue": true
     },
     "ICE": {
-      "sector": "exchange",
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "ICIJ": {
@@ -1132,6 +1188,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "ImmigrationOS": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "InQTel": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
@@ -1148,6 +1208,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "Intellexa": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "IonQ": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
@@ -1158,6 +1222,10 @@
     },
     "Iran_nuclear_program": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Israel": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Israel_state": {
@@ -1284,6 +1352,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Kimsuky": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Komeito": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1388,6 +1460,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "LockBit": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Logistics_3PL": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -1416,9 +1492,17 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "MSS": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
     "Maersk": {
       "sector": "logistics",
       "has_exogenous_revenue": true
+    },
+    "Mandiant": {
+      "sector": "security_research",
+      "has_exogenous_revenue": false
     },
     "Medical_Device_Standards": {
       "sector": "standards",
@@ -1544,6 +1628,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "NSO_Group": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "NVIDIA": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -1590,6 +1678,10 @@
     },
     "Nondepository financial institutions": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "North_Korea": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Nous_Research": {
@@ -1696,6 +1788,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "Paragon": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Pasqal": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -1707,6 +1803,10 @@
     "PayPay": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Pegasus": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Pension_Funds": {
       "sector": "financier",
@@ -1731,6 +1831,10 @@
     "Polymarket": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Predator": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Predatory_Sparrow": {
       "sector": "other",
@@ -1763,6 +1867,10 @@
     "PrivateEquity_Funds": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
+    },
+    "Private_Surveillance": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Protocol_Labs": {
       "sector": "crypto_infra",
@@ -1820,12 +1928,20 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": false
     },
+    "Ransomware_RaaS": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Rare_Earths": {
       "sector": "commodity",
       "has_exogenous_revenue": true
     },
     "Rate_Shock": {
       "sector": "macro_factor",
+      "has_exogenous_revenue": false
+    },
+    "Recorded_Future": {
+      "sector": "security_research",
       "has_exogenous_revenue": false
     },
     "Render": {
@@ -2036,6 +2152,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Sandworm": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Sanseito": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2047,6 +2167,10 @@
     "ScaleAI": {
       "sector": "ai_data",
       "has_exogenous_revenue": true
+    },
+    "Scattered_Spider": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
     },
     "Scientific_Publishing": {
       "sector": "other",
@@ -2460,6 +2584,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Unit_8200": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
     "UnitedHealth": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2500,12 +2628,20 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Viasat": {
+      "sector": "satellite",
+      "has_exogenous_revenue": false
+    },
     "Vistra": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
     "Vitalik": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "VoltTyphoon": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "Voyager": {
@@ -5619,7 +5755,7 @@
       "status": "ongoing",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-telecom-satellite.json",
+      "source_file": "spec-telecom-satellite.json,spec-surveillance-cyber-threat-layer.json",
       "note": "China MSS breached 9+ carriers via the CALEA wiretap backdoor; 1M+ users' metadata; the mandated-backdoor-becomes-open-door proof."
     },
     {
@@ -10602,6 +10738,630 @@
       "note": "$306B aggregate unrealized securities loss (down from $684B 2023 peak); invisible while HTM held at cost, realized only if forced to sell (the SVB mechanism). BTFP backstop expired Mar 2024."
     },
     {
+      "from": "China",
+      "to": "MSS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ministry of State Security \u2014 China's foreign-intelligence/secret-police organ",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "MSS",
+      "to": "SaltTyphoon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates Salt Typhoon (telecom espionage APT)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "MSS",
+      "to": "VoltTyphoon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates Volt Typhoon (critical-infra pre-positioning)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "China state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "VoltTyphoon",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "China state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "CALEA_Backdoor",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "entered via the CALEA lawful-intercept (wiretap) systems \u2014 the backdoor paradox",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "Viasat",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "compromised Viasat satellite ground infrastructure (2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "VoltTyphoon",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "pre-positioning in comms/power/water for 'pre-conflict' disruption (CISA Feb 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "FBI",
+      "to": "CALEA_Backdoor",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "lawful-intercept (CALEA) wiretap mandate embedded in carrier infrastructure",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "CALEA_Backdoor",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exceptional-access channel built into US telecom networks",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "APT28_FancyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GRU-attributed APT (Fancy Bear)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "APT29_CozyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SVR-attributed APT (Cozy Bear; SolarWinds)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "Sandworm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GRU-attributed destructive APT (NotPetya/grid attacks)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "APT28_FancyBear",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Russia state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "APT29_CozyBear",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Russia state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Sandworm",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Russia state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "North_Korea",
+      "to": "Lazarus_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "state operator of Lazarus (financial theft + laundering)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "North_Korea",
+      "to": "Kimsuky",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state espionage APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Lazarus_Group",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "North Korea state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Kimsuky",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "North Korea state APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "NSA",
+      "to": "Equation_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Equation Group attributed to NSA (Shadow Brokers leak)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Equation_Group",
+      "to": "APT_State_Actors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US-attributed APT",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Israel",
+      "to": "Unit_8200",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "IDF SIGINT unit; alumni seeded the commercial-spyware/cyber industry",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Unit_8200",
+      "to": "Commercial_Spyware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni talent pipeline into NSO/Intellexa-class vendors",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "NSO_Group",
+      "to": "Pegasus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "makes Pegasus (zero-click mobile spyware)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "NSO_Group",
+      "to": "Commercial_Spyware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mercenary-spyware vendor (Entity List)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Intellexa",
+      "to": "Predator",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Intellexa Consortium markets Predator spyware",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Cytrox",
+      "to": "Predator",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Cytrox develops Predator (Intellexa member)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Intellexa",
+      "to": "Commercial_Spyware",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned spyware consortium",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Paragon",
+      "to": "Commercial_Spyware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spyware vendor (DHS/ICE exploring use, 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Cellebrite",
+      "to": "Commercial_Spyware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mobile-forensics/extraction vendor",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Intellexa",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned 2024; 3 figures quietly REMOVED from the list in 2025 (one later convicted in Greece) \u2014 enforcement reversal",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "LockBit",
+      "to": "Ransomware_RaaS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "LockBit 5.0 (Sept 2025) \u2014 permits critical-infra attacks",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "ALPHV_BlackCat",
+      "to": "Ransomware_RaaS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "RaaS (MGM/Caesars; since disrupted)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Scattered_Spider",
+      "to": "Ransomware_RaaS",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "social-engineering crew; launching ShinySp1d3r RaaS (Nov 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Cl0p",
+      "to": "Ransomware_RaaS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mass zero-day extortion (MOVEit)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Scattered_Spider",
+      "to": "ALPHV_BlackCat",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliate collaboration on the MGM intrusion",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Palantir",
+      "to": "ImmigrationOS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built ImmigrationOS (~$30M ICE deportation-targeting contract)",
+      "amount_usd": 30000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Palantir",
+      "to": "Private_Surveillance",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Gotham predictive-policing; CIA-seeded",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Clearview_AI",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "web-scraped facial-recognition sold to police/ICE",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Anduril",
+      "to": "Private_Surveillance",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "autonomous defense/border surveillance (Founders Fund)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "ICE",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ImmigrationOS deportation-targeting contract",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "ICE",
+      "to": "Clearview_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "facial-recognition contract",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "ICE",
+      "to": "Paragon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploring Paragon spyware (2026)",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Google",
+      "to": "Mandiant",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns Mandiant (threat intel / IR)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Mandiant",
+      "to": "Cyber_Defense",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution + incident response",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "CrowdStrike",
+      "to": "Cyber_Defense",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "endpoint/threat-intel (Falcon)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
+      "from": "Recorded_Future",
+      "to": "Cyber_Defense",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "threat-intelligence (Mastercard-owned)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "note": ""
+    },
+    {
       "from": "ICE",
       "to": "Polymarket",
       "instrument": "investment",
@@ -13268,10 +14028,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 664,
-    "num_edges": 816,
-    "num_financial_edges": 178,
-    "num_structural_edges": 638,
+    "num_nodes": 698,
+    "num_edges": 864,
+    "num_financial_edges": 180,
+    "num_structural_edges": 684,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -13326,15 +14086,15 @@
         "SINK_lenders"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
         "OpenAI"
       ],
       [
@@ -13342,18 +14102,13 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -13363,14 +14118,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -13385,16 +14139,22 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -13478,6 +14238,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ALPHV_BlackCat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "AMD": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13508,6 +14275,27 @@
       },
       "ANTHROPIC_INVESTORS": {
         "total_usd": 30000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "APT28_FancyBear": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "APT29_CozyBear": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "APT_State_Actors": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -13626,6 +14414,13 @@
         "in_robust_core": true
       },
       "Amkor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Anduril": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14045,6 +14840,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CALEA_Backdoor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CCDH": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14227,6 +15029,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cellebrite": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Celsius": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14311,6 +15120,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cl0p": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Clearview_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CoBank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14354,6 +15177,13 @@
         "in_robust_core": false
       },
       "Commercial_Parents": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Commercial_Spyware": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14444,6 +15274,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CrowdStrike": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crude_Oil": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14493,7 +15330,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cyber_Defense": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cymer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cytrox": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14760,6 +15611,13 @@
         "in_robust_core": false
       },
       "Epstein_Files": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Equation_Group": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15389,6 +16247,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ImmigrationOS": {
+        "total_usd": 30000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "InQTel": {
         "total_usd": 2000000,
         "circular_usd": 0,
@@ -15417,6 +16282,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Intellexa": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IonQ": {
         "total_usd": 1075000000,
         "circular_usd": 0,
@@ -15432,6 +16304,13 @@
         "in_robust_core": false
       },
       "Iran_nuclear_program": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Israel": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15655,6 +16534,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Kimsuky": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Komeito": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -15837,6 +16723,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LockBit": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Logistics_3PL": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -15886,7 +16779,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MSS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Maersk": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mandiant": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16110,6 +17017,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NSO_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NVIDIA": {
         "total_usd": 153619000000,
         "circular_usd": 133169000000,
@@ -16189,6 +17103,13 @@
       },
       "Nondepository financial institutions": {
         "total_usd": 1972670000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "North_Korea": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16363,13 +17284,20 @@
         "in_robust_core": false
       },
       "Palantir": {
-        "total_usd": 2000000,
+        "total_usd": 32000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
         "in_robust_core": false
       },
       "Panama_Canal": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Paragon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16391,6 +17319,13 @@
         "in_robust_core": false
       },
       "PayPay": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pegasus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16434,6 +17369,13 @@
       },
       "Polymarket": {
         "total_usd": 2000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Predator": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16489,6 +17431,13 @@
         "in_robust_core": false
       },
       "PrivateEquity_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Private_Surveillance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16593,6 +17542,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ransomware_RaaS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Rare_Earths": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16602,6 +17558,13 @@
       },
       "Rate_Shock": {
         "total_usd": 306000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Recorded_Future": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16971,6 +17934,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sandworm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sanseito": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16987,6 +17957,13 @@
       },
       "ScaleAI": {
         "total_usd": 14300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Scattered_Spider": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -17713,6 +18690,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Unit_8200": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UnitedHealth": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17783,6 +18767,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Viasat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Vistra": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17791,6 +18782,13 @@
         "in_robust_core": false
       },
       "Vitalik": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "VoltTyphoon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18067,7 +19065,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 22,
+        "degree": 23,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -18081,10 +19079,11 @@
           "semiconductor",
           "standards",
           "state",
+          "state_intel",
           "statistic"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 12,
+        "n_neighbor_sectors": 14,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -18138,6 +19137,28 @@
         "both_layers": true
       },
       {
+        "node": "Google",
+        "degree": 11,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "crypto_infra",
+          "dlt",
+          "ip_rightsholder",
+          "pqc_quantum",
+          "security_research",
+          "space_real_economy",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Government",
         "degree": 18,
         "neighbor_sectors": [
@@ -18174,27 +19195,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Google",
-        "degree": 10,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "crypto_infra",
-          "dlt",
-          "ip_rightsholder",
-          "pqc_quantum",
-          "space_real_economy",
-          "surveillance"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 7,
         "layers": [
           "financial",
           "structural"

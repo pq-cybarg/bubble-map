@@ -128,6 +128,13 @@ ALIAS = {
  "Bittensor":"Bittensor","TAO":"Bittensor","Akash":"Akash","Render":"Render","Octra":"Octra","Venice":"Venice_AI","Venice.ai":"Venice_AI","Venice_AI":"Venice_AI","Erik Voorhees":"Erik_Voorhees","Erik_Voorhees":"Erik_Voorhees","FUTO":"FUTO",
  "Local_AI_Tooling":"Local_AI_Tooling","Uncensored_AI":"Uncensored_AI","Decentralized_AI":"Decentralized_AI","Open_Local_AI":"Open_Local_AI",
  "Fhenix":"Fhenix","FHEnix":"Fhenix","Biconomy":"Biconomy","TapBit":"TapBit",
+ # surveillance & cyber-threat layer
+ "VoltTyphoon":"VoltTyphoon","Volt Typhoon":"VoltTyphoon","Salt Typhoon":"SaltTyphoon","MSS":"MSS","APT28":"APT28_FancyBear","Fancy Bear":"APT28_FancyBear","APT28_FancyBear":"APT28_FancyBear","APT29":"APT29_CozyBear","Cozy Bear":"APT29_CozyBear","APT29_CozyBear":"APT29_CozyBear","Sandworm":"Sandworm","Kimsuky":"Kimsuky","Equation Group":"Equation_Group","Equation_Group":"Equation_Group",
+ "Unit 8200":"Unit_8200","Unit_8200":"Unit_8200","North Korea":"North_Korea","North_Korea":"North_Korea","Israel":"Israel","APT_State_Actors":"APT_State_Actors","CALEA_Backdoor":"CALEA_Backdoor","Viasat":"Viasat",
+ "NSO Group":"NSO_Group","NSO_Group":"NSO_Group","Pegasus":"Pegasus","Intellexa":"Intellexa","Cytrox":"Cytrox","Predator":"Predator","Paragon":"Paragon","Cellebrite":"Cellebrite","Commercial_Spyware":"Commercial_Spyware",
+ "LockBit":"LockBit","ALPHV":"ALPHV_BlackCat","BlackCat":"ALPHV_BlackCat","ALPHV_BlackCat":"ALPHV_BlackCat","Scattered Spider":"Scattered_Spider","Scattered_Spider":"Scattered_Spider","Cl0p":"Cl0p","Clop":"Cl0p","Ransomware_RaaS":"Ransomware_RaaS",
+ "Clearview":"Clearview_AI","Clearview AI":"Clearview_AI","Clearview_AI":"Clearview_AI","Anduril":"Anduril","ImmigrationOS":"ImmigrationOS","ICE":"ICE","Private_Surveillance":"Private_Surveillance",
+ "CrowdStrike":"CrowdStrike","Mandiant":"Mandiant","Recorded Future":"Recorded_Future","Recorded_Future":"Recorded_Future","Cyber_Defense":"Cyber_Defense",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -282,6 +289,13 @@ NODE_META = {
  "Bittensor":("crypto_infra",False),"Akash":("crypto_infra",False),"Render":("crypto_infra",False),"Octra":("crypto_infra",False),"Venice_AI":("crypto_infra",False),"Erik_Voorhees":("person",False),"FUTO":("ai_infra",False),
  "Local_AI_Tooling":("ai_infra",False),"Uncensored_AI":("ai_infra",False),"Decentralized_AI":("ai_infra",False),"Open_Local_AI":("ai_infra",False),
  "Fhenix":("crypto_infra",False),"Biconomy":("crypto_infra",False),"TapBit":("exchange",True),
+ # surveillance & cyber-threat layer
+ "VoltTyphoon":("threat_actor",False),"APT28_FancyBear":("threat_actor",False),"APT29_CozyBear":("threat_actor",False),"Sandworm":("threat_actor",False),"Kimsuky":("threat_actor",False),"Equation_Group":("threat_actor",False),"APT_State_Actors":("threat_actor",False),
+ "MSS":("state_intel",True),"Unit_8200":("state_intel",True),"North_Korea":("state",True),"Israel":("state",True),"CALEA_Backdoor":("surveillance",False),"Viasat":("satellite",False),
+ "NSO_Group":("surveillance",False),"Pegasus":("surveillance",False),"Intellexa":("surveillance",False),"Cytrox":("surveillance",False),"Predator":("surveillance",False),"Paragon":("surveillance",False),"Cellebrite":("surveillance",False),"Commercial_Spyware":("surveillance",False),
+ "LockBit":("threat_actor",False),"ALPHV_BlackCat":("threat_actor",False),"Scattered_Spider":("threat_actor",False),"Cl0p":("threat_actor",False),"Ransomware_RaaS":("threat_actor",False),
+ "Clearview_AI":("surveillance",False),"Anduril":("defense_tech",True),"ImmigrationOS":("surveillance",False),"ICE":("state",True),"Private_Surveillance":("surveillance",False),
+ "CrowdStrike":("security_research",True),"Mandiant":("security_research",False),"Recorded_Future":("security_research",False),"Cyber_Defense":("security_research",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

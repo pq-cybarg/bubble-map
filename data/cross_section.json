@@ -4207,109 +4207,109 @@
    "note": "bridge_score = z(degree) + z(distinct neighbor-sectors) + 0.5 if the node spans both layers.",
    "ranking": [
     {
+     "node": "China",
+     "degree": 23,
+     "n_neighbor_sectors": 14,
+     "both_layers": true,
+     "bridge_score": 4.69
+    },
+    {
      "node": "NVIDIA",
      "degree": 29,
      "n_neighbor_sectors": 11,
      "both_layers": true,
-     "bridge_score": 4.6
-    },
-    {
-     "node": "China",
-     "degree": 22,
-     "n_neighbor_sectors": 13,
-     "both_layers": true,
-     "bridge_score": 4.37
+     "bridge_score": 4.39
     },
     {
      "node": "US_Banks",
      "degree": 18,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 1.87
+     "bridge_score": 1.75
     },
     {
      "node": "Hedera",
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 1.51
+     "bridge_score": 1.35
     },
     {
      "node": "US_Government",
      "degree": 18,
      "n_neighbor_sectors": 8,
      "both_layers": true,
-     "bridge_score": 1.42
+     "bridge_score": 1.33
     },
     {
      "node": "Ripple",
      "degree": 15,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 1.38
+     "bridge_score": 1.27
     },
     {
      "node": "SEC",
      "degree": 18,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 0.96
+     "bridge_score": 0.9
+    },
+    {
+     "node": "Google",
+     "degree": 11,
+     "n_neighbor_sectors": 9,
+     "both_layers": true,
+     "bridge_score": 0.62
     },
     {
      "node": "OpenAI",
      "degree": 18,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": 0.5
+     "bridge_score": 0.48
     },
     {
      "node": "Microsoft",
      "degree": 13,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": 0.14
-    },
-    {
-     "node": "Google",
-     "degree": 10,
-     "n_neighbor_sectors": 8,
-     "both_layers": true,
-     "bridge_score": 0.1
+     "bridge_score": 0.09
     },
     {
      "node": "SpaceX",
      "degree": 11,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": -0.19
+     "bridge_score": -0.24
     },
     {
      "node": "PrivateCredit_Funds",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": -0.68
+     "bridge_score": -0.72
     },
     {
      "node": "Anthropic",
      "degree": 12,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -0.95
+     "bridge_score": -0.92
     },
     {
      "node": "BlackRock",
      "degree": 9,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -0.98
+     "bridge_score": -0.99
     },
     {
      "node": "Oracle",
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": false,
-     "bridge_score": -1.18
+     "bridge_score": -1.22
     },
     {
      "node": "xAI",
@@ -4323,14 +4323,14 @@
      "degree": 8,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -1.6
+     "bridge_score": -1.57
     },
     {
      "node": "JPMorgan",
      "degree": 6,
      "n_neighbor_sectors": 5,
      "both_layers": true,
-     "bridge_score": -1.93
+     "bridge_score": -1.9
     }
    ]
   },

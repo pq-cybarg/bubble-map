@@ -128,6 +128,10 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "llama_cpp":"llama.cpp","LM_Studio":"LM Studio","Stability_AI":"Stability AI (Stable Diffusion)","Black_Forest_Labs":"Black Forest Labs (Flux)","Hugging_Face":"Hugging Face","Nous_Research":"Nous Research","AllenAI_OLMo":"Allen AI (OLMo)",
  "Eric_Hartford":"Eric Hartford (Dolphin)","Venice_AI":"Venice.ai (VVV)","Erik_Voorhees":"Erik Voorhees","Local_AI_Tooling":"Local AI tooling","Uncensored_AI":"Uncensored AI (abliteration)","Decentralized_AI":"Decentralized AI compute","Open_Local_AI":"Open / local AI ecosystem",
  "Fhenix":"Fhenix (FHE L2)","Biconomy":"Biconomy (account abstraction)",
+ # surveillance & cyber-threat layer
+ "VoltTyphoon":"Volt Typhoon (China APT)","SaltTyphoon":"Salt Typhoon (China APT)","APT28_FancyBear":"APT28 / Fancy Bear (Russia)","APT29_CozyBear":"APT29 / Cozy Bear (Russia)","Sandworm":"Sandworm (Russia)","Kimsuky":"Kimsuky (DPRK)","Equation_Group":"Equation Group (NSA)","APT_State_Actors":"State APTs","Lazarus_Group":"Lazarus Group (DPRK)",
+ "MSS":"MSS (China intel)","Unit_8200":"Unit 8200 (Israel)","North_Korea":"North Korea","CALEA_Backdoor":"CALEA wiretap backdoor","NSO_Group":"NSO Group","Commercial_Spyware":"Commercial spyware","ALPHV_BlackCat":"ALPHV / BlackCat","Scattered_Spider":"Scattered Spider","Ransomware_RaaS":"Ransomware-as-a-service",
+ "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
