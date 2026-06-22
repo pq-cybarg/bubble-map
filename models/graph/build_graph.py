@@ -135,6 +135,11 @@ ALIAS = {
  "LockBit":"LockBit","ALPHV":"ALPHV_BlackCat","BlackCat":"ALPHV_BlackCat","ALPHV_BlackCat":"ALPHV_BlackCat","Scattered Spider":"Scattered_Spider","Scattered_Spider":"Scattered_Spider","Cl0p":"Cl0p","Clop":"Cl0p","Ransomware_RaaS":"Ransomware_RaaS",
  "Clearview":"Clearview_AI","Clearview AI":"Clearview_AI","Clearview_AI":"Clearview_AI","Anduril":"Anduril","ImmigrationOS":"ImmigrationOS","ICE":"ICE","Private_Surveillance":"Private_Surveillance",
  "CrowdStrike":"CrowdStrike","Mandiant":"Mandiant","Recorded Future":"Recorded_Future","Recorded_Future":"Recorded_Future","Cyber_Defense":"Cyber_Defense",
+ # SE Asia scam/crime nexus
+ "SE_Asia_Scam_Complex":"SE_Asia_Scam_Complex","Chen Zhi":"Chen_Zhi","Chen_Zhi":"Chen_Zhi","KK Park":"KK_Park","KK_Park":"KK_Park","Qingsong Park":"Qingsong_Park","Qingsong_Park":"Qingsong_Park","Thai Hoa Garden":"Qingsong_Park",
+ "Zhao Wei":"Zhao_Wei","Zhao_Wei":"Zhao_Wei","Kings Romans":"Kings_Romans","Kings_Romans":"Kings_Romans","Golden Triangle SEZ":"Golden_Triangle_SEZ","Golden_Triangle_SEZ":"Golden_Triangle_SEZ","GTSEZ":"Golden_Triangle_SEZ",
+ "POGO":"POGO","POGOs":"POGO","Tudou Guarantee":"Tudou_Guarantee","Tudou_Guarantee":"Tudou_Guarantee","Tudou":"Tudou_Guarantee","Starlink":"Starlink",
+ "Myanmar":"Myanmar","Laos":"Laos","Philippines":"Philippines","Thailand":"Thailand",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -296,6 +301,10 @@ NODE_META = {
  "LockBit":("threat_actor",False),"ALPHV_BlackCat":("threat_actor",False),"Scattered_Spider":("threat_actor",False),"Cl0p":("threat_actor",False),"Ransomware_RaaS":("threat_actor",False),
  "Clearview_AI":("surveillance",False),"Anduril":("defense_tech",True),"ImmigrationOS":("surveillance",False),"ICE":("state",True),"Private_Surveillance":("surveillance",False),
  "CrowdStrike":("security_research",True),"Mandiant":("security_research",False),"Recorded_Future":("security_research",False),"Cyber_Defense":("security_research",False),
+ # SE Asia scam/crime nexus
+ "SE_Asia_Scam_Complex":("threat_actor",False),"Chen_Zhi":("person",False),"Zhao_Wei":("person",False),"KK_Park":("threat_actor",False),"Qingsong_Park":("threat_actor",False),"POGO":("threat_actor",False),
+ "Golden_Triangle_SEZ":("other",False),"Kings_Romans":("other",False),"Tudou_Guarantee":("crypto_infra",False),"Starlink":("satellite",True),
+ "Myanmar":("state",True),"Laos":("state",True),"Philippines":("state",True),"Thailand":("state",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

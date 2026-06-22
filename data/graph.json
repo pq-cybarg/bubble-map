@@ -512,6 +512,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Chen_Zhi": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "China": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -1032,6 +1036,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Golden_Triangle_SEZ": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Google": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -1324,6 +1332,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "KK_Park": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "KLA": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1354,6 +1366,10 @@
     },
     "Kimsuky": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Kings_Romans": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Komeito": {
@@ -1415,6 +1431,10 @@
     "Lambda": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
+    },
+    "Laos": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Larry_Ellison": {
       "sector": "other",
@@ -1594,6 +1614,10 @@
     },
     "Municipal_Debt": {
       "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
+    "Myanmar": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Mysten_Labs": {
@@ -1780,6 +1804,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "POGO": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Palantir": {
       "sector": "defense_tech",
       "has_exogenous_revenue": true
@@ -1826,6 +1854,10 @@
     },
     "Phil Gramm": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Philippines": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Polymarket": {
@@ -1899,6 +1931,10 @@
     "Qatar": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Qingsong_Park": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
     },
     "QuEra": {
       "sector": "pqc_quantum",
@@ -2054,6 +2090,10 @@
     },
     "SEMI": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "SE_Asia_Scam_Complex": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "SINK_backlog": {
@@ -2300,6 +2340,10 @@
       "sector": "spv",
       "has_exogenous_revenue": false
     },
+    "Starlink": {
+      "sector": "satellite",
+      "has_exogenous_revenue": true
+    },
     "Starlink_Subscribers": {
       "sector": "exogenous_source",
       "has_exogenous_revenue": true
@@ -2416,6 +2460,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": true
     },
+    "Thailand": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Three_Arrows_Capital": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2471,6 +2519,10 @@
     "Trump Media & Technology Group": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Tudou_Guarantee": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "Turkey_state": {
       "sector": "other",
@@ -2755,6 +2807,10 @@
     "Zenko_Kurishita": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Zhao_Wei": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Zhipu_AI": {
       "sector": "ai_lab",
@@ -12363,6 +12419,331 @@
       "note": ""
     },
     {
+      "from": "Chen_Zhi",
+      "to": "Prince_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chairman; DOJ-indicted for Cambodian forced-labor scam compounds; ~127k BTC (~$15B) seized (Oct 2025)",
+      "amount_usd": 15000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Prince_Group",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Cambodia's largest scam-compound operator",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Prince_Group",
+      "to": "Cambodia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "forced-labor compounds; 'too big to fail' scam GDP-share",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Chen_Zhi",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Treasury TCO designation + sanctions (Oct 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Chen_Zhi",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reportedly fled toward China; alleged influence with Chinese officials to shield operations (graded; criminal network != state)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "KK_Park",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "one of SE Asia's largest scam centres (Myawaddy)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "KK_Park",
+      "to": "Myanmar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Myawaddy Township, Myanmar-Thailand border; junta 'cleared' it Oct 2025 (2,000+ released)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "KK_Park",
+      "to": "Thailand",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cross-border trafficking/logistics via the Thai side (Mae Sot)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "KK_Park",
+      "to": "Starlink",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "compounds ran on Starlink to evade local telecom controls; 30 terminals confiscated (Oct 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Starlink",
+      "to": "SpaceX",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operated by SpaceX",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Qingsong_Park",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'KK Park 2.0' (Thai Hoa Garden) \u2014 successor compound expanding nearby",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Qingsong_Park",
+      "to": "Myanmar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "new compound ~5km from the dismantled KK Park",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Zhao_Wei",
+      "to": "Golden_Triangle_SEZ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "runs the GTSEZ (Kings Romans casino) hosting scams/trafficking/drugs",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Zhao_Wei",
+      "to": "Kings_Romans",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "casino used for laundering (per Treasury)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Zhao_Wei",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned 2018 (Zhao Wei Transnational Crime Organization)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Golden_Triangle_SEZ",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Laos SEZ scam/trafficking enclave",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Laos",
+      "to": "Zhao_Wei",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "awarded Zhao Wei a Third-Class Development Medal (Dec 2025) \u2014 state honoring a US-sanctioned crime boss",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Philippines",
+      "to": "POGO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "banned POGOs (order effective 1 Jan 2025; Anti-POGO Act Oct 2025; 'eradicated' Apr 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "POGO",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "offshore-gaming facade for scam/trafficking/laundering",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Huione",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "Telegram 'guarantee' marketplace \u2014 the scam economy's tooling/laundering layer ($27B+ processed)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Huione",
+      "to": "Tether",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "USDT the dominant settlement currency for the scam/laundering economy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Huione",
+      "to": "Tudou_Guarantee",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Huione held ~30% of Tudou, which absorbed the migration after Huione's May-2025 shutdown",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "Tudou_Guarantee",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "successor guarantee marketplace (since winding down; activity persists elsewhere)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "FinCEN",
+      "to": "Huione",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "designated; shut down 13 May 2025; $4B+ laundered 2021-2025 (Lazarus links)",
+      "amount_usd": 4000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
+      "from": "SE_Asia_Scam_Complex",
+      "to": "SINK_scam_victims",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tens of billions stolen from defrauded victims + hundreds of thousands of trafficked/forced-labor victims",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-se-asia-scam-crime-nexus.json",
+      "note": ""
+    },
+    {
       "from": "CoreWeave",
       "to": "NVIDIA",
       "instrument": "gpu_purchase",
@@ -14028,10 +14409,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 698,
-    "num_edges": 864,
+    "num_nodes": 712,
+    "num_edges": 889,
     "num_financial_edges": 180,
-    "num_structural_edges": 684,
+    "num_structural_edges": 709,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -14086,10 +14467,6 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
       ],
@@ -14106,9 +14483,18 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -14118,13 +14504,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -14139,22 +14526,16 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -15064,6 +15445,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chen_Zhi": {
+        "total_usd": 15000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "China": {
         "total_usd": 86000000000,
         "circular_usd": 0,
@@ -15786,7 +16174,7 @@
         "in_robust_core": false
       },
       "FinCEN": {
-        "total_usd": 0,
+        "total_usd": 4000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -15974,6 +16362,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Golden_Triangle_SEZ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Google": {
         "total_usd": 200230000000,
         "circular_usd": 0,
@@ -16122,7 +16517,7 @@
         "in_robust_core": false
       },
       "Huione": {
-        "total_usd": 0,
+        "total_usd": 4000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16485,6 +16880,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "KK_Park": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "KLA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16535,6 +16937,13 @@
         "in_robust_core": false
       },
       "Kimsuky": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kings_Romans": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16645,6 +17054,13 @@
         "circularity_ratio": 1.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Laos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Larry_Ellison": {
         "total_usd": 330000000,
@@ -16955,6 +17371,13 @@
         "in_robust_core": false
       },
       "Municipal_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Myanmar": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17283,6 +17706,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "POGO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Palantir": {
         "total_usd": 32000000,
         "circular_usd": 0,
@@ -17367,6 +17797,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Philippines": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Polymarket": {
         "total_usd": 2000000000,
         "circular_usd": 0,
@@ -17396,7 +17833,7 @@
         "in_robust_core": false
       },
       "Prince_Group": {
-        "total_usd": 15000000000,
+        "total_usd": 30000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -17488,6 +17925,13 @@
       },
       "Qatar": {
         "total_usd": 400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Qingsong_Park": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -17760,6 +18204,13 @@
         "in_robust_core": false
       },
       "SEMI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SE_Asia_Scam_Complex": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18193,6 +18644,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Starlink": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Starlink_Subscribers": {
         "total_usd": 11400000000,
         "circular_usd": 0,
@@ -18396,6 +18854,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Thailand": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Three_Arrows_Capital": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18488,6 +18953,13 @@
         "in_robust_core": false
       },
       "Trump Media & Technology Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tudou_Guarantee": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18991,6 +19463,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zhao_Wei": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zhipu_AI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19065,7 +19544,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 23,
+        "degree": 24,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -19073,6 +19552,7 @@
           "creditor",
           "defense",
           "other",
+          "person",
           "pqc_quantum",
           "regulator",
           "research",
@@ -19082,8 +19562,8 @@
           "state_intel",
           "statistic"
         ],
-        "n_neighbor_sectors": 14,
-        "source_files": 13,
+        "n_neighbor_sectors": 15,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -19303,6 +19783,26 @@
         "both_layers": true
       },
       {
+        "node": "SpaceX",
+        "degree": 12,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "exogenous_source",
+          "hyperscaler",
+          "satellite",
+          "state_intel",
+          "telecom"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "xAI",
         "degree": 7,
         "neighbor_sectors": [
@@ -19315,26 +19815,6 @@
         ],
         "n_neighbor_sectors": 6,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "SpaceX",
-        "degree": 11,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "exogenous_source",
-          "hyperscaler",
-          "satellite",
-          "state_intel",
-          "telecom"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 3,
         "layers": [
           "financial",
           "structural"

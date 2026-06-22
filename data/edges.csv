@@ -49,6 +49,7 @@ OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.jso
 Private credit / venture debt lenders,Neoclouds,debt,18000000000,2025-2026,False,False,macro-cre-privatecredit.json
 PIMCO,Meta_Hyperion_SPV,debt,18000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.json
+Chen_Zhi,Prince_Group,other,15000000000,documented,False,False,spec-se-asia-scam-crime-nexus.json
 US_Government,Prince_Group,other,15000000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
 BlackRock,GIP,acquisition,12500000000,closed,False,False,spec-blackrock-aladdin-concentration.json
@@ -71,6 +72,7 @@ MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
 Binance,World_Liberty_Financial,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
+FinCEN,Huione,other,4000000000,documented,False,False,spec-se-asia-scam-crime-nexus.json
 NSCC,Robinhood,other,3700000000,closed,False,False,spec-market-plumbing-control.json
 NVIDIA,CoreWeave,equity,3660000000,13F-~11pct,True,False,"spec-sec-filings-primary.json,fin-nvidia-openai.json,fin-coreweave-oracle.json"
 US_Government,Bitfinex,other,3600000000,closed,False,False,spec-onchain-threat-actor-addresses.json
@@ -762,6 +764,29 @@ GSEs_FannieFreddie,US_Banks,other,,open,False,False,macro-gses-fhlb.json
 Japanese_Banks,US_Treasuries,other,,open,False,False,macro-foreign-bank-branches.json
 Foreign_Bank_US_Branches,Repo_Market,other,,open,False,False,macro-foreign-bank-branches.json
 Federal_Reserve,Foreign_Bank_US_Branches,other,,open,False,False,macro-foreign-bank-branches.json
+Prince_Group,SE_Asia_Scam_Complex,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Prince_Group,Cambodia,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+OFAC,Chen_Zhi,regulatory_legal,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Chen_Zhi,China,other,,contested,False,False,spec-se-asia-scam-crime-nexus.json
+KK_Park,SE_Asia_Scam_Complex,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+KK_Park,Myanmar,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+KK_Park,Thailand,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+KK_Park,Starlink,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Starlink,SpaceX,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Qingsong_Park,SE_Asia_Scam_Complex,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Qingsong_Park,Myanmar,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Zhao_Wei,Golden_Triangle_SEZ,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Zhao_Wei,Kings_Romans,surveillance_security,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+OFAC,Zhao_Wei,regulatory_legal,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Golden_Triangle_SEZ,SE_Asia_Scam_Complex,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Laos,Zhao_Wei,regulatory_legal,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Philippines,POGO,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+POGO,SE_Asia_Scam_Complex,surveillance_security,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Huione,SE_Asia_Scam_Complex,surveillance_security,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Huione,Tether,surveillance_security,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Huione,Tudou_Guarantee,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+Tudou_Guarantee,SE_Asia_Scam_Complex,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
+SE_Asia_Scam_Complex,SINK_scam_victims,other,,documented,False,False,spec-se-asia-scam-crime-nexus.json
 Microsoft,CoreWeave,compute_commitment,,active,False,False,fin-coreweave-oracle.json
 Oracle,NVIDIA,gpu_purchase,,ongoing,True,False,fin-coreweave-oracle.json
 OptumRx,UnitedHealth,other,,recurring,False,False,spec-disability-healthcare-insurance-extraction.json

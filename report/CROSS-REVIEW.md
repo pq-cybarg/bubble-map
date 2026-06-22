@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-surveillance-cyber-threat-layer.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 5 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- spec-disclosures-surveillance.json: 4 shared entities
-- spec-network-overlay.json: 4 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- digitalid-corporate.json: 4 shared entities
-- spec-unc-nk-attribution-map.json: 3 shared entities
-- geopolitics-defense-industrial-base.json: 3 shared entities
+## Newest file `spec-se-asia-scam-crime-nexus.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 3 shared entities
+- spec-sdny-crypto-prosecution.json: 2 shared entities
+- spec-unc-nk-attribution-map.json: 2 shared entities
+- spec-tornado-samourai.json: 2 shared entities
+- spec-onchain-threat-actor-addresses.json: 2 shared entities
+- spec-cambodia-scam-fara-paid-influence.json: 2 shared entities
+- geopolitics-allied-intel-nodes.json: 1 shared entities
+- fin-spacex-spcx.json: 1 shared entities

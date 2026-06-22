@@ -132,6 +132,9 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "VoltTyphoon":"Volt Typhoon (China APT)","SaltTyphoon":"Salt Typhoon (China APT)","APT28_FancyBear":"APT28 / Fancy Bear (Russia)","APT29_CozyBear":"APT29 / Cozy Bear (Russia)","Sandworm":"Sandworm (Russia)","Kimsuky":"Kimsuky (DPRK)","Equation_Group":"Equation Group (NSA)","APT_State_Actors":"State APTs","Lazarus_Group":"Lazarus Group (DPRK)",
  "MSS":"MSS (China intel)","Unit_8200":"Unit 8200 (Israel)","North_Korea":"North Korea","CALEA_Backdoor":"CALEA wiretap backdoor","NSO_Group":"NSO Group","Commercial_Spyware":"Commercial spyware","ALPHV_BlackCat":"ALPHV / BlackCat","Scattered_Spider":"Scattered Spider","Ransomware_RaaS":"Ransomware-as-a-service",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
+ # SE Asia scam/crime nexus
+ "SE_Asia_Scam_Complex":"SE Asia scam-compound complex","Chen_Zhi":"Chen Zhi (Prince Group)","Zhao_Wei":"Zhao Wei (Golden Triangle)","KK_Park":"KK Park (Myanmar)","Qingsong_Park":"Qingsong Park (KK 2.0)","Golden_Triangle_SEZ":"Golden Triangle SEZ (Laos)","Kings_Romans":"Kings Romans casino",
+ "Tudou_Guarantee":"Tudou Guarantee","Prince_Group":"Prince Group","Huione":"Huione Guarantee","SINK_scam_victims":"Scam + trafficking victims",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
