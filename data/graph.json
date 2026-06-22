@@ -368,6 +368,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Brave1": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Brian_Armstrong": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -812,6 +816,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "EU": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "EUDI_Wallet": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -835,6 +843,10 @@
     "Elizabeth_Warren": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Energoatom": {
+      "sector": "energy",
+      "has_exogenous_revenue": true
     },
     "Epstein_Files": {
       "sector": "other",
@@ -1083,6 +1095,10 @@
     "HPS": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
+    },
+    "Halushchenko": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Hamilton_Lane": {
       "sector": "financier",
@@ -1588,6 +1604,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Mindich": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "MiniMax": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -1651,6 +1671,10 @@
     "Mysten_Labs": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
+    },
+    "NABU": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
     },
     "NCET": {
       "sector": "regulator",
@@ -1798,6 +1822,10 @@
     },
     "Operation_Choke_Point_2": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Operation_Midas": {
+      "sector": "regulator",
       "has_exogenous_revenue": false
     },
     "OptumRx": {
@@ -2664,6 +2692,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "US_Ukraine_Reconstruction_Fund": {
+      "sector": "spv",
+      "has_exogenous_revenue": false
+    },
     "US_household_credit": {
       "sector": "retail",
       "has_exogenous_revenue": true
@@ -2683,6 +2715,14 @@
     "Ukraine": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Ukraine_Drone_Industry": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
+    "Ukraine_Minerals": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": false
     },
     "Umicore": {
       "sector": "other",
@@ -2792,6 +2832,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Western_Aid_Ukraine": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "WhiteHouse": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -2870,6 +2914,10 @@
     },
     "Zcash": {
       "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
+    "Zelensky": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Zenko_Kurishita": {
@@ -3098,6 +3146,227 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Zelensky",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "wartime president",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Ukraine_Minerals",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ukraine retains full ownership (lithium/titanium/rare earths/graphite)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Ukraine_Minerals",
+      "to": "US_Ukraine_Reconstruction_Fund",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "50% of revenue from NEW minerals/oil/gas projects capitalizes the fund",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "US_Ukraine_Reconstruction_Fund",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-manages the 50/50 fund (signed 30 Apr 2025) \u2014 resources-for-alignment",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "US_Ukraine_Reconstruction_Fund",
+      "to": "Ukraine",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "all revenue reinvested in Ukraine for the first decade (reconstruction)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Western_Aid_Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": ">EUR114B bilateral (largest single donor, mid-2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "Western_Aid_Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EU + member states >$226B; institutions ~EUR63.2B; replacing wavering US financial aid",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Western_Aid_Ukraine",
+      "to": "Ukraine",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": ">$300B total Western commitments through Dec 2025 (military >$200B)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Brave1",
+      "to": "Ukraine_Drone_Industry",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "state defense-tech accelerator (470+ grants)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Ukraine_Drone_Industry",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~500 makers (from 7); ~200k FPV/month; reshaping global drone warfare",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "NABU",
+      "to": "Operation_Midas",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NABU + SAPO anti-corruption probe (unveiled 10 Nov 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Operation_Midas",
+      "to": "Energoatom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposed ~$100M embezzlement/kickback scheme (10-15% commissions)",
+      "amount_usd": 100000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Mindich",
+      "to": "Energoatom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "central figure in the kickback scheme (fled); presumed innocent until adjudicated",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Mindich",
+      "to": "Zelensky",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "business associate of the president (the 'Mindich tapes')",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Halushchenko",
+      "to": "Energoatom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "energy minister (2021-25) named in the Mindich tapes as providing political cover",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "Energoatom",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state nuclear-power operator",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
+      "note": ""
+    },
+    {
+      "from": "NABU",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "National Anti-Corruption Bureau (the institution aid conditionality protects)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ukraine-war-economy.json",
       "note": ""
     },
     {
@@ -14841,10 +15110,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 729,
-    "num_edges": 917,
-    "num_financial_edges": 180,
-    "num_structural_edges": 737,
+    "num_nodes": 741,
+    "num_edges": 934,
+    "num_financial_edges": 181,
+    "num_structural_edges": 753,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -14895,6 +15164,14 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -14903,28 +15180,10 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -14936,14 +15195,24 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -14954,8 +15223,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -15619,6 +15888,13 @@
         "in_robust_core": false
       },
       "Brad_Garlinghouse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brave1": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16402,6 +16678,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EU": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EUDI_Wallet": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16439,6 +16722,13 @@
       },
       "Elizabeth_Warren": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Energoatom": {
+        "total_usd": 100000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16873,6 +17163,13 @@
       },
       "HPS": {
         "total_usd": 12000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Halushchenko": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -17760,6 +18057,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mindich": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MiniMax": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17866,6 +18170,13 @@
         "in_robust_core": false
       },
       "Mysten_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NABU": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18126,6 +18437,13 @@
       },
       "Operation_Choke_Point_2": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Operation_Midas": {
+        "total_usd": 100000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19643,6 +19961,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Ukraine_Reconstruction_Fund": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_household_credit": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19672,6 +19997,20 @@
         "in_robust_core": false
       },
       "Ukraine": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ukraine_Drone_Industry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ukraine_Minerals": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19867,6 +20206,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Western_Aid_Ukraine": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WhiteHouse": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20001,6 +20347,13 @@
         "in_robust_core": false
       },
       "Zcash": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zelensky": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20168,6 +20521,29 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "financier",
+          "other",
+          "person",
+          "pqc_quantum",
+          "sink",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Google",
         "degree": 11,
         "neighbor_sectors": [
@@ -20183,27 +20559,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Government",
-        "degree": 18,
-        "neighbor_sectors": [
-          "ai_data",
-          "creditor",
-          "critical_minerals",
-          "other",
-          "person",
-          "pqc_quantum",
-          "sink",
-          "state"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 10,
         "layers": [
           "financial",
           "structural"
@@ -20376,6 +20731,27 @@
         "both_layers": true
       },
       {
+        "node": "Ukraine",
+        "degree": 8,
+        "neighbor_sectors": [
+          "critical_minerals",
+          "defense",
+          "energy",
+          "financier",
+          "other",
+          "person",
+          "regulator",
+          "spv"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "xAI",
         "degree": 7,
         "neighbor_sectors": [
@@ -20449,24 +20825,6 @@
           "financial"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Anthropic",
-        "degree": 12,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "other",
-          "space_real_economy"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       }
     ]
   }

@@ -31,4 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-russia-state-network.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-ukraine-war-economy.json` — related files by shared entities (verify cross-refs exist)

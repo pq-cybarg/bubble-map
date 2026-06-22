@@ -144,6 +144,10 @@ ALIAS = {
  "Putin":"Putin","Vladimir Putin":"Putin","Siloviki":"Siloviki","Silovik":"Siloviki","Gazprom":"Gazprom","Rosneft":"Rosneft","Igor Sechin":"Igor_Sechin","Sechin":"Igor_Sechin","Igor_Sechin":"Igor_Sechin",
  "Shadow_Fleet":"Shadow_Fleet","Shadow Fleet":"Shadow_Fleet","Wagner":"Wagner","Wagner Group":"Wagner","Africa Corps":"Africa_Corps","Africa_Corps":"Africa_Corps",
  "FSB":"FSB","GRU":"GRU","SVR":"SVR","Russian_Intel":"Russian_Intel","Bortnikov":"Bortnikov","Kostyukov":"Kostyukov","Naryshkin":"Naryshkin","Sberbank":"Sberbank","Ukraine":"Ukraine",
+ # Ukraine war economy
+ "Zelensky":"Zelensky","Zelenskyy":"Zelensky","Volodymyr Zelensky":"Zelensky","Ukraine_Minerals":"Ukraine_Minerals","US_Ukraine_Reconstruction_Fund":"US_Ukraine_Reconstruction_Fund","Reconstruction Investment Fund":"US_Ukraine_Reconstruction_Fund",
+ "Western_Aid_Ukraine":"Western_Aid_Ukraine","EU":"EU","European Union":"EU","Ukraine_Drone_Industry":"Ukraine_Drone_Industry","Brave1":"Brave1","Energoatom":"Energoatom",
+ "NABU":"NABU","Operation Midas":"Operation_Midas","Operation_Midas":"Operation_Midas","Mindich":"Mindich","Timur Mindich":"Mindich","Halushchenko":"Halushchenko",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -314,6 +318,9 @@ NODE_META = {
  "Shadow_Fleet":("logistics",False),"Wagner":("defense",False),"Africa_Corps":("defense",False),
  "FSB":("state_intel",True),"GRU":("state_intel",True),"SVR":("state_intel",True),"Russian_Intel":("state_intel",False),
  "Bortnikov":("person",False),"Kostyukov":("person",False),"Naryshkin":("person",False),"Sberbank":("bank",True),"Ukraine":("state",True),
+ # Ukraine war economy
+ "Zelensky":("person",False),"Ukraine_Minerals":("critical_minerals",False),"US_Ukraine_Reconstruction_Fund":("spv",False),"Western_Aid_Ukraine":("financier",False),"EU":("state",True),
+ "Ukraine_Drone_Industry":("defense",True),"Brave1":("defense",False),"Energoatom":("energy",True),"NABU":("regulator",True),"Operation_Midas":("regulator",False),"Mindich":("person",False),"Halushchenko":("person",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
