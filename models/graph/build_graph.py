@@ -120,6 +120,14 @@ ALIAS = {
  "Zhipu":"Zhipu_AI","Zhipu AI":"Zhipu_AI","Zhipu_AI":"Zhipu_AI","GLM":"Zhipu_AI","Moonshot":"Moonshot","Kimi":"Moonshot","MiniMax":"MiniMax","StepFun":"StepFun","01.AI":"01_AI","01_AI":"01_AI","Yi":"01_AI","Baichuan":"Baichuan",
  "Huawei":"Huawei","Ascend":"Huawei","Cambricon":"Cambricon","Biren":"Biren","Moore Threads":"Moore_Threads","Moore_Threads":"Moore_Threads",
  "CAC":"CAC","Cyberspace Administration of China":"CAC","MIIT":"MIIT","China_AI_Labs":"China_AI_Labs","China_AI_Hardware":"China_AI_Hardware","China_AI_Censorship":"China_AI_Censorship",
+ # local / uncensored / decentralized AI
+ "llama.cpp":"llama_cpp","llama_cpp":"llama_cpp","Ollama":"Ollama","vLLM":"vLLM","LM Studio":"LM_Studio","LM_Studio":"LM_Studio","GPT4All":"GPT4All","Jan":"Jan","ComfyUI":"ComfyUI",
+ "Stability AI":"Stability_AI","Stability_AI":"Stability_AI","Stable Diffusion":"Stability_AI","Black Forest Labs":"Black_Forest_Labs","Black_Forest_Labs":"Black_Forest_Labs","Flux":"Black_Forest_Labs","Hugging Face":"Hugging_Face","HuggingFace":"Hugging_Face","Hugging_Face":"Hugging_Face",
+ "EleutherAI":"EleutherAI","Nous Research":"Nous_Research","Nous_Research":"Nous_Research","AllenAI":"AllenAI_OLMo","OLMo":"AllenAI_OLMo","AllenAI_OLMo":"AllenAI_OLMo",
+ "Heretic":"Heretic","Dolphin":"Dolphin","Eric Hartford":"Eric_Hartford","Eric_Hartford":"Eric_Hartford",
+ "Bittensor":"Bittensor","TAO":"Bittensor","Akash":"Akash","Render":"Render","Octra":"Octra","Venice":"Venice_AI","Venice.ai":"Venice_AI","Venice_AI":"Venice_AI","Erik Voorhees":"Erik_Voorhees","Erik_Voorhees":"Erik_Voorhees","FUTO":"FUTO",
+ "Local_AI_Tooling":"Local_AI_Tooling","Uncensored_AI":"Uncensored_AI","Decentralized_AI":"Decentralized_AI","Open_Local_AI":"Open_Local_AI",
+ "Fhenix":"Fhenix","FHEnix":"Fhenix","Biconomy":"Biconomy","TapBit":"TapBit",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -267,6 +275,13 @@ NODE_META = {
  "Alibaba":("bigtech_asia",True),"Baidu":("bigtech_asia",True),"Tencent":("bigtech_asia",True),"Xiaomi":("bigtech_asia",True),"Huawei":("bigtech_asia",True),
  "Cambricon":("chip_vendor",True),"Biren":("chip_vendor",False),"Moore_Threads":("chip_vendor",False),
  "CAC":("regulator",True),"MIIT":("regulator",True),"China_AI_Labs":("ai_lab",False),"China_AI_Hardware":("chip_vendor",False),"China_AI_Censorship":("surveillance",False),
+ # local / uncensored / decentralized AI
+ "llama_cpp":("ai_infra",False),"Ollama":("ai_infra",False),"vLLM":("ai_infra",False),"LM_Studio":("ai_infra",False),"GPT4All":("ai_infra",False),"Jan":("ai_infra",False),"ComfyUI":("ai_infra",False),
+ "Stability_AI":("ai_lab",False),"Black_Forest_Labs":("ai_lab",False),"Hugging_Face":("ai_infra",True),"EleutherAI":("ai_lab",False),"Nous_Research":("ai_lab",False),"AllenAI_OLMo":("ai_lab",False),
+ "Heretic":("ai_infra",False),"Dolphin":("ai_lab",False),"Eric_Hartford":("person",False),
+ "Bittensor":("crypto_infra",False),"Akash":("crypto_infra",False),"Render":("crypto_infra",False),"Octra":("crypto_infra",False),"Venice_AI":("crypto_infra",False),"Erik_Voorhees":("person",False),"FUTO":("ai_infra",False),
+ "Local_AI_Tooling":("ai_infra",False),"Uncensored_AI":("ai_infra",False),"Decentralized_AI":("ai_infra",False),"Open_Local_AI":("ai_infra",False),
+ "Fhenix":("crypto_infra",False),"Biconomy":("crypto_infra",False),"TapBit":("exchange",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

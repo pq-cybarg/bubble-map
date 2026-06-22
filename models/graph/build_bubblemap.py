@@ -124,6 +124,10 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  # China AI stack
  "Zhipu_AI":"Zhipu AI (GLM)","Moonshot":"Moonshot (Kimi)","01_AI":"01.AI (Yi)","Alibaba":"Alibaba (Qwen)","Baidu":"Baidu (Ernie)","Tencent":"Tencent (Hunyuan)","Xiaomi":"Xiaomi (MiMo)","Huawei":"Huawei (Ascend)",
  "Moore_Threads":"Moore Threads","CAC":"CAC (Cyberspace Admin)","China_AI_Labs":"China AI labs","China_AI_Hardware":"China AI hardware (Ascend)","China_AI_Censorship":"China AI censorship (CAC)",
+ # local / uncensored / decentralized AI
+ "llama_cpp":"llama.cpp","LM_Studio":"LM Studio","Stability_AI":"Stability AI (Stable Diffusion)","Black_Forest_Labs":"Black Forest Labs (Flux)","Hugging_Face":"Hugging Face","Nous_Research":"Nous Research","AllenAI_OLMo":"Allen AI (OLMo)",
+ "Eric_Hartford":"Eric Hartford (Dolphin)","Venice_AI":"Venice.ai (VVV)","Erik_Voorhees":"Erik Voorhees","Local_AI_Tooling":"Local AI tooling","Uncensored_AI":"Uncensored AI (abliteration)","Decentralized_AI":"Decentralized AI compute","Open_Local_AI":"Open / local AI ecosystem",
+ "Fhenix":"Fhenix (FHE L2)","Biconomy":"Biconomy (account abstraction)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
