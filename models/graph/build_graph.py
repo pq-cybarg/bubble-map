@@ -140,6 +140,10 @@ ALIAS = {
  "Zhao Wei":"Zhao_Wei","Zhao_Wei":"Zhao_Wei","Kings Romans":"Kings_Romans","Kings_Romans":"Kings_Romans","Golden Triangle SEZ":"Golden_Triangle_SEZ","Golden_Triangle_SEZ":"Golden_Triangle_SEZ","GTSEZ":"Golden_Triangle_SEZ",
  "POGO":"POGO","POGOs":"POGO","Tudou Guarantee":"Tudou_Guarantee","Tudou_Guarantee":"Tudou_Guarantee","Tudou":"Tudou_Guarantee","Starlink":"Starlink",
  "Myanmar":"Myanmar","Laos":"Laos","Philippines":"Philippines","Thailand":"Thailand",
+ # Russia state network
+ "Putin":"Putin","Vladimir Putin":"Putin","Siloviki":"Siloviki","Silovik":"Siloviki","Gazprom":"Gazprom","Rosneft":"Rosneft","Igor Sechin":"Igor_Sechin","Sechin":"Igor_Sechin","Igor_Sechin":"Igor_Sechin",
+ "Shadow_Fleet":"Shadow_Fleet","Shadow Fleet":"Shadow_Fleet","Wagner":"Wagner","Wagner Group":"Wagner","Africa Corps":"Africa_Corps","Africa_Corps":"Africa_Corps",
+ "FSB":"FSB","GRU":"GRU","SVR":"SVR","Russian_Intel":"Russian_Intel","Bortnikov":"Bortnikov","Kostyukov":"Kostyukov","Naryshkin":"Naryshkin","Sberbank":"Sberbank","Ukraine":"Ukraine",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -305,6 +309,11 @@ NODE_META = {
  "SE_Asia_Scam_Complex":("threat_actor",False),"Chen_Zhi":("person",False),"Zhao_Wei":("person",False),"KK_Park":("threat_actor",False),"Qingsong_Park":("threat_actor",False),"POGO":("threat_actor",False),
  "Golden_Triangle_SEZ":("other",False),"Kings_Romans":("other",False),"Tudou_Guarantee":("crypto_infra",False),"Starlink":("satellite",True),
  "Myanmar":("state",True),"Laos":("state",True),"Philippines":("state",True),"Thailand":("state",True),
+ # Russia state network
+ "Putin":("person",False),"Siloviki":("state",False),"Gazprom":("energy",True),"Rosneft":("energy",True),"Igor_Sechin":("person",False),
+ "Shadow_Fleet":("logistics",False),"Wagner":("defense",False),"Africa_Corps":("defense",False),
+ "FSB":("state_intel",True),"GRU":("state_intel",True),"SVR":("state_intel",True),"Russian_Intel":("state_intel",False),
+ "Bortnikov":("person",False),"Kostyukov":("person",False),"Naryshkin":("person",False),"Sberbank":("bank",True),"Ukraine":("state",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

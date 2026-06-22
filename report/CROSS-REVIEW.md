@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-se-asia-scam-crime-nexus.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 3 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- spec-unc-nk-attribution-map.json: 2 shared entities
-- spec-tornado-samourai.json: 2 shared entities
-- spec-onchain-threat-actor-addresses.json: 2 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
-- fin-spacex-spcx.json: 1 shared entities
+## Newest file `spec-russia-state-network.json` — related files by shared entities (verify cross-refs exist)

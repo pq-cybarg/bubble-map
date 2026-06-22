@@ -4,9 +4,9 @@
       "SDN:https://sanctionslistservice.ofac.treas.gov/api/download/sdn_advanced.xml",
       "CONS:https://sanctionslistservice.ofac.treas.gov/api/download/cons_advanced.xml"
     ],
-    "count": 757,
+    "count": 759,
     "by_list": {
-      "SDN": 757
+      "SDN": 759
     },
     "note": "Crypto addresses pattern-extracted from the FREE OFAC Advanced XML lists (SDN + Consolidated), downloaded via the Treasury Sanctions List Service (sanctionslistservice.ofac.treas.gov; also free as CSV/XML and via the sanctionslist.ofac.treas.gov portals and the sanctionssearch.ofac.treas.gov search UI). For authoritative party/program attribution, resolve each address against its full list entry.",
     "COVERAGE_LIMITS": "OFAC's own data is NOT access-limited: the full SDN and Consolidated lists \u2014 including the 'Digital Currency Address' crypto fields \u2014 are freely downloadable in CSV, XML, and Advanced-XML (machine-readable) and searchable for free. The 757 here is still a LOWER BOUND on the threat-actor address universe, but for reasons OTHER than OFAC availability: it captures only addresses OFAC has formally DESIGNATED, and deliberately excludes (a) per-incident FBI/CISA PSA IOC address lists (e.g., the 51 Bybit-laundering ETH addresses), published separately but also free; and (b) un-sanctioned but attributed clusters tracked by commercial forensics (Chainalysis/Elliptic/TRM/Arkham), which ARE paywalled. Sanction status is also time-varying (e.g., Tornado Cash: sanctioned 2022 -> vacated 2024 -> lifted 2025), so a static list overstates what is CURRENTLY designated."
@@ -3506,6 +3506,13 @@
       ]
     },
     {
+      "address": "TBXMiRqUp1XH1zLazWu8cWitMAScv4HsYq",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TBYRhsZR7Mdn9ezpGVLwZiNVnGm8wZGLAD",
       "asset_guess": "TRON",
       "lists": [
@@ -3584,6 +3591,13 @@
     },
     {
       "address": "TCzq6m2zxnQkrZrf8cqYcK6bbXQYAfWYKC",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "TDFj8tYzfLDkwEMo4MJ2DfrbpMztuCCnan",
       "asset_guess": "TRON",
       "lists": [
         "SDN"

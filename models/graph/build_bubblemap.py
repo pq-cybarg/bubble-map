@@ -135,6 +135,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  # SE Asia scam/crime nexus
  "SE_Asia_Scam_Complex":"SE Asia scam-compound complex","Chen_Zhi":"Chen Zhi (Prince Group)","Zhao_Wei":"Zhao Wei (Golden Triangle)","KK_Park":"KK Park (Myanmar)","Qingsong_Park":"Qingsong Park (KK 2.0)","Golden_Triangle_SEZ":"Golden Triangle SEZ (Laos)","Kings_Romans":"Kings Romans casino",
  "Tudou_Guarantee":"Tudou Guarantee","Prince_Group":"Prince Group","Huione":"Huione Guarantee","SINK_scam_victims":"Scam + trafficking victims",
+ # Russia state network
+ "Igor_Sechin":"Igor Sechin (Rosneft)","Shadow_Fleet":"Russia shadow fleet","Africa_Corps":"Africa Corps (ex-Wagner)","Russian_Intel":"Russian intel triad","Siloviki":"Siloviki (security elite)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

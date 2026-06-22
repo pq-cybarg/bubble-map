@@ -92,6 +92,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "Africa_Corps": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Age_Assurance_Issuers": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -350,6 +354,10 @@
     },
     "Bond_Market_2Y": {
       "sector": "macro_factor",
+      "has_exogenous_revenue": false
+    },
+    "Bortnikov": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Boskin_Commission": {
@@ -880,6 +888,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "FSB": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
     "FTC": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -988,6 +1000,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "GRU": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
     "GSEs_FannieFreddie": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -1003,6 +1019,10 @@
     "Gary_Gensler": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Gazprom": {
+      "sector": "energy",
+      "has_exogenous_revenue": true
     },
     "Gemini": {
       "sector": "exchange",
@@ -1196,6 +1216,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "Igor_Sechin": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "ImmigrationOS": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -1379,6 +1403,10 @@
     "Korea_chaebol_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Kostyukov": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Kraken": {
       "sector": "exchange",
@@ -1660,6 +1688,10 @@
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
     },
+    "Naryshkin": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "National_Consulting_Services": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1912,6 +1944,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Putin": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "QCEW_Benchmark": {
       "sector": "statistic",
       "has_exogenous_revenue": false
@@ -2016,6 +2052,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Rosneft": {
+      "sector": "energy",
+      "has_exogenous_revenue": true
+    },
     "Rostin_Behnam": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2031,6 +2071,10 @@
     "Russia_state": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Russian_Intel": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": false
     },
     "Russian_energy_executives": {
       "sector": "other",
@@ -2164,6 +2208,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "SVR": {
+      "sector": "state_intel",
+      "has_exogenous_revenue": true
+    },
     "SaltTyphoon": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -2204,6 +2252,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Sberbank": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "ScaleAI": {
       "sector": "ai_data",
       "has_exogenous_revenue": true
@@ -2236,6 +2288,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Shadow_Fleet": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
     "Shigeru_Ishiba": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2267,6 +2323,10 @@
     "Silicon_Valley_Bank": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Siloviki": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "SilverLake": {
       "sector": "financier",
@@ -2620,6 +2680,10 @@
       "sector": "critical_minerals",
       "has_exogenous_revenue": false
     },
+    "Ukraine": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Umicore": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2710,6 +2774,10 @@
     },
     "WYST": {
       "sector": "stablecoin",
+      "has_exogenous_revenue": false
+    },
+    "Wagner": {
+      "sector": "defense",
       "has_exogenous_revenue": false
     },
     "Waheed_Alli": {
@@ -5682,6 +5750,370 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-foreign-influence-comparison.json",
+      "note": ""
+    },
+    {
+      "from": "Putin",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "25+ years in power; rebuilt the centralized 'power vertical'",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Putin",
+      "to": "Siloviki",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "appoints security-service loyalists atop state + enterprises",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Siloviki",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "security-service elite running the state and state enterprises",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Gazprom",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state gas champion \u2014 fiscal backbone",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Rosneft",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state oil champion (Sechin)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Igor_Sechin",
+      "to": "Rosneft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chairman/CEO; KGB-colleague silovik archetype",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Igor_Sechin",
+      "to": "Siloviki",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading silovik",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Rosneft",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "produces the seaborne crude exported to Asia at a discount",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Crude_Oil",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "~400-600+ tankers move the majority of Russian seaborne crude past sanctions",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Russia",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctions-evasion oil revenue funds the state/war (G7-sanctioned tankers carried ~68% of crude by early 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Shadow_Fleet",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "tanker designations \u2014 yet sanctioned tankers loading rose 44 (Jan) -> 143 (Nov 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Shipping_Chokepoints",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "uninsured tankers degrade the maritime order at chokepoints (cable-cutting incidents)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Wagner",
+      "to": "Africa_Corps",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Wagner's footprint absorbed by Africa Corps after Prigozhin's 2023 mutiny/death",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Africa_Corps",
+      "to": "Russia",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "paramilitary subordinate to the Russian Defense Ministry; security-for-resources in the Sahel/Libya",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "SVR",
+      "to": "Africa_Corps",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SVR took over Wagner's influence/disinfo arm ('The Company', ~100 consultants)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "FSB",
+      "to": "Russian_Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "domestic security/counterintel/border (Bortnikov, since 2008) \u2014 most powerful",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "GRU",
+      "to": "Russian_Intel",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "military intelligence (Kostyukov, since 2018)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "SVR",
+      "to": "Russian_Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "foreign intelligence (Naryshkin, since 2016)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Russian_Intel",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the rivalrous intel triad serving the state (competes more than cooperates)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "GRU",
+      "to": "Sandworm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates Sandworm (destructive cyber)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "GRU",
+      "to": "APT28_FancyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates APT28 / Fancy Bear",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "SVR",
+      "to": "APT29_CozyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates APT29 / Cozy Bear (SolarWinds)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Bortnikov",
+      "to": "FSB",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FSB director since 2008",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Kostyukov",
+      "to": "GRU",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GRU director since 2018",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Naryshkin",
+      "to": "SVR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SVR director since 2016",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Sberbank",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest state bank",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "Gold",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CBR selling gold reserves (~22t early 2026; ~2,305t, multi-year low) to fund a ~$61B deficit",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "Ukraine",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "full-scale invasion (2022) \u2014 the war driving the fiscal/sanctions dynamics",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-russia-state-network.json",
       "note": ""
     },
     {
@@ -14409,10 +14841,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 712,
-    "num_edges": 889,
+    "num_nodes": 729,
+    "num_edges": 917,
     "num_financial_edges": 180,
-    "num_structural_edges": 709,
+    "num_structural_edges": 737,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -14463,15 +14895,7 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -14479,7 +14903,7 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -14487,14 +14911,12 @@
         "Anthropic"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -14504,7 +14926,17 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -14514,14 +14946,21 @@
         "Microsoft"
       ],
       [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -14529,13 +14968,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -14705,6 +15137,13 @@
       },
       "ATT": {
         "total_usd": 20000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Africa_Corps": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -15159,6 +15598,13 @@
         "in_robust_core": false
       },
       "Bond_Market_2Y": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bortnikov": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16089,6 +16535,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FSB": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FTC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16278,6 +16731,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GRU": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GSEs_FannieFreddie": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16300,6 +16760,13 @@
         "in_robust_core": false
       },
       "Gary_Gensler": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gazprom": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16642,6 +17109,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Igor_Sechin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ImmigrationOS": {
         "total_usd": 30000000,
         "circular_usd": 0,
@@ -16958,6 +17432,13 @@
         "in_robust_core": false
       },
       "Korea_chaebol_platforms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kostyukov": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17454,6 +17935,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Naryshkin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "National_Consulting_Services": {
         "total_usd": 456000,
         "circular_usd": 0,
@@ -17895,6 +18383,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Putin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "QCEW_Benchmark": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18077,6 +18572,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Rosneft": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Rostin_Behnam": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18100,6 +18602,13 @@
       },
       "Russia_state": {
         "total_usd": 10000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Russian_Intel": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -18336,6 +18845,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SVR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SaltTyphoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18406,6 +18922,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sberbank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ScaleAI": {
         "total_usd": 14300000000,
         "circular_usd": 0,
@@ -18456,6 +18979,13 @@
         "in_robust_core": false
       },
       "Senate Banking Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Shadow_Fleet": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18513,6 +19043,13 @@
       },
       "Silicon_Valley_Bank": {
         "total_usd": 3300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Siloviki": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19134,6 +19671,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ukraine": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Umicore": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19289,6 +19833,13 @@
         "in_robust_core": false
       },
       "WYST": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Wagner": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19682,6 +20233,28 @@
         "both_layers": true
       },
       {
+        "node": "Russia",
+        "degree": 17,
+        "neighbor_sectors": [
+          "bank",
+          "commodity",
+          "defense",
+          "energy",
+          "logistics",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 6,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Microsoft",
         "degree": 13,
         "neighbor_sectors": [
@@ -19886,24 +20459,6 @@
           "hyperscaler",
           "other",
           "space_real_economy"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "JPMorgan",
-        "degree": 6,
-        "neighbor_sectors": [
-          "commodity_market",
-          "crypto_infra",
-          "other",
-          "pqc_quantum",
-          "spv"
         ],
         "n_neighbor_sectors": 5,
         "source_files": 5,
