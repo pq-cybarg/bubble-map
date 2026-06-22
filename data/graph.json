@@ -228,6 +228,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Axis_of_Resistance": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "BDCs": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -354,6 +358,10 @@
     },
     "Bond_Market_2Y": {
       "sector": "macro_factor",
+      "has_exogenous_revenue": false
+    },
+    "Bonyads": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Bortnikov": {
@@ -546,6 +554,10 @@
     },
     "China_Scholarship_Council": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Chinese_Teapots": {
+      "sector": "energy",
       "has_exogenous_revenue": true
     },
     "Cigna": {
@@ -1100,6 +1112,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Hamas": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Hamilton_Lane": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -1132,6 +1148,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Hezbollah": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Hiero_LFDT": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -1147,6 +1167,10 @@
     "House Financial Services": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Houthis": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
     },
     "Huawei": {
       "sector": "bigtech_asia",
@@ -1166,6 +1190,10 @@
     },
     "Hyundai": {
       "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "IAEA": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "IBIT": {
@@ -1211,6 +1239,10 @@
     "IQM": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "IRGC": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
     },
     "ISO": {
       "sector": "standards",
@@ -1264,8 +1296,20 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
+    "Iran": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Iran_IRGC": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Iran_Nuclear_Program": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
+    "Iran_Oil": {
+      "sector": "energy",
       "has_exogenous_revenue": true
     },
     "Iran_nuclear_program": {
@@ -1401,6 +1445,10 @@
       "has_exogenous_revenue": true
     },
     "Keonne_Rodriguez": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Khamenei": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -2490,6 +2538,10 @@
     },
     "Synopsys": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
+    "Syria": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "TMobile": {
@@ -4395,6 +4447,318 @@
       "cancelable": false,
       "source_file": "macro-futures-vs-physical.json",
       "note": "~4.2 paper claims per registered deliverable oz; backwardation + LBMA premium + Shanghai 12-13% premium = physical reasserting over paper."
+    },
+    {
+      "from": "Khamenei",
+      "to": "Iran",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Supreme Leader",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "IRGC",
+      "to": "Iran",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "military-bonyad complex controlling >50% of GDP",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Bonyads",
+      "to": "Iran",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "revolutionary-religious parastatal foundations",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "IRGC",
+      "to": "Iran_Oil",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "granted ~51% of oil/gas export revenue (~EUR12B, 2025 budget)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran_Oil",
+      "to": "Iran",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the fiscal lifeline (amid ~69% inflation)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran_Oil",
+      "to": "Chinese_Teapots",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~90% absorbed by Chinese independent 'teapot' refineries",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Chinese_Teapots",
+      "to": "China",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "independent refineries taking sanctioned Iranian crude",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Iran_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ship-to-ship transfers move Iranian crude (shared with Russia/Venezuela)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "OFAC",
+      "to": "Chinese_Teapots",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "2026 sanctions on a major Chinese refinery + 40 shipping firms; FinCEN ~$5B shell network",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Iran",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "buys sanctioned oil settled in YUAN via CIPS (not USD/SWIFT) \u2014 evasion + de-dollarization; proceeds partly TRAPPED in Chinese accounts (capital controls) = leverage over a captive supplier",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "CIPS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "settles oil-for-yuan through China's CIPS rail, bypassing SWIFT (shared with Russia)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "Financial_Privacy",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctions-evasion crypto + shadow-banking channels (FinCEN-flagged)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "Hezbollah",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "primary sponsor (leadership decapitated 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "Hamas",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "sponsor/backer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "Houthis",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "sponsor \u2014 but reportedly 'lost control' (2025); Houthis act autonomously",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Hezbollah",
+      "to": "Axis_of_Resistance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Lebanese member (degraded)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Hamas",
+      "to": "Axis_of_Resistance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Gaza member (degraded)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Houthis",
+      "to": "Axis_of_Resistance",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Yemen member (now most autonomous)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Syria",
+      "to": "Axis_of_Resistance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "former linchpin \u2014 Assad regime FELL Dec 2024 (land bridge lost)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Houthis",
+      "to": "Shipping_Chokepoints",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Red Sea / Bab-el-Mandeb attacks disrupting the Suez route (autonomous)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Iran_Nuclear_Program",
+      "to": "Iran",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enrichment program (Fordow/Natanz/Isfahan)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Israel",
+      "to": "Iran_Nuclear_Program",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "June 2025 strikes (~360 airstrikes; killed ~30 IRGC cmdrs + 11 scientists)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Iran_Nuclear_Program",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Operation Midnight Hammer (22 Jun 2025) \u2014 struck Fordow/Natanz/Isfahan",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "IAEA",
+      "to": "Iran_Nuclear_Program",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Grossi: enrichment could resume in 'months' (vs Israel's 'many years') \u2014 contested damage",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iran-state-network.json",
+      "note": ""
     },
     {
       "from": "Gig_Platforms",
@@ -15110,10 +15474,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 741,
-    "num_edges": 934,
-    "num_financial_edges": 181,
-    "num_structural_edges": 753,
+    "num_nodes": 754,
+    "num_edges": 958,
+    "num_financial_edges": 182,
+    "num_structural_edges": 776,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -15164,14 +15528,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -15180,10 +15536,28 @@
         "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -15195,12 +15569,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
-        "NVIDIA",
+        "Amazon",
         "OpenAI",
-        "Oracle"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -15213,18 +15589,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -15649,6 +16013,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Axis_of_Resistance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BDCs": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -15867,6 +16238,13 @@
         "in_robust_core": false
       },
       "Bond_Market_2Y": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bonyads": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16203,6 +16581,13 @@
         "in_robust_core": false
       },
       "China_Scholarship_Council": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chinese_Teapots": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17175,6 +17560,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hamas": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hamilton_Lane": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17231,6 +17623,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hezbollah": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hiero_LFDT": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17253,6 +17652,13 @@
         "in_robust_core": false
       },
       "House Financial Services": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Houthis": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17288,6 +17694,13 @@
         "in_robust_core": false
       },
       "Hyundai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IAEA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17365,6 +17778,13 @@
         "in_robust_core": false
       },
       "IQM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IRGC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17462,7 +17882,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Iran": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Iran_IRGC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Iran_Nuclear_Program": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Iran_Oil": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17701,6 +18142,13 @@
         "in_robust_core": false
       },
       "Keonne_Rodriguez": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Khamenei": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19611,6 +20059,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Syria": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TMobile": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20448,13 +20903,14 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 24,
+        "degree": 26,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
           "commodity",
           "creditor",
           "defense",
+          "energy",
           "other",
           "person",
           "pqc_quantum",
@@ -20466,8 +20922,8 @@
           "state_intel",
           "statistic"
         ],
-        "n_neighbor_sectors": 15,
-        "source_files": 14,
+        "n_neighbor_sectors": 16,
+        "source_files": 15,
         "layers": [
           "financial",
           "structural"
@@ -20497,6 +20953,30 @@
         "both_layers": true
       },
       {
+        "node": "US_Government",
+        "degree": 21,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "defense",
+          "financier",
+          "other",
+          "person",
+          "pqc_quantum",
+          "sink",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "NVIDIA",
         "degree": 29,
         "neighbor_sectors": [
@@ -20514,29 +20994,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Government",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai_data",
-          "creditor",
-          "critical_minerals",
-          "financier",
-          "other",
-          "person",
-          "pqc_quantum",
-          "sink",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 11,
         "layers": [
           "financial",
           "structural"

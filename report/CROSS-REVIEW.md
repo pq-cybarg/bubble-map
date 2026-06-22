@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-ukraine-war-economy.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-iran-state-network.json` — related files by shared entities (verify cross-refs exist)
+- spec-market-plumbing-control.json: 1 shared entities
+- spec-cross-border-settlement-rails.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities
+- altcoin-lens.json: 1 shared entities
+- spec-sec-sdny-regulatory.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- spec-blockchain-ecosystem.json: 1 shared entities

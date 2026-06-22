@@ -139,6 +139,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Igor_Sechin":"Igor Sechin (Rosneft)","Shadow_Fleet":"Russia shadow fleet","Africa_Corps":"Africa Corps (ex-Wagner)","Russian_Intel":"Russian intel triad","Siloviki":"Siloviki (security elite)",
  # Ukraine war economy
  "Ukraine_Minerals":"Ukraine minerals","US_Ukraine_Reconstruction_Fund":"US-Ukraine Reconstruction Fund","Western_Aid_Ukraine":"Western aid to Ukraine","Ukraine_Drone_Industry":"Ukraine drone industry","Operation_Midas":"Operation Midas (NABU)","NABU":"NABU (anti-corruption)",
+ # Iran state network
+ "IRGC":"IRGC (Iran)","Iran_Oil":"Iran oil","Chinese_Teapots":"Chinese teapot refineries","Axis_of_Resistance":"Axis of Resistance","Iran_Nuclear_Program":"Iran nuclear program","Bonyads":"Bonyads (Iran foundations)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

@@ -148,6 +148,9 @@ ALIAS = {
  "Zelensky":"Zelensky","Zelenskyy":"Zelensky","Volodymyr Zelensky":"Zelensky","Ukraine_Minerals":"Ukraine_Minerals","US_Ukraine_Reconstruction_Fund":"US_Ukraine_Reconstruction_Fund","Reconstruction Investment Fund":"US_Ukraine_Reconstruction_Fund",
  "Western_Aid_Ukraine":"Western_Aid_Ukraine","EU":"EU","European Union":"EU","Ukraine_Drone_Industry":"Ukraine_Drone_Industry","Brave1":"Brave1","Energoatom":"Energoatom",
  "NABU":"NABU","Operation Midas":"Operation_Midas","Operation_Midas":"Operation_Midas","Mindich":"Mindich","Timur Mindich":"Mindich","Halushchenko":"Halushchenko",
+ # Iran state network
+ "Iran":"Iran","Khamenei":"Khamenei","IRGC":"IRGC","Bonyads":"Bonyads","Bonyad":"Bonyads","Iran_Oil":"Iran_Oil","Chinese_Teapots":"Chinese_Teapots","Teapot Refineries":"Chinese_Teapots",
+ "Axis_of_Resistance":"Axis_of_Resistance","Axis of Resistance":"Axis_of_Resistance","Hezbollah":"Hezbollah","Hamas":"Hamas","Houthis":"Houthis","Syria":"Syria","Iran_Nuclear_Program":"Iran_Nuclear_Program","IAEA":"IAEA",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -321,6 +324,9 @@ NODE_META = {
  # Ukraine war economy
  "Zelensky":("person",False),"Ukraine_Minerals":("critical_minerals",False),"US_Ukraine_Reconstruction_Fund":("spv",False),"Western_Aid_Ukraine":("financier",False),"EU":("state",True),
  "Ukraine_Drone_Industry":("defense",True),"Brave1":("defense",False),"Energoatom":("energy",True),"NABU":("regulator",True),"Operation_Midas":("regulator",False),"Mindich":("person",False),"Halushchenko":("person",False),
+ # Iran state network
+ "Iran":("state",True),"Khamenei":("person",False),"IRGC":("defense",True),"Bonyads":("industrial",False),"Iran_Oil":("energy",True),"Chinese_Teapots":("energy",True),
+ "Axis_of_Resistance":("defense",False),"Hezbollah":("defense",False),"Hamas":("defense",False),"Houthis":("defense",False),"Syria":("state",True),"Iran_Nuclear_Program":("defense",False),"IAEA":("regulator",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
