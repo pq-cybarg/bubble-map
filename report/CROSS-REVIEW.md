@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 57 files
-- **Google** — 38 files
-- **OpenAI** — 32 files
+- **Meta** — 58 files
+- **Google** — 39 files
+- **OpenAI** — 33 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
 - **Chainlink** — 28 files
 - **Microsoft** — 27 files
-- **Amazon** — 25 files
-- **NVIDIA** — 25 files
+- **Amazon** — 26 files
+- **NVIDIA** — 26 files
 - **Stargate** — 21 files
-- **Anthropic** — 19 files
+- **Anthropic** — 20 files
 - **JPMorgan** — 18 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-east-asia-conglomerates-politics.json` — related files by shared entities (verify cross-refs exist)
-- macro-money-market-funds.json: 1 shared entities
-- spec-market-plumbing-control.json: 1 shared entities
-- influence-congress-funding-compromise.json: 1 shared entities
-- spec-uk-labour-tbi-influence.json: 1 shared entities
-- digitalid-orchestration-real-incentive.json: 1 shared entities
-- spec-reproducibility-crisis.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- spec-cross-border-settlement-rails.json: 1 shared entities
+## Newest file `spec-china-ai-stack-censorship.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 8 shared entities
+- fin-hedera-connections.json: 7 shared entities
+- sec-filings.json: 6 shared entities
+- spec-semiconductor-logistics-standards.json: 6 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- spec-sec-filings-primary.json: 6 shared entities
+- fin-meta-family.json: 6 shared entities
+- spec-cross-system-contagion.json: 6 shared entities

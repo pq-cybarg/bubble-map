@@ -121,6 +121,9 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "LDP":"LDP (Japan)","Soka_Gakkai":"Soka Gakkai","Unification_Church":"Unification Church","CDP_Japan":"CDP (Japan opposition)","Shinzo_Abe":"Shinzo Abe","Shigeru_Ishiba":"Shigeru Ishiba",
  "People_Power_Party":"People Power Party (Korea)","Democratic_Party_Korea":"Democratic Party (Korea)","Yoon_Suk_yeol":"Yoon Suk Yeol","Lee_Jae_myung":"Lee Jae-myung",
  "Apartheid_Honorary_Whites":"Apartheid 'honorary whites'","Toyoko_Kids":"Toyoko kids","Host_Club_Debt":"Host-club debt trap","Japan_Sex_Industry":"Japan sex industry (harms)",
+ # China AI stack
+ "Zhipu_AI":"Zhipu AI (GLM)","Moonshot":"Moonshot (Kimi)","01_AI":"01.AI (Yi)","Alibaba":"Alibaba (Qwen)","Baidu":"Baidu (Ernie)","Tencent":"Tencent (Hunyuan)","Xiaomi":"Xiaomi (MiMo)","Huawei":"Huawei (Ascend)",
+ "Moore_Threads":"Moore Threads","CAC":"CAC (Cyberspace Admin)","China_AI_Labs":"China AI labs","China_AI_Hardware":"China AI hardware (Ascend)","China_AI_Censorship":"China AI censorship (CAC)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

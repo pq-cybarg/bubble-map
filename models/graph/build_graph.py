@@ -115,6 +115,11 @@ ALIAS = {
  "Shinzo Abe":"Shinzo_Abe","Shinzo_Abe":"Shinzo_Abe","Shigeru Ishiba":"Shigeru_Ishiba","Shigeru_Ishiba":"Shigeru_Ishiba",
  "People Power Party":"People_Power_Party","People_Power_Party":"People_Power_Party","Democratic Party Korea":"Democratic_Party_Korea","Democratic_Party_Korea":"Democratic_Party_Korea","Yoon Suk Yeol":"Yoon_Suk_yeol","Yoon Suk-yeol":"Yoon_Suk_yeol","Yoon_Suk_yeol":"Yoon_Suk_yeol","Lee Jae-myung":"Lee_Jae_myung","Lee Jae myung":"Lee_Jae_myung","Lee_Jae_myung":"Lee_Jae_myung",
  "Apartheid_Honorary_Whites":"Apartheid_Honorary_Whites","Kabukicho":"Kabukicho","Toyoko Kids":"Toyoko_Kids","Toyoko_Kids":"Toyoko_Kids","Host Club Debt":"Host_Club_Debt","Host_Club_Debt":"Host_Club_Debt","Japan_Sex_Industry":"Japan_Sex_Industry",
+ # China AI stack + censorship
+ "DeepSeek":"DeepSeek","Alibaba":"Alibaba","Qwen":"Alibaba","Baidu":"Baidu","Ernie":"Baidu","Tencent":"Tencent","Xiaomi":"Xiaomi","iFlytek":"iFlytek",
+ "Zhipu":"Zhipu_AI","Zhipu AI":"Zhipu_AI","Zhipu_AI":"Zhipu_AI","GLM":"Zhipu_AI","Moonshot":"Moonshot","Kimi":"Moonshot","MiniMax":"MiniMax","StepFun":"StepFun","01.AI":"01_AI","01_AI":"01_AI","Yi":"01_AI","Baichuan":"Baichuan",
+ "Huawei":"Huawei","Ascend":"Huawei","Cambricon":"Cambricon","Biren":"Biren","Moore Threads":"Moore_Threads","Moore_Threads":"Moore_Threads",
+ "CAC":"CAC","Cyberspace Administration of China":"CAC","MIIT":"MIIT","China_AI_Labs":"China_AI_Labs","China_AI_Hardware":"China_AI_Hardware","China_AI_Censorship":"China_AI_Censorship",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -257,6 +262,11 @@ NODE_META = {
  "LDP":("political",False),"Komeito":("political",False),"Soka_Gakkai":("political",False),"Unification_Church":("political",False),"CDP_Japan":("political",False),"Shinzo_Abe":("person",False),"Shigeru_Ishiba":("person",False),
  "People_Power_Party":("political",False),"Democratic_Party_Korea":("political",False),"Yoon_Suk_yeol":("person",False),"Lee_Jae_myung":("person",False),
  "Apartheid_Honorary_Whites":("state",False),"Kabukicho":("other",False),"Toyoko_Kids":("other",False),"Host_Club_Debt":("other",False),"Japan_Sex_Industry":("other",False),
+ # China AI stack + censorship
+ "DeepSeek":("ai_lab",False),"Zhipu_AI":("ai_lab",False),"Moonshot":("ai_lab",False),"MiniMax":("ai_lab",False),"StepFun":("ai_lab",False),"01_AI":("ai_lab",False),"Baichuan":("ai_lab",False),"iFlytek":("ai_lab",False),
+ "Alibaba":("bigtech_asia",True),"Baidu":("bigtech_asia",True),"Tencent":("bigtech_asia",True),"Xiaomi":("bigtech_asia",True),"Huawei":("bigtech_asia",True),
+ "Cambricon":("chip_vendor",True),"Biren":("chip_vendor",False),"Moore_Threads":("chip_vendor",False),
+ "CAC":("regulator",True),"MIIT":("regulator",True),"China_AI_Labs":("ai_lab",False),"China_AI_Hardware":("chip_vendor",False),"China_AI_Censorship":("surveillance",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

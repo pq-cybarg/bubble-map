@@ -1,5 +1,9 @@
 {
   "entities": {
+    "01_AI": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
     "1789_Capital": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -91,6 +95,10 @@
     "Alex_Mashinsky": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Alibaba": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
     },
     "Alice_Bob": {
       "sector": "pqc_quantum",
@@ -216,6 +224,14 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "Baichuan": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Baidu": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
     "Band_Protocol": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -247,6 +263,10 @@
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
+    },
+    "Biren": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": false
     },
     "BitMEX": {
       "sector": "exchange",
@@ -318,6 +338,10 @@
     },
     "ByteDance": {
       "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
+    "CAC": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "CCDH": {
@@ -396,6 +420,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Cambricon": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": true
+    },
     "Canary": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -439,6 +467,18 @@
     "China": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "China_AI_Censorship": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "China_AI_Hardware": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": false
+    },
+    "China_AI_Labs": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
     },
     "China_Scholarship_Council": {
       "sector": "other",
@@ -606,6 +646,10 @@
     },
     "DePIN_Storage": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "DeepSeek": {
+      "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
     "Defense_Primes": {
@@ -944,6 +988,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Huawei": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
     "Huayou_Cobalt": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1280,6 +1328,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "MIIT": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
     "MP_Materials": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
@@ -1328,6 +1380,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "MiniMax": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
     "Miraex": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -1355,6 +1411,14 @@
     "Money_Market_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Moonshot": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Moore_Threads": {
+      "sector": "chip_vendor",
+      "has_exogenous_revenue": false
     },
     "Mortgage_Market": {
       "sector": "financial_infra",
@@ -2024,6 +2088,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "StepFun": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
     "Strait_of_Hormuz": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -2094,6 +2162,10 @@
     },
     "Temasek": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Tencent": {
+      "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
     "Tenet_Media": {
@@ -2404,6 +2476,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Xiaomi": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
     "Yim_Leak": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2432,6 +2508,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Zhipu_AI": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
     "Zillow_ZORI": {
       "sector": "data_provider",
       "has_exogenous_revenue": false
@@ -2443,6 +2523,10 @@
     "a16z": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "iFlytek": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
     },
     "mBridge": {
       "sector": "other",
@@ -4636,6 +4720,344 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "Alibaba",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Qwen (Qwen3.5, Apache 2.0) \u2014 most-used open-weight family globally",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "DeepSeek",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "High-Flyer's DeepSeek (V3.2/R-series) \u2014 efficiency standard-bearer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Zhipu_AI",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GLM-4.6/GLM-5 (AI Tiger; trained entirely on Huawei Ascend)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Moonshot",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Kimi K2.x \u2014 agentic-benchmark leader (AI Tiger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "MiniMax",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "M2.x \u2014 frontier-adjacent at ~1/20th cost, MIT (AI Tiger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "StepFun",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Step model family (AI Tiger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "01_AI",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Yi family (Kai-Fu Lee; AI Tiger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Baichuan",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Baichuan models (AI Tiger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Baidu",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ernie/Wenxin",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Tencent",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Hunyuan",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "ByteDance",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Doubao",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Xiaomi",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MiMo \u2014 led OpenRouter ~21% weekly-token share (Q2 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "iFlytek",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Spark (speech/LLM)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "CAC",
+      "to": "China_AI_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "algorithm registration + 'Core Socialist Values' testing (748 services filed by Dec 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Censorship",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mandatory built-in alignment \u2014 models refuse on Xi/Tiananmen/Taiwan/Xinjiang by design",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "CAC",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Cyberspace Administration of China \u2014 the state content regulator",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "MIIT",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ministry of Industry and IT \u2014 industrial AI/chip policy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Labs",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sovereign AI capability (15th Five-Year-Plan priority)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Huawei",
+      "to": "China_AI_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Ascend 910C (96GB HBM2e, SMIC 7nm) -> 950PR/950DT; ~600k units 2026; built to escape US Entity-List / AI-chip export controls",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Cambricon",
+      "to": "China_AI_Hardware",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "AI accelerator maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Biren",
+      "to": "China_AI_Hardware",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "GPGPU accelerator maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "Moore_Threads",
+      "to": "China_AI_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "domestic GPU maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "SMIC",
+      "to": "China_AI_Hardware",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "fabs the Ascend/domestic accelerators (7nm via DUV ceiling)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Hardware",
+      "to": "China_AI_Labs",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "domestic compute substrate (GLM-5 trained entirely on Ascend) \u2014 substitution incomplete",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "DeepSeek",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reverted to (export-allowed) Nvidia H800s for critical training after Ascend instabilities (R2 delay)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Hardware",
+      "to": "China",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "sovereign-compute self-sufficiency drive",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-stack-censorship.json",
       "note": ""
     },
     {
@@ -12297,10 +12719,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 613,
-    "num_edges": 757,
-    "num_financial_edges": 166,
-    "num_structural_edges": 591,
+    "num_nodes": 634,
+    "num_edges": 783,
+    "num_financial_edges": 171,
+    "num_structural_edges": 612,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -12352,15 +12774,7 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "SINK_lenders"
       ],
       [
         "AMD",
@@ -12368,11 +12782,24 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -12385,20 +12812,15 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -12437,6 +12859,13 @@
       ]
     ],
     "circularity_exposure": {
+      "01_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "1789_Capital": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -12592,6 +13021,13 @@
         "in_robust_core": false
       },
       "Alex_Mashinsky": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Alibaba": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -12815,6 +13251,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Baichuan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Baidu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Band_Protocol": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -12866,6 +13316,13 @@
       },
       "Binance": {
         "total_usd": 8700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Biren": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -12991,6 +13448,13 @@
         "in_robust_core": false
       },
       "ByteDance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CAC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -13130,6 +13594,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cambricon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Canary": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -13202,6 +13673,27 @@
       },
       "China": {
         "total_usd": 86000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_AI_Censorship": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_AI_Hardware": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_AI_Labs": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -13495,6 +13987,13 @@
         "in_robust_core": false
       },
       "DePIN_Storage": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DeepSeek": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -14089,6 +14588,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Huawei": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Huayou_Cobalt": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14677,6 +15183,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MIIT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MP_Materials": {
         "total_usd": 900000000,
         "circular_usd": 0,
@@ -14761,6 +15274,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MiniMax": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Miraex": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -14804,6 +15324,20 @@
         "in_robust_core": false
       },
       "Money_Market_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Moonshot": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Moore_Threads": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15979,6 +16513,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "StepFun": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Strait_of_Hormuz": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16099,6 +16640,13 @@
         "in_robust_core": false
       },
       "Temasek": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tencent": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16644,6 +17192,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Xiaomi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Yim_Leak": {
         "total_usd": 240000000,
         "circular_usd": 0,
@@ -16693,6 +17248,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zhipu_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zillow_ZORI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16709,6 +17271,13 @@
       },
       "a16z": {
         "total_usd": 70000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "iFlytek": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16738,6 +17307,32 @@
     },
     "top_cross_layer_connectors": [
       {
+        "node": "China",
+        "degree": 22,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "commodity",
+          "creditor",
+          "defense",
+          "other",
+          "pqc_quantum",
+          "regulator",
+          "research",
+          "semiconductor",
+          "standards",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
         "degree": 18,
         "neighbor_sectors": [
@@ -16760,31 +17355,8 @@
         "both_layers": true
       },
       {
-        "node": "China",
-        "degree": 18,
-        "neighbor_sectors": [
-          "commodity",
-          "creditor",
-          "defense",
-          "other",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "standards",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "NVIDIA",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -16799,7 +17371,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 9,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"

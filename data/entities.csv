@@ -1,4 +1,5 @@
 node,sector,has_exogenous_revenue,in_core_scc,in_robust_core,circularity_ratio
+01_AI,ai_lab,False,False,False,0.0
 1789_Capital,other,True,False,False,0.0
 3GPP,standards,False,False,False,0.0
 AI data-center SPVs / hyperscaler projects,other,True,False,False,0.0
@@ -22,6 +23,7 @@ Agency_MBS_Market,financial_infra,True,False,False,0.0
 Aladdin,financial_infra,False,False,False,0.0
 Alameda_Research,crypto_firm,False,False,False,0.0
 Alex_Mashinsky,person,False,False,False,0.0
+Alibaba,bigtech_asia,True,False,False,0.0
 Alice_Bob,pqc_quantum,False,False,False,0.0
 Aligned_Data_Centers,ai_infra,False,False,False,0.0
 Alternative_OS_Exclusion,surveillance,False,False,False,0.0
@@ -53,6 +55,8 @@ BLS_NTRI,statistic,False,False,False,0.0
 BNPL_Phantom_Debt,private_credit,False,False,False,0.0
 BNY_Mellon,other,True,False,False,0.0
 BaaS_Middleware,financial_infra,False,False,False,0.0
+Baichuan,ai_lab,False,False,False,0.0
+Baidu,bigtech_asia,True,False,False,0.0
 Band_Protocol,crypto_infra,False,False,False,0.0
 Bank_of_England,other,True,False,False,0.0
 Banks,other,True,False,False,0.0
@@ -61,6 +65,7 @@ Barry_Silbert,person,False,False,False,0.0
 Battery_REE_Tech_Export_Controls,other,True,False,False,0.0
 Bermuda_Captives,insurance,False,False,False,0.0
 Binance,exchange,True,False,False,0.0
+Biren,chip_vendor,False,False,False,0.0
 BitMEX,exchange,True,False,False,0.0
 Bitcoin_Strategic_Reserve,crypto_infra,False,False,False,0.0
 Bitfinex,other,True,False,False,0.0
@@ -79,6 +84,7 @@ Broadcom,chip_vendor,True,False,False,0.0
 Broadridge,other,True,False,False,0.0
 Bybit,other,True,False,False,0.0
 ByteDance,bigtech_asia,True,False,False,0.0
+CAC,regulator,True,False,False,0.0
 CCDH,other,True,False,False,0.0
 CDP_Japan,political,False,False,False,0.0
 CFTC,other,True,False,False,0.0
@@ -98,6 +104,7 @@ CVS_Health,other,True,False,False,0.0
 CZ,person,False,False,False,0.0
 Cadence,semiconductor,True,False,False,0.0
 Cambodia,other,True,False,False,0.0
+Cambricon,chip_vendor,True,False,False,0.0
 Canary,financier,True,False,False,0.0
 Canon,semiconductor,True,False,False,0.0
 Cantor,other,True,False,False,0.0
@@ -109,6 +116,9 @@ Chaebol,industrial,False,False,False,0.0
 Chainlink,crypto_infra,True,False,False,0.0
 Chainlink_Labs,crypto_infra,False,False,False,0.0
 China,state,True,False,False,0.0
+China_AI_Censorship,surveillance,False,False,False,0.0
+China_AI_Hardware,chip_vendor,False,False,False,0.0
+China_AI_Labs,ai_lab,False,False,False,0.0
 China_Scholarship_Council,other,True,False,False,0.0
 Cigna,other,True,False,False,0.0
 Circle,stablecoin,True,False,False,0.0
@@ -151,6 +161,7 @@ Damian_Williams,person,False,False,False,0.0
 David_Sacks,person,False,False,False,0.0
 David_Schwartz,person,False,False,False,0.0
 DePIN_Storage,crypto_infra,False,False,False,0.0
+DeepSeek,ai_lab,False,False,False,0.0
 Defense_Primes,defense,True,False,False,0.0
 Dell,tech,True,False,False,0.0
 Democratic_Party_Korea,political,False,False,False,0.0
@@ -235,6 +246,7 @@ Hiero_LFDT,dlt,False,False,False,0.0
 Honeywell,industrial,True,False,False,0.0
 Host_Club_Debt,other,False,False,False,0.0
 House Financial Services,other,True,False,False,0.0
+Huawei,bigtech_asia,True,False,False,0.0
 Huayou_Cobalt,other,True,False,False,0.0
 Huione,other,True,False,False,0.0
 Hyundai,industrial,True,False,False,0.0
@@ -319,6 +331,7 @@ Logistics_3PL,logistics,False,False,False,0.0
 Lotte,industrial,True,False,False,0.0
 MAS,regulator,True,False,False,0.0
 MGX,financier,True,False,False,0.0
+MIIT,regulator,True,False,False,0.0
 MP_Materials,critical_minerals,True,False,False,0.0
 MSC,logistics,True,False,False,0.0
 Maersk,logistics,True,False,False,0.0
@@ -331,6 +344,7 @@ Mezink,other,True,False,False,0.0
 Micron,semiconductor,True,False,False,0.0
 Microsoft,hyperscaler,True,True,True,0.956
 Midjourney,ai_lab,False,False,False,0.0
+MiniMax,ai_lab,False,False,False,0.0
 Miraex,pqc_quantum,False,False,False,0.0
 Mistral,ai_lab,False,False,False,0.0
 Mitsubishi,industrial,True,False,False,0.0
@@ -338,6 +352,8 @@ Mitsui,industrial,True,False,False,0.0
 Mochimo,privacy_tool,False,False,False,0.0
 Monero,privacy_tool,False,False,False,0.0
 Money_Market_Funds,financier,True,False,False,0.0
+Moonshot,ai_lab,False,False,False,0.0
+Moore_Threads,chip_vendor,False,False,False,0.0
 Mortgage_Market,financial_infra,True,False,False,0.0
 Mortgage_REITs,financier,True,False,False,0.0
 MtGox,exchange,False,False,False,0.0
@@ -505,6 +521,7 @@ Stargate,spv,False,False,False,0.0
 Starlink_Subscribers,exogenous_source,True,False,False,0.0
 Stellar,dlt,False,False,False,0.0
 Stellar_Development_Foundation,dlt,False,False,False,0.0
+StepFun,ai_lab,False,False,False,0.0
 Strait_of_Hormuz,logistics,False,False,False,0.0
 Strait_of_Malacca,logistics,False,False,False,0.0
 StraitsX,other,True,False,False,0.0
@@ -523,6 +540,7 @@ Taiwan_Strait,logistics,False,False,False,0.0
 TechCompanies,tech,True,False,False,0.0
 Telesat,satellite,True,False,False,0.0
 Temasek,financier,True,False,False,0.0
+Tencent,bigtech_asia,True,False,False,0.0
 Tenet_Media,other,True,False,False,0.0
 TerraPower,other,True,False,False,0.0
 Terraform_Labs,other,True,False,False,0.0
@@ -600,6 +618,7 @@ XRPLF,dlt,False,False,False,0.0
 XRPL_EVM,dlt,False,False,False,0.0
 XRPL_Labs,crypto_infra,False,False,False,0.0
 Xahau,dlt,False,False,False,0.0
+Xiaomi,bigtech_asia,True,False,False,0.0
 Yim_Leak,other,True,False,False,0.0
 Yoon_Suk_yeol,person,False,False,False,0.0
 ZEISS_SMT,semiconductor,False,False,False,0.0
@@ -607,8 +626,10 @@ Zaibatsu_Keiretsu,industrial,False,False,False,0.0
 Zano,privacy_tool,False,False,False,0.0
 Zcash,privacy_tool,False,False,False,0.0
 Zenko_Kurishita,other,True,False,False,0.0
+Zhipu_AI,ai_lab,False,False,False,0.0
 Zillow_ZORI,data_provider,False,False,False,0.0
 Zooko_Wilcox,person,False,False,False,0.0
 a16z,financier,True,False,False,0.0
+iFlytek,ai_lab,False,False,False,0.0
 mBridge,other,True,False,False,0.0
 xAI,ai_lab,False,False,False,0.0
