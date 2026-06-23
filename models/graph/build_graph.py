@@ -159,6 +159,9 @@ ALIAS = {
  # Australia
  "Albanese":"Albanese","Anthony Albanese":"Albanese","AUKUS":"AUKUS","UK":"UK","United Kingdom":"UK","SSN_AUKUS":"SSN_AUKUS","SSN-AUKUS":"SSN_AUKUS","US_Australia_Minerals_Framework":"US_Australia_Minerals_Framework",
  "Critical_Minerals_Strategic_Reserve":"Critical_Minerals_Strategic_Reserve","Lynas":"Lynas","BHP":"BHP","Rio Tinto":"Rio_Tinto","Rio_Tinto":"Rio_Tinto","Fortescue":"Fortescue","Superannuation_Funds":"Superannuation_Funds","Superannuation":"Superannuation_Funds",
+ # India
+ "India":"India","Modi":"Modi","Narendra Modi":"Modi","BJP":"BJP","Adani_Group":"Adani_Group","Adani":"Adani_Group","Gautam Adani":"Gautam_Adani","Gautam_Adani":"Gautam_Adani","Reliance":"Reliance","Ambani":"Ambani","Mukesh Ambani":"Ambani",
+ "UPI":"UPI","Aadhaar":"Aadhaar","India_DPI":"India_DPI","BRICS":"BRICS","Quad":"Quad","IMEC":"IMEC",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -341,6 +344,9 @@ NODE_META = {
  # Australia
  "Albanese":("person",False),"AUKUS":("defense",False),"UK":("state",True),"SSN_AUKUS":("defense",False),"US_Australia_Minerals_Framework":("state",False),
  "Critical_Minerals_Strategic_Reserve":("critical_minerals",False),"Lynas":("critical_minerals",True),"BHP":("industrial",True),"Rio_Tinto":("industrial",True),"Fortescue":("industrial",True),"Superannuation_Funds":("financier",True),
+ # India
+ "India":("state",True),"Modi":("person",False),"BJP":("political",False),"Adani_Group":("industrial",True),"Gautam_Adani":("person",False),"Reliance":("industrial",True),"Ambani":("person",False),
+ "UPI":("financial_infra",False),"Aadhaar":("surveillance",False),"India_DPI":("financial_infra",False),"BRICS":("state",False),"Quad":("state",False),"IMEC":("state",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

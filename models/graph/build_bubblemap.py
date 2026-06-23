@@ -146,6 +146,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Central_SOEs":"Central SOEs","Military_Civil_Fusion":"Military-civil fusion","Provincial_Governments":"Chinese provinces","Ant_Group":"Ant Group","China_Tech_Crackdown":"China tech crackdown","LGFV_Debt":"China LGFV debt",
  # Australia
  "SSN_AUKUS":"SSN-AUKUS submarines","US_Australia_Minerals_Framework":"US-Australia minerals framework","Critical_Minerals_Strategic_Reserve":"Australia critical-minerals reserve","Rio_Tinto":"Rio Tinto","Superannuation_Funds":"Australian super funds (~$4T)","Lynas":"Lynas Rare Earths",
+ # India
+ "Adani_Group":"Adani Group","Gautam_Adani":"Gautam Adani","Ambani":"Mukesh Ambani","India_DPI":"India DPI (UPI/Aadhaar)","UPI":"UPI","Aadhaar":"Aadhaar (biometric ID)","BRICS":"BRICS","Quad":"Quad","IMEC":"IMEC corridor",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

@@ -100,6 +100,14 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "Aadhaar": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Adani_Group": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Africa_Corps": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -155,6 +163,10 @@
     "Amazon": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
+    },
+    "Ambani": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Amkor": {
       "sector": "semiconductor",
@@ -260,6 +272,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "BJP": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "BLS": {
       "sector": "statistical_agency",
       "has_exogenous_revenue": true
@@ -275,6 +291,10 @@
     "BNY_Mellon": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "BRICS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "BaaS_Middleware": {
       "sector": "financial_infra",
@@ -1096,6 +1116,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Gautam_Adani": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Gazprom": {
       "sector": "energy",
       "has_exogenous_revenue": true
@@ -1284,6 +1308,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "IMEC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "IPFS": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1327,6 +1355,14 @@
     "InQTel": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
+    },
+    "India": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "India_DPI": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
     },
     "Infura": {
       "sector": "crypto_infra",
@@ -1740,6 +1776,10 @@
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
     },
+    "Modi": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Monero": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -2124,6 +2164,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Quad": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Quandela": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -2163,6 +2207,10 @@
     "Recorded_Future": {
       "sector": "security_research",
       "has_exogenous_revenue": false
+    },
+    "Reliance": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Render": {
       "sector": "crypto_infra",
@@ -2792,6 +2840,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "UPI": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
     "UPS": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -3302,6 +3354,292 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-rare-earth-statecraft.json",
+      "note": ""
+    },
+    {
+      "from": "Modi",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Prime Minister; BJP consolidation (2026 West Bengal/Assam wins)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Modi",
+      "to": "BJP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leader of the ruling Bharatiya Janata Party",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "BJP",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dominant ruling party ('hegemonic'; religious-polarisation campaigning)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member; chairs the 2026 BRICS summit",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "Quad",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member (with US/Japan/Australia) \u2014 rival-bloc overlap with BRICS",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "India-Middle East-Europe Economic Corridor (rivals China's BRI; implementation stalled)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "buys ~1.16M bpd Russian oil (Feb 2026); long-standing defense ties",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "25% tariff (Aug 2025) over Russian oil, later removed; interim trade deal (no explicit oil-stop commitment)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Quad",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Quad member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Australia",
+      "to": "Quad",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Quad member (links to the Australia block)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founding BRICS member (links to the China block)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founding BRICS member (links to the Russia block)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025-26 thaw: border-trade reopening + lifted rare-earth-magnet export curbs (Aug 2025); rivalry persists",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Gautam_Adani",
+      "to": "Adani_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chairman",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Adani_Group",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "infrastructure pillar (ports/energy/airports/coal)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Adani_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EDNY indictment (Nov 2024) \u2014 securities/wire fraud + ~$250M bribery; US moving to END the cases (2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Adani_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "parallel civil fraud case (~$15-20M settlement talks)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Ambani",
+      "to": "Reliance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Mukesh Ambani controls Reliance (Jio/retail/energy)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Reliance",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest private conglomerate (telecom/retail/energy)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "UPI",
+      "to": "India_DPI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~22.35B transactions/month (Apr 2026); ~3.4% of GDP",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Aadhaar",
+      "to": "India_DPI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~1.4B-person biometric ID (world's largest)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "India_DPI",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "digital public infrastructure \u2014 inclusion + single-point-of-failure concentration risk",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-india-state-network.json",
       "note": ""
     },
     {
@@ -16189,10 +16527,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 780,
-    "num_edges": 1005,
+    "num_nodes": 793,
+    "num_edges": 1027,
     "num_financial_edges": 184,
-    "num_structural_edges": 821,
+    "num_structural_edges": 843,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -16272,6 +16610,11 @@
         "Oracle"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
@@ -16279,18 +16622,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -16504,6 +16842,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Aadhaar": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Adani_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Africa_Corps": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16601,6 +16953,13 @@
         "circularity_ratio": 0.941,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Ambani": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Amkor": {
         "total_usd": 0,
@@ -16784,6 +17143,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BJP": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BLS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16807,6 +17173,13 @@
       },
       "BNY_Mellon": {
         "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BRICS": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -18247,6 +18620,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Gautam_Adani": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gazprom": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18576,6 +18956,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IMEC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IPFS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18648,6 +19035,20 @@
       },
       "InQTel": {
         "total_usd": 2000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "India": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "India_DPI": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19374,6 +19775,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Modi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Monero": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20046,6 +20454,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Quad": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Quandela": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20110,6 +20525,13 @@
         "in_robust_core": false
       },
       "Recorded_Future": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Reliance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21215,6 +21637,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UPI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UPS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21800,7 +22229,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 37,
+        "degree": 39,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -21821,7 +22250,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -21830,7 +22259,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 23,
+        "degree": 25,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -21845,7 +22274,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -21944,7 +22373,7 @@
       },
       {
         "node": "Russia",
-        "degree": 17,
+        "degree": 19,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -21958,11 +22387,32 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 6,
+        "source_files": 7,
         "layers": [
           "structural"
         ],
         "both_layers": false
+      },
+      {
+        "node": "SEC",
+        "degree": 19,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "dlt",
+          "exchange",
+          "financier",
+          "industrial",
+          "person",
+          "regulator"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
       },
       {
         "node": "Microsoft",
@@ -21995,26 +22445,6 @@
           "insurance",
           "other",
           "retail"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "SEC",
-        "degree": 18,
-        "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "dlt",
-          "exchange",
-          "financier",
-          "person",
-          "regulator"
         ],
         "n_neighbor_sectors": 7,
         "source_files": 6,
@@ -22126,6 +22556,26 @@
         "both_layers": true
       },
       {
+        "node": "Australia",
+        "degree": 12,
+        "neighbor_sectors": [
+          "critical_minerals",
+          "defense",
+          "financier",
+          "industrial",
+          "other",
+          "person",
+          "state"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "China_AI_Labs",
         "degree": 20,
         "neighbor_sectors": [
@@ -22139,26 +22589,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Australia",
-        "degree": 11,
-        "neighbor_sectors": [
-          "critical_minerals",
-          "defense",
-          "financier",
-          "industrial",
-          "other",
-          "person",
-          "state"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 2,
         "layers": [
           "financial",
           "structural"
