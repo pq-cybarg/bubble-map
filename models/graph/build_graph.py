@@ -151,6 +151,11 @@ ALIAS = {
  # Iran state network
  "Iran":"Iran","Khamenei":"Khamenei","IRGC":"IRGC","Bonyads":"Bonyads","Bonyad":"Bonyads","Iran_Oil":"Iran_Oil","Chinese_Teapots":"Chinese_Teapots","Teapot Refineries":"Chinese_Teapots",
  "Axis_of_Resistance":"Axis_of_Resistance","Axis of Resistance":"Axis_of_Resistance","Hezbollah":"Hezbollah","Hamas":"Hamas","Houthis":"Houthis","Syria":"Syria","Iran_Nuclear_Program":"Iran_Nuclear_Program","IAEA":"IAEA",
+ # China party-state
+ "CCP":"CCP","Chinese Communist Party":"CCP","Xi":"Xi","Xi Jinping":"Xi","Politburo Standing Committee":"Politburo_Standing_Committee","Politburo_Standing_Committee":"Politburo_Standing_Committee","PSC":"Politburo_Standing_Committee","Fourth Plenum":"Fourth_Plenum","Fourth_Plenum":"Fourth_Plenum",
+ "CMC":"CMC","Central Military Commission":"CMC","PLA":"PLA","State Council":"State_Council","State_Council":"State_Council","15th Five Year Plan":"15th_Five_Year_Plan","15th_Five_Year_Plan":"15th_Five_Year_Plan","15th FYP":"15th_Five_Year_Plan",
+ "SASAC":"SASAC","Central SOEs":"Central_SOEs","Central_SOEs":"Central_SOEs","Military-Civil Fusion":"Military_Civil_Fusion","Military_Civil_Fusion":"Military_Civil_Fusion","MCF":"Military_Civil_Fusion",
+ "Provincial Governments":"Provincial_Governments","Provincial_Governments":"Provincial_Governments","Ant Group":"Ant_Group","Ant_Group":"Ant_Group","DiDi":"DiDi","Didi":"DiDi","China_Tech_Crackdown":"China_Tech_Crackdown",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -327,6 +332,9 @@ NODE_META = {
  # Iran state network
  "Iran":("state",True),"Khamenei":("person",False),"IRGC":("defense",True),"Bonyads":("industrial",False),"Iran_Oil":("energy",True),"Chinese_Teapots":("energy",True),
  "Axis_of_Resistance":("defense",False),"Hezbollah":("defense",False),"Hamas":("defense",False),"Houthis":("defense",False),"Syria":("state",True),"Iran_Nuclear_Program":("defense",False),"IAEA":("regulator",True),
+ # China party-state
+ "CCP":("state",False),"Xi":("person",False),"Politburo_Standing_Committee":("state",False),"Fourth_Plenum":("state",False),"CMC":("defense",True),"PLA":("defense",True),"State_Council":("state",False),"15th_Five_Year_Plan":("state",False),
+ "SASAC":("regulator",True),"Central_SOEs":("industrial",False),"Military_Civil_Fusion":("defense",False),"Provincial_Governments":("state",False),"Ant_Group":("bigtech_asia",True),"DiDi":("bigtech_asia",True),"China_Tech_Crackdown":("regulator",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

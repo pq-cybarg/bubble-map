@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 60 files
+- **Meta** — 61 files
 - **Google** — 41 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-iran-state-network.json` — related files by shared entities (verify cross-refs exist)
-- spec-market-plumbing-control.json: 1 shared entities
-- spec-cross-border-settlement-rails.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- spec-blockchain-ecosystem.json: 1 shared entities
+## Newest file `spec-china-party-state.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- spec-crypto-sec-epstein.json: 3 shared entities
+- fin-hedera-connections.json: 3 shared entities
+- spec-cross-border-settlement-rails.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- spec-asia-crypto-payments.json: 2 shared entities
+- spec-china-ai-stack-censorship.json: 2 shared entities

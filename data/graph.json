@@ -4,6 +4,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "15th_Five_Year_Plan": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "1789_Capital": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -157,6 +161,10 @@
       "has_exogenous_revenue": false
     },
     "AntGroup": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
+    "Ant_Group": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
@@ -412,6 +420,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CCP": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CDP_Japan": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -434,6 +446,10 @@
     },
     "CMA_CGM": {
       "sector": "logistics",
+      "has_exogenous_revenue": true
+    },
+    "CMC": {
+      "sector": "defense",
       "has_exogenous_revenue": true
     },
     "CME": {
@@ -520,6 +536,10 @@
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
     },
+    "Central_SOEs": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Chaebol": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -555,6 +575,10 @@
     "China_Scholarship_Council": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "China_Tech_Crackdown": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
     },
     "Chinese_Teapots": {
       "sector": "energy",
@@ -792,6 +816,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "DiDi": {
+      "sector": "bigtech_asia",
+      "has_exogenous_revenue": true
+    },
     "Disfavored_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -991,6 +1019,10 @@
     "Foreign_Bank_US_Branches": {
       "sector": "bank",
       "has_exogenous_revenue": true
+    },
+    "Fourth_Plenum": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Franklin_Templeton": {
       "sector": "financier",
@@ -1652,6 +1684,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Military_Civil_Fusion": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Mindich": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1912,6 +1948,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "PLA": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
     "POGO": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -1968,6 +2008,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Politburo_Standing_Committee": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Polymarket": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2014,6 +2058,10 @@
     },
     "Protocol_Labs": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Provincial_Governments": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "PsiQuantum": {
@@ -2158,6 +2206,10 @@
     },
     "Ryan_Kelly": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SASAC": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "SBI": {
@@ -2483,6 +2535,10 @@
     "Starlink_Subscribers": {
       "sector": "exogenous_source",
       "has_exogenous_revenue": true
+    },
+    "State_Council": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Stellar": {
       "sector": "dlt",
@@ -2938,6 +2994,10 @@
     },
     "Xahau": {
       "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "Xi": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Xiaomi": {
@@ -8267,7 +8327,7 @@
       "status": "open",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "macro-hidden-sovereign-debt.json",
+      "source_file": "macro-hidden-sovereign-debt.json,spec-china-party-state.json",
       "note": ""
     },
     {
@@ -13354,6 +13414,370 @@
       "note": ""
     },
     {
+      "from": "Xi",
+      "to": "CCP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "General Secretary \u2014 the party's apex leader",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "CCP",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the ruling party IS the ultimate authority (party > state)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Politburo_Standing_Committee",
+      "to": "CCP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "apex decision body",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Xi",
+      "to": "Politburo_Standing_Committee",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "heads the PSC",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Fourth_Plenum",
+      "to": "CCP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025 plenum \u2014 policy continuity but purged ~10 Central Committee members",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Xi",
+      "to": "CMC",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Chairman of the Central Military Commission (the army serves the party)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "CMC",
+      "to": "PLA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commands the People's Liberation Army",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "PLA",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the armed forces of the party-state",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "State_Council",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the government/cabinet executing party direction",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "15th_Five_Year_Plan",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NPC-approved master plan (Mar 2026) \u2014 AI 50+ mentions; MCF; center over provinces",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "SASAC",
+      "to": "Central_SOEs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "oversees the central state-owned enterprises",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "SASAC",
+      "to": "State_Council",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "State Council body managing state assets",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Central_SOEs",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commanding heights (energy/telecom/banks/rail/defense); SOE transfers +55% (2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Labs",
+      "to": "Military_Civil_Fusion",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "civilian AI routed to military applications via MCF 'green channel'",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "China_AI_Hardware",
+      "to": "Military_Civil_Fusion",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "domestic accelerators dual-use via MCF",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Military_Civil_Fusion",
+      "to": "PLA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "channels civilian S&T (AI/chips/quantum/space) into PLA capability",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "15th_Five_Year_Plan",
+      "to": "Military_Civil_Fusion",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "re-emphasized MCF after Western pushback",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "15th_Five_Year_Plan",
+      "to": "China_AI_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AI/computing-power prioritized (dedicated chapter)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Provincial_Governments",
+      "to": "LGFV_Debt",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "off-balance-sheet borrowing via local-government financing vehicles",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Provincial_Governments",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "center reasserting authority over provinces (15th FYP)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "PBoC",
+      "to": "CIPS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates the cross-border yuan settlement rail (Russia/Iran route through it)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "PBoC",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "central bank; RMB-internationalization project",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Ant_Group",
+      "to": "China_Tech_Crackdown",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "record IPO pulled (Nov 2020); forcibly restructured",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "DiDi",
+      "to": "China_Tech_Crackdown",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "forced delisting after defiant US IPO",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Alibaba",
+      "to": "China_Tech_Crackdown",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "record antitrust fine; Jack Ma sidelined",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "CAC",
+      "to": "China_Tech_Crackdown",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the regulator driving the discipline (now also runs AI censorship)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "China_Tech_Crackdown",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "party reasserting control over private tech champions (crackdown->leash->selective rehab)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
+      "from": "Ant_Group",
+      "to": "Alibaba",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Alibaba-affiliated fintech (Jack Ma)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-party-state.json",
+      "note": ""
+    },
+    {
       "from": "Iran_IRGC",
       "to": "Crude_Oil",
       "instrument": "other",
@@ -15474,10 +15898,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 754,
-    "num_edges": 958,
-    "num_financial_edges": 182,
-    "num_structural_edges": 776,
+    "num_nodes": 769,
+    "num_edges": 986,
+    "num_financial_edges": 183,
+    "num_structural_edges": 803,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -15528,18 +15952,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -15548,8 +15960,20 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -15569,18 +15993,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -15589,6 +16001,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -15615,6 +16039,13 @@
     ],
     "circularity_exposure": {
       "01_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "15th_Five_Year_Plan": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -15888,6 +16319,13 @@
         "in_robust_core": false
       },
       "AntGroup": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ant_Group": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16335,6 +16773,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CCP": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CDP_Japan": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16371,6 +16816,13 @@
         "in_robust_core": false
       },
       "CMA_CGM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CMC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -16524,6 +16976,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Central_SOEs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chaebol": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16581,6 +17040,13 @@
         "in_robust_core": false
       },
       "China_Scholarship_Council": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_Tech_Crackdown": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17000,6 +17466,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DiDi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Disfavored_platforms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17344,6 +17817,13 @@
         "in_robust_core": false
       },
       "Foreign_Bank_US_Branches": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fourth_Plenum": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18505,6 +18985,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Military_Civil_Fusion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mindich": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18960,6 +19447,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PLA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "POGO": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19058,6 +19552,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Politburo_Standing_Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Polymarket": {
         "total_usd": 2000000000,
         "circular_usd": 0,
@@ -19136,6 +19637,13 @@
         "in_robust_core": false
       },
       "Protocol_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Provincial_Governments": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19389,6 +19897,13 @@
       },
       "Ryan_Kelly": {
         "total_usd": 25000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SASAC": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19956,6 +20471,13 @@
       },
       "Starlink_Subscribers": {
         "total_usd": 11400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "State_Council": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20759,6 +21281,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Xi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Xiaomi": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20903,7 +21432,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 26,
+        "degree": 34,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -20911,6 +21440,7 @@
           "creditor",
           "defense",
           "energy",
+          "industrial",
           "other",
           "person",
           "pqc_quantum",
@@ -20922,8 +21452,8 @@
           "state_intel",
           "statistic"
         ],
-        "n_neighbor_sectors": 16,
-        "source_files": 15,
+        "n_neighbor_sectors": 17,
+        "source_files": 16,
         "layers": [
           "financial",
           "structural"
@@ -21228,6 +21758,26 @@
         "both_layers": true
       },
       {
+        "node": "China_AI_Labs",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai_infra",
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense",
+          "state",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 3,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "BlackRock",
         "degree": 9,
         "neighbor_sectors": [
@@ -21263,25 +21813,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Oracle",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "other",
-          "private_credit",
-          "sink",
-          "spv"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 5,
-        "layers": [
-          "financial"
-        ],
-        "both_layers": false
       }
     ]
   }
