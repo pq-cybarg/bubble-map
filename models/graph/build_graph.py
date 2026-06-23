@@ -156,6 +156,9 @@ ALIAS = {
  "CMC":"CMC","Central Military Commission":"CMC","PLA":"PLA","State Council":"State_Council","State_Council":"State_Council","15th Five Year Plan":"15th_Five_Year_Plan","15th_Five_Year_Plan":"15th_Five_Year_Plan","15th FYP":"15th_Five_Year_Plan",
  "SASAC":"SASAC","Central SOEs":"Central_SOEs","Central_SOEs":"Central_SOEs","Military-Civil Fusion":"Military_Civil_Fusion","Military_Civil_Fusion":"Military_Civil_Fusion","MCF":"Military_Civil_Fusion",
  "Provincial Governments":"Provincial_Governments","Provincial_Governments":"Provincial_Governments","Ant Group":"Ant_Group","Ant_Group":"Ant_Group","DiDi":"DiDi","Didi":"DiDi","China_Tech_Crackdown":"China_Tech_Crackdown",
+ # Australia
+ "Albanese":"Albanese","Anthony Albanese":"Albanese","AUKUS":"AUKUS","UK":"UK","United Kingdom":"UK","SSN_AUKUS":"SSN_AUKUS","SSN-AUKUS":"SSN_AUKUS","US_Australia_Minerals_Framework":"US_Australia_Minerals_Framework",
+ "Critical_Minerals_Strategic_Reserve":"Critical_Minerals_Strategic_Reserve","Lynas":"Lynas","BHP":"BHP","Rio Tinto":"Rio_Tinto","Rio_Tinto":"Rio_Tinto","Fortescue":"Fortescue","Superannuation_Funds":"Superannuation_Funds","Superannuation":"Superannuation_Funds",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -335,6 +338,9 @@ NODE_META = {
  # China party-state
  "CCP":("state",False),"Xi":("person",False),"Politburo_Standing_Committee":("state",False),"Fourth_Plenum":("state",False),"CMC":("defense",True),"PLA":("defense",True),"State_Council":("state",False),"15th_Five_Year_Plan":("state",False),
  "SASAC":("regulator",True),"Central_SOEs":("industrial",False),"Military_Civil_Fusion":("defense",False),"Provincial_Governments":("state",False),"Ant_Group":("bigtech_asia",True),"DiDi":("bigtech_asia",True),"China_Tech_Crackdown":("regulator",False),
+ # Australia
+ "Albanese":("person",False),"AUKUS":("defense",False),"UK":("state",True),"SSN_AUKUS":("defense",False),"US_Australia_Minerals_Framework":("state",False),
+ "Critical_Minerals_Strategic_Reserve":("critical_minerals",False),"Lynas":("critical_minerals",True),"BHP":("industrial",True),"Rio_Tinto":("industrial",True),"Fortescue":("industrial",True),"Superannuation_Funds":("financier",True),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

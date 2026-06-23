@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-china-party-state.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 4 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- spec-crypto-sec-epstein.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- spec-cross-border-settlement-rails.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- spec-asia-crypto-payments.json: 2 shared entities
-- spec-china-ai-stack-censorship.json: 2 shared entities
+## Newest file `spec-australia-state-network.json` — related files by shared entities (verify cross-refs exist)
+- spec-quantum-computing-competitive-landscape.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities
+- spec-rare-earth-statecraft.json: 1 shared entities
+- macro-critical-minerals.json: 1 shared entities
+- macro-quantum-computing.json: 1 shared entities
+- defense-rare-earth.json: 1 shared entities
+- spec-network-overlay.json: 1 shared entities
+- fin-sealsq-wisekey-global.json: 1 shared entities

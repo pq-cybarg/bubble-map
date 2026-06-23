@@ -96,6 +96,10 @@
       "sector": "telecom",
       "has_exogenous_revenue": true
     },
+    "AUKUS": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Africa_Corps": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -118,6 +122,10 @@
     },
     "Alameda_Research": {
       "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Albanese": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Alex_Mashinsky": {
@@ -242,6 +250,10 @@
     },
     "BDCs": {
       "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "BHP": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "BIPM": {
@@ -684,6 +696,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Critical_Minerals_Strategic_Reserve": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
     "CrowdStrike": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -1018,6 +1034,10 @@
     },
     "Foreign_Bank_US_Branches": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Fortescue": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Fourth_Plenum": {
@@ -1616,6 +1636,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Lynas": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": true
+    },
     "MAS": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -2156,6 +2180,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
+    "Rio_Tinto": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Ripple": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
@@ -2331,6 +2359,10 @@
     "SSA": {
       "sector": "statistical_agency",
       "has_exogenous_revenue": true
+    },
+    "SSN_AUKUS": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
     },
     "SUMCO": {
       "sector": "semiconductor",
@@ -2588,6 +2620,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Superannuation_Funds": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Swift": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -2732,6 +2768,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "UK": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "UK_Digital_ID": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -2767,6 +2807,10 @@
     "US_Allied_Military": {
       "sector": "defense",
       "has_exogenous_revenue": true
+    },
+    "US_Australia_Minerals_Framework": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "US_Banks": {
       "sector": "bank",
@@ -7717,6 +7761,253 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-reproducibility-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Albanese",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Prime Minister",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "AUKUS",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AUKUS security pact (Pillar I subs + Pillar II AI/quantum/hypersonics/cyber)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "AUKUS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US party; DoD review (Jun 2025) then Trump support (Oct 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "UK",
+      "to": "AUKUS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "UK party; SSN-AUKUS design; A$310M long-lead payment (Feb 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "AUKUS",
+      "to": "SSN_AUKUS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "nuclear-submarine program \u2014 3 second-hand US Virginia-class + the SSN-AUKUS build",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Australia_Minerals_Framework",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Oct-2025 framework for securing critical-minerals/rare-earths supply (Albanese-Trump)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "US_Australia_Minerals_Framework",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US co-signatory",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Australia",
+      "to": "Critical_Minerals_Strategic_Reserve",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "A$1.2B reserve focused on antimony/gallium/rare earths (dual clean-energy + military)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Critical_Minerals_Strategic_Reserve",
+      "to": "Rare_Earths",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets rare earths + antimony + gallium",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Lynas",
+      "to": "Rare_Earths",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "first non-China commercial dysprosium oxide (May 2025; Mount Weld) \u2014 breaks the heavy-REE monopoly",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Lynas",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Australian rare-earth miner/processor",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "BHP",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "iron-ore export dependence; China centralized buying (CMRG) + brand bans (Jinbao) cost ~$2.8B/yr \u2014 monopsony leverage",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Rio_Tinto",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "iron-ore exports; switched China term-contract pricing off the S&P Platts index",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Fortescue",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "iron-ore exports to China (dominant customer)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "BHP",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest miner",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Rio_Tinto",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mining major",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Fortescue",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "iron-ore major",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Superannuation_Funds",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~A$4T retirement-savings pool (SG 12% from Jul 2025; Div 296 tax)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "Australia",
+      "to": "PsiQuantum",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "Commonwealth+Queensland A$940M for the Brisbane utility-scale quantum computer (Lendlease; ground broken Jun 2026)",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-australia-state-network.json",
       "note": ""
     },
     {
@@ -15898,10 +16189,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 769,
-    "num_edges": 986,
-    "num_financial_edges": 183,
-    "num_structural_edges": 803,
+    "num_nodes": 780,
+    "num_edges": 1005,
+    "num_financial_edges": 184,
+    "num_structural_edges": 821,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -15956,14 +16247,6 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -15977,13 +16260,16 @@
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Anthropic",
@@ -15993,8 +16279,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -16005,14 +16290,20 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -16206,6 +16497,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "AUKUS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Africa_Corps": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -16243,6 +16541,13 @@
       },
       "Alameda_Research": {
         "total_usd": 8000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Albanese": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -16459,6 +16764,13 @@
         "in_robust_core": false
       },
       "BDCs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BHP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -17235,6 +17547,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Critical_Minerals_Strategic_Reserve": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CrowdStrike": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17817,6 +18136,13 @@
         "in_robust_core": false
       },
       "Foreign_Bank_US_Branches": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fortescue": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18866,6 +19192,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lynas": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MAS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19811,6 +20144,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Rio_Tinto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ripple": {
         "total_usd": 1300000000,
         "circular_usd": 0,
@@ -20113,6 +20453,13 @@
         "in_robust_core": false
       },
       "SSA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SSN_AUKUS": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20567,6 +20914,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Superannuation_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Swift": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20819,6 +21173,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UK": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UK_Digital_ID": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20876,6 +21237,13 @@
         "in_robust_core": false
       },
       "US_Allied_Military": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "US_Australia_Minerals_Framework": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21432,7 +21800,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 34,
+        "degree": 37,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -21453,7 +21821,31 @@
           "statistic"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 16,
+        "source_files": 17,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "US_Government",
+        "degree": 23,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "defense",
+          "financier",
+          "other",
+          "person",
+          "pqc_quantum",
+          "sink",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -21476,30 +21868,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 16,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Government",
-        "degree": 21,
-        "neighbor_sectors": [
-          "ai_data",
-          "creditor",
-          "critical_minerals",
-          "defense",
-          "financier",
-          "other",
-          "person",
-          "pqc_quantum",
-          "sink",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 12,
         "layers": [
           "financial",
           "structural"
@@ -21778,6 +22146,26 @@
         "both_layers": true
       },
       {
+        "node": "Australia",
+        "degree": 11,
+        "neighbor_sectors": [
+          "critical_minerals",
+          "defense",
+          "financier",
+          "industrial",
+          "other",
+          "person",
+          "state"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "BlackRock",
         "degree": 9,
         "neighbor_sectors": [
@@ -21790,24 +22178,6 @@
         ],
         "n_neighbor_sectors": 6,
         "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Coinbase",
-        "degree": 8,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "other",
-          "person",
-          "political",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 5,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"
