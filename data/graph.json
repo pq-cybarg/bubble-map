@@ -488,6 +488,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CLARITY_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CLS_Bank": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -574,6 +578,10 @@
     },
     "Caroline_Ellison": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Catholic_Coalition": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Cellebrite": {
@@ -746,6 +754,10 @@
     },
     "Crusoe": {
       "sector": "neocloud",
+      "has_exogenous_revenue": false
+    },
+    "Crypto_AML_Gap": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
     "Crypto_Market_Makers": {
@@ -1651,6 +1663,10 @@
     "Larry_Ellison": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Law_Enforcement_Coalition": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
     },
     "LayerZero": {
       "sector": "crypto_infra",
@@ -10187,6 +10203,175 @@
       "note": "FORMER member (10th to join, Aug 2019; invested via HorizonX; board seat; departed Feb 14 2025). Aerospace/SATELLITE prime exited an enterprise DLT amid its own crisis-era retrenchment - while the same secure-satellite/identity use-case migrated to narrative vehicles (WISeSat/SEALSQ). Timeline tell: see boeing_timeline."
     },
     {
+      "from": "CLARITY_Act",
+      "to": "Congress",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "crypto market-structure bill (H.R. 3633); House-passed; Senate Banking 15-9 (May 2026); calendar #423; needs 60-vote floor + reconciliation",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "CLARITY_Act",
+      "to": "SEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "splits jurisdiction \u2014 narrows SEC reach over 'digital commodities'",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "CLARITY_Act",
+      "to": "CFTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "makes the CFTC primary regulator of most digital commodities",
+      "amount_usd": null,
+      "status": "open",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Elizabeth_Warren",
+      "to": "CLARITY_Act",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "leads AML/ethics opposition; 5-priority framework (full Treasury AML tools, close DeFi/sanctions loopholes, bar officials profiting)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Catholic_Coalition",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Jun-23-2026 letter to Senate leadership: bill 'could weaken safeguards against illicit finance' exploitable by traffickers/TCOs (user-reported; broader religious+AML opposition corroborated)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Law_Enforcement_Coalition",
+      "to": "CLARITY_Act",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "law-enforcement/anti-corruption warnings on illicit-finance gaps",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Elizabeth_Warren",
+      "to": "Crypto_AML_Gap",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "argues weak AML/CFT + DeFi-intermediary exemptions widen the illicit-finance gap",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Catholic_Coalition",
+      "to": "Crypto_AML_Gap",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "warns of trafficking/illicit-finance exploitation",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Law_Enforcement_Coalition",
+      "to": "Crypto_AML_Gap",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "flags money-laundering / sanctions-evasion gaps",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Crypto_AML_Gap",
+      "to": "SE_Asia_Scam_Complex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the concrete illicit-finance referent \u2014 pig-butchering trafficking-finance the opposition invokes",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Crypto_AML_Gap",
+      "to": "Huione",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "the guarantee-marketplace laundering rail (FinCEN $4B)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Crypto_AML_Gap",
+      "to": "Tether",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USDT the dominant illicit-finance settlement rail",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Elizabeth_Warren",
+      "to": "World_Liberty_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Warren/Reed pressed DOJ/Treasury on WLF token sales to illicit actors \u2014 the ethics-provision sticking point",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-illicit-finance.json",
+      "note": ""
+    },
+    {
       "from": "Brazil",
       "to": "BRICS",
       "instrument": "other",
@@ -16818,10 +17003,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 804,
-    "num_edges": 1046,
+    "num_nodes": 808,
+    "num_edges": 1059,
     "num_financial_edges": 184,
-    "num_structural_edges": 862,
+    "num_structural_edges": 875,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -16872,8 +17057,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -16884,16 +17069,21 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -16906,9 +17096,16 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -16921,18 +17118,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -17812,6 +17997,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CLARITY_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CLS_Bank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17960,6 +18152,13 @@
         "in_robust_core": false
       },
       "Caroline_Ellison": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Catholic_Coalition": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18266,6 +18465,13 @@
         "circularity_ratio": 1.0,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Crypto_AML_Gap": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Crypto_Market_Makers": {
         "total_usd": 0,
@@ -19844,6 +20050,13 @@
       },
       "Larry_Ellison": {
         "total_usd": 330000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Law_Enforcement_Coalition": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22718,6 +22931,28 @@
         "both_layers": true
       },
       {
+        "node": "SEC",
+        "degree": 20,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "dlt",
+          "exchange",
+          "financier",
+          "industrial",
+          "person",
+          "regulator",
+          "state"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 15,
         "neighbor_sectors": [
@@ -22760,27 +22995,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "SEC",
-        "degree": 19,
-        "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "dlt",
-          "exchange",
-          "financier",
-          "industrial",
-          "person",
-          "regulator"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Microsoft",

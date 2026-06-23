@@ -150,6 +150,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Adani_Group":"Adani Group","Gautam_Adani":"Gautam Adani","Ambani":"Mukesh Ambani","India_DPI":"India DPI (UPI/Aadhaar)","UPI":"UPI","Aadhaar":"Aadhaar (biometric ID)","BRICS":"BRICS","Quad":"Quad","IMEC":"IMEC corridor",
  # BRICS+ / de-dollarization
  "Saudi_Arabia":"Saudi Arabia","BRICS_Partners":"BRICS partner states","NDB":"New Development Bank","BRICS_Pay":"BRICS Pay","BRICS_Unit":"BRICS Unit (gold-backed)","De_Dollarization":"De-dollarization drive",
+ # CLARITY Act fight
+ "CLARITY_Act":"CLARITY Act (H.R. 3633)","Catholic_Coalition":"Catholic coalition (AML letter)","Law_Enforcement_Coalition":"Law-enforcement coalition","Crypto_AML_Gap":"Crypto illicit-finance gap",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

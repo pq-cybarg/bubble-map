@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-brics-dedollarization.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-border-settlement-rails.json: 2 shared entities
-- spec-india-state-network.json: 2 shared entities
-- spec-market-plumbing-control.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- spec-sec-filings-primary.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- spec-rare-earth-statecraft.json: 1 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
+## Newest file `spec-clarity-act-illicit-finance.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 3 shared entities
+- blockchain-leg.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- spec-sdny-crypto-prosecution.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- spec-crypto-legislation-forcing.json: 2 shared entities
+- spec-crypto-market-makers-political.json: 2 shared entities
