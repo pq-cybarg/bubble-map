@@ -162,6 +162,9 @@ ALIAS = {
  # India
  "India":"India","Modi":"Modi","Narendra Modi":"Modi","BJP":"BJP","Adani_Group":"Adani_Group","Adani":"Adani_Group","Gautam Adani":"Gautam_Adani","Gautam_Adani":"Gautam_Adani","Reliance":"Reliance","Ambani":"Ambani","Mukesh Ambani":"Ambani",
  "UPI":"UPI","Aadhaar":"Aadhaar","India_DPI":"India_DPI","BRICS":"BRICS","Quad":"Quad","IMEC":"IMEC",
+ # BRICS+ / de-dollarization
+ "Brazil":"Brazil","Egypt":"Egypt","Ethiopia":"Ethiopia","UAE":"UAE","United Arab Emirates":"UAE","Indonesia":"Indonesia","Saudi_Arabia":"Saudi_Arabia","Saudi Arabia":"Saudi_Arabia","BRICS_Partners":"BRICS_Partners",
+ "NDB":"NDB","New Development Bank":"NDB","BRICS_Pay":"BRICS_Pay","BRICS Pay":"BRICS_Pay","BRICS_Unit":"BRICS_Unit","BRICS Unit":"BRICS_Unit","De_Dollarization":"De_Dollarization","De-Dollarization":"De_Dollarization",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -347,6 +350,9 @@ NODE_META = {
  # India
  "India":("state",True),"Modi":("person",False),"BJP":("political",False),"Adani_Group":("industrial",True),"Gautam_Adani":("person",False),"Reliance":("industrial",True),"Ambani":("person",False),
  "UPI":("financial_infra",False),"Aadhaar":("surveillance",False),"India_DPI":("financial_infra",False),"BRICS":("state",False),"Quad":("state",False),"IMEC":("state",False),
+ # BRICS+ / de-dollarization
+ "Brazil":("state",True),"Egypt":("state",True),"Ethiopia":("state",True),"UAE":("state",True),"Indonesia":("state",True),"Saudi_Arabia":("state",True),"BRICS_Partners":("state",False),
+ "NDB":("financier",True),"BRICS_Pay":("financial_infra",False),"BRICS_Unit":("financial_infra",False),"De_Dollarization":("financial_infra",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

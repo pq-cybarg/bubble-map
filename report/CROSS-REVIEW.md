@@ -20,7 +20,7 @@
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
-- **Chainlink** — 29 files
+- **Chainlink** — 30 files
 - **Microsoft** — 27 files
 - **Amazon** — 27 files
 - **NVIDIA** — 27 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-india-state-network.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-brics-dedollarization.json` — related files by shared entities (verify cross-refs exist)
 - spec-cross-border-settlement-rails.json: 2 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 1 shared entities
-- spec-disclosures-surveillance.json: 1 shared entities
-- influence-tbi-policy.json: 1 shared entities
-- spec-east-asia-conglomerates-politics.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- macro-gig-labor.json: 1 shared entities
+- spec-india-state-network.json: 2 shared entities
+- spec-market-plumbing-control.json: 1 shared entities
+- digitalid-corporate.json: 1 shared entities
+- spec-sec-filings-primary.json: 1 shared entities
+- spec-crypto-sec-epstein.json: 1 shared entities
+- spec-rare-earth-statecraft.json: 1 shared entities
+- geopolitics-allied-intel-nodes.json: 1 shared entities

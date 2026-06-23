@@ -296,6 +296,18 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "BRICS_Partners": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "BRICS_Pay": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
+    "BRICS_Unit": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
     "BaaS_Middleware": {
       "sector": "financial_infra",
       "has_exogenous_revenue": false
@@ -419,6 +431,10 @@
     "Brave1": {
       "sector": "defense",
       "has_exogenous_revenue": false
+    },
+    "Brazil": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Brian_Armstrong": {
       "sector": "person",
@@ -812,6 +828,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "De_Dollarization": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
     "Decentralized_AI": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -908,6 +928,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Egypt": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Electric_Coin_Company": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -947,6 +971,10 @@
     "Ethereum_Foundation": {
       "sector": "dlt",
       "has_exogenous_revenue": false
+    },
+    "Ethiopia": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Euroclear": {
       "sector": "other",
@@ -1363,6 +1391,10 @@
     "India_DPI": {
       "sector": "financial_infra",
       "has_exogenous_revenue": false
+    },
+    "Indonesia": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Infura": {
       "sector": "crypto_infra",
@@ -1830,6 +1862,10 @@
     },
     "NCUSIF": {
       "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
+    "NDB": {
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "NIST": {
@@ -2456,6 +2492,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Saudi_Arabia": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Saudi_Arabia_state": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2806,6 +2846,10 @@
     },
     "Turkey_state": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "UAE": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "UBS": {
@@ -10143,6 +10187,253 @@
       "note": "FORMER member (10th to join, Aug 2019; invested via HorizonX; board seat; departed Feb 14 2025). Aerospace/SATELLITE prime exited an enterprise DLT amid its own crisis-era retrenchment - while the same secure-satellite/identity use-case migrated to narrative vehicles (WISeSat/SEALSQ). Timeline tell: see boeing_timeline."
     },
     {
+      "from": "Brazil",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founding member (chaired 2025, Rio summit)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "South_Africa",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founding member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "Egypt",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "full member (Jan 2024); maintains heavy Western ties",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "Ethiopia",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "full member (Jan 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "UAE",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "full member (Jan 2024) \u2014 yet a US security partner (hedger)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "Indonesia",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "full member (Jan 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "INVITED (2023) but deliberately HELD OFF formal membership to avoid antagonizing the US",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS_Partners",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "10 partner states (2025): Belarus/Bolivia/Cuba/Kazakhstan/Malaysia/Nigeria/Thailand/Uganda/Uzbekistan/Vietnam",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "Thailand",
+      "to": "BRICS_Partners",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BRICS partner state (2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS",
+      "to": "NDB",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "established the New Development Bank (Shanghai); 30% local-currency-lending target",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "NDB",
+      "to": "De_Dollarization",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "local-currency lending (30% target)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS",
+      "to": "BRICS_Pay",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "card/settlement system for local-currency transactions",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS_Pay",
+      "to": "De_Dollarization",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "local-currency settlement rail",
+      "amount_usd": null,
+      "status": "committed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS",
+      "to": "BRICS_Unit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "proposed gold-and-local-currency-backed settlement instrument (2026 push; aspirational)",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS_Unit",
+      "to": "Gold",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gold-backed component (hard-money lens)",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS_Unit",
+      "to": "De_Dollarization",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "proposed non-dollar settlement unit",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "De_Dollarization",
+      "to": "CIPS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Russia-China ~90% local-currency trade routed via CIPS / yuan rails",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "De_Dollarization",
+      "to": "Gold",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BRICS central-bank gold accumulation / reserve diversification",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Trump 10% tariff on BRICS-aligned states + 100% threat on de-dollarizers (a de-dollarization accelerant for the targeted)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-brics-dedollarization.json",
+      "note": ""
+    },
+    {
       "from": "Google",
       "to": "Anthropic",
       "instrument": "equity",
@@ -16527,10 +16818,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 793,
-    "num_edges": 1027,
+    "num_nodes": 804,
+    "num_edges": 1046,
     "num_financial_edges": 184,
-    "num_structural_edges": 843,
+    "num_structural_edges": 862,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -16581,12 +16872,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Microsoft",
@@ -16597,12 +16892,8 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -17185,6 +17476,27 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BRICS_Partners": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BRICS_Pay": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BRICS_Unit": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BaaS_Middleware": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -17396,6 +17708,13 @@
         "in_robust_core": false
       },
       "Brave1": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brazil": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18088,6 +18407,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "De_Dollarization": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Decentralized_AI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18256,6 +18582,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Egypt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Electric_Coin_Company": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -18320,6 +18653,13 @@
         "in_robust_core": false
       },
       "Ethereum_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ethiopia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19048,6 +19388,13 @@
         "in_robust_core": false
       },
       "India_DPI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Indonesia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19867,6 +20214,13 @@
         "in_robust_core": false
       },
       "NCUSIF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NDB": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20965,6 +21319,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Saudi_Arabia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Saudi_Arabia_state": {
         "total_usd": 12000000,
         "circular_usd": 0,
@@ -21575,6 +21936,13 @@
         "in_robust_core": false
       },
       "Turkey_state": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "UAE": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22259,7 +22627,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 25,
+        "degree": 26,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -22274,7 +22642,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 14,
+        "source_files": 15,
         "layers": [
           "financial",
           "structural"

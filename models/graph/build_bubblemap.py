@@ -148,6 +148,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "SSN_AUKUS":"SSN-AUKUS submarines","US_Australia_Minerals_Framework":"US-Australia minerals framework","Critical_Minerals_Strategic_Reserve":"Australia critical-minerals reserve","Rio_Tinto":"Rio Tinto","Superannuation_Funds":"Australian super funds (~$4T)","Lynas":"Lynas Rare Earths",
  # India
  "Adani_Group":"Adani Group","Gautam_Adani":"Gautam Adani","Ambani":"Mukesh Ambani","India_DPI":"India DPI (UPI/Aadhaar)","UPI":"UPI","Aadhaar":"Aadhaar (biometric ID)","BRICS":"BRICS","Quad":"Quad","IMEC":"IMEC corridor",
+ # BRICS+ / de-dollarization
+ "Saudi_Arabia":"Saudi Arabia","BRICS_Partners":"BRICS partner states","NDB":"New Development Bank","BRICS_Pay":"BRICS Pay","BRICS_Unit":"BRICS Unit (gold-backed)","De_Dollarization":"De-dollarization drive",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",
