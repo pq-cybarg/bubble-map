@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 61 files
+- **Meta** — 62 files
 - **Google** — 41 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-clarity-act-illicit-finance.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 3 shared entities
-- blockchain-leg.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- spec-exchanges-asia.json: 2 shared entities
-- spec-sdny-crypto-prosecution.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- spec-crypto-legislation-forcing.json: 2 shared entities
-- spec-crypto-market-makers-political.json: 2 shared entities
+## Newest file `spec-opioid-crisis.json` — related files by shared entities (verify cross-refs exist)
+- spec-vitalik-buterin-thought.json: 1 shared entities
+- spec-telecom-satellite.json: 1 shared entities
+- temporal-bridges.json: 1 shared entities
+- spec-semiconductor-logistics-standards.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
+- macro-ai-power-grid-bottleneck.json: 1 shared entities
+- macro-firstbrands-ubs.json: 1 shared entities
+- altcoin-lens.json: 1 shared entities

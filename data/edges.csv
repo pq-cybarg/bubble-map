@@ -43,6 +43,7 @@ Amazon,Anthropic,equity,25000000000,completed,True,False,fin-google-amazon-anthr
 OpenAI,CoreWeave,compute_commitment,22400000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 CoreWeave,SINK_debt,debt,21373000000,outstanding,False,False,fin-coreweave-oracle.json
 CoreWeave,SINK_lenders,debt,21000000000,reported-10K,False,False,spec-sec-filings-primary.json
+State_AGs,Big_Three_Distributors,other,21000000000,documented,False,False,spec-opioid-crisis.json
 Microsoft,Nebius,compute_commitment,19400000000,active,False,False,fin-coreweave-oracle.json
 SoftBank,Stargate,equity,19000000000,committed,False,False,fin-coreweave-oracle.json
 OpenAI,Stargate,equity,19000000000,committed,True,False,fin-coreweave-oracle.json
@@ -56,6 +57,7 @@ BlackRock,GIP,acquisition,12500000000,closed,False,False,spec-blackrock-aladdin-
 BlackRock,HPS,debt,12000000000,closed,False,False,spec-blackrock-aladdin-concentration.json
 Amazon,Globalstar,acquisition,11600000000,announced,False,False,spec-telecom-satellite.json
 Starlink_Subscribers,SpaceX,exogenous_revenue,11400000000,recurring-durable,False,False,fin-spacex-spcx.json
+Sackler_Family,Purdue_Pharma,other,11000000000,documented,False,False,spec-opioid-crisis.json
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 PIMCO,Oracle,debt,10000000000,anchored,False,False,spec-sec-filings-primary.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
@@ -66,10 +68,12 @@ FTX,Alameda_Research,other,8000000000,documented,False,False,spec-crypto-collaps
 NVIDIA,Intel,equity,7900000000,13F-largest,False,False,spec-sec-filings-primary.json
 Lazarus_Group,Tornado_Cash,surveillance_security,7600000000,documented,False,False,spec-tornado-samourai.json
 Blackstone,CoreWeave,debt,7500000000,closed,False,False,fin-coreweave-oracle.json
+State_AGs,Purdue_Pharma,other,7400000000,documented,False,False,spec-opioid-crisis.json
 MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
 MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+State_AGs,JNJ,other,5000000000,documented,False,False,spec-opioid-crisis.json
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
 Binance,World_Liberty_Financial,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
 FinCEN,Huione,other,4000000000,documented,False,False,spec-se-asia-scam-crime-nexus.json
@@ -445,6 +449,17 @@ China,UK_comms_infrastructure,other,,open,False,False,spec-uk-labour-tbi-influen
 Labour_Together,UK_Labour_government,other,,open,False,True,spec-uk-labour-tbi-influence.json
 UK_Labour_government,UK_Digital_ID,other,,open,False,True,spec-uk-labour-tbi-influence.json
 Tony_Blair_Institute,UK_Digital_ID,other,,open,False,True,spec-uk-labour-tbi-influence.json
+Purdue_Pharma,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
+SCOTUS,Sackler_Family,other,,documented,False,False,spec-opioid-crisis.json
+SCOTUS,Purdue_Pharma,other,,documented,False,False,spec-opioid-crisis.json
+Letitia_James,Purdue_Pharma,other,,documented,False,False,spec-opioid-crisis.json
+Big_Three_Distributors,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
+JNJ,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
+Pharmacies,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
+Fentanyl,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
+China,Fentanyl,other,,contested,False,False,spec-opioid-crisis.json
+Opioid_Crisis,SINK_overdose_victims,other,,documented,False,False,spec-opioid-crisis.json
+Opioid_Crisis,US_Government,other,,documented,False,False,spec-opioid-crisis.json
 DOJ,Epstein_Files,other,,closed,False,False,spec-epstein-document-authenticity.json
 US_Congress,Epstein_Files,regulatory_legal,,closed,False,False,spec-epstein-document-authenticity.json
 Commercial_Parents,ILCs,other,,open,False,False,macro-ilcs.json

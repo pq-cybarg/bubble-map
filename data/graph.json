@@ -352,6 +352,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Big_Three_Distributors": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -1060,6 +1064,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Fentanyl": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Fhenix": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1463,6 +1471,10 @@
     "JEDEC": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "JNJ": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "JPM_Coin": {
       "sector": "other",
@@ -2028,6 +2040,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": false
     },
+    "Opioid_Crisis": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "OptumRx": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2116,6 +2132,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Pharmacies": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Phil Gramm": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2183,6 +2203,10 @@
     "PsiQuantum": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Purdue_Pharma": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Putin": {
       "sector": "person",
@@ -2356,6 +2380,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "SCOTUS": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
     "SDNY": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -2428,6 +2456,10 @@
       "sector": "sink",
       "has_exogenous_revenue": true
     },
+    "SINK_overdose_victims": {
+      "sector": "sink",
+      "has_exogenous_revenue": true
+    },
     "SINK_repo": {
       "sector": "sink",
       "has_exogenous_revenue": true
@@ -2471,6 +2503,10 @@
     "SVR": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
+    },
+    "Sackler_Family": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "SaltTyphoon": {
       "sector": "threat_actor",
@@ -2671,6 +2707,10 @@
     "Starlink_Subscribers": {
       "sector": "exogenous_source",
       "has_exogenous_revenue": true
+    },
+    "State_AGs": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
     },
     "State_Council": {
       "sector": "state",
@@ -7795,6 +7835,201 @@
       "declared_circular": false,
       "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Sackler_Family",
+      "to": "Purdue_Pharma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owners; extracted ~$11B before bankruptcy",
+      "amount_usd": 11000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Purdue_Pharma",
+      "to": "Opioid_Crisis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "OxyContin marketing with downplayed addiction risk (from 1996) \u2014 the spark",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "SCOTUS",
+      "to": "Sackler_Family",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Harrington v. Purdue (Jun 2024) struck the non-consensual third-party releases shielding the Sacklers",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "SCOTUS",
+      "to": "Purdue_Pharma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "voided the original bankruptcy plan; forced renegotiation",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "Purdue_Pharma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$7.4B renegotiated settlement (Jan 2025; plan approved Nov 2025; 15-yr payout)",
+      "amount_usd": 7400000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Letitia_James",
+      "to": "Purdue_Pharma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NY AG led the Purdue/Sackler settlement",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Big_Three_Distributors",
+      "to": "Opioid_Crisis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "McKesson/Cardinal/AmerisourceBergen \u2014 alleged failure to flag/halt suspicious oversupply",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "Big_Three_Distributors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$21B share of the ~$26B national settlement (18-yr payout)",
+      "amount_usd": 21000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "JNJ",
+      "to": "Opioid_Crisis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "generic-opioid manufacturing + marketing",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "JNJ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$5B share of the national settlement",
+      "amount_usd": 5000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Pharmacies",
+      "to": "Opioid_Crisis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CVS/Walgreens/Walmart dispensing; separate ~$13B+ settlements",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Fentanyl",
+      "to": "Opioid_Crisis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "illicit synthetic opioids \u2014 ~58% of overdose deaths (the mutated phase)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Fentanyl",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Chinese precursor-chemical suppliers feed the fentanyl chain (PRC pressed on scheduling controls); cartels press the pills",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Opioid_Crisis",
+      "to": "SINK_overdose_victims",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~80k overdose deaths/yr (falling ~25% in the year to Mar 2025) + millions addicted",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
+      "note": ""
+    },
+    {
+      "from": "Opioid_Crisis",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "public-health catastrophe; ~$50B+ total settlements routed to states/communities for treatment",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opioid-crisis.json",
       "note": ""
     },
     {
@@ -17003,10 +17238,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 808,
-    "num_edges": 1059,
+    "num_nodes": 818,
+    "num_edges": 1074,
     "num_financial_edges": 184,
-    "num_structural_edges": 875,
+    "num_structural_edges": 890,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -17057,8 +17292,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "AMD",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -17067,14 +17310,6 @@
       [
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "Microsoft",
@@ -17096,12 +17331,6 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -17118,6 +17347,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -17754,6 +17989,13 @@
       },
       "Biconomy": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Big_Three_Distributors": {
+        "total_usd": 21000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -18998,6 +19240,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Fentanyl": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Fhenix": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19700,6 +19949,13 @@
       },
       "JEDEC": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "JNJ": {
+        "total_usd": 5000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20692,6 +20948,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Opioid_Crisis": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OptumRx": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20846,6 +21109,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Pharmacies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Phil Gramm": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20960,6 +21230,13 @@
       },
       "PsiQuantum": {
         "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Purdue_Pharma": {
+        "total_usd": 18400000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21266,6 +21543,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SCOTUS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SDNY": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21392,6 +21676,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "SINK_overdose_victims": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_repo": {
         "total_usd": 2000000000000,
         "circular_usd": 0,
@@ -21464,6 +21755,13 @@
       },
       "SVR": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sackler_Family": {
+        "total_usd": 11000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21814,6 +22112,13 @@
       },
       "Starlink_Subscribers": {
         "total_usd": 11400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "State_AGs": {
+        "total_usd": 33400000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22810,7 +23115,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 39,
+        "degree": 40,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -22831,7 +23136,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 18,
+        "source_files": 19,
         "layers": [
           "financial",
           "structural"
@@ -22840,7 +23145,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 26,
+        "degree": 27,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -22855,7 +23160,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 15,
+        "source_files": 16,
         "layers": [
           "financial",
           "structural"

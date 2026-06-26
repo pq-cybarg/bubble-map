@@ -167,6 +167,9 @@ ALIAS = {
  "NDB":"NDB","New Development Bank":"NDB","BRICS_Pay":"BRICS_Pay","BRICS Pay":"BRICS_Pay","BRICS_Unit":"BRICS_Unit","BRICS Unit":"BRICS_Unit","De_Dollarization":"De_Dollarization","De-Dollarization":"De_Dollarization",
  # CLARITY Act fight
  "CLARITY_Act":"CLARITY_Act","CLARITY Act":"CLARITY_Act","Digital Asset Market Clarity Act":"CLARITY_Act","Catholic_Coalition":"Catholic_Coalition","Law_Enforcement_Coalition":"Law_Enforcement_Coalition","Crypto_AML_Gap":"Crypto_AML_Gap",
+ # opioid crisis
+ "Opioid_Crisis":"Opioid_Crisis","Purdue_Pharma":"Purdue_Pharma","Purdue":"Purdue_Pharma","Sackler_Family":"Sackler_Family","Sacklers":"Sackler_Family","Big_Three_Distributors":"Big_Three_Distributors","JNJ":"JNJ","Johnson & Johnson":"JNJ","J&J":"JNJ",
+ "Pharmacies":"Pharmacies","Fentanyl":"Fentanyl","SCOTUS":"SCOTUS","Supreme Court":"SCOTUS","State_AGs":"State_AGs",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -357,6 +360,9 @@ NODE_META = {
  "NDB":("financier",True),"BRICS_Pay":("financial_infra",False),"BRICS_Unit":("financial_infra",False),"De_Dollarization":("financial_infra",False),
  # CLARITY Act fight
  "CLARITY_Act":("state",False),"Catholic_Coalition":("political",False),"Law_Enforcement_Coalition":("regulator",False),"Crypto_AML_Gap":("financial_infra",False),
+ # opioid crisis
+ "Opioid_Crisis":("other",False),"Purdue_Pharma":("industrial",False),"Sackler_Family":("person",False),"Big_Three_Distributors":("industrial",True),"JNJ":("industrial",True),
+ "Pharmacies":("industrial",True),"Fentanyl":("commodity",False),"SCOTUS":("regulator",True),"State_AGs":("regulator",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
