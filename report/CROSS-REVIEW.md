@@ -16,7 +16,7 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 62 files
-- **Google** — 41 files
+- **Google** — 42 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-opioid-crisis.json` — related files by shared entities (verify cross-refs exist)
-- spec-vitalik-buterin-thought.json: 1 shared entities
-- spec-telecom-satellite.json: 1 shared entities
-- temporal-bridges.json: 1 shared entities
-- spec-semiconductor-logistics-standards.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
-- macro-ai-power-grid-bottleneck.json: 1 shared entities
-- macro-firstbrands-ubs.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
+## Newest file `spec-defense-primes-pqc.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-orchestration-real-incentive.json: 4 shared entities
+- spec-disclosures-surveillance.json: 4 shared entities
+- macro-pqc-chips.json: 3 shared entities
+- macro-crqc-quantum-landscape.json: 3 shared entities
+- spec-blockchain-ecosystem.json: 3 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
+- spec-semiconductor-logistics-standards.json: 2 shared entities
+- spec-quantum-computing-competitive-landscape.json: 2 shared entities

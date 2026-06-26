@@ -120,6 +120,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "AgustaWestland_Scandal": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Akash": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -924,6 +928,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": false
     },
+    "ELSAG": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "ETSI": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -1019,6 +1027,10 @@
     "FHLB_System": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "FOCI_Proxy": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "FSB": {
       "sector": "state_intel",
@@ -1464,6 +1476,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Italy": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "JCET": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1696,6 +1712,14 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Leonardo": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
+    "Leonardo_DRS": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
     "Letitia_James": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1724,6 +1748,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Lockheed_Martin": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
     "Logistics_3PL": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -1739,6 +1767,10 @@
     "MAS": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "MEF": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "MGX": {
       "sector": "financier",
@@ -2228,6 +2260,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "QRL_XMSS_Patent": {
+      "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
     "Qatar": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2268,6 +2304,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": false
     },
+    "RTX": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
+    },
     "Ransomware_RaaS": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -2279,6 +2319,10 @@
     "Rate_Shock": {
       "sector": "macro_factor",
       "has_exogenous_revenue": false
+    },
+    "Raytheon": {
+      "sector": "defense",
+      "has_exogenous_revenue": true
     },
     "Recorded_Future": {
       "sector": "security_research",
@@ -11140,6 +11184,227 @@
       "note": ""
     },
     {
+      "from": "Lockheed_Martin",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest US defense prime (F-35/missiles/space)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "RTX",
+      "to": "Raytheon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "RTX Corp is the parent of Raytheon (+ Pratt & Whitney, Collins)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Raytheon",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "missiles/air-defense prime",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Raytheon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "$950M+ (Oct 2024): Qatar foreign bribery (FCPA) + Patriot/radar defective pricing + export-control fraud; $230.4M criminal + $36M forfeiture",
+      "amount_usd": 950000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "SEC",
+      "to": "Raytheon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$124M related FCPA settlement",
+      "amount_usd": 124000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "MEF",
+      "to": "Leonardo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Italian state owns ~30% of Leonardo via the Ministry of Economy & Finance",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "MEF",
+      "to": "Italy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Italian Ministry of Economy & Finance (state organ)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Leonardo",
+      "to": "Leonardo_DRS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Italian parent of the US-listed subsidiary",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Leonardo_DRS",
+      "to": "FOCI_Proxy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates under a DoD FOCI proxy agreement \u2014 cleared US persons hold the voting rights",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "FOCI_Proxy",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DoD mechanism mitigating foreign ownership/control/influence over classified programs",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Leonardo_DRS",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US defense contractor (sensors/electro-optics/network computing)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "ELSAG",
+      "to": "Leonardo",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Leonardo division \u2014 automatic license-plate readers (ALPR) for US law enforcement",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "ELSAG",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mass ALPR vehicle tracking (consumer-rights/privacy concerns)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Leonardo",
+      "to": "AgustaWestland_Scandal",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Finmeccanica-era India VVIP-helicopter bribery (~EUR560M; Orsi/Spagnolo prosecuted; outcomes varied by jurisdiction/appeal)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Lockheed_Martin",
+      "to": "QRL_XMSS_Patent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "assignee of US20240048369A1 (filed 2023; inventors Kam & Vesey; H04L9/0852 quantum cryptography) \u2014 a QRL-based secure-comms method",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "QRL_XMSS_Patent",
+      "to": "QRL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US20240048369A1 applies a Quantum Resistant Ledger (QRL) encryption scheme for secure communications (pending; not proof of deployment)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
+      "from": "Defense_Primes",
+      "to": "Cryptography_Standards",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CNSA 2.0 mandates PQC migration \u2014 hash-based signatures (XMSS/LMS, NIST SP 800-208) a natural fit for defense secure comms",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-primes-pqc.json",
+      "note": ""
+    },
+    {
       "from": "UBS",
       "to": "Phil Gramm",
       "instrument": "investment",
@@ -17238,10 +17503,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 818,
-    "num_edges": 1074,
+    "num_nodes": 829,
+    "num_edges": 1091,
     "num_financial_edges": 184,
-    "num_structural_edges": 890,
+    "num_structural_edges": 907,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -17292,11 +17557,15 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "AMD",
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -17304,16 +17573,12 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -17339,12 +17604,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
@@ -17353,6 +17612,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -17582,6 +17847,13 @@
         "in_robust_core": false
       },
       "Agency_MBS_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AgustaWestland_Scandal": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -18793,7 +19065,7 @@
         "in_robust_core": false
       },
       "DOJ": {
-        "total_usd": 0,
+        "total_usd": 950000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -18995,6 +19267,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ELSAG": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ETSI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19157,6 +19436,13 @@
         "in_robust_core": false
       },
       "FHLB_System": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FOCI_Proxy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19940,6 +20226,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Italy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JCET": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20346,6 +20639,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Leonardo": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Leonardo_DRS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Letitia_James": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20395,6 +20702,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lockheed_Martin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Logistics_3PL": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20417,6 +20731,13 @@
         "in_robust_core": false
       },
       "MAS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MEF": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21277,6 +21598,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "QRL_XMSS_Patent": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Qatar": {
         "total_usd": 400000000,
         "circular_usd": 0,
@@ -21347,6 +21675,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "RTX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ransomware_RaaS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21363,6 +21698,13 @@
       },
       "Rate_Shock": {
         "total_usd": 306000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Raytheon": {
+        "total_usd": 1074000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21586,7 +21928,7 @@
         "in_robust_core": false
       },
       "SEC": {
-        "total_usd": 153000000,
+        "total_usd": 277000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23145,7 +23487,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 27,
+        "degree": 28,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -23160,7 +23502,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "financial",
           "structural"
@@ -23214,6 +23556,29 @@
         "both_layers": true
       },
       {
+        "node": "SEC",
+        "degree": 21,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "defense",
+          "dlt",
+          "exchange",
+          "financier",
+          "industrial",
+          "person",
+          "regulator",
+          "state"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Google",
         "degree": 11,
         "neighbor_sectors": [
@@ -23226,28 +23591,6 @@
           "security_research",
           "space_real_economy",
           "surveillance"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "SEC",
-        "degree": 20,
-        "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "dlt",
-          "exchange",
-          "financier",
-          "industrial",
-          "person",
-          "regulator",
-          "state"
         ],
         "n_neighbor_sectors": 9,
         "source_files": 8,

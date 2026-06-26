@@ -170,6 +170,9 @@ ALIAS = {
  # opioid crisis
  "Opioid_Crisis":"Opioid_Crisis","Purdue_Pharma":"Purdue_Pharma","Purdue":"Purdue_Pharma","Sackler_Family":"Sackler_Family","Sacklers":"Sackler_Family","Big_Three_Distributors":"Big_Three_Distributors","JNJ":"JNJ","Johnson & Johnson":"JNJ","J&J":"JNJ",
  "Pharmacies":"Pharmacies","Fentanyl":"Fentanyl","SCOTUS":"SCOTUS","Supreme Court":"SCOTUS","State_AGs":"State_AGs",
+ # defense primes + QRL patent
+ "Lockheed_Martin":"Lockheed_Martin","Lockheed Martin":"Lockheed_Martin","LMT":"Lockheed_Martin","RTX":"RTX","Raytheon":"Raytheon","Leonardo":"Leonardo","Leonardo S.p.A.":"Leonardo","Finmeccanica":"Leonardo","Leonardo_DRS":"Leonardo_DRS","Leonardo DRS":"Leonardo_DRS",
+ "MEF":"MEF","FOCI_Proxy":"FOCI_Proxy","ELSAG":"ELSAG","AgustaWestland_Scandal":"AgustaWestland_Scandal","QRL_XMSS_Patent":"QRL_XMSS_Patent",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -363,6 +366,9 @@ NODE_META = {
  # opioid crisis
  "Opioid_Crisis":("other",False),"Purdue_Pharma":("industrial",False),"Sackler_Family":("person",False),"Big_Three_Distributors":("industrial",True),"JNJ":("industrial",True),
  "Pharmacies":("industrial",True),"Fentanyl":("commodity",False),"SCOTUS":("regulator",True),"State_AGs":("regulator",False),
+ # defense primes + QRL patent
+ "Lockheed_Martin":("defense",True),"RTX":("defense",True),"Raytheon":("defense",True),"Leonardo":("defense",True),"Leonardo_DRS":("defense",True),
+ "MEF":("state",False),"FOCI_Proxy":("state",False),"ELSAG":("surveillance",False),"AgustaWestland_Scandal":("defense",False),"QRL_XMSS_Patent":("pqc_quantum",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),
