@@ -158,6 +158,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Lockheed_Martin":"Lockheed Martin","Leonardo":"Leonardo (Finmeccanica)","Leonardo_DRS":"Leonardo DRS","MEF":"Italy MEF (state owner)","FOCI_Proxy":"FOCI proxy (DoD firewall)","ELSAG":"ELSAG (Leonardo ALPR)","AgustaWestland_Scandal":"AgustaWestland bribery","QRL_XMSS_Patent":"Lockheed QRL patent (US20240048369A1)",
  # 3D-stacking scaling race
  "IBM_Nanostack":"IBM Nanostack (0.7nm)","Huawei_Tau_Scaling":"Huawei Tau Scaling / LogicFolding","CFET":"CFET (3D-stacked transistors)","IMEC":"IMEC (CFET originator)",
+ # PFAS
+ "PFAS":"PFAS (forever chemicals)","AFFF_MDL":"AFFF water MDL (settlements)","EPA_PFAS_Rule":"EPA PFAS drinking-water rule","Public_Water_Systems":"Public water systems","PFAS_Suppression":"PFAS knowledge suppression",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

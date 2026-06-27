@@ -175,6 +175,8 @@ ALIAS = {
  "MEF":"MEF","FOCI_Proxy":"FOCI_Proxy","ELSAG":"ELSAG","AgustaWestland_Scandal":"AgustaWestland_Scandal","QRL_XMSS_Patent":"QRL_XMSS_Patent",
  # 3D-stacking scaling race
  "IBM_Nanostack":"IBM_Nanostack","Nanostack":"IBM_Nanostack","Huawei_Tau_Scaling":"Huawei_Tau_Scaling","Tau Scaling":"Huawei_Tau_Scaling","LogicFolding":"Huawei_Tau_Scaling","CFET":"CFET","IMEC":"IMEC",
+ # PFAS forever chemicals
+ "PFAS":"PFAS","3M":"3M","DuPont":"DuPont","Chemours":"Chemours","Corteva":"Corteva","AFFF_MDL":"AFFF_MDL","EPA":"EPA","EPA_PFAS_Rule":"EPA_PFAS_Rule","Public_Water_Systems":"Public_Water_Systems","PFAS_Suppression":"PFAS_Suppression",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -373,6 +375,9 @@ NODE_META = {
  "MEF":("state",False),"FOCI_Proxy":("state",False),"ELSAG":("surveillance",False),"AgustaWestland_Scandal":("defense",False),"QRL_XMSS_Patent":("pqc_quantum",False),
  # 3D-stacking scaling race
  "IBM_Nanostack":("semiconductor",False),"Huawei_Tau_Scaling":("semiconductor",False),"CFET":("semiconductor",False),"IMEC":("semiconductor",False),
+ # PFAS forever chemicals
+ "PFAS":("commodity",False),"3M":("industrial",True),"DuPont":("industrial",True),"Chemours":("industrial",True),"Corteva":("industrial",True),
+ "AFFF_MDL":("regulator",False),"EPA":("regulator",True),"EPA_PFAS_Rule":("regulator",False),"Public_Water_Systems":("other",False),"PFAS_Suppression":("other",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

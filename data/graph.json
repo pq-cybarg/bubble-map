@@ -16,6 +16,14 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "3M": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "AFFF_MDL": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
     "AI data-center SPVs / hyperscaler projects": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -620,6 +628,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Chemours": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Chen_Zhi": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -730,6 +742,10 @@
     },
     "Corporate_Credit_Unions": {
       "sector": "bank",
+      "has_exogenous_revenue": true
+    },
+    "Corteva": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Cosmos": {
@@ -924,6 +940,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "DuPont": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Dual_Mandate": {
       "sector": "statistic",
       "has_exogenous_revenue": false
@@ -934,6 +954,14 @@
     },
     "ELSAG": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "EPA": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
+    "EPA_PFAS_Rule": {
+      "sector": "regulator",
       "has_exogenous_revenue": false
     },
     "ETSI": {
@@ -2120,6 +2148,14 @@
       "sector": "insurance",
       "has_exogenous_revenue": true
     },
+    "PFAS": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "PFAS_Suppression": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "PIMCO": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -2247,6 +2283,10 @@
     "PsiQuantum": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Public_Water_Systems": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Purdue_Pharma": {
       "sector": "industrial",
@@ -13523,6 +13563,240 @@
       "note": ""
     },
     {
+      "from": "3M",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the original/dominant PFAS maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "DuPont",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PFAS/C-8 maker (Teflon lineage)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "Chemours",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DuPont PFAS-liability spinoff (2015); GenX",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "Corteva",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DuPont agriculture spinoff (co-liable)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "Chemours",
+      "to": "DuPont",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spun off from DuPont to carry PFAS/materials liabilities (2015)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "3M",
+      "to": "AFFF_MDL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "up to $10.3B / 13yr public-water settlement (final approval Mar 2024, Charleston SC)",
+      "amount_usd": 10300000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "Chemours",
+      "to": "AFFF_MDL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$592M (50% of the $1.185B combined fund)",
+      "amount_usd": 592000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "DuPont",
+      "to": "AFFF_MDL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$400M of the combined $1.185B fund",
+      "amount_usd": 400000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "Corteva",
+      "to": "AFFF_MDL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$193M of the combined fund",
+      "amount_usd": 193000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "PFAS",
+      "to": "Public_Water_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contamination of public drinking-water systems nationwide",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "AFFF_MDL",
+      "to": "Public_Water_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "settlement funds routed to water suppliers for remediation (ratepayers bear residual cost)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "EPA",
+      "to": "EPA_PFAS_Rule",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Apr-2024 NPDWR (6 PFAS; PFOA/PFOS 4 ppt); 2025-26 partial rollback (keep PFOA/PFOS to 2031; rescind GenX/PFHxS/PFNA/PFBS)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "EPA_PFAS_Rule",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "drinking-water limits on PFAS (partially unwound 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "PFAS",
+      "to": "Semiconductor_Materials",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "1000+ chipmaking uses (resists/rinses/etchants/coolants); SEMI calls them 'essential'; no federal discharge limits",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "SEMI",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industry seeks exemptions; claims removing low-volume-exemption PFAS would shut down all US chipmaking (industry assertion)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "3M",
+      "to": "PFAS_Suppression",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "suppressed PFAS hazard evidence from the 1960s ('toxic gaslighting'; ProPublica)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "DuPont",
+      "to": "PFAS_Suppression",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "knew C-8 toxic by 1970; hid 1980 worker birth-defect cases; 1981 denial memo",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
+      "from": "PFAS_Suppression",
+      "to": "PFAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decades of concealed-harm evidence (Annals of Global Health study) \u2014 the verification/cover-up theme",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-pfas-forever-chemicals.json",
+      "note": ""
+    },
+    {
       "from": "Microsoft",
       "to": "Device_Ownership_Erosion",
       "instrument": "other",
@@ -17593,10 +17867,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 832,
-    "num_edges": 1097,
+    "num_nodes": 842,
+    "num_edges": 1115,
     "num_financial_edges": 184,
-    "num_structural_edges": 913,
+    "num_structural_edges": 931,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -17647,6 +17921,14 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -17657,14 +17939,6 @@
       [
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Amazon",
@@ -17688,26 +17962,26 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -17756,6 +18030,20 @@
       },
       "3GPP": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "3M": {
+        "total_usd": 10300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AFFF_MDL": {
+        "total_usd": 11485000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -18818,6 +19106,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chemours": {
+        "total_usd": 592000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chen_Zhi": {
         "total_usd": 15000000000,
         "circular_usd": 0,
@@ -19009,6 +19304,13 @@
       },
       "Corporate_Credit_Unions": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Corteva": {
+        "total_usd": 193000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19350,6 +19652,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DuPont": {
+        "total_usd": 400000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Dual_Mandate": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19365,6 +19674,20 @@
         "in_robust_core": false
       },
       "ELSAG": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EPA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EPA_PFAS_Rule": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21443,6 +21766,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PFAS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PFAS_Suppression": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PIMCO": {
         "total_usd": 28000000000,
         "circular_usd": 0,
@@ -21662,6 +21999,13 @@
       },
       "PsiQuantum": {
         "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Public_Water_Systems": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
