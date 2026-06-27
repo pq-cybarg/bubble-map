@@ -201,6 +201,10 @@ ALIAS = {
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case)
  "Kytch":"Kytch","Taylor_Foodservice":"Taylor_Foodservice","Taylor Commercial Foodservice":"Taylor_Foodservice","Taylor":"Taylor_Foodservice",
  "Middleby":"Middleby","Middleby Corp":"Middleby","McDonalds":"McDonalds","McDonald's":"McDonalds","Public_Knowledge":"Public_Knowledge","Public Knowledge":"Public_Knowledge",
+ # farm-equipment R2R (John Deere)
+ "John_Deere":"John_Deere","John Deere":"John_Deere","Deere":"John_Deere","Deere & Company":"John_Deere",
+ "Deere_Financial":"Deere_Financial","John Deere Financial":"Deere_Financial","American_Farm_Bureau":"American_Farm_Bureau","AFBF":"American_Farm_Bureau",
+ "AFBF_Deere_MOU":"AFBF_Deere_MOU","Farm_Debt":"Farm_Debt","US_Farm_Debt":"Farm_Debt",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -479,6 +483,9 @@ NODE_META = {
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case; overlay)
  "Kytch":("tech",False),"Taylor_Foodservice":("industrial",False),"Middleby":("industrial",True),
  "McDonalds":("industrial",True),"Public_Knowledge":("political",False),
+ # farm-equipment R2R (John Deere; overlay)
+ "John_Deere":("industrial",True),"Deere_Financial":("financier",True),"American_Farm_Bureau":("political",False),
+ "AFBF_Deere_MOU":("other",False),"Farm_Debt":("statistic",False),
 }
 
 edges=[]

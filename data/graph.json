@@ -20,6 +20,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "AFBF_Deere_MOU": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "AFFF_MDL": {
       "sector": "regulator",
       "has_exogenous_revenue": false
@@ -178,6 +182,10 @@
     },
     "Ambani": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "American_Farm_Bureau": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Amkor": {
@@ -908,6 +916,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Deere_Financial": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Defense_Primes": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -1135,6 +1147,10 @@
     "Farm_Credit_System": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Farm_Debt": {
+      "sector": "statistic",
+      "has_exogenous_revenue": false
     },
     "Farmington_Moonstone": {
       "sector": "other",
@@ -1651,6 +1667,10 @@
     "John_Deaton": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "John_Deere": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Johns_Manville": {
       "sector": "industrial",
@@ -14975,6 +14995,136 @@
       "note": ""
     },
     {
+      "from": "FTC",
+      "to": "John_Deere",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTC + IL/MN AGs sue (15 Jan 2025, N.D. Ill.) for monopolizing the repair aftermarket; MI/WI/AZ joined; Deere MTD DENIED June 2025; Commrs Ferguson+Holyoak dissented (premature/partisan)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "John_Deere",
+      "to": "Parts_Pairing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Service ADVISOR dealer-only software gates full diagnosis + part calibration/pairing (engine ECUs, payload sensors)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "John_Deere",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the flagship farm-equipment R2R case; April-2026 $99M class settlement + 10-yr digital-tool commitment",
+      "amount_usd": 99000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "John_Deere",
+      "to": "State_R2R_Laws",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Colorado HB23-1011 (2023) \u2014 first agricultural-equipment R2R statute \u2014 applies to Deere",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "John_Deere",
+      "to": "AFBF_Deere_MOU",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "co-signed the non-binding MOU (8 Jan 2023); cites it as a voluntary fix making laws unnecessary",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "American_Farm_Bureau",
+      "to": "AFBF_Deere_MOU",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "signed the MOU; agreed to encourage Farm Bureau orgs to refrain from supporting R2R legislation",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "AFBF_Deere_MOU",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "non-binding (not court-enforceable); Deere/AFBF: sufficient voluntary fix vs PIRG/repair.org: toothless + bought off the largest farm lobby",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "John_Deere",
+      "to": "Deere_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "captive lender (John Deere Financial) on $500k-$1M+ machines \u2014 financing + dealer service + parts ecosystem lock-in",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "Deere_Financial",
+      "to": "Farm_Debt",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "captive equipment loans feed record US farm debt (~$561B, USDA 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
+      "from": "Farm_Credit_System",
+      "to": "Farm_Debt",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "GSE-status Farm Credit System + commercial lenders carry the bulk of record US farm debt (context cross-link)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-farm-equipment-r2r.json",
+      "note": ""
+    },
+    {
       "from": "ICE",
       "to": "Polymarket",
       "instrument": "investment",
@@ -18590,10 +18740,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 870,
-    "num_edges": 1162,
-    "num_financial_edges": 188,
-    "num_structural_edges": 974,
+    "num_nodes": 875,
+    "num_edges": 1172,
+    "num_financial_edges": 190,
+    "num_structural_edges": 982,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18644,23 +18794,7 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -18668,9 +18802,20 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -18683,10 +18828,15 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -18697,14 +18847,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -18760,6 +18910,13 @@
       },
       "3M": {
         "total_usd": 10300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AFBF_Deere_MOU": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19039,6 +19196,13 @@
         "in_robust_core": true
       },
       "Ambani": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "American_Farm_Bureau": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20319,6 +20483,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Deere_Financial": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Defense_Primes": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20712,6 +20883,13 @@
         "in_robust_core": false
       },
       "Farm_Credit_System": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Farm_Debt": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21616,6 +21794,13 @@
       },
       "John_Deaton": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "John_Deere": {
+        "total_usd": 99000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23085,7 +23270,7 @@
         "in_robust_core": false
       },
       "Right_to_Repair": {
-        "total_usd": 0,
+        "total_usd": 99000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
