@@ -356,6 +356,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Bambu_Lab": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Band_Protocol": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -2228,6 +2232,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Open_Source_Hardware": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Operation_Choke_Point_2": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -2250,6 +2258,10 @@
     },
     "Oracle_Interop": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "OrcaSlicer": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Origin_Quantum": {
@@ -2986,6 +2998,10 @@
     },
     "StraitsX": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Stratasys": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Stuart_Alderoty": {
@@ -8419,6 +8435,110 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Bambu_Lab",
+      "to": "Open_Source_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "16 Jan 2025 authorization/authentication firmware ('security'); Bambu Connect gated print/motion/AMS/calibration/firmware behind a proprietary auth path; Sept-2025 tightened \u2014 closed a previously open ecosystem",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "Bambu_Lab",
+      "to": "OrcaSlicer",
+      "instrument": "warrant",
+      "layer": "financial",
+      "raw_instrument": "restricted OrcaSlicer (SoftFever rejected Bambu Connect) + Panda Touch; blocked X1Plus custom firmware (warranty-waiver 'one-way ticket')",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "OrcaSlicer",
+      "to": "Open_Source_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "open-source slicer (community) \u2014 the open ecosystem the auth firmware locked out",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "Stratasys",
+      "to": "Bambu_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "patent-infringement suits (Aug 2024, E.D. Tex Marshall; 10 patents; X1/P1/A1 lines); MTD denied Feb 2025 (Gilstrap); consolidated 2:25-cv-00465; Bambu PTAB IPRs (Dec 2024) challenge validity",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "Stratasys",
+      "to": "Open_Source_Hardware",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "held the foundational FDM patents whose ~2009 EXPIRY unleashed RepRap/Prusa/Marlin/Slic3r \u2014 the same patent system seeded then polices the field",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "Consumer_Rights_Wiki",
+      "to": "Bambu_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "documents the Bambu Authorization Control System case (Rossmann/FULU wiki) \u2014 the real link to the 3D-printer dispute",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "FUTO",
+      "to": "Open_Source_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds source-AVAILABLE software under its own 'Source First' license \u2014 OSI/FSF community contests it's not 'open source'; FUTO does NOT make 3D-printer code (framing corrected)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
+      "note": ""
+    },
+    {
+      "from": "Open_Source_Hardware",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "modification/interoperability/repair of devices you own \u2014 the open-hardware front of R2R",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-source-3dprinting-lawfare.json",
       "note": ""
     },
     {
@@ -19044,10 +19164,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 886,
-    "num_edges": 1192,
-    "num_financial_edges": 199,
-    "num_structural_edges": 993,
+    "num_nodes": 890,
+    "num_edges": 1200,
+    "num_financial_edges": 201,
+    "num_structural_edges": 999,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19098,12 +19218,20 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -19111,19 +19239,6 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -19137,10 +19252,15 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -19151,14 +19271,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -19801,6 +19921,13 @@
         "in_robust_core": false
       },
       "Baidu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bambu_Lab": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23083,6 +23210,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Open_Source_Hardware": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Operation_Choke_Point_2": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23119,6 +23253,13 @@
         "in_robust_core": true
       },
       "Oracle_Interop": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OrcaSlicer": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24413,6 +24554,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stratasys": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stuart_Alderoty": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25627,6 +25775,27 @@
         "both_layers": true
       },
       {
+        "node": "Right_to_Repair",
+        "degree": 21,
+        "neighbor_sectors": [
+          "ai_infra",
+          "hyperscaler",
+          "industrial",
+          "other",
+          "person",
+          "political",
+          "regulator",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 5,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Apple",
         "degree": 8,
         "neighbor_sectors": [
@@ -25644,27 +25813,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Right_to_Repair",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai_infra",
-          "hyperscaler",
-          "industrial",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "state",
-          "tech"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 4,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Hedera",

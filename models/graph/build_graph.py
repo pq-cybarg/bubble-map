@@ -210,6 +210,8 @@ ALIAS = {
  "ChemChina":"ChemChina","Corteva":"Corteva","US_Corn":"US_Corn","Corn":"US_Corn","Ethanol_RFS":"Ethanol_RFS","Renewable_Fuel_Standard":"Ethanol_RFS","Farm_Subsidies":"Farm_Subsidies",
  # consumer-electronics parts-pairing
  "Samsung_Repair_Terms":"Samsung_Repair_Terms","Biometric_Security":"Biometric_Security",
+ # open-source / 3D-printing lawfare
+ "Open_Source_Hardware":"Open_Source_Hardware","Bambu_Lab":"Bambu_Lab","Bambu Lab":"Bambu_Lab","Stratasys":"Stratasys","OrcaSlicer":"OrcaSlicer","Orca Slicer":"OrcaSlicer",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -497,6 +499,8 @@ NODE_META = {
  "US_Corn":("commodity",False),"Ethanol_RFS":("state",False),"Farm_Subsidies":("state",False),
  # consumer-electronics parts-pairing (overlay)
  "Samsung_Repair_Terms":("other",False),"Biometric_Security":("other",False),
+ # open-source / 3D-printing lawfare (overlay)
+ "Open_Source_Hardware":("other",False),"Bambu_Lab":("industrial",False),"Stratasys":("industrial",True),"OrcaSlicer":("tech",False),
 }
 
 edges=[]

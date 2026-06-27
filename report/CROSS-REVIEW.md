@@ -17,7 +17,7 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 63 files
 - **Google** — 43 files
-- **Chainlink** — 35 files
+- **Chainlink** — 36 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-electronics-parts-pairing.json` — related files by shared entities (verify cross-refs exist)
-- commodities-metals.json: 2 shared entities
-- fin-coreweave-oracle.json: 2 shared entities
-- macro-ai-power-grid-bottleneck.json: 2 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
-- spec-sec-filings-primary.json: 2 shared entities
-- digitalid-device-ownership-erosion.json: 2 shared entities
-- fin-ai-depreciation-debttrap.json: 2 shared entities
-- spec-exchanges-asia.json: 2 shared entities
+## Newest file `spec-open-source-3dprinting-lawfare.json` — related files by shared entities (verify cross-refs exist)
+- geopolitics-contested-resource-states.json: 1 shared entities
+- geopolitics-allied-intel-nodes.json: 1 shared entities
+- spec-pfas-forever-chemicals.json: 1 shared entities
+- spec-jj-talc-texas-two-step.json: 1 shared entities
+- spec-farm-equipment-r2r.json: 1 shared entities
+- spec-east-asia-conglomerates-politics.json: 1 shared entities
+- spec-seed-ip-corn.json: 1 shared entities
+- macro-mortgage-reits.json: 1 shared entities
