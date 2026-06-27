@@ -22,6 +22,18 @@ Physical goods move through a concentrated maritime network: the **ocean-carrier
 
 Standards bodies write the rules every product must meet, and **whoever writes the standard shapes the market** (China's "**Standards 2035**" targets exactly this terrain). **ISO + IEC** run **ISO/IEC JTC 1**, whose subcommittees include **SC 42** (Artificial Intelligence — ~45 standards, the AI-governance battleground) and **SC 27** (IT security / the PQC channel). Adjacent: **IEEE, ITU, ETSI, 3GPP** (telecom), **SEMI, JEDEC** (semiconductor/memory), **ANSI, BIPM, Codex Alimentarius**. Medical devices: the **GHTF** → **IMDRF** lineage harmonizing **ISO 13485** (QMS) + **ISO 14971** (risk). **NIST** feeds international AI + cryptography standards. Standards are **chokepoints of legitimacy** — controlling them is controlling the terrain (Sun Tzu) without firing a shot. *Bodies/scopes fact; soft-power framing interpretation.*
 
+## 4a. The 3D-stacking scaling race — IBM Nanostack vs Huawei Tau (grade the claim, not the country)
+
+Two mid-2026 announcements got **asymmetric receptions**:
+- **IBM Nanostack** (25 Jun 2026) — a **"0.7nm/7-angstrom"** research demo using **3D sequential integration** to vertically **stack + stagger** transistors with different materials per layer (~100B/die; +50% perf / +70% efficiency vs 2nm; **~5 yr from production**).
+- **Huawei Tau (τ) Scaling Law** (May 2026, ISCAS) — a **metric reframe** (replace geometric-nm with a time-constant τ) **+ LogicFolding**, explicitly framed to raise density and **bypass EUV** (Kirin 155→238 MTr/mm², +55%; **projected** "1.4nm-equivalent" by 2031).
+
+**Same thing?** Related family, **different objects**: both pursue **3D/vertical stacking for density without lithography shrink**, but IBM's is a fabricated **device demo at a named node** and Huawei's is a **scaling-metric + architecture + 2031 projection**. Conceptual overlap real; "exact same thing" no.
+
+**Who first?** **Neither — IMEC** proposed CFET (stack n-over-p) in **2018**; IBM, Samsung, TSMC, Intel **and Huawei** all build on it (a **joint Huawei/IMEC CFET patent** exists). "Nanostack" and "LogicFolding/Tau" are **branded implementations of a shared lineage.**
+
+**Double standard?** Partly real, not total. Same bar for both: both use **marketing node-names** ("0.7nm," "1.4nm-equivalent") mapping to no physical feature; both are **demos/projections, not products**; IBM got a hype pass, Huawei extra scrutiny. **But** Huawei's carries an extra, legitimate unverifiability layer (τ is a self-defined yardstick; a 2031 projection; a sanctions/EUV-workaround narrative hard to audit), while IBM's is a peer-reviewable **IEDM-class device result** — more concrete *today*. **Rule: grade the claim, not the country** — under which IBM's is *more-verifiable-now*, Huawei's *more-forward/harder-to-verify*, and **both ride the same CFET wave and over-market on node-names.**
+
 ## 5. The composition caveat
 
 An industry coordinating around a standard, or concentrating at a chokepoint, is institutional **action** — it does **not** imply a unitary industry **mind** or conspiracy. The concentration emerges from economies of scale, decades of unrepeatable co-development (ASML/Zeiss), and network effects — **structural causes, not necessarily designed ones**. The finding is **fragility + leverage, not intent**.

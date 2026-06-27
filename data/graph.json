@@ -484,6 +484,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "CFET": {
+      "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
     "CFTC": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1312,6 +1316,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Huawei_Tau_Scaling": {
+      "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
     "Huayou_Cobalt": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1339,6 +1347,10 @@
     "IBM": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "IBM_Nanostack": {
+      "sector": "semiconductor",
+      "has_exogenous_revenue": false
     },
     "ICALPS": {
       "sector": "pqc_quantum",
@@ -1369,7 +1381,7 @@
       "has_exogenous_revenue": false
     },
     "IMEC": {
-      "sector": "state",
+      "sector": "semiconductor",
       "has_exogenous_revenue": false
     },
     "IPFS": {
@@ -6314,6 +6326,84 @@
       "instrument": "other",
       "layer": "structural",
       "raw_instrument": "medical-device standards cluster",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "IBM",
+      "to": "IBM_Nanostack",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'0.7nm' 3D-sequential-integration stacked-transistor research demo (Jun 2026; ~100B/die; ~5yr to production)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "IBM_Nanostack",
+      "to": "CFET",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a CFET-family vertical-stacking architecture",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "Huawei",
+      "to": "Huawei_Tau_Scaling",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Tau Scaling Law + LogicFolding (May 2026) \u2014 metric reframe + EUV-bypass density architecture; 1.4nm-equivalent by 2031 (projection)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "Huawei_Tau_Scaling",
+      "to": "CFET",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "3D/stacking-for-density approach in the CFET lineage",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "CFET",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CFET (stack n-over-p) concept FIRST proposed by IMEC (2018) \u2014 the shared origin both firms build on (Huawei/IMEC joint patent exists)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "TSMC",
+      "to": "CFET",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CFET on the roadmap of all advanced foundries (TSMC/Samsung/Intel) + IBM",
       "amount_usd": null,
       "status": "documented",
       "declared_circular": false,
@@ -17503,10 +17593,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 829,
-    "num_edges": 1091,
+    "num_nodes": 832,
+    "num_edges": 1097,
     "num_financial_edges": 184,
-    "num_structural_edges": 907,
+    "num_structural_edges": 913,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -17557,20 +17647,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -17578,12 +17660,15 @@
       ],
       [
         "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -17596,10 +17681,9 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -17612,6 +17696,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -18484,6 +18574,13 @@
         "in_robust_core": false
       },
       "CDP_Japan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CFET": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19939,6 +20036,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Huawei_Tau_Scaling": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Huayou_Cobalt": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19982,6 +20086,13 @@
         "in_robust_core": false
       },
       "IBM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IBM_Nanostack": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

@@ -173,6 +173,8 @@ ALIAS = {
  # defense primes + QRL patent
  "Lockheed_Martin":"Lockheed_Martin","Lockheed Martin":"Lockheed_Martin","LMT":"Lockheed_Martin","RTX":"RTX","Raytheon":"Raytheon","Leonardo":"Leonardo","Leonardo S.p.A.":"Leonardo","Finmeccanica":"Leonardo","Leonardo_DRS":"Leonardo_DRS","Leonardo DRS":"Leonardo_DRS",
  "MEF":"MEF","FOCI_Proxy":"FOCI_Proxy","ELSAG":"ELSAG","AgustaWestland_Scandal":"AgustaWestland_Scandal","QRL_XMSS_Patent":"QRL_XMSS_Patent",
+ # 3D-stacking scaling race
+ "IBM_Nanostack":"IBM_Nanostack","Nanostack":"IBM_Nanostack","Huawei_Tau_Scaling":"Huawei_Tau_Scaling","Tau Scaling":"Huawei_Tau_Scaling","LogicFolding":"Huawei_Tau_Scaling","CFET":"CFET","IMEC":"IMEC",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -369,6 +371,8 @@ NODE_META = {
  # defense primes + QRL patent
  "Lockheed_Martin":("defense",True),"RTX":("defense",True),"Raytheon":("defense",True),"Leonardo":("defense",True),"Leonardo_DRS":("defense",True),
  "MEF":("state",False),"FOCI_Proxy":("state",False),"ELSAG":("surveillance",False),"AgustaWestland_Scandal":("defense",False),"QRL_XMSS_Patent":("pqc_quantum",False),
+ # 3D-stacking scaling race
+ "IBM_Nanostack":("semiconductor",False),"Huawei_Tau_Scaling":("semiconductor",False),"CFET":("semiconductor",False),"IMEC":("semiconductor",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

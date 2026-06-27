@@ -156,6 +156,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Opioid_Crisis":"Opioid crisis","Purdue_Pharma":"Purdue Pharma","Sackler_Family":"Sackler family","Big_Three_Distributors":"Big Three drug distributors","JNJ":"Johnson & Johnson","Fentanyl":"Fentanyl","SCOTUS":"US Supreme Court","State_AGs":"State attorneys general","SINK_overdose_victims":"Overdose victims",
  # defense primes + QRL patent
  "Lockheed_Martin":"Lockheed Martin","Leonardo":"Leonardo (Finmeccanica)","Leonardo_DRS":"Leonardo DRS","MEF":"Italy MEF (state owner)","FOCI_Proxy":"FOCI proxy (DoD firewall)","ELSAG":"ELSAG (Leonardo ALPR)","AgustaWestland_Scandal":"AgustaWestland bribery","QRL_XMSS_Patent":"Lockheed QRL patent (US20240048369A1)",
+ # 3D-stacking scaling race
+ "IBM_Nanostack":"IBM Nanostack (0.7nm)","Huawei_Tau_Scaling":"Huawei Tau Scaling / LogicFolding","CFET":"CFET (3D-stacked transistors)","IMEC":"IMEC (CFET originator)",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

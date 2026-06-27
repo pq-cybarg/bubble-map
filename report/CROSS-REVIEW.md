@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-defense-primes-pqc.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 4 shared entities
-- spec-disclosures-surveillance.json: 4 shared entities
-- macro-pqc-chips.json: 3 shared entities
-- macro-crqc-quantum-landscape.json: 3 shared entities
-- spec-blockchain-ecosystem.json: 3 shared entities
-- influence-congress-funding-compromise.json: 2 shared entities
-- spec-semiconductor-logistics-standards.json: 2 shared entities
-- spec-quantum-computing-competitive-landscape.json: 2 shared entities
+## Newest file `spec-semiconductor-logistics-standards.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 7 shared entities
+- fin-meta-family.json: 6 shared entities
+- spec-china-ai-stack-censorship.json: 6 shared entities
+- spec-cross-system-contagion.json: 6 shared entities
+- fin-google-amazon-anthropic-meta.json: 6 shared entities
+- spec-local-uncensored-ai.json: 6 shared entities
+- spec-exchanges-asia.json: 6 shared entities
+- spec-sec-filings-primary.json: 6 shared entities
