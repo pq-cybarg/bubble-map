@@ -16,12 +16,12 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 63 files
-- **Google** — 42 files
+- **Google** — 43 files
 - **Chainlink** — 35 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
-- **Microsoft** — 27 files
+- **Microsoft** — 28 files
 - **Amazon** — 27 files
 - **NVIDIA** — 27 files
 - **Stargate** — 21 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-seed-ip-corn.json` — related files by shared entities (verify cross-refs exist)
-- spec-uk-labour-tbi-influence.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
-- spec-cross-system-contagion.json: 1 shared entities
-- spec-east-asia-conglomerates-politics.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- macro-money-market-funds.json: 1 shared entities
-- spec-blockchain-ecosystem.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
+## Newest file `spec-electronics-parts-pairing.json` — related files by shared entities (verify cross-refs exist)
+- commodities-metals.json: 2 shared entities
+- fin-coreweave-oracle.json: 2 shared entities
+- macro-ai-power-grid-bottleneck.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities
+- spec-sec-filings-primary.json: 2 shared entities
+- digitalid-device-ownership-erosion.json: 2 shared entities
+- fin-ai-depreciation-debttrap.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities

@@ -404,6 +404,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
+    "Biometric_Security": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Biren": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": false
@@ -2767,6 +2771,10 @@
     "Samsung_Group": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Samsung_Repair_Terms": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Sandworm": {
       "sector": "threat_actor",
@@ -6617,6 +6625,110 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-semiconductor-logistics-standards.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "11 Apr 2024 used-genuine-parts policy: on-device calibration (from fall 2024) for iPhone 15+ screens/batteries/cameras; Activation-Lock parts restricted (anti-theft) \u2014 a partial loosening of serialization",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Group",
+      "to": "Parts_Pairing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Galaxy serialization + glued assemblies; iFixit forced to sell pre-glued screen/battery bundles (raised independent-repair cost)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Group",
+      "to": "Samsung_Repair_Terms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the leaked 2023 third-party-repair contract terms",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Repair_Terms",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "daily G-SPN upload of customer data (name/address/email/IMEI/complaint) + 'immediately disassemble' devices with aftermarket parts + notify Samsung (404 Media, May 2024; contract dated 2023)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Samsung_Group",
+      "to": "iFixit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2022 self-repair partnership ENDED May 2024 (iFixit cited Samsung's lack of commitment: parts pricing/quantity, glued designs)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Google",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Pixel self-repair via iFixit (genuine parts to consumers; comparatively open) \u2014 advocates cite it as proof the lockout isn't technically necessary",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Microsoft",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Surface repairability turnaround after a 2022 shareholder-resolution repair study: self-service tools, iFixit parts, more replaceable components",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Biometric_Security",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the genuine security core: secure pairing of Face ID/Touch ID/fingerprint sensors + anti-theft (Activation-Lock parts) \u2014 conceded by advocates; the dispute is over NON-biometric parts",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-electronics-parts-pairing.json",
       "note": ""
     },
     {
@@ -18932,10 +19044,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 884,
-    "num_edges": 1184,
+    "num_nodes": 886,
+    "num_edges": 1192,
     "num_financial_edges": 199,
-    "num_structural_edges": 985,
+    "num_structural_edges": 993,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18986,6 +19098,14 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -18994,24 +19114,11 @@
         "NVIDIA"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -19027,8 +19134,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -19037,14 +19143,27 @@
         "SINK_lenders"
       ],
       [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -19052,13 +19171,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -19774,6 +19886,13 @@
       },
       "Binance": {
         "total_usd": 8700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Biometric_Security": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23916,6 +24035,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Samsung_Repair_Terms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sandworm": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25370,6 +25496,29 @@
         "both_layers": true
       },
       {
+        "node": "Google",
+        "degree": 12,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "crypto_infra",
+          "dlt",
+          "ip_rightsholder",
+          "other",
+          "pqc_quantum",
+          "security_research",
+          "space_real_economy",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 21,
         "neighbor_sectors": [
@@ -25393,20 +25542,19 @@
         "both_layers": true
       },
       {
-        "node": "Google",
-        "degree": 11,
+        "node": "Microsoft",
+        "degree": 14,
         "neighbor_sectors": [
           "ai_lab",
-          "chip_vendor",
-          "crypto_infra",
-          "dlt",
-          "ip_rightsholder",
+          "financial_infra",
+          "neocloud",
+          "other",
           "pqc_quantum",
-          "security_research",
-          "space_real_economy",
-          "surveillance"
+          "spv",
+          "surveillance",
+          "tech"
         ],
-        "n_neighbor_sectors": 9,
+        "n_neighbor_sectors": 8,
         "source_files": 8,
         "layers": [
           "financial",
@@ -25459,26 +25607,6 @@
         "both_layers": false
       },
       {
-        "node": "Microsoft",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_lab",
-          "financial_infra",
-          "neocloud",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "PrivateCredit_Funds",
         "degree": 8,
         "neighbor_sectors": [
@@ -25500,7 +25628,7 @@
       },
       {
         "node": "Apple",
-        "degree": 7,
+        "degree": 8,
         "neighbor_sectors": [
           "chip_vendor",
           "critical_minerals",
@@ -25510,12 +25638,33 @@
           "surveillance"
         ],
         "n_neighbor_sectors": 6,
-        "source_files": 6,
+        "source_files": 7,
         "layers": [
           "financial",
           "structural"
         ],
         "both_layers": true
+      },
+      {
+        "node": "Right_to_Repair",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai_infra",
+          "hyperscaler",
+          "industrial",
+          "other",
+          "person",
+          "political",
+          "regulator",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 4,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
       },
       {
         "node": "Hedera",
@@ -25629,26 +25778,6 @@
           "other",
           "person",
           "state"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "China_AI_Labs",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai_infra",
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense",
-          "state",
-          "surveillance"
         ],
         "n_neighbor_sectors": 7,
         "source_files": 3,
