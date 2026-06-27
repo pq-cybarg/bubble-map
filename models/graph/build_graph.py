@@ -205,6 +205,9 @@ ALIAS = {
  "John_Deere":"John_Deere","John Deere":"John_Deere","Deere":"John_Deere","Deere & Company":"John_Deere",
  "Deere_Financial":"Deere_Financial","John Deere Financial":"Deere_Financial","American_Farm_Bureau":"American_Farm_Bureau","AFBF":"American_Farm_Bureau",
  "AFBF_Deere_MOU":"AFBF_Deere_MOU","Farm_Debt":"Farm_Debt","US_Farm_Debt":"Farm_Debt",
+ # seed IP + corn complex
+ "Seed_IP":"Seed_IP","Seed_Patents":"Seed_IP","Bayer":"Bayer","Bayer AG":"Bayer","Monsanto":"Monsanto","Syngenta":"Syngenta","BASF":"BASF",
+ "ChemChina":"ChemChina","Corteva":"Corteva","US_Corn":"US_Corn","Corn":"US_Corn","Ethanol_RFS":"Ethanol_RFS","Renewable_Fuel_Standard":"Ethanol_RFS","Farm_Subsidies":"Farm_Subsidies",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -486,6 +489,10 @@ NODE_META = {
  # farm-equipment R2R (John Deere; overlay)
  "John_Deere":("industrial",True),"Deere_Financial":("financier",True),"American_Farm_Bureau":("political",False),
  "AFBF_Deere_MOU":("other",False),"Farm_Debt":("statistic",False),
+ # seed IP + corn complex (overlay)
+ "Seed_IP":("other",False),"Bayer":("industrial",True),"Monsanto":("industrial",False),"Corteva":("industrial",True),
+ "Syngenta":("industrial",True),"BASF":("industrial",True),"ChemChina":("industrial",True),
+ "US_Corn":("commodity",False),"Ethanol_RFS":("state",False),"Farm_Subsidies":("state",False),
 }
 
 edges=[]

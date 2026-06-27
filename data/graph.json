@@ -292,6 +292,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "BASF": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "BDCs": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -378,6 +382,10 @@
     },
     "Battery_REE_Tech_Export_Controls": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Bayer": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Bermuda_Captives": {
@@ -651,6 +659,10 @@
     "Chainlink_Labs": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
+    },
+    "ChemChina": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Chemours": {
       "sector": "industrial",
@@ -1072,6 +1084,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Ethanol_RFS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Ethereum": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -1150,6 +1166,10 @@
     },
     "Farm_Debt": {
       "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "Farm_Subsidies": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Farmington_Moonstone": {
@@ -2016,6 +2036,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Monsanto": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Moonshot": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -2784,6 +2808,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Seed_IP": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Semiconductor_Equipment": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -2982,6 +3010,10 @@
     },
     "Swift": {
       "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
+    "Syngenta": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Synopsys": {
@@ -3198,6 +3230,10 @@
     },
     "US_Contingent_Liabilities": {
       "sector": "creditor",
+      "has_exogenous_revenue": false
+    },
+    "US_Corn": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "US_Farmland": {
@@ -9168,6 +9204,162 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Bayer",
+      "to": "Monsanto",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Bayer acquired Monsanto (2018, ~$63B) and retired the Monsanto name",
+      "amount_usd": 63000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Monsanto",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Roundup Ready trait patents + Technology Stewardship Agreement (contractually bars seed-saving)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Bayer",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "world's largest seed/agrochem after Monsanto deal; Bayer+Corteva ~42% of global seed",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Corteva",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "~19% of global seed; DowDuPont ag spinoff; Oct-2025 seed/agrochem split",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Syngenta",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Big-4 seed/agrochem; ChemChina-owned",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "BASF",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Big-4 seed/agrochem (bought divested Bayer assets in the 2018 antitrust remedy)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "ChemChina",
+      "to": "Syngenta",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "China's state-owned ChemChina acquired Syngenta (2017, ~$43B)",
+      "amount_usd": 43000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "ChemChina",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "state ownership/control (SOE) \u2014 puts a major global seed/agrochem firm under Chinese state control",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "SCOTUS",
+      "to": "Seed_IP",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Bowman v. Monsanto (9-0, 13 May 2013): patent exhaustion does NOT permit replanting saved patented seed; J.E.M. v Pioneer (2001): utility patents cover seeds",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Seed_IP",
+      "to": "US_Corn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "concentrated trait IP (~95% of corn IP in a few firms) over a crop that is ~92% genetically engineered",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Farm_Subsidies",
+      "to": "US_Corn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commodity subsidies + federal crop insurance tilt toward corn/soy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
+      "note": ""
+    },
+    {
+      "from": "Ethanol_RFS",
+      "to": "US_Corn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the Renewable Fuel Standard routes ~40% of the US corn crop into ethanol",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-seed-ip-corn.json",
       "note": ""
     },
     {
@@ -18740,10 +18932,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 875,
-    "num_edges": 1172,
-    "num_financial_edges": 190,
-    "num_structural_edges": 982,
+    "num_nodes": 884,
+    "num_edges": 1184,
+    "num_financial_edges": 199,
+    "num_structural_edges": 985,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18794,33 +18986,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -18833,16 +19020,15 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -18859,7 +19045,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -18867,6 +19052,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -19391,6 +19583,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BASF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BDCs": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19540,6 +19739,13 @@
       },
       "Battery_REE_Tech_Export_Controls": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bayer": {
+        "total_usd": 63000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20016,6 +20222,13 @@
       },
       "Chainlink_Labs": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ChemChina": {
+        "total_usd": 43000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20756,6 +20969,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ethanol_RFS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ethereum": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20890,6 +21110,13 @@
         "in_robust_core": false
       },
       "Farm_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Farm_Subsidies": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22408,6 +22635,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Monsanto": {
+        "total_usd": 63000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Moonshot": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23752,6 +23986,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Seed_IP": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Semiconductor_Equipment": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24097,6 +24338,13 @@
       },
       "Swift": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Syngenta": {
+        "total_usd": 43000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24474,6 +24722,13 @@
         "in_robust_core": false
       },
       "US_Contingent_Liabilities": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "US_Corn": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25016,7 +25271,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 40,
+        "degree": 41,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -25037,7 +25292,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 19,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"

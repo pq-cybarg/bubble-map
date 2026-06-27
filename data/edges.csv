@@ -20,9 +20,11 @@ Tether,US_Treasuries,other,100000000000,held,False,False,"macro-stablecoin-treas
 China,Gold,other,86000000000,net-seller,False,False,macro-stablecoin-treasury-rail.json
 SpaceX_IPO_Public,SpaceX,ipo_proceeds,75000000000,offering,False,False,fin-spacex-spcx.json
 Circle,US_Treasuries,other,74000000000,held,False,False,macro-stablecoin-treasury-rail.json
+Bayer,Monsanto,acquisition,63000000000,documented,False,False,spec-seed-ip-corn.json
 Broadcom,SINK_backlog,compute_commitment,56000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
 Amazon,OpenAI,equity,50000000000,committed,False,False,fin-nvidia-openai.json
 Anthropic,SpaceX,compute_commitment,45000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
+ChemChina,Syngenta,acquisition,43000000000,documented,False,False,spec-seed-ip-corn.json
 SoftBank,OpenAI,equity,41000000000,closed,False,False,fin-nvidia-openai.json
 Apollo,Next-gen data centers / AI infrastructure,equity,40000000000,2025,False,False,macro-cre-privatecredit.json
 Terraform_Labs,SINK_investors,other,40000000000,closed,False,False,macro-stablecoin-failures-manipulation.json
@@ -531,6 +533,16 @@ Saudi_Arabia_state,mBridge,other,,open,False,False,spec-cross-border-settlement-
 Russia,CIPS,other,,open,False,False,spec-cross-border-settlement-rails.json
 mBridge,Swift,other,,open,False,False,spec-cross-border-settlement-rails.json
 Stablecoins,Swift,relationship,,open,False,False,spec-cross-border-settlement-rails.json
+Monsanto,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+Bayer,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+Corteva,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+Syngenta,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+BASF,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+China,ChemChina,investment,,documented,False,False,spec-seed-ip-corn.json
+SCOTUS,Seed_IP,investment,,documented,False,False,spec-seed-ip-corn.json
+Seed_IP,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
+Farm_Subsidies,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
+Ethanol_RFS,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
 Bermuda_Captives,Annuity_Holders,other,,opaque,False,False,spec-insurance-bermuda.json
 Municipal_Debt,Pension_Funds,other,,open,False,False,macro-municipal-public-finance.json
 CRE_Market,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json

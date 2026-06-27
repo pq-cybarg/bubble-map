@@ -87,6 +87,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Parts_Pairing":"Parts-pairing / serialization","R2R_Opposition":"Manufacturer R2R opposition (TechNet/CTA)","FTC":"FTC",
  "Kytch":"Kytch","Taylor_Foodservice":"Taylor (Commercial Foodservice)","Middleby":"Middleby Corp","McDonalds":"McDonald's","Public_Knowledge":"Public Knowledge",
  "John_Deere":"John Deere","Deere_Financial":"John Deere Financial","American_Farm_Bureau":"American Farm Bureau (AFBF)","AFBF_Deere_MOU":"AFBF–Deere MOU (2023)","Farm_Debt":"US farm debt (~$561B)",
+ "Seed_IP":"Seed IP (patents / no-save)","Monsanto":"Monsanto (now Bayer)","Corteva":"Corteva","ChemChina":"ChemChina (SOE)","US_Corn":"US corn complex (~92% GM)","Ethanol_RFS":"Ethanol RFS mandate","Farm_Subsidies":"Farm subsidies + crop insurance",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
