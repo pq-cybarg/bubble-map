@@ -162,6 +162,8 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "PFAS":"PFAS (forever chemicals)","AFFF_MDL":"AFFF water MDL (settlements)","EPA_PFAS_Rule":"EPA PFAS drinking-water rule","Public_Water_Systems":"Public water systems","PFAS_Suppression":"PFAS knowledge suppression",
  # J&J talc / Texas two-step
  "Talc_Litigation":"J&J talc litigation","LTL_Red_River":"LTL / Red River Talc (shell)","Texas_Two_Step":"Texas two-step","Divisive_Merger":"Divisive-merger statute","Bankruptcy_Courts":"Bankruptcy courts","Liability_Engineering":"Liability-engineering playbook",
+ # asbestos
+ "Asbestos_Trusts":"Asbestos §524(g) trusts","Johns_Manville":"Johns-Manville","Mesothelioma_Claims":"Mesothelioma claims","EPA_Asbestos_Ban":"EPA chrysotile ban","Asbestos_Trust_Transparency":"Asbestos trust-transparency debate",
  "Disney_Studios_Coalition":"Disney studios coalition","Russian_energy_executives":"Russian energy executives",
  "SpaceX_IPO_Public":"SpaceX IPO (public markets)","Starlink_Subscribers":"Starlink subscribers",
  "Federal_Reserve":"Federal Reserve","Tornado_Cash":"Tornado Cash","Samourai_Wallet":"Samourai Wallet",

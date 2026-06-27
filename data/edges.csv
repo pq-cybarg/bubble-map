@@ -32,6 +32,7 @@ OpenAI,Microsoft,revenue_share,38000000000,committed,False,False,fin-microsoft-o
 SINK_lenders,Vantage,debt,38000000000,reported,False,False,fin-coreweave-oracle.json
 PrivateCredit_Funds,Anthropic AI infrastructure,debt,36000000000,2026 (in progress),False,False,macro-cre-privatecredit.json
 Apollo_Blackstone,Broadcom,compute_commitment,35000000000,announced,False,False,fin-google-amazon-anthropic-meta.json
+Asbestos_Trusts,Mesothelioma_Claims,other,35000000000,documented,False,False,spec-asbestos-mass-tort.json
 Google,SpaceX,compute_commitment,30000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
 Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-amazon-anthropic-meta.json
 ANTHROPIC_INVESTORS,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
@@ -937,6 +938,15 @@ BlackRock,IBIT,relationship,,documented,False,False,spec-blackrock-aladdin-conce
 IBIT,Coinbase,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 BlackRock,Circle,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
+Johns_Manville,Asbestos,other,,documented,False,False,spec-asbestos-mass-tort.json
+Johns_Manville,Asbestos_Trusts,other,,documented,False,False,spec-asbestos-mass-tort.json
+Asbestos,Mesothelioma_Claims,other,,documented,False,False,spec-asbestos-mass-tort.json
+Asbestos_Trusts,Liability_Engineering,other,,documented,False,False,spec-asbestos-mass-tort.json
+Bankruptcy_Courts,Asbestos_Trusts,other,,documented,False,False,spec-asbestos-mass-tort.json
+Mesothelioma_Claims,Talc_Litigation,other,,documented,False,False,spec-asbestos-mass-tort.json
+EPA,EPA_Asbestos_Ban,other,,contested,False,False,spec-asbestos-mass-tort.json
+EPA_Asbestos_Ban,Asbestos,other,,contested,False,False,spec-asbestos-mass-tort.json
+Asbestos_Trust_Transparency,Asbestos_Trusts,compute_commitment,,contested,False,False,spec-asbestos-mass-tort.json
 DTC_Cede,US_Banks,other,,closed,False,False,spec-market-plumbing-control.json
 ICE,LBMA,other,,closed,False,False,spec-market-plumbing-control.json
 DTCC,Chainlink,relationship,,closed,False,False,spec-market-plumbing-control.json

@@ -252,6 +252,18 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Asbestos": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "Asbestos_Trust_Transparency": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Asbestos_Trusts": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
     "Asia_local_currency_stablecoins": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -968,6 +980,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "EPA_Asbestos_Ban": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
     "EPA_PFAS_Rule": {
       "sector": "regulator",
       "has_exogenous_revenue": false
@@ -1616,6 +1632,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Johns_Manville": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Jump_Crypto": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -1858,6 +1878,10 @@
     },
     "Medical_Device_Standards": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "Mesothelioma_Claims": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Meta": {
@@ -15147,6 +15171,136 @@
       "note": ""
     },
     {
+      "from": "Johns_Manville",
+      "to": "Asbestos",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest asbestos manufacturer; first major Ch.11 (1982)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Johns_Manville",
+      "to": "Asbestos_Trusts",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the Manville Trust \u2014 precedent for the \u00a7524(g) trust system (1994)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Asbestos",
+      "to": "Mesothelioma_Claims",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "causes mesothelioma / lung / ovarian / laryngeal cancer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Asbestos_Trusts",
+      "to": "Mesothelioma_Claims",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "60+ active \u00a7524(g) trusts (~$30-35B) pay current+future claims",
+      "amount_usd": 35000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Asbestos_Trusts",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the LEGITIMATE court-supervised template the later abuses (two-step/spinoff/releases) descend from",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Bankruptcy_Courts",
+      "to": "Asbestos_Trusts",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "confirm/administer \u00a7524(g) trusts (with future-claimants' representatives)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Mesothelioma_Claims",
+      "to": "Talc_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~40% of mesothelioma suits now allege talc exposure; Dec-2025 $1.5B J&J talc verdict \u2014 the asbestos<->talc convergence",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "EPA",
+      "to": "EPA_Asbestos_Ban",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Mar-2024 chrysotile ban (TSCA); 2025 Fifth Circuit abeyance -> EPA reconsidering (both dated)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "EPA_Asbestos_Ban",
+      "to": "Asbestos",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bans ongoing chrysotile uses (only form still used/imported); status under reconsideration",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
+      "from": "Asbestos_Trust_Transparency",
+      "to": "Asbestos_Trusts",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "the contested 'double-dipping' debate: 17 state transparency laws + FACT Act (industry) vs GAO finding NO fraudulent claim (plaintiff/GAO) \u2014 both dated",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-asbestos-mass-tort.json",
+      "note": ""
+    },
+    {
       "from": "DTC_Cede",
       "to": "US_Banks",
       "instrument": "other",
@@ -18021,10 +18175,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 848,
-    "num_edges": 1125,
-    "num_financial_edges": 186,
-    "num_structural_edges": 939,
+    "num_nodes": 854,
+    "num_edges": 1135,
+    "num_financial_edges": 187,
+    "num_structural_edges": 948,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18075,6 +18229,22 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -18083,20 +18253,9 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -18109,9 +18268,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -18122,20 +18282,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -18597,6 +18751,27 @@
       },
       "Arweave": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Asbestos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Asbestos_Trust_Transparency": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Asbestos_Trusts": {
+        "total_usd": 35000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -19855,6 +20030,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EPA_Asbestos_Ban": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EPA_PFAS_Rule": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20989,6 +21171,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Johns_Manville": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jump_Crypto": {
         "total_usd": 1280000000,
         "circular_usd": 0,
@@ -21411,6 +21600,13 @@
       },
       "Medical_Device_Standards": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mesothelioma_Claims": {
+        "total_usd": 35000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

@@ -179,6 +179,8 @@ ALIAS = {
  "PFAS":"PFAS","3M":"3M","DuPont":"DuPont","Chemours":"Chemours","Corteva":"Corteva","AFFF_MDL":"AFFF_MDL","EPA":"EPA","EPA_PFAS_Rule":"EPA_PFAS_Rule","Public_Water_Systems":"Public_Water_Systems","PFAS_Suppression":"PFAS_Suppression",
  # J&J talc / Texas two-step / liability engineering
  "Talc_Litigation":"Talc_Litigation","LTL_Red_River":"LTL_Red_River","Texas_Two_Step":"Texas_Two_Step","Divisive_Merger":"Divisive_Merger","Bankruptcy_Courts":"Bankruptcy_Courts","Liability_Engineering":"Liability_Engineering",
+ # asbestos mass tort
+ "Asbestos":"Asbestos","Asbestos_Trusts":"Asbestos_Trusts","Johns_Manville":"Johns_Manville","Johns-Manville":"Johns_Manville","Mesothelioma_Claims":"Mesothelioma_Claims","EPA_Asbestos_Ban":"EPA_Asbestos_Ban","Asbestos_Trust_Transparency":"Asbestos_Trust_Transparency",
  "balance_sheet":"SINK_debt","bondholders":"SINK_bondmarket","BONDMARKET":"SINK_bondmarket","lenders":"SINK_lenders",
  "CAPEX":"SINK_capex","AI_BACKLOG":"SINK_backlog","AVGO_XPU_PLATFORM":"Broadcom",
  "US commercial banks":"US_Banks",
@@ -382,6 +384,8 @@ NODE_META = {
  "AFFF_MDL":("regulator",False),"EPA":("regulator",True),"EPA_PFAS_Rule":("regulator",False),"Public_Water_Systems":("other",False),"PFAS_Suppression":("other",False),
  # J&J talc / Texas two-step / liability engineering
  "Talc_Litigation":("other",False),"LTL_Red_River":("industrial",False),"Texas_Two_Step":("other",False),"Divisive_Merger":("other",False),"Bankruptcy_Courts":("regulator",True),"Liability_Engineering":("other",False),
+ # asbestos mass tort
+ "Asbestos":("commodity",False),"Asbestos_Trusts":("financial_infra",False),"Johns_Manville":("industrial",False),"Mesothelioma_Claims":("other",False),"EPA_Asbestos_Ban":("regulator",False),"Asbestos_Trust_Transparency":("other",False),
  "SEALCOIN":("crypto_infra",False),"ConsenSys":("crypto_infra",True),"WeCan_Group":("crypto_infra",False),"Canary":("financier",True),
  # PQC / quantum / semiconductor
  "SEALSQ":("pqc_quantum",True),"SEALSQ_Murcia_Hub":("pqc_quantum",False),"ICALPS":("pqc_quantum",True),"EeroQ":("pqc_quantum",False),

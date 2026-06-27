@@ -18,7 +18,7 @@
 - **Meta** — 62 files
 - **Google** — 42 files
 - **OpenAI** — 34 files
-- **Chainlink** — 32 files
+- **Chainlink** — 33 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
 - **Microsoft** — 27 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-jj-talc-texas-two-step.json` — related files by shared entities (verify cross-refs exist)
-- spec-east-asia-conglomerates-politics.json: 1 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 1 shared entities
-- spec-cross-border-settlement-rails.json: 1 shared entities
-- digitalid-orchestration-real-incentive.json: 1 shared entities
-- spec-pfas-forever-chemicals.json: 1 shared entities
+## Newest file `spec-asbestos-mass-tort.json` — related files by shared entities (verify cross-refs exist)
+- spec-reproducibility-crisis.json: 1 shared entities
 - spec-quantum-computing-competitive-landscape.json: 1 shared entities
-- spec-disclosures-surveillance.json: 1 shared entities
-- spec-rare-earth-statecraft.json: 1 shared entities
+- spec-blockchain-ecosystem.json: 1 shared entities
+- spec-east-asia-conglomerates-politics.json: 1 shared entities
+- digitalid-corporate.json: 1 shared entities
+- spec-crypto-sec-epstein.json: 1 shared entities
+- spec-jj-talc-texas-two-step.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
