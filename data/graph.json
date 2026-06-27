@@ -740,6 +740,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Consumer_Rights_Wiki": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Content_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -751,6 +755,10 @@
     "Copper": {
       "sector": "commodity",
       "has_exogenous_revenue": false
+    },
+    "Copyright_Office": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
     },
     "CoreWeave": {
       "sector": "neocloud",
@@ -847,6 +855,10 @@
     "DHL": {
       "sector": "logistics",
       "has_exogenous_revenue": true
+    },
+    "DMCA_1201": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "DOJ": {
       "sector": "regulator",
@@ -1004,6 +1016,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "EU_R2R_Directive": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "EeroQ": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -1093,12 +1109,16 @@
       "has_exogenous_revenue": true
     },
     "FTC": {
-      "sector": "other",
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "FTX": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "FULU_Foundation": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "FUTO": {
       "sector": "ai_infra",
@@ -1836,6 +1856,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Louis_Rossmann": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Lynas": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
@@ -2220,6 +2244,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Parts_Pairing": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Pasqal": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -2384,6 +2412,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "R2R_Opposition": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "REalloys": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2439,6 +2471,10 @@
     "Rigetti": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
+    },
+    "Right_to_Repair": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Rio_Tinto": {
       "sector": "industrial",
@@ -2849,6 +2885,10 @@
       "has_exogenous_revenue": false
     },
     "State_Council": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "State_R2R_Laws": {
       "sector": "state",
       "has_exogenous_revenue": false
     },
@@ -3395,6 +3435,10 @@
     "a16z": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "iFixit": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "iFlytek": {
       "sector": "ai_lab",
@@ -9565,6 +9609,227 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-us-fiscal-trap.json",
+      "note": ""
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leading repair-advocate",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founded the FULU Foundation (501c4, 2025) after leaving FUTO",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Consumer_Rights_Wiki",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "runs the Consumer Rights Wiki (launched Jan 2025); DRM-circumvention bounty program",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "digital-ownership advocacy; \u00a71201 reform",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "FUTO",
+      "to": "Right_to_Repair",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Eron Wolf's grants funded R2R + open source (Rossmann's base before FULU) \u2014 NOTE: FUTO funds the work, not vice-versa",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "iFixit",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "repair-guide company + advocate (parts/schematics)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Copyright_Office",
+      "to": "DMCA_1201",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "9th triennial final rule (25 Oct 2024): repair exemptions for commercial food equipment + vehicle telematics/data; 10th ~2026",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "DMCA_1201",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTC+DOJ joint comment (first ever) supporting/broadening repair exemptions",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "DMCA_1201",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the anticircumvention barrier that can criminalize repair tools (mitigated only by narrow exemptions)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Nixing the Fix (2021) + Magnuson-Moss settlements (Harley-Davidson/Westinghouse/Weber, 2022)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "State_R2R_Laws",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NY/MN/CA/OR/CO/WA enacted; CT (Jul 2026) + TX (Sep 2026); introduced in all 50 states",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "State_R2R_Laws",
+      "to": "Parts_Pairing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Oregon/Colorado/Washington BAN parts-pairing for devices made after 1 Jan 2025",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "EU_R2R_Directive",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Directive 2024/1799 (adopted Jun 2024; applies 31 Jul 2026): repair obligation + spare-parts/info + repairability-by-design",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Parts_Pairing",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "serialization that rejects genuine parts unless maker-authorized \u2014 the central obstacle",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "Parts_Pairing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "serialization/parts-pairing on 'security' grounds; Self Service Repair remains serialization-limited (critics: inadequate)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Apple",
+      "to": "State_R2R_Laws",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "U-TURN: after years of opposition, endorsed California SB 244 (2023)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "R2R_Opposition",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "manufacturer lobbies (TechNet/CTA) historically opposed on security/safety/IP grounds (the (A) side)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-right-to-repair.json",
       "note": ""
     },
     {
@@ -18175,10 +18440,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 854,
-    "num_edges": 1135,
+    "num_nodes": 865,
+    "num_edges": 1152,
     "num_financial_edges": 187,
-    "num_structural_edges": 948,
+    "num_structural_edges": 965,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18229,16 +18494,20 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Microsoft",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -18247,10 +18516,6 @@
       [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -18276,14 +18541,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -19610,6 +19875,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Consumer_Rights_Wiki": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Content_platforms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -19625,6 +19897,13 @@
         "in_robust_core": false
       },
       "Copper": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Copyright_Office": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19793,6 +20072,13 @@
         "in_robust_core": false
       },
       "DHL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DMCA_1201": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20072,6 +20358,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EU_R2R_Directive": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EeroQ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20235,6 +20528,13 @@
       },
       "FTX": {
         "total_usd": 8011500000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FULU_Foundation": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21528,6 +21828,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Louis_Rossmann": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lynas": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22200,6 +22507,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Parts_Pairing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pasqal": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22487,6 +22801,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "R2R_Opposition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "REalloys": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22579,6 +22900,13 @@
         "in_robust_core": false
       },
       "Rigetti": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Right_to_Repair": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23300,6 +23628,13 @@
         "in_robust_core": false
       },
       "State_Council": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "State_R2R_Laws": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24258,6 +24593,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "iFixit": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "iFlytek": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24532,6 +24874,25 @@
         "both_layers": true
       },
       {
+        "node": "Apple",
+        "degree": 7,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "critical_minerals",
+          "other",
+          "satellite",
+          "state",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Hedera",
         "degree": 16,
         "neighbor_sectors": [
@@ -24666,25 +25027,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 3,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "BlackRock",
-        "degree": 9,
-        "neighbor_sectors": [
-          "crypto_infra",
-          "financial_infra",
-          "other",
-          "private_credit",
-          "spv",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"

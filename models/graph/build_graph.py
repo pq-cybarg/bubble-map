@@ -192,6 +192,12 @@ ALIAS = {
  "TornadoCash":"Tornado_Cash","SamouraiWallet":"Samourai_Wallet",
  "WorldLibertyFinancial":"World_Liberty_Financial","WLFI":"World_Liberty_Financial","USD1":"World_Liberty_Financial",
  "Federal Reserve":"Federal_Reserve","FederalReserve":"Federal_Reserve","FOMC":"Federal_Reserve",
+ # right-to-repair umbrella (overlay)
+ "Right_to_Repair":"Right_to_Repair","Right to Repair":"Right_to_Repair","R2R":"Right_to_Repair",
+ "FULU_Foundation":"FULU_Foundation","FULU":"FULU_Foundation","Louis_Rossmann":"Louis_Rossmann","Louis Rossmann":"Louis_Rossmann","Rossmann":"Louis_Rossmann",
+ "Consumer_Rights_Wiki":"Consumer_Rights_Wiki","Consumer Rights Wiki":"Consumer_Rights_Wiki","iFixit":"iFixit",
+ "DMCA_1201":"DMCA_1201","DMCA §1201":"DMCA_1201","Section_1201":"DMCA_1201","Copyright_Office":"Copyright_Office","US Copyright Office":"Copyright_Office",
+ "State_R2R_Laws":"State_R2R_Laws","EU_R2R_Directive":"EU_R2R_Directive","Parts_Pairing":"Parts_Pairing","Parts-Pairing":"Parts_Pairing","R2R_Opposition":"R2R_Opposition",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -462,6 +468,11 @@ NODE_META = {
  "Crude_Oil":("commodity",True),"Antimony":("commodity",True),"Rare_Earths":("commodity",True),
  "Perpetua_Resources":("critical_minerals",False),"United_States_Antimony":("critical_minerals",True),
  "Ucore":("critical_minerals",False),
+ # right-to-repair umbrella (overlay; DAG into sinks, excluded from proofs)
+ "Right_to_Repair":("other",False),"Consumer_Rights_Wiki":("other",False),"Parts_Pairing":("other",False),
+ "FULU_Foundation":("political",False),"R2R_Opposition":("political",False),"Louis_Rossmann":("person",False),
+ "iFixit":("industrial",False),"DMCA_1201":("state",False),"State_R2R_Laws":("state",False),"EU_R2R_Directive":("state",False),
+ "Copyright_Office":("regulator",True),"FTC":("regulator",True),
 }
 
 edges=[]

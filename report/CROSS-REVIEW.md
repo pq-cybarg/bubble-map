@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 62 files
+- **Meta** — 63 files
 - **Google** — 42 files
 - **OpenAI** — 34 files
 - **Chainlink** — 33 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-asbestos-mass-tort.json` — related files by shared entities (verify cross-refs exist)
-- spec-reproducibility-crisis.json: 1 shared entities
-- spec-quantum-computing-competitive-landscape.json: 1 shared entities
-- spec-blockchain-ecosystem.json: 1 shared entities
-- spec-east-asia-conglomerates-politics.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
+## Newest file `spec-right-to-repair.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-regulatory.json: 1 shared entities
+- digitalid-device-ownership-erosion.json: 1 shared entities
+- macro-consumer-abs-subprime.json: 1 shared entities
+- macro-firstbrands-ubs.json: 1 shared entities
+- influence-meta-childsafety.json: 1 shared entities
+- spec-cross-border-settlement-rails.json: 1 shared entities
 - spec-crypto-sec-epstein.json: 1 shared entities
-- spec-jj-talc-texas-two-step.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
+- altcoin-lens.json: 1 shared entities
