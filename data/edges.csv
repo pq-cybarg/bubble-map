@@ -79,6 +79,7 @@ MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta
 Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
 MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+Broadcom,Brocade,debt,5900000000,documented,False,False,spec-foundry-brocade-broadcom.json
 State_AGs,JNJ,other,5000000000,documented,False,False,spec-opioid-crisis.json
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
 Binance,World_Liberty_Financial,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
@@ -91,6 +92,7 @@ OpenAI,Microsoft,equity_method_loss,3100000000,realized,False,False,fin-microsof
 BlackRock,Meta_Hyperion_SPV,debt,3000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 US_Government,Perpetua_Resources,relationship,2900000000,approved,True,False,macro-critical-minerals-equities.json
 NVIDIA,Nebius,equity,2700000000,13F,True,False,"spec-sec-filings-primary.json,fin-coreweave-oracle.json"
+Brocade,Foundry_Networks,acquisition,2600000000,documented,False,False,spec-foundry-brocade-broadcom.json
 Citadel_Securities,SINK_retail_flow,equity,2600000000,recurring,False,False,spec-market-plumbing-control.json
 JPMorgan,Stargate,debt,2300000000,committed,False,False,fin-coreweave-oracle.json
 Netherlands,Pertsev,regulatory_legal,2200000000,convicted-on-appeal,False,False,spec-tornado-samourai.json
@@ -1003,6 +1005,7 @@ BlackRock,IBIT,relationship,,documented,False,False,spec-blackrock-aladdin-conce
 IBIT,Coinbase,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 BlackRock,Circle,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
+Broadcom,CommScope,other,,documented,False,False,spec-foundry-brocade-broadcom.json
 Johns_Manville,Asbestos,other,,documented,False,False,spec-asbestos-mass-tort.json
 Johns_Manville,Asbestos_Trusts,other,,documented,False,False,spec-asbestos-mass-tort.json
 Asbestos,Mesothelioma_Claims,other,,documented,False,False,spec-asbestos-mass-tort.json

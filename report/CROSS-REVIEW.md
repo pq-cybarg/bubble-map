@@ -17,12 +17,12 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 63 files
 - **Google** — 43 files
-- **Chainlink** — 37 files
+- **Chainlink** — 38 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
 - **Microsoft** — 28 files
-- **Amazon** — 27 files
+- **Amazon** — 28 files
 - **NVIDIA** — 27 files
 - **Stargate** — 21 files
 - **Anthropic** — 21 files
@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-camp-lejeune.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-foundry-brocade-broadcom.json` — related files by shared entities (verify cross-refs exist)
+- spec-cross-system-contagion.json: 3 shared entities
+- macro-gig-labor.json: 2 shared entities
+- fin-nvidia-openai.json: 2 shared entities
+- fin-meta-family.json: 2 shared entities
+- spec-sec-filings-primary.json: 2 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
+- spec-quantum-computing-competitive-landscape.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities

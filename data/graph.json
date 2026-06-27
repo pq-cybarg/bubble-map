@@ -508,6 +508,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Brocade": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Bybit": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -763,6 +767,10 @@
     "ComfyUI": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
+    },
+    "CommScope": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Commercial_Parents": {
       "sector": "industrial",
@@ -1251,6 +1259,10 @@
     "Fortescue": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Foundry_Networks": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Fourth_Plenum": {
       "sector": "state",
@@ -16166,6 +16178,45 @@
       "note": ""
     },
     {
+      "from": "Brocade",
+      "to": "Foundry_Networks",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Brocade acquired Foundry (announced 21 Jul 2008 ~$3B; repriced to ~$2.6B all-cash after a crisis financing tranche fell through; closed 18 Dec 2008) \u2014 added IP/Ethernet (BigIron/ServerIron/FastIron) atop its Fibre-Channel SAN",
+      "amount_usd": 2600000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foundry-brocade-broadcom.json",
+      "note": ""
+    },
+    {
+      "from": "Broadcom",
+      "to": "Brocade",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "Broadcom acquired Brocade (~$5.9B incl. net debt, $12.75/sh; FTC consent order Jul 2017; closed 17 Nov 2017) \u2014 KEPT the Fibre-Channel SAN switching business",
+      "amount_usd": 5900000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foundry-brocade-broadcom.json",
+      "note": ""
+    },
+    {
+      "from": "Broadcom",
+      "to": "CommScope",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "divested Brocade's IP networking: Ruckus Wireless + ICX campus switching (Foundry's enterprise heritage) -> Arris (2017) -> CommScope (2019); Vyatta SDN -> AT&T (2017)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-foundry-brocade-broadcom.json",
+      "note": ""
+    },
+    {
       "from": "Johns_Manville",
       "to": "Asbestos",
       "instrument": "other",
@@ -19391,10 +19442,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 898,
-    "num_edges": 1215,
-    "num_financial_edges": 201,
-    "num_structural_edges": 1014,
+    "num_nodes": 901,
+    "num_edges": 1218,
+    "num_financial_edges": 203,
+    "num_structural_edges": 1015,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19445,8 +19496,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "AMD",
@@ -19457,8 +19512,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -19466,12 +19521,8 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -19479,9 +19530,15 @@
         "Oracle"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -19492,25 +19549,12 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -19518,6 +19562,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20407,7 +20458,7 @@
         "in_robust_core": false
       },
       "Broadcom": {
-        "total_usd": 91000000000,
+        "total_usd": 96900000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20415,6 +20466,13 @@
       },
       "Broadridge": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brocade": {
+        "total_usd": 8500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20862,6 +20920,13 @@
         "in_robust_core": false
       },
       "ComfyUI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CommScope": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21717,6 +21782,13 @@
       },
       "Fortescue": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Foundry_Networks": {
+        "total_usd": 2600000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
