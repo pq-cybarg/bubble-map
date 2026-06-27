@@ -340,6 +340,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Bankruptcy_Courts": {
+      "sector": "regulator",
+      "has_exogenous_revenue": true
+    },
     "Banks": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -930,6 +934,10 @@
     },
     "Distressed_Sovereigns": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Divisive_Merger": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Do_Kwon": {
@@ -1712,6 +1720,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "LTL_Red_River": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Labour_Together": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1767,6 +1779,10 @@
     "LexisNexis_Risk_Solutions": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Liability_Engineering": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Liberty Strategic Capital": {
       "sector": "other",
@@ -2892,6 +2908,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "Talc_Litigation": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "TapBit": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -2931,6 +2951,10 @@
     "Tether": {
       "sector": "stablecoin",
       "has_exogenous_revenue": true
+    },
+    "Texas_Two_Step": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Thailand": {
       "sector": "state",
@@ -8009,6 +8033,136 @@
       "declared_circular": false,
       "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "JNJ",
+      "to": "Talc_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~68k MDL talc claims (ovarian cancer + mesothelioma); stopped selling talc baby powder 2023; $8M MA verdict 2025",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "JNJ",
+      "to": "LTL_Red_River",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "created the shell subsidiary (LTL Management -> Red River Talc) to hold talc liabilities",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "LTL_Red_River",
+      "to": "Texas_Two_Step",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the bankrupt liability-shell vehicle for the maneuver",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Texas_Two_Step",
+      "to": "Divisive_Merger",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "uses Texas's divisive-merger statute to split liabilities from assets",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Texas_Two_Step",
+      "to": "Talc_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "maneuver to cap/discharge all talc claims via bankruptcy (offered ~$8-10B); failed",
+      "amount_usd": 10000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Bankruptcy_Courts",
+      "to": "Texas_Two_Step",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rejected J&J's two-step THREE times (Red River dismissed 31 Mar 2025; J&J returns to tort system)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Texas_Two_Step",
+      "to": "Liability_Engineering",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "divisive-merger + bankrupt-the-shell containment of mass-tort liability",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Chemours",
+      "to": "Liability_Engineering",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "DuPont spun PFAS liabilities into Chemours/Corteva \u2014 the spinoff variant",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "Sackler_Family",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Purdue bankruptcy non-consensual third-party releases to shield owners \u2014 the release variant",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
+      "note": ""
+    },
+    {
+      "from": "SCOTUS",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Harrington v. Purdue (2024) struck non-consensual releases \u2014 the judicial constraint on the playbook",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-jj-talc-texas-two-step.json",
       "note": ""
     },
     {
@@ -17867,10 +18021,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 842,
-    "num_edges": 1115,
-    "num_financial_edges": 184,
-    "num_structural_edges": 931,
+    "num_nodes": 848,
+    "num_edges": 1125,
+    "num_financial_edges": 186,
+    "num_structural_edges": 939,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -17929,15 +18083,15 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
       [
         "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -17962,12 +18116,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -17976,6 +18124,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -18596,6 +18750,13 @@
         "in_robust_core": false
       },
       "Bank_of_England": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bankruptcy_Courts": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -19632,6 +19793,13 @@
         "in_robust_core": false
       },
       "Distressed_Sovereigns": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Divisive_Merger": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21003,6 +21171,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LTL_Red_River": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Labour_Together": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21095,6 +21270,13 @@
         "in_robust_core": false
       },
       "LexisNexis_Risk_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Liability_Engineering": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23068,6 +23250,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Talc_Litigation": {
+        "total_usd": 10000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TapBit": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23133,6 +23322,13 @@
       },
       "Tether": {
         "total_usd": 100000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Texas_Two_Step": {
+        "total_usd": 10000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

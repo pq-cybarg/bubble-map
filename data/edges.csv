@@ -61,6 +61,7 @@ Sackler_Family,Purdue_Pharma,other,11000000000,documented,False,False,spec-opioi
 CoreWeave,NVIDIA,gpu_purchase,10309000000,ongoing,True,False,fin-coreweave-oracle.json
 3M,AFFF_MDL,other,10300000000,documented,False,False,spec-pfas-forever-chemicals.json
 PIMCO,Oracle,debt,10000000000,anchored,False,False,spec-sec-filings-primary.json
+Texas_Two_Step,Talc_Litigation,other,10000000000,documented,False,False,spec-jj-talc-texas-two-step.json
 NVIDIA,Anthropic,equity,10000000000,committed,True,False,fin-nvidia-openai.json
 Anthropic,Amazon,equity_method_loss,9500000000,mark-to-market-GAIN,True,False,spec-sec-filings-primary.json
 MtGox,Creditors,repayment,9000000000,in-progress,False,False,spec-exchanges-asia.json
@@ -461,6 +462,15 @@ China,UK_comms_infrastructure,other,,open,False,False,spec-uk-labour-tbi-influen
 Labour_Together,UK_Labour_government,other,,open,False,True,spec-uk-labour-tbi-influence.json
 UK_Labour_government,UK_Digital_ID,other,,open,False,True,spec-uk-labour-tbi-influence.json
 Tony_Blair_Institute,UK_Digital_ID,other,,open,False,True,spec-uk-labour-tbi-influence.json
+JNJ,Talc_Litigation,other,,documented,False,False,spec-jj-talc-texas-two-step.json
+JNJ,LTL_Red_River,other,,documented,False,False,spec-jj-talc-texas-two-step.json
+LTL_Red_River,Texas_Two_Step,other,,documented,False,False,spec-jj-talc-texas-two-step.json
+Texas_Two_Step,Divisive_Merger,merger,,documented,False,False,spec-jj-talc-texas-two-step.json
+Bankruptcy_Courts,Texas_Two_Step,other,,documented,False,False,spec-jj-talc-texas-two-step.json
+Texas_Two_Step,Liability_Engineering,merger,,documented,False,False,spec-jj-talc-texas-two-step.json
+Chemours,Liability_Engineering,relationship,,documented,False,False,spec-jj-talc-texas-two-step.json
+Sackler_Family,Liability_Engineering,other,,documented,False,False,spec-jj-talc-texas-two-step.json
+SCOTUS,Liability_Engineering,other,,documented,False,False,spec-jj-talc-texas-two-step.json
 Purdue_Pharma,Opioid_Crisis,other,,documented,False,False,spec-opioid-crisis.json
 SCOTUS,Sackler_Family,other,,documented,False,False,spec-opioid-crisis.json
 SCOTUS,Purdue_Pharma,other,,documented,False,False,spec-opioid-crisis.json
