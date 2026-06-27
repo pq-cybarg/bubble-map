@@ -91,6 +91,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Samsung_Repair_Terms":"Samsung repair contract (G-SPN)","Biometric_Security":"Biometric/anti-theft pairing (the genuine case)",
  "Open_Source_Hardware":"Open-source hardware / firmware","Bambu_Lab":"Bambu Lab","Stratasys":"Stratasys","OrcaSlicer":"OrcaSlicer (open slicer)",
  "Roundup_Litigation":"Roundup litigation","Glyphosate":"Glyphosate","IARC":"IARC (WHO cancer agency)","Pesticide_Liability_Shields":"State pesticide liability shields",
+ "Camp_Lejeune":"Camp Lejeune contamination","Camp_Lejeune_Justice_Act":"Camp Lejeune Justice Act (2022)","Mass_Tort_Advertising":"Mass-tort advertising economy","ATSDR":"ATSDR (CDC toxics agency)",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

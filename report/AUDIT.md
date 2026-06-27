@@ -14,7 +14,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Inventory
 - models: 40 (z3 .py: 10) + TLA + Alloy
-- research: 150 json / 154 md
+- research: 151 json / 155 md
 - data outputs: 22
 - reports: 9
 
@@ -42,4 +42,5 @@ Canonical numbers (from data/*.json — the source of truth):
 - none
 
 ## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)
-- none
+- ⚑ spec-camp-lejeune.json: 'the government wants'
+  (1 advisory hit(s) to verify)

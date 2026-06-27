@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-roundup-glyphosate.json` — related files by shared entities (verify cross-refs exist)
-- spec-blockchain-ecosystem.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- macro-gig-labor.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- macro-money-market-funds.json: 1 shared entities
-- spec-rare-earth-statecraft.json: 1 shared entities
-- digitalid-orchestration-real-incentive.json: 1 shared entities
+## Newest file `spec-camp-lejeune.json` — related files by shared entities (verify cross-refs exist)

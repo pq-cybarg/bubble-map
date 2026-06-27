@@ -104,6 +104,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": false
     },
+    "ATSDR": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
     "ATT": {
       "sector": "telecom",
       "has_exogenous_revenue": true
@@ -615,6 +619,14 @@
     "Cambricon": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
+    },
+    "Camp_Lejeune": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Camp_Lejeune_Justice_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Canary": {
       "sector": "financier",
@@ -1958,6 +1970,10 @@
     },
     "Mandiant": {
       "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
+    "Mass_Tort_Advertising": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "McDonalds": {
@@ -17164,6 +17180,97 @@
       "note": ""
     },
     {
+      "from": "Camp_Lejeune_Justice_Act",
+      "to": "Camp_Lejeune",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CLJA (10 Aug 2022, part of Honoring our PACT Act): exposed >=30 days 1953-1987 may sue the US in EDNC; sovereign immunity waived; Navy admin-claim exhaustion; 2-yr window (closed ~Aug 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "ATSDR",
+      "to": "Camp_Lejeune",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "links TCE/PCE/benzene/vinyl chloride to kidney cancer, multiple myeloma, leukemias, NHL, bladder, Parkinson's, adverse birth outcomes (population-level)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Camp_Lejeune",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "defendant (Dept of the Navy/DOJ): 409,910 admin claims + 3,600+ EDNC suits; Elective Option $100k-$550k; >$876M offered / >$665M paid (<1% resolved, May 2026); Track 1 bellwethers before Judge Dever",
+      "amount_usd": 665000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "Mass_Tort_Advertising",
+      "to": "Camp_Lejeune",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "most-advertised mass tort: ~$145M (2022, $111M TV); ~$250M Q4-2023 blitz; lead-gen + litigation-finance 'Wild West' (Bloomberg Law)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "Mass_Tort_Advertising",
+      "to": "Talc_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talc among the top-advertised mass torts (shared lead-gen/advertising hub)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "Mass_Tort_Advertising",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Roundup among the top-advertised mass torts (shared lead-gen/advertising hub)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
+      "from": "Camp_Lejeune",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the INVERSE case: Congress CREATED liability against the US + waived immunity (statutory liability-EXPANSION) vs corporate containment elsewhere; friction migrated to pace-of-payment (<1%), the ad economy, and the fee-cap fight (DOJ 25%; VETS Act 2%/10%)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-camp-lejeune.json",
+      "note": ""
+    },
+    {
       "from": "Iran_IRGC",
       "to": "Crude_Oil",
       "instrument": "other",
@@ -19284,10 +19391,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 894,
-    "num_edges": 1208,
+    "num_nodes": 898,
+    "num_edges": 1215,
     "num_financial_edges": 201,
-    "num_structural_edges": 1007,
+    "num_structural_edges": 1014,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19338,19 +19445,7 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -19358,13 +19453,20 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
+        "NVIDIA",
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -19372,15 +19474,14 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -19391,14 +19492,20 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -19601,6 +19708,13 @@
       },
       "AST_SpaceMobile": {
         "total_usd": 120000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ATSDR": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20496,6 +20610,20 @@
         "in_robust_core": false
       },
       "Cambricon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Camp_Lejeune": {
+        "total_usd": 665000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Camp_Lejeune_Justice_Act": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22854,6 +22982,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mass_Tort_Advertising": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "McDonalds": {
         "total_usd": 900000000,
         "circular_usd": 0,
@@ -25165,7 +25300,7 @@
         "in_robust_core": false
       },
       "US_Government": {
-        "total_usd": 22268400000,
+        "total_usd": 22933400000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25723,7 +25858,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -25738,7 +25873,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
