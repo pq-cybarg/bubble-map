@@ -1332,6 +1332,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Glyphosate": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Gold": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -1455,6 +1459,10 @@
     "IAEA": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "IARC": {
+      "sector": "standards",
+      "has_exogenous_revenue": false
     },
     "IBIT": {
       "sector": "crypto_infra",
@@ -2352,6 +2360,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Pesticide_Liability_Shields": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Pharmacies": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -2582,6 +2594,10 @@
     },
     "Rostin_Behnam": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Roundup_Litigation": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Rural_Infrastructure": {
@@ -15783,6 +15799,110 @@
       "note": ""
     },
     {
+      "from": "Monsanto",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Roundup/glyphosate failure-to-warn claims (NHL); bellwether losses Johnson 2018/Hardeman/Pilliod 2019",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "Bayer",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "inherited the liability via the 2018 Monsanto deal; ~177,000 claims; ~$11B+ paid/reserved; proposed $7.25B class settlement (awaiting Missouri approval)",
+      "amount_usd": 7250000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "Glyphosate",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the active ingredient at issue (world's most-used herbicide; basis of Roundup-Ready)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "IARC",
+      "to": "Glyphosate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2015: classified Group 2A 'probable carcinogen' (strong genotoxicity/oxidative-stress evidence)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "EPA",
+      "to": "Glyphosate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'not likely to be carcinogenic' \u2014 BUT 9th Cir (NRDC v EPA, 17 Jun 2022) VACATED the human-health finding as inconsistent + remanded; EPA withdrew the interim decision",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "SCOTUS",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Monsanto v. Durnell (7-2, 25 Jun 2026, Kavanaugh): FIFRA EXPRESSLY PREEMPTS state failure-to-warn; reversed Durnell's >$1M MO verdict; Jackson dissent (w/ Gorsuch) \u2014 should dismiss pending failure-to-warn claims",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "Pesticide_Liability_Shields",
+      "to": "Roundup_Litigation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ND HB1318 (Apr 2025, first) + GA SB144 (2025): EPA label = complete defense to state failure-to-warn (carve-out if EPA finds knowing withholding); Bayer-backed multi-state push",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
+      "from": "Roundup_Litigation",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a THIRD shield mechanism: federal preemption (Durnell 2026) + state label-defense statutes \u2014 distinct from the bankruptcy two-step (J&J) and opioid releases; same SCOTUS that STRUCK Purdue releases (2024) EXPANDED this shield",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-roundup-glyphosate.json",
+      "note": ""
+    },
+    {
       "from": "BlackRock",
       "to": "Aladdin",
       "instrument": "other",
@@ -19164,10 +19284,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 890,
-    "num_edges": 1200,
+    "num_nodes": 894,
+    "num_edges": 1208,
     "num_financial_edges": 201,
-    "num_structural_edges": 999,
+    "num_structural_edges": 1007,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19218,18 +19338,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -19243,13 +19351,20 @@
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
+        "AMD",
         "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Anthropic",
@@ -19259,8 +19374,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -19279,6 +19393,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -19984,7 +20104,7 @@
         "in_robust_core": false
       },
       "Bayer": {
-        "total_usd": 63000000000,
+        "total_usd": 70250000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21635,6 +21755,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Glyphosate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gold": {
         "total_usd": 86000000000,
         "circular_usd": 0,
@@ -21846,6 +21973,13 @@
         "in_robust_core": false
       },
       "IAEA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IARC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23420,6 +23554,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Pesticide_Liability_Shields": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pharmacies": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23821,6 +23962,13 @@
       },
       "Rostin_Behnam": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Roundup_Litigation": {
+        "total_usd": 7250000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

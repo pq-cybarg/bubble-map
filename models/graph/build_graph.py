@@ -212,6 +212,8 @@ ALIAS = {
  "Samsung_Repair_Terms":"Samsung_Repair_Terms","Biometric_Security":"Biometric_Security",
  # open-source / 3D-printing lawfare
  "Open_Source_Hardware":"Open_Source_Hardware","Bambu_Lab":"Bambu_Lab","Bambu Lab":"Bambu_Lab","Stratasys":"Stratasys","OrcaSlicer":"OrcaSlicer","Orca Slicer":"OrcaSlicer",
+ # roundup / glyphosate mass tort
+ "Roundup_Litigation":"Roundup_Litigation","Roundup":"Roundup_Litigation","Glyphosate":"Glyphosate","IARC":"IARC","Pesticide_Liability_Shields":"Pesticide_Liability_Shields",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -501,6 +503,8 @@ NODE_META = {
  "Samsung_Repair_Terms":("other",False),"Biometric_Security":("other",False),
  # open-source / 3D-printing lawfare (overlay)
  "Open_Source_Hardware":("other",False),"Bambu_Lab":("industrial",False),"Stratasys":("industrial",True),"OrcaSlicer":("tech",False),
+ # roundup / glyphosate mass tort (overlay)
+ "Roundup_Litigation":("other",False),"Glyphosate":("commodity",False),"IARC":("standards",False),"Pesticide_Liability_Shields":("state",False),
 }
 
 edges=[]
