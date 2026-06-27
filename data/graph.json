@@ -548,6 +548,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CHIPS_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CIPS": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2104,6 +2108,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Mubadala": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Municipal_Debt": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -3219,6 +3227,10 @@
     "Trump Media & Technology Group": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Trusted_Foundry": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
     },
     "Tudou_Guarantee": {
       "sector": "crypto_infra",
@@ -6789,6 +6801,97 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-electronics-parts-pairing.json",
+      "note": ""
+    },
+    {
+      "from": "Mubadala",
+      "to": "GlobalFoundries",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "majority owner (via ATIC, 2009-; ~80%+ at IPO) \u2014 Abu Dhabi sovereign wealth fund; funded the AMD spinout + 2010 Chartered merger; IPO Oct 2021 (NASDAQ GFS, ~$47B)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "AMD",
+      "to": "GlobalFoundries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GF spun out of AMD's manufacturing (2009); AMD went fabless; legacy wafer-supply agreement",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "IBM",
+      "to": "GlobalFoundries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "IBM PAID GF ~$1.5B (2015) to take over its fabs (East Fishkill NY + Essex Junction VT); after GF dropped 7nm, IBM SUED GF ~$2.5B (2021) for failing to deliver 7nm/10nm \u2014 settled 2021",
+      "amount_usd": 2500000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "CHIPS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CHIPS and Science Act (2022): federal semiconductor manufacturing incentives",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "CHIPS_Act",
+      "to": "GlobalFoundries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$1.5B direct CHIPS award (Feb 2024) to expand Malta NY (Fab 8) + Burlington VT for auto/defense/aerospace chips",
+      "amount_usd": 1500000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "GlobalFoundries",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DoD-accredited 'trusted foundry' / secure US chip manufacturing (Essex Junction VT RF/defense)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
+      "note": ""
+    },
+    {
+      "from": "Mubadala",
+      "to": "MGX",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Mubadala (Abu Dhabi SWF) is a backer of MGX, the Gulf AI-investment vehicle \u2014 same sovereign-capital cluster",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-globalfoundries.json",
       "note": ""
     },
     {
@@ -19442,10 +19545,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 901,
-    "num_edges": 1218,
-    "num_financial_edges": 203,
-    "num_structural_edges": 1015,
+    "num_nodes": 904,
+    "num_edges": 1225,
+    "num_financial_edges": 205,
+    "num_structural_edges": 1020,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19500,15 +19603,19 @@
         "SINK_lenders"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -19516,13 +19623,9 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -19530,15 +19633,9 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -19559,16 +19656,22 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20536,6 +20639,13 @@
       },
       "CFTC": {
         "total_usd": 67400000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CHIPS_Act": {
+        "total_usd": 1500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21942,7 +22052,7 @@
         "in_robust_core": false
       },
       "GlobalFoundries": {
-        "total_usd": 0,
+        "total_usd": 4000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22194,7 +22304,7 @@
         "in_robust_core": false
       },
       "IBM": {
-        "total_usd": 0,
+        "total_usd": 2500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23259,6 +23369,13 @@
       },
       "MtGox": {
         "total_usd": 9000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mubadala": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25217,6 +25334,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Trusted_Foundry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tudou_Guarantee": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25930,7 +26054,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 29,
+        "degree": 30,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -25945,7 +26069,7 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 18,
+        "source_files": 19,
         "layers": [
           "financial",
           "structural"

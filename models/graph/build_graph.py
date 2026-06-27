@@ -218,6 +218,8 @@ ALIAS = {
  "Camp_Lejeune":"Camp_Lejeune","Camp Lejeune":"Camp_Lejeune","Camp_Lejeune_Justice_Act":"Camp_Lejeune_Justice_Act","CLJA":"Camp_Lejeune_Justice_Act","Mass_Tort_Advertising":"Mass_Tort_Advertising","ATSDR":"ATSDR",
  # foundry/brocade/broadcom networking lineage
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
+ # globalfoundries deep dig
+ "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -513,6 +515,8 @@ NODE_META = {
  "Camp_Lejeune":("other",False),"Camp_Lejeune_Justice_Act":("state",False),"Mass_Tort_Advertising":("other",False),"ATSDR":("regulator",False),
  # foundry/brocade/broadcom networking lineage (overlay)
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
+ # globalfoundries deep dig (overlay)
+ "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
 }
 
 edges=[]
