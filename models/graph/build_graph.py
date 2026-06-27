@@ -198,6 +198,9 @@ ALIAS = {
  "Consumer_Rights_Wiki":"Consumer_Rights_Wiki","Consumer Rights Wiki":"Consumer_Rights_Wiki","iFixit":"iFixit",
  "DMCA_1201":"DMCA_1201","DMCA §1201":"DMCA_1201","Section_1201":"DMCA_1201","Copyright_Office":"Copyright_Office","US Copyright Office":"Copyright_Office",
  "State_R2R_Laws":"State_R2R_Laws","EU_R2R_Directive":"EU_R2R_Directive","Parts_Pairing":"Parts_Pairing","Parts-Pairing":"Parts_Pairing","R2R_Opposition":"R2R_Opposition",
+ # McDonald's / Taylor / Kytch (R2R commercial-equipment case)
+ "Kytch":"Kytch","Taylor_Foodservice":"Taylor_Foodservice","Taylor Commercial Foodservice":"Taylor_Foodservice","Taylor":"Taylor_Foodservice",
+ "Middleby":"Middleby","Middleby Corp":"Middleby","McDonalds":"McDonalds","McDonald's":"McDonalds","Public_Knowledge":"Public_Knowledge","Public Knowledge":"Public_Knowledge",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -473,6 +476,9 @@ NODE_META = {
  "FULU_Foundation":("political",False),"R2R_Opposition":("political",False),"Louis_Rossmann":("person",False),
  "iFixit":("industrial",False),"DMCA_1201":("state",False),"State_R2R_Laws":("state",False),"EU_R2R_Directive":("state",False),
  "Copyright_Office":("regulator",True),"FTC":("regulator",True),
+ # McDonald's / Taylor / Kytch (R2R commercial-equipment case; overlay)
+ "Kytch":("tech",False),"Taylor_Foodservice":("industrial",False),"Middleby":("industrial",True),
+ "McDonalds":("industrial",True),"Public_Knowledge":("political",False),
 }
 
 edges=[]

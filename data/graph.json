@@ -1732,6 +1732,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Kytch": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "LBMA": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1900,6 +1904,10 @@
       "sector": "security_research",
       "has_exogenous_revenue": false
     },
+    "McDonalds": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Medical_Device_Standards": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -1934,6 +1942,10 @@
     },
     "Microsoft": {
       "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
+    "Middleby": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Midjourney": {
@@ -2351,6 +2363,10 @@
     "PsiQuantum": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Public_Knowledge": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Public_Water_Systems": {
       "sector": "other",
@@ -2979,6 +2995,10 @@
     "TapBit": {
       "sector": "exchange",
       "has_exogenous_revenue": true
+    },
+    "Taylor_Foodservice": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "TechCompanies": {
       "sector": "tech",
@@ -15566,6 +15586,136 @@
       "note": ""
     },
     {
+      "from": "Kytch",
+      "to": "Taylor_Foodservice",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "trade-secret suit (2021, Alameda): franchisee-obtained Kytch device allegedly routed to Taylor; Kytch won a 2021 preliminary injunction, but its 2024 bid to enjoin Taylor's connected feature was DENIED (court: no evidence Taylor incorporated Kytch trade secrets)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Kytch",
+      "to": "McDonalds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$900M suit (2021): false advertising + tortious interference over the Nov-2020 franchisee email; an adverse ruling led to a 2024-25 settlement",
+      "amount_usd": 900000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "McDonalds",
+      "to": "Taylor_Foodservice",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exclusive soft-serve equipment supplier; Taylor + distributors earn recurring service revenue on repairs (the 'repair racket' allegation, both-sides)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Middleby",
+      "to": "Taylor_Foodservice",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Middleby Corp parent \u2014 acquired Taylor Commercial Foodservice (2018)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Taylor_Foodservice",
+      "to": "DMCA_1201",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "password-locked service menu + access-controlled diagnostics invoked \u00a71201 \u2014 the lock the 2024 food-equipment exemption targets",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Taylor_Foodservice",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the canonical commercial-equipment repair-lockout case (locked diagnostics + cryptic codes)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Kytch",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the diagnostic-access startup that became R2R's commercial-equipment test case",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "iFixit",
+      "to": "Copyright_Office",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-petitioned (with Public Knowledge) for the 2024 \u00a71201 food-equipment exemption; dismantled a Taylor machine to demonstrate repairability",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Public_Knowledge",
+      "to": "Copyright_Office",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-petitioned for the 2024 exemption ('Free the McFlurry'); FTC + DOJ filed a supporting joint comment",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
+      "from": "Public_Knowledge",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "consumer-tech advocacy org; \u00a71201 + repair reform",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-mcdonalds-kytch-taylor.json",
+      "note": ""
+    },
+    {
       "from": "DTC_Cede",
       "to": "US_Banks",
       "instrument": "other",
@@ -18440,10 +18590,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 865,
-    "num_edges": 1152,
-    "num_financial_edges": 187,
-    "num_structural_edges": 965,
+    "num_nodes": 870,
+    "num_edges": 1162,
+    "num_financial_edges": 188,
+    "num_structural_edges": 974,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -18494,12 +18644,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Microsoft",
@@ -18514,8 +18664,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -18533,6 +18683,12 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -18541,20 +18697,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -21611,6 +21761,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Kytch": {
+        "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "LBMA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21905,6 +22062,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "McDonalds": {
+        "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Medical_Device_Standards": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21967,6 +22131,13 @@
         "circularity_ratio": 0.956,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Middleby": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Midjourney": {
         "total_usd": 0,
@@ -22691,6 +22862,13 @@
       },
       "PsiQuantum": {
         "total_usd": 1000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Public_Knowledge": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23789,6 +23967,13 @@
         "in_robust_core": false
       },
       "TapBit": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Taylor_Foodservice": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-right-to-repair.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-regulatory.json: 1 shared entities
-- digitalid-device-ownership-erosion.json: 1 shared entities
-- macro-consumer-abs-subprime.json: 1 shared entities
-- macro-firstbrands-ubs.json: 1 shared entities
-- influence-meta-childsafety.json: 1 shared entities
-- spec-cross-border-settlement-rails.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
+## Newest file `spec-mcdonalds-kytch-taylor.json` — related files by shared entities (verify cross-refs exist)
