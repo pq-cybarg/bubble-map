@@ -129,9 +129,11 @@ Kytch,McDonalds,other,900000000,contested,False,False,spec-mcdonalds-kytch-taylo
 Genesis,Gemini_Earn,other,900000000,documented,False,False,spec-crypto-collapse-cluster.json
 US_Government,Camp_Lejeune,other,665000000,documented,False,False,spec-camp-lejeune.json
 NVIDIA,TerraPower,other,650000000,closed,False,False,fin-meta-family.json
+Flint_Water_Crisis,Disaster_Compensation,other,626000000,contested,False,False,spec-environmental-disasters.json
 Lazarus_Group,Ronin_Network,regulatory_legal,625000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 NVIDIA,Quantinuum,other,600000000,closed,False,False,macro-crqc-quantum-landscape.json
 NVIDIA,Nscale,equity,600000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
+East_Palestine,Disaster_Compensation,other,600000000,contested,False,False,spec-environmental-disasters.json
 Chemours,AFFF_MDL,other,592000000,documented,False,False,spec-pfas-forever-chemicals.json
 First_Brands,UBS_OConnor,debt,500000000,2025,False,False,macro-firstbrands-ubs.json
 Lambda,SINK_lenders,debt,500000000,outstanding,False,False,fin-coreweave-oracle.json
@@ -142,6 +144,7 @@ DuPont,AFFF_MDL,other,400000000,documented,False,False,spec-pfas-forever-chemica
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 US_Government,United_States_Antimony,relationship,350000000,committed,True,False,macro-critical-minerals-equities.json
 Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
+EPA,East_Palestine,other,310000000,documented,False,False,spec-environmental-disasters.json
 NSA,Cryptography_Standards,surveillance_security,250000000,documented,False,False,spec-disclosures-surveillance.json
 AMLO_Thailand,Yim_Leak,other,240000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Google,QuEra,other,230000000,closed,False,False,spec-quantum-computing-competitive-landscape.json
@@ -771,6 +774,13 @@ MGX,xAI,equity,,completed,False,False,fin-google-amazon-anthropic-meta.json
 Unification_Church,Japan_LDP,other,,closed,False,False,spec-japan-politics-social.json
 Sanseito,Japan_society,other,,open,False,False,spec-japan-politics-social.json
 Zenko_Kurishita,Card_networks,other,,open,False,False,spec-japan-politics-social.json
+Zadroga_Act,VCF_9_11,other,,documented,False,False,spec-environmental-disasters.json
+Ken_Feinberg,VCF_9_11,other,,documented,False,False,spec-environmental-disasters.json
+US_Government,VCF_9_11,other,,documented,False,False,spec-environmental-disasters.json
+VCF_9_11,Disaster_Compensation,regulatory_legal,,documented,False,False,spec-environmental-disasters.json
+US_Government,Flint_Water_Crisis,merger,,contested,False,False,spec-environmental-disasters.json
+Norfolk_Southern,East_Palestine,other,,documented,False,False,spec-environmental-disasters.json
+Disaster_Compensation,Liability_Engineering,other,,documented,False,False,spec-environmental-disasters.json
 Lockheed_Martin,Defense_Primes,other,,documented,False,False,spec-defense-primes-pqc.json
 RTX,Raytheon,other,,documented,False,False,spec-defense-primes-pqc.json
 Raytheon,Defense_Primes,other,,documented,False,False,spec-defense-primes-pqc.json

@@ -1060,6 +1060,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Disaster_Compensation": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Disfavored_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1134,6 +1138,10 @@
     },
     "EU_R2R_Directive": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "East_Palestine": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "EchoStar_Boost": {
@@ -1330,6 +1338,10 @@
     },
     "Flare": {
       "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "Flint_Water_Crisis": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Fnality": {
@@ -1888,6 +1900,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Ken_Feinberg": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Keonne_Rodriguez": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2342,6 +2358,10 @@
     },
     "Nondepository financial institutions": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Norfolk_Southern": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "North_Korea": {
@@ -3564,6 +3584,10 @@
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
     },
+    "VCF_9_11": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "VanEck": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -3742,6 +3766,10 @@
     },
     "ZEISS_SMT": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "Zadroga_Act": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Zaibatsu_Keiretsu": {
@@ -12941,6 +12969,136 @@
       "note": ""
     },
     {
+      "from": "Zadroga_Act",
+      "to": "VCF_9_11",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "James Zadroga 9/11 Health and Compensation Act (2011) revived the VCF for responders/survivors + WTC Health Program; VCF Permanent Authorization Act (2019) funded it through 2090",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "Ken_Feinberg",
+      "to": "VCF_9_11",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "special master of the original VCF (2001-04, ~$7B); the no-fault-fund template he later reused (BP, etc.)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "VCF_9_11",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal no-fault fund: ~$7B original (waiving airline suits) + Zadroga responders track; funded through 2090",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "VCF_9_11",
+      "to": "Disaster_Compensation",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "the FEDERAL no-fault fund mechanism (trades litigation rights for speed)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Flint_Water_Crisis",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "government-caused (state emergency-manager cost-cutting switched Flint's water source, 2014, no corrosion control -> lead + Legionnaires' 12+ deaths)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "Flint_Water_Crisis",
+      "to": "Disaster_Compensation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "$626M settlement (2021, child-weighted) \u2014 but criminal charges vs officials (incl. ex-Gov Snyder) DISMISSED (2022-23, MI Supreme Court: improper one-judge grand jury)",
+      "amount_usd": 626000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "Norfolk_Southern",
+      "to": "East_Palestine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "3 Feb 2023 derailment + controversial vent-and-burn of vinyl chloride; NTSB (2024) faulted an overheated bearing + found the burn unnecessary",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "EPA",
+      "to": "East_Palestine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "oversaw cleanup + a ~$310M settlement (2024) with Norfolk Southern (on top of a ~$600M resident class settlement)",
+      "amount_usd": 310000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "East_Palestine",
+      "to": "Disaster_Compensation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$600M class + ~$310M EPA settlements (2024) \u2014 residents dispute adequacy + long-term health monitoring",
+      "amount_usd": 600000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
+      "from": "Disaster_Compensation",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the COMPENSATION side of the ledger (federal fund / gov settlement / corporate settlement) \u2014 the constructive mirror of liability-shedding (two-step, preemption, DPA); VCF = state absorbs+channels liability",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-environmental-disasters.json",
+      "note": ""
+    },
+    {
       "from": "Lockheed_Martin",
       "to": "Defense_Primes",
       "instrument": "other",
@@ -20729,10 +20887,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 953,
-    "num_edges": 1301,
-    "num_financial_edges": 219,
-    "num_structural_edges": 1082,
+    "num_nodes": 960,
+    "num_edges": 1311,
+    "num_financial_edges": 220,
+    "num_structural_edges": 1091,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20783,7 +20941,23 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "AMD",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -20791,20 +20965,9 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
+        "Anthropic",
+        "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -20815,17 +20978,6 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -20844,6 +20996,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -22724,6 +22882,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Disaster_Compensation": {
+        "total_usd": 1226000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Disfavored_platforms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22802,7 +22967,7 @@
         "in_robust_core": false
       },
       "EPA": {
-        "total_usd": 0,
+        "total_usd": 310000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22852,6 +23017,13 @@
       },
       "EU_R2R_Directive": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "East_Palestine": {
+        "total_usd": 910000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23195,6 +23367,13 @@
       },
       "Flare": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Flint_Water_Crisis": {
+        "total_usd": 626000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24173,6 +24352,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ken_Feinberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Keonne_Rodriguez": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24966,6 +25152,13 @@
       },
       "Nondepository financial institutions": {
         "total_usd": 1972670000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Norfolk_Southern": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -27106,6 +27299,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "VCF_9_11": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanEck": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27421,6 +27621,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zadroga_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zaibatsu_Keiretsu": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27581,7 +27788,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 32,
+        "degree": 34,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -27598,7 +27805,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 21,
+        "source_files": 22,
         "layers": [
           "financial",
           "structural"

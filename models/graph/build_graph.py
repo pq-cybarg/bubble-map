@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # environmental/public-health disasters
+ "VCF_9_11":"VCF_9_11","Zadroga_Act":"Zadroga_Act","Flint_Water_Crisis":"Flint_Water_Crisis","Flint":"Flint_Water_Crisis","East_Palestine":"East_Palestine","Norfolk_Southern":"Norfolk_Southern","Ken_Feinberg":"Ken_Feinberg","Disaster_Compensation":"Disaster_Compensation",
  # boeing 737 max
  "Boeing_737_MAX":"Boeing_737_MAX","737_MAX":"Boeing_737_MAX","MCAS":"MCAS","Spirit_AeroSystems":"Spirit_AeroSystems","Boeing_Criminal_Case":"Boeing_Criminal_Case","FAA":"FAA",
  # tobacco master settlement
@@ -537,6 +539,9 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # environmental/public-health disasters (overlay)
+ "VCF_9_11":("other",False),"Zadroga_Act":("state",False),"Flint_Water_Crisis":("other",False),"East_Palestine":("other",False),
+ "Norfolk_Southern":("industrial",True),"Ken_Feinberg":("person",False),"Disaster_Compensation":("other",False),
  # boeing 737 max (overlay)
  "Boeing_737_MAX":("industrial",False),"MCAS":("industrial",False),"Spirit_AeroSystems":("industrial",False),"Boeing_Criminal_Case":("other",False),"FAA":("regulator",True),
  # tobacco master settlement (overlay)
