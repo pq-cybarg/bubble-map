@@ -220,6 +220,9 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # ripple / xrp tradfi rails
+ "Chris_Larsen":"Chris_Larsen","Hidden_Road":"Hidden_Road","SWIFT":"SWIFT","ISO_20022":"ISO_20022","ISO20022":"ISO_20022",
+ "BIS":"BIS","Bank for International Settlements":"BIS","IMF":"IMF","World_Bank":"World_Bank","World Bank":"World_Bank","WEF":"WEF","World Economic Forum":"WEF",
  # telecom carriers (extends existing ATT/Verizon/TMobile/US_Telecoms/CALEA_Backdoor/SaltTyphoon)
  "AT&T":"ATT","AT&T Inc":"ATT","T-Mobile":"TMobile","T_Mobile":"TMobile","T-Mobile US":"TMobile",
  "Mint_Mobile":"Mint_Mobile","Mint Mobile":"Mint_Mobile","FirstNet":"FirstNet","Helium_Mobile":"Helium_Mobile","Helium Mobile":"Helium_Mobile","EchoStar_Boost":"EchoStar_Boost","BitPay":"BitPay",
@@ -524,6 +527,9 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # ripple / xrp tradfi rails (overlay)
+ "Chris_Larsen":("person",False),"Hidden_Road":("financier",False),"SWIFT":("financial_infra",True),"ISO_20022":("standards",False),
+ "BIS":("financial_infra",True),"IMF":("financial_infra",True),"World_Bank":("financial_infra",True),"WEF":("political",False),
  # telecom carriers (overlay; ATT/Verizon/TMobile/US_Telecoms already in meta above)
  "Mint_Mobile":("telecom",False),"FirstNet":("telecom",False),"Helium_Mobile":("crypto_infra",False),"EchoStar_Boost":("telecom",True),"BitPay":("crypto_firm",False),
  # networking & security industry (overlay)

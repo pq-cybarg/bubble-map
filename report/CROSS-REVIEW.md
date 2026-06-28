@@ -26,17 +26,17 @@
 - **NVIDIA** — 27 files
 - **Stargate** — 21 files
 - **Anthropic** — 21 files
-- **JPMorgan** — 18 files
+- **JPMorgan** — 19 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-telecom-carriers.json` — related files by shared entities (verify cross-refs exist)
-- spec-foundry-brocade-broadcom.json: 1 shared entities
-- spec-asbestos-mass-tort.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
-- spec-pfas-forever-chemicals.json: 1 shared entities
-- spec-seed-ip-corn.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
-- spec-open-source-3dprinting-lawfare.json: 1 shared entities
-- spec-jj-talc-texas-two-step.json: 1 shared entities
+## Newest file `spec-ripple-tradfi-rails.json` — related files by shared entities (verify cross-refs exist)
+- altcoin-lens.json: 7 shared entities
+- spec-sec-sdny-regulatory.json: 6 shared entities
+- spec-market-plumbing-control.json: 5 shared entities
+- spec-blockchain-ecosystem.json: 5 shared entities
+- spec-exchanges-asia.json: 5 shared entities
+- fin-hedera-connections.json: 4 shared entities
+- temporal-bridges.json: 4 shared entities
+- spec-crypto-sec-epstein.json: 3 shared entities

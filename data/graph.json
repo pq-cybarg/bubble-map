@@ -320,6 +320,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "BIS": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "BJP": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -747,6 +751,10 @@
     "Chinese_Teapots": {
       "sector": "energy",
       "has_exogenous_revenue": true
+    },
+    "Chris_Larsen": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Cigna": {
       "sector": "other",
@@ -1496,6 +1504,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "Hidden_Road": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "Hiero_LFDT": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -1592,6 +1604,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": false
     },
+    "IMF": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "IPFS": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1613,6 +1629,10 @@
       "has_exogenous_revenue": false
     },
     "ISO_14971": {
+      "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "ISO_20022": {
       "sector": "standards",
       "has_exogenous_revenue": false
     },
@@ -2876,6 +2896,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "SWIFT": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "Sackler_Family": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3524,6 +3548,10 @@
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
     },
+    "WEF": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "WISeART": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3576,6 +3604,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "World_Bank": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "World_Liberty_Financial": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3586,6 +3618,10 @@
     },
     "Wyoming": {
       "sector": "state",
+      "has_exogenous_revenue": true
+    },
+    "XRP": {
+      "sector": "other",
       "has_exogenous_revenue": true
     },
     "XRPL": {
@@ -19429,6 +19465,149 @@
       "note": ""
     },
     {
+      "from": "Chris_Larsen",
+      "to": "Ripple",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "co-founder + executive chairman (ex-E-LOAN/Prosper)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "Hidden_Road",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquired prime broker Hidden Road for $1.25B (announced 8 Apr 2025; closed Oct 2025)",
+      "amount_usd": 1250000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Hidden_Road",
+      "to": "Ripple_Prime",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rebranded as Ripple Prime \u2014 first crypto-firm global multi-asset prime broker; FINRA broker-dealer license",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "SWIFT",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "positions XRP/ODL (On-Demand Liquidity) as a cross-border ALTERNATIVE to SWIFT correspondent banking \u2014 competition, not adoption",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "SWIFT",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "migrated FI-to-FI cross-border messaging to ISO 20022; MT->ISO coexistence ended 22 Nov 2025 \u2014 a data STANDARD, endorses no asset",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "XRP",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "RippleNet/XRP 'technically aligned' with ISO 20022 \u2014 BUT ISO 20022 certifies NO cryptocurrency; the 'ISO 20022 coin list' (XRP/XLM/HBAR/QNT/XDC/ADA/ALGO) is community/marketing, not an ISO/SWIFT endorsement",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "JPMorgan",
+      "to": "JPM_Coin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "built its OWN bank deposit token + blockchain unit (JPM Coin -> Kinexys) \u2014 NOT XRP-based (refutes 'JPM runs on XRP')",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "BIS",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BIS/CPMI promotes ISO 20022 for cross-border payments; its CBDC/tokenization pilots (mBridge, Agor\u00e1) use bespoke DLT, NOT XRPL",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "IMF",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "promotes ISO 20022 in payment-system modernization; the 'IMF SDR = XRP bridge asset' claim is UNVERIFIED (the SDR is a fiat-currency basket, not crypto)",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "World_Bank",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "promotes ISO 20022 for payment-system development; no documented XRP integration",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Ripple",
+      "to": "WEF",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "participated in WEF digital-asset/CBDC working groups \u2014 participation, NOT institutional adoption of XRP",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ripple-tradfi-rails.json",
+      "note": ""
+    },
+    {
       "from": "Corporate_Credit_Unions",
       "to": "Credit_Unions",
       "instrument": "other",
@@ -20028,10 +20207,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 924,
-    "num_edges": 1256,
-    "num_financial_edges": 214,
-    "num_structural_edges": 1042,
+    "num_nodes": 933,
+    "num_edges": 1267,
+    "num_financial_edges": 216,
+    "num_structural_edges": 1051,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20082,22 +20261,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
@@ -20106,9 +20269,25 @@
         "Anthropic"
       ],
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -20116,9 +20295,15 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -20141,6 +20326,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20148,13 +20334,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20722,6 +20901,13 @@
         "in_robust_core": false
       },
       "BIPM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BIS": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21471,6 +21657,13 @@
         "in_robust_core": false
       },
       "Chinese_Teapots": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chris_Larsen": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22786,6 +22979,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hidden_Road": {
+        "total_usd": 1250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hiero_LFDT": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22954,6 +23154,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IMF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IPFS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22990,6 +23197,13 @@
         "in_robust_core": false
       },
       "ISO_14971": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ISO_20022": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24852,7 +25066,7 @@
         "in_robust_core": false
       },
       "Ripple": {
-        "total_usd": 1300000000,
+        "total_usd": 2550000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25195,6 +25409,13 @@
         "in_robust_core": false
       },
       "SVR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SWIFT": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26335,6 +26556,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "WEF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WISeART": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26426,6 +26654,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "World_Bank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "World_Liberty_Financial": {
         "total_usd": 4775000000,
         "circular_usd": 0,
@@ -26441,6 +26676,13 @@
         "in_robust_core": false
       },
       "Wyoming": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26794,6 +27036,29 @@
         "both_layers": true
       },
       {
+        "node": "Ripple",
+        "degree": 19,
+        "neighbor_sectors": [
+          "bank",
+          "crypto_infra",
+          "dlt",
+          "financial_infra",
+          "financier",
+          "other",
+          "person",
+          "political",
+          "regulator",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Microsoft",
         "degree": 14,
         "neighbor_sectors": [
@@ -26808,28 +27073,6 @@
         ],
         "n_neighbor_sectors": 8,
         "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Ripple",
-        "degree": 15,
-        "neighbor_sectors": [
-          "bank",
-          "crypto_infra",
-          "dlt",
-          "financier",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"
