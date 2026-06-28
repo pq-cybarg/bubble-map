@@ -88,6 +88,7 @@ Broadcom,Brocade,debt,5900000000,documented,False,False,spec-foundry-brocade-bro
 State_AGs,JNJ,other,5000000000,documented,False,False,spec-opioid-crisis.json
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
 Binance,World_Liberty_Financial,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
+Spirit_AeroSystems,Boeing_737_MAX,acquisition,4700000000,documented,False,False,spec-boeing-737max.json
 FinCEN,Huione,other,4000000000,documented,False,False,spec-se-asia-scam-crime-nexus.json
 NSCC,Robinhood,other,3700000000,closed,False,False,spec-market-plumbing-control.json
 NVIDIA,CoreWeave,equity,3660000000,13F-~11pct,True,False,"spec-sec-filings-primary.json,fin-nvidia-openai.json,fin-coreweave-oracle.json"
@@ -603,6 +604,12 @@ Municipal_Debt,Pension_Funds,other,,open,False,False,macro-municipal-public-fina
 CRE_Market,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
 Federal_Transfers,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
 Municipal_Debt,US_household_credit,other,,open,False,False,macro-municipal-public-finance.json
+Boeing,Boeing_737_MAX,other,,documented,False,False,spec-boeing-737max.json
+Boeing_737_MAX,MCAS,other,,documented,False,False,spec-boeing-737max.json
+FAA,Boeing_737_MAX,compute_commitment,,contested,False,False,spec-boeing-737max.json
+Boeing_737_MAX,Boeing_Criminal_Case,surveillance_security,,documented,False,False,spec-boeing-737max.json
+DOJ,Boeing_Criminal_Case,regulatory_legal,,contested,False,False,spec-boeing-737max.json
+Boeing_Criminal_Case,Liability_Engineering,regulatory_legal,,documented,False,False,spec-boeing-737max.json
 IonQ,Vector_Atomic,acquisition,,committed,False,False,spec-quantum-computing-competitive-landscape.json
 Honeywell,Quantinuum,merger,,closed,False,False,spec-quantum-computing-competitive-landscape.json
 NVIDIA,IonQ,other,,documented,False,False,spec-quantum-computing-competitive-landscape.json

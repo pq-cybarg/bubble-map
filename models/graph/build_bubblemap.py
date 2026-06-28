@@ -101,6 +101,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Cross_River_Bank":"Cross River Bank","Visa":"Visa","X_Money":"X Money (X Corp / Visa)",
  "XRP_ARG_Lore":"XRP ARG / meme lore","QFS_Great_Reset":"QFS / 'Great Reset' claim","Epistemic_Discipline":"Epistemic discipline (the method)",
  "Tobacco_MSA":"Tobacco MSA (1998)","Big_Tobacco":"Big Tobacco (Big-4)","Altria":"Altria (Philip Morris)","Truth_Initiative":"Truth Initiative","Tobacco_Bonds":"Tobacco settlement bonds",
+ "Boeing_737_MAX":"Boeing 737 MAX","MCAS":"MCAS (flight-control system)","Spirit_AeroSystems":"Spirit AeroSystems","Boeing_Criminal_Case":"Boeing DOJ case (DPA→NPA)","FAA":"FAA",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

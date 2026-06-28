@@ -484,6 +484,14 @@
       "sector": "defense",
       "has_exogenous_revenue": true
     },
+    "Boeing_737_MAX": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Boeing_Criminal_Case": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Boeing_safety_dispute": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1206,6 +1214,10 @@
     },
     "F5": {
       "sector": "tech",
+      "has_exogenous_revenue": true
+    },
+    "FAA": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "FBI": {
@@ -2055,6 +2067,10 @@
     "MAS": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "MCAS": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "MEF": {
       "sector": "state",
@@ -3111,6 +3127,10 @@
     "Spanish_Government_SETT": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Spirit_AeroSystems": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Splunk": {
       "sector": "tech",
@@ -10292,6 +10312,97 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "macro-municipal-public-finance.json",
+      "note": ""
+    },
+    {
+      "from": "Boeing",
+      "to": "Boeing_737_MAX",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "developed the 737 MAX; key staff deceived the FAA about MCAS (per the DOJ charge)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "Boeing_737_MAX",
+      "to": "MCAS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "single-AoA-sensor MCAS, undisclosed to pilots -> Lion Air 610 (29 Oct 2018, 189) + Ethiopian 302 (10 Mar 2019, 157) = 346 dead; grounded Mar 2019-late 2020",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "FAA",
+      "to": "Boeing_737_MAX",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "delegated certification to Boeing via ODA self-certification (the capture); grounded then recertified the MAX; output capped at 38/month after 2024",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "Spirit_AeroSystems",
+      "to": "Boeing_737_MAX",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "fuselage supplier; the 5 Jan 2024 Alaska door-plug blowout (missing bolts) was a QC/process failure; Boeing re-acquired Spirit (2024, ~$4.7B)",
+      "amount_usd": 4700000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "Boeing_737_MAX",
+      "to": "Boeing_Criminal_Case",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "the 346-death crashes + the 2024 door-plug breach drove the DOJ fraud case",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Boeing_Criminal_Case",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "2021 DPA $2.5B (conspiracy to defraud FAA); breach found May 2024; Jul-2024 guilty plea REJECTED by Judge O'Connor (Dec 2024); 2025 NPA ~$1.1B avoiding conviction; case DISMISSED 6 Nov 2025 (judge: 'fails to secure accountability'); families appealing",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "Boeing_Criminal_Case",
+      "to": "Liability_Engineering",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "the PROSECUTORIAL-DEFERRAL variant of liability containment: DPA -> breach -> NPA converted felony exposure into fines, no criminal conviction despite 346 deaths",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-boeing-737max.json",
       "note": ""
     },
     {
@@ -20618,10 +20729,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 948,
-    "num_edges": 1294,
-    "num_financial_edges": 217,
-    "num_structural_edges": 1077,
+    "num_nodes": 953,
+    "num_edges": 1301,
+    "num_financial_edges": 219,
+    "num_structural_edges": 1082,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20672,28 +20783,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -20709,6 +20820,12 @@
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -20727,12 +20844,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -21599,6 +21710,20 @@
         "in_robust_core": false
       },
       "Boeing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Boeing_737_MAX": {
+        "total_usd": 4700000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Boeing_Criminal_Case": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22866,6 +22991,13 @@
         "in_robust_core": false
       },
       "F5": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FAA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24350,6 +24482,13 @@
         "in_robust_core": false
       },
       "MAS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MCAS": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26199,6 +26338,13 @@
       },
       "Spanish_Government_SETT": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Spirit_AeroSystems": {
+        "total_usd": 4700000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
