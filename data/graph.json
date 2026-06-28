@@ -1088,6 +1088,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Djibouti_Base": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Do_Kwon": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1488,6 +1492,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Gwadar": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
     "HBM": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -1510,6 +1518,10 @@
     },
     "Hamas": {
       "sector": "defense",
+      "has_exogenous_revenue": false
+    },
+    "Hambantota": {
+      "sector": "logistics",
       "has_exogenous_revenue": false
     },
     "Hamilton_Lane": {
@@ -1960,6 +1972,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "Kyaukpyu": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
     "Kyle_Davies": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2348,6 +2364,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Necklace_of_Diamonds": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Neobanks": {
       "sector": "financial_infra",
       "has_exogenous_revenue": false
@@ -2595,6 +2615,10 @@
     "Philippines": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Piraeus_Port": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
     },
     "Politburo_Standing_Committee": {
       "sector": "state",
@@ -3259,6 +3283,10 @@
     "Stratasys": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "String_of_Pearls": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Stuart_Alderoty": {
       "sector": "person",
@@ -19557,6 +19585,175 @@
       "note": ""
     },
     {
+      "from": "China",
+      "to": "Gwadar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CPEC flagship deep-water port (Pakistan, Arabian Sea) \u2014 Malacca-bypass outlet",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Hambantota",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "99-year lease to China Merchants Port (2017, ~$1.1B) \u2014 the 'debt-trap' case, CORRECTED below",
+      "amount_usd": 1100000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Djibouti_Base",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "China's FIRST overseas military base (opened 2017), beside US Camp Lemonnier \u2014 the one actual base",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Kyaukpyu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Myanmar deep-sea port + oil/gas pipelines into Yunnan \u2014 Malacca-bypass",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "COSCO",
+      "to": "Piraeus_Port",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "COSCO majority-owns Piraeus (Greece) \u2014 China's Mediterranean gateway into Europe",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Gwadar",
+      "to": "String_of_Pearls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "node in the 'String of Pearls' framing (US/India term)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Hambantota",
+      "to": "String_of_Pearls",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "node in the framing (the contested 'debt-trap' exemplar)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Djibouti_Base",
+      "to": "String_of_Pearls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "node in the framing (the one confirmed base)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Kyaukpyu",
+      "to": "String_of_Pearls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "node in the framing",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Piraeus_Port",
+      "to": "String_of_Pearls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "node in the framing (Mediterranean terminus)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "String_of_Pearls",
+      "to": "BRI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the maritime dimension China frames as the Maritime Silk Road / BRI; 'String of Pearls' is the US/India ENCIRCLEMENT reading of the same ports",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "Necklace_of_Diamonds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "India's counter: access at Chabahar/Sittwe/Duqm/Sabang/Assumption Is. + Quad/AUKUS naval cooperation",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
+      "from": "Necklace_of_Diamonds",
+      "to": "String_of_Pearls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "positioned as the counter to the perceived encirclement (analytical label, not an official program)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-string-of-pearls.json",
+      "note": ""
+    },
+    {
       "from": "Credit_Unions",
       "to": "US_household_credit",
       "instrument": "other",
@@ -21209,10 +21406,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 969,
-    "num_edges": 1333,
-    "num_financial_edges": 224,
-    "num_structural_edges": 1109,
+    "num_nodes": 976,
+    "num_edges": 1346,
+    "num_financial_edges": 226,
+    "num_structural_edges": 1120,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -21263,6 +21460,18 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -21271,25 +21480,8 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -21297,21 +21489,26 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -22652,7 +22849,7 @@
         "in_robust_core": false
       },
       "China": {
-        "total_usd": 86000000000,
+        "total_usd": 87100000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23247,6 +23444,13 @@
         "in_robust_core": false
       },
       "Divisive_Merger": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Djibouti_Base": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23953,6 +24157,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Gwadar": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "HBM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23990,6 +24201,13 @@
       },
       "Hamas": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hambantota": {
+        "total_usd": 1100000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24779,6 +24997,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Kyaukpyu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kyle_Davies": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25458,6 +25683,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Necklace_of_Diamonds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Neobanks": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25886,6 +26118,13 @@
         "in_robust_core": false
       },
       "Philippines": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Piraeus_Port": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27054,6 +27293,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "String_of_Pearls": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stuart_Alderoty": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28143,7 +28389,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 43,
+        "degree": 47,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -28165,7 +28411,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 21,
+        "source_files": 22,
         "layers": [
           "financial",
           "structural"

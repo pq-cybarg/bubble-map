@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-corridors.json` — related files by shared entities (verify cross-refs exist)
-- spec-india-state-network.json: 2 shared entities
-- spec-cross-border-settlement-rails.json: 2 shared entities
-- spec-brics-dedollarization.json: 2 shared entities
-- spec-lens-rereads.json: 1 shared entities
-- temporal-bridges.json: 1 shared entities
-- geopolitics-india-swing-power.json: 1 shared entities
-- spec-sec-filings-primary.json: 1 shared entities
-- spec-farm-equipment-r2r.json: 1 shared entities
+## Newest file `spec-string-of-pearls.json` — related files by shared entities (verify cross-refs exist)

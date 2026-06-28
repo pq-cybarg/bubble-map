@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # string of pearls
+ "String_of_Pearls":"String_of_Pearls","Gwadar":"Gwadar","Hambantota":"Hambantota","Djibouti_Base":"Djibouti_Base","Kyaukpyu":"Kyaukpyu","Piraeus_Port":"Piraeus_Port","Piraeus":"Piraeus_Port","Necklace_of_Diamonds":"Necklace_of_Diamonds",
  # competing infrastructure corridors
  "Infrastructure_Corridors":"Infrastructure_Corridors","PGII":"PGII","Lobito_Corridor":"Lobito_Corridor","Lobito Corridor":"Lobito_Corridor","Global_Gateway":"Global_Gateway","Global Gateway":"Global_Gateway",
  "INSTC":"INSTC","Middle_Corridor":"Middle_Corridor","Middle Corridor":"Middle_Corridor","Turkey":"Turkey","Turkiye":"Turkey",
@@ -542,6 +544,9 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # string of pearls (overlay)
+ "String_of_Pearls":("state",False),"Necklace_of_Diamonds":("state",False),"Gwadar":("logistics",False),"Hambantota":("logistics",False),
+ "Djibouti_Base":("defense",False),"Kyaukpyu":("logistics",False),"Piraeus_Port":("logistics",False),
  # competing infrastructure corridors (overlay)
  "Infrastructure_Corridors":("logistics",False),"PGII":("state",False),"Lobito_Corridor":("logistics",False),"Global_Gateway":("state",False),
  "INSTC":("logistics",False),"Middle_Corridor":("logistics",False),"Turkey":("state",True),"IMEC_Belgium":("semiconductor",False),
