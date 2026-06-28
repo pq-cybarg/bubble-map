@@ -97,6 +97,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Networking_Security_Industry":"Networking & security industry","Palo_Alto_Networks":"Palo Alto Networks","Check_Point":"Check Point","CISA":"CISA","F5":"F5 (BIG-IP)","Cloudflare":"Cloudflare","HPE":"HPE",
  "ATT":"AT&T","TMobile":"T-Mobile","US_Telecoms":"US telecom carriers","Mint_Mobile":"Mint Mobile","FirstNet":"FirstNet (AT&T/federal)","Helium_Mobile":"Helium Mobile (Solana MVNO)","EchoStar_Boost":"EchoStar / Boost","BitPay":"BitPay","SaltTyphoon":"Salt Typhoon (PRC APT)","CALEA_Backdoor":"CALEA wiretap mandate",
  "Chris_Larsen":"Chris Larsen","Hidden_Road":"Hidden Road (→Ripple Prime)","SWIFT":"SWIFT","ISO_20022":"ISO 20022 (standard)","BIS":"BIS","IMF":"IMF","World_Bank":"World Bank","WEF":"World Economic Forum",
+ "Joyce_Kim":"Joyce Kim","Tacostand_Wallet":"'tacostand' wallet (McCaleb XRP)","MoneyGram":"MoneyGram",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

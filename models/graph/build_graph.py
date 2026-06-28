@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # stellar / mccaleb / tacostand
+ "Joyce_Kim":"Joyce_Kim","Tacostand_Wallet":"Tacostand_Wallet","tacostand":"Tacostand_Wallet","MoneyGram":"MoneyGram",
  # ripple / xrp tradfi rails
  "Chris_Larsen":"Chris_Larsen","Hidden_Road":"Hidden_Road","SWIFT":"SWIFT","ISO_20022":"ISO_20022","ISO20022":"ISO_20022",
  "BIS":"BIS","Bank for International Settlements":"BIS","IMF":"IMF","World_Bank":"World_Bank","World Bank":"World_Bank","WEF":"WEF","World Economic Forum":"WEF",
@@ -527,6 +529,8 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # stellar / mccaleb / tacostand (overlay)
+ "Joyce_Kim":("person",False),"Tacostand_Wallet":("crypto_infra",False),"MoneyGram":("financial_infra",False),
  # ripple / xrp tradfi rails (overlay)
  "Chris_Larsen":("person",False),"Hidden_Road":("financier",False),"SWIFT":("financial_infra",True),"ISO_20022":("standards",False),
  "BIS":("financial_infra",True),"IMF":("financial_infra",True),"World_Bank":("financial_infra",True),"WEF":("political",False),

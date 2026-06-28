@@ -1816,6 +1816,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Joyce_Kim": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jump_Crypto": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2162,6 +2166,10 @@
     },
     "Monero": {
       "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
+    "MoneyGram": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
     "Money_Market_Funds": {
@@ -3207,6 +3215,10 @@
     "TSMC": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
+    },
+    "Tacostand_Wallet": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "Tai_Mo_Shan": {
       "sector": "financier",
@@ -16150,6 +16162,71 @@
       "note": "the one de-risked allied REE play"
     },
     {
+      "from": "Jed_McCaleb",
+      "to": "Ripple",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founded Ripple (OpenCoin), CTO until ~2013; departed 2013-14 over decentralization/direction disputes",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stellar-mccaleb-tacostand.json",
+      "note": ""
+    },
+    {
+      "from": "Joyce_Kim",
+      "to": "Stellar_Development_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founded the Stellar Development Foundation with McCaleb (2014)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stellar-mccaleb-tacostand.json",
+      "note": ""
+    },
+    {
+      "from": "Jed_McCaleb",
+      "to": "Tacostand_Wallet",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sold his settlement XRP from the on-ledger 'tacostand' XRPL account",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stellar-mccaleb-tacostand.json",
+      "note": ""
+    },
+    {
+      "from": "Tacostand_Wallet",
+      "to": "XRP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "McCaleb's ~9B XRP sold under the 2014 Ripple settlement (escrow + daily-volume cap; 2B donated to charity); emptied Jul 2022 ('The Stand is Out of Tacos') \u2014 a publicly-trackable insider sell-down",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stellar-mccaleb-tacostand.json",
+      "note": ""
+    },
+    {
+      "from": "MoneyGram",
+      "to": "Stellar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USDC-on-Stellar remittance / cash-in-cash-out partnership (2021-22)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stellar-mccaleb-tacostand.json",
+      "note": ""
+    },
+    {
       "from": "China",
       "to": "China_Scholarship_Council",
       "instrument": "other",
@@ -20207,10 +20284,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 933,
-    "num_edges": 1267,
+    "num_nodes": 936,
+    "num_edges": 1272,
     "num_financial_edges": 216,
-    "num_structural_edges": 1051,
+    "num_structural_edges": 1056,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20261,8 +20338,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Amazon",
@@ -20273,8 +20354,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -20282,7 +20363,8 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -20293,17 +20375,6 @@
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -20326,7 +20397,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20334,6 +20404,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -23525,6 +23602,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Joyce_Kim": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jump_Crypto": {
         "total_usd": 1280000000,
         "circular_usd": 0,
@@ -24128,6 +24212,13 @@
         "in_robust_core": false
       },
       "Monero": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MoneyGram": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25961,6 +26052,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tacostand_Wallet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tai_Mo_Shan": {
         "total_usd": 123000000,
         "circular_usd": 0,
@@ -27037,7 +27135,7 @@
       },
       {
         "node": "Ripple",
-        "degree": 19,
+        "degree": 20,
         "neighbor_sectors": [
           "bank",
           "crypto_infra",
@@ -27051,7 +27149,7 @@
           "stablecoin"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 7,
+        "source_files": 8,
         "layers": [
           "financial",
           "structural"
