@@ -20,12 +20,16 @@ There **is** a real, long-standing Ripple link: CRB was one of the **early banks
 
 ## 4. The hidden-rails test (the core question)
 
-Is there evidence CRB runs **deliberately-hidden** internal blockchain rails beyond what it discloses? **Finding: no primary evidence supports a concealed internal rail.** Two things are true and must not be confused:
+Is the **specific** claim — that CRB runs deliberately-hidden internal blockchain rails connecting to **Ripple/X Money** — established by evidence? **No primary source establishes it.**
 
-1. Banks **routinely do not publish** their full internal technology stacks — that is **normal operational confidentiality**, not evidence of a secret blockchain; and
-2. CRB has, if anything, **publicized** its crypto-rail ambitions (Circle, Stablecoin Payments, Visa/Solana).
+But a correction is owed here (it generalizes across the corpus): **confidentiality and concealment are the same observable act** — information withheld. They differ only in **imputed intent**, which is **not observable** from outside. So non-disclosure must **not** be glossed as *benign* ("just normal confidentiality") any more than as *sinister*. Two neutral facts:
 
-So the "hidden rails" claim **fails the extraordinary-evidence bar**: absence of a public internal-architecture disclosure is **absence of evidence, not proof of a hidden system**. *Grade: "deliberately-hidden internal rails" **unsupported** on current evidence.*
+1. CRB, like every bank, **does withhold** its full internal architecture — that withholding simply **is** non-disclosure, and **nothing about intent** can be read from it; and
+2. CRB has separately **publicized** real crypto rails (Circle, Stablecoin Payments, Visa/Solana).
+
+What **cannot** be inferred from the withholding is **either** that a hidden XRP/Ripple rail exists **or** that it doesn't. **Absence of evidence cuts both ways.**
+
+**But intent *is* partly knowable — from what the actor *says*** (and conspicuously omits). CRB's own public statements market crypto rails **openly** (Circle, Solana, Stablecoin Payments), revealing an intent to operate them **in the open**, not to hide them; no CRB statement asserts — or is caught contradicting — a concealed Ripple/X-Money rail. The signal of **concealment-intent** would be **words that conflict with the record**, or that **conspicuously omit what disclosure would require** — not the bare existence of confidentiality. On CRB's words to date, the evidenced intent is **open operation, not concealment**. *Grade: the specific hidden-rail-to-Ripple/X-Money claim is **unverified** (not "debunked"); undisclosed internal infrastructure is generic to all banks and uninterpretable as to intent **from the act alone — read the statements instead**.*
 
 ## 5. The FDIC order (context, fact)
 

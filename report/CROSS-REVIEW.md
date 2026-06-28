@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 63 files
+- **Meta** — 64 files
 - **Google** — 43 files
 - **Chainlink** — 41 files
 - **OpenAI** — 34 files
@@ -26,17 +26,17 @@
 - **NVIDIA** — 27 files
 - **Stargate** — 21 files
 - **Anthropic** — 21 files
-- **JPMorgan** — 19 files
+- **Ripple** — 19 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-cross-river-bank.json` — related files by shared entities (verify cross-refs exist)
-- spec-crypto-banking-debanking.json: 4 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- altcoin-lens.json: 3 shared entities
-- spec-blockchain-ecosystem.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- macro-money-market-funds.json: 3 shared entities
+## Newest file `spec-xrp-arg-epistemics.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 6 shared entities
+- spec-sec-sdny-regulatory.json: 6 shared entities
+- altcoin-lens.json: 6 shared entities
+- spec-blockchain-ecosystem.json: 6 shared entities
+- spec-ripple-tradfi-rails.json: 5 shared entities
+- fin-hedera-connections.json: 5 shared entities
+- spec-crypto-sec-epstein.json: 4 shared entities
+- temporal-bridges.json: 3 shared entities

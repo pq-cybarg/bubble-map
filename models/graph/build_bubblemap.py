@@ -99,6 +99,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Chris_Larsen":"Chris Larsen","Hidden_Road":"Hidden Road (→Ripple Prime)","SWIFT":"SWIFT","ISO_20022":"ISO 20022 (standard)","BIS":"BIS","IMF":"IMF","World_Bank":"World Bank","WEF":"World Economic Forum",
  "Joyce_Kim":"Joyce Kim","Tacostand_Wallet":"'tacostand' wallet (McCaleb XRP)","MoneyGram":"MoneyGram",
  "Cross_River_Bank":"Cross River Bank","Visa":"Visa","X_Money":"X Money (X Corp / Visa)",
+ "XRP_ARG_Lore":"XRP ARG / meme lore","QFS_Great_Reset":"QFS / 'Great Reset' claim","Epistemic_Discipline":"Epistemic discipline (the method)",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

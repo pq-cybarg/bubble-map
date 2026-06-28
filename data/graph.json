@@ -1148,6 +1148,10 @@
       "sector": "energy",
       "has_exogenous_revenue": true
     },
+    "Epistemic_Discipline": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Epstein_Files": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2596,6 +2600,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "QFS_Great_Reset": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "QIA": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2631,6 +2639,10 @@
     "Quandela": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "Quant": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Quantinuum": {
       "sector": "pqc_quantum",
@@ -3658,6 +3670,10 @@
     },
     "XRPL_Labs": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "XRP_ARG_Lore": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "X_Money": {
@@ -8709,6 +8725,97 @@
       "declared_circular": false,
       "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "XRP_ARG_Lore",
+      "to": "XRP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the ARG/meme/imagery ecosystem built around XRP (the subject of the lore)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "XRP_ARG_Lore",
+      "to": "ISO_20022",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the 'ISO 20022 coin' meme \u2014 GRADED: ISO 20022 is a messaging standard that certifies no crypto (weak/unsupported)",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "XRP_ARG_Lore",
+      "to": "Epistemic_Discipline",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the corpus grades each claim and applies the method: confidentiality==concealment (intent not in the act); intent read from WORDS; absence cuts both ways; cryptic-symbol matching != evidence",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "QFS_Great_Reset",
+      "to": "XRP_ARG_Lore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the 'Quantum Financial System / Great Reset runs on XRP' claim \u2014 GRADED pure-ARG/unsupported",
+      "amount_usd": null,
+      "status": "unsupported",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "QFS_Great_Reset",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the lore conflates the WEF's 2020 'Great Reset' policy theme with a crypto 'QFS' \u2014 GRADED: unrelated/unfounded",
+      "amount_usd": null,
+      "status": "unsupported",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "Quant",
+      "to": "XRP_ARG_Lore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the QNT/Overledger 'connects every bank + XRP' theory feeds the lore \u2014 real interoperability firm, OVER-CLAIMED role",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
+      "note": ""
+    },
+    {
+      "from": "Flare",
+      "to": "XRP_ARG_Lore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the Flare/Songbird XRP-holder airdrop (real, 2020-21) read as 'proof' of XRP's institutional destiny \u2014 airdrop fact, inference unsupported",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xrp-arg-epistemics.json",
       "note": ""
     },
     {
@@ -20413,10 +20520,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 939,
-    "num_edges": 1281,
+    "num_nodes": 943,
+    "num_edges": 1288,
     "num_financial_edges": 216,
-    "num_structural_edges": 1065,
+    "num_structural_edges": 1072,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20467,8 +20574,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -20483,12 +20594,8 @@
         "SINK_lenders"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -20520,13 +20627,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -22557,6 +22664,13 @@
       },
       "Energoatom": {
         "total_usd": 100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Epistemic_Discipline": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25096,6 +25210,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "QFS_Great_Reset": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "QIA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25153,6 +25274,13 @@
         "in_robust_core": false
       },
       "Quandela": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Quant": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26952,6 +27080,13 @@
         "in_robust_core": false
       },
       "XRPL_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "XRP_ARG_Lore": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
