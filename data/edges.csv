@@ -85,6 +85,7 @@ MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
 ATT,FirstNet,other,6500000000,documented,False,False,spec-telecom-carriers.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 Broadcom,Brocade,debt,5900000000,documented,False,False,spec-foundry-brocade-broadcom.json
+VW,Rivian,other,5800000000,documented,False,False,spec-us-automakers.json
 State_AGs,JNJ,other,5000000000,documented,False,False,spec-opioid-crisis.json
 NVIDIA,Intel,other,5000000000,closed,False,False,fin-nvidia-openai.json
 Binance,World_Liberty_Financial,other,4700000000,recurring,False,False,macro-stablecoin-failures-manipulation.json
@@ -764,6 +765,19 @@ Hedera,Hiero_LFDT,relationship,,donated,False,False,fin-hedera-connections.json
 Swift,Hedera,relationship,,experiment-registries-role,False,False,fin-hedera-connections.json
 Chainlink,Swift,relationship,,experiment,False,False,fin-hedera-connections.json
 Boeing,Hedera,governance,,departed,False,False,fin-hedera-connections.json
+Ford,US_Auto_Makers,other,,documented,False,False,spec-us-automakers.json
+GM,US_Auto_Makers,other,,documented,False,False,spec-us-automakers.json
+GM,Cruise,other,,documented,False,False,spec-us-automakers.json
+Stellantis,US_Auto_Makers,other,,contested,False,False,spec-us-automakers.json
+Tesla,US_Auto_Makers,compute_commitment,,documented,False,False,spec-us-automakers.json
+Rivian,US_Auto_Makers,other,,documented,False,False,spec-us-automakers.json
+Lucid,US_Auto_Makers,other,,documented,False,False,spec-us-automakers.json
+Amazon,Rivian,other,,documented,False,False,spec-us-automakers.json
+PIF,Lucid,investment,,documented,False,False,spec-us-automakers.json
+Elon_Musk,Tesla,other,,contested,False,False,spec-us-automakers.json
+Tesla,NACS_Standard,other,,documented,False,False,spec-us-automakers.json
+Ford,NACS_Standard,other,,documented,False,False,spec-us-automakers.json
+GM,NACS_Standard,other,,documented,False,False,spec-us-automakers.json
 CLARITY_Act,Congress,other,,open,False,False,spec-clarity-act-illicit-finance.json
 CLARITY_Act,SEC,other,,open,False,False,spec-clarity-act-illicit-finance.json
 CLARITY_Act,CFTC,other,,open,False,False,spec-clarity-act-illicit-finance.json

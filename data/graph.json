@@ -924,6 +924,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": true
     },
+    "Cruise": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Crusoe": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
@@ -1184,6 +1188,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Elon_Musk": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Energoatom": {
       "sector": "energy",
       "has_exogenous_revenue": true
@@ -1364,6 +1372,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Ford": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Foreign_Bank_US_Branches": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -1410,6 +1422,10 @@
     },
     "GIP": {
       "sector": "private_credit",
+      "has_exogenous_revenue": true
+    },
+    "GM": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "GPT4All": {
@@ -2124,6 +2140,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Lucid": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Lynas": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
@@ -2323,6 +2343,10 @@
     "NABU": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "NACS_Standard": {
+      "sector": "standards",
+      "has_exogenous_revenue": false
     },
     "NCET": {
       "sector": "regulator",
@@ -2551,6 +2575,10 @@
     "PGII": {
       "sector": "state",
       "has_exogenous_revenue": false
+    },
+    "PIF": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
     },
     "PIMCO": {
       "sector": "private_credit",
@@ -2847,6 +2875,10 @@
     "Ripple_Prime": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
+    },
+    "Rivian": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Robinhood": {
       "sector": "other",
@@ -3276,6 +3308,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Stellantis": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Stellar": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -3572,6 +3608,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "US_Auto_Makers": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "US_Banks": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -3671,6 +3711,10 @@
     "VCF_9_11": {
       "sector": "other",
       "has_exogenous_revenue": false
+    },
+    "VW": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "VanEck": {
       "sector": "financier",
@@ -12741,6 +12785,188 @@
       "note": "FORMER member (10th to join, Aug 2019; invested via HorizonX; board seat; departed Feb 14 2025). Aerospace/SATELLITE prime exited an enterprise DLT amid its own crisis-era retrenchment - while the same secure-satellite/identity use-case migrated to narrative vehicles (WISeSat/SEALSQ). Timeline tell: see boeing_timeline."
     },
     {
+      "from": "Ford",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-Three incumbent; strong ICE/hybrid + Pro commercial; Model e EV unit lost ~$5B/yr (2024-25 EV pullbacks)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-Three incumbent; Ultium platform; Super Cruise",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "Cruise",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "robotaxi unit WOUND DOWN (Dec 2024) after the Oct-2023 pedestrian-dragging incident + CA permit suspension; folded into GM for driver-assist",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Stellantis",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "14-brand group (Jeep/Ram/Dodge/Chrysler + EU brands); CEO Tavares OUSTED 1 Dec 2024 (US inventory glut/dealer revolt); Filosa CEO 2025",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Tesla",
+      "to": "US_Auto_Makers",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "volume EV leader; direct-sales (vs dealer-franchise laws, see #183); Cybertruck; FSD; Austin robotaxi 2025",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Rivian",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EV-native (R1T/R1S, R2/R3 coming); high cash burn",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Lucid",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EV-native (Air/Gravity); low volume / high burn",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Rivian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Volkswagen Group JV (announced 2024, up to ~$5.8B) for Rivian's software/electrical architecture",
+      "amount_usd": 5800000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Amazon",
+      "to": "Rivian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest shareholder + EDV electric-delivery-van customer",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "PIF",
+      "to": "Lucid",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Saudi Public Investment Fund \u2014 majority owner (~60%); repeated capital injections",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Elon_Musk",
+      "to": "Tesla",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CEO; FSD/robotaxi push; 2025 DOGE political role widely linked to brand damage + US/EU sales softening (effect documented; magnitude contested)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Tesla",
+      "to": "NACS_Standard",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Tesla's connector opened as NACS; Ford/GM/most US makers ADOPTED it (2023-24) for future EVs + Supercharger access \u2014 proprietary design became the standard",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Ford",
+      "to": "NACS_Standard",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "adopted Tesla's NACS (May 2023, the first domino)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "NACS_Standard",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "adopted Tesla's NACS (2023)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-automakers.json",
+      "note": ""
+    },
+    {
       "from": "CLARITY_Act",
       "to": "Congress",
       "instrument": "other",
@@ -21530,10 +21756,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 981,
-    "num_edges": 1354,
-    "num_financial_edges": 226,
-    "num_structural_edges": 1128,
+    "num_nodes": 992,
+    "num_edges": 1368,
+    "num_financial_edges": 228,
+    "num_structural_edges": 1140,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -21585,18 +21811,6 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -21604,13 +21818,20 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -21623,16 +21844,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -21643,8 +21863,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -23287,6 +23513,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cruise": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crusoe": {
         "total_usd": 1825000000,
         "circular_usd": 1825000000,
@@ -23742,6 +23975,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Elon_Musk": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Energoatom": {
         "total_usd": 100000000,
         "circular_usd": 0,
@@ -24057,6 +24297,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ford": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Foreign_Bank_US_Branches": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24136,6 +24383,13 @@
       },
       "GIP": {
         "total_usd": 12500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GM": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25387,6 +25641,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lucid": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lynas": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25731,6 +25992,13 @@
         "in_robust_core": false
       },
       "NABU": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NACS_Standard": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26130,6 +26398,13 @@
         "in_robust_core": false
       },
       "PGII": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PIF": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26649,6 +26924,13 @@
       },
       "Ripple_Prime": {
         "total_usd": 1250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rivian": {
+        "total_usd": 5800000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -27403,6 +27685,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stellantis": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stellar": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27921,6 +28210,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Auto_Makers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Banks": {
         "total_usd": 2095670000000,
         "circular_usd": 0,
@@ -28091,6 +28387,13 @@
       },
       "VCF_9_11": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "VW": {
+        "total_usd": 5800000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

@@ -15,14 +15,14 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 64 files
+- **Meta** — 65 files
 - **Chainlink** — 44 files
 - **Google** — 43 files
 - **OpenAI** — 34 files
 - **FDIC** — 33 files
 - **Oracle** — 31 files
+- **Amazon** — 29 files
 - **Microsoft** — 28 files
-- **Amazon** — 28 files
 - **NVIDIA** — 27 files
 - **Stargate** — 21 files
 - **Anthropic** — 21 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-auto-right-to-repair.json` — related files by shared entities (verify cross-refs exist)
-- geopolitics-allied-intel-nodes.json: 1 shared entities
-- geopolitics-contested-resource-states.json: 1 shared entities
-- spec-open-source-3dprinting-lawfare.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- influence-tbi-policy.json: 1 shared entities
-- spec-reproducibility-crisis.json: 1 shared entities
-- spec-cambodia-scam-fara-paid-influence.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
+## Newest file `spec-us-automakers.json` — related files by shared entities (verify cross-refs exist)
+- fin-google-amazon-anthropic-meta.json: 3 shared entities
+- spec-unwind-timing.json: 2 shared entities
+- fin-gulf-sovereign-ai-capital.json: 2 shared entities
+- spec-foreign-influence-comparison.json: 2 shared entities
+- spec-telecom-satellite.json: 2 shared entities
+- energy-power.json: 2 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
+- spec-blackrock-aladdin-concentration.json: 2 shared entities

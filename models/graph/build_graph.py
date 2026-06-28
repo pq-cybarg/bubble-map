@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # us automakers
+ "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # auto right-to-repair
  "Alliance_Auto_Innovation":"Alliance_Auto_Innovation","AAI":"Alliance_Auto_Innovation","MA_Telematics_Law":"MA_Telematics_Law","REPAIR_Act":"REPAIR_Act","NHTSA":"NHTSA","Auto_Care_Association":"Auto_Care_Association",
  # string of pearls
@@ -546,6 +548,9 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # us automakers (overlay)
+ "US_Auto_Makers":("industrial",False),"Ford":("industrial",True),"GM":("industrial",True),"Stellantis":("industrial",True),"Rivian":("industrial",False),
+ "Lucid":("industrial",False),"Cruise":("tech",False),"NACS_Standard":("standards",False),"Elon_Musk":("person",False),"PIF":("financier",True),"VW":("industrial",True),
  # auto right-to-repair (overlay)
  "Alliance_Auto_Innovation":("political",False),"MA_Telematics_Law":("state",False),"REPAIR_Act":("state",False),"NHTSA":("regulator",True),"Auto_Care_Association":("political",False),
  # string of pearls (overlay)

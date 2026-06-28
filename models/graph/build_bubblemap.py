@@ -106,6 +106,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Infrastructure_Corridors":"Competing infra corridors","BRI":"Belt and Road (BRI)","IMEC":"IMEC corridor (India-MidEast-EU)","IMEC_Belgium":"imec (Belgium semiconductor R&D)","PGII":"PGII (G7)","Lobito_Corridor":"Lobito Corridor","Global_Gateway":"Global Gateway (EU)","INSTC":"INSTC (Russia-Iran-India)","Middle_Corridor":"Middle Corridor (Trans-Caspian)","Turkey":"Turkey",
  "String_of_Pearls":"String of Pearls (framing)","Necklace_of_Diamonds":"Necklace of Diamonds (India)","Gwadar":"Gwadar (Pakistan)","Hambantota":"Hambantota (Sri Lanka)","Djibouti_Base":"Djibouti PLA base","Kyaukpyu":"Kyaukpyu (Myanmar)","Piraeus_Port":"Piraeus (COSCO)",
  "Alliance_Auto_Innovation":"Alliance for Automotive Innovation","MA_Telematics_Law":"MA telematics R2R law (2020)","REPAIR_Act":"REPAIR Act (federal)","NHTSA":"NHTSA","Auto_Care_Association":"Auto Care Association",
+ "US_Auto_Makers":"US automakers","Ford":"Ford","GM":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise (GM robotaxi)","NACS_Standard":"NACS charging standard","Elon_Musk":"Elon Musk","PIF":"Saudi PIF","VW":"Volkswagen Group",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
