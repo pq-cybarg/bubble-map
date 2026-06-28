@@ -184,6 +184,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Allstate": {
+      "sector": "insurance",
+      "has_exogenous_revenue": true
+    },
     "Alternative_OS_Exclusion": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -263,6 +267,10 @@
     "Arista": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "Arity": {
+      "sector": "data_provider",
+      "has_exogenous_revenue": false
     },
     "Arm": {
       "sector": "semiconductor",
@@ -2092,6 +2100,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "LexisNexis": {
+      "sector": "data_provider",
+      "has_exogenous_revenue": false
+    },
     "LexisNexis_Risk_Solutions": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2711,6 +2723,10 @@
     "Private_Surveillance": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
+    },
+    "Progressive_Insurance": {
+      "sector": "insurance",
+      "has_exogenous_revenue": true
     },
     "Protocol_Labs": {
       "sector": "crypto_infra",
@@ -3424,6 +3440,10 @@
       "sector": "tech",
       "has_exogenous_revenue": true
     },
+    "Telematics_Insurance": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Telesat": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -3742,6 +3762,10 @@
     },
     "Venice_AI": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Verisk": {
+      "sector": "data_provider",
       "has_exogenous_revenue": false
     },
     "Verizon": {
@@ -9038,6 +9062,136 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "Allstate",
+      "to": "Arity",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Arity is Allstate's data/analytics subsidiary \u2014 embedded SDKs in third-party phone apps (Life360/GasBuddy) to harvest movement data from non-customers",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "Allstate",
+      "to": "Telematics_Insurance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Drivewise UBI; Texas AG sued Allstate/Arity (Jan 2025, 45M+ trips sold without consent)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "Progressive_Insurance",
+      "to": "Telematics_Insurance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Snapshot UBI (dongle/app driving-score discount)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "Arity",
+      "to": "Telematics_Insurance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "always-on phone-SDK movement collection feeding driving scores \u2014 even with no insurance relationship",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "OnStar 'Smart Driver' sold driving + precise geolocation (as often as ~every 3s) to LexisNexis Risk Solutions WITHOUT consumer notice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "Verisk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sold driver-behavior data to Verisk Analytics (~$20M total to both brokers); no consumer consent",
+      "amount_usd": 20000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "LexisNexis",
+      "to": "Telematics_Insurance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "packages automaker driving data into 'risk' reports sold to insurers -> premium hikes (one driver +80% from 603 trips)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "Verisk",
+      "to": "Telematics_Insurance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "repackages driver data into insurer risk scores (the shared layer that scores across insurers)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "GM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTC v. GM/OnStar order finalized Jan 2026: 5-YEAR ban on sharing geolocation/driver-behavior data with consumer-reporting agencies + ~20-yr consent/transparency rules",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "Allstate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Texas AG sued Allstate + Arity (Jan 2025) for unlawfully collecting/selling location + movement data from 45M+ trips; California AG settled GM for $12.75M (CCPA)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telematics-insurance.json",
       "note": ""
     },
     {
@@ -21756,10 +21910,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 992,
-    "num_edges": 1368,
+    "num_nodes": 998,
+    "num_edges": 1378,
     "num_financial_edges": 228,
-    "num_structural_edges": 1140,
+    "num_structural_edges": 1150,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -21810,8 +21964,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -21826,12 +21984,8 @@
         "Anthropic"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -22218,6 +22372,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Allstate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Alternative_OS_Exclusion": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22352,6 +22513,13 @@
         "in_robust_core": false
       },
       "Arista": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arity": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24389,7 +24557,7 @@
         "in_robust_core": false
       },
       "GM": {
-        "total_usd": 0,
+        "total_usd": 20000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25557,6 +25725,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LexisNexis": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "LexisNexis_Risk_Solutions": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26636,6 +26811,13 @@
         "in_robust_core": false
       },
       "Private_Surveillance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Progressive_Insurance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27888,6 +28070,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Telematics_Insurance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Telesat": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28443,6 +28632,13 @@
       },
       "Venice_AI": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Verisk": {
+        "total_usd": 20000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

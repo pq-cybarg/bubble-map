@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-us-automakers.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
-- spec-unwind-timing.json: 2 shared entities
-- fin-gulf-sovereign-ai-capital.json: 2 shared entities
-- spec-foreign-influence-comparison.json: 2 shared entities
-- spec-telecom-satellite.json: 2 shared entities
-- energy-power.json: 2 shared entities
-- influence-congress-funding-compromise.json: 2 shared entities
-- spec-blackrock-aladdin-concentration.json: 2 shared entities
+## Newest file `spec-telematics-insurance.json` — related files by shared entities (verify cross-refs exist)

@@ -107,6 +107,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "String_of_Pearls":"String of Pearls (framing)","Necklace_of_Diamonds":"Necklace of Diamonds (India)","Gwadar":"Gwadar (Pakistan)","Hambantota":"Hambantota (Sri Lanka)","Djibouti_Base":"Djibouti PLA base","Kyaukpyu":"Kyaukpyu (Myanmar)","Piraeus_Port":"Piraeus (COSCO)",
  "Alliance_Auto_Innovation":"Alliance for Automotive Innovation","MA_Telematics_Law":"MA telematics R2R law (2020)","REPAIR_Act":"REPAIR Act (federal)","NHTSA":"NHTSA","Auto_Care_Association":"Auto Care Association",
  "US_Auto_Makers":"US automakers","Ford":"Ford","GM":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise (GM robotaxi)","NACS_Standard":"NACS charging standard","Elon_Musk":"Elon Musk","PIF":"Saudi PIF","VW":"Volkswagen Group",
+ "Telematics_Insurance":"Telematics insurance (surveillance pricing)","LexisNexis":"LexisNexis Risk Solutions","Verisk":"Verisk Analytics","Allstate":"Allstate","Progressive_Insurance":"Progressive","Arity":"Arity (Allstate data arm)",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
