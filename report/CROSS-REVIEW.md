@@ -16,8 +16,8 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 64 files
+- **Chainlink** — 44 files
 - **Google** — 43 files
-- **Chainlink** — 43 files
 - **OpenAI** — 34 files
 - **FDIC** — 33 files
 - **Oracle** — 31 files
@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-string-of-pearls.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-auto-right-to-repair.json` — related files by shared entities (verify cross-refs exist)
+- geopolitics-allied-intel-nodes.json: 1 shared entities
+- geopolitics-contested-resource-states.json: 1 shared entities
+- spec-open-source-3dprinting-lawfare.json: 1 shared entities
+- fin-hedera-connections.json: 1 shared entities
+- influence-tbi-policy.json: 1 shared entities
+- spec-reproducibility-crisis.json: 1 shared entities
+- spec-cambodia-scam-fara-paid-influence.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities

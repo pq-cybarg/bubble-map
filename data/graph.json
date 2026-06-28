@@ -180,6 +180,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Alliance_Auto_Innovation": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "Alternative_OS_Exclusion": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -299,6 +303,10 @@
     "Australia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Auto_Care_Association": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Axelar": {
       "sector": "crypto_infra",
@@ -2124,6 +2132,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "MA_Telematics_Law": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "MCAS": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -2322,6 +2334,10 @@
     },
     "NDB": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "NHTSA": {
+      "sector": "regulator",
       "has_exogenous_revenue": true
     },
     "NIST": {
@@ -2754,6 +2770,10 @@
     },
     "R2R_Opposition": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "REPAIR_Act": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "REalloys": {
@@ -9143,6 +9163,110 @@
       "declared_circular": false,
       "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "MA_Telematics_Law",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MA Question 1 (Nov 2020, ~75%) \u2014 the 'Data Access Law' \u2014 extended R2R to vehicle telematics; UPHELD Feb 2025 (Judge Casper dismissed AAI's final counts); Maine passed a similar law (2023)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Alliance_Auto_Innovation",
+      "to": "MA_Telematics_Law",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AAI (GM/Ford/Toyota/VW/Honda/Stellantis...) sued (D. Mass, 2020) on federal-preemption + constitutional grounds; ~4-yr battle; LOST Feb 2025; weighed appeal ('security risk')",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Alliance_Auto_Innovation",
+      "to": "R2R_Opposition",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the automaker lobby opposing telematics R2R via the cybersecurity/safety framing",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Alliance_Auto_Innovation",
+      "to": "Right_to_Repair",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "2014 + July-2023 voluntary MOUs reaffirming independent access \u2014 critics: NON-BINDING, telematics not bindingly covered (cf the John Deere MOU)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "NHTSA",
+      "to": "MA_Telematics_Law",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "June-2023 letter: law preempted + telematics access a safety/cyber risk (the strawman); SOFTENED Aug 2023 (owner Bluetooth OK); then told the court it takes NO POSITION \u2014 the safety argument WALKED BACK before trial",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Auto_Care_Association",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "independent-aftermarket coalition (+CAR Coalition) backing the MA law + the federal REPAIR Act",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "REPAIR_Act",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal Right to Equitable and Professional Auto Industry Repair Act (reintroduced 25 Feb 2025, HR 1566 + Senate; FTC-enforced telematics access) \u2014 but R2R provisions STRIPPED from the 2026 NDAA (Dec 2025) despite wide support",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
+      "note": ""
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "Alliance_Auto_Innovation",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "publicly rebutted the auto industry's 'hackers will weaponize your car' cybersecurity STRAWMAN + the toothless MOUs + NHTSA's flip-flop (documented advocacy)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-right-to-repair.json",
       "note": ""
     },
     {
@@ -21406,10 +21530,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 976,
-    "num_edges": 1346,
+    "num_nodes": 981,
+    "num_edges": 1354,
     "num_financial_edges": 226,
-    "num_structural_edges": 1120,
+    "num_structural_edges": 1128,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -21460,8 +21584,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -21476,12 +21608,9 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -21489,26 +21618,9 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -21521,6 +21633,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -21861,6 +21985,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Alliance_Auto_Innovation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Alternative_OS_Exclusion": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22065,6 +22196,13 @@
         "in_robust_core": false
       },
       "Australia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auto_Care_Association": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25263,6 +25401,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MA_Telematics_Law": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MCAS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25607,6 +25752,13 @@
         "in_robust_core": false
       },
       "NDB": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NHTSA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26363,6 +26515,13 @@
         "in_robust_core": false
       },
       "R2R_Opposition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "REPAIR_Act": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28604,6 +28763,27 @@
         "both_layers": true
       },
       {
+        "node": "Right_to_Repair",
+        "degree": 25,
+        "neighbor_sectors": [
+          "ai_infra",
+          "hyperscaler",
+          "industrial",
+          "other",
+          "person",
+          "political",
+          "regulator",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 6,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 8,
         "neighbor_sectors": [
@@ -28622,27 +28802,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Right_to_Repair",
-        "degree": 21,
-        "neighbor_sectors": [
-          "ai_infra",
-          "hyperscaler",
-          "industrial",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "state",
-          "tech"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 5,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Apple",

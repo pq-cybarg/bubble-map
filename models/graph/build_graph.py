@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # auto right-to-repair
+ "Alliance_Auto_Innovation":"Alliance_Auto_Innovation","AAI":"Alliance_Auto_Innovation","MA_Telematics_Law":"MA_Telematics_Law","REPAIR_Act":"REPAIR_Act","NHTSA":"NHTSA","Auto_Care_Association":"Auto_Care_Association",
  # string of pearls
  "String_of_Pearls":"String_of_Pearls","Gwadar":"Gwadar","Hambantota":"Hambantota","Djibouti_Base":"Djibouti_Base","Kyaukpyu":"Kyaukpyu","Piraeus_Port":"Piraeus_Port","Piraeus":"Piraeus_Port","Necklace_of_Diamonds":"Necklace_of_Diamonds",
  # competing infrastructure corridors
@@ -544,6 +546,8 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # auto right-to-repair (overlay)
+ "Alliance_Auto_Innovation":("political",False),"MA_Telematics_Law":("state",False),"REPAIR_Act":("state",False),"NHTSA":("regulator",True),"Auto_Care_Association":("political",False),
  # string of pearls (overlay)
  "String_of_Pearls":("state",False),"Necklace_of_Diamonds":("state",False),"Gwadar":("logistics",False),"Hambantota":("logistics",False),
  "Djibouti_Base":("defense",False),"Kyaukpyu":("logistics",False),"Piraeus_Port":("logistics",False),
