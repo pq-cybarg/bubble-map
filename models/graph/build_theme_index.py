@@ -26,7 +26,7 @@ RULES=[
  ("space",      ["cable","subsea","satellite","telecom","space-layer","starlink","spectrum"]),
  ("threat",     ["lazarus","typhoon","-apt-","attribution","unc-nk","nk-","malware","ransomware","intrusion","cyber-espionage"]),
  ("scams",      ["scam-fara","scam","pig-butchering","tornado","samourai","mixer","laundering","illicit"]),
- ("defense",    ["defense","defence","geopolitic","taiwan","russia","iran","-war","arctic","contested-resource","military","drone"]),
+ ("defense",    ["defense","defence","geopolitic","taiwan","russia","iran","-war","arctic","contested-resource","military","drone","corridor","belt and road","string of pearls","opec"]),
  ("insurance",  ["insurance","healthcare","health-care","pbm","disability","medicare","medicaid","denial","health","asbestos","talc","mesothelioma","mass-tort","mass tort","roundup","glyphosate","pesticide","tobacco","camp lejeune","boeing","737","flint","east palestine","victim compensation","disaster"]),
  ("contagion",  ["contagion","unwind","basis-trade","treasury-basis","ldi","pension","firstbrands","ubs","cross-system","fed-trap"]),
  ("banking",    ["fdic","-cre","real-estate","bank","credit","htm","mortgage","regional-leverage","duration","dereg","municipal","public-finance"]),

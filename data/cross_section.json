@@ -3220,9 +3220,9 @@
      "date": "2022-12",
      "mean": 2.829,
      "std": 1.195,
-     "min": 2.106,
+     "min": 2.107,
      "max": 4.616,
-     "range": 2.51
+     "range": 2.509
     },
     {
      "date": "2023-01",
@@ -4216,80 +4216,87 @@
    "ranking": [
     {
      "node": "China",
-     "degree": 41,
-     "n_neighbor_sectors": 17,
+     "degree": 43,
+     "n_neighbor_sectors": 18,
      "both_layers": true,
-     "bridge_score": 5.85
+     "bridge_score": 5.92
     },
     {
      "node": "US_Government",
-     "degree": 34,
-     "n_neighbor_sectors": 13,
+     "degree": 37,
+     "n_neighbor_sectors": 14,
      "both_layers": true,
-     "bridge_score": 3.65
+     "bridge_score": 3.98
     },
     {
      "node": "NVIDIA",
      "degree": 29,
      "n_neighbor_sectors": 11,
      "both_layers": true,
-     "bridge_score": 2.39
+     "bridge_score": 2.18
     },
     {
      "node": "Ripple",
      "degree": 21,
      "n_neighbor_sectors": 10,
      "both_layers": true,
-     "bridge_score": 1.17
+     "bridge_score": 1.04
     },
     {
      "node": "SEC",
      "degree": 21,
      "n_neighbor_sectors": 10,
      "both_layers": true,
-     "bridge_score": 1.17
+     "bridge_score": 1.04
+    },
+    {
+     "node": "Russia",
+     "degree": 20,
+     "n_neighbor_sectors": 10,
+     "both_layers": false,
+     "bridge_score": 0.44
     },
     {
      "node": "US_Banks",
      "degree": 18,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 0.49
-    },
-    {
-     "node": "Russia",
-     "degree": 19,
-     "n_neighbor_sectors": 10,
-     "both_layers": false,
-     "bridge_score": 0.46
+     "bridge_score": 0.4
     },
     {
      "node": "Right_to_Repair",
      "degree": 21,
      "n_neighbor_sectors": 9,
      "both_layers": false,
-     "bridge_score": 0.31
+     "bridge_score": 0.2
     },
     {
      "node": "Google",
      "degree": 12,
      "n_neighbor_sectors": 10,
      "both_layers": true,
-     "bridge_score": 0.21
+     "bridge_score": 0.13
     },
     {
      "node": "Hedera",
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 0.14
+     "bridge_score": 0.04
     },
     {
      "node": "Microsoft",
      "degree": 14,
      "n_neighbor_sectors": 8,
      "both_layers": true,
-     "bridge_score": -0.3
+     "bridge_score": -0.33
+    },
+    {
+     "node": "Iran",
+     "degree": 12,
+     "n_neighbor_sectors": 8,
+     "both_layers": true,
+     "bridge_score": -0.54
     },
     {
      "node": "OpenAI",
@@ -4303,14 +4310,7 @@
      "degree": 12,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": -0.88
-    },
-    {
-     "node": "Australia",
-     "degree": 12,
-     "n_neighbor_sectors": 7,
-     "both_layers": true,
-     "bridge_score": -0.88
+     "bridge_score": -0.87
     },
     {
      "node": "Ukraine",
@@ -4324,21 +4324,21 @@
      "degree": 8,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": -1.31
+     "bridge_score": -1.27
     },
     {
      "node": "Apple",
      "degree": 8,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -1.67
+     "bridge_score": -1.61
     },
     {
      "node": "xAI",
      "degree": 7,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -1.77
+     "bridge_score": -1.71
     }
    ]
   },

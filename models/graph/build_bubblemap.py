@@ -103,6 +103,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Tobacco_MSA":"Tobacco MSA (1998)","Big_Tobacco":"Big Tobacco (Big-4)","Altria":"Altria (Philip Morris)","Truth_Initiative":"Truth Initiative","Tobacco_Bonds":"Tobacco settlement bonds",
  "Boeing_737_MAX":"Boeing 737 MAX","MCAS":"MCAS (flight-control system)","Spirit_AeroSystems":"Spirit AeroSystems","Boeing_Criminal_Case":"Boeing DOJ case (DPA→NPA)","FAA":"FAA",
  "VCF_9_11":"9/11 Victim Compensation Fund","Zadroga_Act":"Zadroga Act (9/11)","Flint_Water_Crisis":"Flint water crisis","East_Palestine":"East Palestine derailment","Norfolk_Southern":"Norfolk Southern","Ken_Feinberg":"Ken Feinberg","Disaster_Compensation":"Disaster compensation mechanisms",
+ "Infrastructure_Corridors":"Competing infra corridors","BRI":"Belt and Road (BRI)","IMEC":"IMEC corridor (India-MidEast-EU)","IMEC_Belgium":"imec (Belgium semiconductor R&D)","PGII":"PGII (G7)","Lobito_Corridor":"Lobito Corridor","Global_Gateway":"Global Gateway (EU)","INSTC":"INSTC (Russia-Iran-India)","Middle_Corridor":"Middle Corridor (Trans-Caspian)","Turkey":"Turkey",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

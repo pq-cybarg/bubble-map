@@ -174,7 +174,7 @@ ALIAS = {
  "Lockheed_Martin":"Lockheed_Martin","Lockheed Martin":"Lockheed_Martin","LMT":"Lockheed_Martin","RTX":"RTX","Raytheon":"Raytheon","Leonardo":"Leonardo","Leonardo S.p.A.":"Leonardo","Finmeccanica":"Leonardo","Leonardo_DRS":"Leonardo_DRS","Leonardo DRS":"Leonardo_DRS",
  "MEF":"MEF","FOCI_Proxy":"FOCI_Proxy","ELSAG":"ELSAG","AgustaWestland_Scandal":"AgustaWestland_Scandal","QRL_XMSS_Patent":"QRL_XMSS_Patent",
  # 3D-stacking scaling race
- "IBM_Nanostack":"IBM_Nanostack","Nanostack":"IBM_Nanostack","Huawei_Tau_Scaling":"Huawei_Tau_Scaling","Tau Scaling":"Huawei_Tau_Scaling","LogicFolding":"Huawei_Tau_Scaling","CFET":"CFET","IMEC":"IMEC",
+ "IBM_Nanostack":"IBM_Nanostack","Nanostack":"IBM_Nanostack","Huawei_Tau_Scaling":"Huawei_Tau_Scaling","Tau Scaling":"Huawei_Tau_Scaling","LogicFolding":"Huawei_Tau_Scaling","CFET":"CFET","IMEC_Belgium":"IMEC_Belgium","imec":"IMEC_Belgium",
  # PFAS forever chemicals
  "PFAS":"PFAS","3M":"3M","DuPont":"DuPont","Chemours":"Chemours","Corteva":"Corteva","AFFF_MDL":"AFFF_MDL","EPA":"EPA","EPA_PFAS_Rule":"EPA_PFAS_Rule","Public_Water_Systems":"Public_Water_Systems","PFAS_Suppression":"PFAS_Suppression",
  # J&J talc / Texas two-step / liability engineering
@@ -220,6 +220,9 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # competing infrastructure corridors
+ "Infrastructure_Corridors":"Infrastructure_Corridors","PGII":"PGII","Lobito_Corridor":"Lobito_Corridor","Lobito Corridor":"Lobito_Corridor","Global_Gateway":"Global_Gateway","Global Gateway":"Global_Gateway",
+ "INSTC":"INSTC","Middle_Corridor":"Middle_Corridor","Middle Corridor":"Middle_Corridor","Turkey":"Turkey","Turkiye":"Turkey",
  # environmental/public-health disasters
  "VCF_9_11":"VCF_9_11","Zadroga_Act":"Zadroga_Act","Flint_Water_Crisis":"Flint_Water_Crisis","Flint":"Flint_Water_Crisis","East_Palestine":"East_Palestine","Norfolk_Southern":"Norfolk_Southern","Ken_Feinberg":"Ken_Feinberg","Disaster_Compensation":"Disaster_Compensation",
  # boeing 737 max
@@ -428,7 +431,7 @@ NODE_META = {
  "Lockheed_Martin":("defense",True),"RTX":("defense",True),"Raytheon":("defense",True),"Leonardo":("defense",True),"Leonardo_DRS":("defense",True),
  "MEF":("state",False),"FOCI_Proxy":("state",False),"ELSAG":("surveillance",False),"AgustaWestland_Scandal":("defense",False),"QRL_XMSS_Patent":("pqc_quantum",False),
  # 3D-stacking scaling race
- "IBM_Nanostack":("semiconductor",False),"Huawei_Tau_Scaling":("semiconductor",False),"CFET":("semiconductor",False),"IMEC":("semiconductor",False),
+ "IBM_Nanostack":("semiconductor",False),"Huawei_Tau_Scaling":("semiconductor",False),"CFET":("semiconductor",False),"IMEC_Belgium":("semiconductor",False),
  # PFAS forever chemicals
  "PFAS":("commodity",False),"3M":("industrial",True),"DuPont":("industrial",True),"Chemours":("industrial",True),"Corteva":("industrial",True),
  "AFFF_MDL":("regulator",False),"EPA":("regulator",True),"EPA_PFAS_Rule":("regulator",False),"Public_Water_Systems":("other",False),"PFAS_Suppression":("other",False),
@@ -539,6 +542,9 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # competing infrastructure corridors (overlay)
+ "Infrastructure_Corridors":("logistics",False),"PGII":("state",False),"Lobito_Corridor":("logistics",False),"Global_Gateway":("state",False),
+ "INSTC":("logistics",False),"Middle_Corridor":("logistics",False),"Turkey":("state",True),"IMEC_Belgium":("semiconductor",False),
  # environmental/public-health disasters (overlay)
  "VCF_9_11":("other",False),"Zadroga_Act":("state",False),"Flint_Water_Crisis":("other",False),"East_Palestine":("other",False),
  "Norfolk_Southern":("industrial",True),"Ken_Feinberg":("person",False),"Disaster_Compensation":("other",False),

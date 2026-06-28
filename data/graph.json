@@ -348,6 +348,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "BRI": {
+      "sector": "other",
+      "has_exogenous_revenue": true
+    },
     "BRICS": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1452,6 +1456,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Global_Gateway": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Globalstar": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -1641,12 +1649,20 @@
       "has_exogenous_revenue": false
     },
     "IMEC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "IMEC_Belgium": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
     },
     "IMF": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "INSTC": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
     },
     "IPFS": {
       "sector": "crypto_infra",
@@ -1707,6 +1723,10 @@
     "Indonesia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Infrastructure_Corridors": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
     },
     "Infura": {
       "sector": "crypto_infra",
@@ -2052,6 +2072,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Lobito_Corridor": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
     "Local_AI_Tooling": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -2163,6 +2187,10 @@
     "Microsoft": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
+    },
+    "Middle_Corridor": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
     },
     "Middleby": {
       "sector": "industrial",
@@ -2482,6 +2510,10 @@
     },
     "PFAS_Suppression": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "PGII": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "PIMCO": {
@@ -3423,6 +3455,10 @@
     "Tudou_Guarantee": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
+    },
+    "Turkey": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Turkey_state": {
       "sector": "other",
@@ -5205,6 +5241,292 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "fin-meta-family.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "BRI",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "Belt and Road Initiative (2013) \u2014 land + maritime across ~150 countries; 'debt-trap' framing contested (Rhodium/Chatham House)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Middle_Corridor",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "eastern origin of the Trans-Caspian Middle Corridor (which Western backers promote to BYPASS Russia)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-sponsor of the India-Middle East-Europe Economic Corridor (G20, Sept 2023); stalled by the post-2023 Gaza war",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "IMEC sponsor (the European terminus)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "IMEC partner (Gulf land-bridge) \u2014 while a BRICS member + BRI participant",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "UAE",
+      "to": "IMEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "IMEC partner (Gulf land-bridge) \u2014 while a BRICS member + BRI participant",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "PGII",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "G7 Partnership for Global Infrastructure and Investment (2022) \u2014 the West's BRI counter-financing",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Lobito_Corridor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Lobito Corridor (Angola-DRC-Zambia rail to the Atlantic) for copper/cobalt \u2014 flagship PGII project, US-backed",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "Lobito_Corridor",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "co-backer of the Lobito Corridor (critical-minerals to the Atlantic)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "Global_Gateway",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EU's EUR300B global-infrastructure program (2021) \u2014 the EU's answer to BRI",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "INSTC",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "International North-South Transport Corridor (Russia-Iran-India via Caspian) \u2014 sanctions-resilient",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "INSTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "INSTC midpoint (Caspian-Persian Gulf land-bridge)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "INSTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "INSTC southern terminus (Mumbai-Bandar Abbas) \u2014 India in INSTC (with Russia/Iran) AND IMEC (with US/Gulf/EU): documented multi-alignment",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Turkey",
+      "to": "Middle_Corridor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Middle Corridor anchor (Caucasus-Turkey-EU) routing around Russia \u2014 while a major buyer of Russian energy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "Middle_Corridor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EU backs the Middle Corridor as a Russia-bypassing Asia-Europe route",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "BRI",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "IMEC",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "PGII",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Lobito_Corridor",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Global_Gateway",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "INSTC",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
+      "note": ""
+    },
+    {
+      "from": "Middle_Corridor",
+      "to": "Infrastructure_Corridors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member of the competing-corridor lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-corridors.json",
       "note": ""
     },
     {
@@ -7016,10 +7338,10 @@
     },
     {
       "from": "CFET",
-      "to": "IMEC",
+      "to": "IMEC_Belgium",
       "instrument": "other",
       "layer": "structural",
-      "raw_instrument": "CFET (stack n-over-p) concept FIRST proposed by IMEC (2018) \u2014 the shared origin both firms build on (Huawei/IMEC joint patent exists)",
+      "raw_instrument": "CFET (stack n-over-p) concept FIRST proposed by imec/IMEC Belgium (2018) \u2014 the shared origin both firms build on (Huawei/imec joint patent exists)",
       "amount_usd": null,
       "status": "documented",
       "declared_circular": false,
@@ -20887,10 +21209,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 960,
-    "num_edges": 1311,
-    "num_financial_edges": 220,
-    "num_structural_edges": 1091,
+    "num_nodes": 969,
+    "num_edges": 1333,
+    "num_financial_edges": 224,
+    "num_structural_edges": 1109,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20941,28 +21263,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Anthropic",
@@ -20978,6 +21300,12 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -20996,12 +21324,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -21631,6 +21953,13 @@
       },
       "BNY_Mellon": {
         "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BRI": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23568,6 +23897,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Global_Gateway": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Globalstar": {
         "total_usd": 13300000000,
         "circular_usd": 0,
@@ -23904,7 +24240,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IMEC_Belgium": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IMF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "INSTC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24010,6 +24360,13 @@
         "in_robust_core": false
       },
       "Indonesia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Infrastructure_Corridors": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24618,6 +24975,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lobito_Corridor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Local_AI_Tooling": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24813,6 +25177,13 @@
         "circularity_ratio": 0.956,
         "in_core_scc": true,
         "in_robust_core": true
+      },
+      "Middle_Corridor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
       },
       "Middleby": {
         "total_usd": 0,
@@ -25368,6 +25739,13 @@
         "in_robust_core": false
       },
       "PFAS_Suppression": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PGII": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27019,6 +27397,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Turkey": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Turkey_state": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27758,7 +28143,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 41,
+        "degree": 43,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -27767,6 +28152,7 @@
           "defense",
           "energy",
           "industrial",
+          "logistics",
           "other",
           "person",
           "pqc_quantum",
@@ -27778,8 +28164,8 @@
           "state_intel",
           "statistic"
         ],
-        "n_neighbor_sectors": 17,
-        "source_files": 20,
+        "n_neighbor_sectors": 18,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -27788,13 +28174,14 @@
       },
       {
         "node": "US_Government",
-        "degree": 34,
+        "degree": 37,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
           "critical_minerals",
           "defense",
           "financier",
+          "logistics",
           "other",
           "person",
           "pqc_quantum",
@@ -27804,8 +28191,8 @@
           "state",
           "telecom"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 22,
+        "n_neighbor_sectors": 14,
+        "source_files": 23,
         "layers": [
           "financial",
           "structural"
@@ -27928,6 +28315,28 @@
         "both_layers": true
       },
       {
+        "node": "Russia",
+        "degree": 20,
+        "neighbor_sectors": [
+          "bank",
+          "commodity",
+          "defense",
+          "energy",
+          "logistics",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 8,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Microsoft",
         "degree": 14,
         "neighbor_sectors": [
@@ -27947,28 +28356,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Russia",
-        "degree": 19,
-        "neighbor_sectors": [
-          "bank",
-          "commodity",
-          "defense",
-          "energy",
-          "logistics",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "threat_actor"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 7,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "PrivateCredit_Funds",
@@ -28053,6 +28440,27 @@
         "both_layers": false
       },
       {
+        "node": "Iran",
+        "degree": 12,
+        "neighbor_sectors": [
+          "defense",
+          "energy",
+          "industrial",
+          "logistics",
+          "other",
+          "person",
+          "privacy_tool",
+          "state"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 2,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "OpenAI",
         "degree": 18,
         "neighbor_sectors": [
@@ -28125,26 +28533,6 @@
         ],
         "n_neighbor_sectors": 6,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Australia",
-        "degree": 12,
-        "neighbor_sectors": [
-          "critical_minerals",
-          "defense",
-          "financier",
-          "industrial",
-          "other",
-          "person",
-          "state"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 3,
         "layers": [
           "financial",
           "structural"
