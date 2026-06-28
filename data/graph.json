@@ -432,6 +432,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
+    "BitPay": {
+      "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
     "Bitcoin_Strategic_Reserve": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1104,6 +1108,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "EchoStar_Boost": {
+      "sector": "telecom",
+      "has_exogenous_revenue": true
+    },
     "EeroQ": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -1270,6 +1278,10 @@
     },
     "Financial_Privacy": {
       "sector": "privacy_tool",
+      "has_exogenous_revenue": false
+    },
+    "FirstNet": {
+      "sector": "telecom",
       "has_exogenous_revenue": false
     },
     "First_Brands": {
@@ -1467,6 +1479,10 @@
     "Hedge_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Helium_Mobile": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
     },
     "Heretic": {
       "sector": "ai_infra",
@@ -2094,6 +2110,10 @@
     },
     "MiniMax": {
       "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Mint_Mobile": {
+      "sector": "telecom",
       "has_exogenous_revenue": false
     },
     "Miraex": {
@@ -14989,6 +15009,175 @@
       "note": ""
     },
     {
+      "from": "ATT",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-3 facilities carrier; operates FirstNet; CALEA-mandated; accepts crypto via BitPay",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "Verizon",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-3 facilities carrier; runs Frontline public-safety service; owns Visible + Tracfone",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "TMobile",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-3 facilities carrier (post-Sprint 2020); owns Metro + Mint/Ultra",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "EchoStar_Boost",
+      "to": "US_Telecoms",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "EchoStar/Dish Boost Mobile \u2014 the 4th facilities carrier mandated by the 2020 T-Mobile/Sprint merger remedy (uneven buildout)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "TMobile",
+      "to": "Mint_Mobile",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquired Ka'ena Corp (Mint + Ultra + Plum wholesale) for up to $1.35B; closed 1 May 2024 (Ryan Reynolds had a stake)",
+      "amount_usd": 1350000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "ATT",
+      "to": "FirstNet",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates FirstNet, the nationwide public-safety broadband network (dedicated Band 14, priority/preemption) \u2014 ~$6.5B / 25-yr FirstNet Authority contract (2017)",
+      "amount_usd": 6500000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "FirstNet",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FirstNet Authority \u2014 independent federal authority within NTIA/Commerce (post-9/11) that owns the network + spectrum",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "ATT",
+      "to": "BitPay",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "first major US carrier to accept cryptocurrency bill payment, via BitPay (2019)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "Helium_Mobile",
+      "to": "US_Telecoms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "crypto-native MVNO (Nova Labs) on the T-Mobile network + the Helium DePIN hotspot network",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "Helium_Mobile",
+      "to": "Solana",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "MOBILE token + rewards on Solana (Helium migrated from its own L1 to Solana, 2023)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "ATT",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breached (disclosed Oct 2024); accessed CALEA lawful-intercept systems; AT&T said it evicted the group (Dec 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "Verizon",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breached (disclosed Oct 2024); Verizon said it contained the activity (Dec 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "TMobile",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "intrusion resembling Salt Typhoon; T-Mobile said it ejected attackers before serious damage (2024)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-telecom-carriers.json",
+      "note": ""
+    },
+    {
       "from": "Rate_Shock",
       "to": "Banks",
       "instrument": "other",
@@ -19839,10 +20028,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 919,
-    "num_edges": 1243,
-    "num_financial_edges": 212,
-    "num_structural_edges": 1031,
+    "num_nodes": 924,
+    "num_edges": 1256,
+    "num_financial_edges": 214,
+    "num_structural_edges": 1042,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19893,14 +20082,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -19909,12 +20090,20 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -19922,14 +20111,14 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -20169,7 +20358,7 @@
         "in_robust_core": false
       },
       "ATT": {
-        "total_usd": 20000000,
+        "total_usd": 6520000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -20729,6 +20918,13 @@
         "in_robust_core": false
       },
       "BitMEX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BitPay": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21911,6 +22107,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EchoStar_Boost": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EeroQ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -22200,6 +22403,13 @@
       },
       "Financial_Privacy": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FirstNet": {
+        "total_usd": 6500000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22542,6 +22752,13 @@
         "in_robust_core": false
       },
       "Hedge_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Helium_Mobile": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23642,6 +23859,13 @@
       },
       "MiniMax": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mint_Mobile": {
+        "total_usd": 1350000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25503,7 +25727,7 @@
         "in_robust_core": false
       },
       "TMobile": {
-        "total_usd": 0,
+        "total_usd": 1350000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -26453,7 +26677,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 31,
+        "degree": 32,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -26466,10 +26690,11 @@
           "regulator",
           "sink",
           "spv",
-          "state"
+          "state",
+          "telecom"
         ],
-        "n_neighbor_sectors": 12,
-        "source_files": 20,
+        "n_neighbor_sectors": 13,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"

@@ -95,6 +95,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Foundry_Networks":"Foundry Networks","Brocade":"Brocade","CommScope":"CommScope (ex-Arris/Ruckus)",
  "Mubadala":"Mubadala (Abu Dhabi SWF)","CHIPS_Act":"CHIPS Act","Trusted_Foundry":"DoD Trusted Foundry","GlobalFoundries":"GlobalFoundries (GFS)",
  "Networking_Security_Industry":"Networking & security industry","Palo_Alto_Networks":"Palo Alto Networks","Check_Point":"Check Point","CISA":"CISA","F5":"F5 (BIG-IP)","Cloudflare":"Cloudflare","HPE":"HPE",
+ "ATT":"AT&T","TMobile":"T-Mobile","US_Telecoms":"US telecom carriers","Mint_Mobile":"Mint Mobile","FirstNet":"FirstNet (AT&T/federal)","Helium_Mobile":"Helium Mobile (Solana MVNO)","EchoStar_Boost":"EchoStar / Boost","BitPay":"BitPay","SaltTyphoon":"Salt Typhoon (PRC APT)","CALEA_Backdoor":"CALEA wiretap mandate",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",

@@ -81,6 +81,7 @@ Bayer,Roundup_Litigation,other,7250000000,contested,False,False,spec-roundup-gly
 MGX,OpenAI,equity,7000000000,active,False,False,fin-google-amazon-anthropic-meta.json
 Oracle,Stargate,equity,7000000000,committed,True,False,fin-coreweave-oracle.json
 MGX,Stargate,equity,7000000000,committed,False,False,fin-coreweave-oracle.json
+ATT,FirstNet,other,6500000000,documented,False,False,spec-telecom-carriers.json
 NVIDIA,CoreWeave,backstop,6300000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 Broadcom,Brocade,debt,5900000000,documented,False,False,spec-foundry-brocade-broadcom.json
 State_AGs,JNJ,other,5000000000,documented,False,False,spec-opioid-crisis.json
@@ -111,6 +112,7 @@ CHIPS_Act,GlobalFoundries,other,1500000000,documented,False,False,spec-globalfou
 Lazarus_Group,Bybit,surveillance_security,1500000000,closed,False,False,spec-onchain-threat-actor-addresses.json
 NVIDIA,Lambda,backstop,1500000000,active,True,False,fin-coreweave-oracle.json
 NVIDIA,Crusoe,equity,1400000000,funded,True,False,fin-coreweave-oracle.json
+TMobile,Mint_Mobile,acquisition,1350000000,documented,False,False,spec-telecom-carriers.json
 Jump_Crypto,Terraform_Labs,other,1280000000,documented,False,False,spec-crypto-market-makers-political.json
 Ripple,Ripple_Prime,acquisition,1250000000,closed,False,False,spec-blockchain-ecosystem.json
 IonQ,Oxford_Ionics,acquisition,1075000000,closed,False,False,spec-quantum-computing-competitive-landscape.json
@@ -925,6 +927,17 @@ Device_Ownership_Erosion,Device_Age_Attestation,other,,open,False,False,digitali
 Microsoft,AI_Native_OS,other,,open,False,False,digitalid-device-ownership-erosion.json
 AI_Native_OS,Device_Age_Attestation,other,,open,False,False,digitalid-device-ownership-erosion.json
 Age_Assurance_Issuers,Device_Age_Attestation,surveillance_security,,open,False,False,digitalid-device-ownership-erosion.json
+ATT,US_Telecoms,other,,documented,False,False,spec-telecom-carriers.json
+Verizon,US_Telecoms,other,,documented,False,False,spec-telecom-carriers.json
+TMobile,US_Telecoms,other,,documented,False,False,spec-telecom-carriers.json
+EchoStar_Boost,US_Telecoms,merger,,contested,False,False,spec-telecom-carriers.json
+US_Government,FirstNet,other,,documented,False,False,spec-telecom-carriers.json
+ATT,BitPay,other,,documented,False,False,spec-telecom-carriers.json
+Helium_Mobile,US_Telecoms,other,,documented,False,False,spec-telecom-carriers.json
+Helium_Mobile,Solana,other,,documented,False,False,spec-telecom-carriers.json
+SaltTyphoon,ATT,surveillance_security,,documented,False,False,spec-telecom-carriers.json
+SaltTyphoon,Verizon,surveillance_security,,documented,False,False,spec-telecom-carriers.json
+SaltTyphoon,TMobile,other,,contested,False,False,spec-telecom-carriers.json
 China,MSS,other,,documented,False,False,spec-surveillance-cyber-threat-layer.json
 MSS,SaltTyphoon,other,,documented,False,False,spec-surveillance-cyber-threat-layer.json
 MSS,VoltTyphoon,other,,documented,False,False,spec-surveillance-cyber-threat-layer.json

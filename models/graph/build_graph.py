@@ -220,6 +220,9 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # telecom carriers (extends existing ATT/Verizon/TMobile/US_Telecoms/CALEA_Backdoor/SaltTyphoon)
+ "AT&T":"ATT","AT&T Inc":"ATT","T-Mobile":"TMobile","T_Mobile":"TMobile","T-Mobile US":"TMobile",
+ "Mint_Mobile":"Mint_Mobile","Mint Mobile":"Mint_Mobile","FirstNet":"FirstNet","Helium_Mobile":"Helium_Mobile","Helium Mobile":"Helium_Mobile","EchoStar_Boost":"EchoStar_Boost","BitPay":"BitPay",
  # networking & security industry
  "Networking_Security_Industry":"Networking_Security_Industry","Cisco":"Cisco","Juniper":"Juniper","Juniper Networks":"Juniper","Arista":"Arista","HPE":"HPE","Hewlett Packard Enterprise":"HPE",
  "Palo_Alto_Networks":"Palo_Alto_Networks","Palo Alto Networks":"Palo_Alto_Networks","Fortinet":"Fortinet","Cloudflare":"Cloudflare","Zscaler":"Zscaler","F5":"F5","F5 Networks":"F5",
@@ -521,6 +524,8 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # telecom carriers (overlay; ATT/Verizon/TMobile/US_Telecoms already in meta above)
+ "Mint_Mobile":("telecom",False),"FirstNet":("telecom",False),"Helium_Mobile":("crypto_infra",False),"EchoStar_Boost":("telecom",True),"BitPay":("crypto_firm",False),
  # networking & security industry (overlay)
  "Networking_Security_Industry":("tech",False),"Cisco":("tech",True),"Juniper":("tech",False),"Arista":("tech",True),"HPE":("tech",True),
  "Palo_Alto_Networks":("security_research",True),"Fortinet":("security_research",True),"Cloudflare":("tech",True),"Zscaler":("security_research",True),

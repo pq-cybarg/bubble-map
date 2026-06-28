@@ -17,7 +17,7 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 63 files
 - **Google** — 43 files
-- **Chainlink** — 39 files
+- **Chainlink** — 40 files
 - **OpenAI** — 34 files
 - **FDIC** — 32 files
 - **Oracle** — 31 files
@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-networking-security-industry.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-telecom-carriers.json` — related files by shared entities (verify cross-refs exist)
+- spec-foundry-brocade-broadcom.json: 1 shared entities
+- spec-asbestos-mass-tort.json: 1 shared entities
+- spec-crypto-sec-epstein.json: 1 shared entities
+- spec-pfas-forever-chemicals.json: 1 shared entities
+- spec-seed-ip-corn.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
+- spec-open-source-3dprinting-lawfare.json: 1 shared entities
+- spec-jj-talc-texas-two-step.json: 1 shared entities
