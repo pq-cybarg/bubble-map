@@ -140,6 +140,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "Akamai": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
+    },
     "Akash": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -246,6 +250,10 @@
     },
     "Applied_Materials": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
+    "Arista": {
+      "sector": "tech",
       "has_exogenous_revenue": true
     },
     "Arm": {
@@ -556,6 +564,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CISA": {
+      "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
     "CLARITY": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -688,6 +700,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Check_Point": {
+      "sector": "security_research",
+      "has_exogenous_revenue": true
+    },
     "ChemChina": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -736,6 +752,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": true
     },
+    "Cisco": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
+    },
     "Citadel_Securities": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -747,6 +767,10 @@
     "Clearview_AI": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
+    },
+    "Cloudflare": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
     },
     "CoBank": {
       "sector": "bank",
@@ -883,6 +907,10 @@
     "Custodia_Bank": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "CyberArk": {
+      "sector": "security_research",
+      "has_exogenous_revenue": false
     },
     "Cyber_Defense": {
       "sector": "security_research",
@@ -1144,6 +1172,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "F5": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
+    },
     "FBI": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
@@ -1262,6 +1294,10 @@
     },
     "Fortescue": {
       "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Fortinet": {
+      "sector": "security_research",
       "has_exogenous_revenue": true
     },
     "Foundry_Networks": {
@@ -1391,6 +1427,10 @@
     "HKDA": {
       "sector": "stablecoin",
       "has_exogenous_revenue": false
+    },
+    "HPE": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
     },
     "HPS": {
       "sector": "private_credit",
@@ -1743,6 +1783,10 @@
     "Jump_Crypto": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Juniper": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Justin_Sun": {
       "sector": "person",
@@ -2192,6 +2236,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Networking_Security_Industry": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Next-gen data centers / AI infrastructure": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2350,6 +2398,10 @@
     },
     "Palantir": {
       "sector": "defense_tech",
+      "has_exogenous_revenue": true
+    },
+    "Palo_Alto_Networks": {
+      "sector": "security_research",
       "has_exogenous_revenue": true
     },
     "Panama_Canal": {
@@ -2984,6 +3036,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Splunk": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Sponsor_Banks": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -3587,6 +3643,10 @@
     "Zooko_Wilcox": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Zscaler": {
+      "sector": "security_research",
+      "has_exogenous_revenue": true
     },
     "a16z": {
       "sector": "financier",
@@ -18543,6 +18603,240 @@
       "note": ""
     },
     {
+      "from": "Cisco",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dominant enterprise router/switch incumbent; expanding into security/observability",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Cisco",
+      "to": "Splunk",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Cisco acquired Splunk (~$28B, closed Mar 2024) \u2014 observability/SIEM",
+      "amount_usd": 28000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "HPE",
+      "to": "Juniper",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "HPE acquired Juniper (~$14B); DOJ SUED to block (Jan 2025), SETTLED 28 Jun 2025 (divest Instant On + license Mist AIOps), closed 2 Jul 2025",
+      "amount_usd": 14000000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "HPE",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enterprise networking via Aruba + Juniper",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Juniper",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enterprise/carrier networking + Mist AIOps",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Arista",
+      "to": "Networking_Security_Industry",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "high-end datacenter / AI-fabric switching for the cloud titans",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Palo_Alto_Networks",
+      "to": "CyberArk",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Palo Alto acquired CyberArk (~$25B; announced 30 Jul 2025; closed 11 Feb 2026) \u2014 identity security; part of 'platformization' roll-up (also Chronosphere ~$3.35B)",
+      "amount_usd": 25000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Palo_Alto_Networks",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "firewall/SASE leader pursuing a security 'platform' roll-up",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Fortinet",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "firewall/SASE",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Zscaler",
+      "to": "Networking_Security_Industry",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "zero-trust / SSE (cloud security edge)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Check_Point",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "firewall/network security incumbent",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Cloudflare",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reverse-proxy/CDN fronting a large share of the web: systemic-outage power + content-moderation power (terminated 8chan 2019, KiwiFarms 2022 \u2014 infra-as-speech-regulator precedent)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "Akamai",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CDN/edge + security",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "F5",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "application-delivery / load-balancing (BIG-IP) \u2014 heavily deployed in enterprise + government",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "F5",
+      "to": "CISA",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "Aug-2025 nation-state breach of F5's BIG-IP dev environment: source code + undisclosed vulns exfiltrated -> CISA Emergency Directive ED 26-01 (patch by 22 Oct 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "CrowdStrike",
+      "to": "Networking_Security_Industry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "endpoint EDR (Falcon); the 19 Jul 2024 faulty-update outage crashed ~8.5M Windows machines worldwide (airlines/hospitals/banks; Delta suit) \u2014 the concentration-risk proof",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "CISA",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "CISA (DHS cyber agency): emergency directives + critical-infrastructure oversight",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
+      "from": "CISA",
+      "to": "Networking_Security_Industry",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "federal oversight of + dependency on these vendors for critical infrastructure (KEV catalog, emergency directives)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-networking-security-industry.json",
+      "note": ""
+    },
+    {
       "from": "llama_cpp",
       "to": "Local_AI_Tooling",
       "instrument": "other",
@@ -19545,10 +19839,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 904,
-    "num_edges": 1225,
-    "num_financial_edges": 205,
-    "num_structural_edges": 1020,
+    "num_nodes": 919,
+    "num_edges": 1243,
+    "num_financial_edges": 212,
+    "num_structural_edges": 1031,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -19599,27 +19893,32 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -19635,7 +19934,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -19656,22 +19956,16 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -19930,6 +20224,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Akamai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Akash": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20113,6 +20414,13 @@
         "in_robust_core": false
       },
       "Applied_Materials": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arista": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -20658,6 +20966,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CISA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CLARITY": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -20889,6 +21204,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Check_Point": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ChemChina": {
         "total_usd": 43000000000,
         "circular_usd": 0,
@@ -20973,6 +21295,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cisco": {
+        "total_usd": 28000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Citadel_Securities": {
         "total_usd": 2600000000,
         "circular_usd": 0,
@@ -20988,6 +21317,13 @@
         "in_robust_core": false
       },
       "Clearview_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cloudflare": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21227,6 +21563,13 @@
       },
       "Custodia_Bank": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CyberArk": {
+        "total_usd": 25000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -21687,6 +22030,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "F5": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FBI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -21891,6 +22241,13 @@
         "in_robust_core": false
       },
       "Fortescue": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fortinet": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22116,6 +22473,13 @@
       },
       "HKDA": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "HPE": {
+        "total_usd": 14000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -22732,6 +23096,13 @@
       },
       "Jump_Crypto": {
         "total_usd": 1280000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Juniper": {
+        "total_usd": 14000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23521,6 +23892,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Networking_Security_Industry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Next-gen data centers / AI infrastructure": {
         "total_usd": 40000000000,
         "circular_usd": 0,
@@ -23796,6 +24174,13 @@
       },
       "Palantir": {
         "total_usd": 32000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Palo_Alto_Networks": {
+        "total_usd": 25000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24907,6 +25292,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Splunk": {
+        "total_usd": 28000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sponsor_Banks": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25964,6 +26356,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zscaler": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "a16z": {
         "total_usd": 70000000,
         "circular_usd": 0,
@@ -26054,7 +26453,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 30,
+        "degree": 31,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -26064,12 +26463,13 @@
           "other",
           "person",
           "pqc_quantum",
+          "regulator",
           "sink",
           "spv",
           "state"
         ],
-        "n_neighbor_sectors": 11,
-        "source_files": 19,
+        "n_neighbor_sectors": 12,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"

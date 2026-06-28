@@ -39,10 +39,12 @@ Google,SpaceX,compute_commitment,30000000000,signed-CANCELABLE,True,True,fin-spa
 Google,Anthropic,compute_commitment,30000000000,active,True,False,fin-google-amazon-anthropic-meta.json
 ANTHROPIC_INVESTORS,Anthropic,other,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 SINK_bondmarket,Meta,debt,30000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
+Cisco,Splunk,acquisition,28000000000,documented,False,False,spec-networking-security-industry.json
 Private-credit funds / asset managers,AI data-center SPVs / hyperscaler projects,debt,27000000000,2025-10,False,False,macro-cre-privatecredit.json
 BlueOwl,Meta_Hyperion_SPV,debt,27000000000,closed,False,False,fin-meta-family.json
 BlueOwl,Meta_Hyperion_SPV,equity,27000000000,completed,False,False,fin-google-amazon-anthropic-meta.json
 Amazon,Anthropic,equity,25000000000,completed,True,False,fin-google-amazon-anthropic-meta.json
+Palo_Alto_Networks,CyberArk,acquisition,25000000000,documented,False,False,spec-networking-security-industry.json
 OpenAI,CoreWeave,compute_commitment,22400000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
 CoreWeave,SINK_debt,debt,21373000000,outstanding,False,False,fin-coreweave-oracle.json
 CoreWeave,SINK_lenders,debt,21000000000,reported-10K,False,False,spec-sec-filings-primary.json
@@ -56,6 +58,7 @@ Oracle,SINK_bondmarket,debt,18000000000,issued,False,False,fin-coreweave-oracle.
 Chen_Zhi,Prince_Group,other,15000000000,documented,False,False,spec-se-asia-scam-crime-nexus.json
 US_Government,Prince_Group,other,15000000000,closed,False,False,spec-cambodia-scam-fara-paid-influence.json
 Meta,ScaleAI,equity,14300000000,closed,False,False,fin-meta-family.json
+HPE,Juniper,acquisition,14000000000,contested,False,False,spec-networking-security-industry.json
 BlackRock,GIP,acquisition,12500000000,closed,False,False,spec-blackrock-aladdin-concentration.json
 BlackRock,HPS,debt,12000000000,closed,False,False,spec-blackrock-aladdin-concentration.json
 Amazon,Globalstar,acquisition,11600000000,announced,False,False,spec-telecom-satellite.json
@@ -1153,6 +1156,21 @@ Pension_Funds,PrivateCredit_Funds,other,,open,False,False,macro-pensions-ldi.jso
 Pension_Funds,PrivateEquity_Funds,other,,open,False,False,macro-pensions-ldi.json
 UK_LDI_Funds,Treasury_Market,other,,open,False,False,macro-pensions-ldi.json
 Pension_Funds,Life_Insurers,other,,open,False,False,macro-pensions-ldi.json
+Cisco,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+HPE,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+Juniper,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+Arista,Networking_Security_Industry,compute_commitment,,documented,False,False,spec-networking-security-industry.json
+Palo_Alto_Networks,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+Fortinet,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+Zscaler,Networking_Security_Industry,compute_commitment,,documented,False,False,spec-networking-security-industry.json
+Check_Point,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+Cloudflare,Networking_Security_Industry,other,,contested,False,False,spec-networking-security-industry.json
+Akamai,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+F5,Networking_Security_Industry,other,,documented,False,False,spec-networking-security-industry.json
+F5,CISA,surveillance_security,,documented,False,False,spec-networking-security-industry.json
+CrowdStrike,Networking_Security_Industry,other,,contested,False,False,spec-networking-security-industry.json
+US_Government,CISA,merger,,documented,False,False,spec-networking-security-industry.json
+CISA,Networking_Security_Industry,merger,,documented,False,False,spec-networking-security-industry.json
 llama_cpp,Local_AI_Tooling,other,,documented,False,False,spec-local-uncensored-ai.json
 Ollama,Local_AI_Tooling,other,,documented,False,False,spec-local-uncensored-ai.json
 vLLM,Local_AI_Tooling,other,,documented,False,False,spec-local-uncensored-ai.json

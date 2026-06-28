@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-globalfoundries.json` — related files by shared entities (verify cross-refs exist)
-- spec-quantum-computing-competitive-landscape.json: 3 shared entities
-- fin-openai-conversion-governance.json: 2 shared entities
-- fin-google-amazon-anthropic-meta.json: 2 shared entities
-- macro-pqc-chips.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
+## Newest file `spec-networking-security-industry.json` — related files by shared entities (verify cross-refs exist)

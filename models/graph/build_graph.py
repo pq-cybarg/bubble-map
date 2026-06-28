@@ -220,6 +220,10 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # networking & security industry
+ "Networking_Security_Industry":"Networking_Security_Industry","Cisco":"Cisco","Juniper":"Juniper","Juniper Networks":"Juniper","Arista":"Arista","HPE":"HPE","Hewlett Packard Enterprise":"HPE",
+ "Palo_Alto_Networks":"Palo_Alto_Networks","Palo Alto Networks":"Palo_Alto_Networks","Fortinet":"Fortinet","Cloudflare":"Cloudflare","Zscaler":"Zscaler","F5":"F5","F5 Networks":"F5",
+ "Splunk":"Splunk","CyberArk":"CyberArk","CISA":"CISA","Akamai":"Akamai","Check_Point":"Check_Point","Check Point":"Check_Point",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
@@ -517,6 +521,10 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # networking & security industry (overlay)
+ "Networking_Security_Industry":("tech",False),"Cisco":("tech",True),"Juniper":("tech",False),"Arista":("tech",True),"HPE":("tech",True),
+ "Palo_Alto_Networks":("security_research",True),"Fortinet":("security_research",True),"Cloudflare":("tech",True),"Zscaler":("security_research",True),
+ "F5":("tech",True),"Splunk":("tech",False),"CyberArk":("security_research",False),"CISA":("regulator",False),"Akamai":("tech",True),"Check_Point":("security_research",True),
 }
 
 edges=[]
