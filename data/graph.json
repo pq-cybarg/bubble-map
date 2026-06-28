@@ -884,6 +884,10 @@
       "sector": "critical_minerals",
       "has_exogenous_revenue": false
     },
+    "Cross_River_Bank": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "CrowdStrike": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -3544,6 +3548,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": false
     },
+    "Visa": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": true
+    },
     "Vistra": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3650,6 +3658,10 @@
     },
     "XRPL_Labs": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "X_Money": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
     "Xahau": {
@@ -5461,6 +5473,123 @@
       "cancelable": false,
       "source_file": "macro-futures-vs-physical.json",
       "note": "~4.2 paper claims per registered deliverable oz; backwardation + LBMA premium + Shanghai 12-13% premium = physical reasserting over paper."
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "Circle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USDC settlement/banking partner (named Mar 2023 after SVB's collapse)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "USDC",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "stablecoin settlement; launched its own Stablecoin Payments product (2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "Solana",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Visa USDC settlement pilot on Solana (with Lead Bank) \u2014 outward-facing",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "Ethereum",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "outward-facing stablecoin support on Ethereum",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "Visa",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USDC settlement pilot with Visa (on Solana)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "Cross_River_Bank",
+      "to": "Ripple",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "early Ripple-network member (~2014) for real-time cross-border; 'still active in 2026' is a secondary-source (Web3) claim, not primary-confirmed",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "FDIC",
+      "to": "Cross_River_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "consent order (Mar 2023, public Apr 2023): unsafe/unsound FAIR-LENDING practices in fintech/BaaS partnerships; new-partnership approval requirement \u2014 NOT a crypto-concealment finding",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "X_Money",
+      "to": "Visa",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "X Corp's payments product; announced a Visa partnership (the 'X Money Account', Jan 2025) \u2014 Visa rails, NOT a Ripple/XRP product (corrects the conflation)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
+    },
+    {
+      "from": "X_Money",
+      "to": "Cross_River_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "CLAIMED (secondary Web3 reporting, Genfinity 2026) to use CRB as a bank/settlement partner linking to Solana/Ripple \u2014 NOT primary-confirmed",
+      "amount_usd": null,
+      "status": "weak",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-river-bank.json",
+      "note": ""
     },
     {
       "from": "Khamenei",
@@ -20284,10 +20413,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 936,
-    "num_edges": 1272,
+    "num_nodes": 939,
+    "num_edges": 1281,
     "num_financial_edges": 216,
-    "num_structural_edges": 1056,
+    "num_structural_edges": 1065,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20339,15 +20468,19 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Microsoft",
@@ -20359,7 +20492,8 @@
       ],
       [
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -20372,15 +20506,16 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -20397,6 +20532,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -20404,13 +20540,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -21965,6 +22094,13 @@
         "in_robust_core": false
       },
       "Critical_Minerals_Strategic_Reserve": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cross_River_Bank": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26626,6 +26762,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Visa": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Vistra": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26809,6 +26952,13 @@
         "in_robust_core": false
       },
       "XRPL_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "X_Money": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27111,6 +27261,29 @@
         "both_layers": true
       },
       {
+        "node": "Ripple",
+        "degree": 21,
+        "neighbor_sectors": [
+          "bank",
+          "crypto_infra",
+          "dlt",
+          "financial_infra",
+          "financier",
+          "other",
+          "person",
+          "political",
+          "regulator",
+          "stablecoin"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 21,
         "neighbor_sectors": [
@@ -27127,29 +27300,6 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Ripple",
-        "degree": 20,
-        "neighbor_sectors": [
-          "bank",
-          "crypto_infra",
-          "dlt",
-          "financial_infra",
-          "financier",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"

@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # cross river bank
+ "Cross_River_Bank":"Cross_River_Bank","Cross River Bank":"Cross_River_Bank","Cross River":"Cross_River_Bank","Visa":"Visa","X_Money":"X_Money","X Money":"X_Money",
  # stellar / mccaleb / tacostand
  "Joyce_Kim":"Joyce_Kim","Tacostand_Wallet":"Tacostand_Wallet","tacostand":"Tacostand_Wallet","MoneyGram":"MoneyGram",
  # ripple / xrp tradfi rails
@@ -529,6 +531,8 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # cross river bank (overlay)
+ "Cross_River_Bank":("bank",True),"Visa":("financial_infra",True),"X_Money":("financial_infra",False),
  # stellar / mccaleb / tacostand (overlay)
  "Joyce_Kim":("person",False),"Tacostand_Wallet":("crypto_infra",False),"MoneyGram":("financial_infra",False),
  # ripple / xrp tradfi rails (overlay)
