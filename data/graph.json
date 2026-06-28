@@ -184,6 +184,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Altria": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Amazon": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -417,6 +421,10 @@
       "has_exogenous_revenue": false
     },
     "Big_Three_Distributors": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Big_Tobacco": {
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
@@ -3308,6 +3316,14 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Tobacco_Bonds": {
+      "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
+    "Tobacco_MSA": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Tokyo_Electron": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -3358,6 +3374,10 @@
     },
     "Trusted_Foundry": {
       "sector": "defense",
+      "has_exogenous_revenue": false
+    },
+    "Truth_Initiative": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Tudou_Guarantee": {
@@ -8725,6 +8745,84 @@
       "declared_circular": false,
       "cancelable": true,
       "source_file": "spec-uk-labour-tbi-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Altria",
+      "to": "Big_Tobacco",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Philip Morris USA / Altria \u2014 lead of the Big-4 tobacco majors",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
+      "note": ""
+    },
+    {
+      "from": "Big_Tobacco",
+      "to": "Tobacco_MSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Big-4 (Philip Morris/RJR/B&W/Lorillard) signed the MSA (23 Nov 1998): >=$206B/25yr (perpetual, volume-adjusted) resolving state Medicaid suits; advertising restrictions",
+      "amount_usd": 206000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "Tobacco_MSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "46 states + DC + territories (4 settled separately earlier ~$40B); NAAG-administered; Medicaid cost-recovery",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
+      "note": ""
+    },
+    {
+      "from": "Tobacco_MSA",
+      "to": "Truth_Initiative",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funded the American Legacy Foundation (now Truth Initiative) anti-smoking campaign",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
+      "note": ""
+    },
+    {
+      "from": "Tobacco_MSA",
+      "to": "Tobacco_Bonds",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "states securitized future MSA payments into ~$30B+ 'tobacco bonds' (incl. deferred capital-appreciation bonds) \u2014 ProPublica 'toxic debt'; ties state finances to cigarette VOLUME",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
+      "note": ""
+    },
+    {
+      "from": "Tobacco_MSA",
+      "to": "Liability_Engineering",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the 1998 TEMPLATE for state-AG global settlements + quasi-public abatement funds, copied by the opioid settlements; constructive mirror of the bankruptcy two-step (institutionalized, then securitized, liability)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-tobacco-msa.json",
       "note": ""
     },
     {
@@ -20520,10 +20618,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 943,
-    "num_edges": 1288,
-    "num_financial_edges": 216,
-    "num_structural_edges": 1072,
+    "num_nodes": 948,
+    "num_edges": 1294,
+    "num_financial_edges": 217,
+    "num_structural_edges": 1077,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -20574,18 +20672,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -20596,6 +20682,18 @@
       [
         "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -20613,16 +20711,16 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -20633,8 +20731,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -20976,6 +21074,13 @@
         "in_robust_core": false
       },
       "Alternative_OS_Exclusion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Altria": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -21390,6 +21495,13 @@
       },
       "Big_Three_Distributors": {
         "total_usd": 21000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Big_Tobacco": {
+        "total_usd": 206000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -26449,6 +26561,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tobacco_Bonds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tobacco_MSA": {
+        "total_usd": 206000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tokyo_Electron": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26534,6 +26660,13 @@
         "in_robust_core": false
       },
       "Trusted_Foundry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Truth_Initiative": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

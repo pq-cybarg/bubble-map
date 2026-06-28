@@ -220,6 +220,8 @@ ALIAS = {
  "Foundry_Networks":"Foundry_Networks","Foundry Networks":"Foundry_Networks","Brocade":"Brocade","CommScope":"CommScope",
  # globalfoundries deep dig
  "Mubadala":"Mubadala","Mubadala Investment Company":"Mubadala","CHIPS_Act":"CHIPS_Act","CHIPS and Science Act":"CHIPS_Act","Trusted_Foundry":"Trusted_Foundry",
+ # tobacco master settlement
+ "Tobacco_MSA":"Tobacco_MSA","Big_Tobacco":"Big_Tobacco","Altria":"Altria","Philip_Morris":"Altria","Truth_Initiative":"Truth_Initiative","Tobacco_Bonds":"Tobacco_Bonds",
  # xrp arg / epistemics
  "XRP_ARG_Lore":"XRP_ARG_Lore","QFS_Great_Reset":"QFS_Great_Reset","QFS":"QFS_Great_Reset","Epistemic_Discipline":"Epistemic_Discipline",
  # cross river bank
@@ -533,6 +535,8 @@ NODE_META = {
  "Foundry_Networks":("industrial",False),"Brocade":("industrial",False),"CommScope":("industrial",True),
  # globalfoundries deep dig (overlay)
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
+ # tobacco master settlement (overlay)
+ "Tobacco_MSA":("other",False),"Big_Tobacco":("industrial",True),"Altria":("industrial",True),"Truth_Initiative":("political",False),"Tobacco_Bonds":("financial_infra",False),
  # xrp arg / epistemics (overlay)
  "XRP_ARG_Lore":("other",False),"QFS_Great_Reset":("other",False),"Epistemic_Discipline":("other",False),
  # cross river bank (overlay)

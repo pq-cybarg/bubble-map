@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-xrp-arg-epistemics.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 6 shared entities
-- spec-sec-sdny-regulatory.json: 6 shared entities
-- altcoin-lens.json: 6 shared entities
-- spec-blockchain-ecosystem.json: 6 shared entities
-- spec-ripple-tradfi-rails.json: 5 shared entities
-- fin-hedera-connections.json: 5 shared entities
-- spec-crypto-sec-epstein.json: 4 shared entities
-- temporal-bridges.json: 3 shared entities
+## Newest file `spec-tobacco-msa.json` — related files by shared entities (verify cross-refs exist)
