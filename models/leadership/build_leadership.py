@@ -55,18 +55,20 @@ def load_congress_csv():
         for r in rows:
             typ=(r.get("type") or "").strip().lower()
             first=(r.get("first_name") or "").strip(); last=(r.get("last_name") or "").strip()
-            name=(first+" "+last).strip()
+            name=(r.get("full_name") or "").strip() or (first+" "+last).strip()  # prefer full_name (middle/suffix/nickname)
             if not name: continue
             is_sen = typ=="sen"
             bioguide=(r.get("bioguide_id") or r.get("bioguide") or slug(name)).strip()
             st=(r.get("state") or "").strip()
+            party=(r.get("party") or "").strip()
+            party={"Democrat":"Democratic"}.get(party, party)  # normalize to seed-file convention
             recs.append({
                 "id": "congress-"+bioguide,
                 "person": name,
                 "role": ("U.S. Senator" if is_sen else "U.S. Representative") + (f" ({st}-{r.get('district')})" if (not is_sen and r.get('district')) else (f" ({st})" if st else "")),
                 "jurisdiction": "U.S. Senate" if is_sen else "U.S. House of Representatives",
                 "branch": "legislative", "level": "federal", "status": "incumbent",
-                "party": (r.get("party") or "").strip(),
+                "party": party,
                 "as_of": "from-dataset",
                 "source_url": "https://github.com/unitedstates/congress-legislators",
                 "source_dataset": "congress-legislators",
