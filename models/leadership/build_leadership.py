@@ -114,10 +114,12 @@ def build_html(recs, by_branch, by_level, current_as_of):
             parts.append("<table><tr><th>Office</th><th>Person</th><th>Party</th><th>Since</th><th>Status</th><th>Source</th></tr>")
             for r in sorted(rs, key=lambda x:(x.get("jurisdiction",""), x.get("role",""))):
                 st=r.get("status","")
+                note=f"<br><span class=muted><i>{esc(r['note'])}</i></span>" if r.get("note") else ""
+                since=esc(r.get("start","")) + (f" &ndash; {esc(r['end'])}" if r.get("end") else "")
                 parts.append(
-                    f"<tr><td>{esc(r['role'])}<br><span class=muted>{esc(r['jurisdiction'])}</span></td>"
+                    f"<tr><td>{esc(r['role'])}<br><span class=muted>{esc(r['jurisdiction'])}</span>{note}</td>"
                     f"<td>{esc(r['person'])}</td><td>{esc(r.get('party',''))}</td>"
-                    f"<td>{esc(r.get('start',''))}</td>"
+                    f"<td>{since}</td>"
                     f"<td class=s-{esc(st)}>{esc(st)}</td>"
                     f"<td><a href='{esc(r['source_url'])}' rel=nofollow>src</a></td></tr>")
             parts.append("</table>")
