@@ -20,6 +20,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "AES": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "AFBF_Deere_MOU": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -224,6 +228,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Americas_Region": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Amkor": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -278,6 +286,10 @@
     },
     "Applied_Materials": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
+    "Argentina": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Arista": {
@@ -624,6 +636,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Burkina_Faso": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Bybit": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -760,6 +776,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Canada": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Canary": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -834,6 +854,10 @@
     },
     "Chery": {
       "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Chile": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "China": {
@@ -919,6 +943,10 @@
     "ColibriTD": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "Colombia": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "ComfyUI": {
       "sector": "ai_infra",
@@ -2288,6 +2316,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Lithium_Triangle": {
+      "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
     "Lobito_Corridor": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -2364,6 +2396,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "Mali": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Mandiant": {
       "sector": "security_research",
       "has_exogenous_revenue": false
@@ -2407,6 +2443,10 @@
     "Metals_Futures": {
       "sector": "commodity_market",
       "has_exogenous_revenue": false
+    },
+    "Mexico": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Mezink": {
       "sector": "other",
@@ -2626,6 +2666,10 @@
     },
     "Next-gen data centers / AI infrastructure": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "Niger": {
+      "sector": "state",
       "has_exogenous_revenue": true
     },
     "Nikon": {
@@ -3318,6 +3362,10 @@
     },
     "Sackler_Family": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Sahel_AES": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "SaltTyphoon": {
@@ -19720,6 +19768,266 @@
       "note": ""
     },
     {
+      "from": "Mexico",
+      "to": "Americas_Region",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "nearshoring (USMCA); Sheinbaum (Morena, Oct 2024); cartels+fentanyl + US tariff/cartel-terror-designation pressure; Chinese-EV backdoor concern",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Canada",
+      "to": "Americas_Region",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "USMCA; PM Carney (2025); 2025 US tariffs + '51st state' pressure; oil sands + critical minerals; trade retaliation",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Venezuela",
+      "to": "Americas_Region",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest oil reserves; collapsed PDVSA + migration; 2024 DISPUTED election (Maduro vs Gonzalez/Machado); 2025 US naval buildup + strikes on alleged drug vessels (legality contested)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Argentina",
+      "to": "Americas_Region",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "Milei libertarian shock (Dec 2023); IMF's biggest debtor (~$44B); 2025 US Treasury swap (~$20B); REVERSED BRICS accession; Vaca Muerta shale",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Brazil",
+      "to": "Americas_Region",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "BRICS founder; Lula/Bolsonaro polarization; agribusiness (soy/beef) to China; Petrobras pre-salt oil; Amazon",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Chile",
+      "to": "Americas_Region",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "#1 copper + major lithium; Boric govt; state lithium model",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Colombia",
+      "to": "Americas_Region",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Petro (first leftist president); cocaine economy; 2025 US-Colombia tensions",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "IMF",
+      "to": "Argentina",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "Argentina is the IMF's largest debtor (~$44B+) \u2014 serial programs",
+      "amount_usd": 44000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Venezuela",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctions + on-off Chevron license + 2025 military pressure/strikes (contested)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Mexico",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025 tariff threats + cartel terrorist-designation push (fentanyl)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Canada",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025 tariffs + '51st state' rhetoric",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Argentina",
+      "to": "Lithium_Triangle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Lithium Triangle member (open/Milei model)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Chile",
+      "to": "Lithium_Triangle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Lithium Triangle member (state model)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Lithium_Triangle",
+      "to": "Americas_Region",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Argentina+Chile+Bolivia hold a majority of lithium-brine reserves \u2014 heavy Chinese investment + Western critical-minerals interest (cross-link #182/Lobito)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Lithium_Triangle",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "major Chinese lithium investment (BYD/Ganfeng/Tianqi) in the Triangle",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Burkina_Faso",
+      "to": "AES",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Capt. Traor\u00e9 junta \u2014 founding AES member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Mali",
+      "to": "AES",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "junta \u2014 founding AES member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Niger",
+      "to": "AES",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "junta (2023 coup) \u2014 founding AES member; uranium (ex-French supply)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "AES",
+      "to": "Sahel_AES",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Alliance of Sahel States (Sept 2024): LEFT ECOWAS (2025), expelled French forces, pivoted to Russia/Africa Corps; gold + uranium; anti-colonial framing vs jihadist-violence/backsliding critique",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "AES",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Africa Corps (ex-Wagner) security partner to the Sahel juntas \u2014 France's replacement",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-americas-sahel.json",
+      "note": ""
+    },
+    {
       "from": "Microsoft",
       "to": "OpenAI",
       "instrument": "equity",
@@ -23933,10 +24241,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1065,
-    "num_edges": 1513,
-    "num_financial_edges": 245,
-    "num_structural_edges": 1268,
+    "num_nodes": 1077,
+    "num_edges": 1533,
+    "num_financial_edges": 249,
+    "num_structural_edges": 1284,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -23987,18 +24295,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -24012,13 +24308,15 @@
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -24026,16 +24324,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI",
-        "Microsoft"
+        "Oracle"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -24048,6 +24344,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -24103,6 +24411,13 @@
       },
       "3M": {
         "total_usd": 10300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AES": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24465,6 +24780,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Americas_Region": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Amkor": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24558,6 +24880,13 @@
       },
       "Applied_Materials": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Argentina": {
+        "total_usd": 44000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -25165,6 +25494,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Burkina_Faso": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bybit": {
         "total_usd": 1500000000,
         "circular_usd": 0,
@@ -25403,6 +25739,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Canada": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Canary": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25530,6 +25873,13 @@
         "in_robust_core": false
       },
       "Chery": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chile": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25677,6 +26027,13 @@
         "in_robust_core": false
       },
       "ColibriTD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Colombia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27287,7 +27644,7 @@
         "in_robust_core": false
       },
       "IMF": {
-        "total_usd": 0,
+        "total_usd": 44000000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -28077,6 +28434,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lithium_Triangle": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lobito_Corridor": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28210,6 +28574,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mali": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mandiant": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28282,6 +28653,13 @@
       },
       "Metals_Futures": {
         "total_usd": 920000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mexico": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -28667,6 +29045,13 @@
       },
       "Next-gen data centers / AI infrastructure": {
         "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Niger": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -29878,6 +30263,13 @@
       },
       "Sackler_Family": {
         "total_usd": 11000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sahel_AES": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -31539,12 +31931,13 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 52,
+        "degree": 53,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
           "commodity",
           "creditor",
+          "critical_minerals",
           "defense",
           "energy",
           "industrial",
@@ -31561,8 +31954,8 @@
           "statistic",
           "tech"
         ],
-        "n_neighbor_sectors": 19,
-        "source_files": 26,
+        "n_neighbor_sectors": 20,
+        "source_files": 27,
         "layers": [
           "financial",
           "structural"
@@ -31571,7 +31964,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 44,
+        "degree": 47,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -31590,7 +31983,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 27,
+        "source_files": 28,
         "layers": [
           "financial",
           "structural"
@@ -31714,7 +32107,7 @@
       },
       {
         "node": "Russia",
-        "degree": 22,
+        "degree": 23,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -31728,7 +32121,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 10,
+        "source_files": 11,
         "layers": [
           "structural"
         ],

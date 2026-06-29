@@ -26,6 +26,7 @@ Bayer,Monsanto,acquisition,63000000000,documented,False,False,spec-seed-ip-corn.
 Broadcom,SINK_backlog,compute_commitment,56000000000,guidance,False,False,fin-google-amazon-anthropic-meta.json
 Amazon,OpenAI,equity,50000000000,committed,False,False,fin-nvidia-openai.json
 Anthropic,SpaceX,compute_commitment,45000000000,signed-CANCELABLE,True,True,fin-spacex-spcx.json
+IMF,Argentina,debt,44000000000,documented,False,False,spec-americas-sahel.json
 ChemChina,Syngenta,acquisition,43000000000,documented,False,False,spec-seed-ip-corn.json
 SoftBank,OpenAI,equity,41000000000,closed,False,False,fin-nvidia-openai.json
 Apollo,Next-gen data centers / AI infrastructure,equity,40000000000,2025,False,False,macro-cre-privatecredit.json
@@ -1235,6 +1236,25 @@ xAI,AI_Infrastructure_Partnership,compute_commitment,,committed,False,False,spec
 BlackRock,IBIT,relationship,,documented,False,False,spec-blackrock-aladdin-concentration.json
 IBIT,Coinbase,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
 BlackRock,Circle,other,,documented,False,False,spec-blackrock-aladdin-concentration.json
+Mexico,Americas_Region,surveillance_security,,contested,False,False,spec-americas-sahel.json
+Canada,Americas_Region,other,,contested,False,False,spec-americas-sahel.json
+Venezuela,Americas_Region,other,,contested,False,False,spec-americas-sahel.json
+Argentina,Americas_Region,debt,,contested,False,False,spec-americas-sahel.json
+Brazil,Americas_Region,other,,documented,False,False,spec-americas-sahel.json
+Chile,Americas_Region,other,,documented,False,False,spec-americas-sahel.json
+Colombia,Americas_Region,other,,contested,False,False,spec-americas-sahel.json
+US_Government,Venezuela,regulatory_legal,,contested,False,False,spec-americas-sahel.json
+US_Government,Mexico,other,,contested,False,False,spec-americas-sahel.json
+US_Government,Canada,other,,contested,False,False,spec-americas-sahel.json
+Argentina,Lithium_Triangle,other,,documented,False,False,spec-americas-sahel.json
+Chile,Lithium_Triangle,other,,documented,False,False,spec-americas-sahel.json
+Lithium_Triangle,Americas_Region,investment,,documented,False,False,spec-americas-sahel.json
+China,Lithium_Triangle,investment,,documented,False,False,spec-americas-sahel.json
+Burkina_Faso,AES,other,,documented,False,False,spec-americas-sahel.json
+Mali,AES,other,,documented,False,False,spec-americas-sahel.json
+Niger,AES,other,,documented,False,False,spec-americas-sahel.json
+AES,Sahel_AES,other,,contested,False,False,spec-americas-sahel.json
+Russia,AES,other,,documented,False,False,spec-americas-sahel.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
 Broadcom,CommScope,other,,documented,False,False,spec-foundry-brocade-broadcom.json
 Johns_Manville,Asbestos,other,,documented,False,False,spec-asbestos-mass-tort.json
