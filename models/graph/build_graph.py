@@ -224,6 +224,8 @@ ALIAS = {
  "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # car-insurance telematics
  "Telematics_Insurance":"Telematics_Insurance","LexisNexis":"LexisNexis","Verisk":"Verisk","Allstate":"Allstate","Progressive_Insurance":"Progressive_Insurance","Arity":"Arity",
+ # japan + korea automakers
+ "JP_SK_Auto_Makers":"JP_SK_Auto_Makers","Toyota":"Toyota","Honda":"Honda","Nissan":"Nissan","Mazda":"Mazda","Subaru":"Subaru","Suzuki":"Suzuki","Mitsubishi_Motors":"Mitsubishi_Motors","Hyundai_Motor_Group":"Hyundai_Motor_Group","Hyundai":"Hyundai_Motor_Group","Kia":"Kia","Daihatsu":"Daihatsu","Auto_Cert_Fraud":"Auto_Cert_Fraud",
  # eu automakers + luxury
  "EU_Auto_Makers":"EU_Auto_Makers","BMW":"BMW","Mercedes_Benz":"Mercedes_Benz","Mercedes":"Mercedes_Benz","Renault":"Renault","Geely":"Geely","Tata_Motors":"Tata_Motors","JLR":"JLR","Jaguar_Land_Rover":"JLR",
  "Volvo_Cars":"Volvo_Cars","Ferrari":"Ferrari","Aston_Martin":"Aston_Martin","Audi":"Audi","Porsche":"Porsche","Lamborghini":"Lamborghini","Bentley":"Bentley","Bugatti_Rimac":"Bugatti_Rimac","Rimac":"Bugatti_Rimac",
@@ -555,6 +557,9 @@ NODE_META = {
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
  # car-insurance telematics (overlay)
  "Telematics_Insurance":("surveillance",False),"LexisNexis":("data_provider",False),"Verisk":("data_provider",False),"Allstate":("insurance",True),"Progressive_Insurance":("insurance",True),"Arity":("data_provider",False),
+ # japan + korea automakers (overlay)
+ "JP_SK_Auto_Makers":("industrial",False),"Toyota":("industrial",True),"Honda":("industrial",True),"Nissan":("industrial",True),"Mazda":("industrial",True),
+ "Subaru":("industrial",True),"Suzuki":("industrial",True),"Mitsubishi_Motors":("industrial",True),"Hyundai_Motor_Group":("industrial",True),"Kia":("industrial",True),"Daihatsu":("industrial",False),"Auto_Cert_Fraud":("other",False),
  # eu automakers + luxury (overlay)
  "EU_Auto_Makers":("industrial",False),"BMW":("industrial",True),"Mercedes_Benz":("industrial",True),"Renault":("industrial",True),"Geely":("industrial",True),
  "Tata_Motors":("industrial",True),"JLR":("industrial",False),"Volvo_Cars":("industrial",False),"Ferrari":("industrial",True),"Aston_Martin":("industrial",False),

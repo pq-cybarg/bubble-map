@@ -719,7 +719,7 @@ Jump_Crypto,Fairshake,investment,,documented,False,False,spec-crypto-market-make
 Uniswap,Fairshake,investment,,documented,False,False,spec-crypto-market-makers-political.json
 Gemini,Fairshake,investment,,documented,False,False,spec-crypto-market-makers-political.json
 Samsung_Group,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
-Hyundai,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
+Hyundai_Motor_Group,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
 SK_Group,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
 LG,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
 Lotte,Chaebol,other,,documented,False,False,spec-east-asia-conglomerates-politics.json
@@ -859,6 +859,23 @@ US_Banks,Senate Banking Committee,other,,recurring,False,False,influence-congres
 US_Banks,House Financial Services,other,,recurring,False,False,influence-congress-funding-compromise.json
 GENIUS_Act,Stablecoins,other,,enacted,False,False,macro-stablecoin-treasury-rail.json
 World_Liberty_Financial,GENIUS_Act,other,,flagged,False,False,macro-stablecoin-treasury-rail.json
+Toyota,JP_SK_Auto_Makers,other,,contested,False,False,spec-japan-korea-automakers.json
+Toyota,Daihatsu,other,,documented,False,False,spec-japan-korea-automakers.json
+Toyota,Auto_Cert_Fraud,relationship,,contested,False,False,spec-japan-korea-automakers.json
+Daihatsu,Auto_Cert_Fraud,other,,documented,False,False,spec-japan-korea-automakers.json
+Toyota,Subaru,other,,documented,False,False,spec-japan-korea-automakers.json
+Honda,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
+Honda,Nissan,relationship,,contested,False,False,spec-japan-korea-automakers.json
+Nissan,JP_SK_Auto_Makers,other,,contested,False,False,spec-japan-korea-automakers.json
+Renault,Nissan,other,,documented,False,False,spec-japan-korea-automakers.json
+Mazda,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
+Subaru,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
+Suzuki,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
+Suzuki,India,other,,documented,False,False,spec-japan-korea-automakers.json
+Mitsubishi_Motors,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
+Hyundai_Motor_Group,JP_SK_Auto_Makers,other,,contested,False,False,spec-japan-korea-automakers.json
+Hyundai_Motor_Group,Kia,other,,documented,False,False,spec-japan-korea-automakers.json
+Kia,JP_SK_Auto_Makers,other,,documented,False,False,spec-japan-korea-automakers.json
 SEALSQ,ICALPS,acquisition,,closed,False,False,fin-sealsq-wisekey-global.json
 SEALSQ,Miraex,acquisition,,LOI,False,True,fin-sealsq-wisekey-global.json
 SEALSQ,EeroQ,equity,,invested-lead,False,False,fin-sealsq-wisekey-global.json

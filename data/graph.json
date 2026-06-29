@@ -324,6 +324,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Auto_Cert_Fraud": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Axelar": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1036,6 +1040,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
+    "Daihatsu": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Damian_Williams": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1636,6 +1644,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Honda": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Honeywell": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -1672,7 +1684,7 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
-    "Hyundai": {
+    "Hyundai_Motor_Group": {
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
@@ -1880,6 +1892,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "JP_SK_Auto_Makers": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "JSR": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -2011,6 +2027,10 @@
     "Khamenei": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Kia": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Kimsuky": {
       "sector": "threat_actor",
@@ -2248,6 +2268,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Mazda": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "McDonalds": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -2329,6 +2353,10 @@
       "has_exogenous_revenue": false
     },
     "Mitsubishi": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Mitsubishi_Motors": {
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
@@ -2486,6 +2514,10 @@
     },
     "Nikon": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": true
+    },
+    "Nissan": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Nobitex": {
@@ -3420,6 +3452,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Subaru": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Subprime_Auto_ABS": {
       "sector": "private_credit",
       "has_exogenous_revenue": false
@@ -3438,6 +3474,10 @@
     },
     "Superannuation_Funds": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Suzuki": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Swift": {
@@ -3575,6 +3615,10 @@
     "Toyoko_Kids": {
       "sector": "other",
       "has_exogenous_revenue": false
+    },
+    "Toyota": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "TrailOfBits": {
       "sector": "security_research",
@@ -12063,7 +12107,7 @@
       "note": ""
     },
     {
-      "from": "Hyundai",
+      "from": "Hyundai_Motor_Group",
       "to": "Chaebol",
       "instrument": "other",
       "layer": "structural",
@@ -14388,6 +14432,227 @@
       "cancelable": false,
       "source_file": "macro-stablecoin-treasury-rail.json",
       "note": "USD1 (Trump-family WLF) is a GENIUS-Act stablecoin; the administration legislating the demand rail has a family stake in an issuer (ties spec-exchanges-asia USD1/MGX/Binance)."
+    },
+    {
+      "from": "Toyota",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "world #1; hybrid-first/multi-pathway (criticized 2021-23 as BEV-laggard, vindicated 2024-25 as BEV cooled); keiretsu (Denso/Aisin); chair Akio Toyoda",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Toyota",
+      "to": "Daihatsu",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "small-car subsidiary \u2014 admitted DECADES of safety-cert fraud (Dec 2023), production halted",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Toyota",
+      "to": "Auto_Cert_Fraud",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "2024 type-certification test IRREGULARITIES at Toyota Motor + Toyota Industries + Hino (some models paused) \u2014 fraud real; 'systemic danger vs procedural deviations on safe cars' contested",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Daihatsu",
+      "to": "Auto_Cert_Fraud",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "decades of crash-test certification fraud (Dec 2023) \u2014 the hardest case in the cluster",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Toyota",
+      "to": "Subaru",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Toyota owns ~20% of Subaru; jointly developed EVs (Solterra/bZ4X)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Honda",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "#2 Japan; strong hybrids/motorcycles",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Honda",
+      "to": "Nissan",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Dec-2024 MOU to merge (would create world's ~#3) \u2014 COLLAPSED Feb 2025 (Honda reportedly wanted Nissan as a subsidiary); Mitsubishi observer",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Nissan",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deep post-Ghosn struggles (Ghosn fled Japan 2019); 2024-25 restructuring/job cuts; reported Foxconn interest",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Renault",
+      "to": "Nissan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the Renault-Nissan alliance, REBALANCED 2023 (Renault cut its cross-shareholding) \u2014 the loosening that preceded Nissan's pivot to Honda",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Mazda",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mid-size Japanese maker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Subaru",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "niche Japanese maker (Toyota ~20%)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Suzuki",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "small-car specialist",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Suzuki",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "DOMINANT in India via Maruti Suzuki (~40% market share) \u2014 cross-link India",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Mitsubishi_Motors",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Renault-Nissan alliance member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Hyundai_Motor_Group",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Korean chaebol (Chung family); strong EV (E-GMP/Ioniq); US Georgia Metaplant (2024) + IRA; 2022-23 US supplier child-labor stains",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Hyundai_Motor_Group",
+      "to": "Kia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns Kia (+ the Genesis luxury brand)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Kia",
+      "to": "JP_SK_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Hyundai-group brand",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-japan-korea-automakers.json",
+      "note": ""
     },
     {
       "from": "SEALSQ",
@@ -22321,10 +22586,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1013,
-    "num_edges": 1405,
+    "num_nodes": 1024,
+    "num_edges": 1422,
     "num_financial_edges": 234,
-    "num_structural_edges": 1171,
+    "num_structural_edges": 1188,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -22375,16 +22640,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -22395,8 +22652,21 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -22409,9 +22679,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -22422,20 +22693,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -23022,6 +23287,13 @@
         "in_robust_core": false
       },
       "Auto_Care_Association": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auto_Cert_Fraud": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24274,6 +24546,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Daihatsu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Damian_Williams": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25324,6 +25603,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Honda": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Honeywell": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25387,7 +25673,7 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "Hyundai": {
+      "Hyundai_Motor_Group": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25751,6 +26037,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "JP_SK_Auto_Makers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JSR": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25976,6 +26269,13 @@
         "in_robust_core": false
       },
       "Khamenei": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26395,6 +26695,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mazda": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "McDonalds": {
         "total_usd": 900000000,
         "circular_usd": 0,
@@ -26536,6 +26843,13 @@
         "in_robust_core": false
       },
       "Mitsubishi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mitsubishi_Motors": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26809,6 +27123,13 @@
         "in_robust_core": false
       },
       "Nikon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nissan": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28446,6 +28767,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Subaru": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Subprime_Auto_ABS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28475,6 +28803,13 @@
         "in_robust_core": false
       },
       "Superannuation_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Suzuki": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28713,6 +29048,13 @@
         "in_robust_core": false
       },
       "Toyoko_Kids": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Toyota": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
