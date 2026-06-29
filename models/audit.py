@@ -21,7 +21,7 @@ canon={
 out=["# Consistency & Coverage Audit\n",f"Canonical numbers (from data/*.json — the source of truth):\n"]
 for k,v in canon.items(): out.append(f"- `{k}` = **{v}**")
 # counts
-nmodels=len(glob.glob(ROOT+"/models/**/*.py",recursive=True))+len(glob.glob(ROOT+"/models/**/*.tla",recursive=True))+len(glob.glob(ROOT+"/models/**/*.als",recursive=True))
+nmodels=len([p for p in glob.glob(ROOT+"/models/**/*.py",recursive=True) if "/models/leadership/" not in p.replace("\\","/")])+len(glob.glob(ROOT+"/models/**/*.tla",recursive=True))+len(glob.glob(ROOT+"/models/**/*.als",recursive=True))
 npy_z3=len(glob.glob(ROOT+"/models/z3/*.py"))
 nres=len(glob.glob(ROOT+"/research/*.json")); nresmd=len(glob.glob(ROOT+"/research/*.md"))
 ndata=len(glob.glob(ROOT+"/data/*.json")); nrep=len(glob.glob(ROOT+"/report/*"))
