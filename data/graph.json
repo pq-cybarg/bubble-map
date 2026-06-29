@@ -2644,6 +2644,14 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "OPEC": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "OPEC_Plus": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "OQC": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -2822,6 +2830,10 @@
     },
     "Pesticide_Liability_Shields": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Petrodollar": {
+      "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
     "Pharmacies": {
@@ -3852,6 +3864,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "US_Shale": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "US_Tariff_Policy": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -3955,6 +3971,10 @@
     "Vector_Atomic": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "Venezuela": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Venice_AI": {
       "sector": "crypto_infra",
@@ -11432,6 +11452,175 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-cross-border-settlement-rails.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia",
+      "to": "OPEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "de-facto leader + swing producer (founded 1960)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "OPEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founding member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "UAE",
+      "to": "OPEC",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "member (also OPEC+ quota-tension over capacity)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "Venezuela",
+      "to": "OPEC",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "founding member (world's largest reserves; sanctions-crippled output)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "OPEC",
+      "to": "OPEC_Plus",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "the 2016 OPEC+ alliance (OPEC + ~10 non-OPEC); ~40% of output, ~80% reserves",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "OPEC_Plus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the key non-OPEC partner (Saudi-Russia axis) \u2014 cooperation + tension (the March-2020 price war)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "OPEC_Plus",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "manages global supply via quotas/cuts; 2023-24 ~2.2M bpd voluntary cuts; from Apr 2025 UNWINDING toward market share",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "OPEC_Plus",
+      "to": "US_Shale",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025 production restoration read as partly aimed at squeezing higher-cost US shale breakevens",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "US_Shale",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US = world's top crude producer; the marginal/swing supply that blunts OPEC+ pricing power",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "world's largest oil importer (demand side; buys discounted Russian/Iranian crude)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia",
+      "to": "Petrodollar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "oil priced/settled largely in USD since the 1970s (a set of understandings, NOT a lapsing treaty \u2014 the 2024 'expiry' claim is debunked)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Petrodollar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dollar-recycling pillar of USD dominance (exporter surpluses -> US assets)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS",
+      "to": "Petrodollar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "de-dollarization pressure: local-currency oil deals (China-Saudi yuan pilots, Russia-India rupee/yuan) erode petrodollar exclusivity; NOTE the multi-alignment overlap \u2014 Saudi/UAE/Iran are in BOTH OPEC and BRICS+ (handled in the #144 alignment matrix)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-opec.json",
       "note": ""
     },
     {
@@ -23318,10 +23507,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1051,
-    "num_edges": 1470,
-    "num_financial_edges": 243,
-    "num_structural_edges": 1227,
+    "num_nodes": 1056,
+    "num_edges": 1483,
+    "num_financial_edges": 245,
+    "num_structural_edges": 1238,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -23376,20 +23565,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Microsoft",
@@ -23397,13 +23574,20 @@
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -23411,16 +23595,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -23433,6 +23610,18 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -28085,6 +28274,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "OPEC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OPEC_Plus": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OQC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28394,6 +28597,13 @@
         "in_robust_core": false
       },
       "Pesticide_Liability_Shields": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Petrodollar": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -30199,6 +30409,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_Shale": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Tariff_Policy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -30375,6 +30592,13 @@
         "in_robust_core": false
       },
       "Vector_Atomic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Venezuela": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -30826,7 +31050,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 50,
+        "degree": 51,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -30849,7 +31073,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 24,
+        "source_files": 25,
         "layers": [
           "financial",
           "structural"
@@ -30858,12 +31082,13 @@
       },
       {
         "node": "US_Government",
-        "degree": 41,
+        "degree": 42,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
           "critical_minerals",
           "defense",
+          "financial_infra",
           "financier",
           "logistics",
           "other",
@@ -30875,8 +31100,8 @@
           "state",
           "telecom"
         ],
-        "n_neighbor_sectors": 14,
-        "source_files": 25,
+        "n_neighbor_sectors": 15,
+        "source_files": 26,
         "layers": [
           "financial",
           "structural"
@@ -31000,7 +31225,7 @@
       },
       {
         "node": "Russia",
-        "degree": 20,
+        "degree": 21,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -31014,7 +31239,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 8,
+        "source_files": 9,
         "layers": [
           "structural"
         ],
@@ -31056,6 +31281,28 @@
         ],
         "n_neighbor_sectors": 8,
         "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Iran",
+        "degree": 13,
+        "neighbor_sectors": [
+          "commodity",
+          "defense",
+          "energy",
+          "industrial",
+          "logistics",
+          "other",
+          "person",
+          "privacy_tool",
+          "state"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 3,
         "layers": [
           "financial",
           "structural"
@@ -31142,27 +31389,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Iran",
-        "degree": 12,
-        "neighbor_sectors": [
-          "defense",
-          "energy",
-          "industrial",
-          "logistics",
-          "other",
-          "person",
-          "privacy_tool",
-          "state"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "OpenAI",

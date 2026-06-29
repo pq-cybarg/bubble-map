@@ -113,6 +113,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "China_EV":"China EV ecosystem","BYD":"BYD","CATL":"CATL (batteries)","Xiaomi_EV":"Xiaomi EV (SU7)","Great_Wall_Motor":"Great Wall Motor","Li_Auto":"Li Auto","EV_Tariffs":"EU/US Chinese-EV tariffs","AV_Robotaxi":"AV / robotaxi","Baidu_Apollo":"Baidu Apollo Go","Waymo":"Waymo (Alphabet)",
  "Auto_Politics":"Auto politics + labor","UAW":"UAW","NADA":"NADA (dealer lobby)","Dealer_Franchise_Laws":"Dealer-franchise laws","IRA_EV_Credits":"IRA EV credits (ended 2025)","Auto_Bailout_2009":"2009 auto bailout","CAFE_Standards":"CAFE / tailpipe rules",
  "Auto_Credit_Unwind":"Auto-credit unwind (2025)","Carvana":"Carvana","DriveTime":"DriveTime (Garcia)","Ernest_Garcia":"Ernest Garcia II","Fifth_Third":"Fifth Third","Tricolor_Holdings":"Tricolor (subprime auto)","First_Brands":"First Brands","Subprime_Auto_ABS":"Subprime auto ABS",
+ "OPEC":"OPEC","OPEC_Plus":"OPEC+","US_Shale":"US shale","Petrodollar":"Petrodollar system","Venezuela":"Venezuela",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
