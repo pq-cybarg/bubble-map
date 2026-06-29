@@ -96,6 +96,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "ASEAN": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "ASML": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -130,6 +134,10 @@
     },
     "Africa_Corps": {
       "sector": "defense",
+      "has_exogenous_revenue": false
+    },
+    "African_Union": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Age_Assurance_Issuers": {
@@ -178,6 +186,10 @@
     },
     "Aligned_Data_Centers": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "Alignment_Matrix": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "AllenAI_OLMo": {
@@ -1512,9 +1524,21 @@
       "sector": "tech",
       "has_exogenous_revenue": true
     },
+    "G20": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "G7": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "GCC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "GENIUS_Act": {
       "sector": "state",
@@ -2516,6 +2540,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "NATO": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "NCET": {
       "sector": "regulator",
       "has_exogenous_revenue": false
@@ -2775,6 +2803,10 @@
     "POGO": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
+    },
+    "Pakistan": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Palantir": {
       "sector": "defense_tech",
@@ -3151,6 +3183,10 @@
     "SC42_AI": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "SCO": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "SCOTUS": {
       "sector": "regulator",
@@ -9412,6 +9448,396 @@
       "cancelable": false,
       "source_file": "spec-telecom-satellite.json",
       "note": "500 MHz dedicated military Ka-band on Lightspeed; dual-use LEO; full service Q1 2028."
+    },
+    {
+      "from": "India",
+      "to": "SCO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SCO member (also BRICS + Quad + G20 + IMEC + INSTC) \u2014 the archetypal multi-aligner",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "SCO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SCO co-founder",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "SCO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SCO co-founder",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Iran",
+      "to": "SCO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SCO member (2023) + BRICS+",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Pakistan",
+      "to": "SCO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SCO member (alongside rival India) \u2014 a bloc holding adversaries",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Turkey",
+      "to": "NATO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NATO member \u2014 while anchoring the Russia-bypassing Middle Corridor + buying Russian energy/S-400",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Turkey",
+      "to": "BRICS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "APPLIED to join BRICS (2024) while a NATO member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "NATO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NATO leader",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "UK",
+      "to": "NATO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "NATO + AUKUS + G7",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "G7",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "G7 member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "UK",
+      "to": "G7",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "G7 member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "G20",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "G20 member (hosted 2023) \u2014 the forum where G7 + BRICS overlap",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Brazil",
+      "to": "G20",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "G20 member + BRICS founder",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Saudi_Arabia",
+      "to": "GCC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GCC leader (also OPEC + BRICS+ + US partner + IMEC)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "UAE",
+      "to": "GCC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "GCC member (also OPEC + BRICS+ + US partner + IMEC)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Indonesia",
+      "to": "ASEAN",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ASEAN's largest economy + a 2025 BRICS member",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Egypt",
+      "to": "African_Union",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AU member + BRICS+ + heavy US/IMF dependence",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Ethiopia",
+      "to": "African_Union",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AU seat (Addis Ababa) + BRICS+",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "BRICS",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the overlapping-membership lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Quad",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "AUKUS",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "SCO",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "NATO",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "OPEC",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice (cross-link #146)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "GCC",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "G7",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "G20",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the overlap forum (G7 + BRICS together)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "ASEAN",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice (the ASEAN hedge)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "African_Union",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a bloc in the lattice",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
+    },
+    {
+      "from": "Infrastructure_Corridors",
+      "to": "Alignment_Matrix",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the competing-corridor lattice feeds the same overlap pattern (#143)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-alignment-matrix.json",
+      "note": ""
     },
     {
       "from": "OFAC",
@@ -23507,10 +23933,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1056,
-    "num_edges": 1483,
+    "num_nodes": 1065,
+    "num_edges": 1513,
     "num_financial_edges": 245,
-    "num_structural_edges": 1238,
+    "num_structural_edges": 1268,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -23561,16 +23987,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -23581,8 +23999,16 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -23602,8 +24028,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -23614,13 +24040,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -23815,6 +24241,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ASEAN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ASML": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23872,6 +24305,13 @@
         "in_robust_core": false
       },
       "Africa_Corps": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "African_Union": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23957,6 +24397,13 @@
       },
       "Aligned_Data_Centers": {
         "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Alignment_Matrix": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -26293,7 +26740,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "G20": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "G7": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GARM_WFA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GCC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28050,6 +28518,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NATO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NCET": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28499,6 +28974,13 @@
         "in_robust_core": false
       },
       "POGO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pakistan": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29157,6 +29639,13 @@
         "in_robust_core": false
       },
       "SC42_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SCO": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -31050,7 +31539,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 51,
+        "degree": 52,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -31073,7 +31562,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 25,
+        "source_files": 26,
         "layers": [
           "financial",
           "structural"
@@ -31082,7 +31571,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 42,
+        "degree": 44,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -31101,7 +31590,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 26,
+        "source_files": 27,
         "layers": [
           "financial",
           "structural"
@@ -31225,7 +31714,7 @@
       },
       {
         "node": "Russia",
-        "degree": 21,
+        "degree": 22,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -31239,7 +31728,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 9,
+        "source_files": 10,
         "layers": [
           "structural"
         ],
@@ -31289,7 +31778,7 @@
       },
       {
         "node": "Iran",
-        "degree": 13,
+        "degree": 14,
         "neighbor_sectors": [
           "commodity",
           "defense",
@@ -31302,7 +31791,7 @@
           "state"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 3,
+        "source_files": 4,
         "layers": [
           "financial",
           "structural"
