@@ -252,6 +252,14 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Antarctic_Treaty": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Antarctica": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Anthropic": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -287,6 +295,14 @@
     "Applied_Materials": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
+    },
+    "Arctic": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Arctic_Council": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Argentina": {
       "sector": "state",
@@ -1092,6 +1108,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "DBS": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
+    },
     "DCG": {
       "sector": "financier",
       "has_exogenous_revenue": false
@@ -1683,6 +1703,10 @@
     "Great_Wall_Motor": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Greenland": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Gwadar": {
       "sector": "logistics",
@@ -2392,6 +2416,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "Madrid_Protocol": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Maersk": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -2704,6 +2732,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Northern_Sea_Route": {
+      "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
     "Nous_Research": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -2847,6 +2879,10 @@
     "POGO": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
+    },
+    "PSA_Port": {
+      "sector": "logistics",
+      "has_exogenous_revenue": true
     },
     "Pakistan": {
       "sector": "state",
@@ -3276,6 +3312,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "SG_Laundering": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "SINK_backlog": {
       "sector": "sink",
       "has_exogenous_revenue": true
@@ -3511,6 +3551,10 @@
     "Simpson_Thacher": {
       "sector": "other",
       "has_exogenous_revenue": false
+    },
+    "Singapore": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "SoftBank": {
       "sector": "financier",
@@ -11549,6 +11593,110 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-strategic-lenses.json,spec-manufactured-division.json",
+      "note": ""
+    },
+    {
+      "from": "Antarctic_Treaty",
+      "to": "Antarctica",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "1959 Treaty: peaceful/scientific use, demilitarized, no nuclear tests, claims FROZEN (consensus ATS governance)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "Madrid_Protocol",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "1991 Madrid Protocol: bans mineral activity ('natural reserve'); reviewable from ~2048 (the stress test)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "5 research stations (Qinling on the Ross Sea, 2024) \u2014 dual-use/SIGINT concerns vs stated science",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Rosgeo reported large hydrocarbon 'seismic surveys' (Weddell Sea, 2020s) \u2014 'research' vs prospecting (mining-ban spirit) contested",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "UK",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "territorial claim (overlapping with Argentina + Chile on the Peninsula)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "Argentina",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "territorial claim (overlaps UK/Chile; mirrors Falklands/Malvinas friction)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "Chile",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "territorial claim (overlaps UK/Argentina)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Antarctica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "McMurdo/Amundsen-Scott stations; recognizes no claims but reserves the right (as does Russia)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-antarctica.json",
       "note": ""
     },
     {
@@ -23642,6 +23790,214 @@
       "note": ""
     },
     {
+      "from": "GIC",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sovereign wealth fund (~$770B est.) managing the reserves",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "Temasek",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state holding company (~$300B+; ~$275M FTX writedown 2022)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "MAS",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "central bank/regulator; crypto licensing tightened after FTX/3AC/Terra Singapore links",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "PSA_Port",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "world's busiest transshipment port (trade chokepoint)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "DBS",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "largest SE-Asia bank; wealth-management hub (Chinese inflows)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "SG_Laundering",
+      "to": "Singapore",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "~S$3B money-laundering bust (Aug 2023; 10 Fujian-origin individuals) \u2014 exposed private-banking/family-office AML gaps",
+      "amount_usd": 2200000000,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Singapore",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Chinese capital flight + family offices into the Singapore wealth hub; deep economic integration",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Singapore",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "US military rotations/logistics partner \u2014 the security half of the hedge",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-singapore.json",
+      "note": ""
+    },
+    {
+      "from": "Russia",
+      "to": "Arctic",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "longest Arctic coastline; rebuilt military bases; controls the Northern Sea Route",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Arctic",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "self-styled 'near-Arctic state'; Polar Silk Road (BRI) investment + research stations",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Greenland",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "operates Pituffik base; 2025 push to acquire/control Greenland (Danish territory) \u2014 major flashpoint",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "Greenland",
+      "to": "Arctic",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "rare earths/critical minerals; the US-acquisition target",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "Canada",
+      "to": "Arctic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Northwest Passage (claims internal waters); Arctic sovereignty + critical minerals",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "NATO",
+      "to": "Arctic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Finland (2023) + Sweden (2024) accession -> ~7-of-8 Arctic states are NATO vs Russia",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "Northern_Sea_Route",
+      "to": "Arctic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Russia's coastal shipping lane (Asia-Europe shortcut), China-courted",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
+      "from": "Arctic_Council",
+      "to": "Arctic",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "the 8-state governance forum \u2014 PARALYZED after Russia's 2022 invasion (7 others suspended cooperation)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arctic.json",
+      "note": ""
+    },
+    {
       "from": "Corporate_Credit_Unions",
       "to": "Credit_Unions",
       "instrument": "other",
@@ -24241,10 +24597,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1077,
-    "num_edges": 1533,
-    "num_financial_edges": 249,
-    "num_structural_edges": 1284,
+    "num_nodes": 1088,
+    "num_edges": 1557,
+    "num_financial_edges": 252,
+    "num_structural_edges": 1305,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -24295,22 +24651,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -24319,9 +24659,25 @@
         "NVIDIA"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -24329,9 +24685,15 @@
         "Oracle"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -24352,22 +24714,16 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -24822,6 +25178,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Antarctic_Treaty": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Antarctica": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Anthropic": {
         "total_usd": 289500000000,
         "circular_usd": 189500000000,
@@ -24879,6 +25249,20 @@
         "in_robust_core": false
       },
       "Applied_Materials": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arctic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arctic_Council": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26292,6 +26676,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DBS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DCG": {
         "total_usd": 2100000000,
         "circular_usd": 0,
@@ -27322,6 +27713,13 @@
         "in_robust_core": false
       },
       "Great_Wall_Motor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Greenland": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28567,6 +28965,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Madrid_Protocol": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Maersk": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29113,6 +29518,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Northern_Sea_Route": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Nous_Research": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29359,6 +29771,13 @@
         "in_robust_core": false
       },
       "POGO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PSA_Port": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -30114,6 +30533,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SG_Laundering": {
+        "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SINK_backlog": {
         "total_usd": 56000000000,
         "circular_usd": 0,
@@ -30522,6 +30948,13 @@
       },
       "Simpson_Thacher": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Singapore": {
+        "total_usd": 2200000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -31931,7 +32364,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 53,
+        "degree": 56,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -31955,7 +32388,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 20,
-        "source_files": 27,
+        "source_files": 30,
         "layers": [
           "financial",
           "structural"
@@ -31964,7 +32397,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 47,
+        "degree": 50,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -31983,7 +32416,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 28,
+        "source_files": 31,
         "layers": [
           "financial",
           "structural"
@@ -32035,6 +32468,28 @@
           "structural"
         ],
         "both_layers": true
+      },
+      {
+        "node": "Russia",
+        "degree": 25,
+        "neighbor_sectors": [
+          "bank",
+          "commodity",
+          "defense",
+          "energy",
+          "logistics",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 13,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
       },
       {
         "node": "Google",
@@ -32104,28 +32559,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Russia",
-        "degree": 23,
-        "neighbor_sectors": [
-          "bank",
-          "commodity",
-          "defense",
-          "energy",
-          "logistics",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "threat_actor"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 11,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Microsoft",

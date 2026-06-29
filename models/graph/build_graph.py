@@ -224,6 +224,10 @@ ALIAS = {
  "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # car-insurance telematics
  "Telematics_Insurance":"Telematics_Insurance","LexisNexis":"LexisNexis","Verisk":"Verisk","Allstate":"Allstate","Progressive_Insurance":"Progressive_Insurance","Arity":"Arity",
+ # singapore + arctic + antarctica
+ "Singapore":"Singapore","PSA_Port":"PSA_Port","DBS":"DBS","SG_Laundering":"SG_Laundering",
+ "Arctic":"Arctic","Northern_Sea_Route":"Northern_Sea_Route","Greenland":"Greenland","Arctic_Council":"Arctic_Council",
+ "Antarctica":"Antarctica","Antarctic_Treaty":"Antarctic_Treaty","Madrid_Protocol":"Madrid_Protocol",
  # americas + sahel
  "Americas_Region":"Americas_Region","Sahel_AES":"Sahel_AES","AES":"AES","Mexico":"Mexico","Canada":"Canada","Argentina":"Argentina","Chile":"Chile","Colombia":"Colombia","Mali":"Mali","Niger":"Niger","Burkina_Faso":"Burkina_Faso","Burkina Faso":"Burkina_Faso","Lithium_Triangle":"Lithium_Triangle",
  # alignment matrix
@@ -569,6 +573,10 @@ NODE_META = {
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
  # car-insurance telematics (overlay)
  "Telematics_Insurance":("surveillance",False),"LexisNexis":("data_provider",False),"Verisk":("data_provider",False),"Allstate":("insurance",True),"Progressive_Insurance":("insurance",True),"Arity":("data_provider",False),
+ # singapore + arctic + antarctica (overlay)
+ "Singapore":("state",True),"PSA_Port":("logistics",True),"DBS":("bank",True),"SG_Laundering":("other",False),
+ "Arctic":("state",False),"Northern_Sea_Route":("logistics",False),"Greenland":("state",False),"Arctic_Council":("state",False),
+ "Antarctica":("state",False),"Antarctic_Treaty":("state",False),"Madrid_Protocol":("state",False),
  # americas + sahel (overlay)
  "Americas_Region":("state",False),"Sahel_AES":("state",False),"AES":("state",False),"Mexico":("state",True),"Canada":("state",True),"Argentina":("state",True),
  "Chile":("state",True),"Colombia":("state",True),"Mali":("state",True),"Niger":("state",True),"Burkina_Faso":("state",True),"Lithium_Triangle":("critical_minerals",False),

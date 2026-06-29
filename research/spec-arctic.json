@@ -1,0 +1,31 @@
+{
+ "metadata": {
+  "title": "The Arctic — the resource race, the Northern Sea Route, Greenland, and the militarization (both sides, dated)",
+  "generated": "2026-06-29",
+  "status": "the resource/shipping/militarization facts, the Arctic Council paralysis, China's 'near-Arctic' posture, and the US Greenland push are FACT (treaty/govt records, news of record); motives are not imputed to states/blocs",
+  "frame": "Regional block: the warming Arctic as a resource + shipping + military arena. Threads: hydrocarbons + rare earths + fisheries opening up; the Northern Sea Route (Russia) vs the Northwest Passage (Canada); militarization (Russia's rebuilt Arctic bases; Finland + Sweden joining NATO 2023-24; the US push to acquire/control Greenland, 2025); the Arctic Council paralyzed after Russia's 2022 invasion; China's self-styled 'near-Arctic state' + Polar Silk Road (BRI). Attaches to Russia, China, US_Government, NATO, Canada, BRI.",
+  "grading": "fact | contested | weak | unsupported"
+ },
+ "the_resources": "Warming is opening the Arctic to oil/gas (a large share of undiscovered reserves), rare earths/critical minerals (Greenland), and fisheries — a new resource frontier with contested governance. grade: fact.",
+ "the_routes": "Two seasonal sea lanes shorten Asia-Europe shipping: the NORTHERN SEA ROUTE along Russia's coast (Russia-controlled, China-courted) and the NORTHWEST PASSAGE through Canada's archipelago (Canada claims internal waters; the US calls it an international strait). grade: fact.",
+ "the_militarization": "Security: Russia has the longest Arctic coastline + rebuilt Soviet-era bases; Finland (2023) + Sweden (2024) joined NATO, making the Arctic ~7-of-8 NATO + Russia; the US operates Pituffik (Thule) base in Greenland and in 2025 pressed to ACQUIRE/control Greenland (a Danish territory) — a major flashpoint. grade: fact.",
+ "the_governance": "The Arctic Council (the 8 Arctic states' forum) was effectively PARALYZED after Russia's 2022 Ukraine invasion (the 7 others suspended cooperation with the Russian chair), weakening the main governance body just as competition intensified. China styles itself a 'near-Arctic state' and pursues a Polar Silk Road (BRI) via investment + research stations. grade: fact.",
+ "the_honest_reading": "The Arctic is a resource + shipping + military arena heating up literally and geopolitically: opening hydrocarbons/minerals/fisheries, the Russia-controlled NSR vs Canada's Northwest Passage, a near-fully-NATO Arctic facing Russia, China's 'near-Arctic'/Polar-Silk-Road entry, and the US's 2025 Greenland push — all while the Arctic Council sits paralyzed. Facts are dated; no unitary national 'mind' is imputed. Overlay; excluded from the proofs.",
+ "sources": [
+  {"name": "Reuters — US push to control Greenland (2025)", "url": "https://www.reuters.com/world/us-greenland-2025/"},
+  {"name": "Reuters — Finland + Sweden join NATO (2023-24), reshaping the Arctic", "url": "https://www.reuters.com/world/europe/sweden-joins-nato-2024/"},
+  {"name": "Arctic Council — status after Russia's 2022 invasion (paralysis)", "url": "https://arctic-council.org/"},
+  {"name": "Reuters — Russia's Northern Sea Route + China cooperation", "url": "https://www.reuters.com/business/energy/russia-northern-sea-route-china/"},
+  {"name": "Wikipedia — China and the Arctic ('near-Arctic state' / Polar Silk Road)", "url": "https://en.wikipedia.org/wiki/Arctic_policy_of_China"}
+ ],
+ "edges": [
+  {"from":"Russia","to":"Arctic","instrument":"relationship","raw_instrument":"longest Arctic coastline; rebuilt military bases; controls the Northern Sea Route","amount_usd":null,"status":"documented","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY"},
+  {"from":"China","to":"Arctic","instrument":"relationship","raw_instrument":"self-styled 'near-Arctic state'; Polar Silk Road (BRI) investment + research stations","amount_usd":null,"status":"contested","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY: near-Arctic posture"},
+  {"from":"US_Government","to":"Greenland","instrument":"relationship","raw_instrument":"operates Pituffik base; 2025 push to acquire/control Greenland (Danish territory) — major flashpoint","amount_usd":null,"status":"contested","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY: Greenland push (both-sides)"},
+  {"from":"Greenland","to":"Arctic","instrument":"relationship","raw_instrument":"rare earths/critical minerals; the US-acquisition target","amount_usd":null,"status":"documented","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY"},
+  {"from":"Canada","to":"Arctic","instrument":"relationship","raw_instrument":"Northwest Passage (claims internal waters); Arctic sovereignty + critical minerals","amount_usd":null,"status":"contested","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY"},
+  {"from":"NATO","to":"Arctic","instrument":"relationship","raw_instrument":"Finland (2023) + Sweden (2024) accession -> ~7-of-8 Arctic states are NATO vs Russia","amount_usd":null,"status":"documented","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY: militarization"},
+  {"from":"Northern_Sea_Route","to":"Arctic","instrument":"relationship","raw_instrument":"Russia's coastal shipping lane (Asia-Europe shortcut), China-courted","amount_usd":null,"status":"documented","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY: route"},
+  {"from":"Arctic_Council","to":"Arctic","instrument":"relationship","raw_instrument":"the 8-state governance forum — PARALYZED after Russia's 2022 invasion (7 others suspended cooperation)","amount_usd":null,"status":"contested","declared_circular":false,"cancelable":false,"source_file":"spec-arctic.json","note":"OVERLAY: governance breakdown"}
+ ]
+}

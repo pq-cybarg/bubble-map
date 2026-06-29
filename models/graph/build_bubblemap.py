@@ -116,6 +116,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "OPEC":"OPEC","OPEC_Plus":"OPEC+","US_Shale":"US shale","Petrodollar":"Petrodollar system","Venezuela":"Venezuela",
  "Alignment_Matrix":"Intl alignment matrix","NATO":"NATO","G7":"G7","G20":"G20","GCC":"GCC (Gulf)","ASEAN":"ASEAN","African_Union":"African Union","Pakistan":"Pakistan",
  "Americas_Region":"Americas (region)","Sahel_AES":"Sahel coup belt","AES":"Alliance of Sahel States","Burkina_Faso":"Burkina Faso (Traoré)","Lithium_Triangle":"Lithium Triangle","Mexico":"Mexico","Canada":"Canada","Argentina":"Argentina (Milei)",
+ "Singapore":"Singapore","PSA_Port":"PSA (port)","DBS":"DBS","SG_Laundering":"Singapore S$3B laundering bust","Arctic":"Arctic","Northern_Sea_Route":"Northern Sea Route","Greenland":"Greenland","Arctic_Council":"Arctic Council","Antarctica":"Antarctica","Antarctic_Treaty":"Antarctic Treaty (1959)","Madrid_Protocol":"Madrid Protocol (mining ban)",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
