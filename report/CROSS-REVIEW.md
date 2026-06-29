@@ -15,8 +15,8 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 68 files
-- **Chainlink** — 47 files
+- **Meta** — 69 files
+- **Chainlink** — 48 files
 - **Google** — 44 files
 - **OpenAI** — 34 files
 - **FDIC** — 33 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - ScaleAI, TerraPower, Vistra
 
-## Newest file `spec-china-ev.json` — related files by shared entities (verify cross-refs exist)
-- spec-blockchain-ecosystem.json: 4 shared entities
-- spec-crypto-sec-epstein.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- altcoin-lens.json: 3 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
+## Newest file `spec-auto-politics-labor.json` — related files by shared entities (verify cross-refs exist)
+- geopolitics-contested-resource-states.json: 2 shared entities
+- spec-blockchain-ecosystem.json: 2 shared entities
+- digitalid-corporate.json: 2 shared entities
+- macro-gig-labor.json: 2 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities
+- geopolitics-allied-intel-nodes.json: 2 shared entities
+- influence-tbi-policy.json: 2 shared entities

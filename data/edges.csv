@@ -19,6 +19,7 @@ NVIDIA,OpenAI,equity,100000000000,signed-LOI,True,False,"fin-nvidia-openai.json,
 Anthropic,Amazon,compute_commitment,100000000000,active,True,False,fin-google-amazon-anthropic-meta.json
 Tether,US_Treasuries,other,100000000000,held,False,False,"macro-stablecoin-treasury-rail.json,spec-cross-system-contagion.json"
 China,Gold,other,86000000000,net-seller,False,False,macro-stablecoin-treasury-rail.json
+US_Government,Auto_Bailout_2009,other,80000000000,documented,False,False,spec-auto-politics-labor.json
 SpaceX_IPO_Public,SpaceX,ipo_proceeds,75000000000,offering,False,False,fin-spacex-spcx.json
 Circle,US_Treasuries,other,74000000000,held,False,False,macro-stablecoin-treasury-rail.json
 Bayer,Monsanto,acquisition,63000000000,documented,False,False,spec-seed-ip-corn.json
@@ -915,6 +916,18 @@ SEALSQ,SEALCOIN,other,,open,False,False,fin-sealsq-wisekey-global.json
 Israel_state,Iran_nuclear_program,other,,open,False,False,spec-anomalous-deaths-disappearances.json
 Russia,Russian_energy_executives,other,,open,False,False,spec-anomalous-deaths-disappearances.json
 Boeing_safety_dispute,Boeing_whistleblowers,regulatory_legal,,open,False,False,spec-anomalous-deaths-disappearances.json
+UAW,US_Auto_Makers,other,,documented,False,False,spec-auto-politics-labor.json
+UAW,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+NADA,Dealer_Franchise_Laws,compute_commitment,,documented,False,False,spec-auto-politics-labor.json
+Dealer_Franchise_Laws,Tesla,compute_commitment,,contested,False,False,spec-auto-politics-labor.json
+NADA,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+Dealer_Franchise_Laws,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+US_Government,IRA_EV_Credits,other,,contested,False,False,spec-auto-politics-labor.json
+IRA_EV_Credits,Auto_Politics,relationship,,documented,False,False,spec-auto-politics-labor.json
+US_Government,CAFE_Standards,other,,contested,False,False,spec-auto-politics-labor.json
+CAFE_Standards,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+Auto_Bailout_2009,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+Alliance_Auto_Innovation,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
 Ethereum_Foundation,Ethereum,other,,documented,False,False,spec-blockchain-ecosystem.json
 Vitalik,Ethereum,other,,documented,False,False,spec-blockchain-ecosystem.json
 ConsenSys,Ethereum,other,,documented,False,False,spec-blockchain-ecosystem.json

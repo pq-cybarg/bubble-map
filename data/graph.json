@@ -324,12 +324,20 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Auto_Bailout_2009": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Auto_Care_Association": {
       "sector": "political",
       "has_exogenous_revenue": false
     },
     "Auto_Cert_Fraud": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Auto_Politics": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Axelar": {
@@ -611,6 +619,10 @@
     "CAC": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "CAFE_Standards": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "CALEA_Backdoor": {
       "sector": "surveillance",
@@ -1086,6 +1098,10 @@
     },
     "De_Dollarization": {
       "sector": "financial_infra",
+      "has_exogenous_revenue": false
+    },
+    "Dealer_Franchise_Laws": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Decentralized_AI": {
@@ -1792,6 +1808,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "IRA_EV_Credits": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "IRGC": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -2470,6 +2490,10 @@
     },
     "NACS_Standard": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "NADA": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "NCET": {
@@ -3719,6 +3743,10 @@
     "UAE": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "UAW": {
+      "sector": "labor",
+      "has_exogenous_revenue": false
     },
     "UBS": {
       "sector": "other",
@@ -15222,6 +15250,175 @@
       "note": ""
     },
     {
+      "from": "UAW",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2023 stand-up strike vs all Big Three -> record contracts (~25% + COLA); labor-vs-makers",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "UAW",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Shawn Fain; 2024 organizing \u2014 VW Chattanooga WIN (Apr) / Mercedes Alabama LOSS (May); 2028 alignment push",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "NADA",
+      "to": "Dealer_Franchise_Laws",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "dealers' lobby defends state franchise laws barring direct manufacturer sales",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "Dealer_Franchise_Laws",
+      "to": "Tesla",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "state franchise laws block/limit direct-to-consumer sales (Tesla/Rivian/Lucid) \u2014 intra-industry conflict",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "NADA",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the dealers' lobby (a distinct interest from the makers)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "Dealer_Franchise_Laws",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the franchise-law barrier",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "IRA_EV_Credits",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "IRA (2022): $7,500 consumer EV credit + 45X mfg credits + domestic-content/FEOC rules; TERMINATED the $7,500 credit ~30 Sep 2025 (2025 budget law)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "IRA_EV_Credits",
+      "to": "Auto_Politics",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "the EV-subsidy policy lever (created 2022, gutted 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "CAFE_Standards",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "fuel-economy/EPA tailpipe rules; 2025 ROLLBACK of the Biden-era EV-favoring standards",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "CAFE_Standards",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the emissions/efficiency policy lever",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "Auto_Bailout_2009",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2008-09 GM + Chrysler managed Ch.11 + ~$80B TARP auto rescue ('Government Motors') \u2014 the too-big-to-fail precedent",
+      "amount_usd": 80000000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "Auto_Bailout_2009",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "established the systemic-importance/rescue template + the two-tier wage the 2023 strike reversed",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
+      "from": "Alliance_Auto_Innovation",
+      "to": "Auto_Politics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the maker lobby (also fights right-to-repair, #178) \u2014 distinct from dealers + labor",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-politics-labor.json",
+      "note": ""
+    },
+    {
       "from": "Ethereum_Foundation",
       "to": "Ethereum",
       "instrument": "other",
@@ -22919,10 +23116,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1039,
-    "num_edges": 1443,
-    "num_financial_edges": 235,
-    "num_structural_edges": 1208,
+    "num_nodes": 1046,
+    "num_edges": 1456,
+    "num_financial_edges": 237,
+    "num_structural_edges": 1219,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -22973,28 +23170,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Anthropic",
@@ -23002,20 +23199,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -23028,6 +23219,12 @@
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -23626,6 +23823,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Auto_Bailout_2009": {
+        "total_usd": 80000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Auto_Care_Association": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23634,6 +23838,13 @@
         "in_robust_core": false
       },
       "Auto_Cert_Fraud": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auto_Politics": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24124,6 +24335,13 @@
         "in_robust_core": false
       },
       "CAC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CAFE_Standards": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24957,6 +25175,13 @@
         "in_robust_core": false
       },
       "De_Dollarization": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Dealer_Franchise_Laws": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26195,6 +26420,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IRA_EV_Credits": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IRGC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27379,6 +27611,13 @@
         "in_robust_core": false
       },
       "NACS_Standard": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NADA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29569,6 +29808,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UAW": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UBS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29710,7 +29956,7 @@
         "in_robust_core": false
       },
       "US_Government": {
-        "total_usd": 22933400000,
+        "total_usd": 102933400000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -30375,7 +30621,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 38,
+        "degree": 41,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -30393,7 +30639,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 14,
-        "source_files": 24,
+        "source_files": 25,
         "layers": [
           "financial",
           "structural"
