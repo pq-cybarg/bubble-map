@@ -224,6 +224,9 @@ ALIAS = {
  "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # car-insurance telematics
  "Telematics_Insurance":"Telematics_Insurance","LexisNexis":"LexisNexis","Verisk":"Verisk","Allstate":"Allstate","Progressive_Insurance":"Progressive_Insurance","Arity":"Arity",
+ # eu automakers + luxury
+ "EU_Auto_Makers":"EU_Auto_Makers","BMW":"BMW","Mercedes_Benz":"Mercedes_Benz","Mercedes":"Mercedes_Benz","Renault":"Renault","Geely":"Geely","Tata_Motors":"Tata_Motors","JLR":"JLR","Jaguar_Land_Rover":"JLR",
+ "Volvo_Cars":"Volvo_Cars","Ferrari":"Ferrari","Aston_Martin":"Aston_Martin","Audi":"Audi","Porsche":"Porsche","Lamborghini":"Lamborghini","Bentley":"Bentley","Bugatti_Rimac":"Bugatti_Rimac","Rimac":"Bugatti_Rimac",
  # auto right-to-repair
  "Alliance_Auto_Innovation":"Alliance_Auto_Innovation","AAI":"Alliance_Auto_Innovation","MA_Telematics_Law":"MA_Telematics_Law","REPAIR_Act":"REPAIR_Act","NHTSA":"NHTSA","Auto_Care_Association":"Auto_Care_Association",
  # string of pearls
@@ -552,6 +555,10 @@ NODE_META = {
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
  # car-insurance telematics (overlay)
  "Telematics_Insurance":("surveillance",False),"LexisNexis":("data_provider",False),"Verisk":("data_provider",False),"Allstate":("insurance",True),"Progressive_Insurance":("insurance",True),"Arity":("data_provider",False),
+ # eu automakers + luxury (overlay)
+ "EU_Auto_Makers":("industrial",False),"BMW":("industrial",True),"Mercedes_Benz":("industrial",True),"Renault":("industrial",True),"Geely":("industrial",True),
+ "Tata_Motors":("industrial",True),"JLR":("industrial",False),"Volvo_Cars":("industrial",False),"Ferrari":("industrial",True),"Aston_Martin":("industrial",False),
+ "Audi":("industrial",False),"Porsche":("industrial",True),"Lamborghini":("industrial",False),"Bentley":("industrial",False),"Bugatti_Rimac":("industrial",False),
  # us automakers (overlay)
  "US_Auto_Makers":("industrial",False),"Ford":("industrial",True),"GM":("industrial",True),"Stellantis":("industrial",True),"Rivian":("industrial",False),
  "Lucid":("industrial",False),"Cruise":("tech",False),"NACS_Standard":("standards",False),"Elon_Musk":("person",False),"PIF":("financier",True),"VW":("industrial",True),

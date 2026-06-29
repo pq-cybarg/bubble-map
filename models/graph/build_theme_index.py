@@ -22,7 +22,7 @@ RULES=[
  ("techtransfer",["research-security","tech-transfer","csc","scholarship","talent","espionage"]),
  ("minerals",   ["rare-earth","rare_earth","critical-mineral","critical_mineral","antimony","eudialyte","critical-minerals","lithium","cobalt","mineral","commodities","-metals"]),
  ("energy",     ["power-grid","grid-bottleneck","ai-power","-energy","energy-","nuclear","smr","haleu","uranium","reactor"]),
- ("compute",    ["chip","semiconductor","euv","tsmc","asml","hbm","silicon","lithography","fab","foundry","brocade","broadcom","commscope","networking"]),
+ ("compute",    ["chip","semiconductor","euv","tsmc","asml","hbm","silicon","lithography","fab","foundry","brocade","broadcom","commscope","networking","automaker","automotive","ev ecosystem"]),
  ("space",      ["cable","subsea","satellite","telecom","space-layer","starlink","spectrum"]),
  ("threat",     ["lazarus","typhoon","-apt-","attribution","unc-nk","nk-","malware","ransomware","intrusion","cyber-espionage"]),
  ("scams",      ["scam-fara","scam","pig-butchering","tornado","samourai","mixer","laundering","illicit"]),

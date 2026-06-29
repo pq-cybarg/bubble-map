@@ -304,8 +304,16 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Aston_Martin": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Atom_Computing": {
       "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Audi": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Australia": {
@@ -355,6 +363,10 @@
     "BLS_NTRI": {
       "sector": "statistic",
       "has_exogenous_revenue": false
+    },
+    "BMW": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "BNPL_Phantom_Debt": {
       "sector": "private_credit",
@@ -431,6 +443,10 @@
     "Bayer": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Bentley": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Bermuda_Captives": {
       "sector": "insurance",
@@ -561,6 +577,10 @@
       "has_exogenous_revenue": true
     },
     "Brocade": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Bugatti_Rimac": {
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
@@ -1160,6 +1180,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "EU_Auto_Makers": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "EU_Quantum_Flagship": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1340,6 +1364,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Ferrari": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Fhenix": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1466,6 +1494,10 @@
     },
     "Gazprom": {
       "sector": "energy",
+      "has_exogenous_revenue": true
+    },
+    "Geely": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Gemini": {
@@ -1832,6 +1864,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "JLR": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "JNJ": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -2060,6 +2096,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Lamborghini": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Laos": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -2215,6 +2255,10 @@
     "Medical_Device_Standards": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "Mercedes_Benz": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
     },
     "Mesothelioma_Claims": {
       "sector": "other",
@@ -2684,6 +2728,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Porsche": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Predator": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -2857,6 +2905,10 @@
       "has_exogenous_revenue": false
     },
     "Reliance": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
+    "Renault": {
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
@@ -3432,6 +3484,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": true
     },
+    "Tata_Motors": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "Taylor_Foodservice": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -3790,6 +3846,10 @@
     },
     "VoltTyphoon": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Volvo_Cars": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "Voyager": {
@@ -20479,6 +20539,357 @@
       "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
     },
     {
+      "from": "VW",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Europe's largest automaker; Dieselgate (2015, ~$35B+); China-share erosion to BYD; Dec-2024 IG Metall deal kept all 10 German plants open (~35k cuts by 2030) BUT June-2026 reports of renewed closures (Hanover/Zwickau/Emden/Audi Neckarsulm) \u2014 both dated",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Audi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "brand (premium)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Porsche",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "brand (IPO'd 2022; Porsche SE cross-holding)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Lamborghini",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "brand (via Audi)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Bentley",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "brand (luxury)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "VW",
+      "to": "Bugatti_Rimac",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Bugatti folded into Bugatti-Rimac JV (Porsche + Rimac; Mate Rimac CEO)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Audi",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "VW premium brand",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Porsche",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sports/luxury (independently listed 2022)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Lamborghini",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ultra-luxury (VW/Audi)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Bentley",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ultra-luxury (VW)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Bugatti_Rimac",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "hypercars + Rimac EV tech",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "BMW",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "premium incumbent (+ Mini + Rolls-Royce); China-exposed",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Mercedes_Benz",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "premium incumbent (+ AMG/Maybach; Daimler Truck spun off 2021)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Renault",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "(+ Dacia/Alpine; Ampere EV unit; Nissan alliance rebalanced 2023)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Stellantis",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "EU brands: Fiat/Peugeot/Citro\u00ebn/Opel/Vauxhall/Maserati/Alfa Romeo/DS/Lancia",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "India",
+      "to": "Tata_Motors",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Indian conglomerate (Tata Group) automaker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Tata_Motors",
+      "to": "JLR",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "Tata Motors acquired Jaguar Land Rover (2008, from Ford)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "JLR",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Sept-2025 CYBERATTACK halted production ~5 weeks (Solihull/Wolverhampton/Halewood), ~\u00a31.9bn; Jaguar 2024 ultra-luxury rebrand controversy",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Geely",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Zhejiang Geely (Li Shufu) \u2014 Chinese automaker",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Geely",
+      "to": "Volvo_Cars",
+      "instrument": "acquisition",
+      "layer": "financial",
+      "raw_instrument": "acquired Volvo Cars (2010, from Ford); also owns Polestar/Lotus/Lynk&Co/Zeekr",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Geely",
+      "to": "Mercedes_Benz",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Li Shufu/Geely ~10% stake in Daimler/Mercedes-Benz (since 2018)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Volvo_Cars",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Swedish premium, Geely-owned (+ Polestar)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Ferrari",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Exor/Agnelli-controlled; independent ultra-luxury; the highest margins in autos",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Aston_Martin",
+      "to": "EU_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "multi-owner mosaic (Oct 2025): Yew Tree/Stroll ~27.7% control, Saudi PIF ~17-20%, Geely ~13-17%, Mercedes ~8% + powertrain supply",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "PIF",
+      "to": "Aston_Martin",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Saudi Public Investment Fund ~17-20% (second-largest shareholder, 2022+)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Geely",
+      "to": "Aston_Martin",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Geely ~13-17% stake (Chinese automaker into UK luxury)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
+      "from": "Mercedes_Benz",
+      "to": "Aston_Martin",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "~8% stake + powertrain/tech supply (F1 + road)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-eu-automakers.json",
+      "note": ""
+    },
+    {
       "from": "Pension_Funds",
       "to": "PrivateCredit_Funds",
       "instrument": "other",
@@ -21910,10 +22321,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 998,
-    "num_edges": 1378,
-    "num_financial_edges": 228,
-    "num_structural_edges": 1150,
+    "num_nodes": 1013,
+    "num_edges": 1405,
+    "num_financial_edges": 234,
+    "num_structural_edges": 1171,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -21980,12 +22391,12 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -22005,6 +22416,12 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
@@ -22013,12 +22430,6 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -22582,7 +22993,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Aston_Martin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Atom_Computing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Audi": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22667,6 +23092,13 @@
         "in_robust_core": false
       },
       "BLS_NTRI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BMW": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -22801,6 +23233,13 @@
       },
       "Bayer": {
         "total_usd": 70250000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bentley": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -23032,6 +23471,13 @@
       },
       "Brocade": {
         "total_usd": 8500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bugatti_Rimac": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -24080,6 +24526,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EU_Auto_Makers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EU_Quantum_Flagship": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24395,6 +24848,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ferrari": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Fhenix": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24613,6 +25073,13 @@
         "in_robust_core": false
       },
       "Gazprom": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Geely": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25256,6 +25723,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "JLR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JNJ": {
         "total_usd": 5000000000,
         "circular_usd": 0,
@@ -25655,6 +26129,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Lamborghini": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Laos": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25922,6 +26403,13 @@
         "in_robust_core": false
       },
       "Medical_Device_Standards": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mercedes_Benz": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26747,6 +27235,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Porsche": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Predator": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -27049,6 +27544,13 @@
         "in_robust_core": false
       },
       "Reliance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Renault": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28056,6 +28558,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tata_Motors": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Taylor_Foodservice": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -28686,6 +29195,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Volvo_Cars": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Voyager": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29047,7 +29563,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 47,
+        "degree": 48,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -29069,7 +29585,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 22,
+        "source_files": 23,
         "layers": [
           "financial",
           "structural"
