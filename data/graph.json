@@ -116,6 +116,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "AV_Robotaxi": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Aadhaar": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -400,6 +404,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "BYD": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "BaaS_Middleware": {
       "sector": "financial_infra",
       "has_exogenous_revenue": false
@@ -411,6 +419,10 @@
     "Baidu": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
+    },
+    "Baidu_Apollo": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Bambu_Lab": {
       "sector": "industrial",
@@ -604,6 +616,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "CATL": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "CCDH": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -784,6 +800,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Chery": {
+      "sector": "industrial",
+      "has_exogenous_revenue": true
+    },
     "China": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -798,6 +818,10 @@
     },
     "China_AI_Labs": {
       "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "China_EV": {
+      "sector": "industrial",
       "has_exogenous_revenue": false
     },
     "China_Scholarship_Council": {
@@ -1200,6 +1224,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "EV_Tariffs": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "East_Palestine": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -1562,6 +1590,10 @@
     },
     "Grayscale": {
       "sector": "financier",
+      "has_exogenous_revenue": true
+    },
+    "Great_Wall_Motor": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "Gwadar": {
@@ -2140,6 +2172,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Leapmotor": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "Lee_Family": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2167,6 +2203,10 @@
     "LexisNexis_Risk_Solutions": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Li_Auto": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Liability_Engineering": {
       "sector": "other",
@@ -2447,6 +2487,10 @@
     "NHTSA": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "NIO": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "NIST": {
       "sector": "standards",
@@ -3026,6 +3070,10 @@
     },
     "Ryan_Kelly": {
       "sector": "other",
+      "has_exogenous_revenue": true
+    },
+    "SAIC": {
+      "sector": "industrial",
       "has_exogenous_revenue": true
     },
     "SASAC": {
@@ -3928,6 +3976,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Waymo": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "WeCan_Group": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -3972,6 +4024,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "XPeng": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
     "XRP": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -4011,6 +4067,10 @@
     "Xiaomi": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
+    },
+    "Xiaomi_EV": {
+      "sector": "industrial",
+      "has_exogenous_revenue": false
     },
     "Yim_Leak": {
       "sector": "other",
@@ -8789,6 +8849,279 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-russia-state-network.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "world's largest EV market + maker base; state EV-industrial policy",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "BYD",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "global #1 NEV maker; vertically integrated (Blade LFP battery + chips); overtook Tesla quarterly BEV 2023-24; Berkshire trimmed/exited 2022-25",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "SAIC",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state-owned (MG brand); the EU's largest CVD-tariff target (~35%)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "NIO",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'new force' (battery-swap model)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "XPeng",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'new force' (ADAS focus)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Li_Auto",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "'new force' (EREV/range-extender)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Xiaomi_EV",
+      "to": "China_EV",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "phone giant's EV arm (SU7 launched 2024) \u2014 fast share gain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Chery",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "China's top auto EXPORTER",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Great_Wall_Motor",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "SUV/pickup + Ora EV brand",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Geely",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Chinese EV (Zeekr/Polestar) \u2014 cross-link the EU-brands web (#180)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Stellantis",
+      "to": "Leapmotor",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Stellantis ~21% stake + 'Leapmotor International' JV for global sales (2023-24)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Leapmotor",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "value EV maker (Stellantis-partnered)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "CATL",
+      "to": "China_EV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "world's #1 battery maker (~37% share) \u2014 anchors the China EV supply chain",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "CATL",
+      "to": "Ford",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "licensed LFP battery tech to Ford's Marshall, Michigan plant (2023; downsized amid political pushback over Chinese-tech dependence)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "EU",
+      "to": "EV_Tariffs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "countervailing duties on Chinese BEVs finalized Oct 2024 (up to ~35% + 10% base; SAIC ~35/Geely ~19/BYD ~17)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "US_Government",
+      "to": "EV_Tariffs",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "100% tariff on Chinese EVs (2024); Canada matched; Mexico-assembly 'backdoor' a live concern",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "EV_Tariffs",
+      "to": "China_EV",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "the Western tariff wall vs Chinese-EV cost lead + overcapacity \u2014 both-sides: subsidy/dumping (West) vs protectionism (China, which retaliated on EU brandy/dairy/pork)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Tesla",
+      "to": "AV_Robotaxi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FSD + Austin robotaxi (2025)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Waymo",
+      "to": "AV_Robotaxi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Alphabet's Waymo \u2014 US paid-robotaxi leader (multi-city)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "Baidu_Apollo",
+      "to": "AV_Robotaxi",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Baidu's Apollo Go \u2014 China robotaxi leader (scaled in Wuhan, 2024)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
+      "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Baidu_Apollo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Chinese robotaxi/AV champion (Apollo Go)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ev.json",
       "note": ""
     },
     {
@@ -22586,10 +22919,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1024,
-    "num_edges": 1422,
-    "num_financial_edges": 234,
-    "num_structural_edges": 1188,
+    "num_nodes": 1039,
+    "num_edges": 1443,
+    "num_financial_edges": 235,
+    "num_structural_edges": 1208,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -22669,20 +23002,26 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -22695,12 +23034,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -22923,6 +23256,13 @@
         "in_robust_core": false
       },
       "AUKUS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AV_Robotaxi": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23426,6 +23766,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BYD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BaaS_Middleware": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -23441,6 +23788,13 @@
         "in_robust_core": false
       },
       "Baidu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Baidu_Apollo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -23783,6 +24137,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CATL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CCDH": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -24098,6 +24459,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chery": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "China": {
         "total_usd": 87100000000,
         "circular_usd": 0,
@@ -24120,6 +24488,13 @@
         "in_robust_core": false
       },
       "China_AI_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "China_EV": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24826,6 +25201,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EV_Tariffs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "East_Palestine": {
         "total_usd": 910000000,
         "circular_usd": 0,
@@ -25457,6 +25839,13 @@
         "in_robust_core": false
       },
       "Grayscale": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Great_Wall_Motor": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26471,6 +26860,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Leapmotor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lee_Family": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26514,6 +26910,13 @@
         "in_robust_core": false
       },
       "LexisNexis_Risk_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Li_Auto": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -27004,6 +27407,13 @@
         "in_robust_core": false
       },
       "NHTSA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NIO": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28020,6 +28430,13 @@
       },
       "Ryan_Kelly": {
         "total_usd": 25000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SAIC": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -29600,6 +30017,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Waymo": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WeCan_Group": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29677,6 +30101,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "XPeng": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "XRP": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29741,6 +30172,13 @@
         "in_robust_core": false
       },
       "Xiaomi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Xiaomi_EV": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29905,7 +30343,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 48,
+        "degree": 50,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -29924,10 +30362,11 @@
           "standards",
           "state",
           "state_intel",
-          "statistic"
+          "statistic",
+          "tech"
         ],
-        "n_neighbor_sectors": 18,
-        "source_files": 23,
+        "n_neighbor_sectors": 19,
+        "source_files": 24,
         "layers": [
           "financial",
           "structural"
@@ -29936,7 +30375,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 37,
+        "degree": 38,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -29954,7 +30393,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 14,
-        "source_files": 23,
+        "source_files": 24,
         "layers": [
           "financial",
           "structural"

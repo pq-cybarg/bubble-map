@@ -110,6 +110,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Telematics_Insurance":"Telematics insurance (surveillance pricing)","LexisNexis":"LexisNexis Risk Solutions","Verisk":"Verisk Analytics","Allstate":"Allstate","Progressive_Insurance":"Progressive","Arity":"Arity (Allstate data arm)",
  "EU_Auto_Makers":"EU automakers + luxury","Mercedes_Benz":"Mercedes-Benz","Geely":"Geely (China)","Tata_Motors":"Tata Motors (India)","JLR":"Jaguar Land Rover","Volvo_Cars":"Volvo Cars (Geely)","Aston_Martin":"Aston Martin","Bugatti_Rimac":"Bugatti-Rimac",
  "JP_SK_Auto_Makers":"Japan + Korea automakers","Mitsubishi_Motors":"Mitsubishi Motors","Hyundai_Motor_Group":"Hyundai Motor Group","Auto_Cert_Fraud":"JP auto certification fraud","Daihatsu":"Daihatsu (Toyota)",
+ "China_EV":"China EV ecosystem","BYD":"BYD","CATL":"CATL (batteries)","Xiaomi_EV":"Xiaomi EV (SU7)","Great_Wall_Motor":"Great Wall Motor","Li_Auto":"Li Auto","EV_Tariffs":"EU/US Chinese-EV tariffs","AV_Robotaxi":"AV / robotaxi","Baidu_Apollo":"Baidu Apollo Go","Waymo":"Waymo (Alphabet)",
  # quantum competitive landscape
  "D_Wave":"D-Wave","Atom_Computing":"Atom Computing","Alice_Bob":"Alice & Bob","Oxford_Ionics":"Oxford Ionics",
  "Vector_Atomic":"Vector Atomic","Origin_Quantum":"Origin Quantum (China)","EU_Quantum_Flagship":"EU Quantum Flagship",
