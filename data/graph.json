@@ -336,6 +336,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Auto_Credit_Unwind": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
     "Auto_Politics": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -768,6 +772,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Carvana": {
+      "sector": "retail",
+      "has_exogenous_revenue": false
+    },
     "Catholic_Coalition": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1188,6 +1196,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "DriveTime": {
+      "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
     "DuPont": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -1297,6 +1309,10 @@
       "has_exogenous_revenue": false
     },
     "Erik_Voorhees": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Ernest_Garcia": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -1423,6 +1439,10 @@
     "Fhenix": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
+    },
+    "Fifth_Third": {
+      "sector": "bank",
+      "has_exogenous_revenue": true
     },
     "Filecoin": {
       "sector": "dlt",
@@ -9527,6 +9547,188 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-sdny-crypto-prosecution.json",
+      "note": ""
+    },
+    {
+      "from": "First_Brands",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Sept-2025 Ch.11, ~$10B+ liabilities, off-balance-sheet supply-chain finance/factoring; ~$2.3B receivables-finance funds unaccounted (Greensill echo)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "First_Brands",
+      "to": "US_Auto_Makers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "auto-parts supplier (Raybestos/FRAM/TRICO) to the OEMs + aftermarket",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Jefferies",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "large First Brands exposure via Leucadia-linked Point Bonita / first-lien receivables funds",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "UBS",
+      "to": "First_Brands",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "O'Connor unit held First Brands supply-chain paper \u2014 a Greensill echo for the bank that absorbed Credit Suisse",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Tricolor_Holdings",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "Sept-2025 bankruptcy; subprime auto lender; alleged same collateral pledged to multiple lenders (fraud alleged/under-investigation)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "JPMorgan",
+      "to": "Tricolor_Holdings",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$170M charge on Tricolor exposure; Dimon's 'one cockroach -> probably more' warning",
+      "amount_usd": 170000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Fifth_Third",
+      "to": "Tricolor_Holdings",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disclosed Tricolor exposure",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Carvana",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "online used-car retailer on subprime lending + ABS; 2022 near-death -> 2023-25 recovery; related-party + loan-quality questions",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Carvana",
+      "to": "Subprime_Auto_ABS",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "securitizes subprime auto loans (+ Ally forward-flow)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "DriveTime",
+      "to": "Carvana",
+      "instrument": "backstop",
+      "layer": "financial",
+      "raw_instrument": "Garcia-family subprime dealer/servicer that backstops Carvana's loans (related party)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Ernest_Garcia",
+      "to": "Carvana",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Ernest Garcia II \u2014 largest Carvana shareholder (son Garcia III is CEO); pleaded guilty to bank fraud in the 1990 Lincoln Savings/Keating S&L scandal",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Ernest_Garcia",
+      "to": "DriveTime",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns DriveTime (subprime auto dealer/servicer)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "Subprime_Auto_ABS",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "record subprime 60+ day delinquencies (2024-25), negative equity, rising repos atop ~$1.6T auto debt",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
+      "note": ""
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Auto_Credit_Unwind",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "private credit + CLOs exposed to BOTH 2025 auto blowups (First Brands loans + Tricolor) \u2014 the 'cockroaches' fear about hidden/off-balance-sheet losses",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-credit-unwind.json",
       "note": ""
     },
     {
@@ -23116,10 +23318,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1046,
-    "num_edges": 1456,
-    "num_financial_edges": 237,
-    "num_structural_edges": 1219,
+    "num_nodes": 1051,
+    "num_edges": 1470,
+    "num_financial_edges": 243,
+    "num_structural_edges": 1227,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -23170,33 +23372,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "AMD",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -23204,9 +23401,20 @@
         "Oracle"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -23217,7 +23425,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -23225,12 +23433,6 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -23838,6 +24040,13 @@
         "in_robust_core": false
       },
       "Auto_Cert_Fraud": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auto_Credit_Unwind": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -24600,6 +24809,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Carvana": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Catholic_Coalition": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -25335,6 +25551,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DriveTime": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DuPont": {
         "total_usd": 400000000,
         "circular_usd": 0,
@@ -25525,6 +25748,13 @@
         "in_robust_core": false
       },
       "Erik_Voorhees": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ernest_Garcia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25742,6 +25972,13 @@
         "in_robust_core": false
       },
       "Fhenix": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fifth_Third": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -26652,7 +26889,7 @@
         "in_robust_core": false
       },
       "JPMorgan": {
-        "total_usd": 3220000000,
+        "total_usd": 3390000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -29739,7 +29976,7 @@
         "in_robust_core": false
       },
       "Tricolor_Holdings": {
-        "total_usd": 0,
+        "total_usd": 170000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -30805,6 +31042,27 @@
         "both_layers": true
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 9,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "private_credit",
+          "retail"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Right_to_Repair",
         "degree": 25,
         "neighbor_sectors": [
@@ -30826,26 +31084,6 @@
         "both_layers": false
       },
       {
-        "node": "PrivateCredit_Funds",
-        "degree": 8,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
-          "other",
-          "retail"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "Apple",
         "degree": 8,
         "neighbor_sectors": [
@@ -30855,6 +31093,25 @@
           "satellite",
           "state",
           "surveillance"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "JPMorgan",
+        "degree": 8,
+        "neighbor_sectors": [
+          "commodity_market",
+          "crypto_infra",
+          "other",
+          "pqc_quantum",
+          "private_credit",
+          "spv"
         ],
         "n_neighbor_sectors": 6,
         "source_files": 7,
@@ -30961,25 +31218,6 @@
         ],
         "n_neighbor_sectors": 8,
         "source_files": 2,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "xAI",
-        "degree": 7,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "other",
-          "private_credit",
-          "space_real_economy",
-          "spv"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"

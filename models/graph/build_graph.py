@@ -224,6 +224,8 @@ ALIAS = {
  "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # car-insurance telematics
  "Telematics_Insurance":"Telematics_Insurance","LexisNexis":"LexisNexis","Verisk":"Verisk","Allstate":"Allstate","Progressive_Insurance":"Progressive_Insurance","Arity":"Arity",
+ # auto-credit unwind
+ "Auto_Credit_Unwind":"Auto_Credit_Unwind","Carvana":"Carvana","DriveTime":"DriveTime","Ernest_Garcia":"Ernest_Garcia","Fifth_Third":"Fifth_Third",
  # auto politics + labor
  "Auto_Politics":"Auto_Politics","UAW":"UAW","NADA":"NADA","Dealer_Franchise_Laws":"Dealer_Franchise_Laws","IRA_EV_Credits":"IRA_EV_Credits","Auto_Bailout_2009":"Auto_Bailout_2009","CAFE_Standards":"CAFE_Standards",
  # china ev + ev transition
@@ -561,6 +563,8 @@ NODE_META = {
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
  # car-insurance telematics (overlay)
  "Telematics_Insurance":("surveillance",False),"LexisNexis":("data_provider",False),"Verisk":("data_provider",False),"Allstate":("insurance",True),"Progressive_Insurance":("insurance",True),"Arity":("data_provider",False),
+ # auto-credit unwind (overlay)
+ "Auto_Credit_Unwind":("private_credit",False),"Carvana":("retail",False),"DriveTime":("private_credit",False),"Ernest_Garcia":("person",False),"Fifth_Third":("bank",True),
  # auto politics + labor (overlay)
  "Auto_Politics":("political",False),"UAW":("labor",False),"NADA":("political",False),"Dealer_Franchise_Laws":("state",False),"IRA_EV_Credits":("state",False),"Auto_Bailout_2009":("state",False),"CAFE_Standards":("state",False),
  # china ev + ev transition (overlay)
