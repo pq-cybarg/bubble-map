@@ -75,6 +75,54 @@ def load_congress_csv():
             })
     return recs
 
+def load_fjc_judges():
+    """Auto-ingest currently-serving Article III judges from the Federal Judicial Center
+    Biographical Directory ('fjc_judges.csv') if present. A judge is currently serving on a
+    court where an appointment has a Commission Date and an EMPTY Termination Date. SCOTUS is
+    excluded here (covered by the curated federal_judicial_scotus source). The appointing
+    president's party is recorded in the note, NOT as the judge's party — Article III judges
+    are non-partisan and party-of-appointing-president is not party affiliation."""
+    def iso(d):
+        d=(d or "").strip(); m=re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", d)
+        return f"{m.group(3)}-{int(m.group(1)):02d}-{int(m.group(2)):02d}" if m else d
+    recs=[]
+    for fn in glob.glob(os.path.join(SRC, "fjc_judges.csv")):
+        try:
+            rows=list(csv.DictReader(open(fn, newline="", encoding="utf-8")))
+        except Exception as e:
+            print(f"[leadership] WARN bad csv {os.path.basename(fn)}: {e}"); continue
+        best={}  # nid -> (appointment#, record); later appointment overwrites -> judge's current/most-recent seat
+        for r in rows:
+            for n in range(1,7):
+                ct=(r.get(f"Court Type ({n})") or "").strip()
+                cn=(r.get(f"Court Name ({n})") or "").strip()
+                if   ct=="U.S. Court of Appeals": base="Circuit Judge"
+                elif ct=="U.S. District Court":   base="District Judge"
+                elif ct=="Other" and "Court of International Trade" in cn: base="Judge of the U.S. Court of International Trade"
+                else: continue
+                if not (r.get(f"Commission Date ({n})") or "").strip(): continue
+                if (r.get(f"Termination Date ({n})") or "").strip(): continue  # terminated on this court
+                senior=(r.get(f"Senior Status Date ({n})") or "").strip()
+                cb =(r.get(f"Service as Chief Judge, Begin ({n})") or "").strip(); ce =(r.get(f"Service as Chief Judge, End ({n})") or "").strip()
+                cb2=(r.get(f"2nd Service as Chief Judge, Begin ({n})") or "").strip(); ce2=(r.get(f"2nd Service as Chief Judge, End ({n})") or "").strip()
+                chief=(cb and not ce) or (cb2 and not ce2)
+                role=("Chief "+base) if chief else (base+" (Senior Status)" if senior else base)
+                name=" ".join(x for x in [(r.get("First Name") or "").strip(),(r.get("Middle Name") or "").strip(),
+                                          (r.get("Last Name") or "").strip(),(r.get("Suffix") or "").strip()] if x)
+                appres=(r.get(f"Appointing President ({n})") or "").strip()
+                appty =(r.get(f"Party of Appointing President ({n})") or "").strip()
+                nid=(r.get("nid") or "").strip()
+                note=(f"Appointed by {appres} ({appty}-appointed)." if appres else "Federal Judicial Center Biographical Directory of Article III Federal Judges.")
+                if senior and not chief: note+=" Senior status."
+                best[nid]=(n,{
+                    "id":"fjc-"+nid,"person":name,"role":role,"jurisdiction":cn,
+                    "branch":"judicial","level":"federal","status":"incumbent","party":"",
+                    "start":iso(r.get(f"Commission Date ({n})")),"as_of":"2026-06-29",
+                    "source_url":f"https://www.fjc.gov/node/{nid}","source_dataset":"fjc-article-iii-judges","note":note,
+                })
+        recs.extend(v[1] for v in best.values())
+    return recs
+
 def validate(recs):
     seen={}; clean=[]; warns=0
     for r in recs:
@@ -93,7 +141,7 @@ def validate(recs):
 def esc(s): return html.escape(str(s or ""))
 
 def build_html(recs, by_branch, by_level, current_as_of):
-    css="body{background:#faf8f2;color:#1c1b19;font:16px/1.6 Georgia,'Iowan Old Style','Times New Roman',serif;margin:0;padding:0 0 60px}main{max-width:900px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:32px;margin:26px 0 4px}h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin-top:30px;font-size:22px}h3{font-size:17px;margin:18px 0 4px;color:#33312c}a{color:#1f4e79}.muted{color:#6b665d;font-size:14px}table{border-collapse:collapse;width:100%;margin:8px 0 18px;font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}th,td{border-bottom:1px solid #e9e2d2;padding:6px 9px;text-align:left;vertical-align:top}th{color:#7b2d26}.s-incumbent{color:#2e6b2e}.s-acting{color:#b8860b}.s-former{color:#a33;text-decoration:line-through}.s-nominated{color:#1f4e79}.pill{font:11px sans-serif;background:#f2ede0;border:1px solid #e4ddcc;border-radius:10px;padding:1px 7px;color:#6b3b16}"
+    css="body{background:#faf8f2;color:#1c1b19;font:16px/1.6 Georgia,'Iowan Old Style','Times New Roman',serif;margin:0;padding:0 0 60px}main{max-width:900px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:32px;margin:26px 0 4px}h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin-top:30px;font-size:22px}h3{font-size:17px;margin:18px 0 4px;color:#33312c}a{color:#1f4e79}.muted{color:#6b665d;font-size:14px}.nav{font:14px -apple-system,Segoe UI,Roboto,sans-serif;background:#fffdf8;border:1px solid #e4ddcc;border-radius:7px;padding:10px 14px;margin:14px 0}.nav a{margin-right:14px;white-space:nowrap}details{margin:8px 0}summary{cursor:pointer;font-size:17px;margin:14px 0 2px;color:#33312c;font-weight:600}summary::-webkit-details-marker{color:#7b2d26}table{border-collapse:collapse;width:100%;margin:8px 0 18px;font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}th,td{border-bottom:1px solid #e9e2d2;padding:6px 9px;text-align:left;vertical-align:top}th{color:#7b2d26}.s-incumbent{color:#2e6b2e}.s-acting{color:#b8860b}.s-former{color:#a33;text-decoration:line-through}.s-nominated{color:#1f4e79}.pill{font:11px sans-serif;background:#f2ede0;border:1px solid #e4ddcc;border-radius:10px;padding:1px 7px;color:#6b3b16}"
     rows_by = {}
     for r in recs:
         rows_by.setdefault((r["level"], r["branch"]), []).append(r)
@@ -107,14 +155,19 @@ def build_html(recs, by_branch, by_level, current_as_of):
                  f"<a href='index.html'>&larr; back to the map</a></p>")
     counts=" &middot; ".join(f"{esc(k)}: <b>{v}</b>" for k,v in sorted(by_branch.items(), key=lambda x:-x[1]))
     parts.append(f"<p class=muted>By branch: {counts}</p>")
+    present_levels=[lvl for lvl in order_level if any(rows_by.get((lvl,b)) for b in order_branch)]
+    if len(present_levels)>1:
+        nav=" ".join(f"<a href='#lvl-{slug(lvl)}'>{esc(lvl.capitalize())}</a>" for lvl in present_levels)
+        parts.append(f"<div class=nav>Jump to: {nav}</div>")
     for lvl in order_level:
         lvl_rows=[(b,rows_by.get((lvl,b),[])) for b in order_branch if rows_by.get((lvl,b))]
         if not lvl_rows: continue
-        parts.append(f"<h2>{esc(lvl.capitalize())}</h2>")
+        parts.append(f"<h2 id='lvl-{slug(lvl)}'>{esc(lvl.capitalize())} <span class=muted>({sum(len(rs) for _,rs in lvl_rows)})</span></h2>")
         for br, rs in lvl_rows:
-            parts.append(f"<h3>{esc(br.replace('_',' ').capitalize())} <span class=muted>({len(rs)})</span></h3>")
+            openattr="" if len(rs)>60 else " open"   # keep big sections (Congress, judiciary) collapsed by default
+            parts.append(f"<details{openattr}><summary>{esc(br.replace('_',' ').capitalize())} <span class=muted>({len(rs)})</span></summary>")
             parts.append("<table><tr><th>Office</th><th>Person</th><th>Party</th><th>Since</th><th>Status</th><th>Source</th></tr>")
-            for r in sorted(rs, key=lambda x:(x.get("jurisdiction",""), x.get("role",""))):
+            for r in sorted(rs, key=lambda x:(x.get("jurisdiction",""), x.get("role",""), x.get("person",""))):
                 st=r.get("status","")
                 note=f"<br><span class=muted><i>{esc(r['note'])}</i></span>" if r.get("note") else ""
                 since=esc(r.get("start","")) + (f" &ndash; {esc(r['end'])}" if r.get("end") else "")
@@ -124,12 +177,12 @@ def build_html(recs, by_branch, by_level, current_as_of):
                     f"<td>{since}</td>"
                     f"<td class=s-{esc(st)}>{esc(st)}</td>"
                     f"<td><a href='{esc(r['source_url'])}' rel=nofollow>src</a></td></tr>")
-            parts.append("</table>")
+            parts.append("</table></details>")
     parts.append("</main></body></html>")
     return "".join(parts)
 
 def main():
-    recs = load_json_sources() + load_congress_csv()
+    recs = load_json_sources() + load_congress_csv() + load_fjc_judges()
     recs, warns = validate(recs)
     by_branch={}; by_level={}
     for r in recs:
