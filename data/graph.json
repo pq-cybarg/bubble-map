@@ -44,6 +44,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Datacenter_Foreign_Influence_Claim": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "AI_Datacenters": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -554,6 +558,10 @@
     },
     "BitPay": {
       "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Bitcoin_Policy_Institute": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Bitcoin_Strategic_Reserve": {
@@ -3571,6 +3579,14 @@
     "Singapore": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Singham": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Singham_Network": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "SoftBank": {
       "sector": "financier",
@@ -12597,6 +12613,97 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-boeing-737max.json",
+      "note": ""
+    },
+    {
+      "from": "Singham",
+      "to": "Singham_Network",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "~$278M from Singham-controlled entities into six US nonprofits 2017-23 (IRS 990s per Fox Mar 2026; NYT Aug 2023) \u2014 People's Forum/ANSWER/BreakThrough/Tricontinental/Justice & Education Fund/CodePink (spouse Jodie Evans)",
+      "amount_usd": 278000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Singham",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "US citizen in Shanghai, ex-Huawei consultant, CCP-workshop ties (NYT 2023); Delhi Police chargesheet named Chinese govt 'ultimate paymaster' (May 2024); Rubio FARA referral (2023); reported DOJ grand-jury probe; Singham denies taking orders from any party/government",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Singham_Network",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "PSL leadership overlaps the nonprofits; PSL/allied groups ran or joined ~21 data-center-opposition campaigns in 14 states -> ~10 moratoria + Monterey Park ban + Google(IN)/QTS-Blackstone(WI) withdrawals; report concedes PSL role 'ranged from lead organizer to one member of a broader coalition'",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "CCP",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Chinese state media (CGTN/China Daily/Global Times) ran attributed anti-US-data-center items; content alignment with CCP positions (NYT) \u2014 'directed campaign against American AI' is the report's inference, not shown",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "US_Congress",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "2025-26 inquiries: House Energy & Commerce (Jun 4 2026), Sen. Cotton (Jun 10 2026), Ways & Means letters to Tricontinental (Feb 9 / May 5 2026), House Oversight (Sep 15 2025), Senate Judiciary (spring 2025); DOJ FARA scrutiny",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "Bitcoin_Policy_Institute",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "publisher of the 3-part series (Sam Lyman, May-Jun 2026) \u2014 a pro-Bitcoin/pro-AI-infrastructure 501(c)(3) with an interest in the framing; $23.6B aggregate has no stated methodology (~$17B of named projects)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Datacenters",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the contested object: AI data-center buildout is the target of the opposition campaigns the series tracks (genuine local drivers \u2014 power/water/noise/land/tax abatements \u2014 run parallel to the alleged foreign amplification)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
       "note": ""
     },
     {
@@ -24704,10 +24811,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1092,
-    "num_edges": 1564,
+    "num_nodes": 1096,
+    "num_edges": 1571,
     "num_financial_edges": 255,
-    "num_structural_edges": 1309,
+    "num_structural_edges": 1316,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -24758,28 +24865,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -24797,6 +24904,12 @@
         "NVIDIA"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -24805,19 +24918,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -24915,6 +25022,13 @@
         "in_robust_core": false
       },
       "AI_Benchmarks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Datacenter_Foreign_Influence_Claim": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -25811,6 +25925,13 @@
         "in_robust_core": false
       },
       "BitPay": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bitcoin_Policy_Institute": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -31090,6 +31211,20 @@
       },
       "Singapore": {
         "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Singham": {
+        "total_usd": 278000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Singham_Network": {
+        "total_usd": 278000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
