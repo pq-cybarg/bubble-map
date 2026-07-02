@@ -32,11 +32,11 @@
 - TerraPower, Vistra
 
 ## Newest file `spec-meta-ai-child-safety.json` — related files by shared entities (verify cross-refs exist)
+- spec-telecom-satellite.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
 - spec-exchanges-asia.json: 4 shared entities
 - fin-meta-family.json: 4 shared entities
 - spec-cross-system-contagion.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 4 shared entities
-- spec-telecom-satellite.json: 4 shared entities
+- digitalid-regulatory.json: 3 shared entities
+- spec-sec-filings-primary.json: 3 shared entities
 - fin-disney-openai-sora.json: 3 shared entities
-- spec-semiconductor-logistics-standards.json: 3 shared entities
-- digitalid-corporate.json: 3 shared entities

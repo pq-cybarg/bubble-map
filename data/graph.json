@@ -2440,6 +2440,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Louisiana_HB570": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "Lucid": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -18088,6 +18092,32 @@
       "note": ""
     },
     {
+      "from": "Meta",
+      "to": "Louisiana_HB570",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Meta lobbied Louisiana's App Store Accountability bill HB-570 with ~12 lobbyists/~9 firms and >=$324,992; sponsor Kim Carver confirmed a Meta lobbyist brought the bill's language directly (LD-203 + LA Board of Ethics primary data; open-source repo, LDA API count verified)",
+      "amount_usd": 324992,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Louisiana_HB570",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "a concrete state instance of Track A (offload age-verification duty to app stores) advanced via the lobbying channel",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
       "from": "Gary_Gensler",
       "to": "SEC",
       "instrument": "regulatory_legal",
@@ -25421,10 +25451,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1125,
-    "num_edges": 1609,
+    "num_nodes": 1126,
+    "num_edges": 1611,
     "num_financial_edges": 257,
-    "num_structural_edges": 1352,
+    "num_structural_edges": 1354,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -25476,6 +25506,14 @@
     "elementary_cycles": [
       [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "SINK_lenders"
       ],
       [
@@ -25492,19 +25530,6 @@
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
         "OpenAI",
         "Oracle"
       ],
@@ -25514,16 +25539,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -25534,8 +25558,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -29831,6 +29861,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Louisiana_HB570": {
+        "total_usd": 324992,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lucid": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29979,7 +30016,7 @@
         "in_robust_core": false
       },
       "Meta": {
-        "total_usd": 159358000000,
+        "total_usd": 159358324992,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -33731,7 +33768,7 @@
       },
       {
         "node": "Meta",
-        "degree": 12,
+        "degree": 13,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
