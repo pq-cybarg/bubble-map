@@ -228,6 +228,8 @@ ALIAS = {
  "Meta_AI_ChildSafety":"Meta_AI_ChildSafety","Outlier":"Outlier","Alignerr":"Alignerr","Character_AI":"Character_AI","Character.AI":"Character_AI","CharacterAI":"Character_AI",
  # ai-datacenter foreign-influence claim (BPI / Singham series)
  "Singham":"Singham","Neville_Singham":"Singham","Singham_Network":"Singham_Network","Bitcoin_Policy_Institute":"Bitcoin_Policy_Institute","BPI":"Bitcoin_Policy_Institute","AI_Datacenter_Foreign_Influence_Claim":"AI_Datacenter_Foreign_Influence_Claim",
+ # planet labs + commercial space-imaging / EO industry
+ "Planet_Labs":"Planet_Labs","PlanetLabs":"Planet_Labs","Planet_Labs_PBC":"Planet_Labs","Vantor":"Vantor","Maxar":"Vantor","Maxar_Intelligence":"Vantor","BlackSky":"BlackSky","Satellogic":"Satellogic","Capella_Space":"Capella_Space","Capella":"Capella_Space","Umbra":"Umbra","ICEYE":"ICEYE","Spire_Global":"Spire_Global","Spire":"Spire_Global","HawkEye360":"HawkEye360","HawkEye_360":"HawkEye360","Albedo":"Albedo","Airbus_DS":"Airbus_DS","Airbus_Defence_Space":"Airbus_DS","Synspective":"Synspective","ChangGuang":"ChangGuang","Jilin_1":"ChangGuang","Spacety":"Spacety","NGA":"NGA","SDA":"SDA","Space_Development_Agency":"SDA","Rocket_Lab":"Rocket_Lab","RocketLab":"Rocket_Lab","ULA":"ULA","Blue_Origin":"Blue_Origin","Firefly":"Firefly","Sierra_Space":"Sierra_Space","Advent_International":"Advent_International","Advent":"Advent_International","Commercial_Space_Imaging":"Commercial_Space_Imaging",
  # singapore + arctic + antarctica
  "Singapore":"Singapore","PSA_Port":"PSA_Port","DBS":"DBS","SG_Laundering":"SG_Laundering",
  "Arctic":"Arctic","Northern_Sea_Route":"Northern_Sea_Route","Greenland":"Greenland","Arctic_Council":"Arctic_Council",
@@ -581,6 +583,8 @@ NODE_META = {
  "Meta_AI_ChildSafety":("surveillance",False),"Outlier":("ai_data",True),"Alignerr":("ai_data",True),"Character_AI":("tech",True),
  # ai-datacenter foreign-influence claim (overlay) — hub is a pure sink
  "Singham":("person",False),"Singham_Network":("political",False),"Bitcoin_Policy_Institute":("political",False),"AI_Datacenter_Foreign_Influence_Claim":("political",False),
+ # planet labs + commercial space-imaging / EO industry (overlay) — hub is a pure sink
+ "Planet_Labs":("satellite",True),"Vantor":("satellite",True),"BlackSky":("satellite",True),"Satellogic":("satellite",True),"Capella_Space":("satellite",True),"Umbra":("satellite",True),"ICEYE":("satellite",True),"Spire_Global":("satellite",True),"HawkEye360":("satellite",True),"Albedo":("satellite",True),"Airbus_DS":("satellite",True),"Synspective":("satellite",True),"ChangGuang":("satellite",True),"Spacety":("satellite",True),"NGA":("state_intel",False),"SDA":("state_intel",False),"Rocket_Lab":("space_real_economy",True),"ULA":("space_real_economy",True),"Blue_Origin":("space_real_economy",True),"Firefly":("space_real_economy",True),"Sierra_Space":("space_real_economy",True),"Advent_International":("financier",True),"Commercial_Space_Imaging":("satellite",False),
  # singapore + arctic + antarctica (overlay)
  "Singapore":("state",True),"PSA_Port":("logistics",True),"DBS":("bank",True),"SG_Laundering":("other",False),
  "Arctic":("state",False),"Northern_Sea_Route":("logistics",False),"Greenland":("state",False),"Arctic_Council":("state",False),
