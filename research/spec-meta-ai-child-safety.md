@@ -44,7 +44,50 @@ This exposes the policy fault line. There are two rival ways to keep minors from
 
 "Meta wanted to sexualize children" is a **division/composition error**. The artifact is an institutional **standard** produced and signed off by specific functions (legal, public policy, engineering, a named chief-ethicist role) — institutional **action**, not a single unified malevolent **mind**. Likewise the contractors who pose as teens are **workers** executing a task, not "Meta's intent" embodied. The warranted findings are narrower and stronger for it: **(i)** a cross-functionally-approved written standard treated romantic chat with minors as acceptable until exposed; **(ii)** the product's own red-team metrics show high rates of policy-violating, minor-unsafe output; **(iii)** the safety-testing labor is a **related party** (Scale/Outlier) under Meta's part-ownership.
 
-## 8. The honest reading
+## 8. The opinion-shaping playbook (two tracks)
+
+Beyond the chatbots, Meta runs a consistent **two-track** child-safety playbook, exported near-verbatim across jurisdictions. **Track A — offload the duty to Apple/Google/the device:** champion "App Store Accountability Act"-style laws (Antigone Davis's Nov 2023 framework; "teens use ~40 apps a week, verify once centrally"). **Track B — kill or narrow platform-specific and AI rules,** mostly *through trade groups* (NetChoice/CCIA litigation; TechNet lobbying), keeping Meta's fingerprints lighter. **2025-26 pivot (reported):** after years opposing KOSA, Meta shifted to *supporting* it once bundled with federal pre-emption of state AI laws + the App Store Accountability Act — while Reuters (Jun 2026) reported Meta lobbying to insert **liability immunity** into KOSA (Blackburn's office: "would never consider it"; Meta: "not blanket immunity"). House passed the omnibus KIDS Act 267-117 (Jun 29 2026). **Composition guard:** the "tech industry" is not one mind — Meta's own trade group **CCIA sues to block the app-store laws Meta favors**, and Meta-funded CDT/Chamber of Progress oppose KOSA on independent civil-liberties grounds.
+
+## 9. National / federal (grades vary)
+
+- **American Edge Project** — Meta's flagship dark-money 501(c)(4) (founded Dec 2019; Meta funds it & lists it on its own disclosure; 990 revenue peaked $47.5M in 2022; ~$38M early Meta funding). *Honesty flag:* it campaigns on **antitrust/Section 230/AI-and-China, not child safety** — its child-safety nexus is indirect (its AI-preemption plank = what Meta got in the KOSA bundle). It's the **template** for the covert-funding playbook, not itself a kids'-safety vehicle. *(documented funding; child-safety nexus speculative.)*
+- **Trade/advocacy vehicles:** NetChoice (Meta member; litigation arm striking state child-safety/age-verification laws in ~27 states), CCIA (opposes KOSA *and* sued to block the app-store laws), Chamber of Progress (Meta **left in 2024**; now opposes app-store verification), CDT (Meta funder; led the 90+ group anti-KOSA letter on civil-liberties grounds).
+- **Lobbying:** record **$26.29M (2025)**, ~85 lobbyists (~85% revolving-door); named ex-Senate-Commerce/Judiciary counsels on the account.
+- **PR weaponization (documented):** Meta paid GOP firm **Targeted Victory** (WaPo, Mar 2022) to run a nationwide "**TikTok is a danger to your kids**" campaign — planted op-eds, amplified the "Slap a Teacher" hoax. The clearest case of Meta *using* child-safety framing against a competitor.
+
+## 10. State
+
+- **Meta's own disclosed super-PACs:** **METAC** (~$20M, CA, Aug 2025) + **ATEP** (national state-legislative, Sept 2025) — pro-AI, "parents in charge" framing.
+- **Bill map:** Meta **directly supported** CA **AB 1043** (OS-level age signal — the model it wants) and the Utah/Texas App Store Accountability Acts (Meta+X+Snap joint statement; Google: Meta "offload their own responsibilities"); state design-code/addictive-feed/AI-companion bills (CA SB 976, CA AADC, NY SAFE for Kids, FL HB3, AR SB396, MD Kids Code) were fought mostly **through NetChoice/CCIA**. CA **AB 1064** vetoed (Oct 2025) via a CCIA-led coalition letter — Meta *not* a named signatory (trade-group action). Backdrop: **41-42 state AGs sued Meta** (Oct 2023) over addictive youth features.
+
+## 11. Local / grassroots
+
+- **Digital Childhood Alliance** — 501(c)(4) coalition (100+ orgs) authoring the model App Store Accountability Act in 20+ states; Meta funding **reported** (Bloomberg Jul 2025) + an under-oath partial admission (LA Senate, Apr 2025); Meta unconfirmed, DCA absent from Meta's disclosure.
+- **"Momfluencer"/Screen Smart op** (TTP+CNN, May 2026): paid parent-influencers, doctors, athletes (~276-300M IG views) promoting Teen Accounts + app-store bills; FTC red flags (#MetaPartner instead of the paid-partnership label; undisclosed op-eds; editorial control).
+- **Credibility partners:** National PTA (~15-yr sponsor — **ended Dec 2025**, PTA declined renewal citing scrutiny), ConnectSafely, and historically FOSI (which **revoked** Facebook's membership Apr 2022 over Targeted Victory — now a critic).
+- **School/curricula (direct):** Get Digital, We Think Digital, the Harvard Berkman Klein Digital Literacy Library, Childhelp "Speak Up Be Safe," the Instagram School Partnership Program, an Instagram-sponsored Girl Scouts badge.
+- **Advisory panels (direct):** Meta Safety Advisory Council / Youth Advisors / AI Wellbeing Expert Council — several turned **critical** (the Council's Jan 2025 letter against Meta's moderation rollback), evidence they're not pure mouthpieces.
+
+## 12. International
+
+- **EU:** DSA proceedings on minors (opened May 2024); **preliminary breach finding (Apr 29 2026)** for failing to keep under-13s off its platforms (fine up to **6% of global turnover**); Meta again nudges to the app-store/device model; Brussels lobby ~**€10M/yr** (largest tech lobbyist).
+- **UK:** OSA / Ofcom Children's Codes in force Jul 2025; Meta pushed the app-store model; **opposed** the UK under-16 ban (Jun 2026).
+- **Australia (most aggressive):** Meta's submission called the under-16 ban a "missed opportunity"; complied (removed ~550,000 under-16 accounts Dec 2025) while urging repeal — but the government's **Age-Assurance Technology Trial (Aug 2025) found "no substantial technological barriers,"** undercutting Meta's "not feasible" line; penalty doubled to A$99m (Jun 2026).
+- **Brazil (strongest "hidden hand," flagged single-thread):** document metadata reportedly showed **≥2 amendments to Brazil's child-protection bill were written by a Meta lobbyist** and introduced without disclosure (The Intercept via SOMO; primary page 403'd — treat as strong-but-single-source).
+- **Canada/India/Indonesia:** mostly trade-body engagement + compliance (Meta raised its Indonesia minimum age to 16, Mar 2026).
+
+## 13. Research capture & whistleblowers ("other")
+
+- **Court-surfaced suppression (documented):** "Project Mercury" (buried 2020 Nielsen deactivation study showing lower depression off Facebook; unsealed Nov 2025) + a DC **crime-fraud ruling** (Oct 2025) piercing privilege where lawyers advised staff to "button up" teen-mental-health studies. Meta calls the study flawed and the discussions "routine" (**conflict, both retained**).
+- **Whistleblowers (documented testimony, contested by Meta):** Arturo Béjar (2023), Sarah Wynn-Williams (2025, "divorced from reality" per Meta), Frances Haugen (2021 — *honesty flag:* the suicidal-thoughts stat rested on ~16 of ~2,500 respondents), and the Sept 2025 VR-safety "Hidden Harms" hearing.
+- **Academic shaping:** Instagram Research Awards (up to $50K) and Social Science One (Meta sent researchers data omitting ~half of US users, 2021) — real relationships, but naming ties ≠ proof of bought conclusions.
+- **Revolving door (into Meta, documented):** Joel Kaplan (Bush WH → Meta President of Global Affairs, Jan 2025), Kevin Martin (ex-FCC Chair), Nick Clegg (ex-UK Deputy PM), Antigone Davis (ex-Maryland AG child-safety unit → Meta Global Head of Safety, while on FOSI/NCMEC/NNEDV boards).
+
+## 14. Honesty corrections (guardrails against over-reading)
+
+(i) The viral **"$2B grants / $70M super-PAC"** figure is self-published and contradicted by Meta's actual ~$26.3M 2025 lobbying — **do not cite as fact**. (ii) **Common Sense Media** is funded by the **Chan Zuckerberg Initiative** (Zuckerberg's *personal* philanthropy, distinct from Meta) and its founder is a Meta antagonist. (iii) **Sesame Workshop / Highlights** kids'-brand deals are **Google, not Meta**. (iv) Child Mind Institute, NAMI, Crisis Text Line, #HalfTheStory — **no Meta funding confirmed**. (v) American Edge is antitrust/AI, not a child-safety campaigner. The documented machinery is large enough without the exaggerations.
+
+## 15. The honest reading
 
 Meta operated consumer AI chatbots under an internal "Content Risk Standards" document that — per **Reuters** (reviewed Aug 2025), **confirmed authentic by Meta** — listed romantic/sensual chat with a child as acceptable, a cross-functionally-approved norm Meta **removed and disowned as an "error" only after press questions** (text and walk-back both facts, presented together). To test the bots, Meta and its vendors use contractors who **pose as teens** (Wired, 2026), sourced through **Scale-AI-owned Outlier** and **Alignerr** — a **related-party** safety supplier given Meta's **~$14.3B/49%** Scale stake and Alexandr Wang's move to Meta. The testing's **own numbers**, entered in litigation (Axios, Feb 2026), show high minor-unsafety (~70% failure on one unreleased product; ~two-thirds policy-violation per expert testimony; "Age is just a number" to a purported 14-year-old). Regulators responded on the record (FTC 6(b); 44 AGs; TX Paxton; Senate). Read by **words-reveal-intent**, the operative standard is read from the document's text, not the after-the-fact PR. Read by the **composition guard**, the finding is institutional conduct + structure, not a corporate "mind." And the episode sharpens the age-verification debate: **behavioral red-teaming is itself proof that protecting minors does not *require* identity age-verification** — which makes Meta's parallel push to shove age-verification onto app stores look like **liability-routing**, not the most direct fix. Overlay; excluded from the proofs.
 

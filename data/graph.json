@@ -244,6 +244,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "American_Edge_Project": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "American_Farm_Bureau": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1267,6 +1271,10 @@
     "DiDi": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
+    },
+    "Digital_Childhood_Alliance": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Disaster_Compensation": {
       "sector": "other",
@@ -2532,6 +2540,10 @@
       "sector": "spv",
       "has_exogenous_revenue": false
     },
+    "Meta_State_SuperPACs": {
+      "sector": "political",
+      "has_exogenous_revenue": false
+    },
     "Metals_Futures": {
       "sector": "commodity_market",
       "has_exogenous_revenue": false
@@ -2736,6 +2748,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "National_PTA": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Nebius": {
       "sector": "neocloud",
       "has_exogenous_revenue": false
@@ -2751,6 +2767,10 @@
     "Neoclouds": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "NetChoice": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Netherlands": {
       "sector": "state",
@@ -3867,6 +3887,10 @@
     "TapBit": {
       "sector": "exchange",
       "has_exogenous_revenue": true
+    },
+    "Targeted_Victory": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Tata_Motors": {
       "sector": "industrial",
@@ -17921,6 +17945,149 @@
       "note": ""
     },
     {
+      "from": "Meta",
+      "to": "American_Edge_Project",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Meta funds its flagship dark-money 501(c)(4) (~$38M early; 990 rev peaked $47.5M 2022; listed on Meta's own political-engagement page) \u2014 antitrust/Section 230/AI-and-China messaging",
+      "amount_usd": 38000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "American_Edge_Project",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "the model for Meta's covert-funding playbook; its AI-preemption plank = what Meta obtained in the 2026 KOSA bundle (child-safety nexus INDIRECT/speculative)",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Meta",
+      "to": "Meta_State_SuperPACs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Meta's own disclosed pro-AI super-PACs: METAC (~$20M, CA, Aug 2025) + ATEP (national state-legislative, Sept 2025) \u2014 'parents in charge' framing",
+      "amount_usd": 20000000,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Meta_State_SuperPACs",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deploy pro-AI / app-store-verification messaging into 2026 state races",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Meta",
+      "to": "Digital_Childhood_Alliance",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "Meta funding REPORTED (Bloomberg Jul 2025, anonymous) + under-oath partial admission (LA Senate Apr 2025); Meta unconfirmed and DCA absent from Meta's disclosure",
+      "amount_usd": null,
+      "status": "contested",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Digital_Childhood_Alliance",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "astroturf coalition (100+ orgs) authoring the model App Store Accountability Act in 20+ states",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Meta",
+      "to": "National_PTA",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Meta national sponsor ~15 yrs (PTA Connected/Screen Smart); PTA declined renewal Feb 2026 (ended Dec 31 2025) citing scrutiny/litigation",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "National_PTA",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lent parent-facing credibility to Teen Accounts endorsements (sponsorship undisclosed at the time)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Meta",
+      "to": "Targeted_Victory",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Meta paid the GOP firm to run a nationwide 'TikTok is a danger to your kids' campaign \u2014 planted op-eds, amplified the 'Slap a Teacher' hoax (WaPo Mar 2022)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Targeted_Victory",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "executed the anti-TikTok child-safety PR campaign for Meta",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "NetChoice",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Meta-member trade group; litigation arm striking state child-safety/age-verification laws (CA/FL/AR/MD/UT/TX). COMPOSITION CAVEAT: co-group CCIA also sues to block the app-store laws Meta favors",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
       "from": "Gary_Gensler",
       "to": "SEC",
       "instrument": "regulatory_legal",
@@ -25254,10 +25421,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1119,
-    "num_edges": 1598,
+    "num_nodes": 1125,
+    "num_edges": 1609,
     "num_financial_edges": 257,
-    "num_structural_edges": 1341,
+    "num_structural_edges": 1352,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -25308,20 +25475,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -25330,6 +25489,19 @@
       [
         "AMD",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -25342,15 +25514,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -25359,10 +25526,10 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
+        "Amazon",
+        "OpenAI",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -25816,6 +25983,13 @@
       },
       "Ambani": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "American_Edge_Project": {
+        "total_usd": 38000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -27607,6 +27781,13 @@
         "in_robust_core": false
       },
       "DiDi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Digital_Childhood_Alliance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29798,7 +29979,7 @@
         "in_robust_core": false
       },
       "Meta": {
-        "total_usd": 159300000000,
+        "total_usd": 159358000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -29820,6 +30001,13 @@
       },
       "Meta_Hyperion_SPV": {
         "total_usd": 75000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Meta_State_SuperPACs": {
+        "total_usd": 20000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -30182,6 +30370,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "National_PTA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Nebius": {
         "total_usd": 22100000000,
         "circular_usd": 0,
@@ -30205,6 +30400,13 @@
       },
       "Neoclouds": {
         "total_usd": 18000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NetChoice": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -32163,6 +32365,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Targeted_Victory": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tata_Motors": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33521,6 +33730,27 @@
         "both_layers": false
       },
       {
+        "node": "Meta",
+        "degree": 12,
+        "neighbor_sectors": [
+          "ai_data",
+          "ai_infra",
+          "chip_vendor",
+          "energy",
+          "other",
+          "political",
+          "sink",
+          "surveillance"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 4,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Apple",
         "degree": 8,
         "neighbor_sectors": [
@@ -33613,27 +33843,6 @@
         ],
         "n_neighbor_sectors": 6,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Ukraine",
-        "degree": 8,
-        "neighbor_sectors": [
-          "critical_minerals",
-          "defense",
-          "energy",
-          "financier",
-          "other",
-          "person",
-          "regulator",
-          "spv"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 2,
         "layers": [
           "financial",
           "structural"
