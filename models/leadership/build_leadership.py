@@ -123,6 +123,44 @@ def load_fjc_judges():
         recs.extend(v[1] for v in best.values())
     return recs
 
+US_STATE_NAMES={"al":"Alabama","ak":"Alaska","az":"Arizona","ar":"Arkansas","ca":"California","co":"Colorado","ct":"Connecticut","de":"Delaware","fl":"Florida","ga":"Georgia","hi":"Hawaii","id":"Idaho","il":"Illinois","in":"Indiana","ia":"Iowa","ks":"Kansas","ky":"Kentucky","la":"Louisiana","me":"Maine","md":"Maryland","ma":"Massachusetts","mi":"Michigan","mn":"Minnesota","ms":"Mississippi","mo":"Missouri","mt":"Montana","ne":"Nebraska","nv":"Nevada","nh":"New Hampshire","nj":"New Jersey","nm":"New Mexico","ny":"New York","nc":"North Carolina","nd":"North Dakota","oh":"Ohio","ok":"Oklahoma","or":"Oregon","pa":"Pennsylvania","ri":"Rhode Island","sc":"South Carolina","sd":"South Dakota","tn":"Tennessee","tx":"Texas","ut":"Utah","vt":"Vermont","va":"Virginia","wa":"Washington","wv":"West Virginia","wi":"Wisconsin","wy":"Wyoming","dc":"District of Columbia","pr":"Puerto Rico"}
+
+def load_openstates():
+    """Auto-ingest current state legislators from OpenStates per-state rosters at
+    data/leadership/sources/openstates/<postal>.csv (slimmed to id/name/party/district/chamber).
+    OpenStates aggregates the official legislature rosters; abbr is taken from the filename."""
+    recs=[]
+    for fn in sorted(glob.glob(os.path.join(SRC, "openstates", "*.csv"))):
+        abbr=os.path.splitext(os.path.basename(fn))[0].lower()
+        state=US_STATE_NAMES.get(abbr, abbr.upper())
+        try:
+            rows=list(csv.DictReader(open(fn, newline="", encoding="utf-8")))
+        except Exception as e:
+            print(f"[leadership] WARN bad csv {os.path.basename(fn)}: {e}"); continue
+        for r in rows:
+            name=(r.get("name") or ((r.get("given_name") or "")+" "+(r.get("family_name") or ""))).strip()
+            if not name: continue
+            pid=(r.get("id") or "").strip() or slug(name)
+            chamber=(r.get("current_chamber") or "").strip().lower()
+            dist=(r.get("current_district") or "").strip()
+            if abbr=="dc":
+                role, juris = "Councilmember", "Council of the District of Columbia"
+            elif chamber=="upper":
+                role, juris = "State Senator", f"{state} Senate"
+            elif chamber=="lower":
+                role, juris = "State Representative", f"{state} House"
+            else:  # unicameral (NE) / other
+                role, juris = "State Senator", f"{state} Legislature"
+            if dist: role += f" ({abbr.upper()}-{dist})"
+            recs.append({
+                "id": "os-"+pid, "person": name, "role": role, "jurisdiction": juris,
+                "branch": "legislative", "level": "state", "status": "incumbent",
+                "party": (r.get("current_party") or "").strip(), "as_of": "2026-07-02",
+                "source_url": f"https://data.openstates.org/people/current/{abbr}.csv",
+                "source_dataset": "openstates-people",
+            })
+    return recs
+
 def validate(recs):
     seen={}; clean=[]; warns=0
     for r in recs:
@@ -182,7 +220,7 @@ def build_html(recs, by_branch, by_level, current_as_of):
     return "".join(parts)
 
 def main():
-    recs = load_json_sources() + load_congress_csv() + load_fjc_judges()
+    recs = load_json_sources() + load_congress_csv() + load_fjc_judges() + load_openstates()
     recs, warns = validate(recs)
     by_branch={}; by_level={}
     for r in recs:
