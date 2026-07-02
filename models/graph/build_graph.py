@@ -224,6 +224,8 @@ ALIAS = {
  "US_Auto_Makers":"US_Auto_Makers","Ford":"Ford","GM":"GM","General_Motors":"GM","Stellantis":"Stellantis","Rivian":"Rivian","Lucid":"Lucid","Cruise":"Cruise","NACS_Standard":"NACS_Standard","NACS":"NACS_Standard","Elon_Musk":"Elon_Musk","PIF":"PIF","Saudi_PIF":"PIF","VW":"VW","Volkswagen":"VW","Volkswagen_Group":"VW",
  # car-insurance telematics
  "Telematics_Insurance":"Telematics_Insurance","LexisNexis":"LexisNexis","Verisk":"Verisk","Allstate":"Allstate","Progressive_Insurance":"Progressive_Insurance","Arity":"Arity",
+ # meta ai chatbots & child safety (red-team contractors / Scale-Outlier labor loop)
+ "Meta_AI_ChildSafety":"Meta_AI_ChildSafety","Outlier":"Outlier","Alignerr":"Alignerr","Character_AI":"Character_AI","Character.AI":"Character_AI","CharacterAI":"Character_AI",
  # singapore + arctic + antarctica
  "Singapore":"Singapore","PSA_Port":"PSA_Port","DBS":"DBS","SG_Laundering":"SG_Laundering",
  "Arctic":"Arctic","Northern_Sea_Route":"Northern_Sea_Route","Greenland":"Greenland","Arctic_Council":"Arctic_Council",
@@ -573,6 +575,8 @@ NODE_META = {
  "Mubadala":("financier",True),"CHIPS_Act":("state",False),"Trusted_Foundry":("defense",False),
  # car-insurance telematics (overlay)
  "Telematics_Insurance":("surveillance",False),"LexisNexis":("data_provider",False),"Verisk":("data_provider",False),"Allstate":("insurance",True),"Progressive_Insurance":("insurance",True),"Arity":("data_provider",False),
+ # meta ai chatbots & child safety (overlay) — hub is a pure sink
+ "Meta_AI_ChildSafety":("surveillance",False),"Outlier":("ai_data",True),"Alignerr":("ai_data",True),"Character_AI":("tech",True),
  # singapore + arctic + antarctica (overlay)
  "Singapore":("state",True),"PSA_Port":("logistics",True),"DBS":("bank",True),"SG_Laundering":("other",False),
  "Arctic":("state",False),"Northern_Sea_Route":("logistics",False),"Greenland":("state",False),"Arctic_Council":("state",False),

@@ -192,6 +192,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "Alignerr": {
+      "sector": "ai_data",
+      "has_exogenous_revenue": true
+    },
     "Alignment_Matrix": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -851,6 +855,10 @@
     "Chainlink_Labs": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
+    },
+    "Character_AI": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
     },
     "Check_Point": {
       "sector": "security_research",
@@ -2464,6 +2472,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Meta_AI_ChildSafety": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Meta_Hyperion_SPV": {
       "sector": "spv",
       "has_exogenous_revenue": false
@@ -2835,6 +2847,10 @@
     "Origin_Quantum": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
+    },
+    "Outlier": {
+      "sector": "ai_data",
+      "has_exogenous_revenue": true
     },
     "Oxford_Ionics": {
       "sector": "pqc_quantum",
@@ -17615,6 +17631,97 @@
       "note": ""
     },
     {
+      "from": "Meta",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates Meta AI + AI Studio chatbots; internal 'GenAI: Content Risk Standards' listed romantic/sensual chat with a child as acceptable (Reuters, reviewed Aug 14 2025); Meta confirmed authenticity and removed the passages as an 'error' after questions",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "ScaleAI",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "parent of the Outlier labor platform; Meta holds ~49%/$14.3B stake (Alexandr Wang -> Meta superintelligence) -> the chatbot red-team/data vendor is a RELATED PARTY",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Outlier",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "Scale-AI-owned platform supplying contractors who role-play as teens to red-team Meta's chatbots and review chats (Wired 2026; Fortune Aug 2025)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Alignerr",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "AI-training/review contractor platform supplying Meta chatbot reviewers and red-teamers (Fortune Aug 2025; Wired 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "Character_AI",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "co-subject of the kids/AI-companion safety wave \u2014 FTC 6(b) respondent and TX AG (Paxton) investigation alongside Meta over chatbots marketed to minors",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "FTC",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "FTC 6(b) study (Sept 2025) of ~7 AI-chatbot makers incl. Meta on measuring/mitigating harms to minors",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
+      "from": "State_AGs",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "~44-AG coalition child-safety warning letter to AI firms (2025); TX AG Paxton investigation of Meta AI Studio + Character.AI; NM v. Meta verdict (Mar 2026)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
       "from": "Gary_Gensler",
       "to": "SEC",
       "instrument": "regulatory_legal",
@@ -24597,10 +24704,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1088,
-    "num_edges": 1557,
-    "num_financial_edges": 252,
-    "num_structural_edges": 1305,
+    "num_nodes": 1092,
+    "num_edges": 1564,
+    "num_financial_edges": 255,
+    "num_structural_edges": 1309,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -24651,28 +24758,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -24690,16 +24797,16 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -25068,6 +25175,13 @@
       },
       "Aligned_Data_Centers": {
         "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Alignerr": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -26222,6 +26336,13 @@
         "in_robust_core": false
       },
       "Chainlink_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Character_AI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29049,6 +29170,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Meta_AI_ChildSafety": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Meta_Hyperion_SPV": {
         "total_usd": 75000000000,
         "circular_usd": 0,
@@ -29694,6 +29822,13 @@
         "in_robust_core": false
       },
       "Origin_Quantum": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Outlier": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

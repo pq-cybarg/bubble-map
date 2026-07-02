@@ -15,10 +15,10 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 73 files
+- **Meta** — 74 files
 - **Chainlink** — 53 files
-- **Google** — 44 files
-- **OpenAI** — 34 files
+- **Google** — 45 files
+- **OpenAI** — 35 files
 - **FDIC** — 33 files
 - **Oracle** — 31 files
 - **Amazon** — 30 files
@@ -29,6 +29,14 @@
 - **JPMorgan** — 20 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- ScaleAI, TerraPower, Vistra
+- TerraPower, Vistra
 
-## Newest file `spec-antarctica.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-meta-ai-child-safety.json` — related files by shared entities (verify cross-refs exist)
+- fin-meta-family.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- spec-china-ai-stack-censorship.json: 3 shared entities
+- spec-telecom-satellite.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- macro-ai-power-grid-bottleneck.json: 3 shared entities
+- fin-coreweave-oracle.json: 3 shared entities
