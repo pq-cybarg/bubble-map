@@ -60,6 +60,7 @@ Alternative_OS_Exclusion,surveillance,False,False,False,0.0
 Altria,industrial,True,False,False,0.0
 Amazon,hyperscaler,True,True,True,0.941
 Ambani,person,False,False,False,0.0
+American_Arbitration_Association,standards,True,False,False,0.0
 American_Edge_Project,political,False,False,False,0.0
 American_Farm_Bureau,political,False,False,False,0.0
 Americas_Region,state,False,False,False,0.0
@@ -79,6 +80,8 @@ Apollo,private_credit,True,False,False,0.0
 Apollo_Blackstone,private_credit,True,False,False,0.0
 Apple,hyperscaler,True,False,False,0.0
 Applied_Materials,semiconductor,True,False,False,0.0
+Aragon_Court,crypto_infra,False,False,False,0.0
+Arbitration_ADR_System,standards,False,False,False,0.0
 Arctic,state,False,False,False,0.0
 Arctic_Council,state,False,False,False,0.0
 Argentina,state,True,False,False,0.0
@@ -135,6 +138,7 @@ Battery_REE_Tech_Export_Controls,other,True,False,False,0.0
 Bayer,industrial,True,False,False,0.0
 Bentley,industrial,False,False,False,0.0
 Bermuda_Captives,insurance,False,False,False,0.0
+Beth_Din,standards,False,False,False,0.0
 Biconomy,crypto_infra,False,False,False,0.0
 Big_Three_Distributors,industrial,True,False,False,0.0
 Big_Tobacco,industrial,True,False,False,0.0
@@ -177,13 +181,16 @@ ByteDance,bigtech_asia,True,False,False,0.0
 CAC,regulator,True,False,False,0.0
 CAFE_Standards,state,False,False,False,0.0
 CALEA_Backdoor,surveillance,False,False,False,0.0
+CAS,standards,False,False,False,0.0
 CATL,industrial,True,False,False,0.0
 CCDH,other,True,False,False,0.0
 CCP,state,False,False,False,0.0
 CDP_Japan,political,False,False,False,0.0
 CFET,semiconductor,False,False,False,0.0
+CFPB,regulator,False,False,False,0.0
 CFTC,other,True,False,False,0.0
 CHIPS_Act,state,False,False,False,0.0
+CIETAC,standards,False,False,False,0.0
 CIPS,other,True,False,False,0.0
 CISA,regulator,False,False,False,0.0
 CLARITY,other,True,False,False,0.0
@@ -351,6 +358,7 @@ EleutherAI,ai_lab,False,False,False,0.0
 Elizabeth_Warren,person,False,False,False,0.0
 Elon_Musk,person,False,False,False,0.0
 Energoatom,energy,True,False,False,0.0
+Energy_Charter_Treaty,standards,False,False,False,0.0
 Epistemic_Discipline,other,False,False,False,0.0
 Epstein_Files,other,True,False,False,0.0
 Equation_Group,threat_actor,False,False,False,0.0
@@ -370,6 +378,9 @@ FBI,state_intel,True,False,False,0.0
 FDIC,regulator,True,False,False,0.0
 FFCB_Funding,financial_infra,True,False,False,0.0
 FHLB_System,financial_infra,True,False,False,0.0
+FINRA,regulator,True,False,False,0.0
+FINRA_DR,regulator,False,False,False,0.0
+FMCS,regulator,False,False,False,0.0
 FOCI_Proxy,state,False,False,False,0.0
 FSB,state_intel,True,False,False,0.0
 FTC,regulator,True,False,False,0.0
@@ -383,6 +394,7 @@ Farm_Debt,statistic,False,False,False,0.0
 Farm_Subsidies,state,False,False,False,0.0
 Farmington_Moonstone,other,True,False,False,0.0
 FedEx,logistics,True,False,False,0.0
+Federal_Arbitration_Act,standards,False,False,False,0.0
 Federal_Reserve,central_bank,True,False,False,0.0
 Federal_Transfers,state,True,False,False,0.0
 Fentanyl,commodity,False,False,False,0.0
@@ -444,6 +456,7 @@ Greenland,state,False,False,False,0.0
 Gwadar,logistics,False,False,False,0.0
 HBM,semiconductor,False,False,False,0.0
 HKDA,stablecoin,False,False,False,0.0
+HKIAC,standards,False,False,False,0.0
 HPE,tech,True,False,False,0.0
 HPS,private_credit,True,False,False,0.0
 Halushchenko,person,False,False,False,0.0
@@ -479,9 +492,11 @@ IBIT,crypto_infra,False,False,False,0.0
 IBM,tech,True,False,False,0.0
 IBM_Nanostack,semiconductor,False,False,False,0.0
 ICALPS,pqc_quantum,True,False,False,0.0
+ICC_Arbitration,standards,False,False,False,0.0
 ICE,state,True,False,False,0.0
 ICEYE,satellite,True,False,False,0.0
 ICIJ,journalism,False,False,False,0.0
+ICSID,standards,False,False,False,0.0
 IEC,standards,False,False,False,0.0
 IEEE,standards,False,False,False,0.0
 ILCs,bank,True,False,False,0.0
@@ -494,6 +509,7 @@ IPFS,crypto_infra,False,False,False,0.0
 IQM,pqc_quantum,False,False,False,0.0
 IRA_EV_Credits,state,False,False,False,0.0
 IRGC,defense,True,False,False,0.0
+ISDS,standards,False,False,False,0.0
 ISO,standards,False,False,False,0.0
 ISO_13485,standards,False,False,False,0.0
 ISO_14971,standards,False,False,False,0.0
@@ -508,6 +524,7 @@ India_DPI,financial_infra,False,False,False,0.0
 Indonesia,state,True,False,False,0.0
 Infrastructure_Corridors,logistics,False,False,False,0.0
 Infura,crypto_infra,False,False,False,0.0
+Institute_for_Legal_Reform,political,False,False,False,0.0
 Insurers_Annuities,insurance,True,False,False,0.0
 Intel,chip_vendor,True,False,False,0.0
 Intellexa,surveillance,False,False,False,0.0
@@ -520,6 +537,7 @@ Iran_nuclear_program,other,True,False,False,0.0
 Israel,state,True,False,False,0.0
 Israel_state,other,True,False,False,0.0
 Italy,other,True,False,False,0.0
+JAMS,standards,True,False,False,0.0
 JCET,semiconductor,True,False,False,0.0
 JEDEC,standards,False,False,False,0.0
 JLR,industrial,False,False,False,0.0
@@ -557,12 +575,14 @@ Kalshi,other,True,False,False,0.0
 Kanav_Kariya,person,False,False,False,0.0
 Kaynes_SemiCon,semiconductor,True,False,False,0.0
 Keir_Starmer,other,True,False,False,0.0
+Keller_Postman,standards,True,False,False,0.0
 Ken_Feinberg,person,False,False,False,0.0
 Keonne_Rodriguez,person,False,False,False,0.0
 Khamenei,person,False,False,False,0.0
 Kia,industrial,True,False,False,0.0
 Kimsuky,threat_actor,False,False,False,0.0
 Kings_Romans,other,False,False,False,0.0
+Kleros,crypto_infra,True,False,False,0.0
 Komeito,political,False,False,False,0.0
 Korea_chaebol_platforms,other,True,False,False,0.0
 Kostyukov,person,False,False,False,0.0
@@ -573,6 +593,7 @@ Kyle_Davies,person,False,False,False,0.0
 Kytch,tech,False,False,False,0.0
 LBMA,other,True,False,False,0.0
 LBRY,crypto_firm,False,False,False,0.0
+LCIA,standards,False,False,False,0.0
 LDP,political,False,False,False,0.0
 LG,tech,True,False,False,0.0
 LGFV_Debt,creditor,False,False,False,0.0
@@ -625,6 +646,7 @@ Madrid_Protocol,state,False,False,False,0.0
 Maersk,logistics,True,False,False,0.0
 Mali,state,True,False,False,0.0
 Mandiant,security_research,False,False,False,0.0
+Mass_Arbitration,standards,False,False,False,0.0
 Mass_Tort_Advertising,other,False,False,False,0.0
 Mazda,industrial,True,False,False,0.0
 McDonalds,industrial,True,False,False,0.0
@@ -686,7 +708,9 @@ NSE_India,financial_infra,True,False,False,0.0
 NSO_Group,surveillance,False,False,False,0.0
 NVIDIA,chip_vendor,True,True,True,0.867
 Naryshkin,person,False,False,False,0.0
+National_Arbitration_Forum,standards,False,False,False,0.0
 National_Consulting_Services,other,True,False,False,0.0
+National_Mediation_Board,regulator,False,False,False,0.0
 National_PTA,other,False,False,False,0.0
 Nebius,neocloud,False,False,False,0.0
 Necklace_of_Diamonds,state,False,False,False,0.0
@@ -695,6 +719,7 @@ Neoclouds,other,True,False,False,0.0
 NetChoice,political,False,False,False,0.0
 Netherlands,state,True,False,False,0.0
 Networking_Security_Industry,tech,False,False,False,0.0
+New_York_Convention,standards,False,False,False,0.0
 Next-gen data centers / AI infrastructure,other,True,False,False,0.0
 Niger,state,True,False,False,0.0
 Nikon,semiconductor,True,False,False,0.0
@@ -734,6 +759,7 @@ Origin_Quantum,pqc_quantum,False,False,False,0.0
 Outlier,ai_data,True,False,False,0.0
 Oxford_Ionics,pqc_quantum,False,False,False,0.0
 PBoC,regulator,True,False,False,0.0
+PCA_Arbitration,standards,False,False,False,0.0
 PCE,statistic,False,False,False,0.0
 PE_Insurers,insurance,True,False,False,0.0
 PFAS,commodity,False,False,False,0.0
@@ -855,6 +881,7 @@ SEDA,crypto_infra,False,False,False,0.0
 SEMI,standards,False,False,False,0.0
 SE_Asia_Scam_Complex,threat_actor,False,False,False,0.0
 SG_Laundering,other,False,False,False,0.0
+SIAC,standards,False,False,False,0.0
 SINK_backlog,sink,True,False,False,0.0
 SINK_bondmarket,sink,True,False,False,0.0
 SINK_btc_reserve,sink,True,False,False,0.0
@@ -939,6 +966,7 @@ Standards_Bodies,standards,False,False,False,0.0
 Stargate,spv,False,False,False,0.0
 Starlink,satellite,True,False,False,0.0
 Starlink_Subscribers,exogenous_source,True,False,False,0.0
+State_ADR,standards,False,False,False,0.0
 State_AGs,regulator,False,False,False,0.0
 State_Council,state,False,False,False,0.0
 State_R2R_Laws,state,False,False,False,0.0
@@ -1020,6 +1048,8 @@ UK_Labour_government,other,True,False,False,0.0
 UK_comms_infrastructure,other,True,False,False,0.0
 UK_government_cloud,other,True,False,False,0.0
 ULA,space_real_economy,True,False,False,0.0
+UMA_Protocol,crypto_infra,True,False,False,0.0
+UNCITRAL,standards,False,False,False,0.0
 UPI,financial_infra,False,False,False,0.0
 UPS,logistics,True,False,False,0.0
 USDC,other,True,False,False,0.0

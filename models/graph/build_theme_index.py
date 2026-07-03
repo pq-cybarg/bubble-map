@@ -32,7 +32,7 @@ RULES=[
  ("banking",    ["fdic","-cre","real-estate","bank","credit","htm","mortgage","regional-leverage","duration","dereg","municipal","public-finance"]),
  ("stablecoin", ["stablecoin","tether","usdc","crypto","blockchain","altcoin","onchain","on-chain","settlement","ripple","hedera","genius","exchange"]),
  ("capital",    ["gulf","sovereign","mgx","pif","softbank","private-credit","apollo","blackstone","blackrock","stargate","datacenter","capex","-capital","family-office","family-offices"]),
- ("legitimacy", ["person","influence","foreign-influence","singham","governance","legitimacy","conversion","lobby","fara","epstein","tbi","labour","political","disclosure","network-overlay","sec-filing","filings","anomalous","disappearance","deaths"]),
+ ("legitimacy", ["person","influence","foreign-influence","singham","governance","legitimacy","conversion","lobby","fara","epstein","tbi","labour","political","disclosure","network-overlay","sec-filing","filings","anomalous","disappearance","deaths","arbitration","adr","isds","forced-arbitration","dispute-resolution"]),
  ("hardmoney",  ["gold","silver","hard-money","official-data","cpi","rent-","inflation","data-integrity","reprice","gig-labor","futures-vs-physical","cross-sectional"]),
  ("ai-loop",    ["fin-","nvidia","openai","oracle","coreweave","anthropic","hyperscaler","ai-core","circular","carry-trade","speculation"]),
 ]

@@ -16,12 +16,12 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 75 files
-- **Chainlink** — 54 files
+- **Chainlink** — 55 files
 - **Google** — 47 files
 - **OpenAI** — 35 files
 - **FDIC** — 33 files
-- **Oracle** — 31 files
-- **Amazon** — 30 files
+- **Oracle** — 32 files
+- **Amazon** — 31 files
 - **Microsoft** — 28 files
 - **NVIDIA** — 28 files
 - **Anthropic** — 22 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-meta-ai-child-safety.json` — related files by shared entities (verify cross-refs exist)
-- spec-telecom-satellite.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 4 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- fin-meta-family.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- digitalid-regulatory.json: 3 shared entities
+## Newest file `spec-arbitration-adr.json` — related files by shared entities (verify cross-refs exist)
+- spec-cross-system-contagion.json: 3 shared entities
+- fin-hedera-connections.json: 3 shared entities
 - spec-sec-filings-primary.json: 3 shared entities
-- fin-disney-openai-sora.json: 3 shared entities
+- digitalid-corporate.json: 2 shared entities
+- spec-market-plumbing-control.json: 2 shared entities
+- macro-gig-labor.json: 2 shared entities
+- spec-americas-sahel.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
