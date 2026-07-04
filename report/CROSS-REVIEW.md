@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-arbitration-adr.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-system-contagion.json: 3 shared entities
-- fin-hedera-connections.json: 3 shared entities
-- spec-sec-filings-primary.json: 3 shared entities
-- digitalid-corporate.json: 2 shared entities
-- spec-market-plumbing-control.json: 2 shared entities
-- macro-gig-labor.json: 2 shared entities
-- spec-americas-sahel.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
+## Newest file `spec-meta-ai-child-safety.json` — related files by shared entities (verify cross-refs exist)
+- fin-meta-family.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- spec-telecom-satellite.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- macro-history-dereg-manipulation.json: 3 shared entities
+- fin-gulf-sovereign-ai-capital.json: 3 shared entities
+- macro-cre-privatecredit.json: 3 shared entities

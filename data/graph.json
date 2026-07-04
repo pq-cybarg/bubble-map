@@ -2264,6 +2264,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Julie_Inman_Grant": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jump_Crypto": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -18654,6 +18658,19 @@
       "note": ""
     },
     {
+      "from": "Julie_Inman_Grant",
+      "to": "Meta_AI_ChildSafety",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "Australia's eSafety Commissioner \u2014 statutory regulator behind the world-first under-16 social-media ban (in force 10 Dec 2025) that Meta implemented (~550k under-16 accounts removed); eSafety's post-implementation review surfaced the enforcement gap",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-meta-ai-child-safety.json",
+      "note": ""
+    },
+    {
       "from": "Gary_Gensler",
       "to": "SEC",
       "instrument": "regulatory_legal",
@@ -25987,10 +26004,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1156,
-    "num_edges": 1643,
+    "num_nodes": 1157,
+    "num_edges": 1644,
     "num_financial_edges": 264,
-    "num_structural_edges": 1379,
+    "num_structural_edges": 1380,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -26041,6 +26058,18 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -26053,28 +26082,6 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
@@ -26082,8 +26089,18 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -26092,15 +26109,15 @@
         "Microsoft"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -30083,6 +30100,13 @@
         "in_robust_core": false
       },
       "Joyce_Kim": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Julie_Inman_Grant": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
