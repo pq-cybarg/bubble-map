@@ -18,6 +18,7 @@
     "Crypto"
    ],
    "orgs": [
+    "Peter_Thiel",
     "Palantir",
     "Founders Fund",
     "stakes: Anduril, SpaceX, OpenAI, Stripe"
@@ -35,7 +36,8 @@
    "blocks": [
     "influence-operator-network",
     "geopolitics-defense-industrial-base",
-    "digitalid-corporate"
+    "digitalid-corporate",
+    "spec-dialog-society"
    ]
   },
   {
@@ -67,7 +69,8 @@
     "influence-operator-network",
     "geopolitics-cables-space-layer",
     "fin-openai-conversion-governance",
-    "geopolitics-defense-industrial-base"
+    "geopolitics-defense-industrial-base",
+    "spec-dialog-society"
    ]
   },
   {
@@ -14382,6 +14385,57 @@
    "grade": "Solid on the documented technique and dual-use grading from the local-uncensored-AI block; worldview is grounded in his public statements, labeled interpretation.",
    "blocks": [
     "spec-local-uncensored-ai"
+   ]
+  },
+  {
+   "name": "Auren Hoffman",
+   "role": "Co-founder & chairman, Dialog; owner, Stonebrick LLC; CEO, SafeGraph/Flex Capital (data broker)",
+   "domains": [
+    "Influence",
+    "Data/Surveillance"
+   ],
+   "orgs": [
+    "Auren_Hoffman",
+    "Dialog_Society",
+    "Stonebrick LLC",
+    "SafeGraph / LiveRamp lineage"
+   ],
+   "bluf": "The operator behind Dialog. Thiel is the namesake co-founder, but Hoffman actually runs the invitation-only society — through Stonebrick, LLC, a for-profit entity he owns — and built the A/B/C member-grading and AI-dossier machinery that leaked in June 2026. A career data-broker (SafeGraph/LiveRamp lineage). Assess with MODERATE-HIGH confidence on his operating role.",
+   "drivers": "Convening power; a durable elite trust-network; the data/relationship graph that Dialog's dossiers embody.",
+   "worldview": "Bipartisan-but-libertarian-leaning; treats access, matchmaking and candor as engineerable products.",
+   "decision_style": "Operator/product-builder; quantifies status (grades, value-add scores) and manages the invite list.",
+   "track_record": "Co-founded Dialog (2006) with Thiel; chaired the earlier Stonebrick Group networking events; founded data firms in the location-data/identity-resolution business.",
+   "vulnerabilities": "The June-2026 leak exposed member PII, political-leaning tags and matchmaking data held in an open Airtable — a discretion-as-identity society undone by his own operation's security failure.",
+   "relationships": "Co-founder with [[Peter_Thiel]]; employs ED [[Raffi_Grinberg]]; convenes the member-employer orbit (Palantir, OpenAI, Anduril, a16z, Founders Fund).",
+   "outlook": "Central operator of an elite-cohesion network now moving toward a permanent DC-area campus.",
+   "confidence": "MODERATE-HIGH (operating role documented; Stonebrick ownership single-outlet + public-records inference).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-dialog-society"
+   ]
+  },
+  {
+   "name": "Raffi Grinberg",
+   "role": "Executive director, Dialog; author, 'How to Be a Grown-Up'",
+   "domains": [
+    "Influence"
+   ],
+   "orgs": [
+    "Raffi_Grinberg",
+    "Dialog_Society"
+   ],
+   "bluf": "The executive who runs Dialog's day-to-day operations — the invitation-only Thiel/Hoffman forum — keeping a deliberately low profile. His public footprint is minimal by design ('We intentionally keep a low profile; if you received an invite, you can reach me by email'). Assess with MODERATE confidence: role documented, internal authority beyond ops thinly sourced.",
+   "drivers": "Smooth execution of the retreats and membership; curation of the invite list and the member experience.",
+   "worldview": "Discretion-first operator of an off-the-record convening.",
+   "decision_style": "Low-profile administrator; manages vetting, grading review after each retreat, and moderation assignments.",
+   "track_record": "Runs Dialog with a small team (incl. managing director Juliette Levine); wrote a book on early-adulthood skills.",
+   "vulnerabilities": "Presides over the operation whose member directory and dossiers leaked in June 2026; the secrecy doctrine proved aspirational.",
+   "relationships": "Reports into chairman [[Auren_Hoffman]]; namesake co-founder [[Peter_Thiel]] is at arm's length.",
+   "outlook": "The operational hand behind a society expanding toward a permanent institutional footprint.",
+   "confidence": "MODERATE (ED role documented).",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-dialog-society"
    ]
   }
  ]

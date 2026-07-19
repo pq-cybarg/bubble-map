@@ -18,7 +18,7 @@
 - **Meta** — 75 files
 - **Chainlink** — 55 files
 - **Google** — 47 files
-- **OpenAI** — 35 files
+- **OpenAI** — 36 files
 - **FDIC** — 33 files
 - **Oracle** — 32 files
 - **Amazon** — 31 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-meta-ai-child-safety.json` — related files by shared entities (verify cross-refs exist)
-- fin-meta-family.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- spec-telecom-satellite.json: 4 shared entities
-- spec-exchanges-asia.json: 4 shared entities
-- macro-history-dereg-manipulation.json: 3 shared entities
-- fin-gulf-sovereign-ai-capital.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
+## Newest file `spec-dialog-society.json` — related files by shared entities (verify cross-refs exist)
+- influence-operator-network.json: 7 shared entities
+- spec-network-overlay.json: 6 shared entities
+- temporal-bridges.json: 6 shared entities
+- geopolitics-defense-industrial-base.json: 4 shared entities
+- digitalid-corporate.json: 4 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-surveillance-cyber-threat-layer.json: 3 shared entities
+- spec-disclosures-surveillance.json: 3 shared entities

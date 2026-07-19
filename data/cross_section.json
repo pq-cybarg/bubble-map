@@ -27,18 +27,10 @@
     "IG (all)",
     "HY (all)"
    ],
-   "n_dates": 36,
-   "date_first": "2023-07",
+   "n_dates": 35,
+   "date_first": "2023-08",
    "date_last": "2026-06",
    "dispersion": [
-    {
-     "date": "2023-07",
-     "mean": 3.302,
-     "std": 3.564,
-     "min": 0.51,
-     "max": 9.25,
-     "range": 8.74
-    },
     {
      "date": "2023-08",
      "mean": 3.244,
@@ -313,72 +305,72 @@
     },
     {
      "date": "2026-06",
-     "mean": 2.846,
-     "std": 3.83,
-     "min": 0.34,
-     "max": 9.5,
-     "range": 9.16
+     "mean": 2.856,
+     "std": 3.836,
+     "min": 0.35,
+     "max": 9.52,
+     "range": 9.17
     }
    ],
    "dispersion_now": {
-    "std": 3.83,
-    "z_vs_history": 1.05,
+    "std": 3.836,
+    "z_vs_history": 1.06,
     "pct_of_history": 89.0,
     "reading": "elevated"
    },
    "relative_value": {
     "AAA": {
-     "latest": 0.34,
-     "mean": 0.377,
-     "std": 0.054,
-     "z": -0.69,
-     "pct": 33.0,
-     "window": 36
+     "latest": 0.35,
+     "mean": 0.374,
+     "std": 0.049,
+     "z": -0.48,
+     "pct": 40.0,
+     "window": 35
     },
     "BBB": {
      "latest": 0.93,
-     "mean": 1.157,
-     "std": 0.188,
+     "mean": 1.146,
+     "std": 0.178,
      "z": -1.21,
      "pct": 3.0,
-     "window": 36
+     "window": 35
     },
     "CCC": {
-     "latest": 9.5,
-     "mean": 8.856,
-     "std": 0.791,
-     "z": 0.81,
+     "latest": 9.52,
+     "mean": 8.845,
+     "std": 0.8,
+     "z": 0.84,
      "pct": 86.0,
-     "window": 36
+     "window": 35
     },
     "IG (all)": {
-     "latest": 0.74,
-     "mean": 0.927,
-     "std": 0.157,
-     "z": -1.19,
+     "latest": 0.75,
+     "mean": 0.918,
+     "std": 0.148,
+     "z": -1.14,
      "pct": 3.0,
-     "window": 36
+     "window": 35
     },
     "HY (all)": {
-     "latest": 2.72,
-     "mean": 3.203,
-     "std": 0.442,
-     "z": -1.09,
+     "latest": 2.73,
+     "mean": 3.183,
+     "std": 0.429,
+     "z": -1.05,
      "pct": 11.0,
-     "window": 36
+     "window": 35
     }
    },
    "ranking": [
     {
      "segment": "CCC",
-     "latest": 9.5,
-     "z": 0.81,
+     "latest": 9.52,
+     "z": 0.84,
      "pct": 86.0
     },
     {
      "segment": "HY (all)",
-     "latest": 2.72,
-     "z": -1.09,
+     "latest": 2.73,
+     "z": -1.05,
      "pct": 11.0
     },
     {
@@ -389,22 +381,22 @@
     },
     {
      "segment": "IG (all)",
-     "latest": 0.74,
-     "z": -1.19,
+     "latest": 0.75,
+     "z": -1.14,
      "pct": 3.0
     },
     {
      "segment": "AAA",
-     "latest": 0.34,
-     "z": -0.69,
-     "pct": 33.0
+     "latest": 0.35,
+     "z": -0.48,
+     "pct": 40.0
     }
    ],
    "common_factor": {
     "n": 5,
     "basis": "monthly change (Delta) - Collin-Dufresne-Goldstein-Martin",
-    "avg_pairwise_corr": 0.882,
-    "pc1_eigenvalue": 4.534,
+    "avg_pairwise_corr": 0.883,
+    "pc1_eigenvalue": 4.536,
     "pc1_share": 0.907,
     "matrix": {
      "AAA": {
@@ -412,7 +404,7 @@
       "BBB": 0.83,
       "CCC": 0.76,
       "IG (all)": 0.86,
-      "HY (all)": 0.82
+      "HY (all)": 0.83
      },
      "BBB": {
       "AAA": 0.83,
@@ -436,7 +428,7 @@
       "HY (all)": 0.96
      },
      "HY (all)": {
-      "AAA": 0.82,
+      "AAA": 0.83,
       "BBB": 0.95,
       "CCC": 0.91,
       "IG (all)": 0.96,
@@ -477,9 +469,9 @@
     "Chile",
     "Greece"
    ],
-   "n_dates": 135,
+   "n_dates": 136,
    "date_first": "2015-01",
-   "date_last": "2026-04",
+   "date_last": "2026-05",
    "dispersion": [
     {
      "date": "2015-01",
@@ -492,7 +484,7 @@
     {
      "date": "2015-02",
      "mean": 1.72,
-     "std": 1.961,
+     "std": 1.96,
      "min": 0.015,
      "max": 9.72,
      "range": 9.705
@@ -539,7 +531,7 @@
     },
     {
      "date": "2015-09",
-     "mean": 1.954,
+     "mean": 1.953,
      "std": 1.733,
      "min": -0.1,
      "max": 8.54,
@@ -580,7 +572,7 @@
     {
      "date": "2016-02",
      "mean": 1.772,
-     "std": 2.136,
+     "std": 2.137,
      "min": -0.453,
      "max": 10.41,
      "range": 10.863
@@ -619,7 +611,7 @@
     },
     {
      "date": "2016-07",
-     "mean": 1.331,
+     "mean": 1.33,
      "std": 1.822,
      "min": -0.543,
      "max": 7.99,
@@ -636,7 +628,7 @@
     {
      "date": "2016-09",
      "mean": 1.362,
-     "std": 1.872,
+     "std": 1.873,
      "min": -0.522,
      "max": 8.34,
      "range": 8.862
@@ -699,7 +691,7 @@
     },
     {
      "date": "2017-05",
-     "mean": 1.69,
+     "mean": 1.691,
      "std": 1.429,
      "min": -0.145,
      "max": 5.86,
@@ -708,7 +700,7 @@
     {
      "date": "2017-06",
      "mean": 1.606,
-     "std": 1.394,
+     "std": 1.395,
      "min": -0.025,
      "max": 5.76,
      "range": 5.785
@@ -755,7 +747,7 @@
     },
     {
      "date": "2017-12",
-     "mean": 1.559,
+     "mean": 1.558,
      "std": 1.268,
      "min": -0.095,
      "max": 4.617,
@@ -764,7 +756,7 @@
     {
      "date": "2018-01",
      "mean": 1.67,
-     "std": 1.166,
+     "std": 1.167,
      "min": 0.08,
      "max": 4.524,
      "range": 4.444
@@ -779,7 +771,7 @@
     },
     {
      "date": "2018-03",
-     "mean": 1.742,
+     "mean": 1.741,
      "std": 1.209,
      "min": 0.045,
      "max": 4.493,
@@ -788,7 +780,7 @@
     {
      "date": "2018-04",
      "mean": 1.682,
-     "std": 1.178,
+     "std": 1.177,
      "min": 0.05,
      "max": 4.418,
      "range": 4.368
@@ -804,14 +796,14 @@
     {
      "date": "2018-06",
      "mean": 1.767,
-     "std": 1.317,
+     "std": 1.318,
      "min": -0.012,
      "max": 4.577,
      "range": 4.589
     },
     {
      "date": "2018-07",
-     "mean": 1.693,
+     "mean": 1.694,
      "std": 1.289,
      "min": 0.042,
      "max": 4.565,
@@ -931,7 +923,7 @@
     },
     {
      "date": "2019-10",
-     "mean": 0.654,
+     "mean": 0.653,
      "std": 0.952,
      "min": -0.511,
      "max": 2.944,
@@ -1011,7 +1003,7 @@
     },
     {
      "date": "2020-08",
-     "mean": 0.463,
+     "mean": 0.464,
      "std": 0.79,
      "min": -0.523,
      "max": 2.433,
@@ -1076,14 +1068,14 @@
     {
      "date": "2021-04",
      "mean": 0.865,
-     "std": 1.016,
+     "std": 1.017,
      "min": -0.325,
      "max": 3.554,
      "range": 3.879
     },
     {
      "date": "2021-05",
-     "mean": 0.969,
+     "mean": 0.968,
      "std": 1.016,
      "min": -0.224,
      "max": 3.711,
@@ -1107,7 +1099,7 @@
     },
     {
      "date": "2021-08",
-     "mean": 0.744,
+     "mean": 0.743,
      "std": 1.194,
      "min": -0.539,
      "max": 4.705,
@@ -1172,7 +1164,7 @@
     {
      "date": "2022-04",
      "mean": 2.429,
-     "std": 1.733,
+     "std": 1.734,
      "min": 0.215,
      "max": 6.59,
      "range": 6.375
@@ -1228,7 +1220,7 @@
     {
      "date": "2022-11",
      "mean": 3.479,
-     "std": 1.788,
+     "std": 1.789,
      "min": 0.25,
      "max": 8.81,
      "range": 8.56
@@ -1355,7 +1347,7 @@
     },
     {
      "date": "2024-03",
-     "mean": 3.363,
+     "mean": 3.362,
      "std": 1.307,
      "min": 0.639,
      "max": 6.48,
@@ -1395,7 +1387,7 @@
     },
     {
      "date": "2024-08",
-     "mean": 3.219,
+     "mean": 3.218,
      "std": 1.297,
      "min": 0.451,
      "max": 6.3,
@@ -1403,7 +1395,7 @@
     },
     {
      "date": "2024-09",
-     "mean": 3.148,
+     "mean": 3.147,
      "std": 1.268,
      "min": 0.41,
      "max": 6.22,
@@ -1435,8 +1427,8 @@
     },
     {
      "date": "2025-01",
-     "mean": 3.498,
-     "std": 1.421,
+     "mean": 3.496,
+     "std": 1.42,
      "min": 0.383,
      "max": 6.82,
      "range": 6.437
@@ -1451,15 +1443,15 @@
     },
     {
      "date": "2025-03",
-     "mean": 3.606,
-     "std": 1.344,
+     "mean": 3.605,
+     "std": 1.345,
      "min": 0.514,
      "max": 7.04,
      "range": 6.526
     },
     {
      "date": "2025-04",
-     "mean": 3.455,
+     "mean": 3.453,
      "std": 1.341,
      "min": 0.326,
      "max": 6.99,
@@ -1531,7 +1523,7 @@
     },
     {
      "date": "2026-01",
-     "mean": 3.612,
+     "mean": 3.613,
      "std": 1.191,
      "min": 0.27,
      "max": 6.67,
@@ -1539,7 +1531,7 @@
     },
     {
      "date": "2026-02",
-     "mean": 3.546,
+     "mean": 3.548,
      "std": 1.185,
      "min": 0.25,
      "max": 6.48,
@@ -1547,401 +1539,409 @@
     },
     {
      "date": "2026-03",
-     "mean": 3.781,
-     "std": 1.265,
+     "mean": 3.78,
+     "std": 1.266,
      "min": 0.4,
      "max": 7.13,
      "range": 6.73
     },
     {
      "date": "2026-04",
-     "mean": 3.8,
-     "std": 1.159,
+     "mean": 3.804,
+     "std": 1.158,
      "min": 0.45,
      "max": 6.27,
      "range": 5.82
+    },
+    {
+     "date": "2026-05",
+     "mean": 3.83,
+     "std": 1.138,
+     "min": 0.44,
+     "max": 5.74,
+     "range": 5.3
     }
    ],
    "dispersion_now": {
-    "std": 1.159,
-    "z_vs_history": -0.72,
+    "std": 1.138,
+    "z_vs_history": -0.77,
     "pct_of_history": 20.0,
     "reading": "compressed"
    },
    "relative_value": {
     "US": {
-     "latest": 4.32,
-     "mean": 4.222,
-     "std": 0.255,
-     "z": 0.38,
-     "pct": 91.0,
+     "latest": 4.48,
+     "mean": 4.247,
+     "std": 0.232,
+     "z": 1.0,
+     "pct": 97.0,
      "window": 36
     },
     "Germany": {
-     "latest": 3.001,
-     "mean": 2.515,
-     "std": 0.225,
-     "z": 2.16,
+     "latest": 3.046,
+     "mean": 2.534,
+     "std": 0.24,
+     "z": 2.13,
      "pct": 100.0,
      "window": 36
     },
     "UK": {
-     "latest": 4.821,
-     "mean": 4.376,
-     "std": 0.26,
-     "z": 1.71,
+     "latest": 4.942,
+     "mean": 4.403,
+     "std": 0.266,
+     "z": 2.02,
      "pct": 100.0,
      "window": 36
     },
     "France": {
-     "latest": 3.675,
-     "mean": 3.19,
-     "std": 0.258,
-     "z": 1.88,
+     "latest": 3.74,
+     "mean": 3.213,
+     "std": 0.277,
+     "z": 1.9,
      "pct": 100.0,
      "window": 36
     },
     "Italy": {
-     "latest": 3.818,
-     "mean": 3.789,
-     "std": 0.345,
-     "z": 0.08,
-     "pct": 84.0,
+     "latest": 3.839,
+     "mean": 3.776,
+     "std": 0.334,
+     "z": 0.19,
+     "pct": 85.0,
      "window": 36
     },
     "Japan": {
-     "latest": 2.515,
-     "mean": 1.22,
-     "std": 0.56,
+     "latest": 2.65,
+     "mean": 1.282,
+     "std": 0.592,
      "z": 2.31,
      "pct": 100.0,
      "window": 36
     },
     "Canada": {
-     "latest": 3.483,
-     "mean": 3.358,
-     "std": 0.243,
-     "z": 0.52,
-     "pct": 94.0,
+     "latest": 3.542,
+     "mean": 3.371,
+     "std": 0.238,
+     "z": 0.72,
+     "pct": 96.0,
      "window": 36
     },
     "Australia": {
-     "latest": 4.969,
-     "mean": 4.319,
-     "std": 0.294,
-     "z": 2.21,
+     "latest": 4.982,
+     "mean": 4.36,
+     "std": 0.28,
+     "z": 2.22,
      "pct": 100.0,
      "window": 36
     },
     "Spain": {
-     "latest": 3.449,
-     "mean": 3.282,
-     "std": 0.213,
-     "z": 0.79,
+     "latest": 3.482,
+     "mean": 3.284,
+     "std": 0.214,
+     "z": 0.93,
      "pct": 96.0,
      "window": 36
     },
     "Netherlands": {
-     "latest": 3.15,
-     "mean": 2.778,
-     "std": 0.191,
-     "z": 1.94,
+     "latest": 3.165,
+     "mean": 2.791,
+     "std": 0.202,
+     "z": 1.86,
      "pct": 99.0,
      "window": 36
     },
     "Belgium": {
-     "latest": 3.59,
-     "mean": 3.119,
-     "std": 0.215,
-     "z": 2.19,
+     "latest": 3.6,
+     "mean": 3.135,
+     "std": 0.229,
+     "z": 2.03,
      "pct": 100.0,
      "window": 36
     },
     "Austria": {
-     "latest": 3.303,
-     "mean": 2.993,
-     "std": 0.189,
-     "z": 1.64,
+     "latest": 3.298,
+     "mean": 3.0,
+     "std": 0.196,
+     "z": 1.52,
      "pct": 99.0,
      "window": 36
     },
     "Switzerland": {
-     "latest": 0.45,
-     "mean": 0.54,
-     "std": 0.275,
+     "latest": 0.44,
+     "mean": 0.529,
+     "std": 0.27,
      "z": -0.33,
-     "pct": 77.0,
+     "pct": 76.0,
      "window": 36
     },
     "Ireland": {
-     "latest": 3.241,
-     "mean": 2.866,
-     "std": 0.198,
-     "z": 1.9,
+     "latest": 3.247,
+     "mean": 2.879,
+     "std": 0.207,
+     "z": 1.78,
      "pct": 99.0,
      "window": 36
     },
     "Portugal": {
-     "latest": 3.43,
-     "mean": 3.098,
-     "std": 0.201,
-     "z": 1.65,
-     "pct": 94.0,
+     "latest": 3.42,
+     "mean": 3.105,
+     "std": 0.208,
+     "z": 1.51,
+     "pct": 93.0,
      "window": 36
     },
     "Finland": {
-     "latest": 3.384,
-     "mean": 3.007,
-     "std": 0.196,
-     "z": 1.93,
+     "latest": 3.399,
+     "mean": 3.019,
+     "std": 0.206,
+     "z": 1.84,
      "pct": 99.0,
      "window": 36
     },
     "Sweden": {
-     "latest": 2.785,
-     "mean": 2.446,
-     "std": 0.275,
-     "z": 1.23,
-     "pct": 97.0,
+     "latest": 2.745,
+     "mean": 2.458,
+     "std": 0.279,
+     "z": 1.03,
+     "pct": 94.0,
      "window": 36
     },
     "Norway": {
-     "latest": 4.286,
-     "mean": 3.785,
-     "std": 0.267,
-     "z": 1.88,
+     "latest": 4.33,
+     "mean": 3.811,
+     "std": 0.27,
+     "z": 1.92,
      "pct": 100.0,
      "window": 36
     },
     "Denmark": {
-     "latest": 2.888,
-     "mean": 2.509,
-     "std": 0.264,
-     "z": 1.43,
-     "pct": 99.0,
+     "latest": 2.88,
+     "mean": 2.518,
+     "std": 0.272,
+     "z": 1.33,
+     "pct": 98.0,
      "window": 36
     },
     "Poland": {
-     "latest": 5.58,
-     "mean": 5.522,
-     "std": 0.244,
-     "z": 0.24,
-     "pct": 79.0,
+     "latest": 5.74,
+     "mean": 5.516,
+     "std": 0.237,
+     "z": 0.95,
+     "pct": 86.0,
      "window": 36
     },
     "Czechia": {
-     "latest": 4.738,
-     "mean": 4.242,
-     "std": 0.275,
-     "z": 1.8,
+     "latest": 4.886,
+     "mean": 4.252,
+     "std": 0.293,
+     "z": 2.16,
      "pct": 98.0,
      "window": 36
     },
     "Hungary": {
-     "latest": 6.27,
-     "mean": 6.807,
-     "std": 0.396,
-     "z": -1.36,
-     "pct": 67.0,
+     "latest": 5.65,
+     "mean": 6.747,
+     "std": 0.405,
+     "z": -2.71,
+     "pct": 63.0,
      "window": 36
     },
     "Korea": {
-     "latest": 3.737,
-     "mean": 3.277,
-     "std": 0.414,
-     "z": 1.11,
-     "pct": 95.0,
+     "latest": 4.075,
+     "mean": 3.296,
+     "std": 0.435,
+     "z": 1.79,
+     "pct": 99.0,
      "window": 36
     },
     "New Zealand": {
      "latest": 4.68,
-     "mean": 4.589,
-     "std": 0.27,
-     "z": 0.33,
+     "mean": 4.602,
+     "std": 0.263,
+     "z": 0.3,
      "pct": 94.0,
      "window": 36
     },
     "Chile": {
-     "latest": 5.465,
-     "mean": 5.697,
-     "std": 0.285,
-     "z": -0.82,
-     "pct": 67.0,
+     "latest": 5.57,
+     "mean": 5.698,
+     "std": 0.284,
+     "z": -0.45,
+     "pct": 73.0,
      "window": 36
     },
     "Greece": {
-     "latest": 3.78,
-     "mean": 3.499,
-     "std": 0.281,
-     "z": 1.0,
-     "pct": 53.0,
+     "latest": 3.75,
+     "mean": 3.493,
+     "std": 0.272,
+     "z": 0.95,
+     "pct": 51.0,
      "window": 36
     }
    },
    "ranking": [
     {
-     "segment": "Hungary",
-     "latest": 6.27,
-     "z": -1.36,
-     "pct": 67.0
+     "segment": "Poland",
+     "latest": 5.74,
+     "z": 0.95,
+     "pct": 86.0
     },
     {
-     "segment": "Poland",
-     "latest": 5.58,
-     "z": 0.24,
-     "pct": 79.0
+     "segment": "Hungary",
+     "latest": 5.65,
+     "z": -2.71,
+     "pct": 63.0
     },
     {
      "segment": "Chile",
-     "latest": 5.465,
-     "z": -0.82,
-     "pct": 67.0
+     "latest": 5.57,
+     "z": -0.45,
+     "pct": 73.0
     },
     {
      "segment": "Australia",
-     "latest": 4.969,
-     "z": 2.21,
+     "latest": 4.982,
+     "z": 2.22,
      "pct": 100.0
     },
     {
      "segment": "UK",
-     "latest": 4.821,
-     "z": 1.71,
+     "latest": 4.942,
+     "z": 2.02,
      "pct": 100.0
     },
     {
      "segment": "Czechia",
-     "latest": 4.738,
-     "z": 1.8,
+     "latest": 4.886,
+     "z": 2.16,
      "pct": 98.0
     },
     {
      "segment": "New Zealand",
      "latest": 4.68,
-     "z": 0.33,
+     "z": 0.3,
      "pct": 94.0
     },
     {
      "segment": "US",
-     "latest": 4.32,
-     "z": 0.38,
-     "pct": 91.0
+     "latest": 4.48,
+     "z": 1.0,
+     "pct": 97.0
     },
     {
      "segment": "Norway",
-     "latest": 4.286,
-     "z": 1.88,
+     "latest": 4.33,
+     "z": 1.92,
      "pct": 100.0
     },
     {
+     "segment": "Korea",
+     "latest": 4.075,
+     "z": 1.79,
+     "pct": 99.0
+    },
+    {
      "segment": "Italy",
-     "latest": 3.818,
-     "z": 0.08,
-     "pct": 84.0
+     "latest": 3.839,
+     "z": 0.19,
+     "pct": 85.0
     },
     {
      "segment": "Greece",
-     "latest": 3.78,
-     "z": 1.0,
-     "pct": 53.0
-    },
-    {
-     "segment": "Korea",
-     "latest": 3.737,
-     "z": 1.11,
-     "pct": 95.0
+     "latest": 3.75,
+     "z": 0.95,
+     "pct": 51.0
     },
     {
      "segment": "France",
-     "latest": 3.675,
-     "z": 1.88,
+     "latest": 3.74,
+     "z": 1.9,
      "pct": 100.0
     },
     {
      "segment": "Belgium",
-     "latest": 3.59,
-     "z": 2.19,
+     "latest": 3.6,
+     "z": 2.03,
      "pct": 100.0
     },
     {
      "segment": "Canada",
-     "latest": 3.483,
-     "z": 0.52,
-     "pct": 94.0
+     "latest": 3.542,
+     "z": 0.72,
+     "pct": 96.0
     },
     {
      "segment": "Spain",
-     "latest": 3.449,
-     "z": 0.79,
+     "latest": 3.482,
+     "z": 0.93,
      "pct": 96.0
     },
     {
      "segment": "Portugal",
-     "latest": 3.43,
-     "z": 1.65,
-     "pct": 94.0
+     "latest": 3.42,
+     "z": 1.51,
+     "pct": 93.0
     },
     {
      "segment": "Finland",
-     "latest": 3.384,
-     "z": 1.93,
+     "latest": 3.399,
+     "z": 1.84,
      "pct": 99.0
     },
     {
      "segment": "Austria",
-     "latest": 3.303,
-     "z": 1.64,
+     "latest": 3.298,
+     "z": 1.52,
      "pct": 99.0
     },
     {
      "segment": "Ireland",
-     "latest": 3.241,
-     "z": 1.9,
+     "latest": 3.247,
+     "z": 1.78,
      "pct": 99.0
     },
     {
      "segment": "Netherlands",
-     "latest": 3.15,
-     "z": 1.94,
+     "latest": 3.165,
+     "z": 1.86,
      "pct": 99.0
     },
     {
      "segment": "Germany",
-     "latest": 3.001,
-     "z": 2.16,
+     "latest": 3.046,
+     "z": 2.13,
      "pct": 100.0
     },
     {
      "segment": "Denmark",
-     "latest": 2.888,
-     "z": 1.43,
-     "pct": 99.0
+     "latest": 2.88,
+     "z": 1.33,
+     "pct": 98.0
     },
     {
      "segment": "Sweden",
-     "latest": 2.785,
-     "z": 1.23,
-     "pct": 97.0
+     "latest": 2.745,
+     "z": 1.03,
+     "pct": 94.0
     },
     {
      "segment": "Japan",
-     "latest": 2.515,
+     "latest": 2.65,
      "z": 2.31,
      "pct": 100.0
     },
     {
      "segment": "Switzerland",
-     "latest": 0.45,
+     "latest": 0.44,
      "z": -0.33,
-     "pct": 77.0
+     "pct": 76.0
     }
    ],
    "common_factor": {
     "n": 26,
     "basis": "monthly change (Delta) - Collin-Dufresne-Goldstein-Martin",
-    "avg_pairwise_corr": 0.602,
-    "pc1_eigenvalue": 16.794,
-    "pc1_share": 0.646,
+    "avg_pairwise_corr": 0.6,
+    "pc1_eigenvalue": 16.751,
+    "pc1_share": 0.644,
     "matrix": {
      "US": {
       "US": 1.0,
@@ -1958,15 +1958,15 @@
       "Austria": 0.7,
       "Switzerland": 0.33,
       "Ireland": 0.64,
-      "Portugal": 0.45,
+      "Portugal": 0.44,
       "Finland": 0.69,
       "Sweden": 0.73,
       "Norway": 0.69,
-      "Denmark": 0.66,
+      "Denmark": 0.65,
       "Poland": 0.62,
       "Czechia": 0.64,
-      "Hungary": 0.49,
-      "Korea": 0.78,
+      "Hungary": 0.47,
+      "Korea": 0.77,
       "New Zealand": 0.8,
       "Chile": 0.47,
       "Greece": 0.09
@@ -1979,22 +1979,22 @@
       "Italy": 0.71,
       "Japan": 0.43,
       "Canada": 0.73,
-      "Australia": 0.78,
+      "Australia": 0.77,
       "Spain": 0.87,
       "Netherlands": 0.97,
       "Belgium": 0.95,
       "Austria": 0.96,
-      "Switzerland": 0.52,
+      "Switzerland": 0.51,
       "Ireland": 0.92,
       "Portugal": 0.71,
       "Finland": 0.95,
       "Sweden": 0.85,
-      "Norway": 0.63,
+      "Norway": 0.62,
       "Denmark": 0.9,
       "Poland": 0.62,
       "Czechia": 0.68,
-      "Hungary": 0.55,
-      "Korea": 0.77,
+      "Hungary": 0.54,
+      "Korea": 0.76,
       "New Zealand": 0.73,
       "Chile": 0.35,
       "Greece": 0.21
@@ -2005,7 +2005,7 @@
       "UK": 1.0,
       "France": 0.79,
       "Italy": 0.56,
-      "Japan": 0.31,
+      "Japan": 0.32,
       "Canada": 0.68,
       "Australia": 0.71,
       "Spain": 0.7,
@@ -2016,13 +2016,13 @@
       "Ireland": 0.73,
       "Portugal": 0.54,
       "Finland": 0.77,
-      "Sweden": 0.7,
+      "Sweden": 0.69,
       "Norway": 0.67,
       "Denmark": 0.73,
       "Poland": 0.57,
-      "Czechia": 0.59,
-      "Hungary": 0.54,
-      "Korea": 0.74,
+      "Czechia": 0.6,
+      "Hungary": 0.53,
+      "Korea": 0.73,
       "New Zealand": 0.68,
       "Chile": 0.39,
       "Greece": 0.22
@@ -2038,20 +2038,20 @@
       "Australia": 0.75,
       "Spain": 0.92,
       "Netherlands": 0.96,
-      "Belgium": 0.97,
+      "Belgium": 0.98,
       "Austria": 0.96,
       "Switzerland": 0.51,
       "Ireland": 0.95,
       "Portugal": 0.78,
       "Finland": 0.94,
       "Sweden": 0.83,
-      "Norway": 0.6,
+      "Norway": 0.59,
       "Denmark": 0.87,
       "Poland": 0.63,
-      "Czechia": 0.69,
-      "Hungary": 0.59,
+      "Czechia": 0.68,
+      "Hungary": 0.58,
       "Korea": 0.74,
-      "New Zealand": 0.72,
+      "New Zealand": 0.73,
       "Chile": 0.37,
       "Greece": 0.3
      },
@@ -2073,12 +2073,12 @@
       "Portugal": 0.78,
       "Finland": 0.75,
       "Sweden": 0.6,
-      "Norway": 0.38,
-      "Denmark": 0.7,
+      "Norway": 0.37,
+      "Denmark": 0.69,
       "Poland": 0.52,
       "Czechia": 0.58,
-      "Hungary": 0.58,
-      "Korea": 0.57,
+      "Hungary": 0.57,
+      "Korea": 0.56,
       "New Zealand": 0.54,
       "Chile": 0.31,
       "Greece": 0.41
@@ -2086,29 +2086,29 @@
      "Japan": {
       "US": 0.36,
       "Germany": 0.43,
-      "UK": 0.31,
+      "UK": 0.32,
       "France": 0.41,
       "Italy": 0.32,
       "Japan": 1.0,
-      "Canada": 0.36,
+      "Canada": 0.35,
       "Australia": 0.43,
       "Spain": 0.32,
-      "Netherlands": 0.41,
-      "Belgium": 0.38,
-      "Austria": 0.39,
-      "Switzerland": 0.45,
-      "Ireland": 0.37,
+      "Netherlands": 0.4,
+      "Belgium": 0.37,
+      "Austria": 0.38,
+      "Switzerland": 0.44,
+      "Ireland": 0.36,
       "Portugal": 0.24,
       "Finland": 0.37,
-      "Sweden": 0.39,
+      "Sweden": 0.38,
       "Norway": 0.36,
-      "Denmark": 0.33,
+      "Denmark": 0.32,
       "Poland": 0.13,
       "Czechia": 0.2,
-      "Hungary": 0.1,
-      "Korea": 0.31,
-      "New Zealand": 0.39,
-      "Chile": 0.25,
+      "Hungary": 0.08,
+      "Korea": 0.33,
+      "New Zealand": 0.38,
+      "Chile": 0.26,
       "Greece": 0.1
      },
      "Canada": {
@@ -2117,7 +2117,7 @@
       "UK": 0.68,
       "France": 0.68,
       "Italy": 0.48,
-      "Japan": 0.36,
+      "Japan": 0.35,
       "Canada": 1.0,
       "Australia": 0.85,
       "Spain": 0.6,
@@ -2126,22 +2126,22 @@
       "Austria": 0.67,
       "Switzerland": 0.37,
       "Ireland": 0.66,
-      "Portugal": 0.49,
+      "Portugal": 0.48,
       "Finland": 0.69,
       "Sweden": 0.74,
-      "Norway": 0.71,
+      "Norway": 0.7,
       "Denmark": 0.66,
-      "Poland": 0.6,
+      "Poland": 0.59,
       "Czechia": 0.61,
-      "Hungary": 0.46,
-      "Korea": 0.75,
+      "Hungary": 0.44,
+      "Korea": 0.74,
       "New Zealand": 0.81,
-      "Chile": 0.46,
+      "Chile": 0.45,
       "Greece": 0.06
      },
      "Australia": {
       "US": 0.81,
-      "Germany": 0.78,
+      "Germany": 0.77,
       "UK": 0.71,
       "France": 0.75,
       "Italy": 0.56,
@@ -2161,8 +2161,8 @@
       "Denmark": 0.69,
       "Poland": 0.61,
       "Czechia": 0.61,
-      "Hungary": 0.46,
-      "Korea": 0.78,
+      "Hungary": 0.45,
+      "Korea": 0.76,
       "New Zealand": 0.85,
       "Chile": 0.43,
       "Greece": 0.16
@@ -2185,12 +2185,12 @@
       "Portugal": 0.87,
       "Finland": 0.89,
       "Sweden": 0.76,
-      "Norway": 0.48,
+      "Norway": 0.47,
       "Denmark": 0.83,
       "Poland": 0.6,
       "Czechia": 0.66,
-      "Hungary": 0.58,
-      "Korea": 0.69,
+      "Hungary": 0.57,
+      "Korea": 0.68,
       "New Zealand": 0.65,
       "Chile": 0.33,
       "Greece": 0.39
@@ -2201,7 +2201,7 @@
       "UK": 0.79,
       "France": 0.96,
       "Italy": 0.74,
-      "Japan": 0.41,
+      "Japan": 0.4,
       "Canada": 0.7,
       "Australia": 0.74,
       "Spain": 0.89,
@@ -2218,7 +2218,7 @@
       "Poland": 0.61,
       "Czechia": 0.67,
       "Hungary": 0.56,
-      "Korea": 0.75,
+      "Korea": 0.74,
       "New Zealand": 0.71,
       "Chile": 0.32,
       "Greece": 0.25
@@ -2227,9 +2227,9 @@
       "US": 0.69,
       "Germany": 0.95,
       "UK": 0.78,
-      "France": 0.97,
+      "France": 0.98,
       "Italy": 0.81,
-      "Japan": 0.38,
+      "Japan": 0.37,
       "Canada": 0.68,
       "Australia": 0.74,
       "Spain": 0.94,
@@ -2241,12 +2241,12 @@
       "Portugal": 0.81,
       "Finland": 0.94,
       "Sweden": 0.82,
-      "Norway": 0.6,
+      "Norway": 0.59,
       "Denmark": 0.9,
       "Poland": 0.64,
-      "Czechia": 0.69,
+      "Czechia": 0.68,
       "Hungary": 0.61,
-      "Korea": 0.75,
+      "Korea": 0.73,
       "New Zealand": 0.72,
       "Chile": 0.36,
       "Greece": 0.33
@@ -2257,7 +2257,7 @@
       "UK": 0.79,
       "France": 0.96,
       "Italy": 0.77,
-      "Japan": 0.39,
+      "Japan": 0.38,
       "Canada": 0.67,
       "Australia": 0.75,
       "Spain": 0.91,
@@ -2269,23 +2269,23 @@
       "Portugal": 0.76,
       "Finland": 0.95,
       "Sweden": 0.82,
-      "Norway": 0.6,
+      "Norway": 0.59,
       "Denmark": 0.9,
       "Poland": 0.64,
-      "Czechia": 0.69,
+      "Czechia": 0.68,
       "Hungary": 0.61,
-      "Korea": 0.77,
+      "Korea": 0.76,
       "New Zealand": 0.72,
       "Chile": 0.37,
       "Greece": 0.28
      },
      "Switzerland": {
       "US": 0.33,
-      "Germany": 0.52,
+      "Germany": 0.51,
       "UK": 0.44,
       "France": 0.51,
       "Italy": 0.36,
-      "Japan": 0.45,
+      "Japan": 0.44,
       "Canada": 0.37,
       "Australia": 0.41,
       "Spain": 0.42,
@@ -2313,7 +2313,7 @@
       "UK": 0.73,
       "France": 0.95,
       "Italy": 0.8,
-      "Japan": 0.37,
+      "Japan": 0.36,
       "Canada": 0.66,
       "Australia": 0.72,
       "Spain": 0.93,
@@ -2325,24 +2325,24 @@
       "Portugal": 0.84,
       "Finland": 0.91,
       "Sweden": 0.81,
-      "Norway": 0.58,
+      "Norway": 0.57,
       "Denmark": 0.84,
       "Poland": 0.59,
       "Czechia": 0.64,
-      "Hungary": 0.57,
-      "Korea": 0.72,
+      "Hungary": 0.56,
+      "Korea": 0.71,
       "New Zealand": 0.7,
       "Chile": 0.32,
       "Greece": 0.31
      },
      "Portugal": {
-      "US": 0.45,
+      "US": 0.44,
       "Germany": 0.71,
       "UK": 0.54,
       "France": 0.78,
       "Italy": 0.78,
       "Japan": 0.24,
-      "Canada": 0.49,
+      "Canada": 0.48,
       "Australia": 0.56,
       "Spain": 0.87,
       "Netherlands": 0.74,
@@ -2358,7 +2358,7 @@
       "Poland": 0.54,
       "Czechia": 0.52,
       "Hungary": 0.52,
-      "Korea": 0.53,
+      "Korea": 0.52,
       "New Zealand": 0.54,
       "Chile": 0.24,
       "Greece": 0.47
@@ -2381,12 +2381,12 @@
       "Portugal": 0.72,
       "Finland": 1.0,
       "Sweden": 0.8,
-      "Norway": 0.56,
+      "Norway": 0.55,
       "Denmark": 0.9,
       "Poland": 0.63,
       "Czechia": 0.68,
-      "Hungary": 0.57,
-      "Korea": 0.76,
+      "Hungary": 0.56,
+      "Korea": 0.75,
       "New Zealand": 0.7,
       "Chile": 0.36,
       "Greece": 0.25
@@ -2394,10 +2394,10 @@
      "Sweden": {
       "US": 0.73,
       "Germany": 0.85,
-      "UK": 0.7,
+      "UK": 0.69,
       "France": 0.83,
       "Italy": 0.6,
-      "Japan": 0.39,
+      "Japan": 0.38,
       "Canada": 0.74,
       "Australia": 0.77,
       "Spain": 0.76,
@@ -2409,51 +2409,51 @@
       "Portugal": 0.64,
       "Finland": 0.8,
       "Sweden": 1.0,
-      "Norway": 0.67,
+      "Norway": 0.66,
       "Denmark": 0.77,
       "Poland": 0.57,
-      "Czechia": 0.62,
+      "Czechia": 0.61,
       "Hungary": 0.49,
-      "Korea": 0.73,
+      "Korea": 0.72,
       "New Zealand": 0.74,
       "Chile": 0.38,
       "Greece": 0.18
      },
      "Norway": {
       "US": 0.69,
-      "Germany": 0.63,
+      "Germany": 0.62,
       "UK": 0.67,
-      "France": 0.6,
-      "Italy": 0.38,
+      "France": 0.59,
+      "Italy": 0.37,
       "Japan": 0.36,
-      "Canada": 0.71,
+      "Canada": 0.7,
       "Australia": 0.65,
-      "Spain": 0.48,
+      "Spain": 0.47,
       "Netherlands": 0.61,
-      "Belgium": 0.6,
-      "Austria": 0.6,
+      "Belgium": 0.59,
+      "Austria": 0.59,
       "Switzerland": 0.48,
-      "Ireland": 0.58,
+      "Ireland": 0.57,
       "Portugal": 0.4,
-      "Finland": 0.56,
-      "Sweden": 0.67,
+      "Finland": 0.55,
+      "Sweden": 0.66,
       "Norway": 1.0,
       "Denmark": 0.53,
       "Poland": 0.51,
       "Czechia": 0.5,
-      "Hungary": 0.48,
-      "Korea": 0.64,
+      "Hungary": 0.47,
+      "Korea": 0.63,
       "New Zealand": 0.68,
       "Chile": 0.48,
       "Greece": 0.09
      },
      "Denmark": {
-      "US": 0.66,
+      "US": 0.65,
       "Germany": 0.9,
       "UK": 0.73,
       "France": 0.87,
-      "Italy": 0.7,
-      "Japan": 0.33,
+      "Italy": 0.69,
+      "Japan": 0.32,
       "Canada": 0.66,
       "Australia": 0.69,
       "Spain": 0.83,
@@ -2470,7 +2470,7 @@
       "Poland": 0.56,
       "Czechia": 0.63,
       "Hungary": 0.56,
-      "Korea": 0.73,
+      "Korea": 0.72,
       "New Zealand": 0.67,
       "Chile": 0.31,
       "Greece": 0.23
@@ -2482,7 +2482,7 @@
       "France": 0.63,
       "Italy": 0.52,
       "Japan": 0.13,
-      "Canada": 0.6,
+      "Canada": 0.59,
       "Australia": 0.61,
       "Spain": 0.6,
       "Netherlands": 0.61,
@@ -2497,7 +2497,7 @@
       "Denmark": 0.56,
       "Poland": 1.0,
       "Czechia": 0.82,
-      "Hungary": 0.69,
+      "Hungary": 0.68,
       "Korea": 0.63,
       "New Zealand": 0.61,
       "Chile": 0.43,
@@ -2506,84 +2506,84 @@
      "Czechia": {
       "US": 0.64,
       "Germany": 0.68,
-      "UK": 0.59,
-      "France": 0.69,
+      "UK": 0.6,
+      "France": 0.68,
       "Italy": 0.58,
       "Japan": 0.2,
       "Canada": 0.61,
       "Australia": 0.61,
       "Spain": 0.66,
       "Netherlands": 0.67,
-      "Belgium": 0.69,
-      "Austria": 0.69,
+      "Belgium": 0.68,
+      "Austria": 0.68,
       "Switzerland": 0.35,
       "Ireland": 0.64,
       "Portugal": 0.52,
       "Finland": 0.68,
-      "Sweden": 0.62,
+      "Sweden": 0.61,
       "Norway": 0.5,
       "Denmark": 0.63,
       "Poland": 0.82,
       "Czechia": 1.0,
-      "Hungary": 0.65,
+      "Hungary": 0.64,
       "Korea": 0.69,
       "New Zealand": 0.64,
       "Chile": 0.44,
       "Greece": 0.29
      },
      "Hungary": {
-      "US": 0.49,
-      "Germany": 0.55,
-      "UK": 0.54,
-      "France": 0.59,
-      "Italy": 0.58,
-      "Japan": 0.1,
-      "Canada": 0.46,
-      "Australia": 0.46,
-      "Spain": 0.58,
+      "US": 0.47,
+      "Germany": 0.54,
+      "UK": 0.53,
+      "France": 0.58,
+      "Italy": 0.57,
+      "Japan": 0.08,
+      "Canada": 0.44,
+      "Australia": 0.45,
+      "Spain": 0.57,
       "Netherlands": 0.56,
       "Belgium": 0.61,
       "Austria": 0.61,
       "Switzerland": 0.27,
-      "Ireland": 0.57,
+      "Ireland": 0.56,
       "Portugal": 0.52,
-      "Finland": 0.57,
+      "Finland": 0.56,
       "Sweden": 0.49,
-      "Norway": 0.48,
+      "Norway": 0.47,
       "Denmark": 0.56,
-      "Poland": 0.69,
-      "Czechia": 0.65,
+      "Poland": 0.68,
+      "Czechia": 0.64,
       "Hungary": 1.0,
-      "Korea": 0.55,
-      "New Zealand": 0.53,
-      "Chile": 0.49,
+      "Korea": 0.51,
+      "New Zealand": 0.52,
+      "Chile": 0.48,
       "Greece": 0.31
      },
      "Korea": {
-      "US": 0.78,
-      "Germany": 0.77,
-      "UK": 0.74,
+      "US": 0.77,
+      "Germany": 0.76,
+      "UK": 0.73,
       "France": 0.74,
-      "Italy": 0.57,
-      "Japan": 0.31,
-      "Canada": 0.75,
-      "Australia": 0.78,
-      "Spain": 0.69,
-      "Netherlands": 0.75,
-      "Belgium": 0.75,
-      "Austria": 0.77,
+      "Italy": 0.56,
+      "Japan": 0.33,
+      "Canada": 0.74,
+      "Australia": 0.76,
+      "Spain": 0.68,
+      "Netherlands": 0.74,
+      "Belgium": 0.73,
+      "Austria": 0.76,
       "Switzerland": 0.39,
-      "Ireland": 0.72,
-      "Portugal": 0.53,
-      "Finland": 0.76,
-      "Sweden": 0.73,
-      "Norway": 0.64,
-      "Denmark": 0.73,
+      "Ireland": 0.71,
+      "Portugal": 0.52,
+      "Finland": 0.75,
+      "Sweden": 0.72,
+      "Norway": 0.63,
+      "Denmark": 0.72,
       "Poland": 0.63,
       "Czechia": 0.69,
-      "Hungary": 0.55,
+      "Hungary": 0.51,
       "Korea": 1.0,
-      "New Zealand": 0.76,
+      "New Zealand": 0.75,
       "Chile": 0.48,
       "Greece": 0.15
      },
@@ -2591,9 +2591,9 @@
       "US": 0.8,
       "Germany": 0.73,
       "UK": 0.68,
-      "France": 0.72,
+      "France": 0.73,
       "Italy": 0.54,
-      "Japan": 0.39,
+      "Japan": 0.38,
       "Canada": 0.81,
       "Australia": 0.85,
       "Spain": 0.65,
@@ -2609,10 +2609,10 @@
       "Denmark": 0.67,
       "Poland": 0.61,
       "Czechia": 0.64,
-      "Hungary": 0.53,
-      "Korea": 0.76,
+      "Hungary": 0.52,
+      "Korea": 0.75,
       "New Zealand": 1.0,
-      "Chile": 0.44,
+      "Chile": 0.43,
       "Greece": 0.18
      },
      "Chile": {
@@ -2621,8 +2621,8 @@
       "UK": 0.39,
       "France": 0.37,
       "Italy": 0.31,
-      "Japan": 0.25,
-      "Canada": 0.46,
+      "Japan": 0.26,
+      "Canada": 0.45,
       "Australia": 0.43,
       "Spain": 0.33,
       "Netherlands": 0.32,
@@ -2637,9 +2637,9 @@
       "Denmark": 0.31,
       "Poland": 0.43,
       "Czechia": 0.44,
-      "Hungary": 0.49,
+      "Hungary": 0.48,
       "Korea": 0.48,
-      "New Zealand": 0.44,
+      "New Zealand": 0.43,
       "Chile": 1.0,
       "Greece": 0.13
      },
@@ -2685,966 +2685,966 @@
     "HY muni (HYD)"
    ],
    "n_dates": 109,
-   "date_first": "2017-06",
-   "date_last": "2026-06",
+   "date_first": "2017-07",
+   "date_last": "2026-07",
    "dispersion": [
     {
-     "date": "2017-06",
-     "mean": 3.835,
-     "std": 2.133,
-     "min": 2.613,
-     "max": 7.029,
-     "range": 4.416
-    },
-    {
      "date": "2017-07",
-     "mean": 3.819,
-     "std": 2.155,
-     "min": 2.578,
-     "max": 7.045,
-     "range": 4.467
+     "mean": 3.821,
+     "std": 2.156,
+     "min": 2.58,
+     "max": 7.049,
+     "range": 4.469
     },
     {
      "date": "2017-08",
-     "mean": 3.762,
-     "std": 2.095,
-     "min": 2.54,
-     "max": 6.897,
-     "range": 4.357
+     "mean": 3.765,
+     "std": 2.097,
+     "min": 2.542,
+     "max": 6.903,
+     "range": 4.361
     },
     {
      "date": "2017-09",
-     "mean": 3.766,
-     "std": 2.096,
-     "min": 2.532,
-     "max": 6.902,
-     "range": 4.37
+     "mean": 3.768,
+     "std": 2.097,
+     "min": 2.534,
+     "max": 6.906,
+     "range": 4.372
     },
     {
      "date": "2017-10",
-     "mean": 3.78,
+     "mean": 3.782,
      "std": 2.124,
-     "min": 2.528,
-     "max": 6.958,
+     "min": 2.53,
+     "max": 6.96,
      "range": 4.43
     },
     {
      "date": "2017-11",
-     "mean": 3.79,
-     "std": 2.106,
-     "min": 2.546,
-     "max": 6.941,
-     "range": 4.395
+     "mean": 3.792,
+     "std": 2.107,
+     "min": 2.548,
+     "max": 6.945,
+     "range": 4.397
     },
     {
      "date": "2017-12",
-     "mean": 3.786,
-     "std": 2.009,
-     "min": 2.538,
-     "max": 6.785,
-     "range": 4.247
+     "mean": 3.778,
+     "std": 2.0,
+     "min": 2.536,
+     "max": 6.764,
+     "range": 4.228
     },
     {
      "date": "2018-01",
-     "mean": 3.787,
-     "std": 1.981,
-     "min": 2.545,
-     "max": 6.744,
-     "range": 4.199
+     "mean": 3.8,
+     "std": 1.992,
+     "min": 2.552,
+     "max": 6.772,
+     "range": 4.22
     },
     {
      "date": "2018-02",
-     "mean": 3.811,
-     "std": 1.989,
-     "min": 2.568,
-     "max": 6.78,
-     "range": 4.212
+     "mean": 3.813,
+     "std": 1.99,
+     "min": 2.57,
+     "max": 6.784,
+     "range": 4.214
     },
     {
      "date": "2018-03",
-     "mean": 3.793,
-     "std": 1.979,
-     "min": 2.557,
-     "max": 6.747,
-     "range": 4.19
+     "mean": 3.796,
+     "std": 1.981,
+     "min": 2.558,
+     "max": 6.751,
+     "range": 4.193
     },
     {
      "date": "2018-04",
-     "mean": 3.801,
-     "std": 1.953,
-     "min": 2.573,
-     "max": 6.714,
-     "range": 4.141
+     "mean": 3.803,
+     "std": 1.954,
+     "min": 2.574,
+     "max": 6.717,
+     "range": 4.143
     },
     {
      "date": "2018-05",
-     "mean": 3.752,
+     "mean": 3.755,
      "std": 1.937,
-     "min": 2.526,
-     "max": 6.64,
-     "range": 4.114
+     "min": 2.528,
+     "max": 6.643,
+     "range": 4.115
     },
     {
      "date": "2018-06",
-     "mean": 3.743,
-     "std": 1.907,
-     "min": 2.533,
-     "max": 6.586,
-     "range": 4.053
+     "mean": 3.745,
+     "std": 1.909,
+     "min": 2.535,
+     "max": 6.591,
+     "range": 4.056
     },
     {
      "date": "2018-07",
-     "mean": 3.728,
-     "std": 1.875,
-     "min": 2.523,
-     "max": 6.522,
-     "range": 3.999
+     "mean": 3.731,
+     "std": 1.877,
+     "min": 2.525,
+     "max": 6.528,
+     "range": 4.003
     },
     {
      "date": "2018-08",
-     "mean": 3.743,
-     "std": 1.895,
-     "min": 2.517,
-     "max": 6.568,
-     "range": 4.051
+     "mean": 3.745,
+     "std": 1.896,
+     "min": 2.519,
+     "max": 6.571,
+     "range": 4.052
     },
     {
      "date": "2018-09",
-     "mean": 3.786,
-     "std": 1.916,
-     "min": 2.546,
-     "max": 6.643,
-     "range": 4.097
+     "mean": 3.789,
+     "std": 1.917,
+     "min": 2.548,
+     "max": 6.647,
+     "range": 4.099
     },
     {
      "date": "2018-10",
-     "mean": 3.828,
-     "std": 1.921,
-     "min": 2.584,
-     "max": 6.692,
-     "range": 4.108
+     "mean": 3.83,
+     "std": 1.922,
+     "min": 2.586,
+     "max": 6.696,
+     "range": 4.11
     },
     {
      "date": "2018-11",
-     "mean": 3.84,
-     "std": 1.943,
-     "min": 2.578,
-     "max": 6.736,
+     "mean": 3.841,
+     "std": 1.942,
+     "min": 2.579,
+     "max": 6.737,
      "range": 4.158
     },
     {
      "date": "2018-12",
-     "mean": 7.599,
-     "std": 9.527,
-     "min": 2.573,
-     "max": 21.887,
-     "range": 19.314
+     "mean": 7.032,
+     "std": 8.4,
+     "min": 2.569,
+     "max": 19.628,
+     "range": 17.059
     },
     {
      "date": "2019-01",
-     "mean": 6.959,
-     "std": 8.292,
-     "min": 2.555,
-     "max": 19.394,
-     "range": 16.839
+     "mean": 6.985,
+     "std": 8.328,
+     "min": 2.562,
+     "max": 19.474,
+     "range": 16.912
     },
     {
      "date": "2019-02",
-     "mean": 6.954,
-     "std": 8.258,
-     "min": 2.563,
-     "max": 19.338,
-     "range": 16.775
+     "mean": 6.957,
+     "std": 8.262,
+     "min": 2.565,
+     "max": 19.348,
+     "range": 16.783
     },
     {
      "date": "2019-03",
-     "mean": 6.818,
-     "std": 8.063,
-     "min": 2.521,
-     "max": 18.909,
-     "range": 16.388
+     "mean": 6.824,
+     "std": 8.07,
+     "min": 2.523,
+     "max": 18.925,
+     "range": 16.402
     },
     {
      "date": "2019-04",
-     "mean": 6.783,
-     "std": 8.011,
-     "min": 2.512,
-     "max": 18.796,
-     "range": 16.284
+     "mean": 6.787,
+     "std": 8.016,
+     "min": 2.514,
+     "max": 18.808,
+     "range": 16.294
     },
     {
      "date": "2019-05",
-     "mean": 6.684,
-     "std": 7.867,
-     "min": 2.486,
-     "max": 18.481,
-     "range": 15.995
+     "mean": 6.688,
+     "std": 7.873,
+     "min": 2.487,
+     "max": 18.494,
+     "range": 16.007
     },
     {
      "date": "2019-06",
-     "mean": 6.661,
-     "std": 7.817,
-     "min": 2.488,
-     "max": 18.382,
-     "range": 15.894
+     "mean": 6.665,
+     "std": 7.822,
+     "min": 2.489,
+     "max": 18.393,
+     "range": 15.904
     },
     {
      "date": "2019-07",
-     "mean": 6.626,
-     "std": 7.799,
-     "min": 2.472,
-     "max": 18.321,
-     "range": 15.849
+     "mean": 6.631,
+     "std": 7.805,
+     "min": 2.474,
+     "max": 18.334,
+     "range": 15.86
     },
     {
      "date": "2019-08",
-     "mean": 6.492,
-     "std": 7.631,
-     "min": 2.429,
-     "max": 17.935,
-     "range": 15.506
+     "mean": 6.497,
+     "std": 7.636,
+     "min": 2.432,
+     "max": 17.947,
+     "range": 15.515
     },
     {
      "date": "2019-09",
-     "mean": 6.522,
-     "std": 7.671,
-     "min": 2.441,
-     "max": 18.025,
-     "range": 15.584
+     "mean": 6.526,
+     "std": 7.675,
+     "min": 2.443,
+     "max": 18.035,
+     "range": 15.592
     },
     {
      "date": "2019-10",
-     "mean": 6.498,
-     "std": 7.669,
-     "min": 2.422,
-     "max": 17.998,
-     "range": 15.576
+     "mean": 6.503,
+     "std": 7.675,
+     "min": 2.424,
+     "max": 18.011,
+     "range": 15.587
     },
     {
      "date": "2019-11",
-     "mean": 6.433,
-     "std": 7.606,
-     "min": 2.396,
-     "max": 17.838,
-     "range": 15.442
+     "mean": 6.439,
+     "std": 7.613,
+     "min": 2.398,
+     "max": 17.854,
+     "range": 15.456
     },
     {
      "date": "2019-12",
-     "mean": 3.275,
-     "std": 1.381,
-     "min": 2.357,
-     "max": 5.323,
-     "range": 2.966
+     "mean": 3.27,
+     "std": 1.376,
+     "min": 2.355,
+     "max": 5.311,
+     "range": 2.956
     },
     {
      "date": "2020-01",
-     "mean": 3.202,
-     "std": 1.339,
-     "min": 2.309,
-     "max": 5.187,
-     "range": 2.878
+     "mean": 3.212,
+     "std": 1.346,
+     "min": 2.315,
+     "max": 5.209,
+     "range": 2.894
     },
     {
      "date": "2020-02",
-     "mean": 3.16,
-     "std": 1.327,
-     "min": 2.284,
-     "max": 5.129,
-     "range": 2.845
+     "mean": 3.163,
+     "std": 1.328,
+     "min": 2.286,
+     "max": 5.134,
+     "range": 2.848
     },
     {
      "date": "2020-03",
-     "mean": 3.529,
-     "std": 1.939,
-     "min": 2.343,
-     "max": 6.422,
-     "range": 4.079
+     "mean": 3.533,
+     "std": 1.941,
+     "min": 2.345,
+     "max": 6.429,
+     "range": 4.084
     },
     {
      "date": "2020-04",
-     "mean": 3.481,
-     "std": 1.797,
-     "min": 2.366,
-     "max": 6.16,
-     "range": 3.794
+     "mean": 3.482,
+     "std": 1.795,
+     "min": 2.368,
+     "max": 6.157,
+     "range": 3.789
     },
     {
      "date": "2020-05",
-     "mean": 3.309,
+     "mean": 3.312,
      "std": 1.662,
-     "min": 2.267,
-     "max": 5.786,
+     "min": 2.269,
+     "max": 5.788,
      "range": 3.519
     },
     {
      "date": "2020-06",
-     "mean": 3.237,
+     "mean": 3.239,
      "std": 1.588,
-     "min": 2.251,
-     "max": 5.603,
+     "min": 2.253,
+     "max": 5.605,
      "range": 3.352
     },
     {
      "date": "2020-07",
-     "mean": 3.147,
-     "std": 1.517,
-     "min": 2.199,
-     "max": 5.407,
-     "range": 3.208
+     "mean": 3.15,
+     "std": 1.519,
+     "min": 2.201,
+     "max": 5.413,
+     "range": 3.212
     },
     {
      "date": "2020-08",
-     "mean": 3.126,
-     "std": 1.496,
-     "min": 2.183,
-     "max": 5.354,
-     "range": 3.171
+     "mean": 3.129,
+     "std": 1.498,
+     "min": 2.185,
+     "max": 5.36,
+     "range": 3.175
     },
     {
      "date": "2020-09",
-     "mean": 3.104,
-     "std": 1.49,
-     "min": 2.165,
-     "max": 5.325,
-     "range": 3.16
+     "mean": 3.107,
+     "std": 1.491,
+     "min": 2.167,
+     "max": 5.328,
+     "range": 3.161
     },
     {
      "date": "2020-10",
-     "mean": 3.101,
+     "mean": 3.103,
      "std": 1.486,
-     "min": 2.161,
-     "max": 5.314,
+     "min": 2.164,
+     "max": 5.317,
      "range": 3.153
     },
     {
      "date": "2020-11",
-     "mean": 3.013,
-     "std": 1.433,
-     "min": 2.098,
-     "max": 5.147,
-     "range": 3.049
+     "mean": 3.015,
+     "std": 1.434,
+     "min": 2.101,
+     "max": 5.151,
+     "range": 3.05
     },
     {
      "date": "2020-12",
-     "mean": 2.943,
-     "std": 1.394,
-     "min": 2.05,
-     "max": 5.021,
-     "range": 2.971
+     "mean": 2.939,
+     "std": 1.389,
+     "min": 2.049,
+     "max": 5.01,
+     "range": 2.961
     },
     {
      "date": "2021-01",
-     "mean": 2.899,
-     "std": 1.336,
-     "min": 2.036,
-     "max": 4.889,
-     "range": 2.853
+     "mean": 2.909,
+     "std": 1.343,
+     "min": 2.041,
+     "max": 4.909,
+     "range": 2.868
     },
     {
      "date": "2021-02",
-     "mean": 2.927,
-     "std": 1.369,
-     "min": 2.044,
-     "max": 4.967,
-     "range": 2.923
+     "mean": 2.931,
+     "std": 1.37,
+     "min": 2.046,
+     "max": 4.972,
+     "range": 2.926
     },
     {
      "date": "2021-03",
-     "mean": 2.881,
-     "std": 1.332,
-     "min": 2.015,
-     "max": 4.865,
-     "range": 2.85
+     "mean": 2.884,
+     "std": 1.334,
+     "min": 2.017,
+     "max": 4.871,
+     "range": 2.854
     },
     {
      "date": "2021-04",
-     "mean": 2.804,
-     "std": 1.284,
-     "min": 1.963,
-     "max": 4.717,
-     "range": 2.754
+     "mean": 2.807,
+     "std": 1.285,
+     "min": 1.966,
+     "max": 4.721,
+     "range": 2.755
     },
     {
      "date": "2021-05",
-     "mean": 2.756,
-     "std": 1.254,
-     "min": 1.927,
-     "max": 4.623,
-     "range": 2.696
+     "mean": 2.759,
+     "std": 1.255,
+     "min": 1.929,
+     "max": 4.628,
+     "range": 2.699
     },
     {
      "date": "2021-06",
-     "mean": 2.704,
-     "std": 1.218,
-     "min": 1.89,
-     "max": 4.517,
-     "range": 2.627
+     "mean": 2.707,
+     "std": 1.219,
+     "min": 1.892,
+     "max": 4.522,
+     "range": 2.63
     },
     {
      "date": "2021-07",
-     "mean": 2.66,
-     "std": 1.198,
-     "min": 1.859,
-     "max": 4.443,
-     "range": 2.584
+     "mean": 2.663,
+     "std": 1.2,
+     "min": 1.861,
+     "max": 4.45,
+     "range": 2.589
     },
     {
      "date": "2021-08",
-     "mean": 2.647,
-     "std": 1.201,
-     "min": 1.843,
-     "max": 4.434,
-     "range": 2.591
+     "mean": 2.651,
+     "std": 1.202,
+     "min": 1.846,
+     "max": 4.44,
+     "range": 2.594
     },
     {
      "date": "2021-09",
-     "mean": 2.643,
-     "std": 1.209,
-     "min": 1.835,
-     "max": 4.443,
-     "range": 2.608
+     "mean": 2.646,
+     "std": 1.211,
+     "min": 1.838,
+     "max": 4.449,
+     "range": 2.611
     },
     {
      "date": "2021-10",
-     "mean": 2.618,
-     "std": 1.199,
-     "min": 1.821,
-     "max": 4.403,
-     "range": 2.582
+     "mean": 2.621,
+     "std": 1.201,
+     "min": 1.823,
+     "max": 4.409,
+     "range": 2.586
     },
     {
      "date": "2021-11",
-     "mean": 2.578,
-     "std": 1.184,
-     "min": 1.795,
-     "max": 4.341,
-     "range": 2.546
+     "mean": 2.58,
+     "std": 1.185,
+     "min": 1.797,
+     "max": 4.346,
+     "range": 2.549
     },
     {
      "date": "2021-12",
-     "mean": 2.53,
-     "std": 1.141,
-     "min": 1.771,
-     "max": 4.23,
-     "range": 2.459
+     "mean": 2.529,
+     "std": 1.139,
+     "min": 1.77,
+     "max": 4.224,
+     "range": 2.454
     },
     {
      "date": "2022-01",
-     "mean": 2.595,
-     "std": 1.173,
-     "min": 1.821,
-     "max": 4.342,
-     "range": 2.521
+     "mean": 2.603,
+     "std": 1.179,
+     "min": 1.826,
+     "max": 4.36,
+     "range": 2.534
     },
     {
      "date": "2022-02",
-     "mean": 2.598,
-     "std": 1.191,
-     "min": 1.818,
-     "max": 4.373,
-     "range": 2.555
+     "mean": 2.601,
+     "std": 1.193,
+     "min": 1.821,
+     "max": 4.379,
+     "range": 2.558
     },
     {
      "date": "2022-03",
-     "mean": 2.652,
-     "std": 1.222,
-     "min": 1.869,
-     "max": 4.476,
-     "range": 2.607
+     "mean": 2.656,
+     "std": 1.224,
+     "min": 1.871,
+     "max": 4.483,
+     "range": 2.612
     },
     {
      "date": "2022-04",
-     "mean": 2.726,
-     "std": 1.261,
-     "min": 1.935,
-     "max": 4.61,
-     "range": 2.675
+     "mean": 2.729,
+     "std": 1.263,
+     "min": 1.937,
+     "max": 4.616,
+     "range": 2.679
     },
     {
      "date": "2022-05",
-     "mean": 2.67,
-     "std": 1.235,
-     "min": 1.889,
-     "max": 4.514,
-     "range": 2.625
+     "mean": 2.673,
+     "std": 1.237,
+     "min": 1.891,
+     "max": 4.519,
+     "range": 2.628
     },
     {
      "date": "2022-06",
-     "mean": 2.705,
-     "std": 1.254,
-     "min": 1.919,
-     "max": 4.577,
-     "range": 2.658
+     "mean": 2.708,
+     "std": 1.256,
+     "min": 1.921,
+     "max": 4.584,
+     "range": 2.663
     },
     {
      "date": "2022-07",
-     "mean": 2.659,
-     "std": 1.233,
-     "min": 1.891,
-     "max": 4.501,
-     "range": 2.61
+     "mean": 2.661,
+     "std": 1.234,
+     "min": 1.893,
+     "max": 4.504,
+     "range": 2.611
     },
     {
      "date": "2022-08",
-     "mean": 2.734,
-     "std": 1.254,
-     "min": 1.956,
-     "max": 4.608,
-     "range": 2.652
+     "mean": 2.737,
+     "std": 1.256,
+     "min": 1.958,
+     "max": 4.613,
+     "range": 2.655
     },
     {
      "date": "2022-09",
-     "mean": 2.863,
-     "std": 1.32,
-     "min": 2.057,
-     "max": 4.837,
-     "range": 2.78
+     "mean": 2.866,
+     "std": 1.322,
+     "min": 2.058,
+     "max": 4.843,
+     "range": 2.785
     },
     {
      "date": "2022-10",
-     "mean": 2.899,
-     "std": 1.32,
-     "min": 2.091,
-     "max": 4.872,
-     "range": 2.781
+     "mean": 2.901,
+     "std": 1.321,
+     "min": 2.093,
+     "max": 4.876,
+     "range": 2.783
     },
     {
      "date": "2022-11",
-     "mean": 2.765,
-     "std": 1.21,
-     "min": 2.026,
-     "max": 4.574,
-     "range": 2.548
+     "mean": 2.767,
+     "std": 1.211,
+     "min": 2.027,
+     "max": 4.577,
+     "range": 2.55
     },
     {
      "date": "2022-12",
-     "mean": 2.829,
-     "std": 1.195,
-     "min": 2.107,
-     "max": 4.616,
-     "range": 2.509
+     "mean": 2.825,
+     "std": 1.191,
+     "min": 2.105,
+     "max": 4.606,
+     "range": 2.501
     },
     {
      "date": "2023-01",
-     "mean": 2.733,
-     "std": 1.13,
-     "min": 2.047,
-     "max": 4.422,
-     "range": 2.375
+     "mean": 2.742,
+     "std": 1.136,
+     "min": 2.052,
+     "max": 4.44,
+     "range": 2.388
     },
     {
      "date": "2023-02",
-     "mean": 2.844,
-     "std": 1.142,
-     "min": 2.146,
-     "max": 4.55,
-     "range": 2.404
+     "mean": 2.846,
+     "std": 1.143,
+     "min": 2.148,
+     "max": 4.553,
+     "range": 2.405
     },
     {
      "date": "2023-03",
-     "mean": 2.825,
-     "std": 1.102,
-     "min": 2.149,
-     "max": 4.469,
-     "range": 2.32
+     "mean": 2.827,
+     "std": 1.103,
+     "min": 2.15,
+     "max": 4.473,
+     "range": 2.323
     },
     {
      "date": "2023-04",
-     "mean": 2.867,
+     "mean": 2.868,
      "std": 1.113,
-     "min": 2.165,
-     "max": 4.524,
+     "min": 2.167,
+     "max": 4.526,
      "range": 2.359
     },
     {
      "date": "2023-05",
-     "mean": 2.913,
-     "std": 1.082,
-     "min": 2.228,
-     "max": 4.521,
-     "range": 2.293
+     "mean": 2.915,
+     "std": 1.083,
+     "min": 2.229,
+     "max": 4.525,
+     "range": 2.296
     },
     {
      "date": "2023-06",
-     "mean": 2.943,
-     "std": 1.072,
-     "min": 2.264,
-     "max": 4.534,
-     "range": 2.27
+     "mean": 2.945,
+     "std": 1.073,
+     "min": 2.265,
+     "max": 4.537,
+     "range": 2.272
     },
     {
      "date": "2023-07",
-     "mean": 2.962,
-     "std": 1.042,
-     "min": 2.298,
-     "max": 4.505,
-     "range": 2.207
+     "mean": 2.963,
+     "std": 1.043,
+     "min": 2.299,
+     "max": 4.508,
+     "range": 2.209
     },
     {
      "date": "2023-08",
-     "mean": 3.026,
-     "std": 1.034,
-     "min": 2.364,
-     "max": 4.556,
-     "range": 2.192
+     "mean": 3.028,
+     "std": 1.035,
+     "min": 2.365,
+     "max": 4.559,
+     "range": 2.194
     },
     {
      "date": "2023-09",
-     "mean": 3.151,
-     "std": 1.079,
-     "min": 2.46,
-     "max": 4.748,
-     "range": 2.288
+     "mean": 3.152,
+     "std": 1.08,
+     "min": 2.461,
+     "max": 4.751,
+     "range": 2.29
     },
     {
      "date": "2023-10",
-     "mean": 3.251,
-     "std": 1.147,
-     "min": 2.523,
+     "mean": 3.252,
+     "std": 1.146,
+     "min": 2.524,
      "max": 4.948,
-     "range": 2.425
+     "range": 2.424
     },
     {
      "date": "2023-11",
-     "mean": 3.108,
+     "mean": 3.109,
      "std": 1.068,
-     "min": 2.415,
-     "max": 4.685,
+     "min": 2.416,
+     "max": 4.686,
      "range": 2.27
     },
     {
      "date": "2023-12",
-     "mean": 3.12,
-     "std": 1.011,
-     "min": 2.459,
-     "max": 4.614,
-     "range": 2.155
+     "mean": 3.114,
+     "std": 1.008,
+     "min": 2.455,
+     "max": 4.603,
+     "range": 2.148
     },
     {
      "date": "2024-01",
-     "mean": 3.098,
-     "std": 0.995,
-     "min": 2.448,
-     "max": 4.567,
-     "range": 2.119
+     "mean": 3.108,
+     "std": 1.001,
+     "min": 2.454,
+     "max": 4.586,
+     "range": 2.132
     },
     {
      "date": "2024-02",
-     "mean": 3.134,
+     "mean": 3.136,
      "std": 0.983,
-     "min": 2.485,
-     "max": 4.584,
-     "range": 2.099
+     "min": 2.486,
+     "max": 4.586,
+     "range": 2.1
     },
     {
      "date": "2024-03",
-     "mean": 3.157,
-     "std": 0.955,
-     "min": 2.531,
-     "max": 4.566,
-     "range": 2.035
+     "mean": 3.159,
+     "std": 0.956,
+     "min": 2.532,
+     "max": 4.57,
+     "range": 2.038
     },
     {
      "date": "2024-04",
-     "mean": 3.232,
-     "std": 0.956,
-     "min": 2.626,
-     "max": 4.646,
-     "range": 2.02
+     "mean": 3.233,
+     "std": 0.957,
+     "min": 2.627,
+     "max": 4.648,
+     "range": 2.021
     },
     {
      "date": "2024-05",
-     "mean": 3.284,
+     "mean": 3.285,
      "std": 0.969,
-     "min": 2.684,
+     "min": 2.685,
      "max": 4.72,
-     "range": 2.036
+     "range": 2.035
     },
     {
      "date": "2024-06",
-     "mean": 3.293,
-     "std": 0.948,
+     "mean": 3.295,
+     "std": 0.949,
      "min": 2.707,
-     "max": 4.698,
-     "range": 1.991
+     "max": 4.7,
+     "range": 1.993
     },
     {
      "date": "2024-07",
-     "mean": 3.276,
-     "std": 0.909,
+     "mean": 3.277,
+     "std": 0.91,
      "min": 2.716,
-     "max": 4.625,
-     "range": 1.909
-    },
-    {
-     "date": "2024-08",
-     "mean": 3.301,
-     "std": 0.911,
-     "min": 2.742,
-     "max": 4.653,
+     "max": 4.627,
      "range": 1.911
     },
     {
+     "date": "2024-08",
+     "mean": 3.302,
+     "std": 0.913,
+     "min": 2.742,
+     "max": 4.656,
+     "range": 1.914
+    },
+    {
      "date": "2024-09",
-     "mean": 3.286,
-     "std": 0.87,
-     "min": 2.751,
-     "max": 4.576,
-     "range": 1.825
+     "mean": 3.287,
+     "std": 0.871,
+     "min": 2.752,
+     "max": 4.579,
+     "range": 1.827
     },
     {
      "date": "2024-10",
-     "mean": 3.343,
-     "std": 0.827,
+     "mean": 3.345,
+     "std": 0.829,
      "min": 2.832,
-     "max": 4.569,
-     "range": 1.737
+     "max": 4.574,
+     "range": 1.742
     },
     {
      "date": "2024-11",
-     "mean": 3.312,
-     "std": 0.799,
-     "min": 2.827,
-     "max": 4.499,
-     "range": 1.672
+     "mean": 3.313,
+     "std": 0.801,
+     "min": 2.828,
+     "max": 4.502,
+     "range": 1.674
     },
     {
      "date": "2024-12",
-     "mean": 3.394,
-     "std": 0.806,
-     "min": 2.91,
-     "max": 4.591,
-     "range": 1.681
+     "mean": 3.386,
+     "std": 0.803,
+     "min": 2.904,
+     "max": 4.579,
+     "range": 1.675
     },
     {
      "date": "2025-01",
-     "mean": 3.377,
-     "std": 0.794,
-     "min": 2.888,
-     "max": 4.556,
-     "range": 1.668
+     "mean": 3.388,
+     "std": 0.8,
+     "min": 2.895,
+     "max": 4.575,
+     "range": 1.68
     },
     {
      "date": "2025-02",
-     "mean": 3.362,
+     "mean": 3.363,
      "std": 0.789,
-     "min": 2.876,
+     "min": 2.877,
      "max": 4.535,
-     "range": 1.659
+     "range": 1.658
     },
     {
      "date": "2025-03",
-     "mean": 3.438,
-     "std": 0.79,
-     "min": 2.956,
-     "max": 4.611,
-     "range": 1.655
+     "mean": 3.439,
+     "std": 0.792,
+     "min": 2.957,
+     "max": 4.616,
+     "range": 1.659
     },
     {
      "date": "2025-04",
      "mean": 3.473,
-     "std": 0.798,
-     "min": 2.982,
-     "max": 4.658,
-     "range": 1.676
+     "std": 0.799,
+     "min": 2.983,
+     "max": 4.66,
+     "range": 1.677
     },
     {
      "date": "2025-05",
      "mean": 3.482,
-     "std": 0.751,
+     "std": 0.753,
      "min": 3.019,
-     "max": 4.596,
-     "range": 1.577
+     "max": 4.599,
+     "range": 1.58
     },
     {
      "date": "2025-06",
-     "mean": 3.458,
-     "std": 0.736,
+     "mean": 3.459,
+     "std": 0.737,
      "min": 3.009,
-     "max": 4.552,
-     "range": 1.543
+     "max": 4.554,
+     "range": 1.545
     },
     {
      "date": "2025-07",
-     "mean": 3.499,
-     "std": 0.764,
+     "mean": 3.5,
+     "std": 0.765,
      "min": 3.029,
-     "max": 4.634,
-     "range": 1.605
+     "max": 4.636,
+     "range": 1.607
     },
     {
      "date": "2025-08",
      "mean": 3.482,
      "std": 0.743,
-     "min": 3.024,
-     "max": 4.586,
+     "min": 3.025,
+     "max": 4.587,
      "range": 1.562
     },
     {
      "date": "2025-09",
-     "mean": 3.408,
-     "std": 0.703,
+     "mean": 3.409,
+     "std": 0.704,
      "min": 2.978,
-     "max": 4.452,
-     "range": 1.474
+     "max": 4.454,
+     "range": 1.476
     },
     {
      "date": "2025-10",
-     "mean": 3.386,
-     "std": 0.697,
+     "mean": 3.387,
+     "std": 0.699,
      "min": 2.972,
-     "max": 4.423,
-     "range": 1.451
+     "max": 4.426,
+     "range": 1.454
     },
     {
      "date": "2025-11",
-     "mean": 3.474,
-     "std": 0.868,
+     "mean": 3.47,
+     "std": 0.861,
      "min": 2.961,
-     "max": 4.769,
-     "range": 1.808
+     "max": 4.755,
+     "range": 1.794
     },
     {
      "date": "2025-12",
-     "mean": 3.405,
-     "std": 0.657,
-     "min": 2.992,
-     "max": 4.382,
-     "range": 1.39
+     "mean": 3.399,
+     "std": 0.663,
+     "min": 2.985,
+     "max": 4.385,
+     "range": 1.4
     },
     {
      "date": "2026-01",
-     "mean": 3.373,
-     "std": 0.669,
-     "min": 2.955,
-     "max": 4.368,
-     "range": 1.413
+     "mean": 3.383,
+     "std": 0.674,
+     "min": 2.962,
+     "max": 4.386,
+     "range": 1.424
     },
     {
      "date": "2026-02",
-     "mean": 3.34,
-     "std": 0.635,
+     "mean": 3.341,
+     "std": 0.636,
      "min": 2.939,
-     "max": 4.285,
-     "range": 1.346
+     "max": 4.287,
+     "range": 1.348
     },
     {
      "date": "2026-03",
-     "mean": 3.434,
-     "std": 0.663,
+     "mean": 3.435,
+     "std": 0.665,
      "min": 3.01,
-     "max": 4.42,
-     "range": 1.41
+     "max": 4.423,
+     "range": 1.413
     },
     {
      "date": "2026-04",
      "mean": 3.399,
      "std": 0.649,
      "min": 2.972,
-     "max": 4.364,
-     "range": 1.392
+     "max": 4.363,
+     "range": 1.391
     },
     {
      "date": "2026-05",
-     "mean": 3.393,
-     "std": 0.64,
+     "mean": 3.394,
+     "std": 0.641,
      "min": 2.963,
-     "max": 4.343,
-     "range": 1.38
+     "max": 4.346,
+     "range": 1.383
     },
     {
      "date": "2026-06",
-     "mean": 3.353,
-     "std": 0.602,
-     "min": 2.936,
-     "max": 4.245,
-     "range": 1.309
+     "mean": 3.361,
+     "std": 0.606,
+     "min": 2.941,
+     "max": 4.26,
+     "range": 1.319
+    },
+    {
+     "date": "2026-07",
+     "mean": 3.4,
+     "std": 0.627,
+     "min": 2.963,
+     "max": 4.329,
+     "range": 1.366
     }
    ],
    "dispersion_now": {
-    "std": 0.602,
-    "z_vs_history": -0.65,
-    "pct_of_history": 1.0,
+    "std": 0.627,
+    "z_vs_history": -0.63,
+    "pct_of_history": 2.0,
     "reading": "compressed"
    },
    "relative_value": {
     "CA (CMF)": {
-     "latest": 2.936,
-     "mean": 2.94,
-     "std": 0.098,
-     "z": -0.04,
-     "pct": 86.0,
+     "latest": 2.963,
+     "mean": 2.951,
+     "std": 0.085,
+     "z": 0.14,
+     "pct": 90.0,
      "window": 24
     },
     "NY (NYF)": {
-     "latest": 3.074,
-     "mean": 2.958,
-     "std": 0.103,
-     "z": 1.13,
-     "pct": 95.0,
+     "latest": 3.113,
+     "mean": 2.974,
+     "std": 0.097,
+     "z": 1.44,
+     "pct": 100.0,
      "window": 24
     },
     "National (MUB)": {
-     "latest": 3.156,
-     "mean": 3.164,
-     "std": 0.07,
-     "z": -0.12,
-     "pct": 86.0,
+     "latest": 3.194,
+     "mean": 3.172,
+     "std": 0.063,
+     "z": 0.35,
+     "pct": 93.0,
      "window": 24
     },
     "HY muni (HYD)": {
-     "latest": 4.245,
-     "mean": 4.512,
+     "latest": 4.329,
+     "mean": 4.503,
      "std": 0.133,
-     "z": -2.01,
-     "pct": 2.0,
+     "z": -1.31,
+     "pct": 4.0,
      "window": 24
     }
    },
    "ranking": [
     {
      "segment": "HY muni (HYD)",
-     "latest": 4.245,
-     "z": -2.01,
-     "pct": 2.0
+     "latest": 4.329,
+     "z": -1.31,
+     "pct": 4.0
     },
     {
      "segment": "National (MUB)",
-     "latest": 3.156,
-     "z": -0.12,
-     "pct": 86.0
+     "latest": 3.194,
+     "z": 0.35,
+     "pct": 93.0
     },
     {
      "segment": "NY (NYF)",
-     "latest": 3.074,
-     "z": 1.13,
-     "pct": 95.0
+     "latest": 3.113,
+     "z": 1.44,
+     "pct": 100.0
     },
     {
      "segment": "CA (CMF)",
-     "latest": 2.936,
-     "z": -0.04,
-     "pct": 86.0
+     "latest": 2.963,
+     "z": 0.14,
+     "pct": 90.0
     }
    ],
    "common_factor": {
     "n": 4,
     "basis": "monthly change (Delta) - Collin-Dufresne-Goldstein-Martin",
-    "avg_pairwise_corr": 0.467,
-    "pc1_eigenvalue": 2.78,
+    "avg_pairwise_corr": 0.47,
+    "pc1_eigenvalue": 2.778,
     "pc1_share": 0.695,
     "matrix": {
      "CA (CMF)": {
       "CA (CMF)": 1.0,
-      "NY (NYF)": 0.88,
+      "NY (NYF)": 0.87,
       "National (MUB)": 0.93,
-      "HY muni (HYD)": 0.1
+      "HY muni (HYD)": 0.11
      },
      "NY (NYF)": {
-      "CA (CMF)": 0.88,
+      "CA (CMF)": 0.87,
       "NY (NYF)": 1.0,
       "National (MUB)": 0.85,
-      "HY muni (HYD)": -0.05
+      "HY muni (HYD)": -0.04
      },
      "National (MUB)": {
       "CA (CMF)": 0.93,
@@ -3653,8 +3653,8 @@
       "HY muni (HYD)": 0.09
      },
      "HY muni (HYD)": {
-      "CA (CMF)": 0.1,
-      "NY (NYF)": -0.05,
+      "CA (CMF)": 0.11,
+      "NY (NYF)": -0.04,
       "National (MUB)": 0.09,
       "HY muni (HYD)": 1.0
      }
@@ -4219,7 +4219,7 @@
      "degree": 56,
      "n_neighbor_sectors": 20,
      "both_layers": true,
-     "bridge_score": 6.24
+     "bridge_score": 6.26
     },
     {
      "node": "US_Government",
@@ -4233,112 +4233,112 @@
      "degree": 29,
      "n_neighbor_sectors": 11,
      "both_layers": true,
-     "bridge_score": 1.58
+     "bridge_score": 1.53
     },
     {
      "node": "Ripple",
      "degree": 21,
      "n_neighbor_sectors": 10,
      "both_layers": true,
-     "bridge_score": 0.69
+     "bridge_score": 0.62
     },
     {
      "node": "SEC",
      "degree": 21,
      "n_neighbor_sectors": 10,
      "both_layers": true,
-     "bridge_score": 0.69
+     "bridge_score": 0.62
     },
     {
      "node": "Russia",
      "degree": 25,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": 0.48
+     "bridge_score": 0.43
+    },
+    {
+     "node": "Google",
+     "degree": 13,
+     "n_neighbor_sectors": 11,
+     "both_layers": true,
+     "bridge_score": 0.32
     },
     {
      "node": "Right_to_Repair",
      "degree": 25,
      "n_neighbor_sectors": 9,
      "both_layers": false,
-     "bridge_score": 0.19
+     "bridge_score": 0.13
     },
     {
      "node": "US_Banks",
      "degree": 18,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": 0.17
-    },
-    {
-     "node": "Google",
-     "degree": 12,
-     "n_neighbor_sectors": 10,
-     "both_layers": true,
-     "bridge_score": 0.02
+     "bridge_score": 0.1
     },
     {
      "node": "Iran",
      "degree": 14,
      "n_neighbor_sectors": 9,
      "both_layers": true,
-     "bridge_score": -0.12
+     "bridge_score": -0.2
     },
     {
      "node": "Hedera",
      "degree": 16,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": -0.18
+     "bridge_score": -0.25
+    },
+    {
+     "node": "OpenAI",
+     "degree": 19,
+     "n_neighbor_sectors": 7,
+     "both_layers": true,
+     "bridge_score": -0.42
     },
     {
      "node": "Microsoft",
      "degree": 14,
      "n_neighbor_sectors": 8,
      "both_layers": true,
-     "bridge_score": -0.42
+     "bridge_score": -0.5
     },
     {
-     "node": "OpenAI",
-     "degree": 18,
-     "n_neighbor_sectors": 6,
+     "node": "Meta",
+     "degree": 13,
+     "n_neighbor_sectors": 8,
      "both_layers": true,
-     "bridge_score": -0.72
+     "bridge_score": -0.58
     },
     {
      "node": "PrivateCredit_Funds",
      "degree": 9,
      "n_neighbor_sectors": 8,
      "both_layers": true,
-     "bridge_score": -0.79
+     "bridge_score": -0.88
     },
     {
      "node": "SpaceX",
-     "degree": 12,
+     "degree": 13,
      "n_neighbor_sectors": 7,
      "both_layers": true,
-     "bridge_score": -0.86
-    },
-    {
-     "node": "Ukraine",
-     "degree": 8,
-     "n_neighbor_sectors": 8,
-     "both_layers": true,
-     "bridge_score": -0.86
+     "bridge_score": -0.88
     },
     {
      "node": "Apple",
      "degree": 8,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -1.46
+     "bridge_score": -1.56
     },
     {
      "node": "JPMorgan",
      "degree": 8,
      "n_neighbor_sectors": 6,
      "both_layers": true,
-     "bridge_score": -1.46
+     "bridge_score": -1.56
     }
    ]
   },
@@ -4349,7 +4349,7 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Japan",
-     "latest": 2.515,
+     "latest": 2.65,
      "units": "% yield",
      "rv_z": 2.31,
      "pct": 100.0
@@ -4357,186 +4357,194 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Australia",
-     "latest": 4.969,
+     "latest": 4.982,
      "units": "% yield",
-     "rv_z": 2.21,
-     "pct": 100.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Belgium",
-     "latest": 3.59,
-     "units": "% yield",
-     "rv_z": 2.19,
-     "pct": 100.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Germany",
-     "latest": 3.001,
-     "units": "% yield",
-     "rv_z": 2.16,
-     "pct": 100.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Netherlands",
-     "latest": 3.15,
-     "units": "% yield",
-     "rv_z": 1.94,
-     "pct": 99.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Finland",
-     "latest": 3.384,
-     "units": "% yield",
-     "rv_z": 1.93,
-     "pct": 99.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Ireland",
-     "latest": 3.241,
-     "units": "% yield",
-     "rv_z": 1.9,
-     "pct": 99.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "France",
-     "latest": 3.675,
-     "units": "% yield",
-     "rv_z": 1.88,
-     "pct": 100.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Norway",
-     "latest": 4.286,
-     "units": "% yield",
-     "rv_z": 1.88,
+     "rv_z": 2.22,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Czechia",
-     "latest": 4.738,
+     "latest": 4.886,
      "units": "% yield",
-     "rv_z": 1.8,
+     "rv_z": 2.16,
      "pct": 98.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "UK",
-     "latest": 4.821,
+     "segment": "Germany",
+     "latest": 3.046,
      "units": "% yield",
-     "rv_z": 1.71,
+     "rv_z": 2.13,
      "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Portugal",
-     "latest": 3.43,
+     "segment": "Belgium",
+     "latest": 3.6,
      "units": "% yield",
-     "rv_z": 1.65,
-     "pct": 94.0
+     "rv_z": 2.03,
+     "pct": 100.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Austria",
-     "latest": 3.303,
+     "segment": "UK",
+     "latest": 4.942,
      "units": "% yield",
-     "rv_z": 1.64,
+     "rv_z": 2.02,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Norway",
+     "latest": 4.33,
+     "units": "% yield",
+     "rv_z": 1.92,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "France",
+     "latest": 3.74,
+     "units": "% yield",
+     "rv_z": 1.9,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Netherlands",
+     "latest": 3.165,
+     "units": "% yield",
+     "rv_z": 1.86,
      "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Denmark",
-     "latest": 2.888,
+     "segment": "Finland",
+     "latest": 3.399,
      "units": "% yield",
-     "rv_z": 1.43,
+     "rv_z": 1.84,
      "pct": 99.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Sweden",
-     "latest": 2.785,
-     "units": "% yield",
-     "rv_z": 1.23,
-     "pct": 97.0
-    },
-    {
-     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-     "segment": "NY (NYF)",
-     "latest": 3.074,
-     "units": "% dist. yield",
-     "rv_z": 1.13,
-     "pct": 95.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Korea",
-     "latest": 3.737,
+     "latest": 4.075,
      "units": "% yield",
-     "rv_z": 1.11,
-     "pct": 95.0
+     "rv_z": 1.79,
+     "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Greece",
-     "latest": 3.78,
+     "segment": "Ireland",
+     "latest": 3.247,
      "units": "% yield",
-     "rv_z": 1.0,
-     "pct": 53.0
-    },
-    {
-     "cross_section": "US corporate credit",
-     "segment": "CCC",
-     "latest": 9.5,
-     "units": "pp (OAS)",
-     "rv_z": 0.81,
-     "pct": 86.0
+     "rv_z": 1.78,
+     "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Spain",
-     "latest": 3.449,
+     "segment": "Austria",
+     "latest": 3.298,
      "units": "% yield",
-     "rv_z": 0.79,
-     "pct": 96.0
+     "rv_z": 1.52,
+     "pct": 99.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Canada",
-     "latest": 3.483,
+     "segment": "Portugal",
+     "latest": 3.42,
      "units": "% yield",
-     "rv_z": 0.52,
+     "rv_z": 1.51,
+     "pct": 93.0
+    },
+    {
+     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
+     "segment": "NY (NYF)",
+     "latest": 3.113,
+     "units": "% dist. yield",
+     "rv_z": 1.44,
+     "pct": 100.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Denmark",
+     "latest": 2.88,
+     "units": "% yield",
+     "rv_z": 1.33,
+     "pct": 98.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Sweden",
+     "latest": 2.745,
+     "units": "% yield",
+     "rv_z": 1.03,
      "pct": 94.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "US",
-     "latest": 4.32,
+     "latest": 4.48,
      "units": "% yield",
-     "rv_z": 0.38,
-     "pct": 91.0
+     "rv_z": 1.0,
+     "pct": 97.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Poland",
+     "latest": 5.74,
+     "units": "% yield",
+     "rv_z": 0.95,
+     "pct": 86.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Greece",
+     "latest": 3.75,
+     "units": "% yield",
+     "rv_z": 0.95,
+     "pct": 51.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Spain",
+     "latest": 3.482,
+     "units": "% yield",
+     "rv_z": 0.93,
+     "pct": 96.0
+    },
+    {
+     "cross_section": "US corporate credit",
+     "segment": "CCC",
+     "latest": 9.52,
+     "units": "pp (OAS)",
+     "rv_z": 0.84,
+     "pct": 86.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Canada",
+     "latest": 3.542,
+     "units": "% yield",
+     "rv_z": 0.72,
+     "pct": 96.0
+    },
+    {
+     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
+     "segment": "National (MUB)",
+     "latest": 3.194,
+     "units": "% dist. yield",
+     "rv_z": 0.35,
+     "pct": 93.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "New Zealand",
      "latest": 4.68,
      "units": "% yield",
-     "rv_z": 0.33,
+     "rv_z": 0.3,
      "pct": 94.0
-    },
-    {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Poland",
-     "latest": 5.58,
-     "units": "% yield",
-     "rv_z": 0.24,
-     "pct": 79.0
     },
     {
      "cross_section": "Corporate breadth by quality tier (FINRA TRACE advance/decline ratio)",
@@ -4557,18 +4565,18 @@
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Italy",
-     "latest": 3.818,
+     "latest": 3.839,
      "units": "% yield",
-     "rv_z": 0.08,
-     "pct": 84.0
+     "rv_z": 0.19,
+     "pct": 85.0
     },
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "CA (CMF)",
-     "latest": 2.936,
+     "latest": 2.963,
      "units": "% dist. yield",
-     "rv_z": -0.04,
-     "pct": 86.0
+     "rv_z": 0.14,
+     "pct": 90.0
     },
     {
      "cross_section": "Corporate breadth by quality tier (FINRA TRACE advance/decline ratio)",
@@ -4579,51 +4587,43 @@
      "pct": 42.0
     },
     {
-     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-     "segment": "National (MUB)",
-     "latest": 3.156,
-     "units": "% dist. yield",
-     "rv_z": -0.12,
-     "pct": 86.0
-    },
-    {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Switzerland",
-     "latest": 0.45,
+     "latest": 0.44,
      "units": "% yield",
      "rv_z": -0.33,
-     "pct": 77.0
-    },
-    {
-     "cross_section": "US corporate credit",
-     "segment": "AAA",
-     "latest": 0.34,
-     "units": "pp (OAS)",
-     "rv_z": -0.69,
-     "pct": 33.0
+     "pct": 76.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Chile",
-     "latest": 5.465,
+     "latest": 5.57,
      "units": "% yield",
-     "rv_z": -0.82,
-     "pct": 67.0
+     "rv_z": -0.45,
+     "pct": 73.0
+    },
+    {
+     "cross_section": "US corporate credit",
+     "segment": "AAA",
+     "latest": 0.35,
+     "units": "pp (OAS)",
+     "rv_z": -0.48,
+     "pct": 40.0
     },
     {
      "cross_section": "US corporate credit",
      "segment": "HY (all)",
-     "latest": 2.72,
+     "latest": 2.73,
      "units": "pp (OAS)",
-     "rv_z": -1.09,
+     "rv_z": -1.05,
      "pct": 11.0
     },
     {
      "cross_section": "US corporate credit",
      "segment": "IG (all)",
-     "latest": 0.74,
+     "latest": 0.75,
      "units": "pp (OAS)",
-     "rv_z": -1.19,
+     "rv_z": -1.14,
      "pct": 3.0
     },
     {
@@ -4635,43 +4635,43 @@
      "pct": 3.0
     },
     {
-     "cross_section": "Sovereign 10Y yield (global cross-section)",
-     "segment": "Hungary",
-     "latest": 6.27,
-     "units": "% yield",
-     "rv_z": -1.36,
-     "pct": 67.0
-    },
-    {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "HY muni (HYD)",
-     "latest": 4.245,
+     "latest": 4.329,
      "units": "% dist. yield",
-     "rv_z": -2.01,
-     "pct": 2.0
+     "rv_z": -1.31,
+     "pct": 4.0
+    },
+    {
+     "cross_section": "Sovereign 10Y yield (global cross-section)",
+     "segment": "Hungary",
+     "latest": 5.65,
+     "units": "% yield",
+     "rv_z": -2.71,
+     "pct": 63.0
     }
    ],
    "common_factor_by_cross_section": {
     "credit_oas": 0.907,
-    "sovereign_10y": 0.646,
+    "sovereign_10y": 0.644,
     "muni_yield": 0.695,
     "trace_breadth": 0.871
    },
    "most_stressed": {
     "cross_section": "Sovereign 10Y yield (global cross-section)",
     "segment": "Japan",
-    "latest": 2.515,
+    "latest": 2.65,
     "units": "% yield",
     "rv_z": 2.31,
     "pct": 100.0
    },
    "least_stressed": {
-    "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-    "segment": "HY muni (HYD)",
-    "latest": 4.245,
-    "units": "% dist. yield",
-    "rv_z": -2.01,
-    "pct": 2.0
+    "cross_section": "Sovereign 10Y yield (global cross-section)",
+    "segment": "Hungary",
+    "latest": 5.65,
+    "units": "% yield",
+    "rv_z": -2.71,
+    "pct": 63.0
    }
   }
  }

@@ -264,6 +264,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Andreessen_Horowitz": {
+      "sector": "financier",
+      "has_exogenous_revenue": true
+    },
     "Anduril": {
       "sector": "defense_tech",
       "has_exogenous_revenue": true
@@ -394,6 +398,10 @@
     },
     "Audi": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Auren_Hoffman": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Australia": {
@@ -1300,6 +1308,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "Dialog_Society": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Digital_Childhood_Alliance": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1662,6 +1674,10 @@
     },
     "Fortinet": {
       "sector": "security_research",
+      "has_exogenous_revenue": true
+    },
+    "Founders_Fund": {
+      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "Foundry_Networks": {
@@ -3148,6 +3164,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Peter_Thiel": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Petrodollar": {
       "sector": "financial_infra",
       "has_exogenous_revenue": false
@@ -3335,6 +3355,10 @@
     "RTX": {
       "sector": "defense",
       "has_exogenous_revenue": true
+    },
+    "Raffi_Grinberg": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Ransomware_RaaS": {
       "sector": "threat_actor",
@@ -3904,6 +3928,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Stonebrick_LLC": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Strait_of_Hormuz": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -4067,6 +4095,10 @@
     "Thailand": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Thiel_Foundation": {
+      "sector": "political",
+      "has_exogenous_revenue": false
     },
     "Three_Arrows_Capital": {
       "sector": "other",
@@ -4598,10 +4630,6 @@
     },
     "Zscaler": {
       "sector": "security_research",
-      "has_exogenous_revenue": true
-    },
-    "a16z": {
-      "sector": "financier",
       "has_exogenous_revenue": true
     },
     "iFixit": {
@@ -12158,7 +12186,7 @@
       "note": "Summary judgment (D.N.H., Nov 2022): LBC sales unregistered securities. LBRY dropped appeal + shut down 2023; Odysee (frontend) survived. Commissioner Peirce dissented ('Overdue'). The small-firm casualty of the sweep."
     },
     {
-      "from": "a16z",
+      "from": "Andreessen_Horowitz",
       "to": "Fairshake",
       "instrument": "pac_funding",
       "layer": "financial",
@@ -17423,7 +17451,7 @@
       "note": ""
     },
     {
-      "from": "a16z",
+      "from": "Andreessen_Horowitz",
       "to": "Mysten_Labs",
       "instrument": "other",
       "layer": "structural",
@@ -20400,7 +20428,7 @@
       "note": ""
     },
     {
-      "from": "a16z",
+      "from": "Andreessen_Horowitz",
       "to": "Polymarket",
       "instrument": "investment",
       "layer": "financial",
@@ -24365,6 +24393,188 @@
       "note": ""
     },
     {
+      "from": "Peter_Thiel",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder (2006); namesake \u2014 reportedly has no hand in Dialog's day-to-day operations",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: Dialog principal (person node)"
+    },
+    {
+      "from": "Auren_Hoffman",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "co-founder & chairman; the operator who actually runs Dialog",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: Dialog principal (person node)"
+    },
+    {
+      "from": "Auren_Hoffman",
+      "to": "Stonebrick_LLC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns Stonebrick LLC, the for-profit entity that operates Dialog",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: ownership of the operating entity"
+    },
+    {
+      "from": "Stonebrick_LLC",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "for-profit operating entity of Dialog (Mamaroneck, NY); no 501(c) filing for 'Dialog' itself has surfaced",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: operating entity -> society (single-outlet + public-records inference)"
+    },
+    {
+      "from": "Raffi_Grinberg",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "executive director; runs Dialog's day-to-day operations (with managing director Juliette Levine)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: Dialog principal (person node)"
+    },
+    {
+      "from": "Thiel_Foundation",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reportedly steers Dialog's shift from a nomadic retreat to a permanent DC-area campus (analyst commentary; institutional phase)",
+      "amount_usd": null,
+      "status": "claimed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: campus/institutionalization tie \u2014 analyst commentary, not a documented grant"
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "participant VC whose principals convene at Dialog; NDCF names it among funds whose luminaries underwrite the dual-use tech discussed there",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: participant/ideological backer per NDCF (not a formal Dialog funder)"
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "participant VC (a16z); NDCF names it among the funds whose luminaries convene at Dialog",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: participant/ideological backer per NDCF"
+    },
+    {
+      "from": "Palantir",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-employer \u2014 CEO Alex Karp participates; Thiel is Palantir chairman",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: member-employer via named attendee"
+    },
+    {
+      "from": "Anduril",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-employer \u2014 founder Palmer Luckey a central participant (2025 Venice summit)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: member-employer via named attendee"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-employer \u2014 Greg Brockman & Jason Kwon appear in the leaked directory",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: member-employer via named attendees"
+    },
+    {
+      "from": "BlackRock",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-employer \u2014 CEO Larry Fink a named attendee (NDCF)",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: member-employer via named attendee"
+    },
+    {
+      "from": "PsiQuantum",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "member-employer \u2014 co-founder Pete Shadbolt in the leaked directory",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: member-employer via named attendee \u2014 ties Dialog to the quantum thread"
+    },
+    {
+      "from": "Elon_Musk",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "named participant / attendee in the leaked directory",
+      "amount_usd": null,
+      "status": "documented",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-dialog-society.json",
+      "note": "OVERLAY: named individual attendee (existing person node)"
+    },
+    {
       "from": "Pension_Funds",
       "to": "PrivateCredit_Funds",
       "instrument": "other",
@@ -26004,10 +26214,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1157,
-    "num_edges": 1644,
+    "num_nodes": 1164,
+    "num_edges": 1658,
     "num_financial_edges": 264,
-    "num_structural_edges": 1380,
+    "num_structural_edges": 1394,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -26058,28 +26268,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -26087,26 +26297,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -26119,6 +26317,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -26606,6 +26816,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Andreessen_Horowitz": {
+        "total_usd": 70000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Anduril": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -26831,6 +27048,13 @@
         "in_robust_core": false
       },
       "Audi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auren_Hoffman": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -28419,6 +28643,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dialog_Society": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Digital_Childhood_Alliance": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29050,6 +29281,13 @@
         "in_robust_core": false
       },
       "Fortinet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Founders_Fund": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -31653,6 +31891,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Peter_Thiel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Petrodollar": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -31976,6 +32221,13 @@
         "in_robust_core": false
       },
       "RTX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Raffi_Grinberg": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -32976,6 +33228,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stonebrick_LLC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Strait_of_Hormuz": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33257,6 +33516,13 @@
         "in_robust_core": false
       },
       "Thailand": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Thiel_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -34194,13 +34460,6 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
-      "a16z": {
-        "total_usd": 70000000,
-        "circular_usd": 0,
-        "circularity_ratio": 0.0,
-        "in_core_scc": false,
-        "in_robust_core": false
-      },
       "iFixit": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34516,6 +34775,26 @@
         "both_layers": true
       },
       {
+        "node": "OpenAI",
+        "degree": 19,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "ip_rightsholder",
+          "neocloud",
+          "other",
+          "spv"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Right_to_Repair",
         "degree": 25,
         "neighbor_sectors": [
@@ -34636,25 +34915,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "OpenAI",
-        "degree": 18,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "ip_rightsholder",
-          "neocloud",
-          "spv"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       }
     ]
   }
