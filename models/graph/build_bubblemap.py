@@ -368,7 +368,7 @@ line.hl{stroke:#1f4e79!important;opacity:.95!important}
 <div id=qres></div>
 <label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
-<label class=tog><input type=checkbox id=tLab checked> show labels</label>
+<label class=tog><input type=checkbox id=tLab> all labels (default: hubs only — zoom in for more)</label>
 <div id=legend>__LEGEND__</div>
 <div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
@@ -416,15 +416,21 @@ node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
 const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('class','lab')
- .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.label);  // labels ON by default
+ .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.label).style('display','none');  // hidden until layout settles, then applyLabels() reveals hubs
 let fitted=false, curK=1, pendingFocus=null;
+// ---- smart labels: only hubs + the circular core by default; reveal more on zoom-in ----
+const LABMIN=__LABMIN__;              // degree cutoff (~top-100); the SCC core is always labelled
+let allLab=false;                    // "all labels" override (checkbox)
+const labThr=k=>Math.max(2,Math.round(LABMIN/Math.max(k,1)));   // zoom in -> lower cutoff -> more labels
+function labVisible(d){return allLab||d.scc||d.deg>=labThr(curK);}
+function applyLabels(){if(egoOn||soloB)return;labels.style('display',d=>labVisible(d)?null:'none');}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
  .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?64:88).strength(.28))
- .force('charge',d3.forceManyBody().strength(-140).distanceMax(520))
+ .force('charge',d3.forceManyBody().strength(-190).distanceMax(650))
  .force('center',d3.forceCenter(W()/2,H()/2))
  .force('x',d3.forceX(W()/2).strength(.06)).force('y',d3.forceY(H()/2).strength(.06))
- .force('collide',d3.forceCollide().radius(d=>rad(d)+13).strength(.9))
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+16).strength(.92))
  .on('tick',tick);
 function tick(){
  const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
@@ -433,14 +439,14 @@ function tick(){
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
  if(sim.alpha()<0.06){                                   // settled
    if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
-   else if(!fitted){fitted=true; fit();}                  // else auto-frame (kills empty space)
+   else if(!fitted){fitted=true; fit(); applyLabels();}   // else auto-frame (kills empty space)
  }
 }
 // keep node/line sizes usable at any zoom: enlarge when zoomed OUT (k<1), constant lines via CSS
 function rescale(k){curK=k; const s=k<1?Math.min(1/k,3.2):1;
  node.selectAll('circle').attr('r',d=>rad(d)*s).attr('stroke-width',d=>(d.scc?2.6:1)*s);
  link.attr('stroke-width',d=>baseW(d)*s);
- labels.style('font-size',(9*Math.min(s,2.2))+'px').attr('dx',d=>rad(d)*s+2);}
+ labels.style('font-size',(9*Math.min(s,2.2))+'px').attr('dx',d=>rad(d)*s+2);applyLabels();}
 // node hover: enlarge + reveal its label
 node.on('mouseenter',function(e,d){d3.select(this).select('circle').attr('r',rad(d)*(curK<1?Math.min(1/curK,3.2):1)+3);
   d3.select(this).raise();})
@@ -456,7 +462,7 @@ svg.call(zoomB);
 // controls
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
-document.getElementById('tLab').onchange=e=>labels.style('display',e.target.checked?null:'none');
+document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
 const q=document.getElementById('q'), qres=document.getElementById('qres');
@@ -538,7 +544,7 @@ function egoFocus(d){egoOn=d.id;const keep=ADJ.get(d.id)||new Set([d.id]);
   .attr('stroke-width',n=>n.id===d.id?4.5:(n.scc?2.6:1));}
 function clearEgo(){egoOn=null;
  node.style('opacity',1);link.style('opacity',.55);linkHit.style('pointer-events',null);
- labels.style('display',document.getElementById('tLab').checked?null:'none');  // ALWAYS restore (fixes vanishing names)
+ applyLabels();  // restore smart labels (hubs + core, or all if toggled)
  node.select('circle').attr('stroke',n=>n.scc?'#d4a017':'#fffdf8').attr('stroke-width',n=>n.scc?2.6:1);
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
 // ----- clickable legend: isolate a sector bucket -----
@@ -548,7 +554,7 @@ document.querySelectorAll('.lg').forEach(el=>el.onclick=()=>{const b=el.dataset.
  soloB=b;egoOn=null;
  document.querySelectorAll('.lg').forEach(x=>{x.classList.toggle('solo',x.dataset.b===b);x.classList.toggle('off',x.dataset.b!==b);});
  node.style('opacity',n=>n.bucket===b?1:.08);
- labels.style('display',n=>(n.bucket===b&&document.getElementById('tLab').checked)?null:'none');
+ labels.style('display',n=>(n.bucket===b&&(allLab||n.scc||n.deg>=labThr(curK)))?null:'none');
  const vis=l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));return (s&&s.bucket===b)||(t&&t.bucket===b);};
  link.style('opacity',l=>vis(l)?.7:.04);});
 // ----- fit-to-view + reset -----
@@ -571,6 +577,7 @@ window.addEventListener('hashchange',fromHash);fromHash();
 </script></body></html>"""
 HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
       .replace("__N__",str(len(nodes))).replace("__E__",str(len(links)))
+      .replace("__LABMIN__",str(max(5,sorted((n["deg"] for n in nodes),reverse=True)[min(99,len(nodes)-1)] if nodes else 5)))
       .replace("__NODES__",json.dumps(nodes)).replace("__LINKS__",json.dumps(links))
       .replace("__BTITLE__",json.dumps(TITLES))
       .replace("__COLORS__",json.dumps(COLORS)))
