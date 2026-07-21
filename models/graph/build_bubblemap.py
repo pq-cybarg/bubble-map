@@ -368,6 +368,7 @@ line.hl{stroke:#1f4e79!important;opacity:.95!important}
 <div id=qres></div>
 <label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
+<label class=tog><input type=checkbox id=tCluster checked> group by sector (flocking)</label>
 <label class=tog><input type=checkbox id=tLab> all labels (default: hubs only — zoom in for more)</label>
 <div id=legend>__LEGEND__</div>
 <div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
@@ -424,13 +425,20 @@ let allLab=false;                    // "all labels" override (checkbox)
 const labThr=k=>Math.max(2,Math.round(LABMIN/Math.max(k,1)));   // zoom in -> lower cutoff -> more labels
 function labVisible(d){return allLab||d.scc||d.deg>=labThr(curK);}
 function applyLabels(){if(egoOn||soloB)return;labels.style('display',d=>labVisible(d)?null:'none');}
+// ---- flocking: cohere each sector to its own region; avoidance reserves room for shown labels ----
+const BUCKETS=[...new Set(NODES.map(d=>d.bucket))];
+let clustered=true;
+function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB)*2*Math.PI-Math.PI/2;
+ return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*0.31:H()/2+Math.sin(a)*Math.min(H(),1000)*0.34;}
+const ancX=d=>clustered?bAnchor(d.bucket,'x'):W()/2;
+const ancY=d=>clustered?bAnchor(d.bucket,'y'):H()/2;
+const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
  .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?64:88).strength(.28))
  .force('charge',d3.forceManyBody().strength(-190).distanceMax(650))
- .force('center',d3.forceCenter(W()/2,H()/2))
- .force('x',d3.forceX(W()/2).strength(.06)).force('y',d3.forceY(H()/2).strength(.06))
- .force('collide',d3.forceCollide().radius(d=>rad(d)+16).strength(.92))
+ .force('x',d3.forceX(ancX).strength(.12)).force('y',d3.forceY(ancY).strength(.13))
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+15+labPad(d)).strength(.95))
  .on('tick',tick);
 function tick(){
  const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
@@ -463,6 +471,7 @@ svg.call(zoomB);
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
 document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
+document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;fitted=false;sim.alpha(.6).restart();};
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
 const q=document.getElementById('q'), qres=document.getElementById('qres');
