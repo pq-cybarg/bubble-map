@@ -43,6 +43,8 @@ python3 models/graph/regional_leverage.py
 
 hr "[6b] Flow of funds + housing/CRE re-priced in GOLD & SILVER (1998-2026)"
 python3 models/graph/gold_silver_reprice.py
+python3 models/graph/multi_denomination.py
+python3 models/graph/build_multidenom.py
 
 hr "[6c] Defense leg: primes/Anduril/Palantir x rare-earth chokepoint"
 python3 models/graph/defense_web.py | tail -20
