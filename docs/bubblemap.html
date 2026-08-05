@@ -35,6 +35,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
+.sect text{font:800 30px Georgia,serif;fill:#7b2d2610;letter-spacing:.12em;pointer-events:none;text-transform:uppercase}
 .lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
 .lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
 #tip{position:absolute;z-index:9;pointer-events:none;display:none;max-width:280px;background:#1c1b19f2;color:#f5f1e6;font-size:12px;line-height:1.45;padding:8px 10px;border-radius:7px;box-shadow:0 4px 14px #0004}
@@ -117,13 +118,20 @@ function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB
 const ancX=d=>clustered?bAnchor(d.bucket,'x'):W()/2;
 const ancY=d=>clustered?bAnchor(d.bucket,'y'):H()/2;
 const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
+const BSECT={"ai": "AI core", "capital": "Capital / credit", "crypto": "Crypto", "defense": "Defense / security", "state": "State / regulator", "commodity": "Commodities / energy", "identity": "Identity / telecom", "macro": "Macro / data", "pqc": "PQC / quantum", "person": "Person", "other": "Infra / other"};
+const sectorG=root.insert('g',':first-child').attr('class','sect');   // faint sector headers, behind graph, pan/zoom with it
+function drawSectors(){sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b).join('text')
+ .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')).attr('text-anchor','middle')
+ .text(b=>(BSECT[b]||b).toUpperCase());}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
- .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?64:88).strength(.28))
- .force('charge',d3.forceManyBody().strength(-190).distanceMax(650))
- .force('x',d3.forceX(ancX).strength(.12)).force('y',d3.forceY(ancY).strength(.13))
- .force('collide',d3.forceCollide().radius(d=>rad(d)+15+labPad(d)).strength(.95))
+ .velocityDecay(.55).alphaDecay(.035)              // more friction + faster cool-down => settles, no lingering jitter
+ .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?46:64).strength(.12))  // weaker links so sectors hold
+ .force('charge',d3.forceManyBody().strength(-90).distanceMax(340))                                       // local repulsion only
+ .force('x',d3.forceX(ancX).strength(.34)).force('y',d3.forceY(ancY).strength(.36))                       // strong sector cohesion
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+11+labPad(d)).strength(.9).iterations(2))            // cleaner overlap resolution
  .on('tick',tick);
+drawSectors();
 function tick(){
  const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
  px(link);px(linkHit);
@@ -131,7 +139,7 @@ function tick(){
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
  if(sim.alpha()<0.06){                                   // settled
    if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
-   else if(!fitted){fitted=true; fit(); applyLabels();}   // else auto-frame (kills empty space)
+   else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop();}   // frame, label, then FREEZE (no residual jitter)
  }
 }
 // keep node/line sizes usable at any zoom: enlarge when zoomed OUT (k<1), constant lines via CSS
@@ -155,7 +163,10 @@ svg.call(zoomB);
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
 document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
-document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;fitted=false;sim.alpha(.6).restart();};
+document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
+ sim.force('x').strength(clustered?.34:.05);sim.force('y').strength(clustered?.36:.05);   // free layout = weak center only
+ fitted=false;sim.alpha(.7).restart();}
+document.getElementById('tCluster').addEventListener('change',drawSectors);;
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
 const q=document.getElementById('q'), qres=document.getElementById('qres');
