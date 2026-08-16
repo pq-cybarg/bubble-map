@@ -359,8 +359,8 @@ text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;strok
 #btns{position:absolute;bottom:10px;right:14px;z-index:6;display:flex;gap:6px}
 #btns button{font:12px inherit;cursor:pointer;background:var(--paper);color:var(--ac2);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
 #btns button:hover{background:#1f4e7910}
-line{vector-effect:non-scaling-stroke}
-line.hl{stroke:#1f4e79!important;opacity:.95!important}
+line,path{vector-effect:non-scaling-stroke}
+line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 #panel .ea{color:#9a6a1a;font-weight:600}#panel .amt{color:#2e6b3e;font-weight:600}
 </style></head><body>__NAV__
 <div id=stage>
@@ -393,13 +393,13 @@ const id2n=new Map(NODES.map(n=>[n.id,n]));
 const pslug=s=>'p-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const tip=document.getElementById('tip');
 const lerp=(a,b)=>typeof a==='object'?a.id:a; // source/target id helper
-const link=root.append('g').selectAll('line').data(LINKS).join('line')
+const link=root.append('g').selectAll('path').data(LINKS).join('path').attr('fill','none')
  .attr('stroke',d=>d.layer==='financial'?(d.circular?'#c0392b':'#9a8f78'):'#d8d0bd')
  .attr('stroke-width',d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75))
  .attr('stroke-dasharray',d=>d.layer==='structural'?'3,3':null).attr('opacity',.55)
  .attr('marker-end',d=>'url(#arr-'+(d.layer==='financial'?'fin':'struct')+')');
 // invisible wide hit-layer so thin edges are hoverable -> deal tooltip
-const linkHit=root.append('g').selectAll('line').data(LINKS).join('line')
+const linkHit=root.append('g').selectAll('path').data(LINKS).join('path').attr('fill','none')
  .attr('stroke','transparent').attr('stroke-width',9).style('cursor','help')
  .on('mouseover',(e,d)=>{const i=link.filter(x=>x===d);i.classed('hl',true);
    tip.style.display='block';
@@ -428,6 +428,14 @@ function labVisible(d){return allLab||d.scc||d.deg>=labThr(curK);}
 function applyLabels(){if(egoOn||soloB)return;labels.style('display',d=>labVisible(d)?null:'none');}
 // ---- flocking: cohere each sector to its own region; avoidance reserves room for shown labels ----
 const BUCKETS=[...new Set(NODES.map(d=>d.bucket))];
+// order sectors so heavily-linked buckets sit ADJACENT on the ring -> shorter cross-sector edges
+(function(){const AFF={};BUCKETS.forEach(a=>AFF[a]={});
+ LINKS.forEach(l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));
+  if(s&&t&&s.bucket!==t.bucket){AFF[s.bucket][t.bucket]=(AFF[s.bucket][t.bucket]||0)+1;AFF[t.bucket][s.bucket]=(AFF[t.bucket][s.bucket]||0)+1;}});
+ const rem=new Set(BUCKETS),ord=[],tot=b=>Object.values(AFF[b]).reduce((x,y)=>x+y,0);
+ let cur=[...BUCKETS].sort((a,b)=>tot(b)-tot(a))[0];ord.push(cur);rem.delete(cur);
+ while(rem.size){let best=null,bs=-1;rem.forEach(r=>{const s=AFF[cur][r]||0;if(s>bs){bs=s;best=r;}});ord.push(best);rem.delete(best);cur=best;}
+ BUCKETS.length=0;ord.forEach(b=>BUCKETS.push(b));})();
 let clustered=true;
 function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB)*2*Math.PI-Math.PI/2;
  return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*0.31:H()/2+Math.sin(a)*Math.min(H(),1000)*0.34;}
@@ -449,7 +457,7 @@ const sim=d3.forceSimulation(NODES)
  .on('tick',tick);
 drawSectors();
 function tick(){
- const px=s=>s.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y).attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+ const px=s=>s.attr('d',d=>{const sx=d.source.x,sy=d.source.y,tx=d.target.x,ty=d.target.y,dx=tx-sx,dy=ty-sy,L=Math.hypot(dx,dy)||1,off=Math.min(L*0.16,70),cx=(sx+tx)/2-dy/L*off,cy=(sy+ty)/2+dx/L*off;return 'M'+sx+','+sy+'Q'+cx+','+cy+' '+tx+','+ty;});
  px(link);px(linkHit);
  node.attr('transform',d=>`translate(${d.x},${d.y})`);
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
