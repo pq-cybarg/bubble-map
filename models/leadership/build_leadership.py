@@ -17,7 +17,9 @@ Ingestion contract (see models/leadership/SCHEMA.md):
   legislators-current.csv -> the open @unitedstates/congress-legislators roster (all 535);
             columns last_name/first_name/type(sen|rep)/state/party/... are auto-mapped.
 """
-import json, os, glob, csv, html, re
+import json, os, glob, csv, html, re, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "graph"))
+import nav as _nav   # shared site navbar
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SRC  = os.path.join(ROOT, "data", "leadership", "sources")
@@ -185,7 +187,7 @@ def build_html(recs, by_branch, by_level, current_as_of):
         rows_by.setdefault((r["level"], r["branch"]), []).append(r)
     order_level=["federal","state","county","municipal","special_district"]
     order_branch=["executive","legislative","judicial","independent","military","law_enforcement","state","local"]
-    parts=[f"<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Leadership map</title><style>{css}</style></head><body><main>"]
+    parts=[f"<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Leadership map</title><style>{css}</style></head><body>{_nav.navbar('Leadership', disclaimer=True)}<main>"]
     parts.append("<h1>Leadership map</h1>")
     parts.append(f"<p class=muted>A point-in-time directory of officeholders (current as of <b>{esc(current_as_of)}</b>). "
                  f"{len(recs)} records across {len(by_level)} levels. Separate overlay — NOT part of the formally-verified funding graph. "
