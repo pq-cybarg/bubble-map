@@ -267,6 +267,37 @@
     ],
     "reading": "M2 grew 4.4x; consumer prices and wages rose under half as fast; assets absorbed the gap and gold/silver exceeded it. Monetary expansion is the leading candidate mechanism and is strongly ASSOCIATED with the asset-inflation term - but no single money aggregate explains the cross-asset dispersion (gold ran ~2x M2, homes ~0.7x), and confounders (globalisation goods-disinflation, rates, financialisation, EM central-bank gold buying, real earnings growth) are uncontrolled. Association, not proof of cause."
   },
+  "conservation": {
+    "real_aggregate_nw_growth": 2.0,
+    "rows": [
+      {
+        "asset": "Gold (oz)",
+        "claim_ratio": 0.237,
+        "transfer_to_holders": 0.763
+      },
+      {
+        "asset": "Silver (oz)",
+        "claim_ratio": 0.354,
+        "transfer_to_holders": 0.646
+      },
+      {
+        "asset": "S&P 500 (index)",
+        "claim_ratio": 0.532,
+        "transfer_to_holders": 0.468
+      },
+      {
+        "asset": "Home - Case-Shiller (constant-quality)",
+        "claim_ratio": 0.628,
+        "transfer_to_holders": 0.372
+      }
+    ],
+    "unit_growth": {
+      "equity_shares": 0.01,
+      "gold_above_ground": 0.017,
+      "housing_units": 0.011
+    },
+    "identity_exact": true
+  },
   "theorem": "Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, so labor's exchange ratio against an asset does not depend on which money it is quoted in.",
   "invariance_check": {
     "via_usd": 27.439228834870075,

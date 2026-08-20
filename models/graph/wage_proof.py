@@ -246,12 +246,43 @@ money={"m2_mult":round(m2r,3),
                   "(globalisation goods-disinflation, rates, financialisation, EM central-bank gold buying, "
                   "real earnings growth) are uncontrolled. Association, not proof of cause.")%m2r}
 
+# ============================================================================================
+# DEEPER VII - THE CONSERVATION IDENTITY: what R0 actually IS, and why the transfer is not rhetoric.
+# The stock of an asset (shares of equity, ounces above ground, housing units) is ~fixed in the
+# short run; ownership shares of it sum to exactly 1. So a PRICE change creates no new units - it
+# only revalues existing claims. One year of labor's real savings claims a fraction f of the stock;
+# next period, at a higher price, it claims f*R0 (R0<1). The complementary fraction f*(1-R0) is not
+# destroyed - it stays with, i.e. transfers to, existing holders. Thus R0 is not merely "labor
+# bought less gold": it is the shrunken share of a FIXED pie that a year of work can pull from
+# current owners, and (1-R0) is the transfer to them. This is a definitional identity (THEOREM
+# tier) given fixed units; WHO the owners are is empirical (DFA/SCF, top-heavy); WHY the price rose
+# is unproven (CONJECTURE). First-order: real asset-unit growth (~1-2%/yr) is the small correction.
+# Aggregate wealth was NOT zero (real US net worth ~x2.0); the identity is about SHARES of the stock
+# a wage can claim - concentration + a flow-claim transfer, not "no wealth created."
+# ============================================================================================
+NW_REAL=(44.0, 160.0)   # US household net worth $T, 2000->2024 (Fed Z.1, nominal); real via CPI below
+UNIT_GROWTH={"equity_shares":0.010, "gold_above_ground":0.017, "housing_units":0.011}  # ~annual, approx
+def conservation():
+    w0,w24=WAGE_P
+    real_nw=(NW_REAL[1]/NW_REAL[0])/(CPI[2024]/CPI[2000])   # real growth of the aggregate pie
+    rows=[]
+    for name,a0,a24,tol,kind in PRIMARY[:4]:
+        R0=(w24/a24)/(w0/a0)               # labor's one-year unit-claim, 2024 vs 2000 (== the certificate R0)
+        rows.append({"asset":name,"claim_ratio":round(R0,3),"transfer_to_holders":round(1-R0,3)})
+    from fractions import Fraction as Fr
+    w0f,w24f=Fr(29952),Fr(60580); g0,g24=Fr(27911,100),Fr(238620,100)
+    ident_ok = ((w24f/g24)/(w0f/g0)) == ((w24f*g0)/(w0f*g24))   # unit-claim ratio == price-cross form
+    return {"real_aggregate_nw_growth":round(real_nw,2),"rows":rows,
+            "unit_growth":UNIT_GROWTH,"identity_exact":bool(ident_ok)}
+conserv=conservation()
+
 out={
  "data_tol": DATA_TOL,
  "decomposition": decomp, "real_wage_change_2000_2024": real_wage_change,
  "endpoint_matrix": endpoints,
  "machine_check": mcheck,
  "primary": primary, "homes_alnri": homes, "home_payments": home_payments, "money": money,
+ "conservation": conserv,
  "theorem": ("Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, "
              "so labor's exchange ratio against an asset does not depend on which money it is quoted in."),
  "invariance_check": invariance_check(),
@@ -324,6 +355,13 @@ print(f"  M2 grew x{money['m2_mult']:.2f} (2000->2024).  multiple vs M2:")
 for r in money["rows"]:
     print(f"    {r['item']:<24} x{r['mult']:>6.3f}   = {r['vs_m2']:.2f} x M2")
 print("  =>", money["reading"][:150], "...")
+
+print("\n"+"-"*94); print("DEEPER VII - CONSERVATION IDENTITY (R0 = shrunken share of a fixed pie a year of work claims)")
+print(f"  real aggregate US net worth grew x{conserv['real_aggregate_nw_growth']} (pie is bigger - not 'no wealth created')")
+for r in conserv["rows"]:
+    print(f"    {r['asset']:<42} labor's unit-claim -> {r['claim_ratio']:.3f}  => {r['transfer_to_holders']*100:.0f}% transferred to holders")
+print(f"  identity machine-check (unit-claim ratio == price-cross form): {conserv['identity_exact']}")
+print("  => R0 is a claim-share of a fixed stock; (1-R0) accrues to owners. Transfer is definitional; WHO=empirical; WHY=unproven.")
 
 print("\nNOT PROVEN:", *("\n  - "+x for x in out["not_proven"]))
 

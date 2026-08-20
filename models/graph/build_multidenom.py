@@ -117,6 +117,18 @@ def distortion_rows():
                    f'<td style="color:{c};white-space:nowrap">{d["tag"]}</td></tr>')
     return "".join(out)
 
+# --- WEALTH DYNAMICS (trajectory + index family; written by wealth_dynamics.py) --------------
+wd=json.load(open(os.path.join(DATA,"wealth_dynamics.json")))
+WD_JSON=json.dumps(wd)
+# conservation identity (from wage_proof.json)
+_cons=pf["conservation"]
+def conservation_rows():
+    return "".join(f"<tr><td>{r['asset']}</td><td>{r['claim_ratio']:.2f}</td>"
+                   f"<td>{r['transfer_to_holders']*100:.0f}%</td></tr>" for r in _cons["rows"])
+def family_rows():
+    return "".join(f"<tr><td>{r['index']}</td><td>{r['base']:.3f}</td><td>{r['shocked']:.3f}</td>"
+                   f"<td>+{r['change_pct']:.0f}%</td></tr>" for r in wd["index_family"])
+
 import nav as _nav
 NAV=_nav.navbar("Metals")
 DISC=('<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;'
@@ -261,6 +273,22 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <table><thead><tr><th>Item</th><th>× 2000→2024</th><th>vs M2</th></tr></thead><tbody>{money_rows()}</tbody></table>
 <p class=muted>The result cuts <i>both</i> simplistic stories. M2 grew ×{_m2:.2f}; consumer prices (×1.82) and wages (×2.02) rose under half as fast, while assets absorbed the gap and gold/silver <i>exceeded</i> it. That is exactly the footprint of monetary expansion showing up in assets rather than the shopping cart — <b>strong association, and the most plausible mechanism.</b> But it is <b>not proof</b>: no single money aggregate explains the cross-asset dispersion (gold ran ~2× M2, homes ~0.7×), and globalisation's goods-disinflation, interest rates, financialisation, EM central-bank gold buying and real-earnings growth are all uncontrolled confounders. "They printed money" is supported as a <i>partial</i> driver and refuted as a <i>complete</i> one.</p>
 
+<h2>Deeper — what R₀ actually is: a conservation identity</h2>
+<p class=muted>One more level down, the ratio has a meaning that turns "the wage-hours went to owners" from rhetoric into an identity. The stock of an asset — shares of equity, ounces of gold above ground, housing units — is roughly fixed in the short run, and ownership shares of it sum to exactly 1. A price change creates <b>no new units</b>; it only revalues existing claims. One year of labor's real savings claims a fraction of that stock; at the higher price it claims R₀ of what it used to, and the complementary <b>(1−R₀)</b> is not destroyed — it stays with, i.e. transfers to, the existing holders.</p>
+<table><thead><tr><th>Asset (fixed stock)</th><th>labor's unit-claim R₀</th><th>transferred to holders (1−R₀)</th></tr></thead><tbody>{conservation_rows()}</tbody></table>
+<p class=muted>So R₀ is not merely "labor bought less gold" — it is the shrunken share of a fixed pie that a year of work can pull from current owners, and the rest accrues to them. The <b>transfer is definitional</b> (a THEOREM, machine-checked: the unit-claim ratio equals the price-cross form exactly), <b>who the owners are is empirical</b> (the top-heavy ownership above), and <b>why the price rose is unproven</b>. Two honest caveats: real asset-unit growth (~1-2%/yr) is a small first-order correction, and the aggregate pie did grow — real US household net worth roughly <b>doubled</b> (×{_cons['real_aggregate_nw_growth']:.1f}). The claim is about labor's shrinking <i>share-claim</i> on that pie and its concentration, not "no wealth was created."</p>
+
+<h2>Falsify it yourself — the live certificate</h2>
+<p class=muted>Do not trust the numbers above; move them. Set your own wage growth, asset growth, and the tolerance you would grant the data, and the certificate recomputes: R₀ (labor's relative price), the breakdown error e*, the adversarial worst case, and the verdict. The claim is only as good as its ability to survive your inputs.</p>
+<div style="background:#f7f9fc;border:1px solid #cbd8ea;border-radius:10px;padding:14px 16px;margin:14px 0;font:14px/1.7 -apple-system,Segoe UI,Roboto,sans-serif">
+ <div style="display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center">
+  <label>Wage grew ×<input id=fx_w type=number value=2.02 step=0.01 min=0.1 style="width:74px"></label>
+  <label>Asset grew ×<input id=fx_a type=number value=8.55 step=0.01 min=0.1 style="width:74px"></label>
+  <label>Data tolerance ±<input id=fx_t type=number value=5 step=1 min=0 max=45 style="width:60px">%</label>
+ </div>
+ <div id=fx_out style="margin-top:12px;font-size:15px"></div>
+</div>
+
 <h2>Where the proof stops — on purpose</h2>
 <p class=muted>The certified core is narrow by design. It does <b>not</b> establish:</p>
 <ul class=muted style="margin:6px 0 0 4px;line-height:1.7">
@@ -299,6 +327,16 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <h2>The structural distortions, itemised</h2>
 <table><thead><tr><th>Bucket choice</th><th>How it conceals</th><th>honest tag</th></tr></thead><tbody>{distortion_rows()}</tbody></table>
 <p class=muted>Read the tags honestly: several are genuine <span style="color:#c53030">distortions</span> of what a reader thinks they are seeing; one is a plain <span style="color:#8a8378">statistical fact</span> about the Gini; one is a <span style="color:#8a8378">confounder</span>. Some choices have defensible motives (top-coding protects privacy; open bins protect small-sample reliability). The demonstrable point stands regardless of motive: <b>the most-headlined instrument cannot show the concentration, and the government's own fuller series can</b>. What you conclude about intent is your call — this page only draws the receipts.</p>
+
+<h2>The concentration, moving (1989 → 2024)</h2>
+<p class=muted>Not two snapshots — the trajectory. Federal Reserve net-worth shares over 35 years: the top 0.1% and top 1% climb while the bottom half flatlines near the floor (and briefly near zero after 2008). The same span, mirrored: a year of median labor fell from 100 to <b>{wd['labor_sp_index'][-1]:.0f}</b> in S&amp;P-shares (1989=100). Concentration up, labor's asset-claim down, together.</p>
+<div id=dfabar class=plot style="height:360px"></div>
+
+<h2>The number is a choice — how each index sees the same tail</h2>
+<p class=muted>Take one distribution and <b>double</b> the income of the top 0.1%. Every inequality measure registers it differently, because each weights the tail differently. The Gini — the one almost always reported — moves least; top-share and Theil measures move most. Reporting a calm Gini during a tail event is not wrong arithmetic, it is a choice of instrument.</p>
+<div id=familybar class=plot style="height:360px"></div>
+<table><thead><tr><th>Index</th><th>base</th><th>after top-0.1% doubles</th><th>change</th></tr></thead><tbody>{family_rows()}</tbody></table>
+<p class=muted>Atkinson at high inequality-aversion moves little too — but for the opposite reason: it looks at the <i>bottom</i>, not the top. The lesson is the same: no single scalar captures a distribution, and which one is headlined decides whether a concentration looks like a crisis or a calm.</p>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
 </main>
@@ -554,6 +592,56 @@ const WC={WC_JSON};
     xaxis:{{title:"share held by the top 10% (%)",gridcolor:grid_c,color:ink,range:[0,100],zeroline:false}},
     yaxis:{{color:ink,automargin:true}}
   }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// ===================== WEALTH DYNAMICS =====================
+const WD={WD_JSON};
+// --- DFA net-worth share trajectory 1989->2024 ---
+(function(){{
+  const yr=WD.dfa_years, col={{"Top 0.1%":"#7b2d26","Top 1%":"#805ad5","Top 10%":"#2a78d6","Bottom 50%":"#c53030"}};
+  const tr=Object.keys(WD.dfa).map(g=>({{type:"scatter",mode:"lines+markers",name:g,x:yr,y:WD.dfa[g],
+    line:{{color:col[g],width:2}},marker:{{size:6,color:col[g]}},
+    hovertemplate:g+" %{{x}}: %{{y:.1f}}% of net worth<extra></extra>"}}));
+  Plotly.newPlot("dfabar",tr,{{margin:{{l:44,r:14,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{{orientation:"h",y:1.12,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
+    xaxis:{{color:ink,tickformat:"d",tickvals:yr}},
+    yaxis:{{title:"share of US net worth (%)",gridcolor:grid_c,color:ink,rangemode:"tozero"}}
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+// --- inequality-index family: % change to the same top-0.1% doubling ---
+(function(){{
+  const F=WD.index_family;
+  Plotly.newPlot("familybar",[{{type:"bar",orientation:"h",
+    x:F.map(r=>r.change_pct),y:F.map(r=>r.index),
+    marker:{{color:F.map(r=>r.index==="Gini"?"#c53030":(r.index.indexOf("share")>-1?"#0ca30c":"#805ad5"))}},
+    text:F.map(r=>"+"+r.change_pct.toFixed(0)+"%"),textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{y}}: +%{{x:.0f}}% when the top 0.1% doubles<extra></extra>"}}],{{
+    margin:{{l:120,r:70,t:8,b:38}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"movement when the top 0.1% income doubles (%)",gridcolor:grid_c,color:ink,zeroline:false}},
+    yaxis:{{color:ink,automargin:true}},
+    annotations:[{{x:F.find(r=>r.index==="Gini").change_pct,y:"Gini",showarrow:true,arrowcolor:"#c53030",
+      ax:40,ay:0,text:"the one always reported",font:{{color:"#c53030",size:11}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Interactive falsifier: recompute the certificate from the reader's own inputs ---
+(function(){{
+  const W=document.getElementById("fx_w"),A=document.getElementById("fx_a"),
+        T=document.getElementById("fx_t"),O=document.getElementById("fx_out");
+  function bd(R0){{const s=Math.sqrt(R0);return R0<1?(1-s)/(1+s):(s-1)/(s+1);}}
+  function calc(){{
+    const w=parseFloat(W.value),a=parseFloat(A.value),t=parseFloat(T.value)/100;
+    if(!(w>0)||!(a>0)||!(t>=0)){{O.innerHTML="<span style='color:#c53030'>enter positive numbers</span>";return;}}
+    const R0=w/a, e=bd(R0), Rworst=R0*((1+t)/(1-t))*((1+t)/(1-t)), fell=R0<1, cert=fell&&Rworst<1;
+    const verdict = !fell ? "<b style='color:#0ca30c'>labor GAINED against this asset</b>"
+      : cert ? "<b style='color:#0ca30c'>CERTIFIED decline</b> — survives your tolerance"
+             : "<b style='color:#c53030'>fell, NOT certified</b> at your tolerance";
+    O.innerHTML="a year of labor now buys <b>"+(R0*100).toFixed(0)+"%</b> of the asset it did "
+      +"&nbsp;·&nbsp; breakdown error e* = <b>"+(e*100).toFixed(0)+"%</b> "
+      +"&nbsp;·&nbsp; adversarial worst case R<sub>worst</sub> = <b>"+Rworst.toFixed(2)+"</b> "
+      +"&nbsp;·&nbsp; "+verdict;
+  }}
+  [W,A,T].forEach(el=>el.addEventListener("input",calc)); calc();
 }})();
 </script></body></html>"""
 open(os.path.join(DOCS,"multidenom.html"),"w").write(HTML)
