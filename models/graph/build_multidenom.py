@@ -478,10 +478,13 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     marker:{{color:rows.map(r=>r.v>=100?GAIN:LOSS)}},
     text:rows.map(r=>r.v.toFixed(0)),textposition:"outside",textfont:{{color:ink,size:11}},
     hovertemplate:"%{{y}}<br>%{{x:.0f}} of 2000 gold value<extra></extra>"}}],{{
-    margin:{{l:180,r:36,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    xaxis:{{title:"a year's wage in gold, 2024 (2000 = 100)",gridcolor:grid_c,color:ink,range:[0,30],zeroline:false}},
+    margin:{{l:180,r:40,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"a year's wage in gold, 2024 (2000 = 100)",gridcolor:grid_c,color:ink,range:[0,112],zeroline:false}},
     yaxis:{{color:ink,automargin:true}},
-    shapes:[{{type:"line",x0:100,x1:100,y0:-0.5,y1:rows.length-0.5,line:{{color:NEUT,width:1.5,dash:"dash"}}}}]
+    shapes:[{{type:"line",x0:100,x1:100,y0:-0.5,y1:rows.length-0.5,line:{{color:NEUT,width:1.5,dash:"dash"}}}}],
+    annotations:[{{x:100,y:rows.length-1,xanchor:"right",yshift:2,showarrow:false,
+      text:"100 = kept pace with gold (none did)",font:{{color:"#8a8378",size:10.5}},
+      bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -499,8 +502,9 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
       hovertemplate:"%{{x}} · gold idx %{{y:.0f}}<extra></extra>"}}
   ],{{barmode:"group",bargap:0.28,bargroupgap:0.12,
     margin:{{l:44,r:14,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    legend:{{orientation:"h",y:1.12,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
-    xaxis:{{color:ink}},yaxis:{{title:"index (2000 = 100)",gridcolor:grid_c,color:ink,rangemode:"tozero"}}
+    legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
+    xaxis:{{color:ink}},yaxis:{{title:"index (2000 = 100)",gridcolor:grid_c,color:ink,
+      range:[0,Math.max.apply(null,W.regions.map(r=>r.usd_idx[r.usd_idx.length-1]))*1.16]}}
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -511,8 +515,9 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     marker:{{color:[CAT[3],CAT[2],LOSS]}},
     text:vals.map(v=>v.toFixed(1)+" oz"),textposition:"outside",textfont:{{color:ink,size:12}},
     hovertemplate:"%{{x}}<br>%{{y:.1f}} oz gold / yr<extra></extra>"}}],{{
-    margin:{{l:52,r:14,t:8,b:52}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    xaxis:{{color:ink,automargin:true}},yaxis:{{title:"oz gold per year of work (2024)",gridcolor:grid_c,color:ink,rangemode:"tozero"}}
+    margin:{{l:52,r:14,t:16,b:52}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{color:ink,automargin:true}},yaxis:{{title:"oz gold per year of work (2024)",gridcolor:grid_c,color:ink,
+      range:[0,Math.max.apply(null,vals)*1.16]}}
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -541,11 +546,11 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     hovertemplate:"%{{y}}<br>overturning needs >%{{x:.0f}}% error in every input<extra></extra>"}}],{{
     margin:{{l:150,r:120,t:8,b:40}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
     xaxis:{{title:"breakdown error e* — uniform input error needed to overturn the decline",
-      gridcolor:grid_c,color:ink,range:[0,46],zeroline:false}},
+      gridcolor:grid_c,color:ink,range:[0,54],zeroline:false}},
     yaxis:{{color:ink,automargin:true}},
     shapes:[{{type:"line",x0:tol,x1:tol,y0:-0.5,y1:rows.length-0.5,line:{{color:"#c53030",width:1.5,dash:"dash"}}}}],
     annotations:[{{x:tol,y:rows.length-0.5,text:"data tolerance "+tol.toFixed(0)+"%",showarrow:false,
-      yshift:10,font:{{color:"#c53030",size:11}}}}]
+      yshift:12,xanchor:"left",font:{{color:"#c53030",size:11}},bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -596,7 +601,7 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     xaxis:{{color:ink,tickangle:-30,automargin:true}},
     yaxis:{{title:"growth 2000→2024, as a multiple of M2 growth",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
     shapes:[{{type:"line",x0:-0.5,x1:rows.length-0.5,y0:1,y1:1,line:{{color:"#c53030",width:1.5,dash:"dash"}}}}],
-    annotations:[{{x:rows.length-1,y:1,text:"tracked M2",showarrow:false,yshift:12,font:{{color:"#c53030",size:11}}}}]
+    annotations:[{{x:rows.length-1,y:1,text:"= tracked M2",showarrow:false,yshift:11,xanchor:"right",font:{{color:"#c53030",size:11}},bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -610,11 +615,13 @@ const WC={WC_JSON};
     text:B.map(b=>b.open?b.share.toFixed(0)+"%  ← OPEN":b.share.toFixed(0)+"%"),
     textposition:"outside",textfont:{{color:ink,size:11}},
     hovertemplate:"%{{x}}<br>%{{y:.1f}}% of households"+"<extra></extra>"}}],{{
-    margin:{{l:44,r:14,t:8,b:70}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    margin:{{l:44,r:14,t:16,b:72}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
     xaxis:{{color:ink,tickangle:-35,automargin:true}},
-    yaxis:{{title:"share of US households (%)",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
-    annotations:[{{x:B.length-1,y:B[B.length-1].share,yshift:34,showarrow:false,
-      text:"$200k → billionaire,<br>one undivided bin",font:{{color:"#c53030",size:11}}}}]
+    yaxis:{{title:"share of US households (%)",gridcolor:grid_c,color:ink,
+      range:[0,Math.max.apply(null,B.map(b=>b.share))*1.22]}},
+    annotations:[{{x:B.length-1,y:B[B.length-1].share,yshift:30,showarrow:true,arrowcolor:"#c53030",ax:0,ay:-6,
+      xanchor:"right",text:"$200k → billionaire,<br>one undivided bin",align:"right",
+      font:{{color:"#c53030",size:11}},bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -629,8 +636,9 @@ const WC={WC_JSON};
     margin:{{l:90,r:80,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
     xaxis:{{title:"share of US net worth (%)",gridcolor:grid_c,color:ink,range:[0,42],zeroline:false}},
     yaxis:{{color:ink,automargin:true}},
-    annotations:[{{x:WC.top_0_1_share,y:"Top 1%",showarrow:true,arrowcolor:"#7b2d26",ax:0,ay:-26,
-      text:"top 0.1% = "+WC.top_0_1_share+"%",font:{{color:"#7b2d26",size:11}}}}]
+    annotations:[{{x:WC.top_0_1_share,y:"Top 1%",showarrow:true,arrowcolor:"#7b2d26",ax:36,ay:-4,
+      xanchor:"left",text:"of which top 0.1% = "+WC.top_0_1_share+"%",font:{{color:"#7b2d26",size:11}},
+      bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -670,11 +678,13 @@ const WD={WD_JSON};
     marker:{{color:F.map(r=>r.index==="Gini"?"#c53030":(r.index.indexOf("share")>-1?"#0ca30c":"#805ad5"))}},
     text:F.map(r=>"+"+r.change_pct.toFixed(0)+"%"),textposition:"outside",textfont:{{color:ink,size:11}},
     hovertemplate:"%{{y}}: +%{{x:.0f}}% when the top 0.1% doubles<extra></extra>"}}],{{
-    margin:{{l:120,r:70,t:8,b:38}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    xaxis:{{title:"movement when the top 0.1% income doubles (%)",gridcolor:grid_c,color:ink,zeroline:false}},
+    margin:{{l:130,r:96,t:8,b:40}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"movement when the top 0.1% income doubles (%)",gridcolor:grid_c,color:ink,
+      zeroline:false,range:[0,Math.max.apply(null,F.map(r=>r.change_pct))*1.18]}},
     yaxis:{{color:ink,automargin:true}},
     annotations:[{{x:F.find(r=>r.index==="Gini").change_pct,y:"Gini",showarrow:true,arrowcolor:"#c53030",
-      ax:40,ay:0,text:"the one always reported",font:{{color:"#c53030",size:11}}}}]
+      ax:78,ay:0,xanchor:"left",text:"the one<br>always reported",align:"left",
+      font:{{color:"#c53030",size:11}},bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
@@ -711,14 +721,17 @@ const WD={WD_JSON};
       text:price.map(v=>"×"+v.toFixed(2)),textposition:"outside",textfont:{{color:ink,size:11}},
       hovertemplate:"%{{x}} price ×%{{y:.2f}}<extra></extra>"}},
     {{type:"bar",name:"principal driver × (earnings / rent / money)",x:names,y:fund,marker:{{color:dcol}},
-      text:fund.map((v,i)=>"×"+v.toFixed(2)+" "+dlab[i]),textposition:"outside",textfont:{{color:ink,size:10.5}},
+      text:fund.map((v,i)=>"×"+v.toFixed(2)),textposition:"outside",textfont:{{color:ink,size:11}},
       customdata:dlab,hovertemplate:"%{{x}} driver ×%{{y:.2f}} (%{{customdata}})<extra></extra>"}}
-  ],{{barmode:"group",bargap:0.3,bargroupgap:0.12,
-    margin:{{l:44,r:14,t:8,b:46}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
-    xaxis:{{color:ink}},yaxis:{{title:"growth multiple 2000→2024",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
-    annotations:[{{x:"Gold",y:M.gold.m2_mult,yshift:26,showarrow:false,
-      text:"gold has no cashflow —<br>its driver is monetary (M2)",font:{{color:"#8a8378",size:10}}}}]
+  ],{{barmode:"group",bargap:0.32,bargroupgap:0.12,
+    margin:{{l:48,r:16,t:14,b:36}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{{orientation:"h",y:1.16,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
+    xaxis:{{color:ink}},
+    yaxis:{{title:"growth multiple 2000→2024",gridcolor:grid_c,color:ink,
+      range:[0,Math.max.apply(null,price)*1.16]}},
+    annotations:[{{xref:"paper",yref:"paper",x:0.16,y:0.97,xanchor:"center",showarrow:false,
+      text:"gold has no cashflow —<br>its driver is monetary (M2)",align:"center",
+      font:{{color:"#8a8378",size:10.5}},bgcolor:"rgba(255,253,248,0.94)",bordercolor:"#e4ddcc",borderpad:3}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
