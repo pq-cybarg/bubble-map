@@ -192,6 +192,12 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
  .story-tag{{display:inline-block;font:11px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7b2d26;background:#f3eedf;border-radius:20px;padding:6px 11px;margin:16px 0 2px;text-decoration:none;border:1px solid #e7ddc6}}
  a.story-tag:hover{{background:#e9e0c9}}
  @media(max-width:1000px){{ .split{{grid-template-columns:1fr;gap:16px}} .col-story{{padding:4px 18px 24px}} }}
+ @media(min-width:1001px){{
+  .col-story{{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}}
+  .col-story .chunk{{opacity:.32;transition:opacity .5s ease}}
+  .col-story .chunk.active{{opacity:1}}
+  .col-story::-webkit-scrollbar{{width:8px}} .col-story::-webkit-scrollbar-thumb{{background:#e0d7c2;border-radius:8px}}
+ }}
 </style></head><body>{NAV}{DISC}
 <main class=wide>
 <div class=split>
@@ -858,6 +864,43 @@ const WD={WD_JSON};
   }}
   document.getElementById("cache_export").addEventListener("click",()=>dl("eb_archive_latest","bubble-map-metals-data-latest.json"));
   document.getElementById("cache_first").addEventListener("click",()=>dl("eb_archive_first","bubble-map-metals-data-first-seen.json"));
+}})();
+
+// --- Scrollytelling: chunk the story rail; glide the active chunk to the chart in view ---
+(function(){{
+  const story=document.querySelector(".col-story"); if(!story) return;
+  // group each story-tag + its following siblings (until the next tag) into a .chunk
+  const kids=Array.prototype.slice.call(story.children); let groups=[], g=null;
+  kids.forEach(function(el){{
+    if(el.classList && el.classList.contains("story-tag")){{
+      const h=el.getAttribute&&el.getAttribute("href");
+      g={{sec:(h?h.slice(1):"close"), els:[el]}}; groups.push(g);
+    }} else if(g){{ g.els.push(el); }}
+  }});
+  groups.forEach(function(gr){{
+    const d=document.createElement("div"); d.className="chunk"; d.setAttribute("data-sec",gr.sec);
+    story.insertBefore(d, gr.els[0]); gr.els.forEach(function(e){{ d.appendChild(e); }});
+  }});
+  const anchors=Array.prototype.slice.call(document.querySelectorAll(".col-data [id^='s-']"));
+  const mq=window.matchMedia("(min-width:1001px)"); let last=null;
+  function sync(){{
+    if(!mq.matches) return;
+    const y=window.innerHeight*0.34; let act=anchors.length?anchors[0].id:null;
+    anchors.forEach(function(a){{ if(a.getBoundingClientRect().top<=y) act=a.id; }});
+    const atBottom=(window.innerHeight+window.scrollY)>=(document.body.scrollHeight-4);
+    Array.prototype.slice.call(story.querySelectorAll(".chunk")).forEach(function(c){{
+      const sec=c.getAttribute("data-sec");
+      c.classList.toggle("active",(sec===act)||(atBottom&&sec==="close"));
+    }});
+    const target = atBottom ? story.querySelector('.chunk[data-sec="close"]')
+                            : story.querySelector('.chunk[data-sec="'+act+'"]');
+    if(target && target!==last){{
+      story.scrollTo({{top:(window.scrollY<40?0:Math.max(0,target.offsetTop-12)),behavior:"smooth"}}); last=target;
+    }}
+  }}
+  let tick=false;
+  window.addEventListener("scroll",function(){{ if(!tick){{ tick=true; requestAnimationFrame(function(){{ sync(); tick=false; }}); }} }},{{passive:true}});
+  window.addEventListener("resize",sync); sync();
 }})();
 </script></body></html>"""
 open(os.path.join(DOCS,"multidenom.html"),"w").write(HTML)
