@@ -189,14 +189,15 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
  .lead{{font-size:19px;line-height:1.6;color:#33312c}}
  .aud{{background:#f7f9fc;border:1px solid #cbd8ea;border-radius:9px;padding:11px 15px;margin:10px 0;font-size:15.5px;line-height:1.62}}
  .aud .who{{display:block;color:#1f4e79;font-weight:700;margin-bottom:3px}}
- .story-tag{{display:inline-block;font:11px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7b2d26;background:#f3eedf;border-radius:20px;padding:6px 11px;margin:6px 0 2px}}
+ .story-tag{{display:inline-block;font:11px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7b2d26;background:#f3eedf;border-radius:20px;padding:6px 11px;margin:16px 0 2px;text-decoration:none;border:1px solid #e7ddc6}}
+ a.story-tag:hover{{background:#e9e0c9}}
  @media(max-width:1000px){{ .split{{grid-template-columns:1fr;gap:16px}} .col-story{{padding:4px 18px 24px}} }}
 </style></head><body>{NAV}{DISC}
 <main class=wide>
 <div class=split>
 <section class="col col-data">
 <div class=colhead>The evidence — data, proof &amp; its limits</div>
-<h1>Value in three monies</h1>
+<h1 id=s-monies>Value in three monies</h1>
 <p class=muted>Every asset indexed to its base year (=100), then held to a constant monetary unit — US&nbsp;dollars, then ounces of gold, then ounces of silver, at the price prevailing in each year. A number that climbs in dollars often sits flat or falls once the money itself stops moving.</p>
 
 <div>
@@ -221,7 +222,7 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <h2>Gold / silver ratio — annual</h2>
 <table><thead><tr><th>Year</th><th>Gold $/oz</th><th>Silver $/oz</th><th>GSR</th></tr></thead><tbody>{gsr_rows()}</tbody></table>
 
-<h1 style="margin-top:56px">Wages in three monies</h1>
+<h1 id=s-wages style="margin-top:56px">Wages in three monies</h1>
 <p class=muted>The same lens, turned on labor. A year's <b>pay</b> — by occupation, by region, gig versus traditional — held to US dollars, then to ounces of gold, then to ounces of silver at the price prevailing in each year. Wages roughly <b>doubled in dollars</b> since 2000. In gold they fell to a fifth. Figures are representative BLS annual means (occupations, regions) and the federal statutory minimum; approximate and directional, denomination is an overlay lens not proof.</p>
 
 <div>
@@ -258,7 +259,7 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <table><thead><tr><th>Occupation</th><th>USD 2000</th><th>USD 2024</th><th>USD idx</th><th>Gold-oz 2000</th><th>Gold-oz 2024</th><th>Gold idx</th><th>Silver idx</th></tr></thead><tbody>{wage_rows()}</tbody></table>
 <p class=muted>Read the two gold columns: a year's minimum-wage work bought {_mw['gold'][0]:.0f} ounces of gold in 2000 and {_mw['gold'][-1]:.0f} in 2024; the average job, {_all['gold'][0]:.0f} then {_all['gold'][-1]:.0f}. The USD-index column climbs past 190 for almost every row — the same wage, told in two monies, tells opposite stories.</p>
 
-<h1 style="margin-top:56px">What can actually be proven</h1>
+<h1 id=s-proof style="margin-top:56px">What can actually be proven</h1>
 <p class=muted>Everything above is an <i>overlay</i>. "Wages fell in gold" is nearly a tautology — it only re-denominates, and it privileges gold, so a critic answers "gold bubbled." This section keeps only what survives <i>every</i> such objection, and certifies exactly how un-handwavable that core is. Three tiers of certainty; the wage figures are representative and rounded, so only <b>directions</b>, never magnitudes, are claimed as proven.</p>
 
 <div class=k style="display:block;background:#f7f9fc;border-color:#cbd8ea">
@@ -273,7 +274,7 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <table><thead><tr><th>Numeraire</th><th>labor buys, 2000</th><th>labor buys, 2024</th><th>% of 2000</th><th>breakdown e*</th><th>verdict</th></tr></thead><tbody>{proof_rows("All occupations (mean wage)")}</tbody></table>
 <p class=muted>Same test on the federal minimum wage is stronger still (it fell furthest): certified against gold, silver and the S&amp;P; the two hard-money columns need &gt;33% uniform error to overturn.</p>
 
-<h2>Deeper — <i>where</i> did the decline happen? (real wages vs asset inflation)</h2>
+<h2 id=s-decomp>Deeper — <i>where</i> did the decline happen? (real wages vs asset inflation)</h2>
 <p class=muted>The invariance theorem says the ratio fell; it does not say where. Any labor:asset ratio factors <b>exactly</b> into two observable pieces — labor priced in the <i>consumer basket</i> (the real wage) times the consumer basket priced in the <i>asset</i> (asset inflation in wage-hours):</p>
 <div class=k style="display:block;background:#f7fbf7;border-color:#bfe0bf">
 labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b style="color:#c53030">(CPI:asset)</b>. &nbsp;By the CPI lens the real consumption wage <b style="color:#0ca30c">rose {_realwage:+.1f}%</b> from 2000 to 2024 — workers did <b>not</b> lose grocery-store power. The entire labor:asset collapse is the second term: <b style="color:#c53030">asset prices inflated 2×-5× in wage-hours</b>. Labor's claim on the <i>consumption</i> economy held; its claim on the <i>store-of-value</i> economy collapsed.
@@ -281,12 +282,12 @@ labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b
 <div id=decompbar class=plot style="height:340px"></div>
 <p class=muted><b>This split is model-dependent</b> — it trusts the CPI, which is contested (hedonic and substitution adjustments; alternative indices show higher inflation). If true inflation were understated, more of the fall would be lost real wages and less would be asset inflation. So the decomposition sits <i>below</i> the theorem in certainty: illuminating, but resting on a disputed deflator. The <b>total</b> labor:asset decline uses no CPI at all and stays certified.</p>
 
-<h2>Deeper — is it just a cherry-picked endpoint?</h2>
+<h2 id=s-endpoint>Deeper — is it just a cherry-picked endpoint?</h2>
 <p class=muted>Recompute labor's relative price for <i>every</i> start year → 2024, not only 2000. Cells show the 2024 value as a share of that start year (★ = certified, e* &gt; {_ptol:.0f}%).</p>
 <table><thead><tr><th>Numeraire</th>{_ep_head}</tr></thead><tbody>{_ep_body}</tbody></table>
 <p class=muted>Honest reading: the decline is strongest and certified from a <b>2000 or 2007</b> base (and, for equities, 2013). Measured from the <b>recent decade</b> it is milder and <i>not</i> certified — gold and silver were already elevated by 2013, so labor roughly held or even gained against them since. This is therefore a <b>long-horizon</b> (quarter-century) claim, and it is stated as one — it is not a claim that labor collapsed against hard money over the last ten years.</p>
 
-<h2>Deeper — the theorem is machine-checked</h2>
+<h2 id=s-machine>Deeper — the theorem is machine-checked</h2>
 <p class=muted>The two algebraic identities are not asserted in prose; the build recomputes each one two independent ways in <b>exact rational arithmetic</b> (Python <code>fractions</code>, zero floating-point error) and checks they are identical:</p>
 <div class=k style="display:block;background:#f7f9fc;border-color:#cbd8ea;font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif">
 <b>{'✓' if _mck['invariance_exact'] else '✗'}</b> numeraire-invariance &nbsp;(k·p<sub>A</sub>)/(k·p<sub>B</sub>) = p<sub>A</sub>/p<sub>B</sub> — exact<br>
@@ -295,12 +296,12 @@ labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b
 <b style="color:#0ca30c">ALL CHECKS PASS = {str(_mck['all_pass']).upper()}</b> &nbsp;<span class=muted>(re-verified on every site build)</span>
 </div>
 
-<h2>Deeper — authoritative series close the gap</h2>
+<h2 id=s-primary>Deeper — authoritative series close the gap</h2>
 <p class=muted>The 15% tolerance above was a stand-in for rough figures. Swap in named primary series — BLS median usual weekly earnings, LBMA gold &amp; silver, S&amp;P annual close, S&amp;P CoreLogic Case-Shiller (constant-quality) and Census median home — each with its own <i>measurement</i> tolerance (how precisely the annual number is known), and run the certificate as exact interval arithmetic per input. R<sub>worst</sub> = R₀·(1+t<sub>w</sub>)/(1−t<sub>w</sub>)·(1+t<sub>a</sub>)/(1−t<sub>a</sub>); certified iff R<sub>worst</sub>&lt;1.</p>
 <table><thead><tr><th>Numeraire (primary source)</th><th>asset ×</th><th>labor buys</th><th>tol</th><th>R<sub>worst</sub></th><th>verdict</th></tr></thead><tbody>{primary_rows()}</tbody></table>
 <p class=muted>With authoritative-precision data the tolerances shrink from 15% to 1-3%, and the earlier hold-outs cross the line: <b>homes now certify too</b> — even the raw median, where a year of labor buys 80% of the house it did in 2000 and the decline survives the joint measurement error. The certified basket is no longer just hard money and equities; it is <b>every</b> independent store of value measured here.</p>
 
-<h2>Homes, honestly measured</h2>
+<h2 id=s-homes>Homes, honestly measured</h2>
 <p class=muted>"Median home price" hides several things, so reprice a home in wage-hours under each honest lens — constant-quality (repeat-sales), raw median, price-per-square-foot, and the monthly mortgage carry:</p>
 <div id=alnribar class=plot style="height:340px"></div>
 <table><thead><tr><th>Home lens</th><th>home ×</th><th>labor buys</th><th>e*</th><th>verdict</th><th>note</th></tr></thead><tbody>{alnri_rows()}</tbody></table>
@@ -310,13 +311,13 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <h3>The rent signal the headline lags — ALNRI</h3>
 <p class=muted>Renters feel the same measurement gap. The official CPI rent line above (BLS <code>CUUR0000SEHA</code>) is a <b>~1-year-stale lagging print</b>: new-lease market indices — the Apartment List National Rent Index (ALNRI) and the BLS New Tenant Rent Index (NTRI/R-CPI-NTR) — <b>led it by ~16 months</b> (Dec 2021: ALNRI +18% YoY while official CPI rent showed ~3%). The lag cuts both ways and was invoked whichever way fit the moment — leading data in 2022 to argue disinflation, the still-high lagged print in 2024 to justify higher-for-longer — the cleanest BLS-confirmed case of "doubt the headline." <a href="r-macro-rent-cpi-divergence.html">Full analysis</a>.</p>
 
-<h2>Deeper — did money do it? (the causal question, honestly)</h2>
+<h2 id=s-money>Deeper — did money do it? (the causal question, honestly)</h2>
 <p class=muted>Proof of <i>cause</i> is outside what an exchange ratio can give, but the leading candidate — monetary expansion — can be probed as an <b>association</b>. Compare each multiple to M2 money-supply growth (Fed H.6, ×{_m2:.2f} over 2000→2024):</p>
 <div id=moneybar class=plot style="height:340px"></div>
 <table><thead><tr><th>Item</th><th>× 2000→2024</th><th>vs M2</th></tr></thead><tbody>{money_rows()}</tbody></table>
 <p class=muted>The result cuts <i>both</i> simplistic stories. M2 grew ×{_m2:.2f}; consumer prices (×1.82) and wages (×2.02) rose under half as fast, while assets absorbed the gap and gold/silver <i>exceeded</i> it. That is exactly the footprint of monetary expansion showing up in assets rather than the shopping cart — <b>strong association, and the most plausible mechanism.</b> But it is <b>not proof</b>: no single money aggregate explains the cross-asset dispersion (gold ran ~2× M2, homes ~0.7×), and globalisation's goods-disinflation, interest rates, financialisation, EM central-bank gold buying and real-earnings growth are all uncontrolled confounders. "They printed money" is supported as a <i>partial</i> driver and refuted as a <i>complete</i> one.</p>
 
-<h2>Deeper — the mechanism: decompose each asset's rise</h2>
+<h2 id=s-mechanism>Deeper — the mechanism: decompose each asset's rise</h2>
 <p class=muted>Proof of cause is beyond an exchange ratio, but each asset's rise splits — by <b>price identity</b> — into observable drivers, and that discriminates between the "why" stories far better than one M2 number. Equities: price = earnings × P/E. Housing: price = rent × price-to-rent. Gold: no cashflow, so its rise is monetary by elimination.</p>
 <div>
 <span class=k>Equities ×{_eq['price_mult']:.1f}<br>= earnings <b>×{_eq['eps_mult']:.1f}</b> · P/E <b>×{_eq['pe_mult']:.2f}</b> (contracted)</span>
@@ -331,12 +332,12 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <table><thead><tr><th>Candidate cause</th><th>Gold</th><th>Equities</th><th>Housing</th></tr></thead><tbody>{matrix_rows()}</tbody></table>
 <p class=muted>{cm['matrix']['reading']} The one cause that links <b>wages</b> to an asset gain is the <b>labor→capital income-share shift</b>: labor's share of GDP fell ~{abs(_ls['rel_change_pct']):.0f}% ({_ls['pt_change']:.1f} points to {_ls['y_last']}), and the mirror is a rising profit share — the accounting bridge to the equity earnings that lifted the market. That is documented national-accounts arithmetic, not intent. <span class=muted>Tier: the price identities are exact; the driver attributions are accounting decompositions plus association, not proof of cause; confounders (buybacks, globalisation, demographics, tax, foreign demand) are uncontrolled.</span></p>
 
-<h2>Deeper — what R₀ actually is: a conservation identity</h2>
+<h2 id=s-conservation>Deeper — what R₀ actually is: a conservation identity</h2>
 <p class=muted>One more level down, the ratio has a meaning that turns "the wage-hours went to owners" from rhetoric into an identity. The stock of an asset — shares of equity, ounces of gold above ground, housing units — is roughly fixed in the short run, and ownership shares of it sum to exactly 1. A price change creates <b>no new units</b>; it only revalues existing claims. One year of labor's real savings claims a fraction of that stock; at the higher price it claims R₀ of what it used to, and the complementary <b>(1−R₀)</b> is not destroyed — it stays with, i.e. transfers to, the existing holders.</p>
 <table><thead><tr><th>Asset (fixed stock)</th><th>labor's unit-claim R₀</th><th>transferred to holders (1−R₀)</th></tr></thead><tbody>{conservation_rows()}</tbody></table>
 <p class=muted>So R₀ is not merely "labor bought less gold" — it is the shrunken share of a fixed pie that a year of work can pull from current owners, and the rest accrues to them. The <b>transfer is definitional</b> (a THEOREM, machine-checked: the unit-claim ratio equals the price-cross form exactly), <b>who the owners are is empirical</b> (the top-heavy ownership above), and <b>why the price rose is unproven</b>. Two honest caveats: real asset-unit growth (~1-2%/yr) is a small first-order correction, and the aggregate pie did grow — real US household net worth roughly <b>doubled</b> (×{_cons['real_aggregate_nw_growth']:.1f}). The claim is about labor's shrinking <i>share-claim</i> on that pie and its concentration, not "no wealth was created."</p>
 
-<h2>Falsify it yourself — the live certificate</h2>
+<h2 id=s-falsify>Falsify it yourself — the live certificate</h2>
 <p class=muted>Do not trust the numbers above; move them. Set your own wage growth, asset growth, and the tolerance you would grant the data, and the certificate recomputes: R₀ (labor's relative price), the breakdown error e*, the adversarial worst case, and the verdict. The claim is only as good as its ability to survive your inputs.</p>
 <div style="background:#f7f9fc;border:1px solid #cbd8ea;border-radius:10px;padding:14px 16px;margin:14px 0;font:14px/1.7 -apple-system,Segoe UI,Roboto,sans-serif">
  <div style="display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center">
@@ -357,7 +358,7 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 </ul>
 <p class=muted>What remains, fully proven — stated as precisely as the evidence permits: <b>over 2000→2024, a year of ordinary US labor came to command materially less of every liquid, independent store of value — gold, silver, equities — and against hard money that decline cannot be dismissed as a single-asset bubble (it holds across gold and silver), as data noise (it survives &gt;26% simultaneous error in every input), or as a cherry-picked endpoint (it also certifies from a 2007 base).</b> With authoritative primary series the certified basket widens to include <b>homes on every price lens</b> (median, constant-quality, per-square-foot). The sharper, CPI-dependent reading: real <i>consumption</i> wages roughly held; what collapsed was labor's claim on <i>assets</i> — the price of the store-of-value economy, measured in wage-hours, inflated several-fold — though the monthly mortgage <i>carry</i> is the one exception that stayed within noise, so the housing squeeze is about the down-payment, not the payment. On cause, monetary expansion is a supported <i>partial</i> driver, not a proven complete one. Every statement here carries its own certainty tier, and the honest boundary — long-horizon not last-decade, total not decomposition, price not carry, association not cause — is drawn exactly where each one fails.</p>
 
-<h1 style="margin-top:56px">The instrument hides the concentration</h1>
+<h1 id=s-wealth style="margin-top:56px">The instrument hides the concentration</h1>
 <p class=muted>The proof above measures the <i>typical</i> worker. But the asset-price inflation that cost labor its wage-hours did not vanish — it accrued to whoever <b>owned</b> the assets. To see that transfer you have to look at wealth concentration, and here the most-cited government statistic is built so it <b>cannot show you</b>. This is not a claim that anyone fabricated a number; it is that the popular instrument — the Census money-income bracket table — has fine resolution where there is no concentration and none where all of it lives, while the Fed's own data shows the tail plainly. Judge "lie" versus "choice" yourself; the mechanism is demonstrable.</p>
 
 <div>
@@ -396,7 +397,7 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <table><thead><tr><th>Index</th><th>base</th><th>after top-0.1% doubles</th><th>change</th></tr></thead><tbody>{family_rows()}</tbody></table>
 <p class=muted>Atkinson at high inequality-aversion moves little too — but for the opposite reason: it looks at the <i>bottom</i>, not the top. The lesson is the same: no single scalar captures a distribution, and which one is headlined decides whether a concentration looks like a crisis or a calm.</p>
 
-<h1 style="margin-top:56px">Provenance &amp; durability</h1>
+<h1 id=s-provenance style="margin-top:56px">Provenance &amp; durability</h1>
 <p class=muted>Every number here is traceable. Of the {_ntot} inputs, <b>{_nlive} are fetched live</b> from the St. Louis Fed's keyless CSV mirror of the primary agencies (BLS, S&amp;P CoreLogic, Census/HUD, Federal Reserve), refreshed by a committed script; the rest are documented snapshots (LBMA gold &amp; silver, long-history S&amp;P, S&amp;P earnings) with citations. The figures reasoned from earlier <b>reconcile with the live sources to within {_recon_max:.1f}%</b> — the hand estimates were right.</p>
 <table><thead><tr><th>Series ID</th><th>What it is</th><th>type</th><th>as of</th><th>link</th></tr></thead><tbody>{prov_rows()}</tbody></table>
 
@@ -414,33 +415,68 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 </section>
 
 <aside class="col col-story">
-<div class=colhead>In plain terms — what it means &amp; what to do</div>
+<div class=colhead>In plain terms — paired to the evidence on the left</div>
 <h1>The paycheck still works. The ladder moved.</h1>
-<p class=lead>The charts on the left are careful and hedged. Here is what they add up to for an ordinary person, in plain language — what is happening, why, how, where it goes, and what actually helps, depending on who you are.</p>
+<p class=lead>Each block below pairs with a chart on the left — tap a tag to jump to the evidence, then read the plain-language version here. The through-line: your wage still buys the shelf; it no longer buys the store of value — and the instruments that should show that are built not to.</p>
+<p class=muted>The 50-year backdrop: 1971 the dollar leaves gold; decades of financialization; 2000 dot-com; 2008 crisis, then central banks buy assets on a vast scale; 2020 stimulus; 2021-24 inflation and the sharpest rate spike in decades. Each step nudged value toward those who already held assets — not by one plan, but by the shape of the machinery.</p>
 
-<span class=story-tag>What is happening</span>
-<h2>Your wage buys groceries. It no longer buys the future.</h2>
-<p>Measured against the everyday basket — food, gas, rent — a typical paycheck buys about what it did around 2000; by the official measure it even edged up a little (real wages roughly {_realwage:+.0f}%). So day to day, work still works.</p>
-<p>What changed is the price of the things that turn income into <b>lasting wealth</b> — a slice of the stock market, an ounce of gold, a home. Measured in <i>hours of work</i>, those pulled away. A year of the average job bought about <b>{_all['gold'][0]:.0f} ounces of gold in 2000 and roughly {_all['gold'][-1]:.0f} today</b>; a year at the federal minimum, {_mw['gold'][0]:.0f} ounces then, about {_mw['gold'][-1]:.0f} now. You can still live on wages. Turning wages into ownership is what got harder — and the people who already owned those assets grew wealthier as the prices climbed.</p>
+<a class=story-tag href="#s-monies">◂ Three monies</a>
+<h2>Why measure in gold and silver.</h2>
+<p>Dollars are a moving ruler. Re-pricing everything in ounces of gold and silver — the map's hard-money lens — separates real gains from debasement. It is an overlay for perspective, never a proof; but it is the one yardstick no central bank can print more of, which is exactly why the picture changes so much when you switch to it.</p>
 
-<span class=story-tag>Why it happened</span>
-<h2>Endogenous, not engineered — and no single cabal.</h2>
-<p>The tempting story — "they just printed money" — is only part of it, and the map's evidence says so. Money did grow about <b>{_m2:.1f}×</b> since 2000 while shelf prices rose less than half that, so the new money pooled in <b>assets</b>, not groceries; corporate profits climbed as labor's share of national income fell about <b>{abs(_ls['rel_change_pct']):.0f}%</b>. But the deeper pattern is the one Minsky named: stability breeds leverage, leverage breeds fragility, and the system manufactures its own instability from the inside. Around that sit a small <b>operator-network</b> and a few <b>recurring structures</b> — the same self-referential funding loops and off-balance-sheet marks, rebuilt in each era's least-regulated venue. Not one hidden hand; a shape the machinery keeps returning to. (Consistent with the rest of the investigation, intent is never inferred from who stands next to whom.)</p>
+<a class=story-tag href="#s-wages">◂ Wages</a>
+<h2>What a year of work actually buys.</h2>
+<p>Day to day, work still works: by the official basket, real wages even edged up about <b>{_realwage:+.0f}%</b>. But a year of the average job bought roughly <b>{_all['gold'][0]:.0f} ounces of gold in 2000 and about {_all['gold'][-1]:.0f} today</b>; the federal minimum, {_mw['gold'][0]:.0f} then, about {_mw['gold'][-1]:.0f} now. Every occupation and region on the left tells the same story, and gig work sits below traditional in every money. The paycheck buys groceries; it no longer buys the future.</p>
 
-<span class=story-tag>How it works</span>
-<h2>Self-marked value — and yardsticks built not to show it.</h2>
-<p>Two mechanics do most of the work. First, the transfer: the pile of real assets is roughly fixed, so when its price rises no new shares or acres appear — ownership just becomes worth more to whoever already holds it, and dearer to anyone buying in with a paycheck. Second, the <b>mark</b>: in the places risk hides — bank bonds at cost, AI stakes at self-set marks, private-credit loans at the manager's own valuation, insurance liabilities in offshore captives — value is a <i>chosen number, not a market price</i>, held until a forcing event prices it. And much of that risk has been quietly moved onto <b>ordinary retirement money</b> — pension, annuity and 401(k) exposure to manager-marked private credit — so the people least able to check the number are the ones holding it.</p>
-<p>The instruments we are handed are built not to reveal this. Official rent (CPI shelter) trails real market rents by roughly a year — new-lease measures such as the Apartment List index led it by about <b>16 months</b> — so the shelter figure can be quoted whichever way suits the moment. The jobs count gets revised down by hundreds of thousands after the headlines fade. The income table tops out at "$200,000 and over," and the Gini index barely moves when the very top doubles. The concentration is real — the Federal Reserve's own data puts the wealth gap ({_gW}) far above the income gap ({_gI}), the bottom half holding about <b>{_b50}%</b> and the top 0.1% about <b>{_t01}%</b> — the popular gauges just aren't built to show it. In the one unit that cannot be marked to myth — gold — most "gains" vanish: a year of the average job bought about {_all['gold'][0]:.0f} ounces in 2000 and roughly {_all['gold'][-1]:.0f} today.</p>
+<a class=story-tag href="#s-proof">◂ What's proven</a>
+<h2>Proven versus argued — kept apart.</h2>
+<p>The map's discipline is to separate what is proven from what is merely argued. The un-handwavable core here is a change-of-unit fact: a ratio doesn't care which money you quote it in, so "labor buys fewer ounces of gold, fewer shares, less silver" is a statement about labor's <i>price</i>, not a gold-bug opinion. Everything softer than that is labelled as such.</p>
 
-<span class=story-tag>The history</span>
-<h2>Fifty years, in one breath.</h2>
-<p>1971: the dollar leaves gold. Decades of financialization follow. 2000: the dot-com peak. 2008: the crisis, then central banks buy assets on a vast scale, lifting their prices. 2020: pandemic stimulus. 2021-24: inflation, then the sharpest rate spike in decades. Every step nudged value toward those who already held assets — not by a single plan, but by the shape of the machinery.</p>
+<a class=story-tag href="#s-decomp">◂ Real wages vs assets</a>
+<h2>You weren't robbed at the store — you were priced out of ownership.</h2>
+<p>The honest twist: by the CPI, real <i>consumption</i> wages roughly held (about {_realwage:+.0f}%). What collapsed was labor's claim on <b>assets</b> — the same year of work now buys a fraction of the stock, gold or home it once did. So the squeeze isn't mainly the grocery aisle; it's the on-ramp to owning anything. (This split leans on the CPI, itself contested, so it sits one tier below the total.)</p>
 
-<span class=story-tag>Where it goes</span>
-<h2>Structure certain, date unknowable.</h2>
-<p>The map is careful here, and so is this: the <i>structure</i> is provable — a capital loop solvent only while fresh money keeps flowing, marks that must reverse once something forces a real price — but the <i>date</i> is not (that is Minsky and Keynes; dot-com, 2008 and SVB were all visible for years, then broke suddenly on a catalyst no one timed). Extend the trend and the on-ramp to real ownership keeps narrowing for anyone starting from zero. But the thing that breaks first is the one the map treats as decisive: <b>legitimacy — trust</b>. When the scoreboard stops matching what people live, consent erodes; and trust is far harder to rebuild than a price.</p>
+<a class=story-tag href="#s-endpoint">◂ Cherry-picked?</a>
+<h2>Not a 2000-vs-2024 trick.</h2>
+<p>The decline against hard money holds from a 2007 base too, so it isn't an artifact of the chosen endpoints. It is an honest <b>long-horizon</b> claim, not a last-decade one — and the chart marks exactly the recent windows where it does <i>not</i> certify.</p>
 
-<span class=story-tag>What to do</span>
+<a class=story-tag href="#s-machine">◂ Machine-checked</a>
+<h2>The math is verified, not asserted.</h2>
+<p>The load-bearing identities are recomputed in exact fractions on every build and checked to match. In the map's terms this is the proof-core discipline: only what a machine can verify carries the weight of "proven."</p>
+
+<a class=story-tag href="#s-primary">◂ The sources</a>
+<h2>Straight from the primary data — verify, don't trust.</h2>
+<p>These aren't vibes. <b>{_nlive} of the inputs</b> are pulled live from the Federal Reserve's data mirror (BLS, Census, S&amp;P, Fed), and the earlier hand estimates matched them to within <b>{_recon_max:.1f}%</b>. The instruction the map applies to everyone — including itself — is verify, don't trust.</p>
+
+<a class=story-tag href="#s-homes">◂ Homes &amp; rent</a>
+<h2>The house, and the rent number that lies late.</h2>
+<p>A home costs far more work-years than it did on every honest price lens; the monthly payment rose less only because 2000's mortgage rates were high too — so the squeeze is the <b>down-payment, not the payment</b> (<b>${_hp['pay_2000_mo']:,}→${_hp['pay_2024_mo']:,}/mo</b>). Renters meet the same trick: official CPI rent lags real market rents (the Apartment List index, ALNRI) by about <b>16 months</b>, quoted whichever way suits the moment.</p>
+
+<a class=story-tag href="#s-mechanism">◂ Mechanism</a>
+<h2>Why each thing rose — no single villain.</h2>
+<p>Stocks rose on real <b>earnings</b> (up about ×{_eq['eps_mult']:.1f}, while the valuation multiple actually shrank), homes mostly on <b>rents</b>, gold purely on <b>money and fear</b>. The one thread tying wages to the gains: labor's share of output fell about <b>{abs(_ls['rel_change_pct']):.0f}%</b> — the rising profit share is its mirror image. Documented national-accounts arithmetic, not a plot.</p>
+
+<a class=story-tag href="#s-conservation">◂ Where it went</a>
+<h2>The wage-hours didn't vanish — they transferred.</h2>
+<p>The stock of assets is roughly fixed, so a price rise creates nothing new; it just makes ownership worth more to holders and dearer to buyers. The shrinkage in what a year of work can claim is, almost exactly, a transfer to whoever already held it (about <b>76%</b> of the former gold-claim). The pie did grow in real terms (~×{_cons['real_aggregate_nw_growth']:.1f}); the point is the shrinking <i>share</i> a wage can claim.</p>
+
+<a class=story-tag href="#s-falsify">◂ Check it yourself</a>
+<h2>Don't take the verdict on faith.</h2>
+<p>The live panel on the left lets you set your own wage growth, asset growth and error tolerance and watch "certified" flip in real time. The claim is only as strong as its ability to survive your inputs — so try to break it.</p>
+
+<a class=story-tag href="#s-money">◂ Did money do it?</a>
+<h2>Money is a partial cause, not the whole story.</h2>
+<p>The money supply grew about ×<b>{_m2:.1f}</b> while shelf prices rose under half that — the classic footprint of new money landing in assets, not groceries. It is supported as a <i>partial</i> driver and refuted as a complete one: no single money number explains why gold ran ~2× M2 while homes lagged it.</p>
+
+<a class=story-tag href="#s-wealth">◂ Who owns it</a>
+<h2>The concentration is real — and the gauges stay calm by design.</h2>
+<p>The Fed's own data puts the wealth gap (<b>{_gW}</b>) far above the income gap (<b>{_gI}</b>): the bottom half holds about <b>{_b50}%</b>, the top 0.1% about <b>{_t01}%</b>. The popular numbers hide it — an open "$200k and over" bucket, a Gini that barely moves when the very top doubles. That is Goodhart's law: once a measure becomes the target, it stops describing reality.</p>
+
+<a class=story-tag href="#s-provenance">◂ Provenance</a>
+<h2>Traceable — and yours to keep.</h2>
+<p>Every figure traces to a named series, refreshed by a committed script. And because government pages get revised, moved or deleted, the page archives its whole dataset to your browser and lets you export it. Durability is part of honesty — the record shouldn't vanish when the source does.</p>
+
+<span class=story-tag style="background:#efe7d4">What to do — across all of the above</span>
 <h2>Depending on who you are.</h2>
 <div class=aud><span class=who>If you're starting out, or can barely save</span><b>Verify, don't trust; own, don't rent.</b> Anchor your footing in things that can't be marked to myth — real skills, a hard-money yardstick, tools and (when reachable) a home you actually <i>own and can repair</i> — not a nominal figure someone else can reset. Cut your own fragility (Minsky at the kitchen table): avoid leverage and high-interest debt, keep a margin of safety, and understand where your retirement money's risk actually sits before you trust it. Resist the lock-ins that quietly turn ownership back into rental — parts-pairing, bricking subscriptions, account-bound devices — and the surveillance rails (age-verification, digital-ID) you can still refuse. If real ownership is out of reach today, that is a structural constraint, not a personal failing — name it, and push on the fixes below.</div>
 <div class=aud><span class=who>If you're raising a family</span>Pass on real value and the <b>habit of verification</b>, not just cash: repairable tools you own, a hard-money yardstick, and the reflex to doubt the headline number. Teach that a mark is not a price.</div>
