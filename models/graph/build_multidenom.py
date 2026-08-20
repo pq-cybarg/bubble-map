@@ -59,6 +59,20 @@ def comp_rows():
     return head, body
 _comp_head,_comp_body=comp_rows()
 
+# --- PROOF (what actually survives every objection; written by wage_proof.py) ---------------
+pf=json.load(open(os.path.join(DATA,"wage_proof.json")))
+PROOF_JSON=json.dumps(pf)
+_ptol=pf["data_tol"]*100
+def proof_rows(labor):
+    out=[]
+    for r in pf["labor"][labor]:
+        badge=('<b style="color:#0ca30c">CERTIFIED</b>' if r["certified"]
+               else '<span style="color:#8a8378">fell — not certified</span>')
+        out.append(f"<tr><td>{r['numeraire']}</td><td>{r['labor_per_asset_2000']:.3g}</td>"
+                   f"<td>{r['labor_per_asset_2024']:.3g}</td><td>{r['pct_of_2000']:.0f}%</td>"
+                   f"<td>{r['breakdown_pct']:.0f}%</td><td>{badge}</td></tr>")
+    return "".join(out)
+
 import nav as _nav
 NAV=_nav.navbar("Metals")
 DISC=('<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;'
@@ -146,6 +160,31 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <h2>Wages — endpoint index &amp; ounces (2000=100)</h2>
 <table><thead><tr><th>Occupation</th><th>USD 2000</th><th>USD 2024</th><th>USD idx</th><th>Gold-oz 2000</th><th>Gold-oz 2024</th><th>Gold idx</th><th>Silver idx</th></tr></thead><tbody>{wage_rows()}</tbody></table>
 <p class=muted>Read the two gold columns: a year's minimum-wage work bought {_mw['gold'][0]:.0f} ounces of gold in 2000 and {_mw['gold'][-1]:.0f} in 2024; the average job, {_all['gold'][0]:.0f} then {_all['gold'][-1]:.0f}. The USD-index column climbs past 190 for almost every row — the same wage, told in two monies, tells opposite stories.</p>
+
+<h1 style="margin-top:56px">What can actually be proven</h1>
+<p class=muted>Everything above is an <i>overlay</i>. "Wages fell in gold" is nearly a tautology — it only re-denominates, and it privileges gold, so a critic answers "gold bubbled." This section keeps only what survives <i>every</i> such objection, and certifies exactly how un-handwavable that core is. Three tiers of certainty; the wage figures are representative and rounded, so only <b>directions</b>, never magnitudes, are claimed as proven.</p>
+
+<div class=k style="display:block;background:#f7f9fc;border-color:#cbd8ea">
+<b style="color:#256abf">Theorem — relative price is numeraire-invariant.</b> For any two goods A, B priced in a common money <i>m</i>, the exchange ratio p<sub>A</sub>/p<sub>B</sub> = (k·p<sub>A</sub>)/(k·p<sub>B</sub>) for any positive conversion <i>k</i> — the money cancels. So "a year of labor exchanges for fewer ounces of gold, fewer shares of the S&amp;P 500, less silver than in 2000" is a fact about <b>labor's relative price</b>. It needs no trust in the dollar, or gold, or any single asset being "sound"; to deny it you must deny the exchange ratios themselves. <span class=muted>Executable check: labor→gold computed with dollars-as-money equals the same figure with silver-as-money to machine precision ({pf['invariance_check']['via_usd']:.4f} oz), confirming the cancellation.</span>
+</div>
+
+<h2>The robustness certificate</h2>
+<p class=muted>Because the levels are approximate, a bare ratio is not enough. Model each of the four inputs (labor 2000, labor 2024, asset 2000, asset 2024) as known only to within a uniform relative error, and push all four <b>at once</b> in the direction most favorable to "no decline." The <b>breakdown error e*</b> is the answer to: <i>how wrong would every number have to be, simultaneously, to make the decline disappear?</i> A claim is <b>CERTIFIED</b> only if e* clears the assumed data tolerance of {_ptol:.0f}%.</p>
+<div id=proofbar class=plot style="height:360px"></div>
+<p class=muted>Bars past the dashed {_ptol:.0f}% line are un-handwavable even granting my numbers could each be off by that much: against <b>gold, silver and equities</b> a year of average labor buys 22-51% of its 2000 exchange value, and overturning that needs 17-36% error in every input at once. Against <b>housing and commercial real estate</b> labor also fell — but by too little (e* of 3-7%) to certify at this data quality, so it is <i>stated, not proven</i>.</p>
+
+<table><thead><tr><th>Numeraire</th><th>labor buys, 2000</th><th>labor buys, 2024</th><th>% of 2000</th><th>breakdown e*</th><th>verdict</th></tr></thead><tbody>{proof_rows("All occupations (mean wage)")}</tbody></table>
+<p class=muted>Same test on the federal minimum wage is stronger still (it fell furthest): certified against gold, silver and the S&amp;P; the two hard-money columns need &gt;33% uniform error to overturn.</p>
+
+<h2>Where the proof stops — on purpose</h2>
+<p class=muted>The certified core is narrow by design. It does <b>not</b> establish:</p>
+<ul class=muted style="margin:6px 0 0 4px;line-height:1.7">
+<li><b>That the dollar was "debased."</b> A fallen labor:gold ratio and a risen gold price are the same fact seen two ways; which one you name the mover is a modelling choice, not a theorem.</li>
+<li><b>That any actor, policy or institution caused it.</b> This is correlation across series, not a mechanism.</li>
+<li><b>Any moral claim</b> — "exploitation," "theft," intent. None follow from an exchange ratio.</li>
+<li><b>The exact magnitudes.</b> Levels are representative and rounded; only the directions above are claimed, and only where e* clears {_ptol:.0f}%.</li>
+</ul>
+<p class=muted>What remains, fully proven: <b>a year of ordinary US labor commands materially less of every liquid, independent store of value in 2024 than in 2000, and against hard money that conclusion cannot be dismissed as a single-asset bubble (it holds across gold and silver) nor as data noise (it survives &gt;26% simultaneous error in every input).</b> That is as close to incontrovertible as this evidence allows — and the honest boundary is drawn exactly where it fails.</p>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
 </main>
@@ -281,6 +320,26 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     legend:{{orientation:"h",y:-0.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:11.5}}}},
     xaxis:{{color:ink,tickformat:"d",tickvals:ys}},
     yaxis:{{title:"share of US employment (%)",gridcolor:grid_c,color:ink,range:[0,100]}}
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Proof: breakdown error e* per numeraire; dashed line at the data tolerance ---
+(function(){{
+  const P={PROOF_JSON}, tol=P.data_tol*100;
+  const rows=P.labor["All occupations (mean wage)"].slice().sort((a,b)=>b.breakdown_pct-a.breakdown_pct);
+  Plotly.newPlot("proofbar",[{{type:"bar",orientation:"h",
+    x:rows.map(r=>r.breakdown_pct),y:rows.map(r=>r.numeraire),
+    marker:{{color:rows.map(r=>r.certified?"#0ca30c":"#8a8378")}},
+    text:rows.map(r=>r.breakdown_pct.toFixed(0)+"%"+(r.certified?"  certified":"  not certified")),
+    textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{y}}<br>overturning needs >%{{x:.0f}}% error in every input<extra></extra>"}}],{{
+    margin:{{l:150,r:120,t:8,b:40}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"breakdown error e* — uniform input error needed to overturn the decline",
+      gridcolor:grid_c,color:ink,range:[0,46],zeroline:false}},
+    yaxis:{{color:ink,automargin:true}},
+    shapes:[{{type:"line",x0:tol,x1:tol,y0:-0.5,y1:rows.length-0.5,line:{{color:"#c53030",width:1.5,dash:"dash"}}}}],
+    annotations:[{{x:tol,y:rows.length-0.5,text:"data tolerance "+tol.toFixed(0)+"%",showarrow:false,
+      yshift:10,font:{{color:"#c53030",size:11}}}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 </script></body></html>"""

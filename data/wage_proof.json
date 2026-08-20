@@ -1,0 +1,141 @@
+{
+  "data_tol": 0.15,
+  "theorem": "Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, so labor's exchange ratio against an asset does not depend on which money it is quoted in.",
+  "invariance_check": {
+    "via_usd": 27.439228834870075,
+    "via_silver": 27.43922883487008,
+    "identical": true
+  },
+  "labor": {
+    "All occupations (mean wage)": [
+      {
+        "numeraire": "Gold (oz)",
+        "kind": "hard",
+        "labor_per_asset_2000": 121.93548387096774,
+        "labor_per_asset_2024": 27.439228834870075,
+        "R0": 0.225,
+        "pct_of_2000": 22.5,
+        "breakdown_e": 0.3565,
+        "breakdown_pct": 35.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "Silver (oz)",
+        "kind": "hard",
+        "labor_per_asset_2000": 6804.0,
+        "labor_per_asset_2024": 2338.214285714286,
+        "R0": 0.3437,
+        "pct_of_2000": 34.4,
+        "breakdown_e": 0.2609,
+        "breakdown_pct": 26.1,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "S&P 500 (index)",
+        "kind": "liquid",
+        "labor_per_asset_2000": 23.79020979020979,
+        "labor_per_asset_2024": 12.124074074074073,
+        "R0": 0.5096,
+        "pct_of_2000": 51.0,
+        "breakdown_e": 0.1669,
+        "breakdown_pct": 16.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "US median home",
+        "kind": "real",
+        "labor_per_asset_2000": 0.2061818181818182,
+        "labor_per_asset_2024": 0.15588095238095237,
+        "R0": 0.756,
+        "pct_of_2000": 75.6,
+        "breakdown_e": 0.0698,
+        "breakdown_pct": 7.0,
+        "direction": "fell",
+        "certified": false
+      },
+      {
+        "numeraire": "Commercial RE (CPPI)",
+        "kind": "real",
+        "labor_per_asset_2000": 596.8421052631579,
+        "labor_per_asset_2024": 527.983870967742,
+        "R0": 0.8846,
+        "pct_of_2000": 88.5,
+        "breakdown_e": 0.0306,
+        "breakdown_pct": 3.1,
+        "direction": "fell",
+        "certified": false
+      }
+    ],
+    "Federal minimum wage (yr)": [
+      {
+        "numeraire": "Gold (oz)",
+        "kind": "hard",
+        "labor_per_asset_2000": 38.39426523297491,
+        "labor_per_asset_2024": 6.320201173512154,
+        "R0": 0.1646,
+        "pct_of_2000": 16.5,
+        "breakdown_e": 0.4228,
+        "breakdown_pct": 42.3,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "Silver (oz)",
+        "kind": "hard",
+        "labor_per_asset_2000": 2142.4,
+        "labor_per_asset_2024": 538.5714285714286,
+        "R0": 0.2514,
+        "pct_of_2000": 25.1,
+        "breakdown_e": 0.3321,
+        "breakdown_pct": 33.2,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "S&P 500 (index)",
+        "kind": "liquid",
+        "labor_per_asset_2000": 7.490909090909091,
+        "labor_per_asset_2024": 2.7925925925925927,
+        "R0": 0.3728,
+        "pct_of_2000": 37.3,
+        "breakdown_e": 0.2418,
+        "breakdown_pct": 24.2,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "numeraire": "US median home",
+        "kind": "real",
+        "labor_per_asset_2000": 0.06492121212121212,
+        "labor_per_asset_2024": 0.035904761904761905,
+        "R0": 0.5531,
+        "pct_of_2000": 55.3,
+        "breakdown_e": 0.147,
+        "breakdown_pct": 14.7,
+        "direction": "fell",
+        "certified": false
+      },
+      {
+        "numeraire": "Commercial RE (CPPI)",
+        "kind": "real",
+        "labor_per_asset_2000": 187.9298245614035,
+        "labor_per_asset_2024": 121.61290322580645,
+        "R0": 0.6471,
+        "pct_of_2000": 64.7,
+        "breakdown_e": 0.1084,
+        "breakdown_pct": 10.8,
+        "direction": "fell",
+        "certified": false
+      }
+    ]
+  },
+  "not_proven": [
+    "That the US dollar was 'debased' (gold/asset rises may have independent real causes).",
+    "That any actor, policy, or institution CAUSED the change (correlation, not mechanism).",
+    "Any moral claim - 'exploitation', 'theft', intent - none follow from an exchange ratio.",
+    "The exact magnitudes: levels are representative & rounded; only the certified DIRECTIONS are claimed."
+  ]
+}
