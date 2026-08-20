@@ -192,12 +192,18 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
  .story-tag{{display:inline-block;font:11px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7b2d26;background:#f3eedf;border-radius:20px;padding:6px 11px;margin:16px 0 2px;text-decoration:none;border:1px solid #e7ddc6}}
  a.story-tag:hover{{background:#e9e0c9}}
  @media(max-width:1000px){{ .split{{grid-template-columns:1fr;gap:16px}} .col-story{{padding:4px 18px 24px}} }}
- @media(min-width:1001px){{
-  .col-story{{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;scrollbar-width:thin;scroll-behavior:smooth}}
-  .col-story .chunk{{opacity:.32;transition:opacity .5s ease}}
-  .col-story .chunk.active{{opacity:1}}
-  .col-story::-webkit-scrollbar{{width:8px}} .col-story::-webkit-scrollbar-thumb{{background:#e0d7c2;border-radius:8px}}
- }}
+ /* --- paired bands: each chart section beside its sticky sidenote --- */
+ .introband{{max-width:900px;margin:0 auto 10px}}
+ .closeband{{max-width:820px;margin:24px auto 0;background:#fffdf8;border:1px solid #e9e2d2;border-radius:12px;padding:6px 26px 26px}}
+ .band{{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,0.94fr);gap:40px;align-items:start;margin:0 0 30px;padding-top:6px;border-top:1px solid #efe8d8}}
+ .band:first-of-type{{border-top:0}}
+ .band .charts{{min-width:0}}
+ .band .note{{position:sticky;top:16px;align-self:start;background:#fffdf8;border:1px solid #e9e2d2;border-radius:12px;padding:2px 22px 18px}}
+ .band .note .story-tag{{margin-top:14px}}
+ .band .note h2{{color:#1f4e79;border:0;padding:0;margin:8px 0 6px;font-size:20px}}
+ .band .note p{{font-size:16px;line-height:1.72}}
+ .band .charts h1{{font-size:29px}} .band .charts h1:first-child,.band .charts h2:first-child{{margin-top:6px}}
+ @media(max-width:1000px){{ .band{{grid-template-columns:1fr;gap:12px}} .band .note{{position:static}} }}
 </style></head><body>{NAV}{DISC}
 <main class=wide>
 <div class=split>
@@ -866,42 +872,37 @@ const WD={WD_JSON};
   document.getElementById("cache_first").addEventListener("click",()=>dl("eb_archive_first","bubble-map-metals-data-first-seen.json"));
 }})();
 
-// --- Scrollytelling: chunk the story rail; glide the active chunk to the chart in view ---
-(function(){{
-  const story=document.querySelector(".col-story"); if(!story) return;
-  // group each story-tag + its following siblings (until the next tag) into a .chunk
-  const kids=Array.prototype.slice.call(story.children); let groups=[], g=null;
-  kids.forEach(function(el){{
-    if(el.classList && el.classList.contains("story-tag")){{
-      const h=el.getAttribute&&el.getAttribute("href");
-      g={{sec:(h?h.slice(1):"close"), els:[el]}}; groups.push(g);
-    }} else if(g){{ g.els.push(el); }}
-  }});
-  groups.forEach(function(gr){{
-    const d=document.createElement("div"); d.className="chunk"; d.setAttribute("data-sec",gr.sec);
-    story.insertBefore(d, gr.els[0]); gr.els.forEach(function(e){{ d.appendChild(e); }});
-  }});
-  const anchors=Array.prototype.slice.call(document.querySelectorAll(".col-data [id^='s-']"));
-  const mq=window.matchMedia("(min-width:1001px)"); let last=null;
-  function sync(){{
-    if(!mq.matches) return;
-    const y=window.innerHeight*0.34; let act=anchors.length?anchors[0].id:null;
-    anchors.forEach(function(a){{ if(a.getBoundingClientRect().top<=y) act=a.id; }});
-    const atBottom=(window.innerHeight+window.scrollY)>=(document.body.scrollHeight-4);
-    Array.prototype.slice.call(story.querySelectorAll(".chunk")).forEach(function(c){{
-      const sec=c.getAttribute("data-sec");
-      c.classList.toggle("active",(sec===act)||(atBottom&&sec==="close"));
-    }});
-    const target = atBottom ? story.querySelector('.chunk[data-sec="close"]')
-                            : story.querySelector('.chunk[data-sec="'+act+'"]');
-    if(target && target!==last){{
-      story.scrollTo({{top:(window.scrollY<40?0:Math.max(0,target.offsetTop-12)),behavior:"smooth"}}); last=target;
-    }}
-  }}
-  let tick=false;
-  window.addEventListener("scroll",function(){{ if(!tick){{ tick=true; requestAnimationFrame(function(){{ sync(); tick=false; }}); }} }},{{passive:true}});
-  window.addEventListener("resize",sync); sync();
-}})();
 </script></body></html>"""
+
+def _reflow(html):
+    """Turn the two big columns into paired BANDS: each left chart-section beside its story note
+    (note is CSS-sticky within its own band). Splits col-data on the anchored headings and col-story
+    on the story-tags, pairs by id, so the story tracks the charts with no JS and no jank."""
+    import re
+    m=re.search(r'<section class="col col-data">(.*?)</section>\s*<aside class="col col-story">(.*?)</aside>', html, re.S)
+    if not m: return html
+    left, story = m.group(1), m.group(2)
+    lp=re.split(r'(<h[12] id=s-[a-z]+)', left)      # keep anchored headings as split boundaries
+    pre=lp[0]; secs=[]
+    for i in range(1,len(lp),2):
+        head=lp[i]; body=lp[i+1] if i+1<len(lp) else ''
+        sid=re.search(r's-[a-z]+', head).group(0)
+        secs.append([sid, head+body])
+    if secs: secs[0][1]=pre+secs[0][1]              # keep the "The evidence" label with the first band
+    sp=re.split(r'(<a class=story-tag href="#s-[a-z]+">|<span class=story-tag)', story)
+    intro=sp[0]; smap={}; close=''
+    for i in range(1,len(sp),2):
+        tag=sp[i]; rest=sp[i+1] if i+1<len(sp) else ''
+        if tag.startswith('<span'): close+=tag+rest
+        else: smap[re.search(r's-[a-z]+', tag).group(0)]=tag+rest
+    out=['<div class=introband>'+intro+'</div>']
+    for sid,htmll in secs:
+        out.append('<section class=band><div class=charts>'+htmll+'</div>'
+                   '<aside class=note>'+smap.get(sid,'')+'</aside></section>')
+    out.append('<div class=closeband>'+close+'</div>')
+    bands='<div class=flow>'+''.join(out)+'</div>'
+    return re.sub(r'<div class=split>.*?</aside>\s*</div>', lambda _m: bands, html, count=1, flags=re.S)
+
+HTML=_reflow(HTML)
 open(os.path.join(DOCS,"multidenom.html"),"w").write(HTML)
 print("wrote docs/multidenom.html  (%d assets, %d GSR years)"%(len(grid),len(gsr)))
