@@ -1,5 +1,137 @@
 {
   "data_tol": 0.15,
+  "decomposition": {
+    "Gold (oz)": {
+      "real_wage_term": 1.0564,
+      "asset_inflation_term": 0.213,
+      "R0": 0.225,
+      "asset_share_of_decline": 1.037
+    },
+    "Silver (oz)": {
+      "real_wage_term": 1.0564,
+      "asset_inflation_term": 0.3253,
+      "R0": 0.3437,
+      "asset_share_of_decline": 1.051
+    },
+    "S&P 500 (index)": {
+      "real_wage_term": 1.0564,
+      "asset_inflation_term": 0.4824,
+      "R0": 0.5096,
+      "asset_share_of_decline": 1.081
+    }
+  },
+  "real_wage_change_2000_2024": 0.0564,
+  "endpoint_matrix": {
+    "Gold (oz)": [
+      {
+        "start": 2000,
+        "R0": 0.225,
+        "pct_of_start": 22.5,
+        "breakdown_pct": 35.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2007,
+        "R0": 0.469,
+        "pct_of_start": 46.9,
+        "breakdown_pct": 18.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2013,
+        "R0": 0.834,
+        "pct_of_start": 83.4,
+        "breakdown_pct": 4.5,
+        "direction": "fell",
+        "certified": false
+      },
+      {
+        "start": 2019,
+        "R0": 0.715,
+        "pct_of_start": 71.5,
+        "breakdown_pct": 8.4,
+        "direction": "fell",
+        "certified": false
+      }
+    ],
+    "Silver (oz)": [
+      {
+        "start": 2000,
+        "R0": 0.344,
+        "pct_of_start": 34.4,
+        "breakdown_pct": 26.1,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2007,
+        "R0": 0.769,
+        "pct_of_start": 76.9,
+        "breakdown_pct": 6.6,
+        "direction": "fell",
+        "certified": false
+      },
+      {
+        "start": 2013,
+        "R0": 1.198,
+        "pct_of_start": 119.8,
+        "breakdown_pct": 4.5,
+        "direction": "rose",
+        "certified": false
+      },
+      {
+        "start": 2019,
+        "R0": 0.709,
+        "pct_of_start": 70.9,
+        "breakdown_pct": 8.6,
+        "direction": "fell",
+        "certified": false
+      }
+    ],
+    "S&P 500 (index)": [
+      {
+        "start": 2000,
+        "R0": 0.51,
+        "pct_of_start": 51.0,
+        "breakdown_pct": 16.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2007,
+        "R0": 0.441,
+        "pct_of_start": 44.1,
+        "breakdown_pct": 20.2,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2013,
+        "R0": 0.431,
+        "pct_of_start": 43.1,
+        "breakdown_pct": 20.7,
+        "direction": "fell",
+        "certified": true
+      },
+      {
+        "start": 2019,
+        "R0": 0.657,
+        "pct_of_start": 65.7,
+        "breakdown_pct": 10.5,
+        "direction": "fell",
+        "certified": false
+      }
+    ]
+  },
+  "machine_check": {
+    "invariance_exact": true,
+    "decomposition_exact": true,
+    "breakdown_root_residual": 3.3306690738754696e-16,
+    "breakdown_root_ok": true,
+    "all_pass": true
+  },
   "theorem": "Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, so labor's exchange ratio against an asset does not depend on which money it is quoted in.",
   "invariance_check": {
     "via_usd": 27.439228834870075,

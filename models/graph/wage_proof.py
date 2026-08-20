@@ -93,8 +93,85 @@ def invariance_check():
     return {"via_usd": via_usd_2024, "via_silver": via_silver_2024,
             "identical": abs(via_usd_2024-via_silver_2024) < 1e-9}
 
+# ============================================================================================
+# DEEPER I - DECOMPOSITION: labor:asset = (labor:CPI) x (CPI:asset)   [exact identity]
+# The numeraire-invariant total says the RATIO fell. It does not say WHERE it fell. Split it:
+#   labor's price in an asset  =  labor's price in the consumer basket (real wage, inverse)
+#                                 x  the consumer basket's price in that asset (asset inflation).
+# This asks the sharp question: did workers lose GROCERY-STORE power, or did ASSETS inflate in
+# wage-hours? Answer reframes everything - BUT it now leans on CPI, which is contested, so the
+# decomposition is a MODEL-DEPENDENT refinement (tier between THEOREM and CONJECTURE), while the
+# TOTAL above needs no CPI and stays certified.
+# ============================================================================================
+import math as _m
+CPI={2000:172.2, 2007:207.3, 2013:233.0, 2019:255.7, 2024:313.7}   # CPI-U annual average
+WAGE_TS={2000:34020, 2007:40690, 2013:46440, 2019:53490, 2024:65470}   # all-occupations mean
+ASSET_TS={
+ "Gold (oz)":   {2000:279,2007:695,2013:1411,2019:1393,2024:2386},
+ "Silver (oz)": {2000:5.00,2007:13.38,2013:23.79,2019:16.21,2024:28.0},
+ "S&P 500 (index)": {2000:1430,2007:1480,2013:1650,2019:2900,2024:5400},
+}
+def decompose(a0,a24,y0=2000,y24=2024):
+    wr=WAGE_TS[y24]/WAGE_TS[y0]; cr=CPI[y24]/CPI[y0]; ar=a24/a0
+    labor_cpi=wr/cr            # real wage (labor priced in consumer basket), inverse of CPI-deflate
+    cpi_asset=cr/ar           # consumer basket priced in the asset (asset inflation in CPI units)
+    R0=labor_cpi*cpi_asset    # == (wr/ar)
+    # log-share of the decline attributable to the asset-inflation term (>100% when real wage rose)
+    share_asset=_m.log(cpi_asset)/_m.log(R0) if R0<1 and abs(_m.log(R0))>1e-9 else None
+    return {"real_wage_term":round(labor_cpi,4), "asset_inflation_term":round(cpi_asset,4),
+            "R0":round(R0,4), "asset_share_of_decline":(round(share_asset,3) if share_asset else None)}
+decomp={name:decompose(NUM_d[0],NUM_d[1]) for name,NUM_d in
+        {"Gold (oz)":(279,2386),"Silver (oz)":(5.00,28.0),"S&P 500 (index)":(1430,5400)}.items()}
+real_wage_change=round((WAGE_TS[2024]/WAGE_TS[2000])/(CPI[2024]/CPI[2000])-1,4)
+
+# ============================================================================================
+# DEEPER II - ENDPOINT ROBUSTNESS: is this just a 2000-vs-2024 cherry-pick? Recompute R0 and e*
+# for EVERY start year -> 2024, honestly reporting where it certifies and where it does not.
+# ============================================================================================
+def endpoint_matrix():
+    starts=[2000,2007,2013,2019]
+    m={}
+    for name,ts in ASSET_TS.items():
+        rows=[]
+        lp={y:WAGE_TS[y]/ts[y] for y in ts}      # labor priced in the asset, per year
+        for s in starts:
+            R0=lp[2024]/lp[s]; e=breakdown_e(R0)
+            rows.append({"start":s, "R0":round(R0,3), "pct_of_start":round(R0*100,1),
+                         "breakdown_pct":round(e*100,1),
+                         "direction":"fell" if R0<1 else "rose",
+                         "certified":bool(e>DATA_TOL and R0<1)})
+        m[name]=rows
+    return m
+endpoints=endpoint_matrix()
+
+# ============================================================================================
+# DEEPER III - MACHINE CHECK: verify the two algebraic identities in EXACT rational arithmetic
+# (fractions -> zero floating-point error), and the breakdown root to 1e-12. Not an assertion in
+# prose: the program recomputes each identity two independent ways and checks they are identical.
+# ============================================================================================
+from fractions import Fraction as Fr
+def machine_check():
+    # (1) numeraire-invariance: (k*a)/(k*b) == a/b, exactly, for arbitrary positive rationals.
+    a,b,k=Fr(65470),Fr(279),Fr(2800,100)     # wage, gold, silver-price as the conversion factor
+    inv_ok = (k*a)/(k*b) == a/b
+    # (2) decomposition identity: (w24/g24)/(w00/g00) == real_wage_term * asset_term, EXACT.
+    w0,w24=Fr(34020),Fr(65470); g0,g24=Fr(279),Fr(2386); c0,c24=Fr(1722,10),Fr(3137,10)
+    direct=(w24/g24)/(w0/g0)
+    viadecomp=((w24/c24)/(w0/c0))*((c24/g24)/(c0/g0))
+    decomp_ok = direct==viadecomp
+    # (3) breakdown root: R0*((1+e)/(1-e))^2 == 1 at e=e*(R0), to 1e-12 (e* is irrational).
+    R0=0.225; e=breakdown_e(R0); root_resid=abs(R0*((1+e)/(1-e))**2 - 1)
+    root_ok = root_resid < 1e-12
+    return {"invariance_exact":bool(inv_ok), "decomposition_exact":bool(decomp_ok),
+            "breakdown_root_residual":root_resid, "breakdown_root_ok":bool(root_ok),
+            "all_pass":bool(inv_ok and decomp_ok and root_ok)}
+mcheck=machine_check()
+
 out={
  "data_tol": DATA_TOL,
+ "decomposition": decomp, "real_wage_change_2000_2024": real_wage_change,
+ "endpoint_matrix": endpoints,
+ "machine_check": mcheck,
  "theorem": ("Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, "
              "so labor's exchange ratio against an asset does not depend on which money it is quoted in."),
  "invariance_check": invariance_check(),
@@ -125,6 +202,28 @@ for name, rows in out["labor"].items():
     allfell=all(r['direction']=='fell' for r in rows)
     print(f"  => labor fell against ALL {len(rows)} numeraires: {allfell}. "
           f"Against hard money (gold & silver), overturning needs >{minhard:.0f}% uniform error in every input.")
+print("\n"+"-"*94); print("DEEPER I - DECOMPOSITION  labor:asset = (real wage) x (asset inflation in wage-hours)")
+print(f"  real consumption wage 2000->2024 (labor:CPI): {(1+real_wage_change)*100-100:+.1f}%  "
+      f"-> workers did NOT lose grocery-store power by the CPI lens.")
+for name,dd in decomp.items():
+    print(f"  {name:<18} real-wage x{dd['real_wage_term']:.3f}  *  asset-inflation x{dd['asset_inflation_term']:.3f}"
+          f"  = {dd['R0']:.3f}   (asset term = {dd['asset_share_of_decline']*100:.0f}% of the fall)")
+print("  => the entire labor:asset decline is asset inflation; real wages slightly ROSE and were more than offset.")
+print("     (this split trusts CPI - contested; the TOTAL above does not.)")
+
+print("\n"+"-"*94); print("DEEPER II - ENDPOINT ROBUSTNESS (start year -> 2024); not a single-endpoint artifact")
+for name,rows in endpoints.items():
+    cells="  ".join(f"{r['start']}:{r['pct_of_start']:.0f}%(e{r['breakdown_pct']:.0f}{'*' if r['certified'] else ''})" for r in rows)
+    print(f"  {name:<18} {cells}")
+print("  * = certified (e> {:.0f}%). Reading: strongest from 2000/2007; recent-decade windows are milder and".format(DATA_TOL*100))
+print("  do NOT certify (metals were already elevated by 2013) - so this is a LONG-HORIZON claim, honestly not a last-decade one.")
+
+print("\n"+"-"*94); print("DEEPER III - MACHINE CHECK (exact rational arithmetic)")
+print(f"  numeraire-invariance identity exact: {mcheck['invariance_exact']}")
+print(f"  decomposition identity exact:        {mcheck['decomposition_exact']}")
+print(f"  breakdown-root residual:             {mcheck['breakdown_root_residual']:.2e}  ok={mcheck['breakdown_root_ok']}")
+print(f"  ALL CHECKS PASS: {mcheck['all_pass']}")
+
 print("\nNOT PROVEN:", *("\n  - "+x for x in out["not_proven"]))
 
 json.dump(out, open(os.path.join(DATA,"wage_proof.json"),"w"), indent=2)

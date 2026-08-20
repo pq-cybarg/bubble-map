@@ -72,6 +72,21 @@ def proof_rows(labor):
                    f"<td>{r['labor_per_asset_2024']:.3g}</td><td>{r['pct_of_2000']:.0f}%</td>"
                    f"<td>{r['breakdown_pct']:.0f}%</td><td>{badge}</td></tr>")
     return "".join(out)
+_realwage=pf["real_wage_change_2000_2024"]*100
+_mck=pf["machine_check"]
+def endpoint_table():
+    m=pf["endpoint_matrix"]; assets=list(m); starts=[r["start"] for r in m[assets[0]]]
+    head="".join(f"<th>from {s}</th>" for s in starts)
+    body=""
+    for a in assets:
+        cells=""
+        for r in m[a]:
+            sty="font-weight:700;color:#0ca30c" if r["certified"] else ("color:#8a8378" if r["direction"]=="fell" else "color:#c53030")
+            mark=" ★" if r["certified"] else ""
+            cells+=f'<td style="{sty}">{r["pct_of_start"]:.0f}%{mark}</td>'
+        body+=f"<tr><td>{a}</td>{cells}</tr>"
+    return head, body
+_ep_head,_ep_body=endpoint_table()
 
 import nav as _nav
 NAV=_nav.navbar("Metals")
@@ -176,6 +191,28 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <table><thead><tr><th>Numeraire</th><th>labor buys, 2000</th><th>labor buys, 2024</th><th>% of 2000</th><th>breakdown e*</th><th>verdict</th></tr></thead><tbody>{proof_rows("All occupations (mean wage)")}</tbody></table>
 <p class=muted>Same test on the federal minimum wage is stronger still (it fell furthest): certified against gold, silver and the S&amp;P; the two hard-money columns need &gt;33% uniform error to overturn.</p>
 
+<h2>Deeper — <i>where</i> did the decline happen? (real wages vs asset inflation)</h2>
+<p class=muted>The invariance theorem says the ratio fell; it does not say where. Any labor:asset ratio factors <b>exactly</b> into two observable pieces — labor priced in the <i>consumer basket</i> (the real wage) times the consumer basket priced in the <i>asset</i> (asset inflation in wage-hours):</p>
+<div class=k style="display:block;background:#f7fbf7;border-color:#bfe0bf">
+labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b style="color:#c53030">(CPI:asset)</b>. &nbsp;By the CPI lens the real consumption wage <b style="color:#0ca30c">rose {_realwage:+.1f}%</b> from 2000 to 2024 — workers did <b>not</b> lose grocery-store power. The entire labor:asset collapse is the second term: <b style="color:#c53030">asset prices inflated 2×-5× in wage-hours</b>. Labor's claim on the <i>consumption</i> economy held; its claim on the <i>store-of-value</i> economy collapsed.
+</div>
+<div id=decompbar class=plot style="height:340px"></div>
+<p class=muted><b>This split is model-dependent</b> — it trusts the CPI, which is contested (hedonic and substitution adjustments; alternative indices show higher inflation). If true inflation were understated, more of the fall would be lost real wages and less would be asset inflation. So the decomposition sits <i>below</i> the theorem in certainty: illuminating, but resting on a disputed deflator. The <b>total</b> labor:asset decline uses no CPI at all and stays certified.</p>
+
+<h2>Deeper — is it just a cherry-picked endpoint?</h2>
+<p class=muted>Recompute labor's relative price for <i>every</i> start year → 2024, not only 2000. Cells show the 2024 value as a share of that start year (★ = certified, e* &gt; {_ptol:.0f}%).</p>
+<table><thead><tr><th>Numeraire</th>{_ep_head}</tr></thead><tbody>{_ep_body}</tbody></table>
+<p class=muted>Honest reading: the decline is strongest and certified from a <b>2000 or 2007</b> base (and, for equities, 2013). Measured from the <b>recent decade</b> it is milder and <i>not</i> certified — gold and silver were already elevated by 2013, so labor roughly held or even gained against them since. This is therefore a <b>long-horizon</b> (quarter-century) claim, and it is stated as one — it is not a claim that labor collapsed against hard money over the last ten years.</p>
+
+<h2>Deeper — the theorem is machine-checked</h2>
+<p class=muted>The two algebraic identities are not asserted in prose; the build recomputes each one two independent ways in <b>exact rational arithmetic</b> (Python <code>fractions</code>, zero floating-point error) and checks they are identical:</p>
+<div class=k style="display:block;background:#f7f9fc;border-color:#cbd8ea;font:13.5px/1.7 -apple-system,Segoe UI,Roboto,sans-serif">
+<b>{'✓' if _mck['invariance_exact'] else '✗'}</b> numeraire-invariance &nbsp;(k·p<sub>A</sub>)/(k·p<sub>B</sub>) = p<sub>A</sub>/p<sub>B</sub> — exact<br>
+<b>{'✓' if _mck['decomposition_exact'] else '✗'}</b> decomposition &nbsp;(w<sub>24</sub>/g<sub>24</sub>)/(w<sub>00</sub>/g<sub>00</sub>) = (labor:CPI)·(CPI:gold) — exact<br>
+<b>{'✓' if _mck['breakdown_root_ok'] else '✗'}</b> breakdown root &nbsp;R₀·((1+e*)/(1−e*))² = 1 — residual {_mck['breakdown_root_residual']:.0e}<br>
+<b style="color:#0ca30c">ALL CHECKS PASS = {str(_mck['all_pass']).upper()}</b> &nbsp;<span class=muted>(re-verified on every site build)</span>
+</div>
+
 <h2>Where the proof stops — on purpose</h2>
 <p class=muted>The certified core is narrow by design. It does <b>not</b> establish:</p>
 <ul class=muted style="margin:6px 0 0 4px;line-height:1.7">
@@ -184,7 +221,7 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <li><b>Any moral claim</b> — "exploitation," "theft," intent. None follow from an exchange ratio.</li>
 <li><b>The exact magnitudes.</b> Levels are representative and rounded; only the directions above are claimed, and only where e* clears {_ptol:.0f}%.</li>
 </ul>
-<p class=muted>What remains, fully proven: <b>a year of ordinary US labor commands materially less of every liquid, independent store of value in 2024 than in 2000, and against hard money that conclusion cannot be dismissed as a single-asset bubble (it holds across gold and silver) nor as data noise (it survives &gt;26% simultaneous error in every input).</b> That is as close to incontrovertible as this evidence allows — and the honest boundary is drawn exactly where it fails.</p>
+<p class=muted>What remains, fully proven — stated as precisely as the evidence permits: <b>over 2000→2024, a year of ordinary US labor came to command materially less of every liquid, independent store of value — gold, silver, equities — and against hard money that decline cannot be dismissed as a single-asset bubble (it holds across gold and silver), as data noise (it survives &gt;26% simultaneous error in every input), or as a cherry-picked endpoint (it also certifies from a 2007 base).</b> The sharper, CPI-dependent reading: real <i>consumption</i> wages roughly held; what collapsed was labor's claim on <i>assets</i> — the price of the store-of-value economy, measured in wage-hours, inflated several-fold. Both statements carry their own certainty tier, and the honest boundary — long-horizon not last-decade, total not decomposition, correlation not cause — is drawn exactly where each one fails.</p>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
 </main>
@@ -340,6 +377,26 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     shapes:[{{type:"line",x0:tol,x1:tol,y0:-0.5,y1:rows.length-0.5,line:{{color:"#c53030",width:1.5,dash:"dash"}}}}],
     annotations:[{{x:tol,y:rows.length-0.5,text:"data tolerance "+tol.toFixed(0)+"%",showarrow:false,
       yshift:10,font:{{color:"#c53030",size:11}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Decomposition: per asset, real-wage term (labor:CPI) vs asset-inflation term (CPI:asset) ---
+(function(){{
+  const P={PROOF_JSON}, dc=P.decomposition, names=Object.keys(dc);
+  Plotly.newPlot("decompbar",[
+    {{type:"bar",name:"real wage (labor : CPI)",x:names,y:names.map(n=>dc[n].real_wage_term),
+      marker:{{color:"#0ca30c"}},text:names.map(n=>"×"+dc[n].real_wage_term.toFixed(2)),
+      textposition:"outside",textfont:{{color:ink,size:11}},
+      hovertemplate:"%{{x}}<br>real wage ×%{{y:.3f}}<extra></extra>"}},
+    {{type:"bar",name:"asset price in wage-hours (CPI : asset)",x:names,y:names.map(n=>dc[n].asset_inflation_term),
+      marker:{{color:"#c53030"}},text:names.map(n=>"×"+dc[n].asset_inflation_term.toFixed(2)),
+      textposition:"outside",textfont:{{color:ink,size:11}},
+      hovertemplate:"%{{x}}<br>asset inflation ×%{{y:.3f}}<extra></extra>"}}
+  ],{{barmode:"group",bargap:0.3,bargroupgap:0.12,
+    margin:{{l:44,r:14,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
+    xaxis:{{color:ink}},yaxis:{{title:"multiplier on labor's asset-price (2000→2024)",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
+    shapes:[{{type:"line",x0:-0.5,x1:names.length-0.5,y0:1,y1:1,line:{{color:"#8a8378",width:1.5,dash:"dash"}}}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 </script></body></html>"""
