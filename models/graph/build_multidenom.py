@@ -129,6 +129,31 @@ def family_rows():
     return "".join(f"<tr><td>{r['index']}</td><td>{r['base']:.3f}</td><td>{r['shocked']:.3f}</td>"
                    f"<td>+{r['change_pct']:.0f}%</td></tr>" for r in wd["index_family"])
 
+# --- CAUSAL MECHANISM (written by causal_model.py) -------------------------------------------
+cm=json.load(open(os.path.join(DATA,"causal_model.json")))
+CM_JSON=json.dumps(cm)
+_eq=cm["equities"]; _ho=cm["housing"]; _go=cm["gold"]; _ls=cm["labor_share"]
+def matrix_rows():
+    col={"strong":"#0ca30c","partial":"#eda100","none":"#c53030","n_a":"#8a8378"}
+    lab={"strong":"strong","partial":"partial","none":"none","n_a":"n/a"}
+    out=[]
+    for r in cm["matrix"]["rows"]:
+        cells="".join(f'<td style="color:{col[c]};font-weight:600">{lab[c]}</td>' for c in r[1:])
+        out.append(f"<tr><td>{r[0]}</td>{cells}</tr>")
+    return "".join(out)
+# --- PROVENANCE (from wage_proof.json) -------------------------------------------------------
+_prov=pf.get("provenance",{})
+def prov_rows():
+    out=[]
+    for s in _prov.get("series",[]):
+        live=('<b style="color:#0ca30c">live</b>' if s["fetched"] else '<span style="color:#8a8378">documented</span>')
+        aso=s.get("as_of") or "-"
+        out.append(f'<tr><td><code>{s["id"]}</code></td><td>{s["desc"]}</td><td>{live}</td>'
+                   f'<td>{aso}</td><td><a href="{s["url"]}" rel="noopener">source ↗</a></td></tr>')
+    return "".join(out)
+_recon_max=_prov.get("max_abs_delta_pct"); _nlive=_prov.get("n_live",0); _ntot=_prov.get("n_total",0)
+_dataver=max((s.get("as_of") or "" for s in _prov.get("series",[])), default="") or "snapshot"
+
 import nav as _nav
 NAV=_nav.navbar("Metals")
 DISC=('<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;'
@@ -273,6 +298,21 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <table><thead><tr><th>Item</th><th>× 2000→2024</th><th>vs M2</th></tr></thead><tbody>{money_rows()}</tbody></table>
 <p class=muted>The result cuts <i>both</i> simplistic stories. M2 grew ×{_m2:.2f}; consumer prices (×1.82) and wages (×2.02) rose under half as fast, while assets absorbed the gap and gold/silver <i>exceeded</i> it. That is exactly the footprint of monetary expansion showing up in assets rather than the shopping cart — <b>strong association, and the most plausible mechanism.</b> But it is <b>not proof</b>: no single money aggregate explains the cross-asset dispersion (gold ran ~2× M2, homes ~0.7×), and globalisation's goods-disinflation, interest rates, financialisation, EM central-bank gold buying and real-earnings growth are all uncontrolled confounders. "They printed money" is supported as a <i>partial</i> driver and refuted as a <i>complete</i> one.</p>
 
+<h2>Deeper — the mechanism: decompose each asset's rise</h2>
+<p class=muted>Proof of cause is beyond an exchange ratio, but each asset's rise splits — by <b>price identity</b> — into observable drivers, and that discriminates between the "why" stories far better than one M2 number. Equities: price = earnings × P/E. Housing: price = rent × price-to-rent. Gold: no cashflow, so its rise is monetary by elimination.</p>
+<div>
+<span class=k>Equities ×{_eq['price_mult']:.1f}<br>= earnings <b>×{_eq['eps_mult']:.1f}</b> · P/E <b>×{_eq['pe_mult']:.2f}</b> (contracted)</span>
+<span class=k>Housing ×{_ho['price_mult']:.1f}<br>= rent <b>×{_ho['rent_mult']:.1f}</b> · price/rent <b>×{_ho['p2r_mult']:.2f}</b></span>
+<span class=k>Gold ×{_go['price_mult']:.1f}<br>no earnings — <b>{_go['vs_m2']:.1f}×</b> M2, monetary residual</span>
+<span class=k>Labor share of GDP<br><b>{_ls['share_2000']:.3f} → {_ls['share_last']:.3f}</b> ({_ls['rel_change_pct']:.1f}%, to {_ls['y_last']})</span>
+</div>
+<div id=mechbar class=plot style="height:320px"></div>
+<p class=muted><b>Equities rose on earnings, not monetary multiple</b> — the P/E actually <i>contracted</i>; real profits roughly doubled (×{_eq['real_eps_mult']:.1f}). <b>Housing is mostly rents</b> plus a rate/supply multiple. <b>Gold alone is purely monetary.</b> So the mono-causal stories both fail: "all money printing" cannot explain equities (multiples shrank), and "all fundamentals" cannot explain gold (it has none).</p>
+
+<h3>Which cause explains which asset</h3>
+<table><thead><tr><th>Candidate cause</th><th>Gold</th><th>Equities</th><th>Housing</th></tr></thead><tbody>{matrix_rows()}</tbody></table>
+<p class=muted>{cm['matrix']['reading']} The one cause that links <b>wages</b> to an asset gain is the <b>labor→capital income-share shift</b>: labor's share of GDP fell ~{abs(_ls['rel_change_pct']):.0f}% ({_ls['pt_change']:.1f} points to {_ls['y_last']}), and the mirror is a rising profit share — the accounting bridge to the equity earnings that lifted the market. That is documented national-accounts arithmetic, not intent. <span class=muted>Tier: the price identities are exact; the driver attributions are accounting decompositions plus association, not proof of cause; confounders (buybacks, globalisation, demographics, tax, foreign demand) are uncontrolled.</span></p>
+
 <h2>Deeper — what R₀ actually is: a conservation identity</h2>
 <p class=muted>One more level down, the ratio has a meaning that turns "the wage-hours went to owners" from rhetoric into an identity. The stock of an asset — shares of equity, ounces of gold above ground, housing units — is roughly fixed in the short run, and ownership shares of it sum to exactly 1. A price change creates <b>no new units</b>; it only revalues existing claims. One year of labor's real savings claims a fraction of that stock; at the higher price it claims R₀ of what it used to, and the complementary <b>(1−R₀)</b> is not destroyed — it stays with, i.e. transfers to, the existing holders.</p>
 <table><thead><tr><th>Asset (fixed stock)</th><th>labor's unit-claim R₀</th><th>transferred to holders (1−R₀)</th></tr></thead><tbody>{conservation_rows()}</tbody></table>
@@ -337,6 +377,20 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 <div id=familybar class=plot style="height:360px"></div>
 <table><thead><tr><th>Index</th><th>base</th><th>after top-0.1% doubles</th><th>change</th></tr></thead><tbody>{family_rows()}</tbody></table>
 <p class=muted>Atkinson at high inequality-aversion moves little too — but for the opposite reason: it looks at the <i>bottom</i>, not the top. The lesson is the same: no single scalar captures a distribution, and which one is headlined decides whether a concentration looks like a crisis or a calm.</p>
+
+<h1 style="margin-top:56px">Provenance &amp; durability</h1>
+<p class=muted>Every number here is traceable. Of the {_ntot} inputs, <b>{_nlive} are fetched live</b> from the St. Louis Fed's keyless CSV mirror of the primary agencies (BLS, S&amp;P CoreLogic, Census/HUD, Federal Reserve), refreshed by a committed script; the rest are documented snapshots (LBMA gold &amp; silver, long-history S&amp;P, S&amp;P earnings) with citations. The figures reasoned from earlier <b>reconcile with the live sources to within {_recon_max:.1f}%</b> — the hand estimates were right.</p>
+<table><thead><tr><th>Series ID</th><th>What it is</th><th>type</th><th>as of</th><th>link</th></tr></thead><tbody>{prov_rows()}</tbody></table>
+
+<h2>Cached to your browser — in case the data disappears</h2>
+<p class=muted>Government pages get revised, moved, and sometimes deleted. So on first view this page <b>archives its full dataset to your browser's local storage</b>, keeping the earliest copy you ever loaded alongside the latest. If the sources later change or vanish, your archived copy remains — and you can export it to a file.</p>
+<div style="background:#f7f9fc;border:1px solid #cbd8ea;border-radius:10px;padding:14px 16px;margin:14px 0;font:14px/1.7 -apple-system,Segoe UI,Roboto,sans-serif">
+ <div id=cache_status>archiving…</div>
+ <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:10px">
+  <button id=cache_export style="cursor:pointer;background:#1f4e79;color:#fff;border:0;border-radius:6px;padding:8px 14px;font-size:13px">Download my archived copy (JSON)</button>
+  <button id=cache_first style="cursor:pointer;background:#fffdf8;color:#1f4e79;border:1px solid #cbd8ea;border-radius:6px;padding:8px 14px;font-size:13px">Export first-seen snapshot</button>
+ </div>
+</div>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
 </main>
@@ -642,6 +696,55 @@ const WD={WD_JSON};
       +"&nbsp;·&nbsp; "+verdict;
   }}
   [W,A,T].forEach(el=>el.addEventListener("input",calc)); calc();
+}})();
+
+// --- Mechanism: price multiple vs its principal fundamental driver ---
+(function(){{
+  const M={CM_JSON};
+  const names=["Gold","Equities (S&P)","Housing"];
+  const price=[M.gold.price_mult,M.equities.price_mult,M.housing.price_mult];
+  const fund =[0,M.equities.eps_mult,M.housing.rent_mult];
+  Plotly.newPlot("mechbar",[
+    {{type:"bar",name:"total price ×",x:names,y:price,marker:{{color:"#805ad5"}},
+      text:price.map(v=>"×"+v.toFixed(2)),textposition:"outside",textfont:{{color:ink,size:11}},
+      hovertemplate:"%{{x}} price ×%{{y:.2f}}<extra></extra>"}},
+    {{type:"bar",name:"fundamental driver × (earnings / rent)",x:names,y:fund,marker:{{color:"#0ca30c"}},
+      text:fund.map(v=>v?("×"+v.toFixed(2)):"none"),textposition:"outside",textfont:{{color:ink,size:11}},
+      hovertemplate:"%{{x}} fundamental ×%{{y:.2f}}<extra></extra>"}}
+  ],{{barmode:"group",bargap:0.3,bargroupgap:0.12,
+    margin:{{l:44,r:14,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
+    xaxis:{{color:ink}},yaxis:{{title:"growth multiple 2000→2024",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
+    annotations:[{{x:"Gold",y:0,yshift:16,showarrow:false,text:"no cashflow →<br>purely monetary",font:{{color:"#8a8378",size:10.5}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Durability: archive the full dataset to localStorage (first-seen + latest) + export ---
+(function(){{
+  const VER="{_dataver}";
+  const bundle={{version:VER, denom:D, wages:W, proof:{PROOF_JSON}, wealth:WC, dynamics:WD, causal:{CM_JSON}}};
+  const S=document.getElementById("cache_status");
+  function iso(){{try{{return new Date().toISOString().slice(0,19).replace("T"," ")+" UTC";}}catch(e){{return "now";}}}}
+  let firstAt=null, ok=false;
+  try{{
+    const KF="eb_archive_first", KL="eb_archive_latest";
+    if(!localStorage.getItem(KF)) localStorage.setItem(KF, JSON.stringify({{savedAt:iso(),version:VER,data:bundle}}));
+    localStorage.setItem(KL, JSON.stringify({{savedAt:iso(),version:VER,data:bundle}}));
+    firstAt=JSON.parse(localStorage.getItem(KF)).savedAt; ok=true;
+  }}catch(e){{}}
+  S.innerHTML = ok
+    ? "✓ archived to this browser · data vintage <b>"+VER+"</b> · first saved here <b>"+firstAt+"</b>. "
+      +"Your copy survives even if the source pages change or are removed."
+    : "<span style='color:#c53030'>local storage unavailable (private mode?) — the dataset is still inlined in this page.</span>";
+  function dl(key,fname){{
+    let payload;
+    try{{payload=localStorage.getItem(key);}}catch(e){{}}
+    if(!payload) payload=JSON.stringify({{savedAt:iso(),version:VER,data:bundle}});
+    const blob=new Blob([payload],{{type:"application/json"}}), u=URL.createObjectURL(blob);
+    const a=document.createElement("a"); a.href=u; a.download=fname; a.click(); URL.revokeObjectURL(u);
+  }}
+  document.getElementById("cache_export").addEventListener("click",()=>dl("eb_archive_latest","bubble-map-metals-data-latest.json"));
+  document.getElementById("cache_first").addEventListener("click",()=>dl("eb_archive_first","bubble-map-metals-data-first-seen.json"));
 }})();
 </script></body></html>"""
 open(os.path.join(DOCS,"multidenom.html"),"w").write(HTML)

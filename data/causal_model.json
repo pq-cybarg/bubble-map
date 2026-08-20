@@ -1,0 +1,96 @@
+{
+  "equities": {
+    "price_mult": 3.803,
+    "eps_mult": 4.2,
+    "pe_mult": 0.905,
+    "real_eps_mult": 2.305,
+    "decomp": [
+      {
+        "factor": "earnings (EPS)",
+        "mult": 4.2,
+        "log_share_pct": 107.4
+      },
+      {
+        "factor": "multiple (P/E)",
+        "mult": 0.905,
+        "log_share_pct": -7.4
+      }
+    ],
+    "reading": "equities rose on EARNINGS, not multiple expansion - P/E actually contracted; real profits ~x2.3. This is real value capture, not pure monetary inflation."
+  },
+  "housing": {
+    "price_mult": 3.067,
+    "rent_mult": 2.284,
+    "p2r_mult": 1.343,
+    "decomp": [
+      {
+        "factor": "rents",
+        "mult": 2.284,
+        "log_share_pct": 73.7
+      },
+      {
+        "factor": "price-to-rent multiple (rates/supply)",
+        "mult": 1.343,
+        "log_share_pct": 26.3
+      }
+    ],
+    "reading": "most of home appreciation is RENTS (a fundamental); the rest is a price-to-rent multiple driven by the mortgage-rate cycle and chronic underbuilding - a mix, not monetary alone."
+  },
+  "gold": {
+    "price_mult": 8.549,
+    "m2_mult": 4.41,
+    "vs_m2": 1.938,
+    "reading": "gold has no earnings or rent to decompose; its x8.5 rise ran ~1.9x M2 growth - monetary / store-of-value demand plus crisis premium, by elimination."
+  },
+  "labor_share": {
+    "y0": 2000,
+    "share_2000": 0.6371,
+    "y_last": 2019,
+    "share_last": 0.5918,
+    "rel_change_pct": -7.1,
+    "pt_change": -4.5,
+    "reading": "labor's share of GDP fell ~7.1% (4.5 points, 2000->2019; Penn/FRED series ends 2019); the mirror is a rising capital/profit share - the accounting bridge from wage stagnation to the equity EARNINGS that lifted the market."
+  },
+  "matrix": {
+    "columns": [
+      "Gold",
+      "Equities (S&P)",
+      "Housing"
+    ],
+    "rows": [
+      [
+        "Monetary expansion (M2)",
+        "strong",
+        "partial",
+        "partial"
+      ],
+      [
+        "Real earnings / fundamentals",
+        "n_a",
+        "strong",
+        "partial"
+      ],
+      [
+        "Rate suppression (low discount)",
+        "partial",
+        "partial",
+        "strong"
+      ],
+      [
+        "Labor->capital share shift",
+        "none",
+        "strong",
+        "none"
+      ],
+      [
+        "Supply constraint",
+        "none",
+        "none",
+        "strong"
+      ]
+    ],
+    "reading": "No row explains all three; no column is explained by one row. 'It's all money printing' fails equities (multiples contracted); 'it's all fundamentals' fails gold (it has none). The only cause that links WAGES to an asset gain is the labor->capital share shift, via equity earnings - documented accounting, not intent."
+  },
+  "tier": "Price identities are exact; driver attributions are accounting decompositions + association, not proof of cause. Confounders (globalisation, demographics, buybacks, financialisation, tax policy, foreign demand) are uncontrolled.",
+  "sources": "FRED (S&P CoreLogic Case-Shiller, CPI rent, M2, labor share); S&P Dow Jones Indices (as-reported EPS, documented); LBMA gold (documented)."
+}

@@ -1,0 +1,232 @@
+{
+  "generated_note": "annual means from FRED keyless CSV; refresh via fetch_sources.py",
+  "benchmarks": [
+    1989,
+    1995,
+    2000,
+    2007,
+    2013,
+    2019,
+    2024
+  ],
+  "series": {
+    "CPIAUCSL": {
+      "desc": "CPI-U, all items, seasonally adj (BLS via FRED)",
+      "unit": "index 1982-84=100",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+      "fetched": true,
+      "values": {
+        "1989": 123.9417,
+        "1995": 152.3833,
+        "2000": 172.1917,
+        "2007": 207.3442,
+        "2013": 232.9517,
+        "2019": 255.6526,
+        "2024": 313.6982
+      },
+      "as_of": "2026-07-01"
+    },
+    "LEU0252881500Q": {
+      "desc": "Median usual weekly earnings, full-time wage & salary (BLS via FRED)",
+      "unit": "USD/week",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=LEU0252881500Q",
+      "fetched": true,
+      "values": {
+        "1989": 399.5,
+        "1995": 479.0,
+        "2000": 575.25,
+        "2007": 694.5,
+        "2013": 776.5,
+        "2019": 917.0,
+        "2024": 1159.75
+      },
+      "as_of": "2026-04-01"
+    },
+    "CSUSHPINSA": {
+      "desc": "S&P CoreLogic Case-Shiller US National Home Price Index",
+      "unit": "index Jan2000=100",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CSUSHPINSA",
+      "fetched": true,
+      "values": {
+        "1989": 75.5062,
+        "1995": 80.991,
+        "2000": 104.7775,
+        "2007": 179.9412,
+        "2013": 154.5115,
+        "2019": 209.3991,
+        "2024": 321.352
+      },
+      "as_of": "2026-05-01"
+    },
+    "MSPUS": {
+      "desc": "Median sales price of houses sold, US (Census/HUD via FRED)",
+      "unit": "USD",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MSPUS",
+      "fetched": true,
+      "values": {
+        "1989": 120425.0,
+        "1995": 133475.0,
+        "2000": 167550.0,
+        "2007": 244950.0,
+        "2013": 266225.0,
+        "2019": 320250.0,
+        "2024": 418975.0
+      },
+      "as_of": "2026-04-01"
+    },
+    "M2SL": {
+      "desc": "M2 money stock, seasonally adj (Federal Reserve H.6 via FRED)",
+      "unit": "USD billions",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL",
+      "fetched": true,
+      "values": {
+        "1989": 3054.0667,
+        "1995": 3555.6333,
+        "2000": 4792.05,
+        "2007": 7308.175,
+        "2013": 10752.4,
+        "2019": 14863.75,
+        "2024": 21134.6917
+      },
+      "as_of": "2026-06-01"
+    },
+    "TNWBSHNO": {
+      "desc": "Households & nonprofits net worth (Federal Reserve Z.1 via FRED)",
+      "unit": "USD millions",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TNWBSHNO",
+      "fetched": true,
+      "values": {
+        "1989": 21301108.75,
+        "1995": 29153568.5,
+        "2000": 44563038.5,
+        "2007": 69932499.25,
+        "2013": 77612380.75,
+        "2019": 112552440.25,
+        "2024": 166377453.5
+      },
+      "as_of": "2026-01-01"
+    },
+    "WFRBSTP1300": {
+      "desc": "Net worth share held by the Top 0.1% (Fed Distributional Financial Accounts)",
+      "unit": "percent",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBSTP1300",
+      "fetched": true,
+      "values": {
+        "1989": 8.65,
+        "1995": 11.225,
+        "2000": 10.8,
+        "2007": 11.75,
+        "2013": 12.075,
+        "2019": 12.275,
+        "2024": 13.875
+      },
+      "as_of": "2026-01-01"
+    },
+    "WFRBST01134": {
+      "desc": "Net worth share held by the Top 1% (Fed DFA)",
+      "unit": "percent",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBST01134",
+      "fetched": true,
+      "values": {
+        "1989": 22.9,
+        "1995": 26.875,
+        "2000": 27.375,
+        "2007": 28.775,
+        "2013": 29.725,
+        "2019": 30.55,
+        "2024": 30.75
+      },
+      "as_of": "2026-01-01"
+    },
+    "WFRBSB50215": {
+      "desc": "Net worth share held by the Bottom 50% (Fed DFA)",
+      "unit": "percent",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBSB50215",
+      "fetched": true,
+      "values": {
+        "1989": 3.45,
+        "1995": 3.6,
+        "2000": 3.2,
+        "2007": 2.0,
+        "2013": 0.825,
+        "2019": 1.65,
+        "2024": 2.475
+      },
+      "as_of": "2026-01-01"
+    },
+    "CUUR0000SEHA": {
+      "desc": "CPI rent of primary residence (BLS via FRED)",
+      "unit": "index 1982-84=100",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CUUR0000SEHA",
+      "fetched": true,
+      "values": {
+        "1989": 132.8083,
+        "1995": 157.775,
+        "2000": 183.925,
+        "2007": 234.6789,
+        "2013": 267.7246,
+        "2019": 331.1238,
+        "2024": 420.0596
+      },
+      "as_of": "2026-07-01"
+    },
+    "LABSHPUSA156NRUG": {
+      "desc": "Labor share of GDP, United States (Penn World Table via FRED)",
+      "unit": "fraction",
+      "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=LABSHPUSA156NRUG",
+      "fetched": true,
+      "values": {
+        "1989": 0.6119,
+        "1995": 0.6074,
+        "2000": 0.6371,
+        "2007": 0.603,
+        "2013": 0.5872,
+        "2019": 0.5918
+      },
+      "as_of": "2023-01-01"
+    },
+    "GOLD_LBMA": {
+      "desc": "Gold price, London fixing (LBMA; FRED feed discontinued 2022)",
+      "unit": "USD/oz",
+      "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+      "fetched": false,
+      "source_type": "documented snapshot (LBMA annual average)",
+      "values": {
+        "1989": 381,
+        "1995": 384,
+        "2000": 279.11,
+        "2007": 695.39,
+        "2013": 1411.23,
+        "2019": 1392.6,
+        "2024": 2386.2
+      }
+    },
+    "SILVER_LBMA": {
+      "desc": "Silver price, London fixing (LBMA)",
+      "unit": "USD/oz",
+      "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+      "fetched": false,
+      "source_type": "documented snapshot (LBMA annual average)",
+      "values": {
+        "2000": 4.95,
+        "2024": 28.27
+      }
+    },
+    "SP500_ANNUAL": {
+      "desc": "S&P 500 index, annual average close",
+      "unit": "index",
+      "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+      "fetched": false,
+      "source_type": "documented snapshot (annual-average close)",
+      "values": {
+        "1989": 323,
+        "1995": 542,
+        "2000": 1427,
+        "2007": 1477,
+        "2013": 1643,
+        "2019": 2913,
+        "2024": 5427
+      }
+    }
+  }
+}

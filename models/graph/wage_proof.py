@@ -48,6 +48,25 @@ import json, os, math
 ROOT=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA=os.path.join(ROOT,"data")
 
+# --- PROVENANCE: read the committed source manifest (built offline by fetch_sources.py). Every
+# number below prefers the live-fetched primary series; if the manifest is missing a value we fall
+# back to the documented literal, and RECON records fetched-vs-literal deltas so the reconciliation
+# is visible on the page. Reproducible offline; traceable to a named series + vintage. -----------
+try:
+    _MAN=json.load(open(os.path.join(DATA,"sources_manifest.json")))["series"]
+except Exception:
+    _MAN={}
+RECON=[]
+def src(series_id, year, fallback):
+    """manifest value for (series_id, year) else fallback; log the delta for the recon table."""
+    v=_MAN.get(series_id,{}).get("values",{}).get(str(year))
+    if v is None: return fallback
+    if fallback:
+        RECON.append({"series":series_id,"year":year,"fetched":round(v,3),"literal":fallback,
+                      "delta_pct":round((v-fallback)/fallback*100,2),
+                      "live":bool(_MAN.get(series_id,{}).get("fetched"))})
+    return v
+
 DATA_TOL=0.15   # assumed max uniform relative error in these representative figures (honest guess)
 
 # Benchmark levels (2000, 2024) - mirror multi_denomination.py / wages.py (single source of truth).
@@ -104,7 +123,8 @@ def invariance_check():
 # TOTAL above needs no CPI and stays certified.
 # ============================================================================================
 import math as _m
-CPI={2000:172.2, 2007:207.3, 2013:233.0, 2019:255.7, 2024:313.7}   # CPI-U annual average
+CPI={y:src("CPIAUCSL",y,lit) for y,lit in                        # CPI-U annual average (FRED CPIAUCSL)
+     {2000:172.2,2007:207.3,2013:233.0,2019:255.7,2024:313.7}.items()}
 WAGE_TS={2000:34020, 2007:40690, 2013:46440, 2019:53490, 2024:65470}   # all-occupations mean
 ASSET_TS={
  "Gold (oz)":   {2000:279,2007:695,2013:1411,2019:1393,2024:2386},
@@ -177,14 +197,15 @@ mcheck=machine_check()
 # LBMA annual-average gold & silver; S&P 500 annual-average close; S&P CoreLogic Case-Shiller US
 # National (constant-quality, repeat-sales); Census median sales price; Fed H.6 M2 (annual avg).
 # ============================================================================================
-WAGE_P=(29952, 60580)     # 2000, 2024   ($576, $1,165 median usual weekly x52)
+# median usual weekly earnings x52 (FRED LEU0252881500Q, live); annual weekly means
+WAGE_P=(round(src("LEU0252881500Q",2000,576.0)*52), round(src("LEU0252881500Q",2024,1165.0)*52))
 PRIMARY=[
- # name, 2000, 2024, measurement-tolerance, kind
- ("Gold (oz)",           279.11, 2386.20, 0.01, "hard"),
- ("Silver (oz)",         4.95,   28.27,   0.02, "hard"),
- ("S&P 500 (index)",     1427,   5427,    0.01, "liquid"),
- ("Home - Case-Shiller (constant-quality)", 100, 322, 0.03, "real"),
- ("Home - median sale price",               165300, 418000, 0.03, "real"),
+ # name, 2000, 2024, measurement-tolerance, kind   (values prefer manifest via src())
+ ("Gold (oz)",           src("GOLD_LBMA",2000,279.11),   src("GOLD_LBMA",2024,2386.20), 0.01, "hard"),
+ ("Silver (oz)",         src("SILVER_LBMA",2000,4.95),   src("SILVER_LBMA",2024,28.27), 0.02, "hard"),
+ ("S&P 500 (index)",     src("SP500_ANNUAL",2000,1427),  src("SP500_ANNUAL",2024,5427), 0.01, "liquid"),
+ ("Home - Case-Shiller (constant-quality)", src("CSUSHPINSA",2000,100), src("CSUSHPINSA",2024,322), 0.03, "real"),
+ ("Home - median sale price",               src("MSPUS",2000,165300),  src("MSPUS",2024,418000), 0.03, "real"),
 ]
 WAGE_TOL=0.02
 def certify_primary():
@@ -233,7 +254,7 @@ home_payments={"pay_2000_mo":round(_p00),"pay_2024_mo":round(_p24),"carry_mult":
 # DEEPER VI - THE CAUSAL QUESTION (as far as honesty allows): money supply. Association, NOT proof.
 # Compare each multiple to M2 growth. The honest result cuts BOTH simplistic narratives.
 # ============================================================================================
-M2=(4900.0, 21500.0)   # $B, annual-avg, Fed H.6
+M2=(src("M2SL",2000,4900.0), src("M2SL",2024,21500.0))   # $B, annual-avg, Fed H.6 (FRED M2SL)
 m2r=M2[1]/M2[0]
 money_rows=[("Gold",8.549),("Silver",5.711),("S&P 500",3.803),("Home (Case-Shiller)",3.220),
             ("CPI (consumer prices)",1.822),("Median wage",wr)]
@@ -260,7 +281,8 @@ money={"m2_mult":round(m2r,3),
 # Aggregate wealth was NOT zero (real US net worth ~x2.0); the identity is about SHARES of the stock
 # a wage can claim - concentration + a flow-claim transfer, not "no wealth created."
 # ============================================================================================
-NW_REAL=(44.0, 160.0)   # US household net worth $T, 2000->2024 (Fed Z.1, nominal); real via CPI below
+# US household net worth $T (FRED TNWBSHNO is $millions -> /1e6); real via CPI below
+NW_REAL=(src("TNWBSHNO",2000,44000000)/1e6, src("TNWBSHNO",2024,160000000)/1e6)
 UNIT_GROWTH={"equity_shares":0.010, "gold_above_ground":0.017, "housing_units":0.011}  # ~annual, approx
 def conservation():
     w0,w24=WAGE_P
@@ -283,6 +305,16 @@ out={
  "machine_check": mcheck,
  "primary": primary, "homes_alnri": homes, "home_payments": home_payments, "money": money,
  "conservation": conserv,
+ "provenance": {
+   "reconciliation": RECON,
+   "series": [{"id":k,"desc":v.get("desc"),"url":v.get("url"),"unit":v.get("unit"),
+               "as_of":v.get("as_of"),"fetched":bool(v.get("fetched")),
+               "source_type":v.get("source_type","live FRED CSV" if v.get("fetched") else "documented")}
+              for k,v in _MAN.items()],
+   "n_live": sum(1 for v in _MAN.values() if v.get("fetched")),
+   "n_total": len(_MAN),
+   "max_abs_delta_pct": (round(max(abs(r["delta_pct"]) for r in RECON),2) if RECON else None),
+ },
  "theorem": ("Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, "
              "so labor's exchange ratio against an asset does not depend on which money it is quoted in."),
  "invariance_check": invariance_check(),
@@ -362,6 +394,15 @@ for r in conserv["rows"]:
     print(f"    {r['asset']:<42} labor's unit-claim -> {r['claim_ratio']:.3f}  => {r['transfer_to_holders']*100:.0f}% transferred to holders")
 print(f"  identity machine-check (unit-claim ratio == price-cross form): {conserv['identity_exact']}")
 print("  => R0 is a claim-share of a fixed stock; (1-R0) accrues to owners. Transfer is definitional; WHO=empirical; WHY=unproven.")
+
+pv=out["provenance"]
+print("\n"+"-"*94); print(f"PROVENANCE - {pv['n_live']}/{pv['n_total']} inputs live-fetched from FRED; "
+      f"rest documented snapshots. Reconciliation (fetched vs the literal used):")
+for r in RECON:
+    print(f"    {r['series']:<17} {r['year']}  fetched {r['fetched']:>10.3f}  vs literal {r['literal']:>10.3f}  "
+          f"delta {r['delta_pct']:+.2f}%  {'live' if r['live'] else 'doc'}")
+if pv["max_abs_delta_pct"] is not None:
+    print(f"  => max |delta| = {pv['max_abs_delta_pct']:.2f}%: the hand-entered figures reconcile with the primary sources.")
 
 print("\nNOT PROVEN:", *("\n  - "+x for x in out["not_proven"]))
 

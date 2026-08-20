@@ -136,51 +136,51 @@
     {
       "numeraire": "Gold (oz)",
       "kind": "hard",
-      "R0": 0.2366,
-      "pct_of_2000": 23.7,
+      "R0": 0.2358,
+      "pct_of_2000": 23.6,
       "asset_mult": 8.549,
       "tol": 0.01,
-      "R_worst": 0.2512,
+      "R_worst": 0.2504,
       "certified": true
     },
     {
       "numeraire": "Silver (oz)",
       "kind": "hard",
-      "R0": 0.3541,
-      "pct_of_2000": 35.4,
+      "R0": 0.353,
+      "pct_of_2000": 35.3,
       "asset_mult": 5.711,
       "tol": 0.02,
-      "R_worst": 0.3836,
+      "R_worst": 0.3824,
       "certified": true
     },
     {
       "numeraire": "S&P 500 (index)",
       "kind": "liquid",
-      "R0": 0.5318,
-      "pct_of_2000": 53.2,
+      "R0": 0.5301,
+      "pct_of_2000": 53.0,
       "asset_mult": 3.803,
       "tol": 0.01,
-      "R_worst": 0.5647,
+      "R_worst": 0.5629,
       "certified": true
     },
     {
       "numeraire": "Home - Case-Shiller (constant-quality)",
       "kind": "real",
-      "R0": 0.6281,
-      "pct_of_2000": 62.8,
-      "asset_mult": 3.22,
+      "R0": 0.6573,
+      "pct_of_2000": 65.7,
+      "asset_mult": 3.067,
       "tol": 0.03,
-      "R_worst": 0.6942,
+      "R_worst": 0.7265,
       "certified": true
     },
     {
       "numeraire": "Home - median sale price",
       "kind": "real",
-      "R0": 0.7998,
-      "pct_of_2000": 80.0,
-      "asset_mult": 2.529,
+      "R0": 0.8062,
+      "pct_of_2000": 80.6,
+      "asset_mult": 2.501,
       "tol": 0.03,
-      "R_worst": 0.884,
+      "R_worst": 0.8911,
       "certified": true
     }
   ],
@@ -189,9 +189,9 @@
       "letter": "L",
       "lens": "Constant-quality (Case-Shiller repeat-sales)",
       "home_mult": 3.22,
-      "R0": 0.6281,
-      "pct_of_2000": 62.8,
-      "breakdown_pct": 11.6,
+      "R0": 0.6261,
+      "pct_of_2000": 62.6,
+      "breakdown_pct": 11.7,
       "certified": true,
       "note": "same houses resold; controls location, size & quality"
     },
@@ -199,9 +199,9 @@
       "letter": "N",
       "lens": "Median sale price (raw, mix-shifting)",
       "home_mult": 2.529,
-      "R0": 0.7998,
-      "pct_of_2000": 80.0,
-      "breakdown_pct": 5.6,
+      "R0": 0.7973,
+      "pct_of_2000": 79.7,
+      "breakdown_pct": 5.7,
       "certified": true,
       "note": "the usual number; distorted by what sells"
     },
@@ -209,8 +209,8 @@
       "letter": "A",
       "lens": "Price per square foot (~size-adjusted)",
       "home_mult": 2.75,
-      "R0": 0.7355,
-      "pct_of_2000": 73.5,
+      "R0": 0.7331,
+      "pct_of_2000": 73.3,
       "breakdown_pct": 7.7,
       "certified": true,
       "note": "new-home ~$/sqft; homes also grew ~10% in size"
@@ -219,9 +219,9 @@
       "letter": "R",
       "lens": "Mortgage carry (monthly P&I, 20% down)",
       "home_mult": 2.218,
-      "R0": 0.912,
-      "pct_of_2000": 91.2,
-      "breakdown_pct": 2.3,
+      "R0": 0.909,
+      "pct_of_2000": 90.9,
+      "breakdown_pct": 2.4,
       "certified": false,
       "note": "true cash cost; 2000 rate ~8.0%, 2024 ~6.7%"
     }
@@ -232,63 +232,63 @@
     "carry_mult": 2.218
   },
   "money": {
-    "m2_mult": 4.388,
+    "m2_mult": 4.41,
     "rows": [
       {
         "item": "Gold",
         "mult": 8.549,
-        "vs_m2": 1.948
+        "vs_m2": 1.938
       },
       {
         "item": "Silver",
         "mult": 5.711,
-        "vs_m2": 1.302
+        "vs_m2": 1.295
       },
       {
         "item": "S&P 500",
         "mult": 3.803,
-        "vs_m2": 0.867
+        "vs_m2": 0.862
       },
       {
         "item": "Home (Case-Shiller)",
         "mult": 3.22,
-        "vs_m2": 0.734
+        "vs_m2": 0.73
       },
       {
         "item": "CPI (consumer prices)",
         "mult": 1.822,
-        "vs_m2": 0.415
+        "vs_m2": 0.413
       },
       {
         "item": "Median wage",
-        "mult": 2.023,
-        "vs_m2": 0.461
+        "mult": 2.016,
+        "vs_m2": 0.457
       }
     ],
     "reading": "M2 grew 4.4x; consumer prices and wages rose under half as fast; assets absorbed the gap and gold/silver exceeded it. Monetary expansion is the leading candidate mechanism and is strongly ASSOCIATED with the asset-inflation term - but no single money aggregate explains the cross-asset dispersion (gold ran ~2x M2, homes ~0.7x), and confounders (globalisation goods-disinflation, rates, financialisation, EM central-bank gold buying, real earnings growth) are uncontrolled. Association, not proof of cause."
   },
   "conservation": {
-    "real_aggregate_nw_growth": 2.0,
+    "real_aggregate_nw_growth": 2.05,
     "rows": [
       {
         "asset": "Gold (oz)",
-        "claim_ratio": 0.237,
-        "transfer_to_holders": 0.763
+        "claim_ratio": 0.236,
+        "transfer_to_holders": 0.764
       },
       {
         "asset": "Silver (oz)",
-        "claim_ratio": 0.354,
-        "transfer_to_holders": 0.646
+        "claim_ratio": 0.353,
+        "transfer_to_holders": 0.647
       },
       {
         "asset": "S&P 500 (index)",
-        "claim_ratio": 0.532,
-        "transfer_to_holders": 0.468
+        "claim_ratio": 0.53,
+        "transfer_to_holders": 0.47
       },
       {
         "asset": "Home - Case-Shiller (constant-quality)",
-        "claim_ratio": 0.628,
-        "transfer_to_holders": 0.372
+        "claim_ratio": 0.657,
+        "transfer_to_holders": 0.343
       }
     ],
     "unit_growth": {
@@ -297,6 +297,291 @@
       "housing_units": 0.011
     },
     "identity_exact": true
+  },
+  "provenance": {
+    "reconciliation": [
+      {
+        "series": "CPIAUCSL",
+        "year": 2000,
+        "fetched": 172.192,
+        "literal": 172.2,
+        "delta_pct": -0.0,
+        "live": true
+      },
+      {
+        "series": "CPIAUCSL",
+        "year": 2007,
+        "fetched": 207.344,
+        "literal": 207.3,
+        "delta_pct": 0.02,
+        "live": true
+      },
+      {
+        "series": "CPIAUCSL",
+        "year": 2013,
+        "fetched": 232.952,
+        "literal": 233.0,
+        "delta_pct": -0.02,
+        "live": true
+      },
+      {
+        "series": "CPIAUCSL",
+        "year": 2019,
+        "fetched": 255.653,
+        "literal": 255.7,
+        "delta_pct": -0.02,
+        "live": true
+      },
+      {
+        "series": "CPIAUCSL",
+        "year": 2024,
+        "fetched": 313.698,
+        "literal": 313.7,
+        "delta_pct": -0.0,
+        "live": true
+      },
+      {
+        "series": "LEU0252881500Q",
+        "year": 2000,
+        "fetched": 575.25,
+        "literal": 576.0,
+        "delta_pct": -0.13,
+        "live": true
+      },
+      {
+        "series": "LEU0252881500Q",
+        "year": 2024,
+        "fetched": 1159.75,
+        "literal": 1165.0,
+        "delta_pct": -0.45,
+        "live": true
+      },
+      {
+        "series": "GOLD_LBMA",
+        "year": 2000,
+        "fetched": 279.11,
+        "literal": 279.11,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "GOLD_LBMA",
+        "year": 2024,
+        "fetched": 2386.2,
+        "literal": 2386.2,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "SILVER_LBMA",
+        "year": 2000,
+        "fetched": 4.95,
+        "literal": 4.95,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "SILVER_LBMA",
+        "year": 2024,
+        "fetched": 28.27,
+        "literal": 28.27,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "SP500_ANNUAL",
+        "year": 2000,
+        "fetched": 1427,
+        "literal": 1427,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "SP500_ANNUAL",
+        "year": 2024,
+        "fetched": 5427,
+        "literal": 5427,
+        "delta_pct": 0.0,
+        "live": false
+      },
+      {
+        "series": "CSUSHPINSA",
+        "year": 2000,
+        "fetched": 104.778,
+        "literal": 100,
+        "delta_pct": 4.78,
+        "live": true
+      },
+      {
+        "series": "CSUSHPINSA",
+        "year": 2024,
+        "fetched": 321.352,
+        "literal": 322,
+        "delta_pct": -0.2,
+        "live": true
+      },
+      {
+        "series": "MSPUS",
+        "year": 2000,
+        "fetched": 167550.0,
+        "literal": 165300,
+        "delta_pct": 1.36,
+        "live": true
+      },
+      {
+        "series": "MSPUS",
+        "year": 2024,
+        "fetched": 418975.0,
+        "literal": 418000,
+        "delta_pct": 0.23,
+        "live": true
+      },
+      {
+        "series": "M2SL",
+        "year": 2000,
+        "fetched": 4792.05,
+        "literal": 4900.0,
+        "delta_pct": -2.2,
+        "live": true
+      },
+      {
+        "series": "M2SL",
+        "year": 2024,
+        "fetched": 21134.692,
+        "literal": 21500.0,
+        "delta_pct": -1.7,
+        "live": true
+      },
+      {
+        "series": "TNWBSHNO",
+        "year": 2000,
+        "fetched": 44563038.5,
+        "literal": 44000000,
+        "delta_pct": 1.28,
+        "live": true
+      },
+      {
+        "series": "TNWBSHNO",
+        "year": 2024,
+        "fetched": 166377453.5,
+        "literal": 160000000,
+        "delta_pct": 3.99,
+        "live": true
+      }
+    ],
+    "series": [
+      {
+        "id": "CPIAUCSL",
+        "desc": "CPI-U, all items, seasonally adj (BLS via FRED)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+        "unit": "index 1982-84=100",
+        "as_of": "2026-07-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "LEU0252881500Q",
+        "desc": "Median usual weekly earnings, full-time wage & salary (BLS via FRED)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=LEU0252881500Q",
+        "unit": "USD/week",
+        "as_of": "2026-04-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "CSUSHPINSA",
+        "desc": "S&P CoreLogic Case-Shiller US National Home Price Index",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CSUSHPINSA",
+        "unit": "index Jan2000=100",
+        "as_of": "2026-05-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "MSPUS",
+        "desc": "Median sales price of houses sold, US (Census/HUD via FRED)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MSPUS",
+        "unit": "USD",
+        "as_of": "2026-04-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "M2SL",
+        "desc": "M2 money stock, seasonally adj (Federal Reserve H.6 via FRED)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=M2SL",
+        "unit": "USD billions",
+        "as_of": "2026-06-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "TNWBSHNO",
+        "desc": "Households & nonprofits net worth (Federal Reserve Z.1 via FRED)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TNWBSHNO",
+        "unit": "USD millions",
+        "as_of": "2026-01-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "WFRBSTP1300",
+        "desc": "Net worth share held by the Top 0.1% (Fed Distributional Financial Accounts)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBSTP1300",
+        "unit": "percent",
+        "as_of": "2026-01-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "WFRBST01134",
+        "desc": "Net worth share held by the Top 1% (Fed DFA)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBST01134",
+        "unit": "percent",
+        "as_of": "2026-01-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "WFRBSB50215",
+        "desc": "Net worth share held by the Bottom 50% (Fed DFA)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBSB50215",
+        "unit": "percent",
+        "as_of": "2026-01-01",
+        "fetched": true,
+        "source_type": "live FRED CSV"
+      },
+      {
+        "id": "GOLD_LBMA",
+        "desc": "Gold price, London fixing (LBMA; FRED feed discontinued 2022)",
+        "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+        "unit": "USD/oz",
+        "as_of": null,
+        "fetched": false,
+        "source_type": "documented snapshot (LBMA annual average)"
+      },
+      {
+        "id": "SILVER_LBMA",
+        "desc": "Silver price, London fixing (LBMA)",
+        "url": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices",
+        "unit": "USD/oz",
+        "as_of": null,
+        "fetched": false,
+        "source_type": "documented snapshot (LBMA annual average)"
+      },
+      {
+        "id": "SP500_ANNUAL",
+        "desc": "S&P 500 index, annual average close",
+        "url": "https://www.spglobal.com/spdji/en/indices/equity/sp-500/",
+        "unit": "index",
+        "as_of": null,
+        "fetched": false,
+        "source_type": "documented snapshot (annual-average close)"
+      }
+    ],
+    "n_live": 9,
+    "n_total": 12,
+    "max_abs_delta_pct": 4.78
   },
   "theorem": "Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, so labor's exchange ratio against an asset does not depend on which money it is quoted in.",
   "invariance_check": {
