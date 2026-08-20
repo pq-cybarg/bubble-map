@@ -703,19 +703,22 @@ const WD={WD_JSON};
   const M={CM_JSON};
   const names=["Gold","Equities (S&P)","Housing"];
   const price=[M.gold.price_mult,M.equities.price_mult,M.housing.price_mult];
-  const fund =[0,M.equities.eps_mult,M.housing.rent_mult];
+  const fund =[M.gold.m2_mult,M.equities.eps_mult,M.housing.rent_mult];        // gold's driver = M2 (monetary anchor)
+  const dlab =["M2 (money)","earnings","rent"];
+  const dcol =["#8a8378","#0ca30c","#0ca30c"];   // gold driver greyed: monetary, not a real fundamental
   Plotly.newPlot("mechbar",[
     {{type:"bar",name:"total price ×",x:names,y:price,marker:{{color:"#805ad5"}},
       text:price.map(v=>"×"+v.toFixed(2)),textposition:"outside",textfont:{{color:ink,size:11}},
       hovertemplate:"%{{x}} price ×%{{y:.2f}}<extra></extra>"}},
-    {{type:"bar",name:"fundamental driver × (earnings / rent)",x:names,y:fund,marker:{{color:"#0ca30c"}},
-      text:fund.map(v=>v?("×"+v.toFixed(2)):"none"),textposition:"outside",textfont:{{color:ink,size:11}},
-      hovertemplate:"%{{x}} fundamental ×%{{y:.2f}}<extra></extra>"}}
+    {{type:"bar",name:"principal driver × (earnings / rent / money)",x:names,y:fund,marker:{{color:dcol}},
+      text:fund.map((v,i)=>"×"+v.toFixed(2)+" "+dlab[i]),textposition:"outside",textfont:{{color:ink,size:10.5}},
+      customdata:dlab,hovertemplate:"%{{x}} driver ×%{{y:.2f}} (%{{customdata}})<extra></extra>"}}
   ],{{barmode:"group",bargap:0.3,bargroupgap:0.12,
-    margin:{{l:44,r:14,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    margin:{{l:44,r:14,t:8,b:46}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
     legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
     xaxis:{{color:ink}},yaxis:{{title:"growth multiple 2000→2024",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
-    annotations:[{{x:"Gold",y:0,yshift:16,showarrow:false,text:"no cashflow →<br>purely monetary",font:{{color:"#8a8378",size:10.5}}}}]
+    annotations:[{{x:"Gold",y:M.gold.m2_mult,yshift:26,showarrow:false,
+      text:"gold has no cashflow —<br>its driver is monetary (M2)",font:{{color:"#8a8378",size:10}}}}]
   }},{{displayModeBar:false,responsive:true}});
 }})();
 

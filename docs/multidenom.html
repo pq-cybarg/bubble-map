@@ -540,19 +540,22 @@ const WD={"dfa_years": [1989, 1995, 2000, 2007, 2013, 2019, 2024], "dfa": {"Top 
   const M={"equities": {"price_mult": 3.803, "eps_mult": 4.2, "pe_mult": 0.905, "real_eps_mult": 2.305, "decomp": [{"factor": "earnings (EPS)", "mult": 4.2, "log_share_pct": 107.4}, {"factor": "multiple (P/E)", "mult": 0.905, "log_share_pct": -7.4}], "reading": "equities rose on EARNINGS, not multiple expansion - P/E actually contracted; real profits ~x2.3. This is real value capture, not pure monetary inflation."}, "housing": {"price_mult": 3.067, "rent_mult": 2.284, "p2r_mult": 1.343, "decomp": [{"factor": "rents", "mult": 2.284, "log_share_pct": 73.7}, {"factor": "price-to-rent multiple (rates/supply)", "mult": 1.343, "log_share_pct": 26.3}], "reading": "most of home appreciation is RENTS (a fundamental); the rest is a price-to-rent multiple driven by the mortgage-rate cycle and chronic underbuilding - a mix, not monetary alone."}, "gold": {"price_mult": 8.549, "m2_mult": 4.41, "vs_m2": 1.938, "reading": "gold has no earnings or rent to decompose; its x8.5 rise ran ~1.9x M2 growth - monetary / store-of-value demand plus crisis premium, by elimination."}, "labor_share": {"y0": 2000, "share_2000": 0.6371, "y_last": 2019, "share_last": 0.5918, "rel_change_pct": -7.1, "pt_change": -4.5, "reading": "labor's share of GDP fell ~7.1% (4.5 points, 2000->2019; Penn/FRED series ends 2019); the mirror is a rising capital/profit share - the accounting bridge from wage stagnation to the equity EARNINGS that lifted the market."}, "matrix": {"columns": ["Gold", "Equities (S&P)", "Housing"], "rows": [["Monetary expansion (M2)", "strong", "partial", "partial"], ["Real earnings / fundamentals", "n_a", "strong", "partial"], ["Rate suppression (low discount)", "partial", "partial", "strong"], ["Labor->capital share shift", "none", "strong", "none"], ["Supply constraint", "none", "none", "strong"]], "reading": "No row explains all three; no column is explained by one row. 'It's all money printing' fails equities (multiples contracted); 'it's all fundamentals' fails gold (it has none). The only cause that links WAGES to an asset gain is the labor->capital share shift, via equity earnings - documented accounting, not intent."}, "tier": "Price identities are exact; driver attributions are accounting decompositions + association, not proof of cause. Confounders (globalisation, demographics, buybacks, financialisation, tax policy, foreign demand) are uncontrolled.", "sources": "FRED (S&P CoreLogic Case-Shiller, CPI rent, M2, labor share); S&P Dow Jones Indices (as-reported EPS, documented); LBMA gold (documented)."};
   const names=["Gold","Equities (S&P)","Housing"];
   const price=[M.gold.price_mult,M.equities.price_mult,M.housing.price_mult];
-  const fund =[0,M.equities.eps_mult,M.housing.rent_mult];
+  const fund =[M.gold.m2_mult,M.equities.eps_mult,M.housing.rent_mult];        // gold's driver = M2 (monetary anchor)
+  const dlab =["M2 (money)","earnings","rent"];
+  const dcol =["#8a8378","#0ca30c","#0ca30c"];   // gold driver greyed: monetary, not a real fundamental
   Plotly.newPlot("mechbar",[
     {type:"bar",name:"total price ×",x:names,y:price,marker:{color:"#805ad5"},
       text:price.map(v=>"×"+v.toFixed(2)),textposition:"outside",textfont:{color:ink,size:11},
       hovertemplate:"%{x} price ×%{y:.2f}<extra></extra>"},
-    {type:"bar",name:"fundamental driver × (earnings / rent)",x:names,y:fund,marker:{color:"#0ca30c"},
-      text:fund.map(v=>v?("×"+v.toFixed(2)):"none"),textposition:"outside",textfont:{color:ink,size:11},
-      hovertemplate:"%{x} fundamental ×%{y:.2f}<extra></extra>"}
+    {type:"bar",name:"principal driver × (earnings / rent / money)",x:names,y:fund,marker:{color:dcol},
+      text:fund.map((v,i)=>"×"+v.toFixed(2)+" "+dlab[i]),textposition:"outside",textfont:{color:ink,size:10.5},
+      customdata:dlab,hovertemplate:"%{x} driver ×%{y:.2f} (%{customdata})<extra></extra>"}
   ],{barmode:"group",bargap:0.3,bargroupgap:0.12,
-    margin:{l:44,r:14,t:8,b:34},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    margin:{l:44,r:14,t:8,b:46},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
     legend:{orientation:"h",y:1.14,font:{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},
     xaxis:{color:ink},yaxis:{title:"growth multiple 2000→2024",gridcolor:grid_c,color:ink,rangemode:"tozero"},
-    annotations:[{x:"Gold",y:0,yshift:16,showarrow:false,text:"no cashflow →<br>purely monetary",font:{color:"#8a8378",size:10.5}}]
+    annotations:[{x:"Gold",y:M.gold.m2_mult,yshift:26,showarrow:false,
+      text:"gold has no cashflow —<br>its driver is monetary (M2)",font:{color:"#8a8378",size:10}}]
   },{displayModeBar:false,responsive:true});
 })();
 
