@@ -1,0 +1,154 @@
+{
+  "brackets": [
+    {
+      "label": "Under $15k",
+      "share": 8.6,
+      "width_k": 15,
+      "open": false
+    },
+    {
+      "label": "$15-25k",
+      "share": 8.0,
+      "width_k": 10,
+      "open": false
+    },
+    {
+      "label": "$25-35k",
+      "share": 8.2,
+      "width_k": 10,
+      "open": false
+    },
+    {
+      "label": "$35-50k",
+      "share": 11.4,
+      "width_k": 15,
+      "open": false
+    },
+    {
+      "label": "$50-75k",
+      "share": 16.2,
+      "width_k": 25,
+      "open": false
+    },
+    {
+      "label": "$75-100k",
+      "share": 12.4,
+      "width_k": 25,
+      "open": false
+    },
+    {
+      "label": "$100-150k",
+      "share": 15.6,
+      "width_k": 50,
+      "open": false
+    },
+    {
+      "label": "$150-200k",
+      "share": 8.6,
+      "width_k": 50,
+      "open": false
+    },
+    {
+      "label": "$200k and over",
+      "share": 11.0,
+      "width_k": null,
+      "open": true
+    }
+  ],
+  "gini": {
+    "income_census_2023": 0.488,
+    "wealth_scf_2022": 0.85
+  },
+  "wealth_shares": [
+    {
+      "group": "Bottom 50%",
+      "share": 2.5
+    },
+    {
+      "group": "50th-90th",
+      "share": 30.2
+    },
+    {
+      "group": "90th-99th",
+      "share": 36.5
+    },
+    {
+      "group": "Top 1%",
+      "share": 30.8
+    }
+  ],
+  "top_0_1_share": 13.8,
+  "ownership": [
+    {
+      "asset": "Corporate equities & mutual funds",
+      "top10_share": 89,
+      "note": "top 1% alone hold ~54%"
+    },
+    {
+      "asset": "Private business equity",
+      "top10_share": 88,
+      "note": "closely-held firms"
+    },
+    {
+      "asset": "Financial assets (all)",
+      "top10_share": 71,
+      "note": "stocks, bonds, funds, cash"
+    },
+    {
+      "asset": "Real estate (owner + investment)",
+      "top10_share": 45,
+      "note": "housing is the broadest-held asset"
+    }
+  ],
+  "top_income": {
+    "census_bracket_ceiling": "top 5% ~23%  (top 1% not shown at all)",
+    "irs_wid_top1": 19.0,
+    "irs_wid_top1_capital_gains_incl": 22.0
+  },
+  "distortions": [
+    {
+      "name": "Open top bin",
+      "mechanism": "The highest bracket is '$200k and over' - unbounded. Everyone from comfortable to billionaire is one undifferentiated 11%. No top-1%, 0.1%, 0.01% is visible.",
+      "tag": "distortion"
+    },
+    {
+      "name": "Top-coding",
+      "mechanism": "Public-use CPS incomes above a threshold are replaced with swap/ceiling values, mechanically capping the very tail that carries the concentration.",
+      "tag": "distortion (privacy-motivated)"
+    },
+    {
+      "name": "Income, not wealth",
+      "mechanism": "Census measures a yearly FLOW. Concentration lives in the STOCK (net worth); the wealth Gini (0.85) is nearly double the income Gini (0.49).",
+      "tag": "distortion"
+    },
+    {
+      "name": "Capital gains excluded",
+      "mechanism": "Census money income omits realized AND unrealized capital gains - where the top's resources actually accrue (buy-borrow-die). The asset boom is invisible to it.",
+      "tag": "distortion"
+    },
+    {
+      "name": "Quintiles dissolve the tail",
+      "mechanism": "Slicing into five 20%-of-population buckets averages the top 0.1% in with the merely-affluent; the action is inside the top bucket's top sliver.",
+      "tag": "distortion"
+    },
+    {
+      "name": "Gini is tail-insensitive",
+      "mechanism": "A single scalar dominated by the middle of the distribution; large moves in the top 0.1% share barely move it, so the headline gauge under-reports tail dynamics.",
+      "tag": "statistical fact"
+    },
+    {
+      "name": "Household, not person",
+      "mechanism": "Bucketing by household without size-adjustment; more earners per household and shrinking household size flatter measured 'household income' growth.",
+      "tag": "confounder"
+    }
+  ],
+  "gini_tail_demo": {
+    "base_gini": 0.462,
+    "base_top01_share": 5.6,
+    "shocked_gini": 0.49,
+    "shocked_top01_share": 10.7,
+    "gini_rise_pct": 6.2,
+    "topshare_rise_pct": 89.3
+  },
+  "sources": "Census CPS ASEC income tables; Federal Reserve Distributional Financial Accounts & Survey of Consumer Finances; IRS SOI / World Inequality Database. Figures approximate, recent-year, directional."
+}

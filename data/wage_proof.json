@@ -132,6 +132,141 @@
     "breakdown_root_ok": true,
     "all_pass": true
   },
+  "primary": [
+    {
+      "numeraire": "Gold (oz)",
+      "kind": "hard",
+      "R0": 0.2366,
+      "pct_of_2000": 23.7,
+      "asset_mult": 8.549,
+      "tol": 0.01,
+      "R_worst": 0.2512,
+      "certified": true
+    },
+    {
+      "numeraire": "Silver (oz)",
+      "kind": "hard",
+      "R0": 0.3541,
+      "pct_of_2000": 35.4,
+      "asset_mult": 5.711,
+      "tol": 0.02,
+      "R_worst": 0.3836,
+      "certified": true
+    },
+    {
+      "numeraire": "S&P 500 (index)",
+      "kind": "liquid",
+      "R0": 0.5318,
+      "pct_of_2000": 53.2,
+      "asset_mult": 3.803,
+      "tol": 0.01,
+      "R_worst": 0.5647,
+      "certified": true
+    },
+    {
+      "numeraire": "Home - Case-Shiller (constant-quality)",
+      "kind": "real",
+      "R0": 0.6281,
+      "pct_of_2000": 62.8,
+      "asset_mult": 3.22,
+      "tol": 0.03,
+      "R_worst": 0.6942,
+      "certified": true
+    },
+    {
+      "numeraire": "Home - median sale price",
+      "kind": "real",
+      "R0": 0.7998,
+      "pct_of_2000": 80.0,
+      "asset_mult": 2.529,
+      "tol": 0.03,
+      "R_worst": 0.884,
+      "certified": true
+    }
+  ],
+  "homes_alnri": [
+    {
+      "letter": "L",
+      "lens": "Constant-quality (Case-Shiller repeat-sales)",
+      "home_mult": 3.22,
+      "R0": 0.6281,
+      "pct_of_2000": 62.8,
+      "breakdown_pct": 11.6,
+      "certified": true,
+      "note": "same houses resold; controls location, size & quality"
+    },
+    {
+      "letter": "N",
+      "lens": "Median sale price (raw, mix-shifting)",
+      "home_mult": 2.529,
+      "R0": 0.7998,
+      "pct_of_2000": 80.0,
+      "breakdown_pct": 5.6,
+      "certified": true,
+      "note": "the usual number; distorted by what sells"
+    },
+    {
+      "letter": "A",
+      "lens": "Price per square foot (~size-adjusted)",
+      "home_mult": 2.75,
+      "R0": 0.7355,
+      "pct_of_2000": 73.5,
+      "breakdown_pct": 7.7,
+      "certified": true,
+      "note": "new-home ~$/sqft; homes also grew ~10% in size"
+    },
+    {
+      "letter": "R",
+      "lens": "Mortgage carry (monthly P&I, 20% down)",
+      "home_mult": 2.218,
+      "R0": 0.912,
+      "pct_of_2000": 91.2,
+      "breakdown_pct": 2.3,
+      "certified": false,
+      "note": "true cash cost; 2000 rate ~8.0%, 2024 ~6.7%"
+    }
+  ],
+  "home_payments": {
+    "pay_2000_mo": 975,
+    "pay_2024_mo": 2162,
+    "carry_mult": 2.218
+  },
+  "money": {
+    "m2_mult": 4.388,
+    "rows": [
+      {
+        "item": "Gold",
+        "mult": 8.549,
+        "vs_m2": 1.948
+      },
+      {
+        "item": "Silver",
+        "mult": 5.711,
+        "vs_m2": 1.302
+      },
+      {
+        "item": "S&P 500",
+        "mult": 3.803,
+        "vs_m2": 0.867
+      },
+      {
+        "item": "Home (Case-Shiller)",
+        "mult": 3.22,
+        "vs_m2": 0.734
+      },
+      {
+        "item": "CPI (consumer prices)",
+        "mult": 1.822,
+        "vs_m2": 0.415
+      },
+      {
+        "item": "Median wage",
+        "mult": 2.023,
+        "vs_m2": 0.461
+      }
+    ],
+    "reading": "M2 grew 4.4x; consumer prices and wages rose under half as fast; assets absorbed the gap and gold/silver exceeded it. Monetary expansion is the leading candidate mechanism and is strongly ASSOCIATED with the asset-inflation term - but no single money aggregate explains the cross-asset dispersion (gold ran ~2x M2, homes ~0.7x), and confounders (globalisation goods-disinflation, rates, financialisation, EM central-bank gold buying, real earnings growth) are uncontrolled. Association, not proof of cause."
+  },
   "theorem": "Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, so labor's exchange ratio against an asset does not depend on which money it is quoted in.",
   "invariance_check": {
     "via_usd": 27.439228834870075,

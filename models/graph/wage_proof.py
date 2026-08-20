@@ -167,11 +167,91 @@ def machine_check():
             "all_pass":bool(inv_ok and decomp_ok and root_ok)}
 mcheck=machine_check()
 
+# ============================================================================================
+# DEEPER IV - AUTHORITATIVE PRIMARY SERIES + per-series interval certificate.
+# Replace the representative figures with named annual series and give each its own measurement
+# tolerance (how precisely the annual number is known - NOT whether the concept is contested).
+# Interval arithmetic, per input independently:  R_worst = R0 * (1+t_w)/(1-t_w) * (1+t_a)/(1-t_a).
+# Certified iff R_worst<1. With good data the tolerances shrink and more claims cross the line.
+# Sources: BLS CPS median usual weekly earnings (FT wage&salary) x52; BLS CPI-U annual avg;
+# LBMA annual-average gold & silver; S&P 500 annual-average close; S&P CoreLogic Case-Shiller US
+# National (constant-quality, repeat-sales); Census median sales price; Fed H.6 M2 (annual avg).
+# ============================================================================================
+WAGE_P=(29952, 60580)     # 2000, 2024   ($576, $1,165 median usual weekly x52)
+PRIMARY=[
+ # name, 2000, 2024, measurement-tolerance, kind
+ ("Gold (oz)",           279.11, 2386.20, 0.01, "hard"),
+ ("Silver (oz)",         4.95,   28.27,   0.02, "hard"),
+ ("S&P 500 (index)",     1427,   5427,    0.01, "liquid"),
+ ("Home - Case-Shiller (constant-quality)", 100, 322, 0.03, "real"),
+ ("Home - median sale price",               165300, 418000, 0.03, "real"),
+]
+WAGE_TOL=0.02
+def certify_primary():
+    rows=[]; w0,w24=WAGE_P
+    for name,a0,a24,tol,kind in PRIMARY:
+        R0=(w24/a24)/(w0/a0)
+        Rworst=R0*((1+WAGE_TOL)/(1-WAGE_TOL))*((1+tol)/(1-tol))
+        rows.append({"numeraire":name,"kind":kind,"R0":round(R0,4),"pct_of_2000":round(R0*100,1),
+                     "asset_mult":round(a24/a0,3),"tol":tol,"R_worst":round(Rworst,4),
+                     "certified":bool(Rworst<1)})
+    return rows
+primary=certify_primary()
+
+# ============================================================================================
+# DEEPER V - HOMES with ALNRI: raw median price hides five things. Adjust for each and reprice a
+# home in wage-hours. Acronym = the five adjustments (defined here, not an external index):
+#   A rea (size / price-per-sqft)   L ocation & mix (constant-quality repeat-sales)
+#   N ew-build premium (new vs existing)   R ates (mortgage carry = monthly payment)
+#   I mprovements (quality/amenities, captured by constant-quality too)
+# The point: the PRICE of a house in wage-hours fell on every lens; the monthly CARRY barely moved
+# because 2000 mortgage rates were ~8% too. Housing's squeeze is a down-payment/wealth problem more
+# than a monthly-cashflow one - a distinction the single 'median price' number erases.
+# ============================================================================================
+def mortgage_pay(price, rate, down=0.20, n=360):
+    L=price*(1-down); r=rate/12.0
+    return L*r/(1-(1+r)**-n)
+w0,w24=WAGE_P; wr=w24/w0
+_p00=mortgage_pay(165300,0.0805); _p24=mortgage_pay(418000,0.0672)
+home_lenses=[
+ # letter, label, home-inflation multiple 2000->2024, note
+ ("L","Constant-quality (Case-Shiller repeat-sales)", 322/100,      "same houses resold; controls location, size & quality"),
+ ("N","Median sale price (raw, mix-shifting)",        418000/165300,"the usual number; distorted by what sells"),
+ ("A","Price per square foot (~size-adjusted)",       2.75,          "new-home ~$/sqft; homes also grew ~10% in size"),
+ ("R","Mortgage carry (monthly P&I, 20% down)",       _p24/_p00,    "true cash cost; 2000 rate ~8.0%, 2024 ~6.7%"),
+]
+homes=[]
+for L,label,mult,note in home_lenses:
+    R0=wr/mult; e=breakdown_e(R0)
+    homes.append({"letter":L,"lens":label,"home_mult":round(mult,3),"R0":round(R0,4),
+                  "pct_of_2000":round(R0*100,1),"breakdown_pct":round(e*100,1),
+                  "certified":bool(e>0.05 and R0<1),   # at authoritative-precision tolerance ~5%
+                  "note":note})
+home_payments={"pay_2000_mo":round(_p00),"pay_2024_mo":round(_p24),"carry_mult":round(_p24/_p00,3)}
+
+# ============================================================================================
+# DEEPER VI - THE CAUSAL QUESTION (as far as honesty allows): money supply. Association, NOT proof.
+# Compare each multiple to M2 growth. The honest result cuts BOTH simplistic narratives.
+# ============================================================================================
+M2=(4900.0, 21500.0)   # $B, annual-avg, Fed H.6
+m2r=M2[1]/M2[0]
+money_rows=[("Gold",8.549),("Silver",5.711),("S&P 500",3.803),("Home (Case-Shiller)",3.220),
+            ("CPI (consumer prices)",1.822),("Median wage",wr)]
+money={"m2_mult":round(m2r,3),
+       "rows":[{"item":n,"mult":round(m,3),"vs_m2":round(m/m2r,3)} for n,m in money_rows],
+       "reading":("M2 grew %.1fx; consumer prices and wages rose under half as fast; assets absorbed the "
+                  "gap and gold/silver exceeded it. Monetary expansion is the leading candidate mechanism "
+                  "and is strongly ASSOCIATED with the asset-inflation term - but no single money aggregate "
+                  "explains the cross-asset dispersion (gold ran ~2x M2, homes ~0.7x), and confounders "
+                  "(globalisation goods-disinflation, rates, financialisation, EM central-bank gold buying, "
+                  "real earnings growth) are uncontrolled. Association, not proof of cause.")%m2r}
+
 out={
  "data_tol": DATA_TOL,
  "decomposition": decomp, "real_wage_change_2000_2024": real_wage_change,
  "endpoint_matrix": endpoints,
  "machine_check": mcheck,
+ "primary": primary, "homes_alnri": homes, "home_payments": home_payments, "money": money,
  "theorem": ("Relative price is numeraire-invariant: p_A/p_B = (k p_A)/(k p_B) for any positive k, "
              "so labor's exchange ratio against an asset does not depend on which money it is quoted in."),
  "invariance_check": invariance_check(),
@@ -223,6 +303,27 @@ print(f"  numeraire-invariance identity exact: {mcheck['invariance_exact']}")
 print(f"  decomposition identity exact:        {mcheck['decomposition_exact']}")
 print(f"  breakdown-root residual:             {mcheck['breakdown_root_residual']:.2e}  ok={mcheck['breakdown_root_ok']}")
 print(f"  ALL CHECKS PASS: {mcheck['all_pass']}")
+
+print("\n"+"-"*94); print("DEEPER IV - AUTHORITATIVE PRIMARY SERIES (per-series interval certificate)")
+for r in primary:
+    print(f"  {r['numeraire']:<42} x{r['asset_mult']:>7.3f}  R0={r['R0']:.3f}  R_worst={r['R_worst']:.3f}  "
+          f"{'CERTIFIED' if r['certified'] else 'not certified'}")
+print("  => with authoritative-precision tolerances, even median & constant-quality HOMES certify a decline in wage-hours.")
+
+print("\n"+"-"*94); print("DEEPER V - HOMES with ALNRI (area / location / new-build / rates / improvements)")
+for h in homes:
+    print(f"  [{h['letter']}] {h['lens']:<44} home x{h['home_mult']:.2f}  labor buys {h['pct_of_2000']:.0f}%  "
+          f"e*{h['breakdown_pct']:.0f}%  {'CERTIFIED' if h['certified'] else 'within noise'}")
+print(f"  mortgage payment: ${home_payments['pay_2000_mo']}/mo (2000) -> ${home_payments['pay_2024_mo']}/mo (2024), "
+      f"x{home_payments['carry_mult']:.2f}")
+print("  => house PRICE in wage-hours fell on every lens; the monthly CARRY barely moved (2000 rates were ~8% too).")
+print("     Housing's squeeze is a DOWN-PAYMENT / wealth problem more than a monthly-cashflow one.")
+
+print("\n"+"-"*94); print("DEEPER VI - CAUSATION probe: MONEY SUPPLY (association, not proof)")
+print(f"  M2 grew x{money['m2_mult']:.2f} (2000->2024).  multiple vs M2:")
+for r in money["rows"]:
+    print(f"    {r['item']:<24} x{r['mult']:>6.3f}   = {r['vs_m2']:.2f} x M2")
+print("  =>", money["reading"][:150], "...")
 
 print("\nNOT PROVEN:", *("\n  - "+x for x in out["not_proven"]))
 

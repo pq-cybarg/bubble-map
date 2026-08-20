@@ -87,6 +87,35 @@ def endpoint_table():
         body+=f"<tr><td>{a}</td>{cells}</tr>"
     return head, body
 _ep_head,_ep_body=endpoint_table()
+def _badge(ok, yes="CERTIFIED", no="within noise", nocol="#8a8378"):
+    return (f'<b style="color:#0ca30c">{yes}</b>' if ok else f'<span style="color:{nocol}">{no}</span>')
+def primary_rows():
+    return "".join(f"<tr><td>{r['numeraire']}</td><td>×{r['asset_mult']:.2f}</td><td>{r['pct_of_2000']:.0f}%</td>"
+                   f"<td>±{r['tol']*100:.0f}%</td><td>{r['R_worst']:.2f}</td><td>{_badge(r['certified'])}</td></tr>"
+                   for r in pf["primary"])
+def alnri_rows():
+    return "".join(f"<tr><td><b>{h['letter']}</b></td><td>{h['lens']}</td><td>×{h['home_mult']:.2f}</td>"
+                   f"<td>{h['pct_of_2000']:.0f}%</td><td>{h['breakdown_pct']:.0f}%</td>"
+                   f"<td>{_badge(h['certified'])}</td><td class=muted>{h['note']}</td></tr>" for h in pf["homes_alnri"])
+def money_rows():
+    return "".join(f"<tr><td>{r['item']}</td><td>×{r['mult']:.2f}</td><td>{r['vs_m2']:.2f}×</td></tr>"
+                   for r in pf["money"]["rows"])
+_hp=pf["home_payments"]; _m2=pf["money"]["m2_mult"]
+
+# --- WEALTH CONCENTRATION (bucket-bias critique; written by wealth_concentration.py) ---------
+wc=json.load(open(os.path.join(DATA,"wealth_concentration.json")))
+WC_JSON=json.dumps(wc)
+_gI=wc["gini"]["income_census_2023"]; _gW=wc["gini"]["wealth_scf_2022"]
+_t01=wc["top_0_1_share"]; _b50=next(g["share"] for g in wc["wealth_shares"] if g["group"]=="Bottom 50%")
+_td=wc["gini_tail_demo"]
+def distortion_rows():
+    col={"distortion":"#c53030","statistical fact":"#8a8378","confounder":"#8a8378"}
+    out=[]
+    for d in wc["distortions"]:
+        c=next((v for k,v in col.items() if d["tag"].startswith(k)),"#8a8378")
+        out.append(f'<tr><td><b>{d["name"]}</b></td><td>{d["mechanism"]}</td>'
+                   f'<td style="color:{c};white-space:nowrap">{d["tag"]}</td></tr>')
+    return "".join(out)
 
 import nav as _nav
 NAV=_nav.navbar("Metals")
@@ -213,6 +242,25 @@ labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b
 <b style="color:#0ca30c">ALL CHECKS PASS = {str(_mck['all_pass']).upper()}</b> &nbsp;<span class=muted>(re-verified on every site build)</span>
 </div>
 
+<h2>Deeper — authoritative series close the gap</h2>
+<p class=muted>The 15% tolerance above was a stand-in for rough figures. Swap in named primary series — BLS median usual weekly earnings, LBMA gold &amp; silver, S&amp;P annual close, S&amp;P CoreLogic Case-Shiller (constant-quality) and Census median home — each with its own <i>measurement</i> tolerance (how precisely the annual number is known), and run the certificate as exact interval arithmetic per input. R<sub>worst</sub> = R₀·(1+t<sub>w</sub>)/(1−t<sub>w</sub>)·(1+t<sub>a</sub>)/(1−t<sub>a</sub>); certified iff R<sub>worst</sub>&lt;1.</p>
+<table><thead><tr><th>Numeraire (primary source)</th><th>asset ×</th><th>labor buys</th><th>tol</th><th>R<sub>worst</sub></th><th>verdict</th></tr></thead><tbody>{primary_rows()}</tbody></table>
+<p class=muted>With authoritative-precision data the tolerances shrink from 15% to 1-3%, and the earlier hold-outs cross the line: <b>homes now certify too</b> — even the raw median, where a year of labor buys 80% of the house it did in 2000 and the decline survives the joint measurement error. The certified basket is no longer just hard money and equities; it is <b>every</b> independent store of value measured here.</p>
+
+<h2>Homes, adjusted — the ALNRI lenses</h2>
+<p class=muted>"Median home price" hides five things, and honest housing has to adjust for each: <b>A</b>rea (size / price-per-sqft), <b>L</b>ocation &amp; mix (constant-quality repeat-sales), <b>N</b>ew-build premium, <b>R</b>ates (mortgage carry), <b>I</b>mprovements (quality — also caught by constant-quality). Reprice a home in wage-hours under each:</p>
+<div id=alnribar class=plot style="height:340px"></div>
+<table><thead><tr><th>ALNRI</th><th>Home lens</th><th>home ×</th><th>labor buys</th><th>e*</th><th>verdict</th><th>note</th></tr></thead><tbody>{alnri_rows()}</tbody></table>
+<div class=k style="display:block;background:#fbf7f7;border-color:#e2cccc">
+The house <b>price</b> in wage-hours fell on every lens (constant-quality worst: a year of labor buys 63% of the home it did). But the monthly <b>mortgage payment</b> in wage-hours barely moved — <b>${_hp['pay_2000_mo']:,}/mo → ${_hp['pay_2024_mo']:,}/mo</b>, ×{_hp['carry_mult']:.2f} against wages up ×2.02 — because mortgage rates in 2000 were ~8% too. <b>Housing's squeeze is a down-payment / wealth-accumulation problem far more than a monthly-cashflow one</b> — a distinction the single "median price" number erases, and the reason "just rent the same payment" and "priced out of ownership" are both true at once.
+</div>
+
+<h2>Deeper — did money do it? (the causal question, honestly)</h2>
+<p class=muted>Proof of <i>cause</i> is outside what an exchange ratio can give, but the leading candidate — monetary expansion — can be probed as an <b>association</b>. Compare each multiple to M2 money-supply growth (Fed H.6, ×{_m2:.2f} over 2000→2024):</p>
+<div id=moneybar class=plot style="height:340px"></div>
+<table><thead><tr><th>Item</th><th>× 2000→2024</th><th>vs M2</th></tr></thead><tbody>{money_rows()}</tbody></table>
+<p class=muted>The result cuts <i>both</i> simplistic stories. M2 grew ×{_m2:.2f}; consumer prices (×1.82) and wages (×2.02) rose under half as fast, while assets absorbed the gap and gold/silver <i>exceeded</i> it. That is exactly the footprint of monetary expansion showing up in assets rather than the shopping cart — <b>strong association, and the most plausible mechanism.</b> But it is <b>not proof</b>: no single money aggregate explains the cross-asset dispersion (gold ran ~2× M2, homes ~0.7×), and globalisation's goods-disinflation, interest rates, financialisation, EM central-bank gold buying and real-earnings growth are all uncontrolled confounders. "They printed money" is supported as a <i>partial</i> driver and refuted as a <i>complete</i> one.</p>
+
 <h2>Where the proof stops — on purpose</h2>
 <p class=muted>The certified core is narrow by design. It does <b>not</b> establish:</p>
 <ul class=muted style="margin:6px 0 0 4px;line-height:1.7">
@@ -221,7 +269,36 @@ labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b
 <li><b>Any moral claim</b> — "exploitation," "theft," intent. None follow from an exchange ratio.</li>
 <li><b>The exact magnitudes.</b> Levels are representative and rounded; only the directions above are claimed, and only where e* clears {_ptol:.0f}%.</li>
 </ul>
-<p class=muted>What remains, fully proven — stated as precisely as the evidence permits: <b>over 2000→2024, a year of ordinary US labor came to command materially less of every liquid, independent store of value — gold, silver, equities — and against hard money that decline cannot be dismissed as a single-asset bubble (it holds across gold and silver), as data noise (it survives &gt;26% simultaneous error in every input), or as a cherry-picked endpoint (it also certifies from a 2007 base).</b> The sharper, CPI-dependent reading: real <i>consumption</i> wages roughly held; what collapsed was labor's claim on <i>assets</i> — the price of the store-of-value economy, measured in wage-hours, inflated several-fold. Both statements carry their own certainty tier, and the honest boundary — long-horizon not last-decade, total not decomposition, correlation not cause — is drawn exactly where each one fails.</p>
+<p class=muted>What remains, fully proven — stated as precisely as the evidence permits: <b>over 2000→2024, a year of ordinary US labor came to command materially less of every liquid, independent store of value — gold, silver, equities — and against hard money that decline cannot be dismissed as a single-asset bubble (it holds across gold and silver), as data noise (it survives &gt;26% simultaneous error in every input), or as a cherry-picked endpoint (it also certifies from a 2007 base).</b> With authoritative primary series the certified basket widens to include <b>homes on every price lens</b> (median, constant-quality, per-square-foot). The sharper, CPI-dependent reading: real <i>consumption</i> wages roughly held; what collapsed was labor's claim on <i>assets</i> — the price of the store-of-value economy, measured in wage-hours, inflated several-fold — though the monthly mortgage <i>carry</i> is the one exception that stayed within noise, so the housing squeeze is about the down-payment, not the payment. On cause, monetary expansion is a supported <i>partial</i> driver, not a proven complete one. Every statement here carries its own certainty tier, and the honest boundary — long-horizon not last-decade, total not decomposition, price not carry, association not cause — is drawn exactly where each one fails.</p>
+
+<h1 style="margin-top:56px">The instrument hides the concentration</h1>
+<p class=muted>The proof above measures the <i>typical</i> worker. But the asset-price inflation that cost labor its wage-hours did not vanish — it accrued to whoever <b>owned</b> the assets. To see that transfer you have to look at wealth concentration, and here the most-cited government statistic is built so it <b>cannot show you</b>. This is not a claim that anyone fabricated a number; it is that the popular instrument — the Census money-income bracket table — has fine resolution where there is no concentration and none where all of it lives, while the Fed's own data shows the tail plainly. Judge "lie" versus "choice" yourself; the mechanism is demonstrable.</p>
+
+<div>
+<span class=k>Same country, switch the question<br>income Gini <b>{_gI}</b> → wealth Gini <b>{_gW}</b> &nbsp;(×{_gW/_gI:.2f})</span>
+<span class=k>Bottom half of America<br>owns <b>{_b50}%</b> of the wealth</span>
+<span class=k>Top 0.1% (Fed data)<br>owns <b>{_t01}%</b> — invisible to the income brackets</span>
+<span class=k>Owners of the assets that inflated<br>top 10% hold <b>~89%</b> of equities</span>
+</div>
+
+<h2>The open bucket — fine at the bottom, infinite at the top</h2>
+<p class=muted>The standard Census household-income table resolves the bottom in $10-15k steps, then dumps everyone from the comfortable to the billionaire into one open-ended "$200k and over" bin. No top 1%, 0.1% or 0.01% can exist in it — the concentration is quite literally off the chart, by construction.</p>
+<div id=bracketbar class=plot style="height:360px"></div>
+
+<h2>What the Fed's own data shows</h2>
+<p class=muted>The Federal Reserve's Distributional Financial Accounts — also US government data — resolves the tail the income table erases. Net-worth share by group; the top 1% (dark) contains a top 0.1% of {_t01}% on its own, and the bottom half of the country holds {_b50}%.</p>
+<div id=wealthbar class=plot style="height:300px"></div>
+
+<h2>Where the wage-hours went — who owns the inflated assets</h2>
+<p class=muted>This closes the loop with the proof. The gold, equities and housing that rose several-fold in wage-hours are owned overwhelmingly at the top (Survey of Consumer Finances). The purchasing power labor lost to asset prices is the wealth asset-holders gained — and Census money income, which excludes capital gains, never records it.</p>
+<div id=ownbar class=plot style="height:300px"></div>
+
+<h2>Why the headline gauge stays calm — the Gini hides the tail</h2>
+<p class=muted>Even the inequality number itself is built to under-react. On a synthetic US-shaped income distribution, <b>doubling</b> the income of the top 0.1% raises that group's share by <b>+{_td['topshare_rise_pct']:.0f}%</b> — but the headline Gini moves only from <b>{_td['base_gini']}</b> to <b>{_td['shocked_gini']}</b> (<b>+{_td['gini_rise_pct']:.0f}%</b>, a drift it makes over a normal decade). A metric dominated by the middle cannot register a tail event; reported alone, it reads as stability during a concentration.</p>
+
+<h2>The structural distortions, itemised</h2>
+<table><thead><tr><th>Bucket choice</th><th>How it conceals</th><th>honest tag</th></tr></thead><tbody>{distortion_rows()}</tbody></table>
+<p class=muted>Read the tags honestly: several are genuine <span style="color:#c53030">distortions</span> of what a reader thinks they are seeing; one is a plain <span style="color:#8a8378">statistical fact</span> about the Gini; one is a <span style="color:#8a8378">confounder</span>. Some choices have defensible motives (top-coding protects privacy; open bins protect small-sample reliability). The demonstrable point stands regardless of motive: <b>the most-headlined instrument cannot show the concentration, and the government's own fuller series can</b>. What you conclude about intent is your call — this page only draws the receipts.</p>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
 </main>
@@ -397,6 +474,85 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     legend:{{orientation:"h",y:1.14,font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}}}},
     xaxis:{{color:ink}},yaxis:{{title:"multiplier on labor's asset-price (2000→2024)",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
     shapes:[{{type:"line",x0:-0.5,x1:names.length-0.5,y0:1,y1:1,line:{{color:"#8a8378",width:1.5,dash:"dash"}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- ALNRI home lenses: a year of labor buys X% of the home it did in 2000 (carry = the exception) ---
+(function(){{
+  const H=({PROOF_JSON}).homes_alnri.slice().sort((a,b)=>a.pct_of_2000-b.pct_of_2000);
+  Plotly.newPlot("alnribar",[{{type:"bar",orientation:"h",
+    x:H.map(h=>h.pct_of_2000),y:H.map(h=>"["+h.letter+"] "+h.lens.split(" (")[0]),
+    marker:{{color:H.map(h=>h.certified?LOSS:"#8a8378")}},
+    text:H.map(h=>h.pct_of_2000.toFixed(0)+"%"+(h.certified?"  certified":"  within noise")),
+    textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{y}}<br>labor buys %{{x:.0f}}% of the 2000 home<extra></extra>"}}],{{
+    margin:{{l:210,r:120,t:8,b:38}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"a year of labor buys this share of the year-2000 home",gridcolor:grid_c,color:ink,range:[0,110],zeroline:false}},
+    yaxis:{{color:ink,automargin:true}},
+    shapes:[{{type:"line",x0:100,x1:100,y0:-0.5,y1:H.length-0.5,line:{{color:"#8a8378",width:1.5,dash:"dash"}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Money: each multiple as a share of M2 growth; reference at 1.0 (= tracked money) ---
+(function(){{
+  const M=({PROOF_JSON}).money, rows=M.rows.slice().sort((a,b)=>b.vs_m2-a.vs_m2);
+  Plotly.newPlot("moneybar",[{{type:"bar",x:rows.map(r=>r.item),y:rows.map(r=>r.vs_m2),
+    marker:{{color:rows.map(r=>r.vs_m2>=1?CAT[2]:CAT[0])}},
+    text:rows.map(r=>r.vs_m2.toFixed(2)+"×"),textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{x}}<br>%{{y:.2f}}× the growth of M2<extra></extra>"}}],{{
+    margin:{{l:44,r:14,t:8,b:80}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{color:ink,tickangle:-30,automargin:true}},
+    yaxis:{{title:"growth 2000→2024, as a multiple of M2 growth",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
+    shapes:[{{type:"line",x0:-0.5,x1:rows.length-0.5,y0:1,y1:1,line:{{color:"#c53030",width:1.5,dash:"dash"}}}}],
+    annotations:[{{x:rows.length-1,y:1,text:"tracked M2",showarrow:false,yshift:12,font:{{color:"#c53030",size:11}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// ===================== WEALTH CONCENTRATION =====================
+const WC={WC_JSON};
+// --- Census brackets: share per bin; the open top bin flagged red ---
+(function(){{
+  const B=WC.brackets;
+  Plotly.newPlot("bracketbar",[{{type:"bar",x:B.map(b=>b.label),y:B.map(b=>b.share),
+    marker:{{color:B.map(b=>b.open?"#c53030":"#2a78d6")}},
+    text:B.map(b=>b.open?b.share.toFixed(0)+"%  ← OPEN":b.share.toFixed(0)+"%"),
+    textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{x}}<br>%{{y:.1f}}% of households"+"<extra></extra>"}}],{{
+    margin:{{l:44,r:14,t:8,b:70}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{color:ink,tickangle:-35,automargin:true}},
+    yaxis:{{title:"share of US households (%)",gridcolor:grid_c,color:ink,rangemode:"tozero"}},
+    annotations:[{{x:B.length-1,y:B[B.length-1].share,yshift:34,showarrow:false,
+      text:"$200k → billionaire,<br>one undivided bin",font:{{color:"#c53030",size:11}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Fed net-worth shares; top 1% dark, with a top-0.1% marker ---
+(function(){{
+  const S=WC.wealth_shares;
+  Plotly.newPlot("wealthbar",[{{type:"bar",orientation:"h",
+    x:S.map(s=>s.share),y:S.map(s=>s.group),
+    marker:{{color:S.map(s=>s.group==="Top 1%"?"#7b2d26":(s.group==="Bottom 50%"?"#c53030":"#805ad5"))}},
+    text:S.map(s=>s.share.toFixed(1)+"%"),textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{y}} hold %{{x:.1f}}% of net worth<extra></extra>"}}],{{
+    margin:{{l:90,r:80,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"share of US net worth (%)",gridcolor:grid_c,color:ink,range:[0,42],zeroline:false}},
+    yaxis:{{color:ink,automargin:true}},
+    annotations:[{{x:WC.top_0_1_share,y:"Top 1%",showarrow:true,arrowcolor:"#7b2d26",ax:0,ay:-26,
+      text:"top 0.1% = "+WC.top_0_1_share+"%",font:{{color:"#7b2d26",size:11}}}}]
+  }},{{displayModeBar:false,responsive:true}});
+}})();
+
+// --- Ownership of the inflated assets by the top 10% ---
+(function(){{
+  const O=WC.ownership.slice().sort((a,b)=>a.top10_share-b.top10_share);
+  Plotly.newPlot("ownbar",[{{type:"bar",orientation:"h",
+    x:O.map(o=>o.top10_share),y:O.map(o=>o.asset),
+    marker:{{color:"#805ad5"}},text:O.map(o=>o.top10_share+"%"),textposition:"outside",textfont:{{color:ink,size:11}},
+    hovertemplate:"%{{y}}<br>top 10% hold %{{x}}%  (%{{customdata}})<extra></extra>",
+    customdata:O.map(o=>o.note)}}],{{
+    margin:{{l:210,r:60,t:8,b:34}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    xaxis:{{title:"share held by the top 10% (%)",gridcolor:grid_c,color:ink,range:[0,100],zeroline:false}},
+    yaxis:{{color:ink,automargin:true}}
   }},{{displayModeBar:false,responsive:true}});
 }})();
 </script></body></html>"""
