@@ -94,7 +94,7 @@ def primary_rows():
                    f"<td>±{r['tol']*100:.0f}%</td><td>{r['R_worst']:.2f}</td><td>{_badge(r['certified'])}</td></tr>"
                    for r in pf["primary"])
 def alnri_rows():
-    return "".join(f"<tr><td><b>{h['letter']}</b></td><td>{h['lens']}</td><td>×{h['home_mult']:.2f}</td>"
+    return "".join(f"<tr><td>{h['lens']}</td><td>×{h['home_mult']:.2f}</td>"
                    f"<td>{h['pct_of_2000']:.0f}%</td><td>{h['breakdown_pct']:.0f}%</td>"
                    f"<td>{_badge(h['certified'])}</td><td class=muted>{h['note']}</td></tr>" for h in pf["homes_alnri"])
 def money_rows():
@@ -178,8 +178,24 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
  .k{{display:inline-block;background:#fffdf8;border:1px solid #e4ddcc;border-radius:6px;padding:9px 13px;margin:6px 8px 6px 0;font:13.5px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}}
  .k b{{font-size:19px;color:#7b2d26}}
  a{{color:#1f4e79}}
+ main.wide{{max-width:1580px}}
+ .split{{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,0.98fr);gap:40px;align-items:start}}
+ .col{{min-width:0}}
+ .colhead{{font:12px/1.3 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#9a8f7a;margin:24px 0 0}}
+ .col-story{{background:#fffdf8;border:1px solid #e9e2d2;border-radius:12px;padding:4px 28px 32px}}
+ .col-story h1{{font-size:29px}}
+ .col-story h2{{color:#1f4e79;font-size:20px;border:0;padding:0;margin-top:32px}}
+ .col-story p{{font-size:16.5px;line-height:1.74}}
+ .lead{{font-size:19px;line-height:1.6;color:#33312c}}
+ .aud{{background:#f7f9fc;border:1px solid #cbd8ea;border-radius:9px;padding:11px 15px;margin:10px 0;font-size:15.5px;line-height:1.62}}
+ .aud .who{{display:block;color:#1f4e79;font-weight:700;margin-bottom:3px}}
+ .story-tag{{display:inline-block;font:11px/1 -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#7b2d26;background:#f3eedf;border-radius:20px;padding:6px 11px;margin:6px 0 2px}}
+ @media(max-width:1000px){{ .split{{grid-template-columns:1fr;gap:16px}} .col-story{{padding:4px 18px 24px}} }}
 </style></head><body>{NAV}{DISC}
-<main>
+<main class=wide>
+<div class=split>
+<section class="col col-data">
+<div class=colhead>The evidence — data, proof &amp; its limits</div>
 <h1>Value in three monies</h1>
 <p class=muted>Every asset indexed to its base year (=100), then held to a constant monetary unit — US&nbsp;dollars, then ounces of gold, then ounces of silver, at the price prevailing in each year. A number that climbs in dollars often sits flat or falls once the money itself stops moving.</p>
 
@@ -284,13 +300,15 @@ labor:asset&nbsp;=&nbsp;<b style="color:#0ca30c">(labor:CPI)</b>&nbsp;×&nbsp;<b
 <table><thead><tr><th>Numeraire (primary source)</th><th>asset ×</th><th>labor buys</th><th>tol</th><th>R<sub>worst</sub></th><th>verdict</th></tr></thead><tbody>{primary_rows()}</tbody></table>
 <p class=muted>With authoritative-precision data the tolerances shrink from 15% to 1-3%, and the earlier hold-outs cross the line: <b>homes now certify too</b> — even the raw median, where a year of labor buys 80% of the house it did in 2000 and the decline survives the joint measurement error. The certified basket is no longer just hard money and equities; it is <b>every</b> independent store of value measured here.</p>
 
-<h2>Homes, adjusted — the ALNRI lenses</h2>
-<p class=muted>"Median home price" hides five things, and honest housing has to adjust for each: <b>A</b>rea (size / price-per-sqft), <b>L</b>ocation &amp; mix (constant-quality repeat-sales), <b>N</b>ew-build premium, <b>R</b>ates (mortgage carry), <b>I</b>mprovements (quality — also caught by constant-quality). Reprice a home in wage-hours under each:</p>
+<h2>Homes, honestly measured</h2>
+<p class=muted>"Median home price" hides several things, so reprice a home in wage-hours under each honest lens — constant-quality (repeat-sales), raw median, price-per-square-foot, and the monthly mortgage carry:</p>
 <div id=alnribar class=plot style="height:340px"></div>
-<table><thead><tr><th>ALNRI</th><th>Home lens</th><th>home ×</th><th>labor buys</th><th>e*</th><th>verdict</th><th>note</th></tr></thead><tbody>{alnri_rows()}</tbody></table>
+<table><thead><tr><th>Home lens</th><th>home ×</th><th>labor buys</th><th>e*</th><th>verdict</th><th>note</th></tr></thead><tbody>{alnri_rows()}</tbody></table>
 <div class=k style="display:block;background:#fbf7f7;border-color:#e2cccc">
 The house <b>price</b> in wage-hours fell on every lens (constant-quality worst: a year of labor buys 63% of the home it did). But the monthly <b>mortgage payment</b> in wage-hours barely moved — <b>${_hp['pay_2000_mo']:,}/mo → ${_hp['pay_2024_mo']:,}/mo</b>, ×{_hp['carry_mult']:.2f} against wages up ×2.02 — because mortgage rates in 2000 were ~8% too. <b>Housing's squeeze is a down-payment / wealth-accumulation problem far more than a monthly-cashflow one</b> — a distinction the single "median price" number erases, and the reason "just rent the same payment" and "priced out of ownership" are both true at once.
 </div>
+<h3>The rent signal the headline lags — ALNRI</h3>
+<p class=muted>Renters feel the same measurement gap. The official CPI rent line above (BLS <code>CUUR0000SEHA</code>) is a <b>~1-year-stale lagging print</b>: new-lease market indices — the Apartment List National Rent Index (ALNRI) and the BLS New Tenant Rent Index (NTRI/R-CPI-NTR) — <b>led it by ~16 months</b> (Dec 2021: ALNRI +18% YoY while official CPI rent showed ~3%). The lag cuts both ways and was invoked whichever way fit the moment — leading data in 2022 to argue disinflation, the still-high lagged print in 2024 to justify higher-for-longer — the cleanest BLS-confirmed case of "doubt the headline." <a href="r-macro-rent-cpi-divergence.html">Full analysis</a>.</p>
 
 <h2>Deeper — did money do it? (the causal question, honestly)</h2>
 <p class=muted>Proof of <i>cause</i> is outside what an exchange ratio can give, but the leading candidate — monetary expansion — can be probed as an <b>association</b>. Compare each multiple to M2 money-supply growth (Fed H.6, ×{_m2:.2f} over 2000→2024):</p>
@@ -393,6 +411,49 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 </div>
 
 <p class=muted style="margin-top:34px">Overlay, not proof: repricing strips monetary debasement out of a nominal figure, but it does not by itself establish cause. 2025–26 metal prices are annual-average approximations and provisional.</p>
+</section>
+
+<aside class="col col-story">
+<div class=colhead>In plain terms — what it means &amp; what to do</div>
+<h1>The paycheck still works. The ladder moved.</h1>
+<p class=lead>The charts on the left are careful and hedged. Here is what they add up to for an ordinary person, in plain language — what is happening, why, how, where it goes, and what actually helps, depending on who you are.</p>
+
+<span class=story-tag>What is happening</span>
+<h2>Your wage buys groceries. It no longer buys the future.</h2>
+<p>Measured against the everyday basket — food, gas, rent — a typical paycheck buys about what it did around 2000; by the official measure it even edged up a little (real wages roughly {_realwage:+.0f}%). So day to day, work still works.</p>
+<p>What changed is the price of the things that turn income into <b>lasting wealth</b> — a slice of the stock market, an ounce of gold, a home. Measured in <i>hours of work</i>, those pulled away. A year of the average job bought about <b>{_all['gold'][0]:.0f} ounces of gold in 2000 and roughly {_all['gold'][-1]:.0f} today</b>; a year at the federal minimum, {_mw['gold'][0]:.0f} ounces then, about {_mw['gold'][-1]:.0f} now. You can still live on wages. Turning wages into ownership is what got harder — and the people who already owned those assets grew wealthier as the prices climbed.</p>
+
+<span class=story-tag>Why it happened</span>
+<h2>Endogenous, not engineered — and no single cabal.</h2>
+<p>The tempting story — "they just printed money" — is only part of it, and the map's evidence says so. Money did grow about <b>{_m2:.1f}×</b> since 2000 while shelf prices rose less than half that, so the new money pooled in <b>assets</b>, not groceries; corporate profits climbed as labor's share of national income fell about <b>{abs(_ls['rel_change_pct']):.0f}%</b>. But the deeper pattern is the one Minsky named: stability breeds leverage, leverage breeds fragility, and the system manufactures its own instability from the inside. Around that sit a small <b>operator-network</b> and a few <b>recurring structures</b> — the same self-referential funding loops and off-balance-sheet marks, rebuilt in each era's least-regulated venue. Not one hidden hand; a shape the machinery keeps returning to. (Consistent with the rest of the investigation, intent is never inferred from who stands next to whom.)</p>
+
+<span class=story-tag>How it works</span>
+<h2>Self-marked value — and yardsticks built not to show it.</h2>
+<p>Two mechanics do most of the work. First, the transfer: the pile of real assets is roughly fixed, so when its price rises no new shares or acres appear — ownership just becomes worth more to whoever already holds it, and dearer to anyone buying in with a paycheck. Second, the <b>mark</b>: in the places risk hides — bank bonds at cost, AI stakes at self-set marks, private-credit loans at the manager's own valuation, insurance liabilities in offshore captives — value is a <i>chosen number, not a market price</i>, held until a forcing event prices it. And much of that risk has been quietly moved onto <b>ordinary retirement money</b> — pension, annuity and 401(k) exposure to manager-marked private credit — so the people least able to check the number are the ones holding it.</p>
+<p>The instruments we are handed are built not to reveal this. Official rent (CPI shelter) trails real market rents by roughly a year — new-lease measures such as the Apartment List index led it by about <b>16 months</b> — so the shelter figure can be quoted whichever way suits the moment. The jobs count gets revised down by hundreds of thousands after the headlines fade. The income table tops out at "$200,000 and over," and the Gini index barely moves when the very top doubles. The concentration is real — the Federal Reserve's own data puts the wealth gap ({_gW}) far above the income gap ({_gI}), the bottom half holding about <b>{_b50}%</b> and the top 0.1% about <b>{_t01}%</b> — the popular gauges just aren't built to show it. In the one unit that cannot be marked to myth — gold — most "gains" vanish: a year of the average job bought about {_all['gold'][0]:.0f} ounces in 2000 and roughly {_all['gold'][-1]:.0f} today.</p>
+
+<span class=story-tag>The history</span>
+<h2>Fifty years, in one breath.</h2>
+<p>1971: the dollar leaves gold. Decades of financialization follow. 2000: the dot-com peak. 2008: the crisis, then central banks buy assets on a vast scale, lifting their prices. 2020: pandemic stimulus. 2021-24: inflation, then the sharpest rate spike in decades. Every step nudged value toward those who already held assets — not by a single plan, but by the shape of the machinery.</p>
+
+<span class=story-tag>Where it goes</span>
+<h2>Structure certain, date unknowable.</h2>
+<p>The map is careful here, and so is this: the <i>structure</i> is provable — a capital loop solvent only while fresh money keeps flowing, marks that must reverse once something forces a real price — but the <i>date</i> is not (that is Minsky and Keynes; dot-com, 2008 and SVB were all visible for years, then broke suddenly on a catalyst no one timed). Extend the trend and the on-ramp to real ownership keeps narrowing for anyone starting from zero. But the thing that breaks first is the one the map treats as decisive: <b>legitimacy — trust</b>. When the scoreboard stops matching what people live, consent erodes; and trust is far harder to rebuild than a price.</p>
+
+<span class=story-tag>What to do</span>
+<h2>Depending on who you are.</h2>
+<div class=aud><span class=who>If you're starting out, or can barely save</span><b>Verify, don't trust; own, don't rent.</b> Anchor your footing in things that can't be marked to myth — real skills, a hard-money yardstick, tools and (when reachable) a home you actually <i>own and can repair</i> — not a nominal figure someone else can reset. Cut your own fragility (Minsky at the kitchen table): avoid leverage and high-interest debt, keep a margin of safety, and understand where your retirement money's risk actually sits before you trust it. Resist the lock-ins that quietly turn ownership back into rental — parts-pairing, bricking subscriptions, account-bound devices — and the surveillance rails (age-verification, digital-ID) you can still refuse. If real ownership is out of reach today, that is a structural constraint, not a personal failing — name it, and push on the fixes below.</div>
+<div class=aud><span class=who>If you're raising a family</span>Pass on real value and the <b>habit of verification</b>, not just cash: repairable tools you own, a hard-money yardstick, and the reflex to doubt the headline number. Teach that a mark is not a price.</div>
+<div class=aud><span class=who>If you build things — tech, finance, tools</span>Build to <b>minimize required trust and preserve ownership</b>: verifiable, self-custodial, open, repairable, decentralized. Every unit of trust you replace with proof is legitimacy restored. And don't build the "privacy-preserving" version of a surveillance mandate — a cleaner honeypot still legitimizes the mandate.</div>
+<div class=aud><span class=who>If you already own a great deal</span>Your center of gravity is <b>legitimacy</b>, not the balance sheet — and self-marked gains reverse when a real price finally arrives. Broad real ownership, marks that meet the market, and honest measurement even when it stings are what keep the system's consent — which protects your stake too.</div>
+<div class=aud><span class=who>If you set policy</span>Stop letting the gauge become the target: fix the shelter-rent lag, the jobs benchmark and the open-topped income bucket, and publish the tail plainly. Mark risk to market, not to management, and keep it off retirees' accounts. Protect the right to repair and to own; reject population-scale identity mandates; reduce systemic leverage; build real housing so real assets aren't kept artificially scarce. Restore the yardstick, and the consent.</div>
+
+<span class=story-tag>The goal</span>
+<h2>A verifiable stake — and beyond.</h2>
+<p>Protecting the least-protected who are genuinely trying means making the <b>first rung reachable and real</b>: a durable, verifiable stake in things you actually own — not a nominal number that debases, nor a mark someone can reset, nor a life rented from the platforms. The American Dream, honestly updated, isn't a figure on a screen; it is <i>ownership you can verify and repair</i>, plus the legitimacy that lets ordinary effort compound. Beyond that is the real fork of the decade: as AI makes the asset base far more productive, those gains can be pulled further into the loop, or spread through broad, verifiable ownership. The data can't make that choice — it can only make it impossible to pretend we didn't see it.</p>
+<p class=muted>This column is interpretation — graded overlay, corrigible, in the map's own discipline: only the machine-verified core (left, and the wider investigation) carries the weight of "proven"; nothing here asserts a coordinated cabal, and intent is never inferred from adjacency. See the <a href="lenses.html">lenses</a> and <a href="methodology.html">methodology</a>. The facts are the starting point, not the verdict.</p>
+</aside>
+</div>
 </main>
 <script>
 const D={DATA_JSON};
@@ -574,11 +635,11 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
   }},{{displayModeBar:false,responsive:true}});
 }})();
 
-// --- ALNRI home lenses: a year of labor buys X% of the home it did in 2000 (carry = the exception) ---
+// --- Home lenses: a year of labor buys X% of the home it did in 2000 (carry = the exception) ---
 (function(){{
   const H=({PROOF_JSON}).homes_alnri.slice().sort((a,b)=>a.pct_of_2000-b.pct_of_2000);
   Plotly.newPlot("alnribar",[{{type:"bar",orientation:"h",
-    x:H.map(h=>h.pct_of_2000),y:H.map(h=>"["+h.letter+"] "+h.lens.split(" (")[0]),
+    x:H.map(h=>h.pct_of_2000),y:H.map(h=>h.lens.split(" (")[0]),
     marker:{{color:H.map(h=>h.certified?LOSS:"#8a8378")}},
     text:H.map(h=>h.pct_of_2000.toFixed(0)+"%"+(h.certified?"  certified":"  within noise")),
     textposition:"outside",textfont:{{color:ink,size:11}},

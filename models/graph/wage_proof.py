@@ -220,11 +220,11 @@ def certify_primary():
 primary=certify_primary()
 
 # ============================================================================================
-# DEEPER V - HOMES with ALNRI: raw median price hides five things. Adjust for each and reprice a
-# home in wage-hours. Acronym = the five adjustments (defined here, not an external index):
-#   A rea (size / price-per-sqft)   L ocation & mix (constant-quality repeat-sales)
-#   N ew-build premium (new vs existing)   R ates (mortgage carry = monthly payment)
-#   I mprovements (quality/amenities, captured by constant-quality too)
+# DEEPER V - HOMES, honestly measured: raw median price hides several things. Reprice a home in
+# wage-hours under each honest lens - constant-quality (repeat-sales), raw median, price-per-sqft,
+# and the monthly mortgage carry. (Note: ALNRI in the wider investigation is the Apartment List
+# National Rent Index rent-lag, a separate RENT-measurement point - see macro-rent-cpi-divergence -
+# not a home-price acronym; the `letter` fields below are legacy display markers, unused.)
 # The point: the PRICE of a house in wage-hours fell on every lens; the monthly CARRY barely moved
 # because 2000 mortgage rates were ~8% too. Housing's squeeze is a down-payment/wealth problem more
 # than a monthly-cashflow one - a distinction the single 'median price' number erases.
