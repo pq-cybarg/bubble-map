@@ -155,7 +155,7 @@ _recon_max=_prov.get("max_abs_delta_pct"); _nlive=_prov.get("n_live",0); _ntot=_
 _dataver=max((s.get("as_of") or "" for s in _prov.get("series",[])), default="") or "snapshot"
 
 import nav as _nav
-NAV=_nav.navbar("Metals")
+NAV=_nav.navbar("Real value")
 DISC=('<div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;'
       'text-align:center;padding:6px 16px;border-bottom:1px solid #e4ddcc">Independent research &amp; opinion. '
       'Annual-average metal prices (LBMA/USGS); 2025–26 ~approx and provisional. Denomination is an overlay lens, not proof. '
