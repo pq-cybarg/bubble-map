@@ -512,6 +512,16 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 const D={DATA_JSON};
 const PLANES=["USD","Gold-oz","Silver-oz"], KEY=["usd","gold","silver"];
 const ink="#33312c", grid_c="#e4ddcc";
+// WebGL guard: 3D plots need WebGL; if it's off/blocked, show a graceful note instead of Plotly's error
+const HAS_WEBGL=(function(){{try{{const c=document.createElement("canvas");
+  return !!(window.WebGLRenderingContext&&(c.getContext("webgl")||c.getContext("experimental-webgl")));}}catch(e){{return false;}}}})();
+function plot3d(id,traces,layout,note){{
+  const el=document.getElementById(id); if(!el) return;
+  if(!HAS_WEBGL){{el.style.height="auto";el.innerHTML='<div style="padding:22px 18px;color:#6b665d;'
+    +'font:14.5px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">Interactive 3D needs WebGL, '
+    +'which is turned off or blocked in this browser. '+(note||"The same figures are in the table below.")+'</div>';return;}}
+  Plotly.newPlot(id,traces,layout,{{displayModeBar:false,responsive:true}});
+}}
 // 3D: one trace per asset, points across (year, plane, log index)
 const traces=[];
 D.grid.forEach(row=>{{
@@ -529,7 +539,7 @@ D.grid.forEach(row=>{{
     line:{{color:D.colors[row.asset],width:4}},marker:{{size:3,color:D.colors[row.asset]}},
     visible: (row.asset.indexOf("self")>-1)?"legendonly":true}});
 }});
-Plotly.newPlot("plot3d",traces,{{
+plot3d("plot3d",traces,{{
   margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
   legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.02}},
   scene:{{
@@ -538,7 +548,7 @@ Plotly.newPlot("plot3d",traces,{{
     zaxis:{{title:"index (base=100, log)",type:"log",gridcolor:grid_c,color:ink}},
     camera:{{eye:{{x:1.7,y:-1.5,z:0.9}}}}
   }}
-}},{{displayModeBar:false,responsive:true}});
+}},"The same endpoint figures are in the Breakdown table just below.");
 // GSR 2D line
 Plotly.newPlot("gsr",[{{type:"scatter",mode:"lines+markers",
   x:D.gsr.map(r=>r.year),y:D.gsr.map(r=>r.ratio),
@@ -574,13 +584,13 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
     tr.push({{type:"scatter3d",mode:"lines+markers",name:row.name,x:xs,y:ys,z:zs,
       text:txt,hoverinfo:"text",line:{{color:c,width:4}},marker:{{size:3,color:c}}}});
   }});
-  Plotly.newPlot("wage3d",tr,{{margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
+  plot3d("wage3d",tr,{{margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
     legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.02}},
     scene:{{xaxis:{{title:"year",gridcolor:grid_c,color:ink,tickformat:"d"}},
       yaxis:{{title:"money",tickvals:[0,1,2],ticktext:PLANES,gridcolor:grid_c,color:ink}},
       zaxis:{{title:"index (2000=100, log)",type:"log",gridcolor:grid_c,color:ink}},
       camera:{{eye:{{x:1.7,y:-1.5,z:0.9}}}}}}
-  }},{{displayModeBar:false,responsive:true}});
+  }},"The same figures are in the wage tables below.");
 }})();
 
 // --- Horizontal bar: gold index 2024 (2000=100), ordered worst-first; ref line at 100 ---
