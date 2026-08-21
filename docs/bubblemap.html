@@ -46,6 +46,15 @@ text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;strok
 line,path{vector-effect:non-scaling-stroke}
 line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 #panel .ea{color:#9a6a1a;font-weight:600}#panel .amt{color:#2e6b3e;font-weight:600}
+#flk{display:none;margin:6px 0 2px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:9px 11px;max-width:340px}
+#flk.on{display:block}
+#flk .row{display:flex;align-items:center;gap:8px;margin:4px 0;font:11px/1.2 -apple-system,Segoe UI,Roboto,sans-serif}
+#flk .row label{flex:0 0 118px;color:var(--mut)}
+#flk .row input[type=range]{flex:1;min-width:0}
+#flk .row .v{flex:0 0 40px;text-align:right;font-variant-numeric:tabular-nums;color:#1c1b19}
+#flk .btns{display:flex;gap:8px;margin-top:9px}
+#flk button{cursor:pointer;font:11px -apple-system,Segoe UI,Roboto,sans-serif;border:1px solid var(--line);border-radius:6px;padding:5px 10px;background:#fff;color:var(--ac2)}
+#flk button:hover{background:var(--panel-bg,#f3eedf)}
 </style></head><body><nav style="position:sticky;top:0;z-index:60;background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 14px;box-shadow:0 1px 6px rgba(60,50,30,.06);display:flex;flex-wrap:wrap;gap:5px 15px;justify-content:center;align-items:center;font:13.5px/1.55 -apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Home</a><a href="atlas.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Atlas</a><a href="dashboard.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Dashboard</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Charts</a><a href="multidenom.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Real value</a><a href="research.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Research</a><a href="persons.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Persons</a><a href="bubblemap.html" style="color:#7b2d26;text-decoration:none;white-space:nowrap;font-weight:700">Bubble Map</a><a href="globe.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Globe</a><a href="leadership.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Leadership</a><a href="lenses.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Lenses</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Glossary</a><a href="https://github.com/pq-cybarg/bubble-map" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Source ↗</a></nav><div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:6px 16px;border-bottom:1px solid #e4ddcc">Independent research &amp; opinion. Gradings are automated / LLM-assisted and may contain errors or hallucinations; nothing here is a statement of fact, financial advice, or an accusation of wrongdoing by any party. Claims about identifiable people or organizations reflect public records + good-faith interpretation; intent is not inferred from association. <a href="methodology.html" style="color:#6b665d;text-decoration:underline">Methodology &amp; disclaimer</a>.</div>
 <div id=stage>
 <div id=hud><h1>Bubble Map</h1><div class=sub>the AI capital loop, as a graph &middot; drag bubbles &middot; scroll to zoom &middot; click a bubble to focus its network &middot; hover an edge for the deal</div>
@@ -55,6 +64,8 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
 <label class=tog><input type=checkbox id=tCluster checked> group by sector (flocking)</label>
 <label class=tog><input type=checkbox id=tLab> all labels (default: hubs only — zoom in for more)</label>
+<label class=tog><input type=checkbox id=tFlk> tune flocking (live sliders)</label>
+<div id=flk></div>
 <div id=legend><span class=lg data-b="ai"><i style="background:#1f4e79"></i>AI core</span><span class=lg data-b="capital"><i style="background:#7b2d26"></i>Capital / credit</span><span class=lg data-b="crypto"><i style="background:#b8860b"></i>Crypto</span><span class=lg data-b="defense"><i style="background:#2e8b57"></i>Defense / security</span><span class=lg data-b="state"><i style="background:#c0392b"></i>State / regulator</span><span class=lg data-b="commodity"><i style="background:#8a5a2b"></i>Commodities / energy</span><span class=lg data-b="identity"><i style="background:#5e35b1"></i>Identity / telecom</span><span class=lg data-b="macro"><i style="background:#138a8a"></i>Macro / data</span><span class=lg data-b="pqc"><i style="background:#6b3b16"></i>PQC / quantum</span><span class=lg data-b="person"><i style="background:#d35400"></i>Person</span><span class=lg data-b="other"><i style="background:#8a8378"></i>Infra / other</span></div>
 <div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
@@ -121,8 +132,11 @@ const BUCKETS=[...new Set(NODES.map(d=>d.bucket))];
  while(rem.size){let best=null,bs=-1;rem.forEach(r=>{const s=AFF[cur][r]||0;if(s>bs){bs=s;best=r;}});ord.push(best);rem.delete(best);cur=best;}
  BUCKETS.length=0;ord.forEach(b=>BUCKETS.push(b));})();
 let clustered=true;
+// live-tunable flocking parameters (defaults = the baked-in layout); the on-map panel edits these
+const FLK={velDecay:.55,alphaDecay:.035,charge:-90,chargeMax:340,linkStr:.12,linkDist:46,
+           cohesion:.35,collidePad:11,collideStr:.9,collideIter:2,spreadX:.31,spreadY:.34};
 function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB)*2*Math.PI-Math.PI/2;
- return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*0.31:H()/2+Math.sin(a)*Math.min(H(),1000)*0.34;}
+ return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*FLK.spreadX:H()/2+Math.sin(a)*Math.min(H(),1000)*FLK.spreadY;}
 const ancX=d=>clustered?bAnchor(d.bucket,'x'):W()/2;
 const ancY=d=>clustered?bAnchor(d.bucket,'y'):H()/2;
 const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
@@ -133,13 +147,22 @@ function drawSectors(){sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b)
  .text(b=>(BSECT[b]||b).toUpperCase());}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
- .velocityDecay(.55).alphaDecay(.035)              // more friction + faster cool-down => settles, no lingering jitter
- .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?46:64).strength(.12))  // weaker links so sectors hold
- .force('charge',d3.forceManyBody().strength(-90).distanceMax(340))                                       // local repulsion only
- .force('x',d3.forceX(ancX).strength(.34)).force('y',d3.forceY(ancY).strength(.36))                       // strong sector cohesion
- .force('collide',d3.forceCollide().radius(d=>rad(d)+11+labPad(d)).strength(.9).iterations(2))            // cleaner overlap resolution
+ .velocityDecay(FLK.velDecay).alphaDecay(FLK.alphaDecay)
+ .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?FLK.linkDist:FLK.linkDist+18).strength(FLK.linkStr))
+ .force('charge',d3.forceManyBody().strength(FLK.charge).distanceMax(FLK.chargeMax))
+ .force('x',d3.forceX(ancX).strength(FLK.cohesion)).force('y',d3.forceY(ancY).strength(FLK.cohesion))
+ .force('collide',d3.forceCollide().radius(d=>rad(d)+FLK.collidePad+labPad(d)).strength(FLK.collideStr).iterations(FLK.collideIter))
  .on('tick',tick);
 drawSectors();
+// re-apply the live FLK params to the running forces (used by the tuning panel)
+function applyFlk(reheat){
+ sim.velocityDecay(FLK.velDecay).alphaDecay(FLK.alphaDecay);
+ sim.force('link').strength(FLK.linkStr).distance(d=>d.layer==='financial'?FLK.linkDist:FLK.linkDist+18);
+ sim.force('charge').strength(FLK.charge).distanceMax(FLK.chargeMax);
+ sim.force('x').strength(clustered?FLK.cohesion:.05); sim.force('y').strength(clustered?FLK.cohesion:.05);
+ sim.force('collide').radius(d=>rad(d)+FLK.collidePad+labPad(d)).strength(FLK.collideStr).iterations(FLK.collideIter);
+ drawSectors(); if(reheat!==false){fitted=false; sim.alpha(.6).restart();}
+}
 function tick(){
  const px=s=>s.attr('d',d=>{const sx=d.source.x,sy=d.source.y,tx=d.target.x,ty=d.target.y,dx=tx-sx,dy=ty-sy,L=Math.hypot(dx,dy)||1,off=Math.min(L*0.16,70),cx=(sx+tx)/2-dy/L*off,cy=(sy+ty)/2+dx/L*off;return 'M'+sx+','+sy+'Q'+cx+','+cy+' '+tx+','+ty;});
  px(link);px(linkHit);
@@ -172,7 +195,7 @@ document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
 document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
 document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
- sim.force('x').strength(clustered?.34:.05);sim.force('y').strength(clustered?.36:.05);   // free layout = weak center only
+ sim.force('x').strength(clustered?FLK.cohesion:.05);sim.force('y').strength(clustered?FLK.cohesion:.05);   // free layout = weak center only
  fitted=false;sim.alpha(.7).restart();}
 document.getElementById('tCluster').addEventListener('change',drawSectors);;
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
@@ -286,4 +309,44 @@ function fromHash(){const m=/^#node=(.+)$/.exec(location.hash);if(!m)return;
  else{pendingFocus=id;}                  // still settling -> focus when settled (tick)
 }
 window.addEventListener('hashchange',fromHash);fromHash();
+// ---- live flocking tuner: sliders bound to FLK, reheat on change, copy/reset ----
+(function(){
+ const box=document.getElementById('flk'); if(!box||typeof FLK==='undefined') return;
+ const spec=[
+  ['velDecay','friction',0.10,0.90,0.01],
+  ['alphaDecay','cool-down',0.005,0.100,0.005],
+  ['charge','repulsion',-300,-5,5],
+  ['chargeMax','repulsion range',80,800,10],
+  ['linkStr','link strength',0,0.60,0.01],
+  ['linkDist','link distance',20,140,2],
+  ['cohesion','sector cohesion',0,0.80,0.01],
+  ['collidePad','collide padding',0,40,1],
+  ['collideStr','collide strength',0.10,1.00,0.05],
+  ['collideIter','collide iters',1,4,1],
+  ['spreadX','sector spread X',0.10,0.60,0.01],
+  ['spreadY','sector spread Y',0.10,0.60,0.01]
+ ];
+ const DEF=Object.assign({},FLK); let deb=null;
+ spec.forEach(function(s){
+  const k=s[0], row=document.createElement('div'); row.className='row';
+  row.innerHTML='<label>'+s[1]+'</label><input type=range min='+s[2]+' max='+s[3]+' step='+s[4]+' value='+FLK[k]+'><span class=v>'+FLK[k]+'</span>';
+  const rng=row.querySelector('input'), v=row.querySelector('.v');
+  rng.addEventListener('input',function(){FLK[k]=parseFloat(rng.value); v.textContent=rng.value;
+    clearTimeout(deb); deb=setTimeout(function(){applyFlk(true);},150);});
+  box.appendChild(row);
+ });
+ const btns=document.createElement('div'); btns.className='btns';
+ btns.innerHTML='<button id=flkReset>Reset</button><button id=flkCopy>Copy params</button>';
+ box.appendChild(btns);
+ document.getElementById('tFlk').addEventListener('change',function(e){box.classList.toggle('on',e.target.checked);});
+ document.getElementById('flkReset').addEventListener('click',function(){
+  Object.assign(FLK,DEF);
+  [].forEach.call(box.querySelectorAll('.row'),function(row,i){const k=spec[i][0],r=row.querySelector('input');r.value=FLK[k];row.querySelector('.v').textContent=FLK[k];});
+  applyFlk(true);});
+ document.getElementById('flkCopy').addEventListener('click',function(){
+  const txt=JSON.stringify(FLK); const b=document.getElementById('flkCopy');
+  if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy params';},1200);});}
+  else{prompt('FLK params:',txt);}
+ });
+})();
 </script></body></html>
