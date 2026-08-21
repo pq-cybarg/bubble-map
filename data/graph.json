@@ -848,6 +848,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Caltech": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Cambodia": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1051,6 +1055,10 @@
     "Colombia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Columbia_University": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "ComfyUI": {
       "sector": "ai_infra",
@@ -1788,6 +1796,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Georgia_Tech": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Gig_Platforms": {
       "sector": "labor_platform",
       "has_exogenous_revenue": false
@@ -2280,6 +2292,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Johns_Hopkins_University": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Johns_Manville": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -2587,6 +2603,10 @@
     "MIIT": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "MIT": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "MP_Materials": {
       "sector": "critical_minerals",
@@ -3227,6 +3247,10 @@
     "Prince_Group": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Princeton_University": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "Private credit / venture debt lenders": {
       "sector": "other",
@@ -4220,6 +4244,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "UIUC": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "UK": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -4340,6 +4368,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "UT_Austin": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Ucore": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": false
@@ -4387,6 +4419,22 @@
     "United_States_Antimony": {
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
+    },
+    "University_of_Chicago": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "University_of_Michigan": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "University_of_Pennsylvania": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "University_of_Washington": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "VCF_9_11": {
       "sector": "other",
@@ -4590,6 +4638,10 @@
     },
     "Xiaomi_EV": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Yale_University": {
+      "sector": "university",
       "has_exogenous_revenue": false
     },
     "Yim_Leak": {
@@ -16567,7 +16619,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "Brin & Page founded Google out of Stanford PhD research; the PageRank patent (US6285999B1) was assigned to Stanford and exclusively licensed to Google, Stanford taking equity (fact)."
+      "note": "Brin & Page founded Google from Stanford PhD research; PageRank patent (US6285999B1) assigned to Stanford, exclusively licensed to Google, Stanford took equity (fact)."
     },
     {
       "from": "Stanford_University",
@@ -16593,7 +16645,33 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "Thiel earned a Stanford BA (philosophy, 1989) and JD (1992) and founded The Stanford Review (fact)."
+      "note": "Thiel: Stanford BA philosophy 1989, JD 1992; founded The Stanford Review (fact)."
+    },
+    {
+      "from": "Stanford_University",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni_affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Jensen Huang earned a Stanford MSEE (1992) before co-founding NVIDIA (fact)."
+    },
+    {
+      "from": "Stanford_University",
+      "to": "Elon_Musk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni_affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Musk enrolled in a Stanford applied-physics PhD in 1995 and left within days to start Zip2 (fact; a nominal tie, noted as such)."
     },
     {
       "from": "Harvard_University",
@@ -16606,7 +16684,267 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "Zuckerberg founded Facebook (now Meta) while a Harvard undergraduate in 2004 (fact)."
+      "note": "Zuckerberg founded Facebook (now Meta) at Harvard in 2004 (fact)."
+    },
+    {
+      "from": "Harvard_University",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Bill Gates left Harvard (1975) to co-found Microsoft (fact)."
+    },
+    {
+      "from": "Princeton_University",
+      "to": "Amazon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Jeff Bezos, Princeton BSE 1986, founded Amazon in 1994 (fact)."
+    },
+    {
+      "from": "Caltech",
+      "to": "Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni_affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Gordon Moore, Caltech PhD 1954, co-founded Intel (fact)."
+    },
+    {
+      "from": "UIUC",
+      "to": "Andreessen_Horowitz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Marc Andreessen (UIUC; NCSA Mosaic -> Netscape) co-founded Andreessen Horowitz (fact)."
+    },
+    {
+      "from": "University_of_Pennsylvania",
+      "to": "Elon_Musk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni_affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Elon Musk: Penn BA economics + BS physics (1997) (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "MIT",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "MIT is a longstanding, major DARPA/DoD research performer (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Johns_Hopkins_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Johns Hopkins Applied Physics Laboratory is a large DoD UARC and DARPA performer (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Carnegie_Mellon_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "CMU (robotics; the SEI FFRDC) is a major DARPA/DoD performer (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Georgia_Tech",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Georgia Tech Research Institute (GTRI) is a large DoD/DARPA research center (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Stanford_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Stanford (with its SRI heritage) is a longstanding DARPA research site (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "UC_Berkeley",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UC Berkeley is a major DARPA/federal research performer (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Caltech",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Caltech (and Caltech-managed JPL) perform substantial federal / DARPA-adjacent research (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "University_of_Washington",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UW is an R1 federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "DARPA",
+      "to": "University_of_Michigan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UMich is an R1 federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "DARPA",
+      "to": "UIUC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UIUC (NCSA) is a major federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "DARPA",
+      "to": "Columbia_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Columbia is an R1 federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "DARPA",
+      "to": "Princeton_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Princeton is an R1 federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "DARPA",
+      "to": "UT_Austin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "federal_research_relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UT Austin is a major R1 federal-research university; specific DARPA share graded contested."
+    },
+    {
+      "from": "Yale_University",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alumni_affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "Yale appears in the founder/early network around the PayPal-mafia firms (illustrative; grade: weak)."
+    },
+    {
+      "from": "University_of_Chicago",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-core.json",
+      "note": "UChicago is a recurring source of AI-lab research/economics talent (illustrative; grade: weak)."
     },
     {
       "from": "Stanford_University",
@@ -16619,7 +16957,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "Substantial Stanford-affiliated founder/researcher pipeline into OpenAI (illustrative affiliation, not a funding tie; grade: contested-strength)."
+      "note": "Substantial Stanford-affiliated founder/researcher pipeline into OpenAI (affiliation, not funding; grade: contested-strength)."
     },
     {
       "from": "UC_Berkeley",
@@ -16632,7 +16970,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "Berkeley AI-safety/ML research community is a notable talent source for Anthropic (illustrative affiliation; grade: weak)."
+      "note": "Berkeley's AI-safety/ML community is a notable talent source for Anthropic (grade: weak)."
     },
     {
       "from": "Carnegie_Mellon_University",
@@ -16645,7 +16983,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "catalog-academia-core.json",
-      "note": "CMU (machine learning / robotics) is a recurring source of AI-lab research talent (illustrative affiliation; grade: weak)."
+      "note": "CMU (ML/robotics) is a recurring source of AI-lab research talent (grade: weak)."
     },
     {
       "from": "GENIUS_Act",
@@ -26321,10 +26659,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1168,
-    "num_edges": 1665,
+    "num_nodes": 1181,
+    "num_edges": 1687,
     "num_financial_edges": 264,
-    "num_structural_edges": 1401,
+    "num_structural_edges": 1423,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -26375,16 +26713,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -26395,13 +26725,16 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -26414,16 +26747,21 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -26434,8 +26772,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -27945,6 +28283,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Caltech": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cambodia": {
         "total_usd": 456000,
         "circular_usd": 0,
@@ -28296,6 +28641,13 @@
         "in_robust_core": false
       },
       "Colombia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Columbia_University": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -29590,6 +29942,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Georgia_Tech": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gig_Platforms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -30451,6 +30810,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Johns_Hopkins_University": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Johns_Manville": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -30984,6 +31350,13 @@
         "in_robust_core": false
       },
       "MIIT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MIT": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -32105,6 +32478,13 @@
       },
       "Prince_Group": {
         "total_usd": 30000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Princeton_University": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -33846,6 +34226,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UIUC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UK": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34056,6 +34443,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UT_Austin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ucore": {
         "total_usd": 18400000,
         "circular_usd": 0,
@@ -34135,6 +34529,34 @@
       },
       "United_States_Antimony": {
         "total_usd": 350000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "University_of_Chicago": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "University_of_Michigan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "University_of_Pennsylvania": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "University_of_Washington": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -34497,6 +34919,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Yale_University": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Yim_Leak": {
         "total_usd": 240000000,
         "circular_usd": 0,
@@ -34733,6 +35162,31 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 30,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "pqc_quantum",
+          "research",
+          "semiconductor",
+          "space_real_economy",
+          "spv",
+          "telecom",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
         "degree": 18,
         "neighbor_sectors": [
@@ -34748,30 +35202,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 16,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 29,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "telecom"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 10,
         "layers": [
           "financial",
           "structural"
@@ -34848,7 +35278,7 @@
       },
       {
         "node": "Microsoft",
-        "degree": 14,
+        "degree": 15,
         "neighbor_sectors": [
           "ai_lab",
           "financial_infra",
@@ -34857,10 +35287,11 @@
           "pqc_quantum",
           "spv",
           "surveillance",
-          "tech"
+          "tech",
+          "university"
         ],
-        "n_neighbor_sectors": 8,
-        "source_files": 8,
+        "n_neighbor_sectors": 9,
+        "source_files": 9,
         "layers": [
           "financial",
           "structural"
@@ -34869,7 +35300,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 21,
+        "degree": 22,
         "neighbor_sectors": [
           "chip_vendor",
           "financier",
@@ -34975,6 +35406,25 @@
         "both_layers": false
       },
       {
+        "node": "Amazon",
+        "degree": 9,
+        "neighbor_sectors": [
+          "ai_lab",
+          "financial_infra",
+          "industrial",
+          "satellite",
+          "standards",
+          "university"
+        ],
+        "n_neighbor_sectors": 6,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Apple",
         "degree": 8,
         "neighbor_sectors": [
@@ -35026,25 +35476,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Anthropic",
-        "degree": 13,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "other",
-          "space_real_economy",
-          "university"
-        ],
-        "n_neighbor_sectors": 6,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"
