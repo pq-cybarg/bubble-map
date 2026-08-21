@@ -30,12 +30,18 @@ BUCKET={ "ai":["ai_lab","hyperscaler","chip_vendor","ai_infra","neocloud","semic
  "macro":["macro_factor","statistic","labor","labor_platform","data_provider","retail"],
  "pqc":["pqc_quantum","research"], "person":["person"], "other":["other","spv","offshore"] }
 BUCKET["commodity"].append("logistics")
+# catalog layers (academia epic #200): universities, nonprofits/foundations, elite groups & billionaires
+BUCKET["academia"]=["university","college","academic_institute"]
+BUCKET["philanthropy"]=["nonprofit","foundation","think_tank"]
+BUCKET["elite"]=["elite_group","billionaire"]
 SEC2BUCKET={s:b for b,ss in BUCKET.items() for s in ss}
 COLORS={"ai":"#1f4e79","capital":"#7b2d26","crypto":"#b8860b","defense":"#2e8b57","state":"#c0392b",
- "commodity":"#8a5a2b","identity":"#5e35b1","macro":"#138a8a","pqc":"#6b3b16","person":"#d35400","other":"#8a8378"}
+ "commodity":"#8a5a2b","identity":"#5e35b1","macro":"#138a8a","pqc":"#6b3b16","person":"#d35400","other":"#8a8378",
+ "academia":"#0b7285","philanthropy":"#a61e4d","elite":"#862e9c"}
 BLABEL={"ai":"AI core","capital":"Capital / credit","crypto":"Crypto","defense":"Defense / security",
  "state":"State / regulator","commodity":"Commodities / energy","identity":"Identity / telecom",
- "macro":"Macro / data","pqc":"PQC / quantum","person":"Person","other":"Infra / other"}
+ "macro":"Macro / data","pqc":"PQC / quantum","person":"Person","other":"Infra / other",
+ "academia":"Academia","philanthropy":"Nonprofits / foundations","elite":"Elite / billionaires"}
 
 # degree + incident research blocks per node
 deg={}; blocks={}
@@ -258,7 +264,7 @@ for _f in glob.glob(os.path.join(ROOT,"research","*.json")):
     except Exception: pass
 
 # ---- per-node cross-project description ----
-BDESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","other":"infrastructure / other"}
+BDESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","academia":"universities, colleges & research institutes","philanthropy":"nonprofits, foundations & think tanks","elite":"elite groups, forums & billionaires","other":"infrastructure / other"}
 out_e={}; in_e={}
 for e in edges:
     out_e.setdefault(e["from"],[]).append(e); in_e.setdefault(e["to"],[]).append(e)
@@ -304,7 +310,7 @@ links=[{"source":e["from"],"target":e["to"],"layer":e.get("layer","financial"),
         "note":(e.get("note") or "")[:240],"amount":_amt(e.get("amount_usd")),"status":e.get("status",""),
         "block":(e.get("source_file","")[:-5] if e.get("source_file","").endswith(".json") else "")} for e in edges]
 # first source-file (stub) per node, for the panel's primary block link
-SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","other":"infrastructure / other"}
+SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds","capital":"financiers, private credit, banks, central banks","crypto":"exchanges, stablecoins, DLT","defense":"defense primes, intel, threat actors","state":"states, regulators, commissions","commodity":"commodities, energy, minerals, industrial","identity":"surveillance, telecom, satellite, standards","macro":"macro factors, data, labor","pqc":"post-quantum / quantum","person":"individuals","academia":"universities, colleges & research institutes","philanthropy":"nonprofits, foundations & think tanks","elite":"elite groups, forums & billionaires","other":"infrastructure / other"}
 
 import nav as _nav
 NAV=_nav.navbar("Bubble Map", disclaimer=True)
