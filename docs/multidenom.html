@@ -371,38 +371,29 @@ function render3money(id, series, ztitle){
         camera:{eye:{x:1.7,y:-1.5,z:0.9}}}},{displayModeBar:false,responsive:true});
     return;
   }
-  // ---- SVG axonometric fallback: three parallel (year x log-value) planes, sheared for depth ----
-  let yrs=[],vals=[];
-  series.forEach(function(s){s.pts.forEach(function(r){if(r.v!=null){yrs.push(r.yr);vals.push(r.v);}});});
-  const ymin=Math.min.apply(null,yrs),ymax=Math.max.apply(null,yrs);
-  const lz=vals.map(function(v){return Math.log10(v);}), lzmin=Math.min.apply(null,lz),lzmax=Math.max.apply(null,lz);
-  const DX=0.34, DY=0.40;                                  // per-plane depth (right & up)
-  const nx=function(yr){return ymax===ymin?0:(yr-ymin)/(ymax-ymin);};
-  const nz=function(v){return lzmax===lzmin?0.5:(Math.log10(v)-lzmin)/(lzmax-lzmin);};
-  const PX=function(yr,p){return nx(yr)+p*DX;}, PY=function(v,p){return nz(v)+p*DY;};
-  const shapes=[],anns=[],pcol=["#eef1f7","#f7f1e6","#eef4ee"];
+  // ---- fallback (no WebGL): three clean side-by-side panels, one per money, shared log y ----
+  const dom=[[0.00,0.30],[0.36,0.64],[0.70,1.00]], axx=["x","x2","x3"];
+  const traces=[];
+  series.forEach(function(s){
+    [0,1,2].forEach(function(p){
+      const xs=[],ys=[];
+      s.pts.forEach(function(r){ if(r.p===p&&r.v!=null){xs.push(r.yr);ys.push(r.v);} });
+      traces.push({type:"scatter",mode:"lines+markers",name:s.name,legendgroup:s.name,showlegend:p===0,
+        x:xs,y:ys,xaxis:axx[p],yaxis:"y",line:{color:s.color,width:2},marker:{size:4,color:s.color},
+        visible:s.visible===false?"legendonly":true,
+        hovertemplate:s.name+"<br>%{x} · "+PLANES[p]+"<br>index %{y:.0f}<extra></extra>"});
+    });
+  });
+  const layout={margin:{l:46,r:10,t:22,b:34},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{font:{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12},orientation:"h",y:-0.18},
+    yaxis:{type:"log",title:ztitle,gridcolor:grid_c,color:ink,domain:[0,1]},
+    annotations:[]};
   [0,1,2].forEach(function(p){
-    const a=[PX(ymin,p),p*DY],b=[PX(ymax,p),p*DY],c=[PX(ymax,p),1+p*DY],d=[PX(ymin,p),1+p*DY];
-    shapes.push({type:"path",layer:"below",fillcolor:pcol[p],line:{color:"#e4ddcc",width:1},
-      path:"M"+a[0]+","+a[1]+"L"+b[0]+","+b[1]+"L"+c[0]+","+c[1]+"L"+d[0]+","+d[1]+"Z"});
-    anns.push({x:PX(ymin,p),y:1+p*DY,text:PLANES[p],showarrow:false,xanchor:"left",yshift:9,font:{color:"#8a8378",size:11}});
+    layout[p===0?"xaxis":("xaxis"+(p+1))]={domain:dom[p],anchor:"y",gridcolor:grid_c,color:ink,tickformat:"d"};
+    layout.annotations.push({text:PLANES[p],x:(dom[p][0]+dom[p][1])/2,y:1.0,xref:"paper",yref:"paper",
+      yanchor:"bottom",yshift:2,showarrow:false,font:{color:"#7b2d26",size:12}});
   });
-  const uyr=yrs.filter(function(v,i,a){return a.indexOf(v)===i;}).sort(function(a,b){return a-b;});
-  uyr.forEach(function(yr,i){ if(uyr.length>7&&i%2) return;
-    anns.push({x:PX(yr,0),y:0,text:String(yr),showarrow:false,yshift:-10,font:{color:"#8a8378",size:9.5}}); });
-  const traces=series.map(function(s){
-    const xs=[],ys=[],txt=[];
-    [0,1,2].forEach(function(p){ s.pts.forEach(function(r){ if(r.p!==p||r.v==null) return;
-      xs.push(PX(r.yr,p)); ys.push(PY(r.v,p)); txt.push(s.name+"<br>"+r.yr+" · "+PLANES[p]+"<br>index "+r.v.toFixed(0)); });
-      xs.push(null);ys.push(null);txt.push(null); });
-    return {type:"scatter",mode:"lines+markers",name:s.name,x:xs,y:ys,text:txt,hoverinfo:"text",
-      line:{color:s.color,width:2},marker:{size:4,color:s.color},visible:s.visible===false?"legendonly":true};
-  });
-  Plotly.newPlot(id,traces,{margin:{l:6,r:6,t:8,b:22},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
-    legend:{font:{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12},orientation:"h",y:-0.04},
-    xaxis:{visible:false,range:[-0.05,1+2*DX+0.05],fixedrange:true},
-    yaxis:{visible:false,range:[-0.10,1+2*DY+0.10],fixedrange:true},
-    shapes:shapes,annotations:anns},{displayModeBar:false,responsive:true});
+  Plotly.newPlot(id,traces,layout,{displayModeBar:false,responsive:true});
 }
 // assets: one series per asset (base 2000=100), 'self' metals hidden by default
 const series3=[];
