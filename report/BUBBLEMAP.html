@@ -35,7 +35,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
-.sect text{font:800 30px Georgia,serif;fill:#7b2d2610;letter-spacing:.12em;pointer-events:none;text-transform:uppercase}
+.sect text{font:800 21px Georgia,serif;fill:#7b2d26;fill-opacity:.92;letter-spacing:.08em;pointer-events:none;text-transform:uppercase;paint-order:stroke;stroke:#faf8f2;stroke-width:5px;stroke-linejoin:round}
 .lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
 .lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
 #tip{position:absolute;z-index:9;pointer-events:none;display:none;max-width:280px;background:#1c1b19f2;color:#f5f1e6;font-size:12px;line-height:1.45;padding:8px 10px;border-radius:7px;box-shadow:0 4px 14px #0004}
@@ -108,7 +108,7 @@ const linkHit=root.append('g').selectAll('path').data(LINKS).join('path').attr('
  .on('mousemove',e=>{tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+12)+'px';})
  .on('mouseout',(e,d)=>{link.classed('hl',false);tip.style.display='none';});
 const rad=d=>4+Math.sqrt(d.deg)*2.2;
-const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{showPanel(d);egoFocus(d);});
+const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{e.stopPropagation();showPanel(d);egoFocus(d);});
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
@@ -141,9 +141,9 @@ const ancX=d=>clustered?bAnchor(d.bucket,'x'):W()/2;
 const ancY=d=>clustered?bAnchor(d.bucket,'y'):H()/2;
 const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
 const BSECT={"ai": "AI core", "capital": "Capital / credit", "crypto": "Crypto", "defense": "Defense / security", "state": "State / regulator", "commodity": "Commodities / energy", "identity": "Identity / telecom", "macro": "Macro / data", "pqc": "PQC / quantum", "person": "Person", "other": "Infra / other", "academia": "Academia", "philanthropy": "Nonprofits / foundations", "elite": "Elite / billionaires"};
-const sectorG=root.insert('g',':first-child').attr('class','sect');   // faint sector headers, behind graph, pan/zoom with it
-function drawSectors(){sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b).join('text')
- .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')).attr('text-anchor','middle')
+const sectorG=root.append('g').attr('class','sect');   // sector headers on a TOP layer w/ halo so they stay legible over nodes/lines
+function drawSectors(){sectorG.raise();sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b).join('text')
+ .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')-58).attr('text-anchor','middle')   // lifted above the cluster
  .text(b=>(BSECT[b]||b).toUpperCase());}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
 const sim=d3.forceSimulation(NODES)
@@ -188,8 +188,15 @@ node.call(d3.drag().container(function(){return root.node();})
  .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.12).restart();d.fx=d.x;d.fy=d.y;})
  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;})
  .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);/* leave fx/fy: pinned where dropped */}));
-const zoomB=d3.zoom().scaleExtent([.35,6]).on('zoom',e=>{root.attr('transform',e.transform);rescale(e.transform.k);});
+let panned=false;
+const zoomB=d3.zoom().scaleExtent([.35,6])
+ .on('start',()=>{panned=false;})
+ .on('zoom',e=>{if(e.sourceEvent&&/move/.test(e.sourceEvent.type||''))panned=true;root.attr('transform',e.transform);rescale(e.transform.k);});
 svg.call(zoomB);
+// click empty space (a real click, not a pan) clears the current selection
+svg.on('click',()=>{if(panned)return;if(egoOn)clearEgo();soloB=null;
+ document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));
+ document.getElementById('panel').style.display='none';});
 // controls
 document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
@@ -270,15 +277,18 @@ const ADJ=new Map(NODES.map(n=>[n.id,new Set([n.id])]));
 LINKS.forEach(l=>{const s=lerp(l.source),t=lerp(l.target);ADJ.get(s)&&ADJ.get(s).add(t);ADJ.get(t)&&ADJ.get(t).add(s);});
 let egoOn=null;
 function egoFocus(d){egoOn=d.id;const keep=ADJ.get(d.id)||new Set([d.id]);
+ const S=(curK<1?Math.min(1/curK,3.2):1);
  node.style('opacity',n=>keep.has(n.id)?1:.08);
  labels.style('display',n=>keep.has(n.id)?null:'none');
+ const direct=l=>lerp(l.source)===d.id||lerp(l.target)===d.id;   // edges touching the selected bubble
  const vis=l=>keep.has(lerp(l.source))&&keep.has(lerp(l.target));
- link.style('opacity',l=>vis(l)?.9:.16);
+ link.style('opacity',l=>direct(l)?1:(vis(l)?.4:.1))               // enhance the closer (direct) connections most
+     .attr('stroke-width',l=>(direct(l)?baseW(l)*2.2:baseW(l))*S);
  linkHit.style('pointer-events',l=>vis(l)?null:'none');
  node.select('circle').attr('stroke',n=>n.id===d.id?'#1f4e79':(n.scc?'#d4a017':'#fffdf8'))
   .attr('stroke-width',n=>n.id===d.id?4.5:(n.scc?2.6:1));}
-function clearEgo(){egoOn=null;
- node.style('opacity',1);link.style('opacity',.8);linkHit.style('pointer-events',null);
+function clearEgo(){egoOn=null;const S=(curK<1?Math.min(1/curK,3.2):1);
+ node.style('opacity',1);link.style('opacity',.8).attr('stroke-width',d=>baseW(d)*S);linkHit.style('pointer-events',null);
  applyLabels();  // restore smart labels (hubs + core, or all if toggled)
  node.select('circle').attr('stroke',n=>n.scc?'#d4a017':'#fffdf8').attr('stroke-width',n=>n.scc?2.6:1);
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
