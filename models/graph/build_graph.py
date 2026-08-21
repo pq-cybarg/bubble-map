@@ -661,6 +661,10 @@ NODE_META = {
 }
 
 edges=[]
+# per-block node metadata (sector/exogenous overrides) so catalog blocks (universities, nonprofits,
+# elite groups, billionaires) can declare their own sectors without hand-listing each in NODE_META.
+# A research JSON may carry: "nodes":[{"id":"Stanford_University","sector":"university","exo":false},...]
+NODE_OVERRIDES={}
 def add(frm,to,instr,amt,status,circ,src,note="",cancelable=False):
     f,t=canon(frm),canon(to)
     if f==t: return
@@ -678,6 +682,9 @@ for fn in glob.glob(os.path.join(RES,"*.json")):
             e.get("amount_usd"),e.get("status"),e.get("circular"),base,e.get("notes",""),e.get("cancelable"))
     for e in (d.get("chain_edges") or []):
         add(e.get("from"),e.get("to"),e.get("instrument"),e.get("amount_usd"),e.get("date",""),False,base,e.get("notes",""))
+    for nd in (d.get("nodes") or []):
+        nid=canon(nd.get("id"))
+        if nid: NODE_OVERRIDES[nid]=(nd.get("sector","other"),bool(nd.get("exo",False)))
 
 # critical-minerals STATE-circularity (parallel structure; deliberately NOT part of the AI SCC)
 edges += [
@@ -706,6 +713,7 @@ nodes=sorted({e["from"] for e in E}|{e["to"] for e in E})
 def meta(n):
     if n.startswith("SINK_"): return ("sink",True)
     if n in NODE_META: return NODE_META[n]
+    if n in NODE_OVERRIDES: return NODE_OVERRIDES[n]     # catalog blocks (academia/nonprofits/elite/...)
     if "Starlink" in n or "SpaceX_IPO" in n: return ("exogenous_source",True)
     return ("other",True)
 entities={n:{"sector":meta(n)[0],"has_exogenous_revenue":meta(n)[1]} for n in nodes}

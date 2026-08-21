@@ -1,0 +1,35 @@
+{
+  "title": "Academia catalog - core seed (universities -> mapped entities)",
+  "source": "Public record: university & company founding histories; patent assignments (e.g., Stanford PageRank US6285999B1 assigned to Stanford, licensed to Google); alumni records. Structural overlay; edges graded in notes. First block of the academia/catalogs epic (schema validation).",
+  "grade": "fact except where a note marks otherwise",
+  "nodes": [
+    {"id": "Stanford_University", "sector": "university", "exo": false},
+    {"id": "Harvard_University", "sector": "university", "exo": false},
+    {"id": "MIT", "sector": "university", "exo": false},
+    {"id": "UC_Berkeley", "sector": "university", "exo": false},
+    {"id": "Carnegie_Mellon_University", "sector": "university", "exo": false}
+  ],
+  "edges": [
+    {"from": "Stanford_University", "to": "Google", "instrument": "founder_origin",
+     "notes": "Brin & Page founded Google out of Stanford PhD research; the PageRank patent (US6285999B1) was assigned to Stanford and exclusively licensed to Google, Stanford taking equity (fact).",
+     "source": "USPTO US6285999B1; Stanford OTL records"},
+    {"from": "Stanford_University", "to": "Palantir", "instrument": "founder_origin",
+     "notes": "Co-founders Peter Thiel (Stanford BA/JD) and Alex Karp (Stanford JD) met at Stanford Law (fact).",
+     "source": "Palantir corporate history; Thiel/Karp biographies"},
+    {"from": "Stanford_University", "to": "Peter_Thiel", "instrument": "alumni_affiliation",
+     "notes": "Thiel earned a Stanford BA (philosophy, 1989) and JD (1992) and founded The Stanford Review (fact).",
+     "source": "Stanford records; The Stanford Review"},
+    {"from": "Harvard_University", "to": "Meta", "instrument": "founder_origin",
+     "notes": "Zuckerberg founded Facebook (now Meta) while a Harvard undergraduate in 2004 (fact).",
+     "source": "Meta/Facebook corporate history"},
+    {"from": "Stanford_University", "to": "OpenAI", "instrument": "talent_pipeline",
+     "notes": "Substantial Stanford-affiliated founder/researcher pipeline into OpenAI (illustrative affiliation, not a funding tie; grade: contested-strength).",
+     "source": "public bios / press"},
+    {"from": "UC_Berkeley", "to": "Anthropic", "instrument": "talent_pipeline",
+     "notes": "Berkeley AI-safety/ML research community is a notable talent source for Anthropic (illustrative affiliation; grade: weak).",
+     "source": "public bios / press"},
+    {"from": "Carnegie_Mellon_University", "to": "OpenAI", "instrument": "talent_pipeline",
+     "notes": "CMU (machine learning / robotics) is a recurring source of AI-lab research talent (illustrative affiliation; grade: weak).",
+     "source": "public bios / press"}
+  ]
+}
