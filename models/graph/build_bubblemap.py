@@ -353,6 +353,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
+.grp circle{pointer-events:none}
 .sect text{font:800 21px Georgia,serif;fill:#7b2d26;fill-opacity:.92;letter-spacing:.08em;pointer-events:none;text-transform:uppercase;paint-order:stroke;stroke:#faf8f2;stroke-width:5px;stroke-linejoin:round}
 .lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
 .lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
@@ -381,6 +382,7 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <label class=tog><input type=checkbox id=tStruct checked> structural / overlay edges (governance, legal, revolving-door, PAC)</label>
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
 <label class=tog><input type=checkbox id=tCluster checked> group by sector (flocking)</label>
+<label class=tog><input type=checkbox id=tAgg checked> nest subsidiaries / known groups</label>
 <label class=tog><input type=checkbox id=tLab> all labels (default: hubs only — zoom in for more)</label>
 <label class=tog><input type=checkbox id=tFlk> tune flocking (live sliders)</label>
 <div id=flk></div>
@@ -403,6 +405,13 @@ svg.append('defs').selectAll('marker').data(['fin','struct']).join('marker')
  .attr('markerWidth',5).attr('markerHeight',5).attr('orient','auto')
  .append('path').attr('d','M0,-4L8,0L0,4').attr('fill',d=>d==='fin'?'#9a8f78':'#cdc6b4');
 const id2n=new Map(NODES.map(n=>[n.id,n]));
+// ---- visual aggregation: nest subsidiaries/known-groups into a soft container (render-only) ----
+const CONTAINS=__CONTAINS__; const PARENTS={}, GROUPS={};
+Object.keys(CONTAINS).forEach(p=>{ if(!id2n.has(p)) return;
+  CONTAINS[p].forEach(c=>{ if(!id2n.has(c)) return;
+    (PARENTS[c]=PARENTS[c]||[]).push(p); (GROUPS[p]=GROUPS[p]||[]).push(c); }); });
+NODES.forEach(n=>{ n.parent=(PARENTS[n.id]&&PARENTS[n.id][0])||null; });
+let aggregate=true;
 const pslug=s=>'p-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const tip=document.getElementById('tip');
 const lerp=(a,b)=>typeof a==='object'?a.id:a; // source/target id helper
@@ -455,10 +464,22 @@ const FLK={velDecay:.55,alphaDecay:.035,charge:-90,chargeMax:340,linkStr:.12,lin
            cohesion:.35,collidePad:11,collideStr:.9,collideIter:2,spreadX:.31,spreadY:.34};
 function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB)*2*Math.PI-Math.PI/2;
  return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*FLK.spreadX:H()/2+Math.sin(a)*Math.min(H(),1000)*FLK.spreadY;}
-const ancX=d=>clustered?bAnchor(d.bucket,'x'):W()/2;
-const ancY=d=>clustered?bAnchor(d.bucket,'y'):H()/2;
+// children of a group nest toward their parent's live position; else the sector anchor
+const ancX=d=>{if(aggregate&&d.parent){const p=id2n.get(d.parent);if(p&&p.x!=null)return p.x;}return clustered?bAnchor(d.bucket,'x'):W()/2;};
+const ancY=d=>{if(aggregate&&d.parent){const p=id2n.get(d.parent);if(p&&p.y!=null)return p.y;}return clustered?bAnchor(d.bucket,'y'):H()/2;};
 const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
 const BSECT=__BSECT__;
+const groupG=root.insert('g',':first-child').attr('class','grp');   // soft group-container hulls, behind everything
+function drawGroups(){
+ const keys=aggregate?Object.keys(GROUPS):[];
+ const circ=keys.map(p=>{const mem=[id2n.get(p)].concat(GROUPS[p].map(c=>id2n.get(c))).filter(m=>m&&m.x!=null);
+  if(mem.length<2)return null; const cx=d3.mean(mem,m=>m.x),cy=d3.mean(mem,m=>m.y);
+  let r=0;mem.forEach(m=>{r=Math.max(r,Math.hypot(m.x-cx,m.y-cy)+rad(m));});
+  return {p:p,cx:cx,cy:cy,r:r+11,col:COLORS[(id2n.get(p)||{}).bucket]||'#8a8378'};}).filter(Boolean);
+ groupG.selectAll('circle').data(circ,d=>d.p).join('circle')
+  .attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>d.r)
+  .attr('fill',d=>d.col).attr('fill-opacity',.05).attr('stroke',d=>d.col).attr('stroke-opacity',.3).attr('stroke-width',1);
+}
 const sectorG=root.append('g').attr('class','sect');   // sector headers on a TOP layer w/ halo so they stay legible over nodes/lines
 function drawSectors(){sectorG.raise();sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b).join('text')
  .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')-58).attr('text-anchor','middle')   // lifted above the cluster
@@ -486,6 +507,7 @@ function tick(){
  px(link);px(linkHit);
  node.attr('transform',d=>`translate(${d.x},${d.y})`);
  labels.attr('x',d=>d.x).attr('y',d=>d.y);
+ drawGroups();
  if(sim.alpha()<0.06){                                   // settled
    if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
    else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop();}   // frame, label, then FREEZE (no residual jitter)
@@ -523,6 +545,7 @@ document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
  sim.force('x').strength(clustered?FLK.cohesion:.05);sim.force('y').strength(clustered?FLK.cohesion:.05);   // free layout = weak center only
  fitted=false;sim.alpha(.7).restart();}
 document.getElementById('tCluster').addEventListener('change',drawSectors);;
+document.getElementById('tAgg').onchange=e=>{aggregate=e.target.checked;drawGroups();fitted=false;sim.alpha(.5).restart();};
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
  node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.8:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.85:.18));};
 const q=document.getElementById('q'), qres=document.getElementById('qres');
@@ -678,7 +701,16 @@ window.addEventListener('hashchange',fromHash);fromHash();
  });
 })();
 </script></body></html>"""
+# curated containment (parent -> children) for VISUAL nesting only (no data-structure change).
+# verified subsidiary/known-group pairs; JS nests children into the parent and draws a soft container.
+CONTAINS={
+ "RTX":["Raytheon"],"Leonardo":["Leonardo_DRS"],"Bayer":["Monsanto"],"Honeywell":["Quantinuum"],
+ "Mubadala":["GlobalFoundries"],"Allstate":["Arity"],"Ripple":["Ripple_Prime"],
+ "Samsung_Group":["Samsung_Foundry"],"Toyota":["Daihatsu"],"SEALSQ":["ICALPS","Miraex"],
+ "JNJ":["LTL_Red_River"],"IonQ":["Oxford_Ionics","Vector_Atomic"],"ASML":["Cymer"],
+ "ISO":["ISO_IEC_JTC1"],"IEC":["ISO_IEC_JTC1"]}
 HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
+      .replace("__CONTAINS__",json.dumps(CONTAINS))
       .replace("__N__",str(len(nodes))).replace("__E__",str(len(links)))
       .replace("__LABMIN__",str(max(5,sorted((n["deg"] for n in nodes),reverse=True)[min(99,len(nodes)-1)] if nodes else 5)))
       .replace("__BSECT__",json.dumps(BLABEL))
