@@ -24,7 +24,8 @@ def navbar(active="", disclaimer=False):
         cur = (t == active)
         return (f'<a href="{h}" style="color:{"#7b2d26" if cur else "#1f4e79"};text-decoration:none;'
                 f'white-space:nowrap;font-weight:{700 if cur else 400}">{t}</a>')
-    strip = ('<nav style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 14px;'
+    strip = ('<nav style="position:sticky;top:0;z-index:60;background:#fffdf8;'
+             'border-bottom:1px solid #e4ddcc;padding:9px 14px;box-shadow:0 1px 6px rgba(60,50,30,.06);'
              'display:flex;flex-wrap:wrap;gap:5px 15px;justify-content:center;align-items:center;'
              'font:13.5px/1.55 -apple-system,Segoe UI,Roboto,sans-serif">'
              + "".join(a(h, t) for h, t in NAV_ITEMS) + '</nav>')

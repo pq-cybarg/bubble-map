@@ -166,6 +166,7 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <title>Value in three monies — USD / gold / silver</title>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <style>
+ html{{scroll-padding-top:66px}}
  body{{background:#faf8f2;color:#1c1b19;margin:0;font:17px/1.68 Georgia,'Iowan Old Style','Palatino Linotype',serif}}
  main{{max-width:1000px;margin:0 auto;padding:0 22px 70px}}
  h1{{font-weight:600;font-size:32px;margin:26px 0 6px}}
@@ -198,11 +199,15 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
  .band{{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,0.94fr);gap:40px;align-items:start;margin:0 0 30px;padding-top:6px;border-top:1px solid #efe8d8}}
  .band:first-of-type{{border-top:0}}
  .band .charts{{min-width:0}}
- .band .note{{position:sticky;top:16px;align-self:start;background:#fffdf8;border:1px solid #e9e2d2;border-radius:12px;padding:2px 22px 18px}}
+ .band .note{{position:sticky;top:58px;align-self:start;background:#fffdf8;border:1px solid #e9e2d2;border-radius:12px;padding:2px 22px 18px}}
  .band .note .story-tag{{margin-top:14px}}
- .band .note h2{{color:#1f4e79;border:0;padding:0;margin:8px 0 6px;font-size:20px}}
  .band .note p{{font-size:16px;line-height:1.72}}
- .band .charts h1{{font-size:29px}} .band .charts h1:first-child,.band .charts h2:first-child{{margin-top:6px}}
+ /* --- unified header styling across charts, notes, intro & close --- */
+ .flow h1{{font:600 27px/1.18 Georgia,'Iowan Old Style','Palatino Linotype',serif;color:#1c1b19;letter-spacing:-.01em;margin:8px 0 8px}}
+ .flow h2{{color:#7b2d26;font:600 21px/1.28 Georgia,'Iowan Old Style',serif;border-bottom:1px solid #e4ddcc;padding-bottom:6px;margin:26px 0 10px}}
+ .flow h3{{color:#33312c;font:600 16.5px/1.3 Georgia,serif;border:0;padding:0;margin:20px 0 4px}}
+ .band .charts>h1:first-child,.band .charts>h2:first-child{{margin-top:4px}}
+ .band .note h2{{margin-top:8px}}
  @media(max-width:1000px){{ .band{{grid-template-columns:1fr;gap:12px}} .band .note{{position:static}} }}
 </style></head><body>{NAV}{DISC}
 <main class=wide>
