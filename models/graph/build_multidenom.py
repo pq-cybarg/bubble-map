@@ -512,43 +512,73 @@ The house <b>price</b> in wage-hours fell on every lens (constant-quality worst:
 const D={DATA_JSON};
 const PLANES=["USD","Gold-oz","Silver-oz"], KEY=["usd","gold","silver"];
 const ink="#33312c", grid_c="#e4ddcc";
-// WebGL guard: 3D plots need WebGL; if it's off/blocked, show a graceful note instead of Plotly's error
+// 3D "three money-planes": WebGL scatter3d when available; otherwise a pure-SVG axonometric
+// projection (no WebGL) that renders the same three parallel planes. Both share one data shape:
+// series=[{{name,color,visible,pts:[{{yr,p,v}}...]}}]  (p: 0=USD 1=Gold 2=Silver).
 const HAS_WEBGL=(function(){{try{{const c=document.createElement("canvas");
   return !!(window.WebGLRenderingContext&&(c.getContext("webgl")||c.getContext("experimental-webgl")));}}catch(e){{return false;}}}})();
-function plot3d(id,traces,layout,note){{
+function render3money(id, series, ztitle){{
   const el=document.getElementById(id); if(!el) return;
-  if(!HAS_WEBGL){{el.style.height="auto";el.innerHTML='<div style="padding:22px 18px;color:#6b665d;'
-    +'font:14.5px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center">Interactive 3D needs WebGL, '
-    +'which is turned off or blocked in this browser. '+(note||"The same figures are in the table below.")+'</div>';return;}}
-  Plotly.newPlot(id,traces,layout,{{displayModeBar:false,responsive:true}});
-}}
-// 3D: one trace per asset, points across (year, plane, log index)
-const traces=[];
-D.grid.forEach(row=>{{
-  const xs=[],ys=[],zs=[],txt=[];
-  KEY.forEach((k,pi)=>{{
-    row.years.forEach((yr,i)=>{{
-      const v=row[k][i]; if(v==null) return;
-      xs.push(yr); ys.push(pi); zs.push(v);
-      txt.push(row.asset+"<br>"+yr+" · "+PLANES[pi]+"<br>index "+v.toFixed(0));
+  if(HAS_WEBGL){{
+    const traces=series.map(function(s){{
+      const xs=[],ys=[],zs=[],txt=[];
+      [0,1,2].forEach(function(p){{
+        s.pts.forEach(function(r){{ if(r.p!==p||r.v==null) return; xs.push(r.yr);ys.push(p);zs.push(r.v);
+          txt.push(s.name+"<br>"+r.yr+" · "+PLANES[p]+"<br>index "+r.v.toFixed(0)); }});
+        xs.push(null);ys.push(null);zs.push(null);txt.push(null);
+      }});
+      return {{type:"scatter3d",mode:"lines+markers",name:s.name,x:xs,y:ys,z:zs,text:txt,hoverinfo:"text",
+        line:{{color:s.color,width:4}},marker:{{size:3,color:s.color}},visible:s.visible===false?"legendonly":true}};
     }});
-    xs.push(null);ys.push(null);zs.push(null);txt.push(null); // break line between planes
-  }});
-  traces.push({{type:"scatter3d",mode:"lines+markers",name:row.asset,
-    x:xs,y:ys,z:zs,text:txt,hoverinfo:"text",
-    line:{{color:D.colors[row.asset],width:4}},marker:{{size:3,color:D.colors[row.asset]}},
-    visible: (row.asset.indexOf("self")>-1)?"legendonly":true}});
-}});
-plot3d("plot3d",traces,{{
-  margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
-  legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.02}},
-  scene:{{
-    xaxis:{{title:"year",gridcolor:grid_c,color:ink,tickformat:"d"}},
-    yaxis:{{title:"money",tickvals:[0,1,2],ticktext:PLANES,gridcolor:grid_c,color:ink}},
-    zaxis:{{title:"index (base=100, log)",type:"log",gridcolor:grid_c,color:ink}},
-    camera:{{eye:{{x:1.7,y:-1.5,z:0.9}}}}
+    Plotly.newPlot(id,traces,{{margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
+      legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.02}},
+      scene:{{xaxis:{{title:"year",gridcolor:grid_c,color:ink,tickformat:"d"}},
+        yaxis:{{title:"money",tickvals:[0,1,2],ticktext:PLANES,gridcolor:grid_c,color:ink}},
+        zaxis:{{title:ztitle,type:"log",gridcolor:grid_c,color:ink}},
+        camera:{{eye:{{x:1.7,y:-1.5,z:0.9}}}}}}}},{{displayModeBar:false,responsive:true}});
+    return;
   }}
-}},"The same endpoint figures are in the Breakdown table just below.");
+  // ---- SVG axonometric fallback: three parallel (year x log-value) planes, sheared for depth ----
+  let yrs=[],vals=[];
+  series.forEach(function(s){{s.pts.forEach(function(r){{if(r.v!=null){{yrs.push(r.yr);vals.push(r.v);}}}});}});
+  const ymin=Math.min.apply(null,yrs),ymax=Math.max.apply(null,yrs);
+  const lz=vals.map(function(v){{return Math.log10(v);}}), lzmin=Math.min.apply(null,lz),lzmax=Math.max.apply(null,lz);
+  const DX=0.34, DY=0.40;                                  // per-plane depth (right & up)
+  const nx=function(yr){{return ymax===ymin?0:(yr-ymin)/(ymax-ymin);}};
+  const nz=function(v){{return lzmax===lzmin?0.5:(Math.log10(v)-lzmin)/(lzmax-lzmin);}};
+  const PX=function(yr,p){{return nx(yr)+p*DX;}}, PY=function(v,p){{return nz(v)+p*DY;}};
+  const shapes=[],anns=[],pcol=["#eef1f7","#f7f1e6","#eef4ee"];
+  [0,1,2].forEach(function(p){{
+    const a=[PX(ymin,p),p*DY],b=[PX(ymax,p),p*DY],c=[PX(ymax,p),1+p*DY],d=[PX(ymin,p),1+p*DY];
+    shapes.push({{type:"path",layer:"below",fillcolor:pcol[p],line:{{color:"#e4ddcc",width:1}},
+      path:"M"+a[0]+","+a[1]+"L"+b[0]+","+b[1]+"L"+c[0]+","+c[1]+"L"+d[0]+","+d[1]+"Z"}});
+    anns.push({{x:PX(ymin,p),y:1+p*DY,text:PLANES[p],showarrow:false,xanchor:"left",yshift:9,font:{{color:"#8a8378",size:11}}}});
+  }});
+  const uyr=yrs.filter(function(v,i,a){{return a.indexOf(v)===i;}}).sort(function(a,b){{return a-b;}});
+  uyr.forEach(function(yr,i){{ if(uyr.length>7&&i%2) return;
+    anns.push({{x:PX(yr,0),y:0,text:String(yr),showarrow:false,yshift:-10,font:{{color:"#8a8378",size:9.5}}}}); }});
+  const traces=series.map(function(s){{
+    const xs=[],ys=[],txt=[];
+    [0,1,2].forEach(function(p){{ s.pts.forEach(function(r){{ if(r.p!==p||r.v==null) return;
+      xs.push(PX(r.yr,p)); ys.push(PY(r.v,p)); txt.push(s.name+"<br>"+r.yr+" · "+PLANES[p]+"<br>index "+r.v.toFixed(0)); }});
+      xs.push(null);ys.push(null);txt.push(null); }});
+    return {{type:"scatter",mode:"lines+markers",name:s.name,x:xs,y:ys,text:txt,hoverinfo:"text",
+      line:{{color:s.color,width:2}},marker:{{size:4,color:s.color}},visible:s.visible===false?"legendonly":true}};
+  }});
+  Plotly.newPlot(id,traces,{{margin:{{l:6,r:6,t:8,b:22}},paper_bgcolor:"#fcfcfb",plot_bgcolor:"#fcfcfb",
+    legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.04}},
+    xaxis:{{visible:false,range:[-0.05,1+2*DX+0.05],fixedrange:true}},
+    yaxis:{{visible:false,range:[-0.10,1+2*DY+0.10],fixedrange:true}},
+    shapes:shapes,annotations:anns}},{{displayModeBar:false,responsive:true}});
+}}
+// assets: one series per asset (base 2000=100), 'self' metals hidden by default
+const series3=[];
+D.grid.forEach(row=>{{
+  const pts=[];
+  KEY.forEach((k,pi)=>{{ row.years.forEach((yr,i)=>{{ const v=row[k][i]; if(v!=null) pts.push({{yr:yr,p:pi,v:v}}); }}); }});
+  series3.push({{name:row.asset,color:D.colors[row.asset],pts:pts,visible:(row.asset.indexOf("self")>-1)?false:true}});
+}});
+render3money("plot3d",series3,"index (base=100, log)");
 // GSR 2D line
 Plotly.newPlot("gsr",[{{type:"scatter",mode:"lines+markers",
   x:D.gsr.map(r=>r.year),y:D.gsr.map(r=>r.ratio),
@@ -570,27 +600,12 @@ const occ=n=>W.occupations.find(r=>r.name.indexOf(n)===0);
 (function(){{
   const picks=[occ("Management"),occ("Computer"),occ("All occ"),occ("Food"),W.minimum_wage];
   const IDX=["usd_idx","gold_idx","silver_idx"];
-  const tr=[];
-  picks.forEach((row,ci)=>{{
-    const xs=[],ys=[],zs=[],txt=[];
-    IDX.forEach((k,pi)=>{{
-      row.years.forEach((yr,i)=>{{
-        xs.push(yr);ys.push(pi);zs.push(row[k][i]);
-        txt.push(row.name+"<br>"+yr+" · "+PLANES[pi]+"<br>index "+row[k][i].toFixed(0));
-      }});
-      xs.push(null);ys.push(null);zs.push(null);txt.push(null);
-    }});
-    const c=CAT[ci%CAT.length];
-    tr.push({{type:"scatter3d",mode:"lines+markers",name:row.name,x:xs,y:ys,z:zs,
-      text:txt,hoverinfo:"text",line:{{color:c,width:4}},marker:{{size:3,color:c}}}});
+  const series=picks.map(function(row,ci){{
+    const pts=[];
+    IDX.forEach(function(k,pi){{ row.years.forEach(function(yr,i){{ pts.push({{yr:yr,p:pi,v:row[k][i]}}); }}); }});
+    return {{name:row.name,color:CAT[ci%CAT.length],pts:pts}};
   }});
-  plot3d("wage3d",tr,{{margin:{{l:0,r:0,t:6,b:0}},paper_bgcolor:"#fcfcfb",
-    legend:{{font:{{family:"-apple-system,Segoe UI,Roboto,sans-serif",size:12}},orientation:"h",y:-0.02}},
-    scene:{{xaxis:{{title:"year",gridcolor:grid_c,color:ink,tickformat:"d"}},
-      yaxis:{{title:"money",tickvals:[0,1,2],ticktext:PLANES,gridcolor:grid_c,color:ink}},
-      zaxis:{{title:"index (2000=100, log)",type:"log",gridcolor:grid_c,color:ink}},
-      camera:{{eye:{{x:1.7,y:-1.5,z:0.9}}}}}}
-  }},"The same figures are in the wage tables below.");
+  render3money("wage3d",series,"index (2000=100, log)");
 }})();
 
 // --- Horizontal bar: gold index 2024 (2000=100), ordered worst-first; ref line at 100 ---
