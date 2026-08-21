@@ -273,7 +273,13 @@ NAVBAR=navlinks("Research")   # used by the rendered research block pages + the 
 # ---- mirror to docs/ (GitHub Pages) ----
 DOCS=os.path.join(ROOT,"docs")
 if os.path.isdir(DOCS):
-    docs_html=HTML.replace("<body>","<body>"+navlinks("Dashboard"),1)
+    feat=('<div style="max-width:820px;margin:14px auto 0;padding:12px 16px;background:#fffdf8;'
+          'border:1px solid #e4ddcc;border-radius:10px;font:15px/1.6 Georgia,serif">'
+          '<b style="color:#7b2d26">New &mdash; Real value:</b> wages, homes and the market repriced in gold &amp; '
+          'silver, who owns the assets that inflated, and a machine-checked proof of the wage-to-asset squeeze '
+          '(with the honest boundary where the proof stops). '
+          '<a href="multidenom.html" style="color:#1f4e79">Open the Real-value analysis &rarr;</a></div>')
+    docs_html=HTML.replace("<body>","<body>"+navlinks("Dashboard")+feat,1)
     open(os.path.join(DOCS,"dashboard.html"),"w").write(docs_html)
     PCSS=("body{background:#faf8f2;color:#1c1b19;font:18px/1.72 Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;margin:0;padding:0 0 60px}"
           "main{max-width:820px;margin:0 auto;padding:0 22px}h1{font-family:Georgia,serif;font-weight:600;font-size:34px;margin:26px 0 4px}"
