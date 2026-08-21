@@ -89,9 +89,9 @@ const pslug=s=>'p-'+s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,
 const tip=document.getElementById('tip');
 const lerp=(a,b)=>typeof a==='object'?a.id:a; // source/target id helper
 const link=root.append('g').selectAll('path').data(LINKS).join('path').attr('fill','none')
- .attr('stroke',d=>d.layer==='financial'?(d.circular?'#c0392b':'#9a8f78'):'#d8d0bd')
- .attr('stroke-width',d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75))
- .attr('stroke-dasharray',d=>d.layer==='structural'?'3,3':null).attr('opacity',.55)
+ .attr('stroke',d=>d.layer==='financial'?(d.circular?'#c0392b':'#8f836a'):'#b3a789')
+ .attr('stroke-width',d=>d.circular?1.9:(d.layer==='financial'?1.2:0.9))
+ .attr('stroke-dasharray',d=>d.layer==='structural'?'3,3':null).attr('opacity',.8)
  .attr('marker-end',d=>'url(#arr-'+(d.layer==='financial'?'fin':'struct')+')');
 // invisible wide hit-layer so thin edges are hoverable -> deal tooltip
 const linkHit=root.append('g').selectAll('path').data(LINKS).join('path').attr('fill','none')
@@ -199,7 +199,7 @@ document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
  fitted=false;sim.alpha(.7).restart();}
 document.getElementById('tCluster').addEventListener('change',drawSectors);;
 document.getElementById('tCore').onchange=e=>{const on=e.target.checked;
- node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.55:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.7:.05));};
+ node.style('opacity',d=>!on||d.scc?1:.12); link.style('opacity',d=>!on?.8:((id2n.get(typeof d.source==='object'?d.source.id:d.source).scc&&id2n.get(typeof d.target==='object'?d.target.id:d.target).scc)?.85:.18));};
 const q=document.getElementById('q'), qres=document.getElementById('qres');
 // ---- fuzzy search: ranked, clickable, and indexes PERSONS + descriptions ----
 const _strip=h=>(h||'').replace(/<[^>]*>/g,' ').replace(/&[a-z]+;/g,' ');
@@ -273,12 +273,12 @@ function egoFocus(d){egoOn=d.id;const keep=ADJ.get(d.id)||new Set([d.id]);
  node.style('opacity',n=>keep.has(n.id)?1:.08);
  labels.style('display',n=>keep.has(n.id)?null:'none');
  const vis=l=>keep.has(lerp(l.source))&&keep.has(lerp(l.target));
- link.style('opacity',l=>vis(l)?.85:.04);
+ link.style('opacity',l=>vis(l)?.9:.16);
  linkHit.style('pointer-events',l=>vis(l)?null:'none');
  node.select('circle').attr('stroke',n=>n.id===d.id?'#1f4e79':(n.scc?'#d4a017':'#fffdf8'))
   .attr('stroke-width',n=>n.id===d.id?4.5:(n.scc?2.6:1));}
 function clearEgo(){egoOn=null;
- node.style('opacity',1);link.style('opacity',.55);linkHit.style('pointer-events',null);
+ node.style('opacity',1);link.style('opacity',.8);linkHit.style('pointer-events',null);
  applyLabels();  // restore smart labels (hubs + core, or all if toggled)
  node.select('circle').attr('stroke',n=>n.scc?'#d4a017':'#fffdf8').attr('stroke-width',n=>n.scc?2.6:1);
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
@@ -291,7 +291,7 @@ document.querySelectorAll('.lg').forEach(el=>el.onclick=()=>{const b=el.dataset.
  node.style('opacity',n=>n.bucket===b?1:.08);
  labels.style('display',n=>(n.bucket===b&&(allLab||n.scc||n.deg>=labThr(curK)))?null:'none');
  const vis=l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));return (s&&s.bucket===b)||(t&&t.bucket===b);};
- link.style('opacity',l=>vis(l)?.7:.04);});
+ link.style('opacity',l=>vis(l)?.88:.16);});
 // ----- fit-to-view + reset -----
 function fit(){const xs=NODES.map(n=>n.x),ys=NODES.map(n=>n.y);
  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
