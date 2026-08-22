@@ -353,7 +353,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
-.grp circle{pointer-events:none}
+.grp line{pointer-events:none}
 .sect text{font:800 21px Georgia,serif;fill:#7b2d26;fill-opacity:.92;letter-spacing:.08em;pointer-events:none;text-transform:uppercase;paint-order:stroke;stroke:#faf8f2;stroke-width:5px;stroke-linejoin:round}
 .lg{cursor:pointer;padding:1px 4px;border-radius:9px;border:1px solid transparent;transition:.12s}
 .lg:hover{background:#00000008}.lg.off{opacity:.32}.lg.solo{border-color:var(--ac2);background:#1f4e7912}
@@ -435,7 +435,8 @@ const linkHit=root.append('g').selectAll('path').data(LINKS).join('path').attr('
  .on('mousemove',e=>{tip.style.left=(e.clientX+14)+'px';tip.style.top=(e.clientY+12)+'px';})
  .on('mouseout',(e,d)=>{link.classed('hl',false);tip.style.display='none';});
 const rad=d=>4+Math.sqrt(d.deg)*2.2;
-const node=root.append('g').selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{e.stopPropagation();showPanel(d);egoFocus(d);});
+const nodeG=root.append('g');   // node container (kept so the group-spoke layer can slot just BELOW it)
+const node=nodeG.selectAll('g').data(NODES).join('g').style('cursor','pointer').on('click',(e,d)=>{e.stopPropagation();showPanel(d);egoFocus(d);});
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
@@ -469,16 +470,28 @@ const ancX=d=>{if(aggregate&&d.parent){const p=id2n.get(d.parent);if(p&&p.x!=nul
 const ancY=d=>{if(aggregate&&d.parent){const p=id2n.get(d.parent);if(p&&p.y!=null)return p.y;}return clustered?bAnchor(d.bucket,'y'):H()/2;};
 const labPad=d=>(d.scc||d.deg>=LABMIN)?Math.min(d.label.length*2.1,34):0;   // avoidance: extra collide radius for labelled nodes
 const BSECT=__BSECT__;
-const groupG=root.insert('g',':first-child').attr('class','grp');   // soft group-container hulls, behind everything
+// group-spoke layer sits just BELOW the nodes but ABOVE all edges, so subsidiary tethers read
+// clearly instead of being buried under the edge/node layers (the old ':first-child' bug).
+const groupG=root.insert('g',()=>nodeG.node()).attr('class','grp');
+// ABSOLUTE membership marking: an area/hull would sweep in whatever is geometrically nearby, so
+// membership is shown ONLY as an explicit spoke from each parent to each of its CURATED children.
+// Nothing that isn't a real (parent,child) pair can ever be marked as "in" a group.
 function drawGroups(){
- const keys=aggregate?Object.keys(GROUPS):[];
- const circ=keys.map(p=>{const mem=[id2n.get(p)].concat(GROUPS[p].map(c=>id2n.get(c))).filter(m=>m&&m.x!=null);
-  if(mem.length<2)return null; const cx=d3.mean(mem,m=>m.x),cy=d3.mean(mem,m=>m.y);
-  let r=0;mem.forEach(m=>{r=Math.max(r,Math.hypot(m.x-cx,m.y-cy)+rad(m));});
-  return {p:p,cx:cx,cy:cy,r:r+11,col:COLORS[(id2n.get(p)||{}).bucket]||'#8a8378'};}).filter(Boolean);
- groupG.selectAll('circle').data(circ,d=>d.p).join('circle')
-  .attr('cx',d=>d.cx).attr('cy',d=>d.cy).attr('r',d=>d.r)
-  .attr('fill',d=>d.col).attr('fill-opacity',.05).attr('stroke',d=>d.col).attr('stroke-opacity',.3).attr('stroke-width',1);
+ const pairs=[];
+ if(aggregate){Object.keys(GROUPS).forEach(p=>{const P=id2n.get(p); if(!P||P.x==null)return;
+   GROUPS[p].forEach(c=>{const C=id2n.get(c); if(C&&C.x!=null) pairs.push({k:p+'>'+c,P:P,C:C,col:COLORS[P.bucket]||'#8a8378'});});});}
+ // NO enclosing circle/hull (those sweep in geometric neighbours that aren't members). Membership is
+ // shown ONLY as an explicit parent->child tether: a soft wide glow underlay + a crisp dashed line
+ // in the parent's colour. A tether can only exist for a real curated (parent,child) pair.
+ const glow=groupG.selectAll('line.gglow').data(pairs,d=>d.k);
+ glow.join('line').attr('class','gglow')
+  .attr('x1',d=>d.P.x).attr('y1',d=>d.P.y).attr('x2',d=>d.C.x).attr('y2',d=>d.C.y)
+  .attr('stroke',d=>d.col).attr('stroke-width',7).attr('stroke-opacity',.16).attr('stroke-linecap','round');
+ const line=groupG.selectAll('line.gline').data(pairs,d=>d.k);
+ line.join('line').attr('class','gline')
+  .attr('x1',d=>d.P.x).attr('y1',d=>d.P.y).attr('x2',d=>d.C.x).attr('y2',d=>d.C.y)
+  .attr('stroke',d=>d.col).attr('stroke-width',2.2).attr('stroke-opacity',.9)
+  .attr('stroke-dasharray','2,5').attr('stroke-linecap','round');
 }
 const sectorG=root.append('g').attr('class','sect');   // sector headers on a TOP layer w/ halo so they stay legible over nodes/lines
 function drawSectors(){sectorG.raise();sectorG.selectAll('text').data(clustered?BUCKETS:[],b=>b).join('text')
