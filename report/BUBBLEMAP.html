@@ -143,8 +143,8 @@ const BUCKETS=[...new Set(NODES.map(d=>d.bucket))];
  BUCKETS.length=0;ord.forEach(b=>BUCKETS.push(b));})();
 let clustered=true;
 // live-tunable flocking parameters (defaults = the baked-in layout); the on-map panel edits these
-const FLK={velDecay:.55,alphaDecay:.035,charge:-90,chargeMax:340,linkStr:.12,linkDist:46,
-           cohesion:.35,collidePad:11,collideStr:.9,collideIter:2,spreadX:.31,spreadY:.34};
+const FLK={velDecay:.55,alphaDecay:.035,charge:-70,chargeMax:240,linkStr:.12,linkDist:46,
+           cohesion:.6,collidePad:11,collideStr:.9,collideIter:2,spreadX:.46,spreadY:.5};
 function bAnchor(b,axis){const i=BUCKETS.indexOf(b),NB=BUCKETS.length||1,a=(i/NB)*2*Math.PI-Math.PI/2;
  return axis==='x'?W()/2+Math.cos(a)*Math.min(W(),1500)*FLK.spreadX:H()/2+Math.sin(a)*Math.min(H(),1000)*FLK.spreadY;}
 // children of a group nest toward their parent's live position; else the sector anchor
@@ -184,17 +184,21 @@ function drawSectors(){sectorG.raise();sectorG.selectAll('text').data(clustered?
  .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')-58).attr('text-anchor','middle')   // lifted above the cluster
  .text(b=>(BSECT[b]||b).toUpperCase());}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
-// DETERMINISTIC SEED: put every node at its cluster anchor (children hugging their parent's anchor)
-// on a golden-angle spiral, BEFORE the sim runs. Otherwise d3 seeds all nodes on one phyllotaxis at
-// the origin and the settle-freeze (alpha<0.06, ~80 ticks) fires before weakly-forced leaf nodes
-// (606 deg-1 leaves here) can walk out to their cluster - so they froze piled at the centre and
-// "never moved". Seeding at the anchor means the short settle only relaxes locally; nothing strands.
+// DETERMINISTIC PER-BUCKET SEED: seed each sector as a COMPACT disk around its own anchor, BEFORE the
+// sim runs. Two reasons: (1) d3 otherwise seeds all nodes on one phyllotaxis at the origin, and the
+// settle-freeze (alpha<0.06, ~80 ticks) fires before weakly-forced leaf nodes (606 deg-1 leaves) can
+// reach their cluster - so they froze piled at the centre; (2) seeding with a GLOBAL index flung
+// high-index nodes far from their anchor, so they started already overlapping neighbouring sectors
+// ("bubbles bleed into other sectors"). Indexing WITHIN each bucket keeps every sector a tight disk,
+// sized by its own membership, that starts well clear of its neighbours.
 (function(){const GA=2.399963229;   // golden angle -> even, deterministic spread (no Math.random)
- NODES.forEach((n,i)=>{if(n.parent)return;const ax=bAnchor(n.bucket,'x'),ay=bAnchor(n.bucket,'y');
-   const r=10+Math.sqrt(i)*4,a=i*GA; n.x=ax+Math.cos(a)*r; n.y=ay+Math.sin(a)*r;});
- NODES.forEach((n,i)=>{if(!n.parent)return;const p=id2n.get(n.parent);
-   const bx=(p&&p.x!=null)?p.x:bAnchor(n.bucket,'x'),by=(p&&p.y!=null)?p.y:bAnchor(n.bucket,'y');
-   const a=i*GA; n.x=bx+Math.cos(a)*24; n.y=by+Math.sin(a)*24;});
+ const byB={}; NODES.forEach(n=>{(byB[n.bucket]=byB[n.bucket]||[]).push(n);});
+ Object.keys(byB).forEach(b=>{const arr=byB[b],ax=bAnchor(b,'x'),ay=bAnchor(b,'y');
+   arr.sort((p,q)=>(p.parent?1:0)-(q.parent?1:0));   // parents first so children can hug them
+   arr.forEach((n,j)=>{
+     if(n.parent){const p=id2n.get(n.parent); if(p&&p.x!=null){const a=j*GA;n.x=p.x+Math.cos(a)*22;n.y=p.y+Math.sin(a)*22;return;}}
+     const a=j*GA, r=10+Math.sqrt(j)*6; n.x=ax+Math.cos(a)*r; n.y=ay+Math.sin(a)*r;});   // compact disk, radius grows with sqrt(count)
+ });
 })();
 const sim=d3.forceSimulation(NODES)
  .velocityDecay(FLK.velDecay).alphaDecay(FLK.alphaDecay)
