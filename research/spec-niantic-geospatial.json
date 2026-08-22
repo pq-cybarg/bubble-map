@@ -1,0 +1,30 @@
+{
+  "title": "Niantic / Pokemon GO / Keyhole -> Google geospatial lineage (John Hanke)",
+  "source": "Public record: John Hanke founded Keyhole (In-Q-Tel-funded) -> Google acquired it 2004 (Google Earth/Maps); Hanke started Niantic Labs inside Google (2010), spun out 2015; Niantic shipped Ingress (2012) and Pokemon GO (2016) as real-world location/AR data collection; Niantic built a 'Large Geospatial Model' from player scans. Structural overlay; edges graded. Surveillance-cluster webbing (#217). NOTE: the In-Q-Tel tie is via Keyhole heritage only - no documented IQT funding of Niantic (do not imply one).",
+  "grade": "per-edge in notes (fact | contested | weak)",
+  "nodes": [
+    {"id": "John_Hanke", "sector": "person"},
+    {"id": "Niantic", "sector": "surveillance"},
+    {"id": "Pokemon_GO", "sector": "surveillance"},
+    {"id": "Ingress", "sector": "surveillance"}
+  ],
+  "edges": [
+    {"from": "John_Hanke", "to": "Keyhole", "instrument": "founder_origin",
+     "notes": "John Hanke co-founded Keyhole Inc. (the In-Q-Tel-funded geospatial startup) (fact).",
+     "source": "Keyhole/Hanke history"},
+    {"from": "John_Hanke", "to": "Niantic", "instrument": "leads",
+     "notes": "Hanke founded and led Niantic (fact).", "source": "Niantic"},
+    {"from": "Google", "to": "Niantic", "instrument": "spinout_origin",
+     "notes": "Niantic Labs began inside Google (2010) and spun out as an independent company in 2015 (fact).",
+     "source": "Google/Niantic"},
+    {"from": "Niantic", "to": "Ingress", "instrument": "product_line",
+     "notes": "Ingress (2012) - Niantic's first location-based AR game, seeding its points-of-interest map (fact).",
+     "source": "Niantic"},
+    {"from": "Niantic", "to": "Pokemon_GO", "instrument": "product_line",
+     "notes": "Pokemon GO (2016) - mass-scale location + real-world imagery/AR data collection via players (fact of data collection; downstream sharing/monetization contested).",
+     "source": "Niantic; privacy reporting"},
+    {"from": "Niantic", "to": "Google", "instrument": "partnership",
+     "notes": "Niantic remained tied to Google's maps/cloud ecosystem post-spinout; Google was also an investor (fact of relationship; exact data-flows not public).",
+     "source": "public record"}
+  ]
+}

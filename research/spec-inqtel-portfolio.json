@@ -1,0 +1,28 @@
+{
+  "title": "In-Q-Tel portfolio & CIA-venture surveillance-stack lineage",
+  "source": "Public record: In-Q-Tel disclosed portfolio/history; corporate acquisition records (Google/Keyhole 2004; Google/Mandiant 2022); press. Structural overlay; edges graded in notes. Surveillance-cluster webbing (#218). In-Q-Tel->Palantir is carried in spec-palantir-surveillance.json (not duplicated here).",
+  "grade": "per-edge in notes (fact | contested | weak)",
+  "nodes": [
+    {"id": "In_Q_Tel", "sector": "state_intel"},
+    {"id": "Keyhole", "sector": "surveillance"},
+    {"id": "Recorded_Future", "sector": "surveillance"},
+    {"id": "FireEye_Mandiant", "sector": "security_research"}
+  ],
+  "edges": [
+    {"from": "In_Q_Tel", "to": "Keyhole", "instrument": "cia_seed",
+     "notes": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact).",
+     "source": "In-Q-Tel history; press"},
+    {"from": "In_Q_Tel", "to": "Recorded_Future", "instrument": "cia_seed",
+     "notes": "In-Q-Tel was an early investor in Recorded Future (threat-intel / OSINT analytics) (fact).",
+     "source": "In-Q-Tel portfolio"},
+    {"from": "In_Q_Tel", "to": "FireEye_Mandiant", "instrument": "cia_seed",
+     "notes": "In-Q-Tel was an early investor in FireEye (later Mandiant) (fact).",
+     "source": "In-Q-Tel portfolio"},
+    {"from": "Keyhole", "to": "Google", "instrument": "corporate_lineage",
+     "notes": "Google acquired Keyhole in 2004; its tech became Google Earth / Maps (fact).",
+     "source": "Google acquisition record"},
+    {"from": "FireEye_Mandiant", "to": "Google", "instrument": "corporate_lineage",
+     "notes": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact).",
+     "source": "Google/Mandiant deal"}
+  ]
+}
