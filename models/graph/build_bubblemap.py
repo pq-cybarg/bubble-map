@@ -502,6 +502,18 @@ function drawSectors(){sectorG.raise();sectorG.selectAll('text').data(clustered?
  .attr('x',b=>bAnchor(b,'x')).attr('y',b=>bAnchor(b,'y')-58).attr('text-anchor','middle')   // lifted above the cluster
  .text(b=>(BSECT[b]||b).toUpperCase());}
 const baseW=d=>d.circular?1.9:(d.layer==='financial'?1.15:0.75);
+// DETERMINISTIC SEED: put every node at its cluster anchor (children hugging their parent's anchor)
+// on a golden-angle spiral, BEFORE the sim runs. Otherwise d3 seeds all nodes on one phyllotaxis at
+// the origin and the settle-freeze (alpha<0.06, ~80 ticks) fires before weakly-forced leaf nodes
+// (606 deg-1 leaves here) can walk out to their cluster - so they froze piled at the centre and
+// "never moved". Seeding at the anchor means the short settle only relaxes locally; nothing strands.
+(function(){const GA=2.399963229;   // golden angle -> even, deterministic spread (no Math.random)
+ NODES.forEach((n,i)=>{if(n.parent)return;const ax=bAnchor(n.bucket,'x'),ay=bAnchor(n.bucket,'y');
+   const r=10+Math.sqrt(i)*4,a=i*GA; n.x=ax+Math.cos(a)*r; n.y=ay+Math.sin(a)*r;});
+ NODES.forEach((n,i)=>{if(!n.parent)return;const p=id2n.get(n.parent);
+   const bx=(p&&p.x!=null)?p.x:bAnchor(n.bucket,'x'),by=(p&&p.y!=null)?p.y:bAnchor(n.bucket,'y');
+   const a=i*GA; n.x=bx+Math.cos(a)*24; n.y=by+Math.sin(a)*24;});
+})();
 const sim=d3.forceSimulation(NODES)
  .velocityDecay(FLK.velDecay).alphaDecay(FLK.alphaDecay)
  .force('link',d3.forceLink(LINKS).id(d=>d.id).distance(d=>d.layer==='financial'?FLK.linkDist:FLK.linkDist+18).strength(FLK.linkStr))
@@ -559,7 +571,7 @@ document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
  link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
 document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
 document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
- sim.force('x').strength(clustered?FLK.cohesion:.05);sim.force('y').strength(clustered?FLK.cohesion:.05);   // free layout = weak center only
+ sim.force('x').strength(cohStr);sim.force('y').strength(cohStr);   // per-node: children keep their strong parent pull
  fitted=false;sim.alpha(.7).restart();}
 document.getElementById('tCluster').addEventListener('change',drawSectors);;
 document.getElementById('tAgg').onchange=e=>{aggregate=e.target.checked;drawGroups();fitted=false;sim.alpha(.5).restart();};
