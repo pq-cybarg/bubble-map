@@ -1,0 +1,44 @@
+{
+  "title": "Blankfein's own AI-bubble / 2008-AAA analogy + the Deaton reply (bailout & self-marked-value thread)",
+  "source": "Primary: Lloyd Blankfein (@lloydblankfein) post, and John E. Deaton (@JohnEDeaton1) quote-reply, both 2026-08-22 (captured via X syndication). Claims independently verified against Congress.gov/GovTrack (EESA/TARP), ProPublica Bailout Tracker + Treasury (Goldman CPP), SEC 2010-123 (Abacus), and DOJ 2016 RMBS settlement. This block records a TOP-BANKER PRIMARY-SOURCE statement that itself draws the map's core analogy (self-marked AI value <-> AAA mortgage bonds that went to zero), plus a fact-check of the reply's characterizations. Rhetoric ('POS', 'utter garbage') is opinion and is NOT ingested as fact; only the checkable claims are graded.",
+  "grade": "per-edge in notes (fact | contested | mischaracterization | opinion)",
+  "verification": {
+    "verbatim_blankfein": "Risk management 101 - every exposure should have a limit, even when you're sure nothing could go wrong. After all, the Titanic sank and AAA mortgage bonds went to zero. I worry about the market's (and the economy's) unlimited appetite for exposure to the positive AI revenue story.",
+    "verbatim_deaton": "EVERYONE: Meet Lloyd Blankfein - he's one of the Wall Street Bankers (aka POS) @EdMarkey chose to bailout in 2008. Lloyd was CEO of @GoldmanSachs. His 'risk management 101' back then was packaging toxic mortgage bonds - utter garbage - stamping AAA investment grade on it -",
+    "claims": [
+      {"claim": "Blankfein was CEO of Goldman Sachs", "verdict": "FACT", "detail": "CEO June 2006 (succeeding Hank Paulson, who left to become Treasury Secretary and later architected TARP) through 2018 (succeeded by David Solomon)."},
+      {"claim": "Ed Markey 'chose to bailout' Wall Street in 2008", "verdict": "FACT-with-nuance", "detail": "Markey was a U.S. REPRESENTATIVE (MA-7), not yet a Senator; he publicly maintained support for and voted for the Emergency Economic Stabilization Act of 2008 (TARP), which passed the House 263-171 on Oct 3, 2008. 'Chose to bailout' = one of 263 House yes votes on a $700B program, not a personal selection of Goldman.", "source": ["https://www.govtrack.us/congress/bills/110/hr1424","https://www.markey.senate.gov/news/press-releases/oct-3-2008-markey-maintains-support-for-financial-rescue-package-cites-credit-freeze-on-main-st"]},
+      {"claim": "Goldman Sachs was bailed out in 2008", "verdict": "FACT", "detail": "Goldman received $10B via TARP's Capital Purchase Program on Oct 28, 2008; also drew Fed facilities and a $5B Buffett/Berkshire injection. Repaid the $10B on Jun 9, 2009 with ~$1.4B profit to Treasury (~23% annualized). SIGTARP later noted Goldman 'took $10 billion in TARP bailout funds' while it had misrepresented RMBS quality.", "source": ["https://projects.propublica.org/bailout/entities/237-goldman-sachs","https://www.justice.gov/archives/opa/pr/goldman-sachs-agrees-pay-more-5-billion-connection-its-sale-residential-mortgage-backed"]},
+      {"claim": "Goldman was 'packaging toxic mortgage bonds - utter garbage'", "verdict": "SUPPORTED", "detail": "Goldman underwrote/sold RMBS and synthetic CDOs tied to subprime; DOJ 2016: $5.06B settlement for serious misconduct in RMBS marketing (knew of defective loans). SEC 2010: $550M Abacus settlement - Goldman acknowledged marketing materials were incomplete (omitted that Paulson & Co. helped pick the portfolio and was short it). Note: Goldman did NOT admit fraud in the Abacus settlement.", "source": ["https://www.sec.gov/news/press/2010/2010-123.htm","https://www.justice.gov/archives/opa/pr/goldman-sachs-agrees-pay-more-5-billion-connection-its-sale-residential-mortgage-backed"]},
+      {"claim": "Goldman was 'stamping AAA investment grade on it'", "verdict": "MISCHARACTERIZATION", "detail": "The AAA ratings were assigned by the NATIONALLY RECOGNIZED RATING AGENCIES (Moody's, S&P, Fitch) - NOT by Goldman. Goldman structured/packaged and sold the securities and arranged them to obtain AAA tranches; the rating stamp itself was the agencies' act. The distinction matters: it is the ratings-capture (Goodhart) leg of the story, and attributing the AAA stamp to Goldman is inaccurate even though Goldman's conduct in selling the paper is well-documented."},
+      {"claim": "Blankfein now warns of the AI 'revenue story' the way AAA bonds went to zero", "verdict": "FACT (his own words)", "detail": "The quoted post is Blankfein's own risk-limit warning explicitly analogizing the market's 'unlimited appetite' for AI-revenue exposure to AAA mortgage bonds that went to zero - a top-banker primary source echoing this map's self-marked-value / Minsky-fragility thesis."}
+    ]
+  },
+  "nodes": [
+    {"id": "Lloyd_Blankfein", "sector": "person"},
+    {"id": "John_Deaton", "sector": "person"},
+    {"id": "Goldman_Sachs", "sector": "capital"},
+    {"id": "Rating_Agencies", "sector": "capital"},
+    {"id": "Subprime_RMBS_2007", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Lloyd_Blankfein", "to": "Goldman_Sachs", "instrument": "leads",
+     "notes": "CEO of Goldman Sachs 2006-2018; succeeded Hank Paulson (who became Treasury Secretary) (fact).",
+     "source": "Goldman Sachs corporate history"},
+    {"from": "Treasury", "to": "Goldman_Sachs", "instrument": "tarp_capital_2008",
+     "notes": "$10B TARP Capital Purchase Program injection Oct 28 2008; repaid Jun 9 2009 with ~$1.4B profit to Treasury. Enabled by EESA/TARP (House 263-171, Oct 3 2008; Rep. Markey voted yes) (fact).",
+     "source": "ProPublica Bailout Tracker; Treasury; GovTrack HR1424"},
+    {"from": "Goldman_Sachs", "to": "Subprime_RMBS_2007", "instrument": "packaged_rmbs",
+     "notes": "Underwrote/sold subprime RMBS + synthetic CDOs; DOJ 2016 $5.06B RMBS settlement; SEC 2010 $550M Abacus settlement (incomplete marketing disclosure; no fraud admission) (supported).",
+     "source": "DOJ 2016; SEC 2010-123"},
+    {"from": "Rating_Agencies", "to": "Subprime_RMBS_2007", "instrument": "stamped_aaa",
+     "notes": "Moody's/S&P/Fitch assigned the AAA ratings - correcting the reply's claim that Goldman itself 'stamped AAA'. This is the ratings-capture (Goodhart) leg (fact/correction).",
+     "source": "FCIC report; SEC"},
+    {"from": "Lloyd_Blankfein", "to": "OpenAI", "instrument": "public_warning",
+     "notes": "2026-08-22 post: analogizes the market's 'unlimited appetite' for AI-revenue exposure to AAA mortgage bonds that went to zero - a top-banker primary source echoing the self-marked-value / Minsky thesis. Linked to OpenAI as an AI-loop anchor; the warning is about the AI revenue story broadly, not OpenAI specifically (documented statement).",
+     "source": "https://x.com/lloydblankfein (2026-08-22, via X syndication)"},
+    {"from": "John_Deaton", "to": "Goldman_Sachs", "instrument": "public_commentary",
+     "notes": "2026-08-22 quote-reply critiquing Blankfein/Goldman and the 2008 bailout. Underlying bailout/RMBS facts verified; the 'Goldman stamped AAA' line is inaccurate and the 'Markey chose to bailout' line is a House TARP vote, not a personal selection (opinion + mixed accuracy).",
+     "source": "https://x.com/JohnEDeaton1/status/2091198054074597603"}
+  ]
+}
