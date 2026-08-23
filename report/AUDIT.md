@@ -42,5 +42,4 @@ Canonical numbers (from data/*.json — the source of truth):
 - none
 
 ## Composition/division review (advisory — collective-intent phrasing; confirm institutional ACTION or graded claim, not asserted unitary MIND)
-- ⚑ spec-camp-lejeune.json: 'the government wants'
-  (1 advisory hit(s) to verify)
+- none
