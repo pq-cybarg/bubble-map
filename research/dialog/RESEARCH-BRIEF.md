@@ -71,6 +71,10 @@ One retreat/year at luxury, secluded, high-security venues; bi-continental (US: 
 ### Dimension 6 — Group mentality — _COMPLETE (#195)_ → `research/dialog/dimension6-mentality.json`
 A **curated elite-cohesion machine** (doctrine graded at org level, not imputed to members — composition guard held). Load-bearing norm = **manufactured psychological safety** (off-record, "nonobvious" comments) — framed as candor-enabling; same design keeps elite deliberation outside public accountability (no gov emails, outside records laws) → intent read from what organizers say AND omit. Defining tension: **"avoid status signalling" sitting atop a quantified A/B/C + AI-dossier apparatus** — read as *function* (status settled administratively so it needn't be performed), not mere hypocrisy. Throughline = AI + longevity + near-future, but documented **mood is pessimistic-futurist** (labor displacement, "AI winter," data-center attacks, religious revival) → anticipatory elite positioning, not utopian ideology. **Intimacy as cohesion tech** (confessional sessions + dating.dialog.org matchmaking) distinguishes it from Bilderberg's deal/policy register. Referral-gated in/out-group → high homophily + the fragility the leak exposed. Caveat: nearly all specifics from a single (WIRED-verified) leak corpus; Dialog hasn't confirmed the documents.
 
+### Passive CT follow-up — 2026-08-21 (osint catalog)
+
+crt.name against `dialog.org` (no target contact): **cPanel-class hosting** (`cpanel`/`webmail`/`webdisk`) on a **Squarespace** registrar, plus product names already in the leak (`dating.dialog.org`, `downloads-dialog-retreat.dialog.org`, `auth`/`portal`/`register`/`meet`/`appv2`/`appv3`). Written into `dimension3-governance.json` and `spec-dialog-society.md`. **Anduril** CT independently names `*.usarmy.anduril.com` (Campbell/Benning/Redstone/Johnson/Schofield/Shafter/DEVCOM) + `jadc2` + `cbp-sdk-dev` — dual-use on Anduril's own certs, not inferred from Dialog membership (`dimension2-affiliates.json`). Leak PII not reproduced. Catalog: `~/osint/catalog/entities/dialog.md` and `anduril.md`.
+
 ---
 
 ## Synthesis status (EPIC #189)

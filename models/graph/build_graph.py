@@ -289,6 +289,12 @@ ALIAS = {
  "Splunk":"Splunk","CyberArk":"CyberArk","CISA":"CISA","Akamai":"Akamai","Check_Point":"Check_Point","Check Point":"Check_Point",
  # duplicate-node merges (same entity under two spellings -> one bubble)
  "Lazarus":"Lazarus_Group","Lazarus Group":"Lazarus_Group",
+ "Mt_Gox":"MtGox","Mt. Gox":"MtGox","Mt.Gox":"MtGox",
+ "Huobi":"HTX","Huobi_Global":"HTX","Gate.io":"Gate","GateIO":"Gate",
+ "Crypto.com":"Crypto_com","CryptoCom":"Crypto_com",
+ "1inch":"OneInch",
+ "THORChain":"THORChain",
+ "Stargate Finance":"Stargate_Finance","StargateFinance":"Stargate_Finance",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
  "Private-credit funds":"PrivateCredit_Funds","Private credit funds":"PrivateCredit_Funds",
 }
@@ -741,12 +747,20 @@ def scc_core(edge_list):
     core=set().union(*sccs) if sccs else set()
     return sccs,core,adj
 
-sccs_all,core_all,adj=scc_core(E)
-sccs_robust,core_robust,_=scc_core([e for e in E if not e.get("cancelable")])
-# PROOF-INTEGRITY CHECK: the circular core must rest on capital/credit/compute FLOWS, not on
-# governance/legal/security relationships. Compute the SCC over financial-layer edges only.
-_,core_financial,_=scc_core([e for e in E if e.get("layer")=="financial"])
-structural_adds_no_cycle=(core_financial==core_all)
+# The HEADLINE circular core is the FINANCIAL solvency core - the SCC over capital/credit/compute
+# edges ONLY. This is what the Z3/TLA+/Alloy proofs model, and it must NOT be inflated by
+# governance/legal/lineage ("structural") edges: lumping surveillance/academia/person nodes into
+# "the circular core" just because they sit in a governance cycle would be a composition fallacy.
+sccs_all,core_all,adj=scc_core([e for e in E if e.get("layer")=="financial"])                       # financial, incl cancelable (headline core)
+sccs_robust,core_robust,_=scc_core([e for e in E if e.get("layer")=="financial" and not e.get("cancelable")])  # financial, excl cancelable (robust core)
+core_financial=core_all
+# INFORMATIONAL: the SCC over ALL edges (financial + structural). If governance/lineage edges form
+# their own cycles (e.g. Palantir<->DARPA<->Stanford, Google<->Niantic) this is LARGER than the
+# capital core - reported separately, never as "the circular core".
+sccs_alledges,core_alledges,adj_alledges=scc_core(E)
+# proof-integrity: the headline core is derived from financial edges alone, so structural edges can
+# never manufacture it. This flag is True iff structural edges also add NO extra cycle on top.
+structural_adds_no_cycle=(core_alledges==core_financial)
 
 # elementary cycles (bounded) over full graph
 cycset=set();cyclist=[]
@@ -800,6 +814,7 @@ graph={"entities":entities,"edges":E,"analysis":{
     "core_scc_all":sorted(core_all),"core_scc_all_size":len(core_all),
     "core_scc_robust_excl_cancelable":sorted(core_robust),"core_scc_robust_size":len(core_robust),
     "core_scc_financial_only":sorted(core_financial),"structural_edges_add_no_cycle":structural_adds_no_cycle,
+    "core_scc_all_edges_incl_structural":sorted(core_alledges),"core_scc_all_edges_size":len(core_alledges),
     "nodes_only_circular_via_cancelable":sorted(core_all-core_robust),
     "num_elementary_cycles":len(cyclist),"elementary_cycles":cyclist,
     "circularity_exposure":expo,"nvidia_self_funding":selffund,
@@ -815,11 +830,15 @@ with open(os.path.join(DATA,"entities.csv"),"w",newline="") as f:
 
 print("="*74+"\nSTRUCTURAL FORMAL ANALYSIS  -  AI circular-funding graph\n"+"="*74)
 print(f"nodes={len(nodes)}  edges={len(E)}  (financial={nfin}, structural={nstr})")
-print(f"\n[S0] PROOF-INTEGRITY: SCC over FINANCIAL-layer edges only == SCC over all edges? {structural_adds_no_cycle}")
-print(f"     => the circular core rests on capital/credit/compute flows; governance/legal/security edges add no cycle.")
-print(f"\n[S1] Core SCC (ALL edges): |SCC|={len(core_all)}")
+print(f"\n[S0] PROOF-INTEGRITY: the circular core is the SCC over FINANCIAL-layer edges ONLY - it cannot")
+print(f"     be manufactured by governance/legal/security edges. Do structural edges add NO extra cycle")
+print(f"     on top of the capital core? {structural_adds_no_cycle}  (all-edges SCC={len(core_alledges)} vs capital core={len(core_financial)})")
+if not structural_adds_no_cycle:
+    print(f"     NOTE: governance/lineage edges form their own cycle(s); the {len(core_alledges)}-node all-edges SCC adds "
+          + ", ".join(sorted(core_alledges-core_financial)) + " - these are NOT part of the capital-solvency core.")
+print(f"\n[S1] Core SCC (FINANCIAL edges, incl cancelable): |SCC|={len(core_all)}")
 print("     "+", ".join(sorted(core_all)))
-print(f"\n[S1b] Core SCC (EXCLUDING cancelable contracts): |SCC|={len(core_robust)}")
+print(f"\n[S1b] Robust core SCC (FINANCIAL edges, EXCLUDING cancelable contracts): |SCC|={len(core_robust)}")
 print("     "+", ".join(sorted(core_robust)))
 print(f"\n[S1c] Nodes circular ONLY via CANCELABLE edges: {sorted(core_all-core_robust)}")
 print("      => These are conditionally entangled; their circularity can be unwound by contract termination.")

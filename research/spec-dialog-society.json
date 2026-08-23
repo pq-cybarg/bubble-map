@@ -20,8 +20,11 @@
    {"name": "Semafor — Private club founded by Peter Thiel, Auren Hoffman eyes campus near DC (Aug 8, 2025)", "url": "https://www.semafor.com/article/08/08/2025/private-club-founded-by-peter-thiel-auren-hoffman-eyes-campus-near-dc"},
    {"name": "NATO Defense College Foundation (Spagnuolo) — Dialog on AI systems: shifting warfare and powers", "url": "https://www.natofoundation.org/wp-content/uploads/2026/05/NDCF-Spagnuolo-Dialog-Anduril-Palantir-r-1.pdf"},
    {"name": "Irish Times — Wicklow hotel cancels secretive Peter Thiel conference (Jul 3, 2026)", "url": "https://www.irishtimes.com/ireland/2026/07/03/wicklow-hotel-cancels-secretive-peter-thiel-conference/"},
-   {"name": "Wikipedia — Dialog (organization)", "url": "https://en.wikipedia.org/wiki/Dialog_(organization)"}
-  ]
+   {"name": "Wikipedia — Dialog (organization)", "url": "https://en.wikipedia.org/wiki/Dialog_(organization)"},
+   {"name": "Passive CT — dialog.org (crt.name, 2026-08-21; cPanel-class hosting + dating/retreat product names)", "url": "https://crt.name/v1/search?apex=dialog.org"},
+   {"name": "Passive CT — anduril.com (crt.name; *.usarmy / jadc2 / cbp-sdk-dev)", "url": "https://crt.name/v1/search?apex=anduril.com"}
+  ],
+  "ct_osint_2026_08_21": "Overlay observation, not a graph edge. dialog.org CT shows cPanel/webmail/webdisk plus dating.dialog.org and downloads-dialog-retreat.dialog.org (Squarespace registrar) — technical residue of the June-2026 leak vector. anduril.com CT independently names a US Army customer plane and JADC2/CBP hosts; Campbell renewed through 2026-07-27. Attendance != wrongdoing; hostname issuance != live access."
  },
  "edges": [
   {"from":"Peter_Thiel","to":"Dialog_Society","instrument":"governance","raw_instrument":"co-founder (2006); namesake — reportedly has no hand in Dialog's day-to-day operations","amount_usd":null,"status":"documented","circular":false,"cancelable":false,"notes":"OVERLAY: Dialog principal (person node)"},

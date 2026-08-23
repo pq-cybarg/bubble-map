@@ -233,7 +233,7 @@ HTML=f"""<!doctype html><html><head><meta charset=utf-8><title>Unmasking the AI 
 <h2 id=core>The circular core</h2>
 <p><b>Robust core SCC ({an.get('core_scc_robust_size','?')}):</b> {html.escape(", ".join(dlabel(x) for x in robust))}.<br>
 <b>Circular only via cancelable edges:</b> {html.escape(", ".join(dlabel(x) for x in cancel_only)) or '—'} (SpaceX: operationally separable, financially cross-held by Google's ~$100B stake).</p>
-<p class=muted>Edges split into a <b>financial layer</b> ({an.get('num_financial_edges','?')} capital/credit/compute flows) and a <b>structural layer</b> ({an.get('num_structural_edges','?')} governance/legal/security/ownership relationships). The SCC computed over the financial layer alone equals the SCC over all edges (<code>structural_edges_add_no_cycle = {an.get('structural_edges_add_no_cycle','?')}</code>): the circular core rests on capital flows; the graded structural edges add no cycle.</p>
+<p class=muted>Edges split into a <b>financial layer</b> ({an.get('num_financial_edges','?')} capital/credit/compute flows) and a <b>structural layer</b> ({an.get('num_structural_edges','?')} governance/legal/security/ownership relationships). The circular core is the SCC over the <b>financial layer alone</b> ({an.get('core_scc_all_size','?')} firms; {an.get('core_scc_robust_size','?')} robust, excl. cancelable) — so it can never be manufactured by soft edges. Structural governance/lineage edges do form their own cycles, so the SCC over <i>all</i> edges is larger ({an.get('core_scc_all_edges_size','?')} nodes — adding governance/academia/person nodes such as Palantir, DARPA, Stanford, Google↔Niantic); those are surrounding context, <b>not</b> part of the capital-solvency core.</p>
 <h2 id=connectors>Cross-layer connectors</h2>
 <p class=muted>Nodes ranked by distinct neighbor-sectors bridged (degree, source-files, and whether they span both layers). This quantifies the bridge nodes that tie the financial core to the surrounding layers.</p>{conn_t}
 <h2 id=choke>The three physical chokepoints</h2>{chk}
@@ -261,7 +261,7 @@ open(os.path.join(REP,"INDEX.html"),"w").write(HTML)
 GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
 def navlinks(active=""):
     items=[("index.html","Home"),("atlas.html","Atlas"),("dashboard.html","Dashboard"),("charts.html","Charts"),("multidenom.html","Real value"),("research.html","Research"),
-           ("persons.html","Persons"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),("leadership.html","Leadership"),
+           ("persons.html","Persons"),("blockchain.html","Blockchain"),("bubblemap.html","Bubble Map"),("globe.html","Globe"),("leadership.html","Leadership"),
            ("lenses.html","Lenses"),("methodology.html","Methodology"),("glossary.html","Glossary"),
            ("https://github.com/pq-cybarg/bubble-map","Source ↗")]
     a=lambda h,t:f'<a href="{h}" style="color:{"#7b2d26" if t==active else "#1f4e79"};text-decoration:none;margin:0 9px;white-space:nowrap;font-weight:{700 if t==active else 400}">{t}</a>'
@@ -445,7 +445,7 @@ if os.path.isdir(DOCS):
           "<code>models/graph/build_graph.py</code> consolidates the edges into <code>data/graph.json</code> and runs the Tarjan SCC. The Z3, TLA+, and Alloy models read that data. "
           "The dashboard, this site, and the reports are generated from the same data.</p>"
           f"<h2>Graph layers</h2><p>Every edge is tagged <b>financial</b> (capital/credit/compute flows — {an.get('num_financial_edges','?')}) or <b>structural</b> (governance/legal/security/ownership/statistics — {an.get('num_structural_edges','?')}). "
-          f"The SCC over the financial layer alone equals the SCC over all edges (<code>structural_edges_add_no_cycle = {an.get('structural_edges_add_no_cycle','?')}</code>): the circular core rests on capital flows.</p>"
+          f"The circular core is the Tarjan SCC over the <b>financial layer alone</b> ({an.get('core_scc_all_size','?')} firms; {an.get('core_scc_robust_size','?')} robust) — it cannot be manufactured by structural edges. Structural governance/lineage edges do form their own cycles, so the all-edges SCC is larger ({an.get('core_scc_all_edges_size','?')} nodes); those governance/academia/person nodes are context, not part of the capital-solvency core.</p>"
           "<h2>Grading</h2><p>Claims outside the proven financial core are graded <code>fact · contested · weak · unsupported</code> and excluded from the Z3/TLA+/Alloy proofs. Intent is not inferred from adjacency.</p>"
           "<h2>Consistency checks</h2><p><code>models/audit.py</code> (cross-document number/coverage checks) and <code>models/cross_review.py</code> (edge-amount reconciliation, connectors, under-connection) run via <code>scripts/new-research.sh</code>. Current audit: 0 flags.</p>"
           "<h2>Primary sources</h2><p>Load-bearing claims cite primary government and court records (SCOTUS, DOJ/SDNY, Treasury/OFAC, the Fifth Circuit, SEC EDGAR, Congress.gov, FDIC, BLS, ICIJ, NIST, exchanges). See the <a href=dashboard.html#verify>dashboard</a> for a sample and the <a href=research.html>research index</a> for per-block sources.</p>"

@@ -30,7 +30,7 @@ Extortion as a franchise: **LockBit** (5.0, Sept 2025, *permits critical-infra a
 
 ## 5. The private surveillance complex
 
-**Palantir** (Thiel-founded, CIA-seeded; Gotham predictive-policing + the **~$30M ICE "ImmigrationOS"** deportation-targeting contract), **Clearview AI** (scrapes billions of web images for facial recognition sold to police/ICE), **Anduril** (autonomous border/defense surveillance). The **ICE deportation effort reportedly stacks Palantir + Clearview + Paragon.** Plus Big-Tech **ad-surveillance** feeding the data-broker economy. *Firms/contracts fact; "police-state capability" contested interpretation.*
+**Palantir** (Thiel-founded, CIA-seeded; Gotham predictive-policing + the **~$30M ICE "ImmigrationOS"** deportation-targeting contract), **Clearview AI** (scrapes billions of web images for facial recognition sold to police/ICE), **Anduril** (autonomous border/defense surveillance; **CT on `anduril.com` names `cbp-sdk-dev` plus a `*.usarmy.anduril.com` plane including `piv.usarmy` — PIV/CAC — fact as certificate issuance, not as a live-scan finding**). The **ICE deportation effort reportedly stacks Palantir + Clearview + Paragon.** Plus Big-Tech **ad-surveillance** feeding the data-broker economy. *Firms/contracts fact; "police-state capability" contested interpretation.*
 
 ## 6. The defense side (dual-use recursion)
 

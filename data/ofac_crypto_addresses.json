@@ -4,9 +4,9 @@
       "SDN:https://sanctionslistservice.ofac.treas.gov/api/download/sdn_advanced.xml",
       "CONS:https://sanctionslistservice.ofac.treas.gov/api/download/cons_advanced.xml"
     ],
-    "count": 910,
+    "count": 929,
     "by_list": {
-      "SDN": 910
+      "SDN": 929
     },
     "note": "Crypto addresses pattern-extracted from the FREE OFAC Advanced XML lists (SDN + Consolidated), downloaded via the Treasury Sanctions List Service (sanctionslistservice.ofac.treas.gov; also free as CSV/XML and via the sanctionslist.ofac.treas.gov portals and the sanctionssearch.ofac.treas.gov search UI). For authoritative party/program attribution, resolve each address against its full list entry.",
     "COVERAGE_LIMITS": "OFAC's own data is NOT access-limited: the full SDN and Consolidated lists \u2014 including the 'Digital Currency Address' crypto fields \u2014 are freely downloadable in CSV, XML, and Advanced-XML (machine-readable) and searchable for free. The 757 here is still a LOWER BOUND on the threat-actor address universe, but for reasons OTHER than OFAC availability: it captures only addresses OFAC has formally DESIGNATED, and deliberately excludes (a) per-incident FBI/CISA PSA IOC address lists (e.g., the 51 Bybit-laundering ETH addresses), published separately but also free; and (b) un-sanctioned but attributed clusters tracked by commercial forensics (Chainalysis/Elliptic/TRM/Arkham), which ARE paywalled. Sanction status is also time-varying (e.g., Tornado Cash: sanctioned 2022 -> vacated 2024 -> lifted 2025), so a static list overstates what is CURRENTLY designated."
@@ -328,6 +328,13 @@
       ]
     },
     {
+      "address": "0x6b69e2a7545c166417a80c61a77562052bffa9c5",
+      "asset_guess": "ETH/EVM",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "0x6be0ae71e6c41f2f9d0d1a3b8d0f75e6f6a0b46e",
       "asset_guess": "ETH/EVM",
       "lists": [
@@ -420,6 +427,13 @@
     },
     {
       "address": "0x8Dce2aAC0dE82bdCAf6b4373B79f94331b8e4995",
+      "asset_guess": "ETH/EVM",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "0x8d79c73daae8630c88de372ba8f57592fa987607",
       "asset_guess": "ETH/EVM",
       "lists": [
         "SDN"
@@ -573,6 +587,13 @@
       ]
     },
     {
+      "address": "0xbb69e01921b17cd22080968bcc96ba6115da6062",
+      "asset_guess": "ETH/EVM",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "0xc103b7dc095c904b92081eef0c1640081ec01c10",
       "asset_guess": "ETH/EVM",
       "lists": [
@@ -637,6 +658,13 @@
     },
     {
       "address": "0xdcbEfFBECcE100cCE9E4b153C4e15cB885643193",
+      "asset_guess": "ETH/EVM",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "0xe05f529f5284d75624eba386cb716928c3b54a2a",
       "asset_guess": "ETH/EVM",
       "lists": [
         "SDN"
@@ -952,6 +980,13 @@
     },
     {
       "address": "15YK647qtoZQDzNrvY6HJL6QwXduLHfT28",
+      "asset_guess": "BTC",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "15Zt2mKuQ5Qy6DEXfDcbtsEVneoGQQXrS4",
       "asset_guess": "BTC",
       "lists": [
         "SDN"
@@ -1287,6 +1322,13 @@
       ]
     },
     {
+      "address": "1BUXxhcwzFukm9CUxnhag85sSXDkMRbXse",
+      "asset_guess": "BTC",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "1BiUFjzH6wsT73U3tfy4aXHCQsYQHzjk5h",
       "asset_guess": "BTC",
       "lists": [
@@ -1582,6 +1624,13 @@
     },
     {
       "address": "1Fz29BQp82pE3vXXcsZoMNQ3KSHfMzfMe3",
+      "asset_guess": "BTC",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "1G1V1b9s9uPsFCNL15ibZk44xsVygKsP2u",
       "asset_guess": "BTC",
       "lists": [
         "SDN"
@@ -3569,6 +3618,13 @@
       ]
     },
     {
+      "address": "TAhHpxPRwo1Bmm1A9m51uZ31tcB7EPq7SY",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TAhwhFv3JpK39Nc2m8W5LPCcoTisutiRfp",
       "asset_guess": "TRON",
       "lists": [
@@ -4227,6 +4283,13 @@
       ]
     },
     {
+      "address": "TGr2i8ZQiiMRjP3mWyQUH2MQBfKu8GJNqm",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TGsNFrgWfbGN2gX25Wcf8oTejtxtQkvmEx",
       "asset_guess": "TRON",
       "lists": [
@@ -4249,6 +4312,13 @@
     },
     {
       "address": "THHb5iMAbZgQYY19h6uY66y5xt6e11gcZC",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "THJUJFyTnrBWb1ijWav7qfRBrjUuKgP49Z",
       "asset_guess": "TRON",
       "lists": [
         "SDN"
@@ -4417,6 +4487,13 @@
     },
     {
       "address": "TLj5ZRvem4DAdbZLTGU3qAbAdLQug57JVo",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "TLoG3vbjDgqmTD5bM7w9rMgA6ysaNReuRy",
       "asset_guess": "TRON",
       "lists": [
         "SDN"
@@ -4675,6 +4752,13 @@
       ]
     },
     {
+      "address": "TPgxjjB6AJeMSQFngbUM6dMMxPHa9GEtYa",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TPkNp2Z5KiA1sLWpPMWsfNErVo2dHxc4iy",
       "asset_guess": "TRON",
       "lists": [
@@ -4697,6 +4781,13 @@
     },
     {
       "address": "TPwjq8YuABThppKM5ppsuagBFwDhzpnY11",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "TPyE2oSoaysrXfLzwf9wetBVr9JudLwjtD",
       "asset_guess": "TRON",
       "lists": [
         "SDN"
@@ -4871,6 +4962,13 @@
       ]
     },
     {
+      "address": "TScXZTbDjjZ6a6jiC7dZjgCqfNo4vm7atV",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TSi1d66cgg3cPm9L6c2ZD8K1381XusSjkc",
       "asset_guess": "TRON",
       "lists": [
@@ -4921,6 +5019,13 @@
     },
     {
       "address": "TTUqoT6EAmiM1xLvwVwxhjvjaoEUGtKDdZ",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "TTVJuXWCusAURrpNShiypauagEH1N4CrxV",
       "asset_guess": "TRON",
       "lists": [
         "SDN"
@@ -5137,6 +5242,13 @@
       ]
     },
     {
+      "address": "TVgUsVzA7mpFExP4zS7HHbtKti6UuBDuwZ",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "TVn4q7L4fKEPbygi7UHq1CKfZxtbeuMV5q",
       "asset_guess": "TRON",
       "lists": [
@@ -5278,6 +5390,13 @@
     },
     {
       "address": "TXHb3BkGgYmygyS14MJKX8kTcFGT7dXN4r",
+      "asset_guess": "TRON",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "TXN3hVukebhyYR31YPCYd7aJAvmUeXu1ab",
       "asset_guess": "TRON",
       "lists": [
         "SDN"
@@ -5942,6 +6061,13 @@
       ]
     },
     {
+      "address": "bc1qjzk63wwatq2f638psymq3qapn00aqgksyx56l3t8eg7zuuccwasq498khf",
+      "asset_guess": "BTC",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
       "address": "bc1qkfqh5p2qsakseg5gnwen6zh5xf3elmku2xaup29mw3l0wnncy3es880dss",
       "asset_guess": "BTC",
       "lists": [
@@ -6356,6 +6482,13 @@
     },
     {
       "address": "bc1qyy5pt5cx3zth8xlj92lq5y87dh8xv3nwgs4ncq",
+      "asset_guess": "BTC",
+      "lists": [
+        "SDN"
+      ]
+    },
+    {
+      "address": "bc1qz654h5qcqzalv6ltpxsk4ksdcc3e20wkedqntgnarv3a0t2e2p7scr48pl",
       "asset_guess": "BTC",
       "lists": [
         "SDN"

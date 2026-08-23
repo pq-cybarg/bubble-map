@@ -18,7 +18,7 @@ The dependency is blunt: *"If China said we're not going to give you rare earths
 
 ## The defense-tech capital wave (the AI core's adjacency)
 - **Concentration:** **Anduril + Palantir + SpaceX** reportedly account for **~88%** of significant defense-tech investment and contracts — the same concentration as the AI core, with overlapping principals (**Thiel/Founders Fund, Musk**).
-- **Anduril:** **>$2B 2025 revenue (+110% YoY)**, a **$20B** Army counter-drone contract, a **5M-sq-ft Ohio drone factory** (Arsenal-1), and a **$5B Series H at a $61B valuation**.
+- **Anduril:** **>$2B 2025 revenue (+110% YoY)**, a **$20B** Army counter-drone contract, a **5M-sq-ft Ohio drone factory** (Arsenal-1), and a **$5B Series H at a $61B valuation**. **Passive CT (2026-08-21):** the Army relationship is also named on `anduril.com` itself — `*.usarmy.anduril.com` at Campbell, Benning, Redstone, Johnson, Schofield, Shafter, and DEVCOM, plus `jadc2.anduril.com` and `cbp-sdk-dev.anduril.com`. Campbell certs run 2024-12-10 → 2026-07-27 (Let's Encrypt; crt.sh). Hostnames ≠ live access; they do independently locate the $20B Army story in DNS.
 - **The money:** **a16z's "American Dynamism"** practice (~$1.2B Fund 2, part of a ~**$15B** a16z raise) pours VC into defense/aerospace/energy/supply-chains — the **same marquee AI VCs** now funding defense the way they fund the AI core.
 - **Narrative-beta split:** as with the AI/quantum/critical-minerals cohorts, separate the real, state-anchored builders from the froth. Reality checks: **Anduril's Altius drones crashed in USAF tests**; CNBC noted the Iran war was "defense tech's chance to shine" but **few systems were ready**; and Anduril's own **Trae Stephens warns defense tech is headed for a shakeout** (**fact**).
 

@@ -6,7 +6,8 @@ set is always visible and never clipped/overflowed."""
 NAV_ITEMS = [   # order matches build_dashboard.navlinks() so every page's nav is identical
     ("index.html", "Home"), ("atlas.html", "Atlas"), ("dashboard.html", "Dashboard"),
     ("charts.html", "Charts"), ("multidenom.html", "Real value"), ("research.html", "Research"),
-    ("persons.html", "Persons"), ("bubblemap.html", "Bubble Map"), ("globe.html", "Globe"),
+    ("persons.html", "Persons"), ("blockchain.html", "Blockchain"),
+    ("bubblemap.html", "Bubble Map"), ("globe.html", "Globe"),
     ("leadership.html", "Leadership"), ("lenses.html", "Lenses"), ("methodology.html", "Methodology"),
     ("glossary.html", "Glossary"), ("https://github.com/pq-cybarg/bubble-map", "Source ↗"),
 ]

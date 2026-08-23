@@ -17,7 +17,13 @@ def load(n):
     except Exception: return {}
 g=load("graph.json"); P=load("persons.json")
 ents=g.get("entities",{}); edges=g.get("edges",[]); an=g.get("analysis",{})
-scc=set(an.get("core_scc_all",[])); scc_robust=set(an.get("core_scc_robust_excl_cancelable",[]))
+# The gold "circular core" ring = the FINANCIAL solvency core (capital/credit/compute cycle), NOT the
+# all-edges SCC. Structural governance/lineage edges (e.g. Palantir<->DARPA<->Stanford, Google<->Niantic)
+# can form their own directed cycles, but lumping those nodes into "the circular core" would overclaim
+# that surveillance/academia/person nodes are part of the capital loop (composition fallacy). The honest
+# core is core_scc_financial_only (12); robust = that minus the cancelable-only node (SpaceX) => 11.
+scc=set(an.get("core_scc_financial_only",[]) or an.get("core_scc_all",[]))
+scc_robust=scc - set(an.get("nodes_only_circular_via_cancelable",[]))
 
 # sector -> bucket -> colour
 BUCKET={ "ai":["ai_lab","hyperscaler","chip_vendor","ai_infra","neocloud","semiconductor","ai_data","tech","bigtech_asia"],

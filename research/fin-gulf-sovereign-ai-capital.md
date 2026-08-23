@@ -12,6 +12,8 @@ The machine-checked core proves it is **"solvent only while external capital kee
 
 One Abu Dhabi fund is a marginal backer of the **entire frontier-AI oligopoly at once** — the clearest single answer to *"where does the external capital the core needs come from?"*
 
+**Operational footprint (CT, overlay):** `mgx.ae` is a small public-cert surface (23 names) of **named Cloudflare tunnels** and `mgx-16f-mdf-a128-vg.mgx.ae` (reads as a floor/MDF closet id). Character of the node — a deployable sovereign desk, not a hyperscaler fortress — not a change to the $7B Stargate equity figure. Catalog: `osint/catalog/entities/mgx-tbi-neoclouds.md`.
+
 ## Stargate UAE
 A **1 GW** compute cluster in Abu Dhabi: **G42 + OpenAI + Oracle + Nvidia (GB300) + Cisco + SoftBank**; ~**$30B**; first **200 MW live in 2026**; G42 holds **60%** (UAE insistence on national control). It is the **same Stargate SPV architecture** as the US flagship ([[fin-coreweave-oracle]]), exported to a petro-sovereign: **Gulf capital + US chips + US models + US cloud, on Gulf soil.**
 

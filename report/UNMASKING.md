@@ -47,9 +47,9 @@ It is the same defect four times: a self-chosen valuation that holds until reali
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 182 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **1157 nodes, 1644 directed edges.**
+Consolidating 189 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **1297 nodes, 1828 directed edges.**
 
-Each edge is tagged with a **layer**: **129 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **276 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the SCC computed over the financial layer alone equals the SCC over all edges (`structural_edges_add_no_cycle = True`) — i.e., the circular core rests on capital flows; the graded structural edges contribute no cycle and cannot manufacture the result.
+Each edge is tagged with a **layer**: **264 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **1564 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the circular core is the Tarjan SCC computed over the **financial layer alone** (12 firms; 11 robust, excl. cancelable) — so it can never be manufactured by soft edges. The graded structural edges *do* form their own governance/lineage cycles, so the SCC over all edges is larger (a 20-node component that additionally pulls in DARPA, Google, ICE, Niantic, Palantir, Palantir Gotham, Peter Thiel, Stanford — `structural_edges_add_no_cycle = False`); those are surrounding context and are **excluded** from the capital-solvency core and from every Z3/TLA+/Alloy proof.
 
 **Cross-layer connectors** (nodes ranked by distinct neighbor-sectors bridged) quantify the bridge nodes: **Hedera** spans the most sectors (10 — the enterprise-DLT council overlap), then **NVIDIA** and **Google** (the AI core also sitting on the DLT council), with **MGX** bridging ai-lab / Gulf-bigtech / exchange / SPV (the single Abu-Dhabi fund touching Stargate, Binance, and TikTok-US).
 

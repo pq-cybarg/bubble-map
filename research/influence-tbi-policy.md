@@ -27,3 +27,5 @@ Three of the largest AI-core actors each carry a **documented identity-layer vec
 Not one cabal — but the **same incumbents repeatedly positioned at the identity/access-control layer** of an AI-saturated internet, with aligned regulatory tailwinds. That is the real, defensible relationship; it is an *overlay*, graded, and kept out of the formally-proven financial core.
 
 TBI sits inside the broader **orchestration layer** mapped in [[digitalid-orchestration-real-incentive]] (World Bank ID4D, UN DPI, India-Stack/G20, BIS) and the five-track convergence in [[digitalid-worldcoin-eid-convergence]] — this file is the best-documented *single national instance* of that global pattern: a funder of the AI core financing the think tank that writes the digital-ID policy the same funder is positioned to build.
+
+**CT on `institute.global` (overlay, 2026-08-21):** delivery/digital/project dashboards, Workday/ERP, `remote`, and a **`moldova-poc`** hostname — a policy shop with an operational delivery surface, including a Moldova proof-of-concept named in public certs. Does not close the Oracle-ID-contract loop. Catalog: `osint/catalog/entities/mgx-tbi-neoclouds.md`.

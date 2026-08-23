@@ -15,6 +15,10 @@
 - **Anthropic / others:** additional compute-and-capacity deals.
 - These are flagged **cancelable** in the graph (`cancelable: true`), which is exactly why the **dual-SCC analysis** in `build_graph.py` shows SpaceX **dropping out of the circular core** when cancelable edges are excluded — the formal demonstration that SpaceX is *attached to*, not *trapped in*, the AI loop.
 
+## 2b. Operational fusion in public CT (overlay, 2026-08-21)
+
+The cap-table merger is already an edge. Certificate Transparency on the two apexes shows **Grok's admin/auth living on `spacex.com`** (`admin.grok.spacex.com`, `auth.grok.spacex.com`) and an xAI API shard named for Palantir (`us-south-1-pltr.api.x.ai`). That is operational naming, not a new dollar flow; it is the same SpaceX–xAI fusion the S-1/reporting describe, visible without touching either network. Catalog: `osint/catalog/entities/spacex-xai.md`.
+
 ## 3. Why it matters to the thesis
 The project's circularity proof (Z3 T1–T5) is careful to show **SpaceX is separable**: it has real exogenous cash flows (Starlink/launch/Starshield) and its links to the core are contractual and cancelable. Treating it as part of the self-funding loop would *overstate* the core — so the model excludes it from the robust SCC. The SPCX IPO (a ~$1.75T+ all-primary raise) is itself a **major liquidity event** that could either absorb or strain the capital pool the AI core competes for. Cross-ref `spec-telecom-satellite`, `geopolitics-cables-space-layer`, `data/graph.json` (dual SCC).
 
