@@ -840,6 +840,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "CBP": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CCDH": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1850,6 +1854,10 @@
     },
     "Flint_Water_Crisis": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Flock_Safety": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Fnality": {
@@ -3080,6 +3088,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Motorola_Solutions": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "MtGox": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -3334,6 +3346,10 @@
     },
     "Ollama": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "OnStar": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "OneCoin": {
@@ -3734,6 +3750,10 @@
     },
     "R2R_Opposition": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "RELX": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "REPAIR_Act": {
@@ -4546,6 +4566,10 @@
     },
     "Thodex": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Thomson_Reuters_CLEAR": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Three_Arrows_Capital": {
@@ -11723,7 +11747,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-telematics-insurance.json",
+      "source_file": "spec-telematics-insurance.json,spec-auto-connected-surveillance.json",
       "note": ""
     },
     {
@@ -14481,6 +14505,123 @@
       "cancelable": false,
       "source_file": "spec-quantum-computing-competitive-landscape.json",
       "note": ""
+    },
+    {
+      "from": "GM",
+      "to": "OnStar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "OnStar is GM's connected-vehicle service (+ 'Smart Driver'); collected precise geolocation as often as every 3 seconds plus hard-braking/speeding/late-night records across Chevrolet/GMC/Cadillac/Buick (fact)."
+    },
+    {
+      "from": "OnStar",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_feed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "GM/OnStar SOLD driver geolocation + behavior data to LexisNexis Risk Solutions, which repackaged it for auto insurers (premium-setting/denials; one driver +80% after 603 shared entries). FTC final order (Jan 14 2026) bars GM data-sharing with CRAs for 5yr; MDL No. 3115 names GM/OnStar/LexisNexis/Verisk (fact)."
+    },
+    {
+      "from": "OnStar",
+      "to": "Verisk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_feed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "Same FTC matter: OnStar driving data also sold to Verisk Analytics, repackaged for insurer pricing (fact)."
+    },
+    {
+      "from": "RELX",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "corporate_lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "LexisNexis Risk Solutions is a division of RELX PLC (British-Dutch info/analytics); the Risk arm operates separately from Legal & Professional, letting the parent distance itself from surveillance contracts (fact)."
+    },
+    {
+      "from": "LexisNexis",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "$16.8M ICE contract (2021) for Accurint Virtual Crime Center; LEIDS ~$22.1M (2021-2026) - access to data on 276M+ people from 10k+ gov/commercial sources incl. credit history, plates, cell subscriber data; marketed for pre-crime targeting. 2022 lawsuit challenges it (fact of contract; legality contested)."
+    },
+    {
+      "from": "Thomson_Reuters_CLEAR",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "CLEAR (Consolidated Lead Evaluation and Reporting) sold to DHS/ICE since 2017 ($22M); a $125M 5-yr DHS/ICE deal (2026) adds voter-registration data - names/addresses/SSNs/ethnicity, 'any information that identifies the possible location of the target'. Whistleblower fired after raising concerns; TR denies constitutional risk (fact of contract; framing contested)."
+    },
+    {
+      "from": "Flock_Safety",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_access",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "No formal ICE contract, but 404 Media documented ~4,000 immigration-related searches run through Flock's ALPR network by local police on ICE's behalf ('side-door' access); UW found 'back-door' access to >=10 WA agencies' cameras. Flock says data-sharing is customer-controlled (fact of documented access; direct-contract claim disputed)."
+    },
+    {
+      "from": "Flock_Safety",
+      "to": "CBP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "Flock ran a CBP pilot May 9-Aug 24 2025; halted after backlash (after data had already been shared). CEO initially denied federal contracts, later confirmed the pilot (fact)."
+    },
+    {
+      "from": "Motorola_Solutions",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_feed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-auto-connected-surveillance.json",
+      "note": "Motorola Solutions' Vigilant Solutions ALPR database + body-camera/real-time-crime-center stack has supplied license-plate location history used in immigration enforcement (fact of ALPR data availability to ICE via Vigilant; per-query use varies)."
     },
     {
       "from": "GENIUS_Act",
@@ -29187,10 +29328,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1306,
-    "num_edges": 1843,
+    "num_nodes": 1312,
+    "num_edges": 1852,
     "num_financial_edges": 264,
-    "num_structural_edges": 1579,
+    "num_structural_edges": 1588,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29265,20 +29406,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -29289,9 +29422,22 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -29301,7 +29447,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -29310,22 +29457,16 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
       [
-        "CoreWeave",
+        "Amazon",
+        "OpenAI",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -30815,6 +30956,13 @@
         "in_robust_core": false
       },
       "CATL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CBP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -32587,6 +32735,13 @@
       },
       "Flint_Water_Crisis": {
         "total_usd": 626000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Flock_Safety": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -34741,6 +34896,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Motorola_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MtGox": {
         "total_usd": 9000000000,
         "circular_usd": 0,
@@ -35183,6 +35345,13 @@
         "in_robust_core": false
       },
       "Ollama": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OnStar": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35883,6 +36052,13 @@
         "in_robust_core": false
       },
       "R2R_Opposition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RELX": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37304,6 +37480,13 @@
         "in_robust_core": false
       },
       "Thodex": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Thomson_Reuters_CLEAR": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

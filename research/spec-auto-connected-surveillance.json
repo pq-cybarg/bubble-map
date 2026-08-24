@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Connected-car & ALPR surveillance data streams -> data brokers -> ICE (the fusion pipeline)",
+    "generated": "2026-08-24",
+    "frame": "How ordinary 'safety' telemetry becomes an enforcement-grade dossier: (1) connected vehicles emit precise geolocation + driving-behavior data; (2) automakers sell it to consumer-reporting data brokers (LexisNexis Risk, Verisk) who repackage it for insurers; (3) the SAME broker backbone (LexisNexis Accurint/LEIDS, Thomson Reuters CLEAR) sells person-search access to ICE/DHS; (4) automated license-plate-reader (ALPR) networks (Flock, Motorola/Vigilant) feed location history to police and - directly or via local-PD 'side-door' searches - to ICE/CBP; (5) these feeds converge inside ICE's Palantir-built case systems (Investigative Case Management / ImmigrationOS, see spec-palantir-surveillance). Cross-links #184 (telematics pricing), #216 (Palantir), #218 (In-Q-Tel).",
+    "grade": "per-edge (fact | contested). Corporate/contract facts are documented (FTC orders, procurement records, 404 Media/Intercept reporting). 'Direct ICE access' to Flock is graded on documented indirect access; formal federal contracts were disputed by Flock.",
+    "method": "FTC press releases + final order (GM/OnStar, Jan 2025 complaint / Jan 2026 order); The Intercept (LexisNexis-ICE, 2021/2023); 404 Media + Univ. of Washington Center for Human Rights (Flock/ICE/CBP, 2025); reporting on Thomson Reuters CLEAR-DHS $125M (2026); MDL No. 3115 (In re: Consumer Vehicle Driving Data)."
+  },
+  "nodes": [
+    {"id": "OnStar", "sector": "surveillance"},
+    {"id": "Flock_Safety", "sector": "surveillance"},
+    {"id": "Motorola_Solutions", "sector": "surveillance"},
+    {"id": "Thomson_Reuters_CLEAR", "sector": "surveillance"},
+    {"id": "RELX", "sector": "capital"},
+    {"id": "CBP", "sector": "state"}
+  ],
+  "edges": [
+    {"from": "GM", "to": "OnStar", "instrument": "product_line",
+     "notes": "OnStar is GM's connected-vehicle service (+ 'Smart Driver'); collected precise geolocation as often as every 3 seconds plus hard-braking/speeding/late-night records across Chevrolet/GMC/Cadillac/Buick (fact).",
+     "source": "FTC complaint 2025-01"},
+    {"from": "OnStar", "to": "LexisNexis", "instrument": "data_feed",
+     "notes": "GM/OnStar SOLD driver geolocation + behavior data to LexisNexis Risk Solutions, which repackaged it for auto insurers (premium-setting/denials; one driver +80% after 603 shared entries). FTC final order (Jan 14 2026) bars GM data-sharing with CRAs for 5yr; MDL No. 3115 names GM/OnStar/LexisNexis/Verisk (fact).",
+     "source": "FTC 2026-01; TechCrunch; MDL 3115"},
+    {"from": "OnStar", "to": "Verisk", "instrument": "data_feed",
+     "notes": "Same FTC matter: OnStar driving data also sold to Verisk Analytics, repackaged for insurer pricing (fact).",
+     "source": "FTC 2025/2026"},
+    {"from": "RELX", "to": "LexisNexis", "instrument": "corporate_lineage",
+     "notes": "LexisNexis Risk Solutions is a division of RELX PLC (British-Dutch info/analytics); the Risk arm operates separately from Legal & Professional, letting the parent distance itself from surveillance contracts (fact).",
+     "source": "RELX corporate structure; AFSC Investigate"},
+    {"from": "LexisNexis", "to": "ICE", "instrument": "gov_contract",
+     "notes": "$16.8M ICE contract (2021) for Accurint Virtual Crime Center; LEIDS ~$22.1M (2021-2026) - access to data on 276M+ people from 10k+ gov/commercial sources incl. credit history, plates, cell subscriber data; marketed for pre-crime targeting. 2022 lawsuit challenges it (fact of contract; legality contested).",
+     "source": "The Intercept 2021/2023; procurement records"},
+    {"from": "Thomson_Reuters_CLEAR", "to": "ICE", "instrument": "gov_contract",
+     "notes": "CLEAR (Consolidated Lead Evaluation and Reporting) sold to DHS/ICE since 2017 ($22M); a $125M 5-yr DHS/ICE deal (2026) adds voter-registration data - names/addresses/SSNs/ethnicity, 'any information that identifies the possible location of the target'. Whistleblower fired after raising concerns; TR denies constitutional risk (fact of contract; framing contested).",
+     "source": "Thomson Reuters/DHS 2017 & 2026; The Nation; NPR 2026-04"},
+    {"from": "Flock_Safety", "to": "ICE", "instrument": "data_access",
+     "notes": "No formal ICE contract, but 404 Media documented ~4,000 immigration-related searches run through Flock's ALPR network by local police on ICE's behalf ('side-door' access); UW found 'back-door' access to >=10 WA agencies' cameras. Flock says data-sharing is customer-controlled (fact of documented access; direct-contract claim disputed).",
+     "source": "404 Media 2025; UW Center for Human Rights 2025-10"},
+    {"from": "Flock_Safety", "to": "CBP", "instrument": "deployment",
+     "notes": "Flock ran a CBP pilot May 9-Aug 24 2025; halted after backlash (after data had already been shared). CEO initially denied federal contracts, later confirmed the pilot (fact).",
+     "source": "Flock disclosures; 404 Media 2025"},
+    {"from": "Motorola_Solutions", "to": "ICE", "instrument": "data_feed",
+     "notes": "Motorola Solutions' Vigilant Solutions ALPR database + body-camera/real-time-crime-center stack has supplied license-plate location history used in immigration enforcement (fact of ALPR data availability to ICE via Vigilant; per-query use varies).",
+     "source": "Vigilant/Motorola reporting; EFF"},
+    {"from": "Allstate", "to": "Arity", "instrument": "product_line",
+     "notes": "Allstate owns Arity, whose SDK ingests driving telematics from ~40M+ devices and sells behavior scores into the insurer-pricing market - the other end of the same connected-driving data economy (fact).",
+     "source": "spec (#184) car-insurance telematics"}
+  ]
+}

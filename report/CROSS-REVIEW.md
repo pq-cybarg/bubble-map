@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-inqtel-portfolio.json` — related files by shared entities (verify cross-refs exist)
-- spec-disclosures-surveillance.json: 4 shared entities
-- spec-surveillance-cyber-threat-layer.json: 4 shared entities
-- spec-network-overlay.json: 4 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- digitalid-corporate.json: 3 shared entities
-- catalog-academia-core.json: 3 shared entities
-- temporal-bridges.json: 3 shared entities
-- geopolitics-defense-industrial-base.json: 3 shared entities
+## Newest file `spec-auto-connected-surveillance.json` — related files by shared entities (verify cross-refs exist)
+- spec-disclosures-surveillance.json: 2 shared entities
+- spec-network-overlay.json: 2 shared entities
+- spec-inqtel-portfolio.json: 2 shared entities
+- spec-palantir-surveillance.json: 2 shared entities
+- spec-niantic-geospatial.json: 1 shared entities
+- influence-operator-network.json: 1 shared entities
+- digitalid-corporate.json: 1 shared entities
+- catalog-academia-core.json: 1 shared entities

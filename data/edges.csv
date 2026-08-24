@@ -641,7 +641,7 @@ Ernest_Garcia,Carvana,regulatory_legal,,documented,False,False,spec-auto-credit-
 Ernest_Garcia,DriveTime,other,,documented,False,False,spec-auto-credit-unwind.json
 Subprime_Auto_ABS,Auto_Credit_Unwind,equity,,contested,False,False,spec-auto-credit-unwind.json
 PrivateCredit_Funds,Auto_Credit_Unwind,debt,,contested,False,False,spec-auto-credit-unwind.json
-Allstate,Arity,other,,documented,False,False,spec-telematics-insurance.json
+Allstate,Arity,other,,documented,False,False,"spec-telematics-insurance.json,spec-auto-connected-surveillance.json"
 Allstate,Telematics_Insurance,other,,contested,False,False,spec-telematics-insurance.json
 Progressive_Insurance,Telematics_Insurance,other,,documented,False,False,spec-telematics-insurance.json
 Arity,Telematics_Insurance,other,,contested,False,False,spec-telematics-insurance.json
@@ -829,6 +829,15 @@ EU_Quantum_Flagship,IQM,other,,documented,False,False,spec-quantum-computing-com
 EU_Quantum_Flagship,Quandela,other,,documented,False,False,spec-quantum-computing-competitive-landscape.json
 EU_Quantum_Flagship,Alice_Bob,other,,documented,False,False,spec-quantum-computing-competitive-landscape.json
 EU_Quantum_Flagship,OQC,other,,documented,False,False,spec-quantum-computing-competitive-landscape.json
+GM,OnStar,other,,,False,False,spec-auto-connected-surveillance.json
+OnStar,LexisNexis,other,,,False,False,spec-auto-connected-surveillance.json
+OnStar,Verisk,other,,,False,False,spec-auto-connected-surveillance.json
+RELX,LexisNexis,other,,,False,False,spec-auto-connected-surveillance.json
+LexisNexis,ICE,other,,,False,False,spec-auto-connected-surveillance.json
+Thomson_Reuters_CLEAR,ICE,other,,,False,False,spec-auto-connected-surveillance.json
+Flock_Safety,ICE,other,,,False,False,spec-auto-connected-surveillance.json
+Flock_Safety,CBP,other,,,False,False,spec-auto-connected-surveillance.json
+Motorola_Solutions,ICE,other,,,False,False,spec-auto-connected-surveillance.json
 GENIUS_Act,US_Contingent_Liabilities,relationship,,open,False,False,macro-us-fiscal-trap.json
 EUDI_Wallet,Device_Age_Attestation,relationship,,open,False,False,macro-us-fiscal-trap.json
 Louis_Rossmann,Right_to_Repair,other,,documented,False,False,spec-right-to-repair.json
