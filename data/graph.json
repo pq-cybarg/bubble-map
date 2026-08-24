@@ -848,6 +848,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "CDC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CDP_Japan": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -1372,6 +1376,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "DOGE": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "DOJ": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -1743,6 +1751,10 @@
     "Family_Offices": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Fannie_Mae": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Farm_Credit_System": {
       "sector": "financial_infra",
@@ -2392,6 +2404,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Israel_MoD": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Israel_state": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2890,6 +2906,10 @@
     },
     "Mass_Tort_Advertising": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Maven_Smart_System": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Mazda": {
@@ -21112,7 +21132,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-surveillance-cyber-threat-layer.json",
+      "source_file": "spec-surveillance-cyber-threat-layer.json,spec-palantir-surveillance.json",
       "note": ""
     },
     {
@@ -25393,6 +25413,123 @@
       "note": "Thiel's Founders Fund is part of the founding/early-capital network around Palantir (fact of network; treat as affiliation, not a live financial edge here)."
     },
     {
+      "from": "ImmigrationOS",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Deployed for ICE enforcement/deportation operations (fact of deployment; civil-liberties impact contested)."
+    },
+    {
+      "from": "Palantir",
+      "to": "Maven_Smart_System",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Maven Smart System (MSS) - Palantir's AI targeting/data-fusion successor to Project Maven (DoD, 2017). May 2024 $480M Army prototype; expanded to a ~$1.3B ceiling through 2029 (May 2025 +$795M modification to W911QX-24-D-0012). NGA reported 20,000+ active users across 35+ tools, user base >2x since Jan 2025 (fact)."
+    },
+    {
+      "from": "Maven_Smart_System",
+      "to": "US_Army",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Contracted via Army Contracting Command (Aberdeen); fielded across Army/Air Force/Space Force/Navy/Marines and combatant commands (fact)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "Fannie_Mae",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Fannie Mae 'Crime Detection Unit' - Foundry AI to flag mortgage-fraud patterns before loans reach Fannie, starting with multifamily (announced May 28 2025). FHFA Dir. Pulte floated extending to Freddie Mac + talks with xAI (fact of partnership; efficacy TBD)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Under EO of Mar 20 2025 ('Stopping Waste, Fraud, and Abuse by Eliminating Information Silos'), Foundry expanded across >=4 agencies (incl. DHS, HHS); NYT reported >$113M federal funding since Jan 2025 and talks re cross-agency data linkage. FACT: the EO + Foundry expansion. CONTESTED: the 'single master database of Americans' framing - Palantir publicly denies it and 13 ex-employees signed a letter of protest; Privacy Act (1974) suits filed."
+    },
+    {
+      "from": "DOGE",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Personnel overlap: >=3 DOGE staff are ex-Palantir and 2 more tied to Thiel-backed firms; DOGE reportedly central to Palantir's agency selection (fact of overlap; degree of influence contested; Palantir disputes the strongest DOGE-tie claims)."
+    },
+    {
+      "from": "Palantir",
+      "to": "Israel_MoD",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Strategic partnership announced Jan 2024 to supply technology 'crucial for war-related missions' to the Israeli defense establishment (fact of announcement; specific deployments not public)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "CDC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Foundry powered HHS Protect and the CDC/Operation Warp Speed 'Tiberius' vaccine-allocation platform (2020) (fact)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "SSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "NYT reported Palantir in talks with the Social Security Administration (and IRS) to extend Foundry as the federal role expanded in 2025 (grade: reported/CONTESTED - talks, not a confirmed production deployment)."
+    },
+    {
       "from": "VW",
       "to": "EU_Auto_Makers",
       "instrument": "other",
@@ -28956,10 +29093,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1297,
-    "num_edges": 1828,
+    "num_nodes": 1302,
+    "num_edges": 1837,
     "num_financial_edges": 264,
-    "num_structural_edges": 1564,
+    "num_structural_edges": 1573,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29013,6 +29150,7 @@
       "DARPA",
       "Google",
       "ICE",
+      "ImmigrationOS",
       "Lambda",
       "Microsoft",
       "NVIDIA",
@@ -29026,12 +29164,24 @@
       "SpaceX",
       "Stanford_University"
     ],
-    "core_scc_all_edges_size": 20,
+    "core_scc_all_edges_size": 21,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
       [
         "Microsoft",
         "OpenAI"
@@ -29045,26 +29195,14 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
@@ -29074,8 +29212,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -29086,14 +29230,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -30603,6 +30741,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CDC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CDP_Japan": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -31520,6 +31665,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DOGE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DOJ": {
         "total_usd": 950000000,
         "circular_usd": 0,
@@ -32165,6 +32317,13 @@
         "in_robust_core": false
       },
       "Family_Offices": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fannie_Mae": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -33305,6 +33464,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Israel_MoD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Israel_state": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34174,6 +34340,13 @@
         "in_robust_core": false
       },
       "Mass_Tort_Advertising": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Maven_Smart_System": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38242,7 +38415,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 50,
+        "degree": 51,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -38259,10 +38432,11 @@
           "sink",
           "spv",
           "state",
+          "surveillance",
           "telecom"
         ],
-        "n_neighbor_sectors": 16,
-        "source_files": 31,
+        "n_neighbor_sectors": 17,
+        "source_files": 32,
         "layers": [
           "financial",
           "structural"
@@ -38541,7 +38715,7 @@
       },
       {
         "node": "Palantir",
-        "degree": 16,
+        "degree": 19,
         "neighbor_sectors": [
           "ai_lab",
           "financier",

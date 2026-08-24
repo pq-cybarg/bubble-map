@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-blankfein-ai-2008-analogy.json` — related files by shared entities (verify cross-refs exist)
-- spec-palantir-surveillance.json: 1 shared entities
-- catalog-academia-core.json: 1 shared entities
-- fin-google-amazon-anthropic-meta.json: 1 shared entities
-- spec-vitalik-buterin-thought.json: 1 shared entities
-- spec-semiconductor-logistics-standards.json: 1 shared entities
-- spec-local-uncensored-ai.json: 1 shared entities
-- macro-cre-privatecredit.json: 1 shared entities
-- spec-lens-rereads.json: 1 shared entities
+## Newest file `spec-palantir-surveillance.json` — related files by shared entities (verify cross-refs exist)
+- catalog-academia-core.json: 4 shared entities
+- influence-operator-network.json: 4 shared entities
+- spec-network-overlay.json: 4 shared entities
+- spec-cross-system-contagion.json: 3 shared entities
+- macro-cre-privatecredit.json: 3 shared entities
+- fin-nvidia-openai.json: 3 shared entities
+- fin-gulf-sovereign-ai-capital.json: 3 shared entities
+- fin-google-amazon-anthropic-meta.json: 3 shared entities

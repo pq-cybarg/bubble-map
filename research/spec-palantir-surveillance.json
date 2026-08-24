@@ -1,68 +1,274 @@
 {
-  "title": "Palantir deep dive - In-Q-Tel lineage, product lines, government & foreign deployments, the data-fusion web",
+  "title": "Palantir deep dive - In-Q-Tel lineage, product lines (Gotham/Foundry/AIP/ImmigrationOS/Maven), government & foreign deployments, DOGE/federal-data-consolidation, the data-fusion web",
   "source": "Primary/public record: In-Q-Tel investment history; USASpending/FPDS federal contract records; SEC filings (PLTR); UK NHS Federated Data Platform award (~GBP 330M, 2023); DoD/Army (incl. Project Maven successors), ICE (FALCON/ISAP), HHS (HHS Protect / Tiberius), IRS reporting 2025; company disclosures. Structural overlay only; every edge graded in its note. Deep-webbing block for the Palantir/surveillance epic (#216). More webbing to follow.",
   "grade": "per-edge in notes (fact | contested | weak)",
   "nodes": [
-    {"id": "In_Q_Tel", "sector": "state_intel"},
-    {"id": "Alex_Karp", "sector": "person"},
-    {"id": "Palantir_Gotham", "sector": "surveillance"},
-    {"id": "Palantir_Foundry", "sector": "surveillance"},
-    {"id": "Palantir_AIP", "sector": "surveillance"},
-    {"id": "ICE", "sector": "state"},
-    {"id": "US_Army", "sector": "state"},
-    {"id": "HHS", "sector": "state"},
-    {"id": "IRS", "sector": "state"},
-    {"id": "NHS_England", "sector": "state"},
-    {"id": "UK_Government", "sector": "state"},
-    {"id": "Ukraine_MoD", "sector": "state"}
+    {
+      "id": "In_Q_Tel",
+      "sector": "state_intel"
+    },
+    {
+      "id": "Alex_Karp",
+      "sector": "person"
+    },
+    {
+      "id": "Palantir_Gotham",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Palantir_Foundry",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Palantir_AIP",
+      "sector": "surveillance"
+    },
+    {
+      "id": "ICE",
+      "sector": "state"
+    },
+    {
+      "id": "US_Army",
+      "sector": "state"
+    },
+    {
+      "id": "HHS",
+      "sector": "state"
+    },
+    {
+      "id": "IRS",
+      "sector": "state"
+    },
+    {
+      "id": "NHS_England",
+      "sector": "state"
+    },
+    {
+      "id": "UK_Government",
+      "sector": "state"
+    },
+    {
+      "id": "Ukraine_MoD",
+      "sector": "state"
+    },
+    {
+      "id": "ImmigrationOS",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Maven_Smart_System",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Fannie_Mae",
+      "sector": "capital"
+    },
+    {
+      "id": "SSA",
+      "sector": "state"
+    },
+    {
+      "id": "DOGE",
+      "sector": "state"
+    },
+    {
+      "id": "Israel_MoD",
+      "sector": "state"
+    },
+    {
+      "id": "CDC",
+      "sector": "state"
+    }
   ],
   "edges": [
-    {"from": "In_Q_Tel", "to": "Palantir", "instrument": "cia_seed",
-     "notes": "In-Q-Tel (CIA venture arm) was an early investor/customer that helped seed Palantir (~2005) and shaped Gotham for the IC (fact).",
-     "source": "In-Q-Tel portfolio history; press"},
-    {"from": "Peter_Thiel", "to": "Palantir", "instrument": "founder_origin",
-     "notes": "Thiel co-founded and funded Palantir (2003-04) (fact).",
-     "source": "Palantir corporate history; SEC S-1"},
-    {"from": "Alex_Karp", "to": "Palantir", "instrument": "leads",
-     "notes": "Alex Karp is co-founder and CEO of Palantir (fact).",
-     "source": "PLTR filings"},
-    {"from": "Palantir", "to": "Palantir_Gotham", "instrument": "product_line",
-     "notes": "Gotham - the intelligence/defense data-fusion platform (fact).", "source": "PLTR"},
-    {"from": "Palantir", "to": "Palantir_Foundry", "instrument": "product_line",
-     "notes": "Foundry - the commercial/enterprise + government data-integration platform (fact).", "source": "PLTR"},
-    {"from": "Palantir", "to": "Palantir_AIP", "instrument": "product_line",
-     "notes": "AIP - the Artificial Intelligence Platform layer (2023+) wiring LLMs onto Gotham/Foundry (fact).", "source": "PLTR"},
-    {"from": "Palantir_Gotham", "to": "ICE", "instrument": "gov_contract",
-     "notes": "ICE/HSI used Palantir case-management/analytics (FALCON) and ISAP-adjacent tooling; contracts renewed across administrations (fact).",
-     "source": "USASpending/FPDS; ICE contract records"},
-    {"from": "Palantir_Gotham", "to": "US_Army", "instrument": "gov_contract",
-     "notes": "Army adopted Palantir for intelligence data (won a competition vs the Army's DCGS-A; later Vantage/NGC2 work) (fact).",
-     "source": "USASpending; GAO/court of federal claims"},
-    {"from": "Palantir_Foundry", "to": "HHS", "instrument": "gov_contract",
-     "notes": "HHS used Palantir for HHS Protect / Tiberius (COVID data + vaccine allocation, 2020-21) (fact).",
-     "source": "HHS; USASpending"},
-    {"from": "Palantir_Foundry", "to": "IRS", "instrument": "gov_contract",
-     "notes": "2025 reporting: Palantir engaged to help build/integrate IRS data systems (contested-scope; details evolving).",
-     "source": "press 2025"},
-    {"from": "Palantir_Foundry", "to": "NHS_England", "instrument": "deployment",
-     "notes": "Palantir won the NHS England Federated Data Platform (~GBP 330M, Nov 2023), controversial on patient-data grounds (fact).",
-     "source": "NHS England award; UK press"},
-    {"from": "NHS_England", "to": "UK_Government", "instrument": "governance",
-     "notes": "NHS England is the UK government health body (fact).", "source": "public record"},
-    {"from": "Palantir_Gotham", "to": "Ukraine_MoD", "instrument": "deployment",
-     "notes": "Palantir software reported in use for battlefield/targeting data in Ukraine (fact of deployment; operational specifics contested).",
-     "source": "press; company statements"},
-    {"from": "Palantir", "to": "DARPA", "instrument": "federal_research_relationship",
-     "notes": "Palantir has participated in DoD/DARPA-adjacent data programs (fact, general).",
-     "source": "public record"},
-    {"from": "Palantir_AIP", "to": "OpenAI", "instrument": "partnership",
-     "notes": "Palantir's AIP integrates commercial LLMs (e.g., via Azure OpenAI / model partners) into its stack (fact; specific model mix varies).",
-     "source": "company disclosures"},
-    {"from": "Palantir", "to": "Anthropic", "instrument": "partnership",
-     "notes": "Palantir announced availability of Anthropic's Claude models within its platform for government/defense customers (2024) (fact).",
-     "source": "joint announcement 2024"},
-    {"from": "Founders_Fund", "to": "Palantir", "instrument": "founder_origin",
-     "notes": "Thiel's Founders Fund is part of the founding/early-capital network around Palantir (fact of network; treat as affiliation, not a live financial edge here).",
-     "source": "public record"}
+    {
+      "from": "In_Q_Tel",
+      "to": "Palantir",
+      "instrument": "cia_seed",
+      "notes": "In-Q-Tel (CIA venture arm) was an early investor/customer that helped seed Palantir (~2005) and shaped Gotham for the IC (fact).",
+      "source": "In-Q-Tel portfolio history; press"
+    },
+    {
+      "from": "Peter_Thiel",
+      "to": "Palantir",
+      "instrument": "founder_origin",
+      "notes": "Thiel co-founded and funded Palantir (2003-04) (fact).",
+      "source": "Palantir corporate history; SEC S-1"
+    },
+    {
+      "from": "Alex_Karp",
+      "to": "Palantir",
+      "instrument": "leads",
+      "notes": "Alex Karp is co-founder and CEO of Palantir (fact).",
+      "source": "PLTR filings"
+    },
+    {
+      "from": "Palantir",
+      "to": "Palantir_Gotham",
+      "instrument": "product_line",
+      "notes": "Gotham - the intelligence/defense data-fusion platform (fact).",
+      "source": "PLTR"
+    },
+    {
+      "from": "Palantir",
+      "to": "Palantir_Foundry",
+      "instrument": "product_line",
+      "notes": "Foundry - the commercial/enterprise + government data-integration platform (fact).",
+      "source": "PLTR"
+    },
+    {
+      "from": "Palantir",
+      "to": "Palantir_AIP",
+      "instrument": "product_line",
+      "notes": "AIP - the Artificial Intelligence Platform layer (2023+) wiring LLMs onto Gotham/Foundry (fact).",
+      "source": "PLTR"
+    },
+    {
+      "from": "Palantir_Gotham",
+      "to": "ICE",
+      "instrument": "gov_contract",
+      "notes": "ICE/HSI used Palantir case-management/analytics (FALCON) and ISAP-adjacent tooling; contracts renewed across administrations (fact).",
+      "source": "USASpending/FPDS; ICE contract records"
+    },
+    {
+      "from": "Palantir_Gotham",
+      "to": "US_Army",
+      "instrument": "gov_contract",
+      "notes": "Army adopted Palantir for intelligence data (won a competition vs the Army's DCGS-A; later Vantage/NGC2 work) (fact).",
+      "source": "USASpending; GAO/court of federal claims"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "HHS",
+      "instrument": "gov_contract",
+      "notes": "HHS used Palantir for HHS Protect / Tiberius (COVID data + vaccine allocation, 2020-21) (fact).",
+      "source": "HHS; USASpending"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "IRS",
+      "instrument": "gov_contract",
+      "notes": "2025 reporting: Palantir engaged to help build/integrate IRS data systems (contested-scope; details evolving).",
+      "source": "press 2025"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "NHS_England",
+      "instrument": "deployment",
+      "notes": "Palantir won the NHS England Federated Data Platform (~GBP 330M, Nov 2023), controversial on patient-data grounds (fact).",
+      "source": "NHS England award; UK press"
+    },
+    {
+      "from": "NHS_England",
+      "to": "UK_Government",
+      "instrument": "governance",
+      "notes": "NHS England is the UK government health body (fact).",
+      "source": "public record"
+    },
+    {
+      "from": "Palantir_Gotham",
+      "to": "Ukraine_MoD",
+      "instrument": "deployment",
+      "notes": "Palantir software reported in use for battlefield/targeting data in Ukraine (fact of deployment; operational specifics contested).",
+      "source": "press; company statements"
+    },
+    {
+      "from": "Palantir",
+      "to": "DARPA",
+      "instrument": "federal_research_relationship",
+      "notes": "Palantir has participated in DoD/DARPA-adjacent data programs (fact, general).",
+      "source": "public record"
+    },
+    {
+      "from": "Palantir_AIP",
+      "to": "OpenAI",
+      "instrument": "partnership",
+      "notes": "Palantir's AIP integrates commercial LLMs (e.g., via Azure OpenAI / model partners) into its stack (fact; specific model mix varies).",
+      "source": "company disclosures"
+    },
+    {
+      "from": "Palantir",
+      "to": "Anthropic",
+      "instrument": "partnership",
+      "notes": "Palantir announced availability of Anthropic's Claude models within its platform for government/defense customers (2024) (fact).",
+      "source": "joint announcement 2024"
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Palantir",
+      "instrument": "founder_origin",
+      "notes": "Thiel's Founders Fund is part of the founding/early-capital network around Palantir (fact of network; treat as affiliation, not a live financial edge here).",
+      "source": "public record"
+    },
+    {
+      "from": "Palantir",
+      "to": "ImmigrationOS",
+      "instrument": "product_line",
+      "notes": "ImmigrationOS - deportation 'operating system' for ICE: identify/apprehend removal targets, track self-deportations in near-real-time, optimize removal logistics. $30M sole-source prototype (Apr 2025, due Sept 25 2025) extending a 2022 O&M contract (DHS first contracted Palantir for case management in 2014); +$30M Sept 2025 for 'assisted voluntary return', part of a deal worth up to $157.5M. Justified under EO 14159 + EO 13773 (fact).",
+      "source": "American Immigration Council; Forbes 2025-09-30; The Register 2025-04-21"
+    },
+    {
+      "from": "ImmigrationOS",
+      "to": "ICE",
+      "instrument": "deployment",
+      "notes": "Deployed for ICE enforcement/deportation operations (fact of deployment; civil-liberties impact contested).",
+      "source": "ICE contract justification 2025"
+    },
+    {
+      "from": "Palantir",
+      "to": "Maven_Smart_System",
+      "instrument": "product_line",
+      "notes": "Maven Smart System (MSS) - Palantir's AI targeting/data-fusion successor to Project Maven (DoD, 2017). May 2024 $480M Army prototype; expanded to a ~$1.3B ceiling through 2029 (May 2025 +$795M modification to W911QX-24-D-0012). NGA reported 20,000+ active users across 35+ tools, user base >2x since Jan 2025 (fact).",
+      "source": "DefenseScoop 2025-05-23; SpaceNews; ExecutiveBiz 2025-05"
+    },
+    {
+      "from": "Maven_Smart_System",
+      "to": "US_Army",
+      "instrument": "gov_contract",
+      "notes": "Contracted via Army Contracting Command (Aberdeen); fielded across Army/Air Force/Space Force/Navy/Marines and combatant commands (fact).",
+      "source": "DoD contract announcements 2024-2025"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "Fannie_Mae",
+      "instrument": "deployment",
+      "notes": "Fannie Mae 'Crime Detection Unit' - Foundry AI to flag mortgage-fraud patterns before loans reach Fannie, starting with multifamily (announced May 28 2025). FHFA Dir. Pulte floated extending to Freddie Mac + talks with xAI (fact of partnership; efficacy TBD).",
+      "source": "Fannie Mae newsroom 2025-05-28; CNBC; FedScoop"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "US_Government",
+      "instrument": "deployment",
+      "notes": "Under EO of Mar 20 2025 ('Stopping Waste, Fraud, and Abuse by Eliminating Information Silos'), Foundry expanded across >=4 agencies (incl. DHS, HHS); NYT reported >$113M federal funding since Jan 2025 and talks re cross-agency data linkage. FACT: the EO + Foundry expansion. CONTESTED: the 'single master database of Americans' framing - Palantir publicly denies it and 13 ex-employees signed a letter of protest; Privacy Act (1974) suits filed.",
+      "source": "NYT (via Snopes 2025-06-13); Suffolk JHTL 2025-10-07; Palantir rebuttal"
+    },
+    {
+      "from": "DOGE",
+      "to": "Palantir",
+      "instrument": "relationship",
+      "notes": "Personnel overlap: >=3 DOGE staff are ex-Palantir and 2 more tied to Thiel-backed firms; DOGE reportedly central to Palantir's agency selection (fact of overlap; degree of influence contested; Palantir disputes the strongest DOGE-tie claims).",
+      "source": "NYT 2025; Snopes 2025-06-13"
+    },
+    {
+      "from": "Palantir",
+      "to": "Israel_MoD",
+      "instrument": "partnership",
+      "notes": "Strategic partnership announced Jan 2024 to supply technology 'crucial for war-related missions' to the Israeli defense establishment (fact of announcement; specific deployments not public).",
+      "source": "Palantir press release 2024-01"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "CDC",
+      "instrument": "deployment",
+      "notes": "Foundry powered HHS Protect and the CDC/Operation Warp Speed 'Tiberius' vaccine-allocation platform (2020) (fact).",
+      "source": "HHS/CDC 2020; public reporting"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "SSA",
+      "instrument": "deployment",
+      "notes": "NYT reported Palantir in talks with the Social Security Administration (and IRS) to extend Foundry as the federal role expanded in 2025 (grade: reported/CONTESTED - talks, not a confirmed production deployment).",
+      "source": "NYT 2025 (via Stocktwits/9News summaries)"
+    }
   ]
 }
