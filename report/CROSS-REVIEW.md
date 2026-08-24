@@ -26,17 +26,17 @@
 - **Microsoft** — 29 files
 - **Anthropic** — 24 files
 - **Stargate** — 22 files
-- **JPMorgan** — 21 files
+- **a16z** — 21 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-crypto-exit-scam-pattern.json` — related files by shared entities (verify cross-refs exist)
-- spec-unwind-timing.json: 1 shared entities
-- macro-stablecoin-failures-manipulation.json: 1 shared entities
-- fin-coreweave-oracle.json: 1 shared entities
-- fin-google-amazon-anthropic-meta.json: 1 shared entities
-- macro-stablecoin-treasury-rail.json: 1 shared entities
-- fin-openai-conversion-governance.json: 1 shared entities
-- influence-china-tech.json: 1 shared entities
+## Newest file `spec-story-aria-ipr-wa.json` — related files by shared entities (verify cross-refs exist)
+- spec-prediction-markets.json: 1 shared entities
 - blockchain-registry.json: 1 shared entities
+- geopolitics-defense-industrial-base.json: 1 shared entities
+- defense-rare-earth.json: 1 shared entities
+- catalog-academia-core.json: 1 shared entities
+- spec-uk-labour-tbi-influence.json: 1 shared entities
+- spec-dialog-society.json: 1 shared entities
+- spec-crypto-legislation-forcing.json: 1 shared entities

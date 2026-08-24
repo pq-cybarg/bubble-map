@@ -88,6 +88,10 @@
       "sector": "financier",
       "has_exogenous_revenue": false
     },
+    "APL": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "APT28_FancyBear": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -98,6 +102,10 @@
     },
     "APT_State_Actors": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "ARIAIP": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "ASE": {
@@ -272,6 +280,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Andrea_Muttoni": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Andreessen_Horowitz": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -359,6 +371,18 @@
     "Argentina": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Aria_Foundation": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "Aria_Protocol": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "Aria_Protocol_Labs": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
     },
     "Arista": {
       "sector": "tech",
@@ -1424,8 +1448,16 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Data_Foundation": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Databricks": {
       "sector": "ai",
+      "has_exogenous_revenue": false
+    },
+    "David_Kostiner": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "David_Sacks": {
@@ -2304,6 +2336,14 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "IPRWA": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "IP_Strategy": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "IQM": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -2646,6 +2686,10 @@
     },
     "Kings_Romans": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Kled": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Kleros": {
@@ -3472,6 +3516,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "PIP_Labs": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "PLA": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -3614,6 +3662,10 @@
     },
     "Poloniex": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Polychain": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Polygon": {
@@ -4208,6 +4260,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Seung_yoon_Lee": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Shadow_Fleet": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -4406,6 +4462,10 @@
     },
     "Stonebrick_LLC": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Story_Protocol": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "Strait_of_Hormuz": {
@@ -7492,6 +7552,214 @@
       "cancelable": false,
       "source_file": "macro-family-offices.json",
       "note": ""
+    },
+    {
+      "from": "David_Kostiner",
+      "to": "Story_Protocol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Co-founding partner & Chief IP Officer of Story; the on-chain-IP-as-tradable-asset thesis (fact)."
+    },
+    {
+      "from": "Seung_yoon_Lee",
+      "to": "Story_Protocol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "SY Lee, Story co-founder; explained the Feb-2026 unlock delay (need time for real use cases; on-chain revenue ~0); after the DATA rebrand stays on as an adviser (fact)."
+    },
+    {
+      "from": "PIP_Labs",
+      "to": "Story_Protocol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "PIP Labs (Pen Technology Inc.) is the core developer of Story / the DATA Foundation stack (fact)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Story_Protocol",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "backer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "a16z Crypto led Story's funding (~$54M Sept 2023; ~$80M+ total) and publicly supported the 2026 unlock delay to limit supply shocks (fact)."
+    },
+    {
+      "from": "Story_Protocol",
+      "to": "Data_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "corporate_lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "2026-06-25: Story Foundation rebranded to The DATA Foundation, pivoting from IP-on-chain to AI TRAINING DATA ('labs have effectively run out of internet to scrape'). $IP -> $DATA 1:1 (1B supply); Story Network -> DATA Network. New infra: Trace (on-chain data-provenance receipts), Poseidon (model-ready datasets), contributor apps Numo/Kled. HEALTH: $IP down ~98% from ~$14.78 (Sept 2025); ~$500M FDV on <$100/day on-chain revenue; unlock delayed to Aug-13-2026 (fact of rebrand + metrics; a foundation scam-warning was issued re fake migration prompts)."
+    },
+    {
+      "from": "Andrea_Muttoni",
+      "to": "Data_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Named CEO of the DATA Foundation at the rebrand; Kled founder Avi Patel joins as chief data officer/adviser (fact)."
+    },
+    {
+      "from": "Data_Foundation",
+      "to": "Kled",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Kled's marketplace for user-consented data added ~1.5B records to the network; part of the opt-in human-data supply (Numo + Kled) feeding Poseidon datasets with Trace provenance receipts (fact)."
+    },
+    {
+      "from": "Story_Protocol",
+      "to": "IPRWA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Story provided the on-chain IP substrate (Programmable IP License + Proof of Creativity, each IP linked to an off-chain legal contract) that made Intellectual Property Real-World Assets possible (fact)."
+    },
+    {
+      "from": "Aria_Protocol",
+      "to": "Story_Protocol",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "built_on",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Aria is built on Story (a featured Story case study); brings cultural IP (music first) on-chain as liquid tokens (fact)."
+    },
+    {
+      "from": "Aria_Foundation",
+      "to": "Aria_Protocol",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Aria Foundation stewards the on-chain infrastructure (fact)."
+    },
+    {
+      "from": "Aria_Protocol_Labs",
+      "to": "Aria_Protocol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Aria Protocol Labs Inc. supports/operates the platform (fact)."
+    },
+    {
+      "from": "Aria_Protocol",
+      "to": "IPRWA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Aria operationalizes IPRWA: fractionalizes real IP (music royalties first) into fungible, revenue-generating tokens with secondary trading + lending (fact of product; TAM claims are marketing)."
+    },
+    {
+      "from": "Aria_Protocol",
+      "to": "ARIAIP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "$ARIAIP native/coordination token (1B supply); Binance Alpha listing + airdrop 2025-11-07; deployed on Story (0xC9cb...1Dd52) and BSC (0x2a7e...86836) (fact)."
+    },
+    {
+      "from": "Aria_Protocol",
+      "to": "APL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "$APL - Aria's FIRST IP-RWA token (2025): partial royalty rights across ~48 songs (artists incl. Justin Bieber, Miley Cyrus, BLACKPINK, BTS). 2026: RESCENE x The MUZE Entertainment single 'Busy Boy' = first NEWLY issued master rights into $APL; master royalties route to $APL holders via smart contract (fact of product design; realized payouts early-stage / limited reporting)."
+    },
+    {
+      "from": "Polychain",
+      "to": "Aria_Protocol",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "backer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "Aria raised ~$15M led by Polychain Capital with Neoclassic and Story Foundation participating - institutional backing, not a bootstrapped pop-up (fact)."
+    },
+    {
+      "from": "IP_Strategy",
+      "to": "Aria_Protocol",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-story-aria-ipr-wa.json",
+      "note": "IP Strategy (Nasdaq: IPST) publicly issues statements promoting Aria releases (e.g., the RESCENE 'Busy Boy' K-pop master into $APL) - an aligned public-market promoter of the on-Story IP-RWA thesis (fact of statements; nature of any commercial tie not fully public)."
     },
     {
       "from": "MtGox",
@@ -29491,10 +29759,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1317,
-    "num_edges": 1863,
-    "num_financial_edges": 264,
-    "num_structural_edges": 1599,
+    "num_nodes": 1332,
+    "num_edges": 1879,
+    "num_financial_edges": 266,
+    "num_structural_edges": 1613,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29569,6 +29837,22 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -29578,29 +29862,13 @@
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
       ],
       [
         "Anthropic",
@@ -29614,10 +29882,10 @@
         "Microsoft"
       ],
       [
-        "CoreWeave",
+        "Amazon",
+        "OpenAI",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -29626,8 +29894,15 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -29635,13 +29910,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -29809,6 +30077,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "APL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "APT28_FancyBear": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -29824,6 +30099,13 @@
         "in_robust_core": false
       },
       "APT_State_Actors": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ARIAIP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -30131,6 +30413,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Andrea_Muttoni": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Andreessen_Horowitz": {
         "total_usd": 70000000,
         "circular_usd": 0,
@@ -30280,6 +30569,27 @@
       },
       "Argentina": {
         "total_usd": 44000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aria_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aria_Protocol": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aria_Protocol_Labs": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -32147,7 +32457,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Data_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Databricks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "David_Kostiner": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -33687,6 +34011,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IPRWA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IP_Strategy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "IQM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34283,6 +34621,13 @@
         "in_robust_core": false
       },
       "Kings_Romans": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kled": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35731,6 +36076,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PIP_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PLA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -35977,6 +36329,13 @@
         "in_robust_core": false
       },
       "Poloniex": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Polychain": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37019,6 +37378,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Seung_yoon_Lee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shadow_Fleet": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37363,6 +37729,13 @@
         "in_robust_core": false
       },
       "Stonebrick_LLC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Story_Protocol": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

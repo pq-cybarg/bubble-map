@@ -47,7 +47,7 @@ It is the same defect four times: a self-chosen valuation that holds until reali
 ## 2. LAYER 1 — The circular core (formally verified)
 
 ### 2.1 The graph
-Consolidating 189 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **1297 nodes, 1828 directed edges.**
+Consolidating 192 cited research files into one canonical funding graph (`models/graph/build_graph.py` → `data/graph.json`): **1297 nodes, 1828 directed edges.**
 
 Each edge is tagged with a **layer**: **264 financial** edges (capital / credit / compute flows — the substrate of the formal proofs) and **1564 structural** edges (governance, legal/regulatory, security, ownership, statistics relationships — the graded overlay context). **Proof-integrity check:** the circular core is the Tarjan SCC computed over the **financial layer alone** (12 firms; 11 robust, excl. cancelable) — so it can never be manufactured by soft edges. The graded structural edges *do* form their own governance/lineage cycles, so the SCC over all edges is larger (a 20-node component that additionally pulls in DARPA, Google, ICE, Niantic, Palantir, Palantir Gotham, Peter Thiel, Stanford — `structural_edges_add_no_cycle = False`); those are surrounding context and are **excluded** from the capital-solvency core and from every Z3/TLA+/Alloy proof.
 
