@@ -152,6 +152,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Africrypt": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Age_Assurance_Issuers": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -1316,6 +1320,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "Crypto_Exit_Scam": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Crypto_Market_Makers": {
       "sector": "financier",
       "has_exogenous_revenue": false
@@ -1784,6 +1792,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Faruk_Ozer": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "FedEx": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -1998,6 +2010,10 @@
     },
     "Georgia_Tech": {
       "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "Gerald_Cotten": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Gig_Platforms": {
@@ -3890,6 +3906,10 @@
     },
     "Roundup_Litigation": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Ruja_Ignatova": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Rural_Infrastructure": {
@@ -11554,6 +11574,149 @@
       "cancelable": false,
       "source_file": "spec-sdny-crypto-prosecution.json",
       "note": ""
+    },
+    {
+      "from": "DOJ",
+      "to": "Binance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Nov 2023: Binance pleaded guilty and paid >$4.3B (one of the largest US corporate resolutions) for Bank Secrecy Act failures, operating an unlicensed money-transmitting business, and IEEPA sanctions violations (processed transactions for users in Iran/Cuba/Syria/Russian-occupied Ukraine). Coordinated with FinCEN, OFAC, and CFTC. This is an AML/sanctions case - NOT an exit scam; customer funds were not stolen (fact)."
+    },
+    {
+      "from": "DOJ",
+      "to": "CZ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Changpeng Zhao pleaded guilty to failing to maintain an effective AML program (BSA), resigned as CEO, paid a $50M personal fine, and was sentenced (Apr 30 2024, Judge Richard Jones, Seattle) to 4 months prison - far below the 36 months DOJ sought; released Sept 2024. Retained an estimated ~90% of Binance. Pardoned by President Trump in Oct 2025 (fact)."
+    },
+    {
+      "from": "Ruja_Ignatova",
+      "to": "OneCoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Self-styled 'Cryptoqueen'; founded/led OneCoin, a Ponzi disguised as crypto (from 2014) with NO real blockchain; raised ~$4B+ (reports range up to ~$19B) from 3M+ members. Vanished Oct 2017 en route Bulgaria->Athens; on the FBI Ten Most Wanted list (fact)."
+    },
+    {
+      "from": "OneCoin",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Archetype: sell a token with no product, take deposits via MLM recruitment, founder disappears (fact)."
+    },
+    {
+      "from": "Faruk_Ozer",
+      "to": "Thodex",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Founder/CEO of Thodex (Turkey); the exchange abruptly froze ~$2B for 400,000+ users (Apr 2021); Ozer fled to Albania 3 days before Istanbul raids; later extradited and sentenced to 11,196 years in Turkey (fact)."
+    },
+    {
+      "from": "Thodex",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Operating exchange -> sudden withdrawal freeze -> founder flees with deposits (fact)."
+    },
+    {
+      "from": "Gerald_Cotten",
+      "to": "QuadrigaCX",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Founder of QuadrigaCX (Canada's largest exchange); ~$190M in customer funds became inaccessible when Cotten reportedly died in 2018 holding the sole private keys. The Ontario Securities Commission concluded it operated as a Ponzi; the death itself remains a subject of public doubt (fact of loss/OSC finding; death contested)."
+    },
+    {
+      "from": "QuadrigaCX",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "Exchange collapse with sole-custody keys -> funds unrecoverable; OSC found Ponzi characteristics (fact/contested-cause)."
+    },
+    {
+      "from": "Africrypt",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "South African platform (Cajee brothers) promised ~10%/mo; ~$3.6B in BTC disappeared Apr 2021, blamed on a 'hack' - but staff were locked out of the back-end a week prior. Loss amount is DISPUTED (contested)."
+    },
+    {
+      "from": "BitConnect",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "BCC 'lending program' promised up to ~40%/month; ~$2.4B Ponzi; collapsed early 2018 after cease-and-desist orders; founder Satish Kumbhani charged (SEC/DOJ), facing decades (fact)."
+    },
+    {
+      "from": "FTX",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-exit-scam-pattern.json",
+      "note": "The flagship exchange collapse: customer funds diverted to Alameda; Sam Bankman-Fried convicted of fraud, sentenced to 25 years (2024). Distinct from Binance (fraud/misappropriation vs AML failure) (fact)."
     },
     {
       "from": "First_Brands",
@@ -29328,10 +29491,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1312,
-    "num_edges": 1852,
+    "num_nodes": 1317,
+    "num_edges": 1863,
     "num_financial_edges": 264,
-    "num_structural_edges": 1588,
+    "num_structural_edges": 1599,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29410,6 +29573,14 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -29418,16 +29589,13 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -29435,14 +29603,15 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -29457,14 +29626,15 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
+        "Amazon",
         "OpenAI",
-        "Microsoft"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -29472,13 +29642,6 @@
         "Amazon",
         "OpenAI",
         "Oracle",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -29752,6 +29915,13 @@
         "in_robust_core": false
       },
       "African_Union": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Africrypt": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -31795,6 +31965,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Crypto_Exit_Scam": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crypto_Market_Makers": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -32614,6 +32791,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Faruk_Ozer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FedEx": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -32986,6 +33170,13 @@
         "in_robust_core": false
       },
       "Georgia_Tech": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gerald_Cotten": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -36303,6 +36494,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ruja_Ignatova": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Rural_Infrastructure": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39081,23 +39279,23 @@
         "both_layers": true
       },
       {
-        "node": "Apple",
-        "degree": 8,
+        "node": "DOJ",
+        "degree": 10,
         "neighbor_sectors": [
-          "chip_vendor",
-          "critical_minerals",
+          "defense",
+          "exchange",
+          "industrial",
           "other",
-          "satellite",
-          "state",
-          "surveillance"
+          "person",
+          "regulator",
+          "state"
         ],
-        "n_neighbor_sectors": 6,
-        "source_files": 7,
+        "n_neighbor_sectors": 7,
+        "source_files": 9,
         "layers": [
-          "financial",
           "structural"
         ],
-        "both_layers": true
+        "both_layers": false
       }
     ]
   }

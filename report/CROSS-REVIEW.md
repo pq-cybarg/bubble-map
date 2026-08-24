@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-auto-connected-surveillance.json` — related files by shared entities (verify cross-refs exist)
-- spec-disclosures-surveillance.json: 2 shared entities
-- spec-network-overlay.json: 2 shared entities
-- spec-inqtel-portfolio.json: 2 shared entities
-- spec-palantir-surveillance.json: 2 shared entities
-- spec-niantic-geospatial.json: 1 shared entities
-- influence-operator-network.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- catalog-academia-core.json: 1 shared entities
+## Newest file `spec-crypto-exit-scam-pattern.json` — related files by shared entities (verify cross-refs exist)
+- spec-unwind-timing.json: 1 shared entities
+- macro-stablecoin-failures-manipulation.json: 1 shared entities
+- fin-coreweave-oracle.json: 1 shared entities
+- fin-google-amazon-anthropic-meta.json: 1 shared entities
+- macro-stablecoin-treasury-rail.json: 1 shared entities
+- fin-openai-conversion-governance.json: 1 shared entities
+- influence-china-tech.json: 1 shared entities
+- blockchain-registry.json: 1 shared entities
