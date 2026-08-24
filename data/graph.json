@@ -1136,6 +1136,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Cloudera": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Cloudflare": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -1406,6 +1410,10 @@
     },
     "Damian_Williams": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Databricks": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "David_Sacks": {
@@ -1986,6 +1994,10 @@
     },
     "Gig_Platforms": {
       "sector": "labor_platform",
+      "has_exogenous_revenue": false
+    },
+    "Ginkgo_Bioworks": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "GlobalFoundries": {
@@ -3043,6 +3055,10 @@
     "Money_Market_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "MongoDB": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Monsanto": {
       "sector": "industrial",
@@ -9811,6 +9827,97 @@
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
       "note": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Palantir",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json,spec-palantir-surveillance.json",
+      "note": "IQT seed investment in Palantir (~2004-2005); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact of relationship; amounts undisclosed)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Databricks",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform (later ~$43B valuation) - data-fusion substrate for IC analytics (fact of relationship; confirmed via IQT team page)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Cloudera",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed big-data (Hadoop) platform - one of IQT's billion-dollar outcomes; enterprise/IC data lakes (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "MongoDB",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (fact; an IQT 'unicorn' exit)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Anduril",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact of IQT relationship per IQT leadership; deal terms undisclosed)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Ginkgo_Bioworks",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the IQT portfolio (fact; IQT lists it among notable outcomes)."
+    },
+    {
+      "from": "Databricks",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Palantir<->Databricks product partnership (Foundry/AIP + lakehouse interop) - two IQT-lineage data platforms interoperating (fact)."
     },
     {
       "from": "Terraform_Labs",
@@ -25192,19 +25299,6 @@
       "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
     },
     {
-      "from": "In_Q_Tel",
-      "to": "Palantir",
-      "instrument": "relationship",
-      "layer": "structural",
-      "raw_instrument": "cia_seed",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-palantir-surveillance.json",
-      "note": "In-Q-Tel (CIA venture arm) was an early investor/customer that helped seed Palantir (~2005) and shaped Gotham for the IC (fact)."
-    },
-    {
       "from": "Peter_Thiel",
       "to": "Palantir",
       "instrument": "other",
@@ -29093,10 +29187,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1302,
-    "num_edges": 1837,
+    "num_nodes": 1306,
+    "num_edges": 1843,
     "num_financial_edges": 264,
-    "num_structural_edges": 1573,
+    "num_structural_edges": 1579,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29171,31 +29265,26 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "AMD",
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -29212,8 +29301,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -29232,6 +29320,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -31245,6 +31339,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cloudera": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cloudflare": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -31715,6 +31816,13 @@
         "in_robust_core": false
       },
       "Damian_Williams": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Databricks": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -32730,6 +32838,13 @@
         "in_robust_core": false
       },
       "Gig_Platforms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ginkgo_Bioworks": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -34578,6 +34693,13 @@
         "in_robust_core": false
       },
       "Money_Market_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MongoDB": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38629,6 +38751,28 @@
         "both_layers": true
       },
       {
+        "node": "Palantir",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "financier",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Meta",
         "degree": 14,
         "neighbor_sectors": [
@@ -38707,27 +38851,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Palantir",
-        "degree": 19,
-        "neighbor_sectors": [
-          "ai_lab",
-          "financier",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 5,
         "layers": [
           "financial",
           "structural"

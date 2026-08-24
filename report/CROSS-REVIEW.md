@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - TerraPower, Vistra
 
-## Newest file `spec-palantir-surveillance.json` — related files by shared entities (verify cross-refs exist)
-- catalog-academia-core.json: 4 shared entities
-- influence-operator-network.json: 4 shared entities
+## Newest file `spec-inqtel-portfolio.json` — related files by shared entities (verify cross-refs exist)
+- spec-disclosures-surveillance.json: 4 shared entities
+- spec-surveillance-cyber-threat-layer.json: 4 shared entities
 - spec-network-overlay.json: 4 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
-- fin-nvidia-openai.json: 3 shared entities
-- fin-gulf-sovereign-ai-capital.json: 3 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- catalog-academia-core.json: 3 shared entities
+- temporal-bridges.json: 3 shared entities
+- geopolitics-defense-industrial-base.json: 3 shared entities

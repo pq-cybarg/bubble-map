@@ -1,28 +1,130 @@
 {
-  "title": "In-Q-Tel portfolio & CIA-venture surveillance-stack lineage",
+  "title": "In-Q-Tel portfolio & CIA/IC-venture surveillance-&-data-stack lineage",
   "source": "Public record: In-Q-Tel disclosed portfolio/history; corporate acquisition records (Google/Keyhole 2004; Google/Mandiant 2022); press. Structural overlay; edges graded in notes. Surveillance-cluster webbing (#218). In-Q-Tel->Palantir is carried in spec-palantir-surveillance.json (not duplicated here).",
   "grade": "per-edge in notes (fact | contested | weak)",
   "nodes": [
-    {"id": "In_Q_Tel", "sector": "state_intel"},
-    {"id": "Keyhole", "sector": "surveillance"},
-    {"id": "Recorded_Future", "sector": "surveillance"},
-    {"id": "FireEye_Mandiant", "sector": "security_research"}
+    {
+      "id": "In_Q_Tel",
+      "sector": "state_intel"
+    },
+    {
+      "id": "Keyhole",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Recorded_Future",
+      "sector": "surveillance"
+    },
+    {
+      "id": "FireEye_Mandiant",
+      "sector": "security_research"
+    },
+    {
+      "id": "Databricks",
+      "sector": "ai"
+    },
+    {
+      "id": "Cloudera",
+      "sector": "ai"
+    },
+    {
+      "id": "MongoDB",
+      "sector": "tech"
+    },
+    {
+      "id": "Anduril",
+      "sector": "defense"
+    },
+    {
+      "id": "Ginkgo_Bioworks",
+      "sector": "other"
+    }
   ],
   "edges": [
-    {"from": "In_Q_Tel", "to": "Keyhole", "instrument": "cia_seed",
-     "notes": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact).",
-     "source": "In-Q-Tel history; press"},
-    {"from": "In_Q_Tel", "to": "Recorded_Future", "instrument": "cia_seed",
-     "notes": "In-Q-Tel was an early investor in Recorded Future (threat-intel / OSINT analytics) (fact).",
-     "source": "In-Q-Tel portfolio"},
-    {"from": "In_Q_Tel", "to": "FireEye_Mandiant", "instrument": "cia_seed",
-     "notes": "In-Q-Tel was an early investor in FireEye (later Mandiant) (fact).",
-     "source": "In-Q-Tel portfolio"},
-    {"from": "Keyhole", "to": "Google", "instrument": "corporate_lineage",
-     "notes": "Google acquired Keyhole in 2004; its tech became Google Earth / Maps (fact).",
-     "source": "Google acquisition record"},
-    {"from": "FireEye_Mandiant", "to": "Google", "instrument": "corporate_lineage",
-     "notes": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact).",
-     "source": "Google/Mandiant deal"}
-  ]
+    {
+      "from": "In_Q_Tel",
+      "to": "Keyhole",
+      "instrument": "cia_seed",
+      "notes": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact).",
+      "source": "In-Q-Tel history; press"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Recorded_Future",
+      "instrument": "cia_seed",
+      "notes": "In-Q-Tel was an early investor in Recorded Future (threat-intel / OSINT analytics) (fact).",
+      "source": "In-Q-Tel portfolio"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "FireEye_Mandiant",
+      "instrument": "cia_seed",
+      "notes": "In-Q-Tel was an early investor in FireEye (later Mandiant) (fact).",
+      "source": "In-Q-Tel portfolio"
+    },
+    {
+      "from": "Keyhole",
+      "to": "Google",
+      "instrument": "corporate_lineage",
+      "notes": "Google acquired Keyhole in 2004; its tech became Google Earth / Maps (fact).",
+      "source": "Google acquisition record"
+    },
+    {
+      "from": "FireEye_Mandiant",
+      "to": "Google",
+      "instrument": "corporate_lineage",
+      "notes": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact).",
+      "source": "Google/Mandiant deal"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Palantir",
+      "instrument": "cia_seed",
+      "notes": "IQT seed investment in Palantir (~2004-2005); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact of relationship; amounts undisclosed).",
+      "source": "CNBC; IQT/Palantir history"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Databricks",
+      "instrument": "cia_seed",
+      "notes": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform (later ~$43B valuation) - data-fusion substrate for IC analytics (fact of relationship; confirmed via IQT team page).",
+      "source": "IQT team page (Bowsher); Sherwood/Dakota 2025"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Cloudera",
+      "instrument": "cia_seed",
+      "notes": "IQT-backed big-data (Hadoop) platform - one of IQT's billion-dollar outcomes; enterprise/IC data lakes (fact).",
+      "source": "IQT team page; Crunchbase"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "MongoDB",
+      "instrument": "cia_seed",
+      "notes": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (fact; an IQT 'unicorn' exit).",
+      "source": "IQT team page; Dakota 2025"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Anduril",
+      "instrument": "cia_seed",
+      "notes": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact of IQT relationship per IQT leadership; deal terms undisclosed).",
+      "source": "IQT team page (Bowsher)"
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Ginkgo_Bioworks",
+      "instrument": "cia_seed",
+      "notes": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the IQT portfolio (fact; IQT lists it among notable outcomes).",
+      "source": "IQT/reporting 2025"
+    },
+    {
+      "from": "Databricks",
+      "to": "Palantir",
+      "instrument": "partnership",
+      "notes": "Palantir<->Databricks product partnership (Foundry/AIP + lakehouse interop) - two IQT-lineage data platforms interoperating (fact).",
+      "source": "palantir.com/partnerships/databricks"
+    }
+  ],
+  "note": "In-Q-Tel (IQT) is the CIA/Intelligence-Community's not-for-profit strategic investor (est. 1999); it does NOT disclose funding amounts/dates, so edges are graded on the PUBLIC record of an IQT relationship, not on deal terms. IQT reports ~494 portfolio companies (Aug 2026). Edges are STRUCTURAL (cia_seed / corporate_lineage) - an IQT tie is a capability/adoption signal, NOT evidence of witting espionage by the company."
 }
