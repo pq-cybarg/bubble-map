@@ -25,13 +25,8 @@
    "gov_or_defense": [
     {
      "kind": "state_policy",
-     "note": "US Bitcoin Strategic Reserve (executive policy node in this corpus); spot-BTC ETFs approved after Grayscale v. SEC.",
-     "source": "corpus: Bitcoin_Strategic_Reserve, IBIT, spec-crypto-collapse-cluster"
-    },
-    {
-     "kind": "state_policy",
-     "note": "El Salvador legal tender (2021).",
-     "source": "public statute / widely reported"
+     "note": "US Bitcoin Strategic Reserve policy node; spot-BTC ETFs after Grayscale v. SEC; El Salvador legal tender 2021.",
+     "source": "corpus"
     }
    ],
    "leaders": [
@@ -176,8 +171,8 @@
    "gov_or_defense": [
     {
      "kind": "council_seat",
-     "note": "Governing Council includes Boeing (defense contractor) among Google/IBM/FedEx/etc. Council membership is not a DoD contract for Hedera.",
-     "source": "fin-hedera-connections / altcoin-lens"
+     "note": "Governing Council includes Boeing (defense contractor) among Google/IBM/FedEx. Council membership is not a DoD contract for Hedera.",
+     "source": "fin-hedera-connections"
     }
    ],
    "leaders": [
@@ -287,12 +282,21 @@
      "source": "spec-blockchain-ecosystem"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Mo Shaikh",
+     "role": "co-founder"
+    },
+    {
+     "name": "Avery Ching",
+     "role": "co-founder (ex-Meta Diem)"
+    }
+   ],
    "blocks": [
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "foundation": null
+   "foundation": "Aptos Foundation"
   },
   {
    "id": "Cardano",
@@ -352,8 +356,13 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Emin G\u00fcn Sirer",
+     "role": "founder, Ava Labs"
+    }
+   ],
+   "foundation": "Ava Labs / Avalanche Foundation"
   },
   {
    "id": "Polkadot",
@@ -413,8 +422,17 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Jae Kwon",
+     "role": "co-founder (Tendermint/Cosmos Hub)"
+    },
+    {
+     "name": "Ethan Buchman",
+     "role": "co-founder"
+    }
+   ],
+   "foundation": "Interchain Foundation"
   },
   {
    "id": "TON",
@@ -441,8 +459,17 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Pavel Durov / Telegram",
+     "role": "original TON (halted after SEC v Telegram/Gram)"
+    },
+    {
+     "name": "TON Foundation",
+     "role": "current protocol steward"
+    }
+   ],
+   "foundation": "TON Foundation"
   },
   {
    "id": "QRL",
@@ -461,18 +488,28 @@
    "gov_or_defense": [
     {
      "kind": "none_documented",
-     "note": "No defense contract. XMSS signatures are NIST SP 800-208 (a standards fact, not a procurement).",
-     "source": "macro-pqc-chips / spec-blockchain-ecosystem"
+     "note": "No US DoD contract for the chain. Lockheed patent US20240048369A1 cites a QRL-based method \u2014 that is a patent citation, not a QRL procurement.",
+     "source": "QRL_XMSS_Patent / spec-blockchain-ecosystem"
     }
    ],
    "foundation": "QRL_Foundation",
    "blocks": [
-    "spec-blockchain-ecosystem",
-    "altcoin-lens",
-    "macro-pqc-chips"
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": []
+   "leaders": [
+    {
+     "name": "Peter Waterland",
+     "role": "founder (historical)"
+    },
+    {
+     "name": "QRL Foundation / QRL Stiftung",
+     "role": "Swiss steward"
+    }
+   ],
+   "notes": "Post-quantum native L1. Mandatory XMSS (NIST SP 800-208) signatures since genesis. QRI Stage 4 \u2014 the reference quantum-ready chain in this tab. Token-accrual (altcoin-lens) is a separate axis from cryptographic readiness."
   },
   {
    "id": "Monero",
@@ -499,7 +536,16 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Riccardo Spagni (Fluffypony)",
+     "role": "early maintainer (stepped back)"
+    },
+    {
+     "name": "core team (pseudonymous)",
+     "role": "open-source maintainers"
+    }
+   ],
    "foundation": null
   },
   {
@@ -560,8 +606,13 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Joseph Lubin",
+     "role": "ConsenSys founder (Linea is a ConsenSys L2)"
+    }
+   ],
+   "foundation": "ConsenSys"
   },
   {
    "id": "Base",
@@ -588,8 +639,17 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Brian Armstrong",
+     "role": "Coinbase CEO"
+    },
+    {
+     "name": "Jesse Pollak",
+     "role": "Base lead (public)"
+    }
+   ],
+   "foundation": "Coinbase"
   },
   {
    "id": "Arbitrum",
@@ -616,8 +676,17 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Steven Goldfeder",
+     "role": "Offchain Labs CEO"
+    },
+    {
+     "name": "Ed Felten",
+     "role": "Offchain Labs co-founder"
+    }
+   ],
+   "foundation": "Offchain Labs / Arbitrum Foundation"
   },
   {
    "id": "Optimism",
@@ -644,8 +713,17 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Jinglan Wang",
+     "role": "OP Labs"
+    },
+    {
+     "name": "Karl Floersch",
+     "role": "OP Labs"
+    }
+   ],
+   "foundation": "Optimism Foundation / OP Labs"
   },
   {
    "id": "Polygon",
@@ -672,8 +750,17 @@
     "altcoin-lens"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Sandeep Nailwal",
+     "role": "co-founder"
+    },
+    {
+     "name": "Jaynti Kanani",
+     "role": "co-founder"
+    }
+   ],
+   "foundation": "Polygon Labs"
   },
   {
    "id": "Coinbase",
@@ -701,12 +788,12 @@
    "gov_or_defense": [
     {
      "kind": "political_pac",
-     "note": "Fairshake PAC funder (with a16z, Ripple, Jump, Uniswap Labs).",
+     "note": "Fairshake PAC funder (a16z, Ripple, Jump, Uniswap Labs).",
      "source": "blockchain-leg"
     },
     {
      "kind": "none_documented",
-     "note": "No US defense contract documented in this corpus. NYDFS BitLicense / publicly listed (COIN).",
+     "note": "NYDFS BitLicense / public company (COIN). No US defense contract in this corpus.",
      "source": "spec-exchanges-asia"
     }
    ],
@@ -884,8 +971,17 @@
    "blocks": [
     "macro-stablecoin-failures-manipulation"
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Jean-Louis van der Velde",
+     "role": "CEO (iFinex)"
+    },
+    {
+     "name": "Paolo Ardoino",
+     "role": "CTO historically; now Tether CEO"
+    }
+   ],
+   "foundation": "iFinex",
    "region": "global",
    "venue": "spot+deriv"
   },
@@ -914,7 +1010,12 @@
     "spec-exchanges-asia"
    ],
    "enforcement": [],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Ben Zhou",
+     "role": "founder/CEO"
+    }
+   ],
    "foundation": null,
    "region": "global",
    "venue": "spot+deriv"
@@ -944,7 +1045,12 @@
     "spec-exchanges-asia"
    ],
    "enforcement": [],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Star Xu",
+     "role": "founder"
+    }
+   ],
    "foundation": null,
    "region": "global",
    "venue": "spot+deriv"
@@ -1057,7 +1163,7 @@
    "gov_or_defense": [
     {
      "kind": "political_pac",
-     "note": "Uniswap Labs is a Fairshake PAC funder. Protocol is non-custodial AMM.",
+     "note": "Uniswap Labs is a Fairshake PAC funder.",
      "source": "blockchain-leg"
     }
    ],
@@ -1066,8 +1172,13 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Hayden Adams",
+     "role": "founder, Uniswap Labs"
+    }
+   ],
+   "foundation": "Uniswap Labs",
    "region": "global",
    "venue": "amm"
   },
@@ -1165,8 +1276,17 @@
     "macro-stablecoin-treasury-rail",
     "macro-stablecoin-failures-manipulation"
    ],
-   "leaders": [],
-   "foundation": null
+   "leaders": [
+    {
+     "name": "Paolo Ardoino",
+     "role": "CEO"
+    },
+    {
+     "name": "Jean-Louis van der Velde",
+     "role": "iFinex CEO"
+    }
+   ],
+   "foundation": "iFinex / Tether Ltd"
   },
   {
    "id": "Circle",
@@ -1193,7 +1313,16 @@
     "macro-stablecoin-treasury-rail"
    ],
    "enforcement": [],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Jeremy Allaire",
+     "role": "CEO/co-founder"
+    },
+    {
+     "name": "Sean Neville",
+     "role": "co-founder"
+    }
+   ],
    "foundation": null
   },
   {
@@ -1649,13 +1778,22 @@
      "source": "altcoin-lens"
     }
    ],
-   "foundation": null,
+   "foundation": "Chainlink Labs",
    "blocks": [
     "altcoin-lens",
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": []
+   "leaders": [
+    {
+     "name": "Sergey Nazarov",
+     "role": "co-founder"
+    },
+    {
+     "name": "Steve Ellis",
+     "role": "co-founder"
+    }
+   ]
   },
   {
    "id": "LayerZero",
@@ -1674,7 +1812,7 @@
    "gov_or_defense": [
     {
      "kind": "state_policy",
-     "note": "Wyoming WYST/FRNT state stablecoin via LayerZero OFT (from 31-vendor RFQ). DTCC exploring 'Zero' chain. MAS Project Guardian. Citadel backing. NOT the AI Stargate SPV.",
+     "note": "Wyoming WYST/FRNT via LayerZero OFT. DTCC exploring. MAS Project Guardian. NOT the AI Stargate SPV.",
      "source": "spec-blockchain-ecosystem"
     }
    ],
@@ -1779,7 +1917,20 @@
     "spec-blockchain-ecosystem"
    ],
    "enforcement": [],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Vitalik Buterin",
+     "role": "co-founder"
+    },
+    {
+     "name": "Hsiao-Wei Wang",
+     "role": "co-executive director (public)"
+    },
+    {
+     "name": "Tomasz Sta\u0144czak",
+     "role": "co-executive director (public)"
+    }
+   ],
    "foundation": null
   },
   {
@@ -1808,8 +1959,8 @@
    "gov_or_defense": [
     {
      "kind": "political_pac",
-     "note": "Fairshake funder. SBI ~9% shareholder. Hidden Road -> Ripple Prime. Not a US defense contract.",
-     "source": "blockchain-leg / spec-exchanges-asia"
+     "note": "Fairshake funder. SBI ~9%. SEC v Ripple partial. Not a US defense contract.",
+     "source": "blockchain-leg"
     }
    ],
    "leaders": [
@@ -1886,7 +2037,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Mary Ma",
+     "role": "founder (Gate.io, public bios)"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "blockchain-registry"
@@ -1917,7 +2073,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Gracy Chen",
+     "role": "managing director (public)"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "blockchain-registry"
@@ -1956,7 +2117,12 @@
      "source": "spec-crypto-enforcement-actors"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Johnny Lyu",
+     "role": "CEO (public)"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "spec-crypto-enforcement-actors",
@@ -1988,7 +2154,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Justin Sun",
+     "role": "Huobi/HTX-associated after acquisition"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "spec-crypto-collapse-cluster",
@@ -2020,7 +2191,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Kris Marszalek",
+     "role": "CEO"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "blockchain-registry"
@@ -2051,8 +2227,13 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Dunamu / Song Chi-hyung",
+     "role": "Dunamu founder (Upbit operator)"
+    }
+   ],
+   "foundation": "Dunamu",
    "blocks": [
     "spec-asia-crypto-payments",
     "blockchain-registry"
@@ -2083,7 +2264,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Bithumb Holdings",
+     "role": "operator"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "spec-asia-crypto-payments",
@@ -2208,8 +2394,17 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Nejc Kodri\u010d",
+     "role": "co-founder"
+    },
+    {
+     "name": "Robinhood",
+     "role": "acquirer (2024-25)"
+    }
+   ],
+   "foundation": "Robinhood",
    "blocks": [
     "blockchain-registry"
    ],
@@ -2239,7 +2434,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Yuzo Kano",
+     "role": "founder"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "spec-exchanges-asia",
@@ -2271,8 +2471,13 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Monex Group",
+     "role": "parent after 2018 recap"
+    }
+   ],
+   "foundation": "Monex Group",
    "blocks": [
     "spec-exchanges-asia",
     "blockchain-registry"
@@ -2365,8 +2570,13 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Yoshitaka Kitao",
+     "role": "SBI Holdings"
+    }
+   ],
+   "foundation": "SBI Holdings",
    "blocks": [
     "spec-exchanges-asia",
     "blockchain-registry"
@@ -2429,8 +2639,17 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "John Jansen / Marius Jansen",
+     "role": "founders"
+    },
+    {
+     "name": "Coinbase",
+     "role": "acquirer"
+    }
+   ],
+   "foundation": "Coinbase",
    "blocks": [
     "blockchain-registry"
    ],
@@ -2971,8 +3190,13 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Vlad Tenev",
+     "role": "Robinhood CEO"
+    }
+   ],
+   "foundation": "Robinhood",
    "blocks": [
     "blockchain-registry"
    ],
@@ -3002,7 +3226,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Yoni Assia",
+     "role": "CEO/co-founder"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "blockchain-registry"
@@ -3095,8 +3324,13 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
-   "foundation": null,
+   "leaders": [
+    {
+     "name": "Intercontinental Exchange (ICE)",
+     "role": "origin"
+    }
+   ],
+   "foundation": "ICE",
    "blocks": [
     "blockchain-registry"
    ],
@@ -4835,7 +5069,12 @@
      "source": "registry sweep 2026-08-22"
     }
    ],
-   "leaders": [],
+   "leaders": [
+    {
+     "name": "Jeff Yan",
+     "role": "founder (public)"
+    }
+   ],
    "foundation": null,
    "blocks": [
     "blockchain-registry"
@@ -6084,6 +6323,944 @@
    "notes": "Concentrated-liquidity Uniswap. Same Labs as Uniswap record \u2014 listed as version for search; prefer parent Uniswap for the map node.",
    "region": "global",
    "venue": "amm"
+  },
+  {
+   "id": "Mochimo",
+   "kind": "l1",
+   "launched": 2018,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "Post-quantum PoW (WOTS+/hash-based). QRI Stage 4 alongside QRL. Small-cap; readiness \u2260 adoption.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Abelian",
+   "kind": "l1",
+   "launched": 2022,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "Post-quantum privacy L1. QRI Stage 4. Not a Monero substitute claim \u2014 separate design.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Tidecoin",
+   "kind": "l1",
+   "launched": 2021,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "QRI Stage 4. Small PoW chain with PQ signatures. Readiness score is not a liquidity or security-audit substitute.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Cellframe",
+   "kind": "l1",
+   "launched": 2021,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "l0",
+   "notes": "QRI Stage 3 (migration live). Quantum-safe L0 claims; treat as index evidence, not a completed migration of the whole crypto stack.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "QuantumCoin",
+   "kind": "l1",
+   "launched": 2023,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pos",
+   "notes": "QRI Stage 3. Name collision risk with other 'quantum' tokens \u2014 this is the qrindex slug quantumcoin.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Nervos",
+   "kind": "l1",
+   "launched": 2019,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "CKB. QRI Stage 3 (migration live) \u2014 one of the few large-ish chains with a published PQ path. Not Stage 4.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Algorand",
+   "kind": "l1",
+   "launched": 2019,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pos",
+   "notes": "QRI Stage 3. FALCON/PQ research + state-proofs. Enterprise DLT adjacency (altcoin-lens).",
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Silvio Micali",
+     "role": "founder (Turing Award)"
+    }
+   ],
+   "foundation": "Algorand Foundation",
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "NEAR",
+   "kind": "l1",
+   "launched": 2020,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pos",
+   "notes": "QRI Stage 3. Not quantum-native; migration-live per index.",
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Illia Polosukhin",
+     "role": "co-founder"
+    },
+    {
+     "name": "Alexander Skidanov",
+     "role": "co-founder"
+    }
+   ],
+   "foundation": "NEAR Foundation",
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Bitcoin_Cash",
+   "kind": "l1",
+   "launched": 2017,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "QRI Stage 3. BTC fork; PQ path is index-assessed separately from Bitcoin.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Starknet",
+   "kind": "l2",
+   "launched": 2021,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "zk",
+   "notes": "QRI Stage 2. Validity rollup. Hash-based STARK proofs are a PQ-relevant design fact; account signatures still inherit Ethereum/STARK-friendly curves as assessed by the index.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "Dogecoin",
+   "kind": "l1",
+   "launched": 2013,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "pow",
+   "notes": "QRI Stage 2. Same ECDSA spend-auth family as Bitcoin.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "BNB_Chain",
+   "kind": "l1",
+   "launched": 2019,
+   "operating_status": "operating",
+   "region": "global",
+   "venue": "posa",
+   "notes": "QRI maps as binancecoin / BNB Chain. Stage 2. Not Binance the CEX.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry",
+    "macro-pqc-chips",
+    "spec-blockchain-ecosystem"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   }
+  },
+  {
+   "id": "TRON",
+   "kind": "l1",
+   "launched": 2017,
+   "operating_status": "operating",
+   "venue": "dpos",
+   "notes": "Justin Sun; HTX adjacency. QRI Stage 1. USDT-on-Tron is a volume fact, not a PQ-readiness fact. SEC v Tron paused 2025 after WLFI investment (conflict-of-timing).",
+   "blocks": [
+    "blockchain-registry",
+    "spec-crypto-collapse-cluster"
+   ],
+   "leaders": [
+    {
+     "name": "Justin Sun",
+     "role": "founder"
+    }
+   ],
+   "enforcement": [],
+   "foundation": null,
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Litecoin",
+   "kind": "l1",
+   "launched": 2011,
+   "operating_status": "operating",
+   "venue": "pow",
+   "notes": "BTC-like script/ECDSA family. QRI Stage 1. Charlie Lee founder. No defense contract.",
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Charlie Lee",
+     "role": "founder"
+    }
+   ],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Kaspa",
+   "kind": "l1",
+   "launched": 2021,
+   "operating_status": "operating",
+   "venue": "pow",
+   "notes": "BlockDAG PoW. QRI Stage 1. ECC spend-auth.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "IOTA",
+   "kind": "l1",
+   "launched": 2016,
+   "operating_status": "operating",
+   "venue": "dag",
+   "notes": "Tangle. QRI Stage 1. Coordicide history is protocol-governance, not a fraud flag.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Canton",
+   "kind": "enterprise_dlt",
+   "launched": 2023,
+   "operating_status": "operating",
+   "venue": "privacy_l1",
+   "notes": "Digital Asset / Canton Network. QRI Stage 2. TradFi privacy L1 (GS/DRW-adjacent public record). Not a retail CEX.",
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Digital Asset (Yuval Rooz et al.)",
+     "role": "Canton operator / DAML"
+    }
+   ],
+   "foundation": "Digital Asset",
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Internet_Computer",
+   "kind": "l1",
+   "launched": 2021,
+   "operating_status": "operating",
+   "venue": "pos",
+   "notes": "DFINITY ICP. QRI Stage 1. Chain-key crypto is a design fact; index still Stage 1.",
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Dominic Williams",
+     "role": "DFINITY founder"
+    }
+   ],
+   "foundation": "DFINITY Foundation",
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Fetch_AI",
+   "kind": "l1",
+   "launched": 2019,
+   "operating_status": "operating",
+   "venue": "pos",
+   "notes": "Now ASI Alliance (FET) with Ocean/SingularityNET merge. QRI Stage 2. Agent/AI narrative \u2014 not a quantum-native chain.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Injective",
+   "kind": "l1",
+   "launched": 2020,
+   "operating_status": "operating",
+   "venue": "pos",
+   "notes": "Cosmos L1 for perps/orderbooks. QRI Stage 1.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "XDC",
+   "kind": "enterprise_dlt",
+   "launched": 2019,
+   "operating_status": "operating",
+   "venue": "xpos",
+   "notes": "XinFin/XDC trade-finance DLT. QRI Stage 2.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Ethereum_Classic",
+   "kind": "l1",
+   "launched": 2016,
+   "operating_status": "operating",
+   "venue": "pow",
+   "notes": "ETH DAO-fork minority chain. QRI Stage 2. Same ECC family as Ethereum.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Quranium",
+   "kind": "l1",
+   "launched": 2024,
+   "operating_status": "operating",
+   "venue": "pq",
+   "notes": "QRI Stage 2 (25). Name-branded quantum chain; Stage 2 is not Stage 4. Treat index evidence, not marketing.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "QANplatform",
+   "kind": "l1",
+   "launched": 2021,
+   "operating_status": "operating",
+   "venue": "pq",
+   "notes": "QRI Stage 2 (21). Hybrid PQ claims; not QRL-class Stage 4.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Naoris",
+   "kind": "l1",
+   "launched": 2024,
+   "operating_status": "operating",
+   "venue": "pq",
+   "notes": "Naoris Protocol. QRI Stage 2. Post-quantum / DePIN cybersecurity narrative.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Midnight",
+   "kind": "l1",
+   "launched": 2025,
+   "operating_status": "operating",
+   "venue": "privacy",
+   "notes": "Cardano-adjacent privacy L1 (Input Output). QRI Stage 2.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Mantle",
+   "kind": "l2",
+   "launched": 2023,
+   "operating_status": "operating",
+   "venue": "rollup",
+   "notes": "ETH L2. QRI Stage 0 on the index (unassessed / no evidence) \u2014 absence of a score is itself a fact.",
+   "enforcement": [],
+   "leaders": [],
+   "foundation": null,
+   "blocks": [
+    "blockchain-registry"
+   ],
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
+  },
+  {
+   "id": "Worldcoin",
+   "kind": "l1",
+   "launched": 2023,
+   "operating_status": "operating",
+   "venue": "identity",
+   "notes": "World / Tools for Humanity identity stack (already in digitalid blocks). QRI 2.0 Stage 1 \u2014 biometric registry is not quantum-ready. No OpenAI technical integration documented.",
+   "blocks": [
+    "blockchain-registry",
+    "digitalid-worldcoin-eid-convergence",
+    "digitalid-corporate"
+   ],
+   "enforcement": [],
+   "leaders": [
+    {
+     "name": "Sam Altman",
+     "role": "Tools for Humanity chairman (public)"
+    },
+    {
+     "name": "Alex Blania",
+     "role": "CEO, Tools for Humanity"
+    }
+   ],
+   "foundation": "Tools for Humanity",
+   "gov_or_defense": [
+    {
+     "kind": "none_documented",
+     "note": "No US defense contract documented in this corpus.",
+     "source": "registry"
+    }
+   ],
+   "flags": {
+    "adjudicated_criminal": false,
+    "civil_fraud_judgment": false,
+    "ofac_sdn": false,
+    "insolvency_or_bankruptcy": false,
+    "open_source_protocol": true,
+    "custodial": false,
+    "us_public_company": false
+   },
+   "region": "global"
   }
  ],
  "nodes": [

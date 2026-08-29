@@ -1,61 +1,94 @@
 #!/usr/bin/env python3
 """
-fetch_qri.py — pull the Blockchain Quantum Readiness Index (qrindex.org).
+fetch_qri.py — scrape the Blockchain Quantum Readiness Index (qrindex.org).
 
-Primary: GET https://qrindex.org/api/projects.json (CoinGecko-id keyed compact index).
-Enrichment: GET https://qrindex.org/projects/<id>/report.json for chains we track.
-Fallback: scrapy crawl of qrindex.org/ if the API is down (see qri_spider.py).
+There is NO stable API. The site's JSON paths (if any) and HTML class names
+change. This fetcher:
+
+  1. GETs the public homepage HTML and parses the ranking table defensively
+     (data-* attributes when present, visible cells otherwise).
+  2. Optionally GETs each project's llms.txt for summary / date / confidence
+     (plain text, still not a contract).
+  3. If scrapy is importable, prefers the spider in qri_spider.py.
+  4. Snapshots raw homepage HTML to data/qri_raw/ so a selector break is auditable.
+
+Never required: /api/projects.json or report.json.
 
 Writes data/qri_index.json. Network-tolerant: on failure, keeps the last cache.
 QRI is a third-party, AI-assisted, pre-release index — not a Bubble Map proof.
 """
 from __future__ import annotations
-import json, os, sys, time, urllib.request, urllib.error, datetime
+import json, os, sys, time, datetime, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DATA = os.path.join(ROOT, "data")
-OUT = os.path.join(DATA, "qri_index.json")
-API = "https://qrindex.org/api/projects.json"
-UA = "BubbleMap-QRI-fetch/1.0 (+https://github.com/pq-cybarg/bubble-map; research; cache-only)"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from qri_parse import parse_index_html, parse_llms_project, parse_llms_index, STAGE_LABEL  # noqa: E402
 
-# registry id -> qrindex / CoinGecko id
+DATA = os.path.join(ROOT, "data")
+RAW = os.path.join(DATA, "qri_raw")
+OUT = os.path.join(DATA, "qri_index.json")
+INDEX = "https://qrindex.org/"
+UA = "BubbleMap-QRI-scrape/1.0 (+https://github.com/pq-cybarg/bubble-map; research cache)"
+
+# registry id -> qrindex slug (best-effort; unmatched chains stay qri:null)
 MAP = {
     "Bitcoin": "bitcoin", "Ethereum": "ethereum", "Solana": "solana",
-    "XRPL": "ripple", "Ripple": "ripple", "Hedera": "hedera-hashgraph",
+    "XRPL": "xrp", "Ripple": "xrp", "Hedera": "hedera-hashgraph",
     "Stellar": "stellar", "Sui": "sui", "Aptos": "aptos", "Cardano": "cardano",
     "Avalanche": "avalanche-2", "Polkadot": "polkadot", "Cosmos": "cosmos",
-    "TON": "the-open-network", "QRL": "quantum-resistant-ledger",
+    "TON": "toncoin", "QRL": "quantum-resistant-ledger",
     "Monero": "monero", "Zcash": "zcash", "Arbitrum": "arbitrum",
     "Optimism": "optimism", "Polygon": "polygon-ecosystem-token",
     "Hyperliquid": "hyperliquid", "Uniswap": "uniswap", "Tether": "tether",
     "Circle": "usd-coin", "RLUSD": "ripple-usd", "Mochimo": "mochimo",
-    "Algorand": "algorand", "NEAR": "near", "BNB": "binancecoin",
+    "Algorand": "algorand", "NEAR": "near", "BNB": "bnb", "BNB_Chain": "bnb",
     "Dogecoin": "dogecoin", "Bitcoin_Cash": "bitcoin-cash",
     "Starknet": "starknet", "Aave": "aave", "MakerDAO": "dai",
     "Compound": "compound-governance-token", "Chainlink": "chainlink",
     "Abelian": "abelian", "Cellframe": "cellframe", "Tidecoin": "tidecoin",
     "QuantumCoin": "quantumcoin", "Nervos": "nervos-network",
     "MCM": "mochimo", "QRL_Foundation": "quantum-resistant-ledger",
-    "Linea": "linea", "Base": "base", "dYdX": "dydx-chain",
-    "PancakeSwap": "pancakeswap-token", "SushiSwap": "sushi",
-    "Curve": "curve-dao-token", "Lido": "lido-dao",
+    "dYdX": "dydx-chain", "Jupiter": "jupiter-exchange-solana",
+    "Worldcoin": "worldcoin-wld", "TRON": "tron", "Litecoin": "litecoin",
+    "Kaspa": "kaspa", "IOTA": "iota", "Canton": "canton",
+    "Internet_Computer": "internet-computer", "Fetch_AI": "fetch-ai",
+    "Injective": "injective-protocol", "XDC": "xdce-crowd-sale",
+    "Ethereum_Classic": "ethereum-classic", "Quranium": "quranium",
+    "QANplatform": "qanplatform", "Naoris": "naoris-protocol",
+    "Midnight": "midnight-3", "Mantle": "mantle",
+    "PancakeSwap": "pancakeswap-token",
+    "SushiSwap": "sushi", "Curve": "curve-dao-token", "Lido": "lido-dao",
     "Bittensor": "bittensor", "Filecoin": "filecoin",
-    "Flare": "flare-networks", "Internet_Computer": "internet-computer",
-}
-
-STAGE_LABEL = {
-    0: "Stage 0 — Unassessed / no evidence",
-    1: "Stage 1 — Quantum risk assessed",
-    2: "Stage 2 — Mitigation / development",
-    3: "Stage 3 — Migration live",
-    4: "Stage 4 — Migration complete / quantum-ready",
+    "Flare": "flare-networks",
+    "Nervos_Network": "nervos-network", "BitcoinCash": "bitcoin-cash",
 }
 
 
-def _get(url, timeout=25):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json,text/plain,*/*"})
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read()
+def _get(url, timeout=30):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "text/html,text/plain,*/*"})
+    ctx = None
+    try:
+        import ssl, certifi  # type: ignore
+        ctx = ssl.create_default_context(cafile=certifi.where())
+    except Exception:
+        try:
+            import ssl
+            ctx = ssl.create_default_context()
+        except Exception:
+            ctx = None
+    try:
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as r:
+            return r.read(), r.headers.get_content_charset() or "utf-8"
+    except Exception:
+        # macOS system Python often lacks certs; curl uses the OS store
+        import subprocess
+        p = subprocess.run(
+            ["curl", "-sS", "-L", "-A", UA, "--max-time", str(timeout), url],
+            capture_output=True, check=False,
+        )
+        if p.returncode != 0:
+            raise RuntimeError(p.stderr.decode("utf-8", "replace")[:300])
+        return p.stdout, "utf-8"
 
 
 def load_cache():
@@ -65,129 +98,144 @@ def load_cache():
         return {}
 
 
-def fetch_api():
-    raw = _get(API)
-    projects = json.loads(raw.decode("utf-8"))
-    if not isinstance(projects, dict) or not projects:
-        raise RuntimeError("empty QRI API")
+def rows_to_projects(rows):
+    projects = {}
+    for r in rows:
+        slug = r.get("slug")
+        if not slug:
+            continue
+        stage = r.get("stage")
+        try:
+            stage = int(stage) if stage is not None else None
+        except Exception:
+            stage = None
+        projects[slug] = {
+            "slug": slug,
+            "project_name": r.get("name") or slug,
+            "symbol": r.get("symbol") or "",
+            "qri_score": r.get("score"),
+            "qri_stage": stage,
+            "stage_label": r.get("stage_label") or STAGE_LABEL.get(stage or -1, ""),
+            "project_type": r.get("type") or "",
+            "canonical_url": r.get("url") or f"https://qrindex.org/projects/{slug}/",
+            "evaluated": r.get("evaluated"),
+            "confidence": r.get("confidence"),
+            "review_status": r.get("review_status"),
+            "summary": r.get("summary") or "",
+            "rank": r.get("rank"),
+        }
     return projects
 
 
-def fetch_report(pid):
-    url = f"https://qrindex.org/projects/{pid}/report.json"
+def scrape_stdlib(enrich_slugs, enrich_cap=40):
+    raw, enc = _get(INDEX)
+    html = raw.decode(enc, "replace")
+    os.makedirs(RAW, exist_ok=True)
+    open(os.path.join(RAW, "index.html"), "w").write(html)
+    rows = parse_index_html(html)
+    # fill gaps from llms.txt index (plain text; still unofficial)
     try:
-        return json.loads(_get(url, timeout=20).decode("utf-8"))
-    except Exception:
-        return None
+        llms_raw, enc2 = _get("https://qrindex.org/llms.txt")
+        llms = parse_llms_index(llms_raw.decode(enc2, "replace"))
+        by_slug = {r["slug"]: r for r in rows}
+        for r in llms:
+            cur = by_slug.get(r["slug"])
+            if not cur:
+                rows.append(r)
+            else:
+                if cur.get("score") is None:
+                    cur["score"] = r.get("score")
+                if cur.get("stage") is None:
+                    cur["stage"] = r.get("stage")
+                if not cur.get("stage_label"):
+                    cur["stage_label"] = r.get("stage_label")
+                if r.get("evaluated"):
+                    cur["evaluated"] = r.get("evaluated")
+                if r.get("confidence"):
+                    cur["confidence"] = r.get("confidence")
+                if r.get("name") and not cur.get("name"):
+                    cur["name"] = r.get("name")
+    except Exception as e:
+        print(f"[qri] llms.txt index skipped ({e})", file=sys.stderr)
 
-
-def scrape_fallback():
-    """HTML fallback via scrapy if installed, else stdlib parse of the homepage + llms.txt."""
-    try:
-        from qri_spider import scrape_qrindex  # type: ignore
-        return scrape_qrindex()
-    except Exception:
-        pass
-    # llms.txt is structured enough to rebuild the compact index
-    try:
-        text = _get("https://qrindex.org/llms.txt", timeout=30).decode("utf-8", "replace")
-    except Exception:
-        return {}
-    import re
-    out = {}
-    for m in re.finditer(
-        r"\[([^\]]+) QRI report\]\(https://qrindex.org/projects/([^/]+)/llms\.txt\): "
-        r"QRI ([0-9.]+)/100; Stage (\d+)",
-        text,
-    ):
-        name, pid, score, stage = m.group(1), m.group(2), float(m.group(3)), int(m.group(4))
-        out[pid] = {
-            "project_name": name,
-            "canonical_url": f"https://qrindex.org/projects/{pid}/",
-            "qri_score": score,
-            "qri_stage": stage,
-        }
-    return out
-
-
-def enrich(projects, want_pids, limit=80):
-    reports = {}
-    n = 0
-    for pid in want_pids:
-        if n >= limit:
-            break
-        if pid not in projects:
+    projects = rows_to_projects(rows)
+    # enrich tracked + stage-4 slugs via per-project llms.txt
+    want = []
+    for slug, p in projects.items():
+        if (p.get("qri_stage") or 0) >= 4 or slug in set(MAP.values()):
+            want.append(slug)
+    want = list(dict.fromkeys(want))[:enrich_cap]
+    for slug in want:
+        url = f"https://qrindex.org/projects/{slug}/llms.txt"
+        try:
+            body, enc3 = _get(url, timeout=20)
+            extra = parse_llms_project(body.decode(enc3, "replace"))
+            p = projects[slug]
+            if extra.get("score") is not None:
+                p["qri_score"] = extra["score"]
+            if extra.get("stage") is not None:
+                p["qri_stage"] = extra["stage"]
+                p["stage_label"] = extra.get("stage_label") or STAGE_LABEL.get(extra["stage"], p.get("stage_label"))
+            for k in ("evaluated", "confidence", "review_status", "summary"):
+                if extra.get(k):
+                    p[k] = extra[k]
+            time.sleep(0.15)
+        except Exception:
             continue
-        rep = fetch_report(pid)
-        n += 1
-        time.sleep(0.12)
-        if not rep:
-            continue
-        reports[pid] = {
-            "score": rep.get("score"),
-            "stage": rep.get("stage"),
-            "stage_label": rep.get("stage_label"),
-            "confidence": rep.get("confidence"),
-            "evaluation_date": rep.get("evaluation_date"),
-            "review_status": rep.get("review_status"),
-            "symbol": rep.get("symbol"),
-            "summary": (rep.get("summary") or "")[:900],
-            "critical_blockers": (rep.get("critical_quantum_blockers") or rep.get("critical_blockers") or [])[:6],
-            "tags": rep.get("tags") or [],
-            "user_urgency": rep.get("user_urgency_status"),
-            "category_scores": rep.get("category_scores") or {},
-            "network": rep.get("network"),
-        }
-    return reports
+    return projects, "stdlib-html"
+
+
+def scrape_scrapy():
+    try:
+        from qri_spider import scrape_qrindex
+    except Exception:
+        return None, None
+    got = scrape_qrindex()
+    if not got:
+        return None, None
+    return rows_to_projects(list(got.values())), "scrapy"
 
 
 def main():
     os.makedirs(DATA, exist_ok=True)
     cache = load_cache()
-    source = "api"
+    projects, source = None, None
     try:
-        projects = fetch_api()
+        projects, source = scrape_scrapy()
     except Exception as e:
-        print(f"[qri] API failed ({e}); trying scrape/llms fallback", file=sys.stderr)
-        source = "scrape"
+        print(f"[qri] scrapy path skipped ({e})", file=sys.stderr)
+        projects = None
+    if not projects:
         try:
-            projects = scrape_fallback()
-        except Exception as e2:
-            print(f"[qri] fallback failed ({e2}); keeping cache", file=sys.stderr)
-            if cache:
-                print(f"[qri] cache has {len(cache.get('projects') or {})} projects")
+            projects, source = scrape_stdlib(set(MAP.values()))
+        except Exception as e:
+            print(f"[qri] HTML scrape failed ({e}); keeping cache", file=sys.stderr)
+            if cache.get("projects"):
+                print(f"[qri] cache has {len(cache['projects'])} projects")
                 return 0
             return 1
-        if not projects:
-            print("[qri] empty fallback; keeping cache", file=sys.stderr)
-            return 0 if cache else 1
-
-    want = sorted(set(MAP.values()) | set(projects.keys()))
-    # Always enrich Stage-4 plus mapped registry chains
-    stage4 = [pid for pid, v in projects.items() if (v.get("qri_stage") or 0) >= 4]
-    mapped = list(MAP.values())
-    reports = {}
-    try:
-        reports = enrich(projects, list(dict.fromkeys(stage4 + mapped)))
-    except Exception as e:
-        print(f"[qri] report enrich partial ({e})", file=sys.stderr)
 
     out = {
         "fetched_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "source": source,
-        "api": API,
-        "disclaimer": "QRI is a third-party, AI-assisted, pre-release index (qrindex.org). Scores are not market ratings and are not Bubble Map proofs. Interpret with evaluation date, confidence, and critical blockers.",
+        "parser_version": 1,
+        "index_url": INDEX,
+        "disclaimer": (
+            "QRI is a third-party, AI-assisted, pre-release index scraped from qrindex.org. "
+            "The site has no stable API; HTML and any JSON paths are expected to change. "
+            "A QRI score is not a rating of market quality, adoption, or general merit, "
+            "and is not a Bubble Map proof. Read with evaluation date, confidence, and blockers."
+        ),
         "stage_labels": STAGE_LABEL,
         "map": MAP,
         "projects": projects,
-        "reports": reports,
         "n_projects": len(projects),
         "n_stage4": sum(1 for v in projects.values() if (v.get("qri_stage") or 0) >= 4),
     }
     json.dump(out, open(OUT, "w"), indent=2)
-    print(f"wrote {OUT}  projects={out['n_projects']} stage4={out['n_stage4']} reports={len(reports)} source={source}")
+    print(f"wrote {OUT}  projects={out['n_projects']} stage4={out['n_stage4']} source={source}")
     qrl = projects.get("quantum-resistant-ledger") or {}
-    print(f"  QRL  score={qrl.get('qri_score')} stage={qrl.get('qri_stage')}")
+    print(f"  QRL  score={qrl.get('qri_score')} stage={qrl.get('qri_stage')}  {qrl.get('stage_label')}")
     return 0
 
 

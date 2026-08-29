@@ -6,6 +6,20 @@
 
 The live UI is the **Blockchain** tab (`docs/blockchain.html`).
 
+## Quantum readiness (third axis)
+
+Public-record flags and altcoin-lens utility grades do **not** say whether a chain still signs with ECDSA. That is a separate, load-bearing fact: Bitcoin, Ethereum, Solana, XRP, and most L2s authorize spend with **ECC** (harvest-now / forge-later). The tab joins every chain we can match against the **Blockchain Quantum Readiness Index** ([qrindex.org](https://qrindex.org/)), scraped on each `fetch_qri.py` run.
+
+**There is no stable API.** HTML `data-*` attributes, visible table cells, and per-project `llms.txt` are parsed defensively (`models/graph/qri_parse.py`). A Scrapy spider (`qri_spider.py`) is used when scrapy is importable; otherwise stdlib + curl (macOS cert store). JSON paths on the site, if they appear, are **not** a contract.
+
+**QRL is the reference Stage-4 L1 in this corpus:** mandatory **XMSS** (NIST SP 800-208) since genesis, QRI **98.5 / Stage 4** (evaluated 2026-08-20, medium confidence, draft). Mochimo, Tidecoin, and Abelian also sit at Stage 4 on the same index. That is cryptographic-readiness, not adoption. `altcoin-lens` still grades QRL **speculative-niche on token-accrual** — both can be true.
+
+Fetcher: `python3 models/graph/fetch_qri.py` → `data/qri_index.json` (plus `data/qri_raw/index.html` snapshot). Prefers Scrapy when importable; otherwise stdlib HTML + curl. Cache is kept if the scrape fails. Index is AI-assisted and pre-release; scores are not proofs.
+
+CEX/DEX rows usually have **no venue-level QRI**. The tab then shows host-chain scores (BTC/ETH for a CEX; Solana for Jupiter/Raydium; TRON for SunSwap). That is listed-asset spend-auth exposure, not a cleanliness rating of the exchange.
+
+Slug map is best-effort (XRP Ledger is `xrp` not `ripple`; BNB Chain is `bnb`; TON is `toncoin`). When qrindex changes slugs, update `MAP` in `fetch_qri.py`.
+
 ## Why a tab (the map gap)
 
 The bubble map had a **crypto colour bucket** and a **blockchain-leg** (GENIUS rail + Fairshake cycle) but:

@@ -1448,12 +1448,20 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Data_Center_Bandwagon": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Data_Foundation": {
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "Databricks": {
       "sector": "ai",
+      "has_exogenous_revenue": false
+    },
+    "Datacenter_Backlash": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "David_Kostiner": {
@@ -4376,6 +4384,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Spamouflage": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Spanish_Government_SETT": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -5186,6 +5198,10 @@
     },
     "XT": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "X_Corp": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "X_Money": {
@@ -14572,6 +14588,136 @@
       "cancelable": false,
       "source_file": "spec-ai-datacenter-foreign-influence.json",
       "note": ""
+    },
+    {
+      "from": "China",
+      "to": "Spamouflage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "CCP-linked 'Spamouflage'/Dragonbridge - largest cross-platform covert info op (since 2017); Meta removed 7,704 FB accounts (2023); Google TAG disrupted 50k+ (2022) / 10k+ (Q1 2024); AI-generated media; near-zero organic engagement (fact)."
+    },
+    {
+      "from": "China",
+      "to": "Data_Center_Bandwagon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "OpenAI (June 2026) attributed the 'Data Center Bandwagon' cluster to LIKELY a private Chinese tech company's social team for provincial-government clients (Simplified-Chinese prompts via VPN) - China-linked, contractor-grade, NOT confirmed Beijing-directed (grade: contested attribution level)."
+    },
+    {
+      "from": "Data_Center_Bandwagon",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "AI-generated English comments + comic strips claiming datacenter buildouts raise families' electricity bills; sibling cluster attacked US tariffs (prompts excluded Xi, featured Trump) (fact of content)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Data_Center_Bandwagon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "OpenAI banned the accounts and published the June-2026 exposure; assessed almost no authentic engagement (fact)."
+    },
+    {
+      "from": "X_Corp",
+      "to": "Data_Center_Bandwagon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "X (Aug 27 2026): ~200,000 China-linked inauthentic accounts; ~200 posting datacenter comics/images 'in a manner that could manipulate a legitimate debate'; corroborated by artwork matching OpenAI's June report; reach undisclosed (fact of disclosure; impact unquantified)."
+    },
+    {
+      "from": "Datacenter_Backlash",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "Authentic, large, bipartisan opposition: ~$156B delayed/cancelled 2025; >$130B (75 projects) delayed Q1 2026; 61% oppose local datacenters (UPenn +12pts); 142 protests/42 states (Jul 18 2026); 300+ local bans/moratoria. Drivers: power cost, water, noise, land (fact)."
+    },
+    {
+      "from": "Data_Center_Bandwagon",
+      "to": "Datacenter_Backlash",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "The foreign CIB tried to RIDE the authentic backlash (same power-bill themes) with near-zero traction - a small op atop a large real grievance; 'foreign psyop' and 'green astroturf' labels are both weaponized to delegitimize genuine opponents (grade: interpretation, per the composition/causation guard)."
+    },
+    {
+      "from": "Datacenter_Backlash",
+      "to": "Stargate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "Siting/permitting/political opposition is now a Wall-Street-cited risk to the AI buildout (Stargate/hyperscaler capex) - the physical chokepoint where the AI-capital loop meets the grid and the public (fact of risk)."
+    },
+    {
+      "from": "Stargate",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "Stargate = the flagship AI datacenter buildout program; interconnects the buildout core to the datacenter siting/backlash/influence nexus (fact)."
+    },
+    {
+      "from": "CoreWeave",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-foreign-influence.json",
+      "note": "CoreWeave = neocloud datacenter operator inside the financial core; ties the circular-capital core to the physical datacenter/power/backlash theme (fact)."
     },
     {
       "from": "IonQ",
@@ -29759,10 +29905,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1332,
-    "num_edges": 1879,
+    "num_nodes": 1336,
+    "num_edges": 1889,
     "num_financial_edges": 266,
-    "num_structural_edges": 1613,
+    "num_structural_edges": 1623,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29841,8 +29987,8 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -29857,8 +30003,8 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -29890,13 +30036,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -32457,6 +32603,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Data_Center_Bandwagon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Data_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -32465,6 +32618,13 @@
         "in_robust_core": false
       },
       "Databricks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Datacenter_Backlash": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37581,6 +37741,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Spamouflage": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Spanish_Government_SETT": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39002,6 +39169,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "X_Corp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "X_Money": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39258,7 +39432,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 56,
+        "degree": 58,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -39282,7 +39456,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 20,
-        "source_files": 30,
+        "source_files": 31,
         "layers": [
           "financial",
           "structural"
@@ -39393,7 +39567,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 24,
+        "degree": 25,
         "neighbor_sectors": [
           "chip_vendor",
           "financier",
@@ -39407,7 +39581,7 @@
           "university"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 10,
+        "source_files": 11,
         "layers": [
           "financial",
           "structural"

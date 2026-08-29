@@ -103,6 +103,7 @@ hr "[7b] Build dashboard + globe"
 python3 models/graph/build_dashboard.py
 python3 models/graph/build_globe.py
 python3 models/graph/build_persons.py
+python3 models/graph/fetch_qri.py || true
 python3 models/graph/build_blockchain.py
 python3 models/graph/build_bubblemap.py
 python3 models/graph/fetch_fred.py || true   # refresh monthly FRED cache (tolerates offline; build_charts uses cache)
