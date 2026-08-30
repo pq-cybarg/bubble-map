@@ -1264,6 +1264,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Constellation_Energy": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Consumer_Rights_Wiki": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -1668,6 +1672,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Electricity_Ratepayers": {
+      "sector": "macro",
+      "has_exogenous_revenue": false
+    },
     "EleutherAI": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -1972,6 +1980,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "GE_Vernova": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "GHTF": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -2014,6 +2026,10 @@
     },
     "Gary_Gensler": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Gas_Turbines": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Gate": {
@@ -2120,6 +2136,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "HALEU_Enrichment": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "HBM": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -2146,6 +2166,10 @@
     },
     "HTX": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "HV_Transformers": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Halushchenko": {
@@ -3364,6 +3388,10 @@
       "sector": "neocloud",
       "has_exogenous_revenue": false
     },
+    "Nuclear_SMR": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "OFAC": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -3466,6 +3494,10 @@
     },
     "Oracle_Interop": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Orbital_Datacenters": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "OrcaSlicer": {
@@ -3687,6 +3719,10 @@
     "Porsche": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Power_Grid": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "Predator": {
       "sector": "surveillance",
@@ -5102,6 +5138,10 @@
     },
     "Walrus": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Water_Cooling": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Waymo": {
@@ -9559,6 +9599,71 @@
       "note": ""
     },
     {
+      "from": "AI_Datacenters",
+      "to": "Water_Cooling",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-datacenter-water-siting.json",
+      "note": "~200-300 BILLION gallons/yr (2024-2030) mostly evaporative cooling; ~2/3 of 809 planned US datacenters sited on land in drought - water-hungry cooling where water is scarcest (fact)."
+    },
+    {
+      "from": "AI_Datacenters",
+      "to": "Electricity_Ratepayers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cost_shift",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-datacenter-water-siting.json",
+      "note": "'Private compute, public burden': Dallas Fed - wholesale power up to ~+50% as DC demand doubles in ~5yr; a Virginia bill jumped ~$100 -> $281/mo; states moving to special DC tariffs; now showing in PCE inflation (fact)."
+    },
+    {
+      "from": "Electricity_Ratepayers",
+      "to": "Datacenter_Backlash",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "drives",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-datacenter-water-siting.json",
+      "note": "Rising household bills turn an infrastructure story into a POLITICAL one - the ratepayer grievance is the authentic engine of the datacenter backlash the foreign CIB tries to ride (fact + interpretation; ties spec-ai-datacenter-foreign-influence)."
+    },
+    {
+      "from": "AI_Datacenters",
+      "to": "Orbital_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "escape",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-datacenter-water-siting.json",
+      "note": "Proposed escape from terrestrial power/water/siting limits: orbital datacenters + AI satellites (continuous solar, radiative cooling, no land/water/NIMBY) - a moonshot given heat-rejection/radiation/latency/serviceability barriers (fact of proposals)."
+    },
+    {
+      "from": "SpaceX",
+      "to": "Orbital_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "push",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-datacenter-water-siting.json",
+      "note": "SpaceX pushing Starlink/Starship-enabled orbital compute + AI-on-satellite; alongside Starcloud and Google 'Project Suncatcher'-type concepts - the tell of how binding terrestrial limits feel (fact)."
+    },
+    {
       "from": "Mubadala",
       "to": "GlobalFoundries",
       "instrument": "merger",
@@ -13236,6 +13341,58 @@
       "cancelable": false,
       "source_file": "macro-ilcs.json,macro-uncovered-risk-pools.json",
       "note": ""
+    },
+    {
+      "from": "Power_Grid",
+      "to": "HV_Transformers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bottleneck",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-power-grid-bottleneck.json",
+      "note": "HV transformer lead times 50 -> 127 weeks (some 3-4yr); HV substations 3-5yr; shortage to at least 2029 (fact)."
+    },
+    {
+      "from": "HV_Transformers",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_risk",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-power-grid-bottleneck.json",
+      "note": "Insufficient domestic supply forces imports - including from China - adding a geopolitical-supply risk to the grid itself (fact)."
+    },
+    {
+      "from": "Stargate",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-power-grid-bottleneck.json",
+      "note": "$650B+ 2026 hyperscaler capex + $1.4T OpenAI compute commitments assume power on a 3-5yr delivery clock the 2026-27 buildout can't meet - the physical mirror of 'promises > deliverable substance' (fact + interpretation)."
+    },
+    {
+      "from": "Oracle",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "stranding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-ai-power-grid-bottleneck.json",
+      "note": "Oracle/Stargate ranked #1 in power-STRANDING exposure (much announced compute, less SECURED firm power; leases rather than self-generates). Nadella: 'not a compute glut, but a power and warm-shell glut' (fact of quote; ranking = interpretation)."
     },
     {
       "from": "First_Brands",
@@ -22091,6 +22248,162 @@
       "note": ""
     },
     {
+      "from": "AI_Datacenters",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Datacenters = 4.4% of US electricity (2023) -> 6.7-12% by 2028; ~half of US load growth to 2030; PJM capacity price hit its cap 3 auctions running ($329->$333.44/MW-day), ~$9.3B of the increase datacenter-driven (fact)."
+    },
+    {
+      "from": "Power_Grid",
+      "to": "Gas_Turbines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_wall",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "New firm gas capacity gated by turbine backlog; GE Vernova ~80GW backlog into 2029; heavy-duty lead ~3yr, CCGT 5-7yr (fact)."
+    },
+    {
+      "from": "Gas_Turbines",
+      "to": "GE_Vernova",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplier",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "One of the turbine 'big three' (GE Vernova / Siemens Energy / Mitsubishi) effectively sold out for years (fact)."
+    },
+    {
+      "from": "Crusoe",
+      "to": "Gas_Turbines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "procurement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Crusoe ordered 19 gas turbines for behind-the-meter (BYOP) datacenter power (fact)."
+    },
+    {
+      "from": "Power_Grid",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Hyperscaler nuclear/SMR PPAs + restarts are the firm-power workaround (fact)."
+    },
+    {
+      "from": "Microsoft",
+      "to": "Constellation_Energy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Microsoft 20yr PPA ~835MW ~$16B to restart Three Mile Island Unit 1 (Crane Clean Energy Center), ~2028 (fact of PPA; commercial terms in notes, modeled structural)."
+    },
+    {
+      "from": "Constellation_Energy",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Nuclear operator supplying firm power (TMI restart) into the datacenter buildout (fact)."
+    },
+    {
+      "from": "Amazon",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Amazon ~1920MW through 2042 + SMR exploration (Talen/others) (fact)."
+    },
+    {
+      "from": "Google",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Google first corporate SMR fleet deal (~500MW; 50MW by 2030, Kairos) (fact)."
+    },
+    {
+      "from": "TerraPower",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "TerraPower (Gates-backed) SMR developer supplying the SMR wave (fact)."
+    },
+    {
+      "from": "Nuclear_SMR",
+      "to": "HALEU_Enrichment",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "SMR fleet needs HALEU fuel; domestic supply short through 2029 (Z3 P2 UNSAT) (fact)."
+    },
+    {
+      "from": "HALEU_Enrichment",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chokepoint",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "energy-power.json",
+      "note": "Russia ~44% of global enrichment / ~35% of US imports; HALEU was ~100% Russia. Prohibiting Russian Uranium Imports Act (Aug 2024, waivers to 2027); Russia retaliated with export curbs - the ENERGY analog of China's rare-earth chokepoint (fact)."
+    },
+    {
       "from": "FTC",
       "to": "John_Deere",
       "instrument": "other",
@@ -29905,10 +30218,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1336,
-    "num_edges": 1889,
+    "num_nodes": 1346,
+    "num_edges": 1910,
     "num_financial_edges": 266,
-    "num_structural_edges": 1623,
+    "num_structural_edges": 1644,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -29954,16 +30267,23 @@
     ],
     "structural_edges_add_no_cycle": false,
     "core_scc_all_edges_incl_structural": [
+      "AI_Datacenters",
       "AMD",
       "Amazon",
       "Anthropic",
+      "China",
       "CoreWeave",
       "Crusoe",
       "DARPA",
+      "Data_Center_Bandwagon",
+      "Datacenter_Backlash",
+      "Electricity_Ratepayers",
       "Google",
+      "HV_Transformers",
       "ICE",
       "ImmigrationOS",
       "Lambda",
+      "MSS",
       "Microsoft",
       "NVIDIA",
       "Niantic",
@@ -29972,11 +30292,18 @@
       "Palantir",
       "Palantir_Gotham",
       "Peter_Thiel",
+      "Power_Grid",
+      "PrivateCredit_Funds",
       "SINK_lenders",
+      "SaltTyphoon",
       "SpaceX",
-      "Stanford_University"
+      "Stanford_University",
+      "Stargate",
+      "TMobile",
+      "US_Banks",
+      "US_Treasuries"
     ],
-    "core_scc_all_edges_size": 21,
+    "core_scc_all_edges_size": 35,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -29987,12 +30314,16 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -30000,11 +30331,12 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -30015,11 +30347,6 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -32281,6 +32608,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Constellation_Energy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Consumer_Rights_Wiki": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -32988,6 +33322,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Electricity_Ratepayers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EleutherAI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33520,6 +33861,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GE_Vernova": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GHTF": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33591,6 +33939,13 @@
         "in_robust_core": false
       },
       "Gary_Gensler": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gas_Turbines": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -33779,6 +34134,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "HALEU_Enrichment": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "HBM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33822,6 +34184,13 @@
         "in_robust_core": false
       },
       "HTX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "HV_Transformers": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35956,6 +36325,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Nuclear_SMR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OFAC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -36132,6 +36508,13 @@
         "in_robust_core": true
       },
       "Oracle_Interop": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Orbital_Datacenters": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -36517,6 +36900,13 @@
         "in_robust_core": false
       },
       "Porsche": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Power_Grid": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39001,6 +39391,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Water_Cooling": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Waymo": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39432,7 +39829,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 58,
+        "degree": 59,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -39456,7 +39853,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 20,
-        "source_files": 31,
+        "source_files": 32,
         "layers": [
           "financial",
           "structural"
@@ -39495,10 +39892,11 @@
       },
       {
         "node": "Google",
-        "degree": 18,
+        "degree": 19,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
+          "commodity",
           "crypto_infra",
           "dlt",
           "ip_rightsholder",
@@ -39510,8 +39908,8 @@
           "surveillance",
           "university"
         ],
-        "n_neighbor_sectors": 12,
-        "source_files": 13,
+        "n_neighbor_sectors": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -39590,7 +39988,7 @@
       },
       {
         "node": "Russia",
-        "degree": 25,
+        "degree": 26,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -39604,11 +40002,34 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "structural"
         ],
         "both_layers": false
+      },
+      {
+        "node": "Microsoft",
+        "degree": 16,
+        "neighbor_sectors": [
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "neocloud",
+          "other",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 10,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
       },
       {
         "node": "Ripple",
@@ -39657,28 +40078,6 @@
         "both_layers": true
       },
       {
-        "node": "Microsoft",
-        "degree": 15,
-        "neighbor_sectors": [
-          "ai_lab",
-          "financial_infra",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "Palantir",
         "degree": 20,
         "neighbor_sectors": [
@@ -39694,6 +40093,26 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Amazon",
+        "degree": 10,
+        "neighbor_sectors": [
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "industrial",
+          "satellite",
+          "standards",
+          "university"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 9,
         "layers": [
           "financial",
           "structural"
@@ -39744,6 +40163,48 @@
         "both_layers": true
       },
       {
+        "node": "Stargate",
+        "degree": 12,
+        "neighbor_sectors": [
+          "ai_infra",
+          "ai_lab",
+          "bank",
+          "commodity",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "AI_Datacenters",
+        "degree": 13,
+        "neighbor_sectors": [
+          "commodity",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Iran",
         "degree": 14,
         "neighbor_sectors": [
@@ -39766,83 +40227,25 @@
         "both_layers": true
       },
       {
-        "node": "Anthropic",
-        "degree": 14,
-        "neighbor_sectors": [
-          "chip_vendor",
-          "defense_tech",
-          "financier",
-          "hyperscaler",
-          "other",
-          "space_real_economy",
-          "university"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Right_to_Repair",
-        "degree": 25,
-        "neighbor_sectors": [
-          "ai_infra",
-          "hyperscaler",
-          "industrial",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "state",
-          "tech"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 6,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "Amazon",
+        "node": "Oracle",
         "degree": 9,
         "neighbor_sectors": [
           "ai_lab",
-          "financial_infra",
-          "industrial",
-          "satellite",
-          "standards",
-          "university"
+          "bigtech_asia",
+          "chip_vendor",
+          "commodity",
+          "other",
+          "private_credit",
+          "sink",
+          "spv"
         ],
-        "n_neighbor_sectors": 6,
-        "source_files": 8,
+        "n_neighbor_sectors": 8,
+        "source_files": 6,
         "layers": [
           "financial",
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "DOJ",
-        "degree": 10,
-        "neighbor_sectors": [
-          "defense",
-          "exchange",
-          "industrial",
-          "other",
-          "person",
-          "regulator",
-          "state"
-        ],
-        "n_neighbor_sectors": 7,
-        "source_files": 9,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       }
     ]
   }

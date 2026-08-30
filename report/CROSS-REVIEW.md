@@ -29,14 +29,14 @@
 - **a16z** — 21 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
-- TerraPower, Vistra
+- Vistra
 
-## Newest file `spec-ai-datacenter-foreign-influence.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-system-contagion.json: 7 shared entities
-- spec-sec-filings-primary.json: 6 shared entities
-- fin-coreweave-oracle.json: 6 shared entities
-- blockchain-registry.json: 5 shared entities
-- digitalid-corporate.json: 5 shared entities
-- fin-ai-depreciation-debttrap.json: 5 shared entities
-- macro-ai-power-grid-bottleneck.json: 5 shared entities
-- macro-cre-privatecredit.json: 5 shared entities
+## Newest file `macro-ai-datacenter-water-siting.json` — related files by shared entities (verify cross-refs exist)
+- macro-pqc-chips.json: 3 shared entities
+- energy-power.json: 3 shared entities
+- sec-filings.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities
+- spec-sec-filings-primary.json: 3 shared entities
+- macro-ai-power-grid-bottleneck.json: 2 shared entities
+- fin-ai-depreciation-debttrap.json: 2 shared entities
+- catalog-academia-core.json: 2 shared entities
