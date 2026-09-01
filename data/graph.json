@@ -1552,6 +1552,14 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Digital_Euro": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "Digital_ID": {
+      "sector": "identity",
+      "has_exogenous_revenue": false
+    },
     "Disaster_Compensation": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -4232,6 +4240,10 @@
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
     },
+    "Sam_Altman": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Sam_Bankman_Fried": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -4860,6 +4872,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "UK_Online_Safety_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "UK_comms_infrastructure": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -5219,6 +5235,10 @@
     "World_Liberty_Financial": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Worldcoin": {
+      "sector": "identity",
+      "has_exogenous_revenue": false
     },
     "Wormhole": {
       "sector": "crypto_infra",
@@ -8460,6 +8480,58 @@
       "cancelable": false,
       "source_file": "spec-iran-state-network.json",
       "note": ""
+    },
+    {
+      "from": "UK_Online_Safety_Act",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "age_gate",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-worldcoin-eid-convergence.json",
+      "note": "OSA 2023 + Ofcom 'Highly Effective Age Assurance' codes (eff 2025-07-25): platforms must deploy age assurance (facial age estimation / photo-ID) - self-declaration insufficient; an age/ID gate on speech (fact)."
+    },
+    {
+      "from": "EUDI_Wallet",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "state_wallet",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-worldcoin-eid-convergence.json",
+      "note": "eIDAS 2.0 EU Digital Identity Wallet - the state identity-wallet piece of the stack (fact)."
+    },
+    {
+      "from": "Digital_Euro",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "programmable_money",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-worldcoin-eid-convergence.json",
+      "note": "CBDC/programmable-money piece; BIS GM Carstens on record (2020): a CBDC gives 'absolute control on the rules ... and the technology to enforce that' - programmability = control over when/where/how money is spent (fact of quote)."
+    },
+    {
+      "from": "BIS",
+      "to": "Digital_Euro",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cbdc_design",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-worldcoin-eid-convergence.json",
+      "note": "BIS is the central-bank standards hub behind CBDC design (Carstens programmability quote) (fact)."
     },
     {
       "from": "Gig_Platforms",
@@ -12657,7 +12729,7 @@
       "status": "open",
       "declared_circular": false,
       "cancelable": true,
-      "source_file": "spec-uk-labour-tbi-influence.json",
+      "source_file": "spec-uk-labour-tbi-influence.json,influence-tbi-policy.json",
       "note": ""
     },
     {
@@ -14687,6 +14759,58 @@
       "cancelable": false,
       "source_file": "spec-insurance-bermuda.json",
       "note": "~$180B insurance capital into private credit (2025); the PE owner both originates the credit and owns the insurer that holds it - vertical/circular integration."
+    },
+    {
+      "from": "Sam_Altman",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-corporate.json",
+      "note": "CEO of OpenAI (AI-capex core) (fact)."
+    },
+    {
+      "from": "Sam_Altman",
+      "to": "Worldcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-corporate.json",
+      "note": "Co-founder/chairman of World / Tools for Humanity - iris-'Orb' proof-of-personhood explicitly pitched as the human-verification layer 'for the AI age'. THE person bridging the AI core and the biometric-ID layer (fact of roles)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Worldcoin",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "backer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-corporate.json",
+      "note": "a16z (+ a16z crypto) backed World/Worldcoin (WLD FDV ~$5.3B) alongside Khosla, Bain Crypto, Reid Hoffman, Tiger - the SAME VC cluster that funds the AI-capex bubble (fact of shared capital; coordinating intent NOT asserted)."
+    },
+    {
+      "from": "Worldcoin",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-corporate.json",
+      "note": "World ID = a 'unique human' proof-of-personhood credential; claims >18M verified across ~160 countries - one piece of the identity stack (fact)."
     },
     {
       "from": "Municipal_Debt",
@@ -22840,6 +22964,71 @@
       "note": "the one de-risked allied REE play"
     },
     {
+      "from": "Larry_Ellison",
+      "to": "Oracle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-tbi-policy.json",
+      "note": "Ellison = Oracle founder/chairman/CTO - the AI-core end of the bridge (fact)."
+    },
+    {
+      "from": "Tony_Blair_Institute",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "advocacy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-tbi-policy.json",
+      "note": "Named leading UK national-digital-ID advocate; 'Time for Digital ID' (Sep 2025) recommends a digital-ID superapp on GOV.UK One Login (fact)."
+    },
+    {
+      "from": "Tony_Blair_Institute",
+      "to": "UK_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "advocacy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-tbi-policy.json",
+      "note": "Blair personally lobbied Tech Sec Peter Kyle to engage Ellison's institute (FOI'd minutes); Starmer adopted a digital-ID policy mirroring TBI's blueprint (fact; 'moderate-leaning-strong' loop, coincidence excluded but a single coordinating cabal NOT asserted)."
+    },
+    {
+      "from": "UK_Government",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-tbi-policy.json",
+      "note": "Starmer government advancing mandatory national digital ID mirroring the TBI blueprint (GOV.UK One Login) (fact)."
+    },
+    {
+      "from": "Oracle",
+      "to": "UK_Government",
+      "instrument": "compute_commitment",
+      "layer": "financial",
+      "raw_instrument": "gov_cloud",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-tbi-policy.json",
+      "note": "Oracle is the dominant UK-gov cloud incumbent - the infrastructure that benefits from the digital-ID build; closes the Ellison->TBI->UK-ID->Oracle loop (fact of incumbency; benefit is structural inference)."
+    },
+    {
       "from": "Jed_McCaleb",
       "to": "Ripple",
       "instrument": "other",
@@ -24008,6 +24197,32 @@
       "cancelable": false,
       "source_file": "spec-manufactured-division.json",
       "note": ""
+    },
+    {
+      "from": "World_Bank",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "orchestration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-orchestration-real-incentive.json",
+      "note": "World Bank ID4D + G2Px: digital-ID/civil-registration in 80+ countries, G2P-payment digitization in 40+, DPI in 60+ - the multilateral acquisition layer (fact)."
+    },
+    {
+      "from": "Aadhaar",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "template",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "digitalid-orchestration-real-incentive.json",
+      "note": "India Stack (Aadhaar/UPI) is the global DPI template India's 2023 G20 presidency made a development consensus (~$361B G2P cited as proof-of-concept) (fact)."
     },
     {
       "from": "Brocade",
@@ -30407,10 +30622,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1351,
-    "num_edges": 1923,
-    "num_financial_edges": 270,
-    "num_structural_edges": 1653,
+    "num_nodes": 1356,
+    "num_edges": 1938,
+    "num_financial_edges": 272,
+    "num_structural_edges": 1666,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -30505,10 +30720,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
       ],
@@ -30517,12 +30728,16 @@
         "OpenAI"
       ],
       [
-        "AMD",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -33301,6 +33516,20 @@
         "in_robust_core": false
       },
       "Digital_Childhood_Alliance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Digital_Euro": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Digital_ID": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37997,6 +38226,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sam_Altman": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sam_Bankman_Fried": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39096,6 +39332,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UK_Online_Safety_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UK_comms_infrastructure": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39726,6 +39969,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Worldcoin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Wormhole": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40175,7 +40425,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai",
           "chip_vendor",
@@ -40190,7 +40440,7 @@
           "university"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -40305,6 +40555,28 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Oracle",
+        "degree": 11,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "commodity",
+          "other",
+          "private_credit",
+          "sink",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -40452,28 +40724,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Iran",
-        "degree": 14,
-        "neighbor_sectors": [
-          "commodity",
-          "defense",
-          "energy",
-          "industrial",
-          "logistics",
-          "other",
-          "person",
-          "privacy_tool",
-          "state"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 4,
         "layers": [
           "financial",
           "structural"

@@ -151,7 +151,7 @@ Qatar,Trump,other,400000000,open,False,False,spec-foreign-influence-comparison.j
 DuPont,AFFF_MDL,other,400000000,documented,False,False,spec-pfas-forever-chemicals.json
 US_Government,MP_Materials,equity,400000000,closed,True,False,macro-critical-minerals.json
 US_Government,United_States_Antimony,relationship,350000000,committed,True,False,macro-critical-minerals-equities.json
-Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,spec-uk-labour-tbi-influence.json
+Larry_Ellison,Tony_Blair_Institute,other,330000000,open,False,True,"spec-uk-labour-tbi-influence.json,influence-tbi-policy.json"
 EPA,East_Palestine,other,310000000,documented,False,False,spec-environmental-disasters.json
 Planet_Labs,Commercial_Space_Imaging,other,307700000,documented,False,False,spec-planet-space-imaging.json
 Singham,Singham_Network,other,278000000,documented,False,False,spec-ai-datacenter-foreign-influence.json
@@ -394,6 +394,10 @@ Iran_Nuclear_Program,Iran,other,,documented,False,False,spec-iran-state-network.
 Israel,Iran_Nuclear_Program,other,,documented,False,False,spec-iran-state-network.json
 US_Government,Iran_Nuclear_Program,other,,documented,False,False,spec-iran-state-network.json
 IAEA,Iran_Nuclear_Program,other,,contested,False,False,spec-iran-state-network.json
+UK_Online_Safety_Act,Digital_ID,other,,,False,False,digitalid-worldcoin-eid-convergence.json
+EUDI_Wallet,Digital_ID,other,,,False,False,digitalid-worldcoin-eid-convergence.json
+Digital_Euro,Digital_ID,other,,,False,False,digitalid-worldcoin-eid-convergence.json
+BIS,Digital_Euro,other,,,False,False,digitalid-worldcoin-eid-convergence.json
 Gig_Platforms,Contingent_Labor,other,,enforced,False,False,macro-gig-labor.json
 Contingent_Labor,Jobs_Headline,other,,structural,False,False,macro-gig-labor.json
 ZEISS_SMT,ASML,other,,documented,False,False,spec-semiconductor-logistics-standards.json
@@ -834,6 +838,10 @@ Seed_IP,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
 Farm_Subsidies,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
 Ethanol_RFS,US_Corn,other,,documented,False,False,spec-seed-ip-corn.json
 Bermuda_Captives,Annuity_Holders,other,,opaque,False,False,spec-insurance-bermuda.json
+Sam_Altman,OpenAI,other,,,False,False,digitalid-corporate.json
+Sam_Altman,Worldcoin,other,,,False,False,digitalid-corporate.json
+Andreessen_Horowitz,Worldcoin,investment,,,False,False,digitalid-corporate.json
+Worldcoin,Digital_ID,other,,,False,False,digitalid-corporate.json
 Municipal_Debt,Pension_Funds,other,,open,False,False,macro-municipal-public-finance.json
 CRE_Market,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
 Federal_Transfers,Municipal_Debt,other,,open,False,False,macro-municipal-public-finance.json
@@ -1398,6 +1406,11 @@ Perpetua_Resources,Antimony,other,,developing,False,False,macro-critical-mineral
 United_States_Antimony,Antimony,other,,operating,False,False,macro-critical-minerals-equities.json
 Ucore,Rare_Earths,other,,developing,False,False,macro-critical-minerals-equities.json
 MP_Materials,Rare_Earths,relationship,,operating,False,False,macro-critical-minerals-equities.json
+Larry_Ellison,Oracle,other,,,False,False,influence-tbi-policy.json
+Tony_Blair_Institute,Digital_ID,other,,,False,False,influence-tbi-policy.json
+Tony_Blair_Institute,UK_Government,other,,,False,False,influence-tbi-policy.json
+UK_Government,Digital_ID,other,,,False,False,influence-tbi-policy.json
+Oracle,UK_Government,compute_commitment,,,False,False,influence-tbi-policy.json
 Jed_McCaleb,Ripple,other,,documented,False,False,spec-stellar-mccaleb-tacostand.json
 Joyce_Kim,Stellar_Development_Foundation,other,,documented,False,False,spec-stellar-mccaleb-tacostand.json
 Jed_McCaleb,Tacostand_Wallet,other,,documented,False,False,spec-stellar-mccaleb-tacostand.json
@@ -1475,6 +1488,8 @@ Niantic,Ingress,other,,,False,False,spec-niantic-geospatial.json
 Niantic,Pokemon_GO,other,,,False,False,spec-niantic-geospatial.json
 Niantic,Google,other,,,False,False,spec-niantic-geospatial.json
 Russia_state,US_political_system,other,,open,False,False,spec-manufactured-division.json
+World_Bank,Digital_ID,other,,,False,False,digitalid-orchestration-real-incentive.json
+Aadhaar,Digital_ID,other,,,False,False,digitalid-orchestration-real-incentive.json
 Broadcom,CommScope,other,,documented,False,False,spec-foundry-brocade-broadcom.json
 Johns_Manville,Asbestos,other,,documented,False,False,spec-asbestos-mass-tort.json
 Johns_Manville,Asbestos_Trusts,other,,documented,False,False,spec-asbestos-mass-tort.json

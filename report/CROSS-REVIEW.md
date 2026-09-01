@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `geopolitics-taiwan-silicon-shield.json` — related files by shared entities (verify cross-refs exist)
-- spec-sec-filings-primary.json: 2 shared entities
-- macro-ai-power-grid-bottleneck.json: 2 shared entities
-- fin-nvidia-openai.json: 2 shared entities
-- fin-gulf-sovereign-ai-capital.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- spec-exchanges-asia.json: 2 shared entities
-- fin-meta-family.json: 2 shared entities
-- fin-ai-efficiency-counter-thesis.json: 2 shared entities
+## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-registry.json: 10 shared entities
+- digitalid-corporate.json: 9 shared entities
+- macro-pqc-chips.json: 8 shared entities
+- macro-crqc-quantum-landscape.json: 8 shared entities
+- fin-hedera-connections.json: 7 shared entities
+- altcoin-lens.json: 7 shared entities
+- spec-quantum-computing-competitive-landscape.json: 7 shared entities
+- spec-network-overlay.json: 7 shared entities
