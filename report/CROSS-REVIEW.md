@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `macro-ai-datacenter-water-siting.json` — related files by shared entities (verify cross-refs exist)
-- macro-pqc-chips.json: 3 shared entities
-- energy-power.json: 3 shared entities
-- sec-filings.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- spec-sec-filings-primary.json: 3 shared entities
+## Newest file `geopolitics-taiwan-silicon-shield.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 2 shared entities
 - macro-ai-power-grid-bottleneck.json: 2 shared entities
-- fin-ai-depreciation-debttrap.json: 2 shared entities
-- catalog-academia-core.json: 2 shared entities
+- fin-nvidia-openai.json: 2 shared entities
+- fin-gulf-sovereign-ai-capital.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- fin-meta-family.json: 2 shared entities
+- fin-ai-efficiency-counter-thesis.json: 2 shared entities

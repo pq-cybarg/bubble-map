@@ -1964,6 +1964,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "G42": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "G7": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -2166,6 +2170,10 @@
     },
     "HTX": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "HUMAIN": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "HV_Transformers": {
@@ -3456,6 +3464,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "OpenAI_Foundation": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Open_Local_AI": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -4468,6 +4480,10 @@
       "sector": "spv",
       "has_exogenous_revenue": false
     },
+    "Stargate_UAE": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Starlink": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -4614,6 +4630,10 @@
     },
     "Tai_Mo_Shan": {
       "sector": "financier",
+      "has_exogenous_revenue": false
+    },
+    "Taiwan": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Taiwan_Strait": {
@@ -8503,7 +8523,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-semiconductor-logistics-standards.json",
+      "source_file": "spec-semiconductor-logistics-standards.json,geopolitics-taiwan-silicon-shield.json",
       "note": ""
     },
     {
@@ -11924,6 +11944,162 @@
       "cancelable": false,
       "source_file": "macro-private-credit-bdc-stress.json",
       "note": ""
+    },
+    {
+      "from": "MGX",
+      "to": "OpenAI",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity + Stargate partner ($7B)",
+      "amount_usd": 7000000000,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json,fin-google-amazon-anthropic-meta.json",
+      "note": "Abu Dhabi's MGX (>$100B AUM target, ~$10B/yr AI deployment): $6.6B OpenAI round (Oct 2024) + strategic partner in the $100B Stargate initiative - a marginal external funder of the core (fact)."
+    },
+    {
+      "from": "MGX",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json,fin-google-amazon-anthropic-meta.json",
+      "note": "MGX co-led Anthropic's ~$30B Series G at a ~$380B valuation (fact)."
+    },
+    {
+      "from": "MGX",
+      "to": "xAI",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json,fin-google-amazon-anthropic-meta.json",
+      "note": "MGX anchored xAI's upsized $20B Series E (fact)."
+    },
+    {
+      "from": "QIA",
+      "to": "xAI",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "Qatar Investment Authority anchored xAI's $20B round alongside MGX (fact)."
+    },
+    {
+      "from": "PIF",
+      "to": "HUMAIN",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "Saudi PIF established HUMAIN (2025) under the $100B 'Project Transcendence'; 1.9GW->6.6GW datacenters; Nvidia + Qualcomm partners - the UAE-vs-Saudi sovereign AI arms race (fact)."
+    },
+    {
+      "from": "G42",
+      "to": "Stargate_UAE",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "G42 holds 60% of Stargate UAE (UAE insistence on national control of sovereign AI infra) (fact)."
+    },
+    {
+      "from": "Stargate_UAE",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "Stargate UAE (Abu Dhabi): 1GW cluster, ~$30B, first 200MW live 2026 - G42 + OpenAI + Oracle + Nvidia GB300 + Cisco + SoftBank; same SPV architecture as US Stargate, exported to a petro-sovereign (fact)."
+    },
+    {
+      "from": "Stargate_UAE",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "Runs on Nvidia GB300 systems (restricted chips, exported under IGAA/RTE) (fact)."
+    },
+    {
+      "from": "Microsoft",
+      "to": "G42",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "~$1.5B Microsoft investment in G42 (2024), part of its Western-security restructuring (fact)."
+    },
+    {
+      "from": "G42",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "divestment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-gulf-sovereign-ai-capital.json",
+      "note": "THE CHINA-EXCLUSION PRICE: G42 DIVESTED its Chinese-technology partnerships (2024) after US-official talks, to unlock restricted Nvidia chips + OpenAI models under an Intergovernmental Assurance Agreement (IGAA) + Regulated Technology Environment (RTE) via Commerce/BIS (fact)."
+    },
+    {
+      "from": "OpenAI_Foundation",
+      "to": "OpenAI",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-openai-conversion-governance.json",
+      "note": "28 Oct 2025 for-profit recap: OpenAI Group PBC; the nonprofit OpenAI Foundation holds ~26% as a CONTROLLING stake (Microsoft ~27%/~$135B; employees+investors ~47%). Abandoning the capped-profit cap is what UNLOCKED the mega-rounds - the legal precondition for the 'continuous external-capital injection' the proofs require (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Stargate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "commitment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "fin-openai-conversion-governance.json",
+      "note": "Part of ~$1.4T of compute commitments vs ~$25B revenue run-rate (end-Feb 2026): Stargate ($500B/10GW headline, Jan 2025) + Oracle >$300B/5yr + Azure $250B + Broadcom/AMD/Nvidia/CoreWeave. Z3 T3: needs >=$1.03T external capital (UNSAT without it) (fact)."
     },
     {
       "from": "SDNY",
@@ -17490,19 +17666,6 @@
       "note": "GIC + Coatue led the $30B round at $380B post-money."
     },
     {
-      "from": "MGX",
-      "to": "Anthropic",
-      "instrument": "equity",
-      "layer": "financial",
-      "raw_instrument": "Series G equity (co-lead)",
-      "amount_usd": null,
-      "status": "completed",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "fin-google-amazon-anthropic-meta.json",
-      "note": "MGX (UAE sovereign) co-led. Round total $30B / $380B post-money."
-    },
-    {
       "from": "ANTHROPIC_INVESTORS",
       "to": "Anthropic",
       "instrument": "other",
@@ -17644,32 +17807,6 @@
       "cancelable": false,
       "source_file": "fin-google-amazon-anthropic-meta.json",
       "note": "Noted for completeness; detailed in core-ring file. ~6GW Instinct; warrant for up to ~160M AMD shares vesting on deployment/price milestones. OpenAI is both customer and (via warrant) equity holder."
-    },
-    {
-      "from": "MGX",
-      "to": "OpenAI",
-      "instrument": "equity",
-      "layer": "financial",
-      "raw_instrument": "equity + Stargate partner ($7B)",
-      "amount_usd": 7000000000,
-      "status": "active",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "fin-google-amazon-anthropic-meta.json",
-      "note": "MGX = Stargate partner ($7B, 40% with Oracle vs SoftBank/OpenAI 40% each at $19B). Also OpenAI investor; PIF in talks on OpenAI ~$40B round."
-    },
-    {
-      "from": "MGX",
-      "to": "xAI",
-      "instrument": "equity",
-      "layer": "financial",
-      "raw_instrument": "equity (co-lead, Jan 2026 round)",
-      "amount_usd": null,
-      "status": "completed",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "fin-google-amazon-anthropic-meta.json",
-      "note": "MGX co-invested in xAI's Jan 2026 round (second-largest private tech round on record per reports)."
     },
     {
       "from": "Unification_Church",
@@ -25108,6 +25245,58 @@
       "note": ""
     },
     {
+      "from": "NVIDIA",
+      "to": "TSMC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-taiwan-silicon-shield.json",
+      "note": "TSMC is the sole volume producer of the leading edge (~95% of most-advanced chips) + CoWoS advanced packaging that stitches GPU dies to HBM into an AI accelerator - the master chokepoint the AI thesis rests on (fact)."
+    },
+    {
+      "from": "TSMC",
+      "to": "Taiwan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "located",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-taiwan-silicon-shield.json",
+      "note": "~95% of advanced-chip + CoWoS capacity is on the island; Taipei law keeps the bleeding edge at home (Arizona runs a node or two behind; AZ wafers reportedly flown back to Taiwan for CoWoS) (fact)."
+    },
+    {
+      "from": "China",
+      "to": "Taiwan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "coercion",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-taiwan-silicon-shield.json",
+      "note": "PLA gray-zone incursions, missile drills, maritime militia, undersea-cable cuts; China can QUARANTINE Taiwan (coast-guard 'customs inspections') and choke chip exports without touching a fab - the coercion risk under the entire map (fact of activity; invasion-vs-quarantine = interpretation)."
+    },
+    {
+      "from": "TSMC",
+      "to": "Amkor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "packaging",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-taiwan-silicon-shield.json",
+      "note": "Advanced packaging (CoWoS/InFO) is a separate, equally-concentrated chokepoint (TSMC + Amkor only now starting outside Taiwan) - the finished-accelerator bottleneck (fact)."
+    },
+    {
       "from": "Japanese_Banks",
       "to": "US_Treasuries",
       "instrument": "other",
@@ -30218,10 +30407,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1346,
-    "num_edges": 1910,
-    "num_financial_edges": 266,
-    "num_structural_edges": 1644,
+    "num_nodes": 1351,
+    "num_edges": 1923,
+    "num_financial_edges": 270,
+    "num_structural_edges": 1653,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -30270,14 +30459,17 @@
       "AI_Datacenters",
       "AMD",
       "Amazon",
+      "Amkor",
       "Anthropic",
       "China",
+      "CoWoS",
       "CoreWeave",
       "Crusoe",
       "DARPA",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Electricity_Ratepayers",
+      "G42",
       "Google",
       "HV_Transformers",
       "ICE",
@@ -30287,6 +30479,7 @@
       "Microsoft",
       "NVIDIA",
       "Niantic",
+      "OSAT",
       "OpenAI",
       "Oracle",
       "Palantir",
@@ -30299,11 +30492,13 @@
       "SpaceX",
       "Stanford_University",
       "Stargate",
+      "Stargate_UAE",
       "TMobile",
+      "TSMC",
       "US_Banks",
       "US_Treasuries"
     ],
-    "core_scc_all_edges_size": 35,
+    "core_scc_all_edges_size": 41,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -30314,11 +30509,15 @@
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -30330,15 +30529,6 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
@@ -30347,6 +30537,11 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -33833,6 +34028,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "G42": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "G7": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34184,6 +34386,13 @@
         "in_robust_core": false
       },
       "HTX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "HUMAIN": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -36444,6 +36653,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "OpenAI_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Open_Local_AI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38215,6 +38431,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stargate_UAE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Starlink": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38469,6 +38692,13 @@
       },
       "Tai_Mo_Shan": {
         "total_usd": 123000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Taiwan": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -39829,8 +40059,9 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 59,
+        "degree": 61,
         "neighbor_sectors": [
+          "ai",
           "ai_lab",
           "chip_vendor",
           "commodity",
@@ -39852,8 +40083,8 @@
           "statistic",
           "tech"
         ],
-        "n_neighbor_sectors": 20,
-        "source_files": 32,
+        "n_neighbor_sectors": 21,
+        "source_files": 34,
         "layers": [
           "financial",
           "structural"
@@ -39918,8 +40149,9 @@
       },
       {
         "node": "NVIDIA",
-        "degree": 30,
+        "degree": 32,
         "neighbor_sectors": [
+          "ai",
           "ai_lab",
           "chip_vendor",
           "hyperscaler",
@@ -39933,8 +40165,32 @@
           "telecom",
           "university"
         ],
-        "n_neighbor_sectors": 12,
-        "source_files": 11,
+        "n_neighbor_sectors": 13,
+        "source_files": 13,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "OpenAI",
+        "degree": 28,
+        "neighbor_sectors": [
+          "ai",
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "ip_rightsholder",
+          "neocloud",
+          "other",
+          "person",
+          "spv",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -39964,21 +40220,22 @@
         "both_layers": true
       },
       {
-        "node": "OpenAI",
-        "degree": 25,
+        "node": "Microsoft",
+        "degree": 17,
         "neighbor_sectors": [
-          "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "ip_rightsholder",
+          "ai",
+          "ai_lab",
+          "commodity",
+          "financial_infra",
           "neocloud",
           "other",
-          "person",
+          "pqc_quantum",
           "spv",
           "surveillance",
+          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 10,
+        "n_neighbor_sectors": 11,
         "source_files": 11,
         "layers": [
           "financial",
@@ -40007,29 +40264,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Microsoft",
-        "degree": 16,
-        "neighbor_sectors": [
-          "ai_lab",
-          "commodity",
-          "financial_infra",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Ripple",
@@ -40100,6 +40334,27 @@
         "both_layers": true
       },
       {
+        "node": "Stargate",
+        "degree": 13,
+        "neighbor_sectors": [
+          "ai_infra",
+          "ai_lab",
+          "bank",
+          "commodity",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Amazon",
         "degree": 10,
         "neighbor_sectors": [
@@ -40163,27 +40418,6 @@
         "both_layers": true
       },
       {
-        "node": "Stargate",
-        "degree": 12,
-        "neighbor_sectors": [
-          "ai_infra",
-          "ai_lab",
-          "bank",
-          "commodity",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "AI_Datacenters",
         "degree": 13,
         "neighbor_sectors": [
@@ -40198,6 +40432,26 @@
         ],
         "n_neighbor_sectors": 8,
         "source_files": 6,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Anthropic",
+        "degree": 14,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "defense_tech",
+          "financier",
+          "hyperscaler",
+          "other",
+          "space_real_economy",
+          "university"
+        ],
+        "n_neighbor_sectors": 7,
+        "source_files": 8,
         "layers": [
           "financial",
           "structural"
@@ -40220,27 +40474,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 4,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Oracle",
-        "degree": 9,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "commodity",
-          "other",
-          "private_credit",
-          "sink",
-          "spv"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"
