@@ -92,5 +92,43 @@
     "chokepoint": "Z3: REE-independent flagship production is UNSAT for 2026 (supply ~1,700 kg vs ~5,550 kg/yr demand); earliest feasible year 2028; 2026-27 REQUIRES China. Binding constraint = mine-to-magnet years, not dollars.",
     "debasement": "DoD budget +3.7x nominal (1998 $270B -> 2026 $1T) but -75% in gold (918M -> 233M oz). The $1T military buys ~25% of the gold the 1998 military did.",
     "allied_mincut": "Max-flow/min-cut (data/allied_mincut.json): allies+domestic cannot meet demand without China until ~2028; the MIN-CUT is consistently midstream SEPARATION/magnet-making, NOT mining (allied mining ~11,000 kg/yr >> 5,550 demand). Re-shoring mines does not fix the gap; only midstream processing does."
-  }
+  },
+  "nodes": [],
+  "edges": [
+    {
+      "from": "Rare_Earths",
+      "to": "Lockheed_Martin",
+      "instrument": "chokepoint",
+      "notes": "F-35 needs ~418 kg REE/jet (SmCo magnets for high-temp/missile nose cones); Lockheed = largest US samarium user; Block 4 slipped 2026->2031 (+$6B). China 100% of samarium, 99% heavy-REE separation; Dec-1-2025 auto-rejects foreign-military licenses (fact).",
+      "source": "defense-rare-earth block"
+    },
+    {
+      "from": "Rare_Earths",
+      "to": "Defense_Primes",
+      "instrument": "chokepoint",
+      "notes": "Z3: REE-independent flagship weapons production is UNSAT for 2026 (~1,700 kg supply vs ~5,550 kg/yr demand); earliest feasible 2028; 2026-27 REQUIRES China. Binding constraint = mine-to-magnet years, not dollars (fact).",
+      "source": "defense-rare-earth block"
+    },
+    {
+      "from": "MP_Materials",
+      "to": "Rare_Earths",
+      "instrument": "domestic_supply",
+      "notes": "MP Materials (DoD ~15% equity + $110/kg NdPr floor + $150M loan + 10yr offtake = state-as-vendor-financier) + USA Rare Earth not at full magnet scale until 2027-2028; samarium resilience 3-7 yrs; full mine-to-magnet 7-12+ yrs (fact).",
+      "source": "defense-rare-earth block"
+    },
+    {
+      "from": "US_Government",
+      "to": "Defense_Primes",
+      "instrument": "defense_budget",
+      "notes": "FY2026 ~$1T ($838.7B appropriations + $150B OBBB); FY27 request ~$1.5T. In GOLD terms the $1T buys ~25% of what the 1998 $270B military did (-75% in gold oz) (fact).",
+      "source": "defense-rare-earth block"
+    },
+    {
+      "from": "Anduril",
+      "to": "US_Government",
+      "instrument": "defense_contract",
+      "notes": "Anduril ($30.5B Jun-2025 -> $61B May-2026; rev ~$2.2B doubled): Army IVAS ($22B) reassigned from Microsoft (Feb 2026); Army enterprise contract consolidating 120 procurement actions - defense-tech disrupting the primes (fact).",
+      "source": "defense-rare-earth block"
+    }
+  ]
 }

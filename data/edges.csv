@@ -492,6 +492,11 @@ AI_Datacenters,Electricity_Ratepayers,other,,,False,False,macro-ai-datacenter-wa
 Electricity_Ratepayers,Datacenter_Backlash,other,,,False,False,macro-ai-datacenter-water-siting.json
 AI_Datacenters,Orbital_Datacenters,other,,,False,False,macro-ai-datacenter-water-siting.json
 SpaceX,Orbital_Datacenters,other,,,False,False,macro-ai-datacenter-water-siting.json
+Rare_Earths,Lockheed_Martin,other,,,False,False,defense-rare-earth.json
+Rare_Earths,Defense_Primes,other,,,False,False,defense-rare-earth.json
+MP_Materials,Rare_Earths,other,,,False,False,defense-rare-earth.json
+US_Government,Defense_Primes,other,,,False,False,defense-rare-earth.json
+Anduril,US_Government,other,,,False,False,defense-rare-earth.json
 Mubadala,GlobalFoundries,merger,,documented,False,False,spec-globalfoundries.json
 AMD,GlobalFoundries,other,,documented,False,False,spec-globalfoundries.json
 US_Government,CHIPS_Act,other,,documented,False,False,spec-globalfoundries.json
@@ -688,6 +693,11 @@ Ernest_Garcia,Carvana,regulatory_legal,,documented,False,False,spec-auto-credit-
 Ernest_Garcia,DriveTime,other,,documented,False,False,spec-auto-credit-unwind.json
 Subprime_Auto_ABS,Auto_Credit_Unwind,equity,,contested,False,False,spec-auto-credit-unwind.json
 PrivateCredit_Funds,Auto_Credit_Unwind,debt,,contested,False,False,spec-auto-credit-unwind.json
+ASML,ZEISS_SMT,other,,,False,False,geopolitics-chip-chokepoint-war.json
+ASML,Netherlands,other,,,False,False,geopolitics-chip-chokepoint-war.json
+Japan,TSMC,other,,,False,False,geopolitics-chip-chokepoint-war.json
+China,Rare_Earths,other,,,False,False,geopolitics-chip-chokepoint-war.json
+SMIC,ASML,other,,,False,False,geopolitics-chip-chokepoint-war.json
 Allstate,Arity,other,,documented,False,False,"spec-telematics-insurance.json,spec-auto-connected-surveillance.json"
 Allstate,Telematics_Insurance,other,,contested,False,False,spec-telematics-insurance.json
 Progressive_Insurance,Telematics_Insurance,other,,documented,False,False,spec-telematics-insurance.json

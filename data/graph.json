@@ -9756,6 +9756,71 @@
       "note": "SpaceX pushing Starlink/Starship-enabled orbital compute + AI-on-satellite; alongside Starcloud and Google 'Project Suncatcher'-type concepts - the tell of how binding terrestrial limits feel (fact)."
     },
     {
+      "from": "Rare_Earths",
+      "to": "Lockheed_Martin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chokepoint",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "defense-rare-earth.json",
+      "note": "F-35 needs ~418 kg REE/jet (SmCo magnets for high-temp/missile nose cones); Lockheed = largest US samarium user; Block 4 slipped 2026->2031 (+$6B). China 100% of samarium, 99% heavy-REE separation; Dec-1-2025 auto-rejects foreign-military licenses (fact)."
+    },
+    {
+      "from": "Rare_Earths",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chokepoint",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "defense-rare-earth.json",
+      "note": "Z3: REE-independent flagship weapons production is UNSAT for 2026 (~1,700 kg supply vs ~5,550 kg/yr demand); earliest feasible 2028; 2026-27 REQUIRES China. Binding constraint = mine-to-magnet years, not dollars (fact)."
+    },
+    {
+      "from": "MP_Materials",
+      "to": "Rare_Earths",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "domestic_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "defense-rare-earth.json",
+      "note": "MP Materials (DoD ~15% equity + $110/kg NdPr floor + $150M loan + 10yr offtake = state-as-vendor-financier) + USA Rare Earth not at full magnet scale until 2027-2028; samarium resilience 3-7 yrs; full mine-to-magnet 7-12+ yrs (fact)."
+    },
+    {
+      "from": "US_Government",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "defense_budget",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "defense-rare-earth.json",
+      "note": "FY2026 ~$1T ($838.7B appropriations + $150B OBBB); FY27 request ~$1.5T. In GOLD terms the $1T buys ~25% of what the 1998 $270B military did (-75% in gold oz) (fact)."
+    },
+    {
+      "from": "Anduril",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "defense_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "defense-rare-earth.json",
+      "note": "Anduril ($30.5B Jun-2025 -> $61B May-2026; rev ~$2.2B doubled): Army IVAS ($22B) reassigned from Microsoft (Feb 2026); Army enterprise contract consolidating 120 procurement actions - defense-tech disrupting the primes (fact)."
+    },
+    {
       "from": "Mubadala",
       "to": "GlobalFoundries",
       "instrument": "merger",
@@ -12536,6 +12601,71 @@
       "cancelable": false,
       "source_file": "spec-auto-credit-unwind.json",
       "note": ""
+    },
+    {
+      "from": "ASML",
+      "to": "ZEISS_SMT",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplier",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-chip-chokepoint-war.json",
+      "note": "ASML's EUV optics come from a SINGLE partner, Zeiss SMT (Germany); ~80% of all microchips are made with Zeiss optics + ASML systems - a chokepoint inside the chokepoint (fact)."
+    },
+    {
+      "from": "ASML",
+      "to": "Netherlands",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-chip-chokepoint-war.json",
+      "note": "ASML (NL) = sole EUV maker (~90% litho, 100% EUV; ~80% of EUV to TSMC); EUV required below ~7nm - Dutch/US export controls are the West's denial lever on China (fact)."
+    },
+    {
+      "from": "Japan",
+      "to": "TSMC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "materials_supply",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-chip-chokepoint-war.json",
+      "note": "Japan supplies >50% of 14 refined chip materials (photoresist/wafers/gases) - step (2) of the 7-layer chokepoint stack feeding the fabs (fact)."
+    },
+    {
+      "from": "China",
+      "to": "Rare_Earths",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dominance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-chip-chokepoint-war.json",
+      "note": "China's counter-leverage: ~90% of REE/antimony/gallium. Banned gallium/germanium/antimony to US (3 Dec 2024); added 7 heavy REE - Tb/Dy/Sm/Gd/Lu/Sc/Y (4 Apr 2025); FDP-Rule-style extraterritorial controls (9 Oct 2025) - the materials weapon that mirrors the West's EUV weapon (fact)."
+    },
+    {
+      "from": "SMIC",
+      "to": "ASML",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "export_control",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "geopolitics-chip-chokepoint-war.json",
+      "note": "China's SMIC is DENIED EUV under Dutch/US export controls - forced onto DUV multipatterning; China races LDP-EUV/SSMB-EUV alternatives (reported, not delivered) (fact of denial)."
     },
     {
       "from": "Allstate",
@@ -30623,9 +30753,9 @@
   ],
   "analysis": {
     "num_nodes": 1356,
-    "num_edges": 1938,
+    "num_edges": 1948,
     "num_financial_edges": 272,
-    "num_structural_edges": 1666,
+    "num_structural_edges": 1676,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -30673,6 +30803,7 @@
     "core_scc_all_edges_incl_structural": [
       "AI_Datacenters",
       "AMD",
+      "ASML",
       "Amazon",
       "Amkor",
       "Anthropic",
@@ -30689,6 +30820,7 @@
       "HV_Transformers",
       "ICE",
       "ImmigrationOS",
+      "Japan",
       "Lambda",
       "MSS",
       "Microsoft",
@@ -30711,9 +30843,10 @@
       "TMobile",
       "TSMC",
       "US_Banks",
-      "US_Treasuries"
+      "US_Treasuries",
+      "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 41,
+    "core_scc_all_edges_size": 44,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -30728,20 +30861,20 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -40309,7 +40442,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 61,
+        "degree": 62,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -40334,7 +40467,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 21,
-        "source_files": 34,
+        "source_files": 35,
         "layers": [
           "financial",
           "structural"
@@ -40343,12 +40476,13 @@
       },
       {
         "node": "US_Government",
-        "degree": 51,
+        "degree": 53,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
           "critical_minerals",
           "defense",
+          "defense_tech",
           "exchange",
           "financial_infra",
           "financier",
@@ -40363,8 +40497,8 @@
           "surveillance",
           "telecom"
         ],
-        "n_neighbor_sectors": 17,
-        "source_files": 32,
+        "n_neighbor_sectors": 18,
+        "source_files": 33,
         "layers": [
           "financial",
           "structural"

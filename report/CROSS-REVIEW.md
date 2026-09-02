@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `digitalid-orchestration-real-incentive.json` — related files by shared entities (verify cross-refs exist)
-- blockchain-registry.json: 10 shared entities
-- digitalid-corporate.json: 9 shared entities
-- macro-pqc-chips.json: 8 shared entities
-- macro-crqc-quantum-landscape.json: 8 shared entities
-- fin-hedera-connections.json: 7 shared entities
-- altcoin-lens.json: 7 shared entities
-- spec-quantum-computing-competitive-landscape.json: 7 shared entities
-- spec-network-overlay.json: 7 shared entities
+## Newest file `defense-rare-earth.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 4 shared entities
+- spec-network-overlay.json: 4 shared entities
+- catalog-academia-core.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- spec-dialog-society.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- influence-operator-network.json: 3 shared entities
+- geopolitics-defense-industrial-base.json: 3 shared entities
