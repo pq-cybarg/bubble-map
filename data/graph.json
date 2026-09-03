@@ -288,6 +288,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "American_Water_Works": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Americas_Region": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1874,6 +1878,10 @@
     },
     "Ernest_Garcia": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Essential_Utilities": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Ethanol_RFS": {
@@ -12914,6 +12922,45 @@
       "cancelable": false,
       "source_file": "spec-stormwater-easement-neglect-pattern.json",
       "note": "FEMA flood-zone designation + climate/hurricane intensification compound deferred-maintenance flooding - a maturity-wall-like backlog of un-upkept drains meeting worsening storms (fact of exposure)."
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Public_Water_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "privatizes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "American Water Works (AWK) = largest US regulated water/wastewater utility (~14M people, 14 states, 18 military installations). Growth model = ACQUIRE municipal systems (18 acquisitions in 2025) under state 'fair market value' laws + rate increases; $46-48B capex through 2035 (PFAS/lead lines). The water-side exemplar of the privatized-benefit/public-burden motif (fact of model)."
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Essential_Utilities",
+      "instrument": "merger",
+      "layer": "financial",
+      "raw_instrument": "merger",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "~$40B all-stock merger (close ~Q1 2027; merged entity keeps the American Water name, 17 states) - the TWO LARGEST US water corporations combining, further reducing competition; KY/OH clearances obtained (fact)."
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "critical_infra_cyber",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Oct 3 2024 cyberattack forced AWK to shut its MyWater customer portal + suspend billing (no water/wastewater facility impact; language suggested ransomware) - part of a rising wave of attacks on US water infrastructure, some linked to Iran/Russia/China. The OT/critical-infrastructure threat overlay on the water sector (fact)."
     },
     {
       "from": "OFAC",
@@ -33678,10 +33725,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1457,
-    "num_edges": 2142,
-    "num_financial_edges": 273,
-    "num_structural_edges": 1869,
+    "num_nodes": 1459,
+    "num_edges": 2145,
+    "num_financial_edges": 274,
+    "num_structural_edges": 1871,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -33817,20 +33864,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -33841,8 +33880,11 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -33856,9 +33898,20 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -33872,12 +33925,6 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -34401,6 +34448,13 @@
         "in_robust_core": false
       },
       "American_Farm_Bureau": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "American_Water_Works": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37180,6 +37234,13 @@
         "in_robust_core": false
       },
       "Ernest_Garcia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Essential_Utilities": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

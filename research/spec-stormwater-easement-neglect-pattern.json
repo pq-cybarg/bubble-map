@@ -5,7 +5,8 @@
     "frame": "A national, systemic pattern (NOT any single locality): ~7,250 MS4 systems under the Clean Water Act; deferred drain maintenance backs water onto private property; homeowners' remedies (inverse condemnation / nuisance) are real but often defeated by ownership-control + discretionary-vs-ministerial doctrines; utility easements (poles/vegetation) and municipal drainage duties overlap, creating a finger-pointing responsibility gap; HOA/resident land donations can shift maintenance cost to the public. The 'privatized benefit / public burden' + deferred-public-infrastructure motif that recurs across the corpus (Flint, ratepayer cost-shifting, the fiscal trap).",
     "grade": "statutes/EPA settlements/case law = FACT; the localities are ILLUSTRATIVE instances chosen for breadth across states; 'donate-to-block-a-road' and per-site utility/city disputes = graded/variable; no single jurisdiction is the subject.",
     "honest_limits": "MS4/CWA is enforced by EPA/states (water quality), not primarily by private flood plaintiffs; private flood claims run under state tort/takings law, where the city's OWNERSHIP/CONTROL of the specific drain and the design(discretionary)-vs-maintenance(ministerial) line frequently decide outcomes (San Diego pipe case; Shenson; AGCS v. Arlington).",
-    "method": "EPA enforcement (Salt Lake County UT; West Haven CT); inverse-condemnation case law (Billie v. Channahon IL 2025; Lynch v. Venice FL 2024-25; AGCS v. Arlington VA); SCOTUS 2012 Ark. Game & Fish; CALT/Iowa 'city liable for flooding'; Nolo (open-space donation)."
+    "method": "EPA enforcement (Salt Lake County UT; West Haven CT); inverse-condemnation case law (Billie v. Channahon IL 2025; Lynch v. Venice FL 2024-25; AGCS v. Arlington VA); SCOTUS 2012 Ark. Game & Fish; CALT/Iowa 'city liable for flooding'; Nolo (open-space donation).",
+    "water_utility_exemplar": "American Water Works (AWK) is the water-side counterpart to NextEra/FPL on the power side: a national investor-owned utility whose acquire-municipal-systems + rate-hike model, ~$40B Essential Utilities merger, and Oct-2024 cyberattack make it the exemplar of privatized water infrastructure (privatized benefit / public burden), distinct from municipal MS4 stormwater but part of the same water-governance picture."
   },
   "nodes": [
     {
@@ -55,6 +56,14 @@
     {
       "id": "Arlington_County_VA",
       "sector": "state"
+    },
+    {
+      "id": "American_Water_Works",
+      "sector": "commodity"
+    },
+    {
+      "id": "Essential_Utilities",
+      "sector": "commodity"
     }
   ],
   "edges": [
@@ -148,6 +157,34 @@
       "instrument": "flood_exposure",
       "notes": "FEMA flood-zone designation + climate/hurricane intensification compound deferred-maintenance flooding - a maturity-wall-like backlog of un-upkept drains meeting worsening storms (fact of exposure).",
       "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Public_Water_Systems",
+      "instrument": "privatizes",
+      "notes": "American Water Works (AWK) = largest US regulated water/wastewater utility (~14M people, 14 states, 18 military installations). Growth model = ACQUIRE municipal systems (18 acquisitions in 2025) under state 'fair market value' laws + rate increases; $46-48B capex through 2035 (PFAS/lead lines). The water-side exemplar of the privatized-benefit/public-burden motif (fact of model).",
+      "source": "AWK addition (Food & Water Watch; Cornell/Pitt 2022; Stateline; CNBC 2024-10; AWK filings; SEJ)"
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Essential_Utilities",
+      "instrument": "merger",
+      "notes": "~$40B all-stock merger (close ~Q1 2027; merged entity keeps the American Water name, 17 states) - the TWO LARGEST US water corporations combining, further reducing competition; KY/OH clearances obtained (fact).",
+      "source": "AWK addition (Food & Water Watch; Cornell/Pitt 2022; Stateline; CNBC 2024-10; AWK filings; SEJ)"
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Public_Water_Systems",
+      "instrument": "rate_hikes",
+      "notes": "Privatization rate critique: post-privatization water rates rise ~3x inflation (~18% every other year, Food & Water Watch); a 2022 Cornell/Pitt study found private ownership drives higher prices + less affordability MORE than drought/aging infrastructure; NJ Haddonfield sewer bills +50% after acquisition; 'taxing through the tap'; PA Gov. Shapiro pushback + a bill to repeal the 2016 'fair market value' law. Balancing view: municipalities often sell because they can't fund EPA-compliance upgrades, and PUCs still approve rates (fact of studies/positions; magnitude graded).",
+      "source": "AWK addition (Food & Water Watch; Cornell/Pitt 2022; Stateline; CNBC 2024-10; AWK filings; SEJ)"
+    },
+    {
+      "from": "American_Water_Works",
+      "to": "Stormwater_MS4",
+      "instrument": "critical_infra_cyber",
+      "notes": "Oct 3 2024 cyberattack forced AWK to shut its MyWater customer portal + suspend billing (no water/wastewater facility impact; language suggested ransomware) - part of a rising wave of attacks on US water infrastructure, some linked to Iran/Russia/China. The OT/critical-infrastructure threat overlay on the water sector (fact).",
+      "source": "AWK addition (Food & Water Watch; Cornell/Pitt 2022; Stateline; CNBC 2024-10; AWK filings; SEJ)"
     }
   ]
 }
