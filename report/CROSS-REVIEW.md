@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `macro-fdic.json` — related files by shared entities (verify cross-refs exist)
-- spec-crypto-enforcement-actors.json: 1 shared entities
-- digitalid-orchestration-real-incentive.json: 1 shared entities
-- macro-fintech-baas.json: 1 shared entities
-- macro-cross-sectional-analysis.json: 1 shared entities
-- fin-hedera-connections.json: 1 shared entities
-- spec-crypto-banking-debanking.json: 1 shared entities
-- macro-hidden-sovereign-debt.json: 1 shared entities
-- macro-oil-backwardation.json: 1 shared entities
+## Newest file `macro-pqc-chips.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 10 shared entities
+- digitalid-orchestration-real-incentive.json: 8 shared entities
+- spec-quantum-computing-competitive-landscape.json: 8 shared entities
+- fin-hedera-connections.json: 8 shared entities
+- energy-power.json: 7 shared entities
+- spec-cross-system-contagion.json: 7 shared entities
+- spec-telecom-satellite.json: 6 shared entities
+- spec-exchanges-asia.json: 6 shared entities

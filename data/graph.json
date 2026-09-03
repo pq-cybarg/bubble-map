@@ -968,6 +968,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "CRQC": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "CVS_Caremark": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3592,6 +3596,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "PQC": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "PSA_Port": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -3883,6 +3891,10 @@
     "QuantumComputingInc": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Quantum_Computing": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
     },
     "R2R_Opposition": {
       "sector": "political",
@@ -5159,6 +5171,10 @@
     "WISeART": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "WISeKey": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
     },
     "WISeSat": {
       "sector": "satellite",
@@ -12137,6 +12153,162 @@
       "cancelable": false,
       "source_file": "spec-tornado-samourai.json",
       "note": "64 months for laundering ~$2.2B; multi-jurisdiction developer-liability question."
+    },
+    {
+      "from": "IonQ",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Real-revenue leader: ~$12B val; Q1-2026 GAAP rev $64.7M (+755% YoY), FY26 guide $260-270M; trapped-ion; acquired Oxford Ionics + Vector Atomic (gov sensing); IonQ Federal (AFRL/DOE) - the exception with revenue + state anchor (fact)."
+    },
+    {
+      "from": "Rigetti",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Narrative-beta cohort (RGTI/QBTS/QUBT) at 800x+ sales - prices double/halve on headlines; fundamentals don't yet anchor (fact/interpretation)."
+    },
+    {
+      "from": "D_Wave",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Quantum-annealing; narrative-beta cohort (fact)."
+    },
+    {
+      "from": "Quantinuum",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Honeywell-backed trapped-ion (fact)."
+    },
+    {
+      "from": "PsiQuantum",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Photonic quantum (fact)."
+    },
+    {
+      "from": "IBM",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Superconducting-qubit roadmap (fact)."
+    },
+    {
+      "from": "Google",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Willow/superconducting quantum (fact)."
+    },
+    {
+      "from": "Quantum_Computing",
+      "to": "CRQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "capability",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "A cryptographically-relevant quantum computer (CRQC) would break RSA/ECC - the threat that anchors the whole PQC narrative (fact of the threat model; timeline uncertain)."
+    },
+    {
+      "from": "CRQC",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "threat",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "A CRQC breaks ECDSA (secp256k1) - the signature scheme securing BTC (and most chains) (ties #214 ECDSA.fail) (fact of threat model)."
+    },
+    {
+      "from": "CRQC",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "threat",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "Same ECDSA exposure; drives account-abstraction/PQC-migration debate (fact of threat model)."
+    },
+    {
+      "from": "CRQC",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "drives",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "The threat DRIVES the mandated PQC migration - the SAME catalysts pump both the threat (IonQ/RGTI/QBTS) and the defense (PQC), a closed narrative loop (interpretation on the loop; threat->migration is fact)."
+    },
+    {
+      "from": "IonQ",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-quantum-computing.json",
+      "note": "IonQ Federal: US Air Force Research Lab + DOE anchor - state-as-customer mirrors the defense/energy legs (fact)."
     },
     {
       "from": "US_Banks",
@@ -25737,6 +25909,84 @@
       "note": ""
     },
     {
+      "from": "NIST",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "NIST finalized FIPS 203 (ML-KEM), 204 (ML-DSA), 205 (SLH-DSA) on Aug 13 2024 - the real, mandated, deadline-driven migration driver; market ~$0.42B (2025) -> ~$2.84B (2030), ~46% CAGR (fact)."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "SEALSQ (LAES) QS7001 post-quantum secure chip - SPECULATIVE microcap, LOW likelihood of incumbency; edge is press-release velocity + narrative-stacking, not silicon share/cert depth; dilution-funded cash (current ratio 7.38). Incumbent-led migration (Infineon/NXP/STMicro/Thales) (fact + graded)."
+    },
+    {
+      "from": "WISeKey",
+      "to": "SEALSQ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "parent",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "WISeKey (WKEY) is SEALSQ's parent - same stacked-narrative microcap complex (fact)."
+    },
+    {
+      "from": "SEALSQ",
+      "to": "WISeSat",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "launch_customer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "WISeSat (WISeKey satellites) launched on SpaceX - a launch-customer relationship marketed as a strategic tie (fact; relationship, not incumbency)."
+    },
+    {
+      "from": "QRL",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "quantum_resistant",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "Quantum Resistant Ledger (QRL) = a PQC-native blockchain (XMSS hash-based signatures) - the crypto answer to the CRQC threat (ties altcoin-lens / QRL patent thread) (fact)."
+    },
+    {
+      "from": "PQC",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "migration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-pqc-chips.json",
+      "note": "PQC is pushed as the 'escape hatch' for centralized digital ID (crypto-agility mandate) - NECESSARY but NOT SUFFICIENT: it fixes the crypto layer while leaving every structural/centralization objection standing, and doubles as a vendor-captured capex windfall (cross-ref digitalid-orchestration) (fact + graded)."
+    },
+    {
       "from": "NVIDIA",
       "to": "TSMC",
       "instrument": "other",
@@ -30860,10 +31110,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1357,
-    "num_edges": 1956,
+    "num_nodes": 1361,
+    "num_edges": 1974,
     "num_financial_edges": 272,
-    "num_structural_edges": 1684,
+    "num_structural_edges": 1702,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -30929,6 +31179,7 @@
       "HV_Transformers",
       "ICE",
       "ImmigrationOS",
+      "IonQ",
       "Japan",
       "Lambda",
       "MSS",
@@ -30953,29 +31204,26 @@
       "TSMC",
       "UBS",
       "US_Banks",
+      "US_Government",
       "US_Treasuries",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 46,
+    "core_scc_all_edges_size": 48,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "NVIDIA",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -30983,8 +31231,17 @@
         "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Anthropic",
@@ -30997,15 +31254,10 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "Amazon",
         "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -31020,8 +31272,15 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -31029,13 +31288,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -32737,6 +32989,13 @@
         "in_robust_core": false
       },
       "CRE_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CRQC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37335,6 +37594,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PQC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PSA_Port": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37840,6 +38106,13 @@
         "in_robust_core": false
       },
       "QuantumComputingInc": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Quantum_Computing": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40079,6 +40352,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "WISeKey": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WISeSat": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40593,7 +40873,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 53,
+        "degree": 54,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -40615,7 +40895,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 33,
+        "source_files": 34,
         "layers": [
           "financial",
           "structural"
@@ -40624,7 +40904,7 @@
       },
       {
         "node": "Google",
-        "degree": 19,
+        "degree": 20,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -40633,6 +40913,7 @@
           "dlt",
           "ip_rightsholder",
           "other",
+          "pqc",
           "pqc_quantum",
           "satellite",
           "security_research",
@@ -40640,8 +40921,8 @@
           "surveillance",
           "university"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 14,
+        "n_neighbor_sectors": 14,
+        "source_files": 15,
         "layers": [
           "financial",
           "structural"
