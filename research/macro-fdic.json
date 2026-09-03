@@ -721,5 +721,22 @@
         "https://api.fdic.gov/banks/failures filters=FAILYR:2026 (failure count & failed assets)"
       ]
     }
+  ],
+  "nodes": [],
+  "edges": [
+    {
+      "from": "FDIC",
+      "to": "US_Banks",
+      "instrument": "insures",
+      "notes": "FDIC insures all US banks; aggregate ~4,650 institutions, ~$23.9T assets (2023Q4); unrealized securities losses ~-$478B (HTM -$274B carried at cost = self-marked bank asset class #1) (fact).",
+      "source": "macro-fdic; FDIC API"
+    },
+    {
+      "from": "US_Banks",
+      "to": "CRE",
+      "instrument": "exposure",
+      "notes": "CRE loans ~$2.3T on bank books; ~$30B maturing office loans underwater (IMF) - the commercial-real-estate leg of the credit-stress web (fact).",
+      "source": "macro-fdic; macro-cre-privatecredit; IMF GFSR"
+    }
   ]
 }

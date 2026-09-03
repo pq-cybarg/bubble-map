@@ -375,5 +375,55 @@
     "Private-credit AUM $1.5-2.0T varies by source/definition (direct lending vs broad private credit).",
     "Anthropic ~$36B and Meta $27B-vs-$29-30B figures are reported/in-progress and may move.",
     "'Circularity' (Nvidia->OpenAI->Oracle->neoclouds->Nvidia) is qualitatively flagged by IMF but not quantified in dollars by official sources."
+  ],
+  "nodes": [
+    {
+      "id": "CRE",
+      "sector": "capital"
+    }
+  ],
+  "edges": [
+    {
+      "from": "US_Banks",
+      "to": "PrivateCredit_Funds",
+      "instrument": "nonbank_exposure",
+      "notes": "Fed H.8 'loans to NDFIs' ~$1.97T (Apr-2026), ~$324B (2015) -> ~$1.0T (2024) -> ~$1.97T = the HIDDEN bank exposure to nonbanks (~6x since 2015); IMF/FSB flag private-credit interlinkage + valuation opacity + tech concentration (fact).",
+      "source": "macro-cre-privatecredit; FRED H.8; IMF GFSR Apr-2026; FSB May-2026"
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "AI_Datacenters",
+      "instrument": "buildout_exposure",
+      "notes": "~$800-900B datacenter private-credit pipeline (Morgan Stanley projection, not realized) - GPU/datacenter-backed private debt is the next, bigger First-Brands-shaped risk (projection).",
+      "source": "macro-cre-privatecredit"
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Insurers_Annuities",
+      "instrument": "risk_migration",
+      "notes": "Private-credit risk increasingly warehoused in insurance annuities (the retiree channel that ultimately holds the paper) (fact).",
+      "source": "macro-cre-privatecredit"
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Retail_401k",
+      "instrument": "retailization",
+      "notes": "Private credit being pushed into 401(k)/retail vehicles - migrating illiquid, manager-marked risk onto households (fact).",
+      "source": "macro-cre-privatecredit"
+    },
+    {
+      "from": "Apollo",
+      "to": "PrivateCredit_Funds",
+      "instrument": "operates",
+      "notes": "Apollo = a top private-credit/direct-lending manager (marks its own NAVs; ties to spec-crypto-sec-epstein's Apollo/Black) (fact).",
+      "source": "macro-private-credit-marks"
+    },
+    {
+      "from": "Blackstone",
+      "to": "PrivateCredit_Funds",
+      "instrument": "operates",
+      "notes": "Blackstone = a top private-credit manager (BCRED etc.) (fact).",
+      "source": "public record"
+    }
   ]
 }

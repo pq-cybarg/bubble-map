@@ -960,6 +960,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "CRE": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "CRE_Market": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -6543,6 +6547,84 @@
       "cancelable": false,
       "source_file": "spec-censorship-finance-adtech.json",
       "note": ""
+    },
+    {
+      "from": "US_Banks",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "nonbank_exposure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Fed H.8 'loans to NDFIs' ~$1.97T (Apr-2026), ~$324B (2015) -> ~$1.0T (2024) -> ~$1.97T = the HIDDEN bank exposure to nonbanks (~6x since 2015); IMF/FSB flag private-credit interlinkage + valuation opacity + tech concentration (fact)."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "buildout_exposure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "~$800-900B datacenter private-credit pipeline (Morgan Stanley projection, not realized) - GPU/datacenter-backed private debt is the next, bigger First-Brands-shaped risk (projection)."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Insurers_Annuities",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "risk_transfer",
+      "amount_usd": 180000000000,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json,macro-private-credit-marks.json",
+      "note": "Private-credit risk increasingly warehoused in insurance annuities (the retiree channel that ultimately holds the paper) (fact)."
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "Retail_401k",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "retailization",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json,macro-private-credit-marks.json",
+      "note": "Private credit being pushed into 401(k)/retail vehicles - migrating illiquid, manager-marked risk onto households (fact)."
+    },
+    {
+      "from": "Apollo",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Apollo = a top private-credit/direct-lending manager (marks its own NAVs; ties to spec-crypto-sec-epstein's Apollo/Black) (fact)."
+    },
+    {
+      "from": "Blackstone",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-cre-privatecredit.json",
+      "note": "Blackstone = a top private-credit manager (BCRED etc.) (fact)."
     },
     {
       "from": "US_Banks",
@@ -13771,6 +13853,45 @@
       "cancelable": false,
       "source_file": "macro-ai-power-grid-bottleneck.json",
       "note": "Oracle/Stargate ranked #1 in power-STRANDING exposure (much announced compute, less SECURED firm power; leases rather than self-generates). Nadella: 'not a compute glut, but a power and warm-shell glut' (fact of quote; ranking = interpretation)."
+    },
+    {
+      "from": "First_Brands",
+      "to": "UBS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "counterparty_loss",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-firstbrands-ubs.json",
+      "note": "UBS ~$500M First Brands exposure (largest unsecured group: HFS $233.7M + O'Connor $116.1M unsecured + secured). Loss path: opaque factoring obligor -> private-credit fund -> bank-affiliated asset manager (O'Connor). ~$700M alleged misappropriated, invoices inflated ~50x, $2.3B missing receivables (fact)."
+    },
+    {
+      "from": "First_Brands",
+      "to": "Jefferies",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "counterparty_loss",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-firstbrands-ubs.json",
+      "note": "Jefferies (Point Bonita) also exposed to First Brands' supply-chain-finance / private-credit unwind (fact)."
+    },
+    {
+      "from": "First_Brands",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "systemic_signal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-firstbrands-ubs.json,macro-consumer-abs-subprime.json",
+      "note": "The off-balance-sheet private-credit CANARY: leverage moved into factoring/SPVs/private credit, invisible until a discrete unwind; Fed named it in the FSR - same structural DNA as AI-datacenter/neocloud GPU-backed debt (fact + interpretation)."
     },
     {
       "from": "First_Brands",
@@ -24316,6 +24437,32 @@
       "note": "Niantic remained tied to Google's maps/cloud ecosystem post-spinout; Google was also an investor (fact of relationship; exact data-flows not public)."
     },
     {
+      "from": "FDIC",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "insures",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-fdic.json",
+      "note": "FDIC insures all US banks; aggregate ~4,650 institutions, ~$23.9T assets (2023Q4); unrealized securities losses ~-$478B (HTM -$274B carried at cost = self-marked bank asset class #1) (fact)."
+    },
+    {
+      "from": "US_Banks",
+      "to": "CRE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "macro-fdic.json",
+      "note": "CRE loans ~$2.3T on bank books; ~$30B maturing office loans underwater (IMF) - the commercial-real-estate leg of the credit-stress web (fact)."
+    },
+    {
       "from": "Russia_state",
       "to": "US_political_system",
       "instrument": "other",
@@ -26409,19 +26556,6 @@
       "note": ""
     },
     {
-      "from": "First_Brands",
-      "to": "PrivateCredit_Funds",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "trade-finance/factoring receivables (~$2.5B fabricated invoices, multi-factor double-pledge) - factoring/private-lending opacity, the Tricolor pattern in trade finance",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-consumer-abs-subprime.json",
-      "note": ""
-    },
-    {
       "from": "BNPL_Phantom_Debt",
       "to": "US_household_credit",
       "instrument": "other",
@@ -26836,32 +26970,6 @@
       "cancelable": false,
       "source_file": "macro-private-credit-marks.json",
       "note": "Apollo/Blue Owl/PIMCO are the marginal lenders to the AI buildout (Oracle $72B, CoreWeave, Meta Hyperion $27B) - ties spec-sec-filings-primary + macro-cre-privatecredit."
-    },
-    {
-      "from": "PrivateCredit_Funds",
-      "to": "Insurers_Annuities",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "risk_transfer",
-      "amount_usd": 180000000000,
-      "status": "deployed",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-private-credit-marks.json",
-      "note": "~$180B insurance-linked capital into private credit (2025, up from $120B 2023); ~1/5 of Athene/Global Atlantic investments are loans to AFFILIATED funds - the risk lands in annuity reserves."
-    },
-    {
-      "from": "PrivateCredit_Funds",
-      "to": "Retail_401k",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "risk_transfer",
-      "amount_usd": null,
-      "status": "EO-opened",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-private-credit-marks.json",
-      "note": "Trump EO (Aug 7 2025) + DOL rule open 401(k)s to private credit; interval/BDC retail wrappers >$400B doubling by 2029 - illiquid manager-marked risk to Main Street."
     },
     {
       "from": "Peter_Thiel",
@@ -30752,10 +30860,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1356,
-    "num_edges": 1948,
+    "num_nodes": 1357,
+    "num_edges": 1956,
     "num_financial_edges": 272,
-    "num_structural_edges": 1676,
+    "num_structural_edges": 1684,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -30815,6 +30923,7 @@
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Electricity_Ratepayers",
+      "First_Brands",
       "G42",
       "Google",
       "HV_Transformers",
@@ -30842,11 +30951,12 @@
       "Stargate_UAE",
       "TMobile",
       "TSMC",
+      "UBS",
       "US_Banks",
       "US_Treasuries",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 44,
+    "core_scc_all_edges_size": 46,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -30854,18 +30964,18 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Amazon",
         "Anthropic"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -30873,17 +30983,7 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -30894,14 +30994,18 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -30918,7 +31022,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -30926,6 +31029,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -32613,6 +32723,13 @@
         "in_robust_core": false
       },
       "CPI_Rent": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CRE": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40558,6 +40675,29 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 21,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "central_bank",
+          "financial_infra",
+          "financier",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 17,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "OpenAI",
         "degree": 29,
         "neighbor_sectors": [
@@ -40575,28 +40715,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 18,
-        "neighbor_sectors": [
-          "bank",
-          "central_bank",
-          "financial_infra",
-          "financier",
-          "other",
-          "private_credit",
-          "regulator",
-          "sink",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 16,
         "layers": [
           "financial",
           "structural"
@@ -40740,6 +40858,27 @@
         "both_layers": true
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 13,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "private_credit",
+          "retail"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stargate",
         "degree": 13,
         "neighbor_sectors": [
@@ -40803,29 +40942,8 @@
         "both_layers": true
       },
       {
-        "node": "PrivateCredit_Funds",
-        "degree": 9,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
-          "other",
-          "private_credit",
-          "retail"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "AI_Datacenters",
-        "degree": 13,
+        "degree": 14,
         "neighbor_sectors": [
           "commodity",
           "logistics",
