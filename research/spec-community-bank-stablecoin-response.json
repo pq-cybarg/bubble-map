@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "title": "Community/regional bank response - BankChain Alliance (bank-owned rail) vs the big-bank consortia, and the ICBA yield-ban advocacy",
+    "generated": "2026-09-03",
+    "frame": "The small-bank answer to the megabank digital-money consortia (spec-bank-digitalmoney-consortia): a shared, industry-OWNED network. Two prongs: (1) BankChain Alliance - 39 state banking associations / 3,283 banks / $21.8T - a bank-owned chain for tokenized deposits + bank-issued stablecoins (Aug 25 2026; 2027 target; early-stage); (2) ICBA advocacy to keep the stablecoin yield ban tight (protect deposits).",
+    "user_hypothesis_graded": "'The community-bank approach gives them a fighting chance to topple the large banks, who joined forces to stop them.' POSITIONING as a counterweight = FACT (BankChain is explicitly the small/regional alternative). 'Fighting chance to topple' = ASPIRATIONAL - BankChain is design-phase (no tech partner, no committed issuers, no governance published). 'Big banks joined to STOP them' = the big-bank consortia are genuine rivals, but the timeline (Clearing House Jun, BankChain Aug, 21-bank Sep 2026) and stated rationale read as PARALLEL, defensive-vs-fintech moves rather than demonstrably reactive to the community banks. Both remain open, testable claims.",
+    "the_strategic_fork": "Community banks pursue BANK issuance (BankChain: issue our own tokens) AND blocking NON-bank yield (ICBA: keep the issuer/affiliate yield ban) - coherent (favor bank-issued tokens, deny non-bank rate competition), even though a permissive-yield regime is exactly what could let nimble small banks/chains out-pay the megabanks (spec-stablecoin-yield-fight). Which path better serves community banks is the genuine open question.",
+    "vendor_lock": "A second motive: escaping the Fiserv/FIS/Jack Henry core-tech oligopoly by owning the rail.",
+    "grade": "membership/leadership/analyses = FACT; 'topple/stop' intent = labeled interpretation; per-bank effects = to verify."
+  },
+  "nodes": [
+    {
+      "id": "BankChain_Alliance",
+      "sector": "capital"
+    },
+    {
+      "id": "Community_Banks",
+      "sector": "capital"
+    },
+    {
+      "id": "Texas_Bankers_Association",
+      "sector": "capital"
+    },
+    {
+      "id": "FIS",
+      "sector": "capital"
+    },
+    {
+      "id": "Jack_Henry",
+      "sector": "capital"
+    }
+  ],
+  "edges": [
+    {
+      "from": "BankChain_Alliance",
+      "to": "Community_Banks",
+      "instrument": "owned_by",
+      "notes": "Announced Aug 25 2026: 39 STATE banking associations representing 3,283 banks ($21.8T assets, Mar-2026 call report) building a bank-OWNED, bank-GOVERNED chain for tokenized deposits + bank-issued stablecoins + settlement; 2027 target. Distinctive: it's the community/regional counterpart the members own themselves (vs a crypto firm or megabank owning the rail). EARLY-STAGE: RFP phase, no tech partner, no per-bank issuer list yet (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "Texas_Bankers_Association",
+      "to": "BankChain_Alliance",
+      "instrument": "leads",
+      "notes": "Texas Bankers Association led the formation (alliance registered in TX); interim chair Kathy Kraninger (Florida Bankers Association CEO; former CFPB director) (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Tokenized_Deposits",
+      "instrument": "product",
+      "notes": "Single interoperable network carrying tokenized DEPOSITS (liabilities stay on the issuing bank's book) (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Stablecoins",
+      "instrument": "bank_issued",
+      "notes": "...and bank-ISSUED stablecoins on the same rail - community banks want to ISSUE their own tokens, not just defend against others' (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Bank_Stablecoin_Consortium",
+      "instrument": "counterweight",
+      "notes": "Explicitly positioned as an industry-owned ALTERNATIVE to the big-bank groups. USER FRAMING graded: 'a fighting chance to topple the large banks' = ASPIRATIONAL (BankChain is design-phase, no tech partner/issuers); positioning-as-counterweight = FACT.",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "The_Clearing_House",
+      "instrument": "counterweight",
+      "notes": "The Clearing House tokenized-deposit net is owned by the ~25 LARGEST institutions; BankChain is the small/regional answer. 'Big banks joined forces to STOP them' graded: the big-bank consortia are rivals, but timing (TCH Jun, BankChain Aug, 21-bank Sep 2026) reads PARALLEL and primarily DEFENSIVE-vs-fintech/stablecoins, not demonstrably reactive to BankChain (interpretation).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "Fiserv",
+      "to": "Community_Banks",
+      "instrument": "core_vendor",
+      "notes": "Community banks run on a 3-vendor core-tech oligopoly (Fiserv/FIS/Jack Henry); BankChain co-founder Corey LeBlanc (Locality Bank) frames the chain as partly about breaking that lock-in (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "FIS",
+      "to": "Community_Banks",
+      "instrument": "core_vendor",
+      "notes": "One of the three dominant core-banking vendors (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "Jack_Henry",
+      "to": "Community_Banks",
+      "instrument": "core_vendor",
+      "notes": "One of the three dominant core-banking vendors; BankChain aims to reduce this dependence (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "ICBA",
+      "to": "Community_Banks",
+      "instrument": "represents",
+      "notes": "Independent Community Bankers of America - the community-bank trade group (fact).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "ICBA",
+      "to": "Stablecoins",
+      "instrument": "lobby_against_yield",
+      "notes": "ICBA's PARALLEL play is ADVOCACY not a token: ran an ad campaign + urged the Senate to strengthen the yield ban; ICBA analysis says permitting stablecoin interest would pull ~$1.3T from community banks and cut lending ~$850B; also fights over Fed master-account access + OCC trust charters (fact of positions).",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    },
+    {
+      "from": "Stablecoins",
+      "to": "Community_Banks",
+      "instrument": "deposit_flight_risk",
+      "notes": "The disintermediation-vs-competition crux for small banks: NY Fed found banks with stablecoin-related deposit exposure already lend less (loan-to-asset ~-14pp); community banks are the primary AG/SMALL-BIZ/RURAL lenders, so deposit migration hits rural/low-income credit hardest (fact). NOTE the strategic fork: community banks favor BANK issuance (BankChain) while blocking NON-bank yield (ICBA) - coherent, not contradictory.",
+      "source": "#227 (Aug 25-27 2026: KuCoin/Crowdfund Insider/TechTimes/The Defiant/American Banker; ICBA.org; NY Fed)"
+    }
+  ]
+}

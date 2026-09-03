@@ -620,6 +620,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "BankChain_Alliance": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Bank_Policy_Institute": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -1344,6 +1348,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "Community_Banks": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Congress": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -1922,6 +1930,10 @@
     },
     "FINRA_DR": {
       "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
+    "FIS": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "FMCS": {
@@ -2751,6 +2763,10 @@
     "JSR": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
+    },
+    "Jack_Henry": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Jan": {
       "sector": "ai_infra",
@@ -5016,6 +5032,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": true
     },
+    "Texas_Bankers_Association": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Texas_Two_Step": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -6710,6 +6730,162 @@
       "cancelable": false,
       "source_file": "influence-operator-network.json",
       "note": ""
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owned_by",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Announced Aug 25 2026: 39 STATE banking associations representing 3,283 banks ($21.8T assets, Mar-2026 call report) building a bank-OWNED, bank-GOVERNED chain for tokenized deposits + bank-issued stablecoins + settlement; 2027 target. Distinctive: it's the community/regional counterpart the members own themselves (vs a crypto firm or megabank owning the rail). EARLY-STAGE: RFP phase, no tech partner, no per-bank issuer list yet (fact)."
+    },
+    {
+      "from": "Texas_Bankers_Association",
+      "to": "BankChain_Alliance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Texas Bankers Association led the formation (alliance registered in TX); interim chair Kathy Kraninger (Florida Bankers Association CEO; former CFPB director) (fact)."
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Tokenized_Deposits",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Single interoperable network carrying tokenized DEPOSITS (liabilities stay on the issuing bank's book) (fact)."
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bank_issued",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "...and bank-ISSUED stablecoins on the same rail - community banks want to ISSUE their own tokens, not just defend against others' (fact)."
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "Bank_Stablecoin_Consortium",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "counterweight",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Explicitly positioned as an industry-owned ALTERNATIVE to the big-bank groups. USER FRAMING graded: 'a fighting chance to topple the large banks' = ASPIRATIONAL (BankChain is design-phase, no tech partner/issuers); positioning-as-counterweight = FACT."
+    },
+    {
+      "from": "BankChain_Alliance",
+      "to": "The_Clearing_House",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "counterweight",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "The Clearing House tokenized-deposit net is owned by the ~25 LARGEST institutions; BankChain is the small/regional answer. 'Big banks joined forces to STOP them' graded: the big-bank consortia are rivals, but timing (TCH Jun, BankChain Aug, 21-bank Sep 2026) reads PARALLEL and primarily DEFENSIVE-vs-fintech/stablecoins, not demonstrably reactive to BankChain (interpretation)."
+    },
+    {
+      "from": "Fiserv",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "core_vendor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Community banks run on a 3-vendor core-tech oligopoly (Fiserv/FIS/Jack Henry); BankChain co-founder Corey LeBlanc (Locality Bank) frames the chain as partly about breaking that lock-in (fact)."
+    },
+    {
+      "from": "FIS",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "core_vendor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "One of the three dominant core-banking vendors (fact)."
+    },
+    {
+      "from": "Jack_Henry",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "core_vendor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "One of the three dominant core-banking vendors; BankChain aims to reduce this dependence (fact)."
+    },
+    {
+      "from": "ICBA",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "represents",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Independent Community Bankers of America - the community-bank trade group (fact)."
+    },
+    {
+      "from": "ICBA",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lobby_against_yield",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "ICBA's PARALLEL play is ADVOCACY not a token: ran an ad campaign + urged the Senate to strengthen the yield ban; ICBA analysis says permitting stablecoin interest would pull ~$1.3T from community banks and cut lending ~$850B; also fights over Fed master-account access + OCC trust charters (fact of positions)."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deposit_flight_risk",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "The disintermediation-vs-competition crux for small banks: NY Fed found banks with stablecoin-related deposit exposure already lend less (loan-to-asset ~-14pp); community banks are the primary AG/SMALL-BIZ/RURAL lenders, so deposit migration hits rural/low-income credit hardest (fact). NOTE the strategic fork: community banks favor BANK issuance (BankChain) while blocking NON-bank yield (ICBA) - coherent, not contradictory."
     },
     {
       "from": "Boskin_Commission",
@@ -33285,10 +33461,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1440,
-    "num_edges": 2117,
+    "num_nodes": 1445,
+    "num_edges": 2129,
     "num_financial_edges": 273,
-    "num_structural_edges": 1844,
+    "num_structural_edges": 1856,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -33424,36 +33600,26 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
       ],
@@ -33465,14 +33631,24 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI",
-        "Microsoft"
+        "Oracle"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -34589,6 +34765,13 @@
         "in_robust_core": false
       },
       "Band_Protocol": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BankChain_Alliance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35862,6 +36045,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Community_Banks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Congress": {
         "total_usd": 193000000,
         "circular_usd": 0,
@@ -36871,6 +37061,13 @@
         "in_robust_core": false
       },
       "FINRA_DR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FIS": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38320,6 +38517,13 @@
         "in_robust_core": false
       },
       "JSR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jack_Henry": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42283,6 +42487,13 @@
       },
       "Tether": {
         "total_usd": 100030000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Texas_Bankers_Association": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

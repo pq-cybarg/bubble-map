@@ -31,11 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-clarity-act-chronology.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 2 shared entities
-- spec-crypto-legislation-forcing.json: 2 shared entities
-- blockchain-leg.json: 1 shared entities
-- spec-clarity-act-illicit-finance.json: 1 shared entities
-- spec-us-regulator-jurisdiction-map.json: 1 shared entities
-- influence-congress-hfsc.json: 1 shared entities
-- spec-sec-sdny-regulatory.json: 1 shared entities
+## Newest file `spec-community-bank-stablecoin-response.json` — related files by shared entities (verify cross-refs exist)
