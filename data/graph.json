@@ -412,6 +412,10 @@
       "sector": "data_provider",
       "has_exogenous_revenue": false
     },
+    "Arlington_County_VA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Arm": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1244,8 +1248,16 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "City_of_Venice_FL": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Cl0p": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Clean_Water_Act": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Clearview_AI": {
@@ -1912,6 +1924,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FEMA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "FFCB_Funding": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -2336,6 +2352,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "HOA_Land_Donation": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "HPE": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -2686,6 +2706,10 @@
     },
     "Intellexa": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Inverse_Condemnation": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "IonQ": {
@@ -3587,6 +3611,10 @@
     "Next-gen data centers / AI infrastructure": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "NextEra_Energy": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "Nexus_Darkweb": {
       "sector": "defense",
@@ -4520,6 +4548,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Salt_Lake_County": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Salvium": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -4850,6 +4882,10 @@
     },
     "Stonebrick_LLC": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Stormwater_MS4": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Story_Protocol": {
@@ -5400,6 +5436,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Utility_Easements": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "VALR": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -5462,6 +5502,10 @@
     },
     "Viasat": {
       "sector": "satellite",
+      "has_exogenous_revenue": false
+    },
+    "Village_of_Channahon": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Visa": {
@@ -5546,6 +5590,10 @@
     },
     "Wells_Fargo": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "West_Haven_CT": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Western_Aid_Ukraine": {
@@ -12697,6 +12745,175 @@
       "cancelable": false,
       "source_file": "spec-alignment-matrix.json",
       "note": ""
+    },
+    {
+      "from": "Clean_Water_Act",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "authorizes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "CWA Section 402(p) requires MS4 operators (~7,250 nationwide; Phase I >100k pop, Phase II <100k) to hold an NPDES permit + run a Stormwater Management Program (fact)."
+    },
+    {
+      "from": "EPA",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "EPA (or delegated state agency) enforces MS4 permits; civil penalties up to $25,000/violation/day; annual reporting - the program is water-QUALITY-framed but the maintenance obligations overlap flood conveyance (fact)."
+    },
+    {
+      "from": "EPA",
+      "to": "Salt_Lake_County",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "CWA settlement: county failed to develop/implement its MS4 stormwater program 'to the maximum extent practicable' (fact) [1 of many localities]."
+    },
+    {
+      "from": "EPA",
+      "to": "West_Haven_CT",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Consent-decree modification requiring the city to 'immediately and continuously implement a preventative MAINTENANCE plan' - the direct answer to deferred maintenance (fact) [locality]."
+    },
+    {
+      "from": "Stormwater_MS4",
+      "to": "Inverse_Condemnation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "liability_path",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "When deferred maintenance leaves drains clogged, water backs onto private property -> claims arise under STATE tort (negligence/nuisance) + inverse condemnation (5th Amendment takings). SCOTUS 2012 (Ark. Game & Fish): even temporary/recurring flooding can be a taking. Strict-liability in some states (e.g., CA constitution) (fact)."
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "Village_of_Channahon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "case_law",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Billie v. Village of Channahon (IL App, 2025): recurring-flooding inverse-condemnation/nuisance/trespass claims require proving the GOVERNMENT ACTION caused the water invasion - historic permit approvals alone insufficient (fact) [locality]."
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "City_of_Venice_FL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "case_law",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Lynch v. City of Venice (FL, 2024-25): homeowners sued for inverse condemnation/trespass/negligence over flooding that began Jan 2024 - active litigation over neglected drainage (fact) [locality]."
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "Arlington_County_VA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "case_law",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "AGCS Marine Ins. Co. v. Arlington County (VA): barred inverse-condemnation claims arising from municipal NEGLIGENCE - residents often can't prevail; the ownership/control + discretionary-design-vs-ministerial-maintenance doctrines defeat many claims (fact; the honest limit) [locality]."
+    },
+    {
+      "from": "Utility_Easements",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "responsibility_gap",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "The finger-pointing seam: utilities hold easements with pole/VEGETATION-maintenance duties while the CITY owns drainage upkeep - overlapping corridors with split responsibility let each defer to the other (fact of the split; per-site disputes vary)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Utility_Easements",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "obligations",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "NextEra Energy (parent of Florida Power & Light) - the largest US utility/renewables operator + a major datacenter-PPA supplier - holds pole/transmission easements nationwide with vegetation-management duties distinct from municipal drainage; the exemplar of the utility side of the gap (fact of role; specific local disputes graded)."
+    },
+    {
+      "from": "HOA_Land_Donation",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cost_shift",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Documented mechanism: HOAs/residents donate strips/open-space to a municipality (conservation/open-space) - which can entrench land use AND shift mow/maintenance cost to the public. Eminent domain can override a pure 'blocking' donation (Shelton CT Constitution Blvd condemnation; Hays County TX donation-to-ENABLE) - so 'donate-to-block-a-road' is a real but graded/limited variant, not a guaranteed lock (fact + grade)."
+    },
+    {
+      "from": "Stormwater_MS4",
+      "to": "Public_Water_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "motif",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "Same 'privatized benefit / public burden' + deferred-public-infrastructure motif as the water-systems thread (Flint) - governance-failure where upkeep of shared infrastructure is quietly deferred onto residents (interpretation, labeled)."
+    },
+    {
+      "from": "FEMA",
+      "to": "Stormwater_MS4",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "flood_exposure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stormwater-easement-neglect-pattern.json",
+      "note": "FEMA flood-zone designation + climate/hurricane intensification compound deferred-maintenance flooding - a maturity-wall-like backlog of un-upkept drains meeting worsening storms (fact of exposure)."
     },
     {
       "from": "OFAC",
@@ -33461,10 +33678,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1445,
-    "num_edges": 2129,
+    "num_nodes": 1457,
+    "num_edges": 2142,
     "num_financial_edges": 273,
-    "num_structural_edges": 1856,
+    "num_structural_edges": 1869,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -33604,6 +33821,18 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -33612,31 +33841,25 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
       [
+        "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -33649,12 +33872,6 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -34401,6 +34618,13 @@
         "in_robust_core": false
       },
       "Arity": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arlington_County_VA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35863,7 +36087,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "City_of_Venice_FL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cl0p": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Clean_Water_Act": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37032,6 +37270,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FEMA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FFCB_Funding": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37774,6 +38019,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "HOA_Land_Donation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "HPE": {
         "total_usd": 14000000000,
         "circular_usd": 0,
@@ -38384,6 +38636,13 @@
         "in_robust_core": false
       },
       "Intellexa": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Inverse_Condemnation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39960,6 +40219,13 @@
       },
       "Next-gen data centers / AI infrastructure": {
         "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NextEra_Energy": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -41596,6 +41862,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Salt_Lake_County": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Salvium": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42171,6 +42444,13 @@
         "in_robust_core": false
       },
       "Stonebrick_LLC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Stormwater_MS4": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43136,6 +43416,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Utility_Easements": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VALR": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43242,6 +43529,13 @@
         "in_robust_core": false
       },
       "Viasat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Village_of_Channahon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43389,6 +43683,13 @@
         "in_robust_core": false
       },
       "Wells_Fargo": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "West_Haven_CT": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

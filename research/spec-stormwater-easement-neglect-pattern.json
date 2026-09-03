@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "title": "Municipal stormwater/MS4 deferred-maintenance -> private-property flooding, easement cost-shifting, and the utility-vs-city responsibility gap - a national governance-failure pattern",
+    "generated": "2026-09-03",
+    "frame": "A national, systemic pattern (NOT any single locality): ~7,250 MS4 systems under the Clean Water Act; deferred drain maintenance backs water onto private property; homeowners' remedies (inverse condemnation / nuisance) are real but often defeated by ownership-control + discretionary-vs-ministerial doctrines; utility easements (poles/vegetation) and municipal drainage duties overlap, creating a finger-pointing responsibility gap; HOA/resident land donations can shift maintenance cost to the public. The 'privatized benefit / public burden' + deferred-public-infrastructure motif that recurs across the corpus (Flint, ratepayer cost-shifting, the fiscal trap).",
+    "grade": "statutes/EPA settlements/case law = FACT; the localities are ILLUSTRATIVE instances chosen for breadth across states; 'donate-to-block-a-road' and per-site utility/city disputes = graded/variable; no single jurisdiction is the subject.",
+    "honest_limits": "MS4/CWA is enforced by EPA/states (water quality), not primarily by private flood plaintiffs; private flood claims run under state tort/takings law, where the city's OWNERSHIP/CONTROL of the specific drain and the design(discretionary)-vs-maintenance(ministerial) line frequently decide outcomes (San Diego pipe case; Shenson; AGCS v. Arlington).",
+    "method": "EPA enforcement (Salt Lake County UT; West Haven CT); inverse-condemnation case law (Billie v. Channahon IL 2025; Lynch v. Venice FL 2024-25; AGCS v. Arlington VA); SCOTUS 2012 Ark. Game & Fish; CALT/Iowa 'city liable for flooding'; Nolo (open-space donation)."
+  },
+  "nodes": [
+    {
+      "id": "Stormwater_MS4",
+      "sector": "state"
+    },
+    {
+      "id": "Inverse_Condemnation",
+      "sector": "state"
+    },
+    {
+      "id": "Utility_Easements",
+      "sector": "commodity"
+    },
+    {
+      "id": "HOA_Land_Donation",
+      "sector": "state"
+    },
+    {
+      "id": "FEMA",
+      "sector": "state"
+    },
+    {
+      "id": "Clean_Water_Act",
+      "sector": "state"
+    },
+    {
+      "id": "NextEra_Energy",
+      "sector": "commodity"
+    },
+    {
+      "id": "Salt_Lake_County",
+      "sector": "state"
+    },
+    {
+      "id": "West_Haven_CT",
+      "sector": "state"
+    },
+    {
+      "id": "Village_of_Channahon",
+      "sector": "state"
+    },
+    {
+      "id": "City_of_Venice_FL",
+      "sector": "state"
+    },
+    {
+      "id": "Arlington_County_VA",
+      "sector": "state"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Clean_Water_Act",
+      "to": "Stormwater_MS4",
+      "instrument": "authorizes",
+      "notes": "CWA Section 402(p) requires MS4 operators (~7,250 nationwide; Phase I >100k pop, Phase II <100k) to hold an NPDES permit + run a Stormwater Management Program (fact).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "EPA",
+      "to": "Stormwater_MS4",
+      "instrument": "regulates",
+      "notes": "EPA (or delegated state agency) enforces MS4 permits; civil penalties up to $25,000/violation/day; annual reporting - the program is water-QUALITY-framed but the maintenance obligations overlap flood conveyance (fact).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "EPA",
+      "to": "Salt_Lake_County",
+      "instrument": "enforcement",
+      "notes": "CWA settlement: county failed to develop/implement its MS4 stormwater program 'to the maximum extent practicable' (fact) [1 of many localities].",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "EPA",
+      "to": "West_Haven_CT",
+      "instrument": "enforcement",
+      "notes": "Consent-decree modification requiring the city to 'immediately and continuously implement a preventative MAINTENANCE plan' - the direct answer to deferred maintenance (fact) [locality].",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Stormwater_MS4",
+      "to": "Inverse_Condemnation",
+      "instrument": "liability_path",
+      "notes": "When deferred maintenance leaves drains clogged, water backs onto private property -> claims arise under STATE tort (negligence/nuisance) + inverse condemnation (5th Amendment takings). SCOTUS 2012 (Ark. Game & Fish): even temporary/recurring flooding can be a taking. Strict-liability in some states (e.g., CA constitution) (fact).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "Village_of_Channahon",
+      "instrument": "case_law",
+      "notes": "Billie v. Village of Channahon (IL App, 2025): recurring-flooding inverse-condemnation/nuisance/trespass claims require proving the GOVERNMENT ACTION caused the water invasion - historic permit approvals alone insufficient (fact) [locality].",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "City_of_Venice_FL",
+      "instrument": "case_law",
+      "notes": "Lynch v. City of Venice (FL, 2024-25): homeowners sued for inverse condemnation/trespass/negligence over flooding that began Jan 2024 - active litigation over neglected drainage (fact) [locality].",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Inverse_Condemnation",
+      "to": "Arlington_County_VA",
+      "instrument": "case_law",
+      "notes": "AGCS Marine Ins. Co. v. Arlington County (VA): barred inverse-condemnation claims arising from municipal NEGLIGENCE - residents often can't prevail; the ownership/control + discretionary-design-vs-ministerial-maintenance doctrines defeat many claims (fact; the honest limit) [locality].",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Utility_Easements",
+      "to": "Stormwater_MS4",
+      "instrument": "responsibility_gap",
+      "notes": "The finger-pointing seam: utilities hold easements with pole/VEGETATION-maintenance duties while the CITY owns drainage upkeep - overlapping corridors with split responsibility let each defer to the other (fact of the split; per-site disputes vary).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Utility_Easements",
+      "instrument": "obligations",
+      "notes": "NextEra Energy (parent of Florida Power & Light) - the largest US utility/renewables operator + a major datacenter-PPA supplier - holds pole/transmission easements nationwide with vegetation-management duties distinct from municipal drainage; the exemplar of the utility side of the gap (fact of role; specific local disputes graded).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "HOA_Land_Donation",
+      "to": "Stormwater_MS4",
+      "instrument": "cost_shift",
+      "notes": "Documented mechanism: HOAs/residents donate strips/open-space to a municipality (conservation/open-space) - which can entrench land use AND shift mow/maintenance cost to the public. Eminent domain can override a pure 'blocking' donation (Shelton CT Constitution Blvd condemnation; Hays County TX donation-to-ENABLE) - so 'donate-to-block-a-road' is a real but graded/limited variant, not a guaranteed lock (fact + grade).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "Stormwater_MS4",
+      "to": "Public_Water_Systems",
+      "instrument": "motif",
+      "notes": "Same 'privatized benefit / public burden' + deferred-public-infrastructure motif as the water-systems thread (Flint) - governance-failure where upkeep of shared infrastructure is quietly deferred onto residents (interpretation, labeled).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    },
+    {
+      "from": "FEMA",
+      "to": "Stormwater_MS4",
+      "instrument": "flood_exposure",
+      "notes": "FEMA flood-zone designation + climate/hurricane intensification compound deferred-maintenance flooding - a maturity-wall-like backlog of un-upkept drains meeting worsening storms (fact of exposure).",
+      "source": "#223 national systemic (EPA CWA/MS4 settlements; inverse-condemnation case law 2024-25; CALT/Iowa; SCOTUS 2012 Ark. Game & Fish)"
+    }
+  ]
+}

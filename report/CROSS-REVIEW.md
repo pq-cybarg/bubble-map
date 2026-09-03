@@ -31,4 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-community-bank-stablecoin-response.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-stormwater-easement-neglect-pattern.json` — related files by shared entities (verify cross-refs exist)
