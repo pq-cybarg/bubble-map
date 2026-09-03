@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "title": "US financial/tech regulator jurisdiction map — the 'who regulates what' oversight backbone (+ the fragmentation that enables arbitrage)",
+    "generated": "2026-09-02",
+    "frame": "The recurring actors across this corpus (SEC, FDIC, Treasury, Federal Reserve, CFTC, FTC, OCC, CFPB, FinCEN, OFAC, FHFA, DOL, DOJ/SDNY, NIST) were each wired only via one-off enforcement edges. This overlay adds the STRUCTURAL jurisdiction backbone: which agency oversees which domain hub already in the graph. The point is not just completeness - the FRAGMENTATION itself (overlapping/ambiguous jurisdiction, esp. crypto SEC-vs-CFTC and bank Fed/OCC/FDIC/state) is the arbitrage surface actors exploit (regulatory-capture reads are labeled interpretation; statutory jurisdiction is fact).",
+    "grade": "statutory jurisdiction = FACT; specific enforcement actions cited = FACT; 'capture/arbitrage' framing = labeled interpretation.",
+    "method": "Agency enabling statutes + public enforcement records already cited elsewhere in the corpus (spec-crypto-enforcement-actors, macro-fdic, macro-cre-privatecredit, spec-palantir-surveillance/Fannie Mae, auto FTC v GM, Binance $4.3B DOJ/FinCEN/OFAC/CFTC resolution).",
+    "coverage_note": "Not exhaustive: this overlay wires the recurring financial/tech/defense regulators to their domain hubs. Other agencies touch the corpus and can be added as their blocks are interconnected (e.g., FCC/telecom, EPA, FAA/Boeing, HHS/CDC, GAO/OMB oversight, PCAOB audit, State/GEC)."
+  },
+  "nodes": [
+    {
+      "id": "OCC",
+      "sector": "state"
+    },
+    {
+      "id": "FHFA",
+      "sector": "state"
+    },
+    {
+      "id": "DOL",
+      "sector": "state"
+    },
+    {
+      "id": "NCUA",
+      "sector": "state"
+    },
+    {
+      "id": "FASB",
+      "sector": "state"
+    },
+    {
+      "id": "Commerce_BIS",
+      "sector": "state"
+    },
+    {
+      "id": "DHS",
+      "sector": "state"
+    },
+    {
+      "id": "Department_of_War",
+      "sector": "state"
+    }
+  ],
+  "edges": [
+    {
+      "from": "Federal_Reserve",
+      "to": "US_Banks",
+      "instrument": "bank_supervision",
+      "notes": "Fed supervises bank holding companies + sets monetary policy/capital (Basel III endgame); lender of last resort (fact).",
+      "source": "Federal Reserve Act"
+    },
+    {
+      "from": "OCC",
+      "to": "US_Banks",
+      "instrument": "national_bank_charter",
+      "notes": "OCC charters/supervises national banks + federal thrifts; its charter decisions (incl. crypto/fintech) are a jurisdictional battleground (fact).",
+      "source": "12 USC / OCC"
+    },
+    {
+      "from": "CFPB",
+      "to": "US_Banks",
+      "instrument": "consumer_protection",
+      "notes": "CFPB has consumer-financial-protection authority over banks/nonbanks; its funding + scope are politically contested (2025-26 rollback) (fact).",
+      "source": "Dodd-Frank"
+    },
+    {
+      "from": "FHFA",
+      "to": "Fannie_Mae",
+      "instrument": "conservator",
+      "notes": "FHFA is conservator/regulator of Fannie Mae + Freddie Mac (since 2008); Director Pulte drove the Fannie Mae x Palantir fraud-detection tie-up and floated release from conservatorship (fact).",
+      "source": "HERA 2008; spec-palantir-surveillance"
+    },
+    {
+      "from": "DOL",
+      "to": "Retail_401k",
+      "instrument": "erisa_fiduciary",
+      "notes": "DOL sets ERISA fiduciary rules for 401(k)s - the gate that a 2025 Executive Order pried open to let PRIVATE CREDIT/alts into retirement accounts (the retailization risk in macro-cre-privatecredit) (fact).",
+      "source": "ERISA; 2025 EO"
+    },
+    {
+      "from": "Treasury",
+      "to": "Stablecoins",
+      "instrument": "genius_act_oversight",
+      "notes": "Treasury/OCC oversight of payment stablecoins under the GENIUS Act; the stablecoin->Treasury-bill rail ties the fiscal trap to crypto (fact).",
+      "source": "GENIUS Act"
+    },
+    {
+      "from": "Treasury",
+      "to": "PrivateCredit_Funds",
+      "instrument": "systemic_watch",
+      "notes": "Treasury-chaired FSOC + OFR are (slowly) building the nonbank/private-credit systemic-risk metric; the datacenter-specific exposure is still not separately published (measurement gap) (fact).",
+      "source": "FSOC; OFR; IMF/FSB 2026"
+    },
+    {
+      "from": "SEC",
+      "to": "Coinbase",
+      "instrument": "securities_enforcement",
+      "notes": "SEC asserts securities jurisdiction over many tokens/exchanges (Coinbase, Ripple, Binance) - the SEC-vs-CFTC ambiguity is the core crypto arbitrage surface ('Project Crypto', #215) (fact).",
+      "source": "spec-crypto-enforcement-actors"
+    },
+    {
+      "from": "CFTC",
+      "to": "Binance",
+      "instrument": "commodities_enforcement",
+      "notes": "CFTC treats BTC/ETH as commodities + brought/settled actions (part of Binance's $4.3B 2023 resolution alongside DOJ/FinCEN/OFAC); CLARITY Act would hand it the spot-market lead (fact).",
+      "source": "CFTC; DOJ 2023"
+    },
+    {
+      "from": "FinCEN",
+      "to": "Binance",
+      "instrument": "bsa_aml",
+      "notes": "FinCEN (Treasury) enforces the Bank Secrecy Act/AML - central to the Binance resolution and the SE-Asia scam/illicit-finance thread (fact).",
+      "source": "DOJ/FinCEN 2023"
+    },
+    {
+      "from": "FTC",
+      "to": "Meta",
+      "instrument": "antitrust",
+      "notes": "FTC brings antitrust/consumer-protection actions across Big Tech (Meta monopolization case) + connected-car privacy (FTC v. GM) - the consumer/competition regulator of the AI/data cluster (fact).",
+      "source": "FTC"
+    },
+    {
+      "from": "NIST",
+      "to": "PQC",
+      "instrument": "standards",
+      "notes": "NIST sets the technical standards (FIPS 203/204/205 PQC) the rest of the regulatory stack references - standards-body as a quiet chokepoint (fact).",
+      "source": "NIST"
+    },
+    {
+      "from": "NCUA",
+      "to": "US_Banks",
+      "instrument": "credit_union_regulator",
+      "notes": "NCUA charters/insures credit unions (NCUSIF = the FDIC analog for ~4,500 CUs) - the fragmented deposit-insurance/charter map (Fed/OCC/FDIC/NCUA/state) is itself an arbitrage surface (fact).",
+      "source": "Federal Credit Union Act"
+    },
+    {
+      "from": "FASB",
+      "to": "US_Banks",
+      "instrument": "accounting_standards",
+      "notes": "FASB sets GAAP - incl. the HELD-TO-MATURITY-at-amortized-cost rule that lets banks carry underwater bonds at cost (the self-marked bank-asset defect, macro-fdic) and fair-value vs equity-method marks (fact).",
+      "source": "FASB ASC"
+    },
+    {
+      "from": "FASB",
+      "to": "AI_Datacenters",
+      "instrument": "useful_life_standards",
+      "notes": "GAAP useful-life/depreciation rules are the knob behind the depreciation-trap (fin-ai-depreciation-debttrap): extending GPU useful life 3->6yr flatters profit while economic life is ~2-3yr (fact of the standard; the abuse read is graded).",
+      "source": "FASB; fin-ai-depreciation-debttrap"
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "NVIDIA",
+      "instrument": "export_control",
+      "notes": "Commerce/BIS licenses advanced-chip exports (the NVIDIA-to-China restrictions + the IGAA/RTE regime that gated Gulf access to restricted GPUs, fin-gulf) - the West's compute-denial lever (fact).",
+      "source": "BIS; fin-gulf"
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "China",
+      "instrument": "chip_controls",
+      "notes": "BIS entity list + Foreign Direct Product Rule are the US half of the two-sided chip-chokepoint war (China's REE/FDPR-style controls are the mirror) (fact).",
+      "source": "BIS; geopolitics-chip-chokepoint-war"
+    },
+    {
+      "from": "DHS",
+      "to": "ICE",
+      "instrument": "parent_agency",
+      "notes": "ICE is a DHS component; DHS/ICE drive the Palantir ImmigrationOS + LexisNexis/Thomson-Reuters data-broker procurement (spec-palantir-surveillance, spec-auto-connected-surveillance) (fact).",
+      "source": "DHS org"
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Defense_Primes",
+      "instrument": "procurement",
+      "notes": "The Department of Defense - renamed 'Department of War' by 2025 EO (secondary title; Secretary Pete Hegseth) - is the ~$1T/yr buyer of the primes; REE-gated (defense-rare-earth) (fact of rename + budget).",
+      "source": "2025 EO; defense-rare-earth"
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Palantir",
+      "instrument": "maven_customer",
+      "notes": "DoW is the customer for Palantir's Maven Smart System (~$1.3B ceiling) (fact).",
+      "source": "spec-palantir-surveillance"
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Anduril",
+      "instrument": "customer",
+      "notes": "DoW reassigned Army IVAS (~$22B) from Microsoft to Anduril (Feb 2026) (fact).",
+      "source": "defense-rare-earth"
+    }
+  ]
+}

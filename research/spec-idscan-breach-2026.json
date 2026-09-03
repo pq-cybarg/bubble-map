@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "title": "IDScan.net breach (Sep 2026): ~153M driver's licenses on the dark web — the digital-ID honeypot, realized (incl. the SecDef/'Secretary of War')",
+    "generated": "2026-09-02",
+    "frame": "The single clearest live validation of this project's digital-ID HONEYPOT argument (digitalid-orchestration 'honeypot_realized_live_cases', and the antidote-architecture): centralize the population's identity documents at one private verification vendor, and one breach exposes everyone at once - including the highest-access officials. A dark-web service ('Nexus', advertised on the Russian cybercrime forum Exploit, Aug 31 2026; surfaced by Brian Krebs Sep 1) offered ~153M US/Canada driver's-license scans + ~10M ID cards + ~3M travel docs + ~579k medical cards (claimed ~170M+ people). The FBI (New Orleans) is investigating; the suspected source is Louisiana ID-verification firm IDScan.net (~21M verifications/mo).",
+    "grade": "REPORTED (Krebs/KrebsOnSecurity + multiple outlets; FBI investigating). IDScan.net has NOT confirmed the breach and figures are not independently verified => attribution-to-IDScan and exact counts graded 'reported/uncorroborated-by-the-firm'. The honeypot INTERPRETATION is this project's thesis, labeled.",
+    "why_it_matters": "It proves the structural objection the ID-proponents wave away: aggregation is the risk. Front-and-back scans (some incl. IR/UV captures), Common Access Cards, employment-authorization + residence cards, and 'continuously exfiltrated for over a year' near-real-time = catastrophic even WITHOUT quantum (the plain stolen-outright case macro-pqc-chips's PQC 'escape hatch' does not fix). Physical-safety crisis for DV survivors / witness-protection / and for officials like the Secretary of War.",
+    "method": "KrebsOnSecurity; TechCrunch 2026-09-02; Engadget; Cybernews; Malwarebytes; Yahoo/Protos (Hegseth listing). Common victim link reported = Hertz rentals (IDScan clients incl. Hertz, Target, FedEx, Caesars, Motorola, Jack Henry)."
+  },
+  "nodes": [
+    {"id": "IDScan", "sector": "identity"},
+    {"id": "Nexus_Darkweb", "sector": "defense"},
+    {"id": "Pete_Hegseth", "sector": "person"},
+    {"id": "Hertz", "sector": "other"}
+  ],
+  "edges": [
+    {"from": "IDScan", "to": "Digital_ID", "instrument": "id_verification", "notes": "IDScan.net = centralized ID-verification vendor (~21M+ verifications/month for Fortune-500 clients) - i.e., a single aggregation point holding front/back license scans: the honeypot the digital-ID critique warns about (fact of business model).", "source": "TechCrunch 2026-09; Cybernews"},
+    {"from": "Nexus_Darkweb", "to": "IDScan", "instrument": "exfiltration", "notes": "'Nexus' dark-web service (advertised on Russian forum Exploit, Aug 31 2026) claimed to have 'continuously exfiltrated new data for over a year' with near-real-time access (~500k docs/day added) from 'a major identity-verification company'; Krebs + reporting point to IDScan; site shuttered after publicity (reported; IDScan not confirmed).", "source": "KrebsOnSecurity; Malwarebytes 2026-09"},
+    {"from": "IDScan", "to": "Hertz", "instrument": "client", "notes": "Common thread among victims = Hertz car rentals (IDScan verifies renters); other named clients: Target, FedEx, Caesars, Motorola, Jack Henry - the aggregation footprint (reported).", "source": "KrebsOnSecurity"},
+    {"from": "IDScan", "to": "Pete_Hegseth", "instrument": "data_exposed", "notes": "The listing included US Secretary of Defense / 'Secretary of War' Pete Hegseth's driver's license (offered ~$100), previewed to Krebs - plus Common Access Cards, employment-authorization + residence cards. A high-access official's ID in a mass leak is the acute national-security case (reported).", "source": "Krebs; Yahoo; Protos 2026-09"},
+    {"from": "Pete_Hegseth", "to": "Department_of_War", "instrument": "leads", "notes": "Hegseth heads the Department of War (renamed from DoD, 2025) - so his exposed ID sits atop the defense/Palantir-Maven/Anduril stack (fact of role).", "source": "public record"},
+    {"from": "IDScan", "to": "Data_Breach", "instrument": "honeypot_realized", "notes": "This IS the 'honeypot realized' scenario the antidote-architecture argues against - centralization guarantees single-point catastrophic exposure; PQC does NOT fix plain exfiltration (cross-ref digitalid-orchestration, macro-pqc-chips) (interpretation, labeled; the breach is reported fact).", "source": "digitalid-orchestration; this block"}
+  ]
+}

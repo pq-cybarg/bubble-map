@@ -1252,6 +1252,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Commerce_BIS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Commercial_Parents": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -1424,6 +1428,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "DHS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "DMCA_1201": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1435,6 +1443,10 @@
     "DOJ": {
       "sector": "regulator",
       "has_exogenous_revenue": true
+    },
+    "DOL": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "DSV": {
       "sector": "logistics",
@@ -1459,6 +1471,10 @@
     "Damian_Williams": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Data_Breach": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "Data_Center_Bandwagon": {
       "sector": "other",
@@ -1522,6 +1538,10 @@
     },
     "Democratic_Party_Korea": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "Department_of_War": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Deribit": {
@@ -1776,6 +1796,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FASB": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "FBI": {
       "sector": "state_intel",
       "has_exogenous_revenue": true
@@ -1787,6 +1811,10 @@
     "FFCB_Funding": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "FHFA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "FHLB_System": {
       "sector": "financial_infra",
@@ -2268,6 +2296,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "Hertz": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Hester_Peirce": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2370,6 +2402,10 @@
     },
     "ICSID": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "IDScan": {
+      "sector": "identity",
       "has_exogenous_revenue": false
     },
     "IEC": {
@@ -3268,6 +3304,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": false
     },
+    "NCUA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "NCUSIF": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -3384,6 +3424,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Nexus_Darkweb": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Niantic": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -3438,6 +3482,10 @@
     },
     "Nuclear_SMR": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "OCC": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "OFAC": {
@@ -3706,6 +3754,10 @@
     },
     "Pesticide_Liability_Shields": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Pete_Hegseth": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Peter_Thiel": {
@@ -14185,6 +14237,279 @@
       "note": "Jefferies/Leucadia (Point Bonita) also exposed; second canary alongside Tricolor (subprime auto) in 2025."
     },
     {
+      "from": "Federal_Reserve",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bank_supervision",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json,spec-cross-system-contagion.json",
+      "note": "Fed supervises bank holding companies + sets monetary policy/capital (Basel III endgame); lender of last resort (fact)."
+    },
+    {
+      "from": "OCC",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "national_bank_charter",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "OCC charters/supervises national banks + federal thrifts; its charter decisions (incl. crypto/fintech) are a jurisdictional battleground (fact)."
+    },
+    {
+      "from": "CFPB",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "consumer_protection",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "CFPB has consumer-financial-protection authority over banks/nonbanks; its funding + scope are politically contested (2025-26 rollback) (fact)."
+    },
+    {
+      "from": "FHFA",
+      "to": "Fannie_Mae",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conservator",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "FHFA is conservator/regulator of Fannie Mae + Freddie Mac (since 2008); Director Pulte drove the Fannie Mae x Palantir fraud-detection tie-up and floated release from conservatorship (fact)."
+    },
+    {
+      "from": "DOL",
+      "to": "Retail_401k",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "erisa_fiduciary",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "DOL sets ERISA fiduciary rules for 401(k)s - the gate that a 2025 Executive Order pried open to let PRIVATE CREDIT/alts into retirement accounts (the retailization risk in macro-cre-privatecredit) (fact)."
+    },
+    {
+      "from": "Treasury",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "genius_act_oversight",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "Treasury/OCC oversight of payment stablecoins under the GENIUS Act; the stablecoin->Treasury-bill rail ties the fiscal trap to crypto (fact)."
+    },
+    {
+      "from": "Treasury",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "systemic_watch",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "Treasury-chaired FSOC + OFR are (slowly) building the nonbank/private-credit systemic-risk metric; the datacenter-specific exposure is still not separately published (measurement gap) (fact)."
+    },
+    {
+      "from": "SEC",
+      "to": "Coinbase",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "securities_enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json,spec-sec-sdny-regulatory.json",
+      "note": "SEC asserts securities jurisdiction over many tokens/exchanges (Coinbase, Ripple, Binance) - the SEC-vs-CFTC ambiguity is the core crypto arbitrage surface ('Project Crypto', #215) (fact)."
+    },
+    {
+      "from": "CFTC",
+      "to": "Binance",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "commodities_enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "CFTC treats BTC/ETH as commodities + brought/settled actions (part of Binance's $4.3B 2023 resolution alongside DOJ/FinCEN/OFAC); CLARITY Act would hand it the spot-market lead (fact)."
+    },
+    {
+      "from": "FinCEN",
+      "to": "Binance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "bsa_aml",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "FinCEN (Treasury) enforces the Bank Secrecy Act/AML - central to the Binance resolution and the SE-Asia scam/illicit-finance thread (fact)."
+    },
+    {
+      "from": "FTC",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "antitrust",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "FTC brings antitrust/consumer-protection actions across Big Tech (Meta monopolization case) + connected-car privacy (FTC v. GM) - the consumer/competition regulator of the AI/data cluster (fact)."
+    },
+    {
+      "from": "NIST",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json,macro-pqc-chips.json",
+      "note": "NIST sets the technical standards (FIPS 203/204/205 PQC) the rest of the regulatory stack references - standards-body as a quiet chokepoint (fact)."
+    },
+    {
+      "from": "NCUA",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "credit_union_regulator",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "NCUA charters/insures credit unions (NCUSIF = the FDIC analog for ~4,500 CUs) - the fragmented deposit-insurance/charter map (Fed/OCC/FDIC/NCUA/state) is itself an arbitrage surface (fact)."
+    },
+    {
+      "from": "FASB",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "accounting_standards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "FASB sets GAAP - incl. the HELD-TO-MATURITY-at-amortized-cost rule that lets banks carry underwater bonds at cost (the self-marked bank-asset defect, macro-fdic) and fair-value vs equity-method marks (fact)."
+    },
+    {
+      "from": "FASB",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "useful_life_standards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "GAAP useful-life/depreciation rules are the knob behind the depreciation-trap (fin-ai-depreciation-debttrap): extending GPU useful life 3->6yr flatters profit while economic life is ~2-3yr (fact of the standard; the abuse read is graded)."
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "export_control",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "Commerce/BIS licenses advanced-chip exports (the NVIDIA-to-China restrictions + the IGAA/RTE regime that gated Gulf access to restricted GPUs, fin-gulf) - the West's compute-denial lever (fact)."
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chip_controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "BIS entity list + Foreign Direct Product Rule are the US half of the two-sided chip-chokepoint war (China's REE/FDPR-style controls are the mirror) (fact)."
+    },
+    {
+      "from": "DHS",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "parent_agency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "ICE is a DHS component; DHS/ICE drive the Palantir ImmigrationOS + LexisNexis/Thomson-Reuters data-broker procurement (spec-palantir-surveillance, spec-auto-connected-surveillance) (fact)."
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Defense_Primes",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "procurement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "The Department of Defense - renamed 'Department of War' by 2025 EO (secondary title; Secretary Pete Hegseth) - is the ~$1T/yr buyer of the primes; REE-gated (defense-rare-earth) (fact of rename + budget)."
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "maven_customer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "DoW is the customer for Palantir's Maven Smart System (~$1.3B ceiling) (fact)."
+    },
+    {
+      "from": "Department_of_War",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "customer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "note": "DoW reassigned Army IVAS (~$22B) from Microsoft to Anduril (Feb 2026) (fact)."
+    },
+    {
       "from": "Coinbase",
       "to": "FDIC",
       "instrument": "regulatory_legal",
@@ -14261,19 +14586,6 @@
       "cancelable": false,
       "source_file": "spec-sec-sdny-regulatory.json",
       "note": "$30M staking settlement (shut US staking) Feb 2023; separate unregistered-exchange suit Nov 2023; dismissed 2025."
-    },
-    {
-      "from": "SEC",
-      "to": "Coinbase",
-      "instrument": "regulatory_legal",
-      "layer": "structural",
-      "raw_instrument": "enforcement",
-      "amount_usd": null,
-      "status": "sued-then-DISMISSED-2025-02",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-sec-sdny-regulatory.json",
-      "note": "Unregistered-exchange suit Jun 2023; SEC agreed to dismiss Feb 2025 (the posture reversal)."
     },
     {
       "from": "SEC",
@@ -25379,19 +25691,6 @@
     },
     {
       "from": "Federal_Reserve",
-      "to": "US_Banks",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "circuit-breaker: a BTFP-style facility lets banks borrow at par, suppressing the HTM forced-sale spiral (precedent: 2023)",
-      "amount_usd": null,
-      "status": "contingent",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-cross-system-contagion.json",
-      "note": ""
-    },
-    {
-      "from": "Federal_Reserve",
       "to": "US_Treasuries",
       "instrument": "other",
       "layer": "structural",
@@ -26052,19 +26351,6 @@
       "cancelable": false,
       "source_file": "macro-gses-fhlb.json",
       "note": ""
-    },
-    {
-      "from": "NIST",
-      "to": "PQC",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "standards",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-pqc-chips.json",
-      "note": "NIST finalized FIPS 203 (ML-KEM), 204 (ML-DSA), 205 (SLH-DSA) on Aug 13 2024 - the real, mandated, deadline-driven migration driver; market ~$0.42B (2025) -> ~$2.84B (2030), ~46% CAGR (fact)."
     },
     {
       "from": "SEALSQ",
@@ -30773,6 +31059,84 @@
       "note": "Neither 2% inflation nor full employment (U-6) held while the rate path moved; Z3 macro-fed-trap shows no single feasible rate exists."
     },
     {
+      "from": "IDScan",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "id_verification",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "IDScan.net = centralized ID-verification vendor (~21M+ verifications/month for Fortune-500 clients) - i.e., a single aggregation point holding front/back license scans: the honeypot the digital-ID critique warns about (fact of business model)."
+    },
+    {
+      "from": "Nexus_Darkweb",
+      "to": "IDScan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exfiltration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "'Nexus' dark-web service (advertised on Russian forum Exploit, Aug 31 2026) claimed to have 'continuously exfiltrated new data for over a year' with near-real-time access (~500k docs/day added) from 'a major identity-verification company'; Krebs + reporting point to IDScan; site shuttered after publicity (reported; IDScan not confirmed)."
+    },
+    {
+      "from": "IDScan",
+      "to": "Hertz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "client",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "Common thread among victims = Hertz car rentals (IDScan verifies renters); other named clients: Target, FedEx, Caesars, Motorola, Jack Henry - the aggregation footprint (reported)."
+    },
+    {
+      "from": "IDScan",
+      "to": "Pete_Hegseth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_exposed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "The listing included US Secretary of Defense / 'Secretary of War' Pete Hegseth's driver's license (offered ~$100), previewed to Krebs - plus Common Access Cards, employment-authorization + residence cards. A high-access official's ID in a mass leak is the acute national-security case (reported)."
+    },
+    {
+      "from": "Pete_Hegseth",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "Hegseth heads the Department of War (renamed from DoD, 2025) - so his exposed ID sits atop the defense/Palantir-Maven/Anduril stack (fact of role)."
+    },
+    {
+      "from": "IDScan",
+      "to": "Data_Breach",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "honeypot_realized",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-idscan-breach-2026.json",
+      "note": "This IS the 'honeypot realized' scenario the antidote-architecture argues against - centralization guarantees single-point catastrophic exposure; PQC does NOT fix plain exfiltration (cross-ref digitalid-orchestration, macro-pqc-chips) (interpretation, labeled; the breach is reported fact)."
+    },
+    {
       "from": "Sam_Bankman_Fried",
       "to": "FTX",
       "instrument": "other",
@@ -31255,10 +31619,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1368,
-    "num_edges": 1983,
+    "num_nodes": 1381,
+    "num_edges": 2007,
     "num_financial_edges": 273,
-    "num_structural_edges": 1710,
+    "num_structural_edges": 1734,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -31361,15 +31725,15 @@
     "elementary_cycles": [
       [
         "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
       ],
       [
         "Microsoft",
@@ -31401,18 +31765,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -31421,6 +31773,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -33637,6 +34001,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Commerce_BIS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Commercial_Parents": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33938,6 +34309,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DHS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DMCA_1201": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33954,6 +34332,13 @@
       },
       "DOJ": {
         "total_usd": 950000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DOL": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -33995,6 +34380,13 @@
         "in_robust_core": false
       },
       "Damian_Williams": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Data_Breach": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -34107,6 +34499,13 @@
         "in_robust_core": false
       },
       "Democratic_Party_Korea": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Department_of_War": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -34554,6 +34953,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FASB": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FBI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34569,6 +34975,13 @@
         "in_robust_core": false
       },
       "FFCB_Funding": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FHFA": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35415,6 +35828,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hertz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hester_Peirce": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -35591,6 +36011,13 @@
         "in_robust_core": false
       },
       "ICSID": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IDScan": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37165,6 +37592,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NCUA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NCUSIF": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37368,6 +37802,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Nexus_Darkweb": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Niantic": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37460,6 +37901,13 @@
         "in_robust_core": false
       },
       "Nuclear_SMR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OCC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37929,6 +38377,13 @@
         "in_robust_core": false
       },
       "Pesticide_Liability_Shields": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pete_Hegseth": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41033,7 +41488,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 62,
+        "degree": 63,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -41058,7 +41513,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 21,
-        "source_files": 35,
+        "source_files": 36,
         "layers": [
           "financial",
           "structural"
@@ -41124,8 +41579,35 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 33,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "pqc_quantum",
+          "research",
+          "semiconductor",
+          "space_real_economy",
+          "spv",
+          "state",
+          "telecom",
+          "university"
+        ],
+        "n_neighbor_sectors": 14,
+        "source_files": 14,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
-        "degree": 22,
+        "degree": 26,
         "neighbor_sectors": [
           "bank",
           "capital",
@@ -41140,33 +41622,7 @@
           "statistic"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 18,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 32,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "telecom",
-          "university"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 13,
+        "source_files": 19,
         "layers": [
           "financial",
           "structural"
@@ -41244,6 +41700,52 @@
         "both_layers": false
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 15,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "private_credit",
+          "regulator",
+          "retail",
+          "state"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 10,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "SEC",
+        "degree": 21,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "defense",
+          "dlt",
+          "exchange",
+          "financier",
+          "industrial",
+          "person",
+          "regulator",
+          "state"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 10,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 21,
         "neighbor_sectors": [
@@ -41267,22 +41769,22 @@
         "both_layers": true
       },
       {
-        "node": "SEC",
-        "degree": 21,
+        "node": "Meta",
+        "degree": 15,
         "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "defense",
-          "dlt",
-          "exchange",
-          "financier",
-          "industrial",
-          "person",
+          "ai_data",
+          "ai_infra",
+          "chip_vendor",
+          "energy",
+          "other",
+          "political",
           "regulator",
-          "state"
+          "sink",
+          "surveillance",
+          "university"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 9,
+        "source_files": 6,
         "layers": [
           "financial",
           "structural"
@@ -41290,21 +41792,21 @@
         "both_layers": true
       },
       {
-        "node": "PrivateCredit_Funds",
-        "degree": 14,
+        "node": "AI_Datacenters",
+        "degree": 15,
         "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
+          "commodity",
+          "logistics",
+          "macro",
+          "neocloud",
           "other",
+          "political",
           "private_credit",
-          "retail",
+          "spv",
           "state"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 9,
+        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -41335,7 +41837,7 @@
       },
       {
         "node": "Palantir",
-        "degree": 20,
+        "degree": 21,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -41348,7 +41850,7 @@
           "university"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 6,
+        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -41390,49 +41892,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Meta",
-        "degree": 14,
-        "neighbor_sectors": [
-          "ai_data",
-          "ai_infra",
-          "chip_vendor",
-          "energy",
-          "other",
-          "political",
-          "sink",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 5,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "AI_Datacenters",
-        "degree": 14,
-        "neighbor_sectors": [
-          "commodity",
-          "logistics",
-          "macro",
-          "neocloud",
-          "other",
-          "political",
-          "private_credit",
-          "spv"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 6,
         "layers": [
           "financial",
           "structural"

@@ -15,15 +15,15 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 78 files
-- **Chainlink** — 56 files
+- **Meta** — 79 files
+- **Chainlink** — 57 files
 - **Google** — 51 files
 - **OpenAI** — 41 files
-- **FDIC** — 34 files
+- **FDIC** — 35 files
 - **Oracle** — 33 files
 - **Amazon** — 32 files
-- **NVIDIA** — 29 files
-- **Microsoft** — 29 files
+- **NVIDIA** — 30 files
+- **Microsoft** — 30 files
 - **Anthropic** — 24 files
 - **Stargate** — 23 files
 - **a16z** — 21 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `influence-congress-hfsc.json` — related files by shared entities (verify cross-refs exist)
-- temporal-bridges.json: 3 shared entities
-- spec-crypto-legislation-forcing.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 1 shared entities
-- influence-operator-network.json: 1 shared entities
-- spec-crypto-banking-debanking.json: 1 shared entities
-- macro-money-market-funds.json: 1 shared entities
-- macro-official-data-integrity.json: 1 shared entities
+## Newest file `spec-idscan-breach-2026.json` — related files by shared entities (verify cross-refs exist)
+- spec-disclosures-surveillance.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- temporal-bridges.json: 2 shared entities
+- defense-rare-earth.json: 2 shared entities
+- spec-dialog-society.json: 2 shared entities
+- spec-surveillance-cyber-threat-layer.json: 2 shared entities
+- geopolitics-defense-industrial-base.json: 2 shared entities
+- spec-inqtel-portfolio.json: 2 shared entities
