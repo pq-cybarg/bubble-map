@@ -1740,6 +1740,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Dominion_Energy": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "DriveTime": {
       "sector": "private_credit",
       "has_exogenous_revenue": false
@@ -1750,6 +1754,10 @@
     },
     "Dual_Mandate": {
       "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "Duane_Arnold_Nuclear": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "EDA_Tools": {
@@ -1936,6 +1944,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "FERC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "FFCB_Funding": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
@@ -1966,6 +1978,10 @@
     },
     "FOCI_Proxy": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "FPL": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "FSB": {
@@ -3079,6 +3095,10 @@
     "Laos": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Large_Load_Tariff": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Larry_Ellison": {
       "sector": "other",
@@ -8647,6 +8667,227 @@
       "note": "IP Strategy (Nasdaq: IPST) publicly issues statements promoting Aria releases (e.g., the RESCENE 'Busy Boy' K-pop master into $APL) - an aligned public-market promoter of the on-Story IP-RWA thesis (fact of statements; nature of any commercial tie not fully public)."
     },
     {
+      "from": "NextEra_Energy",
+      "to": "FPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns_subsidiary",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "FPL (Florida Power & Light) is NextEra's regulated utility - ~6M customer accounts, ~12M people; NextEra also runs NextEra Energy Resources, the largest US wind/solar/storage developer. Combined ~80 GW operational, the largest US generation owner (next five largest hold 37-56 GW each) (fact)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_ppa",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "Plan to add 15-30 GW of new generation to serve US data centers by 2035 (CEO Ketchum: 'we'll be disappointed if we don't do more'); 30 GW ~= power for ~22M homes. NextEra is the utility sector's biggest AI-power bet (fact of stated plan/PPAs; the 30 GW upper bound is a target, not committed capacity - graded)."
+    },
+    {
+      "from": "Google",
+      "to": "Duane_Arnold_Nuclear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_ppa",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "Google signed a 25-year PPA (Oct 2025) to buy output from NextEra's restarted 615 MW Duane Arnold nuclear plant (IA; shut 2020) to power an Iowa data center; NextEra bought the remaining 30% stake (sole owner, Iowa Utilities Commission-approved) and targets restart no later than Q1 2029 (~$0.16 EPS/yr over first 10 yrs) (fact)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Duane_Arnold_Nuclear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "nuclear_restart",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "First US restart of a fully decommissioned nuclear plant driven by datacenter demand - the template for treating retired nuclear as AI baseload (fact)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Nuclear_SMR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "smr_colocation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "NextEra + Google agreed to explore advanced/SMR nuclear; NextEra cites ~6 GW of SMR co-location opportunity at existing nuclear sites, but management flags 'first-of-a-kind' risk and frames SMRs as a next-decade solution (fact of agreement; deployment uncertain - graded)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "GE_Vernova",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gas_partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "Partnership with GE Vernova for natural-gas generation (paired with renewables+storage); NextEra has a >20 GW gas development pipeline and is developer of two Japan-backed gas-fired datacenter hubs in TX and PA. Gas is expected to be the MAJORITY of new datacenter capacity - the 'all of the above' pivot alongside its renewables lead (fact)."
+    },
+    {
+      "from": "Meta",
+      "to": "NextEra_Energy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "power_ppa",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "Meta contracted ~2.5 GW of NextEra solar+battery storage across ERCOT/SPP/MISO/New Mexico (Dec 2025), long-term PPAs powering Meta datacenters 2026-2028 - hyperscalers shifting from passive REC buyers to primary drivers of new generation (fact)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Dominion_Energy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "utility_consolidation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "Pending ~$67B acquisition of Dominion Energy (announced ~May 2026) - Dominion sits at the center of Virginia's 'Data Center Alley' with ~51 GW of contracted datacenter capacity and customers incl. Alphabet, Amazon, Microsoft, Meta, Equinix, CoreWeave, CyrusOne. Would make NextEra the dominant US datacenter-power supplier; subject to FERC/state approvals (fact of announced deal; close not certain - graded)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "generation_buildout",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "NextEra's buildout (renewables+storage backlog ~35 GW by Q2-2026; gas >20 GW; nuclear restart+SMR) is a leading driver of new US grid capacity - concentrating a large share of national generation additions in one investor-owned firm (fact; concentration concern = interpretation)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "HV_Transformers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "The buildout depends on scarce high-voltage transformers, switchgear, turbines, and labor/permitting - the same physical bottlenecks that gate the whole datacenter power stack (Q1-2026: labor+permitting called the primary gas-buildout constraint) (fact)."
+    },
+    {
+      "from": "FPL",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "large_load_interconnect",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "FPL reports ~21 GW of large-load interest (mostly hyperscale datacenters valuing speed/reliability/price), in active talks on ~12 GW that could energize as soon as 2028; Florida datacenter interconnection interest grew ~2 GW - more than Orlando's utility peak (fact)."
+    },
+    {
+      "from": "FPL",
+      "to": "Electricity_Ratepayers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rate_hikes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "FPL's Feb-2025 ask (~$9-10B over 4 yrs, billed as the largest US utility hike ever) was cut ~$2.9B in the Nov-2025 PSC settlement: +$945M base revenue Jan-2026, +$705M Jan-2027, plus solar/storage step-ups 2027-2029; ROE 10.95% (band 9.95-11.95%), 59.6% equity ratio. Opponents (Office of Public Counsel) peg cumulative increases ~$6.9B over 4 yrs and plan a FL Supreme Court appeal; a typical 1,000 kWh bill rises ~$134->~$137 in 2026. 'About profits, not reliability' = advocacy interpretation; PSC called it a 'balanced resolution' (graded)."
+    },
+    {
+      "from": "FPL",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "generation_buildout",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "FPL plans ~$40B over four years in 'all of the above' infrastructure: ~5.3 GW solar, ~3.4 GW battery storage, and a gas peaker (pending PSC approval) - regulated capex recovered through base rates (fact)."
+    },
+    {
+      "from": "AI_Datacenters",
+      "to": "Electricity_Ratepayers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cost_shift",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json,macro-ai-datacenter-water-siting.json",
+      "note": "The core public-interest question: absent a dedicated rate class, the cost of new generation/transmission to serve datacenters spreads across all ratepayers. Documented residual channels even WITH tariffs: PJM's market monitor found ~$13B of datacenter-driven costs allocated across PJM ratepayers in Q1-2026 alone (a federal wholesale layer state tariffs don't touch), and EIA modeling shows new gas demand raising system-wide gas prices (a cost on bills with no datacenter nearby). Stranded-asset risk if the AI bubble deflates (fact of documented channels; total magnitude graded)."
+    },
+    {
+      "from": "Large_Load_Tariff",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "large_load_tariff",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "The main regulatory remedy: special rate classes making datacenters pay their own infrastructure via long-term contracts, collateral, minimum-demand ('take-or-pay') charges, and bring-your-own-generation. Adoption surged - ~24 states with >=1 approved by mid-2026; DELTa tracked 20 approved in 2024 and 53 proposed/approved for 2025 (vs 14 in 2018-2024); >300 datacenter bills in 30 states in early 2026. Models: Dominion VA GS-5 (>=25 MW, 85% T&D / 60% generation take-or-pay, eff. Jan-2027), TX SB6, OH AEP, OR Schedule 96 (fact)."
+    },
+    {
+      "from": "FERC",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "FERC governs interstate transmission + wholesale markets (the layer where PJM regional datacenter-cost allocation lives); its Jan-2026 Advance Notice of Proposed Rulemaking seeks to standardize large-load interconnection and cost allocation nationally - the federal complement to state large-load tariffs (fact)."
+    },
+    {
+      "from": "NextEra_Energy",
+      "to": "Data_Center_Bandwagon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "demand_bet",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-nextera-national-utility.json",
+      "note": "NextEra's 15-30 GW plan is a direct bet on the datacenter-demand bandwagon; if AI buildout stalls, the exposure inverts into stranded-asset / over-procurement risk borne partly by ratepayers - linking the power-side buildout to the AI-bubble and datacenter-backlash threads (interpretation/risk-framing, grounded in the stranded-asset literature)."
+    },
+    {
       "from": "MtGox",
       "to": "Creditors",
       "instrument": "repayment",
@@ -10491,19 +10732,6 @@
       "cancelable": false,
       "source_file": "macro-ai-datacenter-water-siting.json",
       "note": "~200-300 BILLION gallons/yr (2024-2030) mostly evaporative cooling; ~2/3 of 809 planned US datacenters sited on land in drought - water-hungry cooling where water is scarcest (fact)."
-    },
-    {
-      "from": "AI_Datacenters",
-      "to": "Electricity_Ratepayers",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "cost_shift",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-ai-datacenter-water-siting.json",
-      "note": "'Private compute, public burden': Dallas Fed - wholesale power up to ~+50% as DC demand doubles in ~5yr; a Virginia bill jumped ~$100 -> $281/mo; states moving to special DC tariffs; now showing in PCE inflation (fact)."
     },
     {
       "from": "Electricity_Ratepayers",
@@ -33725,10 +33953,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1459,
-    "num_edges": 2145,
+    "num_nodes": 1464,
+    "num_edges": 2161,
     "num_financial_edges": 274,
-    "num_structural_edges": 1871,
+    "num_structural_edges": 1887,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -33801,6 +34029,7 @@
       "Early_Warning",
       "Electricity_Ratepayers",
       "FDIC",
+      "FPL",
       "Fairshake",
       "Fifth_Third",
       "First_Brands",
@@ -33819,8 +34048,10 @@
       "KeyBank",
       "Lambda",
       "MSS",
+      "Meta",
       "Microsoft",
       "NVIDIA",
+      "NextEra_Energy",
       "Niantic",
       "OSAT",
       "OpenAI",
@@ -33835,6 +34066,7 @@
       "Regions_Financial",
       "Ripple",
       "SEC",
+      "SINK_bondmarket",
       "SINK_lenders",
       "SaltTyphoon",
       "SpaceX",
@@ -33857,23 +34089,23 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 82,
+    "core_scc_all_edges_size": 86,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "AMD",
@@ -33884,13 +34116,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -33903,16 +34130,9 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Amazon",
@@ -33925,6 +34145,18 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -36995,6 +37227,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dominion_Energy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DriveTime": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37010,6 +37249,13 @@
         "in_robust_core": false
       },
       "Dual_Mandate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Duane_Arnold_Nuclear": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37338,6 +37584,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FERC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "FFCB_Funding": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37388,6 +37641,13 @@
         "in_robust_core": false
       },
       "FOCI_Proxy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FPL": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39334,6 +39594,13 @@
         "in_robust_core": false
       },
       "Laos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Large_Load_Tariff": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44238,6 +44505,34 @@
         "both_layers": true
       },
       {
+        "node": "Google",
+        "degree": 22,
+        "neighbor_sectors": [
+          "ai_lab",
+          "chip_vendor",
+          "commodity",
+          "crypto",
+          "crypto_infra",
+          "dlt",
+          "ip_rightsholder",
+          "other",
+          "pqc",
+          "pqc_quantum",
+          "satellite",
+          "security_research",
+          "space_real_economy",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 15,
+        "source_files": 17,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
         "degree": 32,
         "neighbor_sectors": [
@@ -44257,34 +44552,6 @@
         ],
         "n_neighbor_sectors": 13,
         "source_files": 21,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Google",
-        "degree": 21,
-        "neighbor_sectors": [
-          "ai_lab",
-          "chip_vendor",
-          "commodity",
-          "crypto",
-          "crypto_infra",
-          "dlt",
-          "ip_rightsholder",
-          "other",
-          "pqc",
-          "pqc_quantum",
-          "satellite",
-          "security_research",
-          "space_real_economy",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 15,
-        "source_files": 16,
         "layers": [
           "financial",
           "structural"
@@ -44460,11 +44727,12 @@
       },
       {
         "node": "Meta",
-        "degree": 15,
+        "degree": 16,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
           "chip_vendor",
+          "commodity",
           "energy",
           "other",
           "political",
@@ -44473,8 +44741,8 @@
           "surveillance",
           "university"
         ],
-        "n_neighbor_sectors": 10,
-        "source_files": 6,
+        "n_neighbor_sectors": 11,
+        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -44483,7 +44751,7 @@
       },
       {
         "node": "AI_Datacenters",
-        "degree": 15,
+        "degree": 18,
         "neighbor_sectors": [
           "commodity",
           "logistics",
@@ -44496,7 +44764,7 @@
           "state"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 7,
+        "source_files": 8,
         "layers": [
           "financial",
           "structural"
