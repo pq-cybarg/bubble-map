@@ -25,18 +25,18 @@
 - **Microsoft** — 31 files
 - **NVIDIA** — 30 files
 - **Anthropic** — 24 files
+- **Ripple** — 23 files
 - **JPMorgan** — 23 files
-- **Stargate** — 23 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-us-crypto-reg-tracker.json` — related files by shared entities (verify cross-refs exist)
-- spec-us-regulator-jurisdiction-map.json: 3 shared entities
-- macro-money-market-funds.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- macro-official-data-integrity.json: 2 shared entities
+## Newest file `spec-ecdsa-nonce-failure-tracker.json` — related files by shared entities (verify cross-refs exist)
+- spec-blockchain-ecosystem.json: 3 shared entities
+- spec-us-regulator-jurisdiction-map.json: 2 shared entities
+- blockchain-registry.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
+- macro-pqc-chips.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities
 - digitalid-orchestration-real-incentive.json: 2 shared entities
-- macro-stablecoin-failures-manipulation.json: 2 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
-- influence-congress-funding-compromise.json: 2 shared entities
+- spec-defense-primes-pqc.json: 2 shared entities

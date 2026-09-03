@@ -1764,6 +1764,14 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "ECDSA": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
+    "ECDSA_fail_Tracker": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "EDA_Tools": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -1827,6 +1835,10 @@
     "EchoStar_Boost": {
       "sector": "telecom",
       "has_exogenous_revenue": true
+    },
+    "EdDSA_Ed25519": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
     },
     "EeroQ": {
       "sector": "pqc_quantum",
@@ -4240,6 +4252,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "RFC6979_Deterministic": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "RIKEN": {
       "sector": "research",
       "has_exogenous_revenue": false
@@ -5630,6 +5646,10 @@
     },
     "WeCan_Group": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Weak_Nonce_Failure": {
+      "sector": "pqc",
       "has_exogenous_revenue": false
     },
     "Web3_Foundation": {
@@ -18998,6 +19018,162 @@
       "cancelable": false,
       "source_file": "macro-hidden-sovereign-debt.json",
       "note": ""
+    },
+    {
+      "from": "Bitcoin",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "crypto_dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "Bitcoin authorizes spends with ECDSA over the secp256k1 curve (Schnorr/Taproot added 2021 but ECDSA remains dominant for legacy UTXOs) - so every legacy signature's safety rests on nonce quality (fact)."
+    },
+    {
+      "from": "Ethereum",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "crypto_dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "Ethereum EOAs (externally-owned accounts) sign with ECDSA/secp256k1; the same nonce-quality dependence applies chain-wide (fact)."
+    },
+    {
+      "from": "ECDSA",
+      "to": "Weak_Nonce_Failure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "failure_mode",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "The security of ECDSA collapses if the per-signature nonce k is (a) reused (same r -> two linear equations -> solve for private key d, closed-form), (b) biased/partially known (lattice attack on the Hidden Number Problem), or (c) affinely/recurrence-related across signatures (2023 Polynonce; 2025 two-affinely-related-nonces gives closed-form recovery from just two sigs). Not a weakness in ECC hardness - a nonce-handling failure (theorem)."
+    },
+    {
+      "from": "Weak_Nonce_Failure",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "key_leak",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "Documented in the wild: Brengel & Rossow parsed 647,110,920 BTC signatures, found 1,068 reused r-values across 4,433 keys; the 2013 Android SecureRandom bug reused k and drained wallets; the 'half-half' custom implementation (nonce = half message-hash bits + half secret-key bits) let attackers empty hundreds of BTC addresses for years. Balancing fact: most such addresses are ALREADY EMPTY - continuous scanners sweep vulnerable keys (fact)."
+    },
+    {
+      "from": "Weak_Nonce_Failure",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "key_leak",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "Biased Nonce Sense (2019) recovered dozens of ETH/Ripple keys alongside hundreds of BTC keys; Polynonce (2023) scan flagged ~1,000 BTC/ETH addresses; 'Chain Reactions' (2026) showed nonce collisions compromising Polygon MEV searcher bots specifically (fact per study)."
+    },
+    {
+      "from": "ECDSA_fail_Tracker",
+      "to": "Weak_Nonce_Failure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "The 'ECDSA.fail' thread is the ongoing public-disclosure/scanner premise: continuously catalog chains and libraries for repeated/biased/related nonces and surface affected signatures. Treated here as a living tracker anchored on the peer-reviewed scans above; the project's own headline counts are its reported findings pending primary confirmation (graded)."
+    },
+    {
+      "from": "ECDSA_fail_Tracker",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "Recurring library/implementation disclosures feed the tracker: SlowMist's 'elliptic' JS malformed-input flaw (two distinct messages -> identical k -> key leak from a single (r,s1),(r,s2) pair); Minerva (2020) timing side-channel; 'Sleep Reveals the Nonce' (2026) sleep-based power side-channel enabling partial-k lattice recovery. Implementation surface, not algebraic break (fact)."
+    },
+    {
+      "from": "RFC6979_Deterministic",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mitigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "RFC 6979 derives k deterministically as HMAC(message-hash, secret-key) - the same message always yields the same k, removing dependence on external RNGs and eliminating the reuse/bias vector for correct implementations. The standard fix (fact)."
+    },
+    {
+      "from": "EdDSA_Ed25519",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "alternative_scheme",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "EdDSA (Ed25519) derives the nonce deterministically from the private key + message by design, structurally preventing RNG-driven nonce reuse; increasingly preferred over ECDSA for new systems - though it does NOT address the quantum threat (still elliptic-curve-based) (fact)."
+    },
+    {
+      "from": "Quantum_Computing",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "future_break_risk",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "The SEPARATE, future threat: a cryptographically-relevant quantum computer running Shor's algorithm recovers ECDSA private keys from PUBLIC keys directly (no nonce error needed) - the 'harvest-now, decrypt-later' logic for exposed on-chain pubkeys. Distinct in mechanism and timeline from nonce leakage, but the same reason to migrate signatures (fact of threat model; timing uncertain)."
+    },
+    {
+      "from": "PQC",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deprecation_path",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "The PQC migration (NIST ML-DSA/SLH-DSA; hash-based signatures) is the durable answer to BOTH failure classes: it removes the nonce-handling footgun AND the quantum break. ECDSA's weak-nonce disclosures are the present-tense evidence that the signature layer is fragile even before quantum - strengthening the migration case (fact + interpretation)."
+    },
+    {
+      "from": "QRL",
+      "to": "ECDSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supersession_claim",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ecdsa-nonce-failure-tracker.json",
+      "note": "The Quantum Resistant Ledger uses stateful hash-based signatures (XMSS) instead of ECDSA - positioned explicitly as post-ECDSA/post-quantum. Its thesis (ECDSA chains are structurally fragile) is bolstered by the nonce-failure record, though QRL adoption remains niche (fact of design; adoption graded)."
     },
     {
       "from": "Jump_Crypto",
@@ -34120,10 +34296,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1470,
-    "num_edges": 2172,
+    "num_nodes": 1475,
+    "num_edges": 2184,
     "num_financial_edges": 274,
-    "num_structural_edges": 1898,
+    "num_structural_edges": 1910,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -34177,6 +34353,7 @@
       "Anthropic",
       "Bank_Stablecoin_Consortium",
       "Binance",
+      "Bitcoin",
       "CFTC",
       "CLARITY_Act",
       "CRE",
@@ -34193,8 +34370,10 @@
       "DOJ",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
+      "ECDSA",
       "Early_Warning",
       "Electricity_Ratepayers",
+      "Ethereum",
       "FDIC",
       "FPL",
       "Fairshake",
@@ -34254,18 +34433,23 @@
       "US_Banks",
       "US_Government",
       "US_Treasuries",
+      "Weak_Nonce_Failure",
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 87,
+    "core_scc_all_edges_size": 91,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Microsoft",
@@ -34280,22 +34464,8 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -34303,16 +34473,14 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -34323,13 +34491,18 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -34337,6 +34510,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -37437,6 +37617,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ECDSA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ECDSA_fail_Tracker": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EDA_Tools": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37543,6 +37737,13 @@
         "in_robust_core": false
       },
       "EchoStar_Boost": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EdDSA_Ed25519": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41770,6 +41971,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "RFC6979_Deterministic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "RIKEN": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44200,6 +44408,13 @@
         "in_robust_core": false
       },
       "WeCan_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Weak_Nonce_Failure": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
