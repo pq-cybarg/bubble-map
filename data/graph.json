@@ -1472,6 +1472,10 @@
       "sector": "financier",
       "has_exogenous_revenue": false
     },
+    "Crypto_Sprint": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Crypto_com": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -2716,6 +2720,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Innovation_Exemption": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Institute_for_Legal_Reform": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -3174,6 +3182,10 @@
     },
     "Liquid": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Listed_Spot_Crypto": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "Lithium_Triangle": {
@@ -4116,6 +4128,10 @@
       "sector": "insurance",
       "has_exogenous_revenue": true
     },
+    "Project_Crypto": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Protocol_Labs": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -4278,6 +4294,10 @@
     },
     "Regions_Financial": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Regulation_Crypto_Assets": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Reliance": {
@@ -5138,6 +5158,10 @@
     },
     "Tobacco_MSA": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Tokenized_Collateral": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "Tokenized_Deposits": {
@@ -15293,7 +15317,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-us-regulator-jurisdiction-map.json,spec-cross-system-contagion.json",
+      "source_file": "spec-us-regulator-jurisdiction-map.json,spec-us-crypto-reg-tracker.json,spec-cross-system-contagion.json",
       "note": "Fed supervises bank holding companies + sets monetary policy/capital (Basel III endgame); lender of last resort (fact)."
     },
     {
@@ -15306,7 +15330,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-us-regulator-jurisdiction-map.json",
+      "source_file": "spec-us-regulator-jurisdiction-map.json,spec-us-crypto-reg-tracker.json",
       "note": "OCC charters/supervises national banks + federal thrifts; its charter decisions (incl. crypto/fintech) are a jurisdictional battleground (fact)."
     },
     {
@@ -19912,6 +19936,188 @@
       "note": ""
     },
     {
+      "from": "SEC",
+      "to": "Project_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rulemaking_initiative",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "SEC Chair Paul Atkins's flagship digital-asset program (unveiled 2025; 'inside Project Crypto' speech Nov-12-2025) to modernize securities rules for crypto and 'restore American leadership' - a Chair driving rulemaking through the formal process rather than a policy statement (fact)."
+    },
+    {
+      "from": "Project_Crypto",
+      "to": "Regulation_Crypto_Assets",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "proposed_rule",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "The rulemaking package: Atkins previewed 'Regulation Crypto Assets' (statement Aug-18-2026); at OIRA pre-publication review since Apr-6-2026, could publish as an NPRM any day. OIRA (Sep-4-2025) flagged two 2026 proposals - a comprehensive crypto-asset framework and Exchange-Act amendments for crypto trading on exchanges/ATSs. NOT final (fact of process; adoption pending - graded)."
+    },
+    {
+      "from": "Regulation_Crypto_Assets",
+      "to": "Innovation_Exemption",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exemption_framework",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "Three pillars (announced Mar-17-2026): Startup Exemption (early raises capped ~$5M over 4 yrs); Fundraising Exemption (mid-scale capped ~$75M per 12 mo); and an Investment-Contract Safe Harbor letting a token transition security->non-security when the issuer's essential managerial efforts cease (a status test, not the earlier 3-year clock). Legal-authority challenges already being prepared (fact of framework; durability contested)."
+    },
+    {
+      "from": "SEC",
+      "to": "CFTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "harmonization",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "The two agencies are actively harmonizing: Sep-2-2025 joint statement (current law doesn't bar a CFTC-registered DCM from listing certain spot digital assets); Mar-17-2026 JOINT interpretive release on Howey + a five-category token taxonomy (an objective anchor for the cessation test); Jan-29-2026 Selig+Atkins joint plans to make the US 'the world's crypto capital' (fact)."
+    },
+    {
+      "from": "CFTC",
+      "to": "Crypto_Sprint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rulemaking_initiative",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "A 12-month program launched Aug-2025 (under then-Acting Chair Caroline Pham) implementing the President's Working Group on Digital Asset Markets report; targeted to complete ~Aug-2026. Michael Selig (ex-chief counsel of the SEC Crypto Task Force, Atkins advisor) confirmed CFTC Chair Dec-18-2025, sworn Dec-22-2025 (term to Apr-2029); Pham then resigned (joined MoonPay), leaving a SINGLE commissioner - fast decisions but a bipartisan-balance/durability concern senators flag for 2026 (fact + analyst interpretation)."
+    },
+    {
+      "from": "Crypto_Sprint",
+      "to": "Listed_Spot_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spot_listing_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "Pillar 1: spot crypto contracts listed on CFTC-registered futures exchanges (DCMs). First leveraged spot product went live on Bitnomial Exchange (announced Dec-4-2025) - the first spot crypto on a CFTC-regulated venue (fact)."
+    },
+    {
+      "from": "Crypto_Sprint",
+      "to": "Tokenized_Collateral",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "pilot_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "Pillar 2: Dec-8-2025 Market Participants Division no-action relief + a 3-month Pilot Program letting FCMs accept non-securities digital assets as margin collateral - initially only PAYMENT STABLECOINS, BTC, and ETH (plus tokenized money-market funds); DCOs targeted to go live Q1-Q2 2026. Pillar 3 (blockchain-infra technical rulemaking on collateral/margin/clearing/settlement/reporting) targeted for completion Aug-2026 (fact)."
+    },
+    {
+      "from": "Tokenized_Collateral",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "collateral_eligibility",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "Payment stablecoins (as defined under the GENIUS Act regime) are the lead eligible collateral in the CFTC pilot - a concrete on-ramp tying the stablecoin statute to derivatives-market plumbing (fact)."
+    },
+    {
+      "from": "FDIC",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deregulation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json,macro-fdic.json",
+      "note": "FDIC clarified that supervised banks do NOT need prior approval to engage in crypto activities - reversing the prior de-facto pause and completing the tri-regulator (OCC/Fed/FDIC) green light (fact)."
+    },
+    {
+      "from": "Congress",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "legislation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "The statutory backstop, STALLED: House passed 294-134 (Jul-2025); Senate Banking advanced 15-9 (May-2026); Majority Leader Thune filed cloture Aug-8-2026; a procedural cloture / motion-to-proceed vote (needs 60, i.e. Democratic votes) is set for Sep-15-2026 - NOT final passage. Prediction markets cut 2026-enactment odds; many view it as 'dead in 2026' pending sticking points (fact of schedule; outcome open)."
+    },
+    {
+      "from": "CLARITY_Act",
+      "to": "SEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction_split",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json,spec-clarity-act-illicit-finance.json",
+      "note": "CLARITY would statutorily divide SEC/CFTC authority over digital assets (securities vs digital commodities) - codifying, and making durable, the administrative posture the two agencies are building via Project Crypto + the Crypto Sprint (fact of bill design)."
+    },
+    {
+      "from": "CLARITY_Act",
+      "to": "CFTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction_split",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json,spec-clarity-act-illicit-finance.json",
+      "note": "The digital-commodity spot-market authority CLARITY would give the CFTC is the statutory version of what the Crypto Sprint is doing administratively (listed spot on DCMs) - the SEC-vs-CFTC two-committee split is itself one of the delay factors (fact/interpretation)."
+    },
+    {
+      "from": "Project_Crypto",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "durability_dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "Atkins's stated position: rules alone aren't enough - legislation is 'indispensable' to 'future-proof' the framework against a 'future rogue regulator' unwinding it; the SEC 'has and will continue to support Congress in delivering the CLARITY Act.' The administrative buildout is explicitly framed as needing the statute for durability (fact of stated position)."
+    },
+    {
+      "from": "GENIUS_Act",
+      "to": "Tokenized_Collateral",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enabling_statute",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-us-crypto-reg-tracker.json",
+      "note": "The already-enacted GENIUS Act (payment-stablecoin regime) is the statutory foundation the CFTC leans on to admit payment stablecoins as margin - the one piece of the crypto statutory stack that DID pass, in contrast to the stalled CLARITY market-structure bill (fact)."
+    },
+    {
       "from": "Google",
       "to": "Hedera",
       "instrument": "governance",
@@ -20320,32 +20526,6 @@
       "instrument": "other",
       "layer": "structural",
       "raw_instrument": "crypto market-structure bill (H.R. 3633); House-passed; Senate Banking 15-9 (May 2026); calendar #423; needs 60-vote floor + reconciliation",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-clarity-act-illicit-finance.json",
-      "note": ""
-    },
-    {
-      "from": "CLARITY_Act",
-      "to": "SEC",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "splits jurisdiction \u2014 narrows SEC reach over 'digital commodities'",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-clarity-act-illicit-finance.json",
-      "note": ""
-    },
-    {
-      "from": "CLARITY_Act",
-      "to": "CFTC",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "makes the CFTC primary regulator of most digital commodities",
       "amount_usd": null,
       "status": "open",
       "declared_circular": false,
@@ -27400,19 +27580,6 @@
       "note": "GENIUS 1:1 reserves must be cash/short-T-bills/Treasury repo/MMFs - stablecoin growth is a structural Treasury-bill buyer, tying the yield fight to the fiscal trap (macro-us-fiscal-trap) (fact)."
     },
     {
-      "from": "FDIC",
-      "to": "US_Banks",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "insures",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-fdic.json",
-      "note": "FDIC insures all US banks; aggregate ~4,650 institutions, ~$23.9T assets (2023Q4); unrealized securities losses ~-$478B (HTM -$274B carried at cost = self-marked bank asset class #1) (fact)."
-    },
-    {
       "from": "US_Banks",
       "to": "CRE",
       "instrument": "other",
@@ -33953,10 +34120,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1464,
-    "num_edges": 2161,
+    "num_nodes": 1470,
+    "num_edges": 2172,
     "num_financial_edges": 274,
-    "num_structural_edges": 1887,
+    "num_structural_edges": 1898,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -34062,6 +34229,7 @@
       "Peter_Thiel",
       "Power_Grid",
       "PrivateCredit_Funds",
+      "Project_Crypto",
       "RIKEN",
       "Regions_Financial",
       "Ripple",
@@ -34089,7 +34257,7 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 86,
+    "core_scc_all_edges_size": 87,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -34100,12 +34268,8 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -34116,13 +34280,12 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -34135,6 +34298,11 @@
         "Oracle"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -34143,14 +34311,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -36758,6 +36926,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Crypto_Sprint": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crypto_com": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38935,6 +39110,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Innovation_Exemption": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Institute_for_Legal_Reform": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39734,6 +39916,13 @@
         "in_robust_core": false
       },
       "Liquid": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Listed_Spot_Crypto": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41385,6 +41574,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Project_Crypto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Protocol_Labs": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41666,6 +41862,13 @@
         "in_robust_core": false
       },
       "Regions_Financial": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Regulation_Crypto_Assets": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43177,6 +43380,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Tokenized_Collateral": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tokenized_Deposits": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44505,6 +44715,32 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 32,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "central_bank",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "stablecoin",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 22,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Google",
         "degree": 22,
         "neighbor_sectors": [
@@ -44526,32 +44762,6 @@
         ],
         "n_neighbor_sectors": 15,
         "source_files": 17,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 32,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "central_bank",
-          "crypto",
-          "financial_infra",
-          "financier",
-          "other",
-          "private_credit",
-          "regulator",
-          "sink",
-          "stablecoin",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -44634,6 +44844,30 @@
         "both_layers": true
       },
       {
+        "node": "SEC",
+        "degree": 23,
+        "neighbor_sectors": [
+          "crypto_firm",
+          "crypto_infra",
+          "defense",
+          "dlt",
+          "exchange",
+          "financier",
+          "industrial",
+          "other",
+          "person",
+          "regulator",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 22,
         "neighbor_sectors": [
@@ -44692,29 +44926,6 @@
           "private_credit",
           "regulator",
           "retail",
-          "state"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "SEC",
-        "degree": 21,
-        "neighbor_sectors": [
-          "crypto_firm",
-          "crypto_infra",
-          "defense",
-          "dlt",
-          "exchange",
-          "financier",
-          "industrial",
-          "person",
-          "regulator",
           "state"
         ],
         "n_neighbor_sectors": 10,

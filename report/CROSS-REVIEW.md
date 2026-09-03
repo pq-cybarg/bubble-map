@@ -19,7 +19,7 @@
 - **Chainlink** — 58 files
 - **Google** — 53 files
 - **OpenAI** — 41 files
-- **FDIC** — 36 files
+- **FDIC** — 37 files
 - **Oracle** — 33 files
 - **Amazon** — 33 files
 - **Microsoft** — 31 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-nextera-national-utility.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-system-contagion.json: 5 shared entities
-- sec-filings.json: 5 shared entities
-- fin-ai-depreciation-debttrap.json: 5 shared entities
-- macro-ai-power-grid-bottleneck.json: 5 shared entities
-- spec-sec-filings-primary.json: 5 shared entities
-- fin-coreweave-oracle.json: 5 shared entities
-- commodities-metals.json: 4 shared entities
-- energy-power.json: 4 shared entities
+## Newest file `spec-us-crypto-reg-tracker.json` — related files by shared entities (verify cross-refs exist)
+- spec-us-regulator-jurisdiction-map.json: 3 shared entities
+- macro-money-market-funds.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 2 shared entities
+- macro-official-data-integrity.json: 2 shared entities
+- digitalid-orchestration-real-incentive.json: 2 shared entities
+- macro-stablecoin-failures-manipulation.json: 2 shared entities
+- spec-crypto-banking-debanking.json: 2 shared entities
+- influence-congress-funding-compromise.json: 2 shared entities
