@@ -1712,6 +1712,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "Epic_Games": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Epistemic_Discipline": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -1988,11 +1992,19 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "GARM": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
     },
     "GCC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "GEC": {
       "sector": "state",
       "has_exogenous_revenue": false
     },
@@ -2162,6 +2174,10 @@
     },
     "HBM": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "HFSC": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "HHS": {
@@ -3048,6 +3064,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Maxine_Waters": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Mazda": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -3350,6 +3370,10 @@
     },
     "New_York_Convention": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "NewsGuard": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Newton": {
@@ -3991,6 +4015,10 @@
     "Rio_Tinto": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Riot_Games": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Ripio": {
       "sector": "exchange",
@@ -12337,6 +12365,45 @@
       "note": ""
     },
     {
+      "from": "HFSC",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-hfsc.json",
+      "note": "House Financial Services Committee has jurisdiction over banks/housing-FHFA/securities/CFPB/digital-assets - so mega-bank, community-bank, crypto, private-credit and housing money all concentrate here. THAT concentration is the structural leverage point (documented, bipartisan) (fact)."
+    },
+    {
+      "from": "HFSC",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-hfsc.json",
+      "note": "HFSC also writes the rules touching private credit / nonbank finance - FIRE-sector money concentrates on the members who write them (fact)."
+    },
+    {
+      "from": "Maxine_Waters",
+      "to": "HFSC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ranking_member",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-congress-hfsc.json",
+      "note": "Ranking Member (former Chair). Her documented record cuts AGAINST the naive-capture story: she OPPOSED the industry-favored GENIUS Act (citing Trump-family World Liberty Financial) and introduced 'Stop TRUMP in Crypto' - structural influence is real, but 'foreign leverage/kompromat over a named member' is UNSUPPORTED (fact + honest grade)."
+    },
+    {
       "from": "MGX",
       "to": "OpenAI",
       "instrument": "equity",
@@ -13050,6 +13117,32 @@
       "cancelable": false,
       "source_file": "spec-telematics-insurance.json",
       "note": ""
+    },
+    {
+      "from": "GARM",
+      "to": "X_Corp",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "advertiser_pressure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-ad-censorship.json",
+      "note": "GARM (World Federation of Advertisers brand-safety initiative + Unilever/Mars/CVS) set a common harmful-content taxonomy affecting X/podcasts/news; House Judiciary (Jul 2024) alleged collusion; GARM discontinued Aug 8 2024, days after X's suit. Graded: documented coordinated standard-setting; private actors' own speech/spending, NOT a laundered government mandate (partially supported)."
+    },
+    {
+      "from": "GEC",
+      "to": "NewsGuard",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-ad-censorship.json",
+      "note": "State Dept Global Engagement Center funded/enabled content-rating (GEC -> GDI/NewsGuard) - the 'controls government can't directly mandate' via intermediaries (supported for the financial/intermediary chain; contested as censorship)."
     },
     {
       "from": "Mortgage_REITs",
@@ -19901,6 +19994,58 @@
       "cancelable": false,
       "source_file": "spec-auto-politics-labor.json",
       "note": ""
+    },
+    {
+      "from": "Tencent",
+      "to": "Riot_Games",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "owns",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-china-tech.json",
+      "note": "Tencent owns Riot Games 100% (2015) - one of the rare CONTROLLING Western stakes (fact)."
+    },
+    {
+      "from": "Tencent",
+      "to": "Epic_Games",
+      "instrument": "investment",
+      "layer": "financial",
+      "raw_instrument": "minority_stake",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-china-tech.json",
+      "note": "Tencent ~38% of Epic Games - MINORITY, non-controlling; typical of the cross-ownership (mostly minority/passive) (fact). Grade of the influence hypothesis: WEAK (convergent, NOT directed)."
+    },
+    {
+      "from": "CCP",
+      "to": "Tencent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "golden_share",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-china-tech.json",
+      "note": "State 'golden shares' (~1% + board/content veto) sit in CHINA-DOMESTIC operating subs (Tencent/Alibaba/ByteDance-Douyin) - real and powerful but DOMESTIC-scope only; does NOT reach Western subsidiaries (strong-existence / domestic-scope)."
+    },
+    {
+      "from": "CCP",
+      "to": "ByteDance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "golden_share",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "influence-china-tech.json",
+      "note": "Golden share in Douyin/Toutiao domestic entity (content/news licensing) - not the US TikTok sub (strong-existence / domestic-scope)."
     },
     {
       "from": "Ethereum_Foundation",
@@ -31110,10 +31255,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1361,
-    "num_edges": 1974,
-    "num_financial_edges": 272,
-    "num_structural_edges": 1702,
+    "num_nodes": 1368,
+    "num_edges": 1983,
+    "num_financial_edges": 273,
+    "num_structural_edges": 1710,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -31215,33 +31360,38 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -31251,7 +31401,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -31270,12 +31421,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -34297,6 +34442,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Epic_Games": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Epistemic_Discipline": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34780,6 +34932,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "GARM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "GARM_WFA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -34788,6 +34947,13 @@
         "in_robust_core": false
       },
       "GCC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GEC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35082,6 +35248,13 @@
         "in_robust_core": false
       },
       "HBM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "HFSC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -36635,6 +36808,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Maxine_Waters": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mazda": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37161,6 +37341,13 @@
         "in_robust_core": false
       },
       "New_York_Convention": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NewsGuard": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38281,6 +38468,13 @@
         "in_robust_core": false
       },
       "Rio_Tinto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Riot_Games": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40930,6 +41124,30 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 22,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "central_bank",
+          "financial_infra",
+          "financier",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 18,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "NVIDIA",
         "degree": 32,
         "neighbor_sectors": [
@@ -40949,29 +41167,6 @@
         ],
         "n_neighbor_sectors": 13,
         "source_files": 13,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 21,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "central_bank",
-          "financial_infra",
-          "financier",
-          "other",
-          "private_credit",
-          "regulator",
-          "sink",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 17,
         "layers": [
           "financial",
           "structural"
@@ -41095,6 +41290,28 @@
         "both_layers": true
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 14,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "private_credit",
+          "retail",
+          "state"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Oracle",
         "degree": 11,
         "neighbor_sectors": [
@@ -41132,27 +41349,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 6,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
-          "other",
-          "private_credit",
-          "retail"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"

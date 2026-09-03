@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `macro-pqc-chips.json` — related files by shared entities (verify cross-refs exist)
-- macro-crqc-quantum-landscape.json: 10 shared entities
-- digitalid-orchestration-real-incentive.json: 8 shared entities
-- spec-quantum-computing-competitive-landscape.json: 8 shared entities
-- fin-hedera-connections.json: 8 shared entities
-- energy-power.json: 7 shared entities
-- spec-cross-system-contagion.json: 7 shared entities
-- spec-telecom-satellite.json: 6 shared entities
-- spec-exchanges-asia.json: 6 shared entities
+## Newest file `influence-congress-hfsc.json` — related files by shared entities (verify cross-refs exist)
+- temporal-bridges.json: 3 shared entities
+- spec-crypto-legislation-forcing.json: 2 shared entities
+- digitalid-orchestration-real-incentive.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 1 shared entities
+- influence-operator-network.json: 1 shared entities
+- spec-crypto-banking-debanking.json: 1 shared entities
+- macro-money-market-funds.json: 1 shared entities
+- macro-official-data-integrity.json: 1 shared entities

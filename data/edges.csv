@@ -672,6 +672,9 @@ CRQC,PQC,other,,,False,False,macro-quantum-computing.json
 IonQ,US_Government,other,,,False,False,macro-quantum-computing.json
 US_Banks,BDCs,other,,open,False,False,macro-private-credit-bdc-stress.json
 Retail_401k,BDCs,other,,open,False,False,macro-private-credit-bdc-stress.json
+HFSC,US_Banks,other,,,False,False,influence-congress-hfsc.json
+HFSC,PrivateCredit_Funds,other,,,False,False,influence-congress-hfsc.json
+Maxine_Waters,HFSC,other,,,False,False,influence-congress-hfsc.json
 MGX,Anthropic,equity,,,False,False,"fin-gulf-sovereign-ai-capital.json,fin-google-amazon-anthropic-meta.json"
 MGX,xAI,equity,,,False,False,"fin-gulf-sovereign-ai-capital.json,fin-google-amazon-anthropic-meta.json"
 QIA,xAI,equity,,,False,False,fin-gulf-sovereign-ai-capital.json
@@ -724,6 +727,8 @@ LexisNexis,Telematics_Insurance,other,,documented,False,False,spec-telematics-in
 Verisk,Telematics_Insurance,other,,documented,False,False,spec-telematics-insurance.json
 FTC,GM,other,,documented,False,False,spec-telematics-insurance.json
 State_AGs,Allstate,other,,documented,False,False,spec-telematics-insurance.json
+GARM,X_Corp,other,,,False,False,influence-ad-censorship.json
+GEC,NewsGuard,other,,,False,False,influence-ad-censorship.json
 Mortgage_REITs,Repo_Market,other,,open,False,False,macro-mortgage-reits.json
 Mortgage_REITs,Agency_MBS_Market,other,,open,False,False,macro-mortgage-reits.json
 Agency_MBS_Market,US_Banks,other,,open,False,False,macro-mortgage-reits.json
@@ -1185,6 +1190,10 @@ US_Government,CAFE_Standards,other,,contested,False,False,spec-auto-politics-lab
 CAFE_Standards,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
 Auto_Bailout_2009,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
 Alliance_Auto_Innovation,Auto_Politics,other,,documented,False,False,spec-auto-politics-labor.json
+Tencent,Riot_Games,other,,,False,False,influence-china-tech.json
+Tencent,Epic_Games,investment,,,False,False,influence-china-tech.json
+CCP,Tencent,other,,,False,False,influence-china-tech.json
+CCP,ByteDance,other,,,False,False,influence-china-tech.json
 Ethereum_Foundation,Ethereum,other,,documented,False,False,"spec-blockchain-ecosystem.json,blockchain-registry.json"
 Vitalik,Ethereum,other,,documented,False,False,spec-blockchain-ecosystem.json
 ConsenSys,Ethereum,other,,documented,False,False,spec-blockchain-ecosystem.json
