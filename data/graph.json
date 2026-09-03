@@ -548,6 +548,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "BRCA_Sec604": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "BRI": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1578,6 +1582,10 @@
     },
     "David_Schwartz": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "DeFi_Education_Fund": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "DePIN_Storage": {
@@ -3027,6 +3035,10 @@
     "Larry_Ellison": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Law_Enforcement": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Law_Enforcement_Coalition": {
       "sector": "regulator",
@@ -4587,6 +4599,14 @@
     "Senate Banking Committee": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Senate_Ag_Committee": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Senate_Banking_Committee": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Seung_yoon_Lee": {
       "sector": "person",
@@ -6209,6 +6229,149 @@
       "cancelable": false,
       "source_file": "spec-india-state-network.json",
       "note": ""
+    },
+    {
+      "from": "HFSC",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "house_passage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "House PASSED CLARITY (H.R.3633) 294-134 on Jul 17 2025 (78 Dems) after HFSC 32-19 + House Ag 47-6 (Jun 10) - bipartisan and easy in the House; the friction is all in the Senate (fact)."
+    },
+    {
+      "from": "Senate_Banking_Committee",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "markup",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Markup POSTPONED on the day scheduled (Jan 14 2026); advanced a negotiated version 15-9 (only 2 Dems) May 14 2026; placed on the Senate calendar (No. 423) Jun 1 2026; cloture vote set Sep 15 2026 (not final passage) (fact)."
+    },
+    {
+      "from": "Senate_Ag_Committee",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Approved its own digital-COMMODITY version (Jan 2026) via CFTC jurisdiction - the SEC-vs-CFTC split runs through two committees (fact)."
+    },
+    {
+      "from": "ABA",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lobby_against_yield",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "American Bankers Association lobbied against ANY stablecoin-yield provision; a Jan 12 2026 draft moved to prohibit yield 'for simply holding'; Mar 10 2026 senators floated an 'activity-based' compromise (fact)."
+    },
+    {
+      "from": "Bank_Policy_Institute",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lobby",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Large-bank advocate pressing to close the third-party yield loophole in the market-structure text (fact)."
+    },
+    {
+      "from": "BRCA_Sec604",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "developer_safe_harbor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Blockchain Regulatory Certainty Act (Emmer H.R.1747; Lummis+Wyden S.3611) folded in as Sec 604: NON-CUSTODIAL developers are NOT money transmitters (excludes 31 USC 5330 / 18 USC 1960) where they lack 'unilateral and independent control'; + Keep Your Coins self-custody shield (Sec 10605) (fact)."
+    },
+    {
+      "from": "Law_Enforcement",
+      "to": "BRCA_Sec604",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "objection",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Law-enforcement groups (+ some Catholic leaders) objected that the developer safe harbor is a 'compliance-free lane for illicit finance' / trafficking risk - this is the developer-rights pushback, and it came from LAW ENFORCEMENT, not the bank/yield coalition (fact)."
+    },
+    {
+      "from": "DeFi_Education_Fund",
+      "to": "BRCA_Sec604",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "defends",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "DeFi side: 'code is a publishing right', code!=control, and anti-fraud/anti-manipulation (CFTC) rules STILL apply to everyone; DeFi Education Fund called it 'appropriate tools without overregulating.' The objection did NOT prevail - final text RETAINED full protection ('proven false' in the sense the illicit-finance-loophole claim did not carry) (fact + grade)."
+    },
+    {
+      "from": "Tornado_Cash",
+      "to": "BRCA_Sec604",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "precedent",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "The provision responds to the Tornado Cash prosecution (co-founder Roman Storm convicted on one charge, Aug 2025); rationale 'writing code shouldn't be criminalized' (fact)."
+    },
+    {
+      "from": "Trump",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conflict_of_interest",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "THE under-appreciated delay driver: Trump's Jul 1 2026 disclosure showed ~$1.4B crypto-related income (2025), incl. World Liberty Financial - so ETHICS provisions (state-AG enforcement a GOP 'red line'; Murphy/Van Hollen/Merkley opposed after an ethics clause was dropped) became a primary sticking point. The delay is OVER-DETERMINED (ethics + DeFi + floor-time + yield), not a single-cause bank blockade (fact + grade)."
+    },
+    {
+      "from": "Blockchain_Association",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supports",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-clarity-act-chronology.json",
+      "note": "Crypto industry backs CLARITY (esp. the developer safe harbor + self-custody shield) (fact)."
     },
     {
       "from": "Zelensky",
@@ -33122,10 +33285,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1435,
-    "num_edges": 2106,
+    "num_nodes": 1440,
+    "num_edges": 2117,
     "num_financial_edges": 273,
-    "num_structural_edges": 1833,
+    "num_structural_edges": 1844,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -33261,16 +33424,12 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -33278,16 +33437,15 @@
       ],
       [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -33300,6 +33458,17 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -33310,12 +33479,6 @@
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -34301,6 +34464,13 @@
       },
       "BNY_Mellon": {
         "total_usd": 2000000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BRCA_Sec604": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -36106,6 +36276,13 @@
         "in_robust_core": false
       },
       "David_Schwartz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DeFi_Education_Fund": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38641,6 +38818,13 @@
       },
       "Larry_Ellison": {
         "total_usd": 330000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Law_Enforcement": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -41370,6 +41554,20 @@
         "in_robust_core": false
       },
       "Senate Banking Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Senate_Ag_Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Senate_Banking_Committee": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
