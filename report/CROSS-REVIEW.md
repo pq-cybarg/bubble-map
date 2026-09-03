@@ -16,27 +16,27 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 79 files
-- **Chainlink** — 57 files
-- **Google** — 51 files
+- **Chainlink** — 58 files
+- **Google** — 52 files
 - **OpenAI** — 41 files
-- **FDIC** — 35 files
+- **FDIC** — 36 files
 - **Oracle** — 33 files
 - **Amazon** — 32 files
 - **NVIDIA** — 30 files
 - **Microsoft** — 30 files
 - **Anthropic** — 24 files
+- **JPMorgan** — 23 files
 - **Stargate** — 23 files
-- **JPMorgan** — 22 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-stablecoin-yield-fight.json` — related files by shared entities (verify cross-refs exist)
-- spec-crypto-banking-debanking.json: 4 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- spec-sdny-crypto-prosecution.json: 3 shared entities
-- temporal-bridges.json: 3 shared entities
-- blockchain-registry.json: 3 shared entities
-- macro-stablecoin-treasury-rail.json: 2 shared entities
-- macro-stablecoin-failures-manipulation.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
+## Newest file `spec-bank-digitalmoney-consortia.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-registry.json: 10 shared entities
+- influence-congress-funding-compromise.json: 8 shared entities
+- altcoin-lens.json: 7 shared entities
+- spec-blockchain-ecosystem.json: 6 shared entities
+- spec-crypto-banking-debanking.json: 6 shared entities
+- fin-hedera-connections.json: 5 shared entities
+- digitalid-orchestration-real-incentive.json: 5 shared entities
+- spec-sec-sdny-regulatory.json: 5 shared entities
