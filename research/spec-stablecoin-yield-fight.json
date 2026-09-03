@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "The stablecoin YIELD fight — GENIUS Act issuer-ban, the three-party rewards loophole, OCC's move to close it, and the large-vs-small-bank deposit-disintermediation split",
+    "generated": "2026-09-02",
+    "frame": "Who is allowed to pay you for holding a dollar token is the real fight behind GENIUS/CLARITY. The GENIUS Act (Jul 18 2025) bans ISSUERS from paying yield (so holders don't treat stablecoins as deposits), but not exchanges/affiliates - the 'three-party rewards' loophole (issuer passes reserve interest to an exchange, which pays the holder 'rewards'). That gap is the whole game: it lets non-bank platforms (and, potentially, nimble/smaller issuers) out-compete large-bank deposit rates, so large-bank advocates (BPI) are pushing the OCC to EXTEND the ban to third parties, and the dispute has repeatedly stalled the CLARITY market-structure bill.",
+    "grade": "statute/rulemaking/positions = FACT; the deposit-disintermediation MAGNITUDE and the 'incumbents fixing the game to keep issuance theirs' reading = CONTESTED / labeled interpretation. Banks are NOT monolithic: large-bank (BPI/ABA-leaning) and community-bank (ICBA) interests diverge here.",
+    "the_mechanics": {
+      "issuer_ban": "GENIUS Act Section 4: a permitted payment-stablecoin issuer may not pay holders 'any form of interest or yield ... solely in connection with the holding, use, or retention' of the token. Effectively bans yield-bearing stablecoins at the issuer level. Reserves limited to cash / short-T-bills / Treasury repo / MMFs (1:1).",
+      "the_loophole": "The ban targets ISSUERS, not third parties. Coinbase pays 'platform rewards' on USDC; PayPal offers yield on PYUSD - structured as exchange/affiliate rewards, not issuer interest ('three-party model').",
+      "occ_move": "OCC NPRM (implementing GENIUS) proposes to EXTEND the prohibition to AFFILIATES and third parties - i.e., close the loophole. Final rules targeted ~Nov 2026 (one-year deadline missed).",
+      "tokenized_deposit_contrast": "A tokenized DEPOSIT (JPM Kinexys, The Clearing House network) stays inside the bank, can carry deposit insurance, and CAN pay interest as a deposit - so incumbents can offer yield via deposits even as issuer-stablecoin yield is banned. That asymmetry is central (see the consortia task)."
+    },
+    "the_two_readings": {
+      "banks_position": "Yield-bearing stablecoins are deposit substitutes that would drain uninsured deposits out of banks (esp. smaller banks), shrinking lending capacity - so close the loophole. (BPI 'closing the payment-of-interest loophole'; a White House research note + CRS model the bank-lending effects.)",
+      "crypto_position": "Congress deliberately wrote the ban to apply to issuers only; third-party rewards are lawful consumer choice; banning them protects bank net-interest-margin, not consumers (Blockchain Association / Coinbase / Circle).",
+      "the_untested_hypothesis": "That large banks are using the 'protect small-bank deposits' argument to enlist community banks against a rule that would actually let those same community banks (and chains/neobanks) out-pay large banks on rate. Testable against the lobbying record; NOT asserted here."
+    },
+    "method": "GENIUS Act text (S.1582) + OCC NPRM; CRS IF13174 'Stablecoin Yield Debate'; White House research (Apr 2026); BPI publications; CLS Blue Sky (Circle/Coinbase interest analysis); Perkins Coie / Grant Thornton client notes."
+  },
+  "nodes": [
+    {"id": "PayPal", "sector": "capital"},
+    {"id": "PYUSD", "sector": "crypto"},
+    {"id": "Bank_Policy_Institute", "sector": "capital"},
+    {"id": "ABA", "sector": "capital"},
+    {"id": "ICBA", "sector": "capital"},
+    {"id": "Blockchain_Association", "sector": "crypto"}
+  ],
+  "edges": [
+    {"from": "Circle", "to": "USDC", "instrument": "issues", "notes": "Circle issues USDC; as issuer it pays NO direct yield (GENIUS Act Section 4) (fact).", "source": "GENIUS Act; CLS Blue Sky"},
+    {"from": "Coinbase", "to": "USDC", "instrument": "rewards", "notes": "Coinbase pays 'platform rewards' on USDC balances held on-platform - issuer passes reserve interest to the exchange, which pays the holder = the three-party loophole GENIUS did not close (fact).", "source": "CLS Blue Sky 2025-12"},
+    {"from": "PayPal", "to": "PYUSD", "instrument": "rewards", "notes": "PayPal (issuer Paxos) offers yield on PYUSD via the same affiliate/rewards structure (fact).", "source": "reporting 2025-26"},
+    {"from": "OCC", "to": "Stablecoins", "instrument": "rulemaking", "notes": "OCC NPRM implementing GENIUS proposes to EXTEND the yield ban to affiliates + third parties (close the loophole); final rules ~Nov 2026 (the missed one-year deadline) (fact).", "source": "OCC NPRM; Perkins Coie"},
+    {"from": "Bank_Policy_Institute", "to": "Stablecoins", "instrument": "lobby", "notes": "Bank Policy Institute (large-bank advocate) openly campaigns to 'close the payment-of-interest loophole' - i.e., kill third-party stablecoin yield (fact of position).", "source": "bpi.com"},
+    {"from": "Bank_Policy_Institute", "to": "US_Banks", "instrument": "represents", "notes": "BPI = trade group for the largest US banks (fact).", "source": "BPI"},
+    {"from": "ABA", "to": "US_Banks", "instrument": "represents", "notes": "American Bankers Association - broad bank trade group backing the issuer-yield rationale ('payment stablecoin' != deposit substitute) (fact).", "source": "ABA"},
+    {"from": "ICBA", "to": "US_Banks", "instrument": "represents", "notes": "Independent Community Bankers of America - COMMUNITY-bank interest, which diverges from the megabanks on yield/tokenization; banks are not monolithic here (fact).", "source": "ICBA"},
+    {"from": "Blockchain_Association", "to": "Stablecoins", "instrument": "advocacy", "notes": "Crypto-industry position: Congress limited the ban to issuers on purpose; third-party rewards are lawful consumer choice; closing the loophole protects bank NIM, not consumers (fact of position).", "source": "Blockchain Association"},
+    {"from": "Stablecoins", "to": "US_Banks", "instrument": "disintermediation_risk", "notes": "CONTESTED: yield-bearing stablecoins as deposit substitutes could pull uninsured deposits out of banks (esp. smaller banks) and shrink lending - the banks' core argument (CRS/White-House modeled); crypto disputes the magnitude. Grade: mechanism real, magnitude contested.", "source": "CRS IF13174; White House 2026-04"},
+    {"from": "GENIUS_Act", "to": "CLARITY_Act", "instrument": "yield_dispute", "notes": "The exchange-vs-bank fight over the yield loophole reportedly STALLED the CLARITY market-structure bill in the Senate (repeated delays) (fact of the stall; the 'moving-goalposts/coordination' reading is graded, see #225).", "source": "reporting 2025-26; #215"},
+    {"from": "Stablecoins", "to": "Treasury", "instrument": "reserve_demand", "notes": "GENIUS 1:1 reserves must be cash/short-T-bills/Treasury repo/MMFs - stablecoin growth is a structural Treasury-bill buyer, tying the yield fight to the fiscal trap (macro-us-fiscal-trap) (fact).", "source": "GENIUS Act; macro-us-fiscal-trap"}
+  ]
+}

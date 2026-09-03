@@ -20,6 +20,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "ABA": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "AES": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -580,6 +584,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Bank_Policy_Institute": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Bank_of_England": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -750,6 +758,10 @@
     },
     "BlockFi": {
       "sector": "crypto_firm",
+      "has_exogenous_revenue": false
+    },
+    "Blockchain_Association": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "BlueOwl": {
@@ -2384,6 +2396,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
     },
+    "ICBA": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "ICC_Arbitration": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -3676,6 +3692,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "PYUSD": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Pakistan": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -3726,6 +3746,10 @@
     },
     "Paxful": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "PayPal": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "PayPay": {
@@ -25066,6 +25090,162 @@
       "note": "Niantic remained tied to Google's maps/cloud ecosystem post-spinout; Google was also an investor (fact of relationship; exact data-flows not public)."
     },
     {
+      "from": "Circle",
+      "to": "USDC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "issues",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "Circle issues USDC; as issuer it pays NO direct yield (GENIUS Act Section 4) (fact)."
+    },
+    {
+      "from": "Coinbase",
+      "to": "USDC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rewards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "Coinbase pays 'platform rewards' on USDC balances held on-platform - issuer passes reserve interest to the exchange, which pays the holder = the three-party loophole GENIUS did not close (fact)."
+    },
+    {
+      "from": "PayPal",
+      "to": "PYUSD",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rewards",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "PayPal (issuer Paxos) offers yield on PYUSD via the same affiliate/rewards structure (fact)."
+    },
+    {
+      "from": "OCC",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "rulemaking",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "OCC NPRM implementing GENIUS proposes to EXTEND the yield ban to affiliates + third parties (close the loophole); final rules ~Nov 2026 (the missed one-year deadline) (fact)."
+    },
+    {
+      "from": "Bank_Policy_Institute",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lobby",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "Bank Policy Institute (large-bank advocate) openly campaigns to 'close the payment-of-interest loophole' - i.e., kill third-party stablecoin yield (fact of position)."
+    },
+    {
+      "from": "Bank_Policy_Institute",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "represents",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "BPI = trade group for the largest US banks (fact)."
+    },
+    {
+      "from": "ABA",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "represents",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "American Bankers Association - broad bank trade group backing the issuer-yield rationale ('payment stablecoin' != deposit substitute) (fact)."
+    },
+    {
+      "from": "ICBA",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "represents",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "Independent Community Bankers of America - COMMUNITY-bank interest, which diverges from the megabanks on yield/tokenization; banks are not monolithic here (fact)."
+    },
+    {
+      "from": "Blockchain_Association",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "advocacy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "Crypto-industry position: Congress limited the ban to issuers on purpose; third-party rewards are lawful consumer choice; closing the loophole protects bank NIM, not consumers (fact of position)."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disintermediation_risk",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "CONTESTED: yield-bearing stablecoins as deposit substitutes could pull uninsured deposits out of banks (esp. smaller banks) and shrink lending - the banks' core argument (CRS/White-House modeled); crypto disputes the magnitude. Grade: mechanism real, magnitude contested."
+    },
+    {
+      "from": "GENIUS_Act",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "yield_dispute",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "The exchange-vs-bank fight over the yield loophole reportedly STALLED the CLARITY market-structure bill in the Senate (repeated delays) (fact of the stall; the 'moving-goalposts/coordination' reading is graded, see #225)."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "Treasury",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "reserve_demand",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-yield-fight.json",
+      "note": "GENIUS 1:1 reserves must be cash/short-T-bills/Treasury repo/MMFs - stablecoin growth is a structural Treasury-bill buyer, tying the yield fight to the fiscal trap (macro-us-fiscal-trap) (fact)."
+    },
+    {
       "from": "FDIC",
       "to": "US_Banks",
       "instrument": "other",
@@ -31619,10 +31799,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1381,
-    "num_edges": 2007,
+    "num_nodes": 1387,
+    "num_edges": 2019,
     "num_financial_edges": 273,
-    "num_structural_edges": 1734,
+    "num_structural_edges": 1746,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -31674,22 +31854,34 @@
       "Amazon",
       "Amkor",
       "Anthropic",
+      "Binance",
+      "CFTC",
+      "CLARITY_Act",
+      "CZ",
       "China",
       "CoWoS",
+      "Coinbase",
+      "Congress",
       "CoreWeave",
+      "Cross_River_Bank",
       "Crusoe",
       "DARPA",
+      "DOJ",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Electricity_Ratepayers",
+      "FDIC",
+      "Fairshake",
       "First_Brands",
       "G42",
+      "GENIUS_Act",
       "Google",
       "HV_Transformers",
       "ICE",
       "ImmigrationOS",
       "IonQ",
       "Japan",
+      "Jump_Crypto",
       "Lambda",
       "MSS",
       "Microsoft",
@@ -31703,38 +31895,32 @@
       "Peter_Thiel",
       "Power_Grid",
       "PrivateCredit_Funds",
+      "Ripple",
+      "SEC",
       "SINK_lenders",
       "SaltTyphoon",
       "SpaceX",
+      "Stablecoins",
       "Stanford_University",
       "Stargate",
       "Stargate_UAE",
       "TMobile",
       "TSMC",
+      "Tai_Mo_Shan",
+      "Treasury",
       "UBS",
       "US_Banks",
       "US_Government",
       "US_Treasuries",
+      "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 48,
+    "core_scc_all_edges_size": 66,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
       [
         "Microsoft",
         "OpenAI"
@@ -31744,8 +31930,20 @@
         "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -31765,18 +31963,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
@@ -31785,6 +31971,18 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -31840,6 +32038,13 @@
       },
       "3M": {
         "total_usd": 10300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ABA": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -32825,6 +33030,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Bank_Policy_Institute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bank_of_England": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -33120,6 +33332,13 @@
         "in_robust_core": false
       },
       "BlockFi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Blockchain_Association": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -35982,6 +36201,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ICBA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ICC_Arbitration": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38243,6 +38469,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PYUSD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pakistan": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38328,6 +38561,13 @@
         "in_robust_core": false
       },
       "Paxful": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PayPal": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41552,6 +41792,31 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 30,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "central_bank",
+          "financial_infra",
+          "financier",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "stablecoin",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 20,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Google",
         "degree": 20,
         "neighbor_sectors": [
@@ -41599,30 +41864,6 @@
         ],
         "n_neighbor_sectors": 14,
         "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "US_Banks",
-        "degree": 26,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "central_bank",
-          "financial_infra",
-          "financier",
-          "other",
-          "private_credit",
-          "regulator",
-          "sink",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 19,
         "layers": [
           "financial",
           "structural"

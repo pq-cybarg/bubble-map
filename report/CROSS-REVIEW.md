@@ -26,17 +26,17 @@
 - **Microsoft** — 30 files
 - **Anthropic** — 24 files
 - **Stargate** — 23 files
-- **a16z** — 21 files
+- **JPMorgan** — 22 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-idscan-breach-2026.json` — related files by shared entities (verify cross-refs exist)
-- spec-disclosures-surveillance.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- temporal-bridges.json: 2 shared entities
-- defense-rare-earth.json: 2 shared entities
-- spec-dialog-society.json: 2 shared entities
-- spec-surveillance-cyber-threat-layer.json: 2 shared entities
-- geopolitics-defense-industrial-base.json: 2 shared entities
-- spec-inqtel-portfolio.json: 2 shared entities
+## Newest file `spec-stablecoin-yield-fight.json` — related files by shared entities (verify cross-refs exist)
+- spec-crypto-banking-debanking.json: 4 shared entities
+- influence-congress-funding-compromise.json: 4 shared entities
+- spec-sdny-crypto-prosecution.json: 3 shared entities
+- temporal-bridges.json: 3 shared entities
+- blockchain-registry.json: 3 shared entities
+- macro-stablecoin-treasury-rail.json: 2 shared entities
+- macro-stablecoin-failures-manipulation.json: 2 shared entities
+- digitalid-orchestration-real-incentive.json: 2 shared entities
