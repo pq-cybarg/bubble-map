@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Quantum live feed (machine-collected, UNVERIFIED)",
+    "warning": "This file is written by the scheduled GitHub Actions tracker (quantum_fetch.py). Items are auto-collected from public sources and are NOT verified, graded, or endorsed. Treat as leads to check, not facts. Curated/graded content lives in data/quantum.json.",
+    "generated": "2026-09-03",
+    "last_fetch": null,
+    "sources": [
+      {"key": "arxiv_quant_ph", "name": "arXiv quant-ph", "kind": "api", "note": "New quantum-hardware / error-correction papers."},
+      {"key": "arxiv_cs_cr", "name": "arXiv cs.CR", "kind": "api", "note": "Cryptography / PQC / cryptanalysis papers (filtered for quantum/PQC terms)."},
+      {"key": "nist_pqc", "name": "NIST PQC", "kind": "page", "note": "NIST PQC project news + FIPS updates."},
+      {"key": "vendor_roadmaps", "name": "Vendor roadmaps", "kind": "page", "note": "IBM/Google/Quantinuum/IonQ/PsiQuantum/Atom Computing announcements (best-effort)."},
+      {"key": "compliance", "name": "Compliance / regulatory", "kind": "page", "note": "NSA CNSA 2.0, CISA, EU/BSI/ANSSI, NCSC (best-effort)."},
+      {"key": "ecdsa_fail", "name": "ecdsa.fail", "kind": "page", "note": "Nonce-reuse / weak-signature disclosures (best-effort)."}
+    ]
+  },
+  "items": []
+}

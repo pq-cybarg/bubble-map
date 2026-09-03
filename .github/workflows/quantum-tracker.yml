@@ -1,0 +1,56 @@
+name: quantum-tracker
+
+# Scheduled, hands-off refresh of the quantum LIVE FEED (machine-collected, UNVERIFIED).
+# It fetches public sources into data/quantum_feed.json, regenerates the feed page, and opens a
+# PULL REQUEST for human review. Nothing unverified is ever committed straight to main.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # weekly, Mondays 06:17 UTC
+  workflow_dispatch: {}      # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: quantum-tracker
+  cancel-in-progress: false
+
+jobs:
+  refresh-feed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch quantum feed (env-free, tolerant; never fails the job)
+        run: python3 models/graph/quantum_fetch.py || true
+
+      - name: Rebuild quantum sub-site (reflects the refreshed feed)
+        run: python3 models/graph/build_quantum.py || true
+
+      - name: Open PR if the feed changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "quantum-tracker: refresh live feed (auto, unverified)"
+          branch: quantum-tracker/auto-feed
+          delete-branch: true
+          title: "Quantum tracker: live-feed refresh (auto-collected, UNVERIFIED)"
+          add-paths: |
+            data/quantum_feed.json
+            docs/quantum-feed.html
+          body: |
+            Automated refresh of the quantum **live feed** by `quantum-tracker.yml`.
+
+            - Source: `models/graph/quantum_fetch.py` (arXiv quant-ph + cs.CR, NIST PQC, vendor
+              roadmaps, compliance pages, ecdsa.fail).
+            - **These items are machine-collected and UNVERIFIED.** Review before merging.
+            - Curated/graded content lives in `data/quantum.json` and is not touched here.
+
+            If no PR body diff appears, the feed had no new items this run.

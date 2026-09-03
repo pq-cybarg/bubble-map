@@ -21,4 +21,5 @@ python3 models/graph/fetch_qri.py >/dev/null 2>&1 || true  # qrindex.org HTML sc
 python3 models/graph/build_blockchain.py >/dev/null  # Blockchain registry tab
 python3 models/graph/build_bubblemap.py >/dev/null # interactive funding-graph bubble map
 python3 models/graph/build_theme_index.py          # theme->blocks index for the flagship/atlas zoom
+python3 models/graph/build_quantum.py >/dev/null    # quantum sub-site (hardware/EC/PQC/compliance/feed)
 echo "==> Re-review done. Read report/AUDIT.md + report/CROSS-REVIEW.md and reconcile flags before committing."

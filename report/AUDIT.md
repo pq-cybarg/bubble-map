@@ -13,9 +13,9 @@ Canonical numbers (from data/*.json — the source of truth):
 - `base_gap` = **1090**
 
 ## Inventory
-- models: 53 (z3 .py: 10) + TLA + Alloy
+- models: 55 (z3 .py: 10) + TLA + Alloy
 - research: 202 json / 202 md
-- data outputs: 30
+- data outputs: 32
 - reports: 9
 
 ## JSON validity
