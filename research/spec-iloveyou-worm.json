@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "ILOVEYOU / Love Bug (2000): the mass-mailer worm that outran the law",
+    "generated": "2026-09-04",
+    "frame": "May 2000: a VBScript email worm ('ILOVEYOU') spread to ~45 million machines in ~a day, one of the first truly global malware events. It matters here as (1) the template for social-engineering mass-mailers and (2) the first big demonstration that cybercrime law lagged the technology - the author faced no valid charges.",
+    "grade": "Mechanism, scale, and the prosecution gap = FACT (contemporaneous reporting; CERT). Damage estimates (~$5.5B-$15B) are ESTIMATES with wide spread. The author's identity/intent are as later self-described; not litigated.",
+    "honest_limits": "Damage figures are analyst estimates, not audited. The author (a Philippine student) was arrested but released - there was no applicable computer-crime statute in the Philippines at the time; naming/attributing intent beyond the public record is avoided.",
+    "method": "CERT/CC advisories; contemporaneous press; Philippine E-Commerce Act (RA 8792, enacted weeks later)."
+  },
+  "nodes": [
+    {"id": "ILOVEYOU_Worm", "sector": "other"},
+    {"id": "Malware_Lineage", "sector": "other"},
+    {"id": "Cybercrime_Law_Gap", "sector": "state"}
+  ],
+  "edges": [
+    {"from": "ILOVEYOU_Worm", "to": "Microsoft", "instrument": "exploited_platform", "notes": "Abused Windows/Outlook: a VBScript attachment ('LOVE-LETTER-FOR-YOU.TXT.vbs') hidden by the default 'hide known extensions' setting, auto-mailed to the entire Outlook address book and overwrote local media files - a Windows Scripting Host + social-engineering combo (fact).", "source": "#233 ILOVEYOU (CERT/CC; contemporaneous reporting)"},
+    {"from": "ILOVEYOU_Worm", "to": "Malware_Lineage", "instrument": "lineage", "notes": "May 2000; ~45M machines in ~24h; est. $5.5B-$15B damage (ESTIMATE). The archetypal mass-mailer social-engineering worm - direct ancestor of later email worms and today's phishing/supply-chain lures (fact of influence).", "source": "#233 ILOVEYOU (CERT/CC)"},
+    {"from": "ILOVEYOU_Worm", "to": "Cybercrime_Law_Gap", "instrument": "prosecution_gap", "notes": "The author (a Manila student) was arrested but released: the Philippines had NO applicable computer-crime law in 2000, so charges were dropped. This directly catalyzed the Philippine E-Commerce Act (RA 8792) weeks later and fed the global push for cybercrime statutes (Budapest Convention, 2001) - the law-lags-tech pattern (fact).", "source": "#233 ILOVEYOU (RA 8792; press)"},
+    {"from": "Cybercrime_Law_Gap", "to": "US_Government", "instrument": "regulatory", "notes": "Cross-border, jurisdiction-arbitrage cybercrime (attacker in one state, victims worldwide, no extradition-able offense) became the enduring enforcement problem that later shaped US CFAA prosecutions and international MLAT/treaty efforts (interpretation grounded in the ILOVEYOU precedent).", "source": "#233 ILOVEYOU (cybercrime-law history)"}
+  ]
+}

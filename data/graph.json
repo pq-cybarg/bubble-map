@@ -1364,6 +1364,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Commercial_Spyware_Market": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Commerzbank": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -1394,6 +1398,10 @@
     },
     "Contingent_Labor": {
       "sector": "labor",
+      "has_exogenous_revenue": false
+    },
+    "Coordinated_Disclosure_Norms": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Copper": {
@@ -1514,6 +1522,10 @@
     },
     "Cyber_Defense": {
       "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
+    "Cybercrime_Law_Gap": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Cymer": {
@@ -1768,6 +1780,10 @@
       "sector": "statistic",
       "has_exogenous_revenue": false
     },
+    "Dual_Use_Export_Gap": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Duane_Arnold_Nuclear": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -1918,6 +1934,10 @@
     },
     "Essential_Utilities": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "EternalBlue": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Ethanol_RFS": {
@@ -2112,6 +2132,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": true
     },
+    "FinSpy": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Financial_Privacy": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -2264,6 +2288,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Gamma_Group": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Garantex": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -2322,6 +2350,10 @@
     },
     "Ginkgo_Bioworks": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "GitHub": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "GlobalFoundries": {
@@ -2619,6 +2651,10 @@
     "ILCs": {
       "sector": "bank",
       "has_exogenous_revenue": true
+    },
+    "ILOVEYOU_Worm": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "IMDRF": {
       "sector": "standards",
@@ -3316,6 +3352,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "MS_Nightmare": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "MUFG": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -3331,6 +3371,10 @@
     "Mali": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Malware_Lineage": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Mandiant": {
       "sector": "security_research",
@@ -3424,6 +3468,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Microsoft_Defender": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Middle_Corridor": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -3446,6 +3494,10 @@
     },
     "MiniMax": {
       "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Mini_Shai_Hulud": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Mint_Mobile": {
@@ -3742,6 +3794,10 @@
     },
     "Northern_Sea_Route": {
       "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
+    "NotPetya": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Nous_Research": {
@@ -4776,8 +4832,20 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Shadow_Brokers": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Shadow_Fleet": {
       "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
+    "Shai_Hulud": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Shai_Hulud_V2": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Shakepay": {
@@ -5696,6 +5764,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "WannaCry": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Water_Cooling": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -5955,6 +6027,10 @@
     "mBridge": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "npm_Ecosystem": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "vLLM": {
       "sector": "ai_infra",
@@ -9152,6 +9228,97 @@
       "note": "MGX (Abu Dhabi AI fund) is also a backer of the Stargate AI-infra program (OpenAI/SoftBank/Oracle) - so the SAME Gulf fund touches the AI core, Binance, and TikTok. Cross-ref fin-google-amazon-anthropic-meta / Stargate nodes."
     },
     {
+      "from": "Gamma_Group",
+      "to": "FinSpy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "develops",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Gamma Group (Gamma International, UK/Germany; FinFisher GmbH, Munich) builds the FinFisher/FinSpy 'lawful intercept' suite - full-device implants (calls, messages, mic/camera, files) marketed to law enforcement/intelligence (fact). FinFisher GmbH filed insolvency in 2022 amid German criminal scrutiny of unlicensed exports."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Egypt",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Amnesty International (Sep-2020) found new FinSpy variants targeting Egyptian civil society and - for the first time publicly - revealed FinSpy for macOS and Linux (alongside Windows/Android), using multi-stage loaders + modular spying. Operator inferred as an Egyptian government client (graded)."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "FinSpy is a core exemplar of the mercenary/commercial-spyware market - 'lawful intercept' products sold to states and repeatedly documented against journalists, activists, and dissidents (fact of category)."
+    },
+    {
+      "from": "NSO_Group",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "NSO Group (Pegasus) is the market's most notorious member - wiring the existing NSO/Pegasus nodes into the shared commercial-spyware hub (fact)."
+    },
+    {
+      "from": "Intellexa",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Intellexa/Cytrox (Predator) - the third major cluster (US-sanctioned 2024) - also joins the shared hub (fact)."
+    },
+    {
+      "from": "Commercial_Spyware_Market",
+      "to": "Dual_Use_Export_Gap",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "The recurring policy failure: spyware is dual-use (Wassenaar Arrangement cyber-tools controls; EU dual-use regulation) yet repeatedly reaches abusive governments. The gap between export licensing on paper and enforcement in practice is the through-line (interpretation grounded in the export-control record)."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "FinSpy anchors the 'legal spyware' branch of the malware lineage - distinct from state cyber-weapons (Equation/EternalBlue) and criminal worms (ILOVEYOU/Shai-Hulud) but sharing implant/exfiltration techniques (fact of category)."
+    },
+    {
       "from": "JPMorgan",
       "to": "Metals_Futures",
       "instrument": "other",
@@ -9618,6 +9785,110 @@
       "cancelable": false,
       "source_file": "spec-iran-state-network.json",
       "note": ""
+    },
+    {
+      "from": "Shai_Hulud",
+      "to": "npm_Ecosystem",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain_compromise",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "First wave detected Sep-16-2025: ~187 packages compromised (incl. several tied to CrowdStrike). Self-replicating worm - steals npm token, injects install hook into the victim's other packages, republishes an incremented patch, repeats (fact)."
+    },
+    {
+      "from": "Shai_Hulud",
+      "to": "GitHub",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "credential_theft",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "Harvests secrets with TruffleHog (npm/GitHub PATs, AWS/GCP/Azure creds) and exfiltrates them to attacker-created PUBLIC GitHub repos; registers victim machines as self-hosted GitHub Actions runners for persistence (fact)."
+    },
+    {
+      "from": "Shai_Hulud_V2",
+      "to": "Shai_Hulud",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "'Sha1-Hulud: The Second Coming' (V2) - second generation of the same lineage (fact)."
+    },
+    {
+      "from": "Shai_Hulud_V2",
+      "to": "npm_Ecosystem",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain_compromise",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "Second wave Nov-21-24-2025: 700+ packages, 27,000+ malicious repos, ~14,000 secrets across 487 orgs (ranges vary by vendor). Key escalation: runs during PRE-install (not post-install), uses the Bun runtime, and carries a DESTRUCTIVE dead-man's switch triggered on containment. Hit Zapier, ENS, AsyncAPI, PostHog, Postman, Browserbase (fact; counts as-reported)."
+    },
+    {
+      "from": "Mini_Shai_Hulud",
+      "to": "Shai_Hulud",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "'Mini Shai-Hulud' - 4th-generation variant, active since late Apr-2026, most destructive in the May-11-2026 wave; actor self-labeled 'TeamPCP'. New tricks: PROVENANCE-ATTESTATION FORGERY and AI-CODING-AGENT persistence - deliberately defeating the two controls (software provenance + AI dev workflows) adopted after the 2025 incidents (fact per CSA)."
+    },
+    {
+      "from": "Mini_Shai_Hulud",
+      "to": "npm_Ecosystem",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain_compromise",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "Targets the AI-developer supply chain specifically (packages/tools used by AI coding agents with elevated filesystem access) - the worm adapting to where trust + automation now concentrate (fact)."
+    },
+    {
+      "from": "GitHub",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "GitHub (the exfiltration + propagation surface here) is owned by Microsoft - the same platform that hosts the compromised CI/CD and the dumped secrets (fact; context)."
+    },
+    {
+      "from": "Shai_Hulud",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shai-hulud-npm-worm.json",
+      "note": "Marks the return of the self-replicating WORM at ecosystem scale - but through the software SUPPLY CHAIN (package registries + CI/CD + AI agents) rather than email (ILOVEYOU) or SMB (EternalBlue). The modern mutation of the worm (fact of category)."
     },
     {
       "from": "UK_Online_Safety_Act",
@@ -16042,6 +16313,58 @@
       "note": ""
     },
     {
+      "from": "ILOVEYOU_Worm",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploited_platform",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iloveyou-worm.json",
+      "note": "Abused Windows/Outlook: a VBScript attachment ('LOVE-LETTER-FOR-YOU.TXT.vbs') hidden by the default 'hide known extensions' setting, auto-mailed to the entire Outlook address book and overwrote local media files - a Windows Scripting Host + social-engineering combo (fact)."
+    },
+    {
+      "from": "ILOVEYOU_Worm",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iloveyou-worm.json",
+      "note": "May 2000; ~45M machines in ~24h; est. $5.5B-$15B damage (ESTIMATE). The archetypal mass-mailer social-engineering worm - direct ancestor of later email worms and today's phishing/supply-chain lures (fact of influence)."
+    },
+    {
+      "from": "ILOVEYOU_Worm",
+      "to": "Cybercrime_Law_Gap",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "prosecution_gap",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iloveyou-worm.json",
+      "note": "The author (a Manila student) was arrested but released: the Philippines had NO applicable computer-crime law in 2000, so charges were dropped. This directly catalyzed the Philippine E-Commerce Act (RA 8792) weeks later and fed the global push for cybercrime statutes (Budapest Convention, 2001) - the law-lags-tech pattern (fact)."
+    },
+    {
+      "from": "Cybercrime_Law_Gap",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-iloveyou-worm.json",
+      "note": "Cross-border, jurisdiction-arbitrage cybercrime (attacker in one state, victims worldwide, no extradition-able offense) became the enduring enforcement problem that later shaped US CFAA prosecutions and international MLAT/treaty efforts (interpretation grounded in the ILOVEYOU precedent)."
+    },
+    {
       "from": "Albanese",
       "to": "Australia",
       "instrument": "other",
@@ -16794,6 +17117,71 @@
       "cancelable": false,
       "source_file": "digitalid-corporate.json",
       "note": "World ID = a 'unique human' proof-of-personhood credential; claims >18M verified across ~160 countries - one piece of the identity stack (fact)."
+    },
+    {
+      "from": "MS_Nightmare",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "vuln_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-msnightmare-disclosure.json",
+      "note": "Anonymous actor (aliases Nightmare Eclipse/Chaotic Eclipse/MSNightmare) ran an uncoordinated 0-day campaign vs Microsoft in 2026. SELF-DESCRIBED grievances (UNVERIFIED): valid MSRC bugs triaged low or left unpatched for months; unpaid bounties despite silent patches; MSRC allegedly deleted their account. Microsoft says none were reported via official channels first (present both). Identity unknown."
+    },
+    {
+      "from": "MS_Nightmare",
+      "to": "Microsoft_Defender",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploit_leak",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-msnightmare-disclosure.json",
+      "note": "Published ~7 working PoCs, ~one per 10 days: RedSun, UnDefend, BlueHammer, YellowKey, GreenPlasma, MiniPlasma, then RoguePlanet (a Defender LPE reproduced on fully-patched Win11, Jun-2026). Mostly Windows/Defender local privilege escalation (reported)."
+    },
+    {
+      "from": "Microsoft_Defender",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-msnightmare-disclosure.json",
+      "note": "Defender is Microsoft's built-in endpoint security; the campaign specifically targeting it (turning the security product into the attack surface) is the pointed irony of the episode (fact/context)."
+    },
+    {
+      "from": "MS_Nightmare",
+      "to": "Coordinated_Disclosure_Norms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-msnightmare-disclosure.json",
+      "note": "The episode is a stress-test of Coordinated Vulnerability Disclosure: attackers began exploiting BlueHammer/RedSun/UnDefend soon after PoCs went public. Microsoft: 'Uncoordinated disclosures that put PoC code for unpatched vulnerabilities into the hands of bad actors are never justifiable.' Microsoft vaguely threatened its Digital Crimes Unit, then backed down after backlash (fact)."
+    },
+    {
+      "from": "Coordinated_Disclosure_Norms",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-msnightmare-disclosure.json",
+      "note": "Ties to the insider-threat / weaponized-disclosure branch: like the Shadow Brokers (leaked state tools) but framed as researcher-vs-vendor retaliation. The unifying thread across the lineage: how offensive capability leaks into the wild - via theft, leak, sale, or protest (interpretation)."
     },
     {
       "from": "Municipal_Debt",
@@ -25361,6 +25749,136 @@
       "cancelable": false,
       "source_file": "macro-bank-htm-marks.json",
       "note": "$306B aggregate unrealized securities loss (down from $684B 2023 peak); invisible while HTM held at cost, realized only if forced to sell (the SVB mechanism). BTFP backstop expired Mar 2024."
+    },
+    {
+      "from": "Shadow_Brokers",
+      "to": "Equation_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "From Aug-2016 the Shadow Brokers auctioned/teased, then (Apr-2017) dumped, a cache of offensive tools attributed to the Equation Group (NSA's Tailored Access Operations) - exploits, implants, and the FuzzBunch framework (fact)."
+    },
+    {
+      "from": "Shadow_Brokers",
+      "to": "NSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "The leaked tools are attributed to the NSA (via Equation Group / TAO); the identity of the Shadow Brokers themselves is UNRESOLVED (Russian state widely suspected; an insider theory also floated - not proven). Present as open (fact of tool-attribution; actor-attribution open)."
+    },
+    {
+      "from": "Shadow_Brokers",
+      "to": "EternalBlue",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "The Apr-14-2017 'Lost in Translation' dump released EternalBlue (SMBv1 remote code execution) + DoublePulsar implant. Microsoft had quietly patched it (MS17-010, Mar-14-2017) after a reported tip - one month before the public dump (fact)."
+    },
+    {
+      "from": "EternalBlue",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploited_platform",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "EternalBlue exploited Windows SMBv1; unpatched/legacy systems (incl. end-of-life XP) remained exposed - the long tail of patch lag is what made the follow-on worms so damaging (fact)."
+    },
+    {
+      "from": "EternalBlue",
+      "to": "WannaCry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enabled",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "May-12-2017: WannaCry ransomware used EternalBlue to self-propagate to ~200k+ machines in 150+ countries (incl. UK NHS); halted by a researcher's kill-switch domain (fact)."
+    },
+    {
+      "from": "WannaCry",
+      "to": "North_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "The US, UK and allies attributed WannaCry to North Korea (Lazarus Group), Dec-2017 - official government attribution (strong, state-asserted)."
+    },
+    {
+      "from": "WannaCry",
+      "to": "Lazarus_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "Code/infra overlaps tied WannaCry to Lazarus (the DPRK cluster also behind major crypto thefts) - linking the ransomware to the existing Lazarus node (fact per attribution)."
+    },
+    {
+      "from": "EternalBlue",
+      "to": "NotPetya",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enabled",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "Jun-27-2017: NotPetya (wiper masquerading as ransomware) used EternalBlue + Mimikatz, seeded via a compromised Ukrainian tax-software update (M.E.Doc); est. ~$10B global damage (Maersk, Merck, FedEx/TNT) (fact; damage estimate)."
+    },
+    {
+      "from": "NotPetya",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "The US, UK and allies attributed NotPetya to the Russian military (GRU), Feb-2018 - official government attribution (strong, state-asserted)."
+    },
+    {
+      "from": "EternalBlue",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shadow-brokers-eternalblue.json",
+      "note": "The defining lesson: offensive cyber tools stockpiled by states leak and boomerang; EternalBlue kept powering intrusions for years. The core argument against 'nobody but us' vulnerability hoarding + for coordinated disclosure (fact of recurrence)."
     },
     {
       "from": "China",
@@ -34815,10 +35333,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1491,
-    "num_edges": 2219,
+    "num_nodes": 1510,
+    "num_edges": 2253,
     "num_financial_edges": 274,
-    "num_structural_edges": 1945,
+    "num_structural_edges": 1979,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -34997,37 +35515,27 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
-        "NVIDIA",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -35038,8 +35546,18 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
+        "Amazon",
         "OpenAI",
-        "Microsoft"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -35054,8 +35572,15 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -35063,13 +35588,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -37470,6 +37988,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Commercial_Spyware_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Commerzbank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37520,6 +38045,13 @@
         "in_robust_core": false
       },
       "Contingent_Labor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Coordinated_Disclosure_Norms": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37730,6 +38262,13 @@
         "in_robust_core": false
       },
       "Cyber_Defense": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cybercrime_Law_Gap": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38177,6 +38716,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dual_Use_Export_Gap": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Duane_Arnold_Nuclear": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38437,6 +38983,13 @@
         "in_robust_core": false
       },
       "Essential_Utilities": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EternalBlue": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38779,6 +39332,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "FinSpy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Financial_Privacy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39045,6 +39605,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Gamma_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Garantex": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39144,6 +39711,13 @@
         "in_robust_core": false
       },
       "Ginkgo_Bioworks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GitHub": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39662,6 +40236,13 @@
         "in_robust_core": false
       },
       "ILCs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ILOVEYOU_Worm": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40886,6 +41467,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MS_Nightmare": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MUFG": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40908,6 +41496,13 @@
         "in_robust_core": false
       },
       "Mali": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Malware_Lineage": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41075,6 +41670,13 @@
         "in_core_scc": true,
         "in_robust_core": true
       },
+      "Microsoft_Defender": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Middle_Corridor": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41111,6 +41713,13 @@
         "in_robust_core": false
       },
       "MiniMax": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mini_Shai_Hulud": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41629,6 +42238,13 @@
         "in_robust_core": false
       },
       "Northern_Sea_Route": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NotPetya": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43441,7 +44057,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shadow_Brokers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shadow_Fleet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Shai_Hulud": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Shai_Hulud_V2": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -45051,6 +45688,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "WannaCry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Water_Cooling": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45506,6 +46150,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "npm_Ecosystem": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "vLLM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45565,7 +46216,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 55,
+        "degree": 56,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -45587,7 +46238,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 35,
+        "source_files": 36,
         "layers": [
           "financial",
           "structural"
@@ -45676,6 +46327,30 @@
         "both_layers": true
       },
       {
+        "node": "Microsoft",
+        "degree": 22,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "neocloud",
+          "other",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 15,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "OpenAI",
         "degree": 29,
         "neighbor_sectors": [
@@ -45693,30 +46368,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Microsoft",
-        "degree": 17,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "commodity",
-          "financial_infra",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 11,
         "layers": [
           "financial",
           "structural"
@@ -45773,7 +46424,7 @@
       },
       {
         "node": "Russia",
-        "degree": 26,
+        "degree": 27,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -45787,7 +46438,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 14,
+        "source_files": 15,
         "layers": [
           "structural"
         ],

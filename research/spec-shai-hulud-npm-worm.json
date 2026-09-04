@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Shai-Hulud npm worm (2025-26): self-replicating supply-chain compromise + the Mini variant",
+    "generated": "2026-09-04",
+    "frame": "Shai-Hulud is a self-propagating npm worm: it steals a maintainer's publish token, injects a malicious install hook into all their packages, republishes, and repeats - turning the open-source dependency graph into a spreading medium. Three+ waves (Sep 2025 first wave; Nov 2025 'Second Coming'/V2; Apr-May 2026 'Mini' 4th-gen) escalated in scale and sophistication.",
+    "grade": "Waves, dates, package/secret/repo counts, and TTPs = FACT as reported by multiple vendors (Unit42, eSentire, Zscaler, Arctic Wolf, Checkmarx, CSA). Counts vary by vendor and grew as detection continued (ranges given). Actor label 'TeamPCP' (for Mini) is as-reported.",
+    "honest_limits": "Totals differ across vendors and evolved post-detection (e.g. V2: ~492 to 700-1,000 packages; ~25k-27k repos); ranges are shown rather than a single number. Ultimate operator attribution is not established. This block also FIXES a graph gap: the prior Shai-Hulud write-up was prose-only (0 edges).",
+    "method": "Palo Alto Unit42; eSentire; Zscaler; Arctic Wolf; Checkmarx; Cloud Security Alliance (Mini Shai-Hulud research); Invicti/Lumific."
+  },
+  "nodes": [
+    {"id": "Shai_Hulud", "sector": "other"},
+    {"id": "Shai_Hulud_V2", "sector": "other"},
+    {"id": "Mini_Shai_Hulud", "sector": "other"},
+    {"id": "npm_Ecosystem", "sector": "tech"},
+    {"id": "GitHub", "sector": "tech"}
+  ],
+  "edges": [
+    {"from": "Shai_Hulud", "to": "npm_Ecosystem", "instrument": "supply_chain_compromise", "notes": "First wave detected Sep-16-2025: ~187 packages compromised (incl. several tied to CrowdStrike). Self-replicating worm - steals npm token, injects install hook into the victim's other packages, republishes an incremented patch, repeats (fact).", "source": "#235 Shai-Hulud (Unit42; Checkmarx)"},
+    {"from": "Shai_Hulud", "to": "GitHub", "instrument": "credential_theft", "notes": "Harvests secrets with TruffleHog (npm/GitHub PATs, AWS/GCP/Azure creds) and exfiltrates them to attacker-created PUBLIC GitHub repos; registers victim machines as self-hosted GitHub Actions runners for persistence (fact).", "source": "#235 Shai-Hulud (vendor analyses)"},
+    {"from": "Shai_Hulud_V2", "to": "Shai_Hulud", "instrument": "lineage", "notes": "'Sha1-Hulud: The Second Coming' (V2) - second generation of the same lineage (fact).", "source": "#235 Shai-Hulud (eSentire; Zscaler)"},
+    {"from": "Shai_Hulud_V2", "to": "npm_Ecosystem", "instrument": "supply_chain_compromise", "notes": "Second wave Nov-21-24-2025: 700+ packages, 27,000+ malicious repos, ~14,000 secrets across 487 orgs (ranges vary by vendor). Key escalation: runs during PRE-install (not post-install), uses the Bun runtime, and carries a DESTRUCTIVE dead-man's switch triggered on containment. Hit Zapier, ENS, AsyncAPI, PostHog, Postman, Browserbase (fact; counts as-reported).", "source": "#235 Shai-Hulud (eSentire/Zscaler/Arctic Wolf/Lumific)"},
+    {"from": "Mini_Shai_Hulud", "to": "Shai_Hulud", "instrument": "lineage", "notes": "'Mini Shai-Hulud' - 4th-generation variant, active since late Apr-2026, most destructive in the May-11-2026 wave; actor self-labeled 'TeamPCP'. New tricks: PROVENANCE-ATTESTATION FORGERY and AI-CODING-AGENT persistence - deliberately defeating the two controls (software provenance + AI dev workflows) adopted after the 2025 incidents (fact per CSA).", "source": "#235 Shai-Hulud (Cloud Security Alliance 2026)"},
+    {"from": "Mini_Shai_Hulud", "to": "npm_Ecosystem", "instrument": "supply_chain_compromise", "notes": "Targets the AI-developer supply chain specifically (packages/tools used by AI coding agents with elevated filesystem access) - the worm adapting to where trust + automation now concentrate (fact).", "source": "#235 Shai-Hulud (CSA Mini research)"},
+    {"from": "GitHub", "to": "Microsoft", "instrument": "relationship", "notes": "GitHub (the exfiltration + propagation surface here) is owned by Microsoft - the same platform that hosts the compromised CI/CD and the dumped secrets (fact; context).", "source": "#235 Shai-Hulud (ownership context)"},
+    {"from": "Shai_Hulud", "to": "Malware_Lineage", "instrument": "lineage", "notes": "Marks the return of the self-replicating WORM at ecosystem scale - but through the software SUPPLY CHAIN (package registries + CI/CD + AI agents) rather than email (ILOVEYOU) or SMB (EternalBlue). The modern mutation of the worm (fact of category).", "source": "#235 Shai-Hulud (Malware_Lineage hub)"}
+  ]
+}

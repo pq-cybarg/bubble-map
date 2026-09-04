@@ -20,9 +20,9 @@
 - **Google** — 53 files
 - **OpenAI** — 41 files
 - **FDIC** — 37 files
+- **Microsoft** — 35 files
+- **Amazon** — 34 files
 - **Oracle** — 33 files
-- **Amazon** — 33 files
-- **Microsoft** — 31 files
 - **NVIDIA** — 30 files
 - **Anthropic** — 24 files
 - **Ripple** — 23 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-trusted-foundry-secure-microelectronics.json` — related files by shared entities (verify cross-refs exist)
-- macro-crqc-quantum-landscape.json: 3 shared entities
-- spec-surveillance-cyber-threat-layer.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- spec-vitalik-buterin-thought.json: 2 shared entities
-- spec-semiconductor-logistics-standards.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
+## Newest file `spec-msnightmare-disclosure.json` — related files by shared entities (verify cross-refs exist)
+- macro-ai-datacenter-water-siting.json: 1 shared entities
+- digitalid-orchestration-real-incentive.json: 1 shared entities
+- fin-ai-efficiency-counter-thesis.json: 1 shared entities
+- fin-coreweave-oracle.json: 1 shared entities
+- catalog-academia-core.json: 1 shared entities
+- fin-ai-depreciation-debttrap.json: 1 shared entities
+- spec-shai-hulud-npm-worm.json: 1 shared entities
+- digitalid-device-ownership-erosion.json: 1 shared entities

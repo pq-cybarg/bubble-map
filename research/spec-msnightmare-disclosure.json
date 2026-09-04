@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "MS_Nightmare / 'Nightmare Eclipse' (2026): an uncoordinated Microsoft zero-day disclosure campaign (persona claims UNVERIFIED)",
+    "generated": "2026-09-04",
+    "frame": "In 2026 an anonymous actor - using the aliases Nightmare Eclipse / Chaotic Eclipse / MSNightmare - ran an aggressive UNCOORDINATED disclosure campaign against Microsoft, publishing working proof-of-concept exploits (mostly Windows/Defender local-privilege-escalation) roughly every ~10 days, then moving to self-hosted infrastructure after takedowns. It is a live test case of the vulnerability-disclosure social contract.",
+    "grade": "That the exploits were PUBLISHED and that several were exploited in the wild = reported by security press/vendors (The Register, TechRadar, vendor writeups) - treat as reported, not independently verified here. The PERSONA'S CLAIMS (ex-Microsoft employee; MSRC deleted their account; unpaid bounties; silent patches) are SELF-DESCRIBED and UNVERIFIED; Microsoft says none were reported via official channels first. Identity is unknown.",
+    "honest_limits": "This block does NOT assert the actor's identity, employment history, or the truth of their grievances - all are self-published and contested. It also does not host or point to exploit code. The value is mapping the DISPUTE (uncoordinated disclosure vs vendor handling) and the pattern (public PoCs -> in-the-wild exploitation), not endorsing either side. Provided source URLs (x.com/MSNightmare2000, github.com/MSNightmare, git.projectnightcrawler.dev) are the actor's self-published channels - treated as unverified primary self-claims / PoC-distribution infra.",
+    "method": "The Register (May-Jun 2026); TechRadar; vendor analyses (Picus, PurpleSec, Cyderes) of the RoguePlanet/Defender chain; Microsoft public statement + MSRC posture."
+  },
+  "nodes": [
+    {"id": "MS_Nightmare", "sector": "other"},
+    {"id": "Microsoft_Defender", "sector": "other"},
+    {"id": "Coordinated_Disclosure_Norms", "sector": "state"}
+  ],
+  "edges": [
+    {"from": "MS_Nightmare", "to": "Microsoft", "instrument": "vuln_disclosure", "notes": "Anonymous actor (aliases Nightmare Eclipse/Chaotic Eclipse/MSNightmare) ran an uncoordinated 0-day campaign vs Microsoft in 2026. SELF-DESCRIBED grievances (UNVERIFIED): valid MSRC bugs triaged low or left unpatched for months; unpaid bounties despite silent patches; MSRC allegedly deleted their account. Microsoft says none were reported via official channels first (present both). Identity unknown.", "source": "#237 MS_Nightmare (The Register 2026; Microsoft statement)"},
+    {"from": "MS_Nightmare", "to": "Microsoft_Defender", "instrument": "exploit_leak", "notes": "Published ~7 working PoCs, ~one per 10 days: RedSun, UnDefend, BlueHammer, YellowKey, GreenPlasma, MiniPlasma, then RoguePlanet (a Defender LPE reproduced on fully-patched Win11, Jun-2026). Mostly Windows/Defender local privilege escalation (reported).", "source": "#237 MS_Nightmare (Picus/PurpleSec/Cyderes writeups)"},
+    {"from": "Microsoft_Defender", "to": "Microsoft", "instrument": "relationship", "notes": "Defender is Microsoft's built-in endpoint security; the campaign specifically targeting it (turning the security product into the attack surface) is the pointed irony of the episode (fact/context).", "source": "#237 MS_Nightmare (vendor analyses)"},
+    {"from": "MS_Nightmare", "to": "Coordinated_Disclosure_Norms", "instrument": "disclosure", "notes": "The episode is a stress-test of Coordinated Vulnerability Disclosure: attackers began exploiting BlueHammer/RedSun/UnDefend soon after PoCs went public. Microsoft: 'Uncoordinated disclosures that put PoC code for unpatched vulnerabilities into the hands of bad actors are never justifiable.' Microsoft vaguely threatened its Digital Crimes Unit, then backed down after backlash (fact).", "source": "#237 MS_Nightmare (Microsoft statement; The Register)"},
+    {"from": "Coordinated_Disclosure_Norms", "to": "Malware_Lineage", "instrument": "lineage", "notes": "Ties to the insider-threat / weaponized-disclosure branch: like the Shadow Brokers (leaked state tools) but framed as researcher-vs-vendor retaliation. The unifying thread across the lineage: how offensive capability leaks into the wild - via theft, leak, sale, or protest (interpretation).", "source": "#237 MS_Nightmare (Malware_Lineage hub)"}
+  ]
+}

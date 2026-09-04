@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "title": "The Shadow Brokers (2016-17): when leaked NSA cyber-weapons became global ransomware",
+    "generated": "2026-09-04",
+    "frame": "An entity calling itself 'The Shadow Brokers' auctioned then dumped a cache of offensive tools attributed to the NSA-linked Equation Group. The April-2017 dump included EternalBlue (an SMBv1 exploit), which within weeks powered WannaCry (attributed to North Korea) and NotPetya (attributed to Russia) - the canonical case of state cyber-weapons leaking and boomeranging into worldwide damage.",
+    "grade": "The leak, EternalBlue, MS17-010, and the WannaCry/NotPetya outbreaks = FACT. Attribution of WannaCry->DPRK/Lazarus and NotPetya->Russia/GRU = official government attributions (US/UK et al.) - strong but state-asserted. The identity of 'The Shadow Brokers' themselves is UNRESOLVED (Russia widely suspected; not proven).",
+    "honest_limits": "Attribution of the outbreaks is by governments and vendors (high-confidence, still assertions). Who The Shadow Brokers are - and how they obtained the tools (insider? hack?) - remains publicly unresolved; this block does not assert it. NotPetya damage (~$10B) is an estimate.",
+    "method": "Microsoft MS17-010 (Mar 2017); US-CERT; US/UK government attributions (WannaCry->DPRK 2017; NotPetya->Russia 2018); vendor analyses."
+  },
+  "nodes": [
+    {"id": "Shadow_Brokers", "sector": "other"},
+    {"id": "EternalBlue", "sector": "other"},
+    {"id": "WannaCry", "sector": "other"},
+    {"id": "NotPetya", "sector": "other"}
+  ],
+  "edges": [
+    {"from": "Shadow_Brokers", "to": "Equation_Group", "instrument": "leak_disclosure", "notes": "From Aug-2016 the Shadow Brokers auctioned/teased, then (Apr-2017) dumped, a cache of offensive tools attributed to the Equation Group (NSA's Tailored Access Operations) - exploits, implants, and the FuzzBunch framework (fact).", "source": "#236 Shadow Brokers (vendor analyses; press)"},
+    {"from": "Shadow_Brokers", "to": "NSA", "instrument": "attribution", "notes": "The leaked tools are attributed to the NSA (via Equation Group / TAO); the identity of the Shadow Brokers themselves is UNRESOLVED (Russian state widely suspected; an insider theory also floated - not proven). Present as open (fact of tool-attribution; actor-attribution open).", "source": "#236 Shadow Brokers (IC/press; unresolved)"},
+    {"from": "Shadow_Brokers", "to": "EternalBlue", "instrument": "leak_disclosure", "notes": "The Apr-14-2017 'Lost in Translation' dump released EternalBlue (SMBv1 remote code execution) + DoublePulsar implant. Microsoft had quietly patched it (MS17-010, Mar-14-2017) after a reported tip - one month before the public dump (fact).", "source": "#236 Shadow Brokers (Microsoft MS17-010)"},
+    {"from": "EternalBlue", "to": "Microsoft", "instrument": "exploited_platform", "notes": "EternalBlue exploited Windows SMBv1; unpatched/legacy systems (incl. end-of-life XP) remained exposed - the long tail of patch lag is what made the follow-on worms so damaging (fact).", "source": "#236 Shadow Brokers (MS17-010)"},
+    {"from": "EternalBlue", "to": "WannaCry", "instrument": "enabled", "notes": "May-12-2017: WannaCry ransomware used EternalBlue to self-propagate to ~200k+ machines in 150+ countries (incl. UK NHS); halted by a researcher's kill-switch domain (fact).", "source": "#236 Shadow Brokers (US-CERT)"},
+    {"from": "WannaCry", "to": "North_Korea", "instrument": "attribution", "notes": "The US, UK and allies attributed WannaCry to North Korea (Lazarus Group), Dec-2017 - official government attribution (strong, state-asserted).", "source": "#236 Shadow Brokers (US/UK attribution 2017)"},
+    {"from": "WannaCry", "to": "Lazarus_Group", "instrument": "attribution", "notes": "Code/infra overlaps tied WannaCry to Lazarus (the DPRK cluster also behind major crypto thefts) - linking the ransomware to the existing Lazarus node (fact per attribution).", "source": "#236 Shadow Brokers (vendor overlap analysis)"},
+    {"from": "EternalBlue", "to": "NotPetya", "instrument": "enabled", "notes": "Jun-27-2017: NotPetya (wiper masquerading as ransomware) used EternalBlue + Mimikatz, seeded via a compromised Ukrainian tax-software update (M.E.Doc); est. ~$10B global damage (Maersk, Merck, FedEx/TNT) (fact; damage estimate).", "source": "#236 Shadow Brokers (US-CERT; press)"},
+    {"from": "NotPetya", "to": "Russia", "instrument": "attribution", "notes": "The US, UK and allies attributed NotPetya to the Russian military (GRU), Feb-2018 - official government attribution (strong, state-asserted).", "source": "#236 Shadow Brokers (US/UK attribution 2018)"},
+    {"from": "EternalBlue", "to": "Malware_Lineage", "instrument": "lineage", "notes": "The defining lesson: offensive cyber tools stockpiled by states leak and boomerang; EternalBlue kept powering intrusions for years. The core argument against 'nobody but us' vulnerability hoarding + for coordinated disclosure (fact of recurrence).", "source": "#236 Shadow Brokers (post-incident analyses)"}
+  ]
+}

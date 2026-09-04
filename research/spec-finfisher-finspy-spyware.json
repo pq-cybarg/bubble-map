@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "title": "FinFisher / FinSpy (Gamma Group): German-made 'lawful intercept' spyware in abusive hands",
+    "generated": "2026-09-04",
+    "frame": "FinFisher/FinSpy is commercial 'lawful intercept' spyware sold by the Gamma Group (UK/Germany) to governments. Amnesty International (Sep 2020) found FinSpy targeting Egyptian civil society and revealed new Mac and Linux versions alongside Windows/Android - a marquee example of the mercenary-spyware market that also includes NSO/Pegasus and Intellexa/Predator.",
+    "grade": "The product, the Amnesty 2020 findings (Egypt targeting; Mac/Linux variants), and Gamma/FinFisher's insolvency (2022) = FACT (Amnesty; Citizen Lab; press). Which specific government operator deployed it in a given case is often INFERRED from infrastructure/targeting; attribution to a named agency is graded.",
+    "honest_limits": "'Lawful intercept' is the vendors' framing; documented deployments against journalists/activists show the dual-use gap. Operator attribution (which state ran a given FinSpy campaign) is usually circumstantial (server/targeting analysis), not a confession - graded accordingly. Amnesty/Citizen Lab are advocacy+research orgs; their forensic findings are well-corroborated but they are a party.",
+    "method": "Amnesty International (Sep 2020 report: FinSpy Mac/Linux, Egypt); Citizen Lab FinFisher research; EU dual-use export-control debates; German prosecutors' FinFisher case (2022 insolvency)."
+  },
+  "nodes": [
+    {"id": "Gamma_Group", "sector": "tech"},
+    {"id": "FinSpy", "sector": "other"},
+    {"id": "Commercial_Spyware_Market", "sector": "other"},
+    {"id": "Dual_Use_Export_Gap", "sector": "state"}
+  ],
+  "edges": [
+    {"from": "Gamma_Group", "to": "FinSpy", "instrument": "develops", "notes": "Gamma Group (Gamma International, UK/Germany; FinFisher GmbH, Munich) builds the FinFisher/FinSpy 'lawful intercept' suite - full-device implants (calls, messages, mic/camera, files) marketed to law enforcement/intelligence (fact). FinFisher GmbH filed insolvency in 2022 amid German criminal scrutiny of unlicensed exports.", "source": "#234 FinSpy (Citizen Lab; German prosecutors)"},
+    {"from": "FinSpy", "to": "Egypt", "instrument": "spyware_deployment", "notes": "Amnesty International (Sep-2020) found new FinSpy variants targeting Egyptian civil society and - for the first time publicly - revealed FinSpy for macOS and Linux (alongside Windows/Android), using multi-stage loaders + modular spying. Operator inferred as an Egyptian government client (graded).", "source": "#234 FinSpy (Amnesty 2020)"},
+    {"from": "FinSpy", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "FinSpy is a core exemplar of the mercenary/commercial-spyware market - 'lawful intercept' products sold to states and repeatedly documented against journalists, activists, and dissidents (fact of category).", "source": "#234 FinSpy (Citizen Lab; Amnesty)"},
+    {"from": "NSO_Group", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "NSO Group (Pegasus) is the market's most notorious member - wiring the existing NSO/Pegasus nodes into the shared commercial-spyware hub (fact).", "source": "#234 FinSpy (spyware-market mapping)"},
+    {"from": "Intellexa", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "Intellexa/Cytrox (Predator) - the third major cluster (US-sanctioned 2024) - also joins the shared hub (fact).", "source": "#234 FinSpy (spyware-market mapping)"},
+    {"from": "Commercial_Spyware_Market", "to": "Dual_Use_Export_Gap", "instrument": "regulatory", "notes": "The recurring policy failure: spyware is dual-use (Wassenaar Arrangement cyber-tools controls; EU dual-use regulation) yet repeatedly reaches abusive governments. The gap between export licensing on paper and enforcement in practice is the through-line (interpretation grounded in the export-control record).", "source": "#234 FinSpy (Wassenaar; EU dual-use)"},
+    {"from": "FinSpy", "to": "Malware_Lineage", "instrument": "lineage", "notes": "FinSpy anchors the 'legal spyware' branch of the malware lineage - distinct from state cyber-weapons (Equation/EternalBlue) and criminal worms (ILOVEYOU/Shai-Hulud) but sharing implant/exfiltration techniques (fact of category).", "source": "#234 FinSpy (Malware_Lineage hub)"}
+  ]
+}
