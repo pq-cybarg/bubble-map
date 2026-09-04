@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 80 files
+- **Meta** — 81 files
 - **Chainlink** — 58 files
 - **Google** — 53 files
 - **OpenAI** — 41 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ecdsa-nonce-failure-tracker.json` — related files by shared entities (verify cross-refs exist)
-- spec-blockchain-ecosystem.json: 3 shared entities
-- spec-us-regulator-jurisdiction-map.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
+## Newest file `spec-trusted-foundry-secure-microelectronics.json` — related files by shared entities (verify cross-refs exist)
+- macro-crqc-quantum-landscape.json: 3 shared entities
+- spec-surveillance-cyber-threat-layer.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- spec-vitalik-buterin-thought.json: 2 shared entities
+- spec-semiconductor-logistics-standards.json: 2 shared entities
 - fin-hedera-connections.json: 2 shared entities
-- macro-pqc-chips.json: 2 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- spec-defense-primes-pqc.json: 2 shared entities
+- macro-cre-privatecredit.json: 2 shared entities
+- blockchain-registry.json: 2 shared entities

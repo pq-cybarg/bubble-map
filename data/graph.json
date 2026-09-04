@@ -500,6 +500,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "BAE_Systems": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "BASF": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -1544,6 +1548,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "DMEA_TAPO": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "DOGE": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1810,6 +1818,10 @@
     },
     "EU_Auto_Makers": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "EU_Chips_Act": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "EU_Quantum_Flagship": {
@@ -2626,6 +2638,10 @@
     },
     "INSTC": {
       "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
+    "IPCEI_Microelectronics": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "IPFS": {
@@ -3592,6 +3608,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "NSI_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "NSO_Group": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -3652,12 +3672,20 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "Newport_Wafer_Fab": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "NewsGuard": {
       "sector": "other",
       "has_exogenous_revenue": false
     },
     "Newton": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Nexperia_Wingtech": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Next-gen data centers / AI infrastructure": {
@@ -3980,6 +4008,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Pax_Silica": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Paxful": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -4240,6 +4272,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "RAMP_C": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "RELX": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -4286,6 +4322,10 @@
     },
     "Ransomware_RaaS": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Rapidus": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Rare_Earths": {
@@ -4428,6 +4468,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "S2MARTS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "SAIC": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -4510,6 +4554,10 @@
     },
     "SG_Laundering": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "SHIP_Packaging": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "SIAC": {
@@ -4692,6 +4740,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Secure_Enclave": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Securitize": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
@@ -4806,6 +4858,10 @@
     },
     "Sirius_International_Holding": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "SkyWater": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "SoftBank": {
@@ -5316,6 +5372,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "UK_Semiconductor_Strategy": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "UK_comms_infrastructure": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -5579,6 +5639,10 @@
     "Visa": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Vishay": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Vistra": {
       "sector": "other",
@@ -10943,7 +11007,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-globalfoundries.json",
+      "source_file": "spec-globalfoundries.json,spec-trusted-foundry-secure-microelectronics.json",
       "note": ""
     },
     {
@@ -28978,6 +29042,461 @@
       "note": "the defended-floor mechanism modeled in oil.floor_model"
     },
     {
+      "from": "NSA",
+      "to": "DMEA_TAPO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "The DoD Trusted Foundry mission moved from the NSA to DMEA's Trusted Access Program Office (TAPO) in 2015 (TAPO has run it since 2003) - the same NSA->defense microelectronics lineage that recurs across the surveillance/defense threads (fact)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "DMEA/TAPO administers the Trusted Foundry Program: guaranteed US-government access to trusted microelectronics for the typically LOW-VOLUME needs of defense; accredits the whole chain - design, mask, foundry, packaging/assembly, test, broker (fact)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "GlobalFoundries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "accreditation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "GlobalFoundries (Malta NY; ex-IBM Microelectronics East Fishkill/Essex Jct) is a core DMEA-accredited trusted supplier for defense-grade silicon (fact of accreditation; scope varies)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "accreditation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Intel Foundry is positioned as a leading-edge trusted domestic supplier (RAMP-C + Secure Enclave) - the US bet on onshore <=18A for defense (fact of programs; leading-edge yield/timeline open)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "IBM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "trusted_supplier",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "IBM holds DMEA Trusted Supplier accreditation and (Trusted Foundry Access II, 2022-23) establishes secured microelectronics manufacturing FLOWS + embedded security services at commercial advanced fabs (fact)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "SkyWater",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "accreditation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "SkyWater Technology (Bloomington MN) is a US-owned DMEA-accredited/DoD trusted foundry - trailing-edge + specialty (the domestic trusted-but-not-leading-edge tier) (fact)."
+    },
+    {
+      "from": "DMEA_TAPO",
+      "to": "BAE_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "accreditation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "BAE Systems' Microelectronics Center (Nashua NH) is a long-standing trusted/rad-hard foundry for defense - the prime-owned trusted-fab model (fact)."
+    },
+    {
+      "from": "Trusted_Foundry",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "The program's whole purpose: assured, low-volume, trusted leading-and-legacy parts for weapons systems and NSS - both classified and unclassified (fact)."
+    },
+    {
+      "from": "S2MARTS",
+      "to": "RAMP_C",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ota_vehicle",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "RAMP-C (Rapid Assured Microelectronics Prototypes - Commercial) was awarded via the S2MARTS Other Transaction Authority, run by the Trusted & Assured Microelectronics office (OUSD R&E) - the OTA money pipe for onshore leading-edge (fact)."
+    },
+    {
+      "from": "RAMP_C",
+      "to": "Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "prototype_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Intel Foundry COMPLETED RAMP-C (launched Sep-2021): built IP/EDA/ecosystem on Intel 18A (RibbonFET+PowerVia), taped out + tested defense prototypes, onboarded DIB customers Trusted Semiconductor Solutions + Reliable MicroSystems; declared production-readiness (fact of completion; scale-up open)."
+    },
+    {
+      "from": "RAMP_C",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "prototype_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "RAMP-C exists to give DoD access to domestic LEADING-EDGE (not just trailing-edge trusted) prototypes - directly answering the TSMC/Taiwan leading-edge dependency (fact/intent as stated)."
+    },
+    {
+      "from": "Intel",
+      "to": "Secure_Enclave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "The Secure Enclave program funds a dedicated, walled leading-edge Intel manufacturing capability for DoD (successor focus after RAMP-C) - onshore assured supply of advanced nodes (fact of program)."
+    },
+    {
+      "from": "Secure_Enclave",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Dedicated defense access to advanced-node silicon inside a commercial fab - the 'trusted enclave in a commercial environment' model also used by Trusted Foundry Access III (~$576M ceiling, DMEA 2026) (fact; ceiling != awards)."
+    },
+    {
+      "from": "SHIP_Packaging",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "packaging_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "SHIP (State-of-the-art Heterogeneous Integrated Packaging) gives DoD access to advanced 2.5D/3D packaging + chiplets - packaging is the other half of trusted assurance, not just the fab (fact)."
+    },
+    {
+      "from": "DARPA",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_program",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "DARPA's microelectronics work (Electronics Resurgence Initiative; SHIELD/AMS provenance) feeds trust/assurance techniques into the trusted-foundry regime - the research arm of hardware trust (fact)."
+    },
+    {
+      "from": "Lockheed_Martin",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Defense primes depend on DMEA-accredited trusted parts for weapons programs - the demand side that justifies the trusted-foundry regime (fact of dependency)."
+    },
+    {
+      "from": "RTX",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "RTX/Raytheon (like other primes) sources trusted/rad-hard microelectronics for missiles/radar/EW - same trusted-supply dependency (fact)."
+    },
+    {
+      "from": "Trusted_Foundry",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "dependency",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "PQC/crypto roots-of-trust (key storage, secure boot, HSMs) must be fabricated in trusted facilities - hardware assurance underpins the PQC migration; ties this block to the quantum/PQC + ECDSA threads (fact/interpretation)."
+    },
+    {
+      "from": "TSMC",
+      "to": "Trusted_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "chokepoint",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "The reason the regime exists: leading-edge fabrication is concentrated at TSMC (Taiwan), a single-point geopolitical chokepoint; trusted-foundry + CHIPS onshoring are the hedge (interpretation grounded in the Taiwan-silicon-shield thread)."
+    },
+    {
+      "from": "CHIPS_Act",
+      "to": "Intel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "CHIPS & Science Act: Intel is the largest US CHIPS awardee (AZ/OH/NM/OR); pairs with Secure Enclave to onshore leading-edge for both commercial + defense (fact; disbursement/milestones vary)."
+    },
+    {
+      "from": "CHIPS_Act",
+      "to": "TSMC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "CHIPS-backed TSMC Arizona (leading-edge on US soil) - the onshoring of the very chokepoint the trusted regime worries about (fact)."
+    },
+    {
+      "from": "CHIPS_Act",
+      "to": "Samsung_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "CHIPS-backed Samsung Taylor TX fab - second leading-edge foreign foundry onshored under US industrial policy (fact)."
+    },
+    {
+      "from": "EU_Chips_Act",
+      "to": "IPCEI_Microelectronics",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "EU Chips Act + IPCEI ME/CT (EUR 21.8B; EUR 13.7B state aid) span the value chain; ~EUR 69B catalysed by Oct-2025; a third IPCEI + Chips Act 2.0 (adopted 3-Jun-2026) shift toward supply-chain-resilience + a B2B supply platform (fact)."
+    },
+    {
+      "from": "EU_Chips_Act",
+      "to": "ASML",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Europe's crown-jewel chokepoint is equipment: ASML (EUV monopoly). Draghi urged a fast-track IPCEI for lithography/deposition leadership - the EU's leverage point in the allied stack (fact/interpretation)."
+    },
+    {
+      "from": "EU_Chips_Act",
+      "to": "TSMC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "ESMC Dresden (TSMC JV with Bosch/Infineon/NXP) - EU onshoring of a leading foundry, mirroring the US CHIPS play (fact)."
+    },
+    {
+      "from": "IPCEI_Microelectronics",
+      "to": "Semiconductor_Materials",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "IPCEI funds the FULL chain incl. materials/equipment - wiring the trusted/industrial-policy layer to the existing semiconductor materials + equipment nodes (fact)."
+    },
+    {
+      "from": "EU_Chips_Act",
+      "to": "Pax_Silica",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "allied_coordination",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Reports that the EU + member states are preparing to join the US-led 'Pax Silica' initiative on AI-chip supply chains - resilience via trusted international partnership, not pure autarky (fact of reports; graded)."
+    },
+    {
+      "from": "Pax_Silica",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "allied_coordination",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "US-led allied framework to align AI-chip supply chains among trusted partners - the geopolitical layer above national trusted-foundry programs (fact of initiative; details emerging)."
+    },
+    {
+      "from": "UK_Semiconductor_Strategy",
+      "to": "Newport_Wafer_Fab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "UK National Semiconductor Strategy (GBP 1B/10yr, up to GBP 200M 2023-25) - deliberately NICHE (design, compound semiconductors, R&D; not leading-edge fabrication); Newport is the UK's largest fab (200mm, >30k wafers/mo, automotive) (fact; scale small vs US/EU)."
+    },
+    {
+      "from": "NSI_Act",
+      "to": "Newport_Wafer_Fab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "national_security_review",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Under the National Security and Investment Act 2021 the UK ordered divestment of 86% of Newport Wafer Fab (Nov-2022) after two prior clearances - the marquee NSI intervention (fact; national-security basis stated; Nexperia disputes)."
+    },
+    {
+      "from": "Nexperia_Wingtech",
+      "to": "Newport_Wafer_Fab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "forced_divestment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Nexperia (Dutch-incorporated, ultimately China-owned via Wingtech) had bought 100% by Jul-2021; ordered to divest 86%; said it was 'shocked' and denied the national-security concerns (present both accounts) (fact)."
+    },
+    {
+      "from": "Newport_Wafer_Fab",
+      "to": "Vishay",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Sold to US-based Vishay Intertechnology for ~$177M (completed Mar-2024, after UK approval) - forced Chinese exit -> allied ownership (fact)."
+    },
+    {
+      "from": "NSI_Act",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "national_security_review",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "The pattern extends: UK ordered a Chinese consortium to sell 80.2% of chipmaker FTDI by Feb-2027 (legal challenges failed) - mirroring Newport; retroactive review of PRC-linked chip stakes (fact)."
+    },
+    {
+      "from": "Rapidus",
+      "to": "Japan",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "industrial_policy",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Rapidus (METI-backed, Hokkaido) targets 2nm using IBM technology - Japan's onshoring + allied leading-edge bet, part of the same trusted/allied-supply pattern (fact; yield/timeline unproven)."
+    },
+    {
+      "from": "Rapidus",
+      "to": "IBM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-trusted-foundry-secure-microelectronics.json",
+      "note": "Rapidus licenses IBM's 2nm nanosheet technology - the IBM-microelectronics lineage (also behind GF and DMEA trusted services) reaching into allied Japan (fact)."
+    },
+    {
       "from": "FHLB_System",
       "to": "US_Banks",
       "instrument": "other",
@@ -34296,10 +34815,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1475,
-    "num_edges": 2184,
+    "num_nodes": 1491,
+    "num_edges": 2219,
     "num_financial_edges": 274,
-    "num_structural_edges": 1910,
+    "num_structural_edges": 1945,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -34348,28 +34867,40 @@
       "AI_Datacenters",
       "AMD",
       "ASML",
+      "AUKUS",
       "Amazon",
       "Amkor",
+      "Andreessen_Horowitz",
+      "Anduril",
       "Anthropic",
+      "Australia",
       "Bank_Stablecoin_Consortium",
       "Binance",
       "Bitcoin",
       "CFTC",
+      "CHIPS_Act",
       "CLARITY_Act",
       "CRE",
       "CZ",
+      "Caltech",
+      "Carnegie_Mellon_University",
       "China",
+      "Circle",
       "Citizens_Financial",
       "CoWoS",
       "Coinbase",
       "Congress",
+      "ConsenSys",
       "CoreWeave",
+      "Critical_Minerals_Strategic_Reserve",
       "Cross_River_Bank",
       "Crusoe",
+      "Crypto_Sprint",
       "DARPA",
       "DOJ",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
+      "Department_of_War",
       "ECDSA",
       "Early_Warning",
       "Electricity_Ratepayers",
@@ -34377,10 +34908,13 @@
       "FDIC",
       "FPL",
       "Fairshake",
+      "Family_Offices",
+      "Fentanyl",
       "Fifth_Third",
       "First_Brands",
       "G42",
       "GENIUS_Act",
+      "GlobalFoundries",
       "Goldman_Sachs",
       "Google",
       "HV_Transformers",
@@ -34388,13 +34922,17 @@
       "IBM",
       "ICE",
       "ImmigrationOS",
+      "Intel",
       "IonQ",
       "Japan",
       "Jump_Crypto",
       "KeyBank",
       "Lambda",
+      "Lockheed_Martin",
+      "MP_Materials",
       "MSS",
       "Meta",
+      "MetaMask",
       "Microsoft",
       "NVIDIA",
       "NextEra_Energy",
@@ -34402,20 +34940,28 @@
       "OSAT",
       "OpenAI",
       "Open_Standard",
+      "Opioid_Crisis",
       "Oracle",
       "Palantir",
+      "Palantir_AIP",
+      "Palantir_Foundry",
       "Palantir_Gotham",
       "Peter_Thiel",
       "Power_Grid",
+      "Prime_Brokers",
+      "Princeton_University",
       "PrivateCredit_Funds",
       "Project_Crypto",
       "RIKEN",
+      "Rare_Earths",
       "Regions_Financial",
       "Ripple",
       "SEC",
       "SINK_bondmarket",
       "SINK_lenders",
       "SaltTyphoon",
+      "Secure_Enclave",
+      "Solana",
       "SpaceX",
       "Stablecoins",
       "Stanford_University",
@@ -34425,57 +34971,54 @@
       "TSMC",
       "Tai_Mo_Shan",
       "The_Clearing_House",
+      "Tokenized_Collateral",
       "Tokenized_Deposits",
       "Treasury",
       "Tricolor_Holdings",
       "Truist",
+      "Trusted_Foundry",
       "UBS",
+      "UC_Berkeley",
+      "UIUC",
+      "US_Australia_Minerals_Framework",
       "US_Banks",
       "US_Government",
       "US_Treasuries",
+      "Ucore",
+      "Visa",
       "Weak_Nonce_Failure",
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 91,
+    "core_scc_all_edges_size": 125,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA"
       ],
       [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "Microsoft",
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
@@ -34485,14 +35028,18 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -34509,7 +35056,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -34517,6 +35063,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -35399,6 +35952,13 @@
         "in_robust_core": false
       },
       "Axis_of_Resistance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BAE_Systems": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -37232,6 +37792,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DMEA_TAPO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DOGE": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -37695,6 +38262,13 @@
         "in_robust_core": false
       },
       "EU_Auto_Makers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EU_Chips_Act": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39123,6 +39697,13 @@
         "in_robust_core": false
       },
       "INSTC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IPCEI_Microelectronics": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40816,6 +41397,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NSI_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NSO_Group": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40921,6 +41509,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Newport_Wafer_Fab": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NewsGuard": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40929,6 +41524,13 @@
         "in_robust_core": false
       },
       "Newton": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nexperia_Wingtech": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41495,6 +42097,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Pax_Silica": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Paxful": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41950,6 +42559,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "RAMP_C": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "RELX": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42028,6 +42644,13 @@
         "in_robust_core": false
       },
       "Ransomware_RaaS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rapidus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42279,6 +42902,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "S2MARTS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SAIC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42421,6 +43051,13 @@
       },
       "SG_Laundering": {
         "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SHIP_Packaging": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -42741,6 +43378,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Secure_Enclave": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Securitize": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42938,6 +43582,13 @@
         "in_robust_core": false
       },
       "Sirius_International_Holding": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SkyWater": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43833,6 +44484,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "UK_Semiconductor_Strategy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UK_comms_infrastructure": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44289,6 +44947,13 @@
         "in_robust_core": false
       },
       "Visa": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Vishay": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44866,7 +45531,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 63,
+        "degree": 64,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -44891,7 +45556,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 21,
-        "source_files": 36,
+        "source_files": 37,
         "layers": [
           "financial",
           "structural"
@@ -44900,7 +45565,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 54,
+        "degree": 55,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -44922,7 +45587,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 34,
+        "source_files": 35,
         "layers": [
           "financial",
           "structural"
