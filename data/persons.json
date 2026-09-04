@@ -14465,6 +14465,111 @@
    "blocks": [
     "spec-blankfein-ai-2008-analogy"
    ]
+  },
+  {
+   "name": "Julian Assange",
+   "role": "Founder & former editor-in-chief, WikiLeaks",
+   "domains": [
+    "State/Policy",
+    "Media",
+    "Security"
+   ],
+   "orgs": [
+    "Julian_Assange",
+    "WikiLeaks"
+   ],
+   "bluf": "A radical-transparency absolutist who built a stateless publishing machine to force disclosure of state secrets, treating institutional secrecy itself as the adversary. Assess with MODERATE confidence he optimizes for maximal disclosure + personal mission continuity over operational caution or alliance management; his choices (bulk publication, high-stakes brinkmanship) are ideological, not pragmatic. The 2024 plea ended the legal saga but not the movement he seeded.",
+   "drivers": "Primary: a conviction that secrecy enables abuse and that unfiltered disclosure is a moral duty. Secondary: adversarial self-conception (the lone truth-teller vs the security state), reinforced by years of confinement.",
+   "worldview": "Cypherpunk-adjacent radical transparency: information wants to be free; institutions lie by default; publication is accountability.",
+   "decision_style": "High-risk, mission-first, brinkmanship; low deference to allies' caution - repeatedly chose maximal exposure over harm-reduction compromises.",
+   "track_record": "WikiLeaks (2006); Collateral Murder + Iraq/Afghan War Logs + Cablegate (2010, Manning-sourced); 2016 DNC email publication (US-IC-alleged GRU source, WikiLeaks denies); Ecuadorian embassy asylum (2012-19); UK detention; 2024 US plea (time served) -> Australia.",
+   "vulnerabilities": "Reliance on sources exposed both (Manning prosecuted); polarizing persona narrows coalition; the 2016 episode blurred 'transparency' vs 'instrument' lines and cost credibility with prior allies.",
+   "relationships": "Movement links to the broader leaktivist ecosystem; contested proximity to Russian-sourced material (2016); folk-hero status among transparency/press-freedom advocates alongside official prosecution.",
+   "outlook": "Free but under a felony plea; likely a symbolic figurehead more than an operator going forward; the WikiLeaks model persists via successors.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals",
+    "spec-hacktivist-catalog"
+   ]
+  },
+  {
+   "name": "Edward Snowden",
+   "role": "NSA whistleblower - 2013 mass-surveillance disclosures",
+   "domains": [
+    "Security",
+    "State/Policy",
+    "Privacy"
+   ],
+   "orgs": [
+    "Edward_Snowden",
+    "NSA"
+   ],
+   "bluf": "A principled systems-insider who concluded that mass surveillance was unconstitutional and unaccountable, and chose curated disclosure-via-journalists over dumping - a deliberately more disciplined model than WikiLeaks. Assess with MODERATE-HIGH confidence his actions were conviction-driven and pre-planned; he traded a comfortable career for permanent exile. His location in Russia is a consequence of a revoked passport + geopolitics, and remains his central vulnerability/critique point.",
+   "drivers": "Primary: constitutional/privacy conviction (the state secretly exceeded its legal mandate). Secondary: engineer's belief that architecture, once exposed, can be reformed; a strong personal-integrity self-concept.",
+   "worldview": "Civil-libertarian technologist: privacy is a precondition for freedom; oversight failed, so the public had to be informed.",
+   "decision_style": "Methodical, risk-aware, values-anchored - vetted journalists, staged releases, avoided indiscriminate dumps; accepted exile as the cost.",
+   "track_record": "2013 disclosures (PRISM, upstream/backbone collection, XKeyscore, bulk metadata) -> USA FREEDOM Act reforms, the global encryption/PQC push, and lasting norms debates; asylum in Russia (2013), citizenship (2022); ongoing advocacy/writing.",
+   "vulnerabilities": "Russian residence/citizenship is used to impugn his motives; critics argue disclosures aided adversaries; dependence on host-state goodwill constrains his voice.",
+   "relationships": "Worked through journalists (Greenwald, Poitras, Gellman) rather than a collective; symbolic ally of the privacy/press-freedom movement; adversarial to the US IC.",
+   "outlook": "Durable influence on privacy/crypto norms; personally constrained by exile; unlikely to return under current charges.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals",
+    "spec-surveillance-cyber-threat-layer"
+   ]
+  },
+  {
+   "name": "Maksim Yakubets",
+   "role": "Accused leader, Evil Corp (Dridex/Zeus lineage)",
+   "domains": [
+    "Cybercrime",
+    "Finance"
+   ],
+   "orgs": [
+    "Maksim_Yakubets",
+    "Evil_Corp"
+   ],
+   "bluf": "The archetypal Russia-based cybercrime kingpin: accused of running a professionalized banking-malware + ransomware enterprise while apparently enjoying de-facto immunity at home (reported FSB ties). Assess with MODERATE confidence he operates as a protected profit-maximizer whose main constraint is OFAC/geography, not law enforcement reach; sanctions raised his partners' costs more than his own.",
+   "drivers": "Primary: profit at industrial scale. Secondary: status/impunity (the sanctioned-but-untouchable lifestyle); reported intelligence-service accommodation trading access for tolerance.",
+   "worldview": "Predatory-commercial: banks/victims as targets; the state as a shield to be kept onside.",
+   "decision_style": "Franchise-builder - Dridex botnet, BitPaymer/WastedLocker ransomware, affiliate model; adapts branding under pressure.",
+   "track_record": "Zeus/Dridex campaigns; hundreds of millions in theft; OFAC designation + DOJ indictment + $5M reward (2019); 2024 UK/US/AU sanctions naming associates and a LockBit-affiliate link.",
+   "vulnerabilities": "Cannot travel to extradition jurisdictions; sanctions choke laundering/partnerships; dependence on state tolerance is revocable if politically convenient.",
+   "relationships": "Evil Corp network; reported FSB accommodation; ecosystem ties to LockBit and the broader Russian RaaS scene.",
+   "outlook": "Likely continues while sheltered in Russia; primary risk is a shift in state protection or an operational travel mistake.",
+   "confidence": "moderate",
+   "grade": "assessment (indictment/sanctions + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals",
+    "spec-ransomware-ecrime-catalog"
+   ]
+  },
+  {
+   "name": "Marcus Hutchins",
+   "role": "Security researcher (MalwareTech); registered the WannaCry kill-switch",
+   "domains": [
+    "Security"
+   ],
+   "orgs": [
+    "Marcus_Hutchins",
+    "WannaCry"
+   ],
+   "bluf": "A talented researcher whose arc captures the industry's grey-hat-to-white-hat pipeline: he accidentally halted a global ransomware worm, then was prosecuted for malware he had authored as a teenager. Assess with MODERATE confidence he is now a genuine defender whose credibility is enhanced, not erased, by the reckoning; his value is technical + as a cautionary example of the thin line between the two hats.",
+   "drivers": "Primary: technical mastery + curiosity. Secondary: reputation/redemption after the arrest; a public commitment to the defensive side.",
+   "worldview": "Pragmatic defender; open about his own past to argue that youthful malware authorship shouldn't define a career.",
+   "decision_style": "Analytical, fast under pressure (the live kill-switch call during WannaCry); candid/public post-arrest.",
+   "track_record": "Registered the sinkhole domain that stopped WannaCry's spread (May-2017); arrested over the Kronos banking trojan (2017); pleaded guilty (2019), time served + supervised release; continued malware research + writing since.",
+   "vulnerabilities": "Prior malware authorship is a permanent reputational asterisk; celebrity can distort threat-intel incentives.",
+   "relationships": "Embedded in the malware-research/threat-intel community; the case is a reference point in coordinated-disclosure and youth-cybercrime debates.",
+   "outlook": "Established defensive-research career; the redemption arc is the durable narrative.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals",
+    "spec-shadow-brokers-eternalblue"
+   ]
   }
  ]
 }

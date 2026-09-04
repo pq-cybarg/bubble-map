@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "title": "Notable cyber individuals (public-record figures) - wired to their groups/events",
+    "generated": "2026-09-04",
+    "frame": "A first, tightly-scoped set of NAMED individuals from the cyber-history corpus who are unambiguously public (indictments, sanctions, memoirs, major press) and warrant a strategic-behavior dossier. Each is a person node linked to the org/event they are known for. Companion dossiers live in the Persons tab; this block only wires the graph edges.",
+    "grade": "Roles, convictions, sanctions, and signature events = FACT (DOJ/OFAC/court records; on-record interviews). Any behavioral assessment is in the Persons dossier, labeled inference with calibrated confidence - not fact.",
+    "honest_limits": "Public-record ROLE only here - no private/biographical detail, no home/family/location data (no doxxing). Inclusion = materially documented in the corpus, NOT an accusation beyond what courts/sanctions already state. Living people; excluded from the formal proofs.",
+    "method": "DOJ/SDNY + OFAC records; court filings; on-record interviews + memoirs. Dossiers follow the Persons-tab leadership-analysis method (BLUF/drivers/worldview/etc., graded)."
+  },
+  "nodes": [
+    {"id": "Julian_Assange", "sector": "person"},
+    {"id": "Edward_Snowden", "sector": "person"},
+    {"id": "Maksim_Yakubets", "sector": "person"},
+    {"id": "Marcus_Hutchins", "sector": "person"}
+  ],
+  "edges": [
+    {"from": "Julian_Assange", "to": "WikiLeaks", "instrument": "founder_origin", "notes": "Assange founded WikiLeaks (2006) and was its editor/public face through the 2010 megaleaks; extradition fight ended 2024 with a US plea deal (time served) freeing him to Australia (fact).", "source": "#241 individuals (public record; US v. Assange plea 2024)"},
+    {"from": "Edward_Snowden", "to": "NSA", "instrument": "leak_disclosure", "notes": "Snowden (NSA contractor, Booz Allen) leaked the 2013 mass-surveillance archive (PRISM, upstream/backbone collection, XKeyscore) to journalists - the disclosure that reshaped the global privacy/PQC debate (fact).", "source": "#241 individuals (2013 disclosures; public record)"},
+    {"from": "Edward_Snowden", "to": "Russia", "instrument": "jurisdiction", "notes": "Stranded in Moscow in 2013 (US revoked his passport en route); granted asylum, then Russian citizenship (2022). His location is a matter of geopolitics, not endorsement - noted as jurisdictional fact.", "source": "#241 individuals (public record)"},
+    {"from": "Maksim_Yakubets", "to": "Evil_Corp", "instrument": "leads", "notes": "Yakubets is the accused leader of Evil Corp (Dridex/Zeus lineage); OFAC-sanctioned + DOJ-indicted (2019), with a $5M reward and reported FSB links; 2024 UK/US actions named further associates + a LockBit tie (fact/attribution).", "source": "#241 individuals (OFAC 2019; DOJ; NCA 2024)"},
+    {"from": "Marcus_Hutchins", "to": "WannaCry", "instrument": "halted", "notes": "Hutchins (MalwareTech) registered the kill-switch domain that stopped WannaCry's spread (May-2017) - the accidental-hero moment of the outbreak (fact).", "source": "#241 individuals (public record; 2017)"},
+    {"from": "Marcus_Hutchins", "to": "DOJ", "instrument": "prosecution", "notes": "Months later the DOJ arrested Hutchins over his earlier authorship of the Kronos banking trojan; he pleaded guilty (2019) and received time served + supervised release - a redemption/ambiguity arc (researcher and, earlier, malware author) (fact).", "source": "#241 individuals (US v. Hutchins 2019)"}
+  ]
+}

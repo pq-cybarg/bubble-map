@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-spyware-vendor-catalog.json` — related files by shared entities (verify cross-refs exist)
-- macro-ai-power-grid-bottleneck.json: 3 shared entities
-- commodities-metals.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- energy-power.json: 3 shared entities
-- catalog-academia-core.json: 3 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
-- macro-crqc-quantum-landscape.json: 3 shared entities
-- sec-filings.json: 3 shared entities
+## Newest file `spec-cyber-notable-individuals.json` — related files by shared entities (verify cross-refs exist)
+- spec-hacktivist-catalog.json: 1 shared entities
+- spec-surveillance-cyber-threat-layer.json: 1 shared entities
+- spec-exchanges-asia.json: 1 shared entities
+- spec-disclosures-surveillance.json: 1 shared entities
+- spec-shadow-brokers-eternalblue.json: 1 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities
+- macro-official-data-integrity.json: 1 shared entities
+- spec-state-apt-catalog.json: 1 shared entities

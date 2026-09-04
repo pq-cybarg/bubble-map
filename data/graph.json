@@ -1952,6 +1952,10 @@
       "sector": "pqc",
       "has_exogenous_revenue": false
     },
+    "Edward_Snowden": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "EeroQ": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -3088,6 +3092,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Julian_Assange": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Julie_Inman_Grant": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3508,6 +3516,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "Maksim_Yakubets": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Mali": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -3518,6 +3530,10 @@
     },
     "Mandiant": {
       "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
+    "Marcus_Hutchins": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Mass_Arbitration": {
@@ -16390,6 +16406,84 @@
       "cancelable": false,
       "source_file": "spec-us-regulator-jurisdiction-map.json",
       "note": "DoW reassigned Army IVAS (~$22B) from Microsoft to Anduril (Feb 2026) (fact)."
+    },
+    {
+      "from": "Julian_Assange",
+      "to": "WikiLeaks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Assange founded WikiLeaks (2006) and was its editor/public face through the 2010 megaleaks; extradition fight ended 2024 with a US plea deal (time served) freeing him to Australia (fact)."
+    },
+    {
+      "from": "Edward_Snowden",
+      "to": "NSA",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Snowden (NSA contractor, Booz Allen) leaked the 2013 mass-surveillance archive (PRISM, upstream/backbone collection, XKeyscore) to journalists - the disclosure that reshaped the global privacy/PQC debate (fact)."
+    },
+    {
+      "from": "Edward_Snowden",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "jurisdiction",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Stranded in Moscow in 2013 (US revoked his passport en route); granted asylum, then Russian citizenship (2022). His location is a matter of geopolitics, not endorsement - noted as jurisdictional fact."
+    },
+    {
+      "from": "Maksim_Yakubets",
+      "to": "Evil_Corp",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Yakubets is the accused leader of Evil Corp (Dridex/Zeus lineage); OFAC-sanctioned + DOJ-indicted (2019), with a $5M reward and reported FSB links; 2024 UK/US actions named further associates + a LockBit tie (fact/attribution)."
+    },
+    {
+      "from": "Marcus_Hutchins",
+      "to": "WannaCry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "halted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Hutchins (MalwareTech) registered the kill-switch domain that stopped WannaCry's spread (May-2017) - the accidental-hero moment of the outbreak (fact)."
+    },
+    {
+      "from": "Marcus_Hutchins",
+      "to": "DOJ",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals.json",
+      "note": "Months later the DOJ arrested Hutchins over his earlier authorship of the Kronos banking trojan; he pleaded guilty (2019) and received time served + supervised release - a redemption/ambiguity arc (researcher and, earlier, malware author) (fact)."
     },
     {
       "from": "Coinbase",
@@ -36920,10 +37014,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1559,
-    "num_edges": 2360,
+    "num_nodes": 1563,
+    "num_edges": 2366,
     "num_financial_edges": 274,
-    "num_structural_edges": 2086,
+    "num_structural_edges": 2092,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -37131,11 +37225,11 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -37172,6 +37266,12 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
@@ -37185,12 +37285,6 @@
         "CoreWeave",
         "NVIDIA",
         "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -40633,6 +40727,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Edward_Snowden": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EeroQ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42621,6 +42722,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Julian_Assange": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Julie_Inman_Grant": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43356,6 +43464,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Maksim_Yakubets": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mali": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43371,6 +43486,13 @@
         "in_robust_core": false
       },
       "Mandiant": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Marcus_Hutchins": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48337,7 +48459,7 @@
       },
       {
         "node": "Russia",
-        "degree": 40,
+        "degree": 41,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -48351,7 +48473,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 18,
+        "source_files": 19,
         "layers": [
           "structural"
         ],
@@ -48540,6 +48662,26 @@
         "both_layers": true
       },
       {
+        "node": "DOJ",
+        "degree": 13,
+        "neighbor_sectors": [
+          "defense",
+          "exchange",
+          "industrial",
+          "other",
+          "person",
+          "regulator",
+          "state",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 11,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "JPMorgan",
         "degree": 11,
         "neighbor_sectors": [
@@ -48551,27 +48693,6 @@
           "pqc_quantum",
           "private_credit",
           "spv"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Stargate",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_infra",
-          "ai_lab",
-          "bank",
-          "commodity",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person"
         ],
         "n_neighbor_sectors": 8,
         "source_files": 8,
