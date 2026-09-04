@@ -1,0 +1,29 @@
+{
+  "metadata": {
+    "title": "Notable cyber individuals (batch 2): leakers, malware authors, and the informant - plus the Mirai botnet",
+    "generated": "2026-09-04",
+    "frame": "Second batch of named, public-record cyber figures wired to their events/orgs, with graded dossiers in the Persons tab. Adds the Mirai IoT-botnet node (a major missing malware). Covers leakers (Manning, Schulte), malware authors (de Guzman/ILOVEYOU, Jha/Mirai), and the informant (Monsegur/Sabu).",
+    "grade": "Convictions, sentences, and authorship = FACT (court records; on-record admissions). Behavioral assessments live in dossiers, labeled inference with calibrated confidence.",
+    "honest_limits": "Public-record ROLE only in the graph; no private/biographical detail beyond what courts + on-record interviews establish (no doxxing). Inclusion is documentation, not additional accusation. Where a person has multiple convictions, they are stated factually and without sensationalism. Living people; excluded from the formal proofs.",
+    "method": "DOJ/SDNY court records; US v. Manning (2013, commuted 2017); US v. Schulte (2022); US v. Jha (Mirai, 2017); on-record de Guzman interviews (2000/2020); US v. Monsegur."
+  },
+  "nodes": [
+    {"id": "Chelsea_Manning", "sector": "person"},
+    {"id": "Josh_Schulte", "sector": "person"},
+    {"id": "Onel_de_Guzman", "sector": "person"},
+    {"id": "Paras_Jha", "sector": "person"},
+    {"id": "Hector_Monsegur", "sector": "person"},
+    {"id": "Mirai", "sector": "other"}
+  ],
+  "edges": [
+    {"from": "Chelsea_Manning", "to": "WikiLeaks", "instrument": "leak_disclosure", "notes": "Army intelligence analyst who leaked the Iraq/Afghan War Logs, Collateral Murder, and Cablegate to WikiLeaks (2010); convicted 2013 (35 yrs), sentence commuted by Obama (2017) (fact).", "source": "#241 individuals-2 (US v. Manning)"},
+    {"from": "Josh_Schulte", "to": "Vault7", "instrument": "leak_disclosure", "notes": "Former CIA software engineer convicted (2022) as the source of the Vault 7 leak to WikiLeaks - the largest data theft in CIA history (fact).", "source": "#241 individuals-2 (US v. Schulte 2022)"},
+    {"from": "Josh_Schulte", "to": "US_Government", "instrument": "prosecution", "notes": "SDNY convicted Schulte on espionage-related counts for Vault 7; he also received a separate conviction on CSAM charges - both stated as court fact, without elaboration (fact).", "source": "#241 individuals-2 (SDNY)"},
+    {"from": "Onel_de_Guzman", "to": "ILOVEYOU_Worm", "instrument": "authored", "notes": "The Manila college student who wrote the ILOVEYOU worm (2000); arrested but never charged (no applicable Philippine law), later confirmed authorship on record (2020) - the human at the origin of the law-lags-tech precedent (fact).", "source": "#241 individuals-2 (de Guzman interviews)"},
+    {"from": "Paras_Jha", "to": "Mirai", "instrument": "authored", "notes": "Co-author of the Mirai IoT botnet; pleaded guilty (2017) - originally built to attack Minecraft DDoS-protection markets before it escaped control (fact).", "source": "#241 individuals-2 (US v. Jha 2017)"},
+    {"from": "Mirai", "to": "Malware_Lineage", "instrument": "lineage", "notes": "Mirai (2016) enslaved insecure IoT devices (default creds) into a massive DDoS botnet: it hit Krebs-on-Security, OVH, and - via Dyn (Oct-2016) - knocked out Twitter/Netflix/Reddit for much of the US East Coast. Its SOURCE CODE was released publicly, spawning endless variants - the IoT-botnet branch of the lineage (fact).", "source": "#241 individuals-2 (Dyn 2016; Mirai source release)"},
+    {"from": "Mirai", "to": "US_Government", "instrument": "targets", "notes": "The Dyn DNS attack (Oct-21-2016) was a wake-up call on IoT insecurity + DNS as a single point of failure - feeding CISA/NIST IoT-security guidance (fact).", "source": "#241 individuals-2 (Dyn incident)"},
+    {"from": "Hector_Monsegur", "to": "LulzSec", "instrument": "leads", "notes": "'Sabu' - a leader/hub of LulzSec (and Anonymous-adjacent AntiSec); after his 2011 arrest he became an FBI informant, and his cooperation led to the arrests of fellow members (fact).", "source": "#241 individuals-2 (US v. Monsegur)"},
+    {"from": "Hector_Monsegur", "to": "FBI", "instrument": "cooperation", "notes": "The Sabu case is the canonical example of law enforcement flipping a hacktivist leader into an informant to dismantle a leaderless crew from within (fact).", "source": "#241 individuals-2 (FBI/SDNY)"}
+  ]
+}

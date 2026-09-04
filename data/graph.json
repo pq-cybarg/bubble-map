@@ -1216,6 +1216,10 @@
       "sector": "security_research",
       "has_exogenous_revenue": true
     },
+    "Chelsea_Manning": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "ChemChina": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -2616,6 +2620,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Hector_Monsegur": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Hedera": {
       "sector": "dlt",
       "has_exogenous_revenue": true
@@ -3086,6 +3094,10 @@
     },
     "Johns_Manville": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Josh_Schulte": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Joyce_Kim": {
@@ -3664,6 +3676,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Mirai": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Mistral": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -4036,6 +4052,10 @@
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
     },
+    "Onel_de_Guzman": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "OpenAI": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -4210,6 +4230,10 @@
     },
     "Paragon_Solutions": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Paras_Jha": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Paribu": {
@@ -6695,6 +6719,123 @@
       "cancelable": false,
       "source_file": "spec-rare-earth-statecraft.json",
       "note": ""
+    },
+    {
+      "from": "Chelsea_Manning",
+      "to": "WikiLeaks",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "Army intelligence analyst who leaked the Iraq/Afghan War Logs, Collateral Murder, and Cablegate to WikiLeaks (2010); convicted 2013 (35 yrs), sentence commuted by Obama (2017) (fact)."
+    },
+    {
+      "from": "Josh_Schulte",
+      "to": "Vault7",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "Former CIA software engineer convicted (2022) as the source of the Vault 7 leak to WikiLeaks - the largest data theft in CIA history (fact)."
+    },
+    {
+      "from": "Josh_Schulte",
+      "to": "US_Government",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "SDNY convicted Schulte on espionage-related counts for Vault 7; he also received a separate conviction on CSAM charges - both stated as court fact, without elaboration (fact)."
+    },
+    {
+      "from": "Onel_de_Guzman",
+      "to": "ILOVEYOU_Worm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "authored",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "The Manila college student who wrote the ILOVEYOU worm (2000); arrested but never charged (no applicable Philippine law), later confirmed authorship on record (2020) - the human at the origin of the law-lags-tech precedent (fact)."
+    },
+    {
+      "from": "Paras_Jha",
+      "to": "Mirai",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "authored",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "Co-author of the Mirai IoT botnet; pleaded guilty (2017) - originally built to attack Minecraft DDoS-protection markets before it escaped control (fact)."
+    },
+    {
+      "from": "Mirai",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "Mirai (2016) enslaved insecure IoT devices (default creds) into a massive DDoS botnet: it hit Krebs-on-Security, OVH, and - via Dyn (Oct-2016) - knocked out Twitter/Netflix/Reddit for much of the US East Coast. Its SOURCE CODE was released publicly, spawning endless variants - the IoT-botnet branch of the lineage (fact)."
+    },
+    {
+      "from": "Mirai",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "The Dyn DNS attack (Oct-21-2016) was a wake-up call on IoT insecurity + DNS as a single point of failure - feeding CISA/NIST IoT-security guidance (fact)."
+    },
+    {
+      "from": "Hector_Monsegur",
+      "to": "LulzSec",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "'Sabu' - a leader/hub of LulzSec (and Anonymous-adjacent AntiSec); after his 2011 arrest he became an FBI informant, and his cooperation led to the arrests of fellow members (fact)."
+    },
+    {
+      "from": "Hector_Monsegur",
+      "to": "FBI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "cooperation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cyber-notable-individuals-2.json",
+      "note": "The Sabu case is the canonical example of law enforcement flipping a hacktivist leader into an informant to dismantle a leaderless crew from within (fact)."
     },
     {
       "from": "Modi",
@@ -37014,10 +37155,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1563,
-    "num_edges": 2366,
+    "num_nodes": 1569,
+    "num_edges": 2375,
     "num_financial_edges": 274,
-    "num_structural_edges": 2092,
+    "num_structural_edges": 2101,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -37225,22 +37366,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -37249,19 +37374,35 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -37272,8 +37413,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -37284,8 +37425,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -39433,6 +39574,13 @@
         "in_robust_core": false
       },
       "Check_Point": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chelsea_Manning": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41889,6 +42037,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hector_Monsegur": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hedera": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42709,6 +42864,13 @@
         "in_robust_core": false
       },
       "Johns_Manville": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Josh_Schulte": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43723,6 +43885,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mirai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mistral": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44374,6 +44543,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Onel_de_Guzman": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OpenAI": {
         "total_usd": 966500000000,
         "circular_usd": 898500000000,
@@ -44676,6 +44852,13 @@
         "in_robust_core": false
       },
       "Paragon_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Paras_Jha": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48298,7 +48481,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 61,
+        "degree": 63,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -48321,7 +48504,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 39,
+        "source_files": 40,
         "layers": [
           "financial",
           "structural"

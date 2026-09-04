@@ -14570,6 +14570,136 @@
     "spec-cyber-notable-individuals",
     "spec-shadow-brokers-eternalblue"
    ]
+  },
+  {
+   "name": "Chelsea Manning",
+   "role": "US Army intelligence analyst; 2010 WikiLeaks source",
+   "domains": [
+    "Security",
+    "State/Policy"
+   ],
+   "orgs": [
+    "Chelsea_Manning",
+    "WikiLeaks"
+   ],
+   "bluf": "A conscience-driven insider who concluded that documented wartime conduct + diplomatic secrecy demanded public exposure, and acted on it at enormous personal cost. Assess with MODERATE confidence her motivation was moral-political rather than material or foreign-directed; her disclosures were bulk (unlike Snowden's curated model), which shaped both her impact and her prosecution.",
+   "drivers": "Primary: moral objection to observed conduct + a belief the public had a right to know. Secondary: alienation/isolation within her role; a strong justice self-concept.",
+   "worldview": "Transparency-as-accountability; skeptical of official secrecy and wartime narratives.",
+   "decision_style": "High-risk, conviction-first; bulk disclosure via an intermediary (WikiLeaks) rather than staged journalism.",
+   "track_record": "2010 leaks (Iraq/Afghan War Logs, Collateral Murder, Cablegate); convicted 2013 (35 yrs); sentence commuted 2017; later activism + a jailed contempt period (2019-20) for refusing to testify.",
+   "vulnerabilities": "Bulk-leak method maximized legal exposure + harm-debate; personal notoriety constrains privacy; a polarizing symbol.",
+   "relationships": "Source-side of WikiLeaks/Assange; icon for transparency + whistleblower-protection movements; adversarial to DoD/DoJ.",
+   "outlook": "Enduring symbolic role in the whistleblower canon; limited operational footprint.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals-2",
+    "spec-hacktivist-catalog"
+   ]
+  },
+  {
+   "name": "Josh Schulte",
+   "role": "Former CIA software engineer; convicted Vault 7 source",
+   "domains": [
+    "Security",
+    "State/Policy"
+   ],
+   "orgs": [
+    "Josh_Schulte",
+    "Vault7"
+   ],
+   "bluf": "A skilled CIA developer whose workplace grievance appears to have escalated into the largest data theft in agency history. Assess with MODERATE confidence the leak was retaliatory/personal rather than ideological; the case is the CIA's insider-threat analog to the NSA's Snowden/Shadow Brokers losses, and a study in how internal disputes become national-security breaches.",
+   "drivers": "Primary (assessed): personal grievance/retaliation after internal conflict; secondary: a belief in his own exceptional competence and mistreatment.",
+   "worldview": "Not a clear public ideology - the record reads as personal-grievance-driven rather than a transparency mission.",
+   "decision_style": "High-risk, adversarial, litigious; represented himself at points; continued alleged leaking from jail (per prosecutors).",
+   "track_record": "Vault 7 exfiltration (CIA cyber tools, published by WikiLeaks 2017); SDNY espionage-related conviction (2022); a separate CSAM conviction (court fact).",
+   "vulnerabilities": "Multiple convictions; the personal-grievance framing undercuts any public-interest defense.",
+   "relationships": "Source-side of the WikiLeaks Vault 7 disclosure; the CIA's marquee insider-threat case.",
+   "outlook": "Long incarceration; a permanent reference case in insider-threat programs.",
+   "confidence": "moderate",
+   "grade": "assessment (court record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals-2",
+    "spec-hacktivist-catalog"
+   ]
+  },
+  {
+   "name": "Onel de Guzman",
+   "role": "Author of the ILOVEYOU worm (2000)",
+   "domains": [
+    "Cybercrime",
+    "Security"
+   ],
+   "orgs": [
+    "Onel_de_Guzman",
+    "ILOVEYOU_Worm"
+   ],
+   "bluf": "A Manila computing student whose credential-stealing script became the first global email-worm event - and, by escaping prosecution for lack of any applicable law, the accidental catalyst for modern cybercrime statutes. Assess with MODERATE confidence his intent was narrow (harvest dial-up passwords for free internet), not global sabotage; the scale was emergent, not planned.",
+   "drivers": "Primary (per his own account): access to internet he couldn't afford (password theft), not notoriety or profit; academic frustration (his thesis on the idea was rejected).",
+   "worldview": "No political program - a student's pragmatic hack that outran its author.",
+   "decision_style": "Opportunistic, low-foresight about scale; went to ground after the outbreak, resurfaced decades later.",
+   "track_record": "Wrote/released ILOVEYOU (May-2000, ~45M machines); arrested, charges dropped (no PH computer-crime law); confirmed authorship on record (2020); ran a small phone-repair stall.",
+   "vulnerabilities": "Permanent association with the worm; the escaped-prosecution outcome is a one-time artifact of legal timing.",
+   "relationships": "None organized; a solo case that reshaped law rather than a network.",
+   "outlook": "Historical figure; the enduring legacy is legal/precedential, not operational.",
+   "confidence": "moderate",
+   "grade": "assessment (on-record interviews + public record)",
+   "blocks": [
+    "spec-cyber-notable-individuals-2",
+    "spec-iloveyou-worm"
+   ]
+  },
+  {
+   "name": "Paras Jha",
+   "role": "Co-author, Mirai IoT botnet",
+   "domains": [
+    "Cybercrime",
+    "Security"
+   ],
+   "orgs": [
+    "Paras_Jha",
+    "Mirai"
+   ],
+   "bluf": "A young developer whose profit/ego-driven botnet for the Minecraft DDoS-protection racket escaped into one of the most consequential DDoS tools ever, then went open-source. Assess with MODERATE confidence the origin was commercial/competitive mischief rather than ideology; the public code release - whether to muddy attribution or for notoriety - is what made Mirai historically durable.",
+   "drivers": "Primary: money + status in the Minecraft-server/DDoS-mitigation economy; secondary: technical showmanship.",
+   "worldview": "Commercial-opportunist, not political.",
+   "decision_style": "Aggressive, risk-tolerant; released Mirai's source (plausibly to dilute attribution) - a decision with outsized downstream effects.",
+   "track_record": "Co-authored Mirai (2016; Krebs, OVH, Dyn attacks); pleaded guilty (2017); cooperated with the FBI (research assistance) as part of sentencing.",
+   "vulnerabilities": "Guilty plea + permanent association with Mirai; the source release seeded countless variants beyond his control.",
+   "relationships": "Small co-author group; post-case cooperation with law enforcement/researchers.",
+   "outlook": "Redemption-via-cooperation arc; Mirai's variants long outlived his involvement.",
+   "confidence": "moderate",
+   "grade": "assessment (court record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals-2",
+    "spec-shadow-brokers-eternalblue"
+   ]
+  },
+  {
+   "name": "Hector Monsegur",
+   "role": "'Sabu' - LulzSec leader turned FBI informant",
+   "domains": [
+    "Cybercrime",
+    "Security"
+   ],
+   "orgs": [
+    "Hector_Monsegur",
+    "LulzSec"
+   ],
+   "bluf": "A charismatic hub of LulzSec/AntiSec whose 2011 arrest flipped him into an FBI informant, from which position his cooperation dismantled the very crew he led. Assess with MODERATE confidence his pivot was self-preservation (protecting family/avoiding a long sentence) over ideology; the case is the template for infiltrating leaderless hacktivism from within.",
+   "drivers": "Early: anti-establishment hacktivism + status. Post-arrest: self/family preservation - cooperation for leniency.",
+   "worldview": "Initially hacktivist-adversarial; pragmatically abandoned it under legal pressure.",
+   "decision_style": "Bold operator turned cooperative asset; continued operating online under FBI supervision to build cases.",
+   "track_record": "LulzSec/AntiSec ops (2011); arrested (2011), cooperated for ~3 years leading to co-defendant arrests; light sentence (time served); later worked in security research.",
+   "vulnerabilities": "'Snitch' stigma in the community; the informant role permanently defines his reputation.",
+   "relationships": "Central node of the LulzSec network; the bridge that connected it to the FBI.",
+   "outlook": "Moved into legitimate security work; the informant case is the durable legacy.",
+   "confidence": "moderate",
+   "grade": "assessment (court record + labeled inference)",
+   "blocks": [
+    "spec-cyber-notable-individuals-2",
+    "spec-hacktivist-catalog"
+   ]
   }
  ]
 }
