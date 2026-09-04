@@ -176,6 +176,17 @@ def build_pqc():
             + "<h2>NIST standards</h2>"
             "<table><thead><tr><th>ID</th><th>Name</th><th>Date</th><th>Note</th></tr></thead>"
             f"<tbody>{strows}</tbody></table>")
+    cw = p.get("cryptanalysis_watch")
+    if cw:
+        cwrows = "".join(
+            f"<tr><td>{esc(r['date'])}</td><td><b>{esc(r['scheme'])}</b></td>"
+            f"<td>{esc(r['ref'])}</td><td>{esc(r['result'])}{badge(r.get('grade'))}</td></tr>"
+            for r in cw["rows"])
+        body += ("<h2>Cryptanalysis watch</h2>"
+                 f"<p>{esc(cw['intro'])}</p>"
+                 "<table><thead><tr><th>Date</th><th>Scheme</th><th>Work</th><th>Result</th></tr></thead>"
+                 f"<tbody>{cwrows}</tbody></table>"
+                 f"<div class=b><b>Bottom line.</b> {esc(cw['bottom_line'])}</div>")
     page("quantum-pqc.html", "Post-quantum cryptography", body)
 
 # ---------------------------------------------------------------- Compliance
