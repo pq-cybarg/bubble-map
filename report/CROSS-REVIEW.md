@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 83 files
+- **Meta** — 84 files
 - **Chainlink** — 59 files
 - **Google** — 54 files
 - **OpenAI** — 42 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-cyber-notable-individuals.json` — related files by shared entities (verify cross-refs exist)
-- spec-hacktivist-catalog.json: 1 shared entities
-- spec-surveillance-cyber-threat-layer.json: 1 shared entities
-- spec-exchanges-asia.json: 1 shared entities
-- spec-disclosures-surveillance.json: 1 shared entities
-- spec-shadow-brokers-eternalblue.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
-- macro-official-data-integrity.json: 1 shared entities
-- spec-state-apt-catalog.json: 1 shared entities
+## Newest file `spec-niantic-geospatial.json` — related files by shared entities (verify cross-refs exist)
+- catalog-academia-core.json: 3 shared entities
+- spec-disclosures-surveillance.json: 3 shared entities
+- fin-google-amazon-anthropic-meta.json: 3 shared entities
+- spec-surveillance-cyber-threat-layer.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- fin-ai-depreciation-debttrap.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities
+- spec-inqtel-portfolio.json: 3 shared entities

@@ -1004,6 +1004,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "CIA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CIETAC": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -1679,6 +1683,10 @@
     "Data_Breach": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Data_Brokers": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Data_Center_Bandwagon": {
       "sector": "other",
@@ -2487,6 +2495,10 @@
     "Google": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
+    },
+    "Google_Earth": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Gopax": {
       "sector": "exchange",
@@ -3316,6 +3328,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Large_Geospatial_Model": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Large_Load_Tariff": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3418,6 +3434,10 @@
     },
     "Local_AI_Tooling": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "Location_Data": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "LockBit": {
@@ -3926,6 +3946,10 @@
     },
     "Niantic": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Niantic_Spatial": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Niger": {
@@ -4984,6 +5008,10 @@
       "sector": "ai_data",
       "has_exogenous_revenue": true
     },
+    "Scaniverse": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Scattered_Spider": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -4991,6 +5019,10 @@
     "Scientific_Publishing": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Scopely": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Scotiabank": {
       "sector": "capital",
@@ -12372,7 +12404,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-inqtel-portfolio.json",
+      "source_file": "spec-inqtel-portfolio.json,spec-niantic-geospatial.json",
       "note": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact)."
     },
     {
@@ -29533,7 +29565,59 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "John Hanke co-founded Keyhole Inc. (the In-Q-Tel-funded geospatial startup) (fact)."
+      "note": "Hanke co-founded Keyhole (2001), the satellite/aerial 3D-mapping startup - the seed of his entire geospatial career (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "CIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "In-Q-Tel is the CIA's not-for-profit strategic-investment arm - the mechanism that seeds dual-use commercial tech (Keyhole, Palantir, etc.) into the IC (fact); wires this block to the In-Q-Tel portfolio thread."
+    },
+    {
+      "from": "NGA",
+      "to": "Keyhole",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "The National Geospatial-Intelligence Agency (then NIMA) also backed/used Keyhole - the defense-mapping side of the same seed (fact)."
+    },
+    {
+      "from": "Google",
+      "to": "Keyhole",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Google acquired Keyhole in 2004; its engine became Google Earth (2005) and fed Google Maps - the consumer mass-adoption of what began as IC-seeded tech (fact)."
+    },
+    {
+      "from": "Keyhole",
+      "to": "Google_Earth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Google Earth/Maps is the direct product descendant of Keyhole - the world's most-used map, built on the IC-seeded foundation (fact)."
     },
     {
       "from": "John_Hanke",
@@ -29546,7 +29630,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "Hanke founded and led Niantic (fact)."
+      "note": "Hanke ran Google's Geo division (Earth/Maps/Street View) then founded Niantic Labs inside Google (2010), spun out 2015 - carrying the geospatial mission into gaming/AR (fact)."
     },
     {
       "from": "Google",
@@ -29559,7 +29643,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "Niantic Labs began inside Google (2010) and spun out as an independent company in 2015 (fact)."
+      "note": "Niantic spun out of Google (2015) with Google among its backers - the corporate umbilical to the Maps/Geo empire (fact)."
     },
     {
       "from": "Niantic",
@@ -29572,7 +29656,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "Ingress (2012) - Niantic's first location-based AR game, seeding its points-of-interest map (fact)."
+      "note": "Ingress (2012) - Niantic's first AR game; its player 'portal' submissions crowdsourced a global points-of-interest database that later seeded Pokemon GO's gyms/stops (fact)."
     },
     {
       "from": "Niantic",
@@ -29585,7 +29669,150 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "Pokemon GO (2016) - mass-scale location + real-world imagery/AR data collection via players (fact of data collection; downstream sharing/monetization contested)."
+      "note": "Pokemon GO (2016) - the breakout AR hit; hundreds of millions of installs, driving players to physically visit + interact with real-world locations at planetary scale (fact)."
+    },
+    {
+      "from": "Pokemon_GO",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "harvesting",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "The games collect precise, continuous player location (GPS + sensors) plus, increasingly, camera imagery/3D scans of real places - a uniquely rich real-world-behavior dataset (fact of data collection; consent buried in gameplay)."
+    },
+    {
+      "from": "Ingress",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "harvesting",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Portal/POI submissions crowdsource the verification + geometry of real-world sites - players doing unpaid map-labeling (fact)."
+    },
+    {
+      "from": "Location_Data",
+      "to": "Niantic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "aggregation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Aggregated player movement + scans build Niantic's proprietary real-world map + Visual Positioning System - the actual asset under the games (fact)."
+    },
+    {
+      "from": "Niantic",
+      "to": "Scaniverse",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Niantic acquired Scaniverse (3D-scanning app) - directly sourcing high-fidelity 3D scans of the physical world from users (fact)."
+    },
+    {
+      "from": "Scaniverse",
+      "to": "Large_Geospatial_Model",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "feeds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Scaniverse + in-game scans feed the training data (fact)."
+    },
+    {
+      "from": "Niantic",
+      "to": "Large_Geospatial_Model",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "geospatial_ai",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Nov-2024: Niantic announced a 'Large Geospatial Model' - AI trained on ~10M+ player-scanned locations (millions of neural nets) to understand/reconstruct the physical world for AR + robotics/navigation. The games were, in effect, a data-collection front-end for a spatial-AI foundation model (fact of announcement; capability claims graded)."
+    },
+    {
+      "from": "Large_Geospatial_Model",
+      "to": "Niantic_Spatial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "2025: Niantic kept the geospatial-AI business as 'Niantic Spatial' (the map + LGM) while selling off the games - the data/AI asset was the part it valued most (fact)."
+    },
+    {
+      "from": "Niantic",
+      "to": "Scopely",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Mar-2025: Niantic sold its GAMES division - incl. Pokemon GO, Ingress, Monster Hunter Now - to Scopely for ~$3.5B (fact)."
+    },
+    {
+      "from": "Scopely",
+      "to": "PIF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Scopely is owned by Savvy Games Group, a subsidiary of Saudi Arabia's Public Investment Fund (PIF acquired Scopely for ~$4.9B in 2023) - so the world's largest real-world player-location game now sits under a foreign sovereign wealth fund. Governance/access risk (interpretation grounded in the ownership fact)."
+    },
+    {
+      "from": "Location_Data",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_flow",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "Mobile location data broadly (SDKs, ad exchanges) feeds the data-broker ecosystem that on-sells precise movement patterns - the systemic risk that surrounds any large location dataset (fact of ecosystem; not a specific Niantic sale). Ties to the auto-surveillance + broker threads."
+    },
+    {
+      "from": "Data_Brokers",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-niantic-geospatial.json",
+      "note": "LexisNexis Risk Solutions is a marquee data broker (also in the auto-telematics + surveillance pipelines) - anchoring the broker node to an existing mapped entity (fact)."
     },
     {
       "from": "Niantic",
@@ -29598,7 +29825,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-niantic-geospatial.json",
-      "note": "Niantic remained tied to Google's maps/cloud ecosystem post-spinout; Google was also an investor (fact of relationship; exact data-flows not public)."
+      "note": "Ongoing Maps/Geo + Cloud ties to Google - the corporate lineage never fully severed (fact)."
     },
     {
       "from": "Circle",
@@ -37155,10 +37382,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1569,
-    "num_edges": 2375,
+    "num_nodes": 1577,
+    "num_edges": 2390,
     "num_financial_edges": 274,
-    "num_structural_edges": 2101,
+    "num_structural_edges": 2116,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -37245,6 +37472,7 @@
       "DARPA",
       "DOJ",
       "DarkSide",
+      "Data_Brokers",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Department_of_War",
@@ -37274,14 +37502,18 @@
       "ICE",
       "ImmigrationOS",
       "India",
+      "Ingress",
       "Intel",
       "IonQ",
       "Japan",
       "Jump_Crypto",
       "KeyBank",
+      "Keyhole",
       "Kimsuky",
       "Lambda",
       "Lazarus_Group",
+      "LexisNexis",
+      "Location_Data",
       "LockBit",
       "Lockheed_Martin",
       "MP_Materials",
@@ -37310,6 +37542,7 @@
       "Palantir_Foundry",
       "Palantir_Gotham",
       "Peter_Thiel",
+      "Pokemon_GO",
       "Power_Grid",
       "Prime_Brokers",
       "Princeton_University",
@@ -37359,12 +37592,28 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 154,
+    "core_scc_all_edges_size": 160,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
       [
         "CoreWeave",
         "SINK_lenders"
@@ -37374,35 +37623,19 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -37413,8 +37646,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -37425,8 +37658,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -39209,6 +39442,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CIA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CIETAC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40386,6 +40626,13 @@
         "in_robust_core": false
       },
       "Data_Breach": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Data_Brokers": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41801,6 +42048,13 @@
       },
       "Google": {
         "total_usd": 200230000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Google_Earth": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -43255,6 +43509,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Large_Geospatial_Model": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Large_Load_Tariff": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43431,6 +43692,13 @@
         "in_robust_core": false
       },
       "Local_AI_Tooling": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Location_Data": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44320,6 +44588,13 @@
         "in_robust_core": false
       },
       "Niantic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Niantic_Spatial": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46174,6 +46449,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Scaniverse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Scattered_Spider": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46182,6 +46464,13 @@
         "in_robust_core": false
       },
       "Scientific_Publishing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Scopely": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48539,7 +48828,7 @@
       },
       {
         "node": "Google",
-        "degree": 22,
+        "degree": 23,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
