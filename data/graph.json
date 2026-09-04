@@ -1284,6 +1284,10 @@
       "sector": "stablecoin",
       "has_exogenous_revenue": true
     },
+    "Circles": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Cisco": {
       "sector": "tech",
       "has_exogenous_revenue": true
@@ -1338,6 +1342,10 @@
     },
     "Codex_Alimentarius": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "Cognyte": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "CoinDCX": {
@@ -1782,6 +1790,10 @@
     },
     "Digital_Euro": {
       "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "Digital_Forensics_Extraction": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Digital_ID": {
@@ -2475,6 +2487,10 @@
     "Government_of_Gujarat": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "GrayKey_Magnet": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Grayscale": {
       "sector": "financier",
@@ -4176,6 +4192,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Paragon_Solutions": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Paribu": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -4422,6 +4442,10 @@
     },
     "QuEra": {
       "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "QuaDream": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Quad": {
@@ -5819,6 +5843,10 @@
     "Vantor": {
       "sector": "satellite",
       "has_exogenous_revenue": true
+    },
+    "Variston": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Vauld": {
       "sector": "exchange",
@@ -17753,6 +17781,214 @@
       "cancelable": false,
       "source_file": "spec-boeing-737max.json",
       "note": ""
+    },
+    {
+      "from": "Paragon_Solutions",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Paragon Solutions (Israel) sells 'Graphite' zero-click spyware, marketed as the 'ethical' alternative (democracies only). Citizen Lab (2025) documented Graphite targeting journalists/activists via WhatsApp in Italy - contradicting the framing (fact of product; targeting per Citizen Lab, graded)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Paragon_Solutions",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Citizen Lab's 2025 Graphite findings (Italy 'Paragate') forced an Italian government inquiry - the pattern of forensics -> political fallout repeating (fact of report)."
+    },
+    {
+      "from": "Paragon_Solutions",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Paragon was acquired by US-based AE Industrial Partners (Florida, ~2024) and secured a ~$2M ICE/HSI contract (2024) that was paused under White House review - the 'US-friendly spyware' play (fact; contract status evolving)."
+    },
+    {
+      "from": "QuaDream",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "QuaDream (Israel) sold 'Reign' - an iOS zero-click rival to Pegasus; exposed by Citizen Lab + Microsoft (2023), it shut down shortly after (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "QuaDream",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Citizen Lab mapped QuaDream servers across 10+ countries and documented iOS victims - a case where exposure directly preceded a vendor's collapse (fact)."
+    },
+    {
+      "from": "Circles",
+      "to": "NSO_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Circles (SS7-based phone-location + call/text interception, no infection needed) was commonly owned with NSO under the Q Cyber / Francisco Partners era; Citizen Lab (2020) identified 25 government customers (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Circles",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Citizen Lab's 2020 Circles report exposed the SS7-interception market - a telecom-signaling attack class distinct from device implants (fact)."
+    },
+    {
+      "from": "Variston",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Variston IT (Spain) built the 'Heliconia' exploitation framework (Chrome/Firefox/Windows n-days); exposed by Google TAG (2022-23) and reportedly wound down ~2024 - the EU-based exploit-broker branch (fact)."
+    },
+    {
+      "from": "Cognyte",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Cognyte (Israel; ex-Verint) was named in Meta's 2021 'surveillance-for-hire' report (alongside Cobwebs, Black Cube, BellTroX) for fake-account reconnaissance + targeting - the 'social-media surveillance' vendor tier (fact)."
+    },
+    {
+      "from": "Cognyte",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Meta removed Cognyte-linked accounts and reported it publicly (2021) - platform action against surveillance-for-hire, complementing the Apple/Meta NSO suits (fact)."
+    },
+    {
+      "from": "Cellebrite",
+      "to": "Digital_Forensics_Extraction",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplies",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Cellebrite (Israel; Sun Corp-backed; NASDAQ: CLBT) makes UFED - the dominant seized-phone EXTRACTION tool used by police/agencies worldwide (the San Bernardino iPhone debate; also documented in authoritarian misuse). Physical-access forensics, NOT remote infection (fact; distinction kept)."
+    },
+    {
+      "from": "GrayKey_Magnet",
+      "to": "Digital_Forensics_Extraction",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplies",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "GrayKey (Grayshift, merged with Magnet Forensics 2023) unlocks/extracts modern iPhones for law enforcement - the US-centric rival to Cellebrite (fact)."
+    },
+    {
+      "from": "Digital_Forensics_Extraction",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplies",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Extraction tools are procured heavily by US federal + local law enforcement (FBI, ICE/HSI, police) - lawful-access technology whose oversight/misuse is the live civil-liberties debate (fact; oversight contested)."
+    },
+    {
+      "from": "Digital_Forensics_Extraction",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_market",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Adjacent industry: both sell government surveillance capability, but extraction (physical/consented-custody) is legally + technically distinct from covert remote spyware - flagged to avoid conflation (interpretation/taxonomy)."
+    },
+    {
+      "from": "Cellebrite",
+      "to": "Israel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Like NSO, Gamma-successors, Paragon, QuaDream, Cognyte and Circles, much of the industry clusters in Israel (Unit 8200 alumni pipeline) - the geographic concentration of the surveillance-tech sector (fact/context)."
+    },
+    {
+      "from": "Commercial_Spyware_Market",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-spyware-vendor-catalog.json",
+      "note": "Anchors the COMMERCIAL-SURVEILLANCE branch of the lineage (privatized offensive capability sold to states) - distinct from state APTs, criminal ransomware, and hacktivism (fact of category)."
     },
     {
       "from": "Singham",
@@ -36684,10 +36920,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1552,
-    "num_edges": 2344,
+    "num_nodes": 1559,
+    "num_edges": 2360,
     "num_financial_edges": 274,
-    "num_structural_edges": 2070,
+    "num_structural_edges": 2086,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -36895,33 +37131,28 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -36929,21 +37160,26 @@
         "Oracle"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -39228,6 +39464,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Circles": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cisco": {
         "total_usd": 28000000000,
         "circular_usd": 0,
@@ -39320,6 +39563,13 @@
         "in_robust_core": false
       },
       "Codex_Alimentarius": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cognyte": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40097,6 +40347,13 @@
         "in_robust_core": false
       },
       "Digital_Euro": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Digital_Forensics_Extraction": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41308,6 +41565,13 @@
         "in_robust_core": false
       },
       "Government_of_Gujarat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GrayKey_Magnet": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44289,6 +44553,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Paragon_Solutions": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Paribu": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44718,6 +44989,13 @@
       },
       "QuEra": {
         "total_usd": 230000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "QuaDream": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -47166,6 +47444,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Variston": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Vauld": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47891,7 +48176,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 59,
+        "degree": 61,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -47914,7 +48199,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 38,
+        "source_files": 39,
         "layers": [
           "financial",
           "structural"
@@ -48073,6 +48358,31 @@
         "both_layers": false
       },
       {
+        "node": "Meta",
+        "degree": 18,
+        "neighbor_sectors": [
+          "ai_data",
+          "ai_infra",
+          "chip_vendor",
+          "commodity",
+          "energy",
+          "other",
+          "political",
+          "regulator",
+          "sink",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -48114,30 +48424,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Meta",
-        "degree": 17,
-        "neighbor_sectors": [
-          "ai_data",
-          "ai_infra",
-          "chip_vendor",
-          "commodity",
-          "energy",
-          "other",
-          "political",
-          "regulator",
-          "sink",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"

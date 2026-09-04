@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "title": "Commercial spyware & phone-forensics vendors: Paragon, QuaDream, Circles, Variston, Cognyte + the extraction industry (Cellebrite/GrayKey)",
+    "generated": "2026-09-04",
+    "frame": "Batch 4 of the threat-actor catalog: the commercial surveillance INDUSTRY beyond NSO/Gamma/Intellexa. Two adjacent-but-distinct markets: (1) REMOTE spyware (zero-click implants) - Paragon, QuaDream, Circles, Variston, Cognyte; and (2) PHONE-FORENSICS EXTRACTION (physical-access unlocking of seized devices) - Cellebrite, GrayKey/Magnet, MSAB. The distinction matters: remote spyware infects targets covertly; extraction tools crack devices in custody.",
+    "grade": "Vendor existence, products, ownership, and exposure/sanctions actions = FACT (Citizen Lab; Google TAG; Meta; company filings; US Entity List/Treasury). Specific TARGETING findings (who a client spied on) are Citizen Lab/Google forensics - well-corroborated but from parties, graded. Extraction-tool 'customers' (police, FBI) are documented via procurement + case records.",
+    "honest_limits": "Extraction vendors (Cellebrite, GrayKey) sell LAWFUL-access tools to law enforcement - dual-use, documented in abuse cases but categorically different from covert remote spyware; this block keeps them on a separate sub-hub. 'Ethical spyware' is vendor framing (Paragon) that documented targeting contradicts. Ownership chains (Francisco Partners, AE Industrial) are as-reported.",
+    "method": "Citizen Lab (Circles 2020; QuaDream 2023; Paragon/Graphite 2025); Google TAG (Variston 2022-23); Meta 'surveillance-for-hire' report (2021, named Cognyte/Cobwebs/BellTroX); US Commerce Entity List + Treasury; Cellebrite/Magnet filings + procurement records."
+  },
+  "nodes": [
+    {"id": "Paragon_Solutions", "sector": "tech"},
+    {"id": "QuaDream", "sector": "tech"},
+    {"id": "Circles", "sector": "tech"},
+    {"id": "Variston", "sector": "tech"},
+    {"id": "Cognyte", "sector": "tech"},
+    {"id": "Cellebrite", "sector": "tech"},
+    {"id": "GrayKey_Magnet", "sector": "tech"},
+    {"id": "Digital_Forensics_Extraction", "sector": "other"}
+  ],
+  "edges": [
+    {"from": "Paragon_Solutions", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "Paragon Solutions (Israel) sells 'Graphite' zero-click spyware, marketed as the 'ethical' alternative (democracies only). Citizen Lab (2025) documented Graphite targeting journalists/activists via WhatsApp in Italy - contradicting the framing (fact of product; targeting per Citizen Lab, graded).", "source": "#239 spyware (Citizen Lab 2025)"},
+    {"from": "Citizen_Lab", "to": "Paragon_Solutions", "instrument": "exposes", "notes": "Citizen Lab's 2025 Graphite findings (Italy 'Paragate') forced an Italian government inquiry - the pattern of forensics -> political fallout repeating (fact of report).", "source": "#239 spyware (Citizen Lab 2025)"},
+    {"from": "Paragon_Solutions", "to": "US_Government", "instrument": "ownership_transfer", "notes": "Paragon was acquired by US-based AE Industrial Partners (Florida, ~2024) and secured a ~$2M ICE/HSI contract (2024) that was paused under White House review - the 'US-friendly spyware' play (fact; contract status evolving).", "source": "#239 spyware (press; procurement records)"},
+    {"from": "QuaDream", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "QuaDream (Israel) sold 'Reign' - an iOS zero-click rival to Pegasus; exposed by Citizen Lab + Microsoft (2023), it shut down shortly after (fact).", "source": "#239 spyware (Citizen Lab/Microsoft 2023)"},
+    {"from": "Citizen_Lab", "to": "QuaDream", "instrument": "exposes", "notes": "Citizen Lab mapped QuaDream servers across 10+ countries and documented iOS victims - a case where exposure directly preceded a vendor's collapse (fact).", "source": "#239 spyware (Citizen Lab 2023)"},
+    {"from": "Circles", "to": "NSO_Group", "instrument": "affiliation", "notes": "Circles (SS7-based phone-location + call/text interception, no infection needed) was commonly owned with NSO under the Q Cyber / Francisco Partners era; Citizen Lab (2020) identified 25 government customers (fact).", "source": "#239 spyware (Citizen Lab 2020)"},
+    {"from": "Citizen_Lab", "to": "Circles", "instrument": "exposes", "notes": "Citizen Lab's 2020 Circles report exposed the SS7-interception market - a telecom-signaling attack class distinct from device implants (fact).", "source": "#239 spyware (Citizen Lab 2020)"},
+    {"from": "Variston", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "Variston IT (Spain) built the 'Heliconia' exploitation framework (Chrome/Firefox/Windows n-days); exposed by Google TAG (2022-23) and reportedly wound down ~2024 - the EU-based exploit-broker branch (fact).", "source": "#239 spyware (Google TAG 2022-23)"},
+    {"from": "Cognyte", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "Cognyte (Israel; ex-Verint) was named in Meta's 2021 'surveillance-for-hire' report (alongside Cobwebs, Black Cube, BellTroX) for fake-account reconnaissance + targeting - the 'social-media surveillance' vendor tier (fact).", "source": "#239 spyware (Meta 2021)"},
+    {"from": "Cognyte", "to": "Meta", "instrument": "regulatory", "notes": "Meta removed Cognyte-linked accounts and reported it publicly (2021) - platform action against surveillance-for-hire, complementing the Apple/Meta NSO suits (fact).", "source": "#239 spyware (Meta 2021)"},
+    {"from": "Cellebrite", "to": "Digital_Forensics_Extraction", "instrument": "supplies", "notes": "Cellebrite (Israel; Sun Corp-backed; NASDAQ: CLBT) makes UFED - the dominant seized-phone EXTRACTION tool used by police/agencies worldwide (the San Bernardino iPhone debate; also documented in authoritarian misuse). Physical-access forensics, NOT remote infection (fact; distinction kept).", "source": "#239 spyware (Cellebrite filings; case records)"},
+    {"from": "GrayKey_Magnet", "to": "Digital_Forensics_Extraction", "instrument": "supplies", "notes": "GrayKey (Grayshift, merged with Magnet Forensics 2023) unlocks/extracts modern iPhones for law enforcement - the US-centric rival to Cellebrite (fact).", "source": "#239 spyware (Magnet/Grayshift; procurement)"},
+    {"from": "Digital_Forensics_Extraction", "to": "US_Government", "instrument": "supplies", "notes": "Extraction tools are procured heavily by US federal + local law enforcement (FBI, ICE/HSI, police) - lawful-access technology whose oversight/misuse is the live civil-liberties debate (fact; oversight contested).", "source": "#239 spyware (federal procurement)"},
+    {"from": "Digital_Forensics_Extraction", "to": "Commercial_Spyware_Market", "instrument": "peer_market", "notes": "Adjacent industry: both sell government surveillance capability, but extraction (physical/consented-custody) is legally + technically distinct from covert remote spyware - flagged to avoid conflation (interpretation/taxonomy).", "source": "#239 spyware (taxonomy)"},
+    {"from": "Cellebrite", "to": "Israel", "instrument": "relationship", "notes": "Like NSO, Gamma-successors, Paragon, QuaDream, Cognyte and Circles, much of the industry clusters in Israel (Unit 8200 alumni pipeline) - the geographic concentration of the surveillance-tech sector (fact/context).", "source": "#239 spyware (industry mapping)"},
+    {"from": "Commercial_Spyware_Market", "to": "Malware_Lineage", "instrument": "lineage", "notes": "Anchors the COMMERCIAL-SURVEILLANCE branch of the lineage (privatized offensive capability sold to states) - distinct from state APTs, criminal ransomware, and hacktivism (fact of category).", "source": "#239 spyware (Malware_Lineage hub)"}
+  ]
+}

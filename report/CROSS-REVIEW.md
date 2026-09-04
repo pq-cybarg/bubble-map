@@ -15,11 +15,11 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 82 files
+- **Meta** — 83 files
 - **Chainlink** — 59 files
-- **Google** — 53 files
+- **Google** — 54 files
 - **OpenAI** — 42 files
-- **Microsoft** — 39 files
+- **Microsoft** — 40 files
 - **FDIC** — 37 files
 - **Amazon** — 34 files
 - **Oracle** — 33 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-hacktivist-catalog.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 4 shared entities
-- macro-pqc-chips.json: 3 shared entities
-- fin-nvidia-openai.json: 3 shared entities
-- macro-crqc-quantum-landscape.json: 3 shared entities
-- fin-ai-efficiency-counter-thesis.json: 3 shared entities
+## Newest file `spec-spyware-vendor-catalog.json` — related files by shared entities (verify cross-refs exist)
+- macro-ai-power-grid-bottleneck.json: 3 shared entities
+- commodities-metals.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities
+- energy-power.json: 3 shared entities
+- catalog-academia-core.json: 3 shared entities
 - fin-google-amazon-anthropic-meta.json: 3 shared entities
-- fin-coreweave-oracle.json: 3 shared entities
-- geopolitics-allied-intel-nodes.json: 3 shared entities
+- macro-crqc-quantum-landscape.json: 3 shared entities
+- sec-filings.json: 3 shared entities
