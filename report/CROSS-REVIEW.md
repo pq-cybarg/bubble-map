@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-niantic-geospatial.json` — related files by shared entities (verify cross-refs exist)
-- catalog-academia-core.json: 3 shared entities
-- spec-disclosures-surveillance.json: 3 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
-- spec-surveillance-cyber-threat-layer.json: 3 shared entities
+## Newest file `spec-inqtel-portfolio.json` — related files by shared entities (verify cross-refs exist)
+- spec-surveillance-cyber-threat-layer.json: 4 shared entities
+- spec-disclosures-surveillance.json: 4 shared entities
+- spec-network-overlay.json: 4 shared entities
 - influence-congress-funding-compromise.json: 3 shared entities
-- fin-ai-depreciation-debttrap.json: 3 shared entities
 - digitalid-corporate.json: 3 shared entities
-- spec-inqtel-portfolio.json: 3 shared entities
+- spec-niantic-geospatial.json: 3 shared entities
+- catalog-academia-core.json: 3 shared entities
+- influence-operator-network.json: 3 shared entities

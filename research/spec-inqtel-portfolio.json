@@ -1,130 +1,60 @@
 {
   "title": "In-Q-Tel portfolio & CIA/IC-venture surveillance-&-data-stack lineage",
-  "source": "Public record: In-Q-Tel disclosed portfolio/history; corporate acquisition records (Google/Keyhole 2004; Google/Mandiant 2022); press. Structural overlay; edges graded in notes. Surveillance-cluster webbing (#218). In-Q-Tel->Palantir is carried in spec-palantir-surveillance.json (not duplicated here).",
+  "source": "Public record: In-Q-Tel disclosed portfolio/history; corporate acquisition records (Google/Keyhole 2004; Google/Mandiant 2022); press + IQT team/portfolio pages. Structural overlay; edges graded in notes. Surveillance-cluster webbing (#218). In-Q-Tel->Palantir also carried in spec-palantir-surveillance.json.",
   "grade": "per-edge in notes (fact | contested | weak)",
   "nodes": [
-    {
-      "id": "In_Q_Tel",
-      "sector": "state_intel"
-    },
-    {
-      "id": "Keyhole",
-      "sector": "surveillance"
-    },
-    {
-      "id": "Recorded_Future",
-      "sector": "surveillance"
-    },
-    {
-      "id": "FireEye_Mandiant",
-      "sector": "security_research"
-    },
-    {
-      "id": "Databricks",
-      "sector": "ai"
-    },
-    {
-      "id": "Cloudera",
-      "sector": "ai"
-    },
-    {
-      "id": "MongoDB",
-      "sector": "tech"
-    },
-    {
-      "id": "Anduril",
-      "sector": "defense"
-    },
-    {
-      "id": "Ginkgo_Bioworks",
-      "sector": "other"
-    }
+    {"id": "In_Q_Tel", "sector": "state_intel"},
+    {"id": "CIA", "sector": "state"},
+    {"id": "Keyhole", "sector": "surveillance"},
+    {"id": "Recorded_Future", "sector": "surveillance"},
+    {"id": "FireEye_Mandiant", "sector": "security_research"},
+    {"id": "Databricks", "sector": "ai"},
+    {"id": "Cloudera", "sector": "ai"},
+    {"id": "MongoDB", "sector": "tech"},
+    {"id": "Anduril", "sector": "defense"},
+    {"id": "Ginkgo_Bioworks", "sector": "other"},
+    {"id": "Dataminr", "sector": "surveillance"},
+    {"id": "Orbital_Insight", "sector": "surveillance"},
+    {"id": "HawkEye_360", "sector": "surveillance"},
+    {"id": "Primer_AI", "sector": "ai"},
+    {"id": "Shield_AI", "sector": "defense"},
+    {"id": "Fivecast", "sector": "surveillance"},
+    {"id": "Cylance", "sector": "security_research"},
+    {"id": "D_Wave", "sector": "tech"},
+    {"id": "Sonitus", "sector": "other"}
   ],
   "edges": [
-    {
-      "from": "In_Q_Tel",
-      "to": "Keyhole",
-      "instrument": "cia_seed",
-      "notes": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact).",
-      "source": "In-Q-Tel history; press"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Recorded_Future",
-      "instrument": "cia_seed",
-      "notes": "In-Q-Tel was an early investor in Recorded Future (threat-intel / OSINT analytics) (fact).",
-      "source": "In-Q-Tel portfolio"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "FireEye_Mandiant",
-      "instrument": "cia_seed",
-      "notes": "In-Q-Tel was an early investor in FireEye (later Mandiant) (fact).",
-      "source": "In-Q-Tel portfolio"
-    },
-    {
-      "from": "Keyhole",
-      "to": "Google",
-      "instrument": "corporate_lineage",
-      "notes": "Google acquired Keyhole in 2004; its tech became Google Earth / Maps (fact).",
-      "source": "Google acquisition record"
-    },
-    {
-      "from": "FireEye_Mandiant",
-      "to": "Google",
-      "instrument": "corporate_lineage",
-      "notes": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact).",
-      "source": "Google/Mandiant deal"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Palantir",
-      "instrument": "cia_seed",
-      "notes": "IQT seed investment in Palantir (~2004-2005); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact of relationship; amounts undisclosed).",
-      "source": "CNBC; IQT/Palantir history"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Databricks",
-      "instrument": "cia_seed",
-      "notes": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform (later ~$43B valuation) - data-fusion substrate for IC analytics (fact of relationship; confirmed via IQT team page).",
-      "source": "IQT team page (Bowsher); Sherwood/Dakota 2025"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Cloudera",
-      "instrument": "cia_seed",
-      "notes": "IQT-backed big-data (Hadoop) platform - one of IQT's billion-dollar outcomes; enterprise/IC data lakes (fact).",
-      "source": "IQT team page; Crunchbase"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "MongoDB",
-      "instrument": "cia_seed",
-      "notes": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (fact; an IQT 'unicorn' exit).",
-      "source": "IQT team page; Dakota 2025"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Anduril",
-      "instrument": "cia_seed",
-      "notes": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact of IQT relationship per IQT leadership; deal terms undisclosed).",
-      "source": "IQT team page (Bowsher)"
-    },
-    {
-      "from": "In_Q_Tel",
-      "to": "Ginkgo_Bioworks",
-      "instrument": "cia_seed",
-      "notes": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the IQT portfolio (fact; IQT lists it among notable outcomes).",
-      "source": "IQT/reporting 2025"
-    },
-    {
-      "from": "Databricks",
-      "to": "Palantir",
-      "instrument": "partnership",
-      "notes": "Palantir<->Databricks product partnership (Foundry/AIP + lakehouse interop) - two IQT-lineage data platforms interoperating (fact).",
-      "source": "palantir.com/partnerships/databricks"
-    }
+    {"from": "In_Q_Tel", "to": "CIA", "instrument": "relationship", "notes": "In-Q-Tel (est. 1999) is the CIA's not-for-profit strategic-investment arm - the mechanism that identifies + seeds dual-use commercial tech into the Agency (fact).", "source": "In-Q-Tel charter/history"},
+    {"from": "In_Q_Tel", "to": "US_Government", "instrument": "relationship", "notes": "IQT now serves the broader Intelligence Community + partners (NGA, DIA, DHS, and others) - not just the CIA (fact).", "source": "In-Q-Tel"},
+    {"from": "In_Q_Tel", "to": "Keyhole", "instrument": "cia_seed", "notes": "In-Q-Tel funded Keyhole Inc. (~2003), the geospatial-imaging startup (fact).", "source": "In-Q-Tel history; press"},
+    {"from": "In_Q_Tel", "to": "Recorded_Future", "instrument": "cia_seed", "notes": "In-Q-Tel (with Google Ventures) was an early investor in Recorded Future (threat-intel / OSINT temporal analytics) (fact).", "source": "In-Q-Tel portfolio"},
+    {"from": "Recorded_Future", "to": "US_Government", "instrument": "gov_contract", "notes": "Recorded Future supplies threat-intel/OSINT to IC + gov customers - the analytics layer on public + dark-web data (fact).", "source": "Recorded Future gov"},
+    {"from": "In_Q_Tel", "to": "FireEye_Mandiant", "instrument": "cia_seed", "notes": "In-Q-Tel was an early investor in FireEye (later Mandiant) (fact).", "source": "In-Q-Tel portfolio"},
+    {"from": "Keyhole", "to": "Google", "instrument": "corporate_lineage", "notes": "Google acquired Keyhole in 2004; its tech became Google Earth / Maps (fact).", "source": "Google acquisition record"},
+    {"from": "FireEye_Mandiant", "to": "Google", "instrument": "corporate_lineage", "notes": "Google acquired Mandiant in 2022 (~$5.4B), folding it into Google Cloud security (fact).", "source": "Google/Mandiant deal"},
+    {"from": "In_Q_Tel", "to": "Palantir", "instrument": "cia_seed", "notes": "IQT seed investment in Palantir (~2004-05); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact; amounts undisclosed).", "source": "CNBC; IQT/Palantir history"},
+    {"from": "Palantir", "to": "CIA", "instrument": "gov_contract", "notes": "The CIA was Palantir's anchor early customer (Gotham) - the seed-to-customer pipeline IQT is designed to create (fact).", "source": "Palantir history"},
+    {"from": "In_Q_Tel", "to": "Databricks", "instrument": "cia_seed", "notes": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform - data-fusion substrate for IC analytics (fact).", "source": "IQT team page (Bowsher); Sherwood 2025"},
+    {"from": "In_Q_Tel", "to": "Cloudera", "instrument": "cia_seed", "notes": "IQT-backed big-data (Hadoop) platform - enterprise/IC data lakes; a billion-dollar IQT outcome (fact).", "source": "IQT team page; Crunchbase"},
+    {"from": "In_Q_Tel", "to": "MongoDB", "instrument": "cia_seed", "notes": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (an IQT 'unicorn' exit) (fact).", "source": "IQT team page; Dakota 2025"},
+    {"from": "In_Q_Tel", "to": "Anduril", "instrument": "cia_seed", "notes": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact; terms undisclosed).", "source": "IQT team page (Bowsher)"},
+    {"from": "In_Q_Tel", "to": "Ginkgo_Bioworks", "instrument": "cia_seed", "notes": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the portfolio (fact).", "source": "IQT/reporting 2025"},
+    {"from": "Databricks", "to": "Palantir", "instrument": "partnership", "notes": "Palantir<->Databricks product partnership (Foundry/AIP + lakehouse interop) - two IQT-lineage data platforms interoperating (fact).", "source": "palantir.com/partnerships/databricks"},
+    {"from": "In_Q_Tel", "to": "Dataminr", "instrument": "cia_seed", "notes": "IQT-backed Dataminr - real-time alerting off the Twitter/X firehose + other public feeds; ACLU/press documented use for protest/activity monitoring by police + agencies (fact of investment + use; scope contested).", "source": "IQT portfolio; ACLU reporting"},
+    {"from": "Dataminr", "to": "US_Government", "instrument": "gov_contract", "notes": "Dataminr's 'First Alert' sells real-time social-media event detection to government/public-safety customers - the social-media-monitoring node of the IC-venture web (fact).", "source": "Dataminr gov; press"},
+    {"from": "In_Q_Tel", "to": "Orbital_Insight", "instrument": "cia_seed", "notes": "IQT-backed Orbital Insight - geospatial AI extracting patterns (cars, ships, construction) from satellite imagery at scale (fact).", "source": "IQT portfolio"},
+    {"from": "Orbital_Insight", "to": "NGA", "instrument": "gov_contract", "notes": "Commercial geoint feeding NGA/defense analysis - the AI layer atop the Keyhole-lineage imagery world (fact).", "source": "NGA/GEOINT reporting"},
+    {"from": "In_Q_Tel", "to": "HawkEye_360", "instrument": "cia_seed", "notes": "IQT-backed HawkEye 360 - smallsat constellations geolocating RF emissions (ships going dark, jamming, comms) - space-based signals intelligence as a service (fact).", "source": "IQT portfolio"},
+    {"from": "HawkEye_360", "to": "NGA", "instrument": "gov_contract", "notes": "RF-geolocation data sold to NGA/defense/IC - commercial SIGINT-adjacent geoint (fact).", "source": "HawkEye 360 gov"},
+    {"from": "HawkEye_360", "to": "Planet_Labs", "instrument": "peer", "notes": "Commercial-space geoint peers (imagery + RF) increasingly integrated for IC tasking - wires the IQT web to the space-imaging block (#186) (fact of sector).", "source": "GEOINT sector mapping"},
+    {"from": "In_Q_Tel", "to": "Primer_AI", "instrument": "cia_seed", "notes": "IQT-backed Primer - NLP/generative-AI for IC document + open-source analysis (fact).", "source": "IQT portfolio"},
+    {"from": "In_Q_Tel", "to": "Shield_AI", "instrument": "cia_seed", "notes": "IQT-backed Shield AI - autonomy software (Hivemind) for GPS/comms-denied drone operations (fact).", "source": "IQT portfolio"},
+    {"from": "Shield_AI", "to": "Anduril", "instrument": "peer", "notes": "Defense-autonomy peers in the IQT/Founders-Fund-adjacent cluster (fact of sector).", "source": "defense-tech mapping"},
+    {"from": "In_Q_Tel", "to": "Fivecast", "instrument": "cia_seed", "notes": "IQT-backed Fivecast - OSINT/social-media risk analytics used by IC + law enforcement (fact).", "source": "IQT portfolio"},
+    {"from": "In_Q_Tel", "to": "Cylance", "instrument": "cia_seed", "notes": "IQT-backed Cylance - AI endpoint security (later acquired by BlackBerry) (fact).", "source": "IQT portfolio"},
+    {"from": "In_Q_Tel", "to": "D_Wave", "instrument": "cia_seed", "notes": "IQT was an early investor in D-Wave (quantum annealing) - the IC's hedge on quantum optimization/compute (fact).", "source": "IQT portfolio; press"},
+    {"from": "D_Wave", "to": "Quantum_Computing", "instrument": "relationship", "notes": "D-Wave pioneered commercial quantum annealers - wires the IQT web to the quantum tracker's hardware landscape (fact).", "source": "#218 (quantum cross-ref)"},
+    {"from": "In_Q_Tel", "to": "Sonitus", "instrument": "cia_seed", "notes": "IQT-backed Sonitus - near-ear/in-mouth covert comms hardware for operators (fact); the wearable-comms leg of the portfolio.", "source": "IQT portfolio; press"}
   ],
-  "note": "In-Q-Tel (IQT) is the CIA/Intelligence-Community's not-for-profit strategic investor (est. 1999); it does NOT disclose funding amounts/dates, so edges are graded on the PUBLIC record of an IQT relationship, not on deal terms. IQT reports ~494 portfolio companies (Aug 2026). Edges are STRUCTURAL (cia_seed / corporate_lineage) - an IQT tie is a capability/adoption signal, NOT evidence of witting espionage by the company."
+  "note": "In-Q-Tel (IQT) is the CIA/Intelligence-Community's not-for-profit strategic investor (est. 1999); it does NOT disclose funding amounts/dates, so edges are graded on the PUBLIC record of an IQT relationship, not deal terms. IQT reports ~494 portfolio companies (Aug 2026); this block maps a representative surveillance/data/geoint subset. Edges are STRUCTURAL (cia_seed / gov_contract / corporate_lineage) - an IQT tie is a capability/adoption signal, NOT evidence of witting espionage by the company."
 }

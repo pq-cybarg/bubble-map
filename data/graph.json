@@ -1604,6 +1604,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Cylance": {
+      "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
     "Cymer": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -1702,6 +1706,10 @@
     },
     "Datacenter_Backlash": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Dataminr": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "David_Kostiner": {
@@ -2266,6 +2274,10 @@
     },
     "Fiserv": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Fivecast": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Flagstar": {
@@ -4136,6 +4148,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Orbital_Insight": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "OrcaSlicer": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -4403,6 +4419,10 @@
     "Prime_Brokers": {
       "sector": "bank",
       "has_exogenous_revenue": true
+    },
+    "Primer_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
     },
     "Prince_Group": {
       "sector": "other",
@@ -5088,6 +5108,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Shield_AI": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Shigeru_Ishiba": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -5186,6 +5210,10 @@
     },
     "SolarWinds_Sunburst": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Sonitus": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "South_Africa": {
@@ -12396,6 +12424,32 @@
     },
     {
       "from": "In_Q_Tel",
+      "to": "CIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json,spec-niantic-geospatial.json",
+      "note": "In-Q-Tel (est. 1999) is the CIA's not-for-profit strategic-investment arm - the mechanism that identifies + seeds dual-use commercial tech into the Agency (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT now serves the broader Intelligence Community + partners (NGA, DIA, DHS, and others) - not just the CIA (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
       "to": "Keyhole",
       "instrument": "relationship",
       "layer": "structural",
@@ -12418,7 +12472,20 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "In-Q-Tel was an early investor in Recorded Future (threat-intel / OSINT analytics) (fact)."
+      "note": "In-Q-Tel (with Google Ventures) was an early investor in Recorded Future (threat-intel / OSINT temporal analytics) (fact)."
+    },
+    {
+      "from": "Recorded_Future",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Recorded Future supplies threat-intel/OSINT to IC + gov customers - the analytics layer on public + dark-web data (fact)."
     },
     {
       "from": "In_Q_Tel",
@@ -12470,7 +12537,20 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json,spec-palantir-surveillance.json",
-      "note": "IQT seed investment in Palantir (~2004-2005); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact of relationship; amounts undisclosed)."
+      "note": "IQT seed investment in Palantir (~2004-05); the CIA was Palantir's primary early customer for years - the flagship IQT surveillance/data-fusion bet (fact; amounts undisclosed)."
+    },
+    {
+      "from": "Palantir",
+      "to": "CIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "The CIA was Palantir's anchor early customer (Gotham) - the seed-to-customer pipeline IQT is designed to create (fact)."
     },
     {
       "from": "In_Q_Tel",
@@ -12483,7 +12563,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform (later ~$43B valuation) - data-fusion substrate for IC analytics (fact of relationship; confirmed via IQT team page)."
+      "note": "IQT invested in Databricks (~2016), the lakehouse/AI data-platform - data-fusion substrate for IC analytics (fact)."
     },
     {
       "from": "In_Q_Tel",
@@ -12496,7 +12576,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "IQT-backed big-data (Hadoop) platform - one of IQT's billion-dollar outcomes; enterprise/IC data lakes (fact)."
+      "note": "IQT-backed big-data (Hadoop) platform - enterprise/IC data lakes; a billion-dollar IQT outcome (fact)."
     },
     {
       "from": "In_Q_Tel",
@@ -12509,7 +12589,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (fact; an IQT 'unicorn' exit)."
+      "note": "IQT invested in 10gen/MongoDB - document database widely used across gov data systems (an IQT 'unicorn' exit) (fact)."
     },
     {
       "from": "In_Q_Tel",
@@ -12522,7 +12602,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact of IQT relationship per IQT leadership; deal terms undisclosed)."
+      "note": "IQT relationship with Anduril (defense autonomy/sensing/counter-UAS; Luckey/Founders-Fund lineage) - ties the IQT web to the Palantir/Thiel defense cluster (fact; terms undisclosed)."
     },
     {
       "from": "In_Q_Tel",
@@ -12535,7 +12615,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
-      "note": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the IQT portfolio (fact; IQT lists it among notable outcomes)."
+      "note": "IQT-backed synthetic-biology platform - the biosecurity/biodata leg of the portfolio (fact)."
     },
     {
       "from": "Databricks",
@@ -12549,6 +12629,201 @@
       "cancelable": false,
       "source_file": "spec-inqtel-portfolio.json",
       "note": "Palantir<->Databricks product partnership (Foundry/AIP + lakehouse interop) - two IQT-lineage data platforms interoperating (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Dataminr",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Dataminr - real-time alerting off the Twitter/X firehose + other public feeds; ACLU/press documented use for protest/activity monitoring by police + agencies (fact of investment + use; scope contested)."
+    },
+    {
+      "from": "Dataminr",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Dataminr's 'First Alert' sells real-time social-media event detection to government/public-safety customers - the social-media-monitoring node of the IC-venture web (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Orbital_Insight",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Orbital Insight - geospatial AI extracting patterns (cars, ships, construction) from satellite imagery at scale (fact)."
+    },
+    {
+      "from": "Orbital_Insight",
+      "to": "NGA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Commercial geoint feeding NGA/defense analysis - the AI layer atop the Keyhole-lineage imagery world (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "HawkEye360",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed HawkEye 360 - smallsat constellations geolocating RF emissions (ships going dark, jamming, comms) - space-based signals intelligence as a service (fact)."
+    },
+    {
+      "from": "HawkEye360",
+      "to": "NGA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "RF-geolocation data sold to NGA/defense/IC - commercial SIGINT-adjacent geoint (fact)."
+    },
+    {
+      "from": "HawkEye360",
+      "to": "Planet_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Commercial-space geoint peers (imagery + RF) increasingly integrated for IC tasking - wires the IQT web to the space-imaging block (#186) (fact of sector)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Primer_AI",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Primer - NLP/generative-AI for IC document + open-source analysis (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Shield_AI",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Shield AI - autonomy software (Hivemind) for GPS/comms-denied drone operations (fact)."
+    },
+    {
+      "from": "Shield_AI",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "Defense-autonomy peers in the IQT/Founders-Fund-adjacent cluster (fact of sector)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Fivecast",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Fivecast - OSINT/social-media risk analytics used by IC + law enforcement (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Cylance",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Cylance - AI endpoint security (later acquired by BlackBerry) (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "D_Wave",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT was an early investor in D-Wave (quantum annealing) - the IC's hedge on quantum optimization/compute (fact)."
+    },
+    {
+      "from": "D_Wave",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json,macro-quantum-computing.json",
+      "note": "D-Wave pioneered commercial quantum annealers - wires the IQT web to the quantum tracker's hardware landscape (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Sonitus",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "cia_seed",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-inqtel-portfolio.json",
+      "note": "IQT-backed Sonitus - near-ear/in-mouth covert comms hardware for operators (fact); the wearable-comms leg of the portfolio."
     },
     {
       "from": "Terraform_Labs",
@@ -14330,19 +14605,6 @@
       "cancelable": false,
       "source_file": "macro-quantum-computing.json",
       "note": "Narrative-beta cohort (RGTI/QBTS/QUBT) at 800x+ sales - prices double/halve on headlines; fundamentals don't yet anchor (fact/interpretation)."
-    },
-    {
-      "from": "D_Wave",
-      "to": "Quantum_Computing",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "develops",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-quantum-computing.json",
-      "note": "Quantum-annealing; narrative-beta cohort (fact)."
     },
     {
       "from": "Quantinuum",
@@ -29568,19 +29830,6 @@
       "note": "Hanke co-founded Keyhole (2001), the satellite/aerial 3D-mapping startup - the seed of his entire geospatial career (fact)."
     },
     {
-      "from": "In_Q_Tel",
-      "to": "CIA",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "relationship",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-niantic-geospatial.json",
-      "note": "In-Q-Tel is the CIA's not-for-profit strategic-investment arm - the mechanism that seeds dual-use commercial tech (Keyhole, Palantir, etc.) into the IC (fact); wires this block to the In-Q-Tel portfolio thread."
-    },
-    {
       "from": "NGA",
       "to": "Keyhole",
       "instrument": "other",
@@ -37382,10 +37631,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1577,
-    "num_edges": 2390,
+    "num_nodes": 1584,
+    "num_edges": 2407,
     "num_financial_edges": 274,
-    "num_structural_edges": 2116,
+    "num_structural_edges": 2133,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -37600,6 +37849,14 @@
     "elementary_cycles": [
       [
         "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -37615,12 +37872,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -37633,21 +37887,16 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -37658,8 +37907,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -40492,6 +40741,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cylance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cymer": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40661,6 +40917,13 @@
         "in_robust_core": false
       },
       "Datacenter_Backlash": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Dataminr": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41648,6 +41911,13 @@
         "in_robust_core": false
       },
       "Fiserv": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fivecast": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44923,6 +45193,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Orbital_Insight": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OrcaSlicer": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45386,6 +45663,13 @@
         "in_robust_core": false
       },
       "Prime_Brokers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Primer_AI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46589,6 +46873,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shield_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shigeru_Ishiba": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46758,6 +47049,13 @@
         "in_robust_core": false
       },
       "SolarWinds_Sunburst": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sonitus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48770,7 +49068,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 63,
+        "degree": 66,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -48785,15 +49083,17 @@
           "person",
           "pqc_quantum",
           "regulator",
+          "security_research",
           "sink",
           "spv",
           "state",
+          "state_intel",
           "surveillance",
           "tech",
           "telecom"
         ],
-        "n_neighbor_sectors": 19,
-        "source_files": 40,
+        "n_neighbor_sectors": 21,
+        "source_files": 41,
         "layers": [
           "financial",
           "structural"
@@ -49093,7 +49393,7 @@
       },
       {
         "node": "Palantir",
-        "degree": 21,
+        "degree": 22,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
