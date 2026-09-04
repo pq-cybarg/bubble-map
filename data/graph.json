@@ -96,12 +96,20 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "APT1": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "APT28_FancyBear": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "APT29_CozyBear": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "APT35_Charming_Kitten": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "APT_State_Actors": {
@@ -4964,6 +4972,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "SolarWinds_Sunburst": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "South_Africa": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -5408,6 +5420,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Turla": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "UAE": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -5738,6 +5754,10 @@
     },
     "VoltTyphoon": {
       "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
+    "Volt_Typhoon": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Volvo_Cars": {
@@ -25750,7 +25770,7 @@
       "status": "contested",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-telecom-carriers.json",
+      "source_file": "spec-telecom-carriers.json,spec-state-apt-catalog.json",
       "note": ""
     },
     {
@@ -29665,6 +29685,279 @@
       "cancelable": false,
       "source_file": "spec-camp-lejeune.json",
       "note": ""
+    },
+    {
+      "from": "APT1",
+      "to": "PLA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "APT1 = PLA Unit 61398 (Shanghai), exposed in Mandiant's landmark 2013 APT1 report; DOJ indicted 5 PLA officers in 2014 - the first public naming of a state military hacking unit and years of IP-theft espionage (fact/attribution)."
+    },
+    {
+      "from": "Mandiant",
+      "to": "APT1",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "named_by",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Mandiant's APT1 report established the modern threat-intel naming/attribution playbook (fact)."
+    },
+    {
+      "from": "APT28_FancyBear",
+      "to": "GRU",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "APT28 (Fancy Bear / Sofacy / Forest Blizzard) = Russian military intelligence GRU (Unit 26165). Ops: 2016 DNC hack, WADA, TV5Monde, Bundestag; DOJ/Mueller indictments 2018 (fact/attribution). Aliases consolidated here."
+    },
+    {
+      "from": "APT29_CozyBear",
+      "to": "SVR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "APT29 (Cozy Bear / Midnight Blizzard / The Dukes) = Russian foreign-intel SVR. Ops: DNC (2015-16), COVID vaccine-research theft (2020), and the SolarWinds supply-chain campaign (fact/attribution). Aliases consolidated."
+    },
+    {
+      "from": "APT29_CozyBear",
+      "to": "SolarWinds_Sunburst",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "APT29 ran the SolarWinds 'Sunburst' supply-chain compromise (disclosed Dec-2020): a trojanized Orion update reached ~18,000 customers and was used to breach US agencies (Treasury, Commerce, DHS) + tech firms - the defining software-supply-chain espionage event (fact)."
+    },
+    {
+      "from": "SolarWinds_Sunburst",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Sunburst breached multiple US federal agencies - the wake-up call behind EO 14028 (software supply-chain security, SBOMs) and the CISA/CDM push (fact)."
+    },
+    {
+      "from": "SolarWinds_Sunburst",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supply_chain_compromise",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "The campaign also abused SAML token forgery ('Golden SAML') + Microsoft 365/Azure AD to move laterally into cloud tenants - implicating identity infrastructure, not just the Orion update (fact)."
+    },
+    {
+      "from": "Sandworm",
+      "to": "GRU",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Sandworm = GRU Unit 74455. Ops: Ukraine power-grid blackouts (2015, 2016), NotPetya (2017), Olympic Destroyer (2018), Ukraine wartime wipers - the most destructive state cyber unit; DOJ indictment 2020 (fact/attribution)."
+    },
+    {
+      "from": "Sandworm",
+      "to": "NotPetya",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Links the existing NotPetya node to its operator (Sandworm/GRU) - the EternalBlue-powered wiper (~$10B) (fact)."
+    },
+    {
+      "from": "Sandworm",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Sandworm's Ukraine grid attacks (BlackEnergy/Industroyer) are the only confirmed cyber-caused power blackouts - the template for critical-infrastructure sabotage (fact); wires the APT layer to the energy/grid thread."
+    },
+    {
+      "from": "Turla",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Turla (Snake / Uroburos / Venomous Bear) = Russian FSB-linked; decades-long espionage (satellite C2, the Snake implant dismantled by the FBI's 'MEDUSA' operation 2023) (fact/attribution)."
+    },
+    {
+      "from": "Volt_Typhoon",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Volt Typhoon = PRC state-sponsored; living-off-the-land PRE-POSITIONING inside US critical infrastructure (power, water, comms, transport - incl. Guam) for potential disruption in a Taiwan crisis; CISA/NSA/FBI advisories 2023-24 (fact/attribution)."
+    },
+    {
+      "from": "Volt_Typhoon",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Volt Typhoon's focus on critical-infrastructure OT (not espionage but disruption-readiness) is the strategic shift that alarmed US officials - wiring the China-APT thread to the grid/critical-infra nodes (fact)."
+    },
+    {
+      "from": "SaltTyphoon",
+      "to": "MSS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Salt Typhoon = PRC (MSS-linked); breached at least 9 US telecom carriers (Verizon, AT&T, T-Mobile, Lumen) incl. the LAWFUL-INTERCEPT/wiretap systems - a historic counterintelligence compromise (2024-25) (fact/attribution)."
+    },
+    {
+      "from": "Equation_Group",
+      "to": "NSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Equation Group = NSA Tailored Access Operations (the most sophisticated known toolset: firmware implants, Stuxnet-linked tooling); exposed by Kaspersky (2015) and the Shadow Brokers leak - consolidates the US side of the APT ledger (fact/attribution)."
+    },
+    {
+      "from": "Lazarus_Group",
+      "to": "North_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Lazarus (Hidden Cobra) = DPRK (RGB). Uniquely REVENUE-driven: Sony 2014, WannaCry 2017, SWIFT bank heists (Bangladesh Bank $81M), and the largest crypto thefts (Ronin $625M, Bybit 2025) funding the regime (fact/attribution)."
+    },
+    {
+      "from": "Kimsuky",
+      "to": "North_Korea",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Kimsuky (APT43 / Velvet Chollima) = DPRK espionage - spear-phishing think-tanks, academics, and nuclear/foreign-policy targets; sanctioned by OFAC 2023 (fact/attribution)."
+    },
+    {
+      "from": "APT35_Charming_Kitten",
+      "to": "Iran",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "APT35 (Charming Kitten / Mint Sandstorm) = Iran IRGC-linked; credential phishing of journalists, academics, dissidents, and 2020/2024 US election-adjacent targets (fact/attribution)."
+    },
+    {
+      "from": "CrowdStrike",
+      "to": "APT28_FancyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "named_by",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "CrowdStrike's 'Bear' (Russia) / 'Panda' (China) / 'Chollima' (DPRK) / 'Kitten' (Iran) taxonomy is the other dominant naming system - here linking its Fancy Bear = APT28 identification (fact)."
+    },
+    {
+      "from": "APT28_FancyBear",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Anchors the state-ESPIONAGE/influence branch of the malware lineage (distinct from criminal ransomware + commercial spyware) - state services running persistent intrusion campaigns (fact of category)."
+    },
+    {
+      "from": "Volt_Typhoon",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-apt-catalog.json",
+      "note": "Represents the newest branch: CRITICAL-INFRASTRUCTURE PRE-POSITIONING (readiness to disrupt, not steal) - the strategic evolution of state APT activity (interpretation/category)."
     },
     {
       "from": "Iran_IRGC",
@@ -35479,10 +35772,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1514,
-    "num_edges": 2263,
+    "num_nodes": 1519,
+    "num_edges": 2284,
     "num_financial_edges": 274,
-    "num_structural_edges": 1989,
+    "num_structural_edges": 2010,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -35530,8 +35823,13 @@
     "core_scc_all_edges_incl_structural": [
       "AI_Datacenters",
       "AMD",
+      "APT1",
+      "APT28_FancyBear",
+      "APT29_CozyBear",
       "ASML",
       "AUKUS",
+      "Adani_Group",
+      "Africa_Corps",
       "Amazon",
       "Amkor",
       "Andreessen_Horowitz",
@@ -35555,6 +35853,7 @@
       "Coinbase",
       "Congress",
       "ConsenSys",
+      "Constellation_Energy",
       "CoreWeave",
       "Critical_Minerals_Strategic_Reserve",
       "Cross_River_Bank",
@@ -35569,6 +35868,7 @@
       "ECDSA",
       "Early_Warning",
       "Electricity_Ratepayers",
+      "Equation_Group",
       "Ethereum",
       "FDIC",
       "FPL",
@@ -35579,36 +35879,47 @@
       "First_Brands",
       "G42",
       "GENIUS_Act",
+      "GRU",
       "GlobalFoundries",
       "Goldman_Sachs",
       "Google",
+      "HALEU_Enrichment",
       "HV_Transformers",
       "Huntington",
       "IBM",
       "ICE",
       "ImmigrationOS",
+      "India",
       "Intel",
       "IonQ",
       "Japan",
       "Jump_Crypto",
       "KeyBank",
+      "Kimsuky",
       "Lambda",
+      "Lazarus_Group",
       "Lockheed_Martin",
       "MP_Materials",
       "MSS",
       "MS_Nightmare",
+      "Mandiant",
       "Meta",
       "MetaMask",
       "Microsoft",
       "Microsoft_Defender",
+      "NSA",
       "NVIDIA",
       "NextEra_Energy",
       "Niantic",
+      "North_Korea",
+      "NotPetya",
+      "Nuclear_SMR",
       "OSAT",
       "OpenAI",
       "Open_Standard",
       "Opioid_Crisis",
       "Oracle",
+      "PLA",
       "Palantir",
       "Palantir_AIP",
       "Palantir_Foundry",
@@ -35623,12 +35934,17 @@
       "Rare_Earths",
       "Regions_Financial",
       "Ripple",
+      "Russia",
+      "Russian_Intel",
       "SEC",
       "SINK_bondmarket",
       "SINK_lenders",
+      "SVR",
       "SaltTyphoon",
+      "Sandworm",
       "Secure_Enclave",
       "Solana",
+      "SolarWinds_Sunburst",
       "SpaceX",
       "Stablecoins",
       "Stanford_University",
@@ -35637,6 +35953,7 @@
       "TMobile",
       "TSMC",
       "Tai_Mo_Shan",
+      "TerraPower",
       "The_Clearing_House",
       "Tokenized_Collateral",
       "Tokenized_Deposits",
@@ -35657,7 +35974,7 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 128,
+    "core_scc_all_edges_size": 152,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -35665,19 +35982,11 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
         "Microsoft",
@@ -35689,13 +35998,21 @@
       ],
       [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Anthropic",
@@ -35705,20 +36022,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -35727,9 +36032,14 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -35737,6 +36047,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -35918,6 +36235,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "APT1": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "APT28_FancyBear": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -35926,6 +36250,13 @@
         "in_robust_core": false
       },
       "APT29_CozyBear": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "APT35_Charming_Kitten": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44437,6 +44768,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SolarWinds_Sunburst": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "South_Africa": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45214,6 +45552,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Turla": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "UAE": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45795,6 +46140,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Volt_Typhoon": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Volvo_Cars": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46359,7 +46711,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 64,
+        "degree": 65,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -46384,7 +46736,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 21,
-        "source_files": 37,
+        "source_files": 38,
         "layers": [
           "financial",
           "structural"
@@ -46393,7 +46745,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 56,
+        "degree": 57,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -46412,10 +46764,11 @@
           "spv",
           "state",
           "surveillance",
+          "tech",
           "telecom"
         ],
-        "n_neighbor_sectors": 18,
-        "source_files": 36,
+        "n_neighbor_sectors": 19,
+        "source_files": 37,
         "layers": [
           "financial",
           "structural"
@@ -46505,7 +46858,7 @@
       },
       {
         "node": "Microsoft",
-        "degree": 24,
+        "degree": 25,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -46520,7 +46873,7 @@
           "university"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "financial",
           "structural"
@@ -46550,6 +46903,28 @@
           "structural"
         ],
         "both_layers": true
+      },
+      {
+        "node": "Russia",
+        "degree": 28,
+        "neighbor_sectors": [
+          "bank",
+          "commodity",
+          "defense",
+          "energy",
+          "logistics",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 16,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
       },
       {
         "node": "SEC",
@@ -46598,28 +46973,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Russia",
-        "degree": 27,
-        "neighbor_sectors": [
-          "bank",
-          "commodity",
-          "defense",
-          "energy",
-          "logistics",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "threat_actor"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 15,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "PrivateCredit_Funds",
