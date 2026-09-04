@@ -20,7 +20,7 @@
 - **Google** — 53 files
 - **OpenAI** — 41 files
 - **FDIC** — 37 files
-- **Microsoft** — 35 files
+- **Microsoft** — 36 files
 - **Amazon** — 34 files
 - **Oracle** — 33 files
 - **NVIDIA** — 30 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-msnightmare-disclosure.json` — related files by shared entities (verify cross-refs exist)
-- macro-ai-datacenter-water-siting.json: 1 shared entities
-- digitalid-orchestration-real-incentive.json: 1 shared entities
-- fin-ai-efficiency-counter-thesis.json: 1 shared entities
-- fin-coreweave-oracle.json: 1 shared entities
-- catalog-academia-core.json: 1 shared entities
+## Newest file `spec-av-edr-subversion-doubleagent.json` — related files by shared entities (verify cross-refs exist)
+- energy-power.json: 1 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities
+- spec-electronics-parts-pairing.json: 1 shared entities
+- fin-gulf-sovereign-ai-capital.json: 1 shared entities
 - fin-ai-depreciation-debttrap.json: 1 shared entities
-- spec-shai-hulud-npm-worm.json: 1 shared entities
-- digitalid-device-ownership-erosion.json: 1 shared entities
+- spec-sec-filings-primary.json: 1 shared entities
+- spec-shadow-brokers-eternalblue.json: 1 shared entities
+- fin-microsoft-openai.json: 1 shared entities

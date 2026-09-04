@@ -1802,6 +1802,16 @@ Money_Market_Funds,Repo_Market,other,,open,False,False,macro-money-market-funds.
 Money_Market_Funds,Treasury_Market,other,,open,False,False,macro-money-market-funds.json
 Stablecoins,Treasury_Market,relationship,,open,False,False,macro-money-market-funds.json
 Money_Market_Funds,US_Banks,other,,open,False,False,macro-money-market-funds.json
+DoubleAgent,Application_Verifier,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+Application_Verifier,Microsoft,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+DoubleAgent,Microsoft_Defender,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+Microsoft_Defender,DoubleAgent,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+DoubleAgent,MS_Nightmare,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+DoubleAgent,Malware_Lineage,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+BYOVD,EDR_Killer,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+EDR_Killer,Microsoft_Defender,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+BYOVD,Microsoft,other,,,False,False,spec-av-edr-subversion-doubleagent.json
+BYOVD,Malware_Lineage,other,,,False,False,spec-av-edr-subversion-doubleagent.json
 US_Congress,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
 DOJ,Crypto_legislation,regulatory_legal,,open,False,False,spec-crypto-legislation-forcing.json
 Courts,Crypto_legislation,other,,open,False,False,spec-crypto-legislation-forcing.json

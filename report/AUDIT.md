@@ -14,7 +14,7 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Inventory
 - models: 55 (z3 .py: 10) + TLA + Alloy
-- research: 208 json / 208 md
+- research: 209 json / 209 md
 - data outputs: 32
 - reports: 9
 

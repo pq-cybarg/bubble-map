@@ -368,6 +368,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Application_Verifier": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Applied_Materials": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -595,6 +599,10 @@
     "BYD": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "BYOVD": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "BaaS_Middleware": {
       "sector": "financial_infra",
@@ -1768,6 +1776,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "DoubleAgent": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "DriveTime": {
       "sector": "private_credit",
       "has_exogenous_revenue": false
@@ -1798,6 +1810,10 @@
     },
     "EDA_Tools": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "EDR_Killer": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "EDX_Markets": {
@@ -29027,6 +29043,136 @@
       "note": ""
     },
     {
+      "from": "DoubleAgent",
+      "to": "Application_Verifier",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exploits_tool",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "DoubleAgent (Cybellum, Mar-2017) abuses Microsoft's Application Verifier - a legitimate Windows runtime-verification tool. An attacker registers a malicious 'verifier provider' DLL for a target process; Windows then loads that DLL into the process on EVERY start - persistent, pre-boot code injection into arbitrary processes (fact). Requires prior admin/code-exec (technique, not remote break)."
+    },
+    {
+      "from": "Application_Verifier",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "Application Verifier ships with Windows (a developer/QA tool) - the classic 'living-off-the-land' pattern: subvert a trusted first-party feature rather than drop novel malware (fact/context)."
+    },
+    {
+      "from": "DoubleAgent",
+      "to": "Microsoft_Defender",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "subverts",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "The marquee abuse: hijack the ANTIVIRUS process itself. The 2017 PoC weaponized/neutralized most major AV/endpoint products (Avast, AVG, Avira, Bitdefender, ESET, F-Secure, Kaspersky, Malwarebytes, McAfee, Norton, Panda, Trend Micro, Comodo). Turning the guard into the attacker (fact of PoC; vendors mitigated via PPL)."
+    },
+    {
+      "from": "Microsoft_Defender",
+      "to": "DoubleAgent",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mitigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "The documented defense: run AV/EDR as a Protected Process Light (PPL) so non-PPL code (incl. a verifier provider) cannot inject into or tamper with the security service (fact of mitigation)."
+    },
+    {
+      "from": "DoubleAgent",
+      "to": "MS_Nightmare",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer_technique",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "Same thread as the MS_Nightmare Defender 0-days: the endpoint SECURITY product is the target/attack surface. DoubleAgent (2017, injection/persistence) and the 2026 Defender LPE dumps are two eras of 'weaponize the guard' (interpretation)."
+    },
+    {
+      "from": "DoubleAgent",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "Anchors the 'living-off-the-land / defense-evasion' branch of the lineage - abusing trusted OS mechanisms (Application Verifier, later AppInit/IFEO/COM hijacks) rather than novel exploits (fact of category)."
+    },
+    {
+      "from": "BYOVD",
+      "to": "EDR_Killer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enables",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "Bring-Your-Own-Vulnerable-Driver: load a legitimately SIGNED but vulnerable kernel driver (e.g. RTCore64, various OEM drivers) to gain kernel-level execution and disable protections - the engine behind most EDR-killers (fact)."
+    },
+    {
+      "from": "EDR_Killer",
+      "to": "Microsoft_Defender",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "subverts",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "EDR-killer tooling (AuKill; EDRKillShifter, tied by IR vendors to the RansomHub ecosystem) uses BYOVD to terminate/blind AV/EDR agents before ransomware detonation - the modern successor to DoubleAgent's guard-hijack (fact per IR reporting; crew attributions as-reported)."
+    },
+    {
+      "from": "BYOVD",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mitigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "Microsoft's counter is the Vulnerable Driver Blocklist (HVCI/WDAC) - but coverage lags newly-abused drivers, so BYOVD remains effective in practice (fact; efficacy graded)."
+    },
+    {
+      "from": "BYOVD",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-av-edr-subversion-doubleagent.json",
+      "note": "The kernel-level branch of defense evasion - signed-driver abuse - now standard in ransomware playbooks; complements the user-mode DoubleAgent technique (fact of category)."
+    },
+    {
       "from": "US_Congress",
       "to": "Crypto_legislation",
       "instrument": "regulatory_legal",
@@ -35333,10 +35479,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1510,
-    "num_edges": 2253,
+    "num_nodes": 1514,
+    "num_edges": 2263,
     "num_financial_edges": 274,
-    "num_structural_edges": 1979,
+    "num_structural_edges": 1989,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -35419,6 +35565,7 @@
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Department_of_War",
+      "DoubleAgent",
       "ECDSA",
       "Early_Warning",
       "Electricity_Ratepayers",
@@ -35449,9 +35596,11 @@
       "Lockheed_Martin",
       "MP_Materials",
       "MSS",
+      "MS_Nightmare",
       "Meta",
       "MetaMask",
       "Microsoft",
+      "Microsoft_Defender",
       "NVIDIA",
       "NextEra_Energy",
       "Niantic",
@@ -35508,20 +35657,12 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 125,
+    "core_scc_all_edges_size": 128,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
       [
         "CoreWeave",
         "NVIDIA"
@@ -35531,11 +35672,19 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
         "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
         "OpenAI"
       ],
       [
@@ -35554,18 +35703,6 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
@@ -35576,6 +35713,18 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -36245,6 +36394,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Application_Verifier": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Applied_Materials": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -36638,6 +36794,13 @@
         "in_robust_core": false
       },
       "BYD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "BYOVD": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38695,6 +38858,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DoubleAgent": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DriveTime": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38745,6 +38915,13 @@
         "in_robust_core": false
       },
       "EDA_Tools": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EDR_Killer": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46328,7 +46505,7 @@
       },
       {
         "node": "Microsoft",
-        "degree": 22,
+        "degree": 24,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -46343,7 +46520,7 @@
           "university"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 15,
+        "source_files": 16,
         "layers": [
           "financial",
           "structural"
