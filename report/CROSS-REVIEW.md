@@ -16,7 +16,7 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 81 files
-- **Chainlink** — 58 files
+- **Chainlink** — 59 files
 - **Google** — 53 files
 - **OpenAI** — 41 files
 - **FDIC** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-state-apt-catalog.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 4 shared entities
-- temporal-bridges.json: 4 shared entities
-- spec-shadow-brokers-eternalblue.json: 4 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- macro-pqc-chips.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 2 shared entities
-- spec-surveillance-cyber-threat-layer.json: 2 shared entities
+## Newest file `spec-ransomware-ecrime-catalog.json` — related files by shared entities (verify cross-refs exist)
+- spec-east-asia-conglomerates-politics.json: 1 shared entities
+- spec-bank-digitalmoney-consortia.json: 1 shared entities
+- spec-alignment-matrix.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
+- spec-auto-right-to-repair.json: 1 shared entities
+- macro-mortgage-reits.json: 1 shared entities
+- blockchain-registry.json: 1 shared entities
+- digitalid-corporate.json: 1 shared entities

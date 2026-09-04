@@ -816,6 +816,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "BlackCat_ALPHV": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "BlackRock": {
       "sector": "private_credit",
       "has_exogenous_revenue": true
@@ -1120,6 +1124,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "Carbanak": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Card_networks": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1168,6 +1176,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Chainalysis": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Chainlink": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
@@ -1179,6 +1191,10 @@
     "ChangGuang": {
       "sector": "satellite",
       "has_exogenous_revenue": true
+    },
+    "Change_Healthcare": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Character_AI": {
       "sector": "tech",
@@ -1352,6 +1368,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Colonial_Pipeline": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Columbia_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -1411,6 +1431,10 @@
     "Content_platforms": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Conti": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Contingent_Labor": {
       "sector": "labor",
@@ -1614,6 +1638,10 @@
     },
     "Damian_Williams": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "DarkSide": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Data_Breach": {
@@ -1988,6 +2016,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Evil_Corp": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Express_Scripts": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2031,6 +2063,10 @@
     "FHLB_System": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "FIN7": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "FINRA": {
       "sector": "regulator",
@@ -2876,6 +2912,10 @@
       "sector": "standards",
       "has_exogenous_revenue": true
     },
+    "JBS": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "JCET": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -3030,6 +3070,10 @@
     },
     "Kanav_Kariya": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Kaseya": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Kaynes_SemiCon": {
@@ -3352,6 +3396,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "MGM_Resorts": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "MGX": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -3362,6 +3410,10 @@
     },
     "MIT": {
       "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "MOVEit": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "MP_Materials": {
@@ -4368,6 +4420,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "REvil": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "RFC6979_Deterministic": {
       "sector": "pqc",
       "has_exogenous_revenue": false
@@ -4398,6 +4454,10 @@
     },
     "Rakuten_Wallet": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "RansomHub": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Ransomware_RaaS": {
@@ -4547,6 +4607,10 @@
     "Ryan_Kelly": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Ryuk": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "S2MARTS": {
       "sector": "state",
@@ -25917,6 +25981,370 @@
       "note": "The defining lesson: offensive cyber tools stockpiled by states leak and boomerang; EternalBlue kept powering intrusions for years. The core argument against 'nobody but us' vulnerability hoarding + for coordinated disclosure (fact of recurrence)."
     },
     {
+      "from": "Conti",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Conti (successor to Ryuk; Wizard Spider) - Russia-based; the 2022 'Conti Leaks' exposed its corporate-style org after it declared support for Russia's invasion of Ukraine. Later fragmented into Black Basta / Royal / Zeon (fact; Russia base well-established)."
+    },
+    {
+      "from": "Conti",
+      "to": "Ryuk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Ryuk (2018-20, big-game hunting via TrickBot/Emotet) is Conti's direct predecessor - same operators (fact)."
+    },
+    {
+      "from": "Ryuk",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Ryuk pioneered 'big-game hunting' (targeting large orgs for 7-8 figure ransoms) - the model the whole RaaS industry adopted (fact of influence)."
+    },
+    {
+      "from": "REvil",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "REvil (Sodinokibi; GandCrab lineage) - Russia-based RaaS; the FSB announced arrests in Jan-2022 (later stalled). Ran Kaseya + JBS (fact)."
+    },
+    {
+      "from": "REvil",
+      "to": "Kaseya",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Jul-2021: REvil exploited a Kaseya VSA zero-day to push ransomware through MSPs to ~1,500 downstream businesses - a supply-chain ransomware event; a universal decryptor later obtained (fact)."
+    },
+    {
+      "from": "REvil",
+      "to": "JBS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "May-2021: REvil hit JBS (world's largest meatpacker); JBS paid ~$11M in Bitcoin - a food-supply-chain shock (fact)."
+    },
+    {
+      "from": "DarkSide",
+      "to": "Colonial_Pipeline",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "May-2021: DarkSide ransomware shut Colonial Pipeline (largest US fuel pipeline), triggering East-Coast fuel panic; Colonial paid ~$4.4M in BTC; DOJ clawed back ~$2.3M. The incident that made ransomware a national-security issue (fact)."
+    },
+    {
+      "from": "DarkSide",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "DarkSide - Russia-based RaaS that (notably) coded in an exclusion for CIS-country victims; went dark after Colonial, rebranded (BlackMatter) (fact/inference)."
+    },
+    {
+      "from": "DOJ",
+      "to": "DarkSide",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disruption",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "DOJ's ~$2.3M Bitcoin clawback from the Colonial ransom (via the FBI's key seizure) was a landmark - showing crypto ransoms are traceable/seizable (fact)."
+    },
+    {
+      "from": "LockBit",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "LockBit - the most prolific RaaS (2019-2024), Russia-linked; disrupted by NCA/FBI/Europol 'Operation Cronos' (Feb-2024, infrastructure seized, affiliate data exposed) but attempted to persist (fact)."
+    },
+    {
+      "from": "DOJ",
+      "to": "LockBit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "disruption",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Operation Cronos (NCA-led, DOJ/FBI/Europol) seized LockBit infrastructure, decryption keys, and unmasked affiliates - the model takedown, though the brand tried to reconstitute (fact)."
+    },
+    {
+      "from": "LockBit",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "LockBit's affiliate-friendly RaaS + fastest-encryptor marketing made it the dominant brand of the early-2020s ransomware economy (fact of scale)."
+    },
+    {
+      "from": "Cl0p",
+      "to": "MOVEit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "May-2023: Cl0p (TA505-linked) mass-exploited a MOVEit Transfer zero-day, hitting 2,700+ organizations and ~95M individuals - the archetype of zero-day-driven mass data-theft extortion (fact)."
+    },
+    {
+      "from": "Cl0p",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Cl0p / TA505 - Russian-speaking; specializes in file-transfer zero-days (Accellion FTA, GoAnywhere, MOVEit) for pure data-extortion (often skipping encryption) (fact/inference)."
+    },
+    {
+      "from": "BlackCat_ALPHV",
+      "to": "Change_Healthcare",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Feb-2024: BlackCat/ALPHV (Rust-based RaaS) hit Change Healthcare, paralyzing US medical claims for weeks; UnitedHealth paid ~$22M - after which ALPHV EXIT-SCAMMED its own affiliate and faked a takedown (fact)."
+    },
+    {
+      "from": "Change_Healthcare",
+      "to": "UnitedHealth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Change Healthcare is a UnitedHealth (Optum) subsidiary - so the breach hit a chokepoint routing a huge share of US healthcare claims (fact); wires the eCrime layer to the existing UnitedHealth node."
+    },
+    {
+      "from": "BlackCat_ALPHV",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "ALPHV/BlackCat - Russia-linked RaaS, likely DarkSide/BlackMatter successors; ran the notable MGM/Caesars affiliate ops via Scattered Spider (fact/inference)."
+    },
+    {
+      "from": "Scattered_Spider",
+      "to": "MGM_Resorts",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "conducted",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Sep-2023: Scattered Spider (native-English social-engineering crew, tied to 'The Com') breached MGM Resorts (days of casino outages) and Caesars (which paid ~$15M) - deploying ALPHV ransomware. Notable for English-speaking, help-desk-vishing TTPs (fact)."
+    },
+    {
+      "from": "Scattered_Spider",
+      "to": "BlackCat_ALPHV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliate",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Scattered Spider operated as an ALPHV AFFILIATE - illustrating the RaaS split: Western social-engineering access-brokers renting Russian ransomware (fact)."
+    },
+    {
+      "from": "RansomHub",
+      "to": "EDR_Killer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "uses",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "RansomHub (2024 RaaS that absorbed ALPHV/LockBit affiliates after the takedowns) deploys EDRKillShifter - linking the eCrime layer to the BYOVD/EDR-subversion block (fact)."
+    },
+    {
+      "from": "RansomHub",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "RansomHub represents post-takedown consolidation - affiliates migrating to whichever brand survives law-enforcement pressure (fact of dynamic)."
+    },
+    {
+      "from": "FIN7",
+      "to": "Carbanak",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "FIN7 / Carbanak (Cobalt) stole an estimated $1B+ from banks/retail/hospitality via the Carbanak backdoor (2013-18); later pivoted to ransomware affiliation (BlackCat) + selling tooling - eCrime's most durable enterprise (fact)."
+    },
+    {
+      "from": "Carbanak",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Carbanak proved organized financial-cybercrime at industrial scale - the professionalized-eCrime template that RaaS later franchised (fact of influence)."
+    },
+    {
+      "from": "Evil_Corp",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Evil Corp (Maksim Yakubets; Dridex/BitPaymer/WastedLocker) - Russia-based, with reported FSB ties; OFAC-sanctioned 2019; 2024 UK/US/AU sanctions + a named LockBit-affiliate link (fact)."
+    },
+    {
+      "from": "Evil_Corp",
+      "to": "OFAC",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "sanctioned",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Evil Corp's OFAC designation made paying its ransoms a sanctions violation - the policy lever that reshaped the ransom-payment/insurance calculus (fact)."
+    },
+    {
+      "from": "LockBit",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ransom_rail",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Ransomware runs on crypto rails - ransoms paid in Bitcoin (increasingly with mixers/Monero) then laundered via exchanges/mixers; the payment layer that makes the RaaS economy work (fact of mechanism)."
+    },
+    {
+      "from": "Chainalysis",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tracing",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Blockchain-analytics firms (Chainalysis, TRM) trace ransom flows - enabling seizures (Colonial clawback) and the annual ransomware-payment tallies; the counter-force to the crypto ransom rail (fact)."
+    },
+    {
+      "from": "Chainalysis",
+      "to": "OFAC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ransomware-ecrime-catalog.json",
+      "note": "Analytics firms feed law-enforcement/OFAC attribution + sanctions enforcement on crypto addresses - wiring the eCrime layer to the sanctions/regulator thread (fact)."
+    },
+    {
       "from": "China",
       "to": "MSS",
       "instrument": "other",
@@ -35772,10 +36200,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1519,
-    "num_edges": 2284,
+    "num_nodes": 1535,
+    "num_edges": 2312,
     "num_financial_edges": 274,
-    "num_structural_edges": 2010,
+    "num_structural_edges": 2038,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -35861,6 +36289,7 @@
       "Crypto_Sprint",
       "DARPA",
       "DOJ",
+      "DarkSide",
       "Data_Center_Bandwagon",
       "Datacenter_Backlash",
       "Department_of_War",
@@ -35898,6 +36327,7 @@
       "Kimsuky",
       "Lambda",
       "Lazarus_Group",
+      "LockBit",
       "Lockheed_Martin",
       "MP_Materials",
       "MSS",
@@ -35974,20 +36404,12 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 152,
+    "core_scc_all_edges_size": 154,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
       [
         "Microsoft",
         "OpenAI"
@@ -36001,18 +36423,26 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -36024,6 +36454,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -36040,6 +36476,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -36047,13 +36484,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -37495,6 +37925,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BlackCat_ALPHV": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BlackRock": {
         "total_usd": 28500000000,
         "circular_usd": 0,
@@ -38027,6 +38464,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Carbanak": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Card_networks": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38111,6 +38555,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chainalysis": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chainlink": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38126,6 +38577,13 @@
         "in_robust_core": false
       },
       "ChangGuang": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Change_Healthcare": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38433,6 +38891,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Colonial_Pipeline": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Columbia_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38532,6 +38997,13 @@
         "in_robust_core": false
       },
       "Content_platforms": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Conti": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -38889,6 +39361,13 @@
         "in_robust_core": false
       },
       "Damian_Williams": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DarkSide": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39546,6 +40025,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Evil_Corp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Express_Scripts": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -39617,6 +40103,13 @@
         "in_robust_core": false
       },
       "FHLB_System": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FIN7": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41100,6 +41593,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "JBS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "JCET": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41367,6 +41867,13 @@
         "in_robust_core": false
       },
       "Kanav_Kariya": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kaseya": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41933,6 +42440,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MGM_Resorts": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MGX": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -41948,6 +42462,13 @@
         "in_robust_core": false
       },
       "MIT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MOVEit": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43711,6 +44232,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "REvil": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "RFC6979_Deterministic": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43761,6 +44289,13 @@
         "in_robust_core": false
       },
       "Rakuten_Wallet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RansomHub": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44021,6 +44556,13 @@
       },
       "Ryan_Kelly": {
         "total_usd": 25000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ryuk": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -46906,7 +47448,7 @@
       },
       {
         "node": "Russia",
-        "degree": 28,
+        "degree": 35,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -46920,7 +47462,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "structural"
         ],
