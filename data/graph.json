@@ -1108,6 +1108,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Candiru": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Canon": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1282,6 +1286,10 @@
     },
     "Citigroup": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Citizen_Lab": {
+      "sector": "academia",
       "has_exogenous_revenue": false
     },
     "Citizens_Financial": {
@@ -2522,6 +2530,14 @@
     },
     "HV_Transformers": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "Hack_For_Hire": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Hacking_Team": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Halushchenko": {
@@ -5719,6 +5735,10 @@
     "University_of_Pennsylvania": {
       "sector": "university",
       "has_exogenous_revenue": false
+    },
+    "University_of_Toronto": {
+      "sector": "other",
+      "has_exogenous_revenue": true
     },
     "University_of_Washington": {
       "sector": "university",
@@ -25318,6 +25338,162 @@
       "note": "Shelter (rent + OER) ~1/3 of CPI; a ~1yr-lagged largest component drives the headline at every turning point."
     },
     {
+      "from": "Citizen_Lab",
+      "to": "University_of_Toronto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab is based at the Munk School of Global Affairs & Public Policy, University of Toronto (founded 2001, director Ron Deibert) - an academic lab doing device forensics + network measurement at intelligence-grade quality (fact). Wires the cyber threat layer into the academia catalog."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Commercial_Spyware_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab is the dominant independent EXPOSER of the mercenary-spyware market - its forensic reports are what turned 'lawful intercept' vendors into sanctioned, litigated entities (fact). The counter-force to the spyware hub."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "NSO_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Landmark NSO/Pegasus work: 'The Million Dollar Dissident' (Ahmed Mansoor, 2016) first caught Pegasus; 'FORCEDENTRY' (2021) documented the zero-click iMessage exploit; mapped targeting of journalists/dissidents (Khashoggi circle, Catalan officials, US State Dept phones) (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Gamma_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab's FinFisher/FinSpy research (mapping command-and-control servers across dozens of countries) is foundational to the FinSpy record - complementing Amnesty's 2020 Egypt findings (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Hacking_Team",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab exposed Hacking Team (Milan; 'Remote Control System'/Galileo) selling to abusive governments; the vendor was itself hacked in 2015 (400GB dump) confirming client lists incl. Sudan/Ethiopia (fact). Hacking Team wound down / reformed as Memento Labs."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Candiru",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab + Microsoft (2021) exposed Candiru (Tel Aviv; aka Sourgum) and its 'DevilsTongue' Windows spyware, used against civil society across multiple countries - leading to Candiru's addition to the US Commerce Entity List alongside NSO (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Intellexa",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Citizen Lab documented Cytrox/Intellexa's 'Predator' spyware (the 'Predator Files') - feeding the US Treasury sanctions on the Intellexa Consortium (2024) and the EU PEGA inquiry (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Hack_For_Hire",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "'Dark Basin' (2020): Citizen Lab tied a hack-for-hire operation targeting thousands (incl. climate advocates, journalists) to India-based BellTroX - exposing the mercenary phishing/hack-for-hire market alongside spyware (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Beyond spyware: Citizen Lab documented China's 'Great Cannon' (DDoS via injected traffic, 2015) and pervasive censorship in WeChat/TikTok/livestream apps - the state-surveillance/censorship half of its work (fact)."
+    },
+    {
+      "from": "Apple",
+      "to": "NSO_Group",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Downstream of Citizen Lab's FORCEDENTRY: Apple sued NSO (2021) and shipped Lockdown Mode; Apple later moved to dismiss to protect threat-intel methods (2024) (fact)."
+    },
+    {
+      "from": "Meta",
+      "to": "NSO_Group",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Meta/WhatsApp's 2019 suit over a WhatsApp zero-click (1,400 targets) produced a 2025 US jury verdict against NSO (~$167M punitive, later adjusted) - the first major courtroom loss for a spyware vendor (fact)."
+    },
+    {
+      "from": "Citizen_Lab",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-citizen-lab.json",
+      "note": "Represents the DEFENSE/accountability branch of the lineage - independent forensics that convert covert spyware operations into public evidence, sanctions, and litigation (fact of role)."
+    },
+    {
       "from": "Hedge_Funds",
       "to": "Treasury_Market",
       "instrument": "other",
@@ -36200,10 +36376,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1535,
-    "num_edges": 2312,
+    "num_nodes": 1540,
+    "num_edges": 2324,
     "num_financial_edges": 274,
-    "num_structural_edges": 2038,
+    "num_structural_edges": 2050,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -36411,6 +36587,10 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -36427,11 +36607,12 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
-        "CoreWeave",
+        "Anthropic",
+        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -36445,17 +36626,6 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -36466,6 +36636,12 @@
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -38436,6 +38612,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Candiru": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Canon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -38738,6 +38921,13 @@
         "in_robust_core": false
       },
       "Citigroup": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Citizen_Lab": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -40908,6 +41098,20 @@
         "in_robust_core": false
       },
       "HV_Transformers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hack_For_Hire": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hacking_Team": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46507,6 +46711,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "University_of_Toronto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "University_of_Washington": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47253,8 +47464,9 @@
     "top_cross_layer_connectors": [
       {
         "node": "China",
-        "degree": 65,
+        "degree": 66,
         "neighbor_sectors": [
+          "academia",
           "ai",
           "ai_lab",
           "chip_vendor",
@@ -47277,8 +47489,8 @@
           "statistic",
           "tech"
         ],
-        "n_neighbor_sectors": 21,
-        "source_files": 38,
+        "n_neighbor_sectors": 22,
+        "source_files": 39,
         "layers": [
           "financial",
           "structural"
@@ -47517,6 +47729,30 @@
         "both_layers": true
       },
       {
+        "node": "Meta",
+        "degree": 17,
+        "neighbor_sectors": [
+          "ai_data",
+          "ai_infra",
+          "chip_vendor",
+          "commodity",
+          "energy",
+          "other",
+          "political",
+          "regulator",
+          "sink",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 15,
         "neighbor_sectors": [
@@ -47533,30 +47769,6 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Meta",
-        "degree": 16,
-        "neighbor_sectors": [
-          "ai_data",
-          "ai_infra",
-          "chip_vendor",
-          "commodity",
-          "energy",
-          "other",
-          "political",
-          "regulator",
-          "sink",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 7,
         "layers": [
           "financial",
           "structural"
