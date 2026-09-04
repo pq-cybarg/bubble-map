@@ -18,12 +18,12 @@
 - **Meta** — 82 files
 - **Chainlink** — 59 files
 - **Google** — 53 files
-- **OpenAI** — 41 files
-- **Microsoft** — 38 files
+- **OpenAI** — 42 files
+- **Microsoft** — 39 files
 - **FDIC** — 37 files
 - **Amazon** — 34 files
 - **Oracle** — 33 files
-- **NVIDIA** — 30 files
+- **NVIDIA** — 31 files
 - **Anthropic** — 24 files
 - **Ripple** — 23 files
 - **JPMorgan** — 23 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-citizen-lab.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-system-contagion.json: 3 shared entities
-- spec-exchanges-asia.json: 3 shared entities
-- spec-blackrock-aladdin-concentration.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- macro-ai-power-grid-bottleneck.json: 2 shared entities
-- fin-coreweave-oracle.json: 2 shared entities
-- energy-power.json: 2 shared entities
-- commodities-metals.json: 2 shared entities
+## Newest file `spec-hacktivist-catalog.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 4 shared entities
+- macro-pqc-chips.json: 3 shared entities
+- fin-nvidia-openai.json: 3 shared entities
+- macro-crqc-quantum-landscape.json: 3 shared entities
+- fin-ai-efficiency-counter-thesis.json: 3 shared entities
+- fin-google-amazon-anthropic-meta.json: 3 shared entities
+- fin-coreweave-oracle.json: 3 shared entities
+- geopolitics-allied-intel-nodes.json: 3 shared entities

@@ -328,6 +328,14 @@
       "sector": "retail",
       "has_exogenous_revenue": false
     },
+    "Anonymous": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Anonymous_Sudan": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "AntGroup": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
@@ -1552,6 +1560,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Cult_of_Dead_Cow": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Cumberland_DRW": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2476,6 +2488,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Guacamaya": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Gwadar": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -2812,6 +2828,10 @@
       "sector": "standards",
       "has_exogenous_revenue": false
     },
+    "IT_Army_Ukraine": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Igor_Sechin": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3128,6 +3148,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Killnet": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Kimsuky": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -3190,6 +3214,10 @@
     },
     "Kytch": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "LAPSUS": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "LBMA": {
@@ -3382,6 +3410,10 @@
     },
     "Lucid": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "LulzSec": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Luno": {
@@ -3859,6 +3891,10 @@
     "Nissan": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "NoName057": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Nobitex": {
       "sector": "exchange",
@@ -5380,6 +5416,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "The_Com": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Thiel_Foundation": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -5784,6 +5824,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Vault7": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "VeChain": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -5939,6 +5983,10 @@
     "WhiteHouse": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "WikiLeaks": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "William_Hinman": {
       "sector": "person",
@@ -6265,6 +6313,266 @@
       "cancelable": false,
       "source_file": "spec-sec-filings-primary.json",
       "note": "REVERSE sign: Amazon booked a ~$9.5B Q3-2025 GAIN marking up its Anthropic stake (fair-value) after Anthropic's $183B round - circular paper income (vs Microsoft's equity-method OpenAI losses)."
+    },
+    {
+      "from": "Cult_of_Dead_Cow",
+      "to": "Anonymous",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "The cDc (Cult of the Dead Cow, 1984-) coined the term 'hacktivism', shipped Back Orifice (1998), and spun up Hacktivismo (anti-censorship) - the ideological ancestor of the later leaderless movements (fact)."
+    },
+    {
+      "from": "Anonymous",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Anonymous (from ~2008, 4chan roots) = leaderless DDoS + doxxing + defacement hacktivism: Project Chanology (Scientology), Operation Payback (pro-WikiLeaks DDoS on Visa/Mastercard/PayPal 2010), HBGary Federal (2011), Ferguson, #OpISIS. A BANNER anyone can fly, not an org (fact of category)."
+    },
+    {
+      "from": "Anonymous",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "After the 2022 invasion, actors under the Anonymous banner declared '#OpRussia' - defacements, leaks, and DDoS against Russian state/media targets (self-claimed; attribution to any coherent group impossible by design) (graded)."
+    },
+    {
+      "from": "LulzSec",
+      "to": "Anonymous",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "LulzSec (2011) - a high-profile Anonymous splinter (Sony, PBS, CIA.gov, HBGary) doing it 'for the lulz'; collapsed after leader 'Sabu' (Hector Monsegur) became an FBI informant, leading to arrests of the crew (fact; individuals in public record)."
+    },
+    {
+      "from": "LulzSec",
+      "to": "FBI",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "The LulzSec takedown - via a flipped insider informant - is the template for infiltrating leaderless hacktivist crews (fact)."
+    },
+    {
+      "from": "WikiLeaks",
+      "to": "US_Government",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "WikiLeaks (2006-, Julian Assange) published massive US government leaks: 'Collateral Murder', the Iraq/Afghan War Logs, and Cablegate (2010) - sourced from Chelsea Manning (convicted 2013, sentence commuted 2017). Landmark transparency/national-security clash (fact; individuals in public record)."
+    },
+    {
+      "from": "WikiLeaks",
+      "to": "Vault7",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "March 2017: WikiLeaks published 'Vault 7' - a trove of CIA cyber tools/techniques (Weeping Angel, UMBRAGE, etc.). Ex-CIA engineer Josh Schulte was convicted (2022) as the source - the CIA's analog to the NSA's Shadow Brokers loss (fact)."
+    },
+    {
+      "from": "Vault7",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Vault 7 exposed CIA offensive-cyber capabilities (incl. techniques to mimic other actors' code) - the intelligence-community half of the 'state tools leak' pattern alongside Equation/Shadow Brokers (fact)."
+    },
+    {
+      "from": "WikiLeaks",
+      "to": "APT28_FancyBear",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "attribution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "CONTESTED: the US IC assessed that GRU/APT28-hacked 2016 DNC/Podesta emails were routed to the public via WikiLeaks (and Guccifer 2.0/DCLeaks). WikiLeaks denied a Russian source. Present BOTH: US-IC attribution of the source vs WikiLeaks' source-protection denial (interpretation/attribution)."
+    },
+    {
+      "from": "LAPSUS",
+      "to": "The_Com",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "LAPSUS$ (2021-22) - teen extortion/notoriety crew (UK/Brazil) from the loose 'The Com' English-speaking cybercrime community; social-engineering + insider-bribery, not ransomware (fact)."
+    },
+    {
+      "from": "LAPSUS",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "LAPSUS$ breached Microsoft, NVIDIA, Okta, Samsung, Ubisoft, and Uber via help-desk vishing, SIM-swaps, and MFA-fatigue - prompting a US Cyber Safety Review Board study of the group's simple-but-effective TTPs (fact)."
+    },
+    {
+      "from": "The_Com",
+      "to": "Scattered_Spider",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "'The Com' is the broader English-speaking community from which both LAPSUS$ and Scattered Spider emerged - wiring the hacktivist/notoriety layer to the eCrime block (Scattered Spider ran ALPHV ops) (fact)."
+    },
+    {
+      "from": "Killnet",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Killnet (2022-) - pro-Russia DDoS hacktivism against NATO-country government/hospital/airport sites; nationalistic, not state-run but state-aligned (and occasionally suspected of state coordination) (fact/graded)."
+    },
+    {
+      "from": "NoName057",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "NoName057(16) - pro-Russia DDoS crew running the crowdsourced 'DDoSia' project (paid volunteers); persistent low-level attacks on European targets; EU/US 'Operation Eastwood' disruption 2025 (fact)."
+    },
+    {
+      "from": "Anonymous_Sudan",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "CONTESTED: Anonymous Sudan branded itself as Sudanese hacktivists but researchers linked it to Russia/Killnet; it ran powerful DDoS on Microsoft 365, OpenAI, X, and others (2023). DOJ indicted two Sudanese brothers (2024), complicating the Russia-front theory - present both (graded)."
+    },
+    {
+      "from": "IT_Army_Ukraine",
+      "to": "Ukraine",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "affiliation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "The IT Army of Ukraine (2022-) - a government-ENDORSED volunteer collective coordinating DDoS/defacement against Russian targets. Notable for blurring the civilian/combatant line in cyberwar (a state openly mobilizing volunteer hackers) (fact)."
+    },
+    {
+      "from": "IT_Army_Ukraine",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "targets",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Sustained volunteer DDoS/data-leak operations against Russian banks, media, and services - the mirror image of Killnet/NoName057 (fact)."
+    },
+    {
+      "from": "Guacamaya",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Guacamaya (2022) - Latin American hacktivists behind mega-leaks of military/police archives (Mexico's SEDENA 'Guacamaya Leaks', plus Chile, Peru, Colombia, El Salvador) - environmental/anti-extractivism motivated; the leaktivism model applied to the Global South (fact)."
+    },
+    {
+      "from": "Killnet",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "Killnet/NoName057(16)/Anonymous Sudan mark the STATE-ALIGNED DDoS-hacktivism branch that exploded around the Russia-Ukraine war - deniable nationalist volunteers doing states' low-end disruption (interpretation/category)."
+    },
+    {
+      "from": "LAPSUS",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-hacktivist-catalog.json",
+      "note": "LAPSUS$/The Com represent the NOTORIETY-driven, social-engineering-first branch - teenagers defeating big-tech security with vishing/SIM-swaps rather than exploits (fact of category)."
     },
     {
       "from": "China",
@@ -36376,10 +36684,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1540,
-    "num_edges": 2324,
+    "num_nodes": 1552,
+    "num_edges": 2344,
     "num_financial_edges": 274,
-    "num_structural_edges": 2050,
+    "num_structural_edges": 2070,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -36591,6 +36899,14 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -36604,16 +36920,8 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -36621,9 +36929,9 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "Amazon",
@@ -36634,14 +36942,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -37241,6 +37549,20 @@
         "in_robust_core": false
       },
       "Annuity_Holders": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Anonymous": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Anonymous_Sudan": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -39389,6 +39711,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cult_of_Dead_Cow": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cumberland_DRW": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41006,6 +41335,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Guacamaya": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gwadar": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41594,6 +41930,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IT_Army_Ukraine": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Igor_Sechin": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42147,6 +42490,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Killnet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kimsuky": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42254,6 +42604,13 @@
       },
       "Kytch": {
         "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LAPSUS": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -42589,6 +42946,13 @@
         "in_robust_core": false
       },
       "Lucid": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LulzSec": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43422,6 +43786,13 @@
         "in_robust_core": false
       },
       "Nissan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NoName057": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46088,6 +46459,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "The_Com": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Thiel_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46795,6 +47173,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Vault7": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VeChain": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47062,6 +47447,13 @@
         "in_robust_core": false
       },
       "WhiteHouse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WikiLeaks": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47499,7 +47891,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 57,
+        "degree": 59,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -47522,7 +47914,7 @@
           "telecom"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 37,
+        "source_files": 38,
         "layers": [
           "financial",
           "structural"
@@ -47612,7 +48004,7 @@
       },
       {
         "node": "Microsoft",
-        "degree": 25,
+        "degree": 26,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -47627,7 +48019,7 @@
           "university"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -47660,7 +48052,7 @@
       },
       {
         "node": "Russia",
-        "degree": 35,
+        "degree": 40,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -47674,7 +48066,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "structural"
         ],
