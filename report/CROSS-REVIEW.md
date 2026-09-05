@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 85 files
+- **Meta** — 87 files
 - **Chainlink** — 59 files
-- **Google** — 54 files
-- **OpenAI** — 44 files
-- **Microsoft** — 41 files
+- **Google** — 55 files
+- **OpenAI** — 45 files
+- **Microsoft** — 42 files
 - **FDIC** — 37 files
-- **Amazon** — 34 files
+- **Amazon** — 35 files
 - **Oracle** — 33 files
-- **NVIDIA** — 31 files
-- **Anthropic** — 26 files
+- **NVIDIA** — 32 files
+- **Anthropic** — 27 files
+- **a16z** — 23 files
 - **Ripple** — 23 files
-- **JPMorgan** — 23 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-elite-groups.json` — related files by shared entities (verify cross-refs exist)
-- influence-operator-network.json: 6 shared entities
-- temporal-bridges.json: 6 shared entities
-- geopolitics-defense-industrial-base.json: 5 shared entities
-- spec-network-overlay.json: 5 shared entities
-- catalog-academia-core.json: 5 shared entities
-- spec-dialog-society.json: 5 shared entities
-- spec-palantir-surveillance.json: 4 shared entities
-- digitalid-corporate.json: 4 shared entities
+## Newest file `catalog-quiet-money.json` — related files by shared entities (verify cross-refs exist)
+- altcoin-lens.json: 3 shared entities
+- blockchain-registry.json: 3 shared entities
+- spec-network-overlay.json: 3 shared entities
+- spec-exchanges-asia.json: 3 shared entities
+- spec-semiconductor-logistics-standards.json: 2 shared entities
+- spec-trusted-foundry-secure-microelectronics.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
