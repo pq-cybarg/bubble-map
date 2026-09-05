@@ -1,0 +1,42 @@
+{
+  "title": "Quiet money (batch 5): the quant-finance data cluster, quiet European AI money, and quiet Asian power",
+  "source": "Public record: SEC/ADV filings; FEC/OpenSecrets; company histories; Aleph Alpha/Schwarz + C3.ai filings; CK Hutchison/BlackRock 2025 ports deal. Catalog layer (#242 batch 5). Structural overlay; person nodes carry dossiers. FOCUS: the low-profile quant/data-finance fortunes that industrialized ML before Big Tech, plus quiet foreign money in AI + strategic infrastructure. HONESTY: holdings/donations/deals = fact; influence graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Jim_Simons", "sector": "person"},
+    {"id": "Ken_Griffin", "sector": "person"},
+    {"id": "David_Shaw", "sector": "person"},
+    {"id": "Israel_Englander", "sector": "person"},
+    {"id": "Dieter_Schwarz", "sector": "person"},
+    {"id": "Thomas_Siebel", "sector": "person"},
+    {"id": "Li_Ka_shing", "sector": "person"},
+    {"id": "Citadel", "sector": "capital"},
+    {"id": "DE_Shaw", "sector": "capital"},
+    {"id": "Millennium", "sector": "capital"},
+    {"id": "Schwarz_Group", "sector": "commodity"},
+    {"id": "Aleph_Alpha", "sector": "ai"},
+    {"id": "C3_ai", "sector": "ai"},
+    {"id": "CK_Hutchison", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Jim_Simons", "to": "Renaissance_Technologies", "instrument": "founder_origin", "notes": "Jim Simons (mathematician/codebreaker; d. 2024) founded Renaissance Technologies + the Medallion fund - the most successful quant fund ever + the origin of the industrialized-data-in-finance model; the Simons Foundation is a top private math/science funder (fact).", "source": "RenTech; public record"},
+    {"from": "Jim_Simons", "to": "Robert_Mercer", "instrument": "relationship", "notes": "Robert Mercer succeeded Simons as RenTech co-CEO - the bridge from the (apolitical) Simons era to the (political) Mercer data-politics project (fact); wires to the quiet-money data-politics thread.", "source": "RenTech"},
+    {"from": "Ken_Griffin", "to": "Citadel", "instrument": "leads", "notes": "Ken Griffin founded + runs Citadel (the ~$60B+ multi-strategy hedge fund) - and is among the very largest, increasingly political GOP mega-donors (Harvard, museums, Florida) (fact).", "source": "SEC; OpenSecrets"},
+    {"from": "Ken_Griffin", "to": "Citadel_Securities", "instrument": "leads", "notes": "Griffin also controls Citadel Securities - the dominant US market-maker handling a huge share of retail equity/options order flow (payment-for-order-flow; central to the 2021 GameStop/Robinhood episode) - quiet control of market plumbing (fact).", "source": "SEC; congressional testimony"},
+    {"from": "Citadel_Securities", "to": "Robinhood", "instrument": "relationship", "notes": "Citadel Securities is the largest buyer of Robinhood's order flow (PFOF) - the arrangement at the center of the retail-trading + market-structure debate (fact).", "source": "SEC PFOF disclosures"},
+    {"from": "David_Shaw", "to": "DE_Shaw", "instrument": "founder_origin", "notes": "David E. Shaw (computer scientist) founded D. E. Shaw - a pioneering quant fund + a computational-biology powerhouse (DE Shaw Research); a quiet centibillionaire-adjacent scientist (fact).", "source": "DE Shaw"},
+    {"from": "DE_Shaw", "to": "Amazon", "instrument": "talent_pipeline", "notes": "Jeff Bezos worked at DE Shaw (where the Amazon idea was hatched) - the quant-fund-to-Big-Tech origin story (fact).", "source": "public record"},
+    {"from": "DE_Shaw", "to": "Two_Sigma", "instrument": "lineage", "notes": "Two Sigma's founders (Overdeck, Siegel) came out of DE Shaw - the quant-diaspora that built the data-finance cluster (fact).", "source": "public record"},
+    {"from": "Israel_Englander", "to": "Millennium", "instrument": "leads", "notes": "Izzy Englander founded Millennium Management - a ~$70B multi-manager 'pod shop'; among the largest + lowest-profile hedge-fund fortunes (fact).", "source": "SEC"},
+    {"from": "Millennium", "to": "AI", "instrument": "relationship", "notes": "Millennium/Citadel/RenTech/DE Shaw/Two Sigma are the quant cluster that industrialized data + ML in markets before Big Tech - a distinct, quiet AI-capital pole (fact of category).", "source": "quant-finance mapping"},
+    {"from": "Dieter_Schwarz", "to": "Schwarz_Group", "instrument": "leads", "notes": "Dieter Schwarz - Germany's richest, near-invisible owner of the Schwarz Group (Lidl + Kaufland) - Europe's largest retailer (fact).", "source": "public record"},
+    {"from": "Schwarz_Group", "to": "Aleph_Alpha", "instrument": "funds", "notes": "Schwarz Group (via Schwarz Digits) is a lead backer of Aleph Alpha - Germany's sovereign-AI LLM champion - and runs StackIT cloud; retail cash pivoting into European sovereign AI/compute (fact).", "source": "Aleph Alpha; Schwarz Digits"},
+    {"from": "Schwarz_Group", "to": "AI_Datacenters", "instrument": "builds", "notes": "Schwarz Digits builds European datacenters/cloud (data-sovereignty pitch) - quiet retail money into the AI-infrastructure buildout (fact).", "source": "Schwarz Digits"},
+    {"from": "Aleph_Alpha", "to": "AI", "instrument": "research_origin", "notes": "Aleph Alpha is Europe's flagship 'sovereign' LLM lab (Heidelberg) - the EU's bid for AI independence from US/China models (fact; commercial pivot to tooling 2024).", "source": "Aleph Alpha"},
+    {"from": "Thomas_Siebel", "to": "C3_ai", "instrument": "leads", "notes": "Tom Siebel (Siebel Systems -> Oracle) founded + runs C3.ai - enterprise + government AI (defense, energy, intelligence) - a quieter enterprise-AI fortune (fact).", "source": "C3.ai"},
+    {"from": "C3_ai", "to": "US_Government", "instrument": "gov_contract", "notes": "C3.ai supplies AI to the DoD/Air Force/intelligence + energy agencies - enterprise AI embedded in government (fact).", "source": "C3.ai gov contracts"},
+    {"from": "Li_Ka_shing", "to": "CK_Hutchison", "instrument": "leads", "notes": "Li Ka-shing - Hong Kong's quiet magnate - controls CK Hutchison (ports, telecom, retail, infrastructure across ~50 countries) - a low-profile globe-spanning empire (fact).", "source": "CK Hutchison"},
+    {"from": "CK_Hutchison", "to": "BlackRock", "instrument": "ownership_transfer", "notes": "2025: CK Hutchison agreed to sell 43 ports (incl. two at the Panama Canal) to a BlackRock-led consortium (~$23B) - a geopolitically charged transfer of strategic infrastructure amid US-China pressure (fact; deal under review).", "source": "CK Hutchison/BlackRock 2025"},
+    {"from": "Ken_Griffin", "to": "US_Government", "instrument": "mega_donor", "notes": "Griffin is a top-tier GOP + establishment donor (and funds elite universities/museums) - quiet market-structure wealth converted to political + cultural influence (fact).", "source": "OpenSecrets/FEC"}
+  ]
+}

@@ -240,6 +240,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Aleph_Alpha": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Alex_Karp": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -988,6 +992,10 @@
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
     },
+    "C3_ai": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "CAC": {
       "sector": "regulator",
       "has_exogenous_revenue": true
@@ -1058,6 +1066,10 @@
     },
     "CISA": {
       "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
+    "CK_Hutchison": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "CLARITY": {
@@ -1355,6 +1367,10 @@
     "Cisco": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "Citadel": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Citadel_Securities": {
       "sector": "financier",
@@ -1704,6 +1720,10 @@
       "sector": "financier",
       "has_exogenous_revenue": false
     },
+    "DE_Shaw": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "DHL": {
       "sector": "logistics",
       "has_exogenous_revenue": true
@@ -1804,6 +1824,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "David_Shaw": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "David_Siegel": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1898,6 +1922,10 @@
     },
     "Dialog_Society": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Dieter_Schwarz": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Digital_Childhood_Alliance": {
@@ -3172,6 +3200,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Israel_Englander": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Israel_MoD": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3296,6 +3328,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Jim_Simons": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jobs_Headline": {
       "sector": "statistic",
       "has_exogenous_revenue": false
@@ -3389,6 +3425,10 @@
       "has_exogenous_revenue": true
     },
     "Ken_Feinberg": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Ken_Griffin": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -3626,6 +3666,10 @@
     },
     "Li_Auto": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Li_Ka_shing": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Liability_Engineering": {
@@ -3950,6 +3994,10 @@
     },
     "Military_Civil_Fusion": {
       "sector": "defense",
+      "has_exogenous_revenue": false
+    },
+    "Millennium": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Mindich": {
@@ -5392,6 +5440,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Schwarz_Group": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Scientific_Publishing": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -5953,6 +6005,10 @@
       "has_exogenous_revenue": false
     },
     "Thomas_Peterffy": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Thomas_Siebel": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -30281,6 +30337,253 @@
       "note": ""
     },
     {
+      "from": "Jim_Simons",
+      "to": "Renaissance_Technologies",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Jim Simons (mathematician/codebreaker; d. 2024) founded Renaissance Technologies + the Medallion fund - the most successful quant fund ever + the origin of the industrialized-data-in-finance model; the Simons Foundation is a top private math/science funder (fact)."
+    },
+    {
+      "from": "Jim_Simons",
+      "to": "Robert_Mercer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Robert Mercer succeeded Simons as RenTech co-CEO - the bridge from the (apolitical) Simons era to the (political) Mercer data-politics project (fact); wires to the quiet-money data-politics thread."
+    },
+    {
+      "from": "Ken_Griffin",
+      "to": "Citadel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Ken Griffin founded + runs Citadel (the ~$60B+ multi-strategy hedge fund) - and is among the very largest, increasingly political GOP mega-donors (Harvard, museums, Florida) (fact)."
+    },
+    {
+      "from": "Ken_Griffin",
+      "to": "Citadel_Securities",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Griffin also controls Citadel Securities - the dominant US market-maker handling a huge share of retail equity/options order flow (payment-for-order-flow; central to the 2021 GameStop/Robinhood episode) - quiet control of market plumbing (fact)."
+    },
+    {
+      "from": "Citadel_Securities",
+      "to": "Robinhood",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Citadel Securities is the largest buyer of Robinhood's order flow (PFOF) - the arrangement at the center of the retail-trading + market-structure debate (fact)."
+    },
+    {
+      "from": "David_Shaw",
+      "to": "DE_Shaw",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "David E. Shaw (computer scientist) founded D. E. Shaw - a pioneering quant fund + a computational-biology powerhouse (DE Shaw Research); a quiet centibillionaire-adjacent scientist (fact)."
+    },
+    {
+      "from": "DE_Shaw",
+      "to": "Amazon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Jeff Bezos worked at DE Shaw (where the Amazon idea was hatched) - the quant-fund-to-Big-Tech origin story (fact)."
+    },
+    {
+      "from": "DE_Shaw",
+      "to": "Two_Sigma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Two Sigma's founders (Overdeck, Siegel) came out of DE Shaw - the quant-diaspora that built the data-finance cluster (fact)."
+    },
+    {
+      "from": "Israel_Englander",
+      "to": "Millennium",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Izzy Englander founded Millennium Management - a ~$70B multi-manager 'pod shop'; among the largest + lowest-profile hedge-fund fortunes (fact)."
+    },
+    {
+      "from": "Millennium",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Millennium/Citadel/RenTech/DE Shaw/Two Sigma are the quant cluster that industrialized data + ML in markets before Big Tech - a distinct, quiet AI-capital pole (fact of category)."
+    },
+    {
+      "from": "Dieter_Schwarz",
+      "to": "Schwarz_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Dieter Schwarz - Germany's richest, near-invisible owner of the Schwarz Group (Lidl + Kaufland) - Europe's largest retailer (fact)."
+    },
+    {
+      "from": "Schwarz_Group",
+      "to": "Aleph_Alpha",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Schwarz Group (via Schwarz Digits) is a lead backer of Aleph Alpha - Germany's sovereign-AI LLM champion - and runs StackIT cloud; retail cash pivoting into European sovereign AI/compute (fact)."
+    },
+    {
+      "from": "Schwarz_Group",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Schwarz Digits builds European datacenters/cloud (data-sovereignty pitch) - quiet retail money into the AI-infrastructure buildout (fact)."
+    },
+    {
+      "from": "Aleph_Alpha",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Aleph Alpha is Europe's flagship 'sovereign' LLM lab (Heidelberg) - the EU's bid for AI independence from US/China models (fact; commercial pivot to tooling 2024)."
+    },
+    {
+      "from": "Thomas_Siebel",
+      "to": "C3_ai",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Tom Siebel (Siebel Systems -> Oracle) founded + runs C3.ai - enterprise + government AI (defense, energy, intelligence) - a quieter enterprise-AI fortune (fact)."
+    },
+    {
+      "from": "C3_ai",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "C3.ai supplies AI to the DoD/Air Force/intelligence + energy agencies - enterprise AI embedded in government (fact)."
+    },
+    {
+      "from": "Li_Ka_shing",
+      "to": "CK_Hutchison",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Li Ka-shing - Hong Kong's quiet magnate - controls CK Hutchison (ports, telecom, retail, infrastructure across ~50 countries) - a low-profile globe-spanning empire (fact)."
+    },
+    {
+      "from": "CK_Hutchison",
+      "to": "BlackRock",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "2025: CK Hutchison agreed to sell 43 ports (incl. two at the Panama Canal) to a BlackRock-led consortium (~$23B) - a geopolitically charged transfer of strategic infrastructure amid US-China pressure (fact; deal under review)."
+    },
+    {
+      "from": "Ken_Griffin",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mega_donor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-4.json",
+      "note": "Griffin is a top-tier GOP + establishment donor (and funds elite universities/museums) - quiet market-structure wealth converted to political + cultural influence (fact)."
+    },
+    {
       "from": "Data_Brokers",
       "to": "ICE",
       "instrument": "other",
@@ -40890,10 +41193,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1700,
-    "num_edges": 2622,
+    "num_nodes": 1714,
+    "num_edges": 2641,
     "num_financial_edges": 274,
-    "num_structural_edges": 2348,
+    "num_structural_edges": 2367,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -41119,6 +41422,14 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -41131,14 +41442,6 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
@@ -41148,14 +41451,20 @@
         "Oracle"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -41174,12 +41483,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "Amazon",
@@ -41619,6 +41922,13 @@
         "in_robust_core": false
       },
       "Albedo": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Aleph_Alpha": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42934,6 +43244,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "C3_ai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CAC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43054,6 +43371,13 @@
         "in_robust_core": false
       },
       "CISA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CK_Hutchison": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43573,6 +43897,13 @@
       },
       "Cisco": {
         "total_usd": 28000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Citadel": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -44187,6 +44518,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DE_Shaw": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DHL": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44362,6 +44700,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "David_Shaw": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "David_Siegel": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44524,6 +44869,13 @@
         "in_robust_core": false
       },
       "Dialog_Society": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Dieter_Schwarz": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46756,6 +47108,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Israel_Englander": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Israel_MoD": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46973,6 +47332,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jim_Simons": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jobs_Headline": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47135,6 +47501,13 @@
         "in_robust_core": false
       },
       "Ken_Feinberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Ken_Griffin": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47548,6 +47921,13 @@
         "in_robust_core": false
       },
       "Li_Auto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Li_Ka_shing": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48115,6 +48495,13 @@
         "in_robust_core": false
       },
       "Military_Civil_Fusion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Millennium": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50641,6 +51028,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Schwarz_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Scientific_Publishing": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51622,6 +52016,13 @@
         "in_robust_core": false
       },
       "Thomas_Peterffy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Thomas_Siebel": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53116,9 +53517,10 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 69,
+        "degree": 71,
         "neighbor_sectors": [
           "academia",
+          "ai",
           "ai_data",
           "creditor",
           "critical_minerals",
@@ -53141,8 +53543,8 @@
           "tech",
           "telecom"
         ],
-        "n_neighbor_sectors": 22,
-        "source_files": 43,
+        "n_neighbor_sectors": 23,
+        "source_files": 44,
         "layers": [
           "financial",
           "structural"
@@ -53396,6 +53798,30 @@
         "both_layers": true
       },
       {
+        "node": "AI_Datacenters",
+        "degree": 21,
+        "neighbor_sectors": [
+          "ai",
+          "commodity",
+          "financier",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 10,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Ripple",
         "degree": 22,
         "neighbor_sectors": [
@@ -53413,30 +53839,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "AI_Datacenters",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai",
-          "commodity",
-          "financier",
-          "logistics",
-          "macro",
-          "neocloud",
-          "other",
-          "political",
-          "private_credit",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 9,
         "layers": [
           "financial",
           "structural"
@@ -53515,6 +53917,28 @@
         "both_layers": true
       },
       {
+        "node": "Amazon",
+        "degree": 12,
+        "neighbor_sectors": [
+          "ai_lab",
+          "capital",
+          "commodity",
+          "financial_infra",
+          "industrial",
+          "person",
+          "satellite",
+          "standards",
+          "university"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Andreessen_Horowitz",
         "degree": 11,
         "neighbor_sectors": [
@@ -53530,27 +53954,6 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Amazon",
-        "degree": 11,
-        "neighbor_sectors": [
-          "ai_lab",
-          "commodity",
-          "financial_infra",
-          "industrial",
-          "person",
-          "satellite",
-          "standards",
-          "university"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 10,
         "layers": [
           "financial",
           "structural"

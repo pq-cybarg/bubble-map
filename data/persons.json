@@ -1973,6 +1973,7 @@
     "Markets"
    ],
    "orgs": [
+    "Ken_Griffin",
     "Citadel",
     "Citadel Securities"
    ],
@@ -15329,6 +15330,160 @@
    "grade": "assessment (public record + labeled inference)",
    "blocks": [
     "catalog-quiet-money-3"
+   ]
+  },
+  {
+   "name": "Jim Simons",
+   "role": "Founder, Renaissance Technologies (d. 2024); Simons Foundation",
+   "domains": [
+    "Capital",
+    "AI"
+   ],
+   "orgs": [
+    "Jim_Simons",
+    "Renaissance_Technologies"
+   ],
+   "bluf": "The mathematician-codebreaker who proved that pure data + models beat human judgment in markets - inventing the quant-fund template that industrialized machine learning in finance decades before Big Tech. Assess with HIGH confidence (historical) his legacy is twofold: the secretive Medallion money-machine, and (via the Simons Foundation) one of the largest private funders of basic math/science - a rare apolitical quant giant (his successor Mercer went the opposite way).",
+   "drivers": "Primary: mathematical truth + pattern-finding; the elegance of a working model. Secondary: funding basic science as legacy.",
+   "worldview": "Empirical data-determinism; hire scientists not traders; secrecy as edge.",
+   "decision_style": "Model-first, hire-PhDs, guard-the-secret; delegated politics/operations (to Mercer, to his cost reputationally).",
+   "track_record": "NSA codebreaker + Stony Brook math chair -> RenTech (Medallion's ~66%/yr gross returns); Simons Foundation + Flatiron Institute (basic science, computational).",
+   "vulnerabilities": "n/a (deceased 2024); RenTech's opacity + the Mercer-era political turn are the legacy asterisks.",
+   "relationships": "Robert Mercer (successor); the quant-finance cluster he seeded.",
+   "outlook": "The quant model he pioneered is now the template across finance + AI.",
+   "confidence": "high",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4",
+    "catalog-quiet-money"
+   ]
+  },
+  {
+   "name": "David Shaw",
+   "role": "Founder, D. E. Shaw; computational scientist",
+   "domains": [
+    "Capital",
+    "AI"
+   ],
+   "orgs": [
+    "David_Shaw",
+    "DE_Shaw"
+   ],
+   "bluf": "The computer-scientist-turned-quant whose fund was both a pioneering systematic-trading shop AND a talent incubator (Bezos; the Two Sigma founders) - and who redirected his own work to computational biology (DE Shaw Research). Assess with MODERATE-HIGH confidence he is a research-driven, low-profile scientist-financier who treats both markets and molecular dynamics as computational problems.",
+   "drivers": "Primary: computational science as a universal method. Secondary: quiet scientific legacy (protein folding / molecular dynamics).",
+   "worldview": "Computation-first empiricism.",
+   "decision_style": "Built the fund, then stepped back to run a private computational-biology lab (custom Anton supercomputers).",
+   "track_record": "Founded DE Shaw (1988); alumni incl. Bezos (Amazon) + Overdeck/Siegel (Two Sigma); DE Shaw Research (Anton molecular-dynamics machines).",
+   "vulnerabilities": "Quant-fund opacity; less politically exposed than peers.",
+   "relationships": "Amazon (Bezos origin); Two Sigma (diaspora); the quant cluster.",
+   "outlook": "Legacy spans the data-finance cluster + computational biology.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4"
+   ]
+  },
+  {
+   "name": "Israel Englander",
+   "role": "Founder, Millennium Management",
+   "domains": [
+    "Capital"
+   ],
+   "orgs": [
+    "Israel_Englander",
+    "Millennium"
+   ],
+   "bluf": "The founder of one of the largest, lowest-profile 'pod shop' hedge funds - the multi-manager model that now dominates quant/data-driven finance. Assess with MODERATE confidence he is a risk-disciplined allocator-of-allocators, keeping an extremely low public profile while running a systemically large data/talent machine.",
+   "drivers": "Primary: risk-controlled returns at scale. Secondary: privacy.",
+   "worldview": "Multi-manager risk diversification; data + talent as inputs.",
+   "decision_style": "Allocate to many teams, enforce tight risk limits; avoid the spotlight.",
+   "track_record": "Founded Millennium (1989) into a ~$70B multi-strategy giant; part of the quant/data-finance cluster.",
+   "vulnerabilities": "Pod-shop leverage + talent-poaching wars raise systemic + labor-market concerns; low transparency.",
+   "relationships": "The multi-manager cluster (Citadel/Point72/Balyasny); quant-finance ecosystem.",
+   "outlook": "Remains a dominant, quiet multi-manager force.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4"
+   ]
+  },
+  {
+   "name": "Dieter Schwarz",
+   "role": "Owner, Schwarz Group (Lidl/Kaufland); backer of Aleph Alpha",
+   "domains": [
+    "Capital",
+    "AI",
+    "Commodity"
+   ],
+   "orgs": [
+    "Dieter_Schwarz",
+    "Schwarz_Group",
+    "Aleph_Alpha"
+   ],
+   "bluf": "Germany's richest + most reclusive magnate, whose discount-retail empire is quietly pivoting into European sovereign AI + cloud. Assess with MODERATE confidence he is a privacy-obsessed operator now making a strategic bet that data-sovereignty + AI infrastructure (Aleph Alpha, StackIT/Schwarz Digits) is the next moat - a rare case of retail cash funding EU tech independence.",
+   "drivers": "Primary: long-term control + privacy (he has essentially no public presence). Secondary: strategic diversification into data/AI/cloud.",
+   "worldview": "German-Mittelstand discipline + data-sovereignty conviction.",
+   "decision_style": "Foundation-owned control (avoids listing); patient diversification.",
+   "track_record": "Built Lidl + Kaufland into Europe's largest retailer; via Schwarz Digits acquired/backed Aleph Alpha + built StackIT cloud + cybersecurity (XM Cyber).",
+   "vulnerabilities": "AI/cloud is far from his retail core; Aleph Alpha's commercial pivot is unproven; near-total opacity.",
+   "relationships": "Aleph Alpha; European sovereign-AI/cloud ecosystem.",
+   "outlook": "A wildcard European AI-infrastructure patron.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4"
+   ]
+  },
+  {
+   "name": "Thomas Siebel",
+   "role": "Founder/CEO, C3.ai (ex-Siebel Systems)",
+   "domains": [
+    "AI",
+    "Capital",
+    "Defense"
+   ],
+   "orgs": [
+    "Thomas_Siebel",
+    "C3_ai"
+   ],
+   "bluf": "A serial enterprise-software founder (Siebel Systems -> Oracle) now selling enterprise + government/defense AI. Assess with MODERATE confidence he is an aggressive enterprise-sales operator positioning C3.ai as the AI layer for critical government + energy systems - a quieter but strategically-placed AI fortune.",
+   "drivers": "Primary: enterprise-software empire-building + reinvention. Secondary: legacy + thought-leadership (AI books).",
+   "worldview": "Enterprise-AI pragmatism; sell to the biggest institutions.",
+   "decision_style": "Aggressive B2B/gov sales; rebrands ahead of tech cycles (CRM -> IoT -> AI).",
+   "track_record": "Siebel Systems (CRM; sold to Oracle ~$5.8B) -> C3.ai (enterprise/gov AI; DoD/Air Force/energy contracts).",
+   "vulnerabilities": "C3.ai's valuation + revenue-recognition scrutiny; concentration in gov contracts.",
+   "relationships": "Oracle lineage; DoD/energy customers.",
+   "outlook": "Positioned as an enterprise/gov AI supplier.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4"
+   ]
+  },
+  {
+   "name": "Li Ka-shing",
+   "role": "Founder, CK Hutchison / CK Asset (Hong Kong)",
+   "domains": [
+    "Capital",
+    "State/Policy"
+   ],
+   "orgs": [
+    "Li_Ka_shing",
+    "CK_Hutchison"
+   ],
+   "bluf": "Hong Kong's archetypal quiet magnate, whose CK Hutchison empire spans ports, telecom, retail, and infrastructure across ~50 countries - now caught in US-China geopolitics via the 2025 sale of strategic ports (incl. Panama Canal) to a BlackRock-led group. Assess with MODERATE confidence he is a pragmatic, apolitical dealmaker navigating between Beijing + the West, monetizing strategic assets under pressure.",
+   "drivers": "Primary: pragmatic wealth-preservation + deal-making across cycles. Secondary: family-dynasty continuity; political neutrality as survival.",
+   "worldview": "Pragmatic globalist; hedge political risk, take the deal.",
+   "decision_style": "Opportunistic asset rotation; low public political profile.",
+   "track_record": "Built CK Hutchison/Cheung Kong (ports incl. Hutchison Ports, 3 telecom, retail, utilities); the 2025 ~$23B ports sale to a BlackRock-led consortium.",
+   "vulnerabilities": "Caught between US (wants ports out of China-linked hands) + Beijing (opposed the sale) - the deal's fate is geopolitical.",
+   "relationships": "BlackRock (2025 buyer consortium); Beijing + Western governments.",
+   "outlook": "A bellwether of decoupling pressure on strategic infrastructure.",
+   "confidence": "moderate",
+   "grade": "assessment (public record + labeled inference)",
+   "blocks": [
+    "catalog-quiet-money-4",
+    "spec-string-of-pearls"
    ]
   }
  ]
