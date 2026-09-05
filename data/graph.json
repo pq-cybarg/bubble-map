@@ -960,6 +960,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Brown_University": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "BtcTurk": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -1828,6 +1832,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Deep_Learning": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Deere_Financial": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2080,6 +2088,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Eigenfaces": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Electric_Coin_Company": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -2270,6 +2282,10 @@
     },
     "FUTO": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "Facial_Recognition": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Fairshake": {
@@ -3132,6 +3148,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Iris_Recognition": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Israel": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -3528,6 +3548,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Lattice_Crypto": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "Law_Enforcement": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3720,6 +3744,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "ML_KEM": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
     "MOVEit": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -3815,6 +3843,10 @@
     "McDonalds": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "McEliece_Cryptosystem": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
     },
     "Medical_Device_Standards": {
       "sector": "standards",
@@ -4086,6 +4118,10 @@
     },
     "NSO_Group": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "NTRU": {
+      "sector": "pqc",
       "has_exogenous_revenue": false
     },
     "NVIDIA": {
@@ -4784,6 +4820,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Qualcomm": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Quandela": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
@@ -4838,6 +4878,14 @@
     },
     "RLUSD": {
       "sector": "stablecoin",
+      "has_exogenous_revenue": false
+    },
+    "RSA_Algorithm": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
+    "RSA_Security": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "RTX": {
@@ -5756,6 +5804,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "TU_Darmstadt": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Tacostand_Wallet": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -5795,6 +5847,10 @@
     "TechCompanies": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "Tel_Aviv_University": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "Telematics_Insurance": {
       "sector": "surveillance",
@@ -6220,6 +6276,10 @@
       "sector": "critical_minerals",
       "has_exogenous_revenue": true
     },
+    "University_of_Cambridge": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "University_of_Chicago": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -6503,6 +6563,10 @@
     "Wyoming": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "XMSS": {
+      "sector": "pqc",
+      "has_exogenous_revenue": false
     },
     "XPeng": {
       "sector": "industrial",
@@ -30364,6 +30428,318 @@
       "note": "Anthropic is the AI lab most identified with the longtermist/EA ('L'/'E') strands of the TESCREAL cluster - completing the ideology->frontier-lab wiring (interpretation; critics' framing)."
     },
     {
+      "from": "MIT",
+      "to": "RSA_Algorithm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "RSA public-key crypto (Rivest-Shamir-Adleman, 1977) - patent US4405829, assigned to MIT; the foundation of modern public-key encryption/signatures (fact)."
+    },
+    {
+      "from": "RSA_Algorithm",
+      "to": "RSA_Security",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tech_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "MIT licensed RSA to RSA Data Security (Rivest et al.) - the commercialization that seeded the crypto industry (fact)."
+    },
+    {
+      "from": "Quantum_Computing",
+      "to": "RSA_Algorithm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "future_break_risk",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Shor's algorithm on a CRQC breaks RSA (and ECC) - the reason the whole PQC migration exists; wires the university-crypto origin to the quantum tracker (fact of threat)."
+    },
+    {
+      "from": "Caltech",
+      "to": "McEliece_Cryptosystem",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Robert McEliece (Caltech/JPL) proposed the code-based McEliece cryptosystem (1978) - now, ~47 years unbroken, a leading post-quantum candidate (fact); ties academia to the McEliece cryptanalysis watch (quantum-pqc)."
+    },
+    {
+      "from": "McEliece_Cryptosystem",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Code-based crypto is one of the main PQC families (Classic McEliece; HQC) - the conservative, non-lattice branch (fact)."
+    },
+    {
+      "from": "Brown_University",
+      "to": "NTRU",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "NTRU lattice cryptosystem (Hoffstein, Pipher, Silverman @ Brown, 1996) - the first practical lattice-based public-key scheme + a direct ancestor of today's lattice PQC (fact)."
+    },
+    {
+      "from": "NTRU",
+      "to": "Qualcomm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tech_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "NTRU's IP passed via NTRU Cryptosystems -> Security Innovation -> OnBoard Security -> Qualcomm (2019) - the university-lattice-crypto-to-chipmaker pipeline (fact)."
+    },
+    {
+      "from": "NTRU",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "NTRU was a NIST PQC round-3 finalist + conceptual precursor to ML-KEM/ML-DSA (fact)."
+    },
+    {
+      "from": "Tel_Aviv_University",
+      "to": "Lattice_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Oded Regev (Tel Aviv/NYU) introduced Learning With Errors (LWE, 2005) - the hardness assumption underpinning the NIST lattice standards (fact)."
+    },
+    {
+      "from": "Lattice_Crypto",
+      "to": "ML_KEM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "LWE/Module-LWE is the mathematical basis of ML-KEM (Kyber) + ML-DSA (Dilithium) - the primary NIST PQC standards (fact)."
+    },
+    {
+      "from": "ML_KEM",
+      "to": "NIST",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standardized",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "ML-KEM = FIPS 203 (2024) - the flagship post-quantum key-encapsulation standard; wires academic lattice theory to the deployed standard (fact)."
+    },
+    {
+      "from": "TU_Darmstadt",
+      "to": "XMSS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "XMSS (eXtended Merkle Signature Scheme; Buchmann/Dahmen/Huelsing @ TU Darmstadt) - stateful hash-based signatures, the most conservative PQC signatures (RFC 8391) (fact)."
+    },
+    {
+      "from": "XMSS",
+      "to": "QRL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "The Quantum Resistant Ledger is built on XMSS hash-based signatures - the direct academia-to-blockchain PQC deployment (fact); ties to the ECDSA-failure/PQC thread."
+    },
+    {
+      "from": "XMSS",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Hash-based signatures (XMSS/LMS -> SLH-DSA/FIPS 205) are the hash-only-assumption branch of PQC (fact)."
+    },
+    {
+      "from": "University_of_Toronto",
+      "to": "Deep_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "The 2012 AlexNet breakthrough (Krizhevsky, Sutskever, Hinton @ Toronto) ignited the deep-learning revolution - the research origin of the modern AI boom (fact)."
+    },
+    {
+      "from": "Deep_Learning",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "tech_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Google acquired DNNresearch (Hinton's spinout) in 2013, bringing Hinton + the AlexNet team in-house - the academia-to-Big-Tech AI pipeline (Sutskever later co-founded OpenAI) (fact)."
+    },
+    {
+      "from": "Stanford_University",
+      "to": "Deep_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Stanford's ImageNet (Fei-Fei Li, 2009) provided the dataset/benchmark that AlexNet won - the fuel for the deep-learning takeoff (fact)."
+    },
+    {
+      "from": "MIT",
+      "to": "Eigenfaces",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Eigenfaces (Turk & Pentland, MIT Media Lab, 1991) - the first practical automated face-recognition method - the academic root of facial recognition (fact)."
+    },
+    {
+      "from": "Eigenfaces",
+      "to": "Facial_Recognition",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Eigenfaces seeded the facial-recognition field that (with deep learning) became mass biometric surveillance (fact)."
+    },
+    {
+      "from": "Facial_Recognition",
+      "to": "Clearview_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Deep-learning facial recognition underpins Clearview AI's scraped-face matching sold to police - the academic-method-to-surveillance-product endpoint (fact)."
+    },
+    {
+      "from": "Facial_Recognition",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Face matching is a core modality of digital-ID/onboarding systems - wiring the biometrics IP to the Digital_ID thread (fact)."
+    },
+    {
+      "from": "University_of_Cambridge",
+      "to": "Iris_Recognition",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ip_patent",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "John Daugman (Cambridge) invented + patented the dominant iris-recognition algorithm (US5291560) - licensed via Iridian/L-1 into border/ID systems worldwide (fact)."
+    },
+    {
+      "from": "Iris_Recognition",
+      "to": "Worldcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Iris biometrics (the Daugman lineage) underpin Worldcoin's Orb-scanned 'World ID' - the newest privatized iris-ID deployment (fact of modality)."
+    },
+    {
+      "from": "Iris_Recognition",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "basis",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-university-ip.json",
+      "note": "Iris is a high-assurance biometric used in national ID (India's Aadhaar) + border systems - wiring Cambridge IP to the Digital_ID thread (fact)."
+    },
+    {
       "from": "Bill_Gates",
       "to": "Microsoft",
       "instrument": "other",
@@ -40141,10 +40517,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1672,
-    "num_edges": 2573,
+    "num_nodes": 1688,
+    "num_edges": 2597,
     "num_financial_edges": 274,
-    "num_structural_edges": 2299,
+    "num_structural_edges": 2323,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -40236,6 +40612,7 @@
       "Data_Center_Bandwagon",
       "Data_Unification",
       "Datacenter_Backlash",
+      "Deep_Learning",
       "Department_of_War",
       "Dialog_Society",
       "DoubleAgent",
@@ -40361,35 +40738,35 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 170,
+    "core_scc_all_edges_size": 171,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -42134,6 +42511,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Brown_University": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BtcTurk": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43653,6 +44037,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Deep_Learning": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Deere_Financial": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44094,6 +44485,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Eigenfaces": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Electric_Coin_Company": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44424,6 +44822,13 @@
         "in_robust_core": false
       },
       "FUTO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Facial_Recognition": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -45935,6 +46340,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Iris_Recognition": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Israel": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46628,6 +47040,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lattice_Crypto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Law_Enforcement": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46964,6 +47383,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ML_KEM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MOVEit": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47127,6 +47553,13 @@
       },
       "McDonalds": {
         "total_usd": 900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "McEliece_Cryptosystem": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -47602,6 +48035,13 @@
         "in_robust_core": false
       },
       "NSO_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NTRU": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48826,6 +49266,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Qualcomm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Quandela": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48918,6 +49365,20 @@
         "in_robust_core": false
       },
       "RLUSD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RSA_Algorithm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "RSA_Security": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50527,6 +50988,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TU_Darmstadt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tacostand_Wallet": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50591,6 +51059,13 @@
         "in_robust_core": false
       },
       "TechCompanies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tel_Aviv_University": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51339,6 +51814,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "University_of_Cambridge": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "University_of_Chicago": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51836,6 +52318,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "XMSS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "XPeng": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -52239,8 +52728,9 @@
       },
       {
         "node": "Google",
-        "degree": 25,
+        "degree": 26,
         "neighbor_sectors": [
+          "ai",
           "ai_lab",
           "chip_vendor",
           "commodity",
@@ -52258,8 +52748,8 @@
           "surveillance",
           "university"
         ],
-        "n_neighbor_sectors": 16,
-        "source_files": 19,
+        "n_neighbor_sectors": 17,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"
@@ -52542,6 +53032,29 @@
         "both_layers": true
       },
       {
+        "node": "Digital_ID",
+        "degree": 21,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 9,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Andreessen_Horowitz",
         "degree": 11,
         "neighbor_sectors": [
@@ -52562,29 +53075,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Digital_ID",
-        "degree": 19,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 8,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Amazon",
