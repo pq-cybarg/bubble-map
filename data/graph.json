@@ -3828,6 +3828,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "Mercatus_Center": {
+      "sector": "academia",
+      "has_exogenous_revenue": false
+    },
     "Mercedes_Benz": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -19371,7 +19375,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "digitalid-corporate.json",
+      "source_file": "digitalid-corporate.json,catalog-crosslink-pass.json",
       "note": "Co-founder/chairman of World / Tools for Humanity - iris-'Orb' proof-of-personhood explicitly pitched as the human-verification layer 'for the AI age'. THE person bridging the AI core and the biometric-ID layer (fact of roles)."
     },
     {
@@ -19397,7 +19401,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "digitalid-corporate.json",
+      "source_file": "digitalid-corporate.json,catalog-crosslink-pass.json",
       "note": "World ID = a 'unique human' proof-of-personhood credential; claims >18M verified across ~160 countries - one piece of the identity stack (fact)."
     },
     {
@@ -21594,7 +21598,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-auto-connected-surveillance.json",
+      "source_file": "spec-auto-connected-surveillance.json,catalog-crosslink-pass.json",
       "note": "$16.8M ICE contract (2021) for Accurint Virtual Crime Center; LEIDS ~$22.1M (2021-2026) - access to data on 276M+ people from 10k+ gov/commercial sources incl. credit history, plates, cell subscriber data; marketed for pre-crime targeting. 2022 lawsuit challenges it (fact of contract; legality contested)."
     },
     {
@@ -30163,6 +30167,201 @@
       "cancelable": false,
       "source_file": "spec-research-security-tech-transfer.json",
       "note": ""
+    },
+    {
+      "from": "Data_Brokers",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sells",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "ICE (and other agencies) purchase commercial location/utility/vehicle data from brokers to sidestep warrant requirements - the documented 'buy what you can't lawfully collect' pattern (fact; legality contested)."
+    },
+    {
+      "from": "Data_Brokers",
+      "to": "CBP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sells",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "CBP similarly buys broker location data (e.g. Venntel/Babel Street lineage) for border + interior tracking (fact; oversight contested)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ingests",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Palantir's case-management platforms fuse government records WITH commercial + broker data into unified person-profiles - the analytic layer atop the broker feeds (fact of capability; specific feeds vary)."
+    },
+    {
+      "from": "LiveRamp",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ad_identity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "LiveRamp onboards offline/CRM identities into Meta's ad platform (clean rooms / matched audiences) - the identity-resolution bridge between broker data and walled-garden targeting (fact)."
+    },
+    {
+      "from": "LiveRamp",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ad_identity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Same identity-onboarding into Google's ad stack - LiveRamp/Acxiom as the connective tissue of surveillance advertising (fact)."
+    },
+    {
+      "from": "Acxiom",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ad_identity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Acxiom's consumer attributes have long fed platform ad-targeting (Facebook's 'Partner Categories' used Acxiom until 2018) - the historical broker->platform link (fact)."
+    },
+    {
+      "from": "SafeGraph",
+      "to": "Palantir_Foundry",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "sells",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Location/foot-traffic data of the SafeGraph type feeds analytic platforms (Foundry/Gotham) + government buyers - wiring the location-broker node to the surveillance-analytics core (fact of category; specific deals vary)."
+    },
+    {
+      "from": "Koch_Network",
+      "to": "Mercatus_Center",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "The Koch network funds the Mercatus Center at George Mason University - the marquee case of donor-funded academic policy infrastructure (deregulation/free-market research) - wiring the quiet-money layer to academia (fact)."
+    },
+    {
+      "from": "Mercatus_Center",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "influence",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Mercatus supplies free-market/deregulation policy analysis + personnel into federal policymaking - the academia-to-policy pipeline funded by quiet money (fact of role; influence graded)."
+    },
+    {
+      "from": "G42",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "G42 builds massive AI datacenters (UAE + abroad; the Stargate-UAE effort) - wiring Gulf quiet capital to the physical AI-infrastructure core (fact)."
+    },
+    {
+      "from": "G42",
+      "to": "Stargate_UAE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "G42 is central to the UAE Stargate/compute build-out (with OpenAI/Oracle/Nvidia/SoftBank orbit) - the Gulf leg of the AI-datacenter bandwagon (fact)."
+    },
+    {
+      "from": "MGX",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "MGX (Tahnoon/Mubadala/G42) finances AI-datacenter + compute at scale - sovereign capital into the buildout (fact)."
+    },
+    {
+      "from": "Tether",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "issues",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Tether (USDT) is the largest stablecoin - anchoring the quiet-controller node to the stablecoin/Treasury-rail thread (fact)."
+    },
+    {
+      "from": "ID2020",
+      "to": "Worldcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "ID2020 (foundation-led digital identity 'for all') and Worldcoin (private biometric ID) are the nonprofit + for-profit poles of the same digital-identity push - wiring the foundations block to the biometrics thread (fact of category)."
+    },
+    {
+      "from": "TESCREAL",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-crosslink-pass.json",
+      "note": "Anthropic is the AI lab most identified with the longtermist/EA ('L'/'E') strands of the TESCREAL cluster - completing the ideology->frontier-lab wiring (interpretation; critics' framing)."
     },
     {
       "from": "Bill_Gates",
@@ -39942,10 +40141,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1671,
-    "num_edges": 2558,
+    "num_nodes": 1672,
+    "num_edges": 2573,
     "num_financial_edges": 274,
-    "num_structural_edges": 2284,
+    "num_structural_edges": 2299,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -40169,27 +40368,37 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "AMD",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -40200,12 +40409,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
         "OpenAI",
-        "Oracle"
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -40218,12 +40423,6 @@
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -46954,6 +47153,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mercatus_Center": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mercedes_Benz": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51963,8 +52169,9 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 68,
+        "degree": 69,
         "neighbor_sectors": [
+          "academia",
           "ai_data",
           "creditor",
           "critical_minerals",
@@ -51987,8 +52194,8 @@
           "tech",
           "telecom"
         ],
-        "n_neighbor_sectors": 21,
-        "source_files": 42,
+        "n_neighbor_sectors": 22,
+        "source_files": 43,
         "layers": [
           "financial",
           "structural"
@@ -52032,7 +52239,7 @@
       },
       {
         "node": "Google",
-        "degree": 24,
+        "degree": 25,
         "neighbor_sectors": [
           "ai_lab",
           "chip_vendor",
@@ -52052,7 +52259,7 @@
           "university"
         ],
         "n_neighbor_sectors": 16,
-        "source_files": 18,
+        "source_files": 19,
         "layers": [
           "financial",
           "structural"
@@ -52168,7 +52375,7 @@
       },
       {
         "node": "Meta",
-        "degree": 21,
+        "degree": 23,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
@@ -52186,7 +52393,7 @@
           "university"
         ],
         "n_neighbor_sectors": 14,
-        "source_files": 12,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -52264,6 +52471,30 @@
         "both_layers": true
       },
       {
+        "node": "AI_Datacenters",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai",
+          "commodity",
+          "financier",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Palantir",
         "degree": 28,
         "neighbor_sectors": [
@@ -52333,26 +52564,27 @@
         "both_layers": true
       },
       {
-        "node": "AI_Datacenters",
-        "degree": 18,
+        "node": "Digital_ID",
+        "degree": 19,
         "neighbor_sectors": [
-          "commodity",
-          "logistics",
-          "macro",
-          "neocloud",
+          "crypto",
+          "financial_infra",
+          "identity",
           "other",
+          "philanthropy",
           "political",
-          "private_credit",
-          "spv",
-          "state"
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech"
         ],
-        "n_neighbor_sectors": 9,
+        "n_neighbor_sectors": 11,
         "source_files": 8,
         "layers": [
-          "financial",
           "structural"
         ],
-        "both_layers": true
+        "both_layers": false
       },
       {
         "node": "Amazon",
@@ -52376,31 +52608,8 @@
         "both_layers": true
       },
       {
-        "node": "Digital_ID",
-        "degree": 19,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 7,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
         "node": "Anthropic",
-        "degree": 15,
+        "degree": 16,
         "neighbor_sectors": [
           "chip_vendor",
           "defense_tech",
@@ -52412,7 +52621,7 @@
           "university"
         ],
         "n_neighbor_sectors": 8,
-        "source_files": 9,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"
