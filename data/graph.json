@@ -24,6 +24,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "ADQ": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "AES": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -1524,6 +1528,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Continental_Resources": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Contingent_Labor": {
       "sector": "labor",
       "has_exogenous_revenue": false
@@ -1591,6 +1599,10 @@
     "CrowdStrike": {
       "sector": "security_research",
       "has_exogenous_revenue": true
+    },
+    "CrownQuest": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "Crude_Oil": {
       "sector": "commodity",
@@ -1819,6 +1831,10 @@
     "Deere_Financial": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Defend_Texas_Liberty": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
     },
     "Defense_Primes": {
       "sector": "defense",
@@ -2568,6 +2584,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Giancarlo_Devasini": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Gig_Platforms": {
       "sector": "labor_platform",
       "has_exogenous_revenue": false
@@ -2737,6 +2757,10 @@
       "has_exogenous_revenue": true
     },
     "Harlan_Crow": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Harold_Hamm": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -2910,6 +2934,10 @@
     },
     "IEEE": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "IHC": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "ILCs": {
@@ -3496,6 +3524,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Las_Vegas_Sands": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Law_Enforcement": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3886,6 +3918,10 @@
     },
     "Mirai": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Miriam_Adelson": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Mistral": {
@@ -4460,6 +4496,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "Paolo_Ardoino": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Paragon": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -4964,6 +5004,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Royal_Group": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Ruja_Ignatova": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -5342,6 +5386,10 @@
     },
     "Shakepay": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Sheikh_Tahnoon": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Shield_AI": {
@@ -5823,6 +5871,10 @@
     "TikTok_US": {
       "sector": "bigtech_asia",
       "has_exogenous_revenue": true
+    },
+    "Timothy_Dunn": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Timothy_Mellon": {
       "sector": "person",
@@ -25052,7 +25104,7 @@
       "status": "held",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "macro-stablecoin-treasury-rail.json,spec-cross-system-contagion.json",
+      "source_file": "macro-stablecoin-treasury-rail.json,spec-cross-system-contagion.json,catalog-quiet-money-3.json",
       "note": ">$100B T-bills (~79% of reserves in Treasuries); more US debt than UAE/Germany - sovereign-scale, lightly-audited."
     },
     {
@@ -34039,6 +34091,266 @@
       "note": ""
     },
     {
+      "from": "Sheikh_Tahnoon",
+      "to": "G42",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Sheikh Tahnoon bin Zayed - UAE National Security Advisor + brother of the president - chairs G42, the Abu Dhabi AI champion (Microsoft's $1.5B partner; ex-Huawei/China ties unwound under US pressure). The quiet nexus of Gulf AI + intelligence + capital (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "MGX",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Tahnoon-linked MGX (with Mubadala + G42) is a ~$100B AI-investment fund - a participant in the OpenAI/Stargate compute financing orbit - projecting Gulf capital into the AI-infrastructure core (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "IHC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Tahnoon chairs International Holding Company (IHC) - Abu Dhabi's largest listed conglomerate (a meteoric ~$200B+ market cap) - the corporate vehicle of the Royal Group empire (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "ADQ",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Tahnoon chairs ADQ, one of Abu Dhabi's three sovereign wealth funds - completing his control of an AI + capital + national-security stack unusual in its concentration (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "Royal_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Royal Group is Tahnoon's private conglomerate umbrella (IHC, G42-adjacent) - the family holding structure (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "UAE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "As UAE National Security Advisor + spymaster, Tahnoon fuses state intelligence with the AI/data + capital empire he controls - the archetype of state-capital-surveillance fusion (fact of roles; fusion = interpretation)."
+    },
+    {
+      "from": "MGX",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "MGX is among the Gulf vehicles financing OpenAI/Stargate-scale compute - wiring Tahnoon's capital to the AI-bubble core (fact of participation; exact terms evolving)."
+    },
+    {
+      "from": "G42",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Microsoft's $1.5B G42 investment (2024) came with a US-brokered condition that G42 divest Chinese tech - the geopolitics of Gulf AI alignment (fact)."
+    },
+    {
+      "from": "Giancarlo_Devasini",
+      "to": "Tether",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Giancarlo Devasini - the quiet Italian ex-plastic-surgeon who is Tether's largest owner + chairman (moved to El Salvador) - effectively controls the ~$140B+ stablecoin issuer whose profits rival the biggest banks, with famously opaque governance (fact)."
+    },
+    {
+      "from": "Paolo_Ardoino",
+      "to": "Tether",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Paolo Ardoino - Tether CEO + public face - runs the operation Devasini controls; increasingly a geopolitical actor (Bitcoin/AI/compute + El Salvador ties) (fact)."
+    },
+    {
+      "from": "Tether",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "major_shareholder",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Tether plows profits into Bitcoin + gold + compute/AI - turning stablecoin seigniorage into a sovereign-like balance sheet (fact)."
+    },
+    {
+      "from": "Barry_Silbert",
+      "to": "DCG",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json,spec-crypto-collapse-cluster.json",
+      "note": "Barry Silbert founded + leads Digital Currency Group (DCG) - the crypto conglomerate behind Grayscale + Genesis; lower-profile than the exchange founders but structurally central (fact)."
+    },
+    {
+      "from": "DCG",
+      "to": "Grayscale",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json,spec-crypto-collapse-cluster.json",
+      "note": "DCG owns Grayscale (GBTC) - the vehicle that channeled institutional Bitcoin exposure (and whose discount fed the 2022 contagion) (fact)."
+    },
+    {
+      "from": "DCG",
+      "to": "Genesis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "DCG owned Genesis (lending), whose 2022-23 collapse (post-FTX) triggered the Gemini Earn dispute + a 2024 NYAG settlement (~$2B) alleging fraud - the quiet-conglomerate risk laid bare (fact)."
+    },
+    {
+      "from": "Miriam_Adelson",
+      "to": "Las_Vegas_Sands",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Miriam Adelson - controlling shareholder of Las Vegas Sands (after Sheldon Adelson's death) - deploys the casino fortune as the single largest Republican + pro-Israel donor (Preserve America PAC), quietly decisive in recent cycles (fact)."
+    },
+    {
+      "from": "Miriam_Adelson",
+      "to": "Israel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Adelson is a leading funder of pro-Israel + Netanyahu-aligned causes (Israel Hayom newspaper; US pro-Israel politics) - money as foreign-policy influence (fact)."
+    },
+    {
+      "from": "Timothy_Dunn",
+      "to": "CrownQuest",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Tim Dunn - Midland oilman (CrownQuest) - the quiet financier who reshaped Texas politics toward Christian-nationalist hard-right via the Defend Texas Liberty / Texans-for-Fiscal-Responsibility machine (fact)."
+    },
+    {
+      "from": "Timothy_Dunn",
+      "to": "Defend_Texas_Liberty",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Dunn (with the Wilks brothers) bankrolled Defend Texas Liberty - the PAC that drove Texas GOP primaries hard-right; a case study in a single quiet donor capturing a state party (fact)."
+    },
+    {
+      "from": "Timothy_Dunn",
+      "to": "Wilks_Brothers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Dunn + the Wilks brothers are the co-funders of the Texas hard-right infrastructure - wiring batch-4 to batch-3 quiet money (fact of co-funding)."
+    },
+    {
+      "from": "Harold_Hamm",
+      "to": "Continental_Resources",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-3.json",
+      "note": "Harold Hamm - founder of Continental Resources (shale pioneer; took it private 2022) - a quiet energy kingmaker + top Trump energy-policy donor/advisor ('drill baby drill') (fact)."
+    },
+    {
       "from": "Chen_Zhi",
       "to": "Prince_Group",
       "instrument": "other",
@@ -39252,19 +39564,6 @@
       "note": ""
     },
     {
-      "from": "Barry_Silbert",
-      "to": "DCG",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "founder/CEO of Digital Currency Group",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-crypto-collapse-cluster.json",
-      "note": ""
-    },
-    {
       "from": "Su_Zhu",
       "to": "Three_Arrows_Capital",
       "instrument": "other",
@@ -39336,19 +39635,6 @@
       "layer": "financial",
       "raw_instrument": "parent of Genesis; Genesis's Delaware suit alleges DCG/Silbert drained ~$2.1-3.3B via reckless loans (NYAG settlement)",
       "amount_usd": 2100000000,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-crypto-collapse-cluster.json",
-      "note": ""
-    },
-    {
-      "from": "DCG",
-      "to": "Grayscale",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "DCG subsidiary; Grayscale runs GBTC and won Grayscale v. SEC",
-      "amount_usd": null,
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
@@ -39656,10 +39942,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1658,
-    "num_edges": 2540,
+    "num_nodes": 1671,
+    "num_edges": 2558,
     "num_financial_edges": 274,
-    "num_structural_edges": 2266,
+    "num_structural_edges": 2284,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -39883,8 +40169,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -39895,15 +40189,7 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -39912,20 +40198,20 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -39940,10 +40226,10 @@
         "Microsoft"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -40005,6 +40291,13 @@
         "in_robust_core": false
       },
       "ABA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ADQ": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42636,6 +42929,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Continental_Resources": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Contingent_Labor": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42749,6 +43049,13 @@
         "in_robust_core": false
       },
       "CrowdStrike": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CrownQuest": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -43148,6 +43455,13 @@
         "in_robust_core": false
       },
       "Deere_Financial": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Defend_Texas_Liberty": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44463,6 +44777,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Giancarlo_Devasini": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gig_Platforms": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44764,6 +45085,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Harold_Hamm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Harvard_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45059,6 +45387,13 @@
         "in_robust_core": false
       },
       "IEEE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "IHC": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46087,6 +46422,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Las_Vegas_Sands": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Law_Enforcement": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46767,6 +47109,13 @@
         "in_robust_core": false
       },
       "Mirai": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Miriam_Adelson": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47774,6 +48123,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Paolo_Ardoino": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Paragon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48656,6 +49012,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Royal_Group": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ruja_Ignatova": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -49315,6 +49678,13 @@
         "in_robust_core": false
       },
       "Shakepay": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Sheikh_Tahnoon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50155,6 +50525,13 @@
         "in_robust_core": false
       },
       "TikTok_US": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Timothy_Dunn": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51710,7 +52087,7 @@
       },
       {
         "node": "Microsoft",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -51727,7 +52104,34 @@
           "university"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 20,
+        "source_files": 21,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "OpenAI",
+        "degree": 36,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "chip_vendor",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "ip_rightsholder",
+          "neocloud",
+          "other",
+          "person",
+          "philanthropy",
+          "spv",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 14,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -51756,33 +52160,6 @@
         ],
         "n_neighbor_sectors": 15,
         "source_files": 15,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "OpenAI",
-        "degree": 35,
-        "neighbor_sectors": [
-          "ai",
-          "capital",
-          "chip_vendor",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "ip_rightsholder",
-          "neocloud",
-          "other",
-          "person",
-          "philanthropy",
-          "spv",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 14,
-        "source_files": 17,
         "layers": [
           "financial",
           "structural"

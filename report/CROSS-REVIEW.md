@@ -18,25 +18,25 @@
 - **Meta** — 87 files
 - **Chainlink** — 59 files
 - **Google** — 56 files
-- **OpenAI** — 45 files
-- **Microsoft** — 42 files
+- **OpenAI** — 46 files
+- **Microsoft** — 43 files
 - **FDIC** — 37 files
 - **Amazon** — 35 files
 - **Oracle** — 33 files
 - **NVIDIA** — 32 files
 - **Anthropic** — 27 files
+- **Stargate** — 24 files
 - **a16z** — 23 files
-- **Ripple** — 23 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-quiet-money-2.json` — related files by shared entities (verify cross-refs exist)
-- spec-telecom-satellite.json: 1 shared entities
-- spec-surveillance-cyber-threat-layer.json: 1 shared entities
-- spec-spyware-vendor-catalog.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- fin-ai-depreciation-debttrap.json: 1 shared entities
-- influence-meta-childsafety.json: 1 shared entities
-- fin-spacex-spcx.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
+## Newest file `catalog-quiet-money-3.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 4 shared entities
+- fin-openai-conversion-governance.json: 4 shared entities
+- fin-gulf-sovereign-ai-capital.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
+- fin-coreweave-oracle.json: 4 shared entities
+- macro-ai-power-grid-bottleneck.json: 3 shared entities
+- temporal-bridges.json: 3 shared entities
+- sec-filings.json: 3 shared entities
