@@ -108,6 +108,7 @@ python3 models/graph/build_blockchain.py
 python3 models/graph/build_bubblemap.py
 python3 models/graph/quantum_fetch.py || true  # quantum live feed (env-free, tolerant; unverified -> feed only)
 python3 models/graph/build_quantum.py          # quantum sub-site (hardware/EC/PQC/compliance/feed)
+python3 models/graph/build_catalog.py          # catalog index page (academia/money/threat-actor/quantum layers)
 python3 models/graph/fetch_fred.py || true   # refresh monthly FRED cache (tolerates offline; build_charts uses cache)
 python3 models/graph/fetch_yahoo.py || true  # ETF distribution-yield proxies (per-state muni, corporate by maturity)
 python3 models/graph/fetch_tape.py || true   # FINRA TRACE corporate aggregates (needs FINRA_API_CLIENT/SECRET env; tolerates absence)
