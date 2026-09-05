@@ -18,25 +18,25 @@
 - **Meta** — 85 files
 - **Chainlink** — 59 files
 - **Google** — 54 files
-- **OpenAI** — 43 files
+- **OpenAI** — 44 files
 - **Microsoft** — 41 files
 - **FDIC** — 37 files
 - **Amazon** — 34 files
 - **Oracle** — 33 files
 - **NVIDIA** — 31 files
-- **Anthropic** — 25 files
+- **Anthropic** — 26 files
 - **Ripple** — 23 files
 - **JPMorgan** — 23 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-nonprofits-foundations.json` — related files by shared entities (verify cross-refs exist)
-- spec-semiconductor-logistics-standards.json: 4 shared entities
-- macro-crqc-quantum-landscape.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- fin-gulf-sovereign-ai-capital.json: 4 shared entities
-- spec-sec-filings-primary.json: 4 shared entities
-- catalog-academia-core.json: 4 shared entities
-- sec-filings.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 4 shared entities
+## Newest file `catalog-elite-groups.json` — related files by shared entities (verify cross-refs exist)
+- influence-operator-network.json: 6 shared entities
+- temporal-bridges.json: 6 shared entities
+- geopolitics-defense-industrial-base.json: 5 shared entities
+- spec-network-overlay.json: 5 shared entities
+- catalog-academia-core.json: 5 shared entities
+- spec-dialog-society.json: 5 shared entities
+- spec-palantir-surveillance.json: 4 shared entities
+- digitalid-corporate.json: 4 shared entities

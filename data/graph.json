@@ -728,6 +728,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Bilderberg": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
+    },
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -879,6 +883,10 @@
     "Boeing_whistleblowers": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Bohemian_Grove": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
     },
     "Bond_Market_2Y": {
       "sector": "macro_factor",
@@ -1510,6 +1518,10 @@
     },
     "Cosmos": {
       "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "Council_on_Foreign_Relations": {
+      "sector": "elite",
       "has_exogenous_revenue": false
     },
     "Courts": {
@@ -3968,6 +3980,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Network_State": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
+    },
     "Networking_Security_Industry": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -4362,6 +4378,10 @@
     },
     "PayPal": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "PayPal_Mafia": {
+      "sector": "elite",
       "has_exogenous_revenue": false
     },
     "PayPay": {
@@ -5468,6 +5488,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Sun_Valley": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
+    },
     "Superannuation_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -5502,6 +5526,10 @@
     },
     "TD_Bank": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "TESCREAL": {
+      "sector": "elite",
       "has_exogenous_revenue": false
     },
     "TITAN": {
@@ -5694,6 +5722,10 @@
     },
     "Tricolor_Holdings": {
       "sector": "private_credit",
+      "has_exogenous_revenue": false
+    },
+    "Trilateral_Commission": {
+      "sector": "elite",
       "has_exogenous_revenue": false
     },
     "Tron": {
@@ -6290,6 +6322,10 @@
     },
     "Xiaomi_EV": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Y_Combinator": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Yale_University": {
@@ -7405,6 +7441,279 @@
       "cancelable": false,
       "source_file": "spec-clarity-act-chronology.json",
       "note": "Crypto industry backs CLARITY (esp. the developer safe harbor + self-custody shield) (fact)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "Peter_Thiel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "The 'PayPal Mafia' - the ex-PayPal founders/execs (Thiel, Musk, Hoffman, Levchin, Sacks, Nosek, Botha, etc.) who seeded much of Web2/defense-tech/crypto. Thiel is its central node (fact)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "Elon_Musk",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Musk (X.com merged into PayPal) is a PayPal-Mafia member; used the proceeds to found SpaceX/Tesla - the wealth-origin of a huge slice of the current tech-power map (fact)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "Founders_Fund",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Thiel + Nosek + Howery founded Founders Fund - the PayPal-Mafia venture vehicle behind Palantir, SpaceX, Anduril, and much of the defense-tech cluster (fact)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Palantir was founded by Thiel + ex-PayPal engineers, explicitly applying PayPal's fraud-detection approach to intelligence/defense - the mafia-to-surveillance throughline (fact)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "OpenAI's 2015 founding included Musk (chair/funder) and Thiel among backers - PayPal-Mafia capital at the origin of the leading AI lab (fact)."
+    },
+    {
+      "from": "Y_Combinator",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Sam Altman (then YC president) co-founded + later led OpenAI; YC-network money/talent seeded it - the accelerator-to-AI-lab pipeline (fact)."
+    },
+    {
+      "from": "Y_Combinator",
+      "to": "Andreessen_Horowitz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "YC (accelerator) + a16z (mega-VC) are the two dominant Silicon Valley talent/capital networks - overlapping portfolios + alumni across the startup ecosystem (fact of sector)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Network_State",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "promotes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "a16z (esp. a16z crypto) + ex-a16z partner Balaji Srinivasan champion the 'Network State' idea - cloud-first communities acquiring sovereignty; the techno-libertarian exit ideology (fact of advocacy)."
+    },
+    {
+      "from": "Network_State",
+      "to": "TESCREAL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "The Network State sits within the broader Silicon-Valley ideology cluster critics label 'TESCREAL' (Transhumanism, Extropianism, Singularitarianism, Cosmism, Rationalism, Effective Altruism, Longtermism) - the belief-bundle animating parts of the AI/crypto elite (interpretation; 'TESCREAL' is a critics' coinage, presented as such)."
+    },
+    {
+      "from": "TESCREAL",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Effective Altruism/Longtermism are the 'E'/'L' of the TESCREAL bundle - linking the foundations block (Open Phil/EA) to the elite-ideology cluster shaping AI-safety + funding (interpretation grounded in shared personnel/funding)."
+    },
+    {
+      "from": "Dialog_Society",
+      "to": "Peter_Thiel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Dialog (Thiel/Hoffman's invite-only elite forum) is the private-convening node already mapped (#189-195) - Thiel is a co-principal; the 'anti-Davos' right-of-center analog (fact)."
+    },
+    {
+      "from": "Dialog_Society",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Dialog and the WEF/Davos are peer elite-convening institutions at opposite political poles - both invite-only agenda-setting forums (fact of category; rivalry noted in the Dialog block)."
+    },
+    {
+      "from": "Bilderberg",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Bilderberg (est. 1954; ~130 invite-only US/European elites, Chatham House rule) and Davos are the archetypal transatlantic elite convenings - real agenda-discussion venues, NOT a proven governing body (fact of convening; 'secret world govt' framing = conspiracy overreach, rejected)."
+    },
+    {
+      "from": "Trilateral_Commission",
+      "to": "Council_on_Foreign_Relations",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "The Trilateral Commission (1973, David Rockefeller/Brzezinski) and the CFR share Rockefeller lineage + overlapping membership - the US foreign-policy establishment's convening core (fact; unitary-control framing contested)."
+    },
+    {
+      "from": "Council_on_Foreign_Relations",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "CFR (US foreign-policy establishment think-tank/membership org) + WEF are overlapping elite-policy venues - influential, membership-documented, but not a command structure (fact of category)."
+    },
+    {
+      "from": "Bilderberg",
+      "to": "Council_on_Foreign_Relations",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Heavy attendee overlap across Bilderberg/CFR/Trilateral - the same few hundred people recur, which is what fuels both real influence AND overstated cabal theories (fact of overlap; interpretation flagged)."
+    },
+    {
+      "from": "Sun_Valley",
+      "to": "Bohemian_Grove",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Allen & Co's Sun Valley conference (media/tech moguls; deal-making) + the Bohemian Grove (all-male summer encampment of business/political elites) are the informal US social convenings where the powerful mix off-record (fact of gatherings; deal/agenda influence graded)."
+    },
+    {
+      "from": "Sun_Valley",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Sun Valley ('summer camp for billionaires') is the deal-making counterpart to Davos - where major media/tech M&A conversations happen (fact of role)."
+    },
+    {
+      "from": "PayPal_Mafia",
+      "to": "Andreessen_Horowitz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "The PayPal-Mafia + a16z + YC networks heavily overlap (co-investments, board seats, shared founders) - the interlocking Silicon Valley capital-and-talent web (fact of overlap)."
+    },
+    {
+      "from": "Network_State",
+      "to": "Peter_Thiel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "Thiel's long-running techno-libertarian 'exit over voice' politics (seasteading funding; 'freedom vs democracy') is intellectual kin to the Network State idea - the elite-exit ideology cluster (interpretation grounded in Thiel's own writing/funding)."
+    },
+    {
+      "from": "TESCREAL",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-elite-groups.json",
+      "note": "The AGI-race framing that animates OpenAI/Anthropic/DeepMind leadership draws on the transhumanist/longtermist strands of the cluster - critics argue the ideology shapes how frontier AI is built + justified (interpretation; presented as a critique, not fact)."
     },
     {
       "from": "Zelensky",
@@ -38296,10 +38605,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1604,
-    "num_edges": 2452,
+    "num_nodes": 1613,
+    "num_edges": 2473,
     "num_financial_edges": 274,
-    "num_structural_edges": 2178,
+    "num_structural_edges": 2199,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -38392,10 +38701,13 @@
       "Data_Unification",
       "Datacenter_Backlash",
       "Department_of_War",
+      "Dialog_Society",
       "DoubleAgent",
       "ECDSA",
       "Early_Warning",
+      "Effective_Altruism",
       "Electricity_Ratepayers",
+      "Elon_Musk",
       "Equation_Group",
       "Ethereum",
       "FDIC",
@@ -38442,6 +38754,7 @@
       "Microsoft_Defender",
       "NSA",
       "NVIDIA",
+      "Network_State",
       "NextEra_Energy",
       "Niantic",
       "North_Korea",
@@ -38464,6 +38777,7 @@
       "Princeton_University",
       "PrivateCredit_Funds",
       "Project_Crypto",
+      "PsiQuantum",
       "RIKEN",
       "Rare_Earths",
       "Regions_Financial",
@@ -38484,6 +38798,7 @@
       "Stanford_University",
       "Stargate",
       "Stargate_UAE",
+      "TESCREAL",
       "TMobile",
       "TSMC",
       "Tai_Mo_Shan",
@@ -38508,12 +38823,24 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 162,
+    "core_scc_all_edges_size": 168,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
       [
         "CoreWeave",
         "SINK_lenders"
@@ -38523,18 +38850,16 @@
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -38546,12 +38871,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
-        "NVIDIA",
+        "Amazon",
         "OpenAI",
-        "Oracle"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -38564,18 +38891,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -39875,6 +40190,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Bilderberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Binance": {
         "total_usd": 8700000000,
         "circular_usd": 0,
@@ -40135,6 +40457,13 @@
         "in_robust_core": false
       },
       "Boeing_whistleblowers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bohemian_Grove": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41241,6 +41570,13 @@
         "in_robust_core": false
       },
       "Cosmos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Council_on_Foreign_Relations": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -45545,6 +45881,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Network_State": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Networking_Security_Industry": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46232,6 +46575,13 @@
         "in_robust_core": false
       },
       "PayPal": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "PayPal_Mafia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48170,6 +48520,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Sun_Valley": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Superannuation_Funds": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48227,6 +48584,13 @@
         "in_robust_core": false
       },
       "TD_Bank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "TESCREAL": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48564,6 +48928,13 @@
       },
       "Tricolor_Holdings": {
         "total_usd": 170000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Trilateral_Commission": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -49612,6 +49983,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Y_Combinator": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Yale_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -49962,6 +50340,33 @@
         "both_layers": true
       },
       {
+        "node": "OpenAI",
+        "degree": 34,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "chip_vendor",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "ip_rightsholder",
+          "neocloud",
+          "other",
+          "person",
+          "philanthropy",
+          "spv",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 14,
+        "source_files": 16,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Microsoft",
         "degree": 27,
         "neighbor_sectors": [
@@ -50007,32 +50412,6 @@
         ],
         "n_neighbor_sectors": 14,
         "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "OpenAI",
-        "degree": 31,
-        "neighbor_sectors": [
-          "ai",
-          "chip_vendor",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "ip_rightsholder",
-          "neocloud",
-          "other",
-          "person",
-          "philanthropy",
-          "spv",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 15,
         "layers": [
           "financial",
           "structural"
@@ -50136,6 +50515,30 @@
         "both_layers": true
       },
       {
+        "node": "Palantir",
+        "degree": 28,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "defense",
+          "elite",
+          "financier",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 15,
         "neighbor_sectors": [
@@ -50152,29 +50555,6 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Palantir",
-        "degree": 27,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "defense",
-          "financier",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 7,
         "layers": [
           "financial",
           "structural"
@@ -50270,19 +50650,20 @@
         "both_layers": true
       },
       {
-        "node": "Coinbase",
-        "degree": 12,
+        "node": "Andreessen_Horowitz",
+        "degree": 10,
         "neighbor_sectors": [
+          "capital",
           "crypto",
           "crypto_infra",
-          "dlt",
+          "elite",
+          "identity",
           "other",
-          "person",
           "political",
-          "regulator"
+          "university"
         ],
-        "n_neighbor_sectors": 7,
-        "source_files": 10,
+        "n_neighbor_sectors": 8,
+        "source_files": 8,
         "layers": [
           "financial",
           "structural"
