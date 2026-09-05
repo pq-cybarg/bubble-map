@@ -1044,6 +1044,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CMS": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "CNGR": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1420,6 +1424,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Commercial_Customers": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Commercial_Parents": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -1698,6 +1706,10 @@
     },
     "Data_Foundation": {
       "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "Data_Unification": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Databricks": {
@@ -2219,6 +2231,10 @@
     "Federal_Transfers": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Federated_Data_Platform": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Fentanyl": {
       "sector": "commodity",
@@ -5438,6 +5454,10 @@
     },
     "TD_Bank": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "TITAN": {
+      "sector": "defense",
       "has_exogenous_revenue": false
     },
     "TMobile": {
@@ -33990,6 +34010,240 @@
       "note": "NYT reported Palantir in talks with the Social Security Administration (and IRS) to extend Foundry as the federal role expanded in 2025 (grade: reported/CONTESTED - talks, not a confirmed production deployment)."
     },
     {
+      "from": "Palantir",
+      "to": "NATO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "NATO acquired Palantir's Maven Smart System (2025) - the alliance's AI-enabled targeting/decision backbone; first major NATO enterprise AI buy (fact)."
+    },
+    {
+      "from": "Maven_Smart_System",
+      "to": "NATO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "MSS deployed into NATO command - extends the US Army Maven lineage to the alliance (fact)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "CMS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Foundry used at CMS (Medicare/Medicaid) for data integration/fraud analytics - Palantir across the health-payer core of the federal government (fact of deployment; scope graded)."
+    },
+    {
+      "from": "CMS",
+      "to": "HHS",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "CMS is the HHS component running Medicare/Medicaid - parent linkage (fact)."
+    },
+    {
+      "from": "Palantir",
+      "to": "DHS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Palantir contracts across DHS (parent of ICE/CBP) - targeting, case management, immigration analytics (fact)."
+    },
+    {
+      "from": "DHS",
+      "to": "ICE",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "ICE is a DHS component - parent linkage that anchors the ImmigrationOS/Gotham deployments (fact)."
+    },
+    {
+      "from": "Palantir_Gotham",
+      "to": "CBP",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "CBP uses Palantir analytics for border/targeting workflows - the customs-and-border arm of the DHS deployment (fact of use; scope graded)."
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "Federated_Data_Platform",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Palantir won the NHS England Federated Data Platform (~GBP 330M, 2023) - the FDP is Foundry-based (fact)."
+    },
+    {
+      "from": "Federated_Data_Platform",
+      "to": "NHS_England",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "The FDP unifies NHS trust data nationally - the marquee foreign health-data deployment; privacy-contested (fact of award; concerns graded)."
+    },
+    {
+      "from": "Palantir",
+      "to": "Data_Unification",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "enables",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "2025: the administration tapped Palantir to help remove 'data silos' across agencies (EO Mar-2025; NYT reporting) - integrating IRS/SSA/immigration data. Palantir DENIES building a central master database; critics warn of a searchable whole-of-government profile of Americans (fact of contracts/EO + reporting; 'master surveillance database' framing = contested interpretation)."
+    },
+    {
+      "from": "Data_Unification",
+      "to": "IRS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "integration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "IRS is a named node in the cross-agency data-integration push (a mega-API/data project reported 2025) (fact of project; scope contested)."
+    },
+    {
+      "from": "Data_Unification",
+      "to": "SSA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "integration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "SSA data among the sets targeted for cross-agency integration (fact of reporting; contested)."
+    },
+    {
+      "from": "Data_Unification",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "integration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Immigration enforcement is a primary consumer of unified cross-agency data (ties to ImmigrationOS) (fact/interpretation)."
+    },
+    {
+      "from": "Data_Unification",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "integration",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "The civil-liberties crux: linking agency datasets into a queryable whole raises the specter of a de-facto national profile - stated as a governance RISK, grounded in the reporting + EO, not a proven system (interpretation)."
+    },
+    {
+      "from": "Palantir_AIP",
+      "to": "Commercial_Customers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "AIP + 'AIP Bootcamps' drove Palantir's US COMMERCIAL surge (the fastest-growing segment) - the private-sector revenue engine beneath the government story (fact)."
+    },
+    {
+      "from": "Palantir",
+      "to": "US_Army",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "2025: a ~$10B Army enterprise software agreement consolidating dozens of contracts under Palantir - a landmark scale-up of the Army relationship (fact)."
+    },
+    {
+      "from": "Palantir",
+      "to": "TITAN",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "product_line",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "Palantir is prime on the Army's TITAN (Tactical Intelligence Targeting Access Node) ground station - sensor-to-shooter data fusion (fact)."
+    },
+    {
+      "from": "TITAN",
+      "to": "US_Army",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-palantir-surveillance.json",
+      "note": "TITAN delivers deep-sensing/targeting to the Army - hardware+software at the tactical edge (fact)."
+    },
+    {
       "from": "VW",
       "to": "EU_Auto_Makers",
       "instrument": "other",
@@ -37631,10 +37885,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1584,
-    "num_edges": 2407,
+    "num_nodes": 1589,
+    "num_edges": 2425,
     "num_financial_edges": 274,
-    "num_structural_edges": 2133,
+    "num_structural_edges": 2151,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -37719,10 +37973,12 @@
       "Crusoe",
       "Crypto_Sprint",
       "DARPA",
+      "DHS",
       "DOJ",
       "DarkSide",
       "Data_Brokers",
       "Data_Center_Bandwagon",
+      "Data_Unification",
       "Datacenter_Backlash",
       "Department_of_War",
       "DoubleAgent",
@@ -37841,7 +38097,7 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 160,
+    "core_scc_all_edges_size": 162,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -37849,19 +38105,15 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -37872,9 +38124,8 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -37887,16 +38138,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -37907,8 +38157,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -39761,6 +40017,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CMS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CNGR": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40419,6 +40682,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Commercial_Customers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Commercial_Parents": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -40903,6 +41173,13 @@
         "in_robust_core": false
       },
       "Data_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Data_Unification": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41813,6 +42090,13 @@
         "in_robust_core": false
       },
       "Federal_Transfers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Federated_Data_Platform": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47454,6 +47738,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "TITAN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "TMobile": {
         "total_usd": 1350000000,
         "circular_usd": 0,
@@ -49068,7 +49359,7 @@
       },
       {
         "node": "US_Government",
-        "degree": 66,
+        "degree": 67,
         "neighbor_sectors": [
           "ai_data",
           "creditor",
@@ -49348,6 +49639,29 @@
         "both_layers": true
       },
       {
+        "node": "Palantir",
+        "degree": 27,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "defense",
+          "financier",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 7,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "AI_Datacenters",
         "degree": 18,
         "neighbor_sectors": [
@@ -49382,28 +49696,6 @@
           "sink",
           "spv",
           "state"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Palantir",
-        "degree": 22,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "financier",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "surveillance",
-          "university"
         ],
         "n_neighbor_sectors": 9,
         "source_files": 7,

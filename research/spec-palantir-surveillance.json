@@ -78,6 +78,38 @@
     {
       "id": "CDC",
       "sector": "state"
+    },
+    {
+      "id": "CMS",
+      "sector": "state"
+    },
+    {
+      "id": "DHS",
+      "sector": "state"
+    },
+    {
+      "id": "CBP",
+      "sector": "state"
+    },
+    {
+      "id": "NATO",
+      "sector": "state"
+    },
+    {
+      "id": "Federated_Data_Platform",
+      "sector": "surveillance"
+    },
+    {
+      "id": "TITAN",
+      "sector": "defense"
+    },
+    {
+      "id": "Data_Unification",
+      "sector": "surveillance"
+    },
+    {
+      "id": "Commercial_Customers",
+      "sector": "other"
     }
   ],
   "edges": [
@@ -269,6 +301,132 @@
       "instrument": "deployment",
       "notes": "NYT reported Palantir in talks with the Social Security Administration (and IRS) to extend Foundry as the federal role expanded in 2025 (grade: reported/CONTESTED - talks, not a confirmed production deployment).",
       "source": "NYT 2025 (via Stocktwits/9News summaries)"
+    },
+    {
+      "from": "Palantir",
+      "to": "NATO",
+      "instrument": "gov_contract",
+      "notes": "NATO acquired Palantir's Maven Smart System (2025) - the alliance's AI-enabled targeting/decision backbone; first major NATO enterprise AI buy (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Maven_Smart_System",
+      "to": "NATO",
+      "instrument": "deployment",
+      "notes": "MSS deployed into NATO command - extends the US Army Maven lineage to the alliance (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "CMS",
+      "instrument": "deployment",
+      "notes": "Foundry used at CMS (Medicare/Medicaid) for data integration/fraud analytics - Palantir across the health-payer core of the federal government (fact of deployment; scope graded).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "CMS",
+      "to": "HHS",
+      "instrument": "governance",
+      "notes": "CMS is the HHS component running Medicare/Medicaid - parent linkage (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir",
+      "to": "DHS",
+      "instrument": "gov_contract",
+      "notes": "Palantir contracts across DHS (parent of ICE/CBP) - targeting, case management, immigration analytics (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "DHS",
+      "to": "ICE",
+      "instrument": "governance",
+      "notes": "ICE is a DHS component - parent linkage that anchors the ImmigrationOS/Gotham deployments (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir_Gotham",
+      "to": "CBP",
+      "instrument": "gov_contract",
+      "notes": "CBP uses Palantir analytics for border/targeting workflows - the customs-and-border arm of the DHS deployment (fact of use; scope graded).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir_Foundry",
+      "to": "Federated_Data_Platform",
+      "instrument": "product_line",
+      "notes": "Palantir won the NHS England Federated Data Platform (~GBP 330M, 2023) - the FDP is Foundry-based (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Federated_Data_Platform",
+      "to": "NHS_England",
+      "instrument": "deployment",
+      "notes": "The FDP unifies NHS trust data nationally - the marquee foreign health-data deployment; privacy-contested (fact of award; concerns graded).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir",
+      "to": "Data_Unification",
+      "instrument": "enables",
+      "notes": "2025: the administration tapped Palantir to help remove 'data silos' across agencies (EO Mar-2025; NYT reporting) - integrating IRS/SSA/immigration data. Palantir DENIES building a central master database; critics warn of a searchable whole-of-government profile of Americans (fact of contracts/EO + reporting; 'master surveillance database' framing = contested interpretation).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Data_Unification",
+      "to": "IRS",
+      "instrument": "integration",
+      "notes": "IRS is a named node in the cross-agency data-integration push (a mega-API/data project reported 2025) (fact of project; scope contested).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Data_Unification",
+      "to": "SSA",
+      "instrument": "integration",
+      "notes": "SSA data among the sets targeted for cross-agency integration (fact of reporting; contested).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Data_Unification",
+      "to": "ICE",
+      "instrument": "integration",
+      "notes": "Immigration enforcement is a primary consumer of unified cross-agency data (ties to ImmigrationOS) (fact/interpretation).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Data_Unification",
+      "to": "US_Government",
+      "instrument": "integration",
+      "notes": "The civil-liberties crux: linking agency datasets into a queryable whole raises the specter of a de-facto national profile - stated as a governance RISK, grounded in the reporting + EO, not a proven system (interpretation).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir_AIP",
+      "to": "Commercial_Customers",
+      "instrument": "deployment",
+      "notes": "AIP + 'AIP Bootcamps' drove Palantir's US COMMERCIAL surge (the fastest-growing segment) - the private-sector revenue engine beneath the government story (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir",
+      "to": "US_Army",
+      "instrument": "gov_contract",
+      "notes": "2025: a ~$10B Army enterprise software agreement consolidating dozens of contracts under Palantir - a landmark scale-up of the Army relationship (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "Palantir",
+      "to": "TITAN",
+      "instrument": "product_line",
+      "notes": "Palantir is prime on the Army's TITAN (Tactical Intelligence Targeting Access Node) ground station - sensor-to-shooter data fusion (fact).",
+      "source": "#216 Palantir deepen"
+    },
+    {
+      "from": "TITAN",
+      "to": "US_Army",
+      "instrument": "gov_contract",
+      "notes": "TITAN delivers deep-sensing/targeting to the Army - hardware+software at the tactical edge (fact).",
+      "source": "#216 Palantir deepen"
     }
   ]
 }
