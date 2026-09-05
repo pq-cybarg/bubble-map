@@ -17,7 +17,7 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 89 files
 - **Chainlink** — 60 files
-- **Google** — 58 files
+- **Google** — 59 files
 - **OpenAI** — 48 files
 - **Microsoft** — 43 files
 - **FDIC** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-university-ip.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 5 shared entities
-- blockchain-registry.json: 5 shared entities
-- macro-crqc-quantum-landscape.json: 4 shared entities
-- spec-china-ai-stack-censorship.json: 4 shared entities
-- spec-vitalik-buterin-thought.json: 4 shared entities
-- spec-blockchain-ecosystem.json: 4 shared entities
-- spec-semiconductor-logistics-standards.json: 4 shared entities
-- digitalid-corporate.json: 4 shared entities
+## Newest file `catalog-academia-abroad.json` — related files by shared entities (verify cross-refs exist)
+- spec-defense-primes-pqc.json: 2 shared entities
+- spec-semiconductor-logistics-standards.json: 2 shared entities
+- spec-disclosures-surveillance.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities
+- catalog-university-ip.json: 2 shared entities
+- spec-blockchain-ecosystem.json: 2 shared entities
+- digitalid-orchestration-real-incentive.json: 2 shared entities
+- macro-pqc-chips.json: 2 shared entities

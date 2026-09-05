@@ -1828,6 +1828,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "DeepMind": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "DeepSeek": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -2022,6 +2026,14 @@
     },
     "EPA_PFAS_Rule": {
       "sector": "regulator",
+      "has_exogenous_revenue": false
+    },
+    "EPFL": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "ETH_Zurich": {
+      "sector": "university",
       "has_exogenous_revenue": false
     },
     "ETSI": {
@@ -2956,6 +2968,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "IIT": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "ILCs": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -3832,6 +3848,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Max_Planck": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Maxine_Waters": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3975,6 +3995,10 @@
     "Mitsui": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Mobileye": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Mochimo": {
       "sector": "privacy_tool",
@@ -4146,6 +4170,10 @@
     },
     "National_PTA": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "National_University_of_Singapore": {
+      "sector": "university",
       "has_exogenous_revenue": false
     },
     "Nebius": {
@@ -4590,6 +4618,10 @@
     },
     "Pegasus": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Peking_University": {
+      "sector": "university",
       "has_exogenous_revenue": false
     },
     "Pension_Funds": {
@@ -5848,6 +5880,10 @@
       "sector": "tech",
       "has_exogenous_revenue": true
     },
+    "Technion": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "Tel_Aviv_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -6030,6 +6066,10 @@
     },
     "Truth_Initiative": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "Tsinghua_University": {
+      "sector": "university",
       "has_exogenous_revenue": false
     },
     "Tudou_Guarantee": {
@@ -6288,6 +6328,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "University_of_Oxford": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
     "University_of_Pennsylvania": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -6297,6 +6341,10 @@
       "has_exogenous_revenue": true
     },
     "University_of_Washington": {
+      "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "University_of_Waterloo": {
       "sector": "university",
       "has_exogenous_revenue": false
     },
@@ -40061,6 +40109,331 @@
       "note": "This IS the 'honeypot realized' scenario the antidote-architecture argues against - centralization guarantees single-point catastrophic exposure; PQC does NOT fix plain exfiltration (cross-ref digitalid-orchestration, macro-pqc-chips) (interpretation, labeled; the breach is reported fact)."
     },
     {
+      "from": "University_of_Oxford",
+      "to": "DeepMind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "DeepMind acqui-hired Oxford AI groups (Dark Blue Labs / Vision Factory, 2014) + draws heavily on Oxford talent - the UK academia-to-Google-AI pipeline (fact)."
+    },
+    {
+      "from": "University_of_Cambridge",
+      "to": "Arm",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spinout_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "ARM grew out of Acorn Computers in Cambridge - the world's most-licensed CPU architecture (in ~every phone); the UK's crown-jewel chip IP (fact)."
+    },
+    {
+      "from": "University_of_Cambridge",
+      "to": "DeepMind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Cambridge (like Oxford/UCL) is a core DeepMind talent source - the Oxbridge AI-research feeder (fact)."
+    },
+    {
+      "from": "ETH_Zurich",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "ETH Zurich anchors Google's + the broader tech industry's European AI/CS talent (Google Zurich is its largest non-US eng hub) - a top-tier CS research feeder (fact)."
+    },
+    {
+      "from": "EPFL",
+      "to": "ETH_Zurich",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "EPFL + ETH Zurich are Switzerland's twin technical powerhouses (AI, security, blockchain research) - the 'Crypto Valley' academic anchors (fact)."
+    },
+    {
+      "from": "Tsinghua_University",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Tsinghua is the training ground of China's party-state + tech elite (Xi Jinping's alma mater) - the apex of the PRC innovation system (fact)."
+    },
+    {
+      "from": "Tsinghua_University",
+      "to": "PLA",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "military_civil_fusion",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Tsinghua (like other 'Seven Sons of National Defence'-adjacent institutions) participates in China's military-civil fusion - research feeding both commercial + defense/AI (fact of policy; specific projects graded)."
+    },
+    {
+      "from": "Tsinghua_University",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Tsinghua spun out Zhipu AI (a leading Chinese LLM lab) + trains much of China's AI workforce - the PRC's Stanford-equivalent for AI (fact)."
+    },
+    {
+      "from": "Peking_University",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Peking University (PKU) - the other apex PRC university - trains China's scientific + political elite; major AI/CS research (fact)."
+    },
+    {
+      "from": "USTC",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "The University of Science and Technology of China (USTC; Jian-Wei Pan's group) leads China's quantum program - the Micius quantum-comms satellite + the Jiuzhang photonic + Zuchongzhi superconducting quantum-advantage claims; wires abroad academia to the quantum tracker (fact)."
+    },
+    {
+      "from": "USTC",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "USTC (under the Chinese Academy of Sciences) is central to China's state quantum + AI strategy - the flagship of state-directed deep-tech (fact)."
+    },
+    {
+      "from": "Technion",
+      "to": "Israel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "The Technion is Israel's MIT - the engine of 'Startup Nation' + the defense/cyber industry's talent base (fact)."
+    },
+    {
+      "from": "Technion",
+      "to": "Unit_8200",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Technion + IDF Unit 8200 (SIGINT) form Israel's cyber-talent flywheel - the alumni pipeline behind NSO/Check Point/Wiz/etc. (fact)."
+    },
+    {
+      "from": "Technion",
+      "to": "Mobileye",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spinout_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Mobileye (autonomous-driving vision; Amnon Shashua) is a Hebrew-U/Technion-ecosystem spinout - Israel's marquee computer-vision + automotive-data company (Intel acquired it $15B, 2017) (fact)."
+    },
+    {
+      "from": "Tel_Aviv_University",
+      "to": "Unit_8200",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Tel Aviv University (with the Technion) + Unit 8200 feed the Israeli cyber + spyware industry (NSO/Gamma-successors/Intellexa talent) - wiring abroad academia to the commercial-spyware thread (fact)."
+    },
+    {
+      "from": "Tel_Aviv_University",
+      "to": "Check_Point",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "spinout_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Check Point (Gil Shwed, ex-Unit 8200) - the firewall pioneer - is the archetypal Israeli-academia/8200 security spinout (fact)."
+    },
+    {
+      "from": "University_of_Waterloo",
+      "to": "Quantum_Computing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Waterloo's Institute for Quantum Computing (IQC) is a leading quantum-research hub; with the Perimeter Institute it anchors Canada's quantum sector - wiring abroad academia to the quantum tracker (fact)."
+    },
+    {
+      "from": "University_of_Waterloo",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Waterloo's Centre for Applied Cryptographic Research is a historic crypto powerhouse (Menezes et al.; ECC/PQC) - and its co-op pipeline feeds Big Tech (fact)."
+    },
+    {
+      "from": "Max_Planck",
+      "to": "ML_KEM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Max Planck Institute for Security & Privacy (Peter Schwabe) co-authored CRYSTALS-Kyber/Dilithium (ML-KEM/ML-DSA) - the German academic credit behind the NIST lattice standards; wires abroad academia to the PQC standards (fact)."
+    },
+    {
+      "from": "Max_Planck",
+      "to": "PQC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Max Planck + Radboud (Netherlands) + Ru Bochum form the European academic core of the CRYSTALS/PQC standardization effort (fact)."
+    },
+    {
+      "from": "National_University_of_Singapore",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "NUS + NTU underpin Singapore's Smart Nation (national digital-ID/Singpass, biometrics, urban sensing) - the model 'digital state' academic base (fact)."
+    },
+    {
+      "from": "National_University_of_Singapore",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "NUS/NTU are top-ranked Asian AI/CS research universities + a regional talent hub (fact)."
+    },
+    {
+      "from": "IIT",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "The IITs (India) are the dominant global pipeline into Big Tech leadership + engineering (Sundar Pichai/Google; countless FAANG execs) (fact)."
+    },
+    {
+      "from": "IIT",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "contributes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "IIT + Indian technical talent built much of Aadhaar (the world's largest biometric ID) + the India Stack - wiring abroad academia to the Digital_ID thread (fact)."
+    },
+    {
+      "from": "University_of_Oxford",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-academia-abroad.json",
+      "note": "Oxford (with the Future of Humanity Institute legacy) also seeded AI-safety/longtermism thinking - linking abroad academia to the EA/TESCREAL ideology cluster (fact; FHI closed 2024)."
+    },
+    {
       "from": "Sam_Bankman_Fried",
       "to": "FTX",
       "instrument": "other",
@@ -40517,10 +40890,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1688,
-    "num_edges": 2597,
+    "num_nodes": 1700,
+    "num_edges": 2622,
     "num_financial_edges": 274,
-    "num_structural_edges": 2323,
+    "num_structural_edges": 2348,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -40728,6 +41101,7 @@
       "UBS",
       "UC_Berkeley",
       "UIUC",
+      "USTC",
       "US_Australia_Minerals_Framework",
       "US_Banks",
       "US_Government",
@@ -40738,12 +41112,16 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 171,
+    "core_scc_all_edges_size": 172,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
       [
         "CoreWeave",
         "NVIDIA"
@@ -40753,16 +41131,12 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -40786,14 +41160,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -40804,8 +41172,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -44030,6 +44404,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DeepMind": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DeepSeek": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -44367,6 +44748,20 @@
         "in_robust_core": false
       },
       "EPA_PFAS_Rule": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EPFL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ETH_Zurich": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46004,6 +46399,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "IIT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ILCs": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47537,6 +47939,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Max_Planck": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Maxine_Waters": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47783,6 +48192,13 @@
         "in_robust_core": false
       },
       "Mitsui": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mobileye": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48084,6 +48500,13 @@
         "in_robust_core": false
       },
       "National_PTA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "National_University_of_Singapore": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48861,6 +49284,13 @@
         "in_robust_core": false
       },
       "Pegasus": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Peking_University": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51065,6 +51495,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Technion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tel_Aviv_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51381,6 +51818,13 @@
         "in_robust_core": false
       },
       "Truth_Initiative": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tsinghua_University": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51835,6 +52279,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "University_of_Oxford": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "University_of_Pennsylvania": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51850,6 +52301,13 @@
         "in_robust_core": false
       },
       "University_of_Washington": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "University_of_Waterloo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52693,7 +53151,7 @@
       },
       {
         "node": "China",
-        "degree": 66,
+        "degree": 69,
         "neighbor_sectors": [
           "academia",
           "ai",
@@ -52716,10 +53174,11 @@
           "state",
           "state_intel",
           "statistic",
-          "tech"
+          "tech",
+          "university"
         ],
-        "n_neighbor_sectors": 22,
-        "source_files": 39,
+        "n_neighbor_sectors": 23,
+        "source_files": 40,
         "layers": [
           "financial",
           "structural"
@@ -52728,7 +53187,7 @@
       },
       {
         "node": "Google",
-        "degree": 26,
+        "degree": 28,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -52749,7 +53208,7 @@
           "university"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 20,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -52985,6 +53444,30 @@
         "both_layers": true
       },
       {
+        "node": "Digital_ID",
+        "degree": 23,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 10,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Palantir",
         "degree": 28,
         "neighbor_sectors": [
@@ -53030,29 +53513,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Digital_ID",
-        "degree": 21,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 9,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Andreessen_Horowitz",
