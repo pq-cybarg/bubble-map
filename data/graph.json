@@ -732,6 +732,10 @@
       "sector": "elite",
       "has_exogenous_revenue": false
     },
+    "Bill_Gates": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Binance": {
       "sector": "exchange",
       "has_exogenous_revenue": true
@@ -1916,6 +1920,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Dustin_Moskovitz": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "ECDSA": {
       "sector": "pqc",
       "has_exogenous_revenue": false
@@ -2061,6 +2069,10 @@
       "has_exogenous_revenue": false
     },
     "Eric_Hartford": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Eric_Schmidt": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -3140,9 +3152,17 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Jeff_Bezos": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jefferies": {
       "sector": "bank",
       "has_exogenous_revenue": true
+    },
+    "Jensen_Huang": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Jeremy_Kauffman": {
       "sector": "person",
@@ -3636,7 +3656,15 @@
       "sector": "security_research",
       "has_exogenous_revenue": false
     },
+    "Marc_Andreessen": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Marcus_Hutchins": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Mark_Zuckerberg": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -4332,6 +4360,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Palmer_Luckey": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Palo_Alto_Networks": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -4734,6 +4766,10 @@
     },
     "Regulation_Crypto_Assets": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Reid_Hoffman": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Reliance": {
@@ -29608,6 +29644,279 @@
       "note": ""
     },
     {
+      "from": "Bill_Gates",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Gates co-founded Microsoft (1975) - the wealth source behind the Gates Foundation + his climate/health/ag investments (fact)."
+    },
+    {
+      "from": "Bill_Gates",
+      "to": "Gates_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "The Gates (ex-Gates-Melinda) Foundation is his primary influence vehicle - global health, digital-ID/financial-inclusion, US education (fact); wires the billionaire layer to the foundations block."
+    },
+    {
+      "from": "Mark_Zuckerberg",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Zuckerberg founded + controls Meta (Facebook/Instagram/WhatsApp) via dual-class supervoting shares - near-total control of a ~3B-user platform (fact)."
+    },
+    {
+      "from": "Mark_Zuckerberg",
+      "to": "Chan_Zuckerberg",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "CZI is his Meta-wealth philanthropy LLC (science/education) - wiring him to the foundations block (fact)."
+    },
+    {
+      "from": "Jeff_Bezos",
+      "to": "Amazon",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Bezos founded Amazon (1994) - wealth source behind Blue Origin, the Washington Post, and Bezos Earth Fund; Amazon's AWS is core cloud infrastructure incl. for government/IC (fact)."
+    },
+    {
+      "from": "Marc_Andreessen",
+      "to": "Andreessen_Horowitz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Andreessen (Netscape) co-founded Andreessen Horowitz (a16z) - the mega-VC pushing crypto, AI, defense-tech, and the Network State/techno-optimist ideology (fact)."
+    },
+    {
+      "from": "Marc_Andreessen",
+      "to": "Network_State",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "promotes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Andreessen's 'Techno-Optimist Manifesto' + a16z's backing of the Network State idea make him a leading voice of the exit/techno-libertarian cluster (fact of advocacy)."
+    },
+    {
+      "from": "Eric_Schmidt",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Schmidt was Google/Alphabet CEO then Executive Chairman - the wealth + network source for his later defense-AI role (fact)."
+    },
+    {
+      "from": "Eric_Schmidt",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Schmidt chaired the DoD Defense Innovation Board + the National Security Commission on AI (NSCAI) - the marquee tech-billionaire-to-national-security-AI bridge; also funds defense-tech (fact)."
+    },
+    {
+      "from": "Jensen_Huang",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Huang co-founded + leads NVIDIA - the chokepoint AI-chip vendor at the center of the compute-capital core (fact); the newest member of the centibillionaire tier via the AI boom."
+    },
+    {
+      "from": "Palmer_Luckey",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Luckey (Oculus, sold to Facebook) founded Anduril - the Founders-Fund-backed defense-autonomy prime; wires the billionaire layer to the defense-tech/IQT cluster (fact)."
+    },
+    {
+      "from": "Reid_Hoffman",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Hoffman (LinkedIn co-founder; PayPal Mafia; Greylock) is a co-principal of the Dialog forum (with Thiel) - though a Democratic mega-donor, the political mirror image of Thiel within the same elite network (fact)."
+    },
+    {
+      "from": "Reid_Hoffman",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "board_influence",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Hoffman was an early OpenAI board member + funder (later stepped off amid Microsoft-conflict concerns) - a node linking the PayPal Mafia to frontier AI governance (fact)."
+    },
+    {
+      "from": "Dustin_Moskovitz",
+      "to": "Open_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Moskovitz (Facebook co-founder; Asana) + Cari Tuna fund Open Philanthropy - the primary money engine of Effective Altruism + AI-safety grantmaking (fact); wires the billionaire layer to the foundations/EA block."
+    },
+    {
+      "from": "Dustin_Moskovitz",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Via Open Phil + Good Ventures, Moskovitz is EA's largest funder - the individual behind much of the AI-safety philanthropy shaping OpenAI/Anthropic governance (fact)."
+    },
+    {
+      "from": "Peter_Thiel",
+      "to": "Dialog_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json,spec-dialog-society.json",
+      "note": "Thiel co-founded the Dialog forum - completing the founder linkage to the elite-forum block (#189-195) (fact)."
+    },
+    {
+      "from": "Peter_Thiel",
+      "to": "PayPal_Mafia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Thiel is the central node of the PayPal Mafia - wiring the billionaire layer to the elite-groups block (fact)."
+    },
+    {
+      "from": "Elon_Musk",
+      "to": "PayPal_Mafia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Musk (X.com/PayPal) -> SpaceX/Tesla/xAI/X/Neuralink - the highest-net-worth member of the network (fact)."
+    },
+    {
+      "from": "Reid_Hoffman",
+      "to": "PayPal_Mafia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Hoffman is a PayPal-Mafia member (COO) - the Democratic-donor counterpart to Thiel within the same alumni network (fact)."
+    },
+    {
+      "from": "Eric_Schmidt",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Schmidt is a longtime Davos/WEF + CFR-adjacent figure - typical of the tech-billionaire presence in the establishment-convening layer (fact of participation)."
+    },
+    {
+      "from": "Bill_Gates",
+      "to": "WEF",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "membership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-billionaires.json",
+      "note": "Gates is a perennial Davos participant + WEF partner (via the foundation) - among the most prominent philanthropist-attendees (fact)."
+    },
+    {
       "from": "Monsanto",
       "to": "Roundup_Litigation",
       "instrument": "other",
@@ -35315,19 +35624,6 @@
       "note": ""
     },
     {
-      "from": "Peter_Thiel",
-      "to": "Dialog_Society",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "co-founder (2006); namesake \u2014 reportedly has no hand in Dialog's day-to-day operations",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-dialog-society.json",
-      "note": "OVERLAY: Dialog principal (person node)"
-    },
-    {
       "from": "Auren_Hoffman",
       "to": "Dialog_Society",
       "instrument": "other",
@@ -38605,10 +38901,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1613,
-    "num_edges": 2473,
+    "num_nodes": 1622,
+    "num_edges": 2493,
     "num_financial_edges": 274,
-    "num_structural_edges": 2199,
+    "num_structural_edges": 2219,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -38717,6 +39013,7 @@
       "Fentanyl",
       "Fifth_Third",
       "First_Brands",
+      "Founders_Fund",
       "G42",
       "GENIUS_Act",
       "GRU",
@@ -38770,6 +39067,7 @@
       "Palantir_AIP",
       "Palantir_Foundry",
       "Palantir_Gotham",
+      "PayPal_Mafia",
       "Peter_Thiel",
       "Pokemon_GO",
       "Power_Grid",
@@ -38823,7 +39121,7 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 168,
+    "core_scc_all_edges_size": 170,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -38834,24 +39132,24 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -38883,13 +39181,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -40191,6 +40489,13 @@
         "in_robust_core": false
       },
       "Bilderberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bill_Gates": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42269,6 +42574,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dustin_Moskovitz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ECDSA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42522,6 +42834,13 @@
         "in_robust_core": false
       },
       "Eric_Hartford": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Eric_Schmidt": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44411,7 +44730,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jeff_Bezos": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jefferies": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jensen_Huang": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -45279,7 +45612,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Marc_Andreessen": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Marcus_Hutchins": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mark_Zuckerberg": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46497,6 +46844,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Palmer_Luckey": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Palo_Alto_Networks": {
         "total_usd": 25000000000,
         "circular_usd": 0,
@@ -47198,6 +47552,13 @@
         "in_robust_core": false
       },
       "Regulation_Crypto_Assets": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Reid_Hoffman": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50217,6 +50578,40 @@
     },
     "top_cross_layer_connectors": [
       {
+        "node": "US_Government",
+        "degree": 68,
+        "neighbor_sectors": [
+          "ai_data",
+          "creditor",
+          "critical_minerals",
+          "defense",
+          "defense_tech",
+          "exchange",
+          "financial_infra",
+          "financier",
+          "logistics",
+          "other",
+          "person",
+          "pqc_quantum",
+          "regulator",
+          "security_research",
+          "sink",
+          "spv",
+          "state",
+          "state_intel",
+          "surveillance",
+          "tech",
+          "telecom"
+        ],
+        "n_neighbor_sectors": 21,
+        "source_files": 42,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "China",
         "degree": 66,
         "neighbor_sectors": [
@@ -50252,33 +50647,28 @@
         "both_layers": true
       },
       {
-        "node": "US_Government",
-        "degree": 67,
+        "node": "Google",
+        "degree": 24,
         "neighbor_sectors": [
-          "ai_data",
-          "creditor",
-          "critical_minerals",
-          "defense",
-          "defense_tech",
-          "exchange",
-          "financial_infra",
-          "financier",
-          "logistics",
+          "ai_lab",
+          "chip_vendor",
+          "commodity",
+          "crypto",
+          "crypto_infra",
+          "dlt",
+          "ip_rightsholder",
           "other",
           "person",
+          "pqc",
           "pqc_quantum",
-          "regulator",
+          "satellite",
           "security_research",
-          "sink",
-          "spv",
-          "state",
-          "state_intel",
+          "space_real_economy",
           "surveillance",
-          "tech",
-          "telecom"
+          "university"
         ],
-        "n_neighbor_sectors": 21,
-        "source_files": 41,
+        "n_neighbor_sectors": 16,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -50312,27 +50702,53 @@
         "both_layers": true
       },
       {
-        "node": "Google",
-        "degree": 23,
+        "node": "Microsoft",
+        "degree": 28,
         "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "identity",
+          "neocloud",
+          "other",
+          "person",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 20,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "NVIDIA",
+        "degree": 34,
+        "neighbor_sectors": [
+          "ai",
           "ai_lab",
           "chip_vendor",
-          "commodity",
-          "crypto",
-          "crypto_infra",
-          "dlt",
-          "ip_rightsholder",
+          "hyperscaler",
+          "neocloud",
           "other",
-          "pqc",
+          "person",
           "pqc_quantum",
-          "satellite",
-          "security_research",
+          "research",
+          "semiconductor",
           "space_real_economy",
-          "surveillance",
+          "spv",
+          "state",
+          "telecom",
           "university"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 17,
+        "source_files": 15,
         "layers": [
           "financial",
           "structural"
@@ -50341,7 +50757,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 34,
+        "degree": 35,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -50359,59 +50775,7 @@
           "university"
         ],
         "n_neighbor_sectors": 14,
-        "source_files": 16,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Microsoft",
-        "degree": 27,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "commodity",
-          "financial_infra",
-          "identity",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 19,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 33,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "state",
-          "telecom",
-          "university"
-        ],
-        "n_neighbor_sectors": 14,
-        "source_files": 14,
+        "source_files": 17,
         "layers": [
           "financial",
           "structural"
@@ -50420,7 +50784,7 @@
       },
       {
         "node": "Meta",
-        "degree": 19,
+        "degree": 20,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
@@ -50428,6 +50792,7 @@
           "commodity",
           "energy",
           "other",
+          "person",
           "philanthropy",
           "political",
           "regulator",
@@ -50436,8 +50801,8 @@
           "tech",
           "university"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 10,
+        "n_neighbor_sectors": 14,
+        "source_files": 11,
         "layers": [
           "financial",
           "structural"
@@ -50562,6 +50927,28 @@
         "both_layers": true
       },
       {
+        "node": "Andreessen_Horowitz",
+        "degree": 11,
+        "neighbor_sectors": [
+          "capital",
+          "crypto",
+          "crypto_infra",
+          "elite",
+          "identity",
+          "other",
+          "person",
+          "political",
+          "university"
+        ],
+        "n_neighbor_sectors": 9,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "AI_Datacenters",
         "degree": 18,
         "neighbor_sectors": [
@@ -50577,6 +50964,27 @@
         ],
         "n_neighbor_sectors": 9,
         "source_files": 8,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Amazon",
+        "degree": 11,
+        "neighbor_sectors": [
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "industrial",
+          "person",
+          "satellite",
+          "standards",
+          "university"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"
@@ -50621,49 +51029,6 @@
         ],
         "n_neighbor_sectors": 8,
         "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Oracle",
-        "degree": 11,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "commodity",
-          "other",
-          "private_credit",
-          "sink",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 7,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Andreessen_Horowitz",
-        "degree": 10,
-        "neighbor_sectors": [
-          "capital",
-          "crypto",
-          "crypto_infra",
-          "elite",
-          "identity",
-          "other",
-          "political",
-          "university"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"

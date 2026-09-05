@@ -1,0 +1,39 @@
+{
+  "title": "Billionaires catalog: the individuals behind the AI / Digital-ID / academia / surveillance networks - wealth source -> foundations, stakes, boards, elite forums",
+  "source": "Public record: company founding/leadership; foundation founding; board memberships; Forbes/Bloomberg wealth-source attribution; NSCAI + Defense Innovation Board (Schmidt); Open Philanthropy funding (Moskovitz). Catalog layer (#208). Structural overlay; edges graded. Person nodes carry Persons-tab dossiers (backlink via orgs). HONESTY: wealth source + board/foundation ties are FACT; imputing coordinated intent across these (often rival) individuals is avoided.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Bill_Gates", "sector": "person"},
+    {"id": "Mark_Zuckerberg", "sector": "person"},
+    {"id": "Jeff_Bezos", "sector": "person"},
+    {"id": "Marc_Andreessen", "sector": "person"},
+    {"id": "Eric_Schmidt", "sector": "person"},
+    {"id": "Jensen_Huang", "sector": "person"},
+    {"id": "Palmer_Luckey", "sector": "person"},
+    {"id": "Reid_Hoffman", "sector": "person"},
+    {"id": "Dustin_Moskovitz", "sector": "person"}
+  ],
+  "edges": [
+    {"from": "Bill_Gates", "to": "Microsoft", "instrument": "founder_origin", "notes": "Gates co-founded Microsoft (1975) - the wealth source behind the Gates Foundation + his climate/health/ag investments (fact).", "source": "public record"},
+    {"from": "Bill_Gates", "to": "Gates_Foundation", "instrument": "founder_origin", "notes": "The Gates (ex-Gates-Melinda) Foundation is his primary influence vehicle - global health, digital-ID/financial-inclusion, US education (fact); wires the billionaire layer to the foundations block.", "source": "Gates Foundation"},
+    {"from": "Mark_Zuckerberg", "to": "Meta", "instrument": "leads", "notes": "Zuckerberg founded + controls Meta (Facebook/Instagram/WhatsApp) via dual-class supervoting shares - near-total control of a ~3B-user platform (fact).", "source": "Meta filings"},
+    {"from": "Mark_Zuckerberg", "to": "Chan_Zuckerberg", "instrument": "founder_origin", "notes": "CZI is his Meta-wealth philanthropy LLC (science/education) - wiring him to the foundations block (fact).", "source": "CZI"},
+    {"from": "Jeff_Bezos", "to": "Amazon", "instrument": "founder_origin", "notes": "Bezos founded Amazon (1994) - wealth source behind Blue Origin, the Washington Post, and Bezos Earth Fund; Amazon's AWS is core cloud infrastructure incl. for government/IC (fact).", "source": "public record"},
+    {"from": "Marc_Andreessen", "to": "a16z", "instrument": "founder_origin", "notes": "Andreessen (Netscape) co-founded Andreessen Horowitz (a16z) - the mega-VC pushing crypto, AI, defense-tech, and the Network State/techno-optimist ideology (fact).", "source": "a16z"},
+    {"from": "Marc_Andreessen", "to": "Network_State", "instrument": "promotes", "notes": "Andreessen's 'Techno-Optimist Manifesto' + a16z's backing of the Network State idea make him a leading voice of the exit/techno-libertarian cluster (fact of advocacy).", "source": "Techno-Optimist Manifesto"},
+    {"from": "Eric_Schmidt", "to": "Google", "instrument": "leads", "notes": "Schmidt was Google/Alphabet CEO then Executive Chairman - the wealth + network source for his later defense-AI role (fact).", "source": "public record"},
+    {"from": "Eric_Schmidt", "to": "US_Government", "instrument": "relationship", "notes": "Schmidt chaired the DoD Defense Innovation Board + the National Security Commission on AI (NSCAI) - the marquee tech-billionaire-to-national-security-AI bridge; also funds defense-tech (fact).", "source": "NSCAI; DIB"},
+    {"from": "Jensen_Huang", "to": "NVIDIA", "instrument": "leads", "notes": "Huang co-founded + leads NVIDIA - the chokepoint AI-chip vendor at the center of the compute-capital core (fact); the newest member of the centibillionaire tier via the AI boom.", "source": "NVIDIA"},
+    {"from": "Palmer_Luckey", "to": "Anduril", "instrument": "founder_origin", "notes": "Luckey (Oculus, sold to Facebook) founded Anduril - the Founders-Fund-backed defense-autonomy prime; wires the billionaire layer to the defense-tech/IQT cluster (fact).", "source": "Anduril"},
+    {"from": "Reid_Hoffman", "to": "Dialog_Society", "instrument": "membership", "notes": "Hoffman (LinkedIn co-founder; PayPal Mafia; Greylock) is a co-principal of the Dialog forum (with Thiel) - though a Democratic mega-donor, the political mirror image of Thiel within the same elite network (fact).", "source": "spec-dialog-society"},
+    {"from": "Reid_Hoffman", "to": "OpenAI", "instrument": "board_influence", "notes": "Hoffman was an early OpenAI board member + funder (later stepped off amid Microsoft-conflict concerns) - a node linking the PayPal Mafia to frontier AI governance (fact).", "source": "OpenAI board history"},
+    {"from": "Dustin_Moskovitz", "to": "Open_Philanthropy", "instrument": "founder_origin", "notes": "Moskovitz (Facebook co-founder; Asana) + Cari Tuna fund Open Philanthropy - the primary money engine of Effective Altruism + AI-safety grantmaking (fact); wires the billionaire layer to the foundations/EA block.", "source": "Open Philanthropy"},
+    {"from": "Dustin_Moskovitz", "to": "Effective_Altruism", "instrument": "funds", "notes": "Via Open Phil + Good Ventures, Moskovitz is EA's largest funder - the individual behind much of the AI-safety philanthropy shaping OpenAI/Anthropic governance (fact).", "source": "Open Philanthropy"},
+    {"from": "Peter_Thiel", "to": "Dialog_Society", "instrument": "founder_origin", "notes": "Thiel co-founded the Dialog forum - completing the founder linkage to the elite-forum block (#189-195) (fact).", "source": "spec-dialog-society"},
+    {"from": "Peter_Thiel", "to": "PayPal_Mafia", "instrument": "membership", "notes": "Thiel is the central node of the PayPal Mafia - wiring the billionaire layer to the elite-groups block (fact).", "source": "public record"},
+    {"from": "Elon_Musk", "to": "PayPal_Mafia", "instrument": "membership", "notes": "Musk (X.com/PayPal) -> SpaceX/Tesla/xAI/X/Neuralink - the highest-net-worth member of the network (fact).", "source": "public record"},
+    {"from": "Reid_Hoffman", "to": "PayPal_Mafia", "instrument": "membership", "notes": "Hoffman is a PayPal-Mafia member (COO) - the Democratic-donor counterpart to Thiel within the same alumni network (fact).", "source": "public record"},
+    {"from": "Eric_Schmidt", "to": "WEF", "instrument": "membership", "notes": "Schmidt is a longtime Davos/WEF + CFR-adjacent figure - typical of the tech-billionaire presence in the establishment-convening layer (fact of participation).", "source": "WEF participant records"},
+    {"from": "Bill_Gates", "to": "WEF", "instrument": "membership", "notes": "Gates is a perennial Davos participant + WEF partner (via the foundation) - among the most prominent philanthropist-attendees (fact).", "source": "WEF"}
+  ]
+}
