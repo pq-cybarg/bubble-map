@@ -1208,6 +1208,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Chan_Zuckerberg": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "ChangGuang": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -1992,6 +1996,10 @@
       "sector": "pqc_quantum",
       "has_exogenous_revenue": false
     },
+    "Effective_Altruism": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
+    },
     "Egypt": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -2320,6 +2328,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Ford_Foundation": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "Foreign_Bank_US_Branches": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -2371,6 +2383,10 @@
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "GAVI": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "GCC": {
       "sector": "state",
@@ -2442,6 +2458,10 @@
     },
     "Gate": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Gates_Foundation": {
+      "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
     "Gautam_Adani": {
@@ -2688,6 +2708,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Hewlett_Foundation": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "Hezbollah": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -2794,6 +2818,10 @@
     },
     "ICSID": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "ID2020": {
+      "sector": "identity",
       "has_exogenous_revenue": false
     },
     "IDScan": {
@@ -3568,6 +3596,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "MacArthur_Foundation": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "Madrid_Protocol": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -4096,6 +4128,10 @@
       "sector": "ai_infra",
       "has_exogenous_revenue": false
     },
+    "Omidyar_Network": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "OnStar": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -4118,6 +4154,14 @@
     },
     "Open_Local_AI": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "Open_Philanthropy": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
+    "Open_Society": {
+      "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
     "Open_Source_Ecosystem": {
@@ -4731,6 +4775,10 @@
     "Robinhood_Crypto": {
       "sector": "exchange",
       "has_exogenous_revenue": true
+    },
+    "Rockefeller_Foundation": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
     },
     "Rocket_Lab": {
       "sector": "space_real_economy",
@@ -6044,8 +6092,16 @@
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
     },
+    "W3C": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "WEF": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "WHO": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "WISeART": {
@@ -6106,6 +6162,10 @@
     },
     "Weex": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Wellcome_Trust": {
+      "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
     "Wells_Fargo": {
@@ -17316,6 +17376,357 @@
       "cancelable": false,
       "source_file": "spec-reproducibility-crisis.json",
       "note": ""
+    },
+    {
+      "from": "Gates_Foundation",
+      "to": "WHO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Gates Foundation is among the WHO's largest funders (often the #1 or #2 contributor incl. via GAVI) - giving a private foundation outsized agenda-setting weight in global health (fact of funding; influence = interpretation)."
+    },
+    {
+      "from": "Gates_Foundation",
+      "to": "GAVI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Gates Foundation co-founded GAVI (the Vaccine Alliance, 2000) with a $750M seed - the model of foundation-launched global-health public-private partnerships (fact)."
+    },
+    {
+      "from": "Gates_Foundation",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Gates funds digital-identity + digital-financial-inclusion (ID4D with the World Bank; MOSIP open-source ID platform; Mojaloop payments) - a major driver of national digital-ID rollouts in the Global South (fact of programs; 'control' framing contested)."
+    },
+    {
+      "from": "Rockefeller_Foundation",
+      "to": "ID2020",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Rockefeller Foundation co-founded the ID2020 Alliance (2016) to advance digital identity 'for all' - the marquee foundation-led digital-ID initiative (fact)."
+    },
+    {
+      "from": "ID2020",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "ID2020's mission is universal digital identity - the alliance node that ties foundations + tech firms to the Digital_ID thread (fact)."
+    },
+    {
+      "from": "ID2020",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Microsoft (with Accenture, GAVI, Rockefeller) was a founding ID2020 partner - the corporate/foundation coalition behind digital identity (fact)."
+    },
+    {
+      "from": "Rockefeller_Foundation",
+      "to": "GAVI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Rockefeller - the century-old template for scientific philanthropy (public health, the Green Revolution) - also backs global-health alliances (fact)."
+    },
+    {
+      "from": "Wellcome_Trust",
+      "to": "WHO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Wellcome Trust (UK; ~GBP 38B endowment) is a top global-health/biomedical funder alongside Gates - the other pole of private health-research money (fact)."
+    },
+    {
+      "from": "GAVI",
+      "to": "WHO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "GAVI works alongside the WHO/UNICEF/World Bank on immunization - the public-private-partnership machinery of global health (fact)."
+    },
+    {
+      "from": "Chan_Zuckerberg",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Chan Zuckerberg Initiative (CZI, an LLC not a 501c3) is funded by Mark Zuckerberg's Meta wealth - a founder-controlled 'philanthropy' with for-profit flexibility (science, education, and formerly criminal-justice) (fact)."
+    },
+    {
+      "from": "Chan_Zuckerberg",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "CZI's biomedical + education-data programs (e.g. Summit Learning) intersect the data-collection/identity debates - a smaller but notable thread (fact of programs; scope graded)."
+    },
+    {
+      "from": "Open_Philanthropy",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Open Philanthropy (funded by Dustin Moskovitz + Cari Tuna) is the largest Effective Altruism grantmaker - the money engine of the EA movement (fact)."
+    },
+    {
+      "from": "Open_Philanthropy",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Open Phil gave OpenAI a $30M grant (2017) that came with a board seat - an early EA-aligned foothold in frontier-AI governance (fact)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "board_influence",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Anthropic is deeply EA-aligned (founders + early funders incl. FTX/SBF pre-collapse; the Long-Term Benefit Trust governance) - the AI lab most identified with EA/AI-safety (fact of alignment; degree of control graded)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "OpenAI",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "EA-aligned board members were central to the Nov-2023 OpenAI board crisis (the brief ouster of Sam Altman) - the highest-profile case of AI-safety philanthropy colliding with commercial AI (fact)."
+    },
+    {
+      "from": "Ford_Foundation",
+      "to": "Citizen_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Ford Foundation is among the funders of civil-society digital-rights research incl. Citizen Lab's spyware work - the foundation money behind independent surveillance accountability (fact)."
+    },
+    {
+      "from": "Open_Society",
+      "to": "Citizen_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Open Society Foundations (Soros) fund digital-rights/civil-society research + advocacy - a major, politically-polarizing civil-society funder (fact of funding; political framing contested)."
+    },
+    {
+      "from": "MacArthur_Foundation",
+      "to": "Citizen_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "MacArthur has funded cybersecurity/digital-rights research (incl. Citizen Lab-adjacent work) - part of the foundation ecosystem underwriting surveillance accountability (fact)."
+    },
+    {
+      "from": "Hewlett_Foundation",
+      "to": "Citizen_Lab",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The Hewlett Foundation ran a large Cyber Initiative funding cyber-policy + civil-society security research (fact of program)."
+    },
+    {
+      "from": "Omidyar_Network",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Omidyar Network (Pierre Omidyar, eBay) funds 'good ID' / digital-identity + civic-tech work - a major private funder shaping the digital-ID debate (fact)."
+    },
+    {
+      "from": "Omidyar_Network",
+      "to": "Open_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Omidyar + Open Society + Ford frequently co-fund the same digital-rights/independent-media ecosystem - the liberal-philanthropy civil-society cluster (fact of co-funding patterns)."
+    },
+    {
+      "from": "WEF",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The World Economic Forum promotes digital identity (Known Traveller Digital Identity; decentralized-ID work) as part of its Fourth Industrial Revolution agenda - a convening/agenda-setting node, NOT a governing authority (fact of initiatives; 'control' interpretations contested/overstated)."
+    },
+    {
+      "from": "W3C",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards_body",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "The W3C standardized Decentralized Identifiers (DIDs) + Verifiable Credentials - the technical backbone of the 'self-sovereign identity' model (fact)."
+    },
+    {
+      "from": "NIST",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards_body",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "NIST SP 800-63 (Digital Identity Guidelines) sets the US federal identity-assurance standard - the govt-side rulebook that shapes vendor/agency ID systems (fact)."
+    },
+    {
+      "from": "ISO",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards_body",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "ISO/IEC 18013-5 (mobile driving licence / mDL) is the international standard behind state mobile-ID rollouts - the interoperability layer (fact)."
+    },
+    {
+      "from": "IEEE",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "standards_body",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "IEEE contributes biometric + identity technical standards feeding the same ecosystem (fact)."
+    },
+    {
+      "from": "Gates_Foundation",
+      "to": "Rockefeller_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-nonprofits-foundations.json",
+      "note": "Gates + Rockefeller repeatedly co-fund global-health + digital-ID/financial-inclusion initiatives - the two anchor foundations of the modern development-tech agenda (fact of co-funding; unitary agenda NOT asserted)."
     },
     {
       "from": "ILOVEYOU_Worm",
@@ -37885,10 +38296,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1589,
-    "num_edges": 2425,
+    "num_nodes": 1604,
+    "num_edges": 2452,
     "num_financial_edges": 274,
-    "num_structural_edges": 2151,
+    "num_structural_edges": 2178,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -38105,15 +38516,15 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
+        "SINK_lenders"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Microsoft",
@@ -38124,16 +38535,6 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -38145,14 +38546,12 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -38165,6 +38564,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -40304,6 +40715,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chan_Zuckerberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ChangGuang": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -41676,6 +42094,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Effective_Altruism": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Egypt": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42250,6 +42675,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ford_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Foreign_Bank_US_Branches": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42335,6 +42767,13 @@
         "in_robust_core": false
       },
       "GARM_WFA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GAVI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42461,6 +42900,13 @@
         "in_robust_core": false
       },
       "Gate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gates_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42894,6 +43340,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hewlett_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hezbollah": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -43077,6 +43530,13 @@
         "in_robust_core": false
       },
       "ICSID": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ID2020": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44434,6 +44894,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "MacArthur_Foundation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Madrid_Protocol": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45358,6 +45825,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Omidyar_Network": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OnStar": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45394,6 +45868,20 @@
         "in_robust_core": false
       },
       "Open_Local_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Open_Philanthropy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Open_Society": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46465,6 +46953,13 @@
         "in_robust_core": false
       },
       "Robinhood_Crypto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rockefeller_Foundation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48767,7 +49262,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "W3C": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "WEF": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "WHO": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48873,6 +49382,13 @@
         "in_robust_core": false
       },
       "Weex": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Wellcome_Trust": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49446,6 +49962,31 @@
         "both_layers": true
       },
       {
+        "node": "Microsoft",
+        "degree": 27,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "identity",
+          "neocloud",
+          "other",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 19,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "NVIDIA",
         "degree": 33,
         "neighbor_sectors": [
@@ -49473,23 +50014,25 @@
         "both_layers": true
       },
       {
-        "node": "Microsoft",
-        "degree": 26,
+        "node": "OpenAI",
+        "degree": 31,
         "neighbor_sectors": [
           "ai",
-          "ai_lab",
-          "commodity",
-          "financial_infra",
+          "chip_vendor",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "ip_rightsholder",
           "neocloud",
           "other",
-          "pqc_quantum",
+          "person",
+          "philanthropy",
           "spv",
           "surveillance",
-          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 11,
-        "source_files": 18,
+        "n_neighbor_sectors": 13,
+        "source_files": 15,
         "layers": [
           "financial",
           "structural"
@@ -49497,23 +50040,25 @@
         "both_layers": true
       },
       {
-        "node": "OpenAI",
-        "degree": 29,
+        "node": "Meta",
+        "degree": 19,
         "neighbor_sectors": [
-          "ai",
+          "ai_data",
+          "ai_infra",
           "chip_vendor",
-          "financier",
-          "hyperscaler",
-          "ip_rightsholder",
-          "neocloud",
+          "commodity",
+          "energy",
           "other",
-          "person",
-          "spv",
+          "philanthropy",
+          "political",
+          "regulator",
+          "sink",
           "surveillance",
+          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 11,
-        "source_files": 14,
+        "n_neighbor_sectors": 13,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"
@@ -49541,31 +50086,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Meta",
-        "degree": 18,
-        "neighbor_sectors": [
-          "ai_data",
-          "ai_infra",
-          "chip_vendor",
-          "commodity",
-          "energy",
-          "other",
-          "political",
-          "regulator",
-          "sink",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 9,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "SEC",
@@ -49684,6 +50204,50 @@
         "both_layers": true
       },
       {
+        "node": "Digital_ID",
+        "degree": 19,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 7,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
+        "node": "Anthropic",
+        "degree": 15,
+        "neighbor_sectors": [
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "space_real_economy",
+          "university"
+        ],
+        "n_neighbor_sectors": 8,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Oracle",
         "degree": 11,
         "neighbor_sectors": [
@@ -49719,47 +50283,6 @@
         ],
         "n_neighbor_sectors": 7,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "DOJ",
-        "degree": 13,
-        "neighbor_sectors": [
-          "defense",
-          "exchange",
-          "industrial",
-          "other",
-          "person",
-          "regulator",
-          "state",
-          "threat_actor"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 11,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "JPMorgan",
-        "degree": 11,
-        "neighbor_sectors": [
-          "capital",
-          "commodity_market",
-          "crypto",
-          "crypto_infra",
-          "other",
-          "pqc_quantum",
-          "private_credit",
-          "spv"
-        ],
-        "n_neighbor_sectors": 8,
-        "source_files": 8,
         "layers": [
           "financial",
           "structural"
