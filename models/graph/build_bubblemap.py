@@ -41,6 +41,11 @@ BUCKET["academia"]=["university","college","academic_institute"]
 BUCKET["philanthropy"]=["nonprofit","foundation","think_tank"]
 BUCKET["elite"]=["elite_group","billionaire"]
 SEC2BUCKET={s:b for b,ss in BUCKET.items() for s in ss}
+# robustness: many catalog blocks set sector to the BUCKET NAME directly (e.g. "philanthropy",
+# "elite", "pqc", "capital", "ai", "identity", "surveillance"->identity). Map any such
+# bucket-name-as-sector to itself so those nodes colour + filter correctly instead of -> "other".
+SEC2BUCKET.update({b: b for b in BUCKET})
+SEC2BUCKET.setdefault("surveillance", "identity")
 COLORS={"ai":"#1f4e79","capital":"#7b2d26","crypto":"#b8860b","defense":"#2e8b57","state":"#c0392b",
  "commodity":"#8a5a2b","identity":"#5e35b1","macro":"#138a8a","pqc":"#6b3b16","person":"#d35400","other":"#8a8378",
  "academia":"#0b7285","philanthropy":"#a61e4d","elite":"#862e9c"}
