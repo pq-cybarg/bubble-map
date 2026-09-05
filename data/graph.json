@@ -164,6 +164,14 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Access_Industries": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Acxiom": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Adani_Group": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -1252,6 +1260,10 @@
       "sector": "tech",
       "has_exogenous_revenue": true
     },
+    "Charles_Koch": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Check_Point": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -1776,6 +1788,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "David_Siegel": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "DeFi_Education_Fund": {
       "sector": "crypto",
       "has_exogenous_revenue": false
@@ -1914,6 +1930,10 @@
     },
     "Dominion_Energy": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "DonorsTrust": {
+      "sector": "elite",
       "has_exogenous_revenue": false
     },
     "DoubleAgent": {
@@ -3052,6 +3072,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Interactive_Brokers": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Inverse_Condemnation": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3352,6 +3376,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
     },
+    "Koch_Network": {
+      "sector": "elite",
+      "has_exogenous_revenue": false
+    },
     "Komeito": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -3496,6 +3524,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Len_Blavatnik": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Leonard_Leo": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3550,6 +3582,10 @@
     },
     "Lithium_Triangle": {
       "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
+    "LiveRamp": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Lloyd_Blankfein": {
@@ -4852,6 +4888,10 @@
       "sector": "retail",
       "has_exogenous_revenue": false
     },
+    "Richard_Uihlein": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Rigetti": {
       "sector": "pqc_quantum",
       "has_exogenous_revenue": true
@@ -5140,6 +5180,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "SafeGraph": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Sahel_AES": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -5230,6 +5274,10 @@
     },
     "Scotiabank": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Scott_Howe": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Secure_Element_Vendors": {
@@ -5760,6 +5808,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Thomas_Peterffy": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Thomson_Reuters_CLEAR": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -6076,6 +6128,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Uline": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Umbra": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -6346,6 +6402,10 @@
     },
     "WikiLeaks": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Wilks_Brothers": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "William_Hinman": {
@@ -34616,6 +34676,292 @@
       "note": "Up to $19.4B (base $17.4B), revenue ramps through 2026."
     },
     {
+      "from": "Auren_Hoffman",
+      "to": "SafeGraph",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Auren Hoffman - serial data-broker founder (RapLeaf, LiveRamp, then SafeGraph) - the low-profile builder of the commercial location-data industry (fact)."
+    },
+    {
+      "from": "SafeGraph",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "SafeGraph sells precise foot-traffic / points-of-interest location data; drew scrutiny after selling data that could reveal visits to abortion clinics (Planned Parenthood, 2022) - the sharp edge of the location-broker market; Google banned SafeGraph from the Play Store (fact)."
+    },
+    {
+      "from": "SafeGraph",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "SafeGraph anchors the location-broker tier of the data ecosystem - wiring the quiet-money layer to the surveillance/Location_Data thread (Niantic/auto-telematics/LexisNexis) (fact)."
+    },
+    {
+      "from": "Scott_Howe",
+      "to": "LiveRamp",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Scott Howe - CEO of LiveRamp (formerly Acxiom) - identity-resolution + data-onboarding that links offline identities to online ad IDs; the plumbing of surveillance advertising (fact)."
+    },
+    {
+      "from": "LiveRamp",
+      "to": "Acxiom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "LiveRamp IS the renamed Acxiom (after Acxiom sold its Marketing Solutions unit to IPG, 2018) - one of the oldest, largest consumer data brokers (thousands of attributes on ~2.5B people) rebranded around identity resolution (fact)."
+    },
+    {
+      "from": "Acxiom",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Acxiom/LiveRamp is the archetypal mass consumer-data broker - the 'default' example in FTC data-broker reports (fact)."
+    },
+    {
+      "from": "LiveRamp",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "LiveRamp + LexisNexis Risk Solutions are the two poles of the identity/data-broker world (marketing vs risk/policing) - both descend from decades of record-aggregation (fact)."
+    },
+    {
+      "from": "Wilks_Brothers",
+      "to": "Club_for_Growth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Farris + Dan Wilks - fracking billionaires (sold Frac Tech, 2011) turned quiet Christian-right mega-donors (Ted Cruz super PAC, Club for Growth) - low public profile, large political footprint (fact)."
+    },
+    {
+      "from": "Wilks_Brothers",
+      "to": "DonorsTrust",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "The Wilkses fund conservative/Christian-right causes partly through pooled dark-money vehicles - the quiet-donor model (fact of category; specific flows partly opaque)."
+    },
+    {
+      "from": "Richard_Uihlein",
+      "to": "Uline",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Richard Uihlein - co-founder of Uline (shipping/packaging; privately held) - with wife Liz among the very largest, lowest-profile GOP/hard-right donors (fact)."
+    },
+    {
+      "from": "Richard_Uihlein",
+      "to": "Club_for_Growth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "The Uihleins are the top funders of the Club for Growth + numerous hard-right candidates/causes (election-integrity groups, Tea Party legacy) - quiet but pivotal (fact)."
+    },
+    {
+      "from": "Richard_Uihlein",
+      "to": "DonorsTrust",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Uihlein money also flows through DonorsTrust-style conduits - the donor-advised 'dark-money ATM' of the right (fact of vehicle use; amounts partly opaque)."
+    },
+    {
+      "from": "DonorsTrust",
+      "to": "Federalist_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "DonorsTrust - the donor-advised fund known as the right's 'dark-money ATM' - channels anonymous money to conservative legal/policy orgs incl. the Leo/Federalist-Society network - wiring the quiet-donor layer to the judiciary thread (#208) (fact)."
+    },
+    {
+      "from": "Thomas_Peterffy",
+      "to": "Interactive_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Thomas Peterffy - founder of Interactive Brokers (pioneered electronic market-making); Florida's richest, low-profile, and a large GOP donor (fact)."
+    },
+    {
+      "from": "Thomas_Peterffy",
+      "to": "Club_for_Growth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Peterffy is a major (quiet) donor to Republican/free-market causes - the self-made-immigrant-turned-libertarian-megadonor profile (fact)."
+    },
+    {
+      "from": "David_Siegel",
+      "to": "Two_Sigma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "David Siegel - co-founder of Two Sigma (with John Overdeck); completes the quant-data-fund pair; a low-profile computer-scientist billionaire (a rare public governance feud with Overdeck aside) (fact)."
+    },
+    {
+      "from": "Charles_Koch",
+      "to": "Koch_Network",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Charles Koch - Koch Industries (2nd-largest US private company) - built the most sophisticated quiet political-influence machine (Stand Together, Americans for Prosperity, the seminars/donor network) over decades (fact)."
+    },
+    {
+      "from": "Koch_Network",
+      "to": "DonorsTrust",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "The Koch donor network historically routed large sums through DonorsTrust + affiliated 501c4s - the template for anonymized political spending at scale (fact)."
+    },
+    {
+      "from": "Koch_Network",
+      "to": "Federalist_Society",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "The Koch network + the Leo/Federalist-Society legal movement are allied (if distinct) pillars of the conservative infrastructure - overlapping funders, aligned goals (fact of alliance; not a single org)."
+    },
+    {
+      "from": "Charles_Koch",
+      "to": "Club_for_Growth",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Koch-aligned + Club-for-Growth free-market politics overlap heavily - the libertarian-right donor ecosystem (fact of overlap)."
+    },
+    {
+      "from": "Len_Blavatnik",
+      "to": "Access_Industries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Len Blavatnik - Access Industries (Warner Music, chemicals, tech/VC via Access); Soviet-born US-UK dual citizen; one of the wealthiest + most cross-border donors (both US parties + UK + universities) - his Soviet-privatization-era wealth origin draws recurring scrutiny (fact; origin-scrutiny graded)."
+    },
+    {
+      "from": "Len_Blavatnik",
+      "to": "Harvard_University",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-2.json",
+      "note": "Blavatnik's giving is famously bipartisan + INSTITUTION-focused (the Oxford Blavatnik School of Government; Harvard Life Lab; Yale; Tel Aviv; museums; both US parties) - a 'buy access + prestige everywhere' model distinct from the ideological-right donors above; wires the quiet-money layer to the academia catalog (fact; motive interpretation)."
+    },
+    {
       "from": "OptumRx",
       "to": "UnitedHealth",
       "instrument": "other",
@@ -39310,10 +39656,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1643,
-    "num_edges": 2518,
+    "num_nodes": 1658,
+    "num_edges": 2540,
     "num_financial_edges": 274,
-    "num_structural_edges": 2244,
+    "num_structural_edges": 2266,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -39537,8 +39883,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -39546,14 +39892,6 @@
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
         "OpenAI"
       ],
       [
@@ -39562,13 +39900,11 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "SINK_lenders"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -39576,15 +39912,25 @@
         "NVIDIA"
       ],
       [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -39602,14 +39948,14 @@
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -39904,6 +40250,20 @@
         "in_robust_core": false
       },
       "Aave": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Access_Industries": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Acxiom": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -41814,6 +42174,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Charles_Koch": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Check_Point": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42731,6 +43098,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "David_Siegel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DeFi_Education_Fund": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -42970,6 +43344,13 @@
         "in_robust_core": false
       },
       "Dominion_Energy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DonorsTrust": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -44964,6 +45345,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Interactive_Brokers": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Inverse_Condemnation": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45489,6 +45877,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Koch_Network": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Komeito": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45741,6 +46136,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Len_Blavatnik": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Leonard_Leo": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45833,6 +46235,13 @@
         "in_robust_core": false
       },
       "Lithium_Triangle": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LiveRamp": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48114,6 +48523,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Richard_Uihlein": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Rigetti": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48618,6 +49034,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SafeGraph": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sahel_AES": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48773,6 +49196,13 @@
         "in_robust_core": false
       },
       "Scotiabank": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Scott_Howe": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49703,6 +50133,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Thomas_Peterffy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Thomson_Reuters_CLEAR": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50256,6 +50693,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Uline": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Umbra": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50726,6 +51170,13 @@
         "in_robust_core": false
       },
       "WikiLeaks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Wilks_Brothers": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
