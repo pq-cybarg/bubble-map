@@ -1,0 +1,36 @@
+{
+  "title": "Quiet money (batch 6): quiet data/AI founders + foreign family-office fortunes",
+  "source": "Public record: company histories; Forbes/Bloomberg; SEC/regulatory filings; DeepSeek/High-Flyer + ByteDance reporting. Catalog layer (#242 batch 6). Structural overlay; person nodes carry dossiers. FOCUS: low-profile founders of data/AI powerhouses + quiet foreign (China/Israel/Europe) family fortunes moving through tech. HONESTY: holdings/ownership = fact; influence graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Liang_Wenfeng", "sector": "person"},
+    {"id": "Zhang_Yiming", "sector": "person"},
+    {"id": "Idan_Ofer", "sector": "person"},
+    {"id": "Anders_Holch_Povlsen", "sector": "person"},
+    {"id": "Klaus_Michael_Kuehne", "sector": "person"},
+    {"id": "Guillaume_Pousaz", "sector": "person"},
+    {"id": "Rich_Barton", "sector": "person"},
+    {"id": "High_Flyer", "sector": "capital"},
+    {"id": "Israel_Corp", "sector": "capital"},
+    {"id": "Bestseller", "sector": "commodity"},
+    {"id": "Checkout_com", "sector": "capital"},
+    {"id": "Zillow", "sector": "tech"}
+  ],
+  "edges": [
+    {"from": "Liang_Wenfeng", "to": "High_Flyer", "instrument": "founder_origin", "notes": "Liang Wenfeng founded High-Flyer - a Chinese quant hedge fund (~$8B) that amassed a huge Nvidia-GPU cluster; the quant-finance base that funded his AI pivot (fact).", "source": "High-Flyer; press"},
+    {"from": "Liang_Wenfeng", "to": "DeepSeek", "instrument": "founder_origin", "notes": "Liang spun DeepSeek out of High-Flyer; its efficient open-weight models (R1, Jan-2026 wave) shocked the market + reframed the US-China AI + compute-cost race - a quiet quant funding a frontier lab (fact); mirrors the RenTech/Two Sigma quant-to-data pattern in China.", "source": "DeepSeek; press"},
+    {"from": "High_Flyer", "to": "AI_Datacenters", "instrument": "builds", "notes": "High-Flyer stockpiled GPUs + compute pre-export-controls - the quant-fund-to-AI-infra move that made DeepSeek possible (fact).", "source": "press"},
+    {"from": "Zhang_Yiming", "to": "ByteDance", "instrument": "founder_origin", "notes": "Zhang Yiming founded ByteDance (TikTok/Douyin/Toutiao) - the recommendation-algorithm + data powerhouse; stepped back as CEO/chair (2021) but remains the controlling shareholder + China's richest, keeping a very low profile (fact).", "source": "ByteDance"},
+    {"from": "ByteDance", "to": "Data_Brokers", "instrument": "peer", "notes": "ByteDance's algorithmic behavioral-data engine (TikTok) is the surveillance-advertising analog at planetary scale - the center of the US TikTok-ban/data-security fight (fact of data scale; national-security framing graded).", "source": "public record"},
+    {"from": "Idan_Ofer", "to": "Israel_Corp", "instrument": "leads", "notes": "Idan Ofer - Israel's richest (Ofer shipping dynasty) - controls Israel Corp / Kenon (shipping, chemicals ICL, power, and EV/tech bets like Better Place legacy + IC stakes); quiet, globe-spanning (fact).", "source": "public record"},
+    {"from": "Idan_Ofer", "to": "Israel", "instrument": "relationship", "notes": "The Ofer family (Idan + brother Eyal, shipping/real-estate) are among Israel's most powerful, low-profile business dynasties - shipping being strategically sensitive (fact).", "source": "public record"},
+    {"from": "Anders_Holch_Povlsen", "to": "Bestseller", "instrument": "leads", "notes": "Anders Holch Povlsen - Denmark's richest (Bestseller fast-fashion) - is also a major tech VC (early/large stakes in Klarna, Zalando, and others) + Scotland's largest private landowner; very low profile (fact).", "source": "public record"},
+    {"from": "Anders_Holch_Povlsen", "to": "Klarna", "instrument": "major_shareholder", "notes": "Via Heartland, Povlsen is a large Klarna shareholder - retail-fashion cash into fintech/BNPL (fact); wires quiet European money to the fintech thread.", "source": "Klarna cap table"},
+    {"from": "Klaus_Michael_Kuehne", "to": "Kuehne_Nagel", "instrument": "leads", "notes": "Klaus-Michael Kuehne - the reclusive controller of Kuehne+Nagel (the world's largest sea-freight forwarder) + big Hapag-Lloyd/Lufthansa stakes - quiet control of critical global logistics (fact).", "source": "public record"},
+    {"from": "Guillaume_Pousaz", "to": "Checkout_com", "instrument": "founder_origin", "notes": "Guillaume Pousaz - the low-profile Swiss founder of Checkout.com (payments) - once Europe's most valuable fintech (~$40B peak); quiet payments-rail wealth (fact; valuation since cut).", "source": "public record"},
+    {"from": "Rich_Barton", "to": "Zillow", "instrument": "founder_origin", "notes": "Rich Barton - serial founder of data-driven marketplaces (Expedia, Zillow, Glassdoor) built on the 'power to the people via data' thesis - the US data-marketplace archetype (fact).", "source": "public record"},
+    {"from": "Zillow", "to": "Data_Brokers", "instrument": "peer", "notes": "Zillow's real-estate data (Zestimate; the failed iBuying 'Zillow Offers') exemplifies consumer-data-as-product + the perils of data-driven pricing - adjacent to the broker ecosystem (fact).", "source": "public record"},
+    {"from": "Liang_Wenfeng", "to": "China", "instrument": "relationship", "notes": "DeepSeek's rise made Liang a state-celebrated figure (met by Chinese leadership) - the quiet quant now a symbol of China's AI self-sufficiency drive (fact).", "source": "press"},
+    {"from": "DeepSeek", "to": "AI", "instrument": "relationship", "notes": "DeepSeek anchors the efficient/open-weight pole of the AI race - wiring the quiet-money layer to the China-AI + AI-bubble threads (fact).", "source": "china-ai-stack"}
+  ]
+}

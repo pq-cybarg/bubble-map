@@ -332,6 +332,10 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "Anders_Holch_Povlsen": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Andrea_Muttoni": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -734,6 +738,10 @@
     },
     "Bermuda_Captives": {
       "sector": "insurance",
+      "has_exogenous_revenue": false
+    },
+    "Bestseller": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Beth_Din": {
@@ -1287,6 +1295,10 @@
     "Check_Point": {
       "sector": "security_research",
       "has_exogenous_revenue": true
+    },
+    "Checkout_com": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Chelsea_Manning": {
       "sector": "person",
@@ -2720,6 +2732,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Guillaume_Pousaz": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Gwadar": {
       "sector": "logistics",
       "has_exogenous_revenue": false
@@ -2878,6 +2894,10 @@
     },
     "Hiero_LFDT": {
       "sector": "dlt",
+      "has_exogenous_revenue": false
+    },
+    "High_Flyer": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Honda": {
@@ -3092,6 +3112,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Idan_Ofer": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Igor_Sechin": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3199,6 +3223,10 @@
     "Israel": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Israel_Corp": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Israel_Englander": {
       "sector": "person",
@@ -3472,6 +3500,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "Klaus_Michael_Kuehne": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Kled": {
       "sector": "ai",
       "has_exogenous_revenue": false
@@ -3674,6 +3706,10 @@
     },
     "Liability_Engineering": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Liang_Wenfeng": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Liberty Strategic Capital": {
@@ -5058,6 +5094,10 @@
     },
     "Retail_401k": {
       "sector": "retail",
+      "has_exogenous_revenue": false
+    },
+    "Rich_Barton": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Richard_Uihlein": {
@@ -6780,12 +6820,20 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Zhang_Yiming": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Zhao_Wei": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
     "Zhipu_AI": {
       "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Zillow": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Zillow_ZORI": {
@@ -24448,6 +24496,201 @@
       "note": ""
     },
     {
+      "from": "Liang_Wenfeng",
+      "to": "High_Flyer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Liang Wenfeng founded High-Flyer - a Chinese quant hedge fund (~$8B) that amassed a huge Nvidia-GPU cluster; the quant-finance base that funded his AI pivot (fact)."
+    },
+    {
+      "from": "Liang_Wenfeng",
+      "to": "DeepSeek",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Liang spun DeepSeek out of High-Flyer; its efficient open-weight models (R1, Jan-2026 wave) shocked the market + reframed the US-China AI + compute-cost race - a quiet quant funding a frontier lab (fact); mirrors the RenTech/Two Sigma quant-to-data pattern in China."
+    },
+    {
+      "from": "High_Flyer",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "High-Flyer stockpiled GPUs + compute pre-export-controls - the quant-fund-to-AI-infra move that made DeepSeek possible (fact)."
+    },
+    {
+      "from": "Zhang_Yiming",
+      "to": "ByteDance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Zhang Yiming founded ByteDance (TikTok/Douyin/Toutiao) - the recommendation-algorithm + data powerhouse; stepped back as CEO/chair (2021) but remains the controlling shareholder + China's richest, keeping a very low profile (fact)."
+    },
+    {
+      "from": "ByteDance",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "ByteDance's algorithmic behavioral-data engine (TikTok) is the surveillance-advertising analog at planetary scale - the center of the US TikTok-ban/data-security fight (fact of data scale; national-security framing graded)."
+    },
+    {
+      "from": "Idan_Ofer",
+      "to": "Israel_Corp",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Idan Ofer - Israel's richest (Ofer shipping dynasty) - controls Israel Corp / Kenon (shipping, chemicals ICL, power, and EV/tech bets like Better Place legacy + IC stakes); quiet, globe-spanning (fact)."
+    },
+    {
+      "from": "Idan_Ofer",
+      "to": "Israel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "The Ofer family (Idan + brother Eyal, shipping/real-estate) are among Israel's most powerful, low-profile business dynasties - shipping being strategically sensitive (fact)."
+    },
+    {
+      "from": "Anders_Holch_Povlsen",
+      "to": "Bestseller",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Anders Holch Povlsen - Denmark's richest (Bestseller fast-fashion) - is also a major tech VC (early/large stakes in Klarna, Zalando, and others) + Scotland's largest private landowner; very low profile (fact)."
+    },
+    {
+      "from": "Anders_Holch_Povlsen",
+      "to": "Klarna",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "major_shareholder",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Via Heartland, Povlsen is a large Klarna shareholder - retail-fashion cash into fintech/BNPL (fact); wires quiet European money to the fintech thread."
+    },
+    {
+      "from": "Klaus_Michael_Kuehne",
+      "to": "Kuehne_Nagel",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Klaus-Michael Kuehne - the reclusive controller of Kuehne+Nagel (the world's largest sea-freight forwarder) + big Hapag-Lloyd/Lufthansa stakes - quiet control of critical global logistics (fact)."
+    },
+    {
+      "from": "Guillaume_Pousaz",
+      "to": "Checkout_com",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Guillaume Pousaz - the low-profile Swiss founder of Checkout.com (payments) - once Europe's most valuable fintech (~$40B peak); quiet payments-rail wealth (fact; valuation since cut)."
+    },
+    {
+      "from": "Rich_Barton",
+      "to": "Zillow",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Rich Barton - serial founder of data-driven marketplaces (Expedia, Zillow, Glassdoor) built on the 'power to the people via data' thesis - the US data-marketplace archetype (fact)."
+    },
+    {
+      "from": "Zillow",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "Zillow's real-estate data (Zestimate; the failed iBuying 'Zillow Offers') exemplifies consumer-data-as-product + the perils of data-driven pricing - adjacent to the broker ecosystem (fact)."
+    },
+    {
+      "from": "Liang_Wenfeng",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "DeepSeek's rise made Liang a state-celebrated figure (met by Chinese leadership) - the quiet quant now a symbol of China's AI self-sufficiency drive (fact)."
+    },
+    {
+      "from": "DeepSeek",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-5.json",
+      "note": "DeepSeek anchors the efficient/open-weight pole of the AI race - wiring the quiet-money layer to the China-AI + AI-bubble threads (fact)."
+    },
+    {
       "from": "Zadroga_Act",
       "to": "VCF_9_11",
       "instrument": "other",
@@ -41193,10 +41436,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1714,
-    "num_edges": 2641,
+    "num_nodes": 1726,
+    "num_edges": 2656,
     "num_financial_edges": 274,
-    "num_structural_edges": 2367,
+    "num_structural_edges": 2382,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -41430,14 +41673,6 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
@@ -41446,14 +41681,22 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -42083,6 +42326,13 @@
         "in_robust_core": false
       },
       "Anchorage": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Anders_Holch_Povlsen": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -42791,6 +43041,13 @@
       },
       "Bermuda_Captives": {
         "total_usd": 130000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bestseller": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -43756,6 +44013,13 @@
         "in_robust_core": false
       },
       "Check_Point": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Checkout_com": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46268,6 +46532,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Guillaume_Pousaz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gwadar": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46542,6 +46813,13 @@
         "in_robust_core": false
       },
       "Hiero_LFDT": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "High_Flyer": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46919,6 +47197,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Idan_Ofer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Igor_Sechin": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47102,6 +47387,13 @@
         "in_robust_core": false
       },
       "Israel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Israel_Corp": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47584,6 +47876,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Klaus_Michael_Kuehne": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Kled": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47935,6 +48234,13 @@
         "in_robust_core": false
       },
       "Liability_Engineering": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Liang_Wenfeng": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50357,6 +50663,13 @@
         "in_robust_core": false
       },
       "Retail_401k": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rich_Barton": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53373,6 +53686,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zhang_Yiming": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zhao_Wei": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53381,6 +53701,13 @@
         "in_robust_core": false
       },
       "Zhipu_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zillow": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53553,7 +53880,7 @@
       },
       {
         "node": "China",
-        "degree": 69,
+        "degree": 70,
         "neighbor_sectors": [
           "academia",
           "ai",
@@ -53580,7 +53907,7 @@
           "university"
         ],
         "n_neighbor_sectors": 23,
-        "source_files": 40,
+        "source_files": 41,
         "layers": [
           "financial",
           "structural"
@@ -53774,6 +54101,31 @@
         "both_layers": false
       },
       {
+        "node": "AI_Datacenters",
+        "degree": 22,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "commodity",
+          "financier",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -53791,30 +54143,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "AI_Datacenters",
-        "degree": 21,
-        "neighbor_sectors": [
-          "ai",
-          "commodity",
-          "financier",
-          "logistics",
-          "macro",
-          "neocloud",
-          "other",
-          "political",
-          "private_credit",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 10,
         "layers": [
           "financial",
           "structural"
