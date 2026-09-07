@@ -124,6 +124,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "AQR": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "ARIAIP": {
       "sector": "crypto",
       "has_exogenous_revenue": false
@@ -1436,6 +1440,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "Cliff_Asness": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Cloudera": {
       "sector": "ai",
       "has_exogenous_revenue": false
@@ -1502,6 +1510,10 @@
     },
     "ColibriTD": {
       "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Colin_Huang": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Colombia": {
@@ -4436,6 +4448,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Nongfu_Spring": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Norfolk_Southern": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -4847,6 +4863,10 @@
     "Philippines": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Pinduoduo": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "Piraeus_Port": {
       "sector": "logistics",
@@ -5888,6 +5908,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Stefan_Quandt": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Stellantis": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -5983,6 +6007,10 @@
     "Superannuation_Funds": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Susanne_Klatten": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Susquehanna": {
       "sector": "capital",
@@ -7170,6 +7198,10 @@
     },
     "Zhipu_AI": {
       "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
+    "Zhong_Shanshan": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Zillow": {
@@ -21571,6 +21603,162 @@
       "cancelable": false,
       "source_file": "spec-spyware-vendor-catalog.json",
       "note": "Anchors the COMMERCIAL-SURVEILLANCE branch of the lineage (privatized offensive capability sold to states) - distinct from state APTs, criminal ransomware, and hacktivism (fact of category)."
+    },
+    {
+      "from": "Cliff_Asness",
+      "to": "AQR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Cliff Asness (ex-Goldman quant; Fama student) co-founded AQR Capital Management - a ~$100B+ systematic/factor-investing firm that industrialized academic finance + machine-learning-driven strategies; a quieter quant fortune than Citadel/Millennium (fact)."
+    },
+    {
+      "from": "AQR",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "AQR is a heavy user of ML/systematic models on market + alternative data - part of the quant cluster (RenTech/DE Shaw/Two Sigma/Citadel/Millennium/AQR) that industrialized data + ML in finance before Big Tech (fact of category)."
+    },
+    {
+      "from": "Cliff_Asness",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mega_donor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Asness is a prominent libertarian-leaning political donor + public commentator - quiet quant wealth converted to political + intellectual influence (fact)."
+    },
+    {
+      "from": "Colin_Huang",
+      "to": "Pinduoduo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Colin Huang (Zheng Huang; ex-Google engineer) founded PDD Holdings / Pinduoduo - the social-commerce + agri-tech giant behind Temu; he briefly became China's richest, then stepped back and went almost invisible (no interviews, resigned board) (fact)."
+    },
+    {
+      "from": "Pinduoduo",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "PDD/Temu's aggressive behavioral-data + recommendation engine (and Temu's US privacy/data-scrutiny) make it a planetary-scale surveillance-advertising analog alongside ByteDance/TikTok (fact of data scale; specific-malware/security allegations against the Pinduoduo app graded/contested)."
+    },
+    {
+      "from": "Pinduoduo",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "PDD is a core Chinese consumer-internet + agri-supply-chain platform; Temu is its global export arm - low-profile founder, planetary reach (fact)."
+    },
+    {
+      "from": "Pinduoduo",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Pinduoduo/Temu run algorithmic pricing + recommendation at massive scale - ML-as-product in commerce, wiring the quiet-money layer to the AI thread (fact)."
+    },
+    {
+      "from": "Susanne_Klatten",
+      "to": "BMW",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Susanne Klatten (Quandt dynasty) is Germany's richest woman + BMW's largest individual shareholder (with brother Stefan Quandt); also controls Altana (specialty chemicals) - a famously private industrial fortune (fact)."
+    },
+    {
+      "from": "Stefan_Quandt",
+      "to": "BMW",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Stefan Quandt is deputy chair + a top BMW shareholder; the Quandt siblings' combined stake gives quiet family control of a global automaker - the low-profile industrial-dynasty archetype (fact)."
+    },
+    {
+      "from": "BMW",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Connected vehicles (BMW among all major automakers) generate telematics/location/driving-behavior data feeding the automaker->broker->insurer/LE pipeline documented in the connected-car surveillance thread - quiet-money industrial control sits upstream of that data (fact that the data exists; specific BMW data-sale practices graded)."
+    },
+    {
+      "from": "Zhong_Shanshan",
+      "to": "Nongfu_Spring",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Zhong Shanshan - the 'Lone Wolf', long China's richest - controls Nongfu Spring (bottled water) + a controlling stake in Wantai Biological (vaccines/diagnostics); avoids politics + media almost entirely (fact)."
+    },
+    {
+      "from": "Zhong_Shanshan",
+      "to": "China",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-6.json",
+      "note": "Zhong is the quiet consumer-staples counterexample to China's tech-mogul archetype - vast wealth, minimal state-tech entanglement or public profile (fact); included as a coverage anchor for low-profile non-tech fortunes."
     },
     {
       "from": "Singham",
@@ -42972,10 +43160,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1811,
-    "num_edges": 2748,
+    "num_nodes": 1819,
+    "num_edges": 2760,
     "num_financial_edges": 274,
-    "num_structural_edges": 2474,
+    "num_structural_edges": 2486,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43202,28 +43390,33 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "AMD",
         "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -43234,17 +43427,6 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -43263,6 +43445,12 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -43499,6 +43687,13 @@
         "in_robust_core": false
       },
       "APT_State_Actors": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AQR": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -45801,6 +45996,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cliff_Asness": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cloudera": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -45914,6 +46116,13 @@
         "in_robust_core": false
       },
       "ColibriTD": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Colin_Huang": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51051,6 +51260,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Nongfu_Spring": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Norfolk_Southern": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51766,6 +51982,13 @@
         "in_robust_core": false
       },
       "Philippines": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pinduoduo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53592,6 +53815,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stefan_Quandt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stellantis": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53754,6 +53984,13 @@
         "in_robust_core": false
       },
       "Superannuation_Funds": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Susanne_Klatten": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55839,6 +56076,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zhong_Shanshan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zillow": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55976,7 +56220,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 76,
+        "degree": 77,
         "neighbor_sectors": [
           "academia",
           "academic_institute",
@@ -56005,7 +56249,7 @@
           "university"
         ],
         "n_neighbor_sectors": 25,
-        "source_files": 45,
+        "source_files": 46,
         "layers": [
           "financial",
           "structural"
@@ -56014,7 +56258,7 @@
       },
       {
         "node": "China",
-        "degree": 70,
+        "degree": 72,
         "neighbor_sectors": [
           "academia",
           "ai",
@@ -56041,7 +56285,7 @@
           "university"
         ],
         "n_neighbor_sectors": 23,
-        "source_files": 41,
+        "source_files": 42,
         "layers": [
           "financial",
           "structural"

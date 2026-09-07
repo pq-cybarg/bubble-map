@@ -15,9 +15,9 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 90 files
+- **Meta** — 91 files
 - **Chainlink** — 61 files
-- **Google** — 59 files
+- **Google** — 60 files
 - **OpenAI** — 49 files
 - **Microsoft** — 43 files
 - **FDIC** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-academia-us-longtail.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 3 shared entities
-- geopolitics-allied-intel-nodes.json: 2 shared entities
-- spec-exchanges-asia.json: 2 shared entities
-- digitalid-corporate.json: 2 shared entities
-- spec-sec-filings-primary.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
-- spec-vitalik-buterin-thought.json: 2 shared entities
-- catalog-crosslink-pass.json: 2 shared entities
+## Newest file `catalog-quiet-money-6.json` — related files by shared entities (verify cross-refs exist)
+- influence-meta-childsafety.json: 3 shared entities
+- spec-meta-ai-child-safety.json: 3 shared entities
+- digitalid-regulatory.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- spec-exchanges-asia.json: 3 shared entities
+- spec-telecom-satellite.json: 3 shared entities
+- catalog-quiet-money-5.json: 2 shared entities
+- spec-citizen-lab.json: 2 shared entities

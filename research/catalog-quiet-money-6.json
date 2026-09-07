@@ -1,0 +1,29 @@
+{
+  "title": "Quiet money (batch 7): quiet quant/AI money + low-profile data & connected-device fortunes",
+  "source": "Public record: SEC/ADV filings; FEC/OpenSecrets; company histories; Forbes/Bloomberg billionaire coverage; PDD/Pinduoduo + BMW/Quandt + AQR + Nongfu Spring reporting. Catalog layer (#242 batch 7). Structural overlay; person nodes carry dossiers. FOCUS: low-profile fortunes that genuinely touch the quant/ML, behavioral-data, and connected-device surveillance threads (not just rich lists). HONESTY: holdings/ownership/donations = fact; influence + national-security framing graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Cliff_Asness", "sector": "person"},
+    {"id": "Colin_Huang", "sector": "person"},
+    {"id": "Susanne_Klatten", "sector": "person"},
+    {"id": "Stefan_Quandt", "sector": "person"},
+    {"id": "Zhong_Shanshan", "sector": "person"},
+    {"id": "AQR", "sector": "capital"},
+    {"id": "Pinduoduo", "sector": "tech"},
+    {"id": "Nongfu_Spring", "sector": "commodity"}
+  ],
+  "edges": [
+    {"from": "Cliff_Asness", "to": "AQR", "instrument": "founder_origin", "notes": "Cliff Asness (ex-Goldman quant; Fama student) co-founded AQR Capital Management - a ~$100B+ systematic/factor-investing firm that industrialized academic finance + machine-learning-driven strategies; a quieter quant fortune than Citadel/Millennium (fact).", "source": "AQR; SEC ADV"},
+    {"from": "AQR", "to": "AI", "instrument": "relationship", "notes": "AQR is a heavy user of ML/systematic models on market + alternative data - part of the quant cluster (RenTech/DE Shaw/Two Sigma/Citadel/Millennium/AQR) that industrialized data + ML in finance before Big Tech (fact of category).", "source": "quant-finance mapping"},
+    {"from": "Cliff_Asness", "to": "US_Government", "instrument": "mega_donor", "notes": "Asness is a prominent libertarian-leaning political donor + public commentator - quiet quant wealth converted to political + intellectual influence (fact).", "source": "OpenSecrets/FEC"},
+    {"from": "Colin_Huang", "to": "Pinduoduo", "instrument": "founder_origin", "notes": "Colin Huang (Zheng Huang; ex-Google engineer) founded PDD Holdings / Pinduoduo - the social-commerce + agri-tech giant behind Temu; he briefly became China's richest, then stepped back and went almost invisible (no interviews, resigned board) (fact).", "source": "PDD Holdings"},
+    {"from": "Pinduoduo", "to": "Data_Brokers", "instrument": "peer", "notes": "PDD/Temu's aggressive behavioral-data + recommendation engine (and Temu's US privacy/data-scrutiny) make it a planetary-scale surveillance-advertising analog alongside ByteDance/TikTok (fact of data scale; specific-malware/security allegations against the Pinduoduo app graded/contested).", "source": "public record"},
+    {"from": "Pinduoduo", "to": "China", "instrument": "relationship", "notes": "PDD is a core Chinese consumer-internet + agri-supply-chain platform; Temu is its global export arm - low-profile founder, planetary reach (fact).", "source": "public record"},
+    {"from": "Pinduoduo", "to": "AI", "instrument": "relationship", "notes": "Pinduoduo/Temu run algorithmic pricing + recommendation at massive scale - ML-as-product in commerce, wiring the quiet-money layer to the AI thread (fact).", "source": "public record"},
+    {"from": "Susanne_Klatten", "to": "BMW", "instrument": "leads", "notes": "Susanne Klatten (Quandt dynasty) is Germany's richest woman + BMW's largest individual shareholder (with brother Stefan Quandt); also controls Altana (specialty chemicals) - a famously private industrial fortune (fact).", "source": "public record"},
+    {"from": "Stefan_Quandt", "to": "BMW", "instrument": "leads", "notes": "Stefan Quandt is deputy chair + a top BMW shareholder; the Quandt siblings' combined stake gives quiet family control of a global automaker - the low-profile industrial-dynasty archetype (fact).", "source": "public record"},
+    {"from": "BMW", "to": "Private_Surveillance", "instrument": "data_broker", "notes": "Connected vehicles (BMW among all major automakers) generate telematics/location/driving-behavior data feeding the automaker->broker->insurer/LE pipeline documented in the connected-car surveillance thread - quiet-money industrial control sits upstream of that data (fact that the data exists; specific BMW data-sale practices graded).", "source": "connected-car surveillance thread"},
+    {"from": "Zhong_Shanshan", "to": "Nongfu_Spring", "instrument": "leads", "notes": "Zhong Shanshan - the 'Lone Wolf', long China's richest - controls Nongfu Spring (bottled water) + a controlling stake in Wantai Biological (vaccines/diagnostics); avoids politics + media almost entirely (fact).", "source": "public record"},
+    {"from": "Zhong_Shanshan", "to": "China", "instrument": "relationship", "notes": "Zhong is the quiet consumer-staples counterexample to China's tech-mogul archetype - vast wealth, minimal state-tech entanglement or public profile (fact); included as a coverage anchor for low-profile non-tech fortunes.", "source": "public record"}
+  ]
+}

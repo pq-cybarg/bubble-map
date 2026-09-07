@@ -39,6 +39,7 @@ GROUPS = [
     ("Money & power", [
         "catalog-nonprofits-foundations", "catalog-elite-groups", "catalog-billionaires",
         "catalog-quiet-money", "catalog-quiet-money-2", "catalog-quiet-money-3",
+        "catalog-quiet-money-4", "catalog-quiet-money-5", "catalog-quiet-money-6",
         "catalog-crosslink-pass"]),
     ("Threat actors & cyber", [
         "spec-state-apt-catalog", "spec-ransomware-ecrime-catalog", "spec-hacktivist-catalog",
