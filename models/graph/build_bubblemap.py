@@ -402,7 +402,7 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <label class=tog><input type=checkbox id=tCore> dim all but the circular core</label>
 <label class=tog><input type=checkbox id=tCluster checked> group by sector (flocking)</label>
 <label class=tog><input type=checkbox id=tAgg checked> nest subsidiaries / known groups</label>
-<label class=tog><input type=checkbox id=tLab> all labels (default: hubs only — zoom in for more)</label>
+<label class=tog>labels <select id=labMode><option value=hubs selected>hubs only (zoom in for more)</option><option value=all>all</option><option value=none>none (off)</option></select></label>
 <label class=tog><input type=checkbox id=tFlk> tune flocking (live sliders)</label>
 <div id=flk></div>
 <div id=legend>__LEGEND__</div>
@@ -465,9 +465,9 @@ const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('c
 let fitted=false, curK=1, pendingFocus=null;
 // ---- smart labels: only hubs + the circular core by default; reveal more on zoom-in ----
 const LABMIN=__LABMIN__;              // degree cutoff (~top-100); the SCC core is always labelled
-let allLab=false;                    // "all labels" override (checkbox)
+let labMode='hubs';                  // 'hubs' (default) | 'all' | 'none' (off) - selector
 const labThr=k=>Math.max(2,Math.round(LABMIN/Math.max(k,1)));   // zoom in -> lower cutoff -> more labels
-function labVisible(d){return allLab||d.scc||d.deg>=labThr(curK);}
+function labVisible(d){if(labMode==='none')return false;if(labMode==='all')return true;return d.scc||d.deg>=labThr(curK);}
 function applyLabels(){if(egoOn||soloB)return;labels.style('display',d=>labVisible(d)?null:'none');}
 // ---- flocking: cohere each sector to its own region; avoidance reserves room for shown labels ----
 const BUCKETS=[...new Set(NODES.map(d=>d.bucket))];
@@ -609,7 +609,7 @@ document.getElementById('layAll').onclick=e=>{e.preventDefault();hiddenB.clear()
 document.getElementById('layNone').onclick=e=>{e.preventDefault();
  document.querySelectorAll('.layck').forEach(x=>{x.checked=false;hiddenB.add(x.dataset.b);});applyVis();};
 document.getElementById('tStruct').onchange=e=>{showStruct=e.target.checked;applyVis();};
-document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
+document.getElementById('labMode').onchange=e=>{labMode=e.target.value;if(soloB)soloLabels(soloB);else applyLabels();};
 document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
  sim.force('x').strength(cohStr);sim.force('y').strength(cohStr);   // per-node: children keep their strong parent pull
  fitted=false;sim.alpha(.7).restart();}
@@ -704,12 +704,13 @@ function clearEgo(){egoOn=null;const S=(curK<1?Math.min(1/curK,3.2):1);
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));}
 // ----- clickable legend: isolate a sector bucket -----
 let soloB=null;
+function soloLabels(b){labels.style('display',n=>(n.bucket===b&&labVisible(n))?null:'none');}
 document.querySelectorAll('.lg').forEach(el=>el.onclick=()=>{const b=el.dataset.b;
  if(soloB===b){soloB=null;clearEgo();return;}
  soloB=b;egoOn=null;
  document.querySelectorAll('.lg').forEach(x=>{x.classList.toggle('solo',x.dataset.b===b);x.classList.toggle('off',x.dataset.b!==b);});
  node.style('opacity',n=>n.bucket===b?1:.08);
- labels.style('display',n=>(n.bucket===b&&(allLab||n.scc||n.deg>=labThr(curK)))?null:'none');
+ soloLabels(b);
  const vis=l=>{const s=id2n.get(lerp(l.source)),t=id2n.get(lerp(l.target));return (s&&s.bucket===b)||(t&&t.bucket===b);};
  link.style('opacity',l=>vis(l)?.88:.16);});
 // ----- fit-to-view + reset -----
