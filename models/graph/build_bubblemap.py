@@ -404,10 +404,11 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <label class=tog><input type=checkbox id=tAgg checked> nest subsidiaries / known groups</label>
 <label class=tog>labels <select id=labMode><option value=hubs selected>hubs only (zoom in for more)</option><option value=all>all</option><option value=none>none (off)</option></select></label>
 <label class=tog><input type=checkbox id=tFlk> tune flocking (live sliders)</label>
+<label class=tog><input type=checkbox id=tLegend checked> legend + layers panel</label>
 <div id=flk></div>
-<div id=legend>__LEGEND__</div>
+<div id=legendwrap><div id=legend>__LEGEND__</div>
 <div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div>
-<div id=layers>__LAYERS__</div></div>
+<div id=layers>__LAYERS__</div></div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
 <div id=tip></div>
 <div id=btns><button id=bFit>Fit to view</button><button id=bReset>Reset focus</button></div>
@@ -610,6 +611,7 @@ document.getElementById('layNone').onclick=e=>{e.preventDefault();
  document.querySelectorAll('.layck').forEach(x=>{x.checked=false;hiddenB.add(x.dataset.b);});applyVis();};
 document.getElementById('tStruct').onchange=e=>{showStruct=e.target.checked;applyVis();};
 document.getElementById('labMode').onchange=e=>{labMode=e.target.value;if(soloB)soloLabels(soloB);else applyLabels();};
+document.getElementById('tLegend').onchange=e=>{document.getElementById('legendwrap').style.display=e.target.checked?'':'none';};
 document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
  sim.force('x').strength(cohStr);sim.force('y').strength(cohStr);   // per-node: children keep their strong parent pull
  fitted=false;sim.alpha(.7).restart();}
