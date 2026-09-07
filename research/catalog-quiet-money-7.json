@@ -1,0 +1,29 @@
+{
+  "title": "Quiet money (batch 8): quiet data-broker & cyber-surveillance fortunes",
+  "source": "Public record: company histories; SEC filings (Wiz/Google 2025, Cellebrite CLBT, Verint/Cognyte); Forbes/Bloomberg; LexisNexis Risk/Seisint/TLO histories; Citizen Lab + press on the commercial-surveillance market. Catalog layer (#242 batch 8). Structural overlay; person nodes carry dossiers. FOCUS: low-profile fortunes built ON the data-broker, forensics, and surveillance-analytics economy the rest of the map documents. HONESTY: founder roles/ownership/deals = fact; specific surveillance-use + intent framings graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Assaf_Rappaport", "sector": "person"},
+    {"id": "Shiv_Nadar", "sector": "person"},
+    {"id": "Hank_Asher", "sector": "person"},
+    {"id": "Kobi_Alexander", "sector": "person"},
+    {"id": "Wiz", "sector": "tech"},
+    {"id": "HCLTech", "sector": "tech"},
+    {"id": "Verint", "sector": "tech"}
+  ],
+  "edges": [
+    {"from": "Assaf_Rappaport", "to": "Wiz", "instrument": "founder_origin", "notes": "Assaf Rappaport (ex-Microsoft cloud-security GM; earlier sold Adallom to Microsoft) co-founded Wiz - the fastest-growing cloud-security firm; a low-profile Israeli cyber fortune (fact).", "source": "Wiz; press"},
+    {"from": "Wiz", "to": "Google", "instrument": "ownership_transfer", "notes": "2025: Google/Alphabet agreed to acquire Wiz for ~$32B - one of the largest cybersecurity deals ever, folding a quiet Israeli security firm into Big Tech (fact; deal under regulatory review).", "source": "Alphabet/Wiz 2025"},
+    {"from": "Wiz", "to": "AI", "instrument": "relationship", "notes": "Wiz secures cloud + AI infrastructure (agentless scanning, AI-pipeline security) - wiring the quiet cyber-money layer to the AI-buildout thread (fact of product scope).", "source": "Wiz"},
+    {"from": "Shiv_Nadar", "to": "HCLTech", "instrument": "founder_origin", "notes": "Shiv Nadar - one of India's quietest tech magnates - founded HCL, now HCLTech, a global IT-services + engineering giant; a large, low-profile fortune + major philanthropist (Shiv Nadar Foundation) (fact).", "source": "HCLTech; public record"},
+    {"from": "HCLTech", "to": "India", "instrument": "relationship", "notes": "HCLTech is a pillar of India's IT-services export economy - managing infrastructure, data, and applications for global corporations + governments (fact).", "source": "public record"},
+    {"from": "HCLTech", "to": "AI", "instrument": "relationship", "notes": "HCLTech (like TCS/Infosys/Wipro) runs enterprise data + AI/automation services at scale - the quiet back-office layer of the global data economy (fact of category).", "source": "public record"},
+    {"from": "Hank_Asher", "to": "LexisNexis", "instrument": "founder_origin", "notes": "Hank Asher (d. 2013) - the 'father of data fusion' - built Seisint (whose Accurint + the post-9/11 MATRIX program tied together public + private records) which became the core of LexisNexis Risk; later founded TLO (-> TransUnion) - a quiet, controversial data-broker fortune (fact).", "source": "LexisNexis Risk; Seisint/MATRIX history"},
+    {"from": "Hank_Asher", "to": "Private_Surveillance", "instrument": "relationship", "notes": "Asher's data-fusion model - merging consumer, government, and behavioral records for search by law enforcement - is a foundational template for the modern commercial-surveillance stack (fact of technique; broader impact graded).", "source": "public record"},
+    {"from": "Kobi_Alexander", "to": "Verint", "instrument": "founder_origin", "notes": "Jacob 'Kobi' Alexander founded Comverse Technology, whose Verint unit became a leading surveillance-analytics + lawful-intercept vendor; Alexander fled a US options-backdating indictment to Namibia, later returned + pleaded guilty (2016) - a quiet, tarnished surveillance-tech fortune (fact).", "source": "public record; DOJ"},
+    {"from": "Verint", "to": "Private_Surveillance", "instrument": "data_broker", "notes": "Verint supplies communications-interception, monitoring, and analytics to governments, telcos, and enterprises worldwide - core plumbing of the lawful-intercept + surveillance-analytics market (fact; specific-country deployments graded).", "source": "public record"},
+    {"from": "Verint", "to": "Cognyte", "instrument": "relationship", "notes": "Verint spun off Cognyte (2021) as its dedicated investigative-analytics ('security analytics') arm - Cognyte flagged in commercial-spyware/surveillance reporting; the corporate lineage of the surveillance-analytics business (fact).", "source": "Verint/Cognyte filings"},
+    {"from": "Cellebrite", "to": "ICE", "instrument": "gov_contract", "notes": "Cellebrite's phone-extraction/forensics tools are procured by US agencies including ICE/HSI + DHS - mobile-device unlocking embedded in immigration + criminal enforcement (fact).", "source": "federal procurement records"},
+    {"from": "Cellebrite", "to": "Law_Enforcement", "instrument": "gov_contract", "notes": "Cellebrite (public: CLBT) sells UFED/Physical Analyzer to thousands of police + government agencies globally - the dominant lawful phone-forensics vendor; recurring civil-liberties + due-process debate over scope (fact of market; use-abuse framing graded).", "source": "public record"}
+  ]
+}

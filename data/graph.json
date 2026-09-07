@@ -504,6 +504,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Assaf_Rappaport": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Aston_Martin": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -2808,6 +2812,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": false
     },
+    "HCLTech": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "HFSC": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3579,6 +3587,10 @@
     "Kleros": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": true
+    },
+    "Kobi_Alexander": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Koch_Network": {
       "sector": "elite",
@@ -5712,6 +5724,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "Shiv_Nadar": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Shopify": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -6864,6 +6880,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Verint": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Verisk": {
       "sector": "data_provider",
       "has_exogenous_revenue": false
@@ -7054,6 +7074,10 @@
     },
     "WisdomTree": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Wiz": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "World_Bank": {
@@ -16299,6 +16323,175 @@
       "cancelable": false,
       "source_file": "spec-telecom-satellite.json",
       "note": "500 MHz dedicated military Ka-band on Lightspeed; dual-use LEO; full service Q1 2028."
+    },
+    {
+      "from": "Assaf_Rappaport",
+      "to": "Wiz",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Assaf Rappaport (ex-Microsoft cloud-security GM; earlier sold Adallom to Microsoft) co-founded Wiz - the fastest-growing cloud-security firm; a low-profile Israeli cyber fortune (fact)."
+    },
+    {
+      "from": "Wiz",
+      "to": "Google",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "2025: Google/Alphabet agreed to acquire Wiz for ~$32B - one of the largest cybersecurity deals ever, folding a quiet Israeli security firm into Big Tech (fact; deal under regulatory review)."
+    },
+    {
+      "from": "Wiz",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Wiz secures cloud + AI infrastructure (agentless scanning, AI-pipeline security) - wiring the quiet cyber-money layer to the AI-buildout thread (fact of product scope)."
+    },
+    {
+      "from": "Shiv_Nadar",
+      "to": "HCLTech",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Shiv Nadar - one of India's quietest tech magnates - founded HCL, now HCLTech, a global IT-services + engineering giant; a large, low-profile fortune + major philanthropist (Shiv Nadar Foundation) (fact)."
+    },
+    {
+      "from": "HCLTech",
+      "to": "India",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "HCLTech is a pillar of India's IT-services export economy - managing infrastructure, data, and applications for global corporations + governments (fact)."
+    },
+    {
+      "from": "HCLTech",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "HCLTech (like TCS/Infosys/Wipro) runs enterprise data + AI/automation services at scale - the quiet back-office layer of the global data economy (fact of category)."
+    },
+    {
+      "from": "Hank_Asher",
+      "to": "LexisNexis",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Hank Asher (d. 2013) - the 'father of data fusion' - built Seisint (whose Accurint + the post-9/11 MATRIX program tied together public + private records) which became the core of LexisNexis Risk; later founded TLO (-> TransUnion) - a quiet, controversial data-broker fortune (fact)."
+    },
+    {
+      "from": "Hank_Asher",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Asher's data-fusion model - merging consumer, government, and behavioral records for search by law enforcement - is a foundational template for the modern commercial-surveillance stack (fact of technique; broader impact graded)."
+    },
+    {
+      "from": "Kobi_Alexander",
+      "to": "Verint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Jacob 'Kobi' Alexander founded Comverse Technology, whose Verint unit became a leading surveillance-analytics + lawful-intercept vendor; Alexander fled a US options-backdating indictment to Namibia, later returned + pleaded guilty (2016) - a quiet, tarnished surveillance-tech fortune (fact)."
+    },
+    {
+      "from": "Verint",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Verint supplies communications-interception, monitoring, and analytics to governments, telcos, and enterprises worldwide - core plumbing of the lawful-intercept + surveillance-analytics market (fact; specific-country deployments graded)."
+    },
+    {
+      "from": "Verint",
+      "to": "Cognyte",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Verint spun off Cognyte (2021) as its dedicated investigative-analytics ('security analytics') arm - Cognyte flagged in commercial-spyware/surveillance reporting; the corporate lineage of the surveillance-analytics business (fact)."
+    },
+    {
+      "from": "Cellebrite",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Cellebrite's phone-extraction/forensics tools are procured by US agencies including ICE/HSI + DHS - mobile-device unlocking embedded in immigration + criminal enforcement (fact)."
+    },
+    {
+      "from": "Cellebrite",
+      "to": "Law_Enforcement",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-7.json",
+      "note": "Cellebrite (public: CLBT) sells UFED/Physical Analyzer to thousands of police + government agencies globally - the dominant lawful phone-forensics vendor; recurring civil-liberties + due-process debate over scope (fact of market; use-abuse framing graded)."
     },
     {
       "from": "India",
@@ -43160,10 +43353,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1819,
-    "num_edges": 2760,
+    "num_nodes": 1825,
+    "num_edges": 2773,
     "num_financial_edges": 274,
-    "num_structural_edges": 2486,
+    "num_structural_edges": 2499,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43398,25 +43591,20 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "NVIDIA",
         "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -43429,9 +43617,14 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -43441,16 +43634,16 @@
         "Microsoft"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -44352,6 +44545,13 @@
         "in_robust_core": false
       },
       "Asia_local_currency_stablecoins": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Assaf_Rappaport": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48390,6 +48590,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "HCLTech": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "HFSC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -49735,6 +49942,13 @@
         "in_robust_core": false
       },
       "Kleros": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kobi_Alexander": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53472,6 +53686,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shiv_Nadar": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shopify": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55488,6 +55709,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Verint": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Verisk": {
         "total_usd": 20000000,
         "circular_usd": 0,
@@ -55818,6 +56046,13 @@
         "in_robust_core": false
       },
       "WisdomTree": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Wiz": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56294,7 +56529,7 @@
       },
       {
         "node": "Google",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -56312,10 +56547,11 @@
           "security_research",
           "space_real_economy",
           "surveillance",
+          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 17,
-        "source_files": 21,
+        "n_neighbor_sectors": 18,
+        "source_files": 22,
         "layers": [
           "financial",
           "structural"

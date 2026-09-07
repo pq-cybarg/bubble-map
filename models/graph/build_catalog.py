@@ -40,7 +40,7 @@ GROUPS = [
         "catalog-nonprofits-foundations", "catalog-elite-groups", "catalog-billionaires",
         "catalog-quiet-money", "catalog-quiet-money-2", "catalog-quiet-money-3",
         "catalog-quiet-money-4", "catalog-quiet-money-5", "catalog-quiet-money-6",
-        "catalog-crosslink-pass"]),
+        "catalog-quiet-money-7", "catalog-crosslink-pass"]),
     ("Threat actors & cyber", [
         "spec-state-apt-catalog", "spec-ransomware-ecrime-catalog", "spec-hacktivist-catalog",
         "spec-spyware-vendor-catalog", "spec-citizen-lab", "spec-av-edr-subversion-doubleagent",
