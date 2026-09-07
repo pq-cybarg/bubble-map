@@ -1,0 +1,998 @@
+{
+ "title": "US higher-education long-tail (chunk 1): state flagships, major publics, notable privates + HBCUs",
+ "source": "Public record: IPEDS / Carnegie Classification (institution existence); NSF HERD + federal-R&D + UARC records for the documented ties. Catalog COVERAGE layer (#203). Structural overlay; flat enumeration - most nodes carry only a 'member' edge to the US_Higher_Education hub; specific ties added only where documented. All under the 'academia' bucket (hideable via the bubble-map Layers panel).",
+ "grade": "institution existence = FACT; the hub 'member' edges are enumeration, not relationship claims; the handful of signal edges (Penn State ARL, Texas A&M, UMD ARLIS, Purdue, ASU, JHU APL) = FACT.",
+ "honest_limits": "This is a COVERAGE layer, not exhaustive (US has ~4,000 degree-granting institutions; this chunk is ~85 flagships/majors/notable privates/HBCUs). Community colleges, for-profits, and the small-college long-tail are NOT included - adding thousands of single-edge nodes would dilute the map (hence the Layers toggle to hide 'academia'). Further chunks can extend coverage.",
+ "nodes": [
+  {
+   "id": "US_Higher_Education",
+   "sector": "academic_institute"
+  },
+  {
+   "id": "University_of_Alabama",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Alaska_Fairbanks",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Arizona",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Arkansas",
+   "sector": "university"
+  },
+  {
+   "id": "UCLA",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Colorado_Boulder",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Connecticut",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Delaware",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Florida",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Georgia",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Hawaii_Manoa",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Idaho",
+   "sector": "university"
+  },
+  {
+   "id": "Indiana_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Iowa",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Kansas",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Kentucky",
+   "sector": "university"
+  },
+  {
+   "id": "Louisiana_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Maine",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Maryland_College_Park",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Massachusetts_Amherst",
+   "sector": "university"
+  },
+  {
+   "id": "Michigan_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Minnesota",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Mississippi",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Missouri",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Montana",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Nebraska_Lincoln",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Nevada_Reno",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_New_Hampshire",
+   "sector": "university"
+  },
+  {
+   "id": "Rutgers_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_New_Mexico",
+   "sector": "university"
+  },
+  {
+   "id": "University_at_Buffalo",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_North_Carolina_Chapel_Hill",
+   "sector": "university"
+  },
+  {
+   "id": "North_Carolina_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_North_Dakota",
+   "sector": "university"
+  },
+  {
+   "id": "Ohio_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Oklahoma",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Oregon",
+   "sector": "university"
+  },
+  {
+   "id": "Pennsylvania_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Rhode_Island",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_South_Carolina",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_South_Dakota",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Tennessee_Knoxville",
+   "sector": "university"
+  },
+  {
+   "id": "Texas_AM_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Utah",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Vermont",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Virginia",
+   "sector": "university"
+  },
+  {
+   "id": "Washington_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "West_Virginia_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Wisconsin_Madison",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Wyoming",
+   "sector": "university"
+  },
+  {
+   "id": "Purdue_University",
+   "sector": "university"
+  },
+  {
+   "id": "UC_San_Diego",
+   "sector": "university"
+  },
+  {
+   "id": "UC_Davis",
+   "sector": "university"
+  },
+  {
+   "id": "UC_Irvine",
+   "sector": "university"
+  },
+  {
+   "id": "UC_Santa_Barbara",
+   "sector": "university"
+  },
+  {
+   "id": "Arizona_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Central_Florida",
+   "sector": "university"
+  },
+  {
+   "id": "Virginia_Tech",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Pittsburgh",
+   "sector": "university"
+  },
+  {
+   "id": "Stony_Brook_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Houston",
+   "sector": "university"
+  },
+  {
+   "id": "Clemson_University",
+   "sector": "university"
+  },
+  {
+   "id": "Auburn_University",
+   "sector": "university"
+  },
+  {
+   "id": "Colorado_State_University",
+   "sector": "university"
+  },
+  {
+   "id": "New_York_University",
+   "sector": "university"
+  },
+  {
+   "id": "Cornell_University",
+   "sector": "university"
+  },
+  {
+   "id": "Duke_University",
+   "sector": "university"
+  },
+  {
+   "id": "Northwestern_University",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Pennsylvania",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Southern_California",
+   "sector": "university"
+  },
+  {
+   "id": "Vanderbilt_University",
+   "sector": "university"
+  },
+  {
+   "id": "Rice_University",
+   "sector": "university"
+  },
+  {
+   "id": "Emory_University",
+   "sector": "university"
+  },
+  {
+   "id": "Georgetown_University",
+   "sector": "university"
+  },
+  {
+   "id": "Boston_University",
+   "sector": "university"
+  },
+  {
+   "id": "Dartmouth_College",
+   "sector": "university"
+  },
+  {
+   "id": "Washington_University_St_Louis",
+   "sector": "university"
+  },
+  {
+   "id": "University_of_Notre_Dame",
+   "sector": "university"
+  },
+  {
+   "id": "Case_Western_Reserve_University",
+   "sector": "university"
+  },
+  {
+   "id": "Tufts_University",
+   "sector": "university"
+  },
+  {
+   "id": "Howard_University",
+   "sector": "university"
+  },
+  {
+   "id": "Morehouse_College",
+   "sector": "university"
+  },
+  {
+   "id": "Spelman_College",
+   "sector": "university"
+  },
+  {
+   "id": "Florida_AM_University",
+   "sector": "university"
+  },
+  {
+   "id": "North_Carolina_AT",
+   "sector": "university"
+  }
+ ],
+ "edges": [
+  {
+   "from": "University_of_Alabama",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Alaska_Fairbanks",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Arizona",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Arkansas",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "UCLA",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Colorado_Boulder",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Connecticut",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Delaware",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Florida",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Georgia",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Hawaii_Manoa",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Idaho",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Indiana_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Iowa",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Kansas",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Kentucky",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Louisiana_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Maine",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Maryland_College_Park",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Massachusetts_Amherst",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Michigan_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Minnesota",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Mississippi",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Missouri",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Montana",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Nebraska_Lincoln",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Nevada_Reno",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_New_Hampshire",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Rutgers_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_New_Mexico",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_at_Buffalo",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_North_Carolina_Chapel_Hill",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "North_Carolina_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_North_Dakota",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Ohio_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Oklahoma",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Oregon",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Pennsylvania_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Rhode_Island",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_South_Carolina",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_South_Dakota",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Tennessee_Knoxville",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Texas_AM_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Utah",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Vermont",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Virginia",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Washington_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "West_Virginia_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Wisconsin_Madison",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Wyoming",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Purdue_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "UC_San_Diego",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "UC_Davis",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "UC_Irvine",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "UC_Santa_Barbara",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Arizona_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Central_Florida",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Virginia_Tech",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Pittsburgh",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Stony_Brook_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Houston",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Clemson_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Auburn_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Colorado_State_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "New_York_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Cornell_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Duke_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Northwestern_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Pennsylvania",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Southern_California",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Vanderbilt_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Rice_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Emory_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Georgetown_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Boston_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Dartmouth_College",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Washington_University_St_Louis",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "University_of_Notre_Dame",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Case_Western_Reserve_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Tufts_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Howard_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Morehouse_College",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Spelman_College",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "Florida_AM_University",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "North_Carolina_AT",
+   "to": "US_Higher_Education",
+   "instrument": "member",
+   "notes": "US degree-granting institution (coverage layer; documented existence via IPEDS/Carnegie). Flat enumeration node - specific ties added only where documented.",
+   "source": "#203 US long-tail (IPEDS/Carnegie)"
+  },
+  {
+   "from": "US_Higher_Education",
+   "to": "US_Government",
+   "instrument": "gov_funding",
+   "notes": "US higher education is a major recipient of federal research funding (NSF/NIH/DoD/DOE) + student aid - the systemic academia<->state tie (fact).",
+   "source": "#203 (NSF HERD; federal R&D)"
+  },
+  {
+   "from": "Pennsylvania_State_University",
+   "to": "US_Government",
+   "instrument": "research",
+   "notes": "Penn State's Applied Research Laboratory is a Navy University-Affiliated Research Center (UARC) - major defense R&D (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  },
+  {
+   "from": "Texas_AM_University",
+   "to": "US_Government",
+   "instrument": "research",
+   "notes": "Texas A&M runs major nuclear + defense + hypersonics research (Bush Combat Dev Complex; nuclear engineering) (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  },
+  {
+   "from": "University_of_Maryland_College_Park",
+   "to": "US_Government",
+   "instrument": "research",
+   "notes": "UMD hosts IC/defense-adjacent research (ARLIS UARC; proximity to NSA/agencies) (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  },
+  {
+   "from": "Purdue_University",
+   "to": "AI",
+   "instrument": "research",
+   "notes": "Purdue is a semiconductor + hypersonics + AI research hub (SK Hynix Indiana packaging; Purdue Computes) (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  },
+  {
+   "from": "Arizona_State_University",
+   "to": "AI",
+   "instrument": "research",
+   "notes": "ASU - largest US public university + heavy online/AI-in-education + OpenAI enterprise deal (2024) (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  },
+  {
+   "from": "Johns_Hopkins_University",
+   "to": "US_Government",
+   "instrument": "research",
+   "notes": "(core node) JHU Applied Physics Lab is the largest US UARC - defense/space; noted for cross-link (fact).",
+   "source": "#203 US long-tail (signal ties)"
+  }
+ ]
+}

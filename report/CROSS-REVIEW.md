@@ -15,15 +15,15 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 89 files
-- **Chainlink** — 60 files
+- **Meta** — 90 files
+- **Chainlink** — 61 files
 - **Google** — 59 files
-- **OpenAI** — 48 files
+- **OpenAI** — 49 files
 - **Microsoft** — 43 files
 - **FDIC** — 37 files
-- **Amazon** — 35 files
-- **Oracle** — 34 files
-- **NVIDIA** — 33 files
+- **Amazon** — 36 files
+- **Oracle** — 35 files
+- **NVIDIA** — 34 files
 - **Anthropic** — 28 files
 - **Stargate** — 25 files
 - **a16z** — 23 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-academia-abroad.json` — related files by shared entities (verify cross-refs exist)
-- spec-defense-primes-pqc.json: 2 shared entities
-- spec-semiconductor-logistics-standards.json: 2 shared entities
-- spec-disclosures-surveillance.json: 2 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
-- catalog-university-ip.json: 2 shared entities
-- spec-blockchain-ecosystem.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- macro-pqc-chips.json: 2 shared entities
+## Newest file `catalog-academia-us-longtail.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-orchestration-real-incentive.json: 3 shared entities
+- geopolitics-allied-intel-nodes.json: 2 shared entities
+- spec-exchanges-asia.json: 2 shared entities
+- digitalid-corporate.json: 2 shared entities
+- spec-sec-filings-primary.json: 2 shared entities
+- blockchain-registry.json: 2 shared entities
+- spec-vitalik-buterin-thought.json: 2 shared entities
+- catalog-crosslink-pass.json: 2 shared entities
