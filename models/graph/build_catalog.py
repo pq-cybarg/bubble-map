@@ -46,7 +46,8 @@ GROUPS = [
         "spec-spyware-vendor-catalog", "spec-citizen-lab", "spec-av-edr-subversion-doubleagent",
         "spec-cyber-notable-individuals", "spec-cyber-notable-individuals-2",
         "spec-iloveyou-worm", "spec-shadow-brokers-eternalblue", "spec-finfisher-finspy-spyware",
-        "spec-shai-hulud-npm-worm", "spec-msnightmare-disclosure", "spec-inqtel-portfolio",
+        "spec-shai-hulud-npm-worm", "spec-msnightmare-disclosure", "spec-shinyhunters-data-extortion",
+        "spec-inqtel-portfolio",
         "spec-palantir-surveillance", "spec-niantic-geospatial"]),
     ("Quantum & PQC", [
         "spec-ecdsa-nonce-failure-tracker", "macro-crqc-quantum-landscape", "macro-pqc-chips",

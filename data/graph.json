@@ -972,6 +972,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "BreachForums": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Breitbart": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -1768,6 +1772,10 @@
       "sector": "state_intel",
       "has_exogenous_revenue": true
     },
+    "DAVID_Database": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "DBS": {
       "sector": "bank",
       "has_exogenous_revenue": true
@@ -2354,6 +2362,10 @@
     },
     "FIS": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "FLHSMV": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "FMCS": {
@@ -5540,6 +5552,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Salesforce": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "SaltTyphoon": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -5716,6 +5732,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "ShinyHunters": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Shinzo_Abe": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -5789,6 +5809,10 @@
       "has_exogenous_revenue": false
     },
     "SkyWater": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Snowflake": {
       "sector": "tech",
       "has_exogenous_revenue": false
     },
@@ -32939,6 +32963,136 @@
       "note": "Anthropic is the AI lab most identified with the longtermist/EA ('L'/'E') strands of the TESCREAL cluster - completing the ideology->frontier-lab wiring (interpretation; critics' framing)."
     },
     {
+      "from": "ShinyHunters",
+      "to": "BreachForums",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "ShinyHunters is a long-running data-theft + extortion collective (active since ~2020) closely tied to operating/administering successive BreachForums incarnations - the primary marketplace for leaked/stolen datasets (fact; membership is fluid + partly pseudonymous)."
+    },
+    {
+      "from": "ShinyHunters",
+      "to": "Snowflake",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "2024: ShinyHunters-linked actors ran a mass campaign against ~165 Snowflake customer tenants using stolen/infostealer credentials (no Snowflake-product flaw), hitting Ticketmaster, AT&T, Santander and others - one of the largest data-theft waves on record (fact; some activity co-attributed to UNC5537)."
+    },
+    {
+      "from": "ShinyHunters",
+      "to": "Salesforce",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "2025: a ShinyHunters-branded wave used voice-phishing + abused OAuth tokens (incl. the Salesloft 'Drift' integration) to exfiltrate data from many companies' Salesforce instances, then extort them - a shift to SaaS-integration + social-engineering theft (fact)."
+    },
+    {
+      "from": "ShinyHunters",
+      "to": "The_Com",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "ShinyHunters overlaps the loose English-speaking cybercrime milieu 'The Com' (which also spawned Scattered Spider + LAPSUS$); 2025 saw joint 'Scattered LAPSUS$ Hunters' branding - graded, since attribution across these fluid crews is uncertain (contested)."
+    },
+    {
+      "from": "ShinyHunters",
+      "to": "FLHSMV",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "2026-09-07 (reported/unverified): ShinyHunters posted an extortion CLAIM to have breached FLHSMV's DAVID (Driver And Vehicle Information Database) - driver's-license data, license photo + signature, address + vehicle records - setting a 2026-09-11 contact deadline. FLHSMV had NOT confirmed any breach at publication; the only public proof was a single DAVID screenshot (a Jeffrey Epstein record) whose authenticity/provenance is contested (could derive from prior investigative disclosures). A possible tie to a larger 'Nexus' 153M+ license-record dataset was floated but unconfirmed."
+    },
+    {
+      "from": "FLHSMV",
+      "to": "DAVID_Database",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "FLHSMV operates DAVID - the state portal exposing Floridians' driver + vehicle records (license data, photo, signature, address, vehicle history) to authorized law-enforcement + agency users; a high-value single-point repository of resident identity data (fact)."
+    },
+    {
+      "from": "DAVID_Database",
+      "to": "ICE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_data_access",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "State DMV driver records + license photos have been accessed by federal immigration enforcement (ICE/HSI), including facial-recognition searches of DMV photo databases - documented nationally; the Florida-specific access scope is graded (fact of the general pattern; FL specifics contested)."
+    },
+    {
+      "from": "DAVID_Database",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "US state DMVs have sold/shared motor-vehicle records with data brokers + private buyers under DPPA 'permissible use' carve-outs, feeding the commercial identity-data economy; a DMV breach collapses that same dataset into the criminal market (fact of the national pattern; FL-specific practice graded)."
+    },
+    {
+      "from": "DAVID_Database",
+      "to": "Facial_Recognition",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "DMV license-photo databases are a core enrollment source for government + commercial facial recognition (the largest de-facto biometric databases of ordinary residents) - making a DMV compromise a biometric-exposure event, not just a PII one (fact of category; specific FL use graded)."
+    },
+    {
+      "from": "ShinyHunters",
+      "to": "Ransomware_RaaS",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-shinyhunters-data-extortion.json",
+      "note": "ShinyHunters exemplifies the pivot from encryption-ransomware to pure data-theft extortion ('exfiltrate + name-and-shame + pay-or-leak'), the dominant e-crime model - distinct from but adjacent to the RaaS ecosystem (interpretation of category)."
+    },
+    {
       "from": "MIT",
       "to": "RSA_Algorithm",
       "instrument": "other",
@@ -43353,10 +43507,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1825,
-    "num_edges": 2773,
+    "num_nodes": 1831,
+    "num_edges": 2783,
     "num_financial_edges": 274,
-    "num_structural_edges": 2499,
+    "num_structural_edges": 2509,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43583,28 +43737,33 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -43617,9 +43776,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -43630,20 +43790,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -45370,6 +45524,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "BreachForums": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Breitbart": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46763,6 +46924,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DAVID_Database": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DBS": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47786,6 +47954,13 @@
         "in_robust_core": false
       },
       "FIS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "FLHSMV": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53364,6 +53539,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Salesforce": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SaltTyphoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53672,6 +53854,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ShinyHunters": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Shinzo_Abe": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53799,6 +53988,13 @@
         "in_robust_core": false
       },
       "SkyWater": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Snowflake": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

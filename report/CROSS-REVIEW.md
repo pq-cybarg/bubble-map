@@ -16,7 +16,7 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 91 files
-- **Google** — 61 files
+- **Google** — 62 files
 - **Chainlink** — 61 files
 - **OpenAI** — 49 files
 - **Microsoft** — 44 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-quiet-money-7.json` — related files by shared entities (verify cross-refs exist)
-- macro-pqc-chips.json: 2 shared entities
-- spec-electronics-parts-pairing.json: 2 shared entities
-- fin-microsoft-openai.json: 2 shared entities
-- spec-sec-filings-primary.json: 2 shared entities
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- macro-ai-datacenter-water-siting.json: 2 shared entities
-- digitalid-corporate.json: 2 shared entities
-- spec-nextera-national-utility.json: 2 shared entities
+## Newest file `spec-shinyhunters-data-extortion.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 2 shared entities
+- altcoin-lens.json: 2 shared entities
+- spec-disclosures-surveillance.json: 2 shared entities
+- blockchain-registry.json: 2 shared entities
+- spec-crypto-sec-epstein.json: 2 shared entities
+- spec-blockchain-ecosystem.json: 2 shared entities
+- macro-ai-datacenter-water-siting.json: 1 shared entities
+- spec-unc-nk-attribution-map.json: 1 shared entities
