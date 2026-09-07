@@ -326,6 +326,13 @@ SEC2BUCKET_DESC={"ai":"AI model labs, hyperscalers, chip vendors and neoclouds",
 import nav as _nav
 NAV=_nav.navbar("Bubble Map", disclaimer=True)
 legend="".join(f'<span class=lg data-b="{b}"><i style="background:{COLORS[b]}"></i>{html.escape(BLABEL[b])}</span>' for b in BLABEL)
+# Unity-hierarchy-style show/hide checklist (one per bucket layer)
+layers=("<div class=sub style='margin:10px 0 3px;font-weight:600'>Layers (show / hide)</div><div id=layerbox>"
+ + "".join('<label class=tog style="margin:1px 0"><input type=checkbox class=layck data-b="%s" checked> '
+          '<i style="display:inline-block;width:8px;height:8px;border-radius:50%%;background:%s;margin-right:3px;vertical-align:middle"></i>%s</label>'
+          % (b, COLORS.get(b,'#8a8378'), html.escape(BLABEL[b])) for b in BLABEL)
+ + "</div><div class=sub style='margin:3px 0'><a href=# id=layAll>all</a> &middot; <a href=# id=layNone>none</a> &middot; "
+   "<span style='color:#6b665d'>hide a whole layer</span></div>")
 
 HTML="""<!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><title>Bubble Map — the AI capital loop graph</title>
@@ -398,7 +405,8 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <label class=tog><input type=checkbox id=tFlk> tune flocking (live sliders)</label>
 <div id=flk></div>
 <div id=legend>__LEGEND__</div>
-<div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div></div>
+<div class=sub style="margin:8px 0 0">Click a legend colour to isolate a sector.</div>
+<div id=layers>__LAYERS__</div></div>
 <div id=panel><span id=close>&times;</span><div id=pbody></div></div>
 <div id=tip></div>
 <div id=btns><button id=bFit>Fit to view</button><button id=bReset>Reset focus</button></div>
@@ -582,8 +590,24 @@ svg.on('click',()=>{if(panned)return;if(egoOn)clearEgo();soloB=null;
  document.querySelectorAll('.lg').forEach(x=>x.classList.remove('off','solo'));
  document.getElementById('panel').style.display='none';});
 // controls
-document.getElementById('tStruct').onchange=e=>{const on=e.target.checked;
- link.style('display',d=>d.layer==='structural'&&!on?'none':null);};
+// ----- Unity-style layer show/hide (composes with the structural-edge toggle) -----
+const hiddenB=new Set(); let showStruct=true;
+function _lb(x){const n=id2n.get(lerp(x));return n?n.bucket:null;}
+function linkShown(l){const s=_lb(l.source),t=_lb(l.target);
+ if(hiddenB.has(s)||hiddenB.has(t))return false;
+ if(l.layer==='structural'&&!showStruct)return false; return true;}
+function applyVis(){
+ node.style('display',n=>hiddenB.has(n.bucket)?'none':null);
+ link.style('display',l=>linkShown(l)?null:'none');
+ if(typeof linkHit!=='undefined')linkHit.style('display',l=>linkShown(l)?null:'none');
+ labels.style('display',n=>(!hiddenB.has(n.bucket)&&labVisible(n))?null:'none');}
+document.querySelectorAll('.layck').forEach(el=>el.onchange=()=>{
+ if(el.checked)hiddenB.delete(el.dataset.b);else hiddenB.add(el.dataset.b);applyVis();});
+document.getElementById('layAll').onclick=e=>{e.preventDefault();hiddenB.clear();
+ document.querySelectorAll('.layck').forEach(x=>x.checked=true);applyVis();};
+document.getElementById('layNone').onclick=e=>{e.preventDefault();
+ document.querySelectorAll('.layck').forEach(x=>{x.checked=false;hiddenB.add(x.dataset.b);});applyVis();};
+document.getElementById('tStruct').onchange=e=>{showStruct=e.target.checked;applyVis();};
 document.getElementById('tLab').onchange=e=>{allLab=e.target.checked;applyLabels();};
 document.getElementById('tCluster').onchange=e=>{clustered=e.target.checked;
  sim.force('x').strength(cohStr);sim.force('y').strength(cohStr);   // per-node: children keep their strong parent pull
@@ -753,7 +777,7 @@ CONTAINS={
  "Samsung_Group":["Samsung_Foundry"],"Toyota":["Daihatsu"],"SEALSQ":["ICALPS","Miraex"],
  "JNJ":["LTL_Red_River"],"IonQ":["Oxford_Ionics","Vector_Atomic"],"ASML":["Cymer"],
  "ISO":["ISO_IEC_JTC1"],"IEC":["ISO_IEC_JTC1"]}
-HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend)
+HTML=(HTML.replace("__NAV__",NAV).replace("__LEGEND__",legend).replace("__LAYERS__",layers)
       .replace("__CONTAINS__",json.dumps(CONTAINS))
       .replace("__N__",str(len(nodes))).replace("__E__",str(len(links)))
       .replace("__LABMIN__",str(max(5,sorted((n["deg"] for n in nodes),reverse=True)[min(99,len(nodes)-1)] if nodes else 5)))
