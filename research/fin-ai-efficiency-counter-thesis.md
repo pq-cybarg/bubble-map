@@ -24,3 +24,13 @@ Crucially, the project's **machine-proven** results don't hinge on this. The **c
 1. The **unfalsifiable "build-more-either-way" narrative** is bubble-shaped.
 2. Efficiency makes the **depreciation trap worse** — today's expensive brute-force GPUs are obsoleted *faster* by tomorrow's efficiency ([[fin-ai-depreciation-debttrap]]).
 3. China's efficiency + domestic stack **undercut the chip-chokepoint moat** the bull case leans on.
+
+## The distillation-by-proxy wrinkle (2025-2026)
+
+A live wrinkle in the efficiency story: US labs allege part of the Chinese cost gap comes from **distilling their models via proxied access**. OpenAI flagged **DeepSeek** (2025); Anthropic (24 Feb 2026) named **DeepSeek, Moonshot AI, and MiniMax** - estimating **~16M exchanges from ~24,000 fraudulently-created accounts** (MiniMax the largest, ~13M) - and later added **Alibaba/Qwen**. Because Anthropic and OpenAI sell **no API in China**, the requests were allegedly **routed to the US providers through commercial proxies + overseas shell accounts** - i.e. Chinese AI pipelines quietly pointing at American models. *Fact that the allegations were made; **contested** per-firm culpability - the named firms have not confirmed.*
+
+**Why it matters here.** It partially undercuts the cleanest reading of DeepSeek: some efficiency may be **free-riding on US models' training signal**, not purely novel algorithm. But it does **not** collapse the counter-thesis - DeepSeek's architectural gains (MoE, MLA, FP8, Huawei-Ascend post-training) are independently documented, and distillation is a standard, cheap technique regardless of source. **Both hold: real efficiency AND unauthorized distillation-by-proxy.**
+
+**Honesty guards.** (1) *Composition fallacy* - "Chinese labs" is not one mind; the evidence differs per firm. (2) The dispute is **narrow** - using a *competitor's* model + circumventing ToS/geo-limits, not distillation itself (which Anthropic/OpenAI/Google all do to their *own* models). (3) Anthropic's own detection drew backlash: per the Washington Post (Mar 2026) it quietly deployed software to unmask China-based users, then pulled it after privacy criticism - a surveilling-its-own-customers episode that cuts against a clean-hands framing. See [[spec-china-ai-stack-censorship]] for the graph edges + fuller account.
+
+*Sources: [CNBC - Anthropic joins OpenAI in flagging distillation by Chinese AI firms (2026-02-24)](https://www.cnbc.com/2026/02/24/anthropic-openai-china-firms-distillation-deepseek.html); [CNBC - Anthropic's distillation battle turns to the dark web (2026-09-03)](https://www.cnbc.com/2026/09/03/anthropic-distillation-battle-turns-to-dark-web-china-concerns-swell.html).*

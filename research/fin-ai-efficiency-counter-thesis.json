@@ -1,6 +1,6 @@
 {
  "metadata": {
-  "title": "The efficiency counter-thesis — DeepSeek, Jevons, and China's domestic AI stack (the strongest honest challenge to the AI-capex bubble case)",
+  "title": "The efficiency counter-thesis  -  DeepSeek, Jevons, and China's domestic AI stack (the strongest honest challenge to the AI-capex bubble case)",
   "generated": "2026-06-11",
   "status": "facts from press/CSIS/RAND/company; the 'unfalsifiable build-more narrative is itself bubble-evidence' framing is labeled interpretation. Steelman-then-assess, in the project's zero-trust spirit.",
   "frame": "The honest counter-argument to this project's own thesis. If algorithms get 10-50x more efficient (DeepSeek), maybe the $1.4T brute-force compute bet is unnecessary - OR (Jevons paradox) efficiency drives so much new demand the capex is justified. We hold BOTH and note the tell: the narrative is used to justify spending NO MATTER WHAT (scarce compute -> build more; cheap compute -> build more) - which is itself a bubble-narrative structure. Separately, China is routing AROUND the chip chokepoint via efficiency (DeepSeek) + a domestic brute-force stack (Huawei Ascend), undermining the export-control strategy. Overlay; excluded from the proofs. Connects to fin-microsoft-openai (the $1.4T), fin-ai-depreciation-debttrap, geopolitics-chip-chokepoint-war, macro-ai-power-grid-bottleneck.",
@@ -18,13 +18,48 @@
  },
  "honest_assessment": "Where this leaves the project's bubble thesis: the CIRCULAR-FUNDING + SELF-MARKED-VALUE + DEPRECIATION proofs do NOT depend on whether compute demand is real - they are about how the build is FINANCED and ACCOUNTED FOR, which is defective regardless of end-demand. But the efficiency question DOES bear on the 'is the capex justified by real demand?' question, and here intellectual honesty requires saying: it is genuinely uncertain, the Jevons case is real, and the project should NOT claim the demand is fake. What it CAN say: (a) the unfalsifiable 'build-more-either-way' narrative is bubble-shaped; (b) efficiency makes the DEPRECIATION trap worse (today's expensive brute-force GPUs are obsoleted faster by tomorrow's efficiency); and (c) China's efficiency + domestic stack undercut the chip-chokepoint moat the bull case leans on.",
  "sources": [
-  {"name": "WWT - When less means more: how Jevons paradox applies to our post-DeepSeek world", "url": "https://www.wwt.com/wwt-research/when-less-means-more-how-jevons-paradox-applies-to-our-post-deepseek-world"},
-  {"name": "Tom's Hardware - Huawei's Ascend & Kunpeng progress: China rebuilding an AI compute stack under sanctions", "url": "https://www.tomshardware.com/tech-industry/semiconductors/huaweis-ascend-and-kunpeng-progress-shows-how-china-is-rebuilding-an-ai-compute-stack-under-sanctions"},
-  {"name": "Tom's Hardware - Huawei-led team post-trained DeepSeek's 1.6T-param model on ~1,000 Ascend 910C", "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/huawei-led-team-claims-it-post-trained-deepseeks-1-6-trillion-parameter-models-on-ascend-910c-chips"},
-  {"name": "CSIS - DeepSeek, Huawei, export controls, and the future of the US-China AI race", "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race"},
-  {"name": "RAND - DeepSeek's lesson: America needs smarter export controls", "url": "https://www.rand.org/pubs/commentary/2025/02/deepseeks-lesson-america-needs-smarter-export-controls.html"},
-  {"name": "Bloomberg - Nvidia worked to co-design DeepSeek model, US lawmaker says", "url": "https://www.bloomberg.com/news/articles/2026-01-29/nvidia-worked-to-co-design-deepseek-model-us-lawmaker-says"},
-  {"name": "gpuvec - CloudMatrix384 with Ascend 910C: how DeepSeek cuts AI costs vs Nvidia H100", "url": "https://gpuvec.com/posts/huawei_and_deepseek"}
+  {
+   "name": "WWT - When less means more: how Jevons paradox applies to our post-DeepSeek world",
+   "url": "https://www.wwt.com/wwt-research/when-less-means-more-how-jevons-paradox-applies-to-our-post-deepseek-world"
+  },
+  {
+   "name": "Tom's Hardware - Huawei's Ascend & Kunpeng progress: China rebuilding an AI compute stack under sanctions",
+   "url": "https://www.tomshardware.com/tech-industry/semiconductors/huaweis-ascend-and-kunpeng-progress-shows-how-china-is-rebuilding-an-ai-compute-stack-under-sanctions"
+  },
+  {
+   "name": "Tom's Hardware - Huawei-led team post-trained DeepSeek's 1.6T-param model on ~1,000 Ascend 910C",
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/huawei-led-team-claims-it-post-trained-deepseeks-1-6-trillion-parameter-models-on-ascend-910c-chips"
+  },
+  {
+   "name": "CSIS - DeepSeek, Huawei, export controls, and the future of the US-China AI race",
+   "url": "https://www.csis.org/analysis/deepseek-huawei-export-controls-and-future-us-china-ai-race"
+  },
+  {
+   "name": "RAND - DeepSeek's lesson: America needs smarter export controls",
+   "url": "https://www.rand.org/pubs/commentary/2025/02/deepseeks-lesson-america-needs-smarter-export-controls.html"
+  },
+  {
+   "name": "Bloomberg - Nvidia worked to co-design DeepSeek model, US lawmaker says",
+   "url": "https://www.bloomberg.com/news/articles/2026-01-29/nvidia-worked-to-co-design-deepseek-model-us-lawmaker-says"
+  },
+  {
+   "name": "gpuvec - CloudMatrix384 with Ascend 910C: how DeepSeek cuts AI costs vs Nvidia H100",
+   "url": "https://gpuvec.com/posts/huawei_and_deepseek"
+  },
+  {
+   "name": "CNBC - Anthropic joins OpenAI in flagging distillation by Chinese AI firms (2026-02-24)",
+   "url": "https://www.cnbc.com/2026/02/24/anthropic-openai-china-firms-distillation-deepseek.html"
+  },
+  {
+   "name": "CNBC - Anthropic's distillation battle turns to the dark web (2026-09-03)",
+   "url": "https://www.cnbc.com/2026/09/03/anthropic-distillation-battle-turns-to-dark-web-china-concerns-swell.html"
+  }
  ],
- "edges": []
+ "edges": [],
+ "the_distillation_by_proxy_wrinkle": {
+  "claim": "A 2025-2026 wrinkle in the efficiency story: US labs allege part of the Chinese cost gap comes from DISTILLING their models via proxied access. OpenAI flagged DeepSeek (2025); Anthropic (24 Feb 2026) named DeepSeek, Moonshot AI and MiniMax (~16M exchanges from ~24,000 fake accounts, MiniMax ~13M), later adding Alibaba/Qwen. Because Anthropic/OpenAI sell no API in China, the requests were allegedly ROUTED to the US providers through commercial proxies + overseas shell accounts - Chinese AI pipelines quietly pointing at American models. status: fact (allegations made) + contested (per-firm culpability; named firms have not confirmed).",
+  "why_it_matters_here": "It partially undercuts the cleanest reading of DeepSeek - some efficiency may be free-riding on US models' training signal, not purely novel algorithm. But it does NOT collapse the counter-thesis: DeepSeek's architectural gains (MoE, MLA, FP8, the Huawei-Ascend post-training) are independently documented, and distillation is a standard, cheap technique regardless of source. Both hold: real efficiency AND unauthorized distillation-by-proxy.",
+  "honesty_guards": "(1) Composition fallacy - 'Chinese labs' is not one mind; evidence differs per firm. (2) The dispute is narrow - using a COMPETITOR'S model + circumventing ToS/geo-limits, not distillation itself (which Anthropic/OpenAI/Google all do to their own models). (3) Anthropic's own detection drew backlash: per WaPo (Mar 2026) it quietly deployed software to unmask China-based users, then pulled it after privacy criticism - a surveillance-of-own-customers episode that cuts against a purely clean-hands framing. status: fact (reported).",
+  "detail_ref": "See spec-china-ai-stack-censorship (the_distillation_reveal) for the graph edges + fuller account."
+ }
 }
