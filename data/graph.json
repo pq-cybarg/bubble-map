@@ -1428,6 +1428,10 @@
       "sector": "academia",
       "has_exogenous_revenue": false
     },
+    "Citizens_Bank_Edmond": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Citizens_Financial": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -4230,6 +4234,10 @@
     },
     "Moore_Threads": {
       "sector": "chip_vendor",
+      "has_exogenous_revenue": false
+    },
+    "Moov": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Morehouse_College": {
@@ -9096,6 +9104,71 @@
       "cancelable": false,
       "source_file": "spec-community-bank-stablecoin-response.json",
       "note": "The disintermediation-vs-competition crux for small banks: NY Fed found banks with stablecoin-related deposit exposure already lend less (loan-to-asset ~-14pp); community banks are the primary AG/SMALL-BIZ/RURAL lenders, so deposit migration hits rural/low-income credit hardest (fact). NOTE the strategic fork: community banks favor BANK issuance (BankChain) while blocking NON-bank yield (ICBA) - coherent, not contradictory."
+    },
+    {
+      "from": "Coinbase",
+      "to": "Moov",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Sep 10 2026: Coinbase (digital-asset infra) + Moov (payments infra) partner to embed stablecoin acceptance, settlement, real-time funding, custodial wallets and the Coinbase Payments API into community banks + credit unions - so institutions offer stablecoin services without building crypto infra (fact). Announced days before the Sep 15 CLARITY cloture vote."
+    },
+    {
+      "from": "Moov",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Moov's payment rails already serve 1,000+ community banks + credit unions - the distribution channel for the Coinbase stablecoin stack; Moov CEO Wade Arnold frames it as letting the PRIMARY institution answer the 'accept stablecoins' ask instead of a third party (fact)."
+    },
+    {
+      "from": "Coinbase",
+      "to": "Community_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "partnership",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Positions community banks as DISTRIBUTION PARTNERS for stablecoins (not competitors) - explicitly aimed at defusing the ICBA/community-bank deposit-flight opposition to CLARITY by giving members a direct stake (fact of framing; efficacy graded). Contrast with the members-OWN-it BankChain approach."
+    },
+    {
+      "from": "Coinbase",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Timing is strategic: the partnership was shared days before the Sep 15 2026 Senate cloture vote; Coinbase is a leading CLARITY proponent, and banks (ICBA) the chief opponents over interest-like crypto rewards causing deposit flight (fact)."
+    },
+    {
+      "from": "Moov",
+      "to": "Citizens_Bank_Edmond",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-community-bank-stablecoin-response.json",
+      "note": "Citizens Bank of Edmond (Oklahoma; CEO Jill Castilla) is an existing Moov customer cited as wanting lower interchange + faster settlement - an early community-bank voice for the stablecoin stack. NOTE: distinct from Citizens Financial Group (the large RI bank) (fact)."
     },
     {
       "from": "Boskin_Commission",
@@ -43679,10 +43752,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1835,
-    "num_edges": 2795,
+    "num_nodes": 1837,
+    "num_edges": 2800,
     "num_financial_edges": 274,
-    "num_structural_edges": 2521,
+    "num_structural_edges": 2526,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43909,16 +43982,20 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
-        "AMD",
+        "Microsoft",
         "OpenAI"
       ],
       [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -43927,10 +44004,6 @@
       [
         "CoreWeave",
         "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -46488,6 +46561,13 @@
         "in_robust_core": false
       },
       "Citizen_Lab": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Citizens_Bank_Edmond": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51395,6 +51475,13 @@
         "in_robust_core": false
       },
       "Moore_Threads": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Moov": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57301,21 +57388,21 @@
         "both_layers": true
       },
       {
-        "node": "Andreessen_Horowitz",
-        "degree": 11,
+        "node": "Coinbase",
+        "degree": 15,
         "neighbor_sectors": [
           "capital",
           "crypto",
           "crypto_infra",
-          "elite",
-          "identity",
+          "dlt",
           "other",
           "person",
           "political",
-          "university"
+          "regulator",
+          "state"
         ],
         "n_neighbor_sectors": 9,
-        "source_files": 9,
+        "source_files": 11,
         "layers": [
           "financial",
           "structural"

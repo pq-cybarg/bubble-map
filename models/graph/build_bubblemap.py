@@ -193,6 +193,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "VoltTyphoon":"Volt Typhoon (China APT)","SaltTyphoon":"Salt Typhoon (China APT)","APT28_FancyBear":"APT28 / Fancy Bear (Russia)","APT29_CozyBear":"APT29 / Cozy Bear (Russia)","Sandworm":"Sandworm (Russia)","Kimsuky":"Kimsuky (DPRK)","Equation_Group":"Equation Group (NSA)","APT_State_Actors":"State APTs","Lazarus_Group":"Lazarus Group (DPRK)",
  "MSS":"MSS (China intel)","Unit_8200":"Unit 8200 (Israel)","North_Korea":"North Korea","CALEA_Backdoor":"CALEA wiretap backdoor","NSO_Group":"NSO Group","Commercial_Spyware":"Commercial spyware","ALPHV_BlackCat":"ALPHV / BlackCat","Scattered_Spider":"Scattered Spider","Ransomware_RaaS":"Ransomware-as-a-service",
  "Jump_Trading":"Jump Trading","DRW":"DRW","Cumberland":"Cumberland (DRW crypto)",
+ "Moov":"Moov (bank payments infra)","Citizens_Bank_Edmond":"Citizens Bank of Edmond",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus

@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `fin-ai-efficiency-counter-thesis.json` — related files by shared entities (verify cross-refs exist)
-- spec-china-ai-stack-censorship.json: 7 shared entities
-- spec-exchanges-asia.json: 7 shared entities
-- catalog-academia-core.json: 5 shared entities
-- sec-filings.json: 5 shared entities
-- spec-cross-system-contagion.json: 5 shared entities
-- catalog-billionaires.json: 5 shared entities
-- fin-google-amazon-anthropic-meta.json: 5 shared entities
-- spec-sec-filings-primary.json: 5 shared entities
+## Newest file `macro-consumer-abs-subprime.json` — related files by shared entities (verify cross-refs exist)
+- macro-history-dereg-manipulation.json: 3 shared entities
+- spec-auto-credit-unwind.json: 3 shared entities
+- spec-crypto-banking-debanking.json: 2 shared entities
+- macro-private-credit-marks.json: 2 shared entities
+- blockchain-registry.json: 2 shared entities
+- macro-uncovered-risk-pools.json: 2 shared entities
+- spec-sec-sdny-regulatory.json: 2 shared entities
+- macro-cre-privatecredit.json: 2 shared entities
