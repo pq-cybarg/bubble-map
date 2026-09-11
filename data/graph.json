@@ -780,6 +780,10 @@
       "sector": "elite",
       "has_exogenous_revenue": false
     },
+    "Bill_DiSomma": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Bill_Gates": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2054,6 +2058,10 @@
     },
     "Dominion_Energy": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "Don_Wilson": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "DonorsTrust": {
@@ -3495,6 +3503,10 @@
     "Jump_Crypto": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Jump_Trading": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Juniper": {
       "sector": "tech",
@@ -5278,6 +5290,10 @@
     },
     "Rivian": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Rob_Granieri": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Robert_Mercer": {
@@ -24405,7 +24421,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-crypto-market-makers-political.json",
+      "source_file": "spec-crypto-market-makers-political.json,catalog-quiet-money-8.json",
       "note": ""
     },
     {
@@ -30218,6 +30234,97 @@
       "cancelable": false,
       "source_file": "spec-citizen-lab.json",
       "note": "Represents the DEFENSE/accountability branch of the lineage - independent forensics that convert covert spyware operations into public evidence, sanctions, and litigation (fact of role)."
+    },
+    {
+      "from": "Rob_Granieri",
+      "to": "Jane_Street",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Rob Granieri is the last active co-founder of Jane Street - a deliberately opaque partnership that became one of the most profitable trading firms on earth (a dominant ETF + options + crypto market-maker); the partners keep near-total anonymity + take no outside capital (fact; exact profits private)."
+    },
+    {
+      "from": "Jane_Street",
+      "to": "Alameda_Research",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Jane Street alumni - Sam Bankman-Fried, Caroline Ellison and others - founded/ran Alameda Research + FTX; the quant-prop-to-crypto talent pipeline that seeded the biggest crypto blow-up (fact of lineage; no imputation of Jane Street culpability)."
+    },
+    {
+      "from": "Bill_DiSomma",
+      "to": "Jump_Trading",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Bill DiSomma (with Paul Gurinas) co-founded Jump Trading - a secretive Chicago HFT/prop giant + major futures/equities market-maker; among the lowest-profile large trading fortunes (fact)."
+    },
+    {
+      "from": "Jump_Trading",
+      "to": "Jump_Crypto",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Jump Crypto is Jump Trading's digital-asset arm - a top crypto market-maker + infra builder (it wrote the Firedancer Solana validator client and was central to the Terra/Wormhole episodes) (fact)."
+    },
+    {
+      "from": "Jump_Crypto",
+      "to": "Solana",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Jump Crypto is a major Solana backer + builds Firedancer, an independent high-performance Solana validator client - a quiet prop-firm shaping core crypto infrastructure (fact)."
+    },
+    {
+      "from": "Jump_Trading",
+      "to": "Citadel_Securities",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Jump Trading sits alongside Citadel Securities, Jane Street, DRW, Susquehanna, Hudson River and Virtu as the dominant, mostly-private HFT/prop market-makers that intermediate a huge share of US + global order flow - quiet control of market plumbing (fact of category; exact shares graded)."
+    },
+    {
+      "from": "Don_Wilson",
+      "to": "Cumberland_DRW",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-8.json",
+      "note": "Don Wilson founded DRW - a low-profile Chicago proprietary-trading firm spanning futures, fixed income, real estate, and crypto; a quiet self-made trading fortune (fact)."
     },
     {
       "from": "Hedge_Funds",
@@ -43507,10 +43614,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1831,
-    "num_edges": 2783,
+    "num_nodes": 1835,
+    "num_edges": 2790,
     "num_financial_edges": 274,
-    "num_structural_edges": 2509,
+    "num_structural_edges": 2516,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43737,14 +43844,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -43757,12 +43856,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -43776,16 +43878,9 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -43796,8 +43891,20 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -45182,6 +45289,13 @@
         "in_robust_core": false
       },
       "Bilderberg": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bill_DiSomma": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47415,6 +47529,13 @@
         "in_robust_core": false
       },
       "Dominion_Energy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Don_Wilson": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49936,6 +50057,13 @@
       },
       "Jump_Crypto": {
         "total_usd": 1280000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jump_Trading": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -53058,6 +53186,13 @@
       },
       "Rivian": {
         "total_usd": 5800000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Rob_Granieri": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,

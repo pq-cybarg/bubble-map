@@ -1,0 +1,25 @@
+{
+  "title": "Quiet money (batch 9): the secretive prop-trading & market-making fortunes",
+  "source": "Public record: company histories; SEC/CFTC + press coverage of Jane Street, Jump Trading/Jump Crypto, and DRW/Cumberland; reporting on the quant-to-crypto talent pipeline (Jane Street -> Alameda/FTX). Catalog layer (#242 batch 9). Structural overlay; person nodes carry dossiers. FOCUS: the deliberately low-profile proprietary-trading + market-making firms that dominate market structure AND crypto liquidity - vast, private fortunes upstream of both TradFi plumbing and the crypto market. HONESTY: founder roles/firm scope = fact; specific market-share + influence framings graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Rob_Granieri", "sector": "person"},
+    {"id": "Bill_DiSomma", "sector": "person"},
+    {"id": "Don_Wilson", "sector": "person"},
+    {"id": "Jump_Trading", "sector": "capital"},
+    {"id": "DRW", "sector": "capital"},
+    {"id": "Cumberland", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Rob_Granieri", "to": "Jane_Street", "instrument": "founder_origin", "notes": "Rob Granieri is the last active co-founder of Jane Street - a deliberately opaque partnership that became one of the most profitable trading firms on earth (a dominant ETF + options + crypto market-maker); the partners keep near-total anonymity + take no outside capital (fact; exact profits private).", "source": "Jane Street; press"},
+    {"from": "Jane_Street", "to": "Alameda_Research", "instrument": "talent_pipeline", "notes": "Jane Street alumni - Sam Bankman-Fried, Caroline Ellison and others - founded/ran Alameda Research + FTX; the quant-prop-to-crypto talent pipeline that seeded the biggest crypto blow-up (fact of lineage; no imputation of Jane Street culpability).", "source": "public record"},
+    {"from": "Bill_DiSomma", "to": "Jump_Trading", "instrument": "founder_origin", "notes": "Bill DiSomma (with Paul Gurinas) co-founded Jump Trading - a secretive Chicago HFT/prop giant + major futures/equities market-maker; among the lowest-profile large trading fortunes (fact).", "source": "Jump Trading; press"},
+    {"from": "Jump_Trading", "to": "Jump_Crypto", "instrument": "controls", "notes": "Jump Crypto is Jump Trading's digital-asset arm - a top crypto market-maker + infra builder (it wrote the Firedancer Solana validator client and was central to the Terra/Wormhole episodes) (fact).", "source": "Jump Crypto"},
+    {"from": "Jump_Crypto", "to": "Solana", "instrument": "relationship", "notes": "Jump Crypto is a major Solana backer + builds Firedancer, an independent high-performance Solana validator client - a quiet prop-firm shaping core crypto infrastructure (fact).", "source": "Jump Crypto; Solana"},
+    {"from": "Jump_Trading", "to": "Citadel_Securities", "instrument": "peer", "notes": "Jump Trading sits alongside Citadel Securities, Jane Street, DRW, Susquehanna, Hudson River and Virtu as the dominant, mostly-private HFT/prop market-makers that intermediate a huge share of US + global order flow - quiet control of market plumbing (fact of category; exact shares graded).", "source": "market-structure mapping"},
+    {"from": "Don_Wilson", "to": "DRW", "instrument": "founder_origin", "notes": "Don Wilson founded DRW - a low-profile Chicago proprietary-trading firm spanning futures, fixed income, real estate, and crypto; a quiet self-made trading fortune (fact).", "source": "DRW; press"},
+    {"from": "DRW", "to": "Cumberland", "instrument": "controls", "notes": "Cumberland is DRW's crypto arm - one of the largest OTC + on-exchange digital-asset market-makers/liquidity providers (an early institutional crypto trader) (fact).", "source": "DRW/Cumberland"},
+    {"from": "Cumberland", "to": "Crypto_Market_Makers", "instrument": "relationship", "notes": "Cumberland (DRW), Jane Street, Jump Crypto and Wintermute are the core crypto market-makers providing the bulk of institutional liquidity - a concentrated, quiet layer under the whole crypto market (fact of category; SEC Wells notice reportedly issued to Cumberland in 2024, contested).", "source": "crypto market-structure reporting"},
+    {"from": "DRW", "to": "Crypto_Market_Makers", "instrument": "relationship", "notes": "DRW was among the earliest TradFi prop firms to move into crypto (via Cumberland) - the quiet-prop-money bridge from Chicago futures pits to digital-asset liquidity (fact).", "source": "public record"}
+  ]
+}

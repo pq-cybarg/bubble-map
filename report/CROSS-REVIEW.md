@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-shinyhunters-data-extortion.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 2 shared entities
-- altcoin-lens.json: 2 shared entities
-- spec-disclosures-surveillance.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
-- spec-crypto-sec-epstein.json: 2 shared entities
-- spec-blockchain-ecosystem.json: 2 shared entities
-- macro-ai-datacenter-water-siting.json: 1 shared entities
-- spec-unc-nk-attribution-map.json: 1 shared entities
+## Newest file `catalog-quiet-money-8.json` — related files by shared entities (verify cross-refs exist)
+- digitalid-corporate.json: 1 shared entities
+- influence-tbi-policy.json: 1 shared entities
+- influence-china-tech.json: 1 shared entities
+- spec-crypto-market-makers-political.json: 1 shared entities
+- spec-uk-labour-tbi-influence.json: 1 shared entities
+- blockchain-registry.json: 1 shared entities
+- digitalid-orchestration-real-incentive.json: 1 shared entities
+- spec-crypto-collapse-cluster.json: 1 shared entities
