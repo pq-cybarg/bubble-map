@@ -15,9 +15,9 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 91 files
+- **Meta** — 92 files
 - **Google** — 63 files
-- **Chainlink** — 61 files
+- **Chainlink** — 62 files
 - **OpenAI** — 49 files
 - **Microsoft** — 45 files
 - **FDIC** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `macro-consumer-abs-subprime.json` — related files by shared entities (verify cross-refs exist)
-- macro-history-dereg-manipulation.json: 3 shared entities
-- spec-auto-credit-unwind.json: 3 shared entities
-- spec-crypto-banking-debanking.json: 2 shared entities
-- macro-private-credit-marks.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
-- macro-uncovered-risk-pools.json: 2 shared entities
-- spec-sec-sdny-regulatory.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
+## Newest file `catalog-quiet-money-9.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-registry.json: 3 shared entities
+- spec-blockchain-ecosystem.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- spec-auto-politics-labor.json: 2 shared entities
+- macro-gig-labor.json: 2 shared entities
+- spec-china-ev.json: 2 shared entities
+- spec-cross-border-settlement-rails.json: 2 shared entities
+- spec-reproducibility-crisis.json: 2 shared entities

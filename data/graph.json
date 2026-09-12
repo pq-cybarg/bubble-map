@@ -172,6 +172,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Abigail_Johnson": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Access_Industries": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -1252,6 +1256,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Cargill": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Carnegie_Mellon_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -1659,6 +1667,14 @@
     "Courts": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Cox_Automotive": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Cox_Enterprises": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
     },
     "Credit_Agricole": {
       "sector": "capital",
@@ -2490,6 +2506,10 @@
     },
     "Fidelity": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Fidelity_Digital_Assets": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "Fifth_Third": {
@@ -3386,6 +3406,10 @@
     },
     "Jack_Henry": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "James_Cox_Kennedy": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Jan": {
@@ -30166,6 +30190,149 @@
       "note": ""
     },
     {
+      "from": "Abigail_Johnson",
+      "to": "Fidelity",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Abigail Johnson (3rd-gen; the Johnson family controls Fidelity) chairs + runs Fidelity Investments - a private ~$5T+ AUM / ~$15T+ administered asset-management giant; low public profile despite immense scale (fact)."
+    },
+    {
+      "from": "Fidelity",
+      "to": "Fidelity_Digital_Assets",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Fidelity Digital Assets is Fidelity's institutional crypto custody + trading arm (est. 2018) - a rare TradFi giant that built crypto infrastructure early + quietly (fact)."
+    },
+    {
+      "from": "Fidelity_Digital_Assets",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Fidelity runs a spot Bitcoin ETF (FBTC) + a spot Ether ETF + institutional custody - quiet Johnson-family money bridging TradFi to crypto at scale (fact)."
+    },
+    {
+      "from": "Fidelity",
+      "to": "BlackRock",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Fidelity + BlackRock are the asset-manager giants whose spot crypto ETFs mainstreamed institutional Bitcoin - one public (BLK), one private (Fidelity) but comparably vast (fact of category)."
+    },
+    {
+      "from": "James_Cox_Kennedy",
+      "to": "Cox_Enterprises",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "James Cox Kennedy (Cox family; grandson of founder James M. Cox) long chaired Cox Enterprises - a private media + telecom + automotive conglomerate; the family is among America's wealthiest + most low-profile (fact)."
+    },
+    {
+      "from": "Cox_Enterprises",
+      "to": "Cox_Automotive",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Cox Automotive is Cox Enterprises' automotive-data + marketplace arm (fact)."
+    },
+    {
+      "from": "Cox_Automotive",
+      "to": "Data_Brokers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Cox Automotive owns Autotrader, Kelley Blue Book, Manheim (the largest wholesale auto auctions), and Dealertrack - a dominant automotive valuation + transaction + inventory data complex feeding dealers, lenders, and insurers; quiet family control of a core auto-data layer (fact of ownership; downstream data-use scope graded)."
+    },
+    {
+      "from": "Cox_Automotive",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Cox Automotive's Manheim Used Vehicle Value Index + Dealertrack lending rails sit upstream of auto-collateral valuation - directly relevant to the subprime-auto + auto-ABS stress thread (fact; interpretive link to the credit cycle)."
+    },
+    {
+      "from": "James_Cox_Kennedy",
+      "to": "Cox_Automotive",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "The Cox family's control of Cox Automotive places a low-profile dynasty at the center of US automotive data - the quiet-money angle on the connected-car/auto-data economy the map documents elsewhere (fact of control; systemic framing graded)."
+    },
+    {
+      "from": "Cargill",
+      "to": "US_Corn",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Cargill - the largest private US company + one of the 'ABCD' global grain traders - is a dominant force in corn/grain/oilseed flows, feed, and food ingredients; the Cargill-MacMillan family (~a dozen billionaires) is famously private (fact)."
+    },
+    {
+      "from": "Cargill",
+      "to": "Farm_Credit_System",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-9.json",
+      "note": "Cargill also provides private agricultural financing + risk management (Cargill Financial) alongside the Farm Credit System - quiet private capital woven through the ag-credit + commodity complex (fact)."
+    },
+    {
       "from": "ApartmentList_ALNRI",
       "to": "CPI_Rent",
       "instrument": "other",
@@ -43752,10 +43919,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1837,
-    "num_edges": 2800,
+    "num_nodes": 1843,
+    "num_edges": 2811,
     "num_financial_edges": 274,
-    "num_structural_edges": 2526,
+    "num_structural_edges": 2537,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -43982,18 +44149,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
@@ -44002,7 +44157,24 @@
         "SINK_lenders"
       ],
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -44014,17 +44186,6 @@
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -44043,6 +44204,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -44363,6 +44530,13 @@
         "in_robust_core": false
       },
       "Aave": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Abigail_Johnson": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46259,6 +46433,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cargill": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Carnegie_Mellon_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46967,6 +47148,20 @@
         "in_robust_core": false
       },
       "Courts": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cox_Automotive": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cox_Enterprises": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48423,6 +48618,13 @@
         "in_robust_core": false
       },
       "Fidelity": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Fidelity_Digital_Assets": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49991,6 +50193,13 @@
         "in_robust_core": false
       },
       "Jack_Henry": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "James_Cox_Kennedy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

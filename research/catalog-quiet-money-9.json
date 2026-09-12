@@ -1,0 +1,26 @@
+{
+  "title": "Quiet money (batch 10): quiet asset-manager & data-dynasty fortunes (Fidelity, Cox, Cargill)",
+  "source": "Public record: company histories; Forbes/Bloomberg family-wealth coverage; Fidelity Digital Assets + spot-crypto-ETF filings; Cox Enterprises/Cox Automotive (Autotrader/KBB/Manheim/Dealertrack); Cargill private-company reporting. Catalog layer (#242 batch 10). Structural overlay; person nodes carry dossiers. FOCUS: enormous, deliberately private family fortunes that touch threads already on the map - crypto custody + asset management (Fidelity/Johnson), the automotive-data complex (Cox), and global ag-commodity flows (Cargill). HONESTY: control/ownership/product scope = fact; market-share + influence framings graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Abigail_Johnson", "sector": "person"},
+    {"id": "James_Cox_Kennedy", "sector": "person"},
+    {"id": "Fidelity_Digital_Assets", "sector": "crypto"},
+    {"id": "Cox_Enterprises", "sector": "commodity"},
+    {"id": "Cox_Automotive", "sector": "tech"},
+    {"id": "Cargill", "sector": "commodity"}
+  ],
+  "edges": [
+    {"from": "Abigail_Johnson", "to": "Fidelity", "instrument": "leads", "notes": "Abigail Johnson (3rd-gen; the Johnson family controls Fidelity) chairs + runs Fidelity Investments - a private ~$5T+ AUM / ~$15T+ administered asset-management giant; low public profile despite immense scale (fact).", "source": "Fidelity; public record"},
+    {"from": "Fidelity", "to": "Fidelity_Digital_Assets", "instrument": "controls", "notes": "Fidelity Digital Assets is Fidelity's institutional crypto custody + trading arm (est. 2018) - a rare TradFi giant that built crypto infrastructure early + quietly (fact).", "source": "Fidelity Digital Assets"},
+    {"from": "Fidelity_Digital_Assets", "to": "Bitcoin", "instrument": "relationship", "notes": "Fidelity runs a spot Bitcoin ETF (FBTC) + a spot Ether ETF + institutional custody - quiet Johnson-family money bridging TradFi to crypto at scale (fact).", "source": "SEC ETF filings"},
+    {"from": "Fidelity", "to": "BlackRock", "instrument": "peer", "notes": "Fidelity + BlackRock are the asset-manager giants whose spot crypto ETFs mainstreamed institutional Bitcoin - one public (BLK), one private (Fidelity) but comparably vast (fact of category).", "source": "public record"},
+    {"from": "James_Cox_Kennedy", "to": "Cox_Enterprises", "instrument": "leads", "notes": "James Cox Kennedy (Cox family; grandson of founder James M. Cox) long chaired Cox Enterprises - a private media + telecom + automotive conglomerate; the family is among America's wealthiest + most low-profile (fact).", "source": "Cox Enterprises; public record"},
+    {"from": "Cox_Enterprises", "to": "Cox_Automotive", "instrument": "controls", "notes": "Cox Automotive is Cox Enterprises' automotive-data + marketplace arm (fact).", "source": "Cox Automotive"},
+    {"from": "Cox_Automotive", "to": "Data_Brokers", "instrument": "data_broker", "notes": "Cox Automotive owns Autotrader, Kelley Blue Book, Manheim (the largest wholesale auto auctions), and Dealertrack - a dominant automotive valuation + transaction + inventory data complex feeding dealers, lenders, and insurers; quiet family control of a core auto-data layer (fact of ownership; downstream data-use scope graded).", "source": "Cox Automotive"},
+    {"from": "Cox_Automotive", "to": "US_household_credit", "instrument": "relationship", "notes": "Cox Automotive's Manheim Used Vehicle Value Index + Dealertrack lending rails sit upstream of auto-collateral valuation - directly relevant to the subprime-auto + auto-ABS stress thread (fact; interpretive link to the credit cycle).", "source": "Manheim/Dealertrack"},
+    {"from": "James_Cox_Kennedy", "to": "Cox_Automotive", "instrument": "relationship", "notes": "The Cox family's control of Cox Automotive places a low-profile dynasty at the center of US automotive data - the quiet-money angle on the connected-car/auto-data economy the map documents elsewhere (fact of control; systemic framing graded).", "source": "public record"},
+    {"from": "Cargill", "to": "US_Corn", "instrument": "relationship", "notes": "Cargill - the largest private US company + one of the 'ABCD' global grain traders - is a dominant force in corn/grain/oilseed flows, feed, and food ingredients; the Cargill-MacMillan family (~a dozen billionaires) is famously private (fact).", "source": "Cargill; public record"},
+    {"from": "Cargill", "to": "Farm_Credit_System", "instrument": "relationship", "notes": "Cargill also provides private agricultural financing + risk management (Cargill Financial) alongside the Farm Credit System - quiet private capital woven through the ag-credit + commodity complex (fact).", "source": "public record"}
+  ]
+}
