@@ -195,6 +195,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Jump_Trading":"Jump Trading","DRW":"DRW","Cumberland":"Cumberland (DRW crypto)",
  "Moov":"Moov (bank payments infra)","Citizens_Bank_Edmond":"Citizens Bank of Edmond",
  "Fidelity_Digital_Assets":"Fidelity Digital Assets","Cox_Enterprises":"Cox Enterprises","Cox_Automotive":"Cox Automotive","Cargill":"Cargill",
+ "Hilcorp":"Hilcorp","Endeavor_Energy":"Endeavor Energy","Energy_Transfer":"Energy Transfer","Diamondback_Energy":"Diamondback Energy",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus

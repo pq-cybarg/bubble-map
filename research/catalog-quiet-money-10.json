@@ -1,0 +1,29 @@
+{
+  "title": "Quiet money (batch 11): quiet oil/gas & pipeline fortunes behind the AI power buildout",
+  "source": "Public record: company histories; Forbes/Bloomberg energy-wealth coverage; Diamondback-Endeavor 2024 merger filings; FEC/OpenSecrets (Warren, Wilks). Catalog layer (#242 batch 11). Structural overlay; person nodes carry dossiers. FOCUS: the low-profile private oil/gas + pipeline fortunes that supply the marginal natural gas increasingly used to power AI datacenters (the map's power-grid bottleneck), and in several cases convert that wealth into political influence. HONESTY: founder roles/ownership/deals/donations = fact; the gas->datacenter-power link is a real but partly interpretive systemic tie (graded); no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Jeffery_Hildebrand", "sector": "person"},
+    {"id": "Autry_Stephens", "sector": "person"},
+    {"id": "Kelcy_Warren", "sector": "person"},
+    {"id": "Farris_Wilks", "sector": "person"},
+    {"id": "Dan_Wilks", "sector": "person"},
+    {"id": "Hilcorp", "sector": "commodity"},
+    {"id": "Endeavor_Energy", "sector": "commodity"},
+    {"id": "Energy_Transfer", "sector": "commodity"},
+    {"id": "Diamondback_Energy", "sector": "commodity"}
+  ],
+  "edges": [
+    {"from": "Jeffery_Hildebrand", "to": "Hilcorp", "instrument": "founder_origin", "notes": "Jeffery Hildebrand founded Hilcorp - the largest privately held US oil + natural-gas producer; a near-invisible multi-billionaire known for buying mature fields + big employee bonuses (fact).", "source": "Hilcorp; public record"},
+    {"from": "Hilcorp", "to": "Power_Grid", "instrument": "relationship", "notes": "Hilcorp is a major private natural-gas producer; gas is the marginal fuel increasingly dispatched to meet AI-datacenter + electrification power demand (the map's power-grid bottleneck) - quiet private supply upstream of the grid (fact of production; the datacenter-power link is a real but partly interpretive systemic tie, graded).", "source": "public record"},
+    {"from": "Autry_Stephens", "to": "Endeavor_Energy", "instrument": "founder_origin", "notes": "Autry Stephens (d. 2024) built Endeavor Energy Resources into the largest privately held Permian Basin producer - a quiet West Texas oil fortune (fact).", "source": "Endeavor; public record"},
+    {"from": "Endeavor_Energy", "to": "Diamondback_Energy", "instrument": "ownership_transfer", "notes": "2024: Diamondback Energy acquired Endeavor for ~$26B - one of the largest Permian deals, folding a quiet private producer into a public major amid the shale-consolidation wave (fact).", "source": "Diamondback/Endeavor 2024"},
+    {"from": "Endeavor_Energy", "to": "Power_Grid", "instrument": "relationship", "notes": "Permian oil production is associated with vast natural-gas output; that gas feeds power generation (incl. behind-the-meter + in-basin datacenters) - quiet private hydrocarbons upstream of AI power (fact of gas association; datacenter tie graded).", "source": "public record"},
+    {"from": "Kelcy_Warren", "to": "Energy_Transfer", "instrument": "leads", "notes": "Kelcy Warren built + controls Energy Transfer - one of the largest US midstream pipeline networks (gas, NGLs, crude); a low-profile-but-powerful energy fortune (fact).", "source": "Energy Transfer"},
+    {"from": "Energy_Transfer", "to": "Power_Grid", "instrument": "relationship", "notes": "Energy Transfer's pipeline network moves the natural gas that fuels power plants supplying the grid + new datacenter load (it has courted direct gas-supply deals for datacenters) - quiet midstream control upstream of AI power (fact; specific-deal scope graded).", "source": "public record"},
+    {"from": "Kelcy_Warren", "to": "US_Government", "instrument": "mega_donor", "notes": "Warren is a major political donor - pipeline + fossil wealth converted to political influence (fact).", "source": "FEC/OpenSecrets"},
+    {"from": "Farris_Wilks", "to": "Wilks_Brothers", "instrument": "founder_origin", "notes": "Farris Wilks (with brother Dan) built the fracking-services fortune (Frac Tech, sold ~2011) that became Wilks Brothers - quiet West Texas gas-services money (fact).", "source": "public record"},
+    {"from": "Dan_Wilks", "to": "Wilks_Brothers", "instrument": "founder_origin", "notes": "Dan Wilks co-built the Wilks fracking-services fortune; the brothers are among the largest quiet conservative + Christian-right political donors (already wired to Club for Growth / DonorsTrust) (fact).", "source": "public record"},
+    {"from": "Wilks_Brothers", "to": "Power_Grid", "instrument": "relationship", "notes": "The Wilks fortune originates in hydraulic-fracturing services that unlocked US shale gas - the same gas now dispatched for AI-datacenter power; a quiet gas-services origin upstream of the power buildout (fact of origin; datacenter tie graded).", "source": "public record"}
+  ]
+}

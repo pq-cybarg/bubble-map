@@ -17,7 +17,7 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 92 files
 - **Google** — 63 files
-- **Chainlink** — 62 files
+- **Chainlink** — 63 files
 - **OpenAI** — 49 files
 - **Microsoft** — 45 files
 - **FDIC** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-quiet-money-9.json` — related files by shared entities (verify cross-refs exist)
-- blockchain-registry.json: 3 shared entities
-- spec-blockchain-ecosystem.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- spec-auto-politics-labor.json: 2 shared entities
-- macro-gig-labor.json: 2 shared entities
-- spec-china-ev.json: 2 shared entities
-- spec-cross-border-settlement-rails.json: 2 shared entities
-- spec-reproducibility-crisis.json: 2 shared entities
+## Newest file `catalog-quiet-money-10.json` — related files by shared entities (verify cross-refs exist)
+- catalog-crosslink-pass.json: 1 shared entities
+- spec-roundup-glyphosate.json: 1 shared entities
+- digitalid-corporate.json: 1 shared entities
+- blockchain-registry.json: 1 shared entities
+- spec-brics-dedollarization.json: 1 shared entities
+- spec-corridors.json: 1 shared entities
+- spec-opec.json: 1 shared entities
+- spec-crypto-sec-epstein.json: 1 shared entities

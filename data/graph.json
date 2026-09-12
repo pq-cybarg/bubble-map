@@ -556,6 +556,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "Autry_Stephens": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Axelar": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -1864,6 +1868,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Dan_Wilks": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "DarkSide": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -2014,6 +2022,10 @@
     },
     "Dialog_Society": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Diamondback_Energy": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Dieter_Schwarz": {
@@ -2256,12 +2268,20 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "Endeavor_Energy": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Energoatom": {
       "sector": "energy",
       "has_exogenous_revenue": true
     },
     "Energy_Charter_Treaty": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "Energy_Transfer": {
+      "sector": "commodity",
       "has_exogenous_revenue": false
     },
     "Epic_Games": {
@@ -2463,6 +2483,10 @@
     "Farmington_Moonstone": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Farris_Wilks": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Faruk_Ozer": {
       "sector": "person",
@@ -3012,6 +3036,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "Hilcorp": {
+      "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
     "Honda": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -3464,6 +3492,10 @@
       "sector": "bank",
       "has_exogenous_revenue": true
     },
+    "Jeffery_Hildebrand": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jeffrey_Yass": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3575,6 +3607,10 @@
     "Keir_Starmer": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Kelcy_Warren": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Keller_Postman": {
       "sector": "standards",
@@ -30541,6 +30577,149 @@
       "note": "Represents the DEFENSE/accountability branch of the lineage - independent forensics that convert covert spyware operations into public evidence, sanctions, and litigation (fact of role)."
     },
     {
+      "from": "Jeffery_Hildebrand",
+      "to": "Hilcorp",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Jeffery Hildebrand founded Hilcorp - the largest privately held US oil + natural-gas producer; a near-invisible multi-billionaire known for buying mature fields + big employee bonuses (fact)."
+    },
+    {
+      "from": "Hilcorp",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Hilcorp is a major private natural-gas producer; gas is the marginal fuel increasingly dispatched to meet AI-datacenter + electrification power demand (the map's power-grid bottleneck) - quiet private supply upstream of the grid (fact of production; the datacenter-power link is a real but partly interpretive systemic tie, graded)."
+    },
+    {
+      "from": "Autry_Stephens",
+      "to": "Endeavor_Energy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Autry Stephens (d. 2024) built Endeavor Energy Resources into the largest privately held Permian Basin producer - a quiet West Texas oil fortune (fact)."
+    },
+    {
+      "from": "Endeavor_Energy",
+      "to": "Diamondback_Energy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "2024: Diamondback Energy acquired Endeavor for ~$26B - one of the largest Permian deals, folding a quiet private producer into a public major amid the shale-consolidation wave (fact)."
+    },
+    {
+      "from": "Endeavor_Energy",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Permian oil production is associated with vast natural-gas output; that gas feeds power generation (incl. behind-the-meter + in-basin datacenters) - quiet private hydrocarbons upstream of AI power (fact of gas association; datacenter tie graded)."
+    },
+    {
+      "from": "Kelcy_Warren",
+      "to": "Energy_Transfer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Kelcy Warren built + controls Energy Transfer - one of the largest US midstream pipeline networks (gas, NGLs, crude); a low-profile-but-powerful energy fortune (fact)."
+    },
+    {
+      "from": "Energy_Transfer",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Energy Transfer's pipeline network moves the natural gas that fuels power plants supplying the grid + new datacenter load (it has courted direct gas-supply deals for datacenters) - quiet midstream control upstream of AI power (fact; specific-deal scope graded)."
+    },
+    {
+      "from": "Kelcy_Warren",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "mega_donor",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Warren is a major political donor - pipeline + fossil wealth converted to political influence (fact)."
+    },
+    {
+      "from": "Farris_Wilks",
+      "to": "Wilks_Brothers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Farris Wilks (with brother Dan) built the fracking-services fortune (Frac Tech, sold ~2011) that became Wilks Brothers - quiet West Texas gas-services money (fact)."
+    },
+    {
+      "from": "Dan_Wilks",
+      "to": "Wilks_Brothers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "Dan Wilks co-built the Wilks fracking-services fortune; the brothers are among the largest quiet conservative + Christian-right political donors (already wired to Club for Growth / DonorsTrust) (fact)."
+    },
+    {
+      "from": "Wilks_Brothers",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-10.json",
+      "note": "The Wilks fortune originates in hydraulic-fracturing services that unlocked US shale gas - the same gas now dispatched for AI-datacenter power; a quiet gas-services origin upstream of the power buildout (fact of origin; datacenter tie graded)."
+    },
+    {
       "from": "Rob_Granieri",
       "to": "Jane_Street",
       "instrument": "other",
@@ -43919,10 +44098,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1843,
-    "num_edges": 2811,
+    "num_nodes": 1852,
+    "num_edges": 2822,
     "num_financial_edges": 274,
-    "num_structural_edges": 2537,
+    "num_structural_edges": 2548,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44149,12 +44328,20 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Microsoft",
@@ -44166,9 +44353,6 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
@@ -44185,17 +44369,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -44204,6 +44377,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -45202,6 +45381,13 @@
         "in_robust_core": false
       },
       "Auto_Politics": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Autry_Stephens": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -47497,6 +47683,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dan_Wilks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DarkSide": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47757,6 +47950,13 @@
         "in_robust_core": false
       },
       "Dialog_Society": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Diamondback_Energy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48183,6 +48383,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Endeavor_Energy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Energoatom": {
         "total_usd": 100000000,
         "circular_usd": 0,
@@ -48191,6 +48398,13 @@
         "in_robust_core": false
       },
       "Energy_Charter_Treaty": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Energy_Transfer": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48542,6 +48756,13 @@
       },
       "Farmington_Moonstone": {
         "total_usd": 11500000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Farris_Wilks": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -49506,6 +49727,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hilcorp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Honda": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50297,6 +50525,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jeffery_Hildebrand": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jeffrey_Yass": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50487,6 +50722,13 @@
         "in_robust_core": false
       },
       "Keir_Starmer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kelcy_Warren": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57147,7 +57389,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 77,
+        "degree": 78,
         "neighbor_sectors": [
           "academia",
           "academic_institute",
@@ -57176,7 +57418,7 @@
           "university"
         ],
         "n_neighbor_sectors": 25,
-        "source_files": 46,
+        "source_files": 47,
         "layers": [
           "financial",
           "structural"
