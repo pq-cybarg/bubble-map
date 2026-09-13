@@ -1,0 +1,25 @@
+{
+  "title": "Quiet money (batch 12): quiet stablecoin & crypto-infrastructure fortunes (Tether/Cantor, Wintermute, Bitmain)",
+  "source": "Public record: Tether/Bitfinex + Cantor Fitzgerald reporting; Howard Lutnick confirmation + divestiture coverage; Wintermute; Bitmain/Bitdeer filings. Catalog layer (#242 batch 12). Structural overlay; person nodes carry dossiers. FOCUS: the deliberately opaque fortunes behind stablecoin + crypto plumbing - Tether (now a top-20-scale US Treasury holder) and its Cantor custody, quiet crypto market-makers, and the mining-ASIC money pivoting into AI datacenters. HONESTY: ownership/custody/roles = fact; conflict-of-interest + systemic framings graded; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Howard_Lutnick", "sector": "person"},
+    {"id": "Evgeny_Gaevoy", "sector": "person"},
+    {"id": "Jihan_Wu", "sector": "person"},
+    {"id": "Cantor_Fitzgerald", "sector": "capital"},
+    {"id": "Bitmain", "sector": "tech"},
+    {"id": "Bitdeer", "sector": "tech"}
+  ],
+  "edges": [
+    {"from": "Tether", "to": "Cantor_Fitzgerald", "instrument": "relationship", "notes": "Cantor Fitzgerald custodies/manages the bulk of Tether's ~$120B+ US-Treasury reserves and took a stake in Tether (~5%, ~$600M) - so the world's largest, deliberately-opaque stablecoin parks its reserves at a single primary dealer (fact; exact figures partly disclosed).", "source": "Tether/Cantor reporting"},
+    {"from": "Cantor_Fitzgerald", "to": "US_Treasuries", "instrument": "relationship", "notes": "Cantor is a US primary dealer; via Tether's reserves + its own SPAC/crypto ventures it is a major conduit routing stablecoin cash into Treasuries - a quiet node linking crypto liquidity to Treasury demand (fact of role; magnitude graded).", "source": "public record"},
+    {"from": "Howard_Lutnick", "to": "Cantor_Fitzgerald", "instrument": "leads", "notes": "Howard Lutnick built + long ran Cantor Fitzgerald (and BGC/Newmark); he handed control to his sons on becoming US Commerce Secretary in 2025 (fact).", "source": "public record"},
+    {"from": "Howard_Lutnick", "to": "US_Government", "instrument": "leads", "notes": "Lutnick became US Commerce Secretary (2025); his prior Cantor role - custodian of Tether's reserves + a crypto dealmaker - drew conflict-of-interest scrutiny despite a pledged divestiture (fact of role + divestiture pledge; conflict framing graded/interpretation).", "source": "confirmation coverage"},
+    {"from": "Evgeny_Gaevoy", "to": "Wintermute", "instrument": "founder_origin", "notes": "Evgeny Gaevoy founded Wintermute - a top algorithmic crypto market-maker + OTC liquidity provider; a low-profile crypto-trading fortune (fact).", "source": "Wintermute"},
+    {"from": "Jihan_Wu", "to": "Bitmain", "instrument": "founder_origin", "notes": "Jihan Wu co-founded Bitmain - the dominant Bitcoin-mining ASIC maker (Antminer) - a quiet, geopolitically-sensitive hardware fortune (fact).", "source": "Bitmain; public record"},
+    {"from": "Jihan_Wu", "to": "Bitdeer", "instrument": "leads", "notes": "Wu leads Bitdeer (spun out of Bitmain; Nasdaq-listed) - a mining + datacenter operator now pivoting hash-rate infrastructure toward AI compute (fact).", "source": "Bitdeer filings"},
+    {"from": "Bitmain", "to": "Bitcoin", "instrument": "relationship", "notes": "Bitmain's ASIC dominance makes it a chokepoint on Bitcoin mining hardware (hash-rate supply) - quiet hardware control under the whole PoW network (fact of market position).", "source": "public record"},
+    {"from": "Bitdeer", "to": "AI_Datacenters", "instrument": "relationship", "notes": "Bitdeer (like other miners: Core Scientific, TeraWulf, IREN) is converting power-rich mining sites into AI datacenters - the crypto-mining-to-AI-compute pivot that ties quiet mining money to the AI-power buildout (fact).", "source": "public record"},
+    {"from": "Wintermute", "to": "Stablecoins", "instrument": "relationship", "notes": "Wintermute (with Cumberland/Jane Street/Jump) provides the market-making liquidity that keeps stablecoins + tokens trading at scale - a concentrated, quiet layer under crypto markets (fact of category).", "source": "crypto market-structure reporting"}
+  ]
+}

@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-quiet-money-10.json` — related files by shared entities (verify cross-refs exist)
-- catalog-crosslink-pass.json: 1 shared entities
-- spec-roundup-glyphosate.json: 1 shared entities
-- digitalid-corporate.json: 1 shared entities
-- blockchain-registry.json: 1 shared entities
-- spec-brics-dedollarization.json: 1 shared entities
-- spec-corridors.json: 1 shared entities
-- spec-opec.json: 1 shared entities
-- spec-crypto-sec-epstein.json: 1 shared entities
+## Newest file `catalog-quiet-money-11.json` — related files by shared entities (verify cross-refs exist)

@@ -852,6 +852,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Bitdeer": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Bitfinex": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -866,6 +870,10 @@
     },
     "Bithumb": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Bitmain": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Bitmart": {
@@ -1235,6 +1243,10 @@
     "Cantor": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Cantor_Fitzgerald": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Capella_Space": {
       "sector": "satellite",
@@ -2348,6 +2360,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Evgeny_Gaevoy": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Evil_Corp": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -3060,6 +3076,10 @@
       "sector": "defense",
       "has_exogenous_revenue": false
     },
+    "Howard_Lutnick": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Howard_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -3511,6 +3531,10 @@
     "Jiangmen_Changxin": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Jihan_Wu": {
+      "sector": "person",
+      "has_exogenous_revenue": false
     },
     "Jim_Simons": {
       "sector": "person",
@@ -30720,6 +30744,136 @@
       "note": "The Wilks fortune originates in hydraulic-fracturing services that unlocked US shale gas - the same gas now dispatched for AI-datacenter power; a quiet gas-services origin upstream of the power buildout (fact of origin; datacenter tie graded)."
     },
     {
+      "from": "Tether",
+      "to": "Cantor_Fitzgerald",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Cantor Fitzgerald custodies/manages the bulk of Tether's ~$120B+ US-Treasury reserves and took a stake in Tether (~5%, ~$600M) - so the world's largest, deliberately-opaque stablecoin parks its reserves at a single primary dealer (fact; exact figures partly disclosed)."
+    },
+    {
+      "from": "Cantor_Fitzgerald",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Cantor is a US primary dealer; via Tether's reserves + its own SPAC/crypto ventures it is a major conduit routing stablecoin cash into Treasuries - a quiet node linking crypto liquidity to Treasury demand (fact of role; magnitude graded)."
+    },
+    {
+      "from": "Howard_Lutnick",
+      "to": "Cantor_Fitzgerald",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Howard Lutnick built + long ran Cantor Fitzgerald (and BGC/Newmark); he handed control to his sons on becoming US Commerce Secretary in 2025 (fact)."
+    },
+    {
+      "from": "Howard_Lutnick",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Lutnick became US Commerce Secretary (2025); his prior Cantor role - custodian of Tether's reserves + a crypto dealmaker - drew conflict-of-interest scrutiny despite a pledged divestiture (fact of role + divestiture pledge; conflict framing graded/interpretation)."
+    },
+    {
+      "from": "Evgeny_Gaevoy",
+      "to": "Wintermute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Evgeny Gaevoy founded Wintermute - a top algorithmic crypto market-maker + OTC liquidity provider; a low-profile crypto-trading fortune (fact)."
+    },
+    {
+      "from": "Jihan_Wu",
+      "to": "Bitmain",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Jihan Wu co-founded Bitmain - the dominant Bitcoin-mining ASIC maker (Antminer) - a quiet, geopolitically-sensitive hardware fortune (fact)."
+    },
+    {
+      "from": "Jihan_Wu",
+      "to": "Bitdeer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Wu leads Bitdeer (spun out of Bitmain; Nasdaq-listed) - a mining + datacenter operator now pivoting hash-rate infrastructure toward AI compute (fact)."
+    },
+    {
+      "from": "Bitmain",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Bitmain's ASIC dominance makes it a chokepoint on Bitcoin mining hardware (hash-rate supply) - quiet hardware control under the whole PoW network (fact of market position)."
+    },
+    {
+      "from": "Bitdeer",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Bitdeer (like other miners: Core Scientific, TeraWulf, IREN) is converting power-rich mining sites into AI datacenters - the crypto-mining-to-AI-compute pivot that ties quiet mining money to the AI-power buildout (fact)."
+    },
+    {
+      "from": "Wintermute",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-11.json",
+      "note": "Wintermute (with Cumberland/Jane Street/Jump) provides the market-making liquidity that keeps stablecoins + tokens trading at scale - a concentrated, quiet layer under crypto markets (fact of category)."
+    },
+    {
       "from": "Rob_Granieri",
       "to": "Jane_Street",
       "instrument": "other",
@@ -44098,10 +44252,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1852,
-    "num_edges": 2822,
+    "num_nodes": 1858,
+    "num_edges": 2832,
     "num_financial_edges": 274,
-    "num_structural_edges": 2548,
+    "num_structural_edges": 2558,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44329,14 +44483,6 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -44344,12 +44490,25 @@
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "AMD",
         "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -44362,9 +44521,16 @@
         "NVIDIA"
       ],
       [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI",
-        "Oracle"
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -44377,18 +44543,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -45905,6 +46059,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Bitdeer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bitfinex": {
         "total_usd": 3600000000,
         "circular_usd": 0,
@@ -45927,6 +46088,13 @@
         "in_robust_core": false
       },
       "Bithumb": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bitmain": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -46571,6 +46739,13 @@
         "in_robust_core": false
       },
       "Cantor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cantor_Fitzgerald": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48523,6 +48698,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Evgeny_Gaevoy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Evil_Corp": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -49769,6 +49951,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Howard_Lutnick": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Howard_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50554,6 +50743,13 @@
         "in_robust_core": false
       },
       "Jiangmen_Changxin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jihan_Wu": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57389,7 +57585,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 78,
+        "degree": 79,
         "neighbor_sectors": [
           "academia",
           "academic_institute",
@@ -57418,7 +57614,7 @@
           "university"
         ],
         "n_neighbor_sectors": 25,
-        "source_files": 47,
+        "source_files": 48,
         "layers": [
           "financial",
           "structural"
@@ -57628,6 +57824,32 @@
         "both_layers": true
       },
       {
+        "node": "AI_Datacenters",
+        "degree": 23,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "commodity",
+          "financier",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Russia",
         "degree": 41,
         "neighbor_sectors": [
@@ -57648,31 +57870,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "AI_Datacenters",
-        "degree": 22,
-        "neighbor_sectors": [
-          "ai",
-          "capital",
-          "commodity",
-          "financier",
-          "logistics",
-          "macro",
-          "neocloud",
-          "other",
-          "political",
-          "private_credit",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "SEC",
