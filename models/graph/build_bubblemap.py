@@ -197,6 +197,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Fidelity_Digital_Assets":"Fidelity Digital Assets","Cox_Enterprises":"Cox Enterprises","Cox_Automotive":"Cox Automotive","Cargill":"Cargill",
  "Hilcorp":"Hilcorp","Endeavor_Energy":"Endeavor Energy","Energy_Transfer":"Energy Transfer","Diamondback_Energy":"Diamondback Energy",
  "Cantor_Fitzgerald":"Cantor Fitzgerald","Bitmain":"Bitmain","Bitdeer":"Bitdeer",
+ "CLEAR":"CLEAR (biometric ID)","ID_me":"ID.me","Persona":"Persona (ID verif)","Socure":"Socure","Onfido":"Onfido","Entrust":"Entrust",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus

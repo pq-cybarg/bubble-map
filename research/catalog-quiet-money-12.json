@@ -1,0 +1,28 @@
+{
+  "title": "Quiet money (batch 13): quiet biometric & digital-ID / age-verification vendor fortunes",
+  "source": "Public record: company histories; CLEAR (Alclear, NYSE:YOU) filings; ID.me federal/state contracts + facial-recognition controversy; Persona/Founders Fund coverage; Entrust-Onfido 2024 acquisition; Socure. Catalog layer (#242 batch 13). Structural overlay; person nodes carry dossiers. FOCUS: the low-profile fortunes selling the biometric + identity/age-verification plumbing that the map's Digital-ID thread documents - the vendors who profit from identity-gating. HONESTY: ownership/contracts/products = fact; the surveillance-by-construction + efficacy critiques are the project's labeled position (see age-verification-abolition), NOT an endorsement of any 'better mechanism'; no cabal imputed.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Caryn_Seidman_Becker", "sector": "person"},
+    {"id": "Blake_Hall", "sector": "person"},
+    {"id": "CLEAR", "sector": "surveillance"},
+    {"id": "ID_me", "sector": "surveillance"},
+    {"id": "Persona", "sector": "surveillance"},
+    {"id": "Socure", "sector": "surveillance"},
+    {"id": "Onfido", "sector": "surveillance"},
+    {"id": "Entrust", "sector": "identity"}
+  ],
+  "edges": [
+    {"from": "Caryn_Seidman_Becker", "to": "CLEAR", "instrument": "leads", "notes": "Caryn Seidman-Becker co-founded + runs CLEAR (Alclear; NYSE: YOU) - biometric identity lanes at airports + venues (~30M+ members), now expanding into general identity, age, and healthcare verification; a low-profile founder-CEO fortune (fact).", "source": "CLEAR; public record"},
+    {"from": "CLEAR", "to": "Biometric_Security", "instrument": "relationship", "notes": "CLEAR enrolls face/iris/fingerprint for tens of millions - one of the largest private consumer biometric databases; the honeypot-concentration concern the map's identity thread flags (fact of scale; risk framing = labeled position).", "source": "public record"},
+    {"from": "CLEAR", "to": "Digital_ID", "instrument": "relationship", "notes": "CLEAR is pushing from airport lanes into general digital-identity + age-verification - a private biometric ID expanding across everyday gating (fact of expansion).", "source": "CLEAR"},
+    {"from": "Blake_Hall", "to": "ID_me", "instrument": "founder_origin", "notes": "Blake Hall founded ID.me - identity-proofing for US federal + state agencies (IRS, VA, unemployment); a quiet govtech identity fortune (fact).", "source": "ID.me; public record"},
+    {"from": "ID_me", "to": "US_Government", "instrument": "gov_contract", "notes": "ID.me holds identity-verification contracts across the IRS, VA, SSA, and state unemployment systems - private identity proofing embedded in government access (fact).", "source": "federal/state contracts"},
+    {"from": "ID_me", "to": "Facial_Recognition", "instrument": "relationship", "notes": "ID.me used facial recognition (initially effectively mandatory for IRS login) - after 2022 backlash it added a human-verification option + walked back some claims about its 1:many matching; the archetypal 'convenience vs surveillance' fight in gov identity (fact; efficacy/claims contested).", "source": "public record"},
+    {"from": "Persona", "to": "Digital_ID", "instrument": "data_broker", "notes": "Persona (Founders Fund/Thiel-network backed) is an identity + age-verification vendor; the age-verification-abolition block flags such pipelines as combining ID capture, watchlist screening, and biometric retention - identity-gating as a data pipeline (fact of product category; the surveillance framing is the project's labeled position).", "source": "public record; age-verification-abolition"},
+    {"from": "Founders_Fund", "to": "Persona", "instrument": "relationship", "notes": "Persona sits in the Founders Fund / Thiel investment network - the same PayPal-mafia capital that also backs Palantir + surveillance-adjacent identity infrastructure (fact of backing; network framing graded).", "source": "public record"},
+    {"from": "Socure", "to": "Digital_ID", "instrument": "relationship", "notes": "Socure is a large identity-verification + fraud-scoring vendor to banks, fintechs, and government - predictive identity analytics feeding the KYC/onboarding layer (fact).", "source": "Socure"},
+    {"from": "Onfido", "to": "Entrust", "instrument": "ownership_transfer", "notes": "Entrust acquired Onfido (2024) - consolidating AI document + biometric identity/age-assurance into a larger security vendor; part of the age-assurance market roll-up ahead of UK OSA / EU rules (fact).", "source": "Entrust/Onfido 2024"},
+    {"from": "Onfido", "to": "Digital_ID", "instrument": "relationship", "notes": "Onfido provides AI-based document + selfie biometric identity/age verification - a core supplier to the age-gating regimes (UK Online Safety Act, EU) the map tracks (fact).", "source": "public record"}
+  ]
+}

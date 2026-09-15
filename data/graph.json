@@ -920,6 +920,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "Blake_Hall": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "BlockFi": {
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
@@ -1132,6 +1136,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "CLEAR": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "CLS_Bank": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -1290,6 +1298,10 @@
     },
     "Carvana": {
       "sector": "retail",
+      "has_exogenous_revenue": false
+    },
+    "Caryn_Seidman_Becker": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Case_Western_Reserve_University": {
@@ -2296,6 +2308,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Entrust": {
+      "sector": "identity",
+      "has_exogenous_revenue": false
+    },
     "Epic_Games": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -3166,6 +3182,10 @@
     },
     "IDScan": {
       "sector": "identity",
+      "has_exogenous_revenue": false
+    },
+    "ID_me": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "IEC": {
@@ -4696,6 +4716,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Onfido": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "OpenAI": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -4954,6 +4978,10 @@
     },
     "Perpetua_Resources": {
       "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
+    "Persona": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Pertsev": {
@@ -5922,6 +5950,10 @@
     },
     "Snowflake": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Socure": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "SoftBank": {
@@ -17651,6 +17683,149 @@
       "cancelable": false,
       "source_file": "influence-congress-hfsc.json",
       "note": "Ranking Member (former Chair). Her documented record cuts AGAINST the naive-capture story: she OPPOSED the industry-favored GENIUS Act (citing Trump-family World Liberty Financial) and introduced 'Stop TRUMP in Crypto' - structural influence is real, but 'foreign leverage/kompromat over a named member' is UNSUPPORTED (fact + honest grade)."
+    },
+    {
+      "from": "Caryn_Seidman_Becker",
+      "to": "CLEAR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Caryn Seidman-Becker co-founded + runs CLEAR (Alclear; NYSE: YOU) - biometric identity lanes at airports + venues (~30M+ members), now expanding into general identity, age, and healthcare verification; a low-profile founder-CEO fortune (fact)."
+    },
+    {
+      "from": "CLEAR",
+      "to": "Biometric_Security",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "CLEAR enrolls face/iris/fingerprint for tens of millions - one of the largest private consumer biometric databases; the honeypot-concentration concern the map's identity thread flags (fact of scale; risk framing = labeled position)."
+    },
+    {
+      "from": "CLEAR",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "CLEAR is pushing from airport lanes into general digital-identity + age-verification - a private biometric ID expanding across everyday gating (fact of expansion)."
+    },
+    {
+      "from": "Blake_Hall",
+      "to": "ID_me",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Blake Hall founded ID.me - identity-proofing for US federal + state agencies (IRS, VA, unemployment); a quiet govtech identity fortune (fact)."
+    },
+    {
+      "from": "ID_me",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "ID.me holds identity-verification contracts across the IRS, VA, SSA, and state unemployment systems - private identity proofing embedded in government access (fact)."
+    },
+    {
+      "from": "ID_me",
+      "to": "Facial_Recognition",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "ID.me used facial recognition (initially effectively mandatory for IRS login) - after 2022 backlash it added a human-verification option + walked back some claims about its 1:many matching; the archetypal 'convenience vs surveillance' fight in gov identity (fact; efficacy/claims contested)."
+    },
+    {
+      "from": "Persona",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "data_broker",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Persona (Founders Fund/Thiel-network backed) is an identity + age-verification vendor; the age-verification-abolition block flags such pipelines as combining ID capture, watchlist screening, and biometric retention - identity-gating as a data pipeline (fact of product category; the surveillance framing is the project's labeled position)."
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Persona",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Persona sits in the Founders Fund / Thiel investment network - the same PayPal-mafia capital that also backs Palantir + surveillance-adjacent identity infrastructure (fact of backing; network framing graded)."
+    },
+    {
+      "from": "Socure",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Socure is a large identity-verification + fraud-scoring vendor to banks, fintechs, and government - predictive identity analytics feeding the KYC/onboarding layer (fact)."
+    },
+    {
+      "from": "Onfido",
+      "to": "Entrust",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Entrust acquired Onfido (2024) - consolidating AI document + biometric identity/age-assurance into a larger security vendor; part of the age-assurance market roll-up ahead of UK OSA / EU rules (fact)."
+    },
+    {
+      "from": "Onfido",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-12.json",
+      "note": "Onfido provides AI-based document + selfie biometric identity/age verification - a core supplier to the age-gating regimes (UK Online Safety Act, EU) the map tracks (fact)."
     },
     {
       "from": "MGX",
@@ -44252,10 +44427,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1858,
-    "num_edges": 2832,
+    "num_nodes": 1866,
+    "num_edges": 2843,
     "num_financial_edges": 274,
-    "num_structural_edges": 2558,
+    "num_structural_edges": 2569,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44483,7 +44658,15 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -44491,15 +44674,7 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "Amazon",
@@ -44523,18 +44698,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
@@ -44543,6 +44706,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -46178,6 +46353,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Blake_Hall": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "BlockFi": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46549,6 +46731,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CLEAR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CLS_Bank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -46823,6 +47012,13 @@
         "in_robust_core": false
       },
       "Carvana": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Caryn_Seidman_Becker": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48586,6 +48782,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Entrust": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Epic_Games": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50106,6 +50309,13 @@
         "in_robust_core": false
       },
       "IDScan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ID_me": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52786,6 +52996,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Onfido": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "OpenAI": {
         "total_usd": 966500000000,
         "circular_usd": 898500000000,
@@ -53236,6 +53453,13 @@
       },
       "Perpetua_Resources": {
         "total_usd": 2900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Persona": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -54929,6 +55153,13 @@
         "in_robust_core": false
       },
       "Snowflake": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Socure": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57585,7 +57816,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 79,
+        "degree": 80,
         "neighbor_sectors": [
           "academia",
           "academic_institute",
@@ -57614,7 +57845,7 @@
           "university"
         ],
         "n_neighbor_sectors": 25,
-        "source_files": 48,
+        "source_files": 49,
         "layers": [
           "financial",
           "structural"
@@ -57896,6 +58127,30 @@
         "both_layers": true
       },
       {
+        "node": "Digital_ID",
+        "degree": 27,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 11,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Ripple",
         "degree": 22,
         "neighbor_sectors": [
@@ -57941,30 +58196,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Digital_ID",
-        "degree": 23,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 10,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Palantir",

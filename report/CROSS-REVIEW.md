@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `catalog-quiet-money-11.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `catalog-quiet-money-12.json` — related files by shared entities (verify cross-refs exist)
+- spec-palantir-surveillance.json: 2 shared entities
+- spec-inqtel-portfolio.json: 2 shared entities
+- catalog-academia-core.json: 2 shared entities
+- geopolitics-defense-industrial-base.json: 2 shared entities
+- influence-operator-network.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- catalog-elite-groups.json: 2 shared entities
+- spec-dialog-society.json: 2 shared entities
