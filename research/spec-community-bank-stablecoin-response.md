@@ -32,3 +32,6 @@ The strategic point is the framing: it positions community banks as **distributi
 **Two contrasting community-bank models now exist:** (1) **BankChain Alliance** - members **own** the rail; (2) **Coinbase+Moov** - a crypto firm supplies the rail, banks distribute. *Facts of the announcements; whether either actually neutralizes deposit-flight risk is graded. Market reaction was muted (COIN -0.88% that day).*
 
 *Sources: [CNBC - Coinbase partners with Moov before Clarity vote (2026-09-10)](https://www.cnbc.com/2026/09/10/coinbase-clarity-moov-banks-stablecoin.html); [Finextra](https://www.finextra.com/newsarticle/48384/coinbase-and-moov-partner-to-boost-stablecoin-payments-for-community-banks-ahead-of-clarity-vote); [Quartz](https://qz.com/coinbase-moov-stablecoin-community-banks-clarity-act-091026); [UseTheBitcoin](https://usethebitcoin.com/news/coinbase-moov-stablecoin-payments-community-banks/).*
+
+### Vote outcome (15 Sep 2026)
+The CLARITY cloture vote this partnership was timed ahead of **failed** (short of 60), with possible GOP defections flagged on **community-bank grounds** (e.g. Cornyn) - underscoring that the deposit-flight worry the Coinbase+Moov and BankChain models each try to defuse remained a live vote-driver. Majority Leader Thune filed a **motion to reconsider**, keeping the bill revivable. (See [[spec-clarity-act-chronology]].)

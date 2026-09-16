@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 92 files
+- **Meta** — 93 files
 - **Google** — 63 files
 - **Chainlink** — 63 files
 - **OpenAI** — 49 files
@@ -31,4 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-coinex-winddown.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-clarity-act-chronology.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-leg.json: 4 shared entities
+- temporal-bridges.json: 4 shared entities
+- blockchain-registry.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- spec-crypto-banking-debanking.json: 3 shared entities
+- spec-blackrock-aladdin-concentration.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
+- spec-blockchain-ecosystem.json: 3 shared entities

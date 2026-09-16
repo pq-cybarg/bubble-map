@@ -27,3 +27,13 @@ Section 604 (the Blockchain Regulatory Certainty Act — Emmer H.R. 1747; Lummis
 - **But the delay is over-determined.** The **ethics fight around Trump's ~$1.4B crypto income (World Liberty Financial)**, Democratic conditions (a state-AG enforcement role Republicans called a "red line"), the **SEC-vs-CFTC two-committee split**, and ordinary **floor-time congestion** (nominations + a Russia sanctions bill ahead of it) each independently slowed the bill. A coordinated **bank blockade** is one live thread — not the demonstrated cause. The parsimonious read is a multi-front stall, of which the bank/yield fight is one front.
 
 *Sources: Latham & Paul Hastings US crypto-policy trackers; The Block (Jul 22 2026); crypto.news; Coinpedia timeline; Polymarket/Galaxy odds; DeFi Education Fund. Cross-refs: spec-stablecoin-yield-fight, spec-bank-digitalmoney-consortia, spec-us-regulator-jurisdiction-map, spec-crypto-sec-epstein (Trump/WLFI conflict).*
+
+## Cloture-vote outcome (15 Sep 2026): failed, but kept revivable
+
+The Senate cloture vote on the **motion to proceed** to CLARITY **failed** on 15 Sep 2026, short of the 60 needed (live tally ~49-49/49-50; Sen. Susan Collins among the notable no votes; possible GOP defections flagged on community-bank grounds, e.g. Cornyn). Sponsors' "last, best and final" substitute (14 Sep) reportedly folded in ~126 Democratic-requested changes over a year; Democrats sent a counterproposal Monday night; overnight talks collapsed before the 2:15pm ET vote.
+
+**But it was not killed.** Majority Leader **John Thune entered a motion to reconsider** - the standard maneuver (a prevailing-side member, typically the leader switching to "no" for standing) that **preserves a route to bring CLARITY back**. So the widely-quoted "it's over" (Sen. Lummis) is an overstatement: the vehicle **stalled but was deliberately kept revivable**.
+
+The three disputes that sank it map exactly onto threads already documented here: **(1)** ethics rules targeting President Trump's ~$1.4B crypto income (World Liberty Financial); **(2)** DeFi developer liability (Section 604); **(3)** the stablecoin-yield provision (threatening ~$1.35B/yr in Coinbase USDC-rewards revenue - the same yield fight in [[spec-stablecoin-yield-fight]]). Prediction markets had already collapsed (Polymarket ~82% Feb -> ~16% early Sep; Galaxy ~10%). Cloture success would not have enacted the law anyway - it only opens amendments -> passage -> House concurrence.
+
+*Sources: CoinGape, Coinpedia, TechTimes, CryptoTimes (2026-09-15 live coverage). Cross-refs: spec-stablecoin-yield-fight, spec-community-bank-stablecoin-response, spec-crypto-sec-epstein.*

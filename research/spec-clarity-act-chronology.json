@@ -1,110 +1,132 @@
 {
-  "metadata": {
-    "title": "CLARITY Act (H.R.3633) delay chronology + the shifting arguments - testing the 'large-bank moving-goalposts' hypothesis",
-    "generated": "2026-09-03",
-    "frame": "House passage was fast + bipartisan (294-134, Jul 2025); the Senate is where it stalled through 2026. This block dates the sequence and tests the hypothesis that large banks moved the goalposts (yield -> 'activity-based' -> developer/law-enforcement -> dollar-threat) to run out the clock.",
-    "verdict_graded": "PARTIALLY SUPPORTED but NOT the parsimonious whole story. (1) The stablecoin-YIELD fight (ABA/BPI vs exchanges) is a real, dated sticking point and did contribute to delay. (2) BUT the developer-rights pushback came from LAW ENFORCEMENT groups (+ some faith leaders), not the banks, and it did NOT prevail - the non-custodial safe harbor (Sec 604) survived intact ('proven false' = the illicit-finance-loophole objection did not carry). (3) The delay is OVER-DETERMINED: the ethics fight around Trump's ~$1.4B crypto income (World Liberty Financial), Democratic conditions (state-AG enforcement 'red line'), the SEC-vs-CFTC two-committee split, and plain Senate floor-time congestion (nominations + Russia sanctions ahead of it) each independently slowed it. A coordinated-bank-blockade is one live thread, not the demonstrated cause. Passage odds fell from ~82% (Feb) to ~28-30% (Jul-Aug 2026); cloture set Sep 15 2026.",
-    "method": "Latham & Paul Hastings US crypto-policy trackers; The Block (Jul 22 2026 Senate text w/ dev protections + 2029 ethics sunset); crypto.news (DeFi battle); Coinpedia timeline; Polymarket/Galaxy odds; DeFi Education Fund statements."
+ "metadata": {
+  "title": "CLARITY Act (H.R.3633) delay chronology + the shifting arguments - testing the 'large-bank moving-goalposts' hypothesis",
+  "generated": "2026-09-03",
+  "frame": "House passage was fast + bipartisan (294-134, Jul 2025); the Senate is where it stalled through 2026. This block dates the sequence and tests the hypothesis that large banks moved the goalposts (yield -> 'activity-based' -> developer/law-enforcement -> dollar-threat) to run out the clock.",
+  "verdict_graded": "PARTIALLY SUPPORTED but NOT the parsimonious whole story. (1) The stablecoin-YIELD fight (ABA/BPI vs exchanges) is a real, dated sticking point and did contribute to delay. (2) BUT the developer-rights pushback came from LAW ENFORCEMENT groups (+ some faith leaders), not the banks, and it did NOT prevail - the non-custodial safe harbor (Sec 604) survived intact ('proven false' = the illicit-finance-loophole objection did not carry). (3) The delay is OVER-DETERMINED: the ethics fight around Trump's ~$1.4B crypto income (World Liberty Financial), Democratic conditions (state-AG enforcement 'red line'), the SEC-vs-CFTC two-committee split, and plain Senate floor-time congestion (nominations + Russia sanctions ahead of it) each independently slowed it. A coordinated-bank-blockade is one live thread, not the demonstrated cause. Passage odds fell from ~82% (Feb) to ~28-30% (Jul-Aug 2026); cloture set Sep 15 2026.",
+  "method": "Latham & Paul Hastings US crypto-policy trackers; The Block (Jul 22 2026 Senate text w/ dev protections + 2029 ethics sunset); crypto.news (DeFi battle); Coinpedia timeline; Polymarket/Galaxy odds; DeFi Education Fund statements."
+ },
+ "nodes": [
+  {
+   "id": "Senate_Banking_Committee",
+   "sector": "state"
   },
-  "nodes": [
-    {
-      "id": "Senate_Banking_Committee",
-      "sector": "state"
-    },
-    {
-      "id": "Senate_Ag_Committee",
-      "sector": "state"
-    },
-    {
-      "id": "Law_Enforcement",
-      "sector": "state"
-    },
-    {
-      "id": "DeFi_Education_Fund",
-      "sector": "crypto"
-    },
-    {
-      "id": "BRCA_Sec604",
-      "sector": "state"
-    }
-  ],
-  "edges": [
-    {
-      "from": "HFSC",
-      "to": "CLARITY_Act",
-      "instrument": "house_passage",
-      "notes": "House PASSED CLARITY (H.R.3633) 294-134 on Jul 17 2025 (78 Dems) after HFSC 32-19 + House Ag 47-6 (Jun 10) - bipartisan and easy in the House; the friction is all in the Senate (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Senate_Banking_Committee",
-      "to": "CLARITY_Act",
-      "instrument": "markup",
-      "notes": "Markup POSTPONED on the day scheduled (Jan 14 2026); advanced a negotiated version 15-9 (only 2 Dems) May 14 2026; placed on the Senate calendar (No. 423) Jun 1 2026; cloture vote set Sep 15 2026 (not final passage) (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Senate_Ag_Committee",
-      "to": "CLARITY_Act",
-      "instrument": "jurisdiction",
-      "notes": "Approved its own digital-COMMODITY version (Jan 2026) via CFTC jurisdiction - the SEC-vs-CFTC split runs through two committees (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "ABA",
-      "to": "CLARITY_Act",
-      "instrument": "lobby_against_yield",
-      "notes": "American Bankers Association lobbied against ANY stablecoin-yield provision; a Jan 12 2026 draft moved to prohibit yield 'for simply holding'; Mar 10 2026 senators floated an 'activity-based' compromise (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Bank_Policy_Institute",
-      "to": "CLARITY_Act",
-      "instrument": "lobby",
-      "notes": "Large-bank advocate pressing to close the third-party yield loophole in the market-structure text (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "BRCA_Sec604",
-      "to": "CLARITY_Act",
-      "instrument": "developer_safe_harbor",
-      "notes": "Blockchain Regulatory Certainty Act (Emmer H.R.1747; Lummis+Wyden S.3611) folded in as Sec 604: NON-CUSTODIAL developers are NOT money transmitters (excludes 31 USC 5330 / 18 USC 1960) where they lack 'unilateral and independent control'; + Keep Your Coins self-custody shield (Sec 10605) (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Law_Enforcement",
-      "to": "BRCA_Sec604",
-      "instrument": "objection",
-      "notes": "Law-enforcement groups (+ some Catholic leaders) objected that the developer safe harbor is a 'compliance-free lane for illicit finance' / trafficking risk - this is the developer-rights pushback, and it came from LAW ENFORCEMENT, not the bank/yield coalition (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "DeFi_Education_Fund",
-      "to": "BRCA_Sec604",
-      "instrument": "defends",
-      "notes": "DeFi side: 'code is a publishing right', code!=control, and anti-fraud/anti-manipulation (CFTC) rules STILL apply to everyone; DeFi Education Fund called it 'appropriate tools without overregulating.' The objection did NOT prevail - final text RETAINED full protection ('proven false' in the sense the illicit-finance-loophole claim did not carry) (fact + grade).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Tornado_Cash",
-      "to": "BRCA_Sec604",
-      "instrument": "precedent",
-      "notes": "The provision responds to the Tornado Cash prosecution (co-founder Roman Storm convicted on one charge, Aug 2025); rationale 'writing code shouldn't be criminalized' (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Trump",
-      "to": "CLARITY_Act",
-      "instrument": "conflict_of_interest",
-      "notes": "THE under-appreciated delay driver: Trump's Jul 1 2026 disclosure showed ~$1.4B crypto-related income (2025), incl. World Liberty Financial - so ETHICS provisions (state-AG enforcement a GOP 'red line'; Murphy/Van Hollen/Merkley opposed after an ethics clause was dropped) became a primary sticking point. The delay is OVER-DETERMINED (ethics + DeFi + floor-time + yield), not a single-cause bank blockade (fact + grade).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    },
-    {
-      "from": "Blockchain_Association",
-      "to": "CLARITY_Act",
-      "instrument": "supports",
-      "notes": "Crypto industry backs CLARITY (esp. the developer safe harbor + self-custody shield) (fact).",
-      "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
-    }
-  ]
+  {
+   "id": "Senate_Ag_Committee",
+   "sector": "state"
+  },
+  {
+   "id": "Law_Enforcement",
+   "sector": "state"
+  },
+  {
+   "id": "DeFi_Education_Fund",
+   "sector": "crypto"
+  },
+  {
+   "id": "BRCA_Sec604",
+   "sector": "state"
+  }
+ ],
+ "edges": [
+  {
+   "from": "HFSC",
+   "to": "CLARITY_Act",
+   "instrument": "house_passage",
+   "notes": "House PASSED CLARITY (H.R.3633) 294-134 on Jul 17 2025 (78 Dems) after HFSC 32-19 + House Ag 47-6 (Jun 10) - bipartisan and easy in the House; the friction is all in the Senate (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Senate_Banking_Committee",
+   "to": "CLARITY_Act",
+   "instrument": "markup",
+   "notes": "Markup POSTPONED on the day scheduled (Jan 14 2026); advanced a negotiated version 15-9 (only 2 Dems) May 14 2026; placed on the Senate calendar (No. 423) Jun 1 2026; cloture vote set Sep 15 2026 (not final passage) (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Senate_Ag_Committee",
+   "to": "CLARITY_Act",
+   "instrument": "jurisdiction",
+   "notes": "Approved its own digital-COMMODITY version (Jan 2026) via CFTC jurisdiction - the SEC-vs-CFTC split runs through two committees (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "ABA",
+   "to": "CLARITY_Act",
+   "instrument": "lobby_against_yield",
+   "notes": "American Bankers Association lobbied against ANY stablecoin-yield provision; a Jan 12 2026 draft moved to prohibit yield 'for simply holding'; Mar 10 2026 senators floated an 'activity-based' compromise (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Bank_Policy_Institute",
+   "to": "CLARITY_Act",
+   "instrument": "lobby",
+   "notes": "Large-bank advocate pressing to close the third-party yield loophole in the market-structure text (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "BRCA_Sec604",
+   "to": "CLARITY_Act",
+   "instrument": "developer_safe_harbor",
+   "notes": "Blockchain Regulatory Certainty Act (Emmer H.R.1747; Lummis+Wyden S.3611) folded in as Sec 604: NON-CUSTODIAL developers are NOT money transmitters (excludes 31 USC 5330 / 18 USC 1960) where they lack 'unilateral and independent control'; + Keep Your Coins self-custody shield (Sec 10605) (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Law_Enforcement",
+   "to": "BRCA_Sec604",
+   "instrument": "objection",
+   "notes": "Law-enforcement groups (+ some Catholic leaders) objected that the developer safe harbor is a 'compliance-free lane for illicit finance' / trafficking risk - this is the developer-rights pushback, and it came from LAW ENFORCEMENT, not the bank/yield coalition (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "DeFi_Education_Fund",
+   "to": "BRCA_Sec604",
+   "instrument": "defends",
+   "notes": "DeFi side: 'code is a publishing right', code!=control, and anti-fraud/anti-manipulation (CFTC) rules STILL apply to everyone; DeFi Education Fund called it 'appropriate tools without overregulating.' The objection did NOT prevail - final text RETAINED full protection ('proven false' in the sense the illicit-finance-loophole claim did not carry) (fact + grade).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Tornado_Cash",
+   "to": "BRCA_Sec604",
+   "instrument": "precedent",
+   "notes": "The provision responds to the Tornado Cash prosecution (co-founder Roman Storm convicted on one charge, Aug 2025); rationale 'writing code shouldn't be criminalized' (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Trump",
+   "to": "CLARITY_Act",
+   "instrument": "conflict_of_interest",
+   "notes": "THE under-appreciated delay driver: Trump's Jul 1 2026 disclosure showed ~$1.4B crypto-related income (2025), incl. World Liberty Financial - so ETHICS provisions (state-AG enforcement a GOP 'red line'; Murphy/Van Hollen/Merkley opposed after an ethics clause was dropped) became a primary sticking point. The delay is OVER-DETERMINED (ethics + DeFi + floor-time + yield), not a single-cause bank blockade (fact + grade).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  },
+  {
+   "from": "Blockchain_Association",
+   "to": "CLARITY_Act",
+   "instrument": "supports",
+   "notes": "Crypto industry backs CLARITY (esp. the developer safe harbor + self-custody shield) (fact).",
+   "source": "#225 chronology (Latham/Paul Hastings crypto trackers; The Block; crypto.news; Coinpedia; Polymarket)"
+  }
+ ],
+ "cloture_vote_outcome_2026_09_15": {
+  "result": "FAILED cloture. On 15 Sep 2026 the Senate cloture vote on the motion to proceed to CLARITY fell short of the 60 needed (live tally ~49-49/49-50); the chair ruled three-fifths not reached. But this was cloture on the MOTION TO PROCEED, not final passage. status: fact.",
+  "endgame": "Sponsors' 'last, best and final' substitute (Sun 14 Sep) reportedly incorporated ~126 Democratic-requested changes over a year; Democrats sent a counterproposal Mon night; overnight talks collapsed before the 2:15pm ET vote. status: fact.",
+  "three_unresolved_disputes": "(1) ethics rules targeting President Trump's ~$1.4B crypto income (World Liberty Financial); (2) DeFi developer liability (Section 604); (3) the stablecoin-yield provision (threatening ~$1.35B/yr in Coinbase USDC-rewards revenue). status: fact (the disputes) - these map exactly onto the delay threads already documented here.",
+  "odds_backdrop": "Prediction markets had already collapsed: Polymarket 'law in 2026' odds fell from ~82% (Feb) to ~16% (6 Sep); Galaxy pegged ~10%. The failure confirmed the pessimism. status: fact.",
+  "what_it_does_not_mean": "Cloture success would NOT have enacted the law anyway (it only opens amendments -> passage -> House concurrence); and the failure is NOT final rejection - Thune's motion to reconsider leaves the door open. Sen. Lummis said 'I think we're done,' but the procedural posture (motion to reconsider pending) contradicts a clean obituary. The underlying SEC/CFTC market-structure question + the stablecoin-yield + DeFi-liability (Sec 604) + Trump-ethics fights persist. status: fact + interpretation (labeled).",
+  "motion_to_reconsider": "Majority Leader John Thune entered a MOTION TO RECONSIDER the failed cloture vote - the standard maneuver (a prevailing-side member, typically the leader voting 'no' for standing) that PRESERVES a procedural route to bring CLARITY back for another vote rather than killing it. So 'dead for 2026' is an overstatement: the vehicle stalled but was deliberately kept revivable. status: fact (motion filed) + standard-practice note on the vote-switch mechanism."
+ },
+ "sources": [
+  {
+   "name": "CoinGape - CLARITY Act fails to advance in Senate cloture vote (2026-09-15)",
+   "url": "https://coingape.com/clarity-act-live-updates-today-sept-15-crypto-bill-senate-cloture-vote/"
+  },
+  {
+   "name": "Coinpedia - CLARITY Act blocked as Senate fails to reach 60 votes (2026-09-15)",
+   "url": "https://coinpedia.org/news/clarity-act-vote-today-live-updates-can-democrats-deliver-60-votes/"
+  },
+  {
+   "name": "TechTimes - CLARITY Act Senate vote held after overnight talks collapsed (2026-09-15)",
+   "url": "https://www.techtimes.com/articles/327576/20260915/clarity-act-senate-vote-held-after-overnight-talks-collapsed-markets-fell-near-record-lows.htm"
+  }
+ ]
 }
