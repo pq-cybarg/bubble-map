@@ -1,0 +1,18 @@
+{
+  "title": "CoinEx orderly wind-down (Sept 2026) - the honest counter-example to the crypto exit-scam pattern",
+  "source": "Primary: Haipo Yang statement (@yhaiyang, 14-15 Sep 2026) + CoinEx official announcement (coinex.com/en/announcements/detail/53539656293908). Overlay on the crypto-exchange thread. HONESTY: the announced terms + schedule are fact (stated); the >100% reserve is a SELF-CLAIM, contested-until-withdrawals-actually-clear; the 'honorable exit' reading is labeled interpretation. Directly contrasts the pop-up-shell exit-scam pattern (spec-binance-exit-scam / Crypto_Exit_Scam).",
+  "grade": "per-edge in notes (fact | claimed/contested | interpretation)",
+  "nodes": [
+    {"id": "CoinEx", "sector": "crypto"},
+    {"id": "Haipo_Yang", "sector": "person"},
+    {"id": "ViaBTC", "sector": "crypto"},
+    {"id": "CET", "sector": "crypto"}
+  ],
+  "edges": [
+    {"from": "Haipo_Yang", "to": "CoinEx", "instrument": "founder_origin", "notes": "Haipo Yang founded CoinEx (live 22 Dec 2017); on 14-15 Sep 2026 he announced an orderly cessation - withdrawals open until 22 Dec 2026 (the 9-year anniversary), then platform closure; cited a prolonged downturn + 'continuously rising regulatory requirements...beyond reasonable boundaries' and 'unlimited risk for limited revenue' (fact of announcement).", "source": "Haipo Yang; CoinEx announcement 2026-09"},
+    {"from": "Haipo_Yang", "to": "ViaBTC", "instrument": "founder_origin", "notes": "Yang also founded ViaBTC (a major Bitcoin/BCH mining pool); a long-time Bitcoin Cash + mining figure - the same operator behind CoinEx + the CET exchange token (fact).", "source": "public record"},
+    {"from": "CoinEx", "to": "CET", "instrument": "controls", "notes": "CET is CoinEx's exchange token; the wind-down includes an uncapped buyback at the 0.005 USDT initial listing price, with auto-repurchase of remaining CET from 29 Sep 2026 - returning holders to entry price rather than zeroing them (fact of terms; whether it fully executes is claimed-until-done).", "source": "CoinEx announcement"},
+    {"from": "CoinEx", "to": "Crypto_Exit_Scam", "instrument": "relationship", "notes": "CONTRAST NODE: CoinEx's announced full-reserve (>100% claimed), withdrawals-honored, token-buyback-at-listing-price shutdown is the honorable OPPOSITE of the pop-up-shell exit-scam pattern (lock funds, deliver nothing) the map documents elsewhere - IF it executes as stated. Grade: announced terms = fact; >100% reserve = self-claim, contested-until-withdrawals-clear; the 'honest exit' framing = interpretation. A real sting remains: unwithdrawn USDT after 22 Dec 2026 enters custody at a 5%/month fee (claims deadline 22 Aug 2028).", "source": "CoinEx announcement; spec-binance-exit-scam"},
+    {"from": "CoinEx", "to": "Stablecoins", "instrument": "relationship", "notes": "Withdrawals + the post-deadline custody regime are USDT-denominated; the mid-tier-exchange compliance-cost squeeze ('unlimited risk for limited revenue') is a data point on how regulation is reshaping the CEX field (fact of the stated rationale; systemic reading graded).", "source": "CoinEx announcement"}
+  ]
+}

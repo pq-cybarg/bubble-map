@@ -1092,6 +1092,10 @@
       "sector": "political",
       "has_exogenous_revenue": false
     },
+    "CET": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "CFET": {
       "sector": "semiconductor",
       "has_exogenous_revenue": false
@@ -1526,6 +1530,10 @@
     },
     "CoinDCX": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "CoinEx": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "CoinSpot": {
@@ -2966,6 +2974,10 @@
     },
     "Hacking_Team": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Haipo_Yang": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Halushchenko": {
@@ -7055,6 +7067,10 @@
     "Verizon": {
       "sector": "telecom",
       "has_exogenous_revenue": true
+    },
+    "ViaBTC": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
     },
     "Viasat": {
       "sector": "satellite",
@@ -17384,6 +17400,71 @@
       "cancelable": false,
       "source_file": "spec-stormwater-easement-neglect-pattern.json",
       "note": "Oct 3 2024 cyberattack forced AWK to shut its MyWater customer portal + suspend billing (no water/wastewater facility impact; language suggested ransomware) - part of a rising wave of attacks on US water infrastructure, some linked to Iran/Russia/China. The OT/critical-infrastructure threat overlay on the water sector (fact)."
+    },
+    {
+      "from": "Haipo_Yang",
+      "to": "CoinEx",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-coinex-winddown.json",
+      "note": "Haipo Yang founded CoinEx (live 22 Dec 2017); on 14-15 Sep 2026 he announced an orderly cessation - withdrawals open until 22 Dec 2026 (the 9-year anniversary), then platform closure; cited a prolonged downturn + 'continuously rising regulatory requirements...beyond reasonable boundaries' and 'unlimited risk for limited revenue' (fact of announcement)."
+    },
+    {
+      "from": "Haipo_Yang",
+      "to": "ViaBTC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-coinex-winddown.json",
+      "note": "Yang also founded ViaBTC (a major Bitcoin/BCH mining pool); a long-time Bitcoin Cash + mining figure - the same operator behind CoinEx + the CET exchange token (fact)."
+    },
+    {
+      "from": "CoinEx",
+      "to": "CET",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-coinex-winddown.json",
+      "note": "CET is CoinEx's exchange token; the wind-down includes an uncapped buyback at the 0.005 USDT initial listing price, with auto-repurchase of remaining CET from 29 Sep 2026 - returning holders to entry price rather than zeroing them (fact of terms; whether it fully executes is claimed-until-done)."
+    },
+    {
+      "from": "CoinEx",
+      "to": "Crypto_Exit_Scam",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-coinex-winddown.json",
+      "note": "CONTRAST NODE: CoinEx's announced full-reserve (>100% claimed), withdrawals-honored, token-buyback-at-listing-price shutdown is the honorable OPPOSITE of the pop-up-shell exit-scam pattern (lock funds, deliver nothing) the map documents elsewhere - IF it executes as stated. Grade: announced terms = fact; >100% reserve = self-claim, contested-until-withdrawals-clear; the 'honest exit' framing = interpretation. A real sting remains: unwithdrawn USDT after 22 Dec 2026 enters custody at a 5%/month fee (claims deadline 22 Aug 2028)."
+    },
+    {
+      "from": "CoinEx",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-coinex-winddown.json",
+      "note": "Withdrawals + the post-deadline custody regime are USDT-denominated; the mid-tier-exchange compliance-cost squeeze ('unlimited risk for limited revenue') is a data point on how regulation is reshaping the CEX field (fact of the stated rationale; systemic reading graded)."
     },
     {
       "from": "OFAC",
@@ -44427,10 +44508,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1866,
-    "num_edges": 2843,
+    "num_nodes": 1870,
+    "num_edges": 2848,
     "num_financial_edges": 274,
-    "num_structural_edges": 2569,
+    "num_structural_edges": 2574,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44657,8 +44738,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Microsoft",
@@ -44674,11 +44755,11 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -44696,6 +44777,18 @@
         "NVIDIA"
       ],
       [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
@@ -44706,18 +44799,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "Amazon",
@@ -46654,6 +46735,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CET": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "CFET": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47411,6 +47499,13 @@
         "in_robust_core": false
       },
       "CoinDCX": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CoinEx": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49931,6 +50026,13 @@
         "in_robust_core": false
       },
       "Hacking_Team": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Haipo_Yang": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57091,6 +57193,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ViaBTC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Viasat": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -58245,6 +58354,28 @@
         "both_layers": true
       },
       {
+        "node": "Stablecoins",
+        "degree": 25,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "other",
+          "regulator",
+          "stablecoin",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 13,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Amazon",
         "degree": 12,
         "neighbor_sectors": [
@@ -58257,28 +58388,6 @@
           "satellite",
           "standards",
           "university"
-        ],
-        "n_neighbor_sectors": 9,
-        "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Coinbase",
-        "degree": 15,
-        "neighbor_sectors": [
-          "capital",
-          "crypto",
-          "crypto_infra",
-          "dlt",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "state"
         ],
         "n_neighbor_sectors": 9,
         "source_files": 11,
