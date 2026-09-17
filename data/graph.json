@@ -1440,6 +1440,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "CikLeak": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Circle": {
       "sector": "stablecoin",
       "has_exogenous_revenue": true
@@ -2703,6 +2707,10 @@
     "GARM_WFA": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "GAS_Vybory": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "GAVI": {
       "sector": "other",
@@ -5483,6 +5491,10 @@
     "Russia": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Russia_CEC": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Russia_state": {
       "sector": "other",
@@ -35628,6 +35640,58 @@
       "note": "OpenAI's NET LOSS flows onto MSFT's income statement via equity method: $3.1B / $0.41 EPS hit in Q1 FY26, up 6x from $523M / $0.07 a year earlier. OpenAI's cash burn is now a visible, growing drag on Microsoft GAAP earnings."
     },
     {
+      "from": "CikLeak",
+      "to": "Russia_CEC",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cikleak-russia-cec.json",
+      "note": "2026-09-16 (reported/UNVERIFIED): a group calling itself CikLeak claims it breached Russia's Central Election Commission + its contractors, exfiltrating classified documents, server configs, passwords, source code, meeting recordings, and employee chats. It published an interactive 'game' using what it says are the system's real interfaces (play an official who changes results) and called on commission members to report fraud to it; it says it did NOT interfere with voting. CEC head Ella Pamfilova had said in Aug 2026 the system was 'impossible to hack.' Russia's CEC had not confirmed at report time. grade: reported/unverified claim; the mockery + 'impossible to hack' irony are documented from the post; the actual breach scope is unverified."
+    },
+    {
+      "from": "Russia_CEC",
+      "to": "GAS_Vybory",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "operates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cikleak-russia-cec.json",
+      "note": "Russia's CEC operates GAS Vybory 2.0 - the country's new automated election system, slated for first use in the upcoming State Duma elections; a single high-value target whose contractor was among those CikLeak claims to have hit (fact of the system; the compromise of its contractor is the unverified claim)."
+    },
+    {
+      "from": "Russia_CEC",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cikleak-russia-cec.json",
+      "note": "The Central Election Commission is the Russian state body administering federal elections (incl. the State Duma vote) - the target of the claimed breach; election-integrity + legitimacy stakes around the Duma elections (fact of role; legitimacy framing graded)."
+    },
+    {
+      "from": "CikLeak",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cikleak-russia-cec.json",
+      "note": "CikLeak presents as an anti-Kremlin, election-integrity-focused hacktivist actor (targeting the CEC + soliciting fraud reports) - consistent with the wartime anti-Russia hacktivist milieu (IT Army of Ukraine, Anonymous, Cyber Partisans) but with no confirmed affiliation; attribution + motive are graded/interpretation."
+    },
+    {
       "from": "John_Hanke",
       "to": "Keyhole",
       "instrument": "other",
@@ -44508,10 +44572,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1870,
-    "num_edges": 2848,
+    "num_nodes": 1873,
+    "num_edges": 2852,
     "num_financial_edges": 274,
-    "num_structural_edges": 2574,
+    "num_structural_edges": 2578,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44738,11 +44802,23 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Microsoft",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -44751,14 +44827,7 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "AMD",
         "OpenAI"
       ],
       [
@@ -44767,20 +44836,9 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -44795,15 +44853,14 @@
         "Microsoft"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -44811,6 +44868,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -47344,6 +47408,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CikLeak": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Circle": {
         "total_usd": 77300000000,
         "circular_usd": 0,
@@ -49550,6 +49621,13 @@
         "in_robust_core": false
       },
       "GARM_WFA": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GAS_Vybory": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54421,6 +54499,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Russia_CEC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Russia_state": {
         "total_usd": 10000000,
         "circular_usd": 0,
@@ -58191,7 +58276,7 @@
       },
       {
         "node": "Russia",
-        "degree": 41,
+        "degree": 43,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -58205,7 +58290,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 19,
+        "source_files": 20,
         "layers": [
           "structural"
         ],

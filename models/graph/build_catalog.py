@@ -48,6 +48,7 @@ GROUPS = [
         "spec-cyber-notable-individuals", "spec-cyber-notable-individuals-2",
         "spec-iloveyou-worm", "spec-shadow-brokers-eternalblue", "spec-finfisher-finspy-spyware",
         "spec-shai-hulud-npm-worm", "spec-msnightmare-disclosure", "spec-shinyhunters-data-extortion",
+        "spec-cikleak-russia-cec",
         "spec-inqtel-portfolio",
         "spec-palantir-surveillance", "spec-niantic-geospatial"]),
     ("Quantum & PQC", [
