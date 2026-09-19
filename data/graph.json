@@ -676,6 +676,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Bahrain": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Baichuan": {
       "sector": "ai_lab",
       "has_exogenous_revenue": false
@@ -1625,7 +1629,7 @@
       "has_exogenous_revenue": false
     },
     "Commercial_Spyware_Market": {
-      "sector": "other",
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Commerzbank": {
@@ -2153,7 +2157,7 @@
       "has_exogenous_revenue": false
     },
     "Dual_Use_Export_Gap": {
-      "sector": "state",
+      "sector": "regulator",
       "has_exogenous_revenue": false
     },
     "Duane_Arnold_Nuclear": {
@@ -2166,6 +2170,10 @@
     },
     "Dustin_Moskovitz": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "ECCHR": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "ECDSA": {
@@ -2280,6 +2288,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Elaman_GmbH": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "Electric_Coin_Company": {
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
@@ -2318,6 +2330,10 @@
     },
     "Energy_Transfer": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "Enforced_Disappearance": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Entrust": {
@@ -2593,7 +2609,7 @@
       "has_exogenous_revenue": true
     },
     "FinSpy": {
-      "sector": "other",
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Financial_Privacy": {
@@ -2769,7 +2785,7 @@
       "has_exogenous_revenue": true
     },
     "Gamma_Group": {
-      "sector": "tech",
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Garantex": {
@@ -2831,6 +2847,10 @@
     "Gerald_Cotten": {
       "sector": "person",
       "has_exogenous_revenue": false
+    },
+    "Germany": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Giancarlo_Devasini": {
       "sector": "person",
@@ -5116,6 +5136,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "Privacy_International": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Private credit / venture debt lenders": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -6532,6 +6556,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Turkmenistan": {
+      "sector": "state",
+      "has_exogenous_revenue": true
+    },
     "Turla": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -7087,6 +7115,10 @@
     "Viasat": {
       "sector": "satellite",
       "has_exogenous_revenue": false
+    },
+    "Vietnam": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Village_of_Channahon": {
       "sector": "state",
@@ -11405,12 +11437,38 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "Gamma Group (Gamma International, UK/Germany; FinFisher GmbH, Munich) builds the FinFisher/FinSpy 'lawful intercept' suite - full-device implants (calls, messages, mic/camera, files) marketed to law enforcement/intelligence (fact). FinFisher GmbH filed insolvency in 2022 amid German criminal scrutiny of unlicensed exports."
+      "note": "Gamma Group (Gamma International, UK/Germany; FinFisher GmbH + FinFisher Labs, Munich) builds the FinFisher/FinSpy 'lawful intercept' suite - full-device implants (calls, messages, mic/camera, files, keylog, location) plus FinFly USB/Web/ISP delivery, marketed to law enforcement/intelligence (fact; WikiLeaks SpyFiles 2011). FinFisher GmbH, FinFisher Labs and partner Elaman filed insolvency Mar-2022 after Munich prosecutors seized accounts; four managers charged May-2023 with unlicensed dual-use exports."
+    },
+    {
+      "from": "Elaman_GmbH",
+      "to": "FinSpy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "supplies",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Elaman GmbH is the Munich partner named with FinFisher GmbH and FinFisher Labs in the German criminal complaint and the 2022 insolvency - the distribution/sales side of the same conglomerate (fact; GFF/ECCHR)."
+    },
+    {
+      "from": "WikiLeaks",
+      "to": "Gamma_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "WikiLeaks SpyFiles (2011) published Gamma's own marketing: FinSpy, FinFly USB, FinFly Web, FinFly ISP (ISP-level network injection so the target need not open an attachment). That leak is how the 'lawful intercept' stack first became public (fact)."
     },
     {
       "from": "FinSpy",
-      "to": "Egypt",
-      "instrument": "other",
+      "to": "Bahrain",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "spyware_deployment",
       "amount_usd": null,
@@ -11418,7 +11476,150 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "Amnesty International (Sep-2020) found new FinSpy variants targeting Egyptian civil society and - for the first time publicly - revealed FinSpy for macOS and Linux (alongside Windows/Android), using multi-stage loaders + modular spying. Operator inferred as an Egyptian government client (graded)."
+      "note": "Citizen Lab + Bahrain Watch (2012): FinSpy-laced emails targeting Bahraini activists. 2010-12 Bahrain used FinFisher against lawyers, journalists, activists, and opposition, in-country and diaspora (fact). Sits on the post-2011 Pearl Roundabout repression the BICI documented (torture, deaths in custody, mass detention) - the prison system is a state-violence fact; the spyware is the collection tool against people still organizing after it. OECD UK NCP (2015) found Gamma in breach of the Guidelines seven times. UK High Court (2023) allowed Shehabi and Mohammed to sue Bahrain over Sep-2011 FinSpy infections of UK laptops; UK Supreme Court (Jul-2026) stripped Bahrain of immunity for remotely infecting a computer in the UK."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Ethiopia",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Citizen Lab: FinSpy sample using Ginbot 7 opposition imagery as bait, C2 on Ethio Telecom (fact). HRW 2014 'They Know Everything We Do': Ethiopia combined ZTE one-click phone wiretaps with Gamma FinFisher and Hacking Team RCS against diaspora in US/UK/Norway/Switzerland; intercepted Skype appeared on pro-government sites; recorded calls played in abusive interrogations (fact of report). Kidane v. Ethiopia (EFF; Doe v. FDRE, 189 F. Supp. 3d 6): US citizen in Maryland had FinSpy 31-Oct-2012 to 18-Mar-2013 recording Skype/email; dismissed on FSIA, not on the facts. Yohannes Alemu (Norway, Ginbot 7): wife detained in Addis, then he received a FinFisher email (HRW). Ethiopia's political prisons/torture and the 2014-16 Oromo protest killings are independent state-violence facts. Join (FinSpy graph -> domestic arrest) = strong inference, not a named-decedent autopsy."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Egypt",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "2011 SSI-office raid found FinSpy sales contracts to Egyptian authorities (Amnesty). Citizen Lab named Egypt's Technology Research Department as a FinFisher user. Amnesty Security Lab (Sep-2020) found NilePhish distributing FinSpy for Windows via fake Flash to Egyptian civil society, and previously unpublished macOS/Linux FinSpy samples on a different operator's server (fact). Amnesty has NOT documented NilePhish HR violations directly linked to FinFisher products (their limit, kept). Egypt's NSA enforced-disappearance system (ECRF ~2700 documented cases; Amnesty 'Officially You Do Not Exist'; HRW torture 2017) is an independent FACT. Rabaa 2013 (>=817 killed) is a massacre, not a FinSpy autopsy. Join = same graded inference as Ethiopia/Bahrain."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Turkey",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "FinSpy appeared in Turkey summer 2017 on a fake opposition-campaign website, disguised as an app for anti-government demonstrators (ECCHR) - mass-targeting of protesters (fact of report). Germany issued no intrusion-software export licences after 2015; Munich prosecutors treated the Turkey sale as an unlicensed dual-use export, seized FinFisher accounts, and charged four managers (May-2023). Post-2016 coup: >50,000 arrested, ~140,000 fired, hundreds of media shut - the client-state cage. Join = graded inference."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Vietnam",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Citizen Lab: Android FinSpy Mobile sample with a Vietnamese C2 that also exfiltrated SMS to a local phone number - a strong in-country-operator tell (fact of sample). Vietnam's imprisonment of bloggers/activists and historical re-education/prison-labor system are independent state-violence facts. No public named-victim FinSpy forensic report for a Vietnamese camp sentence was located; join is graded inference from C2 + apparatus, not a roster."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Turkmenistan",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Persistent FinSpy C2 in Turkmenistan (Citizen Lab 2013 and later scans) (fact of scan). Turkmenistan's prison-labor colonies (incl. Ovadan-Depe reporting) are an independent state-violence fact. No public FinSpy-victim forensic report for this country was located; listed so the C2 atlas is not silently truncated."
+    },
+    {
+      "from": "FinSpy",
+      "to": "UAE",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Amnesty/Citizen Lab list the UAE among documented FinSpy HRD-targeting governments (fact of category). Later UAE cases (Ahmed Mansoor and after) are Pegasus - different vendor; do not mix (explicit non-claim)."
+    },
+    {
+      "from": "FinSpy",
+      "to": "Enforced_Disappearance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "The through-line, graded as INTERPRETATION grounded in the rights-org record: FinSpy is a collection implant whose purpose is to map files, contacts, movement, and conversations. ECCHR: 'digital surveillance is often followed by imprisonment and torture.' Client states (Bahrain, Ethiopia, Egypt, Turkey; C2 also in Vietnam/Turkmenistan) independently run enforced-disappearance, political-prison, prison-labor/re-education, and death-in-custody systems. The pipeline is a strong repeated inference. It is NOT a forensic kill-list and does NOT attribute a named death or camp sentence to a named sample."
+    },
+    {
+      "from": "Egypt",
+      "to": "Enforced_Disappearance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Sisi-era NSA (renamed SSI) uses incommunicado detention from days to 23 months, torture for confessions, then terrorism prosecutions. ECRF Stop Enforced Disappearance: ~2700 documented cases over five years. Amnesty 'Officially You Do Not Exist'; HRW 'We Do Unreasonable Things Here' (2017). Independent of any one implant; the FinSpy contracts and 2020 targeting sit inside this apparatus (fact of the disappearance system; join graded)."
+    },
+    {
+      "from": "Ethiopia",
+      "to": "Enforced_Disappearance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "HRW 2014: recorded calls played in abusive interrogations; torture of political prisoners independently documented; diaspora targeting with FinFisher/Hacking Team. The domestic prison system (Maekelawi and after) is the action layer the spyware's contact-graph feeds (fact of HRW interviews; join graded)."
+    },
+    {
+      "from": "Bahrain",
+      "to": "Enforced_Disappearance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "BICI (2011) documented systematic torture, deaths in custody, and mass detention after Pearl Roundabout. Jau and the rest of the prison system are the action layer; 2010-12 FinSpy targeting of remaining lawyers/journalists/opposition is the collection layer (fact of BICI + Citizen Lab; join graded)."
+    },
+    {
+      "from": "Turkey",
+      "to": "Enforced_Disappearance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Post-July-2016 coup: >50,000 arrested, ~140,000 fired, hundreds of media shut (ECCHR compilation of the public record). 2017 FinSpy fake-opposition-app targeting of protesters sits inside that emergency-decree cage (fact of the crackdown; join graded)."
     },
     {
       "from": "FinSpy",
@@ -11431,7 +11632,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "FinSpy is a core exemplar of the mercenary/commercial-spyware market - 'lawful intercept' products sold to states and repeatedly documented against journalists, activists, and dissidents (fact of category)."
+      "note": "FinSpy is a core exemplar of the mercenary/commercial-spyware market - 'lawful intercept' products sold to states and repeatedly documented against journalists, activists, and dissidents (fact of category). Older than NSO/Pegasus; Windows/ISP-injection era rather than iMessage zero-click."
     },
     {
       "from": "NSO_Group",
@@ -11444,7 +11645,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "NSO Group (Pegasus) is the market's most notorious member - wiring the existing NSO/Pegasus nodes into the shared commercial-spyware hub (fact)."
+      "note": "NSO Group (Pegasus) is the market's most notorious later member - wired into the shared commercial-spyware hub (fact). Khashoggi is a Pegasus case, not FinSpy; do not mix kill-chains."
     },
     {
       "from": "Intellexa",
@@ -11460,6 +11661,19 @@
       "note": "Intellexa/Cytrox (Predator) - the third major cluster (US-sanctioned 2024) - also joins the shared hub (fact)."
     },
     {
+      "from": "Hacking_Team",
+      "to": "Ethiopia",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "HRW 2014 and Citizen Lab: Ethiopia used Hacking Team RCS alongside FinFisher against the same diaspora targets - at least the second of three spyware vendors HRW counted (FinFisher, then RCS, then Cyberbit 2016-17). Confirms the buyer is a serial commercial-spyware customer, not a one-off Gamma sale (fact)."
+    },
+    {
       "from": "Commercial_Spyware_Market",
       "to": "Dual_Use_Export_Gap",
       "instrument": "other",
@@ -11470,7 +11684,59 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "The recurring policy failure: spyware is dual-use (Wassenaar Arrangement cyber-tools controls; EU dual-use regulation) yet repeatedly reaches abusive governments. The gap between export licensing on paper and enforcement in practice is the through-line (interpretation grounded in the export-control record)."
+      "note": "The recurring policy failure: spyware is dual-use (Wassenaar cyber-tools controls; EU dual-use regulation, licensing from 2015) yet repeatedly reaches abusive governments. Germany issued no intrusion-software licences after 2015; FinSpy still appeared in Turkey/Egypt/Myanmar. The gap between licensing on paper and enforcement in practice is the through-line (interpretation grounded in the export-control and Munich-prosecutor record)."
+    },
+    {
+      "from": "Germany",
+      "to": "Gamma_Group",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "prosecution",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Munich Public Prosecutor: July 2019 complaint (GFF/RSF/ECCHR/netzpolitik.org) -> Oct 2020 searches (Germany + Romania) -> Mar 2022 account seizure and insolvency of FinFisher GmbH / FinFisher Labs / Elaman -> May 2023 charges against four managers for unlicensed dual-use exports to non-EU countries, centred on Turkey (fact of the criminal case). Company is dead; the dual-use gap is not."
+    },
+    {
+      "from": "Privacy_International",
+      "to": "Gamma_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Privacy International (with ECCHR, RSF, BCHR, Bahrain Watch) filed the 2013 OECD complaints against Gamma and Trovicor; PI's FinFisher work is part of the public record that precedes the German criminal case (fact of complaint)."
+    },
+    {
+      "from": "ECCHR",
+      "to": "Gamma_Group",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "ECCHR has worked FinFisher since 2013 (OECD) and co-filed the 2019 German criminal complaint that ended in insolvency + 2023 charges. Their case page is also the source of the through-line sentence used in this block: digital surveillance is often followed by imprisonment and torture (fact of litigation; the sentence is their framing, adopted as graded interpretation)."
+    },
+    {
+      "from": "Bahrain",
+      "to": "UK",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Shehabi and Mohammed (London-based Bahraini activists) sued Bahrain in the UK over Sep-2011 FinSpy infections of UK-located laptops. High Court 2023 allowed the claim; Supreme Court Jul-2026 held remote infection of a UK computer is an act in the UK and stripped Bahrain of state immunity (fact of judgment). First major civil path for extraterritorial FinSpy targeting."
     },
     {
       "from": "FinSpy",
@@ -11483,7 +11749,7 @@
       "declared_circular": false,
       "cancelable": false,
       "source_file": "spec-finfisher-finspy-spyware.json",
-      "note": "FinSpy anchors the 'legal spyware' branch of the malware lineage - distinct from state cyber-weapons (Equation/EternalBlue) and criminal worms (ILOVEYOU/Shai-Hulud) but sharing implant/exfiltration techniques (fact of category)."
+      "note": "FinSpy anchors the 'legal spyware' branch of the malware lineage - distinct from state cyber-weapons (Equation/EternalBlue) and criminal worms (ILOVEYOU/Shai-Hulud) but sharing implant/exfiltration techniques. Older, more Windows/ISP-injection than Pegasus zero-click (fact of category)."
     },
     {
       "from": "JPMorgan",
@@ -32548,8 +32814,8 @@
     {
       "from": "Israel",
       "to": "Unit_8200",
-      "instrument": "investment",
-      "layer": "financial",
+      "instrument": "surveillance_security",
+      "layer": "structural",
       "raw_instrument": "IDF SIGINT unit; alumni seeded the commercial-spyware/cyber industry",
       "amount_usd": null,
       "status": "documented",
@@ -32574,7 +32840,7 @@
     {
       "from": "NSO_Group",
       "to": "Pegasus",
-      "instrument": "other",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "makes Pegasus (zero-click mobile spyware)",
       "amount_usd": null,
@@ -32587,7 +32853,7 @@
     {
       "from": "NSO_Group",
       "to": "Commercial_Spyware",
-      "instrument": "other",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "mercenary-spyware vendor (Entity List)",
       "amount_usd": null,
@@ -32600,7 +32866,7 @@
     {
       "from": "Intellexa",
       "to": "Predator",
-      "instrument": "other",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "Intellexa Consortium markets Predator spyware",
       "amount_usd": null,
@@ -32639,7 +32905,7 @@
     {
       "from": "Paragon",
       "to": "Commercial_Spyware",
-      "instrument": "other",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "spyware vendor (DHS/ICE exploring use, 2026)",
       "amount_usd": null,
@@ -32821,7 +33087,7 @@
     {
       "from": "ICE",
       "to": "Paragon",
-      "instrument": "other",
+      "instrument": "surveillance_security",
       "layer": "structural",
       "raw_instrument": "exploring Paragon spyware (2026)",
       "amount_usd": null,
@@ -44572,10 +44838,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1873,
-    "num_edges": 2852,
-    "num_financial_edges": 274,
-    "num_structural_edges": 2578,
+    "num_nodes": 1881,
+    "num_edges": 2870,
+    "num_financial_edges": 273,
+    "num_structural_edges": 2597,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44802,10 +45068,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -44814,16 +45076,20 @@
         "NVIDIA"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -44843,14 +45109,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -46065,6 +46331,13 @@
         "in_robust_core": false
       },
       "Backpack": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bahrain": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48682,6 +48955,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ECCHR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ECDSA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48878,6 +49158,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Elaman_GmbH": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Electric_Coin_Company": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48942,6 +49229,13 @@
         "in_robust_core": false
       },
       "Energy_Transfer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Enforced_Disappearance": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -49838,6 +50132,13 @@
         "in_robust_core": false
       },
       "Gerald_Cotten": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Germany": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53841,6 +54142,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Privacy_International": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Private credit / venture debt lenders": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -56319,6 +56627,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Turkmenistan": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Turla": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -57286,6 +57601,13 @@
         "in_robust_core": false
       },
       "Viasat": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Vietnam": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

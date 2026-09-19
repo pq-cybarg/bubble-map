@@ -4,7 +4,7 @@ The **Citizen Lab** (University of Toronto, Munk School; founded 2001 by **Ron D
 
 ## The work
 - **NSO / Pegasus** - *"The Million Dollar Dissident"* (Ahmed Mansoor, 2016) first caught Pegasus; **FORCEDENTRY** (2021) documented the zero-click iMessage exploit; mapped targeting of journalists and dissidents (the Khashoggi circle, Catalan officials, US State Dept phones).
-- **FinFisher / FinSpy** (Gamma Group) - mapped command-and-control servers across dozens of countries (with Amnesty's 2020 Egypt findings).
+- **FinFisher / FinSpy** (Gamma Group) - mapped command-and-control servers across dozens of countries (with Amnesty's 2020 Egypt findings). The expanded FinSpy block ([[spec-finfisher-finspy-spyware]]) is the harm-pattern half: documented targeting in Bahrain, Ethiopia, Egypt, Turkey, plus C2 in Vietnam/Turkmenistan/UAE, sitting inside those states' disappearance/prison systems. The join is graded.
 - **Hacking Team** (Milan) - exposed "Remote Control System" sales to abusive governments; the vendor was itself hacked in 2015 (400GB dump confirming client lists).
 - **Candiru** (Tel Aviv) - with Microsoft (2021), exposed "DevilsTongue" - leading to Candiru's US **Entity List** addition alongside NSO.
 - **Cytrox / Intellexa (Predator)** - the "Predator Files," feeding US Treasury **sanctions** (2024) and the EU **PEGA** inquiry.

@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-cikleak-russia-cec.json` — related files by shared entities (verify cross-refs exist)
-- spec-uk-labour-tbi-influence.json: 1 shared entities
-- spec-china-party-state.json: 1 shared entities
-- digitalid-device-ownership-erosion.json: 1 shared entities
-- spec-blackrock-aladdin-concentration.json: 1 shared entities
-- spec-reproducibility-crisis.json: 1 shared entities
-- influence-ad-censorship.json: 1 shared entities
-- spec-planet-space-imaging.json: 1 shared entities
-- energy-power.json: 1 shared entities
+## Newest file `spec-finfisher-finspy-spyware.json` — related files by shared entities (verify cross-refs exist)
+- spec-exchanges-asia.json: 1 shared entities
+- spec-surveillance-cyber-threat-layer.json: 1 shared entities
+- macro-pqc-chips.json: 1 shared entities
+- macro-cre-privatecredit.json: 1 shared entities
+- spec-disclosures-surveillance.json: 1 shared entities
+- spec-shadow-brokers-eternalblue.json: 1 shared entities
+- spec-state-apt-catalog.json: 1 shared entities
+- macro-crqc-quantum-landscape.json: 1 shared entities

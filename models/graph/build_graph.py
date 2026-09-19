@@ -132,6 +132,10 @@ ALIAS = {
  "VoltTyphoon":"VoltTyphoon","Volt Typhoon":"VoltTyphoon","Salt Typhoon":"SaltTyphoon","MSS":"MSS","APT28":"APT28_FancyBear","Fancy Bear":"APT28_FancyBear","APT28_FancyBear":"APT28_FancyBear","APT29":"APT29_CozyBear","Cozy Bear":"APT29_CozyBear","APT29_CozyBear":"APT29_CozyBear","Sandworm":"Sandworm","Kimsuky":"Kimsuky","Equation Group":"Equation_Group","Equation_Group":"Equation_Group",
  "Unit 8200":"Unit_8200","Unit_8200":"Unit_8200","North Korea":"North_Korea","North_Korea":"North_Korea","Israel":"Israel","APT_State_Actors":"APT_State_Actors","CALEA_Backdoor":"CALEA_Backdoor","Viasat":"Viasat",
  "NSO Group":"NSO_Group","NSO_Group":"NSO_Group","Pegasus":"Pegasus","Intellexa":"Intellexa","Cytrox":"Cytrox","Predator":"Predator","Paragon":"Paragon","Cellebrite":"Cellebrite","Commercial_Spyware":"Commercial_Spyware",
+ "Gamma_Group":"Gamma_Group","Gamma International":"Gamma_Group","FinFisher":"Gamma_Group","FinFisher GmbH":"Gamma_Group","FinSpy":"FinSpy","Elaman":"Elaman_GmbH","Elaman_GmbH":"Elaman_GmbH",
+ "Bahrain":"Bahrain","Vietnam":"Vietnam","Viet Nam":"Vietnam","Turkmenistan":"Turkmenistan","Germany":"Germany",
+ "Privacy_International":"Privacy_International","Privacy International":"Privacy_International","ECCHR":"ECCHR",
+ "Enforced_Disappearance":"Enforced_Disappearance","Commercial_Spyware_Market":"Commercial_Spyware_Market","Dual_Use_Export_Gap":"Dual_Use_Export_Gap",
  "LockBit":"LockBit","ALPHV":"ALPHV_BlackCat","BlackCat":"ALPHV_BlackCat","ALPHV_BlackCat":"ALPHV_BlackCat","Scattered Spider":"Scattered_Spider","Scattered_Spider":"Scattered_Spider","Cl0p":"Cl0p","Clop":"Cl0p","Ransomware_RaaS":"Ransomware_RaaS",
  "Clearview":"Clearview_AI","Clearview AI":"Clearview_AI","Clearview_AI":"Clearview_AI","Anduril":"Anduril","ImmigrationOS":"ImmigrationOS","ICE":"ICE","Private_Surveillance":"Private_Surveillance",
  "CrowdStrike":"CrowdStrike","Mandiant":"Mandiant","Recorded Future":"Recorded_Future","Recorded_Future":"Recorded_Future","Cyber_Defense":"Cyber_Defense",
@@ -319,7 +323,7 @@ def iclass(instr):
     if "governance" in s or "council" in s: return "governance"
     if any(k in s for k in ["enforcement","prosecution","conviction","sanction","pardon","foia","pause_order","pause letter","pause_letter","transparency_act","guidance_contradict","plea","subpoena"]): return "regulatory_legal"
     if "litigation" in s and "ip" not in s: return "regulatory_legal"
-    if any(k in s for k in ["breach","backbone_tap","prism","bullrun","backdoor","honeypot","wiretap","laundering","leak_disclosure","_641a"]): return "surveillance_security"
+    if any(k in s for k in ["breach","backbone_tap","prism","bullrun","backdoor","honeypot","wiretap","laundering","leak_disclosure","_641a","spyware"]): return "surveillance_security"
     if any(k in s for k in ["code_donation","built_on","launch","adoption","etf","mou","subsidy","grant","research_commission","military","starshield","kaband","direct_to_cell","stablecoin","registry","cia_seed","iso20022","ccip","tokenization_poc","pause"]): return "relationship"
     # money-flow (financial) classes
     if "equity" in s: return "equity"
@@ -440,6 +444,9 @@ NODE_META = {
  "VoltTyphoon":("threat_actor",False),"APT28_FancyBear":("threat_actor",False),"APT29_CozyBear":("threat_actor",False),"Sandworm":("threat_actor",False),"Kimsuky":("threat_actor",False),"Equation_Group":("threat_actor",False),"APT_State_Actors":("threat_actor",False),
  "MSS":("state_intel",True),"Unit_8200":("state_intel",True),"North_Korea":("state",True),"Israel":("state",True),"CALEA_Backdoor":("surveillance",False),"Viasat":("satellite",False),
  "NSO_Group":("surveillance",False),"Pegasus":("surveillance",False),"Intellexa":("surveillance",False),"Cytrox":("surveillance",False),"Predator":("surveillance",False),"Paragon":("surveillance",False),"Cellebrite":("surveillance",False),"Commercial_Spyware":("surveillance",False),
+ "Gamma_Group":("surveillance",False),"FinSpy":("surveillance",False),"Elaman_GmbH":("surveillance",False),"Commercial_Spyware_Market":("surveillance",False),"Dual_Use_Export_Gap":("regulator",False),
+ "Bahrain":("state",True),"Vietnam":("state",True),"Turkmenistan":("state",True),"Germany":("state",True),
+ "Privacy_International":("other",False),"ECCHR":("other",False),"Enforced_Disappearance":("other",False),
  "LockBit":("threat_actor",False),"ALPHV_BlackCat":("threat_actor",False),"Scattered_Spider":("threat_actor",False),"Cl0p":("threat_actor",False),"Ransomware_RaaS":("threat_actor",False),
  "Clearview_AI":("surveillance",False),"Anduril":("defense_tech",True),"ImmigrationOS":("surveillance",False),"ICE":("state",True),"Private_Surveillance":("surveillance",False),
  "CrowdStrike":("security_research",True),"Mandiant":("security_research",False),"Recorded_Future":("security_research",False),"Cyber_Defense":("security_research",False),
