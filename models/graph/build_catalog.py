@@ -49,6 +49,7 @@ GROUPS = [
         "spec-iloveyou-worm", "spec-shadow-brokers-eternalblue", "spec-finfisher-finspy-spyware",
         "spec-shai-hulud-npm-worm", "spec-msnightmare-disclosure", "spec-shinyhunters-data-extortion",
         "spec-cikleak-russia-cec",
+        "spec-heif-heist-openai-ciso",
         "spec-inqtel-portfolio",
         "spec-palantir-surveillance", "spec-niantic-geospatial"]),
     ("Quantum & PQC", [

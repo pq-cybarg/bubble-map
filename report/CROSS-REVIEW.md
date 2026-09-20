@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 94 files
+- **Meta** — 95 files
 - **Google** — 63 files
 - **Chainlink** — 63 files
-- **OpenAI** — 49 files
+- **OpenAI** — 50 files
 - **Microsoft** — 45 files
 - **FDIC** — 37 files
 - **Amazon** — 36 files
 - **Oracle** — 35 files
 - **NVIDIA** — 34 files
-- **Anthropic** — 29 files
+- **Anthropic** — 30 files
 - **Stargate** — 25 files
 - **a16z** — 23 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-finfisher-finspy-spyware.json` — related files by shared entities (verify cross-refs exist)
-- spec-exchanges-asia.json: 1 shared entities
-- spec-surveillance-cyber-threat-layer.json: 1 shared entities
-- macro-pqc-chips.json: 1 shared entities
-- macro-cre-privatecredit.json: 1 shared entities
-- spec-disclosures-surveillance.json: 1 shared entities
-- spec-shadow-brokers-eternalblue.json: 1 shared entities
-- spec-state-apt-catalog.json: 1 shared entities
-- macro-crqc-quantum-landscape.json: 1 shared entities
+## Newest file `spec-heif-heist-openai-ciso.json` — related files by shared entities (verify cross-refs exist)
+- spec-local-uncensored-ai.json: 3 shared entities
+- spec-sec-filings-primary.json: 3 shared entities
+- macro-cre-privatecredit.json: 3 shared entities
+- spec-semiconductor-logistics-standards.json: 3 shared entities
+- spec-exchanges-asia.json: 3 shared entities
+- spec-telecom-satellite.json: 3 shared entities
+- catalog-nonprofits-foundations.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities

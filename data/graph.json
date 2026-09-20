@@ -1036,6 +1036,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Bugcrowd": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Bullish": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -2092,6 +2096,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Discourse": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Discover": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -2952,6 +2960,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "HEIF_Heist": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "HFSC": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3002,6 +3014,10 @@
     },
     "Hacking_Team": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Hacktron_AI": {
+      "sector": "security_research",
       "has_exogenous_revenue": false
     },
     "Haipo_Yang": {
@@ -3986,6 +4002,10 @@
     },
     "Lithium_Triangle": {
       "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
+    "LiveOverflow": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "LiveRamp": {
@@ -7096,6 +7116,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Vercel": {
+      "sector": "hyperscaler",
+      "has_exogenous_revenue": true
+    },
     "Verint": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -7502,6 +7526,10 @@
     },
     "itBit": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "libheif": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "llama_cpp": {
@@ -39949,6 +39977,175 @@
       "note": ""
     },
     {
+      "from": "Hacktron_AI",
+      "to": "HEIF_Heist",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Hacktron AI (Harsh Jaiswal, Mohan Pedhapati, Rahul Maini; assisted by Sudhanshu Rajbhar) named the campaign HEIF Heist: a class of remote attack paths against services that decode attacker-controlled HEIF/HEIC/AVIF via native libheif/libde265, usually pulled in through ImageMagick/libvips/Sharp/distro images (fact; heif-heist.com)."
+    },
+    {
+      "from": "libheif",
+      "to": "HEIF_Heist",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "The vulnerable surface is below the app: libheif (and libde265) memory corruption on crafted overlay image items. Upstream had changed the code ~a year earlier without marking a security fix / CVE, so Debian 12/13 shipped vulnerable 1.19.7/1.19.8 in Discourse's Docker image. Not a single-version bug - families 1.19.x through 1.23.x; patch to current upstream (v1.23.2 then 1.23.4 by mid-Sep 2026) (fact; Hacktron; Debian DSA-6417-1)."
+    },
+    {
+      "from": "Discourse",
+      "to": "libheif",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Discourse HEIC uploads bypass FastImage and go to ImageMagick magick, which hands decoding to libheif - exposing the native parser to attacker-controlled files. GHSA-vhm9-85gw-x335 (28 Jul 2026); Discourse sandboxed ImageMagick as defense-in-depth. Self-hosters must rebuild the Docker image, not just click-update (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Discourse",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "community.openai.com is a Discourse-hosted forum with 'Sign in with OpenAI' (auth.openai.com). Compromising the forum was one path into OpenAI SSO, not the only conceivable one (Hacktron: any first/third-party service on that SSO would have yielded the same ChatGPT/Codex access) (fact of architecture; 'any service' is their claim)."
+    },
+    {
+      "from": "Hacktron_AI",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "25 Jul 2026, <72h: libheif RCE on community.openai.com -> OpenAI SSO flaw -> employee ChatGPT/Codex takeover -> GitHub connector -> harmless Codex-opened PR #1186742 on internal monorepo openai/openai as proof, then stop. Bugcrowd ~08:00-10:00 UTC; OpenAI-side fix confirmed 22:49 UTC (~14h). 1 Sep: $6,500 bounty; OpenAI wrote that community.openai.com was OUT OF SCOPE and the award is the OpenAI-side/SSO finding (fact; Hacktron timeline + OpenAI scope note). WSJ: researchers did not do anything bad / did not dump the repo."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Hacktron_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Hacktron used Claude Opus 4.8 to find the missing Debian backport and a first ASLR-off exploit; Opus 5 (released that evening) produced a working ASLR-on Discourse exploit in hours; later GPT-5.6 Sol compressed per-target adaption. Whole HEIF Heist campaign: two months, three people, <$3k tokens. Tool use, not 'Anthropic attacked OpenAI' (fact of their write-up; economics are their numbers)."
+    },
+    {
+      "from": "HEIF_Heist",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "surveillance_security",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "HEIF Heist lists RCE in Meta's core product suite via image upload (libheif advisory GHSA-2jg2-4ch7-h545) alongside Slack, GitHub Enterprise (CVE-2026-19118), Next.js/AVIF, Discourse, ImageMagick, Rails, etc. Blast radius is the parser, not one vendor (fact of Hacktron's campaign list; per-vendor depth varies)."
+    },
+    {
+      "from": "Vercel",
+      "to": "Hacktron_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "research",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "CONTROL CASE for disclosure: Vercel publicly says it collaborated with Hacktron to reproduce libheif in Next.js and disclose to the maintainer (Vercel Developers post 18 Sep 2026; Vercel blog). LiveOverflow: working with Vercel CEO/CTO was 'awesome' - the contrast with OpenAI Slack (fact of Vercel's own post; the contrast is his)."
+    },
+    {
+      "from": "LiveOverflow",
+      "to": "Hacktron_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Fabian Faessler (LiveOverflow) is named in Hacktron's acknowledgements and posted the 19 Sep 2026 CISO-process thread. Party to the story, not a neutral adjudicator (fact of acknowledgement + thread authorship)."
+    },
+    {
+      "from": "LiveOverflow",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "exposes",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Thread 2101252692635004997 (19 Sep 2026): after the report, shared Slack; CISO 'pretty sad' they proved GitHub access via the PR, no thank-you; asked for a written inventory of data accessed (fair IR, felt antagonistic; WSJ later said they did nothing bad); unhappy they showed a non-sensitive PR screenshot at Black Hat/DEF CON; $6,500 + community.openai.com OOS; called a shared draft a 'stunt hacking document.' Hacktron went malicious-compliance (OpenAI-only headline, github.com/not-openai/openai/issues/1186742, YouTube clip). Others pushed them to journalists -> WSJ exclusive. OpenAI NEVER threatened legal action; they still talked to lawyers. Context: right after the Hugging Face incident. SAME DAY follow-up: CISO apologized; 'we are good'; thread was personal opinion, not the disclosure plan, because he felt Harsh and Sirius were treated unkindly. Grade: his account + labeled opinion + documented walk-back. Not a verdict on OpenAI-the-firm."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Bugcrowd",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "OpenAI's public bounty runs on Bugcrowd. The 1 Sep 2026 $6,500 award explicitly excluded community.openai.com (Discourse-hosted) from scope and paid only the SSO/OpenAI-side finding - the scope cut that left a forum-to-employee-GitHub path priced as an identity bug (fact of OpenAI's written note; 'underpriced' is opinion)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Hugging_Face",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Separate, prior incident: OpenAI eval/safety agents during a Hugging Face-related run (OpenAI technical report + METR/Redwood). LiveOverflow offers it only as possible stress context for the CISO's tone ('right after the Hugging Face incident'). Do not merge the two events (fact that both exist; the causal 'that's why Slack was hostile' is speculation he hedges)."
+    },
+    {
+      "from": "HEIF_Heist",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-heif-heist-openai-ciso.json",
+      "note": "Parser-under-the-app class: HEIF Heist explicitly rhymes ImageTragick, ForcedEntry (Pegasus/iMessage), and libwebp BLASTPASS (Citizen Lab). An image decoder is a privileged process under uploads and thumbnails. Rhyme of blast radius, NOT a claim that Hacktron is a spyware actor (fact of their own citations; category only)."
+    },
+    {
       "from": "FFCB_Funding",
       "to": "Farm_Credit_System",
       "instrument": "other",
@@ -44838,10 +45035,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1881,
-    "num_edges": 2870,
+    "num_nodes": 1888,
+    "num_edges": 2883,
     "num_financial_edges": 273,
-    "num_structural_edges": 2597,
+    "num_structural_edges": 2610,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44936,6 +45133,7 @@
       "Deep_Learning",
       "Department_of_War",
       "Dialog_Society",
+      "Discourse",
       "DoubleAgent",
       "ECDSA",
       "Early_Warning",
@@ -44959,7 +45157,9 @@
       "Goldman_Sachs",
       "Google",
       "HALEU_Enrichment",
+      "HEIF_Heist",
       "HV_Transformers",
+      "Hacktron_AI",
       "Huntington",
       "IBM",
       "ICE",
@@ -45059,14 +45259,31 @@
       "Visa",
       "Weak_Nonce_Failure",
       "World_Liberty_Financial",
-      "ZEISS_SMT"
+      "ZEISS_SMT",
+      "libheif"
     ],
-    "core_scc_all_edges_size": 173,
+    "core_scc_all_edges_size": 177,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
       [
         "CoreWeave",
         "SINK_lenders"
@@ -45076,25 +45293,9 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -45102,9 +45303,15 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -45127,6 +45334,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -45134,13 +45342,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -46961,6 +47162,13 @@
         "in_robust_core": false
       },
       "Bugatti_Rimac": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bugcrowd": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48815,6 +49023,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Discourse": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Discover": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50320,6 +50535,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "HEIF_Heist": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "HFSC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50405,6 +50627,13 @@
         "in_robust_core": false
       },
       "Hacking_Team": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hacktron_AI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52127,6 +52356,13 @@
         "in_robust_core": false
       },
       "Lithium_Triangle": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LiveOverflow": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57572,6 +57808,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Vercel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Verint": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -58286,6 +58529,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "libheif": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "llama_cpp": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -58437,9 +58687,10 @@
       },
       {
         "node": "OpenAI",
-        "degree": 37,
+        "degree": 42,
         "neighbor_sectors": [
           "ai",
+          "ai_infra",
           "ai_lab",
           "capital",
           "chip_vendor",
@@ -58451,12 +58702,14 @@
           "other",
           "person",
           "philanthropy",
+          "security_research",
           "spv",
           "surveillance",
+          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 15,
-        "source_files": 19,
+        "n_neighbor_sectors": 18,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"
@@ -58545,7 +58798,7 @@
       },
       {
         "node": "Meta",
-        "degree": 23,
+        "degree": 24,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
@@ -58563,7 +58816,7 @@
           "university"
         ],
         "n_neighbor_sectors": 14,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -58617,6 +58870,30 @@
           "structural"
         ],
         "both_layers": false
+      },
+      {
+        "node": "Anthropic",
+        "degree": 21,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "security_research",
+          "space_real_economy",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
       },
       {
         "node": "SEC",
@@ -58684,29 +58961,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Anthropic",
-        "degree": 20,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "other",
-          "space_real_economy",
-          "university"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 11,
         "layers": [
           "financial",
           "structural"

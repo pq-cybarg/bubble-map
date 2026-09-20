@@ -123,6 +123,7 @@ ALIAS = {
  # local / uncensored / decentralized AI
  "llama.cpp":"llama_cpp","llama_cpp":"llama_cpp","Ollama":"Ollama","vLLM":"vLLM","LM Studio":"LM_Studio","LM_Studio":"LM_Studio","GPT4All":"GPT4All","Jan":"Jan","ComfyUI":"ComfyUI",
  "Stability AI":"Stability_AI","Stability_AI":"Stability_AI","Stable Diffusion":"Stability_AI","Black Forest Labs":"Black_Forest_Labs","Black_Forest_Labs":"Black_Forest_Labs","Flux":"Black_Forest_Labs","Hugging Face":"Hugging_Face","HuggingFace":"Hugging_Face","Hugging_Face":"Hugging_Face",
+ "Hacktron":"Hacktron_AI","Hacktron_AI":"Hacktron_AI","Hacktron AI":"Hacktron_AI","HEIF_Heist":"HEIF_Heist","HEIF Heist":"HEIF_Heist","libheif":"libheif","Discourse":"Discourse","LiveOverflow":"LiveOverflow","Bugcrowd":"Bugcrowd","Vercel":"Vercel",
  "EleutherAI":"EleutherAI","Nous Research":"Nous_Research","Nous_Research":"Nous_Research","AllenAI":"AllenAI_OLMo","OLMo":"AllenAI_OLMo","AllenAI_OLMo":"AllenAI_OLMo",
  "Heretic":"Heretic","Dolphin":"Dolphin","Eric Hartford":"Eric_Hartford","Eric_Hartford":"Eric_Hartford",
  "Bittensor":"Bittensor","TAO":"Bittensor","Akash":"Akash","Render":"Render","Octra":"Octra","Venice":"Venice_AI","Venice.ai":"Venice_AI","Venice_AI":"Venice_AI","Erik Voorhees":"Erik_Voorhees","Erik_Voorhees":"Erik_Voorhees","FUTO":"FUTO",
@@ -436,6 +437,7 @@ NODE_META = {
  # local / uncensored / decentralized AI
  "llama_cpp":("ai_infra",False),"Ollama":("ai_infra",False),"vLLM":("ai_infra",False),"LM_Studio":("ai_infra",False),"GPT4All":("ai_infra",False),"Jan":("ai_infra",False),"ComfyUI":("ai_infra",False),
  "Stability_AI":("ai_lab",False),"Black_Forest_Labs":("ai_lab",False),"Hugging_Face":("ai_infra",True),"EleutherAI":("ai_lab",False),"Nous_Research":("ai_lab",False),"AllenAI_OLMo":("ai_lab",False),
+ "Hacktron_AI":("security_research",False),"HEIF_Heist":("surveillance",False),"libheif":("other",False),"Discourse":("tech",False),"LiveOverflow":("person",False),"Bugcrowd":("other",False),"Vercel":("hyperscaler",True),
  "Heretic":("ai_infra",False),"Dolphin":("ai_lab",False),"Eric_Hartford":("person",False),
  "Bittensor":("crypto_infra",False),"Akash":("crypto_infra",False),"Render":("crypto_infra",False),"Octra":("crypto_infra",False),"Venice_AI":("crypto_infra",False),"Erik_Voorhees":("person",False),"FUTO":("ai_infra",False),
  "Local_AI_Tooling":("ai_infra",False),"Uncensored_AI":("ai_infra",False),"Decentralized_AI":("ai_infra",False),"Open_Local_AI":("ai_infra",False),
