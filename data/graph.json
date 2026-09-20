@@ -1016,6 +1016,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Bridge": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Broadcom": {
       "sector": "chip_vendor",
       "has_exogenous_revenue": true
@@ -4960,6 +4964,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Paradigm": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Paragon": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -4982,6 +4990,10 @@
     },
     "Pasqal": {
       "sector": "pqc_quantum",
+      "has_exogenous_revenue": false
+    },
+    "Patrick_Collison": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Paul_Atkins": {
@@ -5174,6 +5186,10 @@
     },
     "Private_Surveillance": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Privy": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Progressive_Insurance": {
@@ -6371,6 +6387,10 @@
     "Temasek": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Tempo": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
     },
     "Tencent": {
       "sector": "bigtech_asia",
@@ -44511,6 +44531,149 @@
       "note": "Oxford (with the Future of Humanity Institute legacy) also seeded AI-safety/longtermism thinking - linking abroad academia to the EA/TESCREAL ideology cluster (fact; FHI closed 2024)."
     },
     {
+      "from": "Patrick_Collison",
+      "to": "Stripe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Patrick Collison (with brother John) co-founded + runs Stripe - the dominant private payments platform now assembling a full stablecoin stack; quiet founder-controlled fintech power (fact)."
+    },
+    {
+      "from": "Stripe",
+      "to": "Bridge",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Stripe acquired Bridge (stablecoin infra; founder Zach Abrams) for ~$1.1B - reported as the largest stablecoin-infrastructure acquisition to date; Bridge's API lets a business accept USDC on Solana, convert to EURC on Ethereum, and settle fiat via one call (fact of deal; exact close date varies across sources - reported Feb/Apr/May 2025)."
+    },
+    {
+      "from": "Stripe",
+      "to": "Privy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "ownership_transfer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Stripe acquired Privy (2025) - embedded crypto-wallet infra powering 75M+ (figures vary 50-110M) wallets across 1,000+ teams (e.g. OpenSea) with no seed-phrase UX; the wallet layer of the stack (fact; wallet count reported/varies)."
+    },
+    {
+      "from": "Stripe",
+      "to": "Tempo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Stripe + Paradigm incubated Tempo (4 Sep 2025) - an independent payments-focused Layer-1 (Matt Huang leads); Series A ~$500M at ~$5B (Thrive/Greenoaks, Oct 2025); mainnet Mar 2026 - completing Stripe's issuance->processing->settlement control + reducing dependence on Ethereum (fact; 'full-stack control' framing = interpretation)."
+    },
+    {
+      "from": "Paradigm",
+      "to": "Tempo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Crypto VC Paradigm co-incubated Tempo with Stripe (first investors); Paradigm's Matt Huang leads it as an independent company - VC + payments-giant capital building settlement rails (fact)."
+    },
+    {
+      "from": "Bridge",
+      "to": "OCC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Feb 2026: Bridge received a conditional national TRUST bank charter from the OCC (stablecoin issuance, custody, reserve management) - a second OCC crypto-bank charter alongside Erebor, folding stablecoin issuance under federal oversight (fact; parallels the Erebor + de-novo-charter thread)."
+    },
+    {
+      "from": "Bridge",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Bridge is cross-chain stablecoin payment + orchestration rails (USDC/EURC across Solana/Ethereum, fiat on/off-ramps) - the back end that makes stablecoins usable as ordinary payments (fact)."
+    },
+    {
+      "from": "Tempo",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Tempo is a stablecoin-payments L1 (targets 100k+ TPS, sub-second finality); at/after launch it hosted Klarna's KlarnaUSD (a bank-issued stablecoin) and World Liberty Financial's USD1 (deployed May 2026), with Visa/Nubank/Shopify partners (fact of deployments)."
+    },
+    {
+      "from": "Tempo",
+      "to": "World_Liberty_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "World Liberty Financial (the Trump-family-linked venture) deployed its USD1 stablecoin natively on Tempo (May 2026) - a notable political-crypto tie running on Stripe/Paradigm rails (fact of deployment; political-conflict framing tracked in the CLARITY/ethics thread, graded)."
+    },
+    {
+      "from": "Stripe",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Stripe's Open Issuance (Sep 2025) lets any business launch a custom stablecoin in a few lines of code, with reserves managed by BlackRock, Fidelity, and Superstate; early users Phantom, Hyperliquid, ConsenSys/MetaMask - stablecoin issuance as a Stripe product (fact)."
+    },
+    {
+      "from": "Stripe",
+      "to": "BlackRock",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stripe-stablecoin-stack.json",
+      "note": "Open Issuance reserves are managed by BlackRock + Fidelity + Superstate - routing stablecoin float into the big asset managers' Treasury/MMF vehicles, wiring Stripe issuance into the stablecoin-Treasury rail (fact; systemic-scale reading graded)."
+    },
+    {
       "from": "Sam_Bankman_Fried",
       "to": "FTX",
       "instrument": "other",
@@ -44967,10 +45130,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1884,
-    "num_edges": 2879,
+    "num_nodes": 1889,
+    "num_edges": 2890,
     "num_financial_edges": 273,
-    "num_structural_edges": 2606,
+    "num_structural_edges": 2617,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45199,16 +45362,8 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Microsoft",
@@ -45224,13 +45379,11 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "Anthropic",
@@ -45238,16 +45391,14 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -45260,6 +45411,18 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -47057,6 +47220,13 @@
         "in_robust_core": false
       },
       "Brian_Armstrong": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Bridge": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53965,6 +54135,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Paradigm": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Paragon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -54001,6 +54178,13 @@
         "in_robust_core": false
       },
       "Pasqal": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Patrick_Collison": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54337,6 +54521,13 @@
         "in_robust_core": false
       },
       "Private_Surveillance": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Privy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56430,6 +56621,13 @@
         "in_robust_core": false
       },
       "Temasek": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Tempo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58771,6 +58969,29 @@
         "both_layers": false
       },
       {
+        "node": "Stablecoins",
+        "degree": 29,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "other",
+          "regulator",
+          "stablecoin",
+          "state",
+          "statistic",
+          "tech"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 15,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -58864,28 +59085,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Stablecoins",
-        "degree": 26,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "crypto",
-          "financial_infra",
-          "financier",
-          "other",
-          "regulator",
-          "stablecoin",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 14,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Palantir",

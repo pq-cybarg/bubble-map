@@ -1,0 +1,25 @@
+{
+  "title": "Stripe's stablecoin stack - Bridge + Privy + Tempo + Open Issuance (the payments giant becomes a stablecoin platform)",
+  "source": "Public record: Stripe/Bridge/Privy announcements; Tempo (Stripe+Paradigm) launch + Series A; a16z/press analyses; OCC Bridge trust-charter action (Feb 2026). Overlay on the stablecoin-Treasury-rail + payments threads. HONESTY: acquisitions, product launches, charter, and named partners = fact; several third-party figures CONFLICT (Privy wallet counts 50-110M; Bridge deal dated Feb/Apr/May 2025) so specific numbers are graded 'reported, varies'; the 'AWS for money' vertical-integration framing = interpretation.",
+  "grade": "per-edge in notes (fact | reported/varies | interpretation)",
+  "nodes": [
+    {"id": "Patrick_Collison", "sector": "person"},
+    {"id": "Bridge", "sector": "crypto"},
+    {"id": "Privy", "sector": "tech"},
+    {"id": "Tempo", "sector": "crypto"},
+    {"id": "Paradigm", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Patrick_Collison", "to": "Stripe", "instrument": "leads", "notes": "Patrick Collison (with brother John) co-founded + runs Stripe - the dominant private payments platform now assembling a full stablecoin stack; quiet founder-controlled fintech power (fact).", "source": "Stripe"},
+    {"from": "Stripe", "to": "Bridge", "instrument": "ownership_transfer", "notes": "Stripe acquired Bridge (stablecoin infra; founder Zach Abrams) for ~$1.1B - reported as the largest stablecoin-infrastructure acquisition to date; Bridge's API lets a business accept USDC on Solana, convert to EURC on Ethereum, and settle fiat via one call (fact of deal; exact close date varies across sources - reported Feb/Apr/May 2025).", "source": "Stripe/Bridge; press"},
+    {"from": "Stripe", "to": "Privy", "instrument": "ownership_transfer", "notes": "Stripe acquired Privy (2025) - embedded crypto-wallet infra powering 75M+ (figures vary 50-110M) wallets across 1,000+ teams (e.g. OpenSea) with no seed-phrase UX; the wallet layer of the stack (fact; wallet count reported/varies).", "source": "Stripe/Privy"},
+    {"from": "Stripe", "to": "Tempo", "instrument": "relationship", "notes": "Stripe + Paradigm incubated Tempo (4 Sep 2025) - an independent payments-focused Layer-1 (Matt Huang leads); Series A ~$500M at ~$5B (Thrive/Greenoaks, Oct 2025); mainnet Mar 2026 - completing Stripe's issuance->processing->settlement control + reducing dependence on Ethereum (fact; 'full-stack control' framing = interpretation).", "source": "Tempo; press"},
+    {"from": "Paradigm", "to": "Tempo", "instrument": "relationship", "notes": "Crypto VC Paradigm co-incubated Tempo with Stripe (first investors); Paradigm's Matt Huang leads it as an independent company - VC + payments-giant capital building settlement rails (fact).", "source": "Paradigm; Tempo"},
+    {"from": "Bridge", "to": "OCC", "instrument": "relationship", "notes": "Feb 2026: Bridge received a conditional national TRUST bank charter from the OCC (stablecoin issuance, custody, reserve management) - a second OCC crypto-bank charter alongside Erebor, folding stablecoin issuance under federal oversight (fact; parallels the Erebor + de-novo-charter thread).", "source": "OCC action 2026"},
+    {"from": "Bridge", "to": "Stablecoins", "instrument": "relationship", "notes": "Bridge is cross-chain stablecoin payment + orchestration rails (USDC/EURC across Solana/Ethereum, fiat on/off-ramps) - the back end that makes stablecoins usable as ordinary payments (fact).", "source": "public record"},
+    {"from": "Tempo", "to": "Stablecoins", "instrument": "relationship", "notes": "Tempo is a stablecoin-payments L1 (targets 100k+ TPS, sub-second finality); at/after launch it hosted Klarna's KlarnaUSD (a bank-issued stablecoin) and World Liberty Financial's USD1 (deployed May 2026), with Visa/Nubank/Shopify partners (fact of deployments).", "source": "Tempo; press"},
+    {"from": "Tempo", "to": "World_Liberty_Financial", "instrument": "relationship", "notes": "World Liberty Financial (the Trump-family-linked venture) deployed its USD1 stablecoin natively on Tempo (May 2026) - a notable political-crypto tie running on Stripe/Paradigm rails (fact of deployment; political-conflict framing tracked in the CLARITY/ethics thread, graded).", "source": "press 2026"},
+    {"from": "Stripe", "to": "Stablecoins", "instrument": "relationship", "notes": "Stripe's Open Issuance (Sep 2025) lets any business launch a custom stablecoin in a few lines of code, with reserves managed by BlackRock, Fidelity, and Superstate; early users Phantom, Hyperliquid, ConsenSys/MetaMask - stablecoin issuance as a Stripe product (fact).", "source": "Stripe Open Issuance"},
+    {"from": "Stripe", "to": "BlackRock", "instrument": "relationship", "notes": "Open Issuance reserves are managed by BlackRock + Fidelity + Superstate - routing stablecoin float into the big asset managers' Treasury/MMF vehicles, wiring Stripe issuance into the stablecoin-Treasury rail (fact; systemic-scale reading graded).", "source": "Stripe"}
+  ]
+}

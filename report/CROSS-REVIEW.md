@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 95 files
+- **Meta** — 96 files
 - **Google** — 63 files
 - **Chainlink** — 63 files
 - **OpenAI** — 49 files
 - **Microsoft** — 45 files
 - **FDIC** — 38 files
-- **Amazon** — 36 files
+- **Amazon** — 37 files
 - **Oracle** — 35 files
 - **NVIDIA** — 34 files
 - **Anthropic** — 29 files
 - **Stargate** — 25 files
-- **Palantir** — 24 files
+- **a16z** — 24 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-erebor-bank.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-stripe-stablecoin-stack.json` — related files by shared entities (verify cross-refs exist)
 - influence-congress-funding-compromise.json: 5 shared entities
-- temporal-bridges.json: 4 shared entities
-- spec-us-regulator-jurisdiction-map.json: 4 shared entities
-- spec-surveillance-cyber-threat-layer.json: 4 shared entities
-- influence-operator-network.json: 4 shared entities
-- spec-network-overlay.json: 4 shared entities
-- geopolitics-defense-industrial-base.json: 3 shared entities
-- spec-dialog-society.json: 3 shared entities
+- spec-blockchain-ecosystem.json: 4 shared entities
+- blockchain-registry.json: 4 shared entities
+- spec-blackrock-aladdin-concentration.json: 4 shared entities
+- altcoin-lens.json: 3 shared entities
+- spec-cross-system-contagion.json: 3 shared entities
+- spec-prediction-markets.json: 3 shared entities
+- blockchain-leg.json: 3 shared entities

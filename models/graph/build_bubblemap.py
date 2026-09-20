@@ -199,7 +199,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Cantor_Fitzgerald":"Cantor Fitzgerald","Bitmain":"Bitmain","Bitdeer":"Bitdeer",
  "CLEAR":"CLEAR (biometric ID)","ID_me":"ID.me","Persona":"Persona (ID verif)","Socure":"Socure","Onfido":"Onfido","Entrust":"Entrust",
  "CoinEx":"CoinEx (wind-down 2026)","ViaBTC":"ViaBTC","CET":"CET (CoinEx token)",
- "CikLeak":"CikLeak (hacktivist)", "Erebor":"Erebor Bank","8VC":"8VC","Joe_Lonsdale":"Joe Lonsdale","Russia_CEC":"Russia CEC","GAS_Vybory":"GAS Vybory 2.0",
+ "CikLeak":"CikLeak (hacktivist)", "Erebor":"Erebor Bank", "Bridge":"Bridge (Stripe)","Privy":"Privy (Stripe)","Tempo":"Tempo L1","Paradigm":"Paradigm","Patrick_Collison":"Patrick Collison","8VC":"8VC","Joe_Lonsdale":"Joe Lonsdale","Russia_CEC":"Russia CEC","GAS_Vybory":"GAS Vybory 2.0",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus
