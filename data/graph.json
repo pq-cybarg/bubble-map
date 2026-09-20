@@ -20,6 +20,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "8VC": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "ABA": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -2356,6 +2360,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Erebor": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Eric_Hartford": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -3602,6 +3610,10 @@
     },
     "Jobs_Headline": {
       "sector": "statistic",
+      "has_exogenous_revenue": false
+    },
+    "Joe_Lonsdale": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "John_Deaton": {
@@ -32526,6 +32538,123 @@
       "note": "Analytics firms feed law-enforcement/OFAC attribution + sanctions enforcement on crypto addresses - wiring the eCrime layer to the sanctions/regulator thread (fact)."
     },
     {
+      "from": "Palmer_Luckey",
+      "to": "Erebor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Palmer Luckey (Anduril founder) co-founded Erebor Bank, N.A. (Columbus, OH); he + Lonsdale are not in day-to-day management (co-CEOs Owen Rapaport + Jacob Hirshman, ex-Circle adviser) (fact)."
+    },
+    {
+      "from": "Joe_Lonsdale",
+      "to": "Erebor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Joe Lonsdale (8VC; Palantir co-founder) co-founded Erebor - a nationally chartered, FDIC-insured bank for AI/crypto/defense/manufacturing startups + the people who work at/invest in them; named for Tolkien's dwarven treasure mountain (fact)."
+    },
+    {
+      "from": "Joe_Lonsdale",
+      "to": "8VC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Lonsdale runs 8VC + co-founded Palantir/Addepar/OpenGov - a core Thiel-adjacent 'PayPal mafia'-network figure; Erebor extends that network into chartered banking (fact)."
+    },
+    {
+      "from": "Erebor",
+      "to": "OCC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "The OCC granted Erebor preliminary conditional approval (15 Oct 2025) + a final national charter (Feb 2026) - reportedly the first de-novo national bank charter under the current administration; ~8 months application-to-opening. Sen. Warren + Democrats formally questioned the SPEED + the founders' political connections (Apr 2026) - a raised concern, not a finding (fact of the letters; impropriety contested)."
+    },
+    {
+      "from": "Erebor",
+      "to": "Silicon_Valley_Bank",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Erebor is explicitly positioned to serve the frontier-tech + crypto clients stranded by the 2023 collapse of Silicon Valley Bank + Silvergate - deposits grew ~$1.1B (Mar) -> ~$4.6B (Jul 2026), ~$1B/month (fact of positioning + disclosed deposits)."
+    },
+    {
+      "from": "Erebor",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Erebor is stablecoin-native: it plans to hold stablecoins on its balance sheet + aims to be 'the most regulated entity conducting and facilitating stablecoin transactions' in the US - a chartered bank built around stablecoin rails, distinct from the bank-consortium tokenized-deposit approach (fact of stated model)."
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Erebor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Erebor's backer network reportedly includes Founders Fund (Thiel), 8VC, Haun Ventures, and Lux Capital; it is in talks to raise ~$1.5B at ~$8B pre / ~$9.5B post - which would make it the most valuable US private bank <6 months after opening (fact of reported backing + valuation talks; final terms not closed)."
+    },
+    {
+      "from": "Erebor",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Shared founder (Luckey) + an explicit defense/AI/manufacturing client focus make Erebor the banking layer of the emerging military-tech stack - the Thiel/Anduril/Palantir network acquiring its own chartered bank (fact of founder overlap + client focus; 'network consolidation' framing graded)."
+    },
+    {
+      "from": "Erebor",
+      "to": "PayPal_Mafia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-erebor-bank.json",
+      "note": "Via Luckey/Lonsdale/Founders Fund, Erebor sits in the Thiel 'PayPal mafia' network the map already tracks - extending it from payments (PayPal), data (Palantir), and defense (Anduril) into deposit-taking banking (fact of network ties; interpretation of the pattern)."
+    },
+    {
       "from": "China",
       "to": "MSS",
       "instrument": "other",
@@ -44838,10 +44967,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1881,
-    "num_edges": 2870,
+    "num_nodes": 1884,
+    "num_edges": 2879,
     "num_financial_edges": 273,
-    "num_structural_edges": 2597,
+    "num_structural_edges": 2606,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -44943,6 +45072,7 @@
       "Electricity_Ratepayers",
       "Elon_Musk",
       "Equation_Group",
+      "Erebor",
       "Ethereum",
       "FDIC",
       "FPL",
@@ -44996,6 +45126,7 @@
       "North_Korea",
       "NotPetya",
       "Nuclear_SMR",
+      "OCC",
       "OSAT",
       "OpenAI",
       "Open_Standard",
@@ -45061,12 +45192,16 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 173,
+    "core_scc_all_edges_size": 175,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "Amazon",
+        "Anthropic"
+      ],
       [
         "CoreWeave",
         "SINK_lenders"
@@ -45076,19 +45211,15 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -45105,6 +45236,12 @@
         "Anthropic",
         "SpaceX",
         "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -45127,6 +45264,7 @@
       [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -45134,13 +45272,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -45184,6 +45315,13 @@
       },
       "3M": {
         "total_usd": 10300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "8VC": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -49277,6 +49415,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Erebor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Eric_Hartford": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51455,6 +51600,13 @@
         "in_robust_core": false
       },
       "Jobs_Headline": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Joe_Lonsdale": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58714,6 +58866,28 @@
         "both_layers": true
       },
       {
+        "node": "Stablecoins",
+        "degree": 26,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "other",
+          "regulator",
+          "stablecoin",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 14,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Palantir",
         "degree": 28,
         "neighbor_sectors": [
@@ -58759,28 +58933,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Stablecoins",
-        "degree": 25,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "crypto",
-          "financial_infra",
-          "financier",
-          "other",
-          "regulator",
-          "stablecoin",
-          "state",
-          "statistic"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 13,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Amazon",
