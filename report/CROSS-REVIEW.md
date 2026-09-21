@@ -17,26 +17,26 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 97 files
 - **Google** — 65 files
-- **Chainlink** — 63 files
+- **Chainlink** — 64 files
 - **OpenAI** — 51 files
 - **Microsoft** — 46 files
 - **FDIC** — 38 files
+- **Oracle** — 37 files
 - **Amazon** — 37 files
-- **Oracle** — 36 files
 - **NVIDIA** — 34 files
-- **Anthropic** — 30 files
+- **Anthropic** — 31 files
 - **Circle** — 28 files
 - **a16z** — 26 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-fed-hike-2026.json` — related files by shared entities (verify cross-refs exist)
-- spec-cross-system-contagion.json: 2 shared entities
-- fin-nvidia-openai.json: 1 shared entities
-- macro-private-credit-marks.json: 1 shared entities
-- fin-microsoft-openai.json: 1 shared entities
-- spec-nextera-national-utility.json: 1 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- macro-ai-power-grid-bottleneck.json: 1 shared entities
-- macro-cre-privatecredit.json: 1 shared entities
+## Newest file `spec-neocloud-refinancing-wall.json` — related files by shared entities (verify cross-refs exist)
+- macro-cre-privatecredit.json: 8 shared entities
+- fin-google-amazon-anthropic-meta.json: 7 shared entities
+- spec-cross-system-contagion.json: 7 shared entities
+- spec-ai-datacenter-debt-spv.json: 6 shared entities
+- macro-private-credit-marks.json: 5 shared entities
+- spec-sec-filings-primary.json: 5 shared entities
+- spec-blockchain-ecosystem.json: 4 shared entities
+- blockchain-registry.json: 4 shared entities

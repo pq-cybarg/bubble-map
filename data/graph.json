@@ -4624,6 +4624,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": false
     },
+    "Neocloud_Refinancing_Wall": {
+      "sector": "macro",
+      "has_exogenous_revenue": false
+    },
     "Neoclouds": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -12054,6 +12058,97 @@
       "cancelable": false,
       "source_file": "spec-cross-river-bank.json",
       "note": ""
+    },
+    {
+      "from": "CoreWeave",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "CoreWeave Q2-2026: total debt ~$35.1B vs ~$5.0B equity + ~$6.9B cash; contractual principal $4.4B (rest-2026), $6.2B (2027, the key hurdle), $4.4B (2028), then $14.9B post-2030. Quarterly interest ~$640M (2.4x YoY); rates span converts ~2% / senior notes ~10% / oldest DDTL ~15% / new $2.6B facility SOFR+550bps (2031). Ba3/B+ high-yield; HSBC flagged a ~$8.9B 2026 liquidity shortfall (fact from filings; shortfall = analyst estimate)."
+    },
+    {
+      "from": "Oracle",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "Oracle total borrowings ~$129.5B (May 2026, up from ~$92.6B); raised ~$43B debt + $5B equity FY2026, plans ~$40B FY2027 (incl a $20B ATM), no new debt in CY2026; Q1-FY2027 interest expense $1.428B (+55% YoY). Year-by-year maturity table not reliably public here - staggered, some decades out (aggregate = fact; per-year schedule = graded, verify in 10-K)."
+    },
+    {
+      "from": "Nebius",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "Nebius (~$8.5B debt) is the third leg of the Oracle/CoreWeave/Nebius trio whose combined ~$152B planned capex vs ~$106B revenue + ~7.8x debt/quarterly-revenue leverage defines the neocloud stress (fact of category; figures reported)."
+    },
+    {
+      "from": "Neocloud_Refinancing_Wall",
+      "to": "SINK_bondmarket",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "The wall concentrates neocloud + hyperscaler-SPV maturities into a tightening 2026-2028 window - a refinancing TEST (roll at higher rates or contract), the leveraged edge of the map's SINK/bond thread (fact of window; test framing interpretation)."
+    },
+    {
+      "from": "Neocloud_Refinancing_Wall",
+      "to": "Fed_Funds_Rate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "Timing collision: the Sep-2026 Fed hike (to 3.75-4.00%, another possible) raises refinancing cost RIGHT as the wall arrives - floating-rate facilities reprice up and new issues price off higher Treasuries, worsening the roll (fact-of-direction; cross-link to spec-fed-hike-2026)."
+    },
+    {
+      "from": "Neocloud_Refinancing_Wall",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "The wall is the debt-service counterpart to the AI-capex buildout: GPUs financed short/expensive against fast-depreciating collateral, with revenue concentrated in a few (unrated) anchor customers (e.g. Anthropic ~40% of one CoreWeave loan) - the depreciation/duration-mismatch trap made concrete (fact of structure; trap framing interpretation)."
+    },
+    {
+      "from": "Neocloud_Refinancing_Wall",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-neocloud-refinancing-wall.json",
+      "note": "Much of the wall is held by private-credit funds (Blackstone/Blue Owl/Apollo/Pimco/BlackRock, per spec-ai-datacenter-debt-spv) - so a failed roll transmits into their portfolios, not just the borrowers' (fact of holders; contagion path interpretation)."
     },
     {
       "from": "Khamenei",
@@ -46403,10 +46498,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1918,
-    "num_edges": 2979,
+    "num_nodes": 1919,
+    "num_edges": 2986,
     "num_financial_edges": 274,
-    "num_structural_edges": 2705,
+    "num_structural_edges": 2712,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46519,6 +46614,7 @@
       "FPL",
       "Fairshake",
       "Family_Offices",
+      "Fed_Funds_Rate",
       "Fentanyl",
       "Fifth_Third",
       "First_Brands",
@@ -46562,6 +46658,8 @@
       "Microsoft_Defender",
       "NSA",
       "NVIDIA",
+      "Nebius",
+      "Neocloud_Refinancing_Wall",
       "Network_State",
       "NextEra_Energy",
       "Niantic",
@@ -46636,7 +46734,7 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 183,
+    "core_scc_all_edges_size": 186,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -46647,7 +46745,7 @@
         "Anthropic"
       ],
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -46663,13 +46761,13 @@
         "OpenAI"
       ],
       [
-        "AMD",
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -46677,9 +46775,9 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
       ],
       [
         "Amazon",
@@ -54821,6 +54919,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Neocloud_Refinancing_Wall": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Neoclouds": {
         "total_usd": 18000000000,
         "circular_usd": 0,
@@ -60407,6 +60512,32 @@
         "both_layers": true
       },
       {
+        "node": "AI_Datacenters",
+        "degree": 26,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "commodity",
+          "financier",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 15,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stablecoins",
         "degree": 34,
         "neighbor_sectors": [
@@ -60431,25 +60562,24 @@
         "both_layers": false
       },
       {
-        "node": "AI_Datacenters",
-        "degree": 25,
+        "node": "PrivateCredit_Funds",
+        "degree": 18,
         "neighbor_sectors": [
-          "ai",
+          "ai_infra",
+          "bank",
           "capital",
-          "commodity",
           "financier",
-          "logistics",
+          "industrial",
+          "insurance",
           "macro",
-          "neocloud",
           "other",
-          "political",
           "private_credit",
-          "spv",
-          "state",
-          "tech"
+          "regulator",
+          "retail",
+          "state"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 14,
+        "n_neighbor_sectors": 12,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -60477,31 +60607,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 17,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "capital",
-          "financier",
-          "industrial",
-          "insurance",
-          "macro",
-          "other",
-          "private_credit",
-          "regulator",
-          "retail",
-          "state"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 12,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Anthropic",
@@ -60623,23 +60728,23 @@
         "both_layers": true
       },
       {
-        "node": "Palantir",
-        "degree": 28,
+        "node": "Oracle",
+        "degree": 13,
         "neighbor_sectors": [
-          "ai",
           "ai_lab",
-          "defense",
-          "elite",
-          "financier",
+          "bigtech_asia",
+          "capital",
+          "chip_vendor",
+          "commodity",
+          "macro",
           "other",
-          "person",
-          "state",
-          "state_intel",
-          "surveillance",
-          "university"
+          "private_credit",
+          "sink",
+          "spv",
+          "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 8,
+        "source_files": 9,
         "layers": [
           "financial",
           "structural"
