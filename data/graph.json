@@ -1408,6 +1408,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Cheyenne_Hunt": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Chile": {
       "sector": "state",
       "has_exogenous_revenue": true
@@ -1542,6 +1546,10 @@
     },
     "Codex_Alimentarius": {
       "sector": "standards",
+      "has_exogenous_revenue": false
+    },
+    "Coefficient_Giving": {
+      "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
     "Cognyte": {
@@ -2328,6 +2336,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "Encode_AI": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Endeavor_Energy": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -2724,6 +2736,10 @@
       "sector": "tech",
       "has_exogenous_revenue": true
     },
+    "Future_of_Life_Institute": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "G20": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -2953,6 +2969,10 @@
       "has_exogenous_revenue": false
     },
     "Guacamaya": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Guidelight": {
       "sector": "other",
       "has_exogenous_revenue": false
     },
@@ -3540,6 +3560,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Jaan_Tallinn": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Jack_Henry": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -4058,6 +4082,10 @@
     },
     "Logistics_3PL": {
       "sector": "logistics",
+      "has_exogenous_revenue": false
+    },
+    "Longview_Philanthropy": {
+      "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
     "Lotte": {
@@ -5236,6 +5264,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Public_Citizen": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Public_Knowledge": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -6292,6 +6324,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Survival_and_Flourishing_Fund": {
+      "sector": "philanthropy",
+      "has_exogenous_revenue": false
+    },
     "Susanne_Klatten": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -6563,6 +6599,10 @@
     "Treasury_Market": {
       "sector": "financial_infra",
       "has_exogenous_revenue": true
+    },
+    "Trial_Lawyers_for_Justice": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Tricolor_Holdings": {
       "sector": "private_credit",
@@ -12302,6 +12342,305 @@
       "cancelable": false,
       "source_file": "spec-iran-state-network.json",
       "note": ""
+    },
+    {
+      "from": "Cheyenne_Hunt",
+      "to": "Public_Citizen",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Hunt was Public Citizen's Big Tech Accountability Advocate and co-author (with Rick Claypool) of Sorry in Advance! (18 Apr 2023): 'Until meaningful government safeguards are in place to protect the public from the harms of generative A.I., we need a pause.' Explicit rejection of corporate self-regulation (fact of the report)."
+    },
+    {
+      "from": "Cheyenne_Hunt",
+      "to": "OpenAI",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Named plaintiff in Buist v. Anthropic PBC, N.D. Cal. 3:26-cv-10693 (filed 18 Sep 2026), with Buist, Bullock, Spetsas, against Anthropic PBC, OpenAI OpCo LLC, SpaceXAI LLC, Google LLC. Sherman Act 1: alleged horizontal agreement to slow the rate competing frontier products improve, after Amodei's 12 Sep essay and same-day Musk/Altman/Hassabis assents. Hunt alleges paid subs to Claude, ChatGPT, Grok, and Gemini. Complaint para 7: guardrails 'should not be decided by the Defendants, but by we the people, through state and federal regulation, and through the voices of juries.' Her 19 Sep post: industry-written rules are a 'grift.' Same 2023 Public Citizen line, antitrust venue (fact of docket + post)."
+    },
+    {
+      "from": "Cheyenne_Hunt",
+      "to": "Anthropic",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Same complaint; Anthropic PBC is first-named defendant. Amodei's 12 Sep 'We Must Pace the Frontier' is the alleged offer; the July employee letter Amodei signed is recited as the 'no firm would slow alone' predicate (fact of docket)."
+    },
+    {
+      "from": "Cheyenne_Hunt",
+      "to": "Google",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Same complaint; Google LLC. Hassabis's July FINRA-style standards-body proposal and 12 Sep 'right path forward' are in the alleged acceptance (fact of docket)."
+    },
+    {
+      "from": "Cheyenne_Hunt",
+      "to": "xAI",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Complaint names SpaceXAI LLC (Grok). Musk quote-posted Amodei within about an hour: 'Dario is right.' Hunt's post says she is suing 'X' (fact of docket + post; SpaceXAI aliases to xAI)."
+    },
+    {
+      "from": "Trial_Lawyers_for_Justice",
+      "to": "Cheyenne_Hunt",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "TL4J (Nick Rowley lead; Andrew Tutt; Stanton Jones; Jakob Norman) is counsel. Buist and Spetsas are Florida trial lawyers also named as plaintiffs - ordinary standing mix, not an AI-safety shop. Tutt is Yale/ex-DOJ OLC. Contingency PI economics, not a Coefficient grant (fact of caption; funding-of-counsel is not public)."
+    },
+    {
+      "from": "Encode_AI",
+      "to": "Anthropic",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Pacing the Frontier (28 Jul 2026), ~1178 employee signatories, organizational support from Encode AI and Guidelight AI Standards. Amodei signed; Anthropic endorsed as a company. Letter asks the US government to help build tools that could later coordinate a slowdown - 'build the brake, not pull it.' The complaint recites this statement as defendants recognizing that no firm would slow alone (fact of organizing + docket recitation)."
+    },
+    {
+      "from": "Encode_AI",
+      "to": "OpenAI",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Same July letter: Pachocki, Chen among signatories; OpenAI endorsed as a company and later said it helped shape the language. Encode is therefore upstream of the complaint's factual spine without being a defendant (fact)."
+    },
+    {
+      "from": "Guidelight",
+      "to": "OpenAI",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Guidelight AI Standards (Page Hedley, Steven Adler - former OpenAI safety leads) co-supported the July letter and writes frontier safety standards meant to go beyond existing law. Professional AI-safety class, not a consumer PI shop. The complaint then treats the coordination those groups helped surface as the restraint of trade (fact of organizing; 'commissioned the suit' is NOT claimed)."
+    },
+    {
+      "from": "Public_Citizen",
+      "to": "Encode_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "ASSOCIATION not direction: Public Citizen (Hunt's former shop) and Encode sit in the same 'don't trust industry self-regulation / oppose federal preemption of state AI bills' civil-society cluster, overlapping Young People's Alliance and the Omidyar Responsible Tech Youth Power Fund neighborhood. Two-hop from Encode's July letter to Hunt's face on the Sep complaint. Not a payment (interpretation grounded in coalition space)."
+    },
+    {
+      "from": "Coefficient_Giving",
+      "to": "Open_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Coefficient Giving is the successor/rebrand of Open Philanthropy (announced 18 Nov 2025; Moskovitz/Tuna / Good Ventures still the anchor). Same shop, new name: still the dominant outside funder of AI-safety evaluators, alignment shops, and policy placement. Kept as a distinct node so the rebrand is visible on the graph rather than collapsed by alias (fact of rebrand)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "Encode_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "GRADED ADJACENCY: Encode has been listed in the same grant neighborhood as Coefficient/Open Phil AI-governance grantees; Secure AI Project (Nick Beckstead, former Open Phil/Coefficient program officer, later FTX Future Fund) works the same state-bill circuit. Personnel hop (Howie Lempel alum) into Hunt's coalition space. This is NOT a finding that EA funded Hunt or TL4J. If anything, Buist v. Anthropic attacks the waiver/private-pacing path Coefficient-world wanted legalized (association; anti-capture cut)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "INCENTIVE OVERLAP not payroll: David Sacks called a pacing waiver 'forming a cartel' before this complaint. The suit's Sherman theory is that sentence as a pleading; Hunt's press line is the opposite sermon (statutes, not an exemption). Same filing, two uses. No file ties a16z or Sacks to Hunt or TL4J (fact of Sacks's prior line; funding unsupported)."
+    },
+    {
+      "from": "Anthropic",
+      "to": "OpenAI",
+      "instrument": "governance",
+      "layer": "structural",
+      "raw_instrument": "governance",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Alleged (and partly admitted-as-talks) coordination: July working group of company representatives on a standards body; 12 Sep public assents to Amodei's essay; Lehane 15 Sep confirmation of weeks of safety talks with Anthropic and DeepMind. Whether that is a Sherman 'agreement' is the live legal question - this edge records the public coordination the complaint recites, not a verdict (fact of public statements + OpenAI confirmation of talks; liability contested)."
+    },
+    {
+      "from": "Jaan_Tallinn",
+      "to": "Survival_and_Flourishing_Fund",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Tallinn (Skype co-founder) is the SFF/SFC funder. SFF-2025 recommended $34.33M, ~86% AI safety (fact of SFF announcements)."
+    },
+    {
+      "from": "Survival_and_Flourishing_Fund",
+      "to": "Encode_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "SFF-2025: Encode AI Corporation $516,000 general support from Jaan Tallinn (fact of SFF recommendations table). Encode's public rule bars funding from frontier-lab executives; Tallinn is an early Anthropic investor. Substance-over-form point, not a lie in Encode's sentence (fact of grant + investor status)."
+    },
+    {
+      "from": "Future_of_Life_Institute",
+      "to": "Encode_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Encode lists FLI among foundation funders. FLI organized the Mar 2023 'pause GPT-4-scale training' letter Musk signed - a different pause (x-risk/longtermist) from Hunt's 2023 Public Citizen pause (government safeguards). Same noun, different authors (fact of Encode's funder page)."
+    },
+    {
+      "from": "Jaan_Tallinn",
+      "to": "Anthropic",
+      "instrument": "equity",
+      "layer": "financial",
+      "raw_instrument": "equity",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Tallinn is widely reported as an early Anthropic investor. That is why SFF money into Encode (organizer of the July letter Amodei signed) is a conflict-of-form for Encode's 'no frontier executives' rule even if Tallinn is not an Anthropic executive (fact of investor reporting; amount/date of his Anthropic stake not re-litigated here)."
+    },
+    {
+      "from": "Survival_and_Flourishing_Fund",
+      "to": "Longview_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "SFF Initiative Committee 2024: $700,000 general support to Longview Inc. Ltd from Tallinn (fact of SFF table)."
+    },
+    {
+      "from": "Longview_Philanthropy",
+      "to": "Guidelight",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "talent_pipeline",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Page Hedley (Guidelight CEO) was AI program director at Longview before co-founding Guidelight with Steven Adler (ex-OpenAI safety; still holds OpenAI equity). Longview is an EA donor-advisor (Natalie Cargill). This is the Coefficient-adjacent personnel hop into the July-letter organizer - biography, not a Guidelight 990 from Coefficient (fact of Guidelight team page)."
+    },
+    {
+      "from": "Guidelight",
+      "to": "Encode_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "Joint organizational support of Pacing the Frontier (28 Jul 2026). Guidelight writes standards meant to go beyond existing law; Encode does state/federal advocacy. Together they midwifed the predicate the complaint recites (fact of the letter's own attribution)."
+    },
+    {
+      "from": "David_Sacks",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "13 Sep 2026: Sacks (PCST chair; former WH AI czar) tells OpenAI/Anthropic to pace unilaterally and stop asking for a waiver 'so you can form a cartel.' Five days later the Buist complaint is that sentence as a pleading. Incentive overlap with Hunt's filing (kill private coordination) without a documented payment; Hunt's press line still demands statutes Sacks does not (fact of Sacks post; harvest not payroll)."
+    },
+    {
+      "from": "Coefficient_Giving",
+      "to": "Longview_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "note": "GRADED: Longview has been described as funded primarily by Coefficient/Open Phil and has directed tens of millions in AIS grants; SFF's $700k is a second documented pipe. Not a finding that Coefficient funded Guidelight or Hunt (association via Hedley's prior job)."
     },
     {
       "from": "Shai_Hulud",
@@ -45793,10 +46132,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1902,
-    "num_edges": 2937,
-    "num_financial_edges": 273,
-    "num_structural_edges": 2664,
+    "num_nodes": 1912,
+    "num_edges": 2960,
+    "num_financial_edges": 274,
+    "num_structural_edges": 2686,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45900,6 +46239,7 @@
       "Effective_Altruism",
       "Electricity_Ratepayers",
       "Elon_Musk",
+      "Encode_AI",
       "Equation_Group",
       "Erebor",
       "Ethereum",
@@ -46023,27 +46363,15 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 180,
+    "core_scc_all_edges_size": 181,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -46054,9 +46382,16 @@
         "NVIDIA"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -46069,10 +46404,9 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -46081,21 +46415,20 @@
         "Microsoft"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -46103,6 +46436,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -48580,6 +48920,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cheyenne_Hunt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Chile": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48812,6 +49159,13 @@
         "in_robust_core": false
       },
       "Codex_Alimentarius": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Coefficient_Giving": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50190,6 +50544,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Encode_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Endeavor_Energy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50883,6 +51244,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Future_of_Life_Institute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "G20": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51283,6 +51651,13 @@
         "in_robust_core": false
       },
       "Guacamaya": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Guidelight": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52311,6 +52686,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Jaan_Tallinn": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Jack_Henry": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53215,6 +53597,13 @@
         "in_robust_core": false
       },
       "Logistics_3PL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Longview_Philanthropy": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55279,6 +55668,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Public_Citizen": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Public_Knowledge": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -57127,6 +57523,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Survival_and_Flourishing_Fund": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Susanne_Klatten": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -57597,6 +58000,13 @@
         "in_robust_core": false
       },
       "Treasury_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Trial_Lawyers_for_Justice": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -59516,7 +59926,7 @@
       },
       {
         "node": "Google",
-        "degree": 29,
+        "degree": 30,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -59538,7 +59948,7 @@
           "university"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 22,
+        "source_files": 23,
         "layers": [
           "financial",
           "structural"
@@ -59547,7 +59957,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 37,
+        "degree": 43,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -59566,7 +59976,7 @@
           "university"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 19,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"
@@ -59752,6 +60162,30 @@
         "both_layers": false
       },
       {
+        "node": "Anthropic",
+        "degree": 24,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person",
+          "space_real_economy",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -59824,18 +60258,18 @@
         "both_layers": true
       },
       {
-        "node": "Anthropic",
-        "degree": 20,
+        "node": "Andreessen_Horowitz",
+        "degree": 13,
         "neighbor_sectors": [
           "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
+          "capital",
+          "crypto",
+          "crypto_infra",
           "elite",
-          "financier",
-          "hyperscaler",
+          "identity",
           "other",
-          "space_real_economy",
+          "person",
+          "political",
           "university"
         ],
         "n_neighbor_sectors": 10,
@@ -59884,29 +60318,6 @@
           "regulator",
           "retail",
           "state"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Tether",
-        "degree": 12,
-        "neighbor_sectors": [
-          "capital",
-          "crypto",
-          "dlt",
-          "financial_infra",
-          "other",
-          "person",
-          "satellite",
-          "sink",
-          "stablecoin",
-          "statistic"
         ],
         "n_neighbor_sectors": 10,
         "source_files": 10,

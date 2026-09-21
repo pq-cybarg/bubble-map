@@ -16,27 +16,27 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 96 files
-- **Google** — 63 files
+- **Google** — 64 files
 - **Chainlink** — 63 files
-- **OpenAI** — 49 files
+- **OpenAI** — 50 files
 - **Microsoft** — 45 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
 - **Oracle** — 35 files
 - **NVIDIA** — 34 files
-- **Anthropic** — 29 files
+- **Anthropic** — 30 files
 - **Circle** — 27 files
-- **a16z** — 25 files
+- **a16z** — 26 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ethena-usde-synthetic-dollar.json` — related files by shared entities (verify cross-refs exist)
-- altcoin-lens.json: 1 shared entities
-- spec-asia-crypto-payments.json: 1 shared entities
-- spec-blockchain-ecosystem.json: 1 shared entities
-- influence-congress-funding-compromise.json: 1 shared entities
-- spec-stellar-mccaleb-tacostand.json: 1 shared entities
-- macro-money-market-funds.json: 1 shared entities
-- spec-prediction-markets.json: 1 shared entities
-- spec-stablecoin-yield-fight.json: 1 shared entities
+## Newest file `spec-buist-v-anthropic-pacing.json` — related files by shared entities (verify cross-refs exist)
+- catalog-billionaires.json: 5 shared entities
+- catalog-academia-core.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- fin-google-amazon-anthropic-meta.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- fin-meta-family.json: 3 shared entities
+- sec-filings.json: 3 shared entities
+- digitalid-corporate.json: 3 shared entities

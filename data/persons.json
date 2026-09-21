@@ -144,6 +144,7 @@
     "Capital"
    ],
    "orgs": [
+    "David_Sacks",
     "White House (AI/crypto czar)",
     "Craft Ventures"
    ],
@@ -159,7 +160,8 @@
    "grade": "fact (role) + labeled interpretation",
    "blocks": [
     "influence-operator-network",
-    "macro-stablecoin-treasury-rail"
+    "macro-stablecoin-treasury-rail",
+    "spec-buist-v-anthropic-pacing"
    ]
   },
   {
@@ -16243,6 +16245,60 @@
    "grade": "fact + labeled interpretation",
    "blocks": [
     "spec-ethena-usde-synthetic-dollar"
+   ]
+  },
+  {
+   "name": "Cheyenne Hunt",
+   "role": "Attorney; filed Buist v. Anthropic (Trial Lawyers for Justice)",
+   "domains": [
+    "Law",
+    "Technology",
+    "Politics"
+   ],
+   "orgs": [
+    "Cheyenne_Hunt",
+    "Trial_Lawyers_for_Justice",
+    "Public_Citizen"
+   ],
+   "bluf": "Consumer-advocate attorney (ex-Public Citizen; 2024 congressional candidate) who filed the Buist v. Anthropic class complaint recoding the labs' 2026 'pacing' letter as a Sherman Act conspiracy. Assess with MEDIUM-HIGH confidence on the documented filing + prior roles; the 'coordinated flip/harvest' reading in the block is labeled interpretation, and several links (who tasked the filing) are explicitly unsupported.",
+   "drivers": "Big-Tech accountability advocacy; plaintiff-bar litigation.",
+   "worldview": "Antitrust + product-liability + juries as the check on AI-lab coordination.",
+   "decision_style": "Litigation-forward, public-facing ('we the people' framing).",
+   "track_record": "Public Citizen tech-policy advocacy; 2024 CA congressional run; Buist v. Anthropic 29-page class complaint (Sep 2026).",
+   "vulnerabilities": "Attribution: the block flags as UNSUPPORTED any claim that a funder ordered the filing.",
+   "relationships": "TL4J (jury-verdict product); the filing is dual-used by Sacks/Hawley (no-waiver) + plaintiff bar.",
+   "outlook": "Advances the antitrust-against-pacing theory; outcome hinges on the docket.",
+   "confidence": "MEDIUM-HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-buist-v-anthropic-pacing"
+   ]
+  },
+  {
+   "name": "Jaan Tallinn",
+   "role": "Skype/Kazaa co-founder; AI-safety funder (SFF, FLI); early Anthropic investor",
+   "domains": [
+    "Technology",
+    "Philanthropy",
+    "AI"
+   ],
+   "orgs": [
+    "Jaan_Tallinn",
+    "Survival_and_Flourishing_Fund",
+    "Future_of_Life_Institute"
+   ],
+   "bluf": "Estonian engineer-investor who co-founded Skype/Kazaa and became a leading AI-existential-risk funder (SFF, FLI co-founder, CSER/FHI backer) and an early Anthropic investor. Assess with HIGH confidence on the funding + cap-table facts; his role in the block is as the money-origin behind the pacing-predicate shops (SFF->Encode/Longview), graded as documented pipes, not proven direction.",
+   "drivers": "Reduce AI existential risk; fund the safety ecosystem.",
+   "worldview": "Frontier AI as civilizational risk requiring coordinated slowing.",
+   "decision_style": "Recommendation-driven philanthropy (SFF speculation grants).",
+   "track_record": "Co-founded Skype/Kazaa; co-founded FLI; runs SFF grant recommendations; early Anthropic investor.",
+   "vulnerabilities": "His safety funding is now cited as Exhibit-A predicate in an antitrust framing (the block's 'flip').",
+   "relationships": "SFF -> Encode/Longview; FLI -> Encode; early Anthropic equity (cap-table reporting).",
+   "outlook": "Continues funding AI-safety orgs now caught in the pacing-as-cartel narrative.",
+   "confidence": "HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-buist-v-anthropic-pacing"
    ]
   }
  ]
