@@ -1624,6 +1624,10 @@
       "sector": "university",
       "has_exogenous_revenue": false
     },
+    "Colossus": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Columbia_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -4502,6 +4506,10 @@
     },
     "Mysten_Labs": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "NAACP": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "NABU": {
@@ -45756,6 +45764,84 @@
       "note": "Oxford (with the Future of Humanity Institute legacy) also seeded AI-safety/longtermism thinking - linking abroad academia to the EA/TESCREAL ideology cluster (fact; FHI closed 2024)."
     },
     {
+      "from": "xAI",
+      "to": "Colossus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "xAI's Colossus supercomputer sites (Colossus 1, Memphis TN; Colossus 2, Southaven MS) are funded by its ~$20B round (closed Jan 2026, ~$230B valuation): reportedly ~$7.5B equity + ~$12.5B debt routed through an SPV that BUYS Nvidia GPUs and rents them to xAI. Nvidia put ~$2B equity into a vehicle buying Nvidia's own chips - a circular supplier-funds-buyer loop (fact of round; splits reported; circular framing interpretation). xAI reportedly burns ~$1B/month."
+    },
+    {
+      "from": "Colossus",
+      "to": "Gas_Turbines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "Colossus is powered by on-site methane turbines: Colossus 1 ran ~35 turbines (~421MW) for over a year before a Jul-2025 permit (for 15); Colossus 2 (Southaven) ran ~57-59 turbines, with 40-90 planned for up to ~1.5GW - far above initial consumption (fact; counts point-in-time + vary by source)."
+    },
+    {
+      "from": "Colossus",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "Behind-the-meter self-generation lets xAI sidestep the grid-interconnection queue - the AI-power-bottleneck workaround that also moves emissions off the utility's books and onto the datacenter (fact of approach; interpretation of the trade-off)."
+    },
+    {
+      "from": "Colossus",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "Colossus is among the largest single AI training clusters; its gas-first power model is a template other AI buildouts may copy where grid power is unavailable fast enough (fact of scale; template framing interpretation)."
+    },
+    {
+      "from": "NAACP",
+      "to": "xAI",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "The NAACP + Mississippi State Conference NAACP (represented by Earthjustice + SELC) sued xAI + subsidiary MZX Tech over unpermitted methane turbines powering Colossus 2 in Southaven - alleging Clean Air Act violations with potential to emit ~1,700 tons/yr NOx plus PM, CO, and formaldehyde, sited near predominantly Black communities (an environmental-justice claim). A permit issued ~one week after an xAI official discussed the site with President Trump; environmental groups called the process rushed (fact of suit + allegations + timing; ONGOING - no final finding; no causation asserted on the permit timing)."
+    },
+    {
+      "from": "xAI",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-xai-colossus-power.json",
+      "note": "xAI's ~$12.5B GPU-SPV debt + ~$1B/month burn put it in the same debt-funded-AI-capex cohort as the neocloud wall (CoreWeave/Oracle) + the Meta/Blue Owl SPV template - private, unrated, and dependent on continued mega-rounds to service the buildout (fact of structure; risk-cohort framing interpretation)."
+    },
+    {
       "from": "Patrick_Collison",
       "to": "Stripe",
       "instrument": "other",
@@ -46498,10 +46584,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1919,
-    "num_edges": 2986,
+    "num_nodes": 1921,
+    "num_edges": 2992,
     "num_financial_edges": 274,
-    "num_structural_edges": 2712,
+    "num_structural_edges": 2718,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46581,6 +46667,7 @@
       "Citizens_Financial",
       "CoWoS",
       "Coinbase",
+      "Colossus",
       "Congress",
       "ConsenSys",
       "Constellation_Energy",
@@ -46732,17 +46819,18 @@
       "Visa",
       "Weak_Nonce_Failure",
       "World_Liberty_Financial",
-      "ZEISS_SMT"
+      "ZEISS_SMT",
+      "xAI"
     ],
-    "core_scc_all_edges_size": 186,
+    "core_scc_all_edges_size": 188,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -46753,26 +46841,16 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
         "NVIDIA"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -46780,10 +46858,14 @@
         "Oracle"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -46802,6 +46884,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -49663,6 +49751,13 @@
         "in_robust_core": false
       },
       "Colorado_State_University": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Colossus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54703,6 +54798,13 @@
         "in_robust_core": false
       },
       "Mysten_Labs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "NAACP": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60513,7 +60615,7 @@
       },
       {
         "node": "AI_Datacenters",
-        "degree": 26,
+        "degree": 27,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -60530,7 +60632,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 15,
+        "source_files": 16,
         "layers": [
           "financial",
           "structural"
