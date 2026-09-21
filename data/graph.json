@@ -440,6 +440,10 @@
       "sector": "dlt",
       "has_exogenous_revenue": false
     },
+    "Arc": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Arctic": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -2796,6 +2800,10 @@
       "sector": "financier",
       "has_exogenous_revenue": true
     },
+    "Galaxy_Digital": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Gamma_Group": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -3593,6 +3601,10 @@
       "has_exogenous_revenue": false
     },
     "Jensen_Huang": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Jeremy_Allaire": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -38109,6 +38121,201 @@
       "note": "Represents the newest branch: CRITICAL-INFRASTRUCTURE PRE-POSITIONING (readiness to disrupt, not steal) - the strategic evolution of state APT activity (interpretation/category)."
     },
     {
+      "from": "Jeremy_Allaire",
+      "to": "Circle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Jeremy Allaire co-founded + runs Circle (USDC issuer; NYSE: CRCL) - which built Arc; Circle's Q2-2026 revenue was ~95% reserve income, so Arc is its pivot from single-product issuer to fee-capturing infrastructure operator (fact; strategic-pivot framing lightly interpretive)."
+    },
+    {
+      "from": "Circle",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Circle built + controls Arc - an EVM (Reth) L1 with Malachite (Tendermint-BFT, Informal Systems) deterministic finality <500ms, ~3,000 TPS at 20 validators; introduced 12 Aug 2025, testnet 28 Oct 2025, mainnet 16 Sep 2026. CREDIBILITY: the ISSUER runs the chain - vertical integration (issue USDC + operate the settlement layer + capture fees), like Tether/Cantor + Stripe/Tempo (fact of structure; conflict framing interpretation)."
+    },
+    {
+      "from": "Arc",
+      "to": "USDC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "USDC is Arc's native gas token (fees ~$0.01, EIP-1559 smoothed) - the issuer's own stablecoin is the fee currency; deterministic finality removes reorg risk (a real institutional-settlement advantage) (fact)."
+    },
+    {
+      "from": "Arc",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Arc is a stablecoin-native settlement L1 for institutional finance; it processed 700M+ testnet tx across 2.8M wallets pre-launch (reported figures) and launched ONE DAY after the 15 Sep 2026 CLARITY cloture failure - a compliance-first bet on eventual US clarity (fact of timing)."
+    },
+    {
+      "from": "Arc",
+      "to": "Tempo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Arc (Circle) vs Tempo (Stripe/Paradigm) are the two flagship stablecoin-payment L1s - the ISSUER-run chain vs the PROCESSOR-run chain; the emerging L1 race to own stablecoin settlement (fact of category; also Tether's Plasma/Stable, Ripple, Codex in the wider field)."
+    },
+    {
+      "from": "Arc",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Arc's permissioned, compliance-first design is a bet that regulation (CLARITY/GENIUS) will favor institutional, KYC-gated rails; mainnet timing (day after the failed cloture vote) underscores the dependence on that clarity (fact of timing; interpretation of the bet)."
+    },
+    {
+      "from": "BlackRock",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "BlackRock is one of 11 permissioned institutional validators AND a presale backer AND plans to migrate its ~$2.87B BUIDL tokenized-Treasury fund onto Arc - deepening the BlackRock<->Circle<->Treasuries loop (fact; migration is announced/forward-looking)."
+    },
+    {
+      "from": "DTCC",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "DTCC (the US securities clearing backbone) is a validator and plans to begin tokenizing DTC-custodied assets on Arc in 2027 - a core market-plumbing institution on an issuer-run chain (fact of announcement; 2027 forward-looking)."
+    },
+    {
+      "from": "Visa",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Visa is among the 11 founding validators - a card network helping run a stablecoin settlement L1 while also pursuing its own USDC settlement (fact)."
+    },
+    {
+      "from": "Mastercard",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Mastercard is a founding Arc validator (while also partnering Circle + owning BVNK) - incumbent networks hedging into stablecoin rails (fact)."
+    },
+    {
+      "from": "Standard_Chartered",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Standard Chartered is a founding validator - a global bank on the permissioned set (fact)."
+    },
+    {
+      "from": "SBI",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "SBI Group (Japan) is a founding validator - Asian financial-group participation (fact)."
+    },
+    {
+      "from": "Galaxy_Digital",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Galaxy Digital is a founding validator; the full 11 also include Global Payments, ICE (NYSE parent), MoneyGram, and Sumitomo - reportedly the most concentrated institutional validator set ever assembled for a public-blockchain launch (fact of set; 'most concentrated' = reported). CREDIBILITY: this is proof-of-AUTHORITY - Circle-chosen permissioned validators, NOT permissionless; a feature for TradFi trust + a censorship/control risk (interpretation)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "a16z crypto led the ARC token presale (reported ~$222M at ~$3B valuation), with BlackRock + Apollo among backers; Circle minted 10B ARC as a technical milestone but has NOT committed to a public token launch - token status is uncertain/speculative (fact of presale reports; figures reported/varies)."
+    },
+    {
+      "from": "Apollo",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-arc-circle-l1.json",
+      "note": "Apollo (private-credit/asset-management giant) is among the reported ARC presale backers - TradFi private capital into the issuer's chain (fact of reported backing)."
+    },
+    {
       "from": "Iran_IRGC",
       "to": "Crude_Oil",
       "instrument": "other",
@@ -45130,10 +45337,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1889,
-    "num_edges": 2890,
+    "num_nodes": 1892,
+    "num_edges": 2905,
     "num_financial_edges": 273,
-    "num_structural_edges": 2617,
+    "num_structural_edges": 2632,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45193,6 +45400,7 @@
       "Andreessen_Horowitz",
       "Anduril",
       "Anthropic",
+      "Arc",
       "Australia",
       "Bank_Stablecoin_Consortium",
       "Binance",
@@ -45333,6 +45541,7 @@
       "TMobile",
       "TSMC",
       "Tai_Mo_Shan",
+      "Tempo",
       "TerraPower",
       "The_Clearing_House",
       "Tokenized_Collateral",
@@ -45355,16 +45564,12 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 175,
+    "core_scc_all_edges_size": 177,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
       [
         "Microsoft",
         "OpenAI"
@@ -45378,16 +45583,15 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -45401,16 +45605,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -45423,6 +45620,18 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -46212,6 +46421,13 @@
         "in_robust_core": false
       },
       "Arbitrum": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Arc": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50341,6 +50557,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Galaxy_Digital": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Gamma_Group": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51735,6 +51958,13 @@
         "in_robust_core": false
       },
       "Jensen_Huang": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jeremy_Allaire": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58970,7 +59200,7 @@
       },
       {
         "node": "Stablecoins",
-        "degree": 29,
+        "degree": 30,
         "neighbor_sectors": [
           "bank",
           "capital",
@@ -58985,7 +59215,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 15,
+        "source_files": 16,
         "layers": [
           "structural"
         ],

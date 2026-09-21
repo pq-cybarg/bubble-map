@@ -25,18 +25,18 @@
 - **Oracle** — 35 files
 - **NVIDIA** — 34 files
 - **Anthropic** — 29 files
+- **a16z** — 25 files
 - **Stargate** — 25 files
-- **a16z** — 24 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-stripe-stablecoin-stack.json` — related files by shared entities (verify cross-refs exist)
-- influence-congress-funding-compromise.json: 5 shared entities
-- spec-blockchain-ecosystem.json: 4 shared entities
-- blockchain-registry.json: 4 shared entities
-- spec-blackrock-aladdin-concentration.json: 4 shared entities
-- altcoin-lens.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
-- spec-prediction-markets.json: 3 shared entities
+## Newest file `spec-arc-circle-l1.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-registry.json: 5 shared entities
+- spec-blockchain-ecosystem.json: 5 shared entities
 - blockchain-leg.json: 3 shared entities
+- spec-stripe-stablecoin-stack.json: 3 shared entities
+- spec-crypto-market-makers-political.json: 3 shared entities
+- influence-congress-funding-compromise.json: 3 shared entities
+- altcoin-lens.json: 3 shared entities
+- spec-sec-sdny-regulatory.json: 3 shared entities
