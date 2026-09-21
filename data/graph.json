@@ -7365,8 +7365,8 @@
       "has_exogenous_revenue": true
     },
     "World_Liberty_Financial": {
-      "sector": "other",
-      "has_exogenous_revenue": true
+      "sector": "crypto",
+      "has_exogenous_revenue": false
     },
     "Worldcoin": {
       "sector": "identity",
@@ -7466,6 +7466,10 @@
     },
     "ZEISS_SMT": {
       "sector": "semiconductor",
+      "has_exogenous_revenue": false
+    },
+    "Zach_Witkoff": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Zadroga_Act": {
@@ -21482,6 +21486,110 @@
       "cancelable": false,
       "source_file": "spec-iloveyou-worm.json",
       "note": "Cross-border, jurisdiction-arbitrage cybercrime (attacker in one state, victims worldwide, no extradition-able offense) became the enduring enforcement problem that later shaped US CFAA prosecutions and international MLAT/treaty efforts (interpretation grounded in the ILOVEYOU precedent)."
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "USD1 is a fiat-backed stablecoin (USD deposits + Treasuries) - politically distinctive but mechanically similar to USDC/USDT; it sits in the same reserve-income model (fact)."
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "USD1 reserves are held in USD deposits + T-bills - adding the Trump-linked issuer to the stablecoin-Treasury rail (float -> Treasuries -> issuer reserve income) (fact of backing model)."
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "Binance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "USD1 supply is heavily concentrated at Binance (~$4.7B of USD1 in Binance accounts as of early 2026; split between exchange + customers unclear); Binance added USD1 trading pairs, elevating the token (fact of concentration; ownership split unclear/reported)."
+    },
+    {
+      "from": "MGX",
+      "to": "World_Liberty_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "Abu Dhabi state-backed fund MGX chose USD1 to settle its ~$2B minority investment in Binance (announced Token2049 Dubai, 1 May 2025, by Zach Witkoff with Eric Trump + Justin Sun) - reportedly the largest crypto-settled investment ever; MGX cited 'compliance history' though USD1 was then brand-new (fact of deal; the 'compliance history' rationale noted as ironic/graded)."
+    },
+    {
+      "from": "Zach_Witkoff",
+      "to": "World_Liberty_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "Zach Witkoff co-founded WLFI + fronted the MGX/USD1-Binance announcement; son of Trump envoy Steve Witkoff - the political-family + Gulf-diplomacy overlap that defines the venture (fact)."
+    },
+    {
+      "from": "Sheikh_Tahnoon",
+      "to": "World_Liberty_Financial",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "Per WSJ (reported Jan 2026), a deal was signed ~Jan 2025 for lieutenants of Sheikh Tahnoon bin Zayed to acquire ~49% of WLFI for ~$500M; Tahnoon also chairs MGX (which then settled $2B in USD1 into Binance) + G42 - the UAE<->WLFI<->MGX<->Binance loop; subsequent US approval of advanced-chip exports to the UAE drew emoluments-clause concerns from legal experts (fact of reported deal + concerns; the ~49%/$500M = reported; emoluments = contested legal opinion)."
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "US_Government",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "Conflict-of-interest nexus: a Trump-family LLC reportedly owns ~38% of WLFI + is entitled to 75% of WLFI token proceeds while Trump holds office (reported ~$1B realized + ~$3B unsold by Dec 2025, estimates vary); Senate Democrats (Warren et al.) sought probes over token buyers + the UAE deal. The map records the documented arrangement + the raised concerns; it makes no adjudicated legal claim (fact of arrangement/inquiries; profit figures reported/varies; wrongdoing contested)."
+    },
+    {
+      "from": "World_Liberty_Financial",
+      "to": "CLARITY_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wlfi-usd1.json",
+      "note": "WLFI is central to the crypto-ethics fight that helped stall CLARITY: ethics language targeting the President's ~$1.4B crypto income (WLFI/USD1) was one of the three unresolved disputes at the failed 15 Sep 2026 cloture vote (fact of the sticking point; see spec-clarity-act-chronology)."
     },
     {
       "from": "Albanese",
@@ -45496,10 +45604,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1896,
-    "num_edges": 2916,
+    "num_nodes": 1897,
+    "num_edges": 2924,
     "num_financial_edges": 273,
-    "num_structural_edges": 2643,
+    "num_structural_edges": 2651,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45737,29 +45845,24 @@
         "Anthropic"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -45772,16 +45875,15 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -45794,6 +45896,12 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -58888,6 +58996,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Zach_Witkoff": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Zadroga_Act": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59102,7 +59217,7 @@
     "top_cross_layer_connectors": [
       {
         "node": "US_Government",
-        "degree": 80,
+        "degree": 81,
         "neighbor_sectors": [
           "academia",
           "academic_institute",
@@ -59110,6 +59225,7 @@
           "ai_data",
           "creditor",
           "critical_minerals",
+          "crypto",
           "defense",
           "defense_tech",
           "exchange",
@@ -59130,8 +59246,8 @@
           "telecom",
           "university"
         ],
-        "n_neighbor_sectors": 25,
-        "source_files": 49,
+        "n_neighbor_sectors": 26,
+        "source_files": 50,
         "layers": [
           "financial",
           "structural"
@@ -59390,7 +59506,7 @@
       },
       {
         "node": "Stablecoins",
-        "degree": 31,
+        "degree": 32,
         "neighbor_sectors": [
           "bank",
           "capital",
@@ -59405,7 +59521,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "structural"
         ],
