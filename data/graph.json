@@ -2596,6 +2596,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": true
     },
+    "Fed_Funds_Rate": {
+      "sector": "macro",
+      "has_exogenous_revenue": false
+    },
     "Federal_Arbitration_Act": {
       "sector": "standards",
       "has_exogenous_revenue": false
@@ -3653,6 +3657,10 @@
       "has_exogenous_revenue": false
     },
     "Jeremy_Kauffman": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Jerome_Powell": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -29143,6 +29151,110 @@
       "note": "USD1 (Trump-family WLF) is a GENIUS-Act stablecoin; the administration legislating the demand rail has a family stake in an issuer (ties spec-exchanges-asia USD1/MGX/Binance)."
     },
     {
+      "from": "Jerome_Powell",
+      "to": "Federal_Reserve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "Jerome Powell chairs the Federal Reserve / FOMC that delivered the September 2026 hike (fact)."
+    },
+    {
+      "from": "Federal_Reserve",
+      "to": "Fed_Funds_Rate",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "16 Sep 2026: FOMC raised the target range +25bps to 3.75-4.00% - the FIRST hike since 2023 - by a unanimous 12-0 vote (a reversal from July's 9-3 hold, when 3 members dissented FOR a hike). Cited elevated inflation (oil-price spike / war) + bond-market pressure. Dot plot: another hike possible by yearend (4.00-4.25%); 2027 split. A sharp turn from March's projected CUTS (fact)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "The hike partly answered bond-market pressure - it was unusual for the funds rate to sit so far below where yields traded; higher-for-longer lifts the discount rate across the map (fact-of-direction)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "SINK_bondmarket",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "Higher rates raise refinancing + discounting costs on the SINK/bond thread - tightening the screws on leveraged, negative-cash-flow borrowers (fact-of-direction; magnitude interpretive)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "Directly raises the cost of the AI-datacenter debt wave: floating-rate facilities (e.g. CoreWeave's ~11% GPU-collateralized loans) reprice higher, and new SPV debt prices off higher Treasuries - squeezing the private-credit-funded buildout mapped in spec-ai-datacenter-debt-spv (fact-of-direction)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "Higher financing costs pressure the debt-funded AI capex - worsening the depreciation/duration-mismatch trap (expensive GPUs financed with costlier debt against fast-obsoleting collateral) (fact-of-direction; interpretation of the trap)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "A tailwind for stablecoin ISSUERS: higher T-bill yields fatten reserve income on the float (Circle/Tether/USD1/Arc/USDtb all earn the carry) - the same higher-for-longer that hurts borrowers pays the issuers (fact-of-direction)."
+    },
+    {
+      "from": "Fed_Funds_Rate",
+      "to": "US_household_credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-fed-hike-2026.json",
+      "note": "Higher-for-longer squeezes the consumer tail - subprime auto + card delinquencies (the stress in macro-consumer-abs-subprime); the hike compounds an already-strained household-credit bottom (fact-of-direction)."
+    },
+    {
       "from": "Toyota",
       "to": "JP_SK_Auto_Makers",
       "instrument": "other",
@@ -46291,10 +46403,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1916,
-    "num_edges": 2971,
+    "num_nodes": 1918,
+    "num_edges": 2979,
     "num_financial_edges": 274,
-    "num_structural_edges": 2697,
+    "num_structural_edges": 2705,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46535,29 +46647,24 @@
         "Anthropic"
       ],
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -46570,10 +46677,21 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -46586,12 +46704,6 @@
         "NVIDIA",
         "Crusoe",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "Amazon",
@@ -51160,6 +51272,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Fed_Funds_Rate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Federal_Arbitration_Act": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53009,6 +53128,13 @@
         "in_robust_core": false
       },
       "Jeremy_Kauffman": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Jerome_Powell": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60281,8 +60407,32 @@
         "both_layers": true
       },
       {
+        "node": "Stablecoins",
+        "degree": 34,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "macro",
+          "other",
+          "regulator",
+          "stablecoin",
+          "state",
+          "statistic",
+          "tech"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 20,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "AI_Datacenters",
-        "degree": 24,
+        "degree": 25,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -60299,35 +60449,12 @@
           "tech"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Stablecoins",
-        "degree": 33,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "crypto",
-          "financial_infra",
-          "financier",
-          "other",
-          "regulator",
-          "stablecoin",
-          "state",
-          "statistic",
-          "tech"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 19,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Russia",
@@ -60352,6 +60479,31 @@
         "both_layers": false
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 17,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "capital",
+          "financier",
+          "industrial",
+          "insurance",
+          "macro",
+          "other",
+          "private_credit",
+          "regulator",
+          "retail",
+          "state"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Anthropic",
         "degree": 24,
         "neighbor_sectors": [
@@ -60369,30 +60521,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 12,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 16,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "capital",
-          "financier",
-          "industrial",
-          "insurance",
-          "other",
-          "private_credit",
-          "regulator",
-          "retail",
-          "state"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 11,
         "layers": [
           "financial",
           "structural"

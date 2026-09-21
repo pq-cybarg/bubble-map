@@ -1,0 +1,19 @@
+{
+  "title": "Fed hikes +25bps (Sep 2026) - the first increase since 2023 and its cross-thread transmission",
+  "source": "Public record: FOMC statement + dot plot (16 Sep 2026); CNBC/Kiplinger/BondSavvy. Macro overlay (structural; no financial-core edges). HONESTY: the decision, vote, and dot plot = fact; the transmission effects (costlier AI debt, stablecoin-float tailwind, subprime squeeze) are directionally sound economics = fact-of-direction, with magnitude/lag = interpretation.",
+  "grade": "per-edge in notes (fact | fact-of-direction | interpretation)",
+  "nodes": [
+    {"id": "Fed_Funds_Rate", "sector": "macro"},
+    {"id": "Jerome_Powell", "sector": "person"}
+  ],
+  "edges": [
+    {"from": "Jerome_Powell", "to": "Federal_Reserve", "instrument": "leads", "notes": "Jerome Powell chairs the Federal Reserve / FOMC that delivered the September 2026 hike (fact).", "source": "Federal Reserve"},
+    {"from": "Federal_Reserve", "to": "Fed_Funds_Rate", "instrument": "controls", "notes": "16 Sep 2026: FOMC raised the target range +25bps to 3.75-4.00% - the FIRST hike since 2023 - by a unanimous 12-0 vote (a reversal from July's 9-3 hold, when 3 members dissented FOR a hike). Cited elevated inflation (oil-price spike / war) + bond-market pressure. Dot plot: another hike possible by yearend (4.00-4.25%); 2027 split. A sharp turn from March's projected CUTS (fact).", "source": "FOMC statement + dot plot"},
+    {"from": "Fed_Funds_Rate", "to": "US_Treasuries", "instrument": "relationship", "notes": "The hike partly answered bond-market pressure - it was unusual for the funds rate to sit so far below where yields traded; higher-for-longer lifts the discount rate across the map (fact-of-direction).", "source": "press"},
+    {"from": "Fed_Funds_Rate", "to": "SINK_bondmarket", "instrument": "relationship", "notes": "Higher rates raise refinancing + discounting costs on the SINK/bond thread - tightening the screws on leveraged, negative-cash-flow borrowers (fact-of-direction; magnitude interpretive).", "source": "analysis"},
+    {"from": "Fed_Funds_Rate", "to": "PrivateCredit_Funds", "instrument": "relationship", "notes": "Directly raises the cost of the AI-datacenter debt wave: floating-rate facilities (e.g. CoreWeave's ~11% GPU-collateralized loans) reprice higher, and new SPV debt prices off higher Treasuries - squeezing the private-credit-funded buildout mapped in spec-ai-datacenter-debt-spv (fact-of-direction).", "source": "analysis"},
+    {"from": "Fed_Funds_Rate", "to": "AI_Datacenters", "instrument": "relationship", "notes": "Higher financing costs pressure the debt-funded AI capex - worsening the depreciation/duration-mismatch trap (expensive GPUs financed with costlier debt against fast-obsoleting collateral) (fact-of-direction; interpretation of the trap).", "source": "analysis"},
+    {"from": "Fed_Funds_Rate", "to": "Stablecoins", "instrument": "relationship", "notes": "A tailwind for stablecoin ISSUERS: higher T-bill yields fatten reserve income on the float (Circle/Tether/USD1/Arc/USDtb all earn the carry) - the same higher-for-longer that hurts borrowers pays the issuers (fact-of-direction).", "source": "analysis"},
+    {"from": "Fed_Funds_Rate", "to": "US_household_credit", "instrument": "relationship", "notes": "Higher-for-longer squeezes the consumer tail - subprime auto + card delinquencies (the stress in macro-consumer-abs-subprime); the hike compounds an already-strained household-credit bottom (fact-of-direction).", "source": "analysis"}
+  ]
+}
