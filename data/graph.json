@@ -2400,6 +2400,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Ethena": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Ethereum": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -2953,6 +2957,10 @@
       "has_exogenous_revenue": false
     },
     "Guillaume_Pousaz": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Guy_Young": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -6728,6 +6736,14 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "USDe": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "USDtb": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "USTC": {
       "sector": "research",
       "has_exogenous_revenue": false
@@ -7578,6 +7594,10 @@
     },
     "npm_Ecosystem": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "sUSDe": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "vLLM": {
@@ -14687,6 +14707,175 @@
       "cancelable": false,
       "source_file": "catalog-academia-us-longtail.json",
       "note": "(core node) JHU Applied Physics Lab is the largest US UARC - defense/space; noted for cross-link (fact)."
+    },
+    {
+      "from": "Guy_Young",
+      "to": "Ethena",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "Guy Young founded Ethena Labs, issuer of USDe - the largest synthetic (crypto-collateralized) dollar after Sky's USDS (fact)."
+    },
+    {
+      "from": "Ethena",
+      "to": "USDe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDe is a SYNTHETIC dollar held to peg by a DELTA-NEUTRAL basis trade: long staked-ETH/LSTs + spot BTC, short an equal notional of ETH/BTC perpetual futures. It is NOT fiat-backed (no T-bill float like USDC) and NOT an over-collateralized CDP (like DAI/USDS); the peg comes from the hedge + arbitrage (fact of mechanism)."
+    },
+    {
+      "from": "USDe",
+      "to": "sUSDe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "Staking USDe -> sUSDe, which accrues the yield (perp funding + staking); sUSDe 7-day APY ~7.1% (Jun 2026, down from ~9.4% in Apr as funding compressed); 7-day unstake cooldown so Ethena can unwind hedges without forced selling (fact; APY reported/varies)."
+    },
+    {
+      "from": "USDe",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDe is the flagship of the SYNTHETIC stablecoin category - a third mechanism class alongside fiat-backed (USDC/USDT/USD1) and algorithmic (Terra/UST). Supply figures conflict (~$4.4B Aug-2026 dashboard vs ~$5.5-6B Q2 DeFiLlama) - treat as a snapshot (fact of category; supply reported/varies)."
+    },
+    {
+      "from": "USDe",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "The long leg is mostly staked ETH / LSTs (e.g. Lido stETH) earning ~3% staking yield, plus spot BTC (which earns nothing on its own) - so USDe's collateral is crypto, not cash (fact)."
+    },
+    {
+      "from": "Ethena",
+      "to": "Binance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "The short-perp hedges sit on CENTRALIZED exchanges (Binance/Bybit/OKX/Deribit) - so exchange failure/insolvency is a live risk that could prevent closing a short; the Bybit hack + Oct flash crash stress-tested the design (fact of dependence; severity interpretation)."
+    },
+    {
+      "from": "Ethena",
+      "to": "Bybit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "Bybit is among Ethena's perp-hedge venues; the 2025 Bybit hack was one of the market-stress events that tested Ethena's off-exchange-settlement + risk management (fact)."
+    },
+    {
+      "from": "Ethena",
+      "to": "USDtb",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDtb is Ethena's tokenized-Treasuries product; a portion of reserves now sits in USDtb as a dollar-stable buffer OUTSIDE the delta-neutral structure, plus a Reserve Fund (~$73M, ~1.7% of supply) to absorb hedge-failure losses (fact; figures reported/varies)."
+    },
+    {
+      "from": "USDtb",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDtb holds tokenized US Treasuries - so even the synthetic-dollar issuer partly plugs into the stablecoin-Treasury rail for its stable buffer (fact)."
+    },
+    {
+      "from": "USDe",
+      "to": "Aave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDe/sUSDe are integrated as collateral across DeFi (Aave, Pendle) and are a significant share of DeFi TVL - boosting capital efficiency but creating CONTAGION/composability risk: a major USDe depeg could cascade through every protocol that accepts it (fact of integration; contagion severity interpretation)."
+    },
+    {
+      "from": "USDe",
+      "to": "GENIUS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "Because USDe is backed by a hedged derivatives trade (not fiat reserves), it does NOT meet the statutory definition of a 'payment stablecoin' - so the GENIUS yield prohibition that constrains USDC does not touch it; USDe pays yield legally, sitting in a regulatory gap (classification as security/commodity/new-class is unsettled) (fact of the gap; classification outcome uncertain)."
+    },
+    {
+      "from": "Ethena",
+      "to": "Terraform_Labs",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "CONTRAST: USDe is often mis-compared to Terra/UST (Do Kwon's algorithmic dollar that collapsed 2022 via a reflexive mint/burn loop). USDe is mechanically different - a delta-neutral HEDGE, not a reflexive seigniorage token - so it avoids UST's specific failure mode; but it carries its OWN distinct risks (negative funding, CEX counterparty, depeg-contagion). Not a Terra-clone, and not risk-free (interpretation, clearly labeled)."
+    },
+    {
+      "from": "USDe",
+      "to": "Plasma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ethena-usde-synthetic-dollar.json",
+      "note": "USDe was among the DeFi assets integrated on Plasma at launch - synthetic-dollar liquidity layered onto a stablecoin L1, compounding both chains' risk surfaces (fact of integration)."
     },
     {
       "from": "Apple",
@@ -45604,10 +45793,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1897,
-    "num_edges": 2924,
+    "num_nodes": 1902,
+    "num_edges": 2937,
     "num_financial_edges": 273,
-    "num_structural_edges": 2651,
+    "num_structural_edges": 2664,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45841,6 +46030,18 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "Anthropic"
       ],
@@ -45849,20 +46050,8 @@
         "SINK_lenders"
       ],
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -45880,18 +46069,6 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
@@ -45902,6 +46079,18 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -50127,6 +50316,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ethena": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ethereum": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51094,6 +51290,13 @@
         "in_robust_core": false
       },
       "Guillaume_Pousaz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Guy_Young": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57701,6 +57904,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "USDe": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "USDtb": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "USTC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59192,6 +59409,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "sUSDe": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "vLLM": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59483,6 +59707,29 @@
         "both_layers": true
       },
       {
+        "node": "Stablecoins",
+        "degree": 33,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "other",
+          "regulator",
+          "stablecoin",
+          "state",
+          "statistic",
+          "tech"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 19,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Russia",
         "degree": 43,
         "neighbor_sectors": [
@@ -59499,29 +59746,6 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 20,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "Stablecoins",
-        "degree": 32,
-        "neighbor_sectors": [
-          "bank",
-          "capital",
-          "crypto",
-          "financial_infra",
-          "financier",
-          "other",
-          "regulator",
-          "stablecoin",
-          "state",
-          "statistic",
-          "tech"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 18,
         "layers": [
           "structural"
         ],

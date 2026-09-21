@@ -16218,6 +16218,32 @@
    "blocks": [
     "spec-erebor-bank"
    ]
+  },
+  {
+   "name": "Guy Young",
+   "role": "Founder & CEO, Ethena Labs (USDe)",
+   "domains": [
+    "Crypto",
+    "Finance"
+   ],
+   "orgs": [
+    "Guy_Young",
+    "Ethena",
+    "USDe"
+   ],
+   "bluf": "Founder of the largest synthetic (delta-neutral) dollar. Assess with HIGH confidence USDe is a distinct, higher-complexity risk class from fiat-backed stablecoins - not a Terra-clone, but exposed to funding-flip, CEX-counterparty, and depeg-contagion risk.",
+   "drivers": "Scale a crypto-native yield-bearing dollar outside the fiat-reserve model.",
+   "worldview": "A basis-trade can synthesize a dollar; yield is the product.",
+   "decision_style": "Mechanism-first, risk-disclosed (publishes reserve/funding data), fast-scaling.",
+   "track_record": "Built Ethena/USDe to multi-billion supply; added USDtb Treasuries buffer + Reserve Fund; weathered Bybit-hack + Oct-flash-crash stress.",
+   "vulnerabilities": "Sustained negative funding (duration unknown even to Ethena); CEX hedge-venue failure; DeFi-contagion; unsettled regulatory classification.",
+   "relationships": "Hedges on Binance/Bybit/OKX/Deribit; DeFi via Aave/Pendle; USDtb->Treasuries; contrast to Terra/UST.",
+   "outlook": "Grows in benign-funding regimes; the open question is behavior through a prolonged negative-funding stress.",
+   "confidence": "HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-ethena-usde-synthetic-dollar"
+   ]
   }
  ]
 }

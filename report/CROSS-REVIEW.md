@@ -25,18 +25,18 @@
 - **Oracle** — 35 files
 - **NVIDIA** — 34 files
 - **Anthropic** — 29 files
-- **Circle** — 26 files
+- **Circle** — 27 files
 - **a16z** — 25 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-wlfi-usd1.json` — related files by shared entities (verify cross-refs exist)
-- macro-stablecoin-failures-manipulation.json: 2 shared entities
-- blockchain-registry.json: 2 shared entities
-- macro-stablecoin-treasury-rail.json: 2 shared entities
-- influence-operator-network.json: 2 shared entities
-- spec-blackrock-aladdin-concentration.json: 2 shared entities
-- catalog-quiet-money-3.json: 1 shared entities
-- fin-gulf-sovereign-ai-capital.json: 1 shared entities
-- fin-openai-conversion-governance.json: 1 shared entities
+## Newest file `spec-ethena-usde-synthetic-dollar.json` — related files by shared entities (verify cross-refs exist)
+- altcoin-lens.json: 1 shared entities
+- spec-asia-crypto-payments.json: 1 shared entities
+- spec-blockchain-ecosystem.json: 1 shared entities
+- influence-congress-funding-compromise.json: 1 shared entities
+- spec-stellar-mccaleb-tacostand.json: 1 shared entities
+- macro-money-market-funds.json: 1 shared entities
+- spec-prediction-markets.json: 1 shared entities
+- spec-stablecoin-yield-fight.json: 1 shared entities
