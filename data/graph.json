@@ -5108,6 +5108,10 @@
       "sector": "satellite",
       "has_exogenous_revenue": true
     },
+    "Plasma": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "PlusToken": {
       "sector": "crypto_firm",
       "has_exogenous_revenue": false
@@ -6120,6 +6124,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Stable": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
     "Stablecoins": {
       "sector": "stablecoin",
       "has_exogenous_revenue": false
@@ -6715,6 +6723,10 @@
     "USDC": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "USDT": {
+      "sector": "crypto",
+      "has_exogenous_revenue": false
     },
     "USTC": {
       "sector": "research",
@@ -7370,6 +7382,10 @@
     },
     "XMSS": {
       "sector": "pqc",
+      "has_exogenous_revenue": false
+    },
+    "XPL": {
+      "sector": "crypto",
       "has_exogenous_revenue": false
     },
     "XPeng": {
@@ -21804,6 +21820,149 @@
       "cancelable": false,
       "source_file": "spec-cross-border-settlement-rails.json",
       "note": ""
+    },
+    {
+      "from": "Tether",
+      "to": "Plasma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Plasma is a USDT-centric, Bitcoin-anchored, EVM L1 (PlasmaBFT consensus) launched with explicit Tether/Bitfinex backing (mainnet 25 Sep 2025); zero-fee USDT transfers, gas payable in USDT - the largest stablecoin issuer building its own rail (fact)."
+    },
+    {
+      "from": "Bitfinex",
+      "to": "Plasma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Bitfinex (Tether's sister exchange) is among Plasma's backers - the Tether/Bitfinex complex extending from issuance into L1 infrastructure (fact)."
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Plasma",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Founders Fund (Thiel network) backed Plasma - the same PayPal-mafia capital behind Erebor + Persona now in a Tether-aligned stablecoin L1 (fact of backing; network-pattern framing interpretation)."
+    },
+    {
+      "from": "Plasma",
+      "to": "XPL",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "XPL is Plasma's native token; the public sale raised ~$373M (reportedly ~7x its $50M target). CREDIBILITY: XPL crashed ~80-85% from its ~$1.5-1.67 high to ~$0.20 by late 2025 - and the design has a structural token-demand flaw: if stablecoin transfers are zero-fee, there is little reason to hold XPL (fact of crash; token-demand critique interpretation)."
+    },
+    {
+      "from": "Plasma",
+      "to": "USDT",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "~89% of stablecoins on Plasma are USDT - single-issuer concentration that ties the chain's fate to Tether's decisions + health (fact of concentration; risk framing graded)."
+    },
+    {
+      "from": "Plasma",
+      "to": "Stablecoins",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Plasma is the boom-bust case study: ~$2B+ day-one TVL + 100+ DeFi partners (Aave/Ethena/Euler/Fluid), then a steep decline as XPL incentives expired - the challenge of converting incentivized deposits into ORGANIC usage. TVL figures conflict wildly across sources (~$0.6B / ~$2B / ~$18.7B at different dates) - treat as uncertain, verify on DeFiLlama (fact of pattern; specific TVL reported/conflicting)."
+    },
+    {
+      "from": "Plasma",
+      "to": "Aave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Aave (with Ethena, Euler, Fluid) integrated on Plasma at launch - the DeFi liquidity that drove the day-one TVL spike (and much of what later migrated out) (fact)."
+    },
+    {
+      "from": "Plasma",
+      "to": "Arc",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Plasma (Tether/USDT) vs Arc (Circle/USDC) vs Tempo (Stripe) - the three-way stablecoin-L1 race: the largest issuer, the #2 issuer, and the largest processor each building a rail to capture float + fees beyond reserve income (fact of category)."
+    },
+    {
+      "from": "Plasma",
+      "to": "Tempo",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Plasma + Tempo + Arc are the flagship stablecoin L1s; Plasma is the cautionary datapoint (huge launch, hype fade) the newer entrants must avoid (fact of category; lesson framing interpretation)."
+    },
+    {
+      "from": "Plasma",
+      "to": "Tron",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "Tron remains the dominant USDT-transfer chain; Plasma competes for that same USDT-settlement volume - so Tether's own L1 partly competes with USDT's existing home on Tron (fact; tension framing interpretation)."
+    },
+    {
+      "from": "Stable",
+      "to": "Tether",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-plasma-stable-tether-l1.json",
+      "note": "'Stable' is a second Tether/Bitfinex-aligned USDT-focused L1 - alongside Plasma, Tether is pursuing MULTIPLE issuer-run chains, echoing the Arc/Tempo issuer-run pattern (fact of category; details less documented, graded)."
     },
     {
       "from": "Saudi_Arabia",
@@ -45337,10 +45496,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1892,
-    "num_edges": 2905,
+    "num_nodes": 1896,
+    "num_edges": 2916,
     "num_financial_edges": 273,
-    "num_structural_edges": 2632,
+    "num_structural_edges": 2643,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -45393,6 +45552,7 @@
       "APT29_CozyBear",
       "ASML",
       "AUKUS",
+      "Aave",
       "Adani_Group",
       "Africa_Corps",
       "Amazon",
@@ -45405,6 +45565,7 @@
       "Bank_Stablecoin_Consortium",
       "Binance",
       "Bitcoin",
+      "Bitfinex",
       "CFTC",
       "CHIPS_Act",
       "CLARITY_Act",
@@ -45510,6 +45671,7 @@
       "Palantir_Gotham",
       "PayPal_Mafia",
       "Peter_Thiel",
+      "Plasma",
       "Pokemon_GO",
       "Power_Grid",
       "Prime_Brokers",
@@ -45564,12 +45726,16 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 177,
+    "core_scc_all_edges_size": 180,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "Amazon",
+        "Anthropic"
+      ],
       [
         "Microsoft",
         "OpenAI"
@@ -45583,15 +45749,16 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -45605,17 +45772,6 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
@@ -45624,13 +45780,19 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -54596,6 +54758,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Plasma": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PlusToken": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56367,6 +56536,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stable": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stablecoins": {
         "total_usd": 1000000000000,
         "circular_usd": 0,
@@ -57404,6 +57580,13 @@
         "in_robust_core": false
       },
       "USDC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "USDT": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58558,6 +58741,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "XPL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "XPeng": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59200,7 +59390,7 @@
       },
       {
         "node": "Stablecoins",
-        "degree": 30,
+        "degree": 31,
         "neighbor_sectors": [
           "bank",
           "capital",
@@ -59215,7 +59405,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "structural"
         ],
@@ -59364,21 +59554,22 @@
         "both_layers": true
       },
       {
-        "node": "Amazon",
+        "node": "Tether",
         "degree": 12,
         "neighbor_sectors": [
-          "ai_lab",
           "capital",
-          "commodity",
+          "crypto",
+          "dlt",
           "financial_infra",
-          "industrial",
+          "other",
           "person",
           "satellite",
-          "standards",
-          "university"
+          "sink",
+          "stablecoin",
+          "statistic"
         ],
-        "n_neighbor_sectors": 9,
-        "source_files": 11,
+        "n_neighbor_sectors": 10,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"

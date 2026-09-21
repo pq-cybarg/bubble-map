@@ -26,17 +26,17 @@
 - **NVIDIA** — 34 files
 - **Anthropic** — 29 files
 - **a16z** — 25 files
-- **Stargate** — 25 files
+- **Circle** — 25 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-arc-circle-l1.json` — related files by shared entities (verify cross-refs exist)
-- blockchain-registry.json: 5 shared entities
-- spec-blockchain-ecosystem.json: 5 shared entities
-- blockchain-leg.json: 3 shared entities
-- spec-stripe-stablecoin-stack.json: 3 shared entities
-- spec-crypto-market-makers-political.json: 3 shared entities
-- influence-congress-funding-compromise.json: 3 shared entities
-- altcoin-lens.json: 3 shared entities
-- spec-sec-sdny-regulatory.json: 3 shared entities
+## Newest file `spec-plasma-stable-tether-l1.json` — related files by shared entities (verify cross-refs exist)
+- spec-erebor-bank.json: 2 shared entities
+- influence-operator-network.json: 2 shared entities
+- spec-bank-digitalmoney-consortia.json: 1 shared entities
+- spec-citizen-lab.json: 1 shared entities
+- spec-stellar-mccaleb-tacostand.json: 1 shared entities
+- spec-cross-border-settlement-rails.json: 1 shared entities
+- spec-cross-river-bank.json: 1 shared entities
+- spec-stablecoin-yield-fight.json: 1 shared entities
