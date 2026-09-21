@@ -768,6 +768,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Beignet_Investor": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Bentley": {
       "sector": "industrial",
       "has_exogenous_revenue": false
@@ -951,6 +955,10 @@
     "Blue_Origin": {
       "sector": "space_real_economy",
       "has_exogenous_revenue": true
+    },
+    "Blue_Owl": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Boeing": {
       "sector": "defense",
@@ -3212,6 +3220,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "Hyperion": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Hyundai_Motor_Group": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -5131,6 +5143,10 @@
     "Philippines": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Pimco": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Pinduoduo": {
       "sector": "tech",
@@ -45676,6 +45692,149 @@
       "note": "Open Issuance reserves are managed by BlackRock + Fidelity + Superstate - routing stablecoin float into the big asset managers' Treasury/MMF vehicles, wiring Stripe issuance into the stablecoin-Treasury rail (fact; systemic-scale reading graded)."
     },
     {
+      "from": "Blue_Owl",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Beignet Investor is the SPV for Meta's Hyperion data center, ~80% owned/managed by Blue Owl Capital, ~20% by Meta - the largest private-credit data-center deal ever (~$30B, Oct 2025) (fact)."
+    },
+    {
+      "from": "Meta",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Meta holds ~20% of the SPV, which OWNS Hyperion and LEASES it back to Meta - so ~$27B of underlying loans stays OFF Meta's balance sheet (only the equity stake + lease obligation appear). Meta's auditor Ernst & Young flagged the treatment as a 'critical audit matter' - among the most severe auditor warnings (fact of structure + audit flag; 'hiding leverage' framing = interpretation)."
+    },
+    {
+      "from": "Beignet_Investor",
+      "to": "Hyperion",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "builds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "The SPV owns/builds Hyperion in Richland Parish, Louisiana - >4M sq ft, up to ~5GW, online ~2029, set to be Meta's largest data center; debt matures 2049, fully amortizing, rated A+ (S&P), ~225bps over Treasuries (fact; figures reported/vary)."
+    },
+    {
+      "from": "Hyperion",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Hyperion's ~5GW draw is itself a grid-scale load - the AI-datacenter power bottleneck at a single site (fact of scale)."
+    },
+    {
+      "from": "Pimco",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Pimco (with BlackRock, Apollo, and others) provided ~$27B of the SPV's loans; Blue Owl put in ~$3B equity - private-credit + insurance money financing the buildout (fact; exact splits reported/vary)."
+    },
+    {
+      "from": "Apollo",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Apollo is among the private-credit lenders in the Hyperion SPV - part of the Blackstone/Blue Owl/Apollo/Pimco/BlackRock cluster originating most AI data-center debt (fact)."
+    },
+    {
+      "from": "BlackRock",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "BlackRock is among the Hyperion SPV lenders; separately BlackRock/GIP is a rumored SPV partner for Microsoft - the template spreading across hyperscalers (fact of Hyperion role; MSFT tie reported)."
+    },
+    {
+      "from": "Blue_Owl",
+      "to": "Oracle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Blue Owl (with JPMorgan, ~$10B debt of a ~$13B SPV) financed Oracle's OpenAI Abilene TX facility (Stargate); Oracle also has ~$38B (TX/WI) + ~$18B (NM) off-balance-sheet SPV packages + plans a ~$50B 2026 raise - extreme leverage vs hyperscaler peers (fact; figures reported/vary)."
+    },
+    {
+      "from": "Blue_Owl",
+      "to": "SINK_lenders",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Blue Owl/Apollo/Pimco/Blackstone/BlackRock are the private-credit originators behind the AI debt (loans to AI companies surged from ~0 to $200B+ in a few years) - the real-world counterpart to the map's SINK-lender financing layer (fact of category; mapping = interpretation)."
+    },
+    {
+      "from": "Beignet_Investor",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "Hyperion is the blueprint: off-balance-sheet SPV + private-credit debt + sale-leaseback that keeps hyperscaler credit ratings intact - now being copied (MSFT/GIP, Oracle/Stargate/Blue Owl, Google/TeraWulf) (fact of template; industry-wide spread reported)."
+    },
+    {
+      "from": "Beignet_Investor",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-datacenter-debt-spv.json",
+      "note": "The SPV is a pure AI-datacenter vehicle - a structure that moves the AI-capex debt off the tech balance sheet and into private-credit funds + insurance portfolios, redistributing (not removing) the risk (fact of structure; risk-redistribution framing = interpretation)."
+    },
+    {
       "from": "Sam_Bankman_Fried",
       "to": "FTX",
       "instrument": "other",
@@ -46132,10 +46291,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1912,
-    "num_edges": 2960,
+    "num_nodes": 1916,
+    "num_edges": 2971,
     "num_financial_edges": 274,
-    "num_structural_edges": 2686,
+    "num_structural_edges": 2697,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46199,6 +46358,7 @@
       "Arc",
       "Australia",
       "Bank_Stablecoin_Consortium",
+      "Beignet_Investor",
       "Binance",
       "Bitcoin",
       "Bitfinex",
@@ -46260,6 +46420,7 @@
       "HALEU_Enrichment",
       "HV_Transformers",
       "Huntington",
+      "Hyperion",
       "IBM",
       "ICE",
       "ImmigrationOS",
@@ -46363,27 +46524,23 @@
       "World_Liberty_Financial",
       "ZEISS_SMT"
     ],
-    "core_scc_all_edges_size": 181,
+    "core_scc_all_edges_size": 183,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
+        "AMD",
+        "OpenAI"
       ],
       [
         "Microsoft",
@@ -46395,8 +46552,7 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "NVIDIA"
       ],
       [
         "Anthropic",
@@ -46411,8 +46567,13 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
         "OpenAI",
-        "Microsoft"
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -46427,8 +46588,15 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -46436,13 +46604,6 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -47800,6 +47961,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Beignet_Investor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Bentley": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48116,6 +48284,13 @@
         "in_robust_core": false
       },
       "Blue_Origin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Blue_Owl": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52077,6 +52252,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hyperion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Hyundai_Motor_Group": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55431,6 +55613,13 @@
         "in_robust_core": false
       },
       "Philippines": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Pimco": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60065,10 +60254,11 @@
       },
       {
         "node": "Meta",
-        "degree": 23,
+        "degree": 24,
         "neighbor_sectors": [
           "ai_data",
           "ai_infra",
+          "capital",
           "chip_vendor",
           "commodity",
           "energy",
@@ -60082,8 +60272,8 @@
           "tech",
           "university"
         ],
-        "n_neighbor_sectors": 14,
-        "source_files": 13,
+        "n_neighbor_sectors": 15,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -60092,7 +60282,7 @@
       },
       {
         "node": "AI_Datacenters",
-        "degree": 23,
+        "degree": 24,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -60109,7 +60299,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 12,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -60179,6 +60369,30 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "PrivateCredit_Funds",
+        "degree": 16,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "capital",
+          "financier",
+          "industrial",
+          "insurance",
+          "other",
+          "private_credit",
+          "regulator",
+          "retail",
+          "state"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 11,
         "layers": [
           "financial",
           "structural"
@@ -60298,29 +60512,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 8,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 15,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "financier",
-          "industrial",
-          "insurance",
-          "other",
-          "private_credit",
-          "regulator",
-          "retail",
-          "state"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 10,
         "layers": [
           "financial",
           "structural"
