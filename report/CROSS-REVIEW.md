@@ -31,12 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-xai-colossus-power.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 6 shared entities
-- spec-cross-system-contagion.json: 6 shared entities
-- macro-ai-power-grid-bottleneck.json: 5 shared entities
-- fin-gulf-sovereign-ai-capital.json: 5 shared entities
-- fin-google-amazon-anthropic-meta.json: 5 shared entities
-- fin-coreweave-oracle.json: 5 shared entities
-- macro-history-dereg-manipulation.json: 5 shared entities
-- sec-filings.json: 4 shared entities
+## Newest file `spec-datacenter-ratepayer-costshift.json` — related files by shared entities (verify cross-refs exist)

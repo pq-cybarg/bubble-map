@@ -445,8 +445,8 @@ NextEra_Energy,HV_Transformers,other,,,False,False,spec-nextera-national-utility
 FPL,AI_Datacenters,other,,,False,False,spec-nextera-national-utility.json
 FPL,Electricity_Ratepayers,other,,,False,False,spec-nextera-national-utility.json
 FPL,Power_Grid,other,,,False,False,spec-nextera-national-utility.json
-AI_Datacenters,Electricity_Ratepayers,other,,,False,False,"spec-nextera-national-utility.json,macro-ai-datacenter-water-siting.json"
-Large_Load_Tariff,AI_Datacenters,other,,,False,False,spec-nextera-national-utility.json
+AI_Datacenters,Electricity_Ratepayers,other,,,False,False,"spec-nextera-national-utility.json,macro-ai-datacenter-water-siting.json,spec-datacenter-ratepayer-costshift.json"
+Large_Load_Tariff,AI_Datacenters,other,,,False,False,"spec-nextera-national-utility.json,spec-datacenter-ratepayer-costshift.json"
 FERC,Power_Grid,other,,,False,False,spec-nextera-national-utility.json
 NextEra_Energy,Data_Center_Bandwagon,other,,,False,False,spec-nextera-national-utility.json
 Trump,CZ,regulatory_legal,,granted,False,False,spec-exchanges-asia.json
@@ -756,7 +756,7 @@ Google,Right_to_Repair,other,,documented,False,False,spec-electronics-parts-pair
 Microsoft,Right_to_Repair,other,,documented,False,False,spec-electronics-parts-pairing.json
 Biometric_Security,Right_to_Repair,other,,documented,False,False,spec-electronics-parts-pairing.json
 AI_Datacenters,Water_Cooling,other,,,False,False,macro-ai-datacenter-water-siting.json
-Electricity_Ratepayers,Datacenter_Backlash,other,,,False,False,macro-ai-datacenter-water-siting.json
+Electricity_Ratepayers,Datacenter_Backlash,other,,,False,False,"macro-ai-datacenter-water-siting.json,spec-datacenter-ratepayer-costshift.json"
 AI_Datacenters,Orbital_Datacenters,other,,,False,False,macro-ai-datacenter-water-siting.json
 SpaceX,Orbital_Datacenters,other,,,False,False,macro-ai-datacenter-water-siting.json
 Rare_Earths,Lockheed_Martin,other,,,False,False,defense-rare-earth.json
@@ -1201,6 +1201,11 @@ UK,Antarctica,other,,contested,False,False,spec-antarctica.json
 Argentina,Antarctica,other,,contested,False,False,spec-antarctica.json
 Chile,Antarctica,other,,contested,False,False,spec-antarctica.json
 US_Government,Antarctica,other,,documented,False,False,spec-antarctica.json
+AI_Datacenters,PJM,other,,,False,False,spec-datacenter-ratepayer-costshift.json
+PJM,Electricity_Ratepayers,other,,,False,False,spec-datacenter-ratepayer-costshift.json
+PJM,Power_Grid,other,,,False,False,spec-datacenter-ratepayer-costshift.json
+PJM,FERC,other,,,False,False,spec-datacenter-ratepayer-costshift.json
+Large_Load_Tariff,Electricity_Ratepayers,other,,,False,False,spec-datacenter-ratepayer-costshift.json
 AI_Generated_Content,Scientific_Publishing,other,,recurring,False,False,spec-reproducibility-crisis.json
 AI_Generated_Content,Open_Source_Ecosystem,other,,recurring,False,False,spec-reproducibility-crisis.json
 AI_Generated_Content,AI_Benchmarks,capex,,recurring,False,False,spec-reproducibility-crisis.json

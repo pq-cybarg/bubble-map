@@ -4984,6 +4984,10 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "PJM": {
+      "sector": "macro",
+      "has_exogenous_revenue": false
+    },
     "PLA": {
       "sector": "defense",
       "has_exogenous_revenue": true
@@ -11388,7 +11392,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-nextera-national-utility.json,macro-ai-datacenter-water-siting.json",
+      "source_file": "spec-nextera-national-utility.json,macro-ai-datacenter-water-siting.json,spec-datacenter-ratepayer-costshift.json",
       "note": "The core public-interest question: absent a dedicated rate class, the cost of new generation/transmission to serve datacenters spreads across all ratepayers. Documented residual channels even WITH tariffs: PJM's market monitor found ~$13B of datacenter-driven costs allocated across PJM ratepayers in Q1-2026 alone (a federal wholesale layer state tariffs don't touch), and EIA modeling shows new gas demand raising system-wide gas prices (a cost on bills with no datacenter nearby). Stranded-asset risk if the AI bubble deflates (fact of documented channels; total magnitude graded)."
     },
     {
@@ -11401,7 +11405,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-nextera-national-utility.json",
+      "source_file": "spec-nextera-national-utility.json,spec-datacenter-ratepayer-costshift.json",
       "note": "The main regulatory remedy: special rate classes making datacenters pay their own infrastructure via long-term contracts, collateral, minimum-demand ('take-or-pay') charges, and bring-your-own-generation. Adoption surged - ~24 states with >=1 approved by mid-2026; DELTa tracked 20 approved in 2024 and 53 proposed/approved for 2025 (vs 14 in 2018-2024); >300 datacenter bills in 30 states in early 2026. Models: Dominion VA GS-5 (>=25 MW, 85% T&D / 60% generation take-or-pay, eff. Jan-2027), TX SB6, OH AEP, OR Schedule 96 (fact)."
     },
     {
@@ -15470,7 +15474,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "macro-ai-datacenter-water-siting.json",
+      "source_file": "macro-ai-datacenter-water-siting.json,spec-datacenter-ratepayer-costshift.json",
       "note": "Rising household bills turn an infrastructure story into a POLITICAL one - the ratepayer grievance is the authentic engine of the datacenter backlash the foreign CIB tries to ride (fact + interpretation; ties spec-ai-datacenter-foreign-influence)."
     },
     {
@@ -21699,6 +21703,71 @@
       "cancelable": false,
       "source_file": "spec-antarctica.json",
       "note": ""
+    },
+    {
+      "from": "AI_Datacenters",
+      "to": "PJM",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-datacenter-ratepayer-costshift.json",
+      "note": "Data-center load drove ~63% of PJM's 2025/26 capacity-price increase (~$9.3B, per Monitoring Analytics/Bowring); the 2028-29 auction cleared at the FERC price cap ($325/MW-day, ~$16.4B total, ~$6.3B data centers) even as supply fell ~6.8GW short - a ~$30B cumulative data-center burden across recent auctions (fact)."
+    },
+    {
+      "from": "PJM",
+      "to": "Electricity_Ratepayers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-datacenter-ratepayer-costshift.json",
+      "note": "PJM capacity prices went ~11x ($28.92 -> $329.17/MW-day, 24-25 -> 26-27), hitting the cap two auctions running; NRDC estimates $100-163B cumulative ratepayer cost through 2033 absent intervention, ~$70/month/household by 2028; DC Pepco bills +$21/mo (June 2025), about half from capacity (fact on PJM prices; NRDC/per-household = reported estimates)."
+    },
+    {
+      "from": "PJM",
+      "to": "Power_Grid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-datacenter-ratepayer-costshift.json",
+      "note": "PJM is the largest US grid operator (~67M people, IL to VA/DC); its ~3-year forward capacity auctions mean today's data-center-driven prices are already locked into coming bills (fact)."
+    },
+    {
+      "from": "PJM",
+      "to": "FERC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-datacenter-ratepayer-costshift.json",
+      "note": "FERC approves the capacity price cap + interstate transmission cost allocation; PUCs then divide those costs among ratepayers - the two-layer process that lets data-center costs socialize absent a special rate class (fact of structure)."
+    },
+    {
+      "from": "Large_Load_Tariff",
+      "to": "Electricity_Ratepayers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-datacenter-ratepayer-costshift.json",
+      "note": "Large-load tariffs aim to shield existing residential/small-business ratepayers from data-center cost-shifting - but reform stalled regionally: PJM stakeholders voted down all major cost-allocation proposals (Nov 2025), leaving it to the PJM Board; 'the devil is in the details' of utility-specific filings (fact of tariffs + the gridlock)."
     },
     {
       "from": "AI_Generated_Content",
@@ -46584,10 +46653,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1921,
-    "num_edges": 2992,
+    "num_nodes": 1922,
+    "num_edges": 2997,
     "num_financial_edges": 274,
-    "num_structural_edges": 2718,
+    "num_structural_edges": 2723,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46698,6 +46767,7 @@
       "Erebor",
       "Ethereum",
       "FDIC",
+      "FERC",
       "FPL",
       "Fairshake",
       "Family_Offices",
@@ -46759,6 +46829,7 @@
       "Open_Standard",
       "Opioid_Crisis",
       "Oracle",
+      "PJM",
       "PLA",
       "Palantir",
       "Palantir_AIP",
@@ -46822,7 +46893,7 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 188,
+    "core_scc_all_edges_size": 190,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -46837,12 +46908,12 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -46870,26 +46941,26 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -55637,6 +55708,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "PJM": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "PLA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60615,7 +60693,7 @@
       },
       {
         "node": "AI_Datacenters",
-        "degree": 27,
+        "degree": 28,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -60632,7 +60710,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "financial",
           "structural"
