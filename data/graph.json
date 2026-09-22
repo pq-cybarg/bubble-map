@@ -228,6 +228,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "Agentic_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "AgustaWestland_Scandal": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -2122,6 +2126,10 @@
     },
     "Dieter_Schwarz": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Diffusion_Models": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Digital_Childhood_Alliance": {
@@ -4539,6 +4547,10 @@
     "Mubadala": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "Multimodal_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
     },
     "Municipal_Debt": {
       "sector": "financial_infra",
@@ -18105,6 +18117,97 @@
       "cancelable": false,
       "source_file": "catalog-quiet-money-7.json",
       "note": "Cellebrite (public: CLBT) sells UFED/Physical Analyzer to thousands of police + government agencies globally - the dominant lawful phone-forensics vendor; recurring civil-liberties + due-process debate over scope (fact of market; use-abuse framing graded)."
+    },
+    {
+      "from": "ImageNet_AlexNet",
+      "to": "Deep_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "VISION branch arc: AlexNet (2012) -> ResNet (2015) -> object detection/segmentation -> near-saturated ImageNet; vision was where deep learning first became superhuman, years before language (fact)."
+    },
+    {
+      "from": "Diffusion_Models",
+      "to": "Multimodal_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "GENERATIVE-IMAGE branch: GANs (2014) -> diffusion (DDPM 2020) -> DALL-E/Stable Diffusion/Midjourney (2022) -> video (Sora-class, 2024-26); a distinct branch from LLMs that later fused into multimodal systems (fact)."
+    },
+    {
+      "from": "Transformer",
+      "to": "Multimodal_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "LANGUAGE->MULTIMODAL arc: GPT-2 (2019) -> GPT-3 (2020, few-shot) -> ChatGPT (2022) -> GPT-4/Claude/Gemini (2023, multimodal) -> 2024-26 'reasoning' models (o-series/R1) + long context; capability jumps are real but 'reasoning'/'AGI' labels are provider framing (fact of releases; label claims graded)."
+    },
+    {
+      "from": "Multimodal_AI",
+      "to": "Agentic_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "2024-2026 shift to AGENTS: tool-use + computer-use + multi-step autonomy (coding agents, browser agents); capability is uneven + benchmark-gamed, and reliability at long horizons remains the open problem (fact of the shift; autonomy claims graded/reported)."
+    },
+    {
+      "from": "Reinforcement_Learning",
+      "to": "Agentic_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "RL feeds agents twice: RLHF/RLAIF aligned the LLMs, and RL-on-verifiable-rewards drives the 2025-26 'reasoning' training - the RL branch and the language branch converging (fact)."
+    },
+    {
+      "from": "AlphaGo_AlphaFold",
+      "to": "AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "SCIENCE branch keeps advancing OUTSIDE the LLM race: AlphaFold3 (2024) -> biology/materials/weather models -> the domains where non-LLM AI is furthest ahead; a reminder the capability frontier is plural (fact; taxonomy point)."
+    },
+    {
+      "from": "DeepSeek",
+      "to": "Transformer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-capability-timeline.json",
+      "note": "EFFICIENCY inflection (2025-26): DeepSeek R1 + the open-weight wave showed frontier-adjacent capability at a fraction of the cost - shifting the arc from pure-scale to efficiency (fact; cf fin-ai-efficiency-counter-thesis)."
     },
     {
       "from": "India",
@@ -47072,10 +47175,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1939,
-    "num_edges": 3024,
+    "num_nodes": 1942,
+    "num_edges": 3031,
     "num_financial_edges": 274,
-    "num_structural_edges": 2750,
+    "num_structural_edges": 2757,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -47321,20 +47424,16 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -47342,15 +47441,9 @@
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
-      ],
-      [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -47362,14 +47455,12 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
         "NVIDIA",
-        "Anthropic"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -47380,8 +47471,20 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "Amazon",
@@ -47800,6 +47903,13 @@
         "in_robust_core": false
       },
       "Agency_MBS_Market": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Agentic_AI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51118,6 +51228,13 @@
         "in_robust_core": false
       },
       "Dieter_Schwarz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Diffusion_Models": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55346,6 +55463,13 @@
         "in_robust_core": false
       },
       "Mubadala": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Multimodal_AI": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

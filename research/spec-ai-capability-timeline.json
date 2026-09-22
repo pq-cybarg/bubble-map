@@ -1,0 +1,19 @@
+{
+  "title": "AI capability timeline (2012-2026) - what changed, per branch (LLMs are one of them)",
+  "source": "Public record: model releases + benchmark milestones across vision, RL, language, multimodal, diffusion, agents, and science. Chronology overlay (structural; no financial-core edges). TAXONOMY: organized by BRANCH, not conflated into 'AI = LLM' - each branch has its own capability arc. HONESTY: releases/dates/benchmarks = fact; 'reasoning'/'agentic'/'AGI-adjacent' labels = marketing-laden, graded; capability claims are provider-reported unless independently benchmarked.",
+  "grade": "per-edge in notes (fact | reported | interpretation)",
+  "nodes": [
+    {"id": "Diffusion_Models", "sector": "ai"},
+    {"id": "Multimodal_AI", "sector": "ai"},
+    {"id": "Agentic_AI", "sector": "ai"}
+  ],
+  "edges": [
+    {"from": "ImageNet_AlexNet", "to": "Deep_Learning", "instrument": "lineage", "notes": "VISION branch arc: AlexNet (2012) -> ResNet (2015) -> object detection/segmentation -> near-saturated ImageNet; vision was where deep learning first became superhuman, years before language (fact).", "source": "history"},
+    {"from": "Diffusion_Models", "to": "Multimodal_AI", "instrument": "lineage", "notes": "GENERATIVE-IMAGE branch: GANs (2014) -> diffusion (DDPM 2020) -> DALL-E/Stable Diffusion/Midjourney (2022) -> video (Sora-class, 2024-26); a distinct branch from LLMs that later fused into multimodal systems (fact).", "source": "history"},
+    {"from": "Transformer", "to": "Multimodal_AI", "instrument": "lineage", "notes": "LANGUAGE->MULTIMODAL arc: GPT-2 (2019) -> GPT-3 (2020, few-shot) -> ChatGPT (2022) -> GPT-4/Claude/Gemini (2023, multimodal) -> 2024-26 'reasoning' models (o-series/R1) + long context; capability jumps are real but 'reasoning'/'AGI' labels are provider framing (fact of releases; label claims graded).", "source": "history"},
+    {"from": "Multimodal_AI", "to": "Agentic_AI", "instrument": "lineage", "notes": "2024-2026 shift to AGENTS: tool-use + computer-use + multi-step autonomy (coding agents, browser agents); capability is uneven + benchmark-gamed, and reliability at long horizons remains the open problem (fact of the shift; autonomy claims graded/reported).", "source": "public record"},
+    {"from": "Reinforcement_Learning", "to": "Agentic_AI", "instrument": "lineage", "notes": "RL feeds agents twice: RLHF/RLAIF aligned the LLMs, and RL-on-verifiable-rewards drives the 2025-26 'reasoning' training - the RL branch and the language branch converging (fact).", "source": "public record"},
+    {"from": "AlphaGo_AlphaFold", "to": "AI", "instrument": "relationship", "notes": "SCIENCE branch keeps advancing OUTSIDE the LLM race: AlphaFold3 (2024) -> biology/materials/weather models -> the domains where non-LLM AI is furthest ahead; a reminder the capability frontier is plural (fact; taxonomy point).", "source": "public record"},
+    {"from": "DeepSeek", "to": "Transformer", "instrument": "relationship", "notes": "EFFICIENCY inflection (2025-26): DeepSeek R1 + the open-weight wave showed frontier-adjacent capability at a fraction of the cost - shifting the arc from pure-scale to efficiency (fact; cf fin-ai-efficiency-counter-thesis).", "source": "public record"}
+  ]
+}

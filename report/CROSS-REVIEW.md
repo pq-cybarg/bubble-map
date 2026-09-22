@@ -31,4 +31,4 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ai-tech-history-traversal.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-ai-capability-timeline.json` — related files by shared entities (verify cross-refs exist)
