@@ -16303,6 +16303,31 @@
    "blocks": [
     "spec-buist-v-anthropic-pacing"
    ]
+  },
+  {
+   "name": "DataRepublican",
+   "role": "Pseudonymous open-source data analyst ('Exposing where the money flows')",
+   "domains": [
+    "Data",
+    "Politics",
+    "Philanthropy"
+   ],
+   "orgs": [
+    "DataRepublican"
+   ],
+   "bluf": "Pseudonymous analyst/coder who builds public network-mapping tools over IRS 990 filings + funding flows; published 'EA Explorer' (Sep 2026) mapping the Effective Altruism people-and-funding network. Assess with MEDIUM-HIGH confidence the tooling is a genuine open-data contribution (source-linked quotes, 990-based graphs); her FRAMING is explicitly critical, not neutral - a viewpoint, not an arbiter.",
+   "drivers": "Funding transparency; skepticism of large philanthropic/nonprofit networks.",
+   "worldview": "Follow the money; expose where taxpayer + foundation funds flow.",
+   "decision_style": "Data-first, open-source (charity-graph BFS, verbatim-quote browsers), publishes methodology.",
+   "track_record": "datarepublican.com charity graph / nonprofit explorer / NED + DSA explorers; EA Explorer (25+GB EA material mapped, 2026).",
+   "vulnerabilities": "Explicit political POV (skews interpretation); funding-flow claims need cross-check vs primary 990s; pseudonymity limits accountability.",
+   "relationships": "Maps the EA / Open-Philanthropy / SFF network this map also tracks - an independent, adversarial cross-check on the same rails.",
+   "outlook": "Continues open-source funding-network mapping; EA/AI-safety a current focus.",
+   "confidence": "MEDIUM-HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-ai-safety-evals-ecosystem"
+   ]
   }
  ]
 }

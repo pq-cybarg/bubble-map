@@ -432,6 +432,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": true
     },
+    "Apollo_Research": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Apple": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -1974,6 +1978,10 @@
     },
     "Dartmouth_College": {
       "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "DataRepublican": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Data_Breach": {
@@ -4212,6 +4220,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "METR": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "MEXC": {
       "sector": "exchange",
       "has_exogenous_revenue": false
@@ -5600,6 +5612,10 @@
       "sector": "financial_infra",
       "has_exogenous_revenue": true
     },
+    "Responsible_Scaling_Policy": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Retail_401k": {
       "sector": "retail",
       "has_exogenous_revenue": false
@@ -6906,6 +6922,10 @@
     },
     "USTC": {
       "sector": "research",
+      "has_exogenous_revenue": false
+    },
+    "US_AISI": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "US_Allied_Military": {
@@ -29156,6 +29176,123 @@
       "note": ""
     },
     {
+      "from": "US_AISI",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "The US AI Safety Institute (housed at NIST; renamed the Center for AI Standards and Innovation / CAISI under the current administration) + the UK AISI run pre-deployment model testing - the government-eval layer of AI safety (fact; the rename + de-emphasis is itself a policy signal)."
+    },
+    {
+      "from": "METR",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "METR (Model Evaluation & Threat Research) runs dangerous-capability + autonomy evals (task-horizon benchmarks) that labs cite in safety cases; a central node in the eval ecosystem (fact)."
+    },
+    {
+      "from": "Apollo_Research",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "Apollo Research specializes in deception / scheming evals - probing whether models strategically mislead; feeds lab + government safety assessments (fact)."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Responsible_Scaling_Policy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "Anthropic's Responsible Scaling Policy (RSP; AI Safety Levels) + OpenAI's Preparedness Framework are the labs' SELF-governance instruments - voluntary capability thresholds + commitments (fact of the frameworks; enforceability + sincerity graded)."
+    },
+    {
+      "from": "Responsible_Scaling_Policy",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "Voluntary RSPs are pitched as the template for formal regulation - the mechanism by which lab self-governance becomes the policy baseline (critics call it regulatory capture / safety-washing; interpretation, labeled)."
+    },
+    {
+      "from": "Open_Philanthropy",
+      "to": "METR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "The evals + safety-org ecosystem (METR, Apollo, and many policy shops) is substantially EA-funded - Open Philanthropy (+ SFF/FLI) grants - so the same EA money funds the labs, the evaluators, AND the policy advocates (fact of funding; conflict-of-interest framing interpretation)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "The EA movement is the throughline connecting frontier-lab safety teams, the eval nonprofits, and the pause/pacing policy push (SB 1047, the 2026 pacing letters -> Buist) - the network a 'follow the money' trace keeps landing on (fact of the linkages; coordinated-intent claims remain unsupported, per spec-buist-v-anthropic-pacing)."
+    },
+    {
+      "from": "DataRepublican",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "DataRepublican (pseudonymous open-source data analyst; site tagline 'Exposing where the money flows') published 'EA Explorer' (Sep 2026) - a people-and-funding NETWORK MAP + a verbatim-quote browser over 25+GB of EA forum material, motivated by the follow-the-money scrutiny after Jacob Coxon's viral Anthropic-resignation/pause post + the tracing to METR/EA. INDEPENDENT analysis with an explicitly critical POV: quotes link to sources, but funding claims should be cross-checked vs IRS 990s (fact of the tool; her framing = her viewpoint, labeled). https://datarepublican.com/"
+    },
+    {
+      "from": "DataRepublican",
+      "to": "Open_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-safety-evals-ecosystem.json",
+      "note": "Her charity-graph tooling (multi-root BFS over 990 filings, taxpayer-fund tracing) is applied to the EA/Open-Philanthropy grant network - the same funding rails this map tracks, from an independent methodology (fact of the tool + method; specific dollar attributions = verify vs 990s)."
+    },
+    {
       "from": "UBS",
       "to": "Phil Gramm",
       "instrument": "investment",
@@ -47175,10 +47312,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1942,
-    "num_edges": 3031,
+    "num_nodes": 1947,
+    "num_edges": 3040,
     "num_financial_edges": 274,
-    "num_structural_edges": 2757,
+    "num_structural_edges": 2766,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -47371,6 +47508,7 @@
       "RIKEN",
       "Rare_Earths",
       "Regions_Financial",
+      "Responsible_Scaling_Policy",
       "Ripple",
       "Russia",
       "Russian_Intel",
@@ -47417,12 +47555,16 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 192,
+    "core_scc_all_edges_size": 193,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "Amazon",
+        "Anthropic"
+      ],
       [
         "AMD",
         "OpenAI"
@@ -47432,30 +47574,21 @@
         "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "CoreWeave",
         "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -47465,8 +47598,13 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -47477,14 +47615,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
+        "Lambda",
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "OpenAI",
+        "CoreWeave",
         "NVIDIA",
-        "Anthropic"
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -48261,6 +48399,13 @@
       },
       "Apollo_Blackstone": {
         "total_usd": 35000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apollo_Research": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -50962,6 +51107,13 @@
         "in_robust_core": false
       },
       "Dartmouth_College": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DataRepublican": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54881,6 +55033,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "METR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "MEXC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -57310,6 +57469,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Responsible_Scaling_Policy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Retail_401k": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59599,6 +59765,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "US_AISI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "US_Allied_Military": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -61409,8 +61582,9 @@
       },
       {
         "node": "Anthropic",
-        "degree": 25,
+        "degree": 26,
         "neighbor_sectors": [
+          "ai",
           "ai_lab",
           "bigtech_asia",
           "chip_vendor",
@@ -61424,8 +61598,8 @@
           "state",
           "university"
         ],
-        "n_neighbor_sectors": 12,
-        "source_files": 13,
+        "n_neighbor_sectors": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"

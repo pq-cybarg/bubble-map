@@ -17,18 +17,26 @@
 ## Connectors (entities appearing across the most files)
 - **Meta** — 99 files
 - **Google** — 65 files
-- **Chainlink** — 64 files
-- **OpenAI** — 52 files
+- **Chainlink** — 65 files
+- **OpenAI** — 53 files
 - **Microsoft** — 46 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
 - **NVIDIA** — 35 files
-- **Anthropic** — 32 files
+- **Anthropic** — 33 files
 - **Circle** — 28 files
 - **a16z** — 26 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ai-capability-timeline.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-ai-safety-evals-ecosystem.json` — related files by shared entities (verify cross-refs exist)
+- blockchain-registry.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- spec-semiconductor-logistics-standards.json: 3 shared entities
+- catalog-nonprofits-foundations.json: 3 shared entities
+- digitalid-orchestration-real-incentive.json: 3 shared entities
+- spec-blockchain-ecosystem.json: 3 shared entities
+- spec-disclosures-surveillance.json: 3 shared entities
+- spec-neocloud-refinancing-wall.json: 3 shared entities
