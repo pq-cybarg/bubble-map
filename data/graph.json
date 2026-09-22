@@ -80,6 +80,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "AI_Safety_Regulation": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "ALPHV_BlackCat": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -5690,6 +5694,10 @@
     },
     "SBI_VC_Trade": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "SB_1047": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "SC27_Security": {
@@ -16115,6 +16123,123 @@
       "note": "no domestic mined US source pre-Stibnite"
     },
     {
+      "from": "Open_Philanthropy",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json,catalog-nonprofits-foundations.json",
+      "note": "2017: Open Philanthropy granted OpenAI ~$30M and took a board seat (Holden Karnofsky) - the earliest EA-money-into-a-frontier-lab pathway, justified as buying safety influence over capability (fact; influence-vs-capture framing interpretation)."
+    },
+    {
+      "from": "Open_Philanthropy",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json,catalog-nonprofits-foundations.json",
+      "note": "Open Philanthropy (Dustin Moskovitz + Cari Tuna) is the largest EA grantmaker - the hub routing EA capital into AI-safety orgs, policy shops, and labs (fact)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json,catalog-nonprofits-foundations.json",
+      "note": "Anthropic (founded 2021 by ex-OpenAI staff incl. the Amodei siblings) was built with heavy EA/AI-safety framing; early capital included ~$500M tied to FTX/SBF (later part of the FTX bankruptcy estate) - the EA-to-frontier-lab pattern at its clearest (fact of founding + FTX stake; motive framing interpretation)."
+    },
+    {
+      "from": "Survival_and_Flourishing_Fund",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "SFF (Jaan Tallinn's recommendation-driven fund) + FLI + Longview channel money into the AI-safety-POLICY ecosystem (Encode, safety think tanks) - the funding rail behind the pacing/pause-letter apparatus mapped in spec-buist-v-anthropic-pacing (fact of funding; influence interpretation)."
+    },
+    {
+      "from": "Encode_AI",
+      "to": "SB_1047",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "Encode co-sponsored California's SB 1047 (2024 frontier-AI safety bill) - the youth-safety-advocacy vehicle at the center of the safety-legislation push (fact)."
+    },
+    {
+      "from": "SB_1047",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "SB 1047 (2024) - mandatory frontier-model safety testing + kill-switch + liability - passed the CA legislature and was VETOED by Gov. Newsom (Sep 2024); the template + battleground for the 2025-26 state-vs-federal AI-safety-regulation fight (fact)."
+    },
+    {
+      "from": "AI_Safety_Regulation",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "Anthropic has positioned as the safety-forward lab that (selectively) SUPPORTS regulation - the 'pacing' posture that critics recode as regulatory arbitrage (raise rivals' compliance cost, entrench incumbents); see the 2026 pacing-as-cartel fight (fact of positioning; arbitrage framing = interpretation/contested)."
+    },
+    {
+      "from": "AI_Safety_Regulation",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "OpenAI's stance shifted from 'we won't wait for an exemption' toward selective regulation-shaping; the labs' collective push to 'build the brake' rather than pull it is the core of the safety-regulatory-arbitrage debate (fact of statements; framing interpretation)."
+    },
+    {
+      "from": "DeepMind",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json",
+      "note": "TAXONOMY ANCHOR: DeepMind's landmark wins were NON-LLM AI - AlphaGo (2016, deep RL + tree search) and AlphaFold (2020-24, protein structure, a Nobel) - a reminder that 'AI' is not 'LLM'; the safety-reg debate now centers on LLMs but the field + the risks are broader (fact; taxonomy point)."
+    },
+    {
       "from": "Disney",
       "to": "OpenAI",
       "instrument": "equity",
@@ -21950,45 +22075,6 @@
       "cancelable": false,
       "source_file": "catalog-nonprofits-foundations.json",
       "note": "CZI's biomedical + education-data programs (e.g. Summit Learning) intersect the data-collection/identity debates - a smaller but notable thread (fact of programs; scope graded)."
-    },
-    {
-      "from": "Open_Philanthropy",
-      "to": "Effective_Altruism",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "founder_origin",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "catalog-nonprofits-foundations.json",
-      "note": "Open Philanthropy (funded by Dustin Moskovitz + Cari Tuna) is the largest Effective Altruism grantmaker - the money engine of the EA movement (fact)."
-    },
-    {
-      "from": "Open_Philanthropy",
-      "to": "OpenAI",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "philanthropic_funding",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "catalog-nonprofits-foundations.json",
-      "note": "Open Phil gave OpenAI a $30M grant (2017) that came with a board seat - an early EA-aligned foothold in frontier-AI governance (fact)."
-    },
-    {
-      "from": "Effective_Altruism",
-      "to": "Anthropic",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "board_influence",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "catalog-nonprofits-foundations.json",
-      "note": "Anthropic is deeply EA-aligned (founders + early funders incl. FTX/SBF pre-collapse; the Long-Term Benefit Trust governance) - the AI lab most identified with EA/AI-safety (fact of alignment; degree of control graded)."
     },
     {
       "from": "Effective_Altruism",
@@ -46653,10 +46739,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1922,
-    "num_edges": 2997,
+    "num_nodes": 1924,
+    "num_edges": 3003,
     "num_financial_edges": 274,
-    "num_structural_edges": 2723,
+    "num_structural_edges": 2729,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46703,6 +46789,7 @@
     "structural_edges_add_no_cycle": false,
     "core_scc_all_edges_incl_structural": [
       "AI_Datacenters",
+      "AI_Safety_Regulation",
       "AMD",
       "APT1",
       "APT28_FancyBear",
@@ -46851,6 +46938,7 @@
       "Ripple",
       "Russia",
       "Russian_Intel",
+      "SB_1047",
       "SEC",
       "SINK_bondmarket",
       "SINK_lenders",
@@ -46893,12 +46981,20 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 190,
+    "core_scc_all_edges_size": 192,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
       [
         "Microsoft",
         "OpenAI"
@@ -46908,16 +47004,8 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "Amazon",
@@ -46941,12 +47029,6 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "OpenAI",
         "Microsoft"
       ],
@@ -46955,6 +47037,12 @@
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -47120,6 +47208,13 @@
         "in_robust_core": false
       },
       "AI_Native_OS": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Safety_Regulation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56947,6 +57042,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "SB_1047": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "SC27_Security": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60557,7 +60659,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 43,
+        "degree": 44,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -60572,11 +60674,12 @@
           "person",
           "philanthropy",
           "spv",
+          "state",
           "surveillance",
           "university"
         ],
-        "n_neighbor_sectors": 15,
-        "source_files": 20,
+        "n_neighbor_sectors": 16,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -60742,6 +60845,31 @@
         "both_layers": false
       },
       {
+        "node": "Anthropic",
+        "degree": 25,
+        "neighbor_sectors": [
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person",
+          "space_real_economy",
+          "state",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 13,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 18,
         "neighbor_sectors": [
@@ -60787,30 +60915,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Anthropic",
-        "degree": 24,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person",
-          "space_real_economy",
-          "university"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 12,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "SEC",

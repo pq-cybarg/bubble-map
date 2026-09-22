@@ -18,17 +18,25 @@
 - **Meta** — 98 files
 - **Google** — 65 files
 - **Chainlink** — 64 files
-- **OpenAI** — 51 files
+- **OpenAI** — 52 files
 - **Microsoft** — 46 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
 - **NVIDIA** — 35 files
-- **Anthropic** — 31 files
+- **Anthropic** — 32 files
 - **Circle** — 28 files
 - **a16z** — 26 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-datacenter-ratepayer-costshift.json` — related files by shared entities (verify cross-refs exist)
+## Newest file `spec-ai-lab-chronology-ea-pathways.json` — related files by shared entities (verify cross-refs exist)
+- spec-china-ai-stack-censorship.json: 2 shared entities
+- spec-semiconductor-logistics-standards.json: 2 shared entities
+- spec-palantir-surveillance.json: 2 shared entities
+- spec-telecom-satellite.json: 2 shared entities
+- spec-cross-system-contagion.json: 2 shared entities
+- catalog-billionaires.json: 2 shared entities
+- fin-ai-efficiency-counter-thesis.json: 2 shared entities
+- catalog-elite-groups.json: 2 shared entities
