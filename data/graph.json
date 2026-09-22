@@ -1972,6 +1972,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Dario_Amodei": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "DarkSide": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -2490,6 +2494,10 @@
     },
     "Evil_Corp": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Existential_Risk_Framing": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Expert_Systems": {
@@ -4948,6 +4956,10 @@
       "sector": "philanthropy",
       "has_exogenous_revenue": false
     },
+    "Open_Source_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Open_Source_Ecosystem": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -5582,6 +5594,10 @@
     },
     "Regulation_Crypto_Assets": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Regulatory_Capture": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Reid_Hoffman": {
@@ -7646,6 +7662,10 @@
     },
     "Yale_University": {
       "sector": "university",
+      "has_exogenous_revenue": false
+    },
+    "Yann_LeCun": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Yim_Leak": {
@@ -35962,6 +35982,175 @@
       "note": "Griffin is a top-tier GOP + establishment donor (and funds elite universities/museums) - quiet market-structure wealth converted to political + cultural influence (fact)."
     },
     {
+      "from": "Sam_Altman",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "May 2023: Altman told the US Senate he WELCOMED regulation and proposed a federal LICENSING regime + a new agency for frontier AI - the archetypal 'please regulate us' moment (fact of testimony). Supporters read it as responsible; critics as an incumbent moat (both framings noted)."
+    },
+    {
+      "from": "Dario_Amodei",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "Anthropic CEO Amodei pairs existential-risk warnings (essays; 'a real chance things go catastrophically wrong') with support-for-regulation-with-conditions + the Responsible Scaling Policy - the 'pacing' posture (fact of statements/RSP; sincerity vs strategy contested)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Regulatory_Capture",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "The labs' regulate-us push is recoded by critics as REGULATORY CAPTURE: licensing + compute-threshold rules that raise compliance cost, entrench incumbents, and pre-empt competitors - while the labs simultaneously lobby against provisions that bind them (contested interpretation; the lobbying + the stated safety rationale are both documented)."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Regulatory_Capture",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "Anthropic's 'we support smart regulation' + RSP-as-template is the clearest capture-critique target (safety rules modeled on the incumbent's own practices become the baseline); Anthropic frames it as raising the floor (both framings; 2026 pacing-as-cartel/Buist is the sharpest version - spec-buist-v-anthropic-pacing)."
+    },
+    {
+      "from": "Regulatory_Capture",
+      "to": "Open_Source_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "The concrete stake: licensing / liability / compute thresholds fall HARDEST on open-source + startups (who can't absorb compliance or carry model-liability) - so 'safety' rules can function as a barrier to the open ecosystem (contested; the differential burden is real, the intent is not adjudicated)."
+    },
+    {
+      "from": "Yann_LeCun",
+      "to": "Open_Source_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "Meta's chief AI scientist Yann LeCun is the leading establishment voice FOR open-source AI + AGAINST doom framing - arguing open models are safer (auditable) + that closed 'safety' arguments serve incumbents (attributed opinion; his role + stance are fact)."
+    },
+    {
+      "from": "Yann_LeCun",
+      "to": "Existential_Risk_Framing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "LeCun is a prominent critic of AI-existential-risk framing ('preposterously overblown'), arguing it is threat-inflation that distracts from real present harms + justifies incumbent-friendly control (attributed opinion)."
+    },
+    {
+      "from": "Marc_Andreessen",
+      "to": "Open_Source_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "a16z (Andreessen/Horowitz) mobilized 'little tech' + open-source advocacy against SB 1047 + licensing regimes (Techno-Optimist Manifesto; heavy lobbying) - itself an interested party (VC portfolio) on the anti-regulation side (fact of advocacy; interests noted on BOTH sides)."
+    },
+    {
+      "from": "Existential_Risk_Framing",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "The critique: EA/longtermist EXISTENTIAL-risk framing crowds out present-harm critiques (bias, surveillance, labor, concentration) + supplies the moral urgency for incumbent-shaped rules ('we might kill everyone -> license us') - the framing-manipulation claim (contested interpretation; cf the TESCREAL critique)."
+    },
+    {
+      "from": "Effective_Altruism",
+      "to": "Existential_Risk_Framing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "EA / longtermism is the intellectual source of the x-risk framing that drives the safety-regulation push - and (per the EA-money map) funds the labs' safety teams, the evaluators, AND the advocates pushing it (fact of lineage + funding; coordinated-intent unsupported)."
+    },
+    {
+      "from": "DataRepublican",
+      "to": "Regulatory_Capture",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "DataRepublican + infosec-twitter 'follow the money' work traces the funding behind the regulate-us / pause push to the EA/Open-Phil network - the independent, adversarial cross-check feeding the capture critique (fact that the tracing exists; conclusions are her/their critical POV, verify vs 990s)."
+    },
+    {
+      "from": "Uncensored_AI",
+      "to": "Regulatory_Capture",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "The OSS/local-AI community's anti-capture argument: open weights are already in the wild + de-censorable (the open-weight paradox), so frontier LICENSING can't deliver the safety it promises - it can only entrench incumbents while the capability diffuses anyway (attributed argument; the leak is demonstrated)."
+    },
+    {
+      "from": "SB_1047",
+      "to": "Open_Source_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-regulate-us-capture-debate.json",
+      "note": "SB 1047 was the flashpoint: OSS developers + a16z argued its liability + kill-switch provisions would chill open model release; safety proponents said it only touched the largest frontier models - the same bill read as protection OR as capture (fact of the fight; both readings)."
+    },
+    {
       "from": "Data_Brokers",
       "to": "ICE",
       "instrument": "other",
@@ -47312,10 +47501,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1947,
-    "num_edges": 3040,
+    "num_nodes": 1952,
+    "num_edges": 3053,
     "num_financial_edges": 274,
-    "num_structural_edges": 2766,
+    "num_structural_edges": 2779,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -47426,6 +47615,7 @@
       "Equation_Group",
       "Erebor",
       "Ethereum",
+      "Existential_Risk_Framing",
       "FDIC",
       "FERC",
       "FPL",
@@ -47555,22 +47745,18 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 193,
+    "core_scc_all_edges_size": 194,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "AMD",
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -47578,17 +47764,16 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -47601,10 +47786,9 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -47613,15 +47797,21 @@
         "Microsoft"
       ],
       [
-        "CoreWeave",
+        "Amazon",
+        "OpenAI",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
         "SINK_lenders"
       ],
       [
@@ -51099,6 +51289,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Dario_Amodei": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DarkSide": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -52003,6 +52200,13 @@
         "in_robust_core": false
       },
       "Evil_Corp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Existential_Risk_Framing": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56307,6 +56511,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Open_Source_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Open_Source_Ecosystem": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -57414,6 +57625,13 @@
         "in_robust_core": false
       },
       "Regulation_Crypto_Assets": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Regulatory_Capture": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61032,6 +61250,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Yann_LeCun": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Yim_Leak": {
         "total_usd": 240000000,
         "circular_usd": 0,
@@ -61394,7 +61619,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 44,
+        "degree": 45,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -61414,7 +61639,7 @@
           "university"
         ],
         "n_neighbor_sectors": 16,
-        "source_files": 21,
+        "source_files": 22,
         "layers": [
           "financial",
           "structural"
@@ -61557,6 +61782,32 @@
         "both_layers": true
       },
       {
+        "node": "Anthropic",
+        "degree": 27,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person",
+          "space_real_economy",
+          "state",
+          "university"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 15,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Stablecoins",
         "degree": 34,
         "neighbor_sectors": [
@@ -61579,32 +61830,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Anthropic",
-        "degree": 26,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person",
-          "space_real_economy",
-          "state",
-          "university"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "PrivateCredit_Funds",

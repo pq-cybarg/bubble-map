@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 99 files
+- **Meta** — 100 files
 - **Google** — 65 files
 - **Chainlink** — 65 files
-- **OpenAI** — 53 files
+- **OpenAI** — 54 files
 - **Microsoft** — 46 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
 - **NVIDIA** — 35 files
-- **Anthropic** — 33 files
+- **Anthropic** — 34 files
 - **Circle** — 28 files
-- **a16z** — 26 files
+- **a16z** — 27 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ai-safety-evals-ecosystem.json` — related files by shared entities (verify cross-refs exist)
-- blockchain-registry.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- spec-semiconductor-logistics-standards.json: 3 shared entities
-- catalog-nonprofits-foundations.json: 3 shared entities
-- digitalid-orchestration-real-incentive.json: 3 shared entities
-- spec-blockchain-ecosystem.json: 3 shared entities
-- spec-disclosures-surveillance.json: 3 shared entities
-- spec-neocloud-refinancing-wall.json: 3 shared entities
+## Newest file `spec-ai-regulate-us-capture-debate.json` — related files by shared entities (verify cross-refs exist)
+- catalog-billionaires.json: 4 shared entities
+- catalog-academia-core.json: 4 shared entities
+- spec-exchanges-asia.json: 4 shared entities
+- fin-meta-family.json: 3 shared entities
+- fin-google-amazon-anthropic-meta.json: 3 shared entities
+- spec-china-ai-stack-censorship.json: 3 shared entities
+- catalog-elite-groups.json: 3 shared entities
+- spec-local-uncensored-ai.json: 3 shared entities
