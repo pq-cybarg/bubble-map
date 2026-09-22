@@ -1,0 +1,23 @@
+{
+  "title": "Open-weight AI, abliterators, redistributors + hosting - the de-censoring counter-ecosystem chronology",
+  "source": "Public record: model releases (Llama/Mistral/Qwen/DeepSeek); Hugging Face / Ollama / OpenRouter; abliteration research + Heretic tooling. Chronology overlay (structural; no financial-core edges). TAXONOMY: these are mostly LLMs (one branch of AI); the block tracks the open-weight + uncensoring pathway, distinct from frontier-lab safety posture. HONESTY: releases/licenses/tools = fact; 'undercuts served-model safety' = interpretation (the open-weight paradox), labeled.",
+  "grade": "per-edge in notes (fact | interpretation)",
+  "nodes": [
+    {"id": "Llama", "sector": "ai"},
+    {"id": "Qwen", "sector": "ai"},
+    {"id": "OpenRouter", "sector": "ai"},
+    {"id": "Abliteration", "sector": "ai"}
+  ],
+  "edges": [
+    {"from": "Meta", "to": "Llama", "instrument": "controls", "notes": "Meta's Llama (2023-) anchored the open-WEIGHT era - downloadable models that anyone can run/fine-tune locally, splitting the field from closed frontier APIs (fact).", "source": "Meta"},
+    {"from": "Alibaba", "to": "Qwen", "instrument": "controls", "notes": "Alibaba's Qwen (Apache-2.0) became one of the most-used open-weight families globally - the China-open-weight pole (fact).", "source": "public record"},
+    {"from": "Llama", "to": "Hugging_Face", "instrument": "relationship", "notes": "Hugging Face is the dominant model REDISTRIBUTOR/hub - Llama, Qwen, Mistral, DeepSeek weights are mirrored + versioned there for mass download (fact).", "source": "public record"},
+    {"from": "DeepSeek", "to": "Hugging_Face", "instrument": "relationship", "notes": "DeepSeek's open-weight releases (R1/V-series) distribute via Hugging Face - the efficient-open pole reaching the world through the hub (fact; cf fin-ai-efficiency-counter-thesis).", "source": "public record"},
+    {"from": "OpenRouter", "to": "DeepSeek", "instrument": "relationship", "notes": "OpenRouter is a model-API AGGREGATOR/router; by Q2 2026 Chinese open models (DeepSeek/Qwen/GLM) crossed ~30% of its developer token traffic - the demand-side of the open/efficient shift (fact; cf the China-AI reroute thread).", "source": "OpenRouter data"},
+    {"from": "Ollama", "to": "Uncensored_AI", "instrument": "relationship", "notes": "Ollama (+ llama.cpp) makes local, offline model-running trivial - the substrate for the private/uncensored counter-ecosystem where served-model guardrails don't apply (fact; cf the local/uncensored-AI block).", "source": "public record"},
+    {"from": "Heretic", "to": "Abliteration", "instrument": "relationship", "notes": "Heretic + similar tools automate ABLITERATION - editing an open model's weights to remove refusal behavior - turning a censored-when-served model into an uncensored local one (fact of technique; quality varies).", "source": "public record"},
+    {"from": "Abliteration", "to": "Uncensored_AI", "instrument": "relationship", "notes": "Abliteration/fine-tuning is how open weights are re-released 'uncensored' - the mechanism of the de-censoring layer (fact).", "source": "public record"},
+    {"from": "Uncensored_AI", "to": "AI_Safety_Regulation", "instrument": "relationship", "notes": "THE OPEN-WEIGHT PARADOX: once weights are public they are de-censorable downstream, so served-model safety + frontier regulation are LEAKY - a structural check on the safety-regulation story (interpretation, labeled; the leak itself is demonstrated).", "source": "analysis"},
+    {"from": "Qwen", "to": "Uncensored_AI", "instrument": "relationship", "notes": "Chinese open-weight models ship with built-in state-alignment when served, yet are freely de-censorable once downloaded - both censored-at-source AND uncensorable-material, the paradox bridging the China-AI stack to the local-AI ecosystem (fact of licenses + demonstrated de-censoring; quality-variable).", "source": "public record"}
+  ]
+}

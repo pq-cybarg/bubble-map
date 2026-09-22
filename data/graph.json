@@ -184,6 +184,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Abliteration": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Access_Industries": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -299,6 +303,10 @@
     "Allstate": {
       "sector": "insurance",
       "has_exogenous_revenue": true
+    },
+    "AlphaGo_AlphaFold": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
     },
     "Alternative_OS_Exclusion": {
       "sector": "surveillance",
@@ -686,6 +694,10 @@
     },
     "Backpack": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Backpropagation": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Bahrain": {
@@ -1860,6 +1872,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Cybernetics": {
+      "sector": "academia",
+      "has_exogenous_revenue": false
+    },
     "Cylance": {
       "sector": "security_research",
       "has_exogenous_revenue": false
@@ -2460,6 +2476,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Expert_Systems": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Express_Scripts": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -2826,6 +2846,10 @@
     },
     "GPT4All": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "GPU_Compute": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "GRU": {
@@ -3416,6 +3440,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "ImageNet_AlexNet": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "ImmigrationOS": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -3451,6 +3479,10 @@
     "Indonesia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Information_Theory": {
+      "sector": "academia",
+      "has_exogenous_revenue": false
     },
     "Infrastructure_Corridors": {
       "sector": "logistics",
@@ -4080,6 +4112,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Llama": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Lloyd_Blankfein": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -4270,6 +4306,10 @@
     },
     "Mastercard": {
       "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Mathematical_Logic": {
+      "sector": "academia",
       "has_exogenous_revenue": false
     },
     "Maven_Smart_System": {
@@ -4868,6 +4908,10 @@
       "sector": "ai",
       "has_exogenous_revenue": false
     },
+    "OpenRouter": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Open_Local_AI": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -5126,6 +5170,10 @@
     },
     "People_Power_Party": {
       "sector": "political",
+      "has_exogenous_revenue": false
+    },
+    "Perceptron": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Perpetua_Resources": {
@@ -5514,6 +5562,10 @@
     },
     "Reid_Hoffman": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Reinforcement_Learning": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Reliance": {
@@ -6396,6 +6448,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Symbolic_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Syngenta": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -6638,6 +6694,10 @@
     },
     "TrailOfBits": {
       "sector": "security_research",
+      "has_exogenous_revenue": false
+    },
+    "Transformer": {
+      "sector": "ai",
       "has_exogenous_revenue": false
     },
     "Treasury": {
@@ -16121,6 +16181,123 @@
       "cancelable": false,
       "source_file": "macro-critical-minerals.json",
       "note": "no domestic mined US source pre-Stibnite"
+    },
+    {
+      "from": "Meta",
+      "to": "Llama",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Meta's Llama (2023-) anchored the open-WEIGHT era - downloadable models that anyone can run/fine-tune locally, splitting the field from closed frontier APIs (fact)."
+    },
+    {
+      "from": "Llama",
+      "to": "Hugging_Face",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Hugging Face is the dominant model REDISTRIBUTOR/hub - Llama, Qwen, Mistral, DeepSeek weights are mirrored + versioned there for mass download (fact)."
+    },
+    {
+      "from": "DeepSeek",
+      "to": "Hugging_Face",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "DeepSeek's open-weight releases (R1/V-series) distribute via Hugging Face - the efficient-open pole reaching the world through the hub (fact; cf fin-ai-efficiency-counter-thesis)."
+    },
+    {
+      "from": "OpenRouter",
+      "to": "DeepSeek",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "OpenRouter is a model-API AGGREGATOR/router; by Q2 2026 Chinese open models (DeepSeek/Qwen/GLM) crossed ~30% of its developer token traffic - the demand-side of the open/efficient shift (fact; cf the China-AI reroute thread)."
+    },
+    {
+      "from": "Ollama",
+      "to": "Uncensored_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Ollama (+ llama.cpp) makes local, offline model-running trivial - the substrate for the private/uncensored counter-ecosystem where served-model guardrails don't apply (fact; cf the local/uncensored-AI block)."
+    },
+    {
+      "from": "Heretic",
+      "to": "Abliteration",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Heretic + similar tools automate ABLITERATION - editing an open model's weights to remove refusal behavior - turning a censored-when-served model into an uncensored local one (fact of technique; quality varies)."
+    },
+    {
+      "from": "Abliteration",
+      "to": "Uncensored_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Abliteration/fine-tuning is how open weights are re-released 'uncensored' - the mechanism of the de-censoring layer (fact)."
+    },
+    {
+      "from": "Uncensored_AI",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "THE OPEN-WEIGHT PARADOX: once weights are public they are de-censorable downstream, so served-model safety + frontier regulation are LEAKY - a structural check on the safety-regulation story (interpretation, labeled; the leak itself is demonstrated)."
+    },
+    {
+      "from": "Alibaba",
+      "to": "Uncensored_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-oss-redistributor-chronology.json",
+      "note": "Chinese open-weight models ship with built-in state-alignment when served, yet are freely de-censorable once downloaded - both censored-at-source AND uncensorable-material, the paradox bridging the China-AI stack to the local-AI ecosystem (fact of licenses + demonstrated de-censoring; quality-variable)."
     },
     {
       "from": "Open_Philanthropy",
@@ -29732,6 +29909,162 @@
       "cancelable": false,
       "source_file": "spec-japan-korea-automakers.json",
       "note": ""
+    },
+    {
+      "from": "Mathematical_Logic",
+      "to": "Symbolic_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Boole/Frege/Turing/Church formalized computation + logic -> the Dartmouth 1956 'AI' program + symbolic reasoning (search, theorem-proving, LISP). The FIRST AI paradigm was logic, not learning (fact)."
+    },
+    {
+      "from": "Symbolic_AI",
+      "to": "Expert_Systems",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Symbolic AI matured into 1970s-80s rule-based expert systems (MYCIN, DENDRAL) - commercial AI's first wave, then the 1980s-90s 'AI winter' when they proved brittle (fact)."
+    },
+    {
+      "from": "Cybernetics",
+      "to": "Perceptron",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Wiener's cybernetics (1948) + McCulloch-Pitts neurons (1943) -> Rosenblatt's Perceptron (1958), the first trainable neural net - the CONNECTIONIST branch, distinct from symbolic AI (fact)."
+    },
+    {
+      "from": "Information_Theory",
+      "to": "Perceptron",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Shannon's information theory (1948) + probability/statistics gave learning its mathematical footing (entropy, likelihood) that later underpins ML (fact)."
+    },
+    {
+      "from": "Perceptron",
+      "to": "Backpropagation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "The Perceptron's limits (Minsky-Papert 1969) froze connectionism until backpropagation (Rumelhart/Hinton/Williams 1986) let multi-layer nets learn - the revival (fact)."
+    },
+    {
+      "from": "Backpropagation",
+      "to": "GPU_Compute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Backprop worked but needed compute; GPUs + CUDA (2007) made training deep nets practical - hardware, not just algorithms, unlocked the field (fact)."
+    },
+    {
+      "from": "GPU_Compute",
+      "to": "ImageNet_AlexNet",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "GPU compute + the ImageNet dataset -> AlexNet (2012) crushing image classification - the deep-learning era begins, in VISION (fact)."
+    },
+    {
+      "from": "ImageNet_AlexNet",
+      "to": "Transformer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Deep learning spread from vision to sequences (RNN/LSTM) then to attention -> the Transformer (Vaswani et al. 2017), the substrate for LLMs (fact)."
+    },
+    {
+      "from": "Transformer",
+      "to": "Deep_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Transformers + scaling laws produced LLMs (GPT/BERT ->) - the branch that now dominates attention + capital, but ONE branch of deep learning, itself one branch of ML, itself one branch of AI (fact + taxonomy)."
+    },
+    {
+      "from": "Reinforcement_Learning",
+      "to": "AlphaGo_AlphaFold",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "A PARALLEL branch: RL (Sutton/Barto) + deep nets -> DQN (2013) + AlphaGo (2016, deep RL + tree search) + AlphaFold (2020-24, protein structure, Nobel) - superhuman AI that is NOT an LLM (fact; the taxonomy anchor)."
+    },
+    {
+      "from": "GPU_Compute",
+      "to": "Reinforcement_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "Deep RL also rode the GPU wave - showing the same hardware substrate fed multiple distinct AI branches at once (fact)."
+    },
+    {
+      "from": "Expert_Systems",
+      "to": "Deep_Learning",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-tech-history-traversal.json",
+      "note": "The symbolic winter's lesson (hand-coded rules don't scale) pushed the field toward LEARNING from data - the pivot from symbolic to statistical/deep AI (fact; interpretation of causation modest)."
     },
     {
       "from": "SEALSQ",
@@ -46739,10 +47072,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1924,
-    "num_edges": 3003,
+    "num_nodes": 1939,
+    "num_edges": 3024,
     "num_financial_edges": 274,
-    "num_structural_edges": 2729,
+    "num_structural_edges": 2750,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -46988,14 +47321,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -47004,12 +47329,20 @@
         "OpenAI"
       ],
       [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -47396,6 +47729,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Abliteration": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Access_Industries": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -47593,6 +47933,13 @@
         "in_robust_core": false
       },
       "Allstate": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AlphaGo_AlphaFold": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -48272,6 +48619,13 @@
         "in_robust_core": false
       },
       "Backpack": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Backpropagation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50329,6 +50683,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Cybernetics": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cylance": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51379,6 +51740,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Expert_Systems": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Express_Scripts": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -52017,6 +52385,13 @@
         "in_robust_core": false
       },
       "GPT4All": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "GPU_Compute": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53052,6 +53427,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "ImageNet_AlexNet": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "ImmigrationOS": {
         "total_usd": 30000000,
         "circular_usd": 0,
@@ -53109,6 +53491,13 @@
         "in_robust_core": false
       },
       "Indonesia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Information_Theory": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54214,6 +54603,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Llama": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Lloyd_Blankfein": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -54544,6 +54940,13 @@
         "in_robust_core": false
       },
       "Mastercard": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Mathematical_Logic": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55593,6 +55996,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "OpenRouter": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Open_Local_AI": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56042,6 +56452,13 @@
         "in_robust_core": false
       },
       "People_Power_Party": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Perceptron": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56721,6 +57138,13 @@
         "in_robust_core": false
       },
       "Reid_Hoffman": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Reinforcement_Learning": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58267,6 +58691,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Symbolic_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Syngenta": {
         "total_usd": 43000000000,
         "circular_usd": 0,
@@ -58688,6 +59119,13 @@
         "in_robust_core": false
       },
       "TrailOfBits": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Transformer": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60713,6 +61151,35 @@
         "both_layers": true
       },
       {
+        "node": "Meta",
+        "degree": 25,
+        "neighbor_sectors": [
+          "ai",
+          "ai_data",
+          "ai_infra",
+          "capital",
+          "chip_vendor",
+          "commodity",
+          "energy",
+          "other",
+          "person",
+          "philanthropy",
+          "political",
+          "regulator",
+          "sink",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 15,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Microsoft",
         "degree": 29,
         "neighbor_sectors": [
@@ -60760,34 +61227,6 @@
         ],
         "n_neighbor_sectors": 15,
         "source_files": 15,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Meta",
-        "degree": 24,
-        "neighbor_sectors": [
-          "ai_data",
-          "ai_infra",
-          "capital",
-          "chip_vendor",
-          "commodity",
-          "energy",
-          "other",
-          "person",
-          "philanthropy",
-          "political",
-          "regulator",
-          "sink",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 15,
-        "source_files": 14,
         "layers": [
           "financial",
           "structural"
