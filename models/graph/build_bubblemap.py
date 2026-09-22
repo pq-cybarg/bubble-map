@@ -421,7 +421,7 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <div id=tip></div>
 <div id=btns><button id=bFit>Fit to view</button><button id=bReset>Reset focus</button></div>
 <div class=note>__N__ entities &middot; __E__ edges &middot; gold ring = the circular core (Tarjan SCC) &middot; solid = financial flow, dashed = structural/overlay &middot; <b style=color:#c0392b>red</b> = declared circular</div>
-<svg id=g></svg></div>
+<svg id=g></svg><div id=loading style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:50;background:#fffdf8;border:1px solid #c9bfa5;border-radius:9px;padding:13px 22px;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:#7b2d26;box-shadow:0 2px 12px rgba(60,50,30,.16)"><b>Rendering graph&hellip;</b><br><span style="color:#6b665d;font-size:12.5px">laying out ~1.9k nodes - one moment</span></div></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 const NODES=__NODES__, LINKS=__LINKS__, COLORS=__COLORS__, BTITLE=__BTITLE__;
@@ -469,7 +469,9 @@ const node=nodeG.selectAll('g').data(NODES).join('g').style('cursor','pointer').
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
-const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('class','lab')
+// PERF: only create <text> for nodes that can ever be labelled (core + deg>=2); the deg-1 leaves
+// are never labelled at any zoom, so skip their DOM + every per-zoom labels.* pass over them.
+const labels=root.append('g').selectAll('text').data(NODES.filter(d=>d.scc||d.deg>=2)).join('text').attr('class','lab')
  .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.label).style('display','none');  // hidden until layout settles, then applyLabels() reveals hubs
 let fitted=false, curK=1, pendingFocus=null;
 // ---- smart labels: only hubs + the circular core by default; reveal more on zoom-in ----
@@ -572,7 +574,7 @@ function tick(){
  drawGroups();
  if(sim.alpha()<0.06){                                   // settled
    if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
-   else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop();}   // frame, label, then FREEZE (no residual jitter)
+   else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop(); var _ld=document.getElementById('loading'); if(_ld)_ld.style.display='none';}   // frame, label, FREEZE, hide loader
  }
 }
 // keep node/line sizes usable at any zoom: enlarge when zoomed OUT (k<1), constant lines via CSS
@@ -590,10 +592,13 @@ node.call(d3.drag().container(function(){return root.node();})
  .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.12).restart();d.fx=d.x;d.fy=d.y;})
  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;})
  .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);/* leave fx/fy: pinned where dropped */}));
-let panned=false;
+let panned=false; let _zoomT=0;
 const zoomB=d3.zoom().scaleExtent([.35,6])
  .on('start',()=>{panned=false;})
- .on('zoom',e=>{if(e.sourceEvent&&/move/.test(e.sourceEvent.type||''))panned=true;root.attr('transform',e.transform);rescale(e.transform.k);});
+ // PERF: pan/zoom every event via the cheap CSS transform only; DEBOUNCE the expensive
+ // rescale() (restyles ~2k circles/labels + applyLabels) to fire once ~90ms after the gesture
+ // stops - this kills the per-wheel-tick O(n) restyle storm that froze the map at ~2k nodes.
+ .on('zoom',e=>{if(e.sourceEvent&&/move/.test(e.sourceEvent.type||''))panned=true;root.attr('transform',e.transform);curK=e.transform.k;clearTimeout(_zoomT);_zoomT=setTimeout(()=>rescale(curK),90);});
 svg.call(zoomB);
 // click empty space (a real click, not a pan) clears the current selection
 svg.on('click',()=>{if(panned)return;if(egoOn)clearEgo();soloB=null;
