@@ -2708,6 +2708,10 @@
       "sector": "surveillance",
       "has_exogenous_revenue": false
     },
+    "Financial_Censorship": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Financial_Privacy": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -4608,6 +4612,10 @@
       "sector": "regulator",
       "has_exogenous_revenue": false
     },
+    "NCOSE": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "NCUA": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -4930,6 +4938,10 @@
     },
     "Onfido": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "OnlyFans": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "OpenAI": {
@@ -9291,6 +9303,123 @@
       "cancelable": false,
       "source_file": "spec-ukraine-war-economy.json",
       "note": ""
+    },
+    {
+      "from": "Card_networks",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "Visa + Mastercard (~80% of US card volume) set Acceptable-Use / brand-risk rules that function as a near-universal chokepoint: a merchant cut off by both is effectively de-monetized. Networks cite illegal content, trafficking, chargeback fraud + brand risk; critics call it private financial censorship of LEGAL speech (fact of the duopoly power; framing contested)."
+    },
+    {
+      "from": "Mastercard",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "Mastercard's 2021 'special merchant registration' rules for adult content (age/consent documentation) tightened the lever; defended as anti-CSAM/trafficking, criticized as pushing legal adult work off-platform (fact of the policy; effect + motive contested)."
+    },
+    {
+      "from": "Visa",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "Visa suspended Pornhub/MindGeek acceptance (Dec 2020, after a NYT column alleged CSAM) + was named in related litigation; part of the pattern of card action against adult platforms (fact of the suspension; underlying-harm claims + scope contested)."
+    },
+    {
+      "from": "NCOSE",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "NCOSE (National Center on Sexual Exploitation; ex-Morality in Media) + allied anti-trafficking/faith groups run sustained campaigns pressuring card networks + processors to cut adult platforms - the activist->processor pressure channel (fact of the campaigns; whether it is child-protection or morality-driven speech-suppression is contested)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "OnlyFans",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "The clearest case: OnlyFans announced an adult-content BAN (Aug 2021) then REVERSED it days later, citing that it had 'secured assurances' from banking/payment partners - i.e. payment pressure nearly killed a legal business overnight (fact)."
+    },
+    {
+      "from": "PayPal",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "PayPal/Stripe have de-platformed adult creators, firearms sellers, and some political/press accounts; PayPal's Oct-2022 AUP briefly added a $2,500 fine for 'misinformation' before walking it back after backlash - the processor-as-speech-arbiter flashpoint (fact)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "Operation_Choke_Point_2",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "Same chokepoint logic applied to whole disfavored INDUSTRIES via banks/processors: Operation Choke Point (2013, firearms/payday) + the alleged crypto 'Choke Point 2.0' (2023-25 debanking) - regulatory pressure on intermediaries to cut lawful sectors (fact of the debate; coordinated-intent contested; ties the existing node)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "CONVERGENCE: payment rails + identity are merging - age/ID-verification mandates (UK OSA, adult-site laws) route through processors + ID vendors, so the FINANCIAL chokepoint and the IDENTITY chokepoint reinforce each other (interpretation, labeled; cf the age-verification + Digital-ID threads)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-payment-processor-censorship.json",
+      "note": "COMPETING-EXPLANATION NOTE: chokepoint-via-intermediary (processor / host / registrar / app-store) is a DISTINCT control mechanism that can explain de-platforming + pressure activity NOT reducible to the EA / AI-safety networks - one of several parallel, overlapping explanatory frames (state law, financial chokepoints, influence ops, activist campaigns). The map holds these as competing hypotheses, not one unified cabal (interpretation, labeled)."
     },
     {
       "from": "Trump",
@@ -47501,10 +47630,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1952,
-    "num_edges": 3053,
+    "num_nodes": 1955,
+    "num_edges": 3062,
     "num_financial_edges": 274,
-    "num_structural_edges": 2779,
+    "num_structural_edges": 2788,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -47624,6 +47753,7 @@
       "Fed_Funds_Rate",
       "Fentanyl",
       "Fifth_Third",
+      "Financial_Censorship",
       "First_Brands",
       "Founders_Fund",
       "G42",
@@ -47677,6 +47807,7 @@
       "OSAT",
       "OpenAI",
       "Open_Standard",
+      "Operation_Choke_Point_2",
       "Opioid_Crisis",
       "Oracle",
       "PJM",
@@ -47745,22 +47876,14 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 194,
+    "core_scc_all_edges_size": 196,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -47769,11 +47892,24 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -47786,21 +47922,16 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -47811,8 +47942,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -52577,6 +52708,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Financial_Censorship": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Financial_Privacy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55902,6 +56040,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "NCOSE": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "NCUA": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56463,6 +56608,13 @@
         "in_robust_core": false
       },
       "Onfido": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "OnlyFans": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61879,6 +62031,30 @@
         "both_layers": false
       },
       {
+        "node": "Digital_ID",
+        "degree": 28,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 12,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -61901,30 +62077,6 @@
           "structural"
         ],
         "both_layers": true
-      },
-      {
-        "node": "Digital_ID",
-        "degree": 27,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 11,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
       },
       {
         "node": "Ripple",
