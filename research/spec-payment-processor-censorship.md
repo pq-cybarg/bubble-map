@@ -1,6 +1,6 @@
 # Payment-processor + card-network financial censorship - the private speech chokepoint
 
-*(Part of the speech-control apparatus layer. A distinct control mechanism - and, per the user's point, one that can explain de-platforming/pressure activity **not** reducible to the EA/AI-safety networks.)*
+*(Part of the speech-control apparatus layer. A distinct control mechanism - one that can explain de-platforming/pressure activity **not** reducible to the EA/AI-safety networks.)*
 
 ## The chokepoint (fact of power; framing contested)
 **Visa + Mastercard** clear ~80% of US card volume. Their Acceptable-Use / brand-risk rules are a **near-universal chokepoint**: a merchant cut off by both is effectively de-monetized regardless of legality. The networks cite illegal content, trafficking, chargeback fraud, and brand risk; critics call it **private financial censorship of legal speech**. Both framings are real; this block presents them side by side.

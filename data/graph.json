@@ -464,6 +464,10 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "Arcom": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Arctic": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -563,6 +567,10 @@
     "Australia": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Australia_eSafety": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Auto_Bailout_2009": {
       "sector": "state",
@@ -1556,6 +1564,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Clip_Studio_Assets": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Cloudera": {
       "sector": "ai",
       "has_exogenous_revenue": false
@@ -1634,6 +1646,10 @@
     },
     "Colin_Huang": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Collective_Shout": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Colombia": {
@@ -2160,6 +2176,10 @@
       "sector": "identity",
       "has_exogenous_revenue": false
     },
+    "Digital_Public_Infrastructure": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Disaster_Compensation": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -2210,6 +2230,10 @@
     },
     "DonorsTrust": {
       "sector": "elite",
+      "has_exogenous_revenue": false
+    },
+    "Doppelganger_Campaign": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "DoubleAgent": {
@@ -2308,7 +2332,19 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "EU_Chat_Control": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "EU_Chips_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "EU_Commission": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "EU_Digital_Services_Act": {
       "sector": "state",
       "has_exogenous_revenue": false
     },
@@ -2796,6 +2832,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "France_SREN": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Franklin_Templeton": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2963,6 +3003,10 @@
     "Germany": {
       "sector": "state",
       "has_exogenous_revenue": true
+    },
+    "Germany_NetzDG": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Giancarlo_Devasini": {
       "sector": "person",
@@ -3603,6 +3647,10 @@
     "Italy": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Itch_io": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
     },
     "JAMS": {
       "sector": "standards",
@@ -4904,6 +4952,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Ofcom": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Offshore_Finance": {
       "sector": "offshore",
       "has_exogenous_revenue": false
@@ -4938,6 +4990,10 @@
     },
     "Onfido": {
       "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
+    "Online_Speech_Regulation": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "OnlyFans": {
@@ -6376,8 +6432,16 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "State_Influence_Ops": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "State_R2R_Laws": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Steam_Valve": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Stefan_Quandt": {
@@ -7091,6 +7155,10 @@
     "UnitedHealth": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "United_Front": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "United_States_Antimony": {
       "sector": "critical_minerals",
@@ -22626,7 +22694,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "catalog-nonprofits-foundations.json",
+      "source_file": "catalog-nonprofits-foundations.json,spec-wef-imf-influence.json",
       "note": "The World Economic Forum promotes digital identity (Known Traveller Digital Identity; decentralized-ID work) as part of its Fourth Industrial Revolution agenda - a convening/agenda-setting node, NOT a governing authority (fact of initiatives; 'control' interpretations contested/overstated)."
     },
     {
@@ -23694,6 +23762,123 @@
       "cancelable": false,
       "source_file": "spec-insurance-bermuda.json",
       "note": "~$180B insurance capital into private credit (2025); the PE owner both originates the credit and owns the insurer that holds it - vertical/circular integration."
+    },
+    {
+      "from": "Collective_Shout",
+      "to": "Card_networks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Collective Shout (Melbourne-based anti-porn/anti-exploitation group) published a Jul 2025 open letter to PayPal/Visa/Mastercard demanding they stop processing for platforms hosting NSFW games (citing 'rape, incest and child sexual abuse' content, trigger title 'No Mercy'). The activist->processor pressure channel - the same shape as NCOSE (fact of the campaign; whether it 'swayed' the networks is denied by them = contested)."
+    },
+    {
+      "from": "Collective_Shout",
+      "to": "NCOSE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "peer",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Collective Shout is the Australian analogue of NCOSE - allied anti-exploitation activist groups that use the card-network/processor pressure channel to force adult-content takedowns (peer relationship; fact of the shared tactic)."
+    },
+    {
+      "from": "Collective_Shout",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Collective Shout is an activist input to the financial-censorship mechanism: pressure aimed at the payment layer rather than at courts or legislatures - private de-monetization of legal (if offensive) content (fact of the mechanism; child-protection vs morality-driven-speech-suppression framing contested)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "Steam_Valve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Steam (Valve, ~132m MAU) removed hundreds of adult titles ~a week after the open letter, stating some games 'may violate the rules and standards set forth by our payment processors and their related card networks and banks' and that 'loss of payment methods would prevent customers from ... purchas[ing] other titles' - the platform ITSELF named payment processors as the cause (fact; a clear case of the money-rail gating a legal storefront)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "Itch_io",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "itch.io de-indexed ALL adult NSFW content from browse/search on 31 Jul 2025, saying it 'came under scrutiny from our payment processors' and had to 'prioritize our relationship with our payment partners' - later began RE-INDEXING free adult content + slowly reintroducing paid, after mass user call-in campaigns (fact; also an honest counter-example - some of it was reversible, like OnlyFans)."
+    },
+    {
+      "from": "Collective_Shout",
+      "to": "Steam_Valve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Steam + itch.io were the direct targets of Collective Shout's campaign (fact of the targeting)."
+    },
+    {
+      "from": "Clip_Studio_Assets",
+      "to": "Age_Assurance_Issuers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "Clip Studio Assets (CELSYS, the Clip Studio Paint marketplace) apologized on 23 Sep 2026 for mass-'privating' creator materials and announced a move to 'strengthen the system to include age restrictions, regional controls, and user preferences' so materials publish 'to the appropriate audiences' - i.e. building age/geo-gating into an art-asset store (fact of the announcement; CELSYS cited a mixed-age global audience, NOT payment processors)."
+    },
+    {
+      "from": "Clip_Studio_Assets",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "CSP's 2026 move fits the SAME wave as the Steam/itch purge and the UK/EU/AU age regimes - creative platforms pre-emptively moderating + age/region-gating expression to stay 'universally accessible' and compliant. The join to payment-processor pressure specifically is INTERPRETATION (CELSYS did not state it); the join to the broader age-verification/speech-regulation climate is well-supported (labeled)."
+    },
+    {
+      "from": "Itch_io",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-creative-platform-purge.json",
+      "note": "The purge wave sits at the intersection of the financial chokepoint and the speech-regulation climate - itch/Steam actions were processor-driven, but occurred amid the UK OSA / AU eSafety / EU push that raised platform legal exposure for adult content generally (interpretation of the joint pressure; fact that both pressures were live in 2025-26)."
     },
     {
       "from": "Sam_Altman",
@@ -27958,6 +28143,110 @@
       "cancelable": false,
       "source_file": "fin-hedera-connections.json",
       "note": "FORMER member (10th to join, Aug 2019; invested via HorizonX; board seat; departed Feb 14 2025). Aerospace/SATELLITE prime exited an enterprise DLT amid its own crisis-era retrenchment - while the same secure-satellite/identity use-case migrated to narrative vehicles (WISeSat/SEALSQ). Timeline tell: see boeing_timeline."
+    },
+    {
+      "from": "WEF",
+      "to": "Digital_Public_Infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "WEF promotes DPI (digital ID + payments + data-exchange 'rails') as a development template through its multistakeholder platforms (fact of advocacy; influence is soft/agenda-level, not binding)."
+    },
+    {
+      "from": "IMF",
+      "to": "Digital_Public_Infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "The IMF (with the World Bank / G20) endorses DPI in technical assistance + policy advice as a tool for financial inclusion + efficient transfers. The IMF's real lever is macro CONDITIONALITY, not content - and it is NOT a censor (fact of the endorsement; 'IMF censors speech' is FALSE, stated so)."
+    },
+    {
+      "from": "World_Bank",
+      "to": "Digital_Public_Infrastructure",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "The World Bank's ID4D program + DPI advocacy make it the most operational of the three - financing and templating national ID + payment stacks in developing countries (fact; genuine inclusion benefits AND surveillance/exclusion risks both documented)."
+    },
+    {
+      "from": "Digital_Public_Infrastructure",
+      "to": "Aadhaar",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "India's 'India Stack' - Aadhaar (biometric ID) + UPI (payments) - is the flagship DPI model exported as a template (fact; Aadhaar is simultaneously a financial-inclusion success and an exclusion/surveillance-risk case - both graded in the India thread)."
+    },
+    {
+      "from": "Digital_Public_Infrastructure",
+      "to": "UPI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "UPI is the payments half of the DPI template - instant, low-cost rails - held up globally as the model to replicate (fact; dual-use: inclusion + a potential centralized chokepoint)."
+    },
+    {
+      "from": "Digital_Public_Infrastructure",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "DPI's defining feature is FUSING identity + payment + data rails - which is exactly the ID+money convergence the map tracks elsewhere. Whether that is empowering (inclusion) or a chokepoint (control) depends on governance/design (interpretation, labeled; genuinely dual-use)."
+    },
+    {
+      "from": "Digital_Public_Infrastructure",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "COMPETING/PARALLEL FRAME + honest bound: DPI is an UPSTREAM infrastructure lever (build the rails), distinct from the DOWNSTREAM chokepoint (cut someone off the rails) and from law. Fusing ID+money creates the POTENTIAL for a chokepoint but does not equal one - and attributing censorship to 'the WEF/IMF' is easy overreach. Deliberately under-claimed: agenda + infrastructure != control (interpretation, labeled; overreach rejected)."
+    },
+    {
+      "from": "WEF",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-wef-imf-influence.json",
+      "note": "WEF convenes discussions on 'misinformation/disinformation' (a top Global Risks Report theme) - agenda-SHAPING that can lend intellectual cover to speech-regulation, but the WEF neither drafts nor enforces any law. The 'WEF is behind censorship laws' claim is OVERREACH and rejected; the soft agenda-influence is real (fact of the convening; causal claim rejected)."
     },
     {
       "from": "Ford",
@@ -33717,6 +34006,136 @@
       "cancelable": false,
       "source_file": "spec-pfas-forever-chemicals.json",
       "note": ""
+    },
+    {
+      "from": "China",
+      "to": "United_Front",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "The United Front Work Department is the CCP organ coordinating overseas influence, diaspora mobilization, and elite cultivation - an openly acknowledged party structure (fact of existence + remit; specific operational attributions vary in confidence)."
+    },
+    {
+      "from": "United_Front",
+      "to": "State_Influence_Ops",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "United Front work is the strategic/coordination layer of Chinese state influence (fact)."
+    },
+    {
+      "from": "Spamouflage",
+      "to": "State_Influence_Ops",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "'Spamouflage'/Dragonbridge is the large inauthentic pro-PRC social-media network attributed by Google/Mandiant, Meta, and Graphika; DOJ seized related domains in 2024. High-volume but generally assessed as LOW-engagement/impact (fact of the network + attribution; impact contested = modest)."
+    },
+    {
+      "from": "United_Front",
+      "to": "Spamouflage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "Both sit within the PRC influence apparatus; direct command linkage between UFWD and Spamouflage specifically is NOT firmly established in open sources - treat the tie as apparatus-level, not a proven chain of command (fact of co-membership in the apparatus; specific control link = speculation, labeled)."
+    },
+    {
+      "from": "Russia_state",
+      "to": "Doppelganger_Campaign",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "'Doppelganger' clones Western news domains (Guardian, Bild, Le Monde, etc.) to push fake articles; attributed to Russia by EU DisinfoLab (2022), Meta, and via US Treasury/DOJ 2024 sanctions + indictments naming Russian firms (Social Design Agency, Structura). Fact of the operation + attribution; measured Western-opinion impact contested."
+    },
+    {
+      "from": "Russian_Intel",
+      "to": "Doppelganger_Campaign",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "Doppelganger is run through Russian-intel-linked contractors under Presidential-administration direction per US/EU attributions (fact of the attribution; exact tasking chain partly classified/contested)."
+    },
+    {
+      "from": "Doppelganger_Campaign",
+      "to": "State_Influence_Ops",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "Doppelganger is the Russian pillar of the state-influence frame (fact)."
+    },
+    {
+      "from": "State_Influence_Ops",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "COMPETING-EXPLANATION NOTE: state influence ops are one reason Western regimes cite for content rules (DSA 'foreign interference'; the UK/AU 'online harms' framing) - AND a possible alternative explanation for some narrative/deplatforming activity the EA/AI map doesn't cover. The two interact: real ops give real cover for broad speech powers (interpretation, labeled). No claim that any specific Western takedown WAS an op."
+    },
+    {
+      "from": "State_Influence_Ops",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "Parallel frame: influence ops, financial chokepoints, activist campaigns, and state regulation are DISTINCT overlapping drivers of the online-narrative environment - held as competing hypotheses, not one unified actor (interpretation, labeled)."
+    },
+    {
+      "from": "State_Influence_Ops",
+      "to": "AI_Datacenter_Foreign_Influence_Claim",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-state-influence-ops.json",
+      "note": "SPECULATION, STRICTLY LABELED: 'subtle / unknown / potential' influence operations (e.g. via infrastructure, funding, or proxy media) are a HYPOTHESIS-GENERATOR for gaps the documented networks leave - never an assertion. This edge marks the open question, tied to the existing foreign-influence-claim node; it is not evidence of any specific covert operation (speculation)."
     },
     {
       "from": "Microsoft",
@@ -43859,6 +44278,227 @@
       "note": "OVERLAY: named individual attendee (existing person node)"
     },
     {
+      "from": "UK_Online_Safety_Act",
+      "to": "Ofcom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Ofcom is the OSA regulator: it set the 'highly effective age assurance' duty live 25 Jul 2025 (porn sites + services hosting suicide/self-harm/eating-disorder material) with fines up to GBP 18m or 10% of global turnover and ISP-blocking powers. Fact of the regime; 'child protection' vs 'age-gating legal speech + VPN surge + privacy risk' contested."
+    },
+    {
+      "from": "Ofcom",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Ofcom is a node in the Western lawful-content control layer (fact)."
+    },
+    {
+      "from": "UK_Online_Safety_Act",
+      "to": "Age_Assurance_Issuers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "OSA age checks route through third-party age-assurance vendors (face-scan / ID / bank-token) - the law manufactures demand for the age-verification industry (fact of the routing; the Digital-ID onramp concern is interpretation)."
+    },
+    {
+      "from": "UK_Online_Safety_Act",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "The OSA anchors the UK end of the layer; Wikimedia Foundation's judicial review of the Category-1 'Categorisation Regulations' was dismissed 11 Aug 2025, but the court warned it was not a green light to impede Wikipedia (fact)."
+    },
+    {
+      "from": "EU_Commission",
+      "to": "EU_Digital_Services_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "The European Commission directly enforces the DSA against Very Large Online Platforms (X, Meta, TikTok probes), with fines up to 6% of global turnover and systemic-risk / trusted-flagger / content-transparency duties. Fact of the enforcement; 'accountability + illegal-content' vs 'EU censorship pressure' (the Vance/Musk critique) contested."
+    },
+    {
+      "from": "EU_Digital_Services_Act",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "The DSA is the EU pillar of the layer (fact)."
+    },
+    {
+      "from": "EU_Commission",
+      "to": "EU_Chat_Control",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "The Commission proposed the CSAR ('Chat Control'): the interim voluntary-scanning derogation narrowly survived a 9 Jul 2026 vote (314 to scrap vs 276 to keep, but 360 needed to block the Council) and runs to 2028; the PERMANENT regime - which several drafts would make client-side scanning - was renegotiated from Sep 2026. Fact of the votes; the encryption-breaking / mass-surveillance charge (Breyer et al.; Commission's own report cited up to 20% false positives) is a graded critique, not settled."
+    },
+    {
+      "from": "EU_Chat_Control",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Chat Control extends the layer from PUBLISHED content into PRIVATE messaging + (in the permanent draft) the encryption stack - the most contested frontier (fact of the proposal; effect contested)."
+    },
+    {
+      "from": "EU_Chat_Control",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Client-side scanning + mandatory reporting pairs with age-verification + eIDAS/EU Digital Identity Wallet - device-level scanning and device-level identity converge (interpretation, labeled)."
+    },
+    {
+      "from": "France_SREN",
+      "to": "Arcom",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "France's SREN law (Loi 2024-449, 21 May 2024) empowers Arcom (merged CSA+HADOPI) to enforce age verification for porn sites: since 11 Apr 2025 an accepted method must meet 'double anonymity', card-only no longer qualifies; Arcom can order ISP/DNS blocking within 48h (upheld by the Conseil d'Etat). Penalties up to EUR 150k or 2% turnover. Fact; scope + CJEU referrals ongoing."
+    },
+    {
+      "from": "Arcom",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Arcom is the French regulator node in the layer (fact)."
+    },
+    {
+      "from": "Germany_NetzDG",
+      "to": "EU_Digital_Services_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Germany's NetzDG (2017) - the pioneering '24-hour takedown or fine' template for platform speech liability - was largely absorbed into the DSA in 2024; it is the historical ancestor of the EU regime (fact)."
+    },
+    {
+      "from": "Australia_eSafety",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Australia's eSafety Commissioner enforces the Online Safety Amendment (Social Media Minimum Age) Act - the world-first under-16 social-media ban live 10 Dec 2025 (FB/IG/TikTok/Snap/X/YouTube/Twitch/Reddit/Kick/Threads in scope; Steam/Discord/WhatsApp out), fines up to AUD 49.5m, platform-side onus. Phase-2 industry codes extend age assurance to search/app-stores/messaging through Mar 2026. Fact; even the Commissioner called it a 'very blunt approach' (Jun 2026)."
+    },
+    {
+      "from": "Australia_eSafety",
+      "to": "Age_Assurance_Issuers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "The under-16 ban puts age-verification onus on platforms -> face-scan/ID vendors (Meta removing under-16s from 4 Dec 2025 via face-scan or ID) - another regulatory demand-driver for the age-assurance industry (fact of the routing)."
+    },
+    {
+      "from": "Online_Speech_Regulation",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "CONVERGENCE: 'child safety' age-verification mandates across UK/EU/FR/AU are the most politically durable on-ramp to pervasive age + identity attestation - the speech-regulation layer and the Digital-ID layer reinforce each other (interpretation, labeled; cf age-verification + Digital-ID threads)."
+    },
+    {
+      "from": "Online_Speech_Regulation",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "COMPETING/PARALLEL FRAMES: state speech-regulation and the payment-processor chokepoint are DISTINCT but mutually reinforcing control mechanisms (law gates content; card networks gate money) - the map holds them as parallel hypotheses, not one cabal (interpretation, labeled; cf Financial_Censorship block)."
+    },
+    {
+      "from": "Online_Speech_Regulation",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-western-speech-regulation.json",
+      "note": "Phase-2 codes + app-store age laws push age checks DOWN to the OS/device layer (Apple/Google device age signals) - moving the chokepoint from the website to the phone itself (fact of the direction; centralization concern is interpretation)."
+    },
+    {
       "from": "Pension_Funds",
       "to": "PrivateCredit_Funds",
       "instrument": "other",
@@ -47630,10 +48270,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1955,
-    "num_edges": 3062,
+    "num_nodes": 1972,
+    "num_edges": 3106,
     "num_financial_edges": 274,
-    "num_structural_edges": 2788,
+    "num_structural_edges": 2832,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -47687,6 +48327,7 @@
       "APT29_CozyBear",
       "ASML",
       "AUKUS",
+      "Aadhaar",
       "Aave",
       "Adani_Group",
       "Africa_Corps",
@@ -47734,6 +48375,8 @@
       "Deep_Learning",
       "Department_of_War",
       "Dialog_Society",
+      "Digital_Public_Infrastructure",
+      "Doppelganger_Campaign",
       "DoubleAgent",
       "ECDSA",
       "Early_Warning",
@@ -47770,9 +48413,11 @@
       "ICE",
       "ImmigrationOS",
       "India",
+      "India_DPI",
       "Ingress",
       "Intel",
       "IonQ",
+      "Itch_io",
       "Japan",
       "Johns_Hopkins_University",
       "Jump_Crypto",
@@ -47805,6 +48450,7 @@
       "Nuclear_SMR",
       "OCC",
       "OSAT",
+      "Online_Speech_Regulation",
       "OpenAI",
       "Open_Standard",
       "Operation_Choke_Point_2",
@@ -47844,10 +48490,12 @@
       "Solana",
       "SolarWinds_Sunburst",
       "SpaceX",
+      "Spamouflage",
       "Stablecoins",
       "Stanford_University",
       "Stargate",
       "Stargate_UAE",
+      "State_Influence_Ops",
       "TESCREAL",
       "TMobile",
       "TSMC",
@@ -47864,52 +48512,55 @@
       "UBS",
       "UC_Berkeley",
       "UIUC",
+      "UPI",
       "USTC",
       "US_Australia_Minerals_Framework",
       "US_Banks",
       "US_Government",
       "US_Treasuries",
       "Ucore",
+      "United_Front",
       "Visa",
+      "WEF",
       "Weak_Nonce_Failure",
       "World_Liberty_Financial",
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 196,
+    "core_scc_all_edges_size": 207,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
+        "Microsoft",
         "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "AMD",
+        "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -47917,21 +48568,9 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -47946,9 +48585,14 @@
         "Microsoft"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -47956,6 +48600,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -48781,6 +49432,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Arcom": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Arctic": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -48950,6 +49608,13 @@
         "in_robust_core": false
       },
       "Australia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Australia_eSafety": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50692,6 +51357,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Clip_Studio_Assets": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cloudera": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -50826,6 +51498,13 @@
         "in_robust_core": false
       },
       "Colin_Huang": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Collective_Shout": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51749,6 +52428,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Digital_Public_Infrastructure": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Disaster_Compensation": {
         "total_usd": 1226000000,
         "circular_usd": 0,
@@ -51834,6 +52520,13 @@
         "in_robust_core": false
       },
       "DonorsTrust": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Doppelganger_Campaign": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52008,7 +52701,28 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "EU_Chat_Control": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "EU_Chips_Act": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EU_Commission": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "EU_Digital_Services_Act": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52862,6 +53576,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "France_SREN": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Franklin_Templeton": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53150,6 +53871,13 @@
         "in_robust_core": false
       },
       "Germany": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Germany_NetzDG": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54270,6 +54998,13 @@
         "in_robust_core": false
       },
       "Italy": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Itch_io": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56551,6 +57286,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Ofcom": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Offshore_Finance": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56608,6 +57350,13 @@
         "in_robust_core": false
       },
       "Onfido": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Online_Speech_Regulation": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -59127,7 +59876,21 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "State_Influence_Ops": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "State_R2R_Laws": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Steam_Valve": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60374,6 +61137,13 @@
         "in_robust_core": false
       },
       "UnitedHealth": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "United_Front": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61704,7 +62474,7 @@
       },
       {
         "node": "China",
-        "degree": 72,
+        "degree": 73,
         "neighbor_sectors": [
           "academia",
           "ai",
@@ -61731,7 +62501,7 @@
           "university"
         ],
         "n_neighbor_sectors": 23,
-        "source_files": 42,
+        "source_files": 43,
         "layers": [
           "financial",
           "structural"
@@ -62032,7 +62802,7 @@
       },
       {
         "node": "Digital_ID",
-        "degree": 28,
+        "degree": 31,
         "neighbor_sectors": [
           "crypto",
           "financial_infra",
@@ -62048,7 +62818,7 @@
           "university"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 12,
+        "source_files": 14,
         "layers": [
           "structural"
         ],
