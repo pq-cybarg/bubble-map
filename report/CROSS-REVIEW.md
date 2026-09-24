@@ -33,10 +33,10 @@
 
 ## Newest file `spec-openai-agent-swarm-2026.json` — related files by shared entities (verify cross-refs exist)
 - digitalid-orchestration-real-incentive.json: 2 shared entities
-- digitalid-worldcoin-eid-convergence.json: 2 shared entities
 - fin-gulf-sovereign-ai-capital.json: 2 shared entities
+- spec-legislative-trojan-horse-id.json: 2 shared entities
+- digitalid-worldcoin-eid-convergence.json: 2 shared entities
 - temporal-bridges.json: 2 shared entities
 - macro-cre-privatecredit.json: 2 shared entities
-- spec-legislative-trojan-horse-id.json: 2 shared entities
 - spec-market-plumbing-control.json: 1 shared entities
-- macro-jobs-inflation-fed.json: 1 shared entities
+- macro-stablecoin-treasury-rail.json: 1 shared entities

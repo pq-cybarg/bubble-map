@@ -1,3 +1,4 @@
+# local session/export dumps - never commit (OPSEC: contain full transcripts)
 .claude/
 .DS_Store
 **/.DS_Store
@@ -10,3 +11,6 @@ models/tla/states/
 /private/
 .venv/
 .idea/
+*this-session-is-being-continued*.txt
+*continueclaude*.txt
+/2026-*-continue*.txt
