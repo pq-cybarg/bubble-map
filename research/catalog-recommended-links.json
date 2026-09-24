@@ -47,7 +47,50 @@
         {"name": "Federal Register - 9th triennial 1201 exemptions (Oct 2024)", "url": "https://www.federalregister.gov/documents/2024/10/28/2024-24563/exemption-to-prohibition-on-circumvention-of-copyright-protection-systems-for-access-control", "notes": "Food-prep equipment + vehicle/ag data.", "related": ["spec-mcdonalds-kytch-taylor", "spec-farm-equipment-r2r"]},
         {"name": "FTC & states v Deere (15 Jan 2025)", "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-states-sue-deere-company-protect-farmers-unfair-corporate-tactics-high-repair-costs", "notes": "Farm-equipment monopoly suit.", "related": ["spec-farm-equipment-r2r"]},
         {"name": "EU Directive on the repair of goods (2024/1799)", "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en", "notes": "Applies 31 Jul 2026.", "related": ["spec-right-to-repair"]},
-        {"name": "Apple Newsroom - used genuine parts (11 Apr 2024)", "url": "https://www.apple.com/newsroom/2024/04/apple-to-expand-repair-options-with-support-for-used-genuine-parts/", "notes": "OEM concession on screens/batteries/cameras for iPhone 15+.", "related": ["spec-electronics-parts-pairing"]}
+        {"name": "Apple Newsroom - used genuine parts (11 Apr 2024)", "url": "https://www.apple.com/newsroom/2024/04/apple-to-expand-repair-options-with-support-for-used-genuine-parts/", "notes": "OEM concession on screens/batteries/cameras for iPhone 15+.", "related": ["spec-electronics-parts-pairing"]},
+        {"name": "H.R. 1566 - REPAIR Act (119th, introduced 25 Feb 2025)", "url": "https://www.congress.gov/bill/119th-congress/house-bill/1566", "notes": "Federal auto telematics/data access bill. Companion S. 1379. Scaled-back MOU-codifying language later moved in committee (H.R. 7389). NDAA strip is in the auto block.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "GovTrack - H.R. 1566 text", "url": "https://www.govtrack.us/congress/bills/119/hr1566/text", "notes": "Introduced text.", "related": ["spec-auto-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "eu-intl",
+      "title": "EU and international repair campaigns",
+      "items": [
+        {"name": "Right to Repair Europe (repair.eu)", "url": "https://repair.eu/", "notes": "Coalition (iFixit EU policy among members). Directive 2024/1799 in force 31 Jul 2026; transposition uneven.", "related": ["spec-right-to-repair"]},
+        {"name": "repair.eu - What's my Right to Repair?", "url": "https://repair.eu/whats-my-right-to-repair/", "notes": "Product-by-product EU coverage table (ecodesign, batteries, repair directive, scores).", "related": ["spec-right-to-repair"]},
+        {"name": "The Register - EU smartphone repair-info noncompliance (7 Sep 2026)", "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532", "notes": "R2R Europe: of 2334 smartphone EPREL records since Jun 2025 rules, ~18% list spare-parts/repair URLs; self-scores still A. Thomas Opsomer (iFixit EU).", "related": ["spec-electronics-parts-pairing"]},
+        {"name": "The Restart Project (UK)", "url": "https://therestartproject.org/", "notes": "UK community repair; iFixit points here for UK.", "related": ["spec-right-to-repair"]},
+        {"name": "Right2Repair South Africa", "url": "https://right2repair.org.za/", "notes": "SA campaign iFixit lists.", "related": ["spec-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "trackers-1201",
+      "title": "Trackers, 1201, EFF",
+      "items": [
+        {"name": "iFixit - Right to Repair progress (state/EU map)", "url": "https://www.ifixit.com/right-to-repair-progress", "notes": "Where laws actually passed. Parts-pairing after 1 Jan 2025 called out for OR/CO/WA-class rules.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - Secure Your Right to Repair (action)", "url": "https://www.ifixit.com/right-to-repair-action", "notes": "Campaign hub; pointers to repair.org / repair.eu / Restart.", "related": ["spec-right-to-repair"]},
+        {"name": "EFF - DMCA 1201", "url": "https://www.eff.org/issues/dmca", "notes": "Civil-liberties frame on anticircumvention. FULU's 1201 reform sits next to this, not inside EFF.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Copyright Office - 1201 rulemaking", "url": "https://www.copyright.gov/1201/", "notes": "Triennial exemption process (9th rule Oct 2024; 10th cycle).", "related": ["spec-right-to-repair", "spec-mcdonalds-kytch-taylor"]},
+        {"name": "404 Media - Samsung independent-repair contract", "url": "https://www.404media.co/samsung-requires-independent-repair-shops-to-share-customer-data-snitch-on-people-who-use-aftermarket-parts-leaked-contract-shows/", "notes": "G-SPN daily customer data + forced disassembly of aftermarket-part devices.", "related": ["spec-electronics-parts-pairing"]}
+      ]
+    },
+    {
+      "id": "oem-lobby",
+      "title": "OEM and lobby (the other side)",
+      "items": [
+        {"name": "Alliance for Automotive Innovation", "url": "https://www.autosinnovate.org/", "notes": "Plaintiff in the MA telematics suit. Industry security/preemption frame.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "NADA on REPAIR Act / H.R. 7389", "url": "https://www.nada.org/legislative/congress-should-retain-house-committee-passed-repair-act-language-hr-7389", "notes": "Dealer lobby: keep committee-narrowed MOU+FTC version; reject broader H.R. 1566. Both-sides document.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "CTA (Consumer Technology Association)", "url": "https://www.cta.tech/", "notes": "Historical electronics-R2R opposition (security/IP). Named in the anchor as R2R_Opposition cohort.", "related": ["spec-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "futo-products",
+      "title": "FUTO-adjacent software (source-available / grants)",
+      "items": [
+        {"name": "Grayjay", "url": "https://grayjay.app/", "notes": "FUTO in-house video client. Not a repair tool; sovereignty-of-the-feed product.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Immich", "url": "https://immich.app/", "notes": "Self-hosted photos; FUTO multi-year funding (Rossmann introduced the deal on stream).", "related": ["spec-rossmann-futo-ownership", "spec-local-uncensored-ai"]},
+        {"name": "Rossmann on YouTube", "url": "https://www.youtube.com/@rossmanngroup", "notes": "~2.6M; diagnostics + advocacy. Shop vlogs vs casework split on the CRW video directory.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Wikipedia - Louis Rossmann", "url": "https://en.wikipedia.org/wiki/Louis_Rossmann", "notes": "FUTO dates, FULU, CRW, RPG Action Fund.", "related": ["spec-rossmann-futo-ownership"]}
       ]
     },
     {

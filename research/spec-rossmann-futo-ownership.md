@@ -74,6 +74,8 @@ Documented in-corpus uses: Bambu Lab Authorization Control System ([[spec-open-s
 
 The digital-ID "security" frame and the OEM "security" frame are **the same sentence in two industries**. The corpus does not claim a single cabal; it claims the **pattern** is documented.
 
+Trackers and the EU layer (for the Links tab): **repair.eu** is the European coalition (iFixit EU policy among members). Directive **2024/1799** entered into force **31 Jul 2026**; transposition is uneven. From **Jun 2025** smartphones/tablets need a repairability score + published repair info; Right to Repair Europe found most EPREL smartphone records still omit spare-parts/manual URLs (The Register, 7 Sep 2026). US map: [iFixit progress](https://www.ifixit.com/right-to-repair-progress). 1201 process: [copyright.gov/1201](https://www.copyright.gov/1201/). Federal auto bill: [H.R. 1566](https://www.congress.gov/bill/119th-congress/house-bill/1566) (REPAIR Act); dealer lobby wants the committee-narrowed MOU version. All of those URLs sit on [[catalog-recommended-links]].
+
 ## 7. Both sides (neither adopted)
 
 - **(A) Manufacturers / 1201 defenders.** Cryptographic pairing protects biometrics and deters theft; authorized repair is quality and safety; software is licensed; bounty unlocks can ship exploits; a 50-state patchwork is unworkable.
