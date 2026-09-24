@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 105 files
-- **Google** — 67 files
+- **Meta** — 106 files
+- **Google** — 68 files
 - **Chainlink** — 66 files
-- **OpenAI** — 54 files
-- **Microsoft** — 46 files
+- **OpenAI** — 55 files
+- **Microsoft** — 47 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
 - **NVIDIA** — 35 files
-- **Anthropic** — 34 files
+- **Anthropic** — 35 files
 - **Circle** — 28 files
 - **a16z** — 27 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-wef-imf-influence.json` — related files by shared entities (verify cross-refs exist)
-- spec-china-party-state.json: 1 shared entities
-- altcoin-lens.json: 1 shared entities
-- catalog-nonprofits-foundations.json: 1 shared entities
-- catalog-quiet-money.json: 1 shared entities
-- spec-ai-oss-redistributor-chronology.json: 1 shared entities
-- spec-crypto-banking-debanking.json: 1 shared entities
-- fin-gulf-sovereign-ai-capital.json: 1 shared entities
-- geopolitics-allied-intel-nodes.json: 1 shared entities
+## Newest file `spec-legislative-trojan-horse-id.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 5 shared entities
+- fin-google-amazon-anthropic-meta.json: 5 shared entities
+- spec-exchanges-asia.json: 5 shared entities
+- spec-china-ai-stack-censorship.json: 5 shared entities
+- fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- spec-cross-system-contagion.json: 5 shared entities
+- catalog-billionaires.json: 5 shared entities
+- sec-filings.json: 5 shared entities

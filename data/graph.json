@@ -76,6 +76,10 @@
       "sector": "spv",
       "has_exogenous_revenue": false
     },
+    "AI_Kill_Switch_Act": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "AI_Native_OS": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -2638,6 +2642,10 @@
     },
     "FUTO": {
       "sector": "ai_infra",
+      "has_exogenous_revenue": false
+    },
+    "Facebook_Verified": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Facial_Recognition": {
@@ -7634,6 +7642,10 @@
     },
     "William_L_Hill": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Windows_Age_API": {
+      "sector": "surveillance",
       "has_exogenous_revenue": false
     },
     "Winklevoss_Twins": {
@@ -21292,6 +21304,214 @@
       "cancelable": false,
       "source_file": "catalog-quiet-money.json",
       "note": "Two Sigma is a pure data/ML-driven fund - part of the quiet quant-finance cluster (RenTech, Two Sigma, Citadel, DE Shaw) that pioneered industrial-scale data + AI before Big Tech; wires quiet money to the AI thread (fact of category)."
+    },
+    {
+      "from": "Apple",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json,digitalid-os-hardware-stack.json",
+      "note": "Declared Age Range API (iOS 26, Sep 2025): age bands, not birthdate. From iOS 26.2 declaration enum includes governmentIDChecked / guardianGovernmentIDChecked / paymentChecked. Verify with Wallet already returns Age Over N + ID photo from a government-issued credential. In regulated regions sharing is not optional (fact, Apple docs)."
+    },
+    {
+      "from": "Google",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json,digitalid-os-hardware-stack.json",
+      "note": "Play Age Signals API: 0-12/13-15/16-17/18+ plus VERIFICATION_REQUIRED in mandatory jurisdictions. Brazil 17 Mar 2026; Texas accounts after 28 May 2026; global expansion announced 29 Jul 2026 (fact, Android docs + Developers Blog)."
+    },
+    {
+      "from": "Meta",
+      "to": "Facebook_Verified",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Facebook Verified launched 24 Jul 2026: free badge; short video selfie matched to existing profile photos; 18+; Marketplace/Dating/Groups first; phased global. Distinct from paid Meta Verified. Optional at launch (fact, Meta newsroom)."
+    },
+    {
+      "from": "Facebook_Verified",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Selfie-to-profile biometric match is an identity layer on the largest social graph, sold as anti-AI-impersonation / Marketplace safety. Optional now; the capability is the same 'identify the person first' object as OS age APIs (fact of product; compulsion = not asserted)."
+    },
+    {
+      "from": "Microsoft",
+      "to": "Windows_Age_API",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Windows Age API (GetUserAgeRangeAsync / GetAgeVerificationStatusAsync) documented Sep 2026 for Windows 11; not live at runtime as of the August 2026 SDK. Requires a signed-in Microsoft account. Account age assurance already live in AU/BR/SG/UK via Yoti/Verifymy facial estimation, document upload, or government login (fact)."
+    },
+    {
+      "from": "Windows_Age_API",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Microsoft joining the Apple/Google OS-level age-band interface. Unverified accounts lose mature content in live markets. Completes the phone+PC identity chokepoint Walsh named (fact of docs; runtime enablement still pending)."
+    },
+    {
+      "from": "Age_Assurance_Issuers",
+      "to": "Microsoft",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Microsoft lists Yoti and Verifymy as age-assurance partners for facial estimation and document checks on Microsoft accounts (fact, Microsoft FAQ)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "ChatGPT age prediction plus government-ID upload to gate 18+ content. Separate from World/Tools for Humanity (fact, OpenAI Help)."
+    },
+    {
+      "from": "Anthropic",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Government-ID upload required for some flagged Claude accounts from ~Apr 2026; company said the policy predated the Fable 5 launch (fact of company statement / contemporaneous reporting)."
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "Anthropic",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "12 Jun 2026 17:21 ET 'is informed' letter: suspend Fable 5 and Mythos 5 access by any foreign national worldwide, including Anthropic employees (Export Control Reform Act). Anthropic pulled both models for everyone within hours. Down 19 days; lifted 30 Jun 2026 after Anthropic agreed to detect risks, cooperate on standards, report malicious activity. Demonstrated government shutdown of a frontier model via export control, not an AI-specific statute (fact)."
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "OpenAI",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Same week as the Anthropic lift: OpenAI limited GPT-5.6 Sol to a small administration-approved cohort after a USG cybersecurity review (fact of company statement / contemporaneous reporting)."
+    },
+    {
+      "from": "AI_Kill_Switch_Act",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Lieu/Moran AI Kill Switch Act introduced 23 Jul 2026: would require covered labs to maintain a technical shutdown capability and give DHS order authority. Not enacted. California EO N-9-26 (18 Sep 2026) ordered a shutdown-mechanism design by 16 Nov 2026. Walsh's 'US government holds a kill switch' is true as the 19-day BIS demonstration; it is not a standing statute over every user (fact of bill + EO; statute = not enacted)."
+    },
+    {
+      "from": "Device_Age_Attestation",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "Walsh's payload sentence: identify the person first, then gate speech, association, and money. OS/account age APIs + government-ID enums are the identity half of that stack. Coordinating intent across vendors is not asserted (fact of APIs; interpretation of purpose labeled in the .md)."
+    },
+    {
+      "from": "Device_Age_Attestation",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "The identity-API payload under the statute layer in spec-western-speech-regulation (#253): Apple governmentIDChecked, Play Age Signals, Facebook Verified, Windows Age API are how UK OSA / AU eSafety / EU CSAR age duties get enforced at the device and account. Reverse edge already exists (speech-law -> device). Stack = fact; cabal = not asserted."
+    },
+    {
+      "from": "EU_Chat_Control",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "CSAR lever switch: mandatory client-side scanning dropped; mandatory age verification added; 9 Jul 2026 EP vote failed to kill the voluntary-scan derogation (stands to 2028). Walsh's Chat Control 1.0/2.0 is this scan-to-identify move (fact of the texts; '2.0' as a secret second regulation = not asserted)."
+    },
+    {
+      "from": "Clip_Studio_Assets",
+      "to": "Device_Age_Attestation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-legislative-trojan-horse-id.json",
+      "note": "CELSYS 23 Sep 2026: Clip Studio Assets building age restrictions, regional controls, and user preferences after a privatization wave. Stated driver is mixed-age/multi-region moderation, not processors. Same identify-then-gate object as the OS/account APIs (fact of announcement; payment-processor join not asserted - see spec-creative-platform-purge)."
     },
     {
       "from": "Sackler_Family",
@@ -43030,32 +43250,6 @@
       "note": ""
     },
     {
-      "from": "Google",
-      "to": "Device_Age_Attestation",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "Play Integrity API (hardware-backed signals required since May 2025) + Play Age Signals API + Credential Manager/mDL + W3C Digital Credentials API in Chrome 141 - Android side of the age-attestation chokepoint",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "digitalid-os-hardware-stack.json",
-      "note": ""
-    },
-    {
-      "from": "Apple",
-      "to": "Device_Age_Attestation",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "App Attest/DeviceCheck via Secure Enclave + Declared Age Range API (iOS 26) + App Store age-rating bands - Apple side of the age-attestation chokepoint",
-      "amount_usd": null,
-      "status": "open",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "digitalid-os-hardware-stack.json",
-      "note": ""
-    },
-    {
       "from": "EUDI_Wallet",
       "to": "Device_Age_Attestation",
       "instrument": "other",
@@ -48270,10 +48464,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1972,
-    "num_edges": 3106,
+    "num_nodes": 1975,
+    "num_edges": 3120,
     "num_financial_edges": 274,
-    "num_structural_edges": 2832,
+    "num_structural_edges": 2846,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -48320,6 +48514,7 @@
     "structural_edges_add_no_cycle": false,
     "core_scc_all_edges_incl_structural": [
       "AI_Datacenters",
+      "AI_Native_OS",
       "AI_Safety_Regulation",
       "AMD",
       "APT1",
@@ -48374,6 +48569,8 @@
       "Datacenter_Backlash",
       "Deep_Learning",
       "Department_of_War",
+      "Device_Age_Attestation",
+      "Device_Ownership_Erosion",
       "Dialog_Society",
       "Digital_Public_Infrastructure",
       "Doppelganger_Campaign",
@@ -48391,6 +48588,7 @@
       "FDIC",
       "FERC",
       "FPL",
+      "Facebook_Verified",
       "Fairshake",
       "Family_Offices",
       "Fed_Funds_Rate",
@@ -48523,34 +48721,23 @@
       "Visa",
       "WEF",
       "Weak_Nonce_Failure",
+      "Windows_Age_API",
       "World_Liberty_Financial",
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 207,
+    "core_scc_all_edges_size": 212,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -48558,14 +48745,16 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Anthropic",
@@ -48573,16 +48762,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -48597,16 +48784,28 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -48748,6 +48947,13 @@
       },
       "AI_Infrastructure_Partnership": {
         "total_usd": 40000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Kill_Switch_Act": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -53234,6 +53440,13 @@
         "in_robust_core": false
       },
       "FUTO": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Facebook_Verified": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61983,6 +62196,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Windows_Age_API": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Winklevoss_Twins": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -62532,7 +62752,7 @@
           "university"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 23,
+        "source_files": 24,
         "layers": [
           "financial",
           "structural"
@@ -62541,7 +62761,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 45,
+        "degree": 47,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -62561,6 +62781,61 @@
           "university"
         ],
         "n_neighbor_sectors": 16,
+        "source_files": 23,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Meta",
+        "degree": 26,
+        "neighbor_sectors": [
+          "ai",
+          "ai_data",
+          "ai_infra",
+          "capital",
+          "chip_vendor",
+          "commodity",
+          "energy",
+          "other",
+          "person",
+          "philanthropy",
+          "political",
+          "regulator",
+          "sink",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 16,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Microsoft",
+        "degree": 31,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "commodity",
+          "financial_infra",
+          "identity",
+          "neocloud",
+          "other",
+          "person",
+          "pqc_quantum",
+          "spv",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 13,
         "source_files": 22,
         "layers": [
           "financial",
@@ -62588,61 +62863,6 @@
         ],
         "n_neighbor_sectors": 13,
         "source_files": 22,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Meta",
-        "degree": 25,
-        "neighbor_sectors": [
-          "ai",
-          "ai_data",
-          "ai_infra",
-          "capital",
-          "chip_vendor",
-          "commodity",
-          "energy",
-          "other",
-          "person",
-          "philanthropy",
-          "political",
-          "regulator",
-          "sink",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 16,
-        "source_files": 15,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Microsoft",
-        "degree": 29,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "commodity",
-          "financial_infra",
-          "identity",
-          "neocloud",
-          "other",
-          "person",
-          "pqc_quantum",
-          "spv",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -62678,6 +62898,33 @@
         "both_layers": true
       },
       {
+        "node": "Anthropic",
+        "degree": 30,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "bigtech_asia",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person",
+          "space_real_economy",
+          "state",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 14,
+        "source_files": 16,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "AI_Datacenters",
         "degree": 28,
         "neighbor_sectors": [
@@ -62697,32 +62944,6 @@
         ],
         "n_neighbor_sectors": 13,
         "source_files": 17,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Anthropic",
-        "degree": 27,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person",
-          "space_real_economy",
-          "state",
-          "university"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 15,
         "layers": [
           "financial",
           "structural"
@@ -62802,7 +63023,7 @@
       },
       {
         "node": "Digital_ID",
-        "degree": 31,
+        "degree": 32,
         "neighbor_sectors": [
           "crypto",
           "financial_infra",
@@ -62818,7 +63039,7 @@
           "university"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 14,
+        "source_files": 15,
         "layers": [
           "structural"
         ],

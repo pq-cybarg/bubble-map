@@ -1,7 +1,7 @@
 # US CRE Distress, the NDFI/Private-Credit Boom, and the AI-Datacenter Financing Bridge
 
-**Analyst note — credit markets desk. As of 2026-06-05.**
-All figures dated. FRED series pulled live via `fredgraph.csv` API; narrative figures sourced to Fed/FDIC/OFR/IMF/FSB/MBA/Trepp/MSCI/Green Street and FT/Bloomberg-class reporting. URLs inline.
+**Analyst note — credit markets desk. As of 2026-06-05; CMBS/office print updated 2026-09-23.**
+All figures dated. FRED series pulled live via `fredgraph.csv` API; narrative figures sourced to Fed/FDIC/OFR/IMF/FSB/MBA/Trepp/MSCI/Green Street and FT/Bloomberg-class reporting. URLs inline. Lead (not a source): Kurt S. Altrichter, 22 Sep 2026 ([status/2102434762849661170](https://x.com/kurtsaltrichter/status/2102434762849661170)).
 
 ---
 
@@ -9,7 +9,7 @@ All figures dated. FRED series pulled live via `fredgraph.csv` API; narrative fi
 
 Three trends have fused into a single, under-appreciated credit channel:
 
-1. **CRE distress** — a multi-year, office-led repricing (peak-to-trough value declines of ~37% (Green Street, office) to ~52% (MSCI CBD office)), with a **$2T+ maturity wall** concentrated 2025–2027 and **record office CMBS delinquency (~11.8%)**.
+1. **CRE distress** — a multi-year, office-led repricing (peak-to-trough value declines of ~37% (Green Street, office) to ~52% (MSCI CBD office)), with a **$2T+ maturity wall** concentrated 2025–2027 and **office CMBS delinquency at a Trepp all-time high of 12.34% (Jan 2026), 12.00% in Aug 2026** — above the GFC office peak of **10.7%** (Dec 2012, Trepp via Wolf Street). The 2008 calendar-year print was not the peak; distress peaked years later.
 2. **The NDFI explosion** — US bank lending to **nondepository financial institutions** (the H.8 "loans to NDFIs" line) has gone from ~$324B (2015) to **~$1.97T (Apr 2026)** — banks' largest and fastest-growing loan category. This is the *hidden* bank exposure to private credit, mortgage REITs, BDCs and increasingly datacenter SPVs.
 3. **AI-datacenter private credit** — private-credit funds now originate most large datacenter debt (Meta/Blue Owl Hyperion ~$27–30B; Anthropic ~$36B in progress), with **Morgan Stanley projecting ~$800B more datacenter private-credit financing over the next two years**.
 
@@ -30,8 +30,12 @@ The bridge: **bank balance sheets → NDFI loans → private-credit funds/BDCs �
 - **Green Street CPPI:** office values **−37% from spring-2022 peak to Nov-2024**; core all-property CPPI **~−24%** from peak. Source: [Green Street CPPI](https://www.greenstreet.com/resources/pricing-index/).
 - **MSCI/RCA CPPI:** **CBD office −52%** from peak; older/subprime assets worse. Source: [MSCI RCA CPPI US](https://www.msci.com/research-and-insights/paper/rca-commercial-property-price-indexes-rca-cppi). This brackets the requested ~−30% to −50% range (office sits at the deep end).
 
-### CMBS delinquency (office trend)
-- **Office CMBS delinquency hit an all-time record 11.76% in Oct-2025** (up 63bps m/m), eclipsing prior 2025 records of 11.08% (Jun) and 11.66% (Aug). Overall Trepp CMBS delinquency **7.46%** (Oct-2025). >$1.7B of office loans newly delinquent in October alone. Source: [Trepp via CRE Daily](https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/), [CommercialSearch](https://www.commercialsearch.com/news/cmbs-delinquency-rates/).
+### CMBS delinquency (office trend) — Sep 2026 update
+- **Oct-2025:** office CMBS **11.76%**, then the record (>$1.7B newly delinquent that month). Overall Trepp CMBS **7.46%**. Source: [Trepp via CRE Daily](https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/).
+- **Jan-2026:** office CMBS **12.34%**, Trepp's **all-time high** (+103 bps m/m; previous high 11.76% Oct-2025). Overall **7.47%**. Source: [TreppTalk, 2 Feb 2026](https://www.trepp.com/trepptalk/cmbs-delinquency-rate-increased-to-open-2026).
+- **Aug-2026:** office CMBS **12.00%** (+9 bps m/m). Overall Trepp CMBS **7.85%** (-1 bp; large Times Square cure offset new Chicago/LA/DC office delinquencies). Special servicing **11.42%**, highest since Feb-2013. Newly delinquent balance was **81% non-performing matured balloons** — maturity, not occupancy, is the current trigger. Source: [TreppTalk, 1 Sep 2026](https://www.trepp.com/trepptalk/overall-cmbs-delinquency-rate-decreased-in-august-2026); [CRE Daily, 3 Sep 2026](https://www.credaily.com/briefs/cmbs-delinquency-holds-at-7-85-as-office-risk-rises/).
+- **GFC comparison (do not say "2008"):** Trepp office CMBS peaked at **10.7% in Dec-2012**, years after Lehman. Overall CMBS GFC peak **10.34%** (mid-2012). Nov-2024 office at 10.4% was already "a hair below" that GFC office peak; 2025-26 prints are **through** it. Source: [Wolf Street, 30 Nov 2024](https://wolfstreet.com/wp-json/wp/v2/posts/100541) citing Trepp; Trepp GFC-vs-COVID note (overall 10.34%).
+- **Where the loss lands:** Bloomberg (via CRE Daily, 23 Sep 2026) — US office CMBS delinquency **12% in August**; **~$40B of ~$64B** office CMBS maturing 2026-27 is delinquent, defaulted, or watchlisted; Chicago Aon Center 2015 purchase $712M, May-2026 appraisal **$195M**. Altrichter's 22 Sep 2026 post ("above 12%, past the ~10% 2008 peak; downtown values ~-50% since 2022; risk in regional banks and credit funds, not a call on the whole market") matches the Trepp/MSCI/regional-CRE map once "2008" is corrected to the **2012 GFC peak**. Bondholders and CMBS special servicers take the first loss; the bank book (multifamily-heavy, 1.56% CRE delinquency) still lags. Source: [CRE Daily, 23 Sep 2026](https://www.credaily.com/briefs/office-distress-shifts-from-vacancies-to-investor-losses/).
 
 ### Bank-held CRE and delinquency (FRED, live pull)
 - **CRE loans, all commercial banks (CREACBM027NBOG): ~$3,085.6B (Apr-2026).** Source: [FRED CREACBM027NBOG](https://fred.stlouisfed.org/series/CREACBM027NBOG).
@@ -111,7 +115,7 @@ The dominant 2025-26 pattern is **deconsolidation** — hyperscalers keep mega-b
 
 ## What is solid vs. unverifiable
 
-**Solid (primary / live data):** H.8 NDFI loans ~$1.97T (FRED, Apr-2026); bank CRE ~$3.09T and CRE delinquency 1.56% (FRED); MBA/S&P maturity-wall volumes; Trepp office CMBS 11.76% record; Green Street/MSCI value declines; Fed FEDS Note $123B bank→PC; Meta/Blue Owl $27B (company press release).
+**Solid (primary / live data):** H.8 NDFI loans ~$1.97T (FRED, Apr-2026); bank CRE ~$3.09T and CRE delinquency 1.56% (FRED); MBA/S&P maturity-wall volumes; Trepp office CMBS **12.34% Jan-2026 all-time high / 12.00% Aug-2026** (GFC office peak 10.7% Dec-2012); Green Street/MSCI value declines; Fed FEDS Note $123B bank->PC; Meta/Blue Owl $27B (company press release).
 
 **Soft / estimate / forecast (treat with caution):**
 - The **$800B datacenter PC pipeline** is a Morgan Stanley *projection*, not realized; ranges $800B–$900B depending on definition.

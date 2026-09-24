@@ -15,10 +15,11 @@
 ## 3. Android — attestation, on-device mDL, OS age signals
 - **Play Integrity** (replaced SafetyNet; migration ended 20 May 2025) verifies a genuine app on a **certified** device; **hardware-backed signals required from May 2025**, hard for rooted/custom-ROM devices to pass.
 - **Credential Manager + ISO 18013-5 mDL** on device; **Keystore attestation** reports Software / TEE / **StrongBox** (dedicated secure element). The **W3C Digital Credentials API shipped in Chrome 141 (Sept 2025)** — websites can request an OS-issued credential for identity *and age*.
-- **Play Age Signals API** gives developers users' age range/verification/supervision status; rollout began **Brazil 17 Mar 2026**, Utah May 2026, Louisiana Jul 2026. OS/store-level age determination for all downstream apps.
+- **Play Age Signals API** gives developers users' age range/verification/supervision status; rollout began **Brazil 17 Mar 2026**, Texas accounts after 28 May 2026; **global expansion announced 29 Jul 2026** (Australia/Canada mid-Aug, worldwide later 2026). OS/store-level age determination for all downstream apps. Microsoft's Windows Age API (docs Sep 2026, runtime not yet live) and Meta's Facebook Verified selfie badge (24 Jul 2026) are the PC/social-graph legs - [[spec-legislative-trojan-horse-id]].
 
 ## 4. Apple — OS-level age sharing on Secure-Enclave attestation
 - **Declared Age Range API** (WWDC 2025 / **iOS 26**): apps get an age bracket (under-13 / 13-15 / 16+) without the birth date (which "stays with Apple"); a **Feb-2026** update returns the assurance method and whether a regulation applies (Brazil, Australia, Singapore, Utah, Louisiana).
+- **Sep 2026 update:** from iOS 26.2 the declaration enum includes `governmentIDChecked` / `guardianGovernmentIDChecked` / `paymentChecked`. Verify with Wallet already returns Age Over N + ID photo from a government-issued credential. In regulated regions sharing is not optional. See [[spec-legislative-trojan-horse-id]].
 - **App Attest / DeviceCheck** generates a key in the **Secure Enclave**; Apple attests it came from a genuine device. App Store age-rating bands overhauled 2025 with per-country requirements.
 
 ## 5. App-store mandates + the duopoly chokepoint

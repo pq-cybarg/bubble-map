@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "title": "Legislative Trojan horses: child-safety bills as the on-ramp, identity APIs as the payload (Walsh thread 22 Sep 2026 as lead)",
+    "generated": "2026-09-23",
+    "frame": "Paul Walsh's 22 Sep 2026 thread lists child-safety bills and identity-verification APIs as a coordinated Trojan horse. Walsh is a party. Independently: Apple Declared Age Range (governmentIDChecked), Google Play Age Signals (global 2026), Meta Facebook Verified selfie (24 Jul 2026), Microsoft account age assurance + Windows Age API (docs Sep 2026, runtime not live). Commerce BIS 12 Jun 2026 letter forced Anthropic to pull Fable 5/Mythos 5 for 19 days (export-control shutdown). Stack = fact. Single-cabal pre-build = Walsh interpretation. Overlay; excluded from proofs.",
+    "relevance": "Adds the 2026 vendor SKU wave and the demonstrated US government model-shutdown to the existing digital-ID / age-verification corpus. Lead URL is not a source.",
+    "sources": "Apple developer docs (Declared Age Range, Verify with Wallet); Google Play Age Signals docs + Android Developers Blog 29 Jul 2026; Meta 24 Jul 2026 Facebook Verified; Microsoft account age-assurance FAQ; Lawfare 15 Jun 2026; CRS IF13217; Australia OSA Amendment 2024; Ofcom HEAA; EU CSAR Council 26 Nov 2025 + EP 9 Jul 2026 derogation vote.",
+    "lead_not_source": "https://x.com/Paul__Walsh/status/2102365846408401247"
+  },
+  "nodes": [
+    {"id": "Device_Age_Attestation", "sector": "surveillance"},
+    {"id": "Age_Assurance_Issuers", "sector": "surveillance"},
+    {"id": "Facebook_Verified", "sector": "surveillance"},
+    {"id": "Windows_Age_API", "sector": "surveillance"},
+    {"id": "AI_Kill_Switch_Act", "sector": "state"},
+    {"id": "Commerce_BIS", "sector": "regulator"}
+  ],
+  "edges": [
+    {
+      "from": "Apple",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "Declared Age Range API (iOS 26, Sep 2025): age bands, not birthdate. From iOS 26.2 declaration enum includes governmentIDChecked / guardianGovernmentIDChecked / paymentChecked. Verify with Wallet already returns Age Over N + ID photo from a government-issued credential. In regulated regions sharing is not optional (fact, Apple docs).",
+      "source": "https://developer.apple.com/documentation/declaredagerange/requesting-people-share-their-age-range-with-your-app"
+    },
+    {
+      "from": "Google",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "Play Age Signals API: 0-12/13-15/16-17/18+ plus VERIFICATION_REQUIRED in mandatory jurisdictions. Brazil 17 Mar 2026; Texas accounts after 28 May 2026; global expansion announced 29 Jul 2026 (fact, Android docs + Developers Blog).",
+      "source": "https://developer.android.com/google/play/age-signals/overview"
+    },
+    {
+      "from": "Meta",
+      "to": "Facebook_Verified",
+      "instrument": "relationship",
+      "notes": "Facebook Verified launched 24 Jul 2026: free badge; short video selfie matched to existing profile photos; 18+; Marketplace/Dating/Groups first; phased global. Distinct from paid Meta Verified. Optional at launch (fact, Meta newsroom).",
+      "source": "https://about.fb.com/news/2026/07/introducing-facebook-verified/"
+    },
+    {
+      "from": "Facebook_Verified",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "Selfie-to-profile biometric match is an identity layer on the largest social graph, sold as anti-AI-impersonation / Marketplace safety. Optional now; the capability is the same 'identify the person first' object as OS age APIs (fact of product; compulsion = not asserted).",
+      "source": "https://about.fb.com/news/2026/07/introducing-facebook-verified/"
+    },
+    {
+      "from": "Microsoft",
+      "to": "Windows_Age_API",
+      "instrument": "relationship",
+      "notes": "Windows Age API (GetUserAgeRangeAsync / GetAgeVerificationStatusAsync) documented Sep 2026 for Windows 11; not live at runtime as of the August 2026 SDK. Requires a signed-in Microsoft account. Account age assurance already live in AU/BR/SG/UK via Yoti/Verifymy facial estimation, document upload, or government login (fact).",
+      "source": "https://support.microsoft.com/en-us/accounts-billing/manage/about-microsoft-account-age-verification"
+    },
+    {
+      "from": "Windows_Age_API",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "Microsoft joining the Apple/Google OS-level age-band interface. Unverified accounts lose mature content in live markets. Completes the phone+PC identity chokepoint Walsh named (fact of docs; runtime enablement still pending).",
+      "source": "https://www.biometricupdate.com/202609/microsoft-launches-age-api-following-os-level-declared-age-range-model"
+    },
+    {
+      "from": "Age_Assurance_Issuers",
+      "to": "Microsoft",
+      "instrument": "relationship",
+      "notes": "Microsoft lists Yoti and Verifymy as age-assurance partners for facial estimation and document checks on Microsoft accounts (fact, Microsoft FAQ).",
+      "source": "https://support.microsoft.com/en-us/accounts-billing/manage/about-microsoft-account-age-verification"
+    },
+    {
+      "from": "OpenAI",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "ChatGPT age prediction plus government-ID upload to gate 18+ content. Separate from World/Tools for Humanity (fact, OpenAI Help).",
+      "source": "https://help.openai.com/en/articles/12652064-age-prediction-in-chatgpt"
+    },
+    {
+      "from": "Anthropic",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "Government-ID upload required for some flagged Claude accounts from ~Apr 2026; company said the policy predated the Fable 5 launch (fact of company statement / contemporaneous reporting).",
+      "source": "https://cryptobriefing.com/anthropic-fable-5-identity-verification-backlash/"
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "Anthropic",
+      "instrument": "enforcement",
+      "notes": "12 Jun 2026 17:21 ET 'is informed' letter: suspend Fable 5 and Mythos 5 access by any foreign national worldwide, including Anthropic employees (Export Control Reform Act). Anthropic pulled both models for everyone within hours. Down 19 days; lifted 30 Jun 2026 after Anthropic agreed to detect risks, cooperate on standards, report malicious activity. Demonstrated government shutdown of a frontier model via export control, not an AI-specific statute (fact).",
+      "source": "https://www.lawfaremedia.org/article/a-kill-switch-for-frontier-ai"
+    },
+    {
+      "from": "Commerce_BIS",
+      "to": "OpenAI",
+      "instrument": "enforcement",
+      "notes": "Same week as the Anthropic lift: OpenAI limited GPT-5.6 Sol to a small administration-approved cohort after a USG cybersecurity review (fact of company statement / contemporaneous reporting).",
+      "source": "https://www.congress.gov/crs-product/IF13217"
+    },
+    {
+      "from": "AI_Kill_Switch_Act",
+      "to": "Anthropic",
+      "instrument": "relationship",
+      "notes": "Lieu/Moran AI Kill Switch Act introduced 23 Jul 2026: would require covered labs to maintain a technical shutdown capability and give DHS order authority. Not enacted. California EO N-9-26 (18 Sep 2026) ordered a shutdown-mechanism design by 16 Nov 2026. Walsh's 'US government holds a kill switch' is true as the 19-day BIS demonstration; it is not a standing statute over every user (fact of bill + EO; statute = not enacted).",
+      "source": "https://www.techtimes.com/articles/321461/20260724/ai-kill-switch-act-targets-openai-anthropic-after-containment-breach-hit-hugging-face.htm"
+    },
+    {
+      "from": "Device_Age_Attestation",
+      "to": "Digital_ID",
+      "instrument": "relationship",
+      "notes": "Walsh's payload sentence: identify the person first, then gate speech, association, and money. OS/account age APIs + government-ID enums are the identity half of that stack. Coordinating intent across vendors is not asserted (fact of APIs; interpretation of purpose labeled in the .md).",
+      "source": "spec-legislative-trojan-horse-id; digitalid-os-hardware-stack"
+    },
+    {
+      "from": "Device_Age_Attestation",
+      "to": "Online_Speech_Regulation",
+      "instrument": "relationship",
+      "notes": "The identity-API payload under the statute layer in spec-western-speech-regulation (#253): Apple governmentIDChecked, Play Age Signals, Facebook Verified, Windows Age API are how UK OSA / AU eSafety / EU CSAR age duties get enforced at the device and account. Reverse edge already exists (speech-law -> device). Stack = fact; cabal = not asserted.",
+      "source": "spec-legislative-trojan-horse-id; spec-western-speech-regulation"
+    },
+    {
+      "from": "EU_Chat_Control",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "CSAR lever switch: mandatory client-side scanning dropped; mandatory age verification added; 9 Jul 2026 EP vote failed to kill the voluntary-scan derogation (stands to 2028). Walsh's Chat Control 1.0/2.0 is this scan-to-identify move (fact of the texts; '2.0' as a secret second regulation = not asserted).",
+      "source": "spec-western-speech-regulation; spec-legislative-trojan-horse-id"
+    },
+    {
+      "from": "Clip_Studio_Assets",
+      "to": "Device_Age_Attestation",
+      "instrument": "relationship",
+      "notes": "CELSYS 23 Sep 2026: Clip Studio Assets building age restrictions, regional controls, and user preferences after a privatization wave. Stated driver is mixed-age/multi-region moderation, not processors. Same identify-then-gate object as the OS/account APIs (fact of announcement; payment-processor join not asserted - see spec-creative-platform-purge).",
+      "source": "spec-creative-platform-purge"
+    }
+  ]
+}
