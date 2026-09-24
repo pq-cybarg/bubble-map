@@ -24,7 +24,7 @@ RULES=[
  ("energy",     ["power-grid","grid-bottleneck","ai-power","-energy","energy-","nuclear","smr","haleu","uranium","reactor"]),
  ("compute",    ["chip","semiconductor","euv","tsmc","asml","hbm","silicon","lithography","fab","foundry","brocade","broadcom","commscope","networking","automaker","automotive","ev ecosystem"]),
  ("space",      ["cable","subsea","satellite","telecom","space-layer","starlink","spectrum","space-imaging","earth-observation","planet-space","geospatial","reconnaissance","launch"]),
- ("threat",     ["lazarus","typhoon","-apt-","attribution","unc-nk","nk-","malware","ransomware","intrusion","cyber-espionage","spyware","finspy","finfisher","citizen-lab","hacktivist","iloveyou","shai-hulud","shinyhunters"]),
+ ("threat",     ["lazarus","typhoon","-apt-","attribution","unc-nk","nk-","malware","ransomware","intrusion","cyber-espionage","spyware","finspy","finfisher","citizen-lab","hacktivist","iloveyou","shai-hulud","shinyhunters","agent-swarm","exploitgym","artifactory","hugging-face"]),
  ("scams",      ["scam-fara","scam","pig-butchering","tornado","samourai","mixer","laundering","illicit"]),
  ("defense",    ["defense","defence","geopolitic","taiwan","russia","iran","-war","arctic","contested-resource","military","drone","corridor","belt and road","string of pearls","opec","alignment matrix","bloc member","americas","sahel","venezuela","argentina","antarctica","singapore","greenland"]),
  ("insurance",  ["insurance","healthcare","health-care","pbm","disability","medicare","medicaid","denial","health","asbestos","talc","mesothelioma","mass-tort","mass tort","roundup","glyphosate","pesticide","tobacco","camp lejeune","boeing","737","flint","east palestine","victim compensation","disaster"]),

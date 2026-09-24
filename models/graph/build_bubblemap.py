@@ -254,7 +254,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Municipal_Debt":"Municipal debt","Federal_Transfers":"Federal transfers","US_household_credit":"US household credit",
  "Credit_Unions":"Credit unions","ILCs":"ILCs","Foreign_Bank_US_Branches":"Foreign-bank US branches",
  # digital-ID OS/hardware layer
- "EUDI_Wallet":"EU Digital Identity Wallet","Device_Age_Attestation":"Device / OS age attestation","Facebook_Verified":"Facebook Verified (selfie)","Windows_Age_API":"Windows Age API","AI_Kill_Switch_Act":"AI Kill Switch Act",
+ "EUDI_Wallet":"EU Digital Identity Wallet","Device_Age_Attestation":"Device / OS age attestation","Facebook_Verified":"Facebook Verified (selfie)","Windows_Age_API":"Windows Age API","AI_Kill_Switch_Act":"AI Kill Switch Act","RubyGems":"RubyGems","DseWiki":"DseWiki","JFrog_Artifactory":"JFrog Artifactory","Services_Australia":"Services Australia","ExploitGym":"ExploitGym",
  "Secure_Element_Vendors":"Secure-element / eUICC vendors","Alternative_OS_Exclusion":"Alternative-OS exclusion",
  "UK_Digital_ID":"UK digital ID (BritCard / One Login)","Labour_Together":"Labour Together",
  # hidden / off-book sovereign debt

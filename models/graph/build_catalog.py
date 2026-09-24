@@ -50,7 +50,8 @@ GROUPS = [
         "spec-shai-hulud-npm-worm", "spec-msnightmare-disclosure", "spec-shinyhunters-data-extortion",
         "spec-cikleak-russia-cec",
         "spec-inqtel-portfolio",
-        "spec-palantir-surveillance", "spec-niantic-geospatial"]),
+        "spec-palantir-surveillance", "spec-niantic-geospatial",
+        "spec-openai-agent-swarm-2026"]),
     ("Quantum & PQC", [
         "spec-ecdsa-nonce-failure-tracker", "macro-crqc-quantum-landscape", "macro-pqc-chips",
         "spec-defense-primes-pqc", "spec-quantum-computing-competitive-landscape",

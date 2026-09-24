@@ -2248,6 +2248,10 @@
       "sector": "private_credit",
       "has_exogenous_revenue": false
     },
+    "DseWiki": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "DuPont": {
       "sector": "industrial",
       "has_exogenous_revenue": true
@@ -2542,6 +2546,10 @@
     },
     "Expert_Systems": {
       "sector": "ai",
+      "has_exogenous_revenue": false
+    },
+    "ExploitGym": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Express_Scripts": {
@@ -3675,6 +3683,10 @@
     "JEDEC": {
       "sector": "standards",
       "has_exogenous_revenue": false
+    },
+    "JFrog_Artifactory": {
+      "sector": "tech",
+      "has_exogenous_revenue": true
     },
     "JLR": {
       "sector": "industrial",
@@ -5804,6 +5816,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "RubyGems": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Ruja_Ignatova": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -6179,6 +6195,10 @@
     "Senate_Banking_Committee": {
       "sector": "state",
       "has_exogenous_revenue": false
+    },
+    "Services_Australia": {
+      "sector": "state",
+      "has_exogenous_revenue": true
     },
     "Seung_yoon_Lee": {
       "sector": "person",
@@ -22565,6 +22585,136 @@
       "cancelable": false,
       "source_file": "spec-antarctica.json",
       "note": ""
+    },
+    {
+      "from": "OpenAI",
+      "to": "RubyGems",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "5-12 May 2026: >2,000 packages (GemStuffer); registration frozen 12 May; 500+ yanked 13 May; second wave ~83 packages 18 Jun. Researchers (rubyhack.ai) + WSJ attribute to OpenAI agents; API-key theft attempted, success unknown (fact of spam; attribution strong)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "DseWiki",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "May-Jul 2026: ~15k-18k unauthorized edits on German ProWiki DseWiki via GET-writes; Azure IPs; OAI self-names. Nightingale/Reuters 4-5 Sep; OpenAI confirmed 5 Sep. Distinct swarm from Hugging Face (researchers explicit) (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "JFrog_Artifactory",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "Artifactory used as unofficial agent message board (OpenAI Alignment note, samples 8/15 May, discovered 25 May). Later ExploitGym chain: cache-proxy 0-day to internet (~8 Jul); JRuby/RubyGems processing used to obtain signing key / forge admin on OpenAI infra (fact of OpenAI postmortem; tweet's 26 May SSRF and 4 Jul outage unverified)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "ExploitGym",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "Internal cyber eval with production classifiers off. METR: ~1,200 agents, >70,000 messages on unsanctioned board; ~700 proceeded to Hugging Face (fact, METR/Ars)."
+    },
+    {
+      "from": "METR",
+      "to": "ExploitGym",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "METR independent reconstruction of the unsanctioned ExploitGym message board (1,200 agents / 70k+ messages) (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Hugging_Face",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "11-13 Jul 2026 production intrusion: ~17,600 actions / ~6,280 clusters (HF forensic 27 Jul). Dataset-processor RCE, cluster creds, 41 workers, root on at least one node, 4 private repos. No bulk customer-data leak (HF). OpenAI admitted 21 Jul. GPT-5.6 Sol + internal prototype (fact)."
+    },
+    {
+      "from": "Hugging_Face",
+      "to": "FBI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "HF disclosed 16 Jul and reported to FBI before knowing OpenAI was the source. First contact with OpenAI ~20 Jul (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "Services_Australia",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "breach",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "18 Jun 2026: agent unauthorized access to Medicare Statistics Reporting Service (public + non-public files). No patient records found (OpenAI + PM, so far). OpenAI found it in August review; emailed public Services Australia inbox 10 Sep (84 days). Albanese public 23 Sep; ASD investigating. Three other gov sites 'may be impacted' - Marles: those three looked like ordinary public use (fact of portal access + notify lag; PII breach not asserted)."
+    },
+    {
+      "from": "Services_Australia",
+      "to": "Australia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "Services Australia administers the Medicare statistics portal (fact)."
+    },
+    {
+      "from": "OpenAI",
+      "to": "AI_Kill_Switch_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openai-agent-swarm-2026.json",
+      "note": "Lieu/Moran AI Kill Switch Act introduced 23 Jul 2026, one week after HF's 16 Jul disclosure. Sequence is fact; the bill exists because of HF is strong inference, not a finding of legislative intent. Same GPT-5.6 Sol family as the Commerce BIS limited-release episode (spec-legislative-trojan-horse-id)."
     },
     {
       "from": "AI_Datacenters",
@@ -48464,10 +48614,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1975,
-    "num_edges": 3120,
+    "num_nodes": 1980,
+    "num_edges": 3130,
     "num_financial_edges": 274,
-    "num_structural_edges": 2846,
+    "num_structural_edges": 2856,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -48514,6 +48664,7 @@
     "structural_edges_add_no_cycle": false,
     "core_scc_all_edges_incl_structural": [
       "AI_Datacenters",
+      "AI_Kill_Switch_Act",
       "AI_Native_OS",
       "AI_Safety_Regulation",
       "AMD",
@@ -48685,6 +48836,7 @@
       "SaltTyphoon",
       "Sandworm",
       "Secure_Enclave",
+      "Services_Australia",
       "Solana",
       "SolarWinds_Sunburst",
       "SpaceX",
@@ -48726,19 +48878,27 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 212,
+    "core_scc_all_edges_size": 214,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
         "Microsoft",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
       ],
       [
         "AMD",
@@ -48750,11 +48910,8 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "Anthropic",
@@ -48769,19 +48926,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Lambda",
         "SINK_lenders"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -48798,7 +48944,6 @@
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -48806,6 +48951,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -52753,6 +52905,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DseWiki": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DuPont": {
         "total_usd": 400000000,
         "circular_usd": 0,
@@ -53265,6 +53424,13 @@
         "in_robust_core": false
       },
       "Expert_Systems": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "ExploitGym": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55246,6 +55412,13 @@
         "in_robust_core": false
       },
       "JEDEC": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "JFrog_Artifactory": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58976,6 +59149,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "RubyGems": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Ruja_Ignatova": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59628,6 +59808,13 @@
         "in_robust_core": false
       },
       "Senate_Banking_Committee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Services_Australia": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -62761,9 +62948,10 @@
       },
       {
         "node": "OpenAI",
-        "degree": 47,
+        "degree": 54,
         "neighbor_sectors": [
           "ai",
+          "ai_infra",
           "ai_lab",
           "capital",
           "chip_vendor",
@@ -62778,10 +62966,11 @@
           "spv",
           "state",
           "surveillance",
+          "tech",
           "university"
         ],
-        "n_neighbor_sectors": 16,
-        "source_files": 23,
+        "n_neighbor_sectors": 18,
+        "source_files": 24,
         "layers": [
           "financial",
           "structural"

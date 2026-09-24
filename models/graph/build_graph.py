@@ -238,6 +238,7 @@ ALIAS = {
  "American_Edge_Project":"American_Edge_Project","American_Edge":"American_Edge_Project","Meta_State_SuperPACs":"Meta_State_SuperPACs","METAC":"Meta_State_SuperPACs","ATEP":"Meta_State_SuperPACs","Digital_Childhood_Alliance":"Digital_Childhood_Alliance","National_PTA":"National_PTA","Targeted_Victory":"Targeted_Victory","NetChoice":"NetChoice","Louisiana_HB570":"Louisiana_HB570","HB570":"Louisiana_HB570",
  "Julie_Inman_Grant":"Julie_Inman_Grant","Julie Inman Grant":"Julie_Inman_Grant","eSafety_Commissioner":"Julie_Inman_Grant","eSafety Commissioner":"Julie_Inman_Grant",
  "Facebook_Verified":"Facebook_Verified","Facebook Verified":"Facebook_Verified","Windows_Age_API":"Windows_Age_API","Windows Age API":"Windows_Age_API","AI_Kill_Switch_Act":"AI_Kill_Switch_Act","AI Kill Switch Act":"AI_Kill_Switch_Act",
+ "RubyGems":"RubyGems","DseWiki":"DseWiki","DSEWiki":"DseWiki","JFrog_Artifactory":"JFrog_Artifactory","Artifactory":"JFrog_Artifactory","JFrog":"JFrog_Artifactory","Services_Australia":"Services_Australia","ExploitGym":"ExploitGym","METR":"METR",
  # dialog society (thiel/hoffman private forum) — overlay; hub is a pure sink
  "Dialog_Society":"Dialog_Society","Dialog":"Dialog_Society","Dialog (organization)":"Dialog_Society","Stonebrick_LLC":"Stonebrick_LLC","Stonebrick":"Stonebrick_LLC","Peter_Thiel":"Peter_Thiel","Peter Thiel":"Peter_Thiel","Auren_Hoffman":"Auren_Hoffman","Auren Hoffman":"Auren_Hoffman","Raffi_Grinberg":"Raffi_Grinberg","Raffi Grinberg":"Raffi_Grinberg","Thiel_Foundation":"Thiel_Foundation","The Thiel Foundation":"Thiel_Foundation","Founders_Fund":"Founders_Fund","Founders Fund":"Founders_Fund","Andreessen_Horowitz":"Andreessen_Horowitz","a16z":"Andreessen_Horowitz","Andreessen Horowitz":"Andreessen_Horowitz",
  # arbitration / ADR bodies
@@ -564,6 +565,7 @@ NODE_META = {
  # device-ownership erosion -> OS identity (overlay)
  "Device_Ownership_Erosion":("surveillance",False),"AI_Native_OS":("tech",False),"Age_Assurance_Issuers":("surveillance",False),
  "Facebook_Verified":("surveillance",False),"Windows_Age_API":("surveillance",False),"AI_Kill_Switch_Act":("state",False),
+ "RubyGems":("tech",False),"DseWiki":("other",False),"JFrog_Artifactory":("tech",True),"Services_Australia":("state",True),"ExploitGym":("other",False),
  # uncovered-pool deep digs (overlay)
  "Corporate_Credit_Unions":("bank",True),"NCUSIF":("regulator",True),"BDCs":("private_credit",True),
  "Commercial_Parents":("industrial",False),"Farm_Credit_System":("financial_infra",True),"FFCB_Funding":("financial_infra",True),
