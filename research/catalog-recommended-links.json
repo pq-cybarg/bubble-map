@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "title": "Recommended links - right to repair, ownership, FUTO/FULU, Consumer Rights Wiki, and corpus companions",
+    "generated": "2026-09-24",
+    "frame": "Curated outbound + in-corpus links for the Links tab. Started with the R2R/ownership cluster. URLs are fact of publication; site framing is the publisher's."
+  },
+  "groups": [
+    {
+      "id": "rossmann-fulu",
+      "title": "Rossmann / FULU / Consumer Rights Wiki",
+      "items": [
+        {"name": "Rossmann Repair Group - Louis Rossmann", "url": "https://rossmanngroup.com/louis-rossmann", "notes": "Shop + testimony timeline + org list (RPG, FULU, FUTO past).", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU Foundation USA", "url": "https://rossmanngroup.com/fulu-foundation", "notes": "501c4; wiki move; bounty program; shop/nonprofit split.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU bounties", "url": "https://bounties.fulu.org/", "notes": "Cash for restoring DRM-bricked devices. 1201-contested; listed as their program, not legal advice.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU events / Own Your Shit tour", "url": "https://www.fulu.org/events", "notes": "2026 live tour; 1201 postcards.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Consumer Rights Wiki", "url": "https://consumerrights.wiki/", "notes": "FULU-hosted advocacy encyclopedia (1,472 articles / 206 contributors on About).", "related": ["spec-rossmann-futo-ownership", "spec-open-source-3dprinting-lawfare"]},
+        {"name": "CRW About", "url": "https://consumerrights.wiki/w/About", "notes": "Mission + counts.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "CRW - Bambu Lab Authorization Control System", "url": "https://consumerrights.wiki/w/Bambu_Lab_Authorization_Control_System", "notes": "In-corpus example of the wiki as a case file.", "related": ["spec-open-source-3dprinting-lawfare"]},
+        {"name": "WIRED - Own Your Shit tour (17 Sep 2026)", "url": "https://www.wired.com/story/people-are-pissed-off-and-ready-to-own-their-shit/", "notes": "Independent coverage of the 2026 tour.", "related": ["spec-rossmann-futo-ownership"]}
+      ]
+    },
+    {
+      "id": "futo",
+      "title": "FUTO (Eron Wolf)",
+      "items": [
+        {"name": "FUTO About", "url": "https://futo.tech/about", "notes": "For-profit, Wolf-funded; independence pledges.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FUTO Statement on Open Source / Source First", "url": "https://futo.org/about/futo-statement-on-opensource/", "notes": "Why they reject OSI commercial-use freedom; both-sides in the 3D-print block.", "related": ["spec-open-source-3dprinting-lawfare"]},
+        {"name": "FUTO grants", "url": "https://futo.org/grants", "notes": "Grant program Rossmann publicized 2022-24.", "related": ["spec-rossmann-futo-ownership"]}
+      ]
+    },
+    {
+      "id": "r2r-orgs",
+      "title": "Institutional right-to-repair",
+      "items": [
+        {"name": "iFixit", "url": "https://www.ifixit.com/", "notes": "Guides, parts, teardown scores.", "related": ["spec-right-to-repair", "spec-electronics-parts-pairing"]},
+        {"name": "repair.org (The Repair Association)", "url": "https://www.repair.org/", "notes": "Trade/advocacy coalition.", "related": ["spec-right-to-repair"]},
+        {"name": "US PIRG - State of Right to Repair", "url": "https://pirg.org/edfund/resources/the-state-of-right-to-repair/", "notes": "State-law tracker used in the anchor block.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - Apple SB 244 U-turn", "url": "https://www.ifixit.com/News/79902/apples-u-turn-tech-giant-finally-backs-repair-in-california", "notes": "Dated OEM reversal.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - ending Samsung collaboration (May 2024)", "url": "https://www.ifixit.com/News/96162/were-ending-our-samsung-collaboration", "notes": "Parts-pairing / glued-assembly fight.", "related": ["spec-electronics-parts-pairing"]}
+      ]
+    },
+    {
+      "id": "law",
+      "title": "Statutes, FTC, Copyright Office, EU",
+      "items": [
+        {"name": "FTC - Nixing the Fix (2021)", "url": "https://www.ftc.gov/reports/nixing-fix-ftc-report-congress-repair-restrictions", "notes": "Repair restrictions 'not generally supported' by the safety/security evidence offered.", "related": ["spec-right-to-repair"]},
+        {"name": "Federal Register - 9th triennial 1201 exemptions (Oct 2024)", "url": "https://www.federalregister.gov/documents/2024/10/28/2024-24563/exemption-to-prohibition-on-circumvention-of-copyright-protection-systems-for-access-control", "notes": "Food-prep equipment + vehicle/ag data.", "related": ["spec-mcdonalds-kytch-taylor", "spec-farm-equipment-r2r"]},
+        {"name": "FTC & states v Deere (15 Jan 2025)", "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-states-sue-deere-company-protect-farmers-unfair-corporate-tactics-high-repair-costs", "notes": "Farm-equipment monopoly suit.", "related": ["spec-farm-equipment-r2r"]},
+        {"name": "EU Directive on the repair of goods (2024/1799)", "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en", "notes": "Applies 31 Jul 2026.", "related": ["spec-right-to-repair"]},
+        {"name": "Apple Newsroom - used genuine parts (11 Apr 2024)", "url": "https://www.apple.com/newsroom/2024/04/apple-to-expand-repair-options-with-support-for-used-genuine-parts/", "notes": "OEM concession on screens/batteries/cameras for iPhone 15+.", "related": ["spec-electronics-parts-pairing"]}
+      ]
+    },
+    {
+      "id": "corpus-r2r",
+      "title": "In-corpus research pages (this site)",
+      "internal": true,
+      "items": [
+        {"name": "Right to Repair (anchor)", "stub": "spec-right-to-repair", "notes": "Mechanism, 1201, FTC, 50-state wave, EU, actors."},
+        {"name": "Rossmann / FUTO / FULU / CRW (this article)", "stub": "spec-rossmann-futo-ownership", "notes": "Seventeen-year advocacy timeline."},
+        {"name": "Auto R2R / MA telematics", "stub": "spec-auto-right-to-repair", "notes": "Question 1, NHTSA walk-back, REPAIR Act."},
+        {"name": "Electronics parts-pairing", "stub": "spec-electronics-parts-pairing", "notes": "Apple / Samsung / Google / Microsoft."},
+        {"name": "Farm equipment / Deere", "stub": "spec-farm-equipment-r2r", "notes": "FTC suit, class settlement, AFBF MOU."},
+        {"name": "McDonald's / Kytch / Taylor", "stub": "spec-mcdonalds-kytch-taylor", "notes": "The food-prep 1201 exemption case."},
+        {"name": "Open-source 3D-print lawfare", "stub": "spec-open-source-3dprinting-lawfare", "notes": "Bambu, Stratasys, FUTO Source First correction."},
+        {"name": "Device-ownership erosion", "stub": "digitalid-device-ownership-erosion", "notes": "OS/account identity as the next lock."},
+        {"name": "Local / uncensored AI", "stub": "spec-local-uncensored-ai", "notes": "Own the weights; FUTO adjacency."},
+        {"name": "Payment-processor censorship", "stub": "spec-payment-processor-censorship", "notes": "Visa/MC/PayPal chokepoint Rossmann covered in 2025."},
+        {"name": "Creative-platform purge", "stub": "spec-creative-platform-purge", "notes": "Steam/itch/Collective Shout; Clip Studio age gates."},
+        {"name": "Legislative Trojan horses / ID APIs", "stub": "spec-legislative-trojan-horse-id", "notes": "Identify first, then gate repair-adjacent speech and apps."}
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "Consumer_Rights_Wiki",
+      "to": "FULU_Foundation",
+      "instrument": "relationship",
+      "notes": "Wiki is a FULU project; recommended-links catalog points at the About page as the living index (fact of hosting).",
+      "source": "https://consumerrights.wiki/w/About"
+    }
+  ]
+}

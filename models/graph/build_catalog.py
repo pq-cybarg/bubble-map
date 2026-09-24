@@ -52,6 +52,10 @@ GROUPS = [
         "spec-inqtel-portfolio",
         "spec-palantir-surveillance", "spec-niantic-geospatial",
         "spec-openai-agent-swarm-2026"]),
+    ("Right to repair & ownership", [
+        "spec-right-to-repair", "spec-rossmann-futo-ownership", "spec-auto-right-to-repair",
+        "spec-electronics-parts-pairing", "spec-farm-equipment-r2r", "spec-mcdonalds-kytch-taylor",
+        "spec-open-source-3dprinting-lawfare", "catalog-recommended-links"]),
     ("Quantum & PQC", [
         "spec-ecdsa-nonce-failure-tracker", "macro-crqc-quantum-landscape", "macro-pqc-chips",
         "spec-defense-primes-pqc", "spec-quantum-computing-competitive-landscape",

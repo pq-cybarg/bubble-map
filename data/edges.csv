@@ -925,6 +925,16 @@ Tesla,AV_Robotaxi,other,,contested,False,False,spec-china-ev.json
 Waymo,AV_Robotaxi,other,,documented,False,False,spec-china-ev.json
 Baidu_Apollo,AV_Robotaxi,other,,documented,False,False,spec-china-ev.json
 China,Baidu_Apollo,other,,documented,False,False,spec-china-ev.json
+Louis_Rossmann,Right_to_Repair,other,,,False,False,"spec-rossmann-futo-ownership.json,spec-right-to-repair.json"
+Louis_Rossmann,Repair_Preservation_Group,other,,,False,False,spec-rossmann-futo-ownership.json
+FUTO,Louis_Rossmann,relationship,,,False,False,spec-rossmann-futo-ownership.json
+Eron_Wolf,FUTO,other,,,False,False,spec-rossmann-futo-ownership.json
+Louis_Rossmann,FULU_Foundation,other,,,False,False,"spec-rossmann-futo-ownership.json,spec-right-to-repair.json"
+Kevin_OReilly,FULU_Foundation,other,,,False,False,spec-rossmann-futo-ownership.json
+FULU_Foundation,Consumer_Rights_Wiki,other,,,False,False,spec-rossmann-futo-ownership.json
+FULU_Foundation,DMCA_1201,other,,,False,False,spec-rossmann-futo-ownership.json
+FULU_Foundation,Right_to_Repair,other,,,False,False,"spec-rossmann-futo-ownership.json,spec-right-to-repair.json"
+iFixit,Louis_Rossmann,other,,,False,False,spec-rossmann-futo-ownership.json
 NIST,Cryptography_Standards,other,,documented,False,False,spec-disclosures-surveillance.json
 NSA,ATT,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
 NSA,TechCompanies,surveillance_security,,documented,False,False,spec-disclosures-surveillance.json
@@ -1002,6 +1012,7 @@ FEMA,Stormwater_MS4,other,,,False,False,spec-stormwater-easement-neglect-pattern
 American_Water_Works,Public_Water_Systems,other,,,False,False,spec-stormwater-easement-neglect-pattern.json
 American_Water_Works,Essential_Utilities,merger,,,False,False,spec-stormwater-easement-neglect-pattern.json
 American_Water_Works,Stormwater_MS4,other,,,False,False,spec-stormwater-easement-neglect-pattern.json
+Consumer_Rights_Wiki,FULU_Foundation,other,,,False,False,catalog-recommended-links.json
 Haipo_Yang,CoinEx,other,,,False,False,spec-coinex-winddown.json
 Haipo_Yang,ViaBTC,other,,,False,False,spec-coinex-winddown.json
 CoinEx,CET,other,,,False,False,spec-coinex-winddown.json
@@ -1562,10 +1573,7 @@ Flock_Safety,CBP,other,,,False,False,spec-auto-connected-surveillance.json
 Motorola_Solutions,ICE,other,,,False,False,spec-auto-connected-surveillance.json
 GENIUS_Act,US_Contingent_Liabilities,relationship,,open,False,False,macro-us-fiscal-trap.json
 EUDI_Wallet,Device_Age_Attestation,relationship,,open,False,False,macro-us-fiscal-trap.json
-Louis_Rossmann,Right_to_Repair,other,,documented,False,False,spec-right-to-repair.json
-Louis_Rossmann,FULU_Foundation,other,,documented,False,False,spec-right-to-repair.json
 FULU_Foundation,Consumer_Rights_Wiki,relationship,,documented,False,False,spec-right-to-repair.json
-FULU_Foundation,Right_to_Repair,other,,documented,False,False,spec-right-to-repair.json
 FUTO,Right_to_Repair,relationship,,documented,False,False,spec-right-to-repair.json
 iFixit,Right_to_Repair,other,,documented,False,False,spec-right-to-repair.json
 Copyright_Office,DMCA_1201,other,,documented,False,False,spec-right-to-repair.json

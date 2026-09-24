@@ -16,10 +16,10 @@
 
 ## Connectors (entities appearing across the most files)
 - **Meta** — 106 files
-- **Google** — 68 files
+- **Google** — 69 files
 - **Chainlink** — 66 files
 - **OpenAI** — 56 files
-- **Microsoft** — 47 files
+- **Microsoft** — 48 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Amazon** — 37 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-openai-agent-swarm-2026.json` — related files by shared entities (verify cross-refs exist)
-- digitalid-orchestration-real-incentive.json: 2 shared entities
-- digitalid-worldcoin-eid-convergence.json: 2 shared entities
-- fin-gulf-sovereign-ai-capital.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- macro-cre-privatecredit.json: 2 shared entities
-- spec-legislative-trojan-horse-id.json: 2 shared entities
-- spec-market-plumbing-control.json: 1 shared entities
-- macro-jobs-inflation-fed.json: 1 shared entities
+## Newest file `catalog-recommended-links.json` — related files by shared entities (verify cross-refs exist)
+- energy-power.json: 2 shared entities
+- macro-pqc-chips.json: 2 shared entities
+- spec-nextera-national-utility.json: 2 shared entities
+- spec-ai-datacenter-debt-spv.json: 2 shared entities
+- spec-china-ai-stack-censorship.json: 2 shared entities
+- catalog-billionaires.json: 2 shared entities
+- macro-crqc-quantum-landscape.json: 2 shared entities
+- fin-google-amazon-anthropic-meta.json: 2 shared entities

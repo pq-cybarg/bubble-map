@@ -2496,6 +2496,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Eron_Wolf": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Essential_Utilities": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -3925,6 +3929,10 @@
       "has_exogenous_revenue": false
     },
     "Keonne_Rodriguez": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Kevin_OReilly": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -5710,6 +5718,10 @@
     },
     "Render": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Repair_Preservation_Group": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Repo_Market": {
@@ -17998,6 +18010,136 @@
       "note": ""
     },
     {
+      "from": "Louis_Rossmann",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "Shop owner + YouTube diagnostics (~2.6M) turned into legislative testimony (NY Digital Fair Repair Act 2015-22; Nebraska LB67 2017) and ongoing R2R lobbying via Repair Preservation Group Action Fund (fact)."
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "Repair_Preservation_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Founder and exec director of Repair Preservation Group (501c3 education / repair.wiki) plus the Action Fund 501c4 that lobbies R2R bills (fact, his site)."
+    },
+    {
+      "from": "FUTO",
+      "to": "Louis_Rossmann",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "grant",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Director of Community Outreach 2022-Feb 2025; shop moved to Austin. FUTO (Eron Wolf, for-profit) funded the work - inverted 'Rossmann funds FUTO' claim is false. Wolf donated on the order of $1M to Rossmann's nonprofit before hiring him (Rossmann's own comment) (fact of the job and funder direction; $1M is his figure)."
+    },
+    {
+      "from": "Eron_Wolf",
+      "to": "FUTO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Founded FUTO 2021; sole owner/funder; Yahoo Games-era capital. No SV/government/NGO investment (fact, FUTO FAQ/About)."
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "Co-founded FULU Foundation USA (Freedom from Unethical Limitations on Users) with Kevin O'Reilly, June 2025; 501c4 for digital ownership and DMCA 1201 reform. Distinct from the for-profit shop (fact)."
+    },
+    {
+      "from": "Kevin_OReilly",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Co-founder with Rossmann (fact, Wikipedia + FULU materials)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Consumer_Rights_Wiki",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Hosts consumerrights.wiki (moved from wiki.rossmanngroup.com). Launched Jan 2025 as Consumer Action Taskforce Wiki. About page: 1,472 articles, 206 active contributors (2026). Advocacy database, not a court (fact of hosting and counts)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "DMCA_1201",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Bounty program (bounties.fulu.org) pays for restoring function on DRM-locked/bricked devices (Nest, Molekule, Xbox optical, Echelon bikes $20k). Intended as legislative evidence. 1201 makes sharing unlocks legally hazardous - legality of any given unlock not asserted (fact of the program)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "R2R asks OEMs for parts/tools; FULU is the self-help twin plus 1201 reform. Own Your Shit tour summer 2026 (WIRED 17 Sep 2026) with 1201 postcards to representatives (fact of the tour)."
+    },
+    {
+      "from": "iFixit",
+      "to": "Louis_Rossmann",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Institutional R2R cohort (guides, parts, state-law tracker) networked with Rossmann's shop-advocacy line. Same fight, different vehicles (fact of shared campaign space; no payroll asserted)."
+    },
+    {
       "from": "NSA",
       "to": "Cryptography_Standards",
       "instrument": "surveillance_security",
@@ -19075,6 +19217,19 @@
       "cancelable": false,
       "source_file": "spec-stormwater-easement-neglect-pattern.json",
       "note": "Oct 3 2024 cyberattack forced AWK to shut its MyWater customer portal + suspend billing (no water/wastewater facility impact; language suggested ransomware) - part of a rising wave of attacks on US water infrastructure, some linked to Iran/Russia/China. The OT/critical-infrastructure threat overlay on the water sector (fact)."
+    },
+    {
+      "from": "Consumer_Rights_Wiki",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-recommended-links.json",
+      "note": "Wiki is a FULU project; recommended-links catalog points at the About page as the living index (fact of hosting)."
     },
     {
       "from": "Haipo_Yang",
@@ -26734,50 +26889,11 @@
       "note": ""
     },
     {
-      "from": "Louis_Rossmann",
-      "to": "Right_to_Repair",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "leading repair-advocate",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
-      "from": "Louis_Rossmann",
-      "to": "FULU_Foundation",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "co-founded the FULU Foundation (501c4, 2025) after leaving FUTO",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
       "from": "FULU_Foundation",
       "to": "Consumer_Rights_Wiki",
       "instrument": "relationship",
       "layer": "structural",
       "raw_instrument": "runs the Consumer Rights Wiki (launched Jan 2025); DRM-circumvention bounty program",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
-      "from": "FULU_Foundation",
-      "to": "Right_to_Repair",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "digital-ownership advocacy; \u00a71201 reform",
       "amount_usd": null,
       "status": "documented",
       "declared_circular": false,
@@ -48614,10 +48730,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1980,
-    "num_edges": 3130,
+    "num_nodes": 1983,
+    "num_edges": 3138,
     "num_financial_edges": 274,
-    "num_structural_edges": 2856,
+    "num_structural_edges": 2864,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -48705,6 +48821,7 @@
       "Congress",
       "ConsenSys",
       "Constellation_Energy",
+      "Consumer_Rights_Wiki",
       "CoreWeave",
       "Critical_Minerals_Strategic_Reserve",
       "Cross_River_Bank",
@@ -48739,6 +48856,7 @@
       "FDIC",
       "FERC",
       "FPL",
+      "FULU_Foundation",
       "Facebook_Verified",
       "Fairshake",
       "Family_Offices",
@@ -48878,16 +48996,12 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 214,
+    "core_scc_all_edges_size": 216,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "Microsoft",
-        "OpenAI"
-      ],
       [
         "CoreWeave",
         "SINK_lenders"
@@ -48897,8 +49011,8 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
@@ -48909,14 +49023,13 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -48924,16 +49037,21 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -53339,6 +53457,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Eron_Wolf": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Essential_Utilities": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55839,6 +55964,13 @@
         "in_robust_core": false
       },
       "Keonne_Rodriguez": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Kevin_OReilly": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58961,6 +59093,13 @@
         "in_robust_core": false
       },
       "Render": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Repair_Preservation_Group": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

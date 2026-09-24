@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "title": "Louis Rossmann, FUTO, FULU, and the Consumer Rights Wiki - seventeen years of repair advocacy into digital-ownership lawfare",
+    "generated": "2026-09-24",
+    "frame": "Rossmann: NY shop + YouTube + decade of R2R testimony, then FUTO community outreach (2022-Feb 2025, funded by Eron Wolf), then FULU 501(c)(4) with Kevin O'Reilly (Jun 2025) running DMCA 1201 bounties and the Consumer Rights Wiki (Jan 2025; consumerrights.wiki). FUTO funded him; he did not fund FUTO. Own Your Shit tour summer 2026 (WIRED 17 Sep). Overlay; excluded from proofs.",
+    "status": "shop/org/testimony/wiki stats/tour = fact; strawman-security line = documented advocacy except where primaries already cut that way (NHTSA, FTC)"
+  },
+  "nodes": [
+    {"id": "Louis_Rossmann", "sector": "person"},
+    {"id": "FUTO", "sector": "tech"},
+    {"id": "Eron_Wolf", "sector": "person"},
+    {"id": "FULU_Foundation", "sector": "political"},
+    {"id": "Kevin_OReilly", "sector": "person"},
+    {"id": "Consumer_Rights_Wiki", "sector": "other"},
+    {"id": "Repair_Preservation_Group", "sector": "political"},
+    {"id": "iFixit", "sector": "industrial"}
+  ],
+  "edges": [
+    {
+      "from": "Louis_Rossmann",
+      "to": "Right_to_Repair",
+      "instrument": "relationship",
+      "notes": "Shop owner + YouTube diagnostics (~2.6M) turned into legislative testimony (NY Digital Fair Repair Act 2015-22; Nebraska LB67 2017) and ongoing R2R lobbying via Repair Preservation Group Action Fund (fact).",
+      "source": "https://rossmanngroup.com/louis-rossmann"
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "Repair_Preservation_Group",
+      "instrument": "relationship",
+      "notes": "Founder and exec director of Repair Preservation Group (501c3 education / repair.wiki) plus the Action Fund 501c4 that lobbies R2R bills (fact, his site).",
+      "source": "https://rossmanngroup.com/louis-rossmann"
+    },
+    {
+      "from": "FUTO",
+      "to": "Louis_Rossmann",
+      "instrument": "grant",
+      "notes": "Director of Community Outreach 2022-Feb 2025; shop moved to Austin. FUTO (Eron Wolf, for-profit) funded the work - inverted 'Rossmann funds FUTO' claim is false. Wolf donated on the order of $1M to Rossmann's nonprofit before hiring him (Rossmann's own comment) (fact of the job and funder direction; $1M is his figure).",
+      "source": "https://en.wikipedia.org/wiki/Louis_Rossmann"
+    },
+    {
+      "from": "Eron_Wolf",
+      "to": "FUTO",
+      "instrument": "founder_origin",
+      "notes": "Founded FUTO 2021; sole owner/funder; Yahoo Games-era capital. No SV/government/NGO investment (fact, FUTO FAQ/About).",
+      "source": "https://futo.tech/about"
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "FULU_Foundation",
+      "instrument": "relationship",
+      "notes": "Co-founded FULU Foundation USA (Freedom from Unethical Limitations on Users) with Kevin O'Reilly, June 2025; 501c4 for digital ownership and DMCA 1201 reform. Distinct from the for-profit shop (fact).",
+      "source": "https://rossmanngroup.com/fulu-foundation"
+    },
+    {
+      "from": "Kevin_OReilly",
+      "to": "FULU_Foundation",
+      "instrument": "relationship",
+      "notes": "Co-founder with Rossmann (fact, Wikipedia + FULU materials).",
+      "source": "https://en.wikipedia.org/wiki/Louis_Rossmann"
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Consumer_Rights_Wiki",
+      "instrument": "relationship",
+      "notes": "Hosts consumerrights.wiki (moved from wiki.rossmanngroup.com). Launched Jan 2025 as Consumer Action Taskforce Wiki. About page: 1,472 articles, 206 active contributors (2026). Advocacy database, not a court (fact of hosting and counts).",
+      "source": "https://consumerrights.wiki/w/About"
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "DMCA_1201",
+      "instrument": "relationship",
+      "notes": "Bounty program (bounties.fulu.org) pays for restoring function on DRM-locked/bricked devices (Nest, Molekule, Xbox optical, Echelon bikes $20k). Intended as legislative evidence. 1201 makes sharing unlocks legally hazardous - legality of any given unlock not asserted (fact of the program).",
+      "source": "https://rossmanngroup.com/fulu-foundation"
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Right_to_Repair",
+      "instrument": "relationship",
+      "notes": "R2R asks OEMs for parts/tools; FULU is the self-help twin plus 1201 reform. Own Your Shit tour summer 2026 (WIRED 17 Sep 2026) with 1201 postcards to representatives (fact of the tour).",
+      "source": "https://www.wired.com/story/people-are-pissed-off-and-ready-to-own-their-shit/"
+    },
+    {
+      "from": "iFixit",
+      "to": "Louis_Rossmann",
+      "instrument": "relationship",
+      "notes": "Institutional R2R cohort (guides, parts, state-law tracker) networked with Rossmann's shop-advocacy line. Same fight, different vehicles (fact of shared campaign space; no payroll asserted).",
+      "source": "spec-right-to-repair"
+    }
+  ]
+}
