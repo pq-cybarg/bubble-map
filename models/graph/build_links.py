@@ -77,13 +77,14 @@ def main():
     toc.append("</div>")
     intro = (
         "<h1>Recommended links</h1>"
-        "<p class=muted>A living catalog of primary pages, statutes, advocacy orgs, and in-corpus "
-        "research. Started 2026-09-24 with the right-to-repair / ownership cluster "
-        "(Rossmann, FUTO, FULU, Consumer Rights Wiki). "
+        "<p class=muted>A living catalog of labs, leak archives, statutes, data sources, "
+        "advocacy orgs, OEM/lobby pages, and in-corpus research. Started with right-to-repair; "
+        "swept the rest of the graph for visitor-facing primaries (Citizen Lab, ATT&amp;CK, "
+        "FRED/BIS/EDGAR, Chat Control/ID explainers). "
         f"{n} links in {len(groups)} groups. URL existence is fact; site framing is the publisher's. "
         "Advocacy wikis and manufacturer newsrooms both belong here, labeled.</p>"
-        '<p>Deep article: <a href="r-spec-rossmann-futo-ownership.html">Louis Rossmann, FUTO, FULU, Consumer Rights Wiki</a>. '
-        'Anchor: <a href="r-spec-right-to-repair.html">Right to Repair</a>. '
+        '<p>Spyware index: <a href="r-spec-uwu-apt-leads.html">UwU leads (not a source)</a>. '
+        'Ownership: <a href="r-spec-rossmann-futo-ownership.html">Rossmann / FUTO / FULU</a>. '
         'Source JSON: <code>research/catalog-recommended-links.json</code>.</p>'
     )
     html = ("<!doctype html><html lang=en><head><meta charset=utf-8>"
