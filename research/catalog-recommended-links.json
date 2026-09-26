@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "Recommended links - right to repair, ownership, FUTO/FULU, Consumer Rights Wiki, and corpus companions",
-    "generated": "2026-09-24",
-    "frame": "Curated outbound + in-corpus links for the Links tab. Started with the R2R/ownership cluster. URLs are fact of publication; site framing is the publisher's."
+    "title": "Recommended links - R2R, spyware labs, APT primers, digital-rights explainers, data literacy",
+    "generated": "2026-09-25",
+    "frame": "Curated outbound + in-corpus links for the Links tab. Educational value for visitors: labs and leak archives, ATT&CK/CISA, Chat Control/ID explainers, FRED/BIS/EDGAR, plus the R2R/ownership cluster. URLs are fact of publication; site framing is the publisher's."
   },
   "groups": [
     {
@@ -135,6 +135,78 @@
         {"name": "Kaspersky Darkhotel (2014)", "url": "https://securelist.com/the-darkhotel-apt/66729/", "notes": "Primary for the Vol 3 tribute actor.", "related": ["spec-uwu-apt-leads"]},
         {"name": "Citizen Lab Stealth Falcon (2016)", "url": "https://citizenlab.ca/2016/05/stealth-falcon/", "notes": "UAE-nexus spearphish.", "related": ["spec-uwu-apt-leads"]},
         {"name": "Apple Audio Intelligence Privacy Overview (Sep 2026)", "url": "https://www.apple.com/privacy/docs/Audio_Intelligence_Privacy_Overview_Sep_2026.pdf", "notes": "Live Rewind / Siri Recap mechanics.", "related": ["spec-uwu-apt-leads"]}
+      ]
+    },
+    {
+      "id": "spyware-hrd",
+      "title": "Spyware, human-rights labs, and leak archives",
+      "items": [
+        {"name": "Citizen Lab", "url": "https://citizenlab.ca/", "notes": "University of Toronto. FinFisher C2 maps, Stealth Falcon, Pegasus, Predator, Dark Basin. The load-bearing lab for this graph's spyware layer.", "related": ["spec-citizen-lab", "spec-finfisher-finspy-spyware"]},
+        {"name": "Citizen Lab - You Only Click Twice (FinFisher 2013)", "url": "https://citizenlab.ca/2013/03/you-only-click-twice-finfishers-global-proliferation-2/", "notes": "First global FinSpy C2 atlas.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "Amnesty Security Lab - FinSpy Egypt / Mac / Linux (2020)", "url": "https://www.amnesty.org/en/latest/research/2020/09/german-made-finspy-spyware-found-in-egypt-and-mac-and-linux-versions-revealed/", "notes": "Forensics, not lyrics.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "HRW - Ethiopia telecom surveillance (2014)", "url": "https://www.hrw.org/news/2014/03/25/ethiopia-telecom-surveillance-chills-rights", "notes": "FinFisher + Hacking Team + ZTE wiretaps; recorded calls in interrogations.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "ECCHR - FinFisher / Turkey export case", "url": "https://www.ecchr.eu/en/case/surveillance-software-germany-turkey-finfisher/", "notes": "'Digital surveillance is often followed by imprisonment and torture.'", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "GFF - FinFisher criminal complaint / insolvency", "url": "https://freiheitsrechte.org/en/themen/freiheit-im-digitalen-zeitalter/export-von-uberwachungssoftware", "notes": "German NGO complaint that became the Munich case.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "WikiLeaks SpyFiles", "url": "https://wikileaks.org/spyfiles/", "notes": "2011 Gamma brochures (FinSpy/FinFly). Distinct from the 2014 Phineas dump.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "EFF - Kidane v. Ethiopia", "url": "https://www.eff.org/cases/kidane-v-ethiopia", "notes": "Maryland PC, FinSpy 2012-13. Dismissed on FSIA, not on the facts.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "The Pegasus Project (Forbidden Stories)", "url": "https://forbiddenstories.org/case/the-pegasus-project/", "notes": "Consortium investigation of NSO targeting. Do not mix with FinSpy kill-chains.", "related": ["spec-citizen-lab"]},
+        {"name": "Privacy International", "url": "https://privacyinternational.org/", "notes": "Surveillance-industry reporting; Gamma/HT neighborhood.", "related": ["spec-surveillance-cyber-threat-layer"]}
+      ]
+    },
+    {
+      "id": "threat-intel-edu",
+      "title": "Threat-intel primers (how to read APTs)",
+      "items": [
+        {"name": "MITRE ATT&CK", "url": "https://attack.mitre.org/", "notes": "Technique taxonomy. Groups are activity clusters, not org charts.", "related": ["spec-state-apt-catalog"]},
+        {"name": "CISA", "url": "https://www.cisa.gov/", "notes": "US alerts and emergency directives (e.g. npm Shai-Hulud; F5 ED 26-01).", "related": ["spec-shai-hulud-npm-worm", "spec-networking-security-industry"]},
+        {"name": "Malpedia", "url": "https://malpedia.caad.fkie.fraunhofer.de/", "notes": "Fraunhofer malware-family encyclopedia: aliases, YARA, papers.", "related": ["spec-state-apt-catalog"]},
+        {"name": "Kaspersky Securelist - Darkhotel (2014)", "url": "https://securelist.com/the-darkhotel-apt/66729/", "notes": "Hotel-WiFi watering-hole APT. Primary for the Vol 3 tribute actor.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "NIST PQC standards (FIPS 203/204/205)", "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards", "notes": "Post-quantum algorithms this corpus's PQC blocks rest on.", "related": ["macro-pqc-chips"]}
+      ]
+    },
+    {
+      "id": "digital-rights-edu",
+      "title": "Digital-rights explainers (ID, speech, Chat Control)",
+      "items": [
+        {"name": "EFF", "url": "https://www.eff.org/", "notes": "US digital-rights docket. X account is retired; site is live.", "related": ["spec-western-speech-regulation"]},
+        {"name": "EFF - Chat Control explainer (Dec 2025)", "url": "https://www.eff.org/deeplinks/2025/12/after-years-controversy-eus-chat-control-nears-its-final-hurdle-what-know", "notes": "Scan vs age-ID lever switch.", "related": ["spec-western-speech-regulation", "spec-legislative-trojan-horse-id"]},
+        {"name": "EFF - ZK proofs are not a digital-ID solution (2025)", "url": "https://www.eff.org/deeplinks/2025/07/zero-knowledge-proofs-alone-are-not-digital-id-solution-protecting-user-privacy", "notes": "Pairs with the abolition/age-assurance block.", "related": ["age-verification-abolition"]},
+        {"name": "EDRi - FinFisher accounts seized", "url": "https://edri.org/our-work/criminal-complaint-against-illegal-export-of-surveillance-software-is-making-an-impact-the-finfisher-group-of-companies-ceases-business-operations-after-its-accounts-are-seized-by-public-prosecutor/", "notes": "EU digital-rights network on the Munich case.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "fightchatcontrol.eu", "url": "https://fightchatcontrol.eu/chat-control-overview", "notes": "Breyer's 1.0 vs 2.0 split. Advocacy site; statute text is the source.", "related": ["spec-western-speech-regulation"]},
+        {"name": "Ofcom - Online Safety", "url": "https://www.ofcom.org.uk/online-safety", "notes": "UK OSA / HEAA regulator. 'Highly effective' age-assurance language.", "related": ["spec-western-speech-regulation", "digitalid-regulatory"]},
+        {"name": "eSafety Commissioner (Australia)", "url": "https://www.esafety.gov.au/", "notes": "Under-16 social-media ban (live 10 Dec 2025) and age-assurance trial.", "related": ["digitalid-regulatory"]}
+      ]
+    },
+    {
+      "id": "data-literacy",
+      "title": "Data literacy (how this graph is checked)",
+      "items": [
+        {"name": "FRED (St. Louis Fed)", "url": "https://fred.stlouisfed.org/", "notes": "Live series behind CRE delinquency, bank books, rates. Pull the series, do not trust a screenshot.", "related": ["macro-cre-privatecredit"]},
+        {"name": "Federal Reserve H.8 / FEDS Notes", "url": "https://www.federalreserve.gov/", "notes": "Bank CRE, NDFI lending, private-credit notes cited in the credit blocks.", "related": ["macro-cre-privatecredit"]},
+        {"name": "BIS", "url": "https://www.bis.org/", "notes": "CBDC / unified-ledger / mBridge papers. Carstens 'absolute control' line lives in the digital-ID orchestration block.", "related": ["digitalid-orchestration-real-incentive"]},
+        {"name": "SEC EDGAR", "url": "https://www.sec.gov/edgar", "notes": "10-Ks and 8-Ks. If a dollar figure is not here or in a filing exhibit, it is not a fact of that size.", "related": ["fin-google-amazon-anthropic-meta"]},
+        {"name": "CourtListener / RECAP", "url": "https://www.courtlistener.com/", "notes": "PACER mirrors. Buist complaint and similar dockets.", "related": ["spec-buist-v-anthropic-pacing"]},
+        {"name": "OpenSecrets", "url": "https://www.opensecrets.org/", "notes": "US money-in-politics. Quiet-money catalogs start here, then 990s.", "related": ["catalog-quiet-money"]},
+        {"name": "Congress.gov", "url": "https://www.congress.gov/", "notes": "Bill text (REPAIR Act, AI Kill Switch Act, NDAA riders).", "related": ["spec-auto-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "corpus-more",
+      "title": "More in-corpus pages (spyware, APTs, ID, this site)",
+      "internal": true,
+      "items": [
+        {"name": "Methodology and disclaimer", "url": "methodology.html", "notes": "How gradings work. Start here before treating any node as a verdict."},
+        {"name": "Citizen Lab block", "stub": "spec-citizen-lab", "notes": "Lab-to-graph mapping."},
+        {"name": "FinSpy / Gamma harm pattern", "stub": "spec-finfisher-finspy-spyware", "notes": "Collection layer vs apparatus. Not a kill-list."},
+        {"name": "UwU APT/spyware lead index", "stub": "spec-uwu-apt-leads", "notes": "How to use the music posts without laundering lyrics."},
+        {"name": "State APT catalog", "stub": "spec-state-apt-catalog", "notes": "Consensus attributions + alias discipline."},
+        {"name": "Surveillance / cyber threat layer", "stub": "spec-surveillance-cyber-threat-layer", "notes": "APTs, CALEA paradox, commercial spyware, ransomware, Palantir."},
+        {"name": "Retail gaze / uXDT", "stub": "spec-retail-uxdt-cactus", "notes": "Cactus CCTV twin vs SilverPush/Shopkick ultrasound."},
+        {"name": "Digital-ID regulatory map", "stub": "digitalid-regulatory", "notes": "Statutes: OSA, DSA, eIDAS, Australia ban."},
+        {"name": "Device-ownership erosion", "stub": "digitalid-device-ownership-erosion", "notes": "OS/account identity as the lock."},
+        {"name": "Age-verification abolition", "stub": "age-verification-abolition", "notes": "Why even ZK fails the 'robust' bar."},
+        {"name": "Western speech regulation", "stub": "spec-western-speech-regulation", "notes": "UK/EU/FR/AU statute layer."},
+        {"name": "OpenAI agent swarm 2026", "stub": "spec-openai-agent-swarm-2026", "notes": "RubyGems, DseWiki, Hugging Face, Medicare portal."}
       ]
     }
   ],
