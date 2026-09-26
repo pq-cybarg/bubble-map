@@ -203,6 +203,7 @@ ALIAS = {
  "DMCA_1201":"DMCA_1201","DMCA §1201":"DMCA_1201","Section_1201":"DMCA_1201","Copyright_Office":"Copyright_Office","US Copyright Office":"Copyright_Office",
  "State_R2R_Laws":"State_R2R_Laws","EU_R2R_Directive":"EU_R2R_Directive","Parts_Pairing":"Parts_Pairing","Parts-Pairing":"Parts_Pairing","R2R_Opposition":"R2R_Opposition",
  "CactusXR":"CactusXR","Cactus XR":"CactusXR","Auki":"Auki","Auki Labs":"Auki","SilverPush":"SilverPush","Shopkick":"Shopkick","LISNR":"LISNR","Lisnr":"LISNR",
+ "Phineas_Fisher":"Phineas_Fisher","Phineas Fisher":"Phineas_Fisher","DarkHotel":"DarkHotel","Darkhotel":"DarkHotel","Stealth_Falcon":"Stealth_Falcon","Stealth Falcon":"Stealth_Falcon","Charming_Kitten":"Charming_Kitten","Charming Kitten":"Charming_Kitten","Phosphorus":"Charming_Kitten","Apple_Live_Rewind":"Apple_Live_Rewind","Live Rewind":"Apple_Live_Rewind",
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case)
  "Kytch":"Kytch","Taylor_Foodservice":"Taylor_Foodservice","Taylor Commercial Foodservice":"Taylor_Foodservice","Taylor":"Taylor_Foodservice",
  "Middleby":"Middleby","Middleby Corp":"Middleby","McDonalds":"McDonalds","McDonald's":"McDonalds","Public_Knowledge":"Public_Knowledge","Public Knowledge":"Public_Knowledge",
@@ -580,6 +581,7 @@ NODE_META = {
  "FULU_Foundation":("political",False),"R2R_Opposition":("political",False),"Louis_Rossmann":("person",False),
  "Eron_Wolf":("person",False),"Kevin_OReilly":("person",False),"Repair_Preservation_Group":("political",False),
  "CactusXR":("tech",False),"Auki":("tech",False),"SilverPush":("surveillance",False),"Shopkick":("tech",False),"LISNR":("tech",False),
+ "Phineas_Fisher":("other",False),"DarkHotel":("threat_actor",False),"Stealth_Falcon":("threat_actor",False),"Charming_Kitten":("threat_actor",False),"Apple_Live_Rewind":("tech",False),
  "iFixit":("industrial",False),"DMCA_1201":("state",False),"State_R2R_Laws":("state",False),"EU_R2R_Directive":("state",False),
  "Copyright_Office":("regulator",True),"FTC":("regulator",True),
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case; overlay)

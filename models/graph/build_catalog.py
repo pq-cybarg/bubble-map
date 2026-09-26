@@ -51,7 +51,7 @@ GROUPS = [
         "spec-cikleak-russia-cec",
         "spec-inqtel-portfolio",
         "spec-palantir-surveillance", "spec-niantic-geospatial",
-        "spec-openai-agent-swarm-2026"]),
+        "spec-openai-agent-swarm-2026", "spec-uwu-apt-leads"]),
     ("Right to repair & ownership", [
         "spec-right-to-repair", "spec-rossmann-futo-ownership", "spec-auto-right-to-repair",
         "spec-electronics-parts-pairing", "spec-farm-equipment-r2r", "spec-mcdonalds-kytch-taylor",

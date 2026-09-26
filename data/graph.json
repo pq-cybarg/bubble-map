@@ -444,6 +444,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Apple_Live_Rewind": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Application_Verifier": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -1432,6 +1436,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Charming_Kitten": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "Check_Point": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -2002,6 +2010,10 @@
     },
     "Dario_Amodei": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "DarkHotel": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "DarkSide": {
@@ -5364,6 +5376,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Phineas_Fisher": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Pimco": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -6498,6 +6514,10 @@
     },
     "State_R2R_Laws": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Stealth_Falcon": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "Steam_Valve": {
@@ -12089,6 +12109,19 @@
       "note": "WikiLeaks SpyFiles (2011) published Gamma's own marketing: FinSpy, FinFly USB, FinFly Web, FinFly ISP (ISP-level network injection so the target need not open an attachment). That leak is how the 'lawful intercept' stack first became public (fact)."
     },
     {
+      "from": "Phineas_Fisher",
+      "to": "Gamma_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Phineas Fisher claimed the Aug 2014 Gamma/FinFisher breach (source, support docs, customer material). Distinct from the 2015 Hacking Team dump by the same handle. Fact of disclosure; 'hero' language is not a graph property."
+    },
+    {
       "from": "FinSpy",
       "to": "Bahrain",
       "instrument": "surveillance_security",
@@ -12932,6 +12965,71 @@
       "cancelable": false,
       "source_file": "spec-iran-state-network.json",
       "note": ""
+    },
+    {
+      "from": "Phineas_Fisher",
+      "to": "Hacking_Team",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "2015 ~400GB dump of Hacking Team (RCS/Galileo) client lists and source. Same handle as the 2014 Gamma/FinFisher op. Fact of disclosure (Citizen Lab HT block)."
+    },
+    {
+      "from": "DarkHotel",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Kaspersky 2014: Darkhotel/Tapaoux hotel-WiFi watering-hole APT against diplomats/execs in Asia. UwU Vol 3 tribute is a lead, not a source (fact of the actor report)."
+    },
+    {
+      "from": "Stealth_Falcon",
+      "to": "UAE",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Citizen Lab 2016 Stealth Falcon: UAE-nexus spearphish against journalists/activists. DarkMatter/Project Raven sits in the same neighborhood. Targeting = fact; named-prisoner join = graded inference."
+    },
+    {
+      "from": "Charming_Kitten",
+      "to": "Iran",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Charming Kitten / Phosphorus / APT35 = IRGC-nexus (CISA/Microsoft). Documented targets include Masih Alinejad; Ruhollah Zam and Jamshid Sharmahd are Iran cross-border cases in the public record. Labor-camp/organ-harvest overlay from lyrics is not sourced here."
+    },
+    {
+      "from": "Apple",
+      "to": "Apple_Live_Rewind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Watch Series 12 / Ultra 4 Audio Intelligence: rolling mic buffer in Secure Exclave; Live Rewind = last 15s as text on double-press Crown + chime. Apple: no accessible recording. All-party eavesdropping-law fight (CA/MA/PA/WA). Always-on buffer = fact; 'spyware' as FinSpy-class implant = advocacy."
     },
     {
       "from": "Cheyenne_Hunt",
@@ -48828,10 +48926,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1988,
-    "num_edges": 3144,
+    "num_nodes": 1993,
+    "num_edges": 3150,
     "num_financial_edges": 274,
-    "num_structural_edges": 2870,
+    "num_structural_edges": 2876,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -49109,6 +49207,10 @@
         "OpenAI"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -49119,10 +49221,6 @@
       [
         "NVIDIA",
         "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
       ],
       [
         "Anthropic",
@@ -49142,14 +49240,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -49166,14 +49264,14 @@
       [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -49959,6 +50057,13 @@
       },
       "Apple": {
         "total_usd": 2200000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Apple_Live_Rewind": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -51693,6 +51798,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Charming_Kitten": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Check_Point": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -52688,6 +52800,13 @@
         "in_robust_core": false
       },
       "Dario_Amodei": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DarkHotel": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58574,6 +58693,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Phineas_Fisher": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pimco": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60556,6 +60682,13 @@
         "in_robust_core": false
       },
       "State_R2R_Laws": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Stealth_Falcon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
