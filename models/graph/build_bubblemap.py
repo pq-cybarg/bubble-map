@@ -98,7 +98,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "IBIT":"IBIT (iShares Bitcoin Trust)","GIP":"Global Infrastructure Partners","HPS":"HPS Investment Partners",
  "Aladdin":"Aladdin (risk engine, ~$25T)",
  # right-to-repair umbrella
- "Right_to_Repair":"Right to Repair","FULU_Foundation":"FULU Foundation (501c4)","Louis_Rossmann":"Louis Rossmann","Eron_Wolf":"Eron Wolf","Kevin_OReilly":"Kevin O'Reilly","Repair_Preservation_Group":"Repair Preservation Group",
+ "Right_to_Repair":"Right to Repair","FULU_Foundation":"FULU Foundation (501c4)","Louis_Rossmann":"Louis Rossmann","Eron_Wolf":"Eron Wolf","Kevin_OReilly":"Kevin O'Reilly","Repair_Preservation_Group":"Repair Preservation Group","CactusXR":"Cactus (Auki)","Auki":"Auki","SilverPush":"SilverPush","Shopkick":"Shopkick","LISNR":"LISNR",
  "Consumer_Rights_Wiki":"Consumer Rights Wiki","DMCA_1201":"DMCA §1201 (anticircumvention)","Copyright_Office":"US Copyright Office",
  "State_R2R_Laws":"State R2R laws (NY/MN/CA/OR/CO/WA…)","EU_R2R_Directive":"EU Repair Directive (2024/1799)",
  "Parts_Pairing":"Parts-pairing / serialization","R2R_Opposition":"Manufacturer R2R opposition (TechNet/CTA)","FTC":"FTC",

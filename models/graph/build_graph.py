@@ -202,6 +202,7 @@ ALIAS = {
  "Consumer_Rights_Wiki":"Consumer_Rights_Wiki","Consumer Rights Wiki":"Consumer_Rights_Wiki","iFixit":"iFixit",
  "DMCA_1201":"DMCA_1201","DMCA §1201":"DMCA_1201","Section_1201":"DMCA_1201","Copyright_Office":"Copyright_Office","US Copyright Office":"Copyright_Office",
  "State_R2R_Laws":"State_R2R_Laws","EU_R2R_Directive":"EU_R2R_Directive","Parts_Pairing":"Parts_Pairing","Parts-Pairing":"Parts_Pairing","R2R_Opposition":"R2R_Opposition",
+ "CactusXR":"CactusXR","Cactus XR":"CactusXR","Auki":"Auki","Auki Labs":"Auki","SilverPush":"SilverPush","Shopkick":"Shopkick","LISNR":"LISNR","Lisnr":"LISNR",
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case)
  "Kytch":"Kytch","Taylor_Foodservice":"Taylor_Foodservice","Taylor Commercial Foodservice":"Taylor_Foodservice","Taylor":"Taylor_Foodservice",
  "Middleby":"Middleby","Middleby Corp":"Middleby","McDonalds":"McDonalds","McDonald's":"McDonalds","Public_Knowledge":"Public_Knowledge","Public Knowledge":"Public_Knowledge",
@@ -578,6 +579,7 @@ NODE_META = {
  "Right_to_Repair":("other",False),"Consumer_Rights_Wiki":("other",False),"Parts_Pairing":("other",False),
  "FULU_Foundation":("political",False),"R2R_Opposition":("political",False),"Louis_Rossmann":("person",False),
  "Eron_Wolf":("person",False),"Kevin_OReilly":("person",False),"Repair_Preservation_Group":("political",False),
+ "CactusXR":("tech",False),"Auki":("tech",False),"SilverPush":("surveillance",False),"Shopkick":("tech",False),"LISNR":("tech",False),
  "iFixit":("industrial",False),"DMCA_1201":("state",False),"State_R2R_Laws":("state",False),"EU_R2R_Directive":("state",False),
  "Copyright_Office":("regulator",True),"FTC":("regulator",True),
  # McDonald's / Taylor / Kytch (R2R commercial-equipment case; overlay)

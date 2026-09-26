@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "title": "Retail gaze, CCTV twins, and ultrasonic cross-device tracking (uXDT)",
+    "generated": "2026-09-24",
+    "frame": "UwU Underground 22 Sep 2026 QT of Auki/CactusXR treated as lead. Independently: Cactus maps existing CCTV + phone digital twin to shelf-attention heatmaps (pose/head, not pupil). uXDT (SilverPush/Shopkick/LISNR, PETS 2017, FTC 2016) is a separate 18-22 kHz phone-mic stitch. Same rhyme (body into merchandising data, no extra hardware); not the same product. Overlay.",
+    "lead_not_source": "https://x.com/uwu_underground/status/2102393363173691481"
+  },
+  "nodes": [
+    {"id": "CactusXR", "sector": "tech"},
+    {"id": "Auki", "sector": "tech"},
+    {"id": "SilverPush", "sector": "surveillance"},
+    {"id": "Shopkick", "sector": "tech"},
+    {"id": "LISNR", "sector": "tech"},
+    {"id": "FTC", "sector": "regulator"}
+  ],
+  "edges": [
+    {
+      "from": "Auki",
+      "to": "CactusXR",
+      "instrument": "relationship",
+      "notes": "Cactus is Auki's retail spatial-AI copilot (phone twin, QR portals, cameras/robots). Pitch: existing CCTV + phone map; up to $500/month/location (Auki 18 Sep 2026 recap) (fact of product).",
+      "source": "https://www.getcactus.ai/"
+    },
+    {
+      "from": "CactusXR",
+      "to": "Location_Data",
+      "instrument": "relationship",
+      "notes": "Existing store CCTV + phone-built digital twin -> pose/head-direction heatmaps tied to SKUs. Not pupil tracking; not a named-shopper join in the public demo. Company product, not a third-party accuracy audit (fact of the pitch).",
+      "source": "https://www.auki.com/community/news/auki-community-update-recap-sep-18-2026"
+    },
+    {
+      "from": "SilverPush",
+      "to": "Location_Data",
+      "instrument": "relationship",
+      "notes": "uXDT SDK: inaudible ~18-22 kHz beacons in ads; app mic reports them. PETS 2017 reverse-engineered History GK (phone number, IMEI, Android ID, Google account). April 2015 claimed >18M devices (fact of the paper/SDK; current covert census not done).",
+      "source": "https://petsymposium.org/popets/2017/popets-2017-0020.pdf"
+    },
+    {
+      "from": "Shopkick",
+      "to": "Location_Data",
+      "instrument": "relationship",
+      "notes": "In-store ultrasonic beacons to confirm a walk-in and award points. PETS 2017 heard beacons in 4 of 35 stores in two EU cities; app must be open (fact).",
+      "source": "https://petsymposium.org/popets/2017/popets-2017-0020.pdf"
+    },
+    {
+      "from": "LISNR",
+      "to": "Location_Data",
+      "instrument": "relationship",
+      "notes": "Radius ultrasonic SDK still sold for proximity, ticketing, payments, dynamic ad serving. Vendor: not covert tracking. Capability class is the same 18-22 kHz phone-mic channel (fact of product; intent = their claim).",
+      "source": "https://lisnr.com/radius-ultrasonic-sdk-3/"
+    },
+    {
+      "from": "FTC",
+      "to": "SilverPush",
+      "instrument": "enforcement",
+      "notes": "Mar 2016 FTC warning letters to app developers embedding SilverPush code that could listen for TV-ad ultrasonic beacons via the microphone. Google Play later required disclosure. SilverPush said it stopped inaudible-frequency smartphone ad detection (fact of the letters; 2026 census of remaining covert SDKs not done here).",
+      "source": "https://www.ftc.gov/news-events/news/press-releases/2016/03/ftc-issues-warning-letters-app-developers-using-silverpush-code"
+    }
+  ]
+}

@@ -109,7 +109,19 @@
         {"name": "Local / uncensored AI", "stub": "spec-local-uncensored-ai", "notes": "Own the weights; FUTO adjacency."},
         {"name": "Payment-processor censorship", "stub": "spec-payment-processor-censorship", "notes": "Visa/MC/PayPal chokepoint Rossmann covered in 2025."},
         {"name": "Creative-platform purge", "stub": "spec-creative-platform-purge", "notes": "Steam/itch/Collective Shout; Clip Studio age gates."},
-        {"name": "Legislative Trojan horses / ID APIs", "stub": "spec-legislative-trojan-horse-id", "notes": "Identify first, then gate repair-adjacent speech and apps."}
+        {"name": "Legislative Trojan horses / ID APIs", "stub": "spec-legislative-trojan-horse-id", "notes": "Identify first, then gate repair-adjacent speech and apps."},
+        {"name": "Retail gaze / uXDT", "stub": "spec-retail-uxdt-cactus", "notes": "Cactus CCTV twin vs SilverPush/Shopkick ultrasonic. Phone as store sensor."}
+      ]
+    },
+    {
+      "id": "retail-tracking",
+      "title": "In-store tracking (CCTV twins + ultrasound)",
+      "items": [
+        {"name": "Cactus (Auki)", "url": "https://www.getcactus.ai/", "notes": "Retail spatial copilot; phone twin + cameras.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "Auki 18 Sep 2026 recap", "url": "https://www.auki.com/community/news/auki-community-update-recap-sep-18-2026", "notes": "Cameras into the twin; pose/gaze heatmaps; robot enroll via QR.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "PETS 2017 - ultrasonic side channels", "url": "https://petsymposium.org/popets/2017/popets-2017-0020.pdf", "notes": "234 Android apps; Shopkick in 4/35 stores.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "FTC SilverPush warning letters (Mar 2016)", "url": "https://www.ftc.gov/news-events/news/press-releases/2016/03/ftc-issues-warning-letters-app-developers-using-silverpush-code", "notes": "App-mic TV-ad beacons.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "LISNR Radius SDK", "url": "https://lisnr.com/radius-ultrasonic-sdk-3/", "notes": "Still-sold ultrasonic proximity / ads / ticketing.", "related": ["spec-retail-uxdt-cactus"]}
       ]
     }
   ],

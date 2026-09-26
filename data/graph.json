@@ -564,6 +564,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Auki": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Auren_Hoffman": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -1266,6 +1270,10 @@
     },
     "CZ": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "CactusXR": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Cadence": {
@@ -4064,6 +4072,10 @@
       "sector": "creditor",
       "has_exogenous_revenue": false
     },
+    "LISNR": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "LM_Studio": {
       "sector": "ai_infra",
       "has_exogenous_revenue": false
@@ -6272,6 +6284,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "Shopkick": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Sia": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -6299,6 +6315,10 @@
     "SilverLake": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "SilverPush": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Silver_Physical": {
       "sector": "commodity",
@@ -9649,6 +9669,84 @@
       "cancelable": false,
       "source_file": "influence-operator-network.json",
       "note": ""
+    },
+    {
+      "from": "Auki",
+      "to": "CactusXR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Cactus is Auki's retail spatial-AI copilot (phone twin, QR portals, cameras/robots). Pitch: existing CCTV + phone map; up to $500/month/location (Auki 18 Sep 2026 recap) (fact of product)."
+    },
+    {
+      "from": "CactusXR",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Existing store CCTV + phone-built digital twin -> pose/head-direction heatmaps tied to SKUs. Not pupil tracking; not a named-shopper join in the public demo. Company product, not a third-party accuracy audit (fact of the pitch)."
+    },
+    {
+      "from": "SilverPush",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "uXDT SDK: inaudible ~18-22 kHz beacons in ads; app mic reports them. PETS 2017 reverse-engineered History GK (phone number, IMEI, Android ID, Google account). April 2015 claimed >18M devices (fact of the paper/SDK; current covert census not done)."
+    },
+    {
+      "from": "Shopkick",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "In-store ultrasonic beacons to confirm a walk-in and award points. PETS 2017 heard beacons in 4 of 35 stores in two EU cities; app must be open (fact)."
+    },
+    {
+      "from": "LISNR",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Radius ultrasonic SDK still sold for proximity, ticketing, payments, dynamic ad serving. Vendor: not covert tracking. Capability class is the same 18-22 kHz phone-mic channel (fact of product; intent = their claim)."
+    },
+    {
+      "from": "FTC",
+      "to": "SilverPush",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Mar 2016 FTC warning letters to app developers embedding SilverPush code that could listen for TV-ad ultrasonic beacons via the microphone. Google Play later required disclosure. SilverPush said it stopped inaudible-frequency smartphone ad detection (fact of the letters; 2026 census of remaining covert SDKs not done here)."
     },
     {
       "from": "BankChain_Alliance",
@@ -48730,10 +48828,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1983,
-    "num_edges": 3138,
+    "num_nodes": 1988,
+    "num_edges": 3144,
     "num_financial_edges": 274,
-    "num_structural_edges": 2864,
+    "num_structural_edges": 2870,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -49003,20 +49101,20 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -49027,6 +49125,11 @@
         "Anthropic"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
@@ -49035,11 +49138,6 @@
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -50070,6 +50168,13 @@
         "in_robust_core": false
       },
       "Audi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auki": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51302,6 +51407,13 @@
         "in_robust_core": false
       },
       "CZ": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CactusXR": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -56201,6 +56313,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "LISNR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "LM_Studio": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60065,6 +60184,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shopkick": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sia": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60108,6 +60234,13 @@
         "in_robust_core": false
       },
       "SilverLake": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SilverPush": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

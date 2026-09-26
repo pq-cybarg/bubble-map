@@ -55,7 +55,8 @@ GROUPS = [
     ("Right to repair & ownership", [
         "spec-right-to-repair", "spec-rossmann-futo-ownership", "spec-auto-right-to-repair",
         "spec-electronics-parts-pairing", "spec-farm-equipment-r2r", "spec-mcdonalds-kytch-taylor",
-        "spec-open-source-3dprinting-lawfare", "catalog-recommended-links"]),
+        "spec-open-source-3dprinting-lawfare", "catalog-recommended-links",
+        "spec-retail-uxdt-cactus"]),
     ("Quantum & PQC", [
         "spec-ecdsa-nonce-failure-tracker", "macro-crqc-quantum-landscape", "macro-pqc-chips",
         "spec-defense-primes-pqc", "spec-quantum-computing-competitive-landscape",
