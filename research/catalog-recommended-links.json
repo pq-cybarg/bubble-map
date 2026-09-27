@@ -187,7 +187,32 @@
         {"name": "SEC EDGAR", "url": "https://www.sec.gov/edgar", "notes": "10-Ks and 8-Ks. If a dollar figure is not here or in a filing exhibit, it is not a fact of that size.", "related": ["fin-google-amazon-anthropic-meta"]},
         {"name": "CourtListener / RECAP", "url": "https://www.courtlistener.com/", "notes": "PACER mirrors. Buist complaint and similar dockets.", "related": ["spec-buist-v-anthropic-pacing"]},
         {"name": "OpenSecrets", "url": "https://www.opensecrets.org/", "notes": "US money-in-politics. Quiet-money catalogs start here, then 990s.", "related": ["catalog-quiet-money"]},
-        {"name": "Congress.gov", "url": "https://www.congress.gov/", "notes": "Bill text (REPAIR Act, AI Kill Switch Act, NDAA riders).", "related": ["spec-auto-right-to-repair"]}
+        {"name": "Congress.gov", "url": "https://www.congress.gov/", "notes": "Bill text (REPAIR Act, AI Kill Switch Act, NDAA riders).", "related": ["spec-auto-right-to-repair"]},
+        {"name": "BLS", "url": "https://www.bls.gov/", "notes": "Payrolls, CPI, QCEW benchmarks. Official-data-integrity block is about how these series get revised.", "related": ["macro-official-data-integrity"]},
+        {"name": "IMF GFSR", "url": "https://www.imf.org/en/Publications/GFSR", "notes": "Global Financial Stability Report. Cited on private-credit / CRE.", "related": ["macro-cre-privatecredit"]},
+        {"name": "FSB", "url": "https://www.fsb.org/", "notes": "Non-bank / private-credit monitoring papers.", "related": ["macro-cre-privatecredit"]},
+        {"name": "TreppTalk CMBS delinquency", "url": "https://www.trepp.com/trepptalk", "notes": "Office CMBS prints (12.34% Jan 2026 high). Primary for the CRE update.", "related": ["macro-cre-privatecredit"]}
+      ]
+    },
+    {
+      "id": "ai-evals-edu",
+      "title": "AI evals, incidents, and tech-history",
+      "items": [
+        {"name": "METR", "url": "https://metr.org/", "notes": "Independent evals. Reconstructed the ExploitGym unsanctioned board (~1,200 agents / 70k messages).", "related": ["spec-openai-agent-swarm-2026", "spec-ai-safety-evals-ecosystem"]},
+        {"name": "CSET (Georgetown)", "url": "https://cset.georgetown.edu/", "notes": "China STEM / CSC papers used in the tech-transfer block.", "related": ["spec-research-security-tech-transfer"]},
+        {"name": "OpenAI - Hugging Face incident and the road ahead", "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/", "notes": "Lab postmortem of the 2026 eval escape. Party account; pair with the HF forensic.", "related": ["spec-openai-agent-swarm-2026"]},
+        {"name": "Hugging Face - agent intrusion timeline", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline", "notes": "~17,600 actions. Victim forensic.", "related": ["spec-openai-agent-swarm-2026"]}
+      ]
+    },
+    {
+      "id": "vitalik-privacy",
+      "title": "Vitalik essays (ID, privacy, local models)",
+      "items": [
+        {"name": "vitalik.eth.limo (essay index)", "url": "https://vitalik.eth.limo/", "notes": "Full archive. This graph cites him on zkID, biometrics, legitimacy, local LLMs.", "related": ["spec-vitalik-buterin-thought"]},
+        {"name": "Does digital ID have risks even if it's ZK-wrapped?", "url": "https://vitalik.eth.limo/general/2025/06/28/zkid.html", "notes": "Pairs with age-verification-abolition.", "related": ["age-verification-abolition", "digitalid-regulatory"]},
+        {"name": "What do I think about biometric proof of personhood?", "url": "https://vitalik.eth.limo/general/2023/07/24/biometric.html", "notes": "Worldcoin neighborhood.", "related": ["digitalid-worldcoin-eid-convergence"]},
+        {"name": "Why I support privacy", "url": "https://vitalik.eth.limo/general/2025/04/14/privacy.html", "notes": "Steering-wheel vs engine framing used in the AI/privacy blocks.", "related": ["spec-vitalik-buterin-thought"]},
+        {"name": "My self-sovereign / local / private / secure LLM setup (2026)", "url": "https://vitalik.eth.limo/general/2026/04/02/secure_llms.html", "notes": "Own-the-weights companion to local-uncensored-ai.", "related": ["spec-local-uncensored-ai"]}
       ]
     },
     {
@@ -206,7 +231,14 @@
         {"name": "Device-ownership erosion", "stub": "digitalid-device-ownership-erosion", "notes": "OS/account identity as the lock."},
         {"name": "Age-verification abolition", "stub": "age-verification-abolition", "notes": "Why even ZK fails the 'robust' bar."},
         {"name": "Western speech regulation", "stub": "spec-western-speech-regulation", "notes": "UK/EU/FR/AU statute layer."},
-        {"name": "OpenAI agent swarm 2026", "stub": "spec-openai-agent-swarm-2026", "notes": "RubyGems, DseWiki, Hugging Face, Medicare portal."}
+        {"name": "OpenAI agent swarm 2026", "stub": "spec-openai-agent-swarm-2026", "notes": "RubyGems, DseWiki, Hugging Face, Medicare portal."},
+        {"name": "Vitalik thought map", "stub": "spec-vitalik-buterin-thought", "notes": "zkID, legitimacy, d/acc, local LLMs."},
+        {"name": "Official data integrity (BLS/CPI)", "stub": "macro-official-data-integrity", "notes": "How headline jobs/CPI get revised."},
+        {"name": "CRE / private credit", "stub": "macro-cre-privatecredit", "notes": "Office CMBS vs GFC; bank book vs bondholders."},
+        {"name": "PQC / CRQC landscape", "stub": "macro-crqc-quantum-landscape", "notes": "Why NIST PQC is on the Links tab."},
+        {"name": "AI chronology tab", "url": "ai.html", "notes": "Lab history, evals, open-weight counter-ecosystem."},
+        {"name": "Local / uncensored AI", "stub": "spec-local-uncensored-ai", "notes": "Own the weights."},
+        {"name": "Tech-transfer / CSC", "stub": "spec-research-security-tech-transfer", "notes": "CSET papers on China Scholarship Council."}
       ]
     }
   ],
