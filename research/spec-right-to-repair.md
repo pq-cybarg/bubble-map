@@ -1,6 +1,6 @@
 # Right to Repair — the movement, the DMCA §1201 barrier, parts-pairing, the state/EU law wave, and the manufacturer counter (both sides, dated)
 
-*Built 2026-06-24 from `research/spec-right-to-repair.json`. The **anchor** for the right-to-repair sub-threads (commercial food equipment, farm equipment, electronics parts-pairing, open-source lawfare). Companion to the device-ownership-erosion thread, the open-source/FUTO thread, and the digital-ID "security"-as-control thread.*
+*Built 2026-06-24 from `research/spec-right-to-repair.json`; Rossmann/FUTO/FULU/wiki layer expanded 2026-09-24 in [[spec-rossmann-futo-ownership]]. The **anchor** for the right-to-repair sub-threads (commercial food equipment, farm equipment, electronics parts-pairing, open-source lawfare). Companion to the device-ownership-erosion thread, the open-source/FUTO thread, and the digital-ID "security"-as-control thread. Recommended URLs: [[catalog-recommended-links]] / the Links tab.*
 
 > **Frame.** A genuine **ownership-vs-licensing** fight. Manufacturers restrict independent repair through **parts-pairing** (serialization), withheld parts/schematics/tools, **software/firmware locks** (which engage the **DMCA §1201** anticircumvention ban), and warranty terms — defended on **security/safety/IP** grounds. Advocates call it a **repair monopoly** + planned obsolescence + e-waste. The legal terrain: §1201's triennial exemptions, the FTC's Magnuson-Moss authority, a **50-state** bill wave (~6 enacted), and the **EU Repair Directive**.
 >
@@ -31,7 +31,7 @@ R2R bills have been introduced in **all 50 states** (iFixit). **Enacted electron
 
 ## 6. The actors (fact; one common claim corrected)
 
-**Advocacy.** **Louis Rossmann** (long-time repair advocate) was based at / funded by **FUTO** (Eron Wolf's open-source grants program) and in **2025 LEFT FUTO** to co-found the **FULU Foundation** (a **501(c)(4)**) with Kevin O'Reilly, plus the **Consumer Rights Wiki** (launched **Jan 2025** as the Consumer Action Taskforce Wiki); FULU runs a bounty program for DRM-circumvention fixes. **iFixit, US PIRG, and repair.org** are the institutional advocates.
+**Advocacy.** **Louis Rossmann** (long-time repair advocate) was based at / funded by **FUTO** (Eron Wolf's open-source grants program) and in **2025 LEFT FUTO** to co-found the **FULU Foundation** (a **501(c)(4)**) with Kevin O'Reilly, plus the **Consumer Rights Wiki** (launched **Jan 2025** as the Consumer Action Taskforce Wiki); FULU runs a bounty program for DRM-circumvention fixes. **iFixit, US PIRG, and repair.org** are the institutional advocates. Full timeline (NY/Nebraska testimony, Austin move, Own Your Shit tour 2026, wiki stats, bounty targets): [[spec-rossmann-futo-ownership]].
 
 **Industry.** Manufacturers + lobbies (TechNet, CTA) historically opposed — though **Apple made a documented U-turn**, endorsing **California's SB 244 (2023)** after years of opposition (its **Self Service Repair** remains serialization-limited; critics call it inadequate).
 

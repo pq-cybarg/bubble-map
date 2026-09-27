@@ -444,6 +444,10 @@
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
     },
+    "Apple_Live_Rewind": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Application_Verifier": {
       "sector": "tech",
       "has_exogenous_revenue": false
@@ -562,6 +566,10 @@
     },
     "Audi": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Auki": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Auren_Hoffman": {
@@ -1268,6 +1276,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "CactusXR": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Cadence": {
       "sector": "semiconductor",
       "has_exogenous_revenue": true
@@ -1422,6 +1434,10 @@
     },
     "Charles_Koch": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Charming_Kitten": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "Check_Point": {
@@ -1996,6 +2012,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "DarkHotel": {
+      "sector": "threat_actor",
+      "has_exogenous_revenue": false
+    },
     "DarkSide": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -2493,6 +2513,10 @@
       "has_exogenous_revenue": false
     },
     "Ernest_Garcia": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Eron_Wolf": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -3928,6 +3952,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Kevin_OReilly": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "KeyBank": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -4054,6 +4082,10 @@
     },
     "LGFV_Debt": {
       "sector": "creditor",
+      "has_exogenous_revenue": false
+    },
+    "LISNR": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "LM_Studio": {
@@ -5344,6 +5376,10 @@
       "sector": "state",
       "has_exogenous_revenue": true
     },
+    "Phineas_Fisher": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Pimco": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -5710,6 +5746,10 @@
     },
     "Render": {
       "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
+    "Repair_Preservation_Group": {
+      "sector": "political",
       "has_exogenous_revenue": false
     },
     "Repo_Market": {
@@ -6260,6 +6300,10 @@
       "sector": "tech",
       "has_exogenous_revenue": false
     },
+    "Shopkick": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Sia": {
       "sector": "dlt",
       "has_exogenous_revenue": false
@@ -6287,6 +6331,10 @@
     "SilverLake": {
       "sector": "financier",
       "has_exogenous_revenue": true
+    },
+    "SilverPush": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
     },
     "Silver_Physical": {
       "sector": "commodity",
@@ -6466,6 +6514,10 @@
     },
     "State_R2R_Laws": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Stealth_Falcon": {
+      "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
     "Steam_Valve": {
@@ -9639,6 +9691,84 @@
       "note": ""
     },
     {
+      "from": "Auki",
+      "to": "CactusXR",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Cactus is Auki's retail spatial-AI copilot (phone twin, QR portals, cameras/robots). Pitch: existing CCTV + phone map; up to $500/month/location (Auki 18 Sep 2026 recap) (fact of product)."
+    },
+    {
+      "from": "CactusXR",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Existing store CCTV + phone-built digital twin -> pose/head-direction heatmaps tied to SKUs. Not pupil tracking; not a named-shopper join in the public demo. Company product, not a third-party accuracy audit (fact of the pitch)."
+    },
+    {
+      "from": "SilverPush",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "uXDT SDK: inaudible ~18-22 kHz beacons in ads; app mic reports them. PETS 2017 reverse-engineered History GK (phone number, IMEI, Android ID, Google account). April 2015 claimed >18M devices (fact of the paper/SDK; current covert census not done)."
+    },
+    {
+      "from": "Shopkick",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "In-store ultrasonic beacons to confirm a walk-in and award points. PETS 2017 heard beacons in 4 of 35 stores in two EU cities; app must be open (fact)."
+    },
+    {
+      "from": "LISNR",
+      "to": "Location_Data",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Radius ultrasonic SDK still sold for proximity, ticketing, payments, dynamic ad serving. Vendor: not covert tracking. Capability class is the same 18-22 kHz phone-mic channel (fact of product; intent = their claim)."
+    },
+    {
+      "from": "FTC",
+      "to": "SilverPush",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "enforcement",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-retail-uxdt-cactus.json",
+      "note": "Mar 2016 FTC warning letters to app developers embedding SilverPush code that could listen for TV-ad ultrasonic beacons via the microphone. Google Play later required disclosure. SilverPush said it stopped inaudible-frequency smartphone ad detection (fact of the letters; 2026 census of remaining covert SDKs not done here)."
+    },
+    {
       "from": "BankChain_Alliance",
       "to": "Community_Banks",
       "instrument": "other",
@@ -11979,6 +12109,19 @@
       "note": "WikiLeaks SpyFiles (2011) published Gamma's own marketing: FinSpy, FinFly USB, FinFly Web, FinFly ISP (ISP-level network injection so the target need not open an attachment). That leak is how the 'lawful intercept' stack first became public (fact)."
     },
     {
+      "from": "Phineas_Fisher",
+      "to": "Gamma_Group",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-finfisher-finspy-spyware.json",
+      "note": "Phineas Fisher claimed the Aug 2014 Gamma/FinFisher breach (source, support docs, customer material). Distinct from the 2015 Hacking Team dump by the same handle. Fact of disclosure; 'hero' language is not a graph property."
+    },
+    {
       "from": "FinSpy",
       "to": "Bahrain",
       "instrument": "surveillance_security",
@@ -12822,6 +12965,71 @@
       "cancelable": false,
       "source_file": "spec-iran-state-network.json",
       "note": ""
+    },
+    {
+      "from": "Phineas_Fisher",
+      "to": "Hacking_Team",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "leak_disclosure",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "2015 ~400GB dump of Hacking Team (RCS/Galileo) client lists and source. Same handle as the 2014 Gamma/FinFisher op. Fact of disclosure (Citizen Lab HT block)."
+    },
+    {
+      "from": "DarkHotel",
+      "to": "Malware_Lineage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Kaspersky 2014: Darkhotel/Tapaoux hotel-WiFi watering-hole APT against diplomats/execs in Asia. UwU Vol 3 tribute is a lead, not a source (fact of the actor report)."
+    },
+    {
+      "from": "Stealth_Falcon",
+      "to": "UAE",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Citizen Lab 2016 Stealth Falcon: UAE-nexus spearphish against journalists/activists. DarkMatter/Project Raven sits in the same neighborhood. Targeting = fact; named-prisoner join = graded inference."
+    },
+    {
+      "from": "Charming_Kitten",
+      "to": "Iran",
+      "instrument": "surveillance_security",
+      "layer": "structural",
+      "raw_instrument": "spyware_deployment",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Charming Kitten / Phosphorus / APT35 = IRGC-nexus (CISA/Microsoft). Documented targets include Masih Alinejad; Ruhollah Zam and Jamshid Sharmahd are Iran cross-border cases in the public record. Labor-camp/organ-harvest overlay from lyrics is not sourced here."
+    },
+    {
+      "from": "Apple",
+      "to": "Apple_Live_Rewind",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-uwu-apt-leads.json",
+      "note": "Watch Series 12 / Ultra 4 Audio Intelligence: rolling mic buffer in Secure Exclave; Live Rewind = last 15s as text on double-press Crown + chime. Apple: no accessible recording. All-party eavesdropping-law fight (CA/MA/PA/WA). Always-on buffer = fact; 'spyware' as FinSpy-class implant = advocacy."
     },
     {
       "from": "Cheyenne_Hunt",
@@ -17998,6 +18206,136 @@
       "note": ""
     },
     {
+      "from": "Louis_Rossmann",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "Shop owner + YouTube diagnostics (~2.6M) turned into legislative testimony (NY Digital Fair Repair Act 2015-22; Nebraska LB67 2017) and ongoing R2R lobbying via Repair Preservation Group Action Fund (fact)."
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "Repair_Preservation_Group",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Founder and exec director of Repair Preservation Group (501c3 education / repair.wiki) plus the Action Fund 501c4 that lobbies R2R bills (fact, his site)."
+    },
+    {
+      "from": "FUTO",
+      "to": "Louis_Rossmann",
+      "instrument": "relationship",
+      "layer": "structural",
+      "raw_instrument": "grant",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Director of Community Outreach 2022-Feb 2025; shop moved to Austin. FUTO (Eron Wolf, for-profit) funded the work - inverted 'Rossmann funds FUTO' claim is false. Wolf donated on the order of $1M to Rossmann's nonprofit before hiring him (Rossmann's own comment) (fact of the job and funder direction; $1M is his figure)."
+    },
+    {
+      "from": "Eron_Wolf",
+      "to": "FUTO",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Founded FUTO 2021; sole owner/funder; Yahoo Games-era capital. No SV/government/NGO investment (fact, FUTO FAQ/About)."
+    },
+    {
+      "from": "Louis_Rossmann",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "Co-founded FULU Foundation USA (Freedom from Unethical Limitations on Users) with Kevin O'Reilly, June 2025; 501c4 for digital ownership and DMCA 1201 reform. Distinct from the for-profit shop (fact)."
+    },
+    {
+      "from": "Kevin_OReilly",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Co-founder with Rossmann (fact, Wikipedia + FULU materials)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Consumer_Rights_Wiki",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Hosts consumerrights.wiki (moved from wiki.rossmanngroup.com). Launched Jan 2025 as Consumer Action Taskforce Wiki. About page: 1,472 articles, 206 active contributors (2026). Advocacy database, not a court (fact of hosting and counts)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "DMCA_1201",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Bounty program (bounties.fulu.org) pays for restoring function on DRM-locked/bricked devices (Nest, Molekule, Xbox optical, Echelon bikes $20k). Intended as legislative evidence. 1201 makes sharing unlocks legally hazardous - legality of any given unlock not asserted (fact of the program)."
+    },
+    {
+      "from": "FULU_Foundation",
+      "to": "Right_to_Repair",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json,spec-right-to-repair.json",
+      "note": "R2R asks OEMs for parts/tools; FULU is the self-help twin plus 1201 reform. Own Your Shit tour summer 2026 (WIRED 17 Sep 2026) with 1201 postcards to representatives (fact of the tour)."
+    },
+    {
+      "from": "iFixit",
+      "to": "Louis_Rossmann",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-rossmann-futo-ownership.json",
+      "note": "Institutional R2R cohort (guides, parts, state-law tracker) networked with Rossmann's shop-advocacy line. Same fight, different vehicles (fact of shared campaign space; no payroll asserted)."
+    },
+    {
       "from": "NSA",
       "to": "Cryptography_Standards",
       "instrument": "surveillance_security",
@@ -19075,6 +19413,19 @@
       "cancelable": false,
       "source_file": "spec-stormwater-easement-neglect-pattern.json",
       "note": "Oct 3 2024 cyberattack forced AWK to shut its MyWater customer portal + suspend billing (no water/wastewater facility impact; language suggested ransomware) - part of a rising wave of attacks on US water infrastructure, some linked to Iran/Russia/China. The OT/critical-infrastructure threat overlay on the water sector (fact)."
+    },
+    {
+      "from": "Consumer_Rights_Wiki",
+      "to": "FULU_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-recommended-links.json",
+      "note": "Wiki is a FULU project; recommended-links catalog points at the About page as the living index (fact of hosting)."
     },
     {
       "from": "Haipo_Yang",
@@ -26734,50 +27085,11 @@
       "note": ""
     },
     {
-      "from": "Louis_Rossmann",
-      "to": "Right_to_Repair",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "leading repair-advocate",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
-      "from": "Louis_Rossmann",
-      "to": "FULU_Foundation",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "co-founded the FULU Foundation (501c4, 2025) after leaving FUTO",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
       "from": "FULU_Foundation",
       "to": "Consumer_Rights_Wiki",
       "instrument": "relationship",
       "layer": "structural",
       "raw_instrument": "runs the Consumer Rights Wiki (launched Jan 2025); DRM-circumvention bounty program",
-      "amount_usd": null,
-      "status": "documented",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-right-to-repair.json",
-      "note": ""
-    },
-    {
-      "from": "FULU_Foundation",
-      "to": "Right_to_Repair",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "digital-ownership advocacy; \u00a71201 reform",
       "amount_usd": null,
       "status": "documented",
       "declared_circular": false,
@@ -48614,10 +48926,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1980,
-    "num_edges": 3130,
+    "num_nodes": 1993,
+    "num_edges": 3150,
     "num_financial_edges": 274,
-    "num_structural_edges": 2856,
+    "num_structural_edges": 2876,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -48705,6 +49017,7 @@
       "Congress",
       "ConsenSys",
       "Constellation_Energy",
+      "Consumer_Rights_Wiki",
       "CoreWeave",
       "Critical_Minerals_Strategic_Reserve",
       "Cross_River_Bank",
@@ -48739,6 +49052,7 @@
       "FDIC",
       "FERC",
       "FPL",
+      "FULU_Foundation",
       "Facebook_Verified",
       "Fairshake",
       "Family_Offices",
@@ -48878,7 +49192,7 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 214,
+    "core_scc_all_edges_size": 216,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -48893,20 +49207,20 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "NVIDIA",
@@ -49748,6 +50062,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Apple_Live_Rewind": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Application_Verifier": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -49952,6 +50273,13 @@
         "in_robust_core": false
       },
       "Audi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Auki": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51190,6 +51518,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "CactusXR": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Cadence": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51457,6 +51792,13 @@
         "in_robust_core": false
       },
       "Charles_Koch": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Charming_Kitten": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52464,6 +52806,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "DarkHotel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DarkSide": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -53333,6 +53682,13 @@
         "in_robust_core": false
       },
       "Ernest_Garcia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Eron_Wolf": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55845,6 +56201,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Kevin_OReilly": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "KeyBank": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56063,6 +56426,13 @@
         "in_robust_core": false
       },
       "LGFV_Debt": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "LISNR": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58323,6 +58693,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Phineas_Fisher": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Pimco": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -58961,6 +59338,13 @@
         "in_robust_core": false
       },
       "Render": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Repair_Preservation_Group": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -59926,6 +60310,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Shopkick": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Sia": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -59969,6 +60360,13 @@
         "in_robust_core": false
       },
       "SilverLake": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "SilverPush": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -60284,6 +60682,13 @@
         "in_robust_core": false
       },
       "State_R2R_Laws": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Stealth_Falcon": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

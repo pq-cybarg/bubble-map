@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "UwU Underground as a spyware/APT lead index (not a source)",
+    "generated": "2026-09-25",
+    "frame": "uwu_underground names FinSpy, Pegasus, APT28, Charming Kitten, Stealth Falcon, DarkHotel, Phineas Fisher, uXDT, Apple Live Rewind. Treat posts as leads. Lyrics are party voice. Primaries: Citizen Lab, Kaspersky, DOJ, FTC, Apple privacy paper. Harm pipeline is graded inference, not a kill-list. Overlay."
+  },
+  "nodes": [
+    {"id": "Phineas_Fisher", "sector": "other"},
+    {"id": "DarkHotel", "sector": "threat_actor"},
+    {"id": "Stealth_Falcon", "sector": "threat_actor"},
+    {"id": "Charming_Kitten", "sector": "threat_actor"},
+    {"id": "Apple_Live_Rewind", "sector": "tech"}
+  ],
+  "edges": [
+    {
+      "from": "Phineas_Fisher",
+      "to": "Hacking_Team",
+      "instrument": "leak_disclosure",
+      "notes": "2015 ~400GB dump of Hacking Team (RCS/Galileo) client lists and source. Same handle as the 2014 Gamma/FinFisher op. Fact of disclosure (Citizen Lab HT block).",
+      "source": "spec-citizen-lab"
+    },
+    {
+      "from": "DarkHotel",
+      "to": "Malware_Lineage",
+      "instrument": "lineage",
+      "notes": "Kaspersky 2014: Darkhotel/Tapaoux hotel-WiFi watering-hole APT against diplomats/execs in Asia. UwU Vol 3 tribute is a lead, not a source (fact of the actor report).",
+      "source": "https://securelist.com/the-darkhotel-apt/66729/"
+    },
+    {
+      "from": "Stealth_Falcon",
+      "to": "UAE",
+      "instrument": "spyware_deployment",
+      "notes": "Citizen Lab 2016 Stealth Falcon: UAE-nexus spearphish against journalists/activists. DarkMatter/Project Raven sits in the same neighborhood. Targeting = fact; named-prisoner join = graded inference.",
+      "source": "https://citizenlab.ca/2016/05/stealth-falcon/"
+    },
+    {
+      "from": "Charming_Kitten",
+      "to": "Iran",
+      "instrument": "spyware_deployment",
+      "notes": "Charming Kitten / Phosphorus / APT35 = IRGC-nexus (CISA/Microsoft). Documented targets include Masih Alinejad; Ruhollah Zam and Jamshid Sharmahd are Iran cross-border cases in the public record. Labor-camp/organ-harvest overlay from lyrics is not sourced here.",
+      "source": "spec-state-apt-catalog"
+    },
+    {
+      "from": "Apple",
+      "to": "Apple_Live_Rewind",
+      "instrument": "relationship",
+      "notes": "Watch Series 12 / Ultra 4 Audio Intelligence: rolling mic buffer in Secure Exclave; Live Rewind = last 15s as text on double-press Crown + chime. Apple: no accessible recording. All-party eavesdropping-law fight (CA/MA/PA/WA). Always-on buffer = fact; 'spyware' as FinSpy-class implant = advocacy.",
+      "source": "https://www.apple.com/privacy/docs/Audio_Intelligence_Privacy_Overview_Sep_2026.pdf"
+    }
+  ]
+}
