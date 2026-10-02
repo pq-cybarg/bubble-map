@@ -440,6 +440,10 @@
       "sector": "ai",
       "has_exogenous_revenue": false
     },
+    "App_Store_Gatekeeping": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Apple": {
       "sector": "hyperscaler",
       "has_exogenous_revenue": true
@@ -2244,6 +2248,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Domain_Registrar_Control": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "Dominion_Energy": {
       "sector": "commodity",
       "has_exogenous_revenue": false
@@ -3328,6 +3336,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Hosting_Deplatforming": {
+      "sector": "tech",
+      "has_exogenous_revenue": false
+    },
     "House Financial Services": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3594,6 +3606,10 @@
     },
     "Information_Theory": {
       "sector": "academia",
+      "has_exogenous_revenue": false
+    },
+    "Infrastructure_Chokepoint": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Infrastructure_Corridors": {
@@ -30075,6 +30091,149 @@
       "note": ""
     },
     {
+      "from": "Amazon",
+      "to": "Hosting_Deplatforming",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "AWS suspended Parler's hosting (effective 10 Jan 2021) after the Jan 6 Capitol riot, taking the app offline for ~a month until it found new hosting. The clearest cloud-hosting deplatforming case: a single IaaS provider can remove a lawful (if noxious) service from the internet. AWS cited repeated ToS violations (violent content); critics called it infrastructure-level censorship without due process (fact of the suspension; framing contested)."
+    },
+    {
+      "from": "Hosting_Deplatforming",
+      "to": "Infrastructure_Chokepoint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Cloud hosting (AWS/Azure/GCP) is a chokepoint layer: a handful of IaaS providers host most of the web, so a hosting cutoff is near-total de-platforming (fact of concentration)."
+    },
+    {
+      "from": "Apple",
+      "to": "App_Store_Gatekeeping",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Apple is the SOLE distribution channel for iOS apps (no sideloading pre-DMA) and takes ~30% - it removed Parler (Jan 2021, restored Apr 2021 after moderation changes) and routinely gates apps. Structural gatekeeping power documented in Epic v. Apple; it is also where OS-level age/ID attestation now routes (fact of the chokepoint; moderation-vs-censorship framing contested)."
+    },
+    {
+      "from": "Google",
+      "to": "App_Store_Gatekeeping",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Google Play removed Parler (Jan 2021) and others; Android allows sideloading, so Play is a softer gate than iOS - but with the 2026 Play 'Age Signals' + developer-verification moves it is tightening. The two mobile stores together are a duopoly gate on app distribution (fact; softer than iOS)."
+    },
+    {
+      "from": "App_Store_Gatekeeping",
+      "to": "Infrastructure_Chokepoint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "The Apple+Google app-store duopoly is the mobile-distribution chokepoint - removal from both effectively ends a consumer app (fact of the duopoly)."
+    },
+    {
+      "from": "Cloudflare",
+      "to": "Infrastructure_Chokepoint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Cloudflare (CDN/DDoS protection) terminated Daily Stormer (Aug 2017), 8chan (Aug 2019), and Kiwi Farms (Sep 2022) - but EACH time CEO Matthew Prince published statements calling the intervention DANGEROUS and warning that an infrastructure provider policing content sets a bad precedent. That self-stated reluctance is a fact that cuts against a simple-censorship reading: the chokepoint is real AND its most-used operator says it should not be a speech arbiter (fact of both the terminations and the reluctance)."
+    },
+    {
+      "from": "Akamai",
+      "to": "Infrastructure_Chokepoint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Akamai/Fastly and the CDN layer are peers in the same chokepoint class: DDoS protection + edge delivery are near-essential for a site at scale, so withdrawal can functionally silence a target (fact of the class)."
+    },
+    {
+      "from": "Domain_Registrar_Control",
+      "to": "Infrastructure_Chokepoint",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "Domain registrars/registries (GoDaddy, Namecheap, Google Domains) and DNS are a further layer: GoDaddy dropped Gab (2018) and AR15.com; registry/registrar seizures (ICE/NTIA-adjacent, court orders) can remove a name entirely. Losing the domain is losing the address (fact of the layer; case-by-case motive varies)."
+    },
+    {
+      "from": "Infrastructure_Chokepoint",
+      "to": "Online_Speech_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "State speech law increasingly DEPUTIZES the infra layer: the EU DSA reaches hosting/intermediary services, the UK OSA reaches 'ancillary' services, and app-store age laws push duties onto Apple/Google. Law + infrastructure reinforce each other (interpretation, labeled; cf Online_Speech_Regulation)."
+    },
+    {
+      "from": "Infrastructure_Chokepoint",
+      "to": "Financial_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "COMPETING/PARALLEL FRAME: infrastructure (host/registrar/app-store/CDN), finance (card networks/processors), and law are THREE DISTINCT chokepoint layers on the same target - a site can be cut at the money, the content, or the pipe. Held as parallel mechanisms, not one cabal (interpretation, labeled; completes the money->law->infrastructure stack)."
+    },
+    {
+      "from": "Infrastructure_Chokepoint",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-infrastructure-chokepoints.json",
+      "note": "CONVERGENCE: app stores are becoming the age/ID-attestation layer (Apple Declared Age Range, Play Age Signals) - so the distribution chokepoint and the identity chokepoint merge at the OS/store (interpretation, labeled; cf the age-verification + Digital-ID threads)."
+    },
+    {
       "from": "Lockheed_Martin",
       "to": "Defense_Primes",
       "instrument": "other",
@@ -48926,10 +49085,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1993,
-    "num_edges": 3150,
+    "num_nodes": 1997,
+    "num_edges": 3161,
     "num_financial_edges": 274,
-    "num_structural_edges": 2876,
+    "num_structural_edges": 2887,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -48994,6 +49153,7 @@
       "Andreessen_Horowitz",
       "Anduril",
       "Anthropic",
+      "App_Store_Gatekeeping",
       "Arc",
       "Australia",
       "Bank_Stablecoin_Consortium",
@@ -49070,6 +49230,7 @@
       "Google",
       "HALEU_Enrichment",
       "HV_Transformers",
+      "Hosting_Deplatforming",
       "Huntington",
       "Hyperion",
       "IBM",
@@ -49077,6 +49238,7 @@
       "ImmigrationOS",
       "India",
       "India_DPI",
+      "Infrastructure_Chokepoint",
       "Ingress",
       "Intel",
       "IonQ",
@@ -49192,15 +49354,19 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 216,
+    "core_scc_all_edges_size": 219,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -49211,16 +49377,17 @@
         "Anthropic"
       ],
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
-        "AMD",
-        "OpenAI"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -49233,9 +49400,10 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -49253,12 +49421,6 @@
         "CoreWeave",
         "NVIDIA",
         "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -50049,6 +50211,13 @@
         "in_robust_core": false
       },
       "Apollo_Research": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "App_Store_Gatekeeping": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53212,6 +53381,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Domain_Registrar_Control": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Dominion_Energy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55109,6 +55285,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Hosting_Deplatforming": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "House Financial Services": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55572,6 +55755,13 @@
         "in_robust_core": false
       },
       "Information_Theory": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Infrastructure_Chokepoint": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -63322,7 +63512,7 @@
       },
       {
         "node": "Google",
-        "degree": 30,
+        "degree": 31,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -63344,7 +63534,7 @@
           "university"
         ],
         "n_neighbor_sectors": 18,
-        "source_files": 24,
+        "source_files": 25,
         "layers": [
           "financial",
           "structural"
@@ -63569,6 +63759,30 @@
         "both_layers": false
       },
       {
+        "node": "Digital_ID",
+        "degree": 33,
+        "neighbor_sectors": [
+          "crypto",
+          "financial_infra",
+          "identity",
+          "other",
+          "philanthropy",
+          "political",
+          "pqc",
+          "standards",
+          "state",
+          "surveillance",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 16,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "PrivateCredit_Funds",
         "degree": 18,
         "neighbor_sectors": [
@@ -63616,30 +63830,6 @@
         "both_layers": false
       },
       {
-        "node": "Digital_ID",
-        "degree": 32,
-        "neighbor_sectors": [
-          "crypto",
-          "financial_infra",
-          "identity",
-          "other",
-          "philanthropy",
-          "political",
-          "pqc",
-          "standards",
-          "state",
-          "surveillance",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 15,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -63657,6 +63847,29 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 11,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Amazon",
+        "degree": 13,
+        "neighbor_sectors": [
+          "ai_lab",
+          "capital",
+          "commodity",
+          "financial_infra",
+          "industrial",
+          "person",
+          "satellite",
+          "standards",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 12,
         "layers": [
           "financial",
           "structural"
@@ -63704,30 +63917,6 @@
         ],
         "n_neighbor_sectors": 10,
         "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Oracle",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_lab",
-          "bigtech_asia",
-          "capital",
-          "chip_vendor",
-          "commodity",
-          "macro",
-          "other",
-          "private_credit",
-          "sink",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 9,
         "layers": [
           "financial",
           "structural"
