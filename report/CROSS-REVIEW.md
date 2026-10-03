@@ -15,12 +15,12 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 108 files
-- **Google** — 71 files
+- **Meta** — 109 files
+- **Google** — 72 files
 - **Chainlink** — 66 files
 - **OpenAI** — 57 files
 - **Microsoft** — 49 files
-- **Amazon** — 39 files
+- **Amazon** — 40 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
 - **Anthropic** — 36 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-infrastructure-chokepoints.json` — related files by shared entities (verify cross-refs exist)
-- fin-coreweave-oracle.json: 3 shared entities
+## Newest file `spec-control-apparatus-overview.json` — related files by shared entities (verify cross-refs exist)
+- fin-hedera-connections.json: 3 shared entities
+- spec-telecom-satellite.json: 3 shared entities
 - spec-crypto-sec-epstein.json: 3 shared entities
-- energy-power.json: 3 shared entities
-- sec-filings.json: 3 shared entities
 - spec-exchanges-asia.json: 3 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
-- fin-meta-family.json: 3 shared entities
-- fin-ai-depreciation-debttrap.json: 3 shared entities
+- catalog-recommended-links.json: 3 shared entities
+- macro-crqc-quantum-landscape.json: 3 shared entities
+- spec-supplychain-shaihulud-extortion.json: 3 shared entities
+- spec-nextera-national-utility.json: 3 shared entities

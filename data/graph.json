@@ -1768,6 +1768,10 @@
       "sector": "labor",
       "has_exogenous_revenue": false
     },
+    "Control_Apparatus": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Coordinated_Disclosure_Norms": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -16140,6 +16144,97 @@
       "cancelable": false,
       "source_file": "defense-rare-earth.json",
       "note": "Anduril ($30.5B Jun-2025 -> $61B May-2026; rev ~$2.2B doubled): Army IVAS ($22B) reassigned from Microsoft (Feb 2026); Army enterprise contract consolidating 120 procurement actions - defense-tech disrupting the primes (fact)."
+    },
+    {
+      "from": "Financial_Censorship",
+      "to": "Control_Apparatus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "LAYER 1 - the money. Card networks/processors (Visa/MC ~80% US volume) + activist pressure (NCOSE, Collective Shout) can de-monetize a lawful target; some actions reversed under counter-pressure (OnlyFans, itch.io). Fact of the mechanism; censorship-vs-brand/legal-risk framing contested. Full block: Financial_Censorship."
+    },
+    {
+      "from": "Online_Speech_Regulation",
+      "to": "Control_Apparatus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "LAYER 2 - the law. UK OSA/Ofcom, EU DSA + Chat Control, DE NetzDG, FR SREN/Arcom, AU eSafety: state content duties enforced by fines + blocking, with age-verification as the durable on-ramp. Fact of the regimes; child-safety-vs-censorship framing contested. Full block: Online_Speech_Regulation."
+    },
+    {
+      "from": "Infrastructure_Chokepoint",
+      "to": "Control_Apparatus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "LAYER 3 - the pipe. App stores (Apple/Google), hosting (AWS/Parler), registrars/DNS (GoDaddy/Gab), CDN (Cloudflare - with its own stated reluctance). Fact of the actions; anti-abuse-vs-censorship framing contested. Full block: Infrastructure_Chokepoint."
+    },
+    {
+      "from": "State_Influence_Ops",
+      "to": "Control_Apparatus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "LAYER 4 - the narrative (and its cover). China (United Front/Spamouflage) + Russia (Doppelganger) + proxies: named/attributed ops = fact (impact assessed modest); 'subtle/potential' ops = strictly labeled speculation. Also a stated rationale states cite for broad speech powers. Full block: State_Influence_Ops."
+    },
+    {
+      "from": "Digital_Public_Infrastructure",
+      "to": "Control_Apparatus",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "LAYER 0 - the upstream rails + agenda. WEF (agenda-shaping forum, NOT a ruler - controller claim rejected), IMF (conditionality, NOT a censor - false claim rejected), DPI (India Stack/Aadhaar/UPI - genuinely dual-use). The weakest layer to attribute causally, deliberately under-claimed. Full block: spec-wef-imf-influence."
+    },
+    {
+      "from": "Control_Apparatus",
+      "to": "Digital_ID",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "THE CONVERGENCE POINT: every layer increasingly routes through identity - age/ID attestation (law), device/app-store attestation (infrastructure), ID+payment rails (DPI), and money+identity chokepoints (finance). Identity is where the layers meet (interpretation, labeled; cf the Digital-ID thread)."
+    },
+    {
+      "from": "Control_Apparatus",
+      "to": "Operation_Choke_Point_2",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-control-apparatus-overview.json",
+      "note": "The template across layers: regulatory/private pressure on INTERMEDIARIES to cut a disfavored target - Operation Choke Point (banks, 2013) and the alleged crypto 'Choke Point 2.0' (2023-25) are the finance-layer version of the same intermediary-pressure logic the other layers use (fact of the debate; coordinated-intent contested)."
     },
     {
       "from": "Mubadala",
@@ -49085,10 +49180,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 1997,
-    "num_edges": 3161,
+    "num_nodes": 1998,
+    "num_edges": 3168,
     "num_financial_edges": 274,
-    "num_structural_edges": 2887,
+    "num_structural_edges": 2894,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -49178,6 +49273,7 @@
       "ConsenSys",
       "Constellation_Energy",
       "Consumer_Rights_Wiki",
+      "Control_Apparatus",
       "CoreWeave",
       "Critical_Minerals_Strategic_Reserve",
       "Cross_River_Bank",
@@ -49354,40 +49450,35 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 219,
+    "core_scc_all_edges_size": 220,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
       ],
       [
         "CoreWeave",
         "SINK_lenders"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -49400,6 +49491,11 @@
         "OpenAI"
       ],
       [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
+      ],
+      [
         "CoreWeave",
         "NVIDIA",
         "Crusoe",
@@ -49408,8 +49504,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -49420,8 +49516,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -52535,6 +52631,13 @@
         "in_robust_core": false
       },
       "Contingent_Labor": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Control_Apparatus": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -63760,7 +63863,7 @@
       },
       {
         "node": "Digital_ID",
-        "degree": 33,
+        "degree": 34,
         "neighbor_sectors": [
           "crypto",
           "financial_infra",
@@ -63776,7 +63879,7 @@
           "university"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "structural"
         ],
