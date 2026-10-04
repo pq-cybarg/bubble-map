@@ -52,7 +52,7 @@ h1{margin:0 0 4px;font-size:30px;font-weight:600;font-family:Georgia,serif}
 .src a{color:var(--ac2);text-decoration:none;margin-right:10px}
 .empty{color:var(--mut);text-align:center;padding:40px}
 footer{border-top:1px solid var(--line);margin-top:40px;padding:22px;color:var(--mut);font-size:13px;text-align:center}
-</style></head><body>
+.loadwrap{display:flex;align-items:center;gap:12px;justify-content:center;padding:60px 20px;color:#6b665d;font-size:15px}.spin{width:22px;height:22px;border:3px solid #e4ddcc;border-top-color:#7b2d26;border-radius:50%;animation:spin 0.8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}</style></head><body>
 <nav style="position:sticky;top:0;z-index:60;background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:9px 14px;box-shadow:0 1px 6px rgba(60,50,30,.06);display:flex;flex-wrap:wrap;gap:5px 15px;justify-content:center;align-items:center;font:13.5px/1.55 -apple-system,Segoe UI,Roboto,sans-serif"><a href="index.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Home</a><a href="atlas.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Atlas</a><a href="dashboard.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Dashboard</a><a href="charts.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Charts</a><a href="multidenom.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Real value</a><a href="research.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Research</a><a href="persons.html" style="color:#7b2d26;text-decoration:none;white-space:nowrap;font-weight:700">Persons</a><a href="catalog.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Catalogs</a><a href="links.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Links</a><a href="blockchain.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Blockchain</a><a href="bubblemap.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Bubble Map</a><a href="globe.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Globe</a><a href="quantum.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Quantum</a><a href="ai.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">AI</a><a href="leadership.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Leadership</a><a href="lenses.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Lenses</a><a href="methodology.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Methodology</a><a href="glossary.html" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Glossary</a><a href="https://github.com/pq-cybarg/bubble-map" style="color:#1f4e79;text-decoration:none;white-space:nowrap;font-weight:400">Source ↗</a></nav><div style="background:#faf8f2;color:#8a8378;font:11px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:6px 16px;border-bottom:1px solid #e4ddcc">Independent research &amp; opinion. Gradings are automated / LLM-assisted and may contain errors or hallucinations; nothing here is a statement of fact, financial advice, or an accusation of wrongdoing by any party. Claims about identifiable people or organizations reflect public records + good-faith interpretation; intent is not inferred from association. <a href="methodology.html" style="color:#6b665d;text-decoration:underline">Methodology &amp; disclaimer</a>.</div>
 <header class=h><div class=wrap>
 <h1>Persons of Interest</h1>
@@ -72,23 +72,14 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:22px;color:var(-
 </div>
 <footer>Behavioral &amp; strategic assessments from the public record &middot; not clinical diagnosis &middot; inference labeled, facts cited &middot; excluded from the formal proofs &middot; contact resistant@tuta.com</footer>
 <script>
-const cards=[...document.querySelectorAll('.card')], q=document.getElementById('q'),
- count=document.getElementById('count'), empty=document.getElementById('empty'),
- sections=[...document.querySelectorAll('.seg')];
-let active=new Set(), searching=false, booted=false;
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
- const d=c.dataset.d;
- if(active.has(d)){active.delete(d);c.classList.remove('on');c.style.background='';}
- else{active.add(d);c.classList.add('on');c.style.background=c.style.getPropertyValue('--c');}
- apply();}));
-q.addEventListener('input',apply);
-// show a card with a one-shot fade-in only when it newly appears (cheap + smooth)
+const q=document.getElementById('q'), count=document.getElementById('count'),
+ empty=document.getElementById('empty'), LIST=document.getElementById('list');
+let cards=[], sections=[], active=new Set(), searching=false, booted=false, TOTAL_PEOPLE=0;
 function setShown(card,show){
  if(show){ if(booted && card.style.display==='none'){card.classList.add('pop');
    card.addEventListener('animationend',()=>card.classList.remove('pop'),{once:true});} card.style.display=''; }
  else card.style.display='none';
 }
-const TOTAL_PEOPLE=new Set(cards.map(c=>c.dataset.person)).size;  // distinct persons (cards are multi-category)
 function apply(){
  const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; const shownPeople=new Set();
  cards.forEach(card=>{
@@ -97,7 +88,6 @@ function apply(){
   const okDom=active.size===0||[...active].every(d=>doms.includes(d));
   const show=okText&&okDom; setShown(card,show); if(show)shownPeople.add(card.dataset.person);
  });
- // per-section counts; hide empty sections; auto-expand sections with matches while searching
  sections.forEach(sec=>{
   const vis=[...sec.querySelectorAll('.card')].filter(c=>c.style.display!=='none').length;
   sec.classList.toggle('nomatch',vis===0);
@@ -108,17 +98,31 @@ function apply(){
  count.textContent=n+' of '+TOTAL_PEOPLE+' people'+(searching?' (filtered) · people appear under every category they belong to':' · shown under every category they belong to');
  empty.style.display=n?'none':'block';
 }
-apply(); booted=true;
-document.getElementById('expandAll').onclick=()=>sections.forEach(s=>s.classList.remove('collapsed'));
-document.getElementById('collapseAll').onclick=()=>sections.forEach(s=>s.classList.add('collapsed'));
-// segnav chip -> expand + smooth-scroll to its section
-document.querySelectorAll('.segchip').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();
- const sec=document.getElementById('seg-'+a.dataset.seg); if(!sec)return;
- sec.classList.remove('collapsed','nomatch'); sec.scrollIntoView({behavior:'smooth',block:'start'});}));
+function boot(){
+ cards=[...document.querySelectorAll('.card')]; sections=[...document.querySelectorAll('.seg')];
+ TOTAL_PEOPLE=new Set(cards.map(c=>c.dataset.person)).size;
+ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  const d=c.dataset.d;
+  if(active.has(d)){active.delete(d);c.classList.remove('on');c.style.background='';}
+  else{active.add(d);c.classList.add('on');c.style.background=c.style.getPropertyValue('--c');}
+  apply();}));
+ q.addEventListener('input',apply);
+ apply(); booted=true;
+ document.getElementById('expandAll').onclick=()=>sections.forEach(s=>s.classList.remove('collapsed'));
+ document.getElementById('collapseAll').onclick=()=>sections.forEach(s=>s.classList.add('collapsed'));
+ document.querySelectorAll('.segchip').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();
+  const sec=document.getElementById('seg-'+a.dataset.seg); if(!sec)return;
+  sec.classList.remove('collapsed','nomatch'); sec.scrollIntoView({behavior:'smooth',block:'start'});}));
+ window.addEventListener('hashchange',openHash); openHash();
+}
 function openHash(){if(!location.hash)return;const el=document.querySelector(location.hash);
  if(el&&el.classList.contains('card')){q.value='';active.clear();
   document.querySelectorAll('.chip.on').forEach(c=>{c.classList.remove('on');c.style.background='';});apply();
   const sec=el.closest('.seg'); if(sec){sec.classList.remove('collapsed','nomatch');}
   el.classList.add('open');setTimeout(()=>el.scrollIntoView({block:'center',behavior:'smooth'}),80);}}
-window.addEventListener('hashchange',openHash);openHash();
+if(LIST.dataset.lazy==='1'){
+ fetch('persons-cards.html').then(r=>{if(!r.ok)throw 0;return r.text();})
+  .then(t=>{requestAnimationFrame(()=>{LIST.innerHTML=t; boot();});})
+  .catch(()=>{LIST.innerHTML='<p class=empty style=\"display:block\">Could not load profiles &mdash; <a href=persons-cards.html>open the full list</a>.</p>';});
+}else{ boot(); }
 </script></body></html>
