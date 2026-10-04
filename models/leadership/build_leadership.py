@@ -187,39 +187,49 @@ def build_html(recs, by_branch, by_level, current_as_of):
         rows_by.setdefault((r["level"], r["branch"]), []).append(r)
     order_level=["federal","state","county","municipal","special_district"]
     order_branch=["executive","legislative","judicial","independent","military","law_enforcement","state","local"]
-    parts=[f"<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Leadership map</title><style>{css}</style></head><body>{_nav.navbar('Leadership', disclaimer=True)}<main>"]
-    parts.append("<h1>Leadership map</h1>")
-    parts.append(f"<p class=muted>A point-in-time directory of officeholders (current as of <b>{esc(current_as_of)}</b>). "
-                 f"{len(recs)} records across {len(by_level)} levels. Separate overlay — NOT part of the formally-verified funding graph. "
-                 f"Every record carries a source. Roles churn; <span class=s-acting>acting</span> / <span class=s-former>former</span> are marked. "
-                 f"<a href='index.html'>&larr; back to the map</a></p>")
+    loadcss=(".loadwrap{display:flex;align-items:center;gap:12px;justify-content:center;padding:60px 20px;color:#6b665d;font:15px -apple-system,Segoe UI,Roboto,sans-serif}"
+             ".spin{width:22px;height:22px;border:3px solid #e4ddcc;border-top-color:#7b2d26;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}")
+    head=[f"<!doctype html><html><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Leadership map</title><style>{css}{loadcss}</style></head><body>{_nav.navbar('Leadership', disclaimer=True)}<main>"]
+    head.append("<h1>Leadership map</h1>")
+    head.append(f"<p class=muted>A point-in-time directory of officeholders (current as of <b>{esc(current_as_of)}</b>). "
+                f"{len(recs)} records across {len(by_level)} levels. Separate overlay — NOT part of the formally-verified funding graph. "
+                f"Every record carries a source. Roles churn; <span class=s-acting>acting</span> / <span class=s-former>former</span> are marked. "
+                f"<a href='index.html'>&larr; back to the map</a></p>")
     counts=" &middot; ".join(f"{esc(k)}: <b>{v}</b>" for k,v in sorted(by_branch.items(), key=lambda x:-x[1]))
-    parts.append(f"<p class=muted>By branch: {counts}</p>")
+    head.append(f"<p class=muted>By branch: {counts}</p>")
     present_levels=[lvl for lvl in order_level if any(rows_by.get((lvl,b)) for b in order_branch)]
     if len(present_levels)>1:
         nav=" ".join(f"<a href='#lvl-{slug(lvl)}'>{esc(lvl.capitalize())}</a>" for lvl in present_levels)
-        parts.append(f"<div class=nav>Jump to: {nav}</div>")
+        head.append(f"<div class=nav>Jump to: {nav}</div>")
+    body=[]  # the heavy level sections, fetched lazily
     for lvl in order_level:
         lvl_rows=[(b,rows_by.get((lvl,b),[])) for b in order_branch if rows_by.get((lvl,b))]
         if not lvl_rows: continue
-        parts.append(f"<h2 id='lvl-{slug(lvl)}'>{esc(lvl.capitalize())} <span class=muted>({sum(len(rs) for _,rs in lvl_rows)})</span></h2>")
+        body.append(f"<h2 id='lvl-{slug(lvl)}'>{esc(lvl.capitalize())} <span class=muted>({sum(len(rs) for _,rs in lvl_rows)})</span></h2>")
         for br, rs in lvl_rows:
             openattr="" if len(rs)>60 else " open"   # keep big sections (Congress, judiciary) collapsed by default
-            parts.append(f"<details{openattr}><summary>{esc(br.replace('_',' ').capitalize())} <span class=muted>({len(rs)})</span></summary>")
-            parts.append("<table><tr><th>Office</th><th>Person</th><th>Party</th><th>Since</th><th>Status</th><th>Source</th></tr>")
+            body.append(f"<details{openattr}><summary>{esc(br.replace('_',' ').capitalize())} <span class=muted>({len(rs)})</span></summary>")
+            body.append("<table><tr><th>Office</th><th>Person</th><th>Party</th><th>Since</th><th>Status</th><th>Source</th></tr>")
             for r in sorted(rs, key=lambda x:(x.get("jurisdiction",""), x.get("role",""), x.get("person",""))):
                 st=r.get("status","")
                 note=f"<br><span class=muted><i>{esc(r['note'])}</i></span>" if r.get("note") else ""
                 since=esc(r.get("start","")) + (f" &ndash; {esc(r['end'])}" if r.get("end") else "")
-                parts.append(
+                body.append(
                     f"<tr><td>{esc(r['role'])}<br><span class=muted>{esc(r['jurisdiction'])}</span>{note}</td>"
                     f"<td>{esc(r['person'])}</td><td>{esc(r.get('party',''))}</td>"
                     f"<td>{since}</td>"
                     f"<td class=s-{esc(st)}>{esc(st)}</td>"
                     f"<td><a href='{esc(r['source_url'])}' rel=nofollow>src</a></td></tr>")
-            parts.append("</table></details>")
-    parts.append("</main></body></html>")
-    return "".join(parts)
+            body.append("</table></details>")
+    fragment="".join(body)
+    script=("<script>var L=document.getElementById('lead');"
+            "fetch('leadership-cards.html').then(function(r){if(!r.ok)throw 0;return r.text();})"
+            ".then(function(t){requestAnimationFrame(function(){L.innerHTML=t;"
+            "if(location.hash){var el=document.querySelector(location.hash);if(el)el.scrollIntoView();}});})"
+            ".catch(function(){L.innerHTML='<p class=muted>Could not load the directory &mdash; <a href=leadership-cards.html>open it directly</a>.</p>';});</script>")
+    head.append(f"<div id=lead data-lazy=1><div class=loadwrap><div class=spin></div>Loading {len(recs)} records&hellip;</div></div>")
+    head.append("</main>"+script+"</body></html>")
+    return "".join(head), fragment
 
 def main():
     recs = load_json_sources() + load_congress_csv() + load_fjc_judges() + load_openstates()
@@ -233,8 +243,10 @@ def main():
          "by_branch":by_branch,"by_level":by_level,"records":recs}
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
     json.dump(out, open(OUT_JSON,"w"), ensure_ascii=False, indent=1)
-    open(OUT_HTML,"w").write(build_html(recs, by_branch, by_level, current_as_of))
-    print(f"[LEADERSHIP] {len(recs)} records | by_level={by_level} | by_branch={by_branch} | warns={warns} | as_of={current_as_of}")
+    shell, fragment = build_html(recs, by_branch, by_level, current_as_of)
+    open(OUT_HTML,"w").write(shell)
+    open(os.path.join(os.path.dirname(OUT_HTML),"leadership-cards.html"),"w").write(fragment)
+    print(f"[LEADERSHIP] {len(recs)} records | shell={len(shell)}B frag={len(fragment)}B | by_level={by_level} | by_branch={by_branch} | warns={warns} | as_of={current_as_of}")
 
 if __name__=="__main__":
     main()
