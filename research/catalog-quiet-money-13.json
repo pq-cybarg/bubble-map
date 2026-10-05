@@ -1,0 +1,21 @@
+{
+  "title": "Quiet money (batch 13): the neocloud picks-and-shovels founders - CoreWeave, Lambda, Crusoe",
+  "source": "Public record: CoreWeave (NASDAQ: CRWV) S-1 + IPO (Mar 2025), founder bios (Michael Intrator, Brian Venturo, Brannin McBee; origin as Hudson Ridge commodities-fund managers -> Ethereum GPU mining -> GPU cloud); Lambda (Stephen Balaban, co-founded 2012); Crusoe Energy (Chase Lochmiller, Cully Cavness; flare-gas-to-compute -> AI data centers, incl. the Abilene 'Stargate' build). Catalog layer (#242 batch 13). Structural overlay; person nodes carry dossiers. FOCUS: the lower-profile founder fortunes selling the AI buildout's compute 'picks and shovels' - the neoclouds the financial-core SCC already maps - rather than the famous lab founders. HONESTY: founder roles + company histories = fact; paper-wealth figures are estimates (CoreWeave post-IPO mark; Lambda/Crusoe private valuations), graded as such; no cabal imputed. All edges structural (leads/founder_origin) - no financial-core edges added.",
+  "grade": "per-edge in notes (fact | estimate | interpretation)",
+  "nodes": [
+    {"id": "Michael_Intrator", "sector": "person"},
+    {"id": "Brian_Venturo", "sector": "person"},
+    {"id": "Brannin_McBee", "sector": "person"},
+    {"id": "Stephen_Balaban", "sector": "person"},
+    {"id": "Chase_Lochmiller", "sector": "person"},
+    {"id": "Cully_Cavness", "sector": "person"}
+  ],
+  "edges": [
+    {"from": "Michael_Intrator", "to": "CoreWeave", "instrument": "leads", "notes": "Michael Intrator is co-founder + CEO of CoreWeave (NASDAQ: CRWV). The three founders ran Hudson Ridge, a commodities/natural-gas hedge fund, then built CoreWeave out of an Ethereum GPU-mining operation before pivoting to GPU cloud - a quiet commodities-desk origin for one of the AI buildout's central neoclouds; large paper fortune post-Mar-2025 IPO (fact of role/origin; wealth = estimate/mark).", "source": "CoreWeave S-1; public record"},
+    {"from": "Brian_Venturo", "to": "CoreWeave", "instrument": "founder_origin", "notes": "Brian Venturo co-founded CoreWeave (served as CTO/CSO) - ex-Hudson Ridge; a lower-profile co-founder fortune of the GPU-cloud build (fact; wealth = estimate).", "source": "CoreWeave S-1"},
+    {"from": "Brannin_McBee", "to": "CoreWeave", "instrument": "founder_origin", "notes": "Brannin McBee co-founded CoreWeave (Chief Development/Strategy Officer) - the third ex-commodities founder; a quiet neocloud fortune (fact; wealth = estimate).", "source": "CoreWeave S-1"},
+    {"from": "Stephen_Balaban", "to": "Lambda", "instrument": "leads", "notes": "Stephen Balaban co-founded (2012) and runs Lambda (Lambda Labs) - GPU cloud + deep-learning workstations/servers that rode the AI-compute demand wave; a low-profile founder-CEO fortune on large private rounds (fact of role; valuation = estimate).", "source": "Lambda; public record"},
+    {"from": "Chase_Lochmiller", "to": "Crusoe", "instrument": "leads", "notes": "Chase Lochmiller is co-founder + CEO of Crusoe Energy - started monetizing flared natural gas via on-site compute (bitcoin), then pivoted to AI data centers (incl. the Abilene, TX 'Stargate' campus); an energy-to-compute founder fortune (fact of role/pivot; wealth = estimate).", "source": "Crusoe; public record"},
+    {"from": "Cully_Cavness", "to": "Crusoe", "instrument": "founder_origin", "notes": "Cully Cavness co-founded Crusoe (President/COO) - the energy-side co-founder of the flare-gas-to-AI-datacenter story; a quiet co-founder fortune (fact; wealth = estimate).", "source": "Crusoe; public record"}
+  ]
+}
