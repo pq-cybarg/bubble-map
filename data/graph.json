@@ -3156,6 +3156,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Golden_Dome": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Golden_Triangle_SEZ": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -5609,6 +5613,10 @@
       "has_exogenous_revenue": true
     },
     "Project_Crypto": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Project_Meridian": {
       "sector": "state",
       "has_exogenous_revenue": false
     },
@@ -44343,6 +44351,123 @@
       "note": "The rating/residual-value fragility IS the trigger channel for the neocloud refinancing wall: if GPU residual values fall or ARDs are missed, downgrades force selling into a thin market right as the debt needs rolling - concentrated, correlated, maturity-clustered (interpretation, labeled; ties the refinancing-wall block)."
     },
     {
+      "from": "Elon_Musk",
+      "to": "Project_Meridian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "Musk co-directs Project Meridian (with Anduril's Palmer Luckey + Newt Gingrich) - a 120-day Pentagon future-of-war study announced by SecDef Hegseth 30 Sep 2026; recommendations due 28 Jan 2027, released as an unclassified report. Musk's return to government after the DOGE stint (fact)."
+    },
+    {
+      "from": "Project_Meridian",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "Project Meridian is a DoD/Pentagon task force under Secretary Hegseth's office; mandate is to identify capabilities for 'absolute technological dominance' (AI, autonomy, directed energy, robotics, biotech) across future combat environments (fact)."
+    },
+    {
+      "from": "Palmer_Luckey",
+      "to": "Project_Meridian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "Palmer Luckey (Anduril co-founder) is a co-director of Project Meridian alongside Musk and Gingrich (fact)."
+    },
+    {
+      "from": "Project_Meridian",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "STRUCTURAL CONFLICT (labeled interpretation): the panel recommends which next-gen weapons the military should develop, while co-director Luckey runs Anduril - a defense-tech prime selling exactly such systems; same tension applies to Musk via SpaceX/xAI. A documented conflict-of-interest concern, not an allegation of wrongdoing."
+    },
+    {
+      "from": "Elon_Musk",
+      "to": "DOGE",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "Context: Musk previously led DOGE (Department of Government Efficiency) as a special government employee under the 130-day statutory limit, then left the White House and publicly fell out with Trump - Project Meridian is his return to a government role (fact)."
+    },
+    {
+      "from": "SpaceX",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "SpaceX is building satellite-network layers for the administration's planned 'Golden Dome' missile-defense shield - Musk's firm is already a major Pentagon contractor as he co-directs a Pentagon capabilities study (fact of the contract; the adjacency is the conflict concern)."
+    },
+    {
+      "from": "Golden_Dome",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "'Golden Dome' is the administration's layered missile-defense shield program (fact)."
+    },
+    {
+      "from": "xAI",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "gov_contract",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "xAI's Grok was approved for use on classified military systems in 2026 - another Musk firm already embedded in DoD as he advises on future capabilities (fact)."
+    },
+    {
+      "from": "Elon_Musk",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-musk-project-meridian.json",
+      "note": "Via SpaceX: the contractor-in-government pattern - a panel co-director whose companies hold large and growing defense contracts in the same domains the panel studies (interpretation, labeled)."
+    },
+    {
       "from": "OptumRx",
       "to": "UnitedHealth",
       "instrument": "other",
@@ -50064,10 +50189,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2024,
-    "num_edges": 3228,
+    "num_nodes": 2026,
+    "num_edges": 3237,
     "num_financial_edges": 274,
-    "num_structural_edges": 2954,
+    "num_structural_edges": 2963,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -50171,6 +50296,7 @@
       "Crypto_Sprint",
       "DARPA",
       "DHS",
+      "DOGE",
       "DOJ",
       "DarkSide",
       "Data_Brokers",
@@ -50213,6 +50339,7 @@
       "GENIUS_Act",
       "GRU",
       "GlobalFoundries",
+      "Golden_Dome",
       "Goldman_Sachs",
       "Google",
       "HALEU_Enrichment",
@@ -50286,6 +50413,7 @@
       "Princeton_University",
       "PrivateCredit_Funds",
       "Project_Crypto",
+      "Project_Meridian",
       "PsiQuantum",
       "RIKEN",
       "Rare_Earths",
@@ -50345,14 +50473,26 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 231,
+    "core_scc_all_edges_size": 234,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -50360,25 +50500,8 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
       ],
       [
         "NVIDIA",
@@ -50386,15 +50509,14 @@
         "Oracle"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -50405,14 +50527,20 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -55961,6 +56089,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Golden_Dome": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Golden_Triangle_SEZ": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60253,6 +60388,13 @@
         "in_robust_core": false
       },
       "Project_Crypto": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Project_Meridian": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

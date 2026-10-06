@@ -181,6 +181,24 @@ def bar_chart_sectors(title, data, note=""):
     if note: s.append(f'<text x="14" y="{H-8}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
     s.append('</svg>'); return "".join(s)
 
+def hbar_labeled(title, data, note="", hi=None):
+    # single-series horizontal magnitude bars; each bar carries a DIRECT value label
+    # (secondary encoding, so identity never rests on hue alone). data=[(name,value,label)].
+    W=760; rowh=30; T=48; H=T+rowh*len(data)+34; L=240; R=96; pw=W-L-R
+    hi=hi or max([v for _,v,_ in data] or [1]) or 1
+    def X(v): return pw*v/hi
+    s=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="max-width:100%;height:auto;background:{PAPER};border:1px solid {LINE};border-radius:6px;margin:8px 0">']
+    s.append(f'<text x="14" y="24" font-size="14" font-weight="700" fill="{INK}" font-family="Georgia,serif">{esc(title)}</text>')
+    s.append(f'<line x1="{L}" y1="{T-8}" x2="{L}" y2="{T+rowh*len(data):.1f}" stroke="{MUT}"/>')
+    for i,(name,v,lab) in enumerate(data):
+        y=T+i*rowh; bw=X(v)
+        if bw>0:
+            s.append(f'<rect x="{L}" y="{y+4:.1f}" width="{bw:.1f}" height="{rowh-10}" rx="3" fill="{AC2}"/>')
+        s.append(f'<text x="{L-8}" y="{y+rowh/2+3:.1f}" font-size="11" fill="{INK}" text-anchor="end" font-family="sans-serif">{esc(name)}</text>')
+        s.append(f'<text x="{L+bw+6:.1f}" y="{y+rowh/2+3:.1f}" font-size="10.5" font-weight="700" fill="{INK}" text-anchor="start" font-family="sans-serif">{esc(lab)}</text>')
+    if note: s.append(f'<text x="14" y="{H-10}" font-size="9.5" fill="{MUT}" font-family="sans-serif">{esc(note)}</text>')
+    s.append('</svg>'); return "".join(s)
+
 def monthly_line_chart(title, dates, series, colors, ylab="%", note="", ymin=None, ymax=None):
     W,H=760,360; L,R,T,B=54,150,40,46; pw,ph=W-L-R,H-T-B
     vals=[v for _,ys in series for v in ys]
@@ -756,6 +774,24 @@ if _xs and _xs.get("cross_sections"):
 
     body.append("".join(out))
 
+GH="https://github.com/pq-cybarg/bubble-map/blob/main/research/"
+body.append('<h2 id="aicompute">AI-compute financing — the chip-SPV thread</h2>')
+body.append(f'<p class=cap>Who funds the AI buildout\'s chips, and how the paper is rated. Companions: <a href="{GH}spec-chip-collateral-spv.md">spec-chip-collateral-spv</a>, <a href="{GH}spec-ai-compute-credit-risk.md">spec-ai-compute-credit-risk</a>, <a href="{GH}spec-insurer-regarb-bermuda.md">spec-insurer-regarb-bermuda</a>.</p>')
+body.append(hbar_labeled("The insurance-funded AI / private-credit pile (approx, $)",
+    [("Bermuda life-reinsurer AUM", 1500, ">$1.5T"),
+     ("Reserves ceded offshore (~2x)", 1100, ">$1.1T"),
+     ("US life insurers' private credit", 849, "~$849B"),
+     ("US insurers' CLO holdings", 277, "~$277B")],
+    note="Sources: NAIC; IMF GFSN; BMA. Offshore ceded reserves roughly doubled to >$1.1T. Illustrative scale, not a single-date snapshot.", hi=1600))
+body.append('<p class=cap>The AI-compute debt is increasingly funded by <b>insurance/annuity</b> capital (private credit, not FDIC-backed deposits) via the PE-insurer flywheel — so retirement liabilities sit downstream of fast-depreciating GPUs. <b>Fact</b> of the magnitudes; the tail-risk-to-retirees reading is labeled interpretation in the companion blocks.</p>')
+body.append(hbar_labeled("Data-center ABS: the S&P rating cap (of ~70 rated tranches)",
+    [("A- (senior)", 42, "42"),
+     ("A", 12, "12"),
+     ("BBB / BBB-", 10, "~10"),
+     ("BB-", 1, "1"),
+     ("Above A (AA / AAA)", 0, "0 at S&P")],
+    note="S&P caps data-center ABS at single-A; Moody's + Fitch have rated comparable deals to AAA. Source: S&P dashboard 2020-25 (via GlobalCapital).", hi=44))
+body.append('<p class=cap>Agencies also rate to the <b>30–35yr legal maturity</b>, not the <b>5–7yr</b> expected-repayment date — and the newest GPU-collateral deals (e.g. CoreWeave\'s $8.5B SPV, A3/Moody\'s) carry the residual-value downgrade→forced-seller risk. S&P\'s single-A ceiling is the honest outlier.</p>')
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')

@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 113 files
+- **Meta** — 114 files
 - **Google** — 73 files
 - **Chainlink** — 66 files
 - **OpenAI** — 58 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-insurer-regarb-bermuda.json` — related files by shared entities (verify cross-refs exist)
-- spec-chip-collateral-spv.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 3 shared entities
+## Newest file `spec-musk-project-meridian.json` — related files by shared entities (verify cross-refs exist)
+- catalog-billionaires.json: 4 shared entities
 - spec-cross-system-contagion.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
-- spec-ai-compute-credit-risk.json: 3 shared entities
-- fin-meta-family.json: 2 shared entities
-- geopolitics-allied-intel-nodes.json: 2 shared entities
-- macro-crqc-quantum-landscape.json: 2 shared entities
+- influence-operator-network.json: 3 shared entities
+- temporal-bridges.json: 3 shared entities
+- fin-google-amazon-anthropic-meta.json: 2 shared entities
+- spec-xai-colossus-power.json: 2 shared entities
+- spec-meta-ai-child-safety.json: 2 shared entities
+- spec-crypto-sec-epstein.json: 2 shared entities
