@@ -23,4 +23,6 @@ python3 models/graph/build_bubblemap.py >/dev/null # interactive funding-graph b
 python3 models/graph/build_theme_index.py          # theme->blocks index for the flagship/atlas zoom
 python3 models/graph/build_quantum.py >/dev/null    # quantum sub-site (hardware/EC/PQC/compliance/feed)
 python3 models/graph/build_catalog.py >/dev/null    # catalog index (academia/money/threat-actor/quantum layers)
+python3 models/graph/build_ai_chronology.py >/dev/null # AI chronology + tech-history Tab
+python3 models/graph/build_links.py >/dev/null         # recommended-links Tab
 echo "==> Re-review done. Read report/AUDIT.md + report/CROSS-REVIEW.md and reconcile flags before committing."

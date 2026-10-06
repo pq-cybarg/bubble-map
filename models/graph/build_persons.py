@@ -230,9 +230,76 @@ for k in seg_order:
                f'<span class=segcount>{len(_buckets[k])}</span></h3>'
                f'<div class=segbody>{body_cards}</div></section>')
 
-HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
+LOAD_CSS=(".loadwrap{display:flex;align-items:center;gap:12px;justify-content:center;"
+ "padding:60px 20px;color:#6b665d;font-size:15px}"
+ ".spin{width:22px;height:22px;border:3px solid #e4ddcc;border-top-color:#7b2d26;"
+ "border-radius:50%;animation:spin 0.8s linear infinite}"
+ "@keyframes spin{to{transform:rotate(360deg)}}")
+
+# The heavy per-segment card HTML is written to an external fragment and fetched
+# lazily by the public page (keeps initial HTML tiny + first paint instant; the
+# report mirror stays fully self-contained inline). JS filter logic is identical;
+# it just runs after the fragment is injected.
+SCRIPT=f"""<script>
+const q=document.getElementById('q'), count=document.getElementById('count'),
+ empty=document.getElementById('empty'), LIST=document.getElementById('list');
+let cards=[], sections=[], active=new Set(), searching=false, booted=false, TOTAL_PEOPLE=0;
+function setShown(card,show){{
+ if(show){{ if(booted && card.style.display==='none'){{card.classList.add('pop');
+   card.addEventListener('animationend',()=>card.classList.remove('pop'),{{once:true}});}} card.style.display=''; }}
+ else card.style.display='none';
+}}
+function apply(){{
+ const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; const shownPeople=new Set();
+ cards.forEach(card=>{{
+  const okText=!s||card.dataset.hay.includes(s);
+  const doms=card.dataset.domains.split('|');
+  const okDom=active.size===0||[...active].every(d=>doms.includes(d));
+  const show=okText&&okDom; setShown(card,show); if(show)shownPeople.add(card.dataset.person);
+ }});
+ sections.forEach(sec=>{{
+  const vis=[...sec.querySelectorAll('.card')].filter(c=>c.style.display!=='none').length;
+  sec.classList.toggle('nomatch',vis===0);
+  sec.querySelector('.segcount').textContent=vis;
+  if(searching) sec.classList.remove('collapsed');
+ }});
+ const n=shownPeople.size;
+ count.textContent=n+' of '+TOTAL_PEOPLE+' people'+(searching?' (filtered) · people appear under every category they belong to':' · shown under every category they belong to');
+ empty.style.display=n?'none':'block';
+}}
+function boot(){{
+ cards=[...document.querySelectorAll('.card')]; sections=[...document.querySelectorAll('.seg')];
+ TOTAL_PEOPLE=new Set(cards.map(c=>c.dataset.person)).size;
+ document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{{
+  const d=c.dataset.d;
+  if(active.has(d)){{active.delete(d);c.classList.remove('on');c.style.background='';}}
+  else{{active.add(d);c.classList.add('on');c.style.background=c.style.getPropertyValue('--c');}}
+  apply();}}));
+ q.addEventListener('input',apply);
+ apply(); booted=true;
+ document.getElementById('expandAll').onclick=()=>sections.forEach(s=>s.classList.remove('collapsed'));
+ document.getElementById('collapseAll').onclick=()=>sections.forEach(s=>s.classList.add('collapsed'));
+ document.querySelectorAll('.segchip').forEach(a=>a.addEventListener('click',e=>{{e.preventDefault();
+  const sec=document.getElementById('seg-'+a.dataset.seg); if(!sec)return;
+  sec.classList.remove('collapsed','nomatch'); sec.scrollIntoView({{behavior:'smooth',block:'start'}});}}));
+ window.addEventListener('hashchange',openHash); openHash();
+}}
+function openHash(){{if(!location.hash)return;const el=document.querySelector(location.hash);
+ if(el&&el.classList.contains('card')){{q.value='';active.clear();
+  document.querySelectorAll('.chip.on').forEach(c=>{{c.classList.remove('on');c.style.background='';}});apply();
+  const sec=el.closest('.seg'); if(sec){{sec.classList.remove('collapsed','nomatch');}}
+  el.classList.add('open');setTimeout(()=>el.scrollIntoView({{block:'center',behavior:'smooth'}}),80);}}}}
+if(LIST.dataset.lazy==='1'){{
+ fetch('persons-cards.html').then(r=>{{if(!r.ok)throw 0;return r.text();}})
+  .then(t=>{{requestAnimationFrame(()=>{{LIST.innerHTML=t; boot();}});}})
+  .catch(()=>{{LIST.innerHTML='<p class=empty style=\\"display:block\\">Could not load profiles &mdash; <a href=persons-cards.html>open the full list</a>.</p>';}});
+}}else{{ boot(); }}
+</script>"""
+
+def _page(list_inner):
+    return (f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Persons of Interest — Bubble Map</title><style>{CSS}</style></head><body>
+<title>Persons of Interest — Bubble Map</title><style>{CSS}{LOAD_CSS}</style></head><body>
 {NAV}
 <header class=h><div class=wrap>
 <h1>Persons of Interest</h1>
@@ -247,63 +314,17 @@ HTML=f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <div class=segtools><span id=expandAll>Expand all</span> &middot; <span id=collapseAll>Collapse all</span> &middot; <span class=sub>{len(seg_order)} segments</span></div>
 </div>
 <div class=count id=count></div>
-<div id=list>{sections}</div>
+{list_inner}
 <div class=empty id=empty style="display:none">No matching profiles.</div>
 </div>
 <footer>Behavioral &amp; strategic assessments from the public record &middot; not clinical diagnosis &middot; inference labeled, facts cited &middot; excluded from the formal proofs &middot; contact resistant@tuta.com</footer>
-<script>
-const cards=[...document.querySelectorAll('.card')], q=document.getElementById('q'),
- count=document.getElementById('count'), empty=document.getElementById('empty'),
- sections=[...document.querySelectorAll('.seg')];
-let active=new Set(), searching=false, booted=false;
-document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{{
- const d=c.dataset.d;
- if(active.has(d)){{active.delete(d);c.classList.remove('on');c.style.background='';}}
- else{{active.add(d);c.classList.add('on');c.style.background=c.style.getPropertyValue('--c');}}
- apply();}}));
-q.addEventListener('input',apply);
-// show a card with a one-shot fade-in only when it newly appears (cheap + smooth)
-function setShown(card,show){{
- if(show){{ if(booted && card.style.display==='none'){{card.classList.add('pop');
-   card.addEventListener('animationend',()=>card.classList.remove('pop'),{{once:true}});}} card.style.display=''; }}
- else card.style.display='none';
-}}
-const TOTAL_PEOPLE=new Set(cards.map(c=>c.dataset.person)).size;  // distinct persons (cards are multi-category)
-function apply(){{
- const s=q.value.trim().toLowerCase(); searching=!!s||active.size>0; const shownPeople=new Set();
- cards.forEach(card=>{{
-  const okText=!s||card.dataset.hay.includes(s);
-  const doms=card.dataset.domains.split('|');
-  const okDom=active.size===0||[...active].every(d=>doms.includes(d));
-  const show=okText&&okDom; setShown(card,show); if(show)shownPeople.add(card.dataset.person);
- }});
- // per-section counts; hide empty sections; auto-expand sections with matches while searching
- sections.forEach(sec=>{{
-  const vis=[...sec.querySelectorAll('.card')].filter(c=>c.style.display!=='none').length;
-  sec.classList.toggle('nomatch',vis===0);
-  sec.querySelector('.segcount').textContent=vis;
-  if(searching) sec.classList.remove('collapsed');
- }});
- const n=shownPeople.size;
- count.textContent=n+' of '+TOTAL_PEOPLE+' people'+(searching?' (filtered) · people appear under every category they belong to':' · shown under every category they belong to');
- empty.style.display=n?'none':'block';
-}}
-apply(); booted=true;
-document.getElementById('expandAll').onclick=()=>sections.forEach(s=>s.classList.remove('collapsed'));
-document.getElementById('collapseAll').onclick=()=>sections.forEach(s=>s.classList.add('collapsed'));
-// segnav chip -> expand + smooth-scroll to its section
-document.querySelectorAll('.segchip').forEach(a=>a.addEventListener('click',e=>{{e.preventDefault();
- const sec=document.getElementById('seg-'+a.dataset.seg); if(!sec)return;
- sec.classList.remove('collapsed','nomatch'); sec.scrollIntoView({{behavior:'smooth',block:'start'}});}}));
-function openHash(){{if(!location.hash)return;const el=document.querySelector(location.hash);
- if(el&&el.classList.contains('card')){{q.value='';active.clear();
-  document.querySelectorAll('.chip.on').forEach(c=>{{c.classList.remove('on');c.style.background='';}});apply();
-  const sec=el.closest('.seg'); if(sec){{sec.classList.remove('collapsed','nomatch');}}
-  el.classList.add('open');setTimeout(()=>el.scrollIntoView({{block:'center',behavior:'smooth'}}),80);}}}}
-window.addEventListener('hashchange',openHash);openHash();
-</script></body></html>"""
+{SCRIPT}</body></html>""")
 
-open(os.path.join(DOCS,"persons.html"),"w").write(HTML)
-print(f"wrote docs/persons.html ({len(HTML)} bytes, {len(persons)} profiles)")
+# public page: light shell that lazy-loads the card fragment behind a spinner
+SHELL=_page(f'<div id=list data-lazy=1><div class=loadwrap><div class=spin></div>Loading {len(persons)} dossiers&hellip;</div></div>')
+open(os.path.join(DOCS,"persons.html"),"w").write(SHELL)
+open(os.path.join(DOCS,"persons-cards.html"),"w").write(sections)
+print(f"wrote docs/persons.html ({len(SHELL)} bytes shell) + docs/persons-cards.html ({len(sections)} bytes, {len(persons)} profiles)")
 if os.path.isdir(REP):
-    open(os.path.join(REP,"PERSONS.html"),"w").write(HTML)
+    # internal report mirror stays fully self-contained (inline cards)
+    open(os.path.join(REP,"PERSONS.html"),"w").write(_page(f'<div id=list>{sections}</div>'))

@@ -144,6 +144,7 @@
     "Capital"
    ],
    "orgs": [
+    "David_Sacks",
     "White House (AI/crypto czar)",
     "Craft Ventures"
    ],
@@ -159,7 +160,8 @@
    "grade": "fact (role) + labeled interpretation",
    "blocks": [
     "influence-operator-network",
-    "macro-stablecoin-treasury-rail"
+    "macro-stablecoin-treasury-rail",
+    "spec-buist-v-anthropic-pacing"
    ]
   },
   {
@@ -409,7 +411,9 @@
     "State/Policy"
    ],
    "orgs": [
-    "Federal Reserve"
+    "Jerome_Powell",
+    "Federal Reserve",
+    "Federal_Reserve"
    ],
    "bluf": "A constrained steward managing an impossible trilemma; the policy rate tracks the bond market far more tightly than the stated mandate. Assess with MODERATE confidence the Fed effectively ratifies market expectations; 'no single rate satisfies the divergent targets' is formally shown (F1-F3 UNSAT).",
    "drivers": "Institutional credibility and continuity; consensus-management of the FOMC; aversion to being the proximate cause of a crisis.",
@@ -423,7 +427,8 @@
    "grade": "fact (co-movement) + labeled interpretation",
    "blocks": [
     "macro-jobs-inflation-fed",
-    "macro-us-fiscal-trap"
+    "macro-us-fiscal-trap",
+    "spec-fed-hike-2026"
    ],
    "legitimacy_bearing": "Credibility IS the tool: a high institutional-trust bearing (Fed independence) being drawn down by political pressure to cut, the 2021-22 'transitory' miss, and the ~$243B deferred-asset optics - the Fed has little else to spend."
   },
@@ -648,6 +653,7 @@
     "Capital"
    ],
    "orgs": [
+    "Dario_Amodei",
     "Anthropic"
    ],
    "bluf": "A safety-framed accelerant - raises tens of billions while warning loudly of catastrophic risk. Assess the documented tension (warn + scale) as structural, not character; it is the clearest case of the safety narrative coexisting with the capital race.",
@@ -662,7 +668,8 @@
    "grade": "fact + labeled interpretation",
    "blocks": [
     "fin-google-amazon-anthropic-meta",
-    "fin-gulf-sovereign-ai-capital"
+    "fin-gulf-sovereign-ai-capital",
+    "spec-ai-regulate-us-capture-debate"
    ]
   },
   {
@@ -1265,7 +1272,9 @@
     "Macro/Finance"
    ],
    "orgs": [
-    "Circle"
+    "Jeremy_Allaire",
+    "Circle",
+    "Arc"
    ],
    "bluf": "Runs the #2 stablecoin and the compliant, US-aligned face of the stablecoin->Treasury rail. Assess with HIGH confidence USDC growth is, by GENIUS-Act design, T-bill demand - the regulated counterpart to Tether.",
    "drivers": "A regulated-digital-dollar vision; first-mover-compliance positioning.",
@@ -1278,7 +1287,8 @@
    "confidence": "HIGH.",
    "grade": "fact + labeled interpretation",
    "blocks": [
-    "macro-stablecoin-treasury-rail"
+    "macro-stablecoin-treasury-rail",
+    "spec-arc-circle-l1"
    ]
   },
   {
@@ -7412,6 +7422,7 @@
     "AI"
    ],
    "orgs": [
+    "Yann_LeCun",
     "Meta",
     "NYU"
    ],
@@ -7426,7 +7437,8 @@
    "confidence": "HIGH (credentials) + labeled interpretation",
    "grade": "HIGH (credentials) + labeled interpretation",
    "blocks": [
-    "fin-ai-efficiency-counter-thesis"
+    "fin-ai-efficiency-counter-thesis",
+    "spec-ai-regulate-us-capture-debate"
    ]
   },
   {
@@ -9269,8 +9281,10 @@
     "Capital"
    ],
    "orgs": [
+    "Zach_Witkoff",
     "World Liberty Financial",
-    "USD1"
+    "USD1",
+    "World_Liberty_Financial"
    ],
    "bluf": "Co-founder of World Liberty Financial — the Trump-family-linked crypto venture behind the USD1 stablecoin — and son of Trump envoy Steve Witkoff, placing him at the intersection of the administration, crypto issuance, and the documented USD1 deposit/collateral questions. Assess with MODERATE-HIGH confidence on the role and the political linkage; specific allegations are partly contested and partly on-chain-verifiable.",
    "drivers": "Building the WLFI/USD1 franchise; leveraging family and political proximity; first-mover advantage in a friendly regime.",
@@ -9286,7 +9300,8 @@
     "macro-stablecoin-failures-manipulation",
     "macro-stablecoin-treasury-rail",
     "spec-onchain-threat-actor-addresses",
-    "influence-congress-funding-compromise"
+    "influence-congress-funding-compromise",
+    "spec-wlfi-usd1"
    ]
   },
   {
@@ -12725,6 +12740,7 @@
     "AI"
    ],
    "orgs": [
+    "Patrick_Collison",
     "Stripe"
    ],
    "bluf": "Co-founder and CEO of Stripe, the dominant internet payments processor whose acceptance decisions (incl. cutting off the Trump campaign after Jan 6 and flagging NSFW platforms) put it in the deplatforming debate; named in the 2026 FTC warnings. Assess with MODERATE-HIGH confidence on Stripe's role as an internet-commerce chokepoint.",
@@ -12740,7 +12756,8 @@
    "blocks": [
     "spec-censorship-finance-adtech",
     "spec-crypto-banking-debanking",
-    "macro-stablecoin-treasury-rail"
+    "macro-stablecoin-treasury-rail",
+    "spec-stripe-stablecoin-stack"
    ]
   },
   {
@@ -16182,6 +16199,138 @@
    "grade": "fact + labeled interpretation",
    "blocks": [
     "spec-coinex-winddown"
+   ]
+  },
+  {
+   "name": "Joe Lonsdale",
+   "role": "Founder, 8VC; co-founder Palantir & Erebor Bank",
+   "domains": [
+    "Finance",
+    "Technology",
+    "Defense"
+   ],
+   "orgs": [
+    "Joe_Lonsdale",
+    "8VC",
+    "Erebor"
+   ],
+   "bluf": "Core Thiel-network figure (Palantir co-founder; 8VC) who co-founded Erebor - extending the 'PayPal mafia' from data + defense into chartered banking. Assess with HIGH confidence Erebor is that network acquiring a stablecoin-native national bank; the fast OCC charter drew Democratic scrutiny (contested, not a finding).",
+   "drivers": "Network-building; ideological techno-libertarianism; institution founding.",
+   "worldview": "Own the infrastructure of the 'American dynamism' stack - data, defense, and now banking.",
+   "decision_style": "Prolific co-founder + allocator; delegates operations (Erebor run by co-CEOs Rapaport + Hirshman).",
+   "track_record": "Co-founded Palantir, Addepar, OpenGov, 8VC; co-founded Erebor (national charter Feb 2026).",
+   "vulnerabilities": "Political-connection scrutiny (Warren/OCC letters); crypto + startup-bank credit-cycle exposure.",
+   "relationships": "Thiel/Founders Fund/Palmer Luckey network; Erebor = its banking layer (PayPal_Mafia, Anduril).",
+   "outlook": "Scales Erebor as the deposit-taking node of the defense/AI/crypto founder network.",
+   "confidence": "HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-erebor-bank"
+   ]
+  },
+  {
+   "name": "Guy Young",
+   "role": "Founder & CEO, Ethena Labs (USDe)",
+   "domains": [
+    "Crypto",
+    "Finance"
+   ],
+   "orgs": [
+    "Guy_Young",
+    "Ethena",
+    "USDe"
+   ],
+   "bluf": "Founder of the largest synthetic (delta-neutral) dollar. Assess with HIGH confidence USDe is a distinct, higher-complexity risk class from fiat-backed stablecoins - not a Terra-clone, but exposed to funding-flip, CEX-counterparty, and depeg-contagion risk.",
+   "drivers": "Scale a crypto-native yield-bearing dollar outside the fiat-reserve model.",
+   "worldview": "A basis-trade can synthesize a dollar; yield is the product.",
+   "decision_style": "Mechanism-first, risk-disclosed (publishes reserve/funding data), fast-scaling.",
+   "track_record": "Built Ethena/USDe to multi-billion supply; added USDtb Treasuries buffer + Reserve Fund; weathered Bybit-hack + Oct-flash-crash stress.",
+   "vulnerabilities": "Sustained negative funding (duration unknown even to Ethena); CEX hedge-venue failure; DeFi-contagion; unsettled regulatory classification.",
+   "relationships": "Hedges on Binance/Bybit/OKX/Deribit; DeFi via Aave/Pendle; USDtb->Treasuries; contrast to Terra/UST.",
+   "outlook": "Grows in benign-funding regimes; the open question is behavior through a prolonged negative-funding stress.",
+   "confidence": "HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-ethena-usde-synthetic-dollar"
+   ]
+  },
+  {
+   "name": "Cheyenne Hunt",
+   "role": "Attorney; filed Buist v. Anthropic (Trial Lawyers for Justice)",
+   "domains": [
+    "Law",
+    "Technology",
+    "Politics"
+   ],
+   "orgs": [
+    "Cheyenne_Hunt",
+    "Trial_Lawyers_for_Justice",
+    "Public_Citizen"
+   ],
+   "bluf": "Consumer-advocate attorney (ex-Public Citizen; 2024 congressional candidate) who filed the Buist v. Anthropic class complaint recoding the labs' 2026 'pacing' letter as a Sherman Act conspiracy. Assess with MEDIUM-HIGH confidence on the documented filing + prior roles; the 'coordinated flip/harvest' reading in the block is labeled interpretation, and several links (who tasked the filing) are explicitly unsupported.",
+   "drivers": "Big-Tech accountability advocacy; plaintiff-bar litigation.",
+   "worldview": "Antitrust + product-liability + juries as the check on AI-lab coordination.",
+   "decision_style": "Litigation-forward, public-facing ('we the people' framing).",
+   "track_record": "Public Citizen tech-policy advocacy; 2024 CA congressional run; Buist v. Anthropic 29-page class complaint (Sep 2026).",
+   "vulnerabilities": "Attribution: the block flags as UNSUPPORTED any claim that a funder ordered the filing.",
+   "relationships": "TL4J (jury-verdict product); the filing is dual-used by Sacks/Hawley (no-waiver) + plaintiff bar.",
+   "outlook": "Advances the antitrust-against-pacing theory; outcome hinges on the docket.",
+   "confidence": "MEDIUM-HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-buist-v-anthropic-pacing"
+   ]
+  },
+  {
+   "name": "Jaan Tallinn",
+   "role": "Skype/Kazaa co-founder; AI-safety funder (SFF, FLI); early Anthropic investor",
+   "domains": [
+    "Technology",
+    "Philanthropy",
+    "AI"
+   ],
+   "orgs": [
+    "Jaan_Tallinn",
+    "Survival_and_Flourishing_Fund",
+    "Future_of_Life_Institute"
+   ],
+   "bluf": "Estonian engineer-investor who co-founded Skype/Kazaa and became a leading AI-existential-risk funder (SFF, FLI co-founder, CSER/FHI backer) and an early Anthropic investor. Assess with HIGH confidence on the funding + cap-table facts; his role in the block is as the money-origin behind the pacing-predicate shops (SFF->Encode/Longview), graded as documented pipes, not proven direction.",
+   "drivers": "Reduce AI existential risk; fund the safety ecosystem.",
+   "worldview": "Frontier AI as civilizational risk requiring coordinated slowing.",
+   "decision_style": "Recommendation-driven philanthropy (SFF speculation grants).",
+   "track_record": "Co-founded Skype/Kazaa; co-founded FLI; runs SFF grant recommendations; early Anthropic investor.",
+   "vulnerabilities": "His safety funding is now cited as Exhibit-A predicate in an antitrust framing (the block's 'flip').",
+   "relationships": "SFF -> Encode/Longview; FLI -> Encode; early Anthropic equity (cap-table reporting).",
+   "outlook": "Continues funding AI-safety orgs now caught in the pacing-as-cartel narrative.",
+   "confidence": "HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-buist-v-anthropic-pacing"
+   ]
+  },
+  {
+   "name": "DataRepublican",
+   "role": "Pseudonymous open-source data analyst ('Exposing where the money flows')",
+   "domains": [
+    "Data",
+    "Politics",
+    "Philanthropy"
+   ],
+   "orgs": [
+    "DataRepublican"
+   ],
+   "bluf": "Pseudonymous analyst/coder who builds public network-mapping tools over IRS 990 filings + funding flows; published 'EA Explorer' (Sep 2026) mapping the Effective Altruism people-and-funding network. Assess with MEDIUM-HIGH confidence the tooling is a genuine open-data contribution (source-linked quotes, 990-based graphs); her FRAMING is explicitly critical, not neutral - a viewpoint, not an arbiter.",
+   "drivers": "Funding transparency; skepticism of large philanthropic/nonprofit networks.",
+   "worldview": "Follow the money; expose where taxpayer + foundation funds flow.",
+   "decision_style": "Data-first, open-source (charity-graph BFS, verbatim-quote browsers), publishes methodology.",
+   "track_record": "datarepublican.com charity graph / nonprofit explorer / NED + DSA explorers; EA Explorer (25+GB EA material mapped, 2026).",
+   "vulnerabilities": "Explicit political POV (skews interpretation); funding-flow claims need cross-check vs primary 990s; pseudonymity limits accountability.",
+   "relationships": "Maps the EA / Open-Philanthropy / SFF network this map also tracks - an independent, adversarial cross-check on the same rails.",
+   "outlook": "Continues open-source funding-network mapping; EA/AI-safety a current focus.",
+   "confidence": "MEDIUM-HIGH.",
+   "grade": "fact + labeled interpretation",
+   "blocks": [
+    "spec-ai-safety-evals-ecosystem"
    ]
   }
  ]

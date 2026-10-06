@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "title": "Recommended links - R2R, spyware labs, APT primers, digital-rights explainers, data literacy",
+    "generated": "2026-09-25",
+    "frame": "Curated outbound + in-corpus links for the Links tab. Educational value for visitors: labs and leak archives, ATT&CK/CISA, Chat Control/ID explainers, FRED/BIS/EDGAR, plus the R2R/ownership cluster. URLs are fact of publication; site framing is the publisher's."
+  },
+  "groups": [
+    {
+      "id": "rossmann-fulu",
+      "title": "Rossmann / FULU / Consumer Rights Wiki",
+      "items": [
+        {"name": "Rossmann Repair Group - Louis Rossmann", "url": "https://rossmanngroup.com/louis-rossmann", "notes": "Shop + testimony timeline + org list (RPG, FULU, FUTO past).", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU Foundation USA", "url": "https://rossmanngroup.com/fulu-foundation", "notes": "501c4; wiki move; bounty program; shop/nonprofit split.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU bounties", "url": "https://bounties.fulu.org/", "notes": "Cash for restoring DRM-bricked devices. 1201-contested; listed as their program, not legal advice.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FULU events / Own Your Shit tour", "url": "https://www.fulu.org/events", "notes": "2026 live tour; 1201 postcards.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Consumer Rights Wiki", "url": "https://consumerrights.wiki/", "notes": "FULU-hosted advocacy encyclopedia (1,472 articles / 206 contributors on About).", "related": ["spec-rossmann-futo-ownership", "spec-open-source-3dprinting-lawfare"]},
+        {"name": "CRW About", "url": "https://consumerrights.wiki/w/About", "notes": "Mission + counts.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "CRW - Bambu Lab Authorization Control System", "url": "https://consumerrights.wiki/w/Bambu_Lab_Authorization_Control_System", "notes": "In-corpus example of the wiki as a case file.", "related": ["spec-open-source-3dprinting-lawfare"]},
+        {"name": "WIRED - Own Your Shit tour (17 Sep 2026)", "url": "https://www.wired.com/story/people-are-pissed-off-and-ready-to-own-their-shit/", "notes": "Independent coverage of the 2026 tour.", "related": ["spec-rossmann-futo-ownership"]}
+      ]
+    },
+    {
+      "id": "futo",
+      "title": "FUTO (Eron Wolf)",
+      "items": [
+        {"name": "FUTO About", "url": "https://futo.tech/about", "notes": "For-profit, Wolf-funded; independence pledges.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "FUTO Statement on Open Source / Source First", "url": "https://futo.org/about/futo-statement-on-opensource/", "notes": "Why they reject OSI commercial-use freedom; both-sides in the 3D-print block.", "related": ["spec-open-source-3dprinting-lawfare"]},
+        {"name": "FUTO grants", "url": "https://futo.org/grants", "notes": "Grant program Rossmann publicized 2022-24.", "related": ["spec-rossmann-futo-ownership"]}
+      ]
+    },
+    {
+      "id": "r2r-orgs",
+      "title": "Institutional right-to-repair",
+      "items": [
+        {"name": "iFixit", "url": "https://www.ifixit.com/", "notes": "Guides, parts, teardown scores.", "related": ["spec-right-to-repair", "spec-electronics-parts-pairing"]},
+        {"name": "repair.org (The Repair Association)", "url": "https://www.repair.org/", "notes": "Trade/advocacy coalition.", "related": ["spec-right-to-repair"]},
+        {"name": "US PIRG - State of Right to Repair", "url": "https://pirg.org/edfund/resources/the-state-of-right-to-repair/", "notes": "State-law tracker used in the anchor block.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - Apple SB 244 U-turn", "url": "https://www.ifixit.com/News/79902/apples-u-turn-tech-giant-finally-backs-repair-in-california", "notes": "Dated OEM reversal.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - ending Samsung collaboration (May 2024)", "url": "https://www.ifixit.com/News/96162/were-ending-our-samsung-collaboration", "notes": "Parts-pairing / glued-assembly fight.", "related": ["spec-electronics-parts-pairing"]}
+      ]
+    },
+    {
+      "id": "law",
+      "title": "Statutes, FTC, Copyright Office, EU",
+      "items": [
+        {"name": "FTC - Nixing the Fix (2021)", "url": "https://www.ftc.gov/reports/nixing-fix-ftc-report-congress-repair-restrictions", "notes": "Repair restrictions 'not generally supported' by the safety/security evidence offered.", "related": ["spec-right-to-repair"]},
+        {"name": "Federal Register - 9th triennial 1201 exemptions (Oct 2024)", "url": "https://www.federalregister.gov/documents/2024/10/28/2024-24563/exemption-to-prohibition-on-circumvention-of-copyright-protection-systems-for-access-control", "notes": "Food-prep equipment + vehicle/ag data.", "related": ["spec-mcdonalds-kytch-taylor", "spec-farm-equipment-r2r"]},
+        {"name": "FTC & states v Deere (15 Jan 2025)", "url": "https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-states-sue-deere-company-protect-farmers-unfair-corporate-tactics-high-repair-costs", "notes": "Farm-equipment monopoly suit.", "related": ["spec-farm-equipment-r2r"]},
+        {"name": "EU Directive on the repair of goods (2024/1799)", "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/directive-repair-goods_en", "notes": "Applies 31 Jul 2026.", "related": ["spec-right-to-repair"]},
+        {"name": "Apple Newsroom - used genuine parts (11 Apr 2024)", "url": "https://www.apple.com/newsroom/2024/04/apple-to-expand-repair-options-with-support-for-used-genuine-parts/", "notes": "OEM concession on screens/batteries/cameras for iPhone 15+.", "related": ["spec-electronics-parts-pairing"]},
+        {"name": "H.R. 1566 - REPAIR Act (119th, introduced 25 Feb 2025)", "url": "https://www.congress.gov/bill/119th-congress/house-bill/1566", "notes": "Federal auto telematics/data access bill. Companion S. 1379. Scaled-back MOU-codifying language later moved in committee (H.R. 7389). NDAA strip is in the auto block.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "GovTrack - H.R. 1566 text", "url": "https://www.govtrack.us/congress/bills/119/hr1566/text", "notes": "Introduced text.", "related": ["spec-auto-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "eu-intl",
+      "title": "EU and international repair campaigns",
+      "items": [
+        {"name": "Right to Repair Europe (repair.eu)", "url": "https://repair.eu/", "notes": "Coalition (iFixit EU policy among members). Directive 2024/1799 in force 31 Jul 2026; transposition uneven.", "related": ["spec-right-to-repair"]},
+        {"name": "repair.eu - What's my Right to Repair?", "url": "https://repair.eu/whats-my-right-to-repair/", "notes": "Product-by-product EU coverage table (ecodesign, batteries, repair directive, scores).", "related": ["spec-right-to-repair"]},
+        {"name": "The Register - EU smartphone repair-info noncompliance (7 Sep 2026)", "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532", "notes": "R2R Europe: of 2334 smartphone EPREL records since Jun 2025 rules, ~18% list spare-parts/repair URLs; self-scores still A. Thomas Opsomer (iFixit EU).", "related": ["spec-electronics-parts-pairing"]},
+        {"name": "The Restart Project (UK)", "url": "https://therestartproject.org/", "notes": "UK community repair; iFixit points here for UK.", "related": ["spec-right-to-repair"]},
+        {"name": "Right2Repair South Africa", "url": "https://right2repair.org.za/", "notes": "SA campaign iFixit lists.", "related": ["spec-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "trackers-1201",
+      "title": "Trackers, 1201, EFF",
+      "items": [
+        {"name": "iFixit - Right to Repair progress (state/EU map)", "url": "https://www.ifixit.com/right-to-repair-progress", "notes": "Where laws actually passed. Parts-pairing after 1 Jan 2025 called out for OR/CO/WA-class rules.", "related": ["spec-right-to-repair"]},
+        {"name": "iFixit - Secure Your Right to Repair (action)", "url": "https://www.ifixit.com/right-to-repair-action", "notes": "Campaign hub; pointers to repair.org / repair.eu / Restart.", "related": ["spec-right-to-repair"]},
+        {"name": "EFF - DMCA 1201", "url": "https://www.eff.org/issues/dmca", "notes": "Civil-liberties frame on anticircumvention. FULU's 1201 reform sits next to this, not inside EFF.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Copyright Office - 1201 rulemaking", "url": "https://www.copyright.gov/1201/", "notes": "Triennial exemption process (9th rule Oct 2024; 10th cycle).", "related": ["spec-right-to-repair", "spec-mcdonalds-kytch-taylor"]},
+        {"name": "404 Media - Samsung independent-repair contract", "url": "https://www.404media.co/samsung-requires-independent-repair-shops-to-share-customer-data-snitch-on-people-who-use-aftermarket-parts-leaked-contract-shows/", "notes": "G-SPN daily customer data + forced disassembly of aftermarket-part devices.", "related": ["spec-electronics-parts-pairing"]}
+      ]
+    },
+    {
+      "id": "oem-lobby",
+      "title": "OEM and lobby (the other side)",
+      "items": [
+        {"name": "Alliance for Automotive Innovation", "url": "https://www.autosinnovate.org/", "notes": "Plaintiff in the MA telematics suit. Industry security/preemption frame.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "NADA on REPAIR Act / H.R. 7389", "url": "https://www.nada.org/legislative/congress-should-retain-house-committee-passed-repair-act-language-hr-7389", "notes": "Dealer lobby: keep committee-narrowed MOU+FTC version; reject broader H.R. 1566. Both-sides document.", "related": ["spec-auto-right-to-repair"]},
+        {"name": "CTA (Consumer Technology Association)", "url": "https://www.cta.tech/", "notes": "Historical electronics-R2R opposition (security/IP). Named in the anchor as R2R_Opposition cohort.", "related": ["spec-right-to-repair"]}
+      ]
+    },
+    {
+      "id": "futo-products",
+      "title": "FUTO-adjacent software (source-available / grants)",
+      "items": [
+        {"name": "Grayjay", "url": "https://grayjay.app/", "notes": "FUTO in-house video client. Not a repair tool; sovereignty-of-the-feed product.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Immich", "url": "https://immich.app/", "notes": "Self-hosted photos; FUTO multi-year funding (Rossmann introduced the deal on stream).", "related": ["spec-rossmann-futo-ownership", "spec-local-uncensored-ai"]},
+        {"name": "Rossmann on YouTube", "url": "https://www.youtube.com/@rossmanngroup", "notes": "~2.6M; diagnostics + advocacy. Shop vlogs vs casework split on the CRW video directory.", "related": ["spec-rossmann-futo-ownership"]},
+        {"name": "Wikipedia - Louis Rossmann", "url": "https://en.wikipedia.org/wiki/Louis_Rossmann", "notes": "FUTO dates, FULU, CRW, RPG Action Fund.", "related": ["spec-rossmann-futo-ownership"]}
+      ]
+    },
+    {
+      "id": "corpus-r2r",
+      "title": "In-corpus research pages (this site)",
+      "internal": true,
+      "items": [
+        {"name": "Right to Repair (anchor)", "stub": "spec-right-to-repair", "notes": "Mechanism, 1201, FTC, 50-state wave, EU, actors."},
+        {"name": "Rossmann / FUTO / FULU / CRW (this article)", "stub": "spec-rossmann-futo-ownership", "notes": "Seventeen-year advocacy timeline."},
+        {"name": "Auto R2R / MA telematics", "stub": "spec-auto-right-to-repair", "notes": "Question 1, NHTSA walk-back, REPAIR Act."},
+        {"name": "Electronics parts-pairing", "stub": "spec-electronics-parts-pairing", "notes": "Apple / Samsung / Google / Microsoft."},
+        {"name": "Farm equipment / Deere", "stub": "spec-farm-equipment-r2r", "notes": "FTC suit, class settlement, AFBF MOU."},
+        {"name": "McDonald's / Kytch / Taylor", "stub": "spec-mcdonalds-kytch-taylor", "notes": "The food-prep 1201 exemption case."},
+        {"name": "Open-source 3D-print lawfare", "stub": "spec-open-source-3dprinting-lawfare", "notes": "Bambu, Stratasys, FUTO Source First correction."},
+        {"name": "Device-ownership erosion", "stub": "digitalid-device-ownership-erosion", "notes": "OS/account identity as the next lock."},
+        {"name": "Local / uncensored AI", "stub": "spec-local-uncensored-ai", "notes": "Own the weights; FUTO adjacency."},
+        {"name": "Payment-processor censorship", "stub": "spec-payment-processor-censorship", "notes": "Visa/MC/PayPal chokepoint Rossmann covered in 2025."},
+        {"name": "Creative-platform purge", "stub": "spec-creative-platform-purge", "notes": "Steam/itch/Collective Shout; Clip Studio age gates."},
+        {"name": "Legislative Trojan horses / ID APIs", "stub": "spec-legislative-trojan-horse-id", "notes": "Identify first, then gate repair-adjacent speech and apps."},
+        {"name": "Retail gaze / uXDT", "stub": "spec-retail-uxdt-cactus", "notes": "Cactus CCTV twin vs SilverPush/Shopkick ultrasonic. Phone as store sensor."}
+      ]
+    },
+    {
+      "id": "retail-tracking",
+      "title": "In-store tracking (CCTV twins + ultrasound)",
+      "items": [
+        {"name": "Cactus (Auki)", "url": "https://www.getcactus.ai/", "notes": "Retail spatial copilot; phone twin + cameras.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "Auki 18 Sep 2026 recap", "url": "https://www.auki.com/community/news/auki-community-update-recap-sep-18-2026", "notes": "Cameras into the twin; pose/gaze heatmaps; robot enroll via QR.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "PETS 2017 - ultrasonic side channels", "url": "https://petsymposium.org/popets/2017/popets-2017-0020.pdf", "notes": "234 Android apps; Shopkick in 4/35 stores.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "FTC SilverPush warning letters (Mar 2016)", "url": "https://www.ftc.gov/news-events/news/press-releases/2016/03/ftc-issues-warning-letters-app-developers-using-silverpush-code", "notes": "App-mic TV-ad beacons.", "related": ["spec-retail-uxdt-cactus"]},
+        {"name": "LISNR Radius SDK", "url": "https://lisnr.com/radius-ultrasonic-sdk-3/", "notes": "Still-sold ultrasonic proximity / ads / ticketing.", "related": ["spec-retail-uxdt-cactus"]}
+      ]
+    },
+    {
+      "id": "uwu-leads",
+      "title": "UwU Underground lead posts (not sources)",
+      "items": [
+        {"name": "APT Tales IV bill (18 Nov 2026)", "url": "https://x.com/uwu_underground/status/2092994695727124797", "notes": "Advertised tracks: APT15, Red Delta, Stealth Falcon, Pegasus, APT28, Charming Kitten, FinFisher.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "FinSpy song 'Clean' + Phineas Fisher", "url": "https://x.com/uwu_underground/status/2097413683911541149", "notes": "Party voice on disappearances. Phineas 2014 Gamma dump is fact.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "Harm-pipeline compression vs vx-underground", "url": "https://x.com/uwu_underground/status/2082006955007336666", "notes": "Grades in the overlay. APT28/Skripal mix-up; DoubleAgent mix-up.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "Apple Live Rewind called spyware", "url": "https://x.com/uwu_underground/status/2098390425589383678", "notes": "Always-on buffer = fact. Implant-class spyware = advocacy.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "Kaspersky Darkhotel (2014)", "url": "https://securelist.com/the-darkhotel-apt/66729/", "notes": "Primary for the Vol 3 tribute actor.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "Citizen Lab Stealth Falcon (2016)", "url": "https://citizenlab.ca/2016/05/stealth-falcon/", "notes": "UAE-nexus spearphish.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "Apple Audio Intelligence Privacy Overview (Sep 2026)", "url": "https://www.apple.com/privacy/docs/Audio_Intelligence_Privacy_Overview_Sep_2026.pdf", "notes": "Live Rewind / Siri Recap mechanics.", "related": ["spec-uwu-apt-leads"]}
+      ]
+    },
+    {
+      "id": "spyware-hrd",
+      "title": "Spyware, human-rights labs, and leak archives",
+      "items": [
+        {"name": "Citizen Lab", "url": "https://citizenlab.ca/", "notes": "University of Toronto. FinFisher C2 maps, Stealth Falcon, Pegasus, Predator, Dark Basin. The load-bearing lab for this graph's spyware layer.", "related": ["spec-citizen-lab", "spec-finfisher-finspy-spyware"]},
+        {"name": "Citizen Lab - You Only Click Twice (FinFisher 2013)", "url": "https://citizenlab.ca/2013/03/you-only-click-twice-finfishers-global-proliferation-2/", "notes": "First global FinSpy C2 atlas.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "Amnesty Security Lab - FinSpy Egypt / Mac / Linux (2020)", "url": "https://www.amnesty.org/en/latest/research/2020/09/german-made-finspy-spyware-found-in-egypt-and-mac-and-linux-versions-revealed/", "notes": "Forensics, not lyrics.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "HRW - Ethiopia telecom surveillance (2014)", "url": "https://www.hrw.org/news/2014/03/25/ethiopia-telecom-surveillance-chills-rights", "notes": "FinFisher + Hacking Team + ZTE wiretaps; recorded calls in interrogations.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "ECCHR - FinFisher / Turkey export case", "url": "https://www.ecchr.eu/en/case/surveillance-software-germany-turkey-finfisher/", "notes": "'Digital surveillance is often followed by imprisonment and torture.'", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "GFF - FinFisher criminal complaint / insolvency", "url": "https://freiheitsrechte.org/en/themen/freiheit-im-digitalen-zeitalter/export-von-uberwachungssoftware", "notes": "German NGO complaint that became the Munich case.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "WikiLeaks SpyFiles", "url": "https://wikileaks.org/spyfiles/", "notes": "2011 Gamma brochures (FinSpy/FinFly). Distinct from the 2014 Phineas dump.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "EFF - Kidane v. Ethiopia", "url": "https://www.eff.org/cases/kidane-v-ethiopia", "notes": "Maryland PC, FinSpy 2012-13. Dismissed on FSIA, not on the facts.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "The Pegasus Project (Forbidden Stories)", "url": "https://forbiddenstories.org/case/the-pegasus-project/", "notes": "Consortium investigation of NSO targeting. Do not mix with FinSpy kill-chains.", "related": ["spec-citizen-lab"]},
+        {"name": "Privacy International", "url": "https://privacyinternational.org/", "notes": "Surveillance-industry reporting; Gamma/HT neighborhood.", "related": ["spec-surveillance-cyber-threat-layer"]}
+      ]
+    },
+    {
+      "id": "threat-intel-edu",
+      "title": "Threat-intel primers (how to read APTs)",
+      "items": [
+        {"name": "MITRE ATT&CK", "url": "https://attack.mitre.org/", "notes": "Technique taxonomy. Groups are activity clusters, not org charts.", "related": ["spec-state-apt-catalog"]},
+        {"name": "CISA", "url": "https://www.cisa.gov/", "notes": "US alerts and emergency directives (e.g. npm Shai-Hulud; F5 ED 26-01).", "related": ["spec-shai-hulud-npm-worm", "spec-networking-security-industry"]},
+        {"name": "Malpedia", "url": "https://malpedia.caad.fkie.fraunhofer.de/", "notes": "Fraunhofer malware-family encyclopedia: aliases, YARA, papers.", "related": ["spec-state-apt-catalog"]},
+        {"name": "Kaspersky Securelist - Darkhotel (2014)", "url": "https://securelist.com/the-darkhotel-apt/66729/", "notes": "Hotel-WiFi watering-hole APT. Primary for the Vol 3 tribute actor.", "related": ["spec-uwu-apt-leads"]},
+        {"name": "NIST PQC standards (FIPS 203/204/205)", "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards", "notes": "Post-quantum algorithms this corpus's PQC blocks rest on.", "related": ["macro-pqc-chips"]}
+      ]
+    },
+    {
+      "id": "digital-rights-edu",
+      "title": "Digital-rights explainers (ID, speech, Chat Control)",
+      "items": [
+        {"name": "EFF", "url": "https://www.eff.org/", "notes": "US digital-rights docket. X account is retired; site is live.", "related": ["spec-western-speech-regulation"]},
+        {"name": "EFF - Chat Control explainer (Dec 2025)", "url": "https://www.eff.org/deeplinks/2025/12/after-years-controversy-eus-chat-control-nears-its-final-hurdle-what-know", "notes": "Scan vs age-ID lever switch.", "related": ["spec-western-speech-regulation", "spec-legislative-trojan-horse-id"]},
+        {"name": "EFF - ZK proofs are not a digital-ID solution (2025)", "url": "https://www.eff.org/deeplinks/2025/07/zero-knowledge-proofs-alone-are-not-digital-id-solution-protecting-user-privacy", "notes": "Pairs with the abolition/age-assurance block.", "related": ["age-verification-abolition"]},
+        {"name": "EDRi - FinFisher accounts seized", "url": "https://edri.org/our-work/criminal-complaint-against-illegal-export-of-surveillance-software-is-making-an-impact-the-finfisher-group-of-companies-ceases-business-operations-after-its-accounts-are-seized-by-public-prosecutor/", "notes": "EU digital-rights network on the Munich case.", "related": ["spec-finfisher-finspy-spyware"]},
+        {"name": "fightchatcontrol.eu", "url": "https://fightchatcontrol.eu/chat-control-overview", "notes": "Breyer's 1.0 vs 2.0 split. Advocacy site; statute text is the source.", "related": ["spec-western-speech-regulation"]},
+        {"name": "Ofcom - Online Safety", "url": "https://www.ofcom.org.uk/online-safety", "notes": "UK OSA / HEAA regulator. 'Highly effective' age-assurance language.", "related": ["spec-western-speech-regulation", "digitalid-regulatory"]},
+        {"name": "eSafety Commissioner (Australia)", "url": "https://www.esafety.gov.au/", "notes": "Under-16 social-media ban (live 10 Dec 2025) and age-assurance trial.", "related": ["digitalid-regulatory"]}
+      ]
+    },
+    {
+      "id": "data-literacy",
+      "title": "Data literacy (how this graph is checked)",
+      "items": [
+        {"name": "FRED (St. Louis Fed)", "url": "https://fred.stlouisfed.org/", "notes": "Live series behind CRE delinquency, bank books, rates. Pull the series, do not trust a screenshot.", "related": ["macro-cre-privatecredit"]},
+        {"name": "Federal Reserve H.8 / FEDS Notes", "url": "https://www.federalreserve.gov/", "notes": "Bank CRE, NDFI lending, private-credit notes cited in the credit blocks.", "related": ["macro-cre-privatecredit"]},
+        {"name": "BIS", "url": "https://www.bis.org/", "notes": "CBDC / unified-ledger / mBridge papers. Carstens 'absolute control' line lives in the digital-ID orchestration block.", "related": ["digitalid-orchestration-real-incentive"]},
+        {"name": "SEC EDGAR", "url": "https://www.sec.gov/edgar", "notes": "10-Ks and 8-Ks. If a dollar figure is not here or in a filing exhibit, it is not a fact of that size.", "related": ["fin-google-amazon-anthropic-meta"]},
+        {"name": "CourtListener / RECAP", "url": "https://www.courtlistener.com/", "notes": "PACER mirrors. Buist complaint and similar dockets.", "related": ["spec-buist-v-anthropic-pacing"]},
+        {"name": "OpenSecrets", "url": "https://www.opensecrets.org/", "notes": "US money-in-politics. Quiet-money catalogs start here, then 990s.", "related": ["catalog-quiet-money"]},
+        {"name": "Congress.gov", "url": "https://www.congress.gov/", "notes": "Bill text (REPAIR Act, AI Kill Switch Act, NDAA riders).", "related": ["spec-auto-right-to-repair"]},
+        {"name": "BLS", "url": "https://www.bls.gov/", "notes": "Payrolls, CPI, QCEW benchmarks. Official-data-integrity block is about how these series get revised.", "related": ["macro-official-data-integrity"]},
+        {"name": "IMF GFSR", "url": "https://www.imf.org/en/Publications/GFSR", "notes": "Global Financial Stability Report. Cited on private-credit / CRE.", "related": ["macro-cre-privatecredit"]},
+        {"name": "FSB", "url": "https://www.fsb.org/", "notes": "Non-bank / private-credit monitoring papers.", "related": ["macro-cre-privatecredit"]},
+        {"name": "TreppTalk CMBS delinquency", "url": "https://www.trepp.com/trepptalk", "notes": "Office CMBS prints (12.34% Jan 2026 high). Primary for the CRE update.", "related": ["macro-cre-privatecredit"]}
+      ]
+    },
+    {
+      "id": "ai-evals-edu",
+      "title": "AI evals, incidents, and tech-history",
+      "items": [
+        {"name": "METR", "url": "https://metr.org/", "notes": "Independent evals. Reconstructed the ExploitGym unsanctioned board (~1,200 agents / 70k messages).", "related": ["spec-openai-agent-swarm-2026", "spec-ai-safety-evals-ecosystem"]},
+        {"name": "CSET (Georgetown)", "url": "https://cset.georgetown.edu/", "notes": "China STEM / CSC papers used in the tech-transfer block.", "related": ["spec-research-security-tech-transfer"]},
+        {"name": "OpenAI - Hugging Face incident and the road ahead", "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/", "notes": "Lab postmortem of the 2026 eval escape. Party account; pair with the HF forensic.", "related": ["spec-openai-agent-swarm-2026"]},
+        {"name": "Hugging Face - agent intrusion timeline", "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline", "notes": "~17,600 actions. Victim forensic.", "related": ["spec-openai-agent-swarm-2026"]}
+      ]
+    },
+    {
+      "id": "vitalik-privacy",
+      "title": "Vitalik essays (ID, privacy, local models)",
+      "items": [
+        {"name": "vitalik.eth.limo (essay index)", "url": "https://vitalik.eth.limo/", "notes": "Full archive. This graph cites him on zkID, biometrics, legitimacy, local LLMs.", "related": ["spec-vitalik-buterin-thought"]},
+        {"name": "Does digital ID have risks even if it's ZK-wrapped?", "url": "https://vitalik.eth.limo/general/2025/06/28/zkid.html", "notes": "Pairs with age-verification-abolition.", "related": ["age-verification-abolition", "digitalid-regulatory"]},
+        {"name": "What do I think about biometric proof of personhood?", "url": "https://vitalik.eth.limo/general/2023/07/24/biometric.html", "notes": "Worldcoin neighborhood.", "related": ["digitalid-worldcoin-eid-convergence"]},
+        {"name": "Why I support privacy", "url": "https://vitalik.eth.limo/general/2025/04/14/privacy.html", "notes": "Steering-wheel vs engine framing used in the AI/privacy blocks.", "related": ["spec-vitalik-buterin-thought"]},
+        {"name": "My self-sovereign / local / private / secure LLM setup (2026)", "url": "https://vitalik.eth.limo/general/2026/04/02/secure_llms.html", "notes": "Own-the-weights companion to local-uncensored-ai.", "related": ["spec-local-uncensored-ai"]}
+      ]
+    },
+    {
+      "id": "corpus-more",
+      "title": "More in-corpus pages (spyware, APTs, ID, this site)",
+      "internal": true,
+      "items": [
+        {"name": "Methodology and disclaimer", "url": "methodology.html", "notes": "How gradings work. Start here before treating any node as a verdict."},
+        {"name": "Citizen Lab block", "stub": "spec-citizen-lab", "notes": "Lab-to-graph mapping."},
+        {"name": "FinSpy / Gamma harm pattern", "stub": "spec-finfisher-finspy-spyware", "notes": "Collection layer vs apparatus. Not a kill-list."},
+        {"name": "UwU APT/spyware lead index", "stub": "spec-uwu-apt-leads", "notes": "How to use the music posts without laundering lyrics."},
+        {"name": "State APT catalog", "stub": "spec-state-apt-catalog", "notes": "Consensus attributions + alias discipline."},
+        {"name": "Surveillance / cyber threat layer", "stub": "spec-surveillance-cyber-threat-layer", "notes": "APTs, CALEA paradox, commercial spyware, ransomware, Palantir."},
+        {"name": "Retail gaze / uXDT", "stub": "spec-retail-uxdt-cactus", "notes": "Cactus CCTV twin vs SilverPush/Shopkick ultrasound."},
+        {"name": "Digital-ID regulatory map", "stub": "digitalid-regulatory", "notes": "Statutes: OSA, DSA, eIDAS, Australia ban."},
+        {"name": "Device-ownership erosion", "stub": "digitalid-device-ownership-erosion", "notes": "OS/account identity as the lock."},
+        {"name": "Age-verification abolition", "stub": "age-verification-abolition", "notes": "Why even ZK fails the 'robust' bar."},
+        {"name": "Western speech regulation", "stub": "spec-western-speech-regulation", "notes": "UK/EU/FR/AU statute layer."},
+        {"name": "OpenAI agent swarm 2026", "stub": "spec-openai-agent-swarm-2026", "notes": "RubyGems, DseWiki, Hugging Face, Medicare portal."},
+        {"name": "Vitalik thought map", "stub": "spec-vitalik-buterin-thought", "notes": "zkID, legitimacy, d/acc, local LLMs."},
+        {"name": "Official data integrity (BLS/CPI)", "stub": "macro-official-data-integrity", "notes": "How headline jobs/CPI get revised."},
+        {"name": "CRE / private credit", "stub": "macro-cre-privatecredit", "notes": "Office CMBS vs GFC; bank book vs bondholders."},
+        {"name": "PQC / CRQC landscape", "stub": "macro-crqc-quantum-landscape", "notes": "Why NIST PQC is on the Links tab."},
+        {"name": "AI chronology tab", "url": "ai.html", "notes": "Lab history, evals, open-weight counter-ecosystem."},
+        {"name": "Local / uncensored AI", "stub": "spec-local-uncensored-ai", "notes": "Own the weights."},
+        {"name": "Tech-transfer / CSC", "stub": "spec-research-security-tech-transfer", "notes": "CSET papers on China Scholarship Council."}
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "Consumer_Rights_Wiki",
+      "to": "FULU_Foundation",
+      "instrument": "relationship",
+      "notes": "Wiki is a FULU project; recommended-links catalog points at the About page as the living index (fact of hosting).",
+      "source": "https://consumerrights.wiki/w/About"
+    }
+  ]
+}

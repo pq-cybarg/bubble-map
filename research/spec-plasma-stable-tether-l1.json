@@ -1,0 +1,102 @@
+{
+ "title": "Tether's stablecoin-L1 push (Plasma + Stable) - the boom-bust counterpoint to Arc/Tempo",
+ "source": "Public record: Plasma (XPL) mainnet 25 Sep 2025; token-sale + backer coverage; CoinDesk on the XPL crash; DeFiLlama TVL (figures conflict). Overlay on the stablecoin-L1 landscape (peer to Arc + Tempo). HONESTY: launch, backers, architecture, and the XPL price crash = fact (well corroborated); TVL numbers CONFLICT WILDLY across sources (~$0.6B vs ~$2B vs ~$18.7B at different dates/methodologies) - treated as uncertain/reported, verify on DeFiLlama; 'incentive-driven, not organic' + token-demand-flaw = interpretation.",
+ "grade": "per-edge in notes (fact | reported/conflicting | interpretation)",
+ "nodes": [
+  {
+   "id": "Plasma",
+   "sector": "crypto"
+  },
+  {
+   "id": "XPL",
+   "sector": "crypto"
+  },
+  {
+   "id": "Stable",
+   "sector": "crypto"
+  },
+  {
+   "id": "USDT",
+   "sector": "crypto"
+  }
+ ],
+ "edges": [
+  {
+   "from": "Tether",
+   "to": "Plasma",
+   "instrument": "relationship",
+   "notes": "Plasma is a USDT-centric, Bitcoin-anchored, EVM L1 (PlasmaBFT consensus) launched with explicit Tether/Bitfinex backing (mainnet 25 Sep 2025); zero-fee USDT transfers, gas payable in USDT - the largest stablecoin issuer building its own rail (fact).",
+   "source": "Plasma; press"
+  },
+  {
+   "from": "Bitfinex",
+   "to": "Plasma",
+   "instrument": "relationship",
+   "notes": "Bitfinex (Tether's sister exchange) is among Plasma's backers - the Tether/Bitfinex complex extending from issuance into L1 infrastructure (fact).",
+   "source": "public record"
+  },
+  {
+   "from": "Founders_Fund",
+   "to": "Plasma",
+   "instrument": "relationship",
+   "notes": "Founders Fund (Thiel network) backed Plasma - the same PayPal-mafia capital behind Erebor + Persona now in a Tether-aligned stablecoin L1 (fact of backing; network-pattern framing interpretation).",
+   "source": "public record"
+  },
+  {
+   "from": "Plasma",
+   "to": "XPL",
+   "instrument": "controls",
+   "notes": "XPL is Plasma's native token; the public sale raised ~$373M (reportedly ~7x its $50M target). CREDIBILITY: XPL crashed ~80-85% from its ~$1.5-1.67 high to ~$0.20 by late 2025 - and the design has a structural token-demand flaw: if stablecoin transfers are zero-fee, there is little reason to hold XPL (fact of crash; token-demand critique interpretation).",
+   "source": "CoinDesk; press"
+  },
+  {
+   "from": "Plasma",
+   "to": "USDT",
+   "instrument": "relationship",
+   "notes": "~89% of stablecoins on Plasma are USDT - single-issuer concentration that ties the chain's fate to Tether's decisions + health (fact of concentration; risk framing graded).",
+   "source": "press"
+  },
+  {
+   "from": "Plasma",
+   "to": "Stablecoins",
+   "instrument": "relationship",
+   "notes": "Plasma is the boom-bust case study: ~$2B+ day-one TVL + 100+ DeFi partners (Aave/Ethena/Euler/Fluid), then a steep decline as XPL incentives expired - the challenge of converting incentivized deposits into ORGANIC usage. TVL figures conflict wildly across sources (~$0.6B / ~$2B / ~$18.7B at different dates) - treat as uncertain, verify on DeFiLlama (fact of pattern; specific TVL reported/conflicting).",
+   "source": "DeFiLlama; press (conflicting)"
+  },
+  {
+   "from": "Plasma",
+   "to": "Aave",
+   "instrument": "relationship",
+   "notes": "Aave (with Ethena, Euler, Fluid) integrated on Plasma at launch - the DeFi liquidity that drove the day-one TVL spike (and much of what later migrated out) (fact).",
+   "source": "press"
+  },
+  {
+   "from": "Plasma",
+   "to": "Arc",
+   "instrument": "peer",
+   "notes": "Plasma (Tether/USDT) vs Arc (Circle/USDC) vs Tempo (Stripe) - the three-way stablecoin-L1 race: the largest issuer, the #2 issuer, and the largest processor each building a rail to capture float + fees beyond reserve income (fact of category).",
+   "source": "stablecoin-L1 landscape"
+  },
+  {
+   "from": "Plasma",
+   "to": "Tempo",
+   "instrument": "peer",
+   "notes": "Plasma + Tempo + Arc are the flagship stablecoin L1s; Plasma is the cautionary datapoint (huge launch, hype fade) the newer entrants must avoid (fact of category; lesson framing interpretation).",
+   "source": "stablecoin-L1 landscape"
+  },
+  {
+   "from": "Plasma",
+   "to": "Tron",
+   "instrument": "peer",
+   "notes": "Tron remains the dominant USDT-transfer chain; Plasma competes for that same USDT-settlement volume - so Tether's own L1 partly competes with USDT's existing home on Tron (fact; tension framing interpretation).",
+   "source": "public record"
+  },
+  {
+   "from": "Stable",
+   "to": "Tether",
+   "instrument": "relationship",
+   "notes": "'Stable' is a second Tether/Bitfinex-aligned USDT-focused L1 - alongside Plasma, Tether is pursuing MULTIPLE issuer-run chains, echoing the Arc/Tempo issuer-run pattern (fact of category; details less documented, graded).",
+   "source": "public record"
+  }
+ ]
+}

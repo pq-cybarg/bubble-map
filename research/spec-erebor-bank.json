@@ -1,0 +1,21 @@
+{
+  "title": "Erebor Bank - the Thiel/Anduril-network stablecoin-native national bank filling the SVB gap",
+  "source": "Public record: OCC/FDIC charter actions (conditional 15 Oct 2025; FDIC insurance 16 Dec 2025; final national charter Feb 2026); FT/Reuters + crypto-press coverage; Sen. Warren/Democratic OCC letters (Apr 2026). Overlay on the bank-digital-money + PayPal-mafia + defense-tech threads. HONESTY: charter dates, founders, business model, and disclosed deposit/valuation figures = fact; the 'political-connections sped the charter' concern is a raised-question (contested); systemic framing graded.",
+  "grade": "per-edge in notes (fact | contested | interpretation)",
+  "nodes": [
+    {"id": "Erebor", "sector": "capital"},
+    {"id": "Joe_Lonsdale", "sector": "person"},
+    {"id": "8VC", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Palmer_Luckey", "to": "Erebor", "instrument": "founder_origin", "notes": "Palmer Luckey (Anduril founder) co-founded Erebor Bank, N.A. (Columbus, OH); he + Lonsdale are not in day-to-day management (co-CEOs Owen Rapaport + Jacob Hirshman, ex-Circle adviser) (fact).", "source": "public record; FT"},
+    {"from": "Joe_Lonsdale", "to": "Erebor", "instrument": "founder_origin", "notes": "Joe Lonsdale (8VC; Palantir co-founder) co-founded Erebor - a nationally chartered, FDIC-insured bank for AI/crypto/defense/manufacturing startups + the people who work at/invest in them; named for Tolkien's dwarven treasure mountain (fact).", "source": "public record"},
+    {"from": "Joe_Lonsdale", "to": "8VC", "instrument": "leads", "notes": "Lonsdale runs 8VC + co-founded Palantir/Addepar/OpenGov - a core Thiel-adjacent 'PayPal mafia'-network figure; Erebor extends that network into chartered banking (fact).", "source": "public record"},
+    {"from": "Erebor", "to": "OCC", "instrument": "relationship", "notes": "The OCC granted Erebor preliminary conditional approval (15 Oct 2025) + a final national charter (Feb 2026) - reportedly the first de-novo national bank charter under the current administration; ~8 months application-to-opening. Sen. Warren + Democrats formally questioned the SPEED + the founders' political connections (Apr 2026) - a raised concern, not a finding (fact of the letters; impropriety contested).", "source": "OCC actions; Warren/Dem letters"},
+    {"from": "Erebor", "to": "Silicon_Valley_Bank", "instrument": "relationship", "notes": "Erebor is explicitly positioned to serve the frontier-tech + crypto clients stranded by the 2023 collapse of Silicon Valley Bank + Silvergate - deposits grew ~$1.1B (Mar) -> ~$4.6B (Jul 2026), ~$1B/month (fact of positioning + disclosed deposits).", "source": "public record"},
+    {"from": "Erebor", "to": "Stablecoins", "instrument": "relationship", "notes": "Erebor is stablecoin-native: it plans to hold stablecoins on its balance sheet + aims to be 'the most regulated entity conducting and facilitating stablecoin transactions' in the US - a chartered bank built around stablecoin rails, distinct from the bank-consortium tokenized-deposit approach (fact of stated model).", "source": "charter application; press"},
+    {"from": "Founders_Fund", "to": "Erebor", "instrument": "relationship", "notes": "Erebor's backer network reportedly includes Founders Fund (Thiel), 8VC, Haun Ventures, and Lux Capital; it is in talks to raise ~$1.5B at ~$8B pre / ~$9.5B post - which would make it the most valuable US private bank <6 months after opening (fact of reported backing + valuation talks; final terms not closed).", "source": "press (2026)"},
+    {"from": "Erebor", "to": "Anduril", "instrument": "relationship", "notes": "Shared founder (Luckey) + an explicit defense/AI/manufacturing client focus make Erebor the banking layer of the emerging military-tech stack - the Thiel/Anduril/Palantir network acquiring its own chartered bank (fact of founder overlap + client focus; 'network consolidation' framing graded).", "source": "public record"},
+    {"from": "Erebor", "to": "PayPal_Mafia", "instrument": "relationship", "notes": "Via Luckey/Lonsdale/Founders Fund, Erebor sits in the Thiel 'PayPal mafia' network the map already tracks - extending it from payments (PayPal), data (Palantir), and defense (Anduril) into deposit-taking banking (fact of network ties; interpretation of the pattern).", "source": "public record"}
+  ]
+}

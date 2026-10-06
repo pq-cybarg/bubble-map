@@ -1,0 +1,24 @@
+{
+  "title": "AI-datacenter debt wave - off-balance-sheet SPVs + private credit (the leverage the capex hides)",
+  "source": "Public record: Meta/Blue Owl Hyperion (Beignet Investor) announcement + 10-K footnote (E&Y 'critical audit matter'); Oracle SPV + $50B raise coverage; Sona Asset Management circular-financing map; FT/Axios/Benzinga. STRUCTURAL OVERLAY - all debt/$ figures are in notes; NO financial-core edges are added, so the proven capital-core SCC is untouched. HONESTY: deal structures, lenders, and the audit flag = fact; the 'circular financing' + 'hidden leverage' framing = analyst interpretation (Sona/credit desks), clearly labeled; figures vary slightly across sources.",
+  "grade": "per-edge in notes (fact | reported/varies | interpretation)",
+  "nodes": [
+    {"id": "Blue_Owl", "sector": "capital"},
+    {"id": "Beignet_Investor", "sector": "capital"},
+    {"id": "Hyperion", "sector": "other"},
+    {"id": "Pimco", "sector": "capital"}
+  ],
+  "edges": [
+    {"from": "Blue_Owl", "to": "Beignet_Investor", "instrument": "leads", "notes": "Beignet Investor is the SPV for Meta's Hyperion data center, ~80% owned/managed by Blue Owl Capital, ~20% by Meta - the largest private-credit data-center deal ever (~$30B, Oct 2025) (fact).", "source": "Meta/Blue Owl"},
+    {"from": "Meta", "to": "Beignet_Investor", "instrument": "relationship", "notes": "Meta holds ~20% of the SPV, which OWNS Hyperion and LEASES it back to Meta - so ~$27B of underlying loans stays OFF Meta's balance sheet (only the equity stake + lease obligation appear). Meta's auditor Ernst & Young flagged the treatment as a 'critical audit matter' - among the most severe auditor warnings (fact of structure + audit flag; 'hiding leverage' framing = interpretation).", "source": "Meta 10-K; press"},
+    {"from": "Beignet_Investor", "to": "Hyperion", "instrument": "builds", "notes": "The SPV owns/builds Hyperion in Richland Parish, Louisiana - >4M sq ft, up to ~5GW, online ~2029, set to be Meta's largest data center; debt matures 2049, fully amortizing, rated A+ (S&P), ~225bps over Treasuries (fact; figures reported/vary).", "source": "S&P; press"},
+    {"from": "Hyperion", "to": "Power_Grid", "instrument": "relationship", "notes": "Hyperion's ~5GW draw is itself a grid-scale load - the AI-datacenter power bottleneck at a single site (fact of scale).", "source": "press"},
+    {"from": "Pimco", "to": "Beignet_Investor", "instrument": "funds", "notes": "Pimco (with BlackRock, Apollo, and others) provided ~$27B of the SPV's loans; Blue Owl put in ~$3B equity - private-credit + insurance money financing the buildout (fact; exact splits reported/vary).", "source": "press"},
+    {"from": "Apollo", "to": "Beignet_Investor", "instrument": "funds", "notes": "Apollo is among the private-credit lenders in the Hyperion SPV - part of the Blackstone/Blue Owl/Apollo/Pimco/BlackRock cluster originating most AI data-center debt (fact).", "source": "press"},
+    {"from": "BlackRock", "to": "Beignet_Investor", "instrument": "funds", "notes": "BlackRock is among the Hyperion SPV lenders; separately BlackRock/GIP is a rumored SPV partner for Microsoft - the template spreading across hyperscalers (fact of Hyperion role; MSFT tie reported).", "source": "press"},
+    {"from": "Blue_Owl", "to": "Oracle", "instrument": "funds", "notes": "Blue Owl (with JPMorgan, ~$10B debt of a ~$13B SPV) financed Oracle's OpenAI Abilene TX facility (Stargate); Oracle also has ~$38B (TX/WI) + ~$18B (NM) off-balance-sheet SPV packages + plans a ~$50B 2026 raise - extreme leverage vs hyperscaler peers (fact; figures reported/vary).", "source": "press; Axios"},
+    {"from": "Blue_Owl", "to": "SINK_lenders", "instrument": "relationship", "notes": "Blue Owl/Apollo/Pimco/Blackstone/BlackRock are the private-credit originators behind the AI debt (loans to AI companies surged from ~0 to $200B+ in a few years) - the real-world counterpart to the map's SINK-lender financing layer (fact of category; mapping = interpretation).", "source": "credit reporting"},
+    {"from": "Beignet_Investor", "to": "PrivateCredit_Funds", "instrument": "relationship", "notes": "Hyperion is the blueprint: off-balance-sheet SPV + private-credit debt + sale-leaseback that keeps hyperscaler credit ratings intact - now being copied (MSFT/GIP, Oracle/Stargate/Blue Owl, Google/TeraWulf) (fact of template; industry-wide spread reported).", "source": "press"},
+    {"from": "Beignet_Investor", "to": "AI_Datacenters", "instrument": "relationship", "notes": "The SPV is a pure AI-datacenter vehicle - a structure that moves the AI-capex debt off the tech balance sheet and into private-credit funds + insurance portfolios, redistributing (not removing) the risk (fact of structure; risk-redistribution framing = interpretation).", "source": "analysis"}
+  ]
+}

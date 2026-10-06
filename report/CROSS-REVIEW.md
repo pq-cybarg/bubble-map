@@ -15,28 +15,28 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 95 files
-- **Google** — 63 files
-- **Chainlink** — 63 files
-- **OpenAI** — 50 files
-- **Microsoft** — 45 files
-- **FDIC** — 37 files
-- **Amazon** — 36 files
-- **Oracle** — 35 files
-- **NVIDIA** — 34 files
-- **Anthropic** — 30 files
-- **Stargate** — 25 files
-- **a16z** — 23 files
+- **Meta** — 110 files
+- **Google** — 72 files
+- **Chainlink** — 66 files
+- **OpenAI** — 58 files
+- **Microsoft** — 49 files
+- **Amazon** — 40 files
+- **Oracle** — 38 files
+- **FDIC** — 38 files
+- **Anthropic** — 37 files
+- **NVIDIA** — 35 files
+- **Circle** — 28 files
+- **a16z** — 27 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-heif-heist-openai-ciso.json` — related files by shared entities (verify cross-refs exist)
-- spec-local-uncensored-ai.json: 3 shared entities
-- spec-sec-filings-primary.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
-- spec-semiconductor-logistics-standards.json: 3 shared entities
-- spec-exchanges-asia.json: 3 shared entities
-- spec-telecom-satellite.json: 3 shared entities
-- catalog-nonprofits-foundations.json: 3 shared entities
-- spec-cross-system-contagion.json: 3 shared entities
+## Newest file `spec-xai-colossus-power.json` — related files by shared entities (verify cross-refs exist)
+- macro-cre-privatecredit.json: 6 shared entities
+- spec-cross-system-contagion.json: 6 shared entities
+- macro-ai-power-grid-bottleneck.json: 5 shared entities
+- fin-coreweave-oracle.json: 5 shared entities
+- fin-google-amazon-anthropic-meta.json: 5 shared entities
+- fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- macro-history-dereg-manipulation.json: 5 shared entities
+- macro-private-credit-marks.json: 4 shared entities

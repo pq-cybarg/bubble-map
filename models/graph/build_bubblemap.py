@@ -98,7 +98,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "IBIT":"IBIT (iShares Bitcoin Trust)","GIP":"Global Infrastructure Partners","HPS":"HPS Investment Partners",
  "Aladdin":"Aladdin (risk engine, ~$25T)",
  # right-to-repair umbrella
- "Right_to_Repair":"Right to Repair","FULU_Foundation":"FULU Foundation (501c4)","Louis_Rossmann":"Louis Rossmann",
+ "Right_to_Repair":"Right to Repair","FULU_Foundation":"FULU Foundation (501c4)","Louis_Rossmann":"Louis Rossmann","Eron_Wolf":"Eron Wolf","Kevin_OReilly":"Kevin O'Reilly","Repair_Preservation_Group":"Repair Preservation Group","CactusXR":"Cactus (Auki)","Auki":"Auki","SilverPush":"SilverPush","Shopkick":"Shopkick","LISNR":"LISNR","Phineas_Fisher":"Phineas Fisher","DarkHotel":"DarkHotel","Stealth_Falcon":"Stealth Falcon","Charming_Kitten":"Charming Kitten","Apple_Live_Rewind":"Apple Live Rewind",
  "Consumer_Rights_Wiki":"Consumer Rights Wiki","DMCA_1201":"DMCA §1201 (anticircumvention)","Copyright_Office":"US Copyright Office",
  "State_R2R_Laws":"State R2R laws (NY/MN/CA/OR/CO/WA…)","EU_R2R_Directive":"EU Repair Directive (2024/1799)",
  "Parts_Pairing":"Parts-pairing / serialization","R2R_Opposition":"Manufacturer R2R opposition (TechNet/CTA)","FTC":"FTC",
@@ -199,7 +199,10 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Cantor_Fitzgerald":"Cantor Fitzgerald","Bitmain":"Bitmain","Bitdeer":"Bitdeer",
  "CLEAR":"CLEAR (biometric ID)","ID_me":"ID.me","Persona":"Persona (ID verif)","Socure":"Socure","Onfido":"Onfido","Entrust":"Entrust",
  "CoinEx":"CoinEx (wind-down 2026)","ViaBTC":"ViaBTC","CET":"CET (CoinEx token)",
- "CikLeak":"CikLeak (hacktivist)","Russia_CEC":"Russia CEC","GAS_Vybory":"GAS Vybory 2.0",
+ "CikLeak":"CikLeak (hacktivist)", "Erebor":"Erebor Bank", "Bridge":"Bridge (Stripe)","Privy":"Privy (Stripe)","Tempo":"Tempo L1", "Arc":"Arc L1 (Circle)", "Plasma":"Plasma (Tether L1)", "Ethena":"Ethena", "Blue_Owl":"Blue Owl", "Fed_Funds_Rate":"Fed funds rate", "Neocloud_Refinancing_Wall":"Neocloud refi wall (26-28)", "PJM":"PJM (grid operator)", "AI_Safety_Regulation":"AI safety regulation", "METR":"METR (evals)", "Regulatory_Capture":"Regulatory capture", "Financial_Censorship":"Financial censorship","NCOSE":"NCOSE","OnlyFans":"OnlyFans","Open_Source_AI":"Open-source AI","Existential_Risk_Framing":"Existential-risk framing","Dario_Amodei":"Dario Amodei","Yann_LeCun":"Yann LeCun","Apollo_Research":"Apollo Research (evals)","US_AISI":"US AISI / CAISI","Responsible_Scaling_Policy":"Responsible Scaling Policy","DataRepublican":"DataRepublican","SB_1047":"SB 1047 (CA, vetoed)", "Colossus":"Colossus (xAI)","NAACP":"NAACP","Jerome_Powell":"Jerome Powell","Beignet_Investor":"Beignet SPV (Meta/Blue Owl)","Hyperion":"Hyperion (Meta DC)","Pimco":"Pimco", "Cheyenne_Hunt":"Cheyenne Hunt","Encode_AI":"Encode AI","Guidelight":"Guidelight","Trial_Lawyers_for_Justice":"TL4J","Coefficient_Giving":"Coefficient Giving","Jaan_Tallinn":"Jaan Tallinn","USDe":"USDe (synthetic $)","sUSDe":"sUSDe","USDtb":"USDtb","Guy_Young":"Guy Young","XPL":"XPL","Stable":"Stable (Tether L1)","USDT":"USDT (Tether)","Galaxy_Digital":"Galaxy Digital","Jeremy_Allaire":"Jeremy Allaire","Paradigm":"Paradigm","Patrick_Collison":"Patrick Collison","8VC":"8VC","Joe_Lonsdale":"Joe Lonsdale","Russia_CEC":"Russia CEC","GAS_Vybory":"GAS Vybory 2.0",
+ # Speech-control / censorship apparatus (#253-256)
+ "Online_Speech_Regulation":"Online speech regulation","Ofcom":"Ofcom (UK)","EU_Digital_Services_Act":"EU Digital Services Act","EU_Commission":"EU Commission","EU_Chat_Control":"EU Chat Control (CSAR)","Germany_NetzDG":"Germany NetzDG","France_SREN":"France SREN law","Arcom":"Arcom (FR)","Australia_eSafety":"Australia eSafety","Collective_Shout":"Collective Shout (AU)","Steam_Valve":"Steam / Valve","Itch_io":"itch.io","Clip_Studio_Assets":"Clip Studio Assets (CELSYS)","State_Influence_Ops":"State influence ops","United_Front":"CCP United Front","Doppelganger_Campaign":"Doppelganger (RU)","Digital_Public_Infrastructure":"Digital Public Infra (DPI)",
+ "Control_Apparatus":"Control apparatus (overview)","Infrastructure_Chokepoint":"Infrastructure chokepoint","App_Store_Gatekeeping":"App-store gatekeeping","Domain_Registrar_Control":"Domain/registrar control","Hosting_Deplatforming":"Hosting deplatforming",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus
@@ -252,7 +255,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Municipal_Debt":"Municipal debt","Federal_Transfers":"Federal transfers","US_household_credit":"US household credit",
  "Credit_Unions":"Credit unions","ILCs":"ILCs","Foreign_Bank_US_Branches":"Foreign-bank US branches",
  # digital-ID OS/hardware layer
- "EUDI_Wallet":"EU Digital Identity Wallet","Device_Age_Attestation":"Device / OS age attestation",
+ "EUDI_Wallet":"EU Digital Identity Wallet","Device_Age_Attestation":"Device / OS age attestation","Facebook_Verified":"Facebook Verified (selfie)","Windows_Age_API":"Windows Age API","AI_Kill_Switch_Act":"AI Kill Switch Act","RubyGems":"RubyGems","DseWiki":"DseWiki","JFrog_Artifactory":"JFrog Artifactory","Services_Australia":"Services Australia","ExploitGym":"ExploitGym",
  "Secure_Element_Vendors":"Secure-element / eUICC vendors","Alternative_OS_Exclusion":"Alternative-OS exclusion",
  "UK_Digital_ID":"UK digital ID (BritCard / One Login)","Labour_Together":"Labour Together",
  # hidden / off-book sovereign debt
@@ -421,7 +424,7 @@ line.hl,path.hl{stroke:#1f4e79!important;opacity:.95!important}
 <div id=tip></div>
 <div id=btns><button id=bFit>Fit to view</button><button id=bReset>Reset focus</button></div>
 <div class=note>__N__ entities &middot; __E__ edges &middot; gold ring = the circular core (Tarjan SCC) &middot; solid = financial flow, dashed = structural/overlay &middot; <b style=color:#c0392b>red</b> = declared circular</div>
-<svg id=g></svg></div>
+<svg id=g></svg><div id=loading style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:50;background:#fffdf8;border:1px solid #c9bfa5;border-radius:9px;padding:13px 22px;font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:#7b2d26;box-shadow:0 2px 12px rgba(60,50,30,.16)"><b>Rendering graph&hellip;</b><br><span style="color:#6b665d;font-size:12.5px">laying out ~1.9k nodes - one moment</span></div></div>
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 const NODES=__NODES__, LINKS=__LINKS__, COLORS=__COLORS__, BTITLE=__BTITLE__;
@@ -469,7 +472,9 @@ const node=nodeG.selectAll('g').data(NODES).join('g').style('cursor','pointer').
 node.append('circle').attr('r',rad).attr('fill',d=>COLORS[d.bucket]||'#8a8378')
  .attr('stroke',d=>d.scc?'#d4a017':'#fffdf8').attr('stroke-width',d=>d.scc?2.6:1);
 node.append('title').text(d=>d.label+'  ('+d.sector+', deg '+d.deg+')');
-const labels=root.append('g').selectAll('text').data(NODES).join('text').attr('class','lab')
+// PERF: only create <text> for nodes that can ever be labelled (core + deg>=2); the deg-1 leaves
+// are never labelled at any zoom, so skip their DOM + every per-zoom labels.* pass over them.
+const labels=root.append('g').selectAll('text').data(NODES.filter(d=>d.scc||d.deg>=2)).join('text').attr('class','lab')
  .attr('dx',d=>rad(d)+2).attr('dy',3).text(d=>d.label).style('display','none');  // hidden until layout settles, then applyLabels() reveals hubs
 let fitted=false, curK=1, pendingFocus=null;
 // ---- smart labels: only hubs + the circular core by default; reveal more on zoom-in ----
@@ -572,7 +577,7 @@ function tick(){
  drawGroups();
  if(sim.alpha()<0.06){                                   // settled
    if(pendingFocus){const t=pendingFocus;pendingFocus=null;fitted=true;focusNode(t);}  // deep-link: center on node
-   else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop();}   // frame, label, then FREEZE (no residual jitter)
+   else if(!fitted){fitted=true; fit(); applyLabels(); sim.stop(); var _ld=document.getElementById('loading'); if(_ld)_ld.style.display='none';}   // frame, label, FREEZE, hide loader
  }
 }
 // keep node/line sizes usable at any zoom: enlarge when zoomed OUT (k<1), constant lines via CSS
@@ -590,10 +595,13 @@ node.call(d3.drag().container(function(){return root.node();})
  .on('start',(e,d)=>{if(!e.active)sim.alphaTarget(.12).restart();d.fx=d.x;d.fy=d.y;})
  .on('drag',(e,d)=>{d.fx=e.x;d.fy=e.y;})
  .on('end',(e,d)=>{if(!e.active)sim.alphaTarget(0);/* leave fx/fy: pinned where dropped */}));
-let panned=false;
+let panned=false; let _zoomT=0;
 const zoomB=d3.zoom().scaleExtent([.35,6])
  .on('start',()=>{panned=false;})
- .on('zoom',e=>{if(e.sourceEvent&&/move/.test(e.sourceEvent.type||''))panned=true;root.attr('transform',e.transform);rescale(e.transform.k);});
+ // PERF: pan/zoom every event via the cheap CSS transform only; DEBOUNCE the expensive
+ // rescale() (restyles ~2k circles/labels + applyLabels) to fire once ~90ms after the gesture
+ // stops - this kills the per-wheel-tick O(n) restyle storm that froze the map at ~2k nodes.
+ .on('zoom',e=>{if(e.sourceEvent&&/move/.test(e.sourceEvent.type||''))panned=true;root.attr('transform',e.transform);curK=e.transform.k;clearTimeout(_zoomT);_zoomT=setTimeout(()=>rescale(curK),90);});
 svg.call(zoomB);
 // click empty space (a real click, not a pan) clears the current selection
 svg.on('click',()=>{if(panned)return;if(egoOn)clearEgo();soloB=null;

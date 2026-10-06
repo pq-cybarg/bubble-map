@@ -8,7 +8,7 @@ This block was thin. The missing piece is not another product description. It is
 
 ## 1. The product (2011 SpyFiles -> 2020 Mac/Linux)
 
-WikiLeaks **SpyFiles** (2011) published Gamma's own brochures. The stack was never "one trojan":
+WikiLeaks **SpyFiles** (2011) published Gamma's own brochures. The **August 2014** dump of FinFisher source, support docs, and customer material is the **Phineas Fisher** operation (same handle later dumped Hacking Team, 2015 - a different vendor). Both disclosures are fact. The stack was never "one trojan":
 
 - **FinSpy** - the implant (Windows first; later Android/iOS/BlackBerry/Symbian; **macOS and Linux** first published by [Amnesty, Sep 2020](https://www.amnesty.org/en/latest/research/2020/09/german-made-finspy-spyware-found-in-egypt-and-mac-and-linux-versions-revealed/)).
 - **FinFly USB / FinFly Web / FinFly ISP** - delivery. FinFly ISP is the important one: **network-injection at the ISP**, so the target does not even have to open a malicious attachment. Citizen Lab later found equipment consistent with this class of injection in Egypt.

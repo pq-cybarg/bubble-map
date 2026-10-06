@@ -1,0 +1,33 @@
+{
+  "title": "The true tech-history of AI - a graph traversal across the sciences (LLMs are ONE branch)",
+  "source": "Public record: standard history of computing, AI, ML, and the contributing fields. Educational lineage overlay (structural; no financial-core edges). CENTRAL CLAIM: 'AI' is a broad field with many branches (logic/search, statistical ML, RL, vision, robotics, protein folding, ...); LLMs (transformers, 2017+) are the currently-dominant branch, NOT AI itself. Edges are LINEAGE (precursor -> successor), traced as a followable walk.",
+  "grade": "per-edge in notes (fact - established history)",
+  "nodes": [
+    {"id": "Mathematical_Logic", "sector": "academia"},
+    {"id": "Information_Theory", "sector": "academia"},
+    {"id": "Cybernetics", "sector": "academia"},
+    {"id": "Perceptron", "sector": "ai"},
+    {"id": "Symbolic_AI", "sector": "ai"},
+    {"id": "Expert_Systems", "sector": "ai"},
+    {"id": "Backpropagation", "sector": "ai"},
+    {"id": "Reinforcement_Learning", "sector": "ai"},
+    {"id": "GPU_Compute", "sector": "ai"},
+    {"id": "ImageNet_AlexNet", "sector": "ai"},
+    {"id": "Transformer", "sector": "ai"},
+    {"id": "AlphaGo_AlphaFold", "sector": "ai"}
+  ],
+  "edges": [
+    {"from": "Mathematical_Logic", "to": "Symbolic_AI", "instrument": "lineage", "notes": "Boole/Frege/Turing/Church formalized computation + logic -> the Dartmouth 1956 'AI' program + symbolic reasoning (search, theorem-proving, LISP). The FIRST AI paradigm was logic, not learning (fact).", "source": "history"},
+    {"from": "Symbolic_AI", "to": "Expert_Systems", "instrument": "lineage", "notes": "Symbolic AI matured into 1970s-80s rule-based expert systems (MYCIN, DENDRAL) - commercial AI's first wave, then the 1980s-90s 'AI winter' when they proved brittle (fact).", "source": "history"},
+    {"from": "Cybernetics", "to": "Perceptron", "instrument": "lineage", "notes": "Wiener's cybernetics (1948) + McCulloch-Pitts neurons (1943) -> Rosenblatt's Perceptron (1958), the first trainable neural net - the CONNECTIONIST branch, distinct from symbolic AI (fact).", "source": "history"},
+    {"from": "Information_Theory", "to": "Perceptron", "instrument": "lineage", "notes": "Shannon's information theory (1948) + probability/statistics gave learning its mathematical footing (entropy, likelihood) that later underpins ML (fact).", "source": "history"},
+    {"from": "Perceptron", "to": "Backpropagation", "instrument": "lineage", "notes": "The Perceptron's limits (Minsky-Papert 1969) froze connectionism until backpropagation (Rumelhart/Hinton/Williams 1986) let multi-layer nets learn - the revival (fact).", "source": "history"},
+    {"from": "Backpropagation", "to": "GPU_Compute", "instrument": "lineage", "notes": "Backprop worked but needed compute; GPUs + CUDA (2007) made training deep nets practical - hardware, not just algorithms, unlocked the field (fact).", "source": "history"},
+    {"from": "GPU_Compute", "to": "ImageNet_AlexNet", "instrument": "lineage", "notes": "GPU compute + the ImageNet dataset -> AlexNet (2012) crushing image classification - the deep-learning era begins, in VISION (fact).", "source": "history"},
+    {"from": "ImageNet_AlexNet", "to": "Transformer", "instrument": "lineage", "notes": "Deep learning spread from vision to sequences (RNN/LSTM) then to attention -> the Transformer (Vaswani et al. 2017), the substrate for LLMs (fact).", "source": "history"},
+    {"from": "Transformer", "to": "Deep_Learning", "instrument": "lineage", "notes": "Transformers + scaling laws produced LLMs (GPT/BERT ->) - the branch that now dominates attention + capital, but ONE branch of deep learning, itself one branch of ML, itself one branch of AI (fact + taxonomy).", "source": "history"},
+    {"from": "Reinforcement_Learning", "to": "AlphaGo_AlphaFold", "instrument": "lineage", "notes": "A PARALLEL branch: RL (Sutton/Barto) + deep nets -> DQN (2013) + AlphaGo (2016, deep RL + tree search) + AlphaFold (2020-24, protein structure, Nobel) - superhuman AI that is NOT an LLM (fact; the taxonomy anchor).", "source": "history"},
+    {"from": "GPU_Compute", "to": "Reinforcement_Learning", "instrument": "lineage", "notes": "Deep RL also rode the GPU wave - showing the same hardware substrate fed multiple distinct AI branches at once (fact).", "source": "history"},
+    {"from": "Expert_Systems", "to": "Deep_Learning", "instrument": "lineage", "notes": "The symbolic winter's lesson (hand-coded rules don't scale) pushed the field toward LEARNING from data - the pivot from symbolic to statistical/deep AI (fact; interpretation of causation modest).", "source": "history"}
+  ]
+}

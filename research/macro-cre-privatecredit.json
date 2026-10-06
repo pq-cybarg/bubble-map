@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-06-05",
+  "as_of": "2026-09-23",
   "metrics": [
     {
       "name": "Bank loans to nondepository financial institutions (H.8 NDFI line), all commercial banks, SA monthly",
@@ -116,25 +116,56 @@
       "notes": "~30% of maturing office loans on properties worth less than the debt (IMF GFSR)."
     },
     {
-      "name": "Office CMBS delinquency rate (record)",
-      "value": 11.76,
+      "name": "Office CMBS delinquency rate (Trepp all-time high)",
+      "value": 12.34,
       "unit": "percent",
-      "date": "2025-10",
+      "date": "2026-01",
       "source": [
-        "https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/",
+        "https://www.trepp.com/trepptalk/cmbs-delinquency-rate-increased-to-open-2026",
         "https://www.commercialsearch.com/news/cmbs-delinquency-rates/"
       ],
-      "notes": "All-time record (Trepp), +63bps m/m, vs 11.08% Jun / 11.66% Aug 2025. >$1.7B office loans newly delinquent in Oct."
+      "notes": "Trepp all-time high, +103bps m/m. Previous high 11.76% Oct-2025. GFC office peak was 10.7% in Dec-2012, not calendar 2008."
+    },
+    {
+      "name": "Office CMBS delinquency rate (latest monthly)",
+      "value": 12.00,
+      "unit": "percent",
+      "date": "2026-08",
+      "source": [
+        "https://www.trepp.com/trepptalk/overall-cmbs-delinquency-rate-decreased-in-august-2026",
+        "https://www.credaily.com/briefs/cmbs-delinquency-holds-at-7-85-as-office-risk-rises/"
+      ],
+      "notes": "Trepp, +9bps m/m. Still above the GFC office peak (10.7%). 81% of newly delinquent balance = non-performing matured balloons."
     },
     {
       "name": "Overall CMBS delinquency rate",
-      "value": 7.46,
+      "value": 7.85,
       "unit": "percent",
-      "date": "2025-10",
+      "date": "2026-08",
       "source": [
-        "https://www.credaily.com/briefs/cmbs-delinquency-hits-7-46-as-office-sector-sets-new-record/"
+        "https://www.trepp.com/trepptalk/overall-cmbs-delinquency-rate-decreased-in-august-2026"
       ],
-      "notes": "Trepp, +23bps m/m."
+      "notes": "Trepp, -1bp m/m. Large Times Square cure offset new Chicago/LA/DC office delinquencies. Special servicing 11.42%, highest since Feb-2013."
+    },
+    {
+      "name": "GFC peak office CMBS delinquency (Trepp)",
+      "value": 10.7,
+      "unit": "percent",
+      "date": "2012-12",
+      "source": [
+        "https://wolfstreet.com/wp-json/wp/v2/posts/100541"
+      ],
+      "notes": "Trepp via Wolf Street. Peak was Dec-2012, years after Lehman. Overall CMBS GFC peak 10.34% (mid-2012). Do not cite as '2008 ~10%'."
+    },
+    {
+      "name": "Office CMBS maturing 2026-27 that is troubled (Bloomberg)",
+      "value": 40,
+      "unit": "USD billions (of ~64 maturing)",
+      "date": "2026-08",
+      "source": [
+        "https://www.credaily.com/briefs/office-distress-shifts-from-vacancies-to-investor-losses/"
+      ],
+      "notes": "Bloomberg via CRE Daily 23 Sep 2026: almost $40B of ~$64B office CMBS maturing this year and next is delinquent, defaulted, or watchlisted. Chicago Aon Center appraisal $195M vs 2015 purchase $712M."
     },
     {
       "name": "Office value peak-to-trough decline (Green Street)",
