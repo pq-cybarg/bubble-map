@@ -88,6 +88,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "AI_XPV_Platform": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "ALPHV_BlackCat": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -1056,6 +1060,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Brannin_McBee": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Brave1": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -1073,6 +1081,10 @@
       "has_exogenous_revenue": false
     },
     "Brian_Armstrong": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Brian_Venturo": {
       "sector": "person",
       "has_exogenous_revenue": false
     },
@@ -1448,6 +1460,10 @@
       "sector": "threat_actor",
       "has_exogenous_revenue": false
     },
+    "Chase_Lochmiller": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Check_Point": {
       "sector": "security_research",
       "has_exogenous_revenue": true
@@ -1519,6 +1535,10 @@
     "Chinese_Teapots": {
       "sector": "energy",
       "has_exogenous_revenue": true
+    },
+    "Chip_Collateral_SPV": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Chris_Larsen": {
       "sector": "person",
@@ -1898,6 +1918,10 @@
     },
     "Cryptopia": {
       "sector": "exchange",
+      "has_exogenous_revenue": false
+    },
+    "Cully_Cavness": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Cult_of_Dead_Cow": {
@@ -4564,6 +4588,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Michael_Intrator": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Michigan_State_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -6584,6 +6612,10 @@
       "sector": "ai_lab",
       "has_exogenous_revenue": false
     },
+    "Stephen_Balaban": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Stonebrick_LLC": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -7511,6 +7543,10 @@
     "VW": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Valor_Compute": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "VanEck": {
       "sector": "financier",
@@ -17708,6 +17744,188 @@
       "note": ""
     },
     {
+      "from": "Amazon",
+      "to": "Chip_Collateral_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "REPORTED/UNCONFIRMED (FT 2026): Amazon in talks to spin ~$8B of NVIDIA Grace Blackwell chips already in its US data centers into an SPV and LEASE THEM BACK; the SPV issues debt to outside investors (who also get up to ~10% equity) and Amazon retains no ownership. Effect: AI buildout looks less capital-intensive on paper (assets rise slower, return-on-asset ratios look better) and residual-value/financing risk shifts to investors. 'Under discussion', not signed (reported-unconfirmed)."
+    },
+    {
+      "from": "Chip_Collateral_SPV",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "The structure funds AI-compute/datacenter capacity OFF the operator's balance sheet: the SPV owns the chips, the operator leases them, outside debt funds the purchase. It is the compute-side cousin of the real-estate off-balance-sheet datacenter SPVs (fact of the mechanism)."
+    },
+    {
+      "from": "Apollo",
+      "to": "AI_XPV_Platform",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Apollo Global Management (with Blackstone) anchored the ~$35B 'AI XPV' hardware-collateralized vehicle (closed 9 Jun 2026) - one of the largest private-credit transactions on record; capital raised largely from insurance + annuity funds (fact)."
+    },
+    {
+      "from": "Blackstone",
+      "to": "AI_XPV_Platform",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Blackstone co-anchored the ~$35B AI XPV vehicle alongside Apollo (fact)."
+    },
+    {
+      "from": "AI_XPV_Platform",
+      "to": "Anthropic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "The SPV buys Broadcom-codesigned Google TPUs and LEASES them to Anthropic; the lease payments repay the debt, and holding the hardware in the SPV keeps ~$35B off Anthropic's balance sheet (fact)."
+    },
+    {
+      "from": "Broadcom",
+      "to": "AI_XPV_Platform",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Broadcom co-designs the TPUs the vehicle buys AND backstops payments on the senior tranches - the chip vendor underwriting the financing of its own chips, the purest vendor-adjacent-financing loop (fact; circularity read = interpretation)."
+    },
+    {
+      "from": "AI_XPV_Platform",
+      "to": "Chip_Collateral_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "AI XPV is the flagship instance of the chip-collateralized-SPV structure (fact)."
+    },
+    {
+      "from": "Apollo",
+      "to": "Valor_Compute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Apollo-managed funds led a ~$3.5B capital solution into Valor Compute Infrastructure (VCI, a Valor Equity Partners fund) supporting its ~$5.4B acquisition-and-lease of GB200 compute to an xAI subsidiary via a TRIPLE-NET LEASE (Jan 2026) - powering a large Grok training cluster (fact)."
+    },
+    {
+      "from": "Valor_Compute",
+      "to": "xAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "VCI owns the NVIDIA GB200 GPUs and leases them to xAI (triple-net) - chips held in a vehicle, leased to the operator, off the operator's balance sheet (fact)."
+    },
+    {
+      "from": "Valor_Compute",
+      "to": "Chip_Collateral_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "The Valor/xAI deal is another instance of the same lease-back structure (fact)."
+    },
+    {
+      "from": "Chip_Collateral_SPV",
+      "to": "Beignet_Investor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Sibling playbook: Meta's Hyperion datacenter uses a Blue Owl / Beignet off-balance-sheet SPV on the REAL-ESTATE side; chip-collateral SPVs do the same on the COMPUTE side - the off-balance-sheet AI-buildout pattern now spans both land and silicon (fact of parallel; ties the datacenter-debt-SPV block)."
+    },
+    {
+      "from": "Chip_Collateral_SPV",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "These vehicles are funded largely by PRIVATE CREDIT + INSURANCE/ANNUITY capital - pushing fast-depreciating GPU residual-value risk onto insurers' balance sheets. The BIS has warned about 'shadow borrowing' in these structures; Amazon itself cut assumed server life 6->5 years (early 2025) on AI obsolescence, which is exactly the residual-value risk being transferred (fact of funding + warning; systemic-risk read = interpretation)."
+    },
+    {
+      "from": "Chip_Collateral_SPV",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "NVIDIA named Apollo among SIX institutions tapped to mobilize >$500B of third-party capital for AI-infra buildout (Aug 2026) - the chip vendor helping orchestrate the financing that buys its chips; the circular-financing concern the map's capital-core tracks, now extended to the SPV layer (fact of the partnership; circularity framing = interpretation)."
+    },
+    {
+      "from": "Chip_Collateral_SPV",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-chip-collateral-spv.json",
+      "note": "Chip-collateral leases carry the same core fragility as the neocloud refinancing wall: if GPU residual values fall faster than the lease amortizes, the collateral under the debt erodes - concentrated, correlated, and maturity-clustered (interpretation, labeled; ties the refinancing-wall block)."
+    },
+    {
       "from": "Putin",
       "to": "Russia",
       "instrument": "other",
@@ -23621,6 +23839,84 @@
       "cancelable": false,
       "source_file": "catalog-nonprofits-foundations.json",
       "note": "Gates + Rockefeller repeatedly co-fund global-health + digital-ID/financial-inclusion initiatives - the two anchor foundations of the modern development-tech agenda (fact of co-funding; unitary agenda NOT asserted)."
+    },
+    {
+      "from": "Michael_Intrator",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Michael Intrator is co-founder + CEO of CoreWeave (NASDAQ: CRWV). The three founders ran Hudson Ridge, a commodities/natural-gas hedge fund, then built CoreWeave out of an Ethereum GPU-mining operation before pivoting to GPU cloud - a quiet commodities-desk origin for one of the AI buildout's central neoclouds; large paper fortune post-Mar-2025 IPO (fact of role/origin; wealth = estimate/mark)."
+    },
+    {
+      "from": "Brian_Venturo",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Brian Venturo co-founded CoreWeave (served as CTO/CSO) - ex-Hudson Ridge; a lower-profile co-founder fortune of the GPU-cloud build (fact; wealth = estimate)."
+    },
+    {
+      "from": "Brannin_McBee",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Brannin McBee co-founded CoreWeave (Chief Development/Strategy Officer) - the third ex-commodities founder; a quiet neocloud fortune (fact; wealth = estimate)."
+    },
+    {
+      "from": "Stephen_Balaban",
+      "to": "Lambda",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Stephen Balaban co-founded (2012) and runs Lambda (Lambda Labs) - GPU cloud + deep-learning workstations/servers that rode the AI-compute demand wave; a low-profile founder-CEO fortune on large private rounds (fact of role; valuation = estimate)."
+    },
+    {
+      "from": "Chase_Lochmiller",
+      "to": "Crusoe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Chase Lochmiller is co-founder + CEO of Crusoe Energy - started monetizing flared natural gas via on-site compute (bitcoin), then pivoted to AI data centers (incl. the Abilene, TX 'Stargate' campus); an energy-to-compute founder fortune (fact of role/pivot; wealth = estimate)."
+    },
+    {
+      "from": "Cully_Cavness",
+      "to": "Crusoe",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-13.json",
+      "note": "Cully Cavness co-founded Crusoe (President/COO) - the energy-side co-founder of the flare-gas-to-AI-datacenter story; a quiet co-founder fortune (fact; wealth = estimate)."
     },
     {
       "from": "ILOVEYOU_Worm",
@@ -49377,10 +49673,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2005,
-    "num_edges": 3181,
+    "num_nodes": 2014,
+    "num_edges": 3201,
     "num_financial_edges": 274,
-    "num_structural_edges": 2907,
+    "num_structural_edges": 2927,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -49430,6 +49726,7 @@
       "AI_Kill_Switch_Act",
       "AI_Native_OS",
       "AI_Safety_Regulation",
+      "AI_XPV_Platform",
       "AMD",
       "APT1",
       "APT28_FancyBear",
@@ -49453,6 +49750,7 @@
       "Binance",
       "Bitcoin",
       "Bitfinex",
+      "Broadcom",
       "CFTC",
       "CHIPS_Act",
       "CLARITY_Act",
@@ -49461,6 +49759,7 @@
       "Caltech",
       "Carnegie_Mellon_University",
       "China",
+      "Chip_Collateral_SPV",
       "Circle",
       "Citizens_Financial",
       "CoWoS",
@@ -49651,26 +49950,30 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 224,
+    "core_scc_all_edges_size": 227,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Amazon",
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
         "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -49678,18 +49981,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
@@ -49699,14 +49993,19 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "OpenAI"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -49892,6 +50191,13 @@
         "in_robust_core": false
       },
       "AI_Safety_Regulation": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_XPV_Platform": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51592,6 +51898,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Brannin_McBee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Brave1": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -51621,6 +51934,13 @@
         "in_robust_core": false
       },
       "Brian_Armstrong": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brian_Venturo": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -52278,6 +52598,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Chase_Lochmiller": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Check_Point": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -52398,6 +52725,13 @@
         "in_robust_core": false
       },
       "Chinese_Teapots": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Chip_Collateral_SPV": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -53063,6 +53397,13 @@
         "in_robust_core": false
       },
       "Cryptopia": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cully_Cavness": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57731,6 +58072,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Michael_Intrator": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Michigan_State_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -61266,6 +61614,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Stephen_Balaban": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Stonebrick_LLC": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -62890,6 +63245,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Valor_Compute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VanEck": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -63927,6 +64289,35 @@
         "both_layers": true
       },
       {
+        "node": "Anthropic",
+        "degree": 32,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "bigtech_asia",
+          "capital",
+          "chip_vendor",
+          "defense_tech",
+          "elite",
+          "financier",
+          "hyperscaler",
+          "other",
+          "person",
+          "security_research",
+          "space_real_economy",
+          "state",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 18,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Meta",
         "degree": 27,
         "neighbor_sectors": [
@@ -63982,6 +64373,35 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 35,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "capital",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "person",
+          "pqc_quantum",
+          "research",
+          "semiconductor",
+          "space_real_economy",
+          "spv",
+          "state",
+          "telecom",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 16,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "US_Banks",
         "degree": 32,
         "neighbor_sectors": [
@@ -64008,64 +64428,8 @@
         "both_layers": true
       },
       {
-        "node": "Anthropic",
-        "degree": 31,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "bigtech_asia",
-          "chip_vendor",
-          "defense_tech",
-          "elite",
-          "financier",
-          "hyperscaler",
-          "other",
-          "person",
-          "security_research",
-          "space_real_economy",
-          "state",
-          "surveillance",
-          "university"
-        ],
-        "n_neighbor_sectors": 15,
-        "source_files": 17,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 34,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "person",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "state",
-          "telecom",
-          "university"
-        ],
-        "n_neighbor_sectors": 15,
-        "source_files": 15,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
         "node": "AI_Datacenters",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -64082,7 +64446,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 17,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -64139,7 +64503,7 @@
       },
       {
         "node": "PrivateCredit_Funds",
-        "degree": 18,
+        "degree": 19,
         "neighbor_sectors": [
           "ai_infra",
           "bank",
@@ -64155,7 +64519,7 @@
           "state"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 13,
+        "source_files": 14,
         "layers": [
           "financial",
           "structural"
@@ -64185,6 +64549,29 @@
         "both_layers": false
       },
       {
+        "node": "Amazon",
+        "degree": 14,
+        "neighbor_sectors": [
+          "ai_lab",
+          "capital",
+          "commodity",
+          "financial_infra",
+          "industrial",
+          "person",
+          "satellite",
+          "standards",
+          "tech",
+          "university"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 13,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "SEC",
         "degree": 23,
         "neighbor_sectors": [
@@ -64202,29 +64589,6 @@
         ],
         "n_neighbor_sectors": 11,
         "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Amazon",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_lab",
-          "capital",
-          "commodity",
-          "financial_infra",
-          "industrial",
-          "person",
-          "satellite",
-          "standards",
-          "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 12,
         "layers": [
           "financial",
           "structural"
