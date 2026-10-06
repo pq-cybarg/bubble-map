@@ -60,6 +60,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Compute_Credit": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "AI_Datacenter_Foreign_Influence_Claim": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -562,6 +566,10 @@
     },
     "Aston_Martin": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Athene": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Atom_Computing": {
@@ -1102,6 +1110,10 @@
     },
     "Brocade": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Brookfield": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "Brown_University": {
@@ -1841,6 +1853,10 @@
       "has_exogenous_revenue": false
     },
     "Credit_Agricole": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
+    "Credit_Rating_Agencies": {
       "sector": "capital",
       "has_exogenous_revenue": false
     },
@@ -3104,6 +3120,10 @@
       "sector": "semiconductor",
       "has_exogenous_revenue": true
     },
+    "Global_Atlantic": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Global_Gateway": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -3942,6 +3962,10 @@
     },
     "Justin_Sun": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "KKR": {
+      "sector": "capital",
       "has_exogenous_revenue": false
     },
     "KK_Park": {
@@ -43924,6 +43948,188 @@
       "note": "Blavatnik's giving is famously bipartisan + INSTITUTION-focused (the Oxford Blavatnik School of Government; Harvard Life Lab; Yale; Tel Aviv; museums; both US parties) - a 'buy access + prestige everywhere' model distinct from the ideological-right donors above; wires the quiet-money layer to the academia catalog (fact; motive interpretation)."
     },
     {
+      "from": "NVIDIA",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "NVIDIA named six financiers - Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR - to build AI-compute financing platforms mobilizing >$500B of third-party capital (Aug 2026). The chip vendor orchestrating the financing that buys its own chips - the circular-financing concern now formalized into a credit market (fact of the partnership; circularity read = interpretation)."
+    },
+    {
+      "from": "AI_Compute_Credit",
+      "to": "Chip_Collateral_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "This is the credit/risk layer sitting under the chip-collateralized SPV structure - who funds the debt, how it is rated, and who ends up holding it (fact)."
+    },
+    {
+      "from": "AI_Compute_Credit",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "The capital is private credit + insurance/annuity money, not bank deposits - leverage that sits outside the regulated banking system (fact; the shadow-banking framing is the BIS's)."
+    },
+    {
+      "from": "Apollo",
+      "to": "Athene",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Apollo owns Athene, its annuity/life insurer - the PE-insurance flywheel: sell annuities, invest the premiums in Apollo-originated private credit (incl. AI-compute debt). Marc Rowan has made this Apollo's core model (fact)."
+    },
+    {
+      "from": "KKR",
+      "to": "Global_Atlantic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "KKR owns Global Atlantic, its life/annuity insurer - the same flywheel: annuity liabilities funding KKR private credit, including AI infrastructure (fact)."
+    },
+    {
+      "from": "Athene",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Athene (Apollo) annuity + life premiums are a primary funding source for AI-compute private credit and the hardware SPVs - so retirement-income liabilities end up downstream of fast-depreciating GPU collateral (fact of the funding; 'retirees bear the tail risk' = interpretation, labeled)."
+    },
+    {
+      "from": "Global_Atlantic",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Global Atlantic (KKR) annuity capital likewise funds the AI-compute credit layer (fact; same retiree-exposure interpretation)."
+    },
+    {
+      "from": "Brookfield",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Brookfield - one of the NVIDIA six, with its own reinsurance arm - is both a datacenter developer and an insurance-funded credit provider to the AI buildout (fact)."
+    },
+    {
+      "from": "BlackRock",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "BlackRock (one of the NVIDIA six; also behind large AI-infra vehicles) channels institutional + insurance capital into the AI-compute credit layer (fact)."
+    },
+    {
+      "from": "Goldman_Sachs",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Goldman Sachs is one of the NVIDIA six arranging/financing AI-compute capital (fact)."
+    },
+    {
+      "from": "Credit_Rating_Agencies",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "KBRA published a Data Center ABS methodology (Jan 2026) + 'AI Compute Financings: re-leasing risk for GPUs/TPUs' (Jul 2026). Key tension: S&P caps data-center ABS at single-A (42/70 tranches A-, 12 A, none higher) while Moody's + Fitch have gone as high as AAA - S&P the deliberate outlier. Agencies rate to the 30-35yr LEGAL final maturity, not the 5-7yr anticipated-repayment date, so the rating understates refinancing/residual exposure if ARDs are missed (fact; adequacy of the ratings = contested)."
+    },
+    {
+      "from": "Credit_Rating_Agencies",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "Concrete case: CoreWeave's $8.5B 4th delayed-draw term loan (Mar 2026) - a bankruptcy-remote SPV secured by GPUs + customer contracts - was rated A3 by Moody's at SOFR+225. Credit analysts flag the doom loop: a downgrade (from offtaker deterioration OR a rating-agency residual-value methodology change) mechanically raises capital charges and can turn rating-constrained insurers into FORCED SELLERS of an asset with almost no secondary market (fact of the deal + rating; forced-seller mechanic = quoted analysis/interpretation)."
+    },
+    {
+      "from": "BIS",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "The BIS Quarterly Review (Mar 2026), 'Financing the AI infrastructure boom: on- and off-balance sheet borrowing', warned that hyperscalers' off-balance-sheet 'shadow borrowing' is bolstering private-credit + systemic risk - a rare central-bank flag on exactly this structure (fact of the warning; severity = the BIS's assessment)."
+    },
+    {
+      "from": "AI_Compute_Credit",
+      "to": "Neocloud_Refinancing_Wall",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-compute-credit-risk.json",
+      "note": "The rating/residual-value fragility IS the trigger channel for the neocloud refinancing wall: if GPU residual values fall or ARDs are missed, downgrades force selling into a thin market right as the debt needs rolling - concentrated, correlated, maturity-clustered (interpretation, labeled; ties the refinancing-wall block)."
+    },
+    {
       "from": "OptumRx",
       "to": "UnitedHealth",
       "instrument": "other",
@@ -49476,10 +49682,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2007,
-    "num_edges": 3188,
+    "num_nodes": 2013,
+    "num_edges": 3202,
     "num_financial_edges": 274,
-    "num_structural_edges": 2914,
+    "num_structural_edges": 2928,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -49525,6 +49731,7 @@
     ],
     "structural_edges_add_no_cycle": false,
     "core_scc_all_edges_incl_structural": [
+      "AI_Compute_Credit",
       "AI_Datacenters",
       "AI_Kill_Switch_Act",
       "AI_Native_OS",
@@ -49749,7 +49956,7 @@
       "ZEISS_SMT",
       "xAI"
     ],
-    "core_scc_all_edges_size": 223,
+    "core_scc_all_edges_size": 224,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -49760,11 +49967,15 @@
         "Anthropic"
       ],
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "AMD",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -49773,15 +49984,6 @@
       ],
       [
         "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -49795,10 +49997,9 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "Amazon",
@@ -49811,6 +50012,12 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -49941,6 +50148,13 @@
         "in_robust_core": false
       },
       "AI_Benchmarks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Compute_Credit": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -50823,6 +51037,13 @@
         "in_robust_core": false
       },
       "Aston_Martin": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Athene": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -51769,6 +51990,13 @@
       },
       "Brocade": {
         "total_usd": 8500000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brookfield": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -53063,6 +53291,13 @@
         "in_robust_core": false
       },
       "Credit_Agricole": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Credit_Rating_Agencies": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55274,6 +55509,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Global_Atlantic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Global_Gateway": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56739,6 +56981,13 @@
       },
       "Justin_Sun": {
         "total_usd": 75000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "KKR": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -64038,6 +64287,35 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 36,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "capital",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "person",
+          "pqc_quantum",
+          "research",
+          "semiconductor",
+          "space_real_economy",
+          "spv",
+          "state",
+          "telecom",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 17,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Meta",
         "degree": 26,
         "neighbor_sectors": [
@@ -64086,35 +64364,6 @@
         ],
         "n_neighbor_sectors": 13,
         "source_files": 22,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 35,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "capital",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "person",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "state",
-          "telecom",
-          "university"
-        ],
-        "n_neighbor_sectors": 16,
-        "source_files": 16,
         "layers": [
           "financial",
           "structural"
@@ -64226,6 +64475,31 @@
         "both_layers": false
       },
       {
+        "node": "PrivateCredit_Funds",
+        "degree": 20,
+        "neighbor_sectors": [
+          "ai_infra",
+          "bank",
+          "capital",
+          "financier",
+          "industrial",
+          "insurance",
+          "macro",
+          "other",
+          "private_credit",
+          "regulator",
+          "retail",
+          "state"
+        ],
+        "n_neighbor_sectors": 12,
+        "source_files": 15,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Digital_ID",
         "degree": 34,
         "neighbor_sectors": [
@@ -64248,31 +64522,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "PrivateCredit_Funds",
-        "degree": 19,
-        "neighbor_sectors": [
-          "ai_infra",
-          "bank",
-          "capital",
-          "financier",
-          "industrial",
-          "insurance",
-          "macro",
-          "other",
-          "private_credit",
-          "regulator",
-          "retail",
-          "state"
-        ],
-        "n_neighbor_sectors": 12,
-        "source_files": 14,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Russia",
