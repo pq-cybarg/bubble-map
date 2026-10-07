@@ -4428,6 +4428,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": false
     },
+    "Lukoil": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "LulzSec": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -5240,6 +5244,10 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "Open_Weight_Models": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
+    },
     "Operation_Choke_Point_2": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -6034,6 +6042,10 @@
     },
     "Russian_Intel": {
       "sector": "state_intel",
+      "has_exogenous_revenue": false
+    },
+    "Russian_Oil_Price_Cap": {
+      "sector": "state",
       "has_exogenous_revenue": false
     },
     "Russian_energy_executives": {
@@ -13352,6 +13364,136 @@
       "cancelable": false,
       "source_file": "spec-uwu-apt-leads.json",
       "note": "Watch Series 12 / Ultra 4 Audio Intelligence: rolling mic buffer in Secure Exclave; Live Rewind = last 15s as text on double-press Crown + chime. Apple: no accessible recording. All-party eavesdropping-law fight (CA/MA/PA/WA). Always-on buffer = fact; 'spyware' as FinSpy-class implant = advocacy."
+    },
+    {
+      "from": "Russian_Oil_Price_Cap",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "G7/EU price cap: Dec 2022 $60 Urals (+$100/$45 products); late-2025 shift to a dynamic formula (~15% below 6-mo average, ~$48); mid-2026 the seaborne crude cap was FROZEN at $44.10 via the EU 21st Sanctions Package. The lever meant to cap Russia's oil revenue while keeping barrels flowing (fact)."
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Russian_Oil_Price_Cap",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "The ~600-700-vessel 'shadow fleet' (from ~200-300) is how Russia evades the cap: ship-to-ship transfers in international waters, re-flagging in low-oversight jurisdictions, non-coalition intermediaries to break the compliance chain, falsified origin/destination docs - tactics modeled on Iran (fact of the evasion architecture)."
+    },
+    {
+      "from": "Shadow_Fleet",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "Russia's shadow fleet lets it export crude outside Western insurance/services, narrowing the Brent-Urals discount over time - the structural workaround to the cap (fact)."
+    },
+    {
+      "from": "Gunvor",
+      "to": "Russian_Oil_Price_Cap",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "CONTESTED, both positions given: Gunvor publicly pledged to exit Russian oil, but a 'strictly confidential' report acknowledged its subsidiaries transacted with sanctioned Russian counterparties (Gazprom/Rosneft/Lukoil/Novatek) at ~0.69% of Q1-2024 group revenue (~$234M, Goteborgs-Posten estimate). Gunvor's OFFICIAL position: it stopped trading Russian crude and handles only 'very small volumes' of sanctions-compliant Russian oil products. Fact of both the report figure AND the company's denial - presented side by side, not resolved."
+    },
+    {
+      "from": "Lukoil",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "Lukoil is one of the major Russian energy groups named among the sanctioned counterparties in the Gunvor confidential report (alongside Gazprom/Rosneft/Novatek) (fact of the naming)."
+    },
+    {
+      "from": "Gunvor",
+      "to": "DOJ",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "SEPARATE CORRUPTION TRACK (not Russia): Gunvor S.A. pleaded guilty + agreed to pay >$661M to resolve a US FCPA case over bribes to Ecuadorean officials for Petroecuador business (2024), plus ~$98M to Swiss authorities. Distinct from the Russia-sanctions question (fact; explicitly a different matter)."
+    },
+    {
+      "from": "Vitol",
+      "to": "DOJ",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "SEPARATE CORRUPTION TRACK: Vitol paid ~$90M (US criminal) + ~$29M (CFTC) + ~$45M back to Petrobras under a Deferred Prosecution Agreement over Brazil/Ecuador/Mexico bribery - Latin America, pre-shadow-fleet, NOT Russian sanctions (fact)."
+    },
+    {
+      "from": "Trafigura",
+      "to": "DOJ",
+      "instrument": "regulatory_legal",
+      "layer": "structural",
+      "raw_instrument": "litigation",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "SEPARATE CORRUPTION TRACK: Trafigura pleaded guilty in a US bribery case (~$127M in fines + forfeiture) - again Latin-America corruption, distinct from the Russia-sanctions track (fact)."
+    },
+    {
+      "from": "Russian_Oil_Price_Cap",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "Net effect: the cap + shadow fleet reshaped the physical crude market (the Urals-Brent wedge, redirected flows to India/China, a parallel non-Western insurance/shipping stack) - the plumbing the trading houses + OPEC+ operate within (fact of the market shift; magnitude evolving)."
+    },
+    {
+      "from": "Russian_Oil_Price_Cap",
+      "to": "OPEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-commodity-sanctions-compliance.json",
+      "note": "Sanctioned Russian barrels rerouted at a discount interact with OPEC+ quota management - a structural complication for the cartel's price control (interpretation of the interaction; fact that both forces act on the same market)."
     },
     {
       "from": "Cheyenne_Hunt",
@@ -25637,6 +25779,97 @@
       "cancelable": false,
       "source_file": "spec-boeing-737max.json",
       "note": ""
+    },
+    {
+      "from": "Alibaba",
+      "to": "Open_Weight_Models",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "Alibaba's Qwen is one of the most-downloaded open-weight model families globally - a default base for fine-tunes worldwide, and a soft-power asset (Chinese models running everywhere) (fact of adoption)."
+    },
+    {
+      "from": "DeepSeek",
+      "to": "Open_Weight_Models",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "DeepSeek's open-weight releases drove its global adoption + the 2025 'DeepSeek moment'; open weights were the distribution strategy that made a Chinese lab a frontier name (fact)."
+    },
+    {
+      "from": "Open_Weight_Models",
+      "to": "China_AI_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "FROM BEIJING'S SIDE: deliberations (Jul 2026) to restrict overseas access to leading open-weight Chinese models (incl. Qwen) + a drift to closed-source = 'training closure'. The open-weight era that spread Chinese models may be closing from the state that benefited from it - capability-leak worry overtaking soft-power benefit (fact of the deliberations; the tradeoff reading is interpretation, labeled)."
+    },
+    {
+      "from": "Open_Weight_Models",
+      "to": "Export_Controls",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "FROM WASHINGTON'S SIDE: 'export-control risks on both sides' (Sheppard Mullin 2026) - US concern over running Chinese models on US infrastructure, weight/data provenance, and the structural puzzle that a freely-downloadable open weight is hard to bind with an export control designed for physical chips (fact of the concern; the enforceability gap = interpretation, labeled)."
+    },
+    {
+      "from": "Open_Weight_Models",
+      "to": "Hugging_Face",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "Hugging Face is the global distribution hub for open weights - which makes it the practical chokepoint (geofence, takedown, access-gating) if either government wants to restrict a model's reach. The platform where soft power and control meet (fact of the role)."
+    },
+    {
+      "from": "Open_Weight_Models",
+      "to": "Open_Source_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "Open weights are the substrate of the OSS-AI counter-ecosystem - fine-tunes, quantizations, and self-hosting that route around both corporate and state gatekeeping (fact; ties the OSS-redistributor chronology)."
+    },
+    {
+      "from": "Open_Weight_Models",
+      "to": "Uncensored_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-open-weight-geopolitics.json",
+      "note": "Open weights enable abliterated / 'uncensored' derivatives - the same property that makes them soft power + a research commons also makes them uncontrollable once released, which is exactly why both states are reconsidering (interpretation, labeled; ties the local/uncensored-AI block)."
     },
     {
       "from": "Paragon_Solutions",
@@ -50886,10 +51119,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2041,
-    "num_edges": 3286,
+    "num_nodes": 2044,
+    "num_edges": 3303,
     "num_financial_edges": 274,
-    "num_structural_edges": 3012,
+    "num_structural_edges": 3029,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51187,22 +51420,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -51211,8 +51428,19 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
         "NVIDIA"
       ],
       [
@@ -51226,16 +51454,21 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "NVIDIA",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -59022,6 +59255,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Lukoil": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "LulzSec": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60443,6 +60683,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Open_Weight_Models": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Operation_Choke_Point_2": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -61830,6 +62077,13 @@
         "in_robust_core": false
       },
       "Russian_Intel": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Russian_Oil_Price_Cap": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -65922,6 +66176,28 @@
         "both_layers": true
       },
       {
+        "node": "Russia",
+        "degree": 47,
+        "neighbor_sectors": [
+          "bank",
+          "commodity",
+          "defense",
+          "energy",
+          "logistics",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "threat_actor"
+        ],
+        "n_neighbor_sectors": 10,
+        "source_files": 22,
+        "layers": [
+          "structural"
+        ],
+        "both_layers": false
+      },
+      {
         "node": "Digital_ID",
         "degree": 34,
         "neighbor_sectors": [
@@ -65940,28 +66216,6 @@
         ],
         "n_neighbor_sectors": 12,
         "source_files": 17,
-        "layers": [
-          "structural"
-        ],
-        "both_layers": false
-      },
-      {
-        "node": "Russia",
-        "degree": 44,
-        "neighbor_sectors": [
-          "bank",
-          "commodity",
-          "defense",
-          "energy",
-          "logistics",
-          "other",
-          "person",
-          "state",
-          "state_intel",
-          "threat_actor"
-        ],
-        "n_neighbor_sectors": 10,
-        "source_files": 21,
         "layers": [
           "structural"
         ],
