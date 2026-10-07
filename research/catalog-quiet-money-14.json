@@ -1,0 +1,26 @@
+{
+  "title": "Quiet money (batch 14): the commodity-trading houses - the quietest big fortunes in energy",
+  "source": "Public record: Gunvor (co-founded 2000 by Torbjorn Tornqvist + Gennady Timchenko; Timchenko sold his ~44% stake to Tornqvist the day before US sanctions on 20 Mar 2014; Gunvor has since cut Russia exposure; US Treasury's 2014 statement alleging Putin 'may have access' to Gunvor funds was strongly denied by the firm - contested); Mercuria (co-founded 2004 by Marco Dunand + Daniel Jaeggi); Trafigura (founded 1993, employee-owned among ~1,000+ partners, exec chair Jeremy Weir - no single controlling fortune); Vitol (world's largest independent oil trader, partner-owned, deliberately private). Catalog layer (#242 batch 14). Structural overlay; person nodes carry dossiers. FOCUS: the privately-held physical-commodity traders - among the largest and LEAST visible fortunes in global energy, central to oil/gas flows, sanctions-redirection (Russian crude price cap), and OPEC+ physical markets. HONESTY: ownership/founding = fact; net-worth figures are ESTIMATES (private firms), graded; the Gunvor-Russia/Timchenko history = fact of the stake + sale, with the US 'access' allegation vs the firm's denial both presented; no cabal imputed.",
+  "grade": "per-edge in notes (fact | estimate | contested)",
+  "nodes": [
+    {"id": "Torbjorn_Tornqvist", "sector": "person"},
+    {"id": "Marco_Dunand", "sector": "person"},
+    {"id": "Daniel_Jaeggi", "sector": "person"},
+    {"id": "Gunvor", "sector": "other"},
+    {"id": "Mercuria", "sector": "other"},
+    {"id": "Trafigura", "sector": "other"},
+    {"id": "Vitol", "sector": "other"}
+  ],
+  "edges": [
+    {"from": "Torbjorn_Tornqvist", "to": "Gunvor", "instrument": "leads", "notes": "Torbjorn Tornqvist (Swedish, Geneva-based) co-founded + controls Gunvor, one of the largest independent energy traders - a quiet multi-billion fortune on a private firm (fact of control; net worth = estimate).", "source": "public record"},
+    {"from": "Gunvor", "to": "Russia", "instrument": "relationship", "notes": "Gunvor was co-founded (2000) with Gennady Timchenko, a Putin associate; Timchenko sold his ~44% stake to Tornqvist the DAY BEFORE US sanctions (20 Mar 2014). US Treasury's 2014 statement alleged Putin 'may have investments in / access to' Gunvor funds; the firm strongly DENIED it and has since cut Russia exposure (fact of the stake + timed sale; the 'access' allegation vs denial = contested, both presented).", "source": "US Treasury 2014; Gunvor"},
+    {"from": "Gunvor", "to": "Crude_Oil", "instrument": "relationship", "notes": "Gunvor is a major physical crude + products + LNG trader - the business is moving barrels, storage, and freight, not headlines (fact).", "source": "public record"},
+    {"from": "Marco_Dunand", "to": "Mercuria", "instrument": "leads", "notes": "Marco Dunand co-founded (2004) + runs Mercuria, a top-5 independent energy trader; a low-profile billionaire fortune (fact of role; net worth = estimate).", "source": "public record"},
+    {"from": "Daniel_Jaeggi", "to": "Mercuria", "instrument": "founder_origin", "notes": "Daniel Jaeggi co-founded Mercuria with Dunand - the second quiet Mercuria fortune (fact; net worth = estimate).", "source": "public record"},
+    {"from": "Mercuria", "to": "Crude_Oil", "instrument": "relationship", "notes": "Mercuria trades crude, products, gas, metals, and power - expanding into energy-transition + metals alongside oil (fact).", "source": "public record"},
+    {"from": "Trafigura", "to": "Crude_Oil", "instrument": "relationship", "notes": "Trafigura (founded 1993) is a top independent trader in oil + metals, EMPLOYEE-owned among 1,000+ partners (exec chair Jeremy Weir) - the fortune is distributed, not a single owner; central to global crude + metals flows (fact; note the diffuse ownership).", "source": "public record"},
+    {"from": "Vitol", "to": "Crude_Oil", "instrument": "relationship", "notes": "Vitol is the world's largest independent oil trader, partner-owned and deliberately private - arguably the quietest mega-fortune in energy, distributed across a small partnership (fact; partner-owned, no single figure).", "source": "public record"},
+    {"from": "Gunvor", "to": "OPEC", "instrument": "relationship", "notes": "The independent traders (Gunvor/Mercuria/Trafigura/Vitol) sit between OPEC+ production and end-markets - physical intermediaries whose flows + storage shape realized prices and sanctions-redirection (e.g. Russian crude under the price cap) (fact of the role; influence magnitude not overclaimed).", "source": "public record"},
+    {"from": "Mercuria", "to": "OPEC", "instrument": "relationship", "notes": "Mercuria + peers move the physical barrels around OPEC+ quota dynamics + Western sanctions - the plumbing beneath the headline oil price (fact).", "source": "public record"}
+  ]
+}

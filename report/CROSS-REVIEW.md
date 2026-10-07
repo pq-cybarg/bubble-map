@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 116 files
+- **Meta** — 118 files
 - **Google** — 73 files
 - **Chainlink** — 66 files
 - **OpenAI** — 58 files
@@ -23,20 +23,12 @@
 - **Amazon** — 41 files
 - **Oracle** — 38 files
 - **FDIC** — 38 files
+- **NVIDIA** — 38 files
 - **Anthropic** — 38 files
-- **NVIDIA** — 37 files
+- **Circle** — 29 files
 - **a16z** — 28 files
-- **Circle** — 28 files
 
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-golden-dome-economics.json` — related files by shared entities (verify cross-refs exist)
-- spec-sec-filings-primary.json: 2 shared entities
-- fin-hedera-connections.json: 2 shared entities
-- temporal-bridges.json: 2 shared entities
-- spec-musk-project-meridian.json: 2 shared entities
-- catalog-billionaires.json: 2 shared entities
-- spec-telecom-satellite.json: 2 shared entities
-- sec-filings.json: 2 shared entities
-- spec-cross-system-contagion.json: 2 shared entities
+## Newest file `catalog-quiet-money-14.json` — related files by shared entities (verify cross-refs exist)

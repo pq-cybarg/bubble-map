@@ -2072,6 +2072,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Daniel_Jaeggi": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Dario_Amodei": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -2652,6 +2656,10 @@
       "sector": "other",
       "has_exogenous_revenue": false
     },
+    "Export_Controls": {
+      "sector": "state",
+      "has_exogenous_revenue": false
+    },
     "Express_Scripts": {
       "sector": "other",
       "has_exogenous_revenue": true
@@ -3222,6 +3230,10 @@
     },
     "Guillaume_Pousaz": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Gunvor": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Guy_Young": {
@@ -4536,6 +4548,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Marco_Dunand": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Marcus_Hutchins": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -4604,6 +4620,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "Mercuria": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Mesothelioma_Claims": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -4639,6 +4659,10 @@
     "Mezink": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "MiCA": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Michael_Intrator": {
       "sector": "person",
@@ -7024,6 +7048,10 @@
       "sector": "exchange",
       "has_exogenous_revenue": false
     },
+    "Torbjorn_Tornqvist": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Tornado_Cash": {
       "sector": "privacy_tool",
       "has_exogenous_revenue": false
@@ -7035,6 +7063,10 @@
     "Toyota": {
       "sector": "industrial",
       "has_exogenous_revenue": true
+    },
+    "Trafigura": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "TrailOfBits": {
       "sector": "security_research",
@@ -7724,6 +7756,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Vitol": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "VoltTyphoon": {
       "sector": "threat_actor",
       "has_exogenous_revenue": false
@@ -8233,6 +8269,136 @@
       "cancelable": false,
       "source_file": "spec-sec-filings-primary.json",
       "note": "REVERSE sign: Amazon booked a ~$9.5B Q3-2025 GAIN marking up its Anthropic stake (fair-value) after Anthropic's $183B round - circular paper income (vs Microsoft's equity-method OpenAI losses)."
+    },
+    {
+      "from": "Torbjorn_Tornqvist",
+      "to": "Gunvor",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Torbjorn Tornqvist (Swedish, Geneva-based) co-founded + controls Gunvor, one of the largest independent energy traders - a quiet multi-billion fortune on a private firm (fact of control; net worth = estimate)."
+    },
+    {
+      "from": "Gunvor",
+      "to": "Russia",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Gunvor was co-founded (2000) with Gennady Timchenko, a Putin associate; Timchenko sold his ~44% stake to Tornqvist the DAY BEFORE US sanctions (20 Mar 2014). US Treasury's 2014 statement alleged Putin 'may have investments in / access to' Gunvor funds; the firm strongly DENIED it and has since cut Russia exposure (fact of the stake + timed sale; the 'access' allegation vs denial = contested, both presented)."
+    },
+    {
+      "from": "Gunvor",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Gunvor is a major physical crude + products + LNG trader - the business is moving barrels, storage, and freight, not headlines (fact)."
+    },
+    {
+      "from": "Marco_Dunand",
+      "to": "Mercuria",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Marco Dunand co-founded (2004) + runs Mercuria, a top-5 independent energy trader; a low-profile billionaire fortune (fact of role; net worth = estimate)."
+    },
+    {
+      "from": "Daniel_Jaeggi",
+      "to": "Mercuria",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "founder_origin",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Daniel Jaeggi co-founded Mercuria with Dunand - the second quiet Mercuria fortune (fact; net worth = estimate)."
+    },
+    {
+      "from": "Mercuria",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Mercuria trades crude, products, gas, metals, and power - expanding into energy-transition + metals alongside oil (fact)."
+    },
+    {
+      "from": "Trafigura",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Trafigura (founded 1993) is a top independent trader in oil + metals, EMPLOYEE-owned among 1,000+ partners (exec chair Jeremy Weir) - the fortune is distributed, not a single owner; central to global crude + metals flows (fact; note the diffuse ownership)."
+    },
+    {
+      "from": "Vitol",
+      "to": "Crude_Oil",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Vitol is the world's largest independent oil trader, partner-owned and deliberately private - arguably the quietest mega-fortune in energy, distributed across a small partnership (fact; partner-owned, no single figure)."
+    },
+    {
+      "from": "Gunvor",
+      "to": "OPEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "The independent traders (Gunvor/Mercuria/Trafigura/Vitol) sit between OPEC+ production and end-markets - physical intermediaries whose flows + storage shape realized prices and sanctions-redirection (e.g. Russian crude under the price cap) (fact of the role; influence magnitude not overclaimed)."
+    },
+    {
+      "from": "Mercuria",
+      "to": "OPEC",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "catalog-quiet-money-14.json",
+      "note": "Mercuria + peers move the physical barrels around OPEC+ quota dynamics + Western sanctions - the plumbing beneath the headline oil price (fact)."
     },
     {
       "from": "Cult_of_Dead_Cow",
@@ -12664,7 +12830,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-cross-river-bank.json",
+      "source_file": "spec-cross-river-bank.json,spec-stablecoin-genius-2026.json",
       "note": ""
     },
     {
@@ -16486,7 +16652,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-china-ai-stack-censorship.json",
+      "source_file": "spec-china-ai-stack-censorship.json,spec-china-ai-2026.json",
       "note": ""
     },
     {
@@ -16707,7 +16873,7 @@
       "status": "documented",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-china-ai-stack-censorship.json",
+      "source_file": "spec-china-ai-stack-censorship.json,spec-china-ai-2026.json",
       "note": ""
     },
     {
@@ -27943,6 +28109,123 @@
       "note": ""
     },
     {
+      "from": "Treasury",
+      "to": "GENIUS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "Treasury's interim final rule (30 Sep 2026) was the first BINDING, effective-on-publication GENIUS rule: it builds the machinery to certify STATE stablecoin regimes, but the $10B threshold locks Tether + Circle out of the state pathway (into federal OCC supervision). 7 agencies missed the 18 Jul 2026 statutory deadline, so Treasury moved to regain the narrative. ABA warns state-certified frameworks could open arbitrage (fact)."
+    },
+    {
+      "from": "OCC",
+      "to": "GENIUS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "OCC proposed its implementing rule 25 Feb 2026 and committed to a final rule by Nov 2026; issuers above $10B fall under mandatory OCC federal supervision (fact)."
+    },
+    {
+      "from": "OCC",
+      "to": "Circle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "Circle received OCC approval to open 'Circle National Trust', a national trust bank - bringing USDC's issuer under direct federal oversight rather than state-by-state licenses (fact)."
+    },
+    {
+      "from": "GENIUS_Act",
+      "to": "Circle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "Circle turned the GENIUS Act into a 'regulatory moat': USDC ~$78.8B, federal charter, EU MiCA compliance - its stock jumped ~35% (late Feb 2026) as USDC reframed from crypto experiment to regulated financial infrastructure (fact of the moves; 'moat' framing = interpretation, labeled)."
+    },
+    {
+      "from": "GENIUS_Act",
+      "to": "USDT",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "Tether's offshore structure (optimized for global scale) does not fit GENIUS's US-domiciled requirements; in response Tether launched USAT (Jan 2026) for US compliance while USDT (~$189.5B) stays offshore (fact)."
+    },
+    {
+      "from": "USDT",
+      "to": "Anchorage",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "USAT, Tether's GENIUS-compliant US stablecoin, is issued by Anchorage Digital Bank - the regulated onshore wrapper for the offshore giant (fact)."
+    },
+    {
+      "from": "MiCA",
+      "to": "USDT",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "The EU's MiCA delisted USDT from EU venues (Binance/Coinbase/Kraken dropped it for EEA retail) since Tether did not seek MiCA authorization, while USDC/EURC complied (+337% EU volume) - the same offshore-vs-onshore split as GENIUS, a jurisdiction apart (fact)."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "US_Treasuries",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "manufactured_demand",
+      "amount_usd": 1000000000000,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json,macro-stablecoin-treasury-rail.json",
+      "note": "MACRO: stablecoin issuers collectively hold ~$155B of US T-bills - more than Germany + Saudi Arabia + South Korea combined. The reserve mandate makes the sector a structural, price-insensitive Treasury buyer (fact of holdings; the demand-channel reading ties the Treasury-rail + macro threads)."
+    },
+    {
+      "from": "Stablecoins",
+      "to": "GENIUS_Act",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-stablecoin-genius-2026.json",
+      "note": "Net effect by late 2026: a ~$322.6B market (Tether+Circle ~83%) consolidating toward federally-supervised US issuers + offshore giants carved out of US/EU retail - regulation is concentrating, not fragmenting, the rails (interpretation, labeled)."
+    },
+    {
       "from": "Bitcoin",
       "to": "ECDSA",
       "instrument": "other",
@@ -31828,19 +32111,6 @@
       "cancelable": false,
       "source_file": "macro-stablecoin-treasury-rail.json",
       "note": "~$74B; 37.6% T-bills + 49.6% T-bill repo."
-    },
-    {
-      "from": "Stablecoins",
-      "to": "US_Treasuries",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "manufactured_demand",
-      "amount_usd": 1000000000000,
-      "status": "projected",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "macro-stablecoin-treasury-rail.json",
-      "note": "StanChart: ~$2T mcap by 2028 -> ~$1T fresh T-bill demand; ~$900B demand-supply gap; Treasury may front-load bill issuance to meet it."
     },
     {
       "from": "China",
@@ -42906,6 +43176,97 @@
       "note": "Rapidus licenses IBM's 2nm nanosheet technology - the IBM-microelectronics lineage (also behind GF and DMEA trusted services) reaching into allied Japan (fact)."
     },
     {
+      "from": "DeepSeek",
+      "to": "Huawei",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "DeepSeek V4 (2026) was optimized to run EXCLUSIVELY on Huawei Ascend (950/910D) - a sharp break from its Nvidia-H800-trained earlier models and the first frontier-scale endorsement of Ascend. R2 (if trained fully on domestic silicon) would prove frontier models can be built without Nvidia; if it needs Nvidia, the dependency narrative persists (fact of V4; R2 = unresolved)."
+    },
+    {
+      "from": "ByteDance",
+      "to": "Huawei",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "ByteDance, Alibaba, and Tencent ordered hundreds of thousands of Ascend chips after the V4 launch - the demand scramble that validated Huawei at scale (fact)."
+    },
+    {
+      "from": "NVIDIA",
+      "to": "China_AI_Hardware",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "Nvidia's China AI-chip share collapsed from ~95% (2023) to ~8% (2026) under export controls - 'a policy meant to slow China's buildout minted its chip champion' (fact; the irony is the cited analysts' framing)."
+    },
+    {
+      "from": "Export_Controls",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "US BIS moved H200-class exports to China to case-by-case review (Jan 2026) with 9 certifications incl. a cap tied to US shipments + a no-weight-transfer commitment; USTR said no H200 deliveries had occurred despite clearances - controls remain a live but fluid constraint (fact)."
+    },
+    {
+      "from": "Export_Controls",
+      "to": "Huawei",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "BIS guidance treats USE of certain Huawei Ascend chips ANYWHERE in the world as a presumptive EAR violation, and extends license requirements to entities with Chinese ultimate parents wherever located (May 2026) - escalation aimed squarely at Ascend (fact)."
+    },
+    {
+      "from": "Alibaba",
+      "to": "China_AI_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "TRAINING CLOSURE: Beijing began deliberations (Jul 2026) on restricting overseas access to leading Chinese models including open-weight Qwen, and Chinese labs are drifting to closed-source - the open-weight era that made Qwen/DeepSeek globally popular may be closing from the state side (fact of the deliberations; outcome unresolved)."
+    },
+    {
+      "from": "China_AI_Hardware",
+      "to": "China_AI_Censorship",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-china-ai-2026.json",
+      "note": "Beijing's coherent 2026 strategy = 'total compute substitution' (domestic silicon end-to-end) + 'training closure' (closed ecosystems), backed by government certification of 9 domestic AI processors for state procurement - indigenization + control as one program (interpretation of the strategy; the certifications + substitution = fact)."
+    },
+    {
       "from": "FHLB_System",
       "to": "US_Banks",
       "instrument": "other",
@@ -50525,10 +50886,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2032,
-    "num_edges": 3261,
+    "num_nodes": 2041,
+    "num_edges": 3286,
     "num_financial_edges": 274,
-    "num_structural_edges": 2987,
+    "num_structural_edges": 3012,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -50593,6 +50954,7 @@
       "Amazon",
       "American_Dynamism",
       "Amkor",
+      "Anchorage",
       "Andreessen_Horowitz",
       "Anduril",
       "Anthropic",
@@ -50615,6 +50977,9 @@
       "Caltech",
       "Carnegie_Mellon_University",
       "China",
+      "China_AI_Censorship",
+      "China_AI_Hardware",
+      "China_AI_Labs",
       "Chip_Collateral_SPV",
       "Circle",
       "Citizens_Financial",
@@ -50718,6 +51083,7 @@
       "MetaMask",
       "Microsoft",
       "Microsoft_Defender",
+      "Military_Civil_Fusion",
       "NSA",
       "NVIDIA",
       "Nebius",
@@ -50796,12 +51162,14 @@
       "UC_Berkeley",
       "UIUC",
       "UPI",
+      "USDT",
       "USTC",
       "US_Australia_Minerals_Framework",
       "US_Banks",
       "US_Government",
       "US_Treasuries",
       "Ucore",
+      "Uncensored_AI",
       "United_Front",
       "Visa",
       "WEF",
@@ -50812,45 +51180,40 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 237,
+    "core_scc_all_edges_size": 244,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "CoreWeave",
-        "SINK_lenders"
+        "Amazon",
+        "Anthropic"
       ],
       [
-        "AMD",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -50860,14 +51223,7 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI"
       ],
       [
         "Amazon",
@@ -50880,6 +51236,18 @@
         "NVIDIA",
         "OpenAI",
         "Microsoft"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -54531,6 +54899,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Daniel_Jaeggi": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Dario_Amodei": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55546,6 +55921,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Export_Controls": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Express_Scripts": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56541,6 +56923,13 @@
         "in_robust_core": false
       },
       "Guillaume_Pousaz": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Gunvor": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58843,6 +59232,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Marco_Dunand": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Marcus_Hutchins": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -58962,6 +59358,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Mercuria": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Mesothelioma_Claims": {
         "total_usd": 35000000000,
         "circular_usd": 0,
@@ -59020,6 +59423,13 @@
       },
       "Mezink": {
         "total_usd": 25000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "MiCA": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -63197,6 +63607,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Torbjorn_Tornqvist": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Tornado_Cash": {
         "total_usd": 7600000000,
         "circular_usd": 0,
@@ -63212,6 +63629,13 @@
         "in_robust_core": false
       },
       "Toyota": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Trafigura": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -64422,6 +64846,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Vitol": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "VoltTyphoon": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -65306,6 +65737,35 @@
         "both_layers": true
       },
       {
+        "node": "NVIDIA",
+        "degree": 38,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "capital",
+          "chip_vendor",
+          "hyperscaler",
+          "neocloud",
+          "other",
+          "person",
+          "pqc_quantum",
+          "research",
+          "semiconductor",
+          "space_real_economy",
+          "spv",
+          "state",
+          "telecom",
+          "university"
+        ],
+        "n_neighbor_sectors": 16,
+        "source_files": 18,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Meta",
         "degree": 27,
         "neighbor_sectors": [
@@ -65324,35 +65784,6 @@
           "sink",
           "surveillance",
           "tech",
-          "university"
-        ],
-        "n_neighbor_sectors": 16,
-        "source_files": 17,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "NVIDIA",
-        "degree": 36,
-        "neighbor_sectors": [
-          "ai",
-          "ai_lab",
-          "capital",
-          "chip_vendor",
-          "hyperscaler",
-          "neocloud",
-          "other",
-          "person",
-          "pqc_quantum",
-          "research",
-          "semiconductor",
-          "space_real_economy",
-          "spv",
-          "state",
-          "telecom",
           "university"
         ],
         "n_neighbor_sectors": 16,
@@ -65443,7 +65874,7 @@
       },
       {
         "node": "Stablecoins",
-        "degree": 34,
+        "degree": 35,
         "neighbor_sectors": [
           "bank",
           "capital",
@@ -65459,7 +65890,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 20,
+        "source_files": 21,
         "layers": [
           "structural"
         ],
@@ -65516,7 +65947,7 @@
       },
       {
         "node": "Russia",
-        "degree": 43,
+        "degree": 44,
         "neighbor_sectors": [
           "bank",
           "commodity",
@@ -65530,7 +65961,7 @@
           "threat_actor"
         ],
         "n_neighbor_sectors": 10,
-        "source_files": 20,
+        "source_files": 21,
         "layers": [
           "structural"
         ],

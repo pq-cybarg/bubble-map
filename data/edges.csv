@@ -1,7 +1,7 @@
 from,to,instrument,amount_usd,status,declared_circular,cancelable,source_file
 BNY_Mellon,SINK_repo,other,2000000000000,recurring,False,False,spec-market-plumbing-control.json
 US_Banks,Nondepository financial institutions,debt,1972670000000,2026-04,False,False,macro-cre-privatecredit.json
-Stablecoins,US_Treasuries,other,1000000000000,projected,False,False,macro-stablecoin-treasury-rail.json
+Stablecoins,US_Treasuries,other,1000000000000,,False,False,"spec-stablecoin-genius-2026.json,macro-stablecoin-treasury-rail.json"
 Private-credit market,AI_Datacenters,debt,800000000000,2026 (Morgan Stanley 2yr projection),False,False,macro-cre-privatecredit.json
 Rate_Shock,Banks,other,306000000000,unrealized-HTM-AFS,False,False,macro-bank-htm-marks.json
 OpenAI,Oracle,compute_commitment,300000000000,committed,True,False,"fin-nvidia-openai.json,fin-coreweave-oracle.json"
@@ -190,6 +190,16 @@ Coinbase,FDIC,regulatory_legal,188440,won-fees,False,False,"spec-sec-sdny-regula
 Mezink,Ryan_Kelly,other,25000,alleged,False,False,spec-cambodia-scam-fara-paid-influence.json
 Microsoft,CoreWeave,revenue_share,,reported-10K,True,False,spec-sec-filings-primary.json
 Oracle,Stargate,compute_commitment,,RPO-523B,True,False,spec-sec-filings-primary.json
+Torbjorn_Tornqvist,Gunvor,other,,,False,False,catalog-quiet-money-14.json
+Gunvor,Russia,other,,,False,False,catalog-quiet-money-14.json
+Gunvor,Crude_Oil,other,,,False,False,catalog-quiet-money-14.json
+Marco_Dunand,Mercuria,other,,,False,False,catalog-quiet-money-14.json
+Daniel_Jaeggi,Mercuria,other,,,False,False,catalog-quiet-money-14.json
+Mercuria,Crude_Oil,other,,,False,False,catalog-quiet-money-14.json
+Trafigura,Crude_Oil,other,,,False,False,catalog-quiet-money-14.json
+Vitol,Crude_Oil,other,,,False,False,catalog-quiet-money-14.json
+Gunvor,OPEC,other,,,False,False,catalog-quiet-money-14.json
+Mercuria,OPEC,other,,,False,False,catalog-quiet-money-14.json
 Cult_of_Dead_Cow,Anonymous,other,,,False,False,spec-hacktivist-catalog.json
 Anonymous,Malware_Lineage,other,,,False,False,spec-hacktivist-catalog.json
 Anonymous,Russia,other,,,False,False,spec-hacktivist-catalog.json
@@ -506,7 +516,7 @@ Cross_River_Bank,Circle,other,,documented,False,False,spec-cross-river-bank.json
 Cross_River_Bank,USDC,relationship,,documented,False,False,spec-cross-river-bank.json
 Cross_River_Bank,Solana,other,,documented,False,False,spec-cross-river-bank.json
 Cross_River_Bank,Ethereum,relationship,,documented,False,False,spec-cross-river-bank.json
-Cross_River_Bank,Visa,other,,documented,False,False,spec-cross-river-bank.json
+Cross_River_Bank,Visa,other,,documented,False,False,"spec-cross-river-bank.json,spec-stablecoin-genius-2026.json"
 Cross_River_Bank,Ripple,other,,weak,False,False,spec-cross-river-bank.json
 FDIC,Cross_River_Bank,other,,documented,False,False,spec-cross-river-bank.json
 X_Money,Visa,other,,documented,False,False,spec-cross-river-bank.json
@@ -798,7 +808,7 @@ US_Government,CHIPS_Act,other,,documented,False,False,spec-globalfoundries.json
 GlobalFoundries,Trusted_Foundry,other,,documented,False,False,spec-globalfoundries.json
 Mubadala,MGX,investment,,documented,False,False,spec-globalfoundries.json
 Alibaba,China_AI_Labs,other,,documented,False,False,spec-china-ai-stack-censorship.json
-DeepSeek,China_AI_Labs,other,,documented,False,False,spec-china-ai-stack-censorship.json
+DeepSeek,China_AI_Labs,other,,documented,False,False,"spec-china-ai-stack-censorship.json,spec-china-ai-2026.json"
 Zhipu_AI,China_AI_Labs,other,,documented,False,False,spec-china-ai-stack-censorship.json
 Moonshot,China_AI_Labs,other,,documented,False,False,spec-china-ai-stack-censorship.json
 MiniMax,China_AI_Labs,other,,documented,False,False,spec-china-ai-stack-censorship.json
@@ -815,7 +825,7 @@ China_AI_Censorship,China_AI_Labs,other,,documented,False,False,spec-china-ai-st
 CAC,China,other,,documented,False,False,spec-china-ai-stack-censorship.json
 MIIT,China,other,,documented,False,False,spec-china-ai-stack-censorship.json
 China_AI_Labs,China,other,,documented,False,False,spec-china-ai-stack-censorship.json
-Huawei,China_AI_Hardware,other,,documented,False,False,spec-china-ai-stack-censorship.json
+Huawei,China_AI_Hardware,other,,documented,False,False,"spec-china-ai-stack-censorship.json,spec-china-ai-2026.json"
 Cambricon,China_AI_Hardware,compute_commitment,,documented,False,False,spec-china-ai-stack-censorship.json
 Biren,China_AI_Hardware,compute_commitment,,documented,False,False,spec-china-ai-stack-censorship.json
 Moore_Threads,China_AI_Hardware,other,,documented,False,False,spec-china-ai-stack-censorship.json
@@ -1639,6 +1649,14 @@ PBoC,Distressed_Sovereigns,other,,open,False,False,macro-hidden-sovereign-debt.j
 LGFV_Debt,China,other,,open,False,False,"macro-hidden-sovereign-debt.json,spec-china-party-state.json"
 US_Government,US_Contingent_Liabilities,other,,open,False,False,macro-hidden-sovereign-debt.json
 US_Contingent_Liabilities,SINK_debt,other,,open,False,False,macro-hidden-sovereign-debt.json
+Treasury,GENIUS_Act,other,,,False,False,spec-stablecoin-genius-2026.json
+OCC,GENIUS_Act,other,,,False,False,spec-stablecoin-genius-2026.json
+OCC,Circle,other,,,False,False,spec-stablecoin-genius-2026.json
+GENIUS_Act,Circle,other,,,False,False,spec-stablecoin-genius-2026.json
+GENIUS_Act,USDT,other,,,False,False,spec-stablecoin-genius-2026.json
+USDT,Anchorage,other,,,False,False,spec-stablecoin-genius-2026.json
+MiCA,USDT,other,,,False,False,spec-stablecoin-genius-2026.json
+Stablecoins,GENIUS_Act,other,,,False,False,spec-stablecoin-genius-2026.json
 Bitcoin,ECDSA,other,,,False,False,spec-ecdsa-nonce-failure-tracker.json
 Ethereum,ECDSA,other,,,False,False,spec-ecdsa-nonce-failure-tracker.json
 ECDSA,Weak_Nonce_Failure,other,,,False,False,spec-ecdsa-nonce-failure-tracker.json
@@ -2708,6 +2726,13 @@ Newport_Wafer_Fab,Vishay,other,,,False,False,spec-trusted-foundry-secure-microel
 NSI_Act,China,other,,,False,False,spec-trusted-foundry-secure-microelectronics.json
 Rapidus,Japan,other,,,False,False,spec-trusted-foundry-secure-microelectronics.json
 Rapidus,IBM,other,,,False,False,spec-trusted-foundry-secure-microelectronics.json
+DeepSeek,Huawei,other,,,False,False,spec-china-ai-2026.json
+ByteDance,Huawei,other,,,False,False,spec-china-ai-2026.json
+NVIDIA,China_AI_Hardware,other,,,False,False,spec-china-ai-2026.json
+Export_Controls,NVIDIA,other,,,False,False,spec-china-ai-2026.json
+Export_Controls,Huawei,other,,,False,False,spec-china-ai-2026.json
+Alibaba,China_AI_Censorship,other,,,False,False,spec-china-ai-2026.json
+China_AI_Hardware,China_AI_Censorship,other,,,False,False,spec-china-ai-2026.json
 FHLB_System,US_Banks,other,,open,False,False,macro-gses-fhlb.json
 GSEs_FannieFreddie,Mortgage_Market,other,,open,False,False,macro-gses-fhlb.json
 Federal_Reserve,GSEs_FannieFreddie,other,,open,False,False,macro-gses-fhlb.json
