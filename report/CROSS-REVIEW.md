@@ -15,7 +15,7 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 115 files
+- **Meta** — 116 files
 - **Google** — 73 files
 - **Chainlink** — 66 files
 - **OpenAI** — 58 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-defense-tech-capital.json` — related files by shared entities (verify cross-refs exist)
-- catalog-billionaires.json: 6 shared entities
-- spec-network-overlay.json: 6 shared entities
-- temporal-bridges.json: 6 shared entities
-- influence-operator-network.json: 6 shared entities
-- catalog-elite-groups.json: 5 shared entities
-- geopolitics-defense-industrial-base.json: 5 shared entities
-- influence-congress-funding-compromise.json: 4 shared entities
-- catalog-academia-core.json: 4 shared entities
+## Newest file `spec-golden-dome-economics.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 2 shared entities
+- fin-hedera-connections.json: 2 shared entities
+- temporal-bridges.json: 2 shared entities
+- spec-musk-project-meridian.json: 2 shared entities
+- catalog-billionaires.json: 2 shared entities
+- spec-telecom-satellite.json: 2 shared entities
+- sec-filings.json: 2 shared entities
+- spec-cross-system-contagion.json: 2 shared entities

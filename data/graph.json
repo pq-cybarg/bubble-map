@@ -1180,6 +1180,10 @@
       "sector": "industrial",
       "has_exogenous_revenue": true
     },
+    "CBO": {
+      "sector": "statistical_agency",
+      "has_exogenous_revenue": true
+    },
     "CBP": {
       "sector": "state",
       "has_exogenous_revenue": false
@@ -6547,6 +6551,10 @@
     "SpaceX_IPO_Public": {
       "sector": "exogenous_source",
       "has_exogenous_revenue": true
+    },
+    "Space_Force": {
+      "sector": "state",
+      "has_exogenous_revenue": false
     },
     "Spacety": {
       "sector": "satellite",
@@ -19912,6 +19920,110 @@
       "cancelable": false,
       "source_file": "spec-coinex-winddown.json",
       "note": "Withdrawals + the post-deadline custody regime are USDT-denominated; the mid-tier-exchange compliance-cost squeeze ('unlimited risk for limited revenue') is a data point on how regulation is reshaping the CEX field (fact of the stated rationale; systemic reading graded)."
+    },
+    {
+      "from": "CBO",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "CBO (May 2026): ~$1.2T over 20 years - >2x its own 2025 estimate ($542B) and ~7x the White House's May-2025 figure ($175B). Breakdown: ~$740B space (warning/tracking + interceptors), ~$270B ground layers, ~$180B other; the space-based interceptor layer = ~70% of acquisition / ~60% of total cost. CBO called it 'illustrative' and said no public plan exists to cost precisely (fact)."
+    },
+    {
+      "from": "Space_Force",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "leads",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "Space Force Gen. Michael Guetlein leads the program and estimated ~$185B (Mar 2026) - roughly 1/6 of CBO's number. CBO says the gap implies either a much more limited architecture or heavy reliance on other budget accounts. Space interceptors targeted for 2028; 'operational before end of term' (Jan 2029) (fact of the estimate + gap; which number is right = contested/unknowable without a public plan)."
+    },
+    {
+      "from": "Golden_Dome",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json,spec-musk-project-meridian.json",
+      "note": "Funded via the One Big Beautiful Bill Act ($24.4B, Jul 2025) + a $22.5B reconciliation tranche (Mar 2026, ~90% obligated in <6 months). The FY2027 defense request is a record ~$1.5T, with ~$750B earmarked for missile defense + drones + AI + industrial base - Golden Dome anchors the topline (fact)."
+    },
+    {
+      "from": "Lockheed_Martin",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "Legacy primes (Lockheed Martin, RTX, L3Harris) compete for the ground-interceptor + sensor layers (~$270B+) while the space layer favors new-space; the program splits spend between the old and new defense-industrial bases (fact of competition)."
+    },
+    {
+      "from": "RTX",
+      "to": "Golden_Dome",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "RTX (Raytheon) and other incumbents bid the interceptor/radar layers - the legacy-prime share of the shield (fact)."
+    },
+    {
+      "from": "Golden_Dome",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "Golden Dome is the single biggest new line item feeding the venture-defense wave: the dominant SPACE layer (~70% of cost) favors SpaceX/Starlink (~7,000 sats already - a scale comparable to a limited space-based MD constellation) and new-space entrants. Sen. Merkley: 'a massive giveaway to defense contractors paid for by working Americans' (fact of the budget pull + the positioning; 'giveaway' = cited critique, labeled)."
+    },
+    {
+      "from": "Golden_Dome",
+      "to": "Project_Meridian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "THE CONFLICT, with a dollar figure: Elon Musk co-directs the Pentagon's Project Meridian capabilities study while SpaceX is the natural prime for Golden Dome's dominant, ~$740B space-based layer. A panel co-director advising on priorities adjacent to his own firm's largest potential contract (interpretation, labeled; sharpens the revolving-door concern from the Meridian + defense-tech blocks)."
+    },
+    {
+      "from": "Golden_Dome",
+      "to": "SINK_bondmarket",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-golden-dome-economics.json",
+      "note": "FISCAL TIE: a $1.2T-over-20yr program (CBO) layered onto a record ~$1.5T annual defense request lands on the same Treasury-issuance / deficit the macro threads track - the missile shield is also a bond-supply story (interpretation, labeled; the exact Golden Dome contribution is a fraction, not the driver)."
     },
     {
       "from": "OFAC",
@@ -44666,19 +44778,6 @@
       "note": "SpaceX is building satellite-network layers for the administration's planned 'Golden Dome' missile-defense shield - Musk's firm is already a major Pentagon contractor as he co-directs a Pentagon capabilities study (fact of the contract; the adjacency is the conflict concern)."
     },
     {
-      "from": "Golden_Dome",
-      "to": "Department_of_War",
-      "instrument": "other",
-      "layer": "structural",
-      "raw_instrument": "relationship",
-      "amount_usd": null,
-      "status": "",
-      "declared_circular": false,
-      "cancelable": false,
-      "source_file": "spec-musk-project-meridian.json",
-      "note": "'Golden Dome' is the administration's layered missile-defense shield program (fact)."
-    },
-    {
       "from": "xAI",
       "to": "Department_of_War",
       "instrument": "other",
@@ -50426,10 +50525,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2030,
-    "num_edges": 3254,
+    "num_nodes": 2032,
+    "num_edges": 3261,
     "num_financial_edges": 274,
-    "num_structural_edges": 2980,
+    "num_structural_edges": 2987,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -50724,11 +50823,7 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
+        "AMD",
         "OpenAI"
       ],
       [
@@ -50740,8 +50835,17 @@
         "OpenAI"
       ],
       [
-        "AMD",
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
         "OpenAI"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -50752,17 +50856,6 @@
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -50783,16 +50876,22 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -52865,6 +52964,13 @@
         "in_robust_core": false
       },
       "CATL": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "CBO": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -62260,6 +62366,13 @@
       },
       "SpaceX_IPO_Public": {
         "total_usd": 75000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Space_Force": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
