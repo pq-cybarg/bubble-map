@@ -344,6 +344,10 @@
       "sector": "standards",
       "has_exogenous_revenue": true
     },
+    "American_Dynamism": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "American_Edge_Project": {
       "sector": "political",
       "has_exogenous_revenue": false
@@ -2179,6 +2183,10 @@
     "Defense_Primes": {
       "sector": "defense",
       "has_exogenous_revenue": true
+    },
+    "Defense_Tech_Capital": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
     },
     "Dell": {
       "sector": "tech",
@@ -6264,6 +6272,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Saronic": {
+      "sector": "defense",
+      "has_exogenous_revenue": false
+    },
     "Satellogic": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -6283,6 +6295,10 @@
     "ScaleAI": {
       "sector": "ai_data",
       "has_exogenous_revenue": true
+    },
+    "Scale_AI": {
+      "sector": "ai",
+      "has_exogenous_revenue": false
     },
     "Scaniverse": {
       "sector": "tech",
@@ -42830,6 +42846,227 @@
       "note": ""
     },
     {
+      "from": "Anduril",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "The exemplar new prime: $5B Series H at $61B (May 2026), in talks toward ~$100B (reported/secondary), revenue ~doubled to ~$2.25B (2025), $900M Arsenal-1 Ohio plant (Mar 2026), >$11B raised total. 'Defense tech' went from a VC taboo (2015) to a pitch advantage (2026) (fact; the ~$100B = reported)."
+    },
+    {
+      "from": "Founders_Fund",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Founders Fund (Thiel) led Anduril's $30.5B round and wrote a $1B Series G check - reported as its largest ever; the anchor of the Thiel-network defense bet (fact)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "a16z has backed Anduril since 2019 and co-led the $61B Series H (May 2026) with Thrive Capital (fact)."
+    },
+    {
+      "from": "Andreessen_Horowitz",
+      "to": "American_Dynamism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "controls",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "'American Dynamism' is a16z's practice for 'companies building in the national interest' (space/defense/manufacturing/robotics) - launched 2023 ($600M), ~$1.8B across two funds, plus a $1.176B fund in the Jan 2026 $15B raise. GP Katherine Boyle (fact; 'national interest' framing is a16z's own)."
+    },
+    {
+      "from": "American_Dynamism",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Anduril is American Dynamism's flagship validation - a16z's foundational defense bet (fact)."
+    },
+    {
+      "from": "American_Dynamism",
+      "to": "Shield_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Shield AI (autonomous flight) - $2B at $12.7B (Mar 2026) - in the American Dynamism / defense-tech portfolio (fact)."
+    },
+    {
+      "from": "American_Dynamism",
+      "to": "Saronic",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "funds",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Saronic (autonomous naval vessels) is in the a16z American Dynamism defense portfolio alongside Anduril/Shield AI/Castelion (fact)."
+    },
+    {
+      "from": "American_Dynamism",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "American Dynamism is the branded center of gravity for the venture-defense wave (fact)."
+    },
+    {
+      "from": "Palantir",
+      "to": "Anduril",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "lineage",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Anduril is 'Palantir's spiritual successor' - founded 2017 by Palantir alumni Brian Schimpf + Matt Grimm with Palmer Luckey (post-Oculus); both named after Lord of the Rings objects. The Palantir diaspora seeding the new primes (fact)."
+    },
+    {
+      "from": "Palantir",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Palantir (~$325B market cap, Jun 2026) is described as the 'public face' of the AI-driven military-industrial complex - the listed anchor of the cluster (fact of mcap; 'public face' = cited critique, labeled)."
+    },
+    {
+      "from": "SpaceX",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "SpaceX is the most valuable American Dynamism-aligned company and a major defense contractor (Golden Dome) - the gravitational center of the cluster (fact)."
+    },
+    {
+      "from": "Scale_AI",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "Scale AI (military AI data/labeling; Meta took a large stake in 2025) sits in the defense-tech cluster alongside Vannevar Labs, Skydio, Epirus (fact of category)."
+    },
+    {
+      "from": "Peter_Thiel",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "The Thiel network (Palantir, Founders Fund, Anduril backing) is the connective tissue the cluster runs through - the 'deeper roster' behind the public face (fact of the network; cabal framing rejected - it is dense investment, not a proven directed scheme)."
+    },
+    {
+      "from": "8VC",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "8VC (Joe Lonsdale, Palantir co-founder) is among the top defense-tech VCs (with Founders Fund, a16z, Lux, Shield Capital, General Catalyst) - the Palantir-founder capital recycling into new primes (fact)."
+    },
+    {
+      "from": "In_Q_Tel",
+      "to": "Defense_Tech_Capital",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "In-Q-Tel (CIA venture arm, Palantir's early backer) + the NATO Innovation Fund are the government-adjacent capital feeding the same cluster - the public-money end of the wave (fact; ties the In-Q-Tel block)."
+    },
+    {
+      "from": "Defense_Tech_Capital",
+      "to": "Department_of_War",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "The sector's single customer is the DoD; the wave rides a procurement-reform tailwind (faster software-style acquisition) + elevated geopolitical demand (Ukraine, Iran). Whether this is healthy industrial-base renewal or venture hype riding war is CONTESTED (both presented)."
+    },
+    {
+      "from": "Defense_Tech_Capital",
+      "to": "Project_Meridian",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-defense-tech-capital.json",
+      "note": "THE REVOLVING DOOR: the cluster's principals now help set DoD demand - Palmer Luckey (Anduril) + Elon Musk (SpaceX/xAI) co-direct the Pentagon's Project Meridian capabilities study. Founders of the supplier side advising on what the buyer should buy - the structural conflict the map flags (interpretation, labeled; cf spec-musk-project-meridian)."
+    },
+    {
       "from": "SEALSQ",
       "to": "PQC",
       "instrument": "other",
@@ -50189,10 +50426,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2026,
-    "num_edges": 3237,
+    "num_nodes": 2030,
+    "num_edges": 3254,
     "num_financial_edges": 274,
-    "num_structural_edges": 2963,
+    "num_structural_edges": 2980,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -50255,6 +50492,7 @@
       "Adani_Group",
       "Africa_Corps",
       "Amazon",
+      "American_Dynamism",
       "Amkor",
       "Andreessen_Horowitz",
       "Anduril",
@@ -50304,6 +50542,7 @@
       "Data_Unification",
       "Datacenter_Backlash",
       "Deep_Learning",
+      "Defense_Tech_Capital",
       "Department_of_War",
       "Device_Age_Attestation",
       "Device_Ownership_Erosion",
@@ -50431,6 +50670,7 @@
       "Sandworm",
       "Secure_Enclave",
       "Services_Australia",
+      "Shield_AI",
       "Solana",
       "SolarWinds_Sunburst",
       "SpaceX",
@@ -50473,19 +50713,15 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 234,
+    "core_scc_all_edges_size": 237,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
-        "OpenAI"
+        "CoreWeave",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -50496,12 +50732,21 @@
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
         "Amazon",
         "Anthropic"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "NVIDIA",
@@ -50516,7 +50761,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -50527,25 +50773,12 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
-      ],
-      [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
         "Crusoe",
         "SINK_lenders"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -50553,6 +50786,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -51162,6 +51402,13 @@
         "in_robust_core": false
       },
       "American_Arbitration_Association": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "American_Dynamism": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54375,6 +54622,13 @@
         "in_robust_core": false
       },
       "Defense_Primes": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Defense_Tech_Capital": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61528,6 +61782,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Saronic": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Satellogic": {
         "total_usd": 30000000,
         "circular_usd": 0,
@@ -61558,6 +61819,13 @@
       },
       "ScaleAI": {
         "total_usd": 14300000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Scale_AI": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -65156,6 +65424,56 @@
         "both_layers": false
       },
       {
+        "node": "Palantir",
+        "degree": 30,
+        "neighbor_sectors": [
+          "ai",
+          "ai_lab",
+          "capital",
+          "defense",
+          "defense_tech",
+          "elite",
+          "financier",
+          "other",
+          "person",
+          "state",
+          "state_intel",
+          "surveillance",
+          "university"
+        ],
+        "n_neighbor_sectors": 13,
+        "source_files": 9,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "Andreessen_Horowitz",
+        "degree": 15,
+        "neighbor_sectors": [
+          "ai_lab",
+          "capital",
+          "crypto",
+          "crypto_infra",
+          "defense_tech",
+          "elite",
+          "identity",
+          "other",
+          "person",
+          "political",
+          "university"
+        ],
+        "n_neighbor_sectors": 11,
+        "source_files": 12,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Amazon",
         "degree": 14,
         "neighbor_sectors": [
@@ -65195,53 +65513,6 @@
           "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 11,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Ripple",
-        "degree": 22,
-        "neighbor_sectors": [
-          "bank",
-          "crypto",
-          "crypto_infra",
-          "dlt",
-          "financial_infra",
-          "financier",
-          "other",
-          "person",
-          "political",
-          "regulator",
-          "stablecoin"
-        ],
-        "n_neighbor_sectors": 11,
-        "source_files": 10,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "Andreessen_Horowitz",
-        "degree": 13,
-        "neighbor_sectors": [
-          "ai_lab",
-          "capital",
-          "crypto",
-          "crypto_infra",
-          "elite",
-          "identity",
-          "other",
-          "person",
-          "political",
-          "university"
-        ],
-        "n_neighbor_sectors": 10,
         "source_files": 11,
         "layers": [
           "financial",
