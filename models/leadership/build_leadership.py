@@ -231,8 +231,101 @@ def build_html(recs, by_branch, by_level, current_as_of):
     head.append("</main>"+script+"</body></html>")
     return "".join(head), fragment
 
+ALGED_OFFICES = {   # ALGED office string (lowered, substring) -> (branch, role title)
+    "county executive": ("executive",  "County Executive"),
+    "county legislat":  ("legislative","County Legislator"),   # legislator/legislature/legislative
+    "county commission":("legislative","County Commissioner"),
+    "county council":   ("legislative","County Council Member"),
+    "county board":     ("legislative","County Board Member"),
+    "sheriff":          ("law_enforcement","Sheriff"),
+    "prosecutor":       ("law_enforcement","Prosecutor / District Attorney"),
+    "district attorney":("law_enforcement","District Attorney"),
+}
+def _pick(keys, *cands):
+    """fuzzy column match: first key whose lowercased name contains any candidate substring"""
+    low={k.lower():k for k in keys}
+    for c in cands:
+        for lk,k in low.items():
+            if c in lk: return k
+    return None
+
+def load_alged():
+    """Ingest the American Local Government Elections Database (de Benedictis-Kessner, Lee,
+    Velez & Warshaw; Sci Data 2023; OSF DOI 10.17605/OSF.IO/MV5E6; CC-BY-NC-SA 4.0) if a file
+    named alged*.csv / localelections*.csv is present in sources/ (fetch via fetch_alged.py).
+
+    County offices only (County Executive/Legislature, Sheriff, Prosecutor/DA). Reduces the
+    candidate-level returns to the WINNER of the LATEST election per (state, geography, office,
+    district); status is 'incumbent' but every record is graded MODERATE with an explicit
+    staleness note + the >50k-population universe caveat (see research/leadership-county-sources.md).
+    Tolerant of absence: returns [] with a notice so the build still passes. Columns are detected
+    flexibly (schema may vary by release)."""
+    files = sorted(glob.glob(os.path.join(SRC,"alged*.csv")) + glob.glob(os.path.join(SRC,"localelections*.csv")))
+    if not files:
+        print("[leadership] NOTE: no ALGED file (alged*.csv) in sources/ - county exec/legislature/sheriff/"
+              "prosecutor pending; run models/leadership/fetch_alged.py in a network-capable env (OSF).")
+        return []
+    DOI="https://doi.org/10.17605/OSF.IO/MV5E6"
+    best={}  # key -> (year, votes, record-dict, winner-flag)
+    total=0
+    for fn in files:
+        try:
+            rows=list(csv.DictReader(open(fn, newline="", encoding="utf-8")))
+        except Exception as e:
+            print(f"[leadership] WARN bad ALGED csv {os.path.basename(fn)}: {e}"); continue
+        if not rows: continue
+        k=list(rows[0].keys())
+        c_off=_pick(k,"office"); c_yr=_pick(k,"year","cycle"); c_st=_pick(k,"state_po","state_abbr","state")
+        c_geo=_pick(k,"geo_name","jurisdiction","county","place","unit","city"); c_name=_pick(k,"candidate","cand_name","name")
+        c_party=_pick(k,"party_detailed","party_simplified","party"); c_win=_pick(k,"winner","won","elected","is_winner")
+        c_votes=_pick(k,"candidatevotes","votes_candidate","votes"); c_dist=_pick(k,"district","seat","office_seat")
+        if not (c_off and c_name and c_geo):
+            print(f"[leadership] WARN ALGED {os.path.basename(fn)}: missing office/name/geo columns; skipped"); continue
+        for r in rows:
+            off=(r.get(c_off) or "").strip().lower()
+            match=next((v for key,v in ALGED_OFFICES.items() if key in off), None)
+            if not match: continue
+            branch,title=match
+            name=(r.get(c_name) or "").strip()
+            if not name or name.lower() in ("scattering","write-in","write in","under votes","over votes","blank","total","others"): continue
+            geo=(r.get(c_geo) or "").strip(); st=(r.get(c_st) or "").strip() if c_st else ""
+            if not geo: continue
+            try: yr=int(float(r.get(c_yr) or 0))
+            except Exception: yr=0
+            try: votes=float(str(r.get(c_votes) or "0").replace(",","")) if c_votes else 0.0
+            except Exception: votes=0.0
+            win=str(r.get(c_win)).strip().lower() in ("1","true","t","yes","y","win","winner","elected") if c_win else None
+            dist=(r.get(c_dist) or "").strip() if c_dist else ""
+            key=(st.lower(), geo.lower(), title, dist.lower())
+            prev=best.get(key)
+            better = (prev is None or yr>prev[0] or (yr==prev[0] and ((win and not prev[3]) or votes>prev[1])))
+            if better:
+                best[key]=(yr, votes, {"name":name,"party":(r.get(c_party) or "").strip(),
+                            "geo":geo,"st":st,"branch":branch,"title":title,"dist":dist,"year":yr}, bool(win))
+            total+=1
+    recs=[]
+    for (stl,geol,title,distl),(yr,votes,d,win) in best.items():
+        if win is False and votes<=0:   # neither a winner flag nor any votes -> can't assert office-holding
+            continue
+        juris=(d["geo"] + (f", {d['st']}" if d["st"] else "")).strip()
+        role=title + (f", District {d['dist']}" if d["dist"] else "") + (f" ({juris})" if juris else "")
+        recs.append({
+            "id":"alged-"+slug(f"{d['st']}-{d['geo']}-{title}-{d['dist']}"),
+            "person":d["name"], "role":role, "jurisdiction":juris or d["geo"],
+            "branch":d["branch"], "level":"county", "status":"incumbent",
+            "party":d["party"],
+            "start":str(yr) if yr else "",
+            "as_of":str(yr) if yr else "from-dataset",
+            "note":(f"Winner of the {yr} election per ALGED (>50k-pop county universe). MODERATE confidence: "
+                    "treated as current incumbent but the dataset ends ~2021, so may be stale - verify against the "
+                    "county's official site. See research/leadership-county-sources.md."),
+            "source_url":DOI, "source_dataset":"alged",
+        })
+    print(f"[leadership] ALGED: {len(recs)} county officeholders (winners) from {total} candidate-rows across {len(files)} file(s)")
+    return recs
+
 def main():
-    recs = load_json_sources() + load_congress_csv() + load_fjc_judges() + load_openstates()
+    recs = load_json_sources() + load_congress_csv() + load_fjc_judges() + load_openstates() + load_alged()
     recs, warns = validate(recs)
     by_branch={}; by_level={}
     for r in recs:
