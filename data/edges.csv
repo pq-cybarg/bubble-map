@@ -522,7 +522,7 @@ FDIC,Cross_River_Bank,other,,documented,False,False,spec-cross-river-bank.json
 X_Money,Visa,other,,documented,False,False,spec-cross-river-bank.json
 X_Money,Cross_River_Bank,other,,weak,False,False,spec-cross-river-bank.json
 CoreWeave,Neocloud_Refinancing_Wall,other,,,False,False,spec-neocloud-refinancing-wall.json
-Oracle,Neocloud_Refinancing_Wall,other,,,False,False,spec-neocloud-refinancing-wall.json
+Oracle,Neocloud_Refinancing_Wall,other,,,False,False,"spec-neocloud-refinancing-wall.json,spec-oracle-ai-credit-lynchpin.json"
 Nebius,Neocloud_Refinancing_Wall,other,,,False,False,spec-neocloud-refinancing-wall.json
 Neocloud_Refinancing_Wall,SINK_bondmarket,other,,,False,False,spec-neocloud-refinancing-wall.json
 Neocloud_Refinancing_Wall,Fed_Funds_Rate,other,,,False,False,spec-neocloud-refinancing-wall.json
@@ -870,6 +870,15 @@ SB_1047,AI_Safety_Regulation,other,,,False,False,spec-ai-lab-chronology-ea-pathw
 AI_Safety_Regulation,Anthropic,other,,,False,False,spec-ai-lab-chronology-ea-pathways.json
 AI_Safety_Regulation,OpenAI,other,,,False,False,spec-ai-lab-chronology-ea-pathways.json
 DeepMind,AI_Safety_Regulation,other,,,False,False,spec-ai-lab-chronology-ea-pathways.json
+Credit_Rating_Agencies,Oracle,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+OpenAI,Oracle,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+NVIDIA,Oracle,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+xAI,Oracle,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+Meta,Oracle,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+Oracle,Stargate,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+Oracle,AI_Datacenters,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+Oracle,AI_Compute_Credit,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
+Oracle,Electricity_Ratepayers,other,,,False,False,spec-oracle-ai-credit-lynchpin.json
 Disney,OpenAI,ip_license,,announced-then-cancelled,False,False,fin-disney-openai-sora.json
 Disney_Studios_Coalition,Midjourney,ip_litigation,,active-lawsuit,False,False,fin-disney-openai-sora.json
 Disney,Google,ip_cease_desist,,demand,False,False,fin-disney-openai-sora.json
@@ -1125,6 +1134,10 @@ OpenAI,Stargate,other,,,False,False,fin-openai-conversion-governance.json
 SDNY,Tornado_Cash,regulatory_legal,,closed,False,False,spec-sdny-crypto-prosecution.json
 FinCEN,Samourai_Wallet,relationship,,closed,False,False,spec-sdny-crypto-prosecution.json
 Lazarus_Group,Tornado_Cash,other,,closed,False,False,spec-sdny-crypto-prosecution.json
+CoreWeave,AI_Compute_Credit,other,,,False,False,spec-coreweave-credit-stress-2026.json
+CoreWeave,Chip_Collateral_SPV,other,,,False,False,spec-coreweave-credit-stress-2026.json
+Core_Scientific,CoreWeave,other,,,False,False,spec-coreweave-credit-stress-2026.json
+Core_Scientific,AI_Datacenters,other,,,False,False,spec-coreweave-credit-stress-2026.json
 DOJ,Binance,other,,,False,False,spec-crypto-exit-scam-pattern.json
 DOJ,CZ,other,,,False,False,spec-crypto-exit-scam-pattern.json
 Ruja_Ignatova,OneCoin,other,,,False,False,spec-crypto-exit-scam-pattern.json

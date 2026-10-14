@@ -95,7 +95,13 @@ def main():
                 continue
             title, nodes, edges, base = b
             total_n += nodes; total_e += edges; total_blocks += 1
-            rows.append(f'<div class=card><span><a href="r-{esc(base)}.html"><b>{esc(title)}</b></a></span>'
+            # Only hyperlink when the detail page was actually generated (build_dashboard emits
+            # r-<base>.html only for blocks that have a .md companion). Otherwise render the title
+            # as plain text so the index never links to a 404.
+            has_page = os.path.exists(os.path.join(DOCS, f"r-{base}.html"))
+            label = (f'<a href="r-{esc(base)}.html"><b>{esc(title)}</b></a>' if has_page
+                     else f'<b>{esc(title)}</b> <span class=muted>(page pending)</span>')
+            rows.append(f'<div class=card><span>{label}</span>'
                         f'<span class=count>{nodes} nodes &middot; {edges} edges</span></div>')
         if rows:
             sections.append(f"<h2>{esc(gname)}</h2>" + "".join(rows))
