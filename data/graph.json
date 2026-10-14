@@ -5164,6 +5164,10 @@
       "sector": "state",
       "has_exogenous_revenue": false
     },
+    "Off_Balance_Sheet_Financing": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "Offshore_Finance": {
       "sector": "offshore",
       "has_exogenous_revenue": false
@@ -26251,6 +26255,71 @@
       "cancelable": false,
       "source_file": "spec-spyware-vendor-catalog.json",
       "note": "Anchors the COMMERCIAL-SURVEILLANCE branch of the lineage (privatized offensive capability sold to states) - distinct from state APTs, criminal ransomware, and hacktivism (fact of category)."
+    },
+    {
+      "from": "Off_Balance_Sheet_Financing",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-offbalancesheet-ai-financing.json",
+      "note": "OBS financing is the mechanism by which datacenter capex is built and operated without sitting as debt on the hyperscaler parent - operating leases, SPVs, and JVs. Moody's tallies ~$969B of total future lease commitments across Amazon/Meta/Alphabet/Microsoft/Oracle (~$662B uncommenced, ~1.13x combined adjusted debt) (fact of the tally; 'hidden leverage' read = labeled, the agencies')."
+    },
+    {
+      "from": "Off_Balance_Sheet_Financing",
+      "to": "Chip_Collateral_SPV",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-offbalancesheet-ai-financing.json",
+      "note": "The chip-collateralized SPV leaseback (Amazon ~$8B; Apollo/Blackstone AI-XPV platform; CoreWeave GPU-backed delayed-draw term loans) is the hardware-level version of the same OBS rolling (fact; cross-ref spec-chip-collateral-spv + spec-ai-compute-credit-risk)."
+    },
+    {
+      "from": "Off_Balance_Sheet_Financing",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-offbalancesheet-ai-financing.json",
+      "note": "The capital behind the OBS vehicles is largely insurance/annuity-funded private credit (Apollo/Athene, KKR/Global Atlantic, Blue Owl, PIMCO, Brookfield) - the BIS 'shadow borrowing' warning is about exactly this off-balance-sheet layer (fact of the funding sources; systemic-risk severity = the BIS's assessment)."
+    },
+    {
+      "from": "Oracle",
+      "to": "Off_Balance_Sheet_Financing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-offbalancesheet-ai-financing.json",
+      "note": "Oracle is the clearest named case: S&P added ~$260B of uncommenced lease commitments (FY2027-2029) + ~$13B unconditional purchase obligations to its adjusted debt in the Jul 2026 BBB- downgrade (fact; see spec-oracle-ai-credit-lynchpin)."
+    },
+    {
+      "from": "Meta",
+      "to": "Off_Balance_Sheet_Financing",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-offbalancesheet-ai-financing.json",
+      "note": "Meta's Hyperion (Louisiana) datacenter is financed through a ~$27-30B SPV (Blue Owl equity ~80% + PIMCO-led debt, via the Beignet investor vehicle), structured to stay largely off Meta's balance sheet (fact of the structure; see fin-meta-family, macro-cre-privatecredit)."
     },
     {
       "from": "Cliff_Asness",
@@ -51292,10 +51361,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2045,
-    "num_edges": 3316,
+    "num_nodes": 2046,
+    "num_edges": 3321,
     "num_financial_edges": 274,
-    "num_structural_edges": 3042,
+    "num_structural_edges": 3047,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51502,6 +51571,7 @@
       "Nuclear_SMR",
       "OCC",
       "OSAT",
+      "Off_Balance_Sheet_Financing",
       "Online_Speech_Regulation",
       "OpenAI",
       "Open_Standard",
@@ -51586,7 +51656,7 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 244,
+    "core_scc_all_edges_size": 245,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
@@ -51594,14 +51664,10 @@
     "elementary_cycles": [
       [
         "CoreWeave",
-        "SINK_lenders"
+        "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "Microsoft",
+        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -51609,12 +51675,16 @@
         "OpenAI"
       ],
       [
-        "NVIDIA",
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "NVIDIA",
@@ -51634,14 +51704,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -51652,8 +51716,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Lambda",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -60716,6 +60786,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Off_Balance_Sheet_Financing": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Offshore_Finance": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -66143,7 +66220,7 @@
       },
       {
         "node": "Meta",
-        "degree": 28,
+        "degree": 29,
         "neighbor_sectors": [
           "ai",
           "ai_data",
@@ -66164,7 +66241,35 @@
           "university"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 18,
+        "source_files": 19,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
+        "node": "AI_Datacenters",
+        "degree": 32,
+        "neighbor_sectors": [
+          "ai",
+          "capital",
+          "commodity",
+          "datacenter",
+          "financier",
+          "hyperscaler",
+          "logistics",
+          "macro",
+          "neocloud",
+          "other",
+          "political",
+          "private_credit",
+          "spv",
+          "state",
+          "tech"
+        ],
+        "n_neighbor_sectors": 15,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -66194,34 +66299,6 @@
         ],
         "n_neighbor_sectors": 16,
         "source_files": 19,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
-      },
-      {
-        "node": "AI_Datacenters",
-        "degree": 31,
-        "neighbor_sectors": [
-          "ai",
-          "capital",
-          "commodity",
-          "datacenter",
-          "financier",
-          "hyperscaler",
-          "logistics",
-          "macro",
-          "neocloud",
-          "other",
-          "political",
-          "private_credit",
-          "spv",
-          "state",
-          "tech"
-        ],
-        "n_neighbor_sectors": 15,
-        "source_files": 20,
         "layers": [
           "financial",
           "structural"
@@ -66406,7 +66483,7 @@
       },
       {
         "node": "Oracle",
-        "degree": 22,
+        "degree": 23,
         "neighbor_sectors": [
           "ai_infra",
           "ai_lab",
@@ -66423,7 +66500,7 @@
           "state"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 10,
+        "source_files": 11,
         "layers": [
           "financial",
           "structural"

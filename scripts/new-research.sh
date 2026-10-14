@@ -2,6 +2,7 @@
 # Re-review ALL prior findings after adding/editing any research/*.json (project standing rule).
 set -e; cd "$(dirname "$0")/.."
 python3 models/graph/build_graph.py >/dev/null
+python3 models/graph/core_robustness.py   # concrete-metric robustness certificate for the circular core (additive; report/CORE-ROBUSTNESS.md)
 python3 models/audit.py
 echo "----"
 python3 models/cross_review.py

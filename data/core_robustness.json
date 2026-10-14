@@ -1,0 +1,506 @@
+{
+ "note": "Additive concrete-metric re-evaluation of the circular-financing core. Does NOT replace the published headline SCC (12) / robust SCC (11) in data/graph.json analysis; it certifies/stresses it.",
+ "n_financial_edges": 274,
+ "filters": {
+  "all": [
+   "AMD",
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Crusoe",
+   "Lambda",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SINK_lenders",
+   "SpaceX"
+  ],
+  "exclude_cancelable": [
+   "AMD",
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Crusoe",
+   "Lambda",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SINK_lenders"
+  ],
+  "hard_status_only": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Crusoe",
+   "Lambda",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SINK_lenders"
+  ],
+  "declared_circular": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SpaceX"
+  ],
+  "sized_only": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Crusoe",
+   "Lambda",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "SINK_lenders"
+  ],
+  "amount>=1B": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "SINK_lenders"
+  ],
+  "amount>=5B": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "SINK_lenders"
+  ],
+  "amount>=10B": [
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI"
+  ]
+ },
+ "filter_core_sizes": {
+  "all": 12,
+  "exclude_cancelable": 11,
+  "hard_status_only": 10,
+  "declared_circular": 8,
+  "sized_only": 9,
+  "amount>=1B": 7,
+  "amount>=5B": 7,
+  "amount>=10B": 6
+ },
+ "per_node_robustness": {
+  "AMD": {
+   "score": 0.25,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable"
+   ],
+   "qualitative_score": 0.4,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Amazon": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Anthropic": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "CoreWeave": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Crusoe": {
+   "score": 0.5,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "sized_only"
+   ],
+   "qualitative_score": 0.8,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Lambda": {
+   "score": 0.5,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "sized_only"
+   ],
+   "qualitative_score": 0.8,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Microsoft": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "NVIDIA": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "OpenAI": {
+   "score": 1.0,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B",
+    "amount>=10B"
+   ],
+   "qualitative_score": 1.0,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "Oracle": {
+   "score": 0.5,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "declared_circular"
+   ],
+   "qualitative_score": 0.8,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "SINK_lenders": {
+   "score": 0.75,
+   "filters_in_core": [
+    "all",
+    "exclude_cancelable",
+    "hard_status_only",
+    "sized_only",
+    "amount>=1B",
+    "amount>=5B"
+   ],
+   "qualitative_score": 0.8,
+   "in_published_headline": true,
+   "in_published_robust": true
+  },
+  "SpaceX": {
+   "score": 0.25,
+   "filters_in_core": [
+    "all",
+    "declared_circular"
+   ],
+   "qualitative_score": 0.4,
+   "in_published_headline": true,
+   "in_published_robust": false
+  }
+ },
+ "certified_core": [
+  "Amazon",
+  "Anthropic",
+  "CoreWeave",
+  "Microsoft",
+  "NVIDIA",
+  "OpenAI"
+ ],
+ "certified_core_size": 6,
+ "qualitative_certified_core": [
+  "Amazon",
+  "Anthropic",
+  "CoreWeave",
+  "Microsoft",
+  "NVIDIA",
+  "OpenAI"
+ ],
+ "qualitative_certified_core_size": 6,
+ "plausible_core": [
+  "AMD",
+  "Amazon",
+  "Anthropic",
+  "CoreWeave",
+  "Crusoe",
+  "Lambda",
+  "Microsoft",
+  "NVIDIA",
+  "OpenAI",
+  "Oracle",
+  "SINK_lenders",
+  "SpaceX"
+ ],
+ "plausible_core_size": 12,
+ "published_headline": [
+  "AMD",
+  "Amazon",
+  "Anthropic",
+  "CoreWeave",
+  "Crusoe",
+  "Lambda",
+  "Microsoft",
+  "NVIDIA",
+  "OpenAI",
+  "Oracle",
+  "SINK_lenders",
+  "SpaceX"
+ ],
+ "published_robust": [
+  "AMD",
+  "Amazon",
+  "Anthropic",
+  "CoreWeave",
+  "Crusoe",
+  "Lambda",
+  "Microsoft",
+  "NVIDIA",
+  "OpenAI",
+  "Oracle",
+  "SINK_lenders"
+ ],
+ "dollar_weight_baseline_core": {
+  "headline_usd": 1141594000000,
+  "committed_usd": 996594000000,
+  "largest_counterparty_pair": [
+   [
+    "OpenAI",
+    "Oracle"
+   ],
+   300000000000.0
+  ],
+  "largest_pair_share_of_committed": 0.301,
+  "top_pairs": [
+   [
+    [
+     "OpenAI",
+     "Oracle"
+    ],
+    300000000000.0
+   ],
+   [
+    [
+     "OpenAI",
+     "Microsoft"
+    ],
+    291100000000.0
+   ],
+   [
+    [
+     "Microsoft",
+     "OpenAI"
+    ],
+    135000000000.0
+   ],
+   [
+    [
+     "Anthropic",
+     "Amazon"
+    ],
+    109500000000.0
+   ],
+   [
+    [
+     "NVIDIA",
+     "OpenAI"
+    ],
+    100000000000.0
+   ],
+   [
+    [
+     "Amazon",
+     "OpenAI"
+    ],
+    50000000000.0
+   ],
+   [
+    [
+     "Anthropic",
+     "SpaceX"
+    ],
+    45000000000.0
+   ],
+   [
+    [
+     "Amazon",
+     "Anthropic"
+    ],
+    25000000000.0
+   ]
+  ],
+  "per_node_circular_throughput": {
+   "AMD": {
+    "circular_in_usd": 0,
+    "circular_out_usd": 0,
+    "circular_throughput_usd": 0
+   },
+   "Amazon": {
+    "circular_in_usd": 109500000000,
+    "circular_out_usd": 75000000000,
+    "circular_throughput_usd": 184500000000
+   },
+   "Anthropic": {
+    "circular_in_usd": 35000000000,
+    "circular_out_usd": 154500000000,
+    "circular_throughput_usd": 189500000000
+   },
+   "CoreWeave": {
+    "circular_in_usd": 40860000000,
+    "circular_out_usd": 31309000000,
+    "circular_throughput_usd": 72169000000
+   },
+   "Crusoe": {
+    "circular_in_usd": 1400000000,
+    "circular_out_usd": 425000000,
+    "circular_throughput_usd": 1825000000
+   },
+   "Lambda": {
+    "circular_in_usd": 1500000000,
+    "circular_out_usd": 500000000,
+    "circular_throughput_usd": 2000000000
+   },
+   "Microsoft": {
+    "circular_in_usd": 291100000000,
+    "circular_out_usd": 135000000000,
+    "circular_throughput_usd": 426100000000
+   },
+   "NVIDIA": {
+    "circular_in_usd": 10309000000,
+    "circular_out_usd": 122860000000,
+    "circular_throughput_usd": 133169000000
+   },
+   "OpenAI": {
+    "circular_in_usd": 285000000000,
+    "circular_out_usd": 613500000000,
+    "circular_throughput_usd": 898500000000
+   },
+   "Oracle": {
+    "circular_in_usd": 300000000000,
+    "circular_out_usd": 0,
+    "circular_throughput_usd": 300000000000
+   },
+   "SINK_lenders": {
+    "circular_in_usd": 21925000000,
+    "circular_out_usd": 8500000000,
+    "circular_throughput_usd": 30425000000
+   },
+   "SpaceX": {
+    "circular_in_usd": 45000000000,
+    "circular_out_usd": 0,
+    "circular_throughput_usd": 45000000000
+   }
+  }
+ },
+ "off_balance_sheet": {
+  "n_obs_edges": 16,
+  "core_without_obs": [
+   "AMD",
+   "Amazon",
+   "Anthropic",
+   "CoreWeave",
+   "Crusoe",
+   "Lambda",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SINK_lenders",
+   "SpaceX"
+  ],
+  "core_with_obs": [
+   "AI_Datacenters",
+   "AMD",
+   "Amazon",
+   "Anthropic",
+   "Beignet_Investor",
+   "Chip_Collateral_SPV",
+   "CoreWeave",
+   "Crusoe",
+   "Hyperion",
+   "Lambda",
+   "Meta",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "SINK_lenders",
+   "SpaceX"
+  ],
+  "nodes_added_by_obs": [
+   "AI_Datacenters",
+   "Beignet_Investor",
+   "Chip_Collateral_SPV",
+   "Hyperion",
+   "Meta"
+  ],
+  "core_with_obs_intra_usd": 1915594000000
+ }
+}
