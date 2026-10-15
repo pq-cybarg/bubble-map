@@ -60,6 +60,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "AI_Bubble_Skeptic_Case": {
+      "sector": "capital",
+      "has_exogenous_revenue": false
+    },
     "AI_Compute_Credit": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -41492,6 +41496,97 @@
       "note": "CRE loans ~$2.3T on bank books; ~$30B maturing office loans underwater (IMF) - the commercial-real-estate leg of the credit-stress web (fact)."
     },
     {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "NVIDIA",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "Michael Burry / Scion disclosed put options on ~1M NVIDIA shares (~$187M notional) in the Q3-2025 13F; later detailed as $110-strike puts expiring 2027. Thesis: AI capex is a dot-com-fiber-style overbuild and hyperscalers understate depreciation by extending GPU useful life. FACT: the disclosed position + the stated thesis. CAVEAT (recorded): 13F put notional is not capital-at-risk; the position took immediate paper losses as NVIDIA kept rising; Burry's timing record is mixed. 'Validates' = a documented bearish bet/claim ABOUT the node, not an endorsement that it is correct."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "Palantir",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "Burry's largest disclosed bet: puts on ~5M Palantir shares (~$912M notional), later a dual-strike structure ($100 Dec 2026 + $50 Jun 2027) plus a direct short - a valuation-multiple critique on a stock up ~176% on the year. Same caveats (notional, paper losses, timing)."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "Oracle",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "validates",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "Burry added a short on Oracle (plus the SOXX semis ETF and QQQ) - consistent with the Oracle debt-funded-capex / RPO-concentration credit thread (cross-ref spec-oracle-ai-credit-lynchpin). FACT of the disclosed short; correctness not asserted."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "AI_Datacenters",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "Core skeptic argument on the asset side: depreciation/useful-life EXTENSION on 2-3yr-cycle compute artificially boosts earnings (Burry's 'fraud of the modern era' claim), and the MIT 'GenAI Divide' study found ~95% of enterprise GenAI pilots delivered zero measurable P&L impact. Maps onto the existing depreciation/duration-mismatch Z3 proof (fin-ai-depreciation-debttrap). FACT: the critique + the study; INTERPRETATION (labeled): that it proves a bubble."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "David Cahn (Sequoia) 'AI's $600B Question' is the most-cited capex-vs-revenue frame: the revenue needed to justify the buildout (NVIDIA run-rate x2 x2) has outrun actual AI revenue by an order of magnitude (~$800B+ implied annual gap by 2026). CAVEAT (recorded): Cahn explicitly framed this as a TIME-LAG, not a bubble, and stayed long-term bullish - the gap is a survival-of-the-gap question, not a verdict."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "CoreWeave",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "The neocloud pure-plays are the skeptics' sharpest target - CoreWeave's junk-level debt pricing and CDS default-odds are the market already pricing part of the bear case (cross-ref spec-coreweave-credit-stress-2026). FACT of the market signals; the doom-loop read is labeled."
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "AI_Compute_Credit",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-bubble-skeptics.json",
+      "note": "The skeptic case converges with the official-sector warnings (BIS 'shadow borrowing', IMF) and the circular-financing critics: capex funded by debt/insurance credit against a fast-depreciating, revenue-light asset. This is the bear framing of the same structure the robustness certificate and off-balance-sheet ledger measure (cross-ref core_robustness, spec-offbalancesheet-ai-financing). FACT of the convergence; severity = contested."
+    },
+    {
       "from": "Russia_state",
       "to": "US_political_system",
       "instrument": "other",
@@ -51464,10 +51559,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2049,
-    "num_edges": 3328,
+    "num_nodes": 2050,
+    "num_edges": 3335,
     "num_financial_edges": 276,
-    "num_structural_edges": 3052,
+    "num_structural_edges": 3059,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51766,22 +51861,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "Microsoft",
         "OpenAI"
       ],
@@ -51790,14 +51869,20 @@
         "SINK_lenders"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -51805,16 +51890,14 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "OpenAI",
-        "NVIDIA",
-        "Anthropic"
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Oracle"
       ],
       [
         "CoreWeave",
@@ -51829,9 +51912,14 @@
         "SINK_lenders"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -51839,6 +51927,13 @@
         "Amazon",
         "OpenAI",
         "CoreWeave",
+        "NVIDIA",
+        "Anthropic"
+      ],
+      [
+        "Amazon",
+        "OpenAI",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
@@ -51951,6 +52046,13 @@
         "in_robust_core": false
       },
       "AI_Benchmarks": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Bubble_Skeptic_Case": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -66281,7 +66383,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 60,
+        "degree": 61,
         "neighbor_sectors": [
           "ai",
           "ai_infra",
@@ -66304,7 +66406,7 @@
           "university"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 26,
+        "source_files": 27,
         "layers": [
           "financial",
           "structural"
@@ -66374,7 +66476,7 @@
       },
       {
         "node": "AI_Datacenters",
-        "degree": 32,
+        "degree": 33,
         "neighbor_sectors": [
           "ai",
           "capital",
@@ -66393,7 +66495,7 @@
           "tech"
         ],
         "n_neighbor_sectors": 15,
-        "source_files": 21,
+        "source_files": 22,
         "layers": [
           "financial",
           "structural"
@@ -66402,7 +66504,7 @@
       },
       {
         "node": "NVIDIA",
-        "degree": 39,
+        "degree": 40,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -66422,7 +66524,7 @@
           "university"
         ],
         "n_neighbor_sectors": 16,
-        "source_files": 19,
+        "source_files": 20,
         "layers": [
           "financial",
           "structural"
@@ -66607,7 +66709,7 @@
       },
       {
         "node": "Oracle",
-        "degree": 23,
+        "degree": 24,
         "neighbor_sectors": [
           "ai_infra",
           "ai_lab",
@@ -66624,7 +66726,7 @@
           "state"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 11,
+        "source_files": 12,
         "layers": [
           "financial",
           "structural"
@@ -66633,7 +66735,7 @@
       },
       {
         "node": "Palantir",
-        "degree": 30,
+        "degree": 31,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -66650,7 +66752,7 @@
           "university"
         ],
         "n_neighbor_sectors": 13,
-        "source_files": 9,
+        "source_files": 10,
         "layers": [
           "financial",
           "structural"

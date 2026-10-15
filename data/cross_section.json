@@ -3570,33 +3570,33 @@
     },
     {
      "date": "2026-10",
-     "mean": 3.555,
-     "std": 0.667,
-     "min": 3.074,
-     "max": 4.542,
+     "mean": 3.557,
+     "std": 0.668,
+     "min": 3.077,
+     "max": 4.545,
      "range": 1.468
     }
    ],
    "dispersion_now": {
-    "std": 0.667,
+    "std": 0.668,
     "z_vs_history": -0.6,
     "pct_of_history": 6.0,
     "reading": "compressed"
    },
    "relative_value": {
     "CA (CMF)": {
-     "latest": 3.074,
-     "mean": 3.009,
+     "latest": 3.077,
+     "mean": 3.01,
      "std": 0.059,
-     "z": 1.1,
+     "z": 1.15,
      "pct": 97.0,
      "window": 24
     },
     "NY (NYF)": {
-     "latest": 3.273,
-     "mean": 3.054,
+     "latest": 3.275,
+     "mean": 3.055,
      "std": 0.111,
-     "z": 1.97,
+     "z": 1.98,
      "pct": 99.0,
      "window": 24
     },
@@ -3609,10 +3609,10 @@
      "window": 24
     },
     "HY muni (HYD)": {
-     "latest": 4.542,
+     "latest": 4.545,
      "mean": 4.543,
      "std": 0.127,
-     "z": -0.01,
+     "z": 0.02,
      "pct": 21.0,
      "window": 24
     }
@@ -3620,8 +3620,8 @@
    "ranking": [
     {
      "segment": "HY muni (HYD)",
-     "latest": 4.542,
-     "z": -0.01,
+     "latest": 4.545,
+     "z": 0.02,
      "pct": 21.0
     },
     {
@@ -3632,14 +3632,14 @@
     },
     {
      "segment": "NY (NYF)",
-     "latest": 3.273,
-     "z": 1.97,
+     "latest": 3.275,
+     "z": 1.98,
      "pct": 99.0
     },
     {
      "segment": "CA (CMF)",
-     "latest": 3.074,
-     "z": 1.1,
+     "latest": 3.077,
+     "z": 1.15,
      "pct": 97.0
     }
    ],
@@ -4235,126 +4235,126 @@
      "degree": 81,
      "n_neighbor_sectors": 26,
      "both_layers": true,
-     "bridge_score": 5.51
+     "bridge_score": 5.5
     },
     {
      "node": "China",
      "degree": 73,
      "n_neighbor_sectors": 23,
      "both_layers": true,
-     "bridge_score": 4.37
+     "bridge_score": 4.36
     },
     {
      "node": "OpenAI",
-     "degree": 60,
+     "degree": 61,
      "n_neighbor_sectors": 19,
      "both_layers": true,
-     "bridge_score": 2.72
+     "bridge_score": 2.76
+    },
+    {
+     "node": "NVIDIA",
+     "degree": 40,
+     "n_neighbor_sectors": 16,
+     "both_layers": true,
+     "bridge_score": 0.89
     },
     {
      "node": "Google",
      "degree": 31,
      "n_neighbor_sectors": 18,
      "both_layers": true,
-     "bridge_score": 0.87
-    },
-    {
-     "node": "NVIDIA",
-     "degree": 39,
-     "n_neighbor_sectors": 16,
-     "both_layers": true,
-     "bridge_score": 0.85
+     "bridge_score": 0.86
     },
     {
      "node": "Meta",
      "degree": 29,
      "n_neighbor_sectors": 17,
      "both_layers": true,
-     "bridge_score": 0.53
+     "bridge_score": 0.51
     },
     {
      "node": "Anthropic",
      "degree": 32,
      "n_neighbor_sectors": 16,
      "both_layers": true,
-     "bridge_score": 0.46
+     "bridge_score": 0.45
     },
     {
      "node": "AI_Datacenters",
-     "degree": 32,
+     "degree": 33,
      "n_neighbor_sectors": 15,
      "both_layers": true,
-     "bridge_score": 0.23
+     "bridge_score": 0.27
     },
     {
      "node": "US_Banks",
      "degree": 32,
      "n_neighbor_sectors": 13,
      "both_layers": true,
-     "bridge_score": -0.23
+     "bridge_score": -0.25
     },
     {
      "node": "Microsoft",
      "degree": 31,
      "n_neighbor_sectors": 13,
      "both_layers": true,
-     "bridge_score": -0.29
+     "bridge_score": -0.3
     },
     {
      "node": "Palantir",
-     "degree": 30,
+     "degree": 31,
      "n_neighbor_sectors": 13,
      "both_layers": true,
-     "bridge_score": -0.34
+     "bridge_score": -0.3
     },
     {
      "node": "Russia",
      "degree": 47,
      "n_neighbor_sectors": 10,
      "both_layers": false,
-     "bridge_score": -0.59
+     "bridge_score": -0.61
     },
     {
      "node": "Oracle",
-     "degree": 23,
+     "degree": 24,
      "n_neighbor_sectors": 13,
      "both_layers": true,
-     "bridge_score": -0.74
+     "bridge_score": -0.69
     },
     {
      "node": "Stablecoins",
      "degree": 35,
      "n_neighbor_sectors": 12,
      "both_layers": false,
-     "bridge_score": -0.8
+     "bridge_score": -0.81
     },
     {
      "node": "Digital_ID",
      "degree": 34,
      "n_neighbor_sectors": 12,
      "both_layers": false,
-     "bridge_score": -0.85
+     "bridge_score": -0.87
     },
     {
      "node": "PrivateCredit_Funds",
      "degree": 24,
      "n_neighbor_sectors": 12,
      "both_layers": true,
-     "bridge_score": -0.91
+     "bridge_score": -0.93
     },
     {
      "node": "Andreessen_Horowitz",
      "degree": 15,
      "n_neighbor_sectors": 11,
      "both_layers": true,
-     "bridge_score": -1.64
+     "bridge_score": -1.66
     },
     {
      "node": "xAI",
      "degree": 15,
      "n_neighbor_sectors": 11,
      "both_layers": true,
-     "bridge_score": -1.64
+     "bridge_score": -1.66
     }
    ]
   },
@@ -4397,9 +4397,9 @@
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "NY (NYF)",
-     "latest": 3.273,
+     "latest": 3.275,
      "units": "% dist. yield",
-     "rv_z": 1.97,
+     "rv_z": 1.98,
      "pct": 99.0
     },
     {
@@ -4531,20 +4531,20 @@
      "pct": 97.0
     },
     {
+     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
+     "segment": "CA (CMF)",
+     "latest": 3.077,
+     "units": "% dist. yield",
+     "rv_z": 1.15,
+     "pct": 97.0
+    },
+    {
      "cross_section": "Sovereign 10Y yield (global cross-section)",
      "segment": "Greece",
      "latest": 3.79,
      "units": "% yield",
      "rv_z": 1.12,
      "pct": 54.0
-    },
-    {
-     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-     "segment": "CA (CMF)",
-     "latest": 3.074,
-     "units": "% dist. yield",
-     "rv_z": 1.1,
-     "pct": 97.0
     },
     {
      "cross_section": "US corporate credit",
@@ -4597,9 +4597,9 @@
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "HY muni (HYD)",
-     "latest": 4.542,
+     "latest": 4.545,
      "units": "% dist. yield",
-     "rv_z": -0.01,
+     "rv_z": 0.02,
      "pct": 21.0
     },
     {

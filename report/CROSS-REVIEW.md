@@ -18,11 +18,11 @@
 - **Meta** — 122 files
 - **Google** — 74 files
 - **Chainlink** — 67 files
-- **OpenAI** — 61 files
+- **OpenAI** — 62 files
 - **Microsoft** — 50 files
+- **Oracle** — 42 files
 - **Amazon** — 42 files
-- **Oracle** — 41 files
-- **NVIDIA** — 40 files
+- **NVIDIA** — 41 files
 - **FDIC** — 38 files
 - **Anthropic** — 38 files
 - **Circle** — 29 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-regional-bank-ndfi-fraud.json` — related files by shared entities (verify cross-refs exist)
-- spec-auto-credit-unwind.json: 2 shared entities
-- macro-private-credit-bdc-stress.json: 2 shared entities
-- macro-consumer-abs-subprime.json: 2 shared entities
-- macro-oil-backwardation.json: 2 shared entities
-- macro-history-dereg-manipulation.json: 2 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- macro-private-credit-marks.json: 1 shared entities
-- macro-uncovered-risk-pools.json: 1 shared entities
+## Newest file `spec-ai-bubble-skeptics.json` — related files by shared entities (verify cross-refs exist)
+- fin-gulf-sovereign-ai-capital.json: 5 shared entities
+- macro-cre-privatecredit.json: 5 shared entities
+- fin-ai-depreciation-debttrap.json: 5 shared entities
+- spec-offbalancesheet-ai-financing.json: 5 shared entities
+- sec-filings.json: 4 shared entities
+- spec-sec-filings-primary.json: 4 shared entities
+- spec-cross-system-contagion.json: 4 shared entities
+- fin-coreweave-oracle.json: 4 shared entities
