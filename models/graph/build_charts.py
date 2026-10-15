@@ -792,6 +792,28 @@ body.append(hbar_labeled("Data-center ABS: the S&P rating cap (of ~70 rated tran
      ("Above A (AA / AAA)", 0, "0 at S&P")],
     note="S&P caps data-center ABS at single-A; Moody's + Fitch have rated comparable deals to AAA. Source: S&P dashboard 2020-25 (via GlobalCapital).", hi=44))
 body.append('<p class=cap>Agencies also rate to the <b>30–35yr legal maturity</b>, not the <b>5–7yr</b> expected-repayment date — and the newest GPU-collateral deals (e.g. CoreWeave\'s $8.5B SPV, A3/Moody\'s) carry the residual-value downgrade→forced-seller risk. S&P\'s single-A ceiling is the honest outlier.</p>')
+try:
+    _cr=json.load(open(os.path.join(ROOT,"data","core_robustness.json")))
+except Exception:
+    _cr=None
+if _cr:
+    body.append('<h2 id="corerobust">The circular core, stress-tested &amp; off-balance-sheet</h2>')
+    body.append(f'<p class=cap>A concrete-metric re-evaluation of the circular-financing core (the published SCC is 12 firms, 11 robust). Full certificate: <a href="core-robustness.html">core-robustness.html</a>; companions <a href="{GH}spec-offbalancesheet-ai-financing.md">off-balance-sheet financing</a>, <a href="{GH}spec-oracle-ai-credit-lynchpin.md">Oracle</a>, <a href="{GH}spec-coreweave-credit-stress-2026.md">CoreWeave</a>.</p>')
+    _sc=_cr.get("off_balance_sheet",{}).get("scenarios",[])
+    if _sc:
+        _lab={0:"On-balance-sheet (published)",1:"+ off-balance-sheet leaseback",2:"+ financier/insurer return-legs"}
+        _lad=[(_lab.get(i,s["label"][:26]), round(s["intra_usd"]/1e12,2), f"${s['intra_usd']/1e12:.2f}T · {s['core_size']} nodes") for i,s in enumerate(_sc)]
+        body.append(hbar_labeled("Circular-core value as off-balance-sheet layers are added ($ trillions)", _lad,
+            note="Each off-balance-sheet layer is a separate, measurable model added cumulatively; the published graph is unchanged. Closing the financier/insurer return-legs pulls Apollo/Athene/Blackstone/Blue Owl/PIMCO into the core.", hi=max(v for _,v,_ in _lad)))
+        body.append('<p class=cap>The on-balance-sheet view (<b>12 nodes, ~$1.1T</b> of intra-core committed capital) <b>understates</b> the loop. Adding operating-lease / SPV rolling lifts it to <b>17 nodes, ~$1.9T</b>; adding the private-credit and annuity-insurer return legs closes the loop at <b>22 nodes, ~$2.2T</b>. Operating-lease and SPV accounting is permitted under GAAP; these are the economic exposures the rating agencies and the BIS add back, not a finding of concealment.</p>')
+    _rob=_cr.get("per_node_robustness",{})
+    if _rob:
+        _rows=sorted(_rob.items(), key=lambda kv:(-kv[1]["score"], kv[0]))
+        _rd=[(n+(" [cert]" if d["score"]==1.0 else ""), round(d["score"],3), f"{d['score']:.2f}") for n,d in _rows]
+        body.append(hbar_labeled("Per-node robustness: share of 8 objective filters keeping each core node in the SCC", _rd,
+            note="Filters use only recorded fields (dollar thresholds, hard-status-only, declared-circular-only, exclude-cancelable). Score 1.0 [cert] = certified under every lens.", hi=1.0))
+        _cert=_cr.get("certified_core",[])
+        body.append(f'<p class=cap>Six nodes are <b>certified</b> (circular under every objective filter): {esc(", ".join(_cert))}. The remaining headline members are real but rest on progressively softer edges — AMD and SpaceX are the weakest-attached (AMD on the warrant LOI, SpaceX on a cancelable edge), which is <b>why</b> the robust count is 11, measured rather than asserted.</p>')
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')
