@@ -23,7 +23,6 @@ Canonical numbers (from data/*.json — the source of truth):
 
 ## Cross-document consistency flags
 - ⚠ stale source count '282' in report/UNMASKING.md (actual 285)
-- ⚠ stale model count '56' in report/EXECUTIVE-SUMMARY.md (actual ~59)
 
 ## Leg coverage (research present?)
 - AI core: ✓

@@ -33,10 +33,10 @@
 
 ## Newest file `spec-offbalancesheet-ai-financing.json` — related files by shared entities (verify cross-refs exist)
 - fin-google-amazon-anthropic-meta.json: 13 shared entities
-- macro-cre-privatecredit.json: 12 shared entities
 - spec-cross-system-contagion.json: 12 shared entities
-- fin-coreweave-oracle.json: 11 shared entities
+- macro-cre-privatecredit.json: 12 shared entities
 - spec-ai-datacenter-debt-spv.json: 11 shared entities
+- fin-coreweave-oracle.json: 11 shared entities
 - spec-sec-filings-primary.json: 10 shared entities
 - macro-ai-power-grid-bottleneck.json: 10 shared entities
-- sec-filings.json: 9 shared entities
+- fin-ai-depreciation-debttrap.json: 9 shared entities

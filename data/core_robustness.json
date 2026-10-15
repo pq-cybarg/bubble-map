@@ -461,6 +461,81 @@
  },
  "off_balance_sheet": {
   "n_obs_edges": 16,
+  "n_financier_return_edges": 5,
+  "scenarios": [
+   {
+    "label": "base (on-balance-sheet; = published headline)",
+    "core": [
+     "AMD",
+     "Amazon",
+     "Anthropic",
+     "CoreWeave",
+     "Crusoe",
+     "Lambda",
+     "Microsoft",
+     "NVIDIA",
+     "OpenAI",
+     "Oracle",
+     "SINK_lenders",
+     "SpaceX"
+    ],
+    "core_size": 12,
+    "intra_usd": 1141594000000
+   },
+   {
+    "label": "+ off-balance-sheet leaseback rolling",
+    "core": [
+     "AI_Datacenters",
+     "AMD",
+     "Amazon",
+     "Anthropic",
+     "Beignet_Investor",
+     "Chip_Collateral_SPV",
+     "CoreWeave",
+     "Crusoe",
+     "Hyperion",
+     "Lambda",
+     "Meta",
+     "Microsoft",
+     "NVIDIA",
+     "OpenAI",
+     "Oracle",
+     "SINK_lenders",
+     "SpaceX"
+    ],
+    "core_size": 17,
+    "intra_usd": 1915594000000
+   },
+   {
+    "label": "+ financier return-legs (PE/insurance loop closed)",
+    "core": [
+     "AI_Datacenters",
+     "AMD",
+     "Amazon",
+     "Anthropic",
+     "Apollo",
+     "Athene",
+     "Beignet_Investor",
+     "Blackstone",
+     "Blue_Owl",
+     "Chip_Collateral_SPV",
+     "CoreWeave",
+     "Crusoe",
+     "Hyperion",
+     "Lambda",
+     "Meta",
+     "Microsoft",
+     "NVIDIA",
+     "OpenAI",
+     "Oracle",
+     "Pimco",
+     "SINK_lenders",
+     "SpaceX"
+    ],
+    "core_size": 22,
+    "intra_usd": 2174094000000
+   }
+  ],
   "core_without_obs": [
    "AMD",
    "Amazon",
@@ -494,6 +569,30 @@
    "SINK_lenders",
    "SpaceX"
   ],
+  "core_with_obs_and_financier": [
+   "AI_Datacenters",
+   "AMD",
+   "Amazon",
+   "Anthropic",
+   "Apollo",
+   "Athene",
+   "Beignet_Investor",
+   "Blackstone",
+   "Blue_Owl",
+   "Chip_Collateral_SPV",
+   "CoreWeave",
+   "Crusoe",
+   "Hyperion",
+   "Lambda",
+   "Meta",
+   "Microsoft",
+   "NVIDIA",
+   "OpenAI",
+   "Oracle",
+   "Pimco",
+   "SINK_lenders",
+   "SpaceX"
+  ],
   "nodes_added_by_obs": [
    "AI_Datacenters",
    "Beignet_Investor",
@@ -501,6 +600,14 @@
    "Hyperion",
    "Meta"
   ],
-  "core_with_obs_intra_usd": 1915594000000
+  "nodes_added_by_financier_returns": [
+   "Apollo",
+   "Athene",
+   "Blackstone",
+   "Blue_Owl",
+   "Pimco"
+  ],
+  "core_with_obs_intra_usd": 1915594000000,
+  "core_with_obs_financier_intra_usd": 2174094000000
  }
 }

@@ -125,15 +125,28 @@ def main():
         cout = sum(amt(e) for e in intra if e["from"] == n)
         node_circ[n] = {"circular_in_usd": cin, "circular_out_usd": cout, "circular_throughput_usd": cin + cout}
 
-    # WITH vs WITHOUT off-balance-sheet rolling
-    obs_edges = []
+    # Scenario ladder: each off-balance-sheet layer is a SEPARATE model, added cumulatively, so the
+    # marginal effect of (a) the leaseback rolling and (b) the financier return-legs is measured on its own.
+    obs_edges, fin_return_edges = [], []
     if os.path.exists(OBS):
-        obs_edges = json.load(open(OBS)).get("obs_edges", [])
-    core_without_obs = base_core                      # == published headline set
-    core_with_obs, _ = scc_core(fin + obs_edges)
-    obs_added = sorted(core_with_obs - core_without_obs)
-    obs_intra = [e for e in (fin + obs_edges) if e["from"] in core_with_obs and e["to"] in core_with_obs]
-    obs_headline_usd = sum(amt(e) for e in obs_intra)
+        obsj = json.load(open(OBS))
+        obs_edges = obsj.get("obs_edges", [])
+        fin_return_edges = obsj.get("financier_return_edges", [])
+    def scenario(label, extra):
+        eset = fin + extra
+        core, _ = scc_core(eset)
+        intra = [e for e in eset if e["from"] in core and e["to"] in core]
+        return {"label": label, "core": sorted(core), "core_size": len(core),
+                "intra_usd": sum(amt(e) for e in intra), "edges": eset}
+    s0 = scenario("base (on-balance-sheet; = published headline)", [])
+    s1 = scenario("+ off-balance-sheet leaseback rolling", obs_edges)
+    s2 = scenario("+ financier return-legs (PE/insurance loop closed)", obs_edges + fin_return_edges)
+    core_without_obs = base_core                       # == published headline set
+    core_with_obs = set(s1["core"])
+    core_with_obs_financier = set(s2["core"])
+    obs_added = sorted(core_with_obs - set(s0["core"]))
+    financier_added = sorted(core_with_obs_financier - core_with_obs)
+    obs_headline_usd = s1["intra_usd"]
 
     result = {
         "note": "Additive concrete-metric re-evaluation of the circular-financing core. Does NOT replace the "
@@ -159,17 +172,26 @@ def main():
         },
         "off_balance_sheet": {
             "n_obs_edges": len(obs_edges),
+            "n_financier_return_edges": len(fin_return_edges),
+            "scenarios": [
+                {k: v for k, v in s.items() if k != "edges"} for s in (s0, s1, s2)
+            ],
             "core_without_obs": sorted(core_without_obs),
             "core_with_obs": sorted(core_with_obs),
+            "core_with_obs_and_financier": sorted(core_with_obs_financier),
             "nodes_added_by_obs": obs_added,
+            "nodes_added_by_financier_returns": financier_added,
             "core_with_obs_intra_usd": obs_headline_usd,
+            "core_with_obs_financier_intra_usd": s2["intra_usd"],
         },
     }
     json.dump(result, open(OUT_JSON, "w"), indent=1)
     write_md(result)
+    write_html(result)
     print(f"[core_robustness] headline={len(cores['all'])} robust={len(cores['exclude_cancelable'])} "
           f"certified={len(certified)} qual_certified={len(qualitative_certified)} "
-          f"plausible={len(plausible)} | +obs adds {len(obs_added)}: {obs_added}")
+          f"plausible={len(plausible)} | +obs adds {len(obs_added)}:{obs_added} "
+          f"| +financier adds {len(financier_added)}:{financier_added}")
 
 def write_md(r):
     L = []
@@ -234,24 +256,95 @@ def write_md(r):
         L.append(f"- {k[0]} -> {k[1]}: {fmt_usd(v)}")
     L.append("")
     obs = r["off_balance_sheet"]
-    L.append("## With vs without off-balance-sheet rolling")
+    L.append("## Scenario ladder: on-balance-sheet -> off-balance-sheet -> financier loop")
     L.append("")
-    L.append(f"The off-balance-sheet ledger (`spec-offbalancesheet-ai-financing.json`, {obs['n_obs_edges']} "
-             f"`obs_edges`, not ingested into the published graph) is added to the financial edge set and the core "
-             f"recomputed.")
+    L.append(f"Two separate off-balance-sheet models (`spec-offbalancesheet-ai-financing.json` - {obs['n_obs_edges']} "
+             f"`obs_edges` + {obs['n_financier_return_edges']} `financier_return_edges`, neither ingested into the "
+             f"published graph) are added to the financial edge set **cumulatively**, so each layer's marginal effect "
+             f"is isolated.")
     L.append("")
-    L.append(f"- Core WITHOUT off-balance-sheet (= published headline): **{len(obs['core_without_obs'])}** - "
-             f"{', '.join(obs['core_without_obs'])}")
-    L.append(f"- Core WITH off-balance-sheet: **{len(obs['core_with_obs'])}** - {', '.join(obs['core_with_obs'])}")
-    L.append(f"- Nodes pulled into the core BY off-balance-sheet rolling: "
+    L.append("| scenario | core size | intra-core value |")
+    L.append("|---|---|---|")
+    for s in obs["scenarios"]:
+        L.append(f"| {s['label']} | {s['core_size']} | {fmt_usd(s['intra_usd'])} |")
+    L.append("")
+    L.append(f"- Nodes pulled in by the **leaseback rolling**: "
              f"**{', '.join(obs['nodes_added_by_obs']) if obs['nodes_added_by_obs'] else '(none)'}**")
-    L.append(f"- Intra-core value with off-balance-sheet included: **{fmt_usd(obs['core_with_obs_intra_usd'])}**")
+    L.append(f"- Nodes pulled in by the **financier return-legs** (PE/insurance loop closed): "
+             f"**{', '.join(obs['nodes_added_by_financier_returns']) if obs['nodes_added_by_financier_returns'] else '(none)'}**")
+    L.append(f"- Full core with both layers ({len(obs['core_with_obs_and_financier'])}): "
+             f"{', '.join(obs['core_with_obs_and_financier'])}")
     L.append("")
-    L.append("*Interpretation of the with/without delta is labeled: operating-lease and SPV accounting is "
-             "permitted under GAAP; the added nodes/edges represent economic exposure the rating agencies and the "
-             "BIS add back, not a legal finding of concealment.*")
+    L.append("*Interpretation of the deltas is labeled: operating-lease and SPV accounting is permitted under GAAP; "
+             "the added nodes/edges represent economic exposure the rating agencies and the BIS add back, not a legal "
+             "finding of concealment. The return-legs carry null dollar amounts (they close the loop topologically "
+             "without double-counting the same capital as both funding and repayment).*")
     L.append("")
     open(OUT_MD, "w").write("\n".join(L) + "\n")
+
+def write_html(r):
+    """Emit a fresh on-site docs/core-robustness.html from the same data (linked from methodology)."""
+    import html as _h
+    OUT_HTML = os.path.join(ROOT, "docs", "core-robustness.html")
+    obs = r["off_balance_sheet"]; dw = r["dollar_weight_baseline_core"]
+    css = ("body{background:#faf8f2;color:#1c1b19;font:17px/1.7 Georgia,'Times New Roman',serif;margin:0;padding:0 0 60px}"
+           "main{max-width:860px;margin:0 auto;padding:0 22px}h1{font-weight:600;font-size:32px;margin:24px 0 4px}"
+           "h2{color:#7b2d26;border-bottom:1px solid #e4ddcc;padding-bottom:7px;margin-top:32px;font-size:22px}"
+           "a{color:#1f4e79}code{background:#f2ede0;padding:1px 5px;border-radius:3px;color:#6b3b16;font-size:14px}"
+           ".muted{color:#6b665d;font-size:14px}table{border-collapse:separate;border-spacing:0;width:100%;margin:16px 0;"
+           "font-size:14.5px;font-family:-apple-system,Segoe UI,Roboto,sans-serif;border:1px solid #e4ddcc;border-radius:8px;overflow:hidden}"
+           "th,td{border-bottom:1px solid #e4ddcc;padding:9px 13px;text-align:left}td+td,th+th{border-left:1px solid #e4ddcc}"
+           "tr:last-child td{border-bottom:none}thead th{background:#f3eedf}tbody tr:nth-child(even){background:#fbf9f3}"
+           "b.hi{color:#7b2d26}")
+    nav = ('<div style="background:#fffdf8;border-bottom:1px solid #e4ddcc;padding:10px 16px;text-align:center;'
+           'font:13.5px/1.6 -apple-system,Segoe UI,Roboto,sans-serif">'
+           '<a href="index.html" style="margin:0 9px">Home</a>'
+           '<a href="methodology.html" style="margin:0 9px">Methodology</a>'
+           '<a href="bubblemap.html" style="margin:0 9px">Bubble Map</a>'
+           '<a href="https://github.com/pq-cybarg/bubble-map/blob/main/report/CORE-ROBUSTNESS.md" style="margin:0 9px">Full report (source)</a></div>')
+    P = ['<!doctype html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">',
+         f'<title>Circular-core robustness</title><style>{css}</style></head><body>', nav, '<main>',
+         '<h1>Circular-financing core - robustness certificate</h1>',
+         '<p class=muted>A concrete-metric re-evaluation of the circular core. It does NOT replace the published '
+         'headline SCC (12 firms, 11 robust) - it stress-tests it against a family of objective, field-based filters '
+         f'so membership is justified by measurement. Generated from <code>data/core_robustness.json</code>.</p>',
+         '<h2>Core under each objective filter</h2>',
+         '<table><thead><tr><th>filter</th><th>size</th><th>nodes</th></tr></thead><tbody>']
+    for name in FILTERS:
+        nodes = sorted(r["filters"][name])
+        P.append(f'<tr><td><code>{name}</code></td><td>{len(nodes)}</td><td>{_h.escape(", ".join(nodes))}</td></tr>')
+    P.append('</tbody></table>')
+    P.append('<h2>Per-node robustness</h2><p class=muted>Score = fraction of all 8 filters keeping the node in the core.</p>')
+    P.append('<table><thead><tr><th>node</th><th>score</th><th>in headline (12)</th><th>in robust (11)</th></tr></thead><tbody>')
+    for n in sorted(r["per_node_robustness"], key=lambda x: (-r["per_node_robustness"][x]["score"], x)):
+        d = r["per_node_robustness"][n]
+        P.append(f'<tr><td>{_h.escape(n)}</td><td>{d["score"]:.2f}</td>'
+                 f'<td>{"yes" if d["in_published_headline"] else "-"}</td>'
+                 f'<td>{"yes" if d["in_published_robust"] else "-"}</td></tr>')
+    P.append('</tbody></table>')
+    P.append(f'<p><b class=hi>Certified core</b> (score 1.0 across every filter, {r["certified_core_size"]}): '
+             f'{_h.escape(", ".join(r["certified_core"]))}.<br>'
+             f'<b>Plausible core</b> (union, {r["plausible_core_size"]}): {_h.escape(", ".join(r["plausible_core"]))}.</p>')
+    P.append('<h2>Dollar weight of the baseline core</h2><ul>')
+    P.append(f'<li>Committed (hard-status) intra-core value: <b>{fmt_usd(dw["committed_usd"])}</b></li>')
+    if dw["largest_counterparty_pair"]:
+        p = dw["largest_counterparty_pair"]
+        P.append(f'<li>Largest single edge: <b>{_h.escape(p[0][0])} &rarr; {_h.escape(p[0][1])}</b> at {fmt_usd(p[1])} '
+                 f'(<b>{dw["largest_pair_share_of_committed"]*100:.0f}%</b> of committed intra-core value)</li>')
+    P.append('</ul>')
+    P.append('<h2>Scenario ladder: off-balance-sheet rolling + financier loop</h2>')
+    P.append('<table><thead><tr><th>scenario</th><th>core size</th><th>intra-core value</th></tr></thead><tbody>')
+    for s in obs["scenarios"]:
+        P.append(f'<tr><td>{_h.escape(s["label"])}</td><td>{s["core_size"]}</td><td>{fmt_usd(s["intra_usd"])}</td></tr>')
+    P.append('</tbody></table>')
+    P.append(f'<p>Pulled in by the leaseback rolling: <b>{_h.escape(", ".join(obs["nodes_added_by_obs"]) or "(none)")}</b>. '
+             f'Pulled in by the financier return-legs: <b>{_h.escape(", ".join(obs["nodes_added_by_financier_returns"]) or "(none)")}</b>.</p>')
+    P.append('<p class=muted>Operating-lease and SPV accounting is permitted under GAAP; the added nodes represent '
+             'economic exposure the rating agencies and the BIS add back, not a legal finding of concealment. '
+             'Return-legs carry null dollar amounts - they close the loop topologically without double-counting '
+             'capital as both funding and repayment.</p>')
+    P.append('</main></body></html>')
+    open(OUT_HTML, "w").write("".join(P))
 
 if __name__ == "__main__":
     main()

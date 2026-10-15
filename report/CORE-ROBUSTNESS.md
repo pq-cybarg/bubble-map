@@ -61,14 +61,19 @@ Top intra-core edges by disclosed value:
 - Anthropic -> SpaceX: $45.0B
 - Amazon -> Anthropic: $25.0B
 
-## With vs without off-balance-sheet rolling
+## Scenario ladder: on-balance-sheet -> off-balance-sheet -> financier loop
 
-The off-balance-sheet ledger (`spec-offbalancesheet-ai-financing.json`, 16 `obs_edges`, not ingested into the published graph) is added to the financial edge set and the core recomputed.
+Two separate off-balance-sheet models (`spec-offbalancesheet-ai-financing.json` - 16 `obs_edges` + 5 `financier_return_edges`, neither ingested into the published graph) are added to the financial edge set **cumulatively**, so each layer's marginal effect is isolated.
 
-- Core WITHOUT off-balance-sheet (= published headline): **12** - AMD, Amazon, Anthropic, CoreWeave, Crusoe, Lambda, Microsoft, NVIDIA, OpenAI, Oracle, SINK_lenders, SpaceX
-- Core WITH off-balance-sheet: **17** - AI_Datacenters, AMD, Amazon, Anthropic, Beignet_Investor, Chip_Collateral_SPV, CoreWeave, Crusoe, Hyperion, Lambda, Meta, Microsoft, NVIDIA, OpenAI, Oracle, SINK_lenders, SpaceX
-- Nodes pulled into the core BY off-balance-sheet rolling: **AI_Datacenters, Beignet_Investor, Chip_Collateral_SPV, Hyperion, Meta**
-- Intra-core value with off-balance-sheet included: **$1.9T**
+| scenario | core size | intra-core value |
+|---|---|---|
+| base (on-balance-sheet; = published headline) | 12 | $1.1T |
+| + off-balance-sheet leaseback rolling | 17 | $1.9T |
+| + financier return-legs (PE/insurance loop closed) | 22 | $2.2T |
 
-*Interpretation of the with/without delta is labeled: operating-lease and SPV accounting is permitted under GAAP; the added nodes/edges represent economic exposure the rating agencies and the BIS add back, not a legal finding of concealment.*
+- Nodes pulled in by the **leaseback rolling**: **AI_Datacenters, Beignet_Investor, Chip_Collateral_SPV, Hyperion, Meta**
+- Nodes pulled in by the **financier return-legs** (PE/insurance loop closed): **Apollo, Athene, Blackstone, Blue_Owl, Pimco**
+- Full core with both layers (22): AI_Datacenters, AMD, Amazon, Anthropic, Apollo, Athene, Beignet_Investor, Blackstone, Blue_Owl, Chip_Collateral_SPV, CoreWeave, Crusoe, Hyperion, Lambda, Meta, Microsoft, NVIDIA, OpenAI, Oracle, Pimco, SINK_lenders, SpaceX
+
+*Interpretation of the deltas is labeled: operating-lease and SPV accounting is permitted under GAAP; the added nodes/edges represent economic exposure the rating agencies and the BIS add back, not a legal finding of concealment. The return-legs carry null dollar amounts (they close the loop topologically without double-counting the same capital as both funding and repayment).*
 
