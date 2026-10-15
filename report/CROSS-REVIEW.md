@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-offbalancesheet-ai-financing.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 13 shared entities
-- spec-cross-system-contagion.json: 12 shared entities
-- macro-cre-privatecredit.json: 12 shared entities
-- spec-ai-datacenter-debt-spv.json: 11 shared entities
-- fin-coreweave-oracle.json: 11 shared entities
-- spec-sec-filings-primary.json: 10 shared entities
-- macro-ai-power-grid-bottleneck.json: 10 shared entities
-- fin-ai-depreciation-debttrap.json: 9 shared entities
+## Newest file `spec-regional-bank-ndfi-fraud.json` — related files by shared entities (verify cross-refs exist)
+- spec-auto-credit-unwind.json: 2 shared entities
+- macro-private-credit-bdc-stress.json: 2 shared entities
+- macro-consumer-abs-subprime.json: 2 shared entities
+- macro-oil-backwardation.json: 2 shared entities
+- macro-history-dereg-manipulation.json: 2 shared entities
+- spec-unwind-timing.json: 1 shared entities
+- macro-private-credit-marks.json: 1 shared entities
+- macro-uncovered-risk-pools.json: 1 shared entities

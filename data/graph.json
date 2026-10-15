@@ -1376,6 +1376,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "Cantor_Group_CRE": {
+      "sector": "financier",
+      "has_exogenous_revenue": false
+    },
     "Capella_Space": {
       "sector": "satellite",
       "has_exogenous_revenue": true
@@ -7896,6 +7900,10 @@
       "sector": "financier",
       "has_exogenous_revenue": false
     },
+    "Western_Alliance": {
+      "sector": "bank",
+      "has_exogenous_revenue": false
+    },
     "Western_Union": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -8110,6 +8118,10 @@
     },
     "Zillow_ZORI": {
       "sector": "data_provider",
+      "has_exogenous_revenue": false
+    },
+    "Zions": {
+      "sector": "bank",
       "has_exogenous_revenue": false
     },
     "Zipmex": {
@@ -12254,6 +12266,97 @@
       "cancelable": false,
       "source_file": "spec-nextera-national-utility.json",
       "note": "NextEra's 15-30 GW plan is a direct bet on the datacenter-demand bandwagon; if AI buildout stalls, the exposure inverts into stranded-asset / over-procurement risk borne partly by ratepayers - linking the power-side buildout to the AI-bubble and datacenter-backlash threads (interpretation/risk-framing, grounded in the stranded-asset literature)."
+    },
+    {
+      "from": "Zions",
+      "to": "Cantor_Group_CRE",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "debt",
+      "amount_usd": 60000000,
+      "status": "charged-off",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "Western_Alliance",
+      "to": "Cantor_Group_CRE",
+      "instrument": "debt",
+      "layer": "financial",
+      "raw_instrument": "debt",
+      "amount_usd": 100000000,
+      "status": "disputed",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "Cantor_Group_CRE",
+      "to": "CRE_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "Zions",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "Western_Alliance",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "JPMorgan",
+      "to": "PrivateCredit_Funds",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
+    },
+    {
+      "from": "Cantor_Group_CRE",
+      "to": "Mortgage_Market",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-regional-bank-ndfi-fraud.json",
+      "note": ""
     },
     {
       "from": "MtGox",
@@ -51361,10 +51464,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2046,
-    "num_edges": 3321,
-    "num_financial_edges": 274,
-    "num_structural_edges": 3047,
+    "num_nodes": 2049,
+    "num_edges": 3328,
+    "num_financial_edges": 276,
+    "num_structural_edges": 3052,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51667,6 +51770,18 @@
         "Anthropic"
       ],
       [
+        "AMD",
+        "OpenAI"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Microsoft",
         "OpenAI"
       ],
@@ -51675,26 +51790,9 @@
         "SINK_lenders"
       ],
       [
-        "CoreWeave",
-        "NVIDIA"
-      ],
-      [
-        "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI"
       ],
       [
         "Anthropic",
@@ -51702,10 +51800,21 @@
         "NVIDIA"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Crusoe",
+        "SINK_lenders"
       ],
       [
         "CoreWeave",
@@ -51717,12 +51826,6 @@
         "CoreWeave",
         "NVIDIA",
         "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
         "SINK_lenders"
       ],
       [
@@ -54152,6 +54255,13 @@
       },
       "Cantor_Fitzgerald": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Cantor_Group_CRE": {
+        "total_usd": 160000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -65567,6 +65677,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Western_Alliance": {
+        "total_usd": 100000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Western_Union": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -65940,6 +66057,13 @@
       },
       "Zillow_ZORI": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zions": {
+        "total_usd": 60000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -66412,7 +66536,7 @@
       },
       {
         "node": "PrivateCredit_Funds",
-        "degree": 21,
+        "degree": 24,
         "neighbor_sectors": [
           "ai_infra",
           "bank",
@@ -66428,7 +66552,7 @@
           "state"
         ],
         "n_neighbor_sectors": 12,
-        "source_files": 16,
+        "source_files": 17,
         "layers": [
           "financial",
           "structural"
