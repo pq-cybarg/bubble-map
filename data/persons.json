@@ -16576,6 +16576,270 @@
     "catalog-quiet-money-14",
     "spec-opec"
    ]
+  },
+  {
+   "name": "John Hanke",
+   "role": "Founder/CEO, Niantic; ex-Google VP (Geo); co-founder, Keyhole",
+   "orgs": [
+    "John_Hanke",
+    "Niantic",
+    "Keyhole",
+    "Google",
+    "In_Q_Tel"
+   ],
+   "domains": [
+    "Surveillance/Geospatial",
+    "Tech"
+   ],
+   "bluf": "The through-line of consumer geospatial surveillance: co-founded Keyhole (In-Q-Tel-backed, 2001), which became Google Earth; ran Google's Geo division (Earth/Maps/Street View); then founded Niantic (Ingress, Pokemon GO) inside Google. Assess the location-data-harvesting lineage as DOCUMENTED structure; intent-to-surveil is NOT asserted - the commercial and mapping rationales are real.",
+   "drivers": "Mapping/AR as a life's work; building planet-scale spatial computing; commercial AR gaming. (Stated rationale; interiority not probed.)",
+   "decision_style": "Long-horizon platform builder; spins ventures out of larger parents (Keyhole->Google; Niantic->Google->independent).",
+   "worldview": "AR as the next computing layer over the physical world; spatial data as foundational infrastructure.",
+   "track_record": "Keyhole (2001, In-Q-Tel + NGA ties) acquired by Google 2004 -> Google Earth; led Google Geo; founded Niantic Labs 2010 (spun out 2015); Ingress and Pokemon GO generated large real-world location datasets.",
+   "relationships": "Google/Alphabet (origin + funding); In-Q-Tel (Keyhole seed); the CIA-venture surveillance-stack network (cf In-Q-Tel portfolio).",
+   "vulnerabilities": "The In-Q-Tel/intelligence provenance of his mapping lineage is a persistent reputational/scrutiny vector; location-data-privacy exposure.",
+   "outlook": "Continues building AR/geospatial platforms; the surveillance-adjacency framing follows the data, not asserted intent.",
+   "confidence": "HIGH (public record).",
+   "grade": "fact + labeled interpretation (the surveillance-lineage read)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-niantic-geospatial",
+    "spec-inqtel-portfolio"
+   ]
+  },
+  {
+   "name": "Eron Wolf",
+   "role": "Founder/sole funder, FUTO",
+   "orgs": [
+    "Eron_Wolf",
+    "FUTO"
+   ],
+   "domains": [
+    "Tech",
+    "Right to Repair"
+   ],
+   "bluf": "Ex-Yahoo (Games-era) technologist who self-funds FUTO (founded 2021) to back right-to-repair and anti-Big-Tech open-source work - no Silicon-Valley VC, government, or NGO capital (per FUTO materials). Assess as a genuine owner-ideological funder; the independence claim is his own and broadly consistent with the record.",
+   "drivers": "Antipathy to centralized Big-Tech control; a stated mission to fund software/hardware freedom and repairability.",
+   "decision_style": "Patient, founder-funded; backs mission-aligned projects and litigation rather than seeking returns.",
+   "worldview": "Decentralization and user-ownership of devices/software; opposition to walled gardens and DRM lockout.",
+   "track_record": "Yahoo Games-era capital; founded and solely funds FUTO; backs Louis Rossmann's repair advocacy, the FUTO Keyboard, GrapheneOS-adjacent grants, and the open-source-vs-lawfare defense (3D-printer code dispute).",
+   "relationships": "Louis Rossmann (FUTO/repair advocacy); the FULU Foundation orbit; the broader R2R movement.",
+   "vulnerabilities": "Single-funder dependency for FUTO's projects; mission-purity scrutiny.",
+   "outlook": "Likely to keep funding repair/open-source advocacy and selective litigation defense.",
+   "confidence": "HIGH (public + FUTO materials).",
+   "grade": "fact",
+   "legitimacy_bearing": true,
+   "blocks": [
+    "spec-rossmann-futo-ownership",
+    "spec-open-source-3dprinting-lawfare"
+   ]
+  },
+  {
+   "name": "Kevin O'Reilly",
+   "role": "Co-founder, FULU Foundation (with Louis Rossmann)",
+   "orgs": [
+    "Kevin_OReilly",
+    "FULU_Foundation",
+    "FUTO"
+   ],
+   "domains": [
+    "Right to Repair",
+    "Tech"
+   ],
+   "bluf": "Co-founder, with Louis Rossmann, of the FULU Foundation - the right-to-repair advocacy vehicle in the FUTO orbit. Public profile is thinner than his co-founder's; assess role as DOCUMENTED, individual specifics at MODERATE confidence.",
+   "drivers": "Right-to-repair and device-ownership advocacy (stated).",
+   "decision_style": "Movement/organization-building alongside Rossmann.",
+   "worldview": "Consumer ownership and repairability vs manufacturer lockout.",
+   "track_record": "Named co-founder of the FULU Foundation (fact, Wikipedia + FULU materials); FUTO-adjacent.",
+   "relationships": "Louis Rossmann (co-founder); FUTO / Eron Wolf orbit.",
+   "vulnerabilities": "Limited independent public record.",
+   "outlook": "Continues FULU/R2R organizing; low-visibility operator.",
+   "confidence": "MODERATE (role documented; individual detail thin).",
+   "grade": "fact (role)",
+   "legitimacy_bearing": true,
+   "blocks": [
+    "spec-rossmann-futo-ownership"
+   ]
+  },
+  {
+   "name": "Fabian Faessler (LiveOverflow)",
+   "role": "Security researcher/educator; named in Hacktron AI",
+   "orgs": [
+    "LiveOverflow",
+    "Hacktron_AI",
+    "OpenAI"
+   ],
+   "domains": [
+    "Cyber/Security"
+   ],
+   "bluf": "Well-known security-education figure (the 'LiveOverflow' channel) and researcher; named in Hacktron AI's acknowledgements and a public participant in the Sep 2026 discussion around the OpenAI-CISO / HEIF vulnerability-report episode. Assess as a legitimate researcher/communicator; no wrongdoing implied.",
+   "drivers": "Security education, reverse-engineering, and public vulnerability pedagogy (stated/evident).",
+   "decision_style": "Public, teaching-oriented disclosure; builds explainer content from real bugs.",
+   "worldview": "Open security education; demystifying exploitation for defenders.",
+   "track_record": "Long-running security-education output; named in Hacktron AI acknowledgements; posted the Sep 19 2026 thread referencing the OpenAI CISO's response to a submitted report.",
+   "relationships": "Hacktron AI (acknowledged); the security-research community; tangential to the OpenAI HEIF-report thread.",
+   "vulnerabilities": "Public-figure scrutiny; none material on record.",
+   "outlook": "Continues security research/education.",
+   "confidence": "HIGH (public posts).",
+   "grade": "fact",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-heif-heist-openai-ciso"
+   ]
+  },
+  {
+   "name": "Faruk Fatih Ozer",
+   "role": "Founder/CEO, Thodex (defunct)",
+   "orgs": [
+    "Faruk_Ozer",
+    "Thodex"
+   ],
+   "domains": [
+    "Crypto"
+   ],
+   "bluf": "Founder/CEO of the Turkish exchange Thodex, which abruptly froze withdrawals for ~400,000+ users in April 2021 (~$2B claimed exposure); he fled Turkey, was extradited from Albania, and in 2023 was convicted and sentenced to thousands of years in prison. Assess as an ADJUDICATED exit-scam / fraud case (court record).",
+   "drivers": "(Not probed; conduct assessed from the record.)",
+   "decision_style": "Abrupt shutdown-and-flight pattern characteristic of the exit-scam template.",
+   "worldview": "n/a (assessed on conduct).",
+   "track_record": "Thodex froze user funds Apr 2021; Ozer fled, was extradited from Albania (2022), convicted of fraud/money-laundering/organized-crime in Turkey (2023) with a sentence reported at ~11,196 years.",
+   "relationships": "Thodex insiders/family (co-defendants); Turkish crypto-user victims.",
+   "vulnerabilities": "Convicted and imprisoned.",
+   "outlook": "Incarcerated; case is a canonical exit-scam precedent.",
+   "confidence": "HIGH (court record).",
+   "grade": "fact (court record)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-crypto-exit-scam-pattern"
+   ]
+  },
+  {
+   "name": "Gerald Cotten",
+   "role": "Founder/CEO, QuadrigaCX (defunct)",
+   "orgs": [
+    "Gerald_Cotten",
+    "QuadrigaCX"
+   ],
+   "domains": [
+    "Crypto"
+   ],
+   "bluf": "Founder of QuadrigaCX, once Canada's largest crypto exchange; after his reported death in India (Dec 2018), ~C$190M in customer funds became inaccessible (he was said to be sole holder of the keys). The Ontario Securities Commission later concluded Quadriga operated as a fraud/Ponzi-like scheme. Assess the fraud finding as DOCUMENTED; death-and-missing-funds theories are labeled.",
+   "drivers": "(Not probed; conduct assessed from the OSC record.)",
+   "decision_style": "Sole-control operator; commingled/ misused customer funds per the OSC.",
+   "worldview": "n/a (assessed on conduct).",
+   "track_record": "Built QuadrigaCX; died (reported) Dec 2018; ~C$190M customer funds unrecoverable; OSC 2020 report found a Ponzi-like fraud (losses largely from his own trading on customer funds).",
+   "relationships": "QuadrigaCX co-founder Michael Patryn (a.k.a. Omar Dhanani) - separately notable; Quadriga creditors.",
+   "vulnerabilities": "Deceased; estate/creditor litigation; persistent 'faked death' speculation (unproven, labeled).",
+   "outlook": "Case closed as a canonical exchange-collapse/exit-scam precedent; funds largely unrecovered.",
+   "confidence": "HIGH (OSC report) + labeled (death/fraud-intent theories).",
+   "grade": "fact + labeled interpretation",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-crypto-exit-scam-pattern"
+   ]
+  },
+  {
+   "name": "Ruja Ignatova",
+   "role": "Founder, OneCoin ('Cryptoqueen'); fugitive",
+   "orgs": [
+    "Ruja_Ignatova",
+    "OneCoin"
+   ],
+   "domains": [
+    "Crypto"
+   ],
+   "bluf": "The self-styled 'Cryptoqueen' who founded and led OneCoin, a multi-billion-dollar Ponzi scheme disguised as a cryptocurrency (from 2014); she vanished in Oct 2017 and is on the FBI Ten Most Wanted list. Assess as a DOCUMENTED large-scale fraud (DOJ charges); her whereabouts/fate are unknown (labeled).",
+   "drivers": "(Not probed; conduct assessed from the record.)",
+   "decision_style": "Charismatic promotion of a fake 'blockchain' with no real ledger; MLM recruitment; disappearance before arrest.",
+   "worldview": "n/a (assessed on conduct).",
+   "track_record": "OneCoin raised billions worldwide (2014-2017) with no functioning blockchain; US (SDNY) charged her with wire fraud, securities fraud, and money laundering; disappeared Oct 2017; added to the FBI Ten Most Wanted (2022).",
+   "relationships": "OneCoin co-founders/associates (several convicted, incl. Karl Sebastian Greenwood; her brother Konstantin Ignatov cooperated); alleged organized-crime protection (reported, unconfirmed).",
+   "vulnerabilities": "Fugitive status; outstanding charges; reported threats to her safety.",
+   "outlook": "Whereabouts unknown; remains a canonical crypto-Ponzi case.",
+   "confidence": "HIGH (DOJ charges) + fugitive status.",
+   "grade": "fact + labeled (fate unknown)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-crypto-exit-scam-pattern"
+   ]
+  },
+  {
+   "name": "SY Lee (Seung-yoon Lee)",
+   "role": "Co-founder/CEO, Story Protocol",
+   "orgs": [
+    "Seung_yoon_Lee",
+    "Story_Protocol"
+   ],
+   "domains": [
+    "Crypto",
+    "IP/Media"
+   ],
+   "bluf": "Co-founder and CEO of Story Protocol (on-chain intellectual-property infrastructure); previously co-founded Radish Fiction (serialized-content platform, sold to Kakao). Assess as a DOCUMENTED founder; the on-chain-IP thesis and token mechanics are the substance (graded in the block).",
+   "drivers": "Building programmable IP rails and a content/IP economy on-chain (stated).",
+   "decision_style": "Media-entrepreneur-to-crypto founder; narrative-forward fundraising.",
+   "worldview": "IP as a tradable, composable on-chain asset class.",
+   "track_record": "Co-founded Radish (acquired by Kakao, 2021); co-founded Story Protocol (a16z-backed), which raised at a multibillion valuation; publicly explained the Feb-2026 token-unlock delay (needing time for real use cases).",
+   "relationships": "Story co-founders (incl. David Kostiner); a16z crypto (backer); Andrea Muttoni (DATA Foundation).",
+   "vulnerabilities": "Token-unlock/valuation scrutiny; dependence on real IP-adoption to justify the thesis.",
+   "outlook": "Continues building Story/DATA; success gated on genuine IP use-cases vs speculative token value.",
+   "confidence": "HIGH (public).",
+   "grade": "fact + labeled interpretation (the thesis)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-story-aria-ipr-wa"
+   ]
+  },
+  {
+   "name": "David Kostiner",
+   "role": "Co-founding partner & Chief IP Officer, Story Protocol",
+   "orgs": [
+    "David_Kostiner",
+    "Story_Protocol"
+   ],
+   "domains": [
+    "Crypto",
+    "IP/Media"
+   ],
+   "bluf": "Co-founding partner and Chief IP Officer of Story Protocol, central to the on-chain-IP-as-tradable-asset thesis and the ARIA/IPR-WA circle mapped in the corpus. Assess role as DOCUMENTED; the IP-financialization thesis is the substance (graded in the block).",
+   "drivers": "Structuring IP as programmable, licensable on-chain assets (stated/evident).",
+   "decision_style": "Legal/IP-structuring lead within a crypto-founder team.",
+   "worldview": "On-chain IP rights and royalties as composable financial primitives.",
+   "track_record": "Co-founding partner and Chief IP Officer of Story; figures in the Story/DATA Protocol, IPR-WA, ARIAIP/ARIA Protocol lineage examined in the dedicated deep-dive.",
+   "relationships": "SY Lee and Story co-founders; the ARIA/IPR-WA circle; a16z crypto orbit.",
+   "vulnerabilities": "Thesis-adoption risk; association scrutiny within the ARIA/IPR-WA circle.",
+   "outlook": "Continues Story IP-infrastructure work; outcome gated on IP adoption.",
+   "confidence": "MODERATE-HIGH (public filings/bios).",
+   "grade": "fact (role)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-story-aria-ipr-wa"
+   ]
+  },
+  {
+   "name": "Andrea Muttoni",
+   "role": "CEO, DATA Foundation (Story/ARIA rebrand)",
+   "orgs": [
+    "Andrea_Muttoni",
+    "Data_Foundation",
+    "Story_Protocol"
+   ],
+   "domains": [
+    "Crypto",
+    "IP/Media"
+   ],
+   "bluf": "Named CEO of the DATA Foundation at the Story/ARIA-adjacent rebrand. Public profile is thin; assess the role as DOCUMENTED and individual specifics at MODERATE confidence - no claims beyond the record.",
+   "drivers": "(Not probed; role assessed from the block.)",
+   "decision_style": "Foundation-steward role at the rebrand.",
+   "worldview": "n/a (insufficient public basis to assert).",
+   "track_record": "Named CEO of the DATA Foundation at the rebrand; appears in the Story/ARIA/IPR-WA mapping.",
+   "relationships": "Story Protocol / DATA Foundation leadership (SY Lee, David Kostiner); Kled founder Avi Patel (noted joining as chief data officer in the same rebrand).",
+   "vulnerabilities": "Limited independent public record.",
+   "outlook": "Steers the DATA Foundation; low-visibility operator.",
+   "confidence": "MODERATE (role documented; individual detail thin).",
+   "grade": "fact (role)",
+   "legitimacy_bearing": null,
+   "blocks": [
+    "spec-story-aria-ipr-wa"
+   ]
   }
  ]
 }
