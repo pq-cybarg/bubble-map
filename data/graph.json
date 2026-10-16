@@ -42211,6 +42211,71 @@
       "note": ""
     },
     {
+      "from": "AI_Compute_Credit",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "contingent",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
+      "from": "PrivateCredit_Funds",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "contingent",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
+      "from": "Off_Balance_Sheet_Financing",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "contingent",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
+      "from": "Oracle",
+      "to": "US_Banks",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "contingent",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
+      "from": "AI_Bubble_Skeptic_Case",
+      "to": "Federal_Reserve",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "contingent",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-cross-system-contagion.json",
+      "note": ""
+    },
+    {
       "from": "Money_Market_Funds",
       "to": "Repo_Market",
       "instrument": "other",
@@ -51560,9 +51625,9 @@
   ],
   "analysis": {
     "num_nodes": 2050,
-    "num_edges": 3335,
+    "num_edges": 3340,
     "num_financial_edges": 276,
-    "num_structural_edges": 3059,
+    "num_structural_edges": 3064,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51861,10 +51926,6 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "CoreWeave",
         "SINK_lenders"
       ],
@@ -51873,16 +51934,20 @@
         "NVIDIA"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "Microsoft",
+        "OpenAI"
       ],
       [
         "AMD",
         "OpenAI"
       ],
       [
-        "NVIDIA",
-        "OpenAI"
+        "Amazon",
+        "Anthropic"
       ],
       [
         "CoreWeave",
@@ -51890,14 +51955,14 @@
         "OpenAI"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "NVIDIA",
         "OpenAI",
         "Oracle"
+      ],
+      [
+        "Anthropic",
+        "SpaceX",
+        "NVIDIA"
       ],
       [
         "CoreWeave",
@@ -66561,6 +66626,33 @@
         "both_layers": true
       },
       {
+        "node": "US_Banks",
+        "degree": 36,
+        "neighbor_sectors": [
+          "bank",
+          "capital",
+          "central_bank",
+          "crypto",
+          "financial_infra",
+          "financier",
+          "hyperscaler",
+          "other",
+          "private_credit",
+          "regulator",
+          "sink",
+          "stablecoin",
+          "state",
+          "statistic"
+        ],
+        "n_neighbor_sectors": 14,
+        "source_files": 22,
+        "layers": [
+          "financial",
+          "structural"
+        ],
+        "both_layers": true
+      },
+      {
         "node": "Microsoft",
         "degree": 31,
         "neighbor_sectors": [
@@ -66587,25 +66679,24 @@
         "both_layers": true
       },
       {
-        "node": "US_Banks",
-        "degree": 32,
+        "node": "PrivateCredit_Funds",
+        "degree": 25,
         "neighbor_sectors": [
+          "ai_infra",
           "bank",
           "capital",
-          "central_bank",
-          "crypto",
-          "financial_infra",
           "financier",
+          "industrial",
+          "insurance",
+          "macro",
           "other",
           "private_credit",
           "regulator",
-          "sink",
-          "stablecoin",
-          "state",
-          "statistic"
+          "retail",
+          "state"
         ],
-        "n_neighbor_sectors": 13,
-        "source_files": 22,
+        "n_neighbor_sectors": 12,
+        "source_files": 18,
         "layers": [
           "financial",
           "structural"
@@ -66637,24 +66728,26 @@
         "both_layers": false
       },
       {
-        "node": "PrivateCredit_Funds",
-        "degree": 24,
+        "node": "Oracle",
+        "degree": 25,
         "neighbor_sectors": [
           "ai_infra",
+          "ai_lab",
           "bank",
+          "bigtech_asia",
           "capital",
-          "financier",
-          "industrial",
-          "insurance",
+          "chip_vendor",
+          "commodity",
+          "hyperscaler",
           "macro",
           "other",
           "private_credit",
-          "regulator",
-          "retail",
+          "sink",
+          "spv",
           "state"
         ],
-        "n_neighbor_sectors": 12,
-        "source_files": 17,
+        "n_neighbor_sectors": 14,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"
@@ -66706,32 +66799,6 @@
           "structural"
         ],
         "both_layers": false
-      },
-      {
-        "node": "Oracle",
-        "degree": 24,
-        "neighbor_sectors": [
-          "ai_infra",
-          "ai_lab",
-          "bigtech_asia",
-          "capital",
-          "chip_vendor",
-          "commodity",
-          "hyperscaler",
-          "macro",
-          "other",
-          "private_credit",
-          "sink",
-          "spv",
-          "state"
-        ],
-        "n_neighbor_sectors": 13,
-        "source_files": 12,
-        "layers": [
-          "financial",
-          "structural"
-        ],
-        "both_layers": true
       },
       {
         "node": "Palantir",

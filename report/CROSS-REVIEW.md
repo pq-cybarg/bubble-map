@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ai-bubble-skeptics.json` — related files by shared entities (verify cross-refs exist)
-- fin-gulf-sovereign-ai-capital.json: 5 shared entities
-- macro-cre-privatecredit.json: 5 shared entities
-- fin-ai-depreciation-debttrap.json: 5 shared entities
-- spec-offbalancesheet-ai-financing.json: 5 shared entities
-- sec-filings.json: 4 shared entities
-- spec-sec-filings-primary.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- fin-coreweave-oracle.json: 4 shared entities
+## Newest file `spec-cross-system-contagion.json` — related files by shared entities (verify cross-refs exist)
+- fin-google-amazon-anthropic-meta.json: 16 shared entities
+- spec-sec-filings-primary.json: 12 shared entities
+- fin-coreweave-oracle.json: 12 shared entities
+- fin-nvidia-openai.json: 12 shared entities
+- macro-cre-privatecredit.json: 12 shared entities
+- spec-offbalancesheet-ai-financing.json: 12 shared entities
+- sec-filings.json: 11 shared entities
+- fin-gulf-sovereign-ai-capital.json: 10 shared entities
