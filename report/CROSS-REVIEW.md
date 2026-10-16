@@ -20,7 +20,7 @@
 - **Chainlink** — 67 files
 - **OpenAI** — 62 files
 - **Microsoft** — 50 files
-- **Oracle** — 42 files
+- **Oracle** — 43 files
 - **Amazon** — 42 files
 - **NVIDIA** — 41 files
 - **FDIC** — 38 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-cross-system-contagion.json` — related files by shared entities (verify cross-refs exist)
-- fin-google-amazon-anthropic-meta.json: 16 shared entities
-- spec-sec-filings-primary.json: 12 shared entities
-- fin-coreweave-oracle.json: 12 shared entities
-- fin-nvidia-openai.json: 12 shared entities
-- macro-cre-privatecredit.json: 12 shared entities
-- spec-offbalancesheet-ai-financing.json: 12 shared entities
-- sec-filings.json: 11 shared entities
-- fin-gulf-sovereign-ai-capital.json: 10 shared entities
+## Newest file `spec-crypto-liquidation-oct2025.json` — related files by shared entities (verify cross-refs exist)
+- spec-market-plumbing-control.json: 1 shared entities
+- spec-xai-colossus-power.json: 1 shared entities
+- spec-ai-datacenter-debt-spv.json: 1 shared entities
+- catalog-quiet-money-4.json: 1 shared entities
+- commodities-metals.json: 1 shared entities
+- spec-coreweave-credit-stress-2026.json: 1 shared entities
+- spec-unwind-timing.json: 1 shared entities
+- spec-network-overlay.json: 1 shared entities

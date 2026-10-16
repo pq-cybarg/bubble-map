@@ -206,6 +206,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Core_Scientific":"Core Scientific (DC host)","Off_Balance_Sheet_Financing":"Off-balance-sheet financing",
  "Zions":"Zions Bancorp","Western_Alliance":"Western Alliance","Cantor_Group_CRE":"Cantor Group (CRE funds)",
  "AI_Bubble_Skeptic_Case":"AI-bubble skeptic/short case",
+ "Crypto_Liquidation_Oct2025":"Oct 2025 crypto liquidation (~$19B)","Hyperliquid":"Hyperliquid (perp DEX)","Perpetual_Futures":"Perpetual futures (crypto)","DeFi_Protocols":"DeFi protocols",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus

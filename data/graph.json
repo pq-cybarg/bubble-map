@@ -1936,6 +1936,10 @@
       "sector": "crypto",
       "has_exogenous_revenue": false
     },
+    "Crypto_Liquidation_Oct2025": {
+      "sector": "crypto_infra",
+      "has_exogenous_revenue": false
+    },
     "Crypto_Market_Makers": {
       "sector": "financier",
       "has_exogenous_revenue": false
@@ -2162,6 +2166,10 @@
     },
     "DeFi_Education_Fund": {
       "sector": "crypto",
+      "has_exogenous_revenue": false
+    },
+    "DeFi_Protocols": {
+      "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
     "DePIN_Storage": {
@@ -3494,6 +3502,10 @@
     },
     "Hyperion": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Hyperliquid": {
+      "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
     "Hyundai_Motor_Group": {
@@ -5506,6 +5518,10 @@
     },
     "Perpetua_Resources": {
       "sector": "critical_minerals",
+      "has_exogenous_revenue": false
+    },
+    "Perpetual_Futures": {
+      "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
     "Persona": {
@@ -8890,6 +8906,110 @@
       "cancelable": false,
       "source_file": "spec-cyber-notable-individuals-2.json",
       "note": "The Sabu case is the canonical example of law enforcement flipping a hacktivist leader into an informant to dismantle a leaderless crew from within (fact)."
+    },
+    {
+      "from": "Trump",
+      "to": "Crypto_Liquidation_Oct2025",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "TRIGGER: the Oct 10 2025 announcement of a 100% tariff on Chinese imports reignited trade tensions; equities/commodities sold off and cross-asset deleveraging cascaded into crypto. FACT of the trigger-and-timing; 'caused' is the proximate read (markets were already leverage-heavy)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "Bitcoin",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "Bitcoin fell ~14% from a ~$122,574 Friday high to a ~$104,783 low; total crypto market cap fell ~$400B (~$4.15T -> ~$3.74T) (fact)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "Ethereum",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "Ether fell ~12.2% to ~$3,436 amid the forced unwind (fact)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "Hyperliquid",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "The sharpest perp contraction: Hyperliquid open interest fell ~57% ($14B -> $6B) and a ~$203M ETH/USDT long was liquidated - the largest DEX liquidation ever recorded. Total perp OI across major venues dropped ~43% ($217B -> $123B) in a day (fact)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "Binance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "On Binance the synthetic-dollar stablecoin USDe briefly fell to ~$0.65; Binance/Bybit data-feed disruptions may have masked the full liquidation scale (Coinglass later estimated a $30-40B true total vs the $19.1B reported). FACT of the depeg + reported figures; the $30-40B is a labeled estimate."
+    },
+    {
+      "from": "USDe",
+      "to": "Crypto_Liquidation_Oct2025",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "SECONDARY TRIGGER: the USDe depeg to ~$0.65 on Binance forced further liquidations across liquid-staking tokens, alt-L1s, and derivatives - the synthetic-dollar fragility mapped in spec-ethena-usde-synthetic-dollar amplifying the cascade. USDe broadly repegged after (fact of the depeg + repeg; amplification read labeled)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "Perpetual_Futures",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "The event was a PERPETUAL-FUTURES deleveraging above all: ~$19.1B liquidated in 24h (~$16.7B longs), ~1.6M accounts, 10-20x any prior liquidation day (April 2021 was ~$10B). The leverage, not spot selling, was the amplifier (fact; 'largest ever' is Coinglass's designation)."
+    },
+    {
+      "from": "Crypto_Liquidation_Oct2025",
+      "to": "DeFi_Protocols",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-crypto-liquidation-oct2025.json",
+      "note": "RESILIENCE SIDE (recorded for balance): infrastructure mostly held - stablecoins broadly repegged, major exchanges processed billions in forced sales without failing, and DeFi protocols liquidated bad loans without accumulating toxic debt - no 2022-style insolvency cascade (spec-crypto-collapse-cluster contrast). Fact of the resilience; the 'systemic vs idiosyncratic' verdict is contested."
     },
     {
       "from": "Modi",
@@ -51624,10 +51744,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2050,
-    "num_edges": 3340,
+    "num_nodes": 2054,
+    "num_edges": 3348,
     "num_financial_edges": 276,
-    "num_structural_edges": 3064,
+    "num_structural_edges": 3072,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51930,15 +52050,15 @@
         "SINK_lenders"
       ],
       [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
         "CoreWeave",
         "NVIDIA"
       ],
       [
         "NVIDIA",
-        "OpenAI"
-      ],
-      [
-        "Microsoft",
         "OpenAI"
       ],
       [
@@ -51946,18 +52066,8 @@
         "OpenAI"
       ],
       [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
+        "Microsoft",
         "OpenAI"
-      ],
-      [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
       ],
       [
         "Anthropic",
@@ -51965,10 +52075,14 @@
         "NVIDIA"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI",
-        "Microsoft"
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI"
       ],
       [
         "CoreWeave",
@@ -51989,16 +52103,22 @@
         "Anthropic"
       ],
       [
+        "CoreWeave",
+        "NVIDIA",
+        "OpenAI",
+        "Microsoft"
+      ],
+      [
         "Amazon",
         "OpenAI",
-        "CoreWeave",
+        "Oracle",
         "NVIDIA",
         "Anthropic"
       ],
       [
         "Amazon",
         "OpenAI",
-        "Oracle",
+        "CoreWeave",
         "NVIDIA",
         "Anthropic"
       ],
@@ -55400,6 +55520,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Crypto_Liquidation_Oct2025": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Crypto_Market_Makers": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55793,6 +55920,13 @@
         "in_robust_core": false
       },
       "DeFi_Education_Fund": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "DeFi_Protocols": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -58124,6 +58258,13 @@
         "in_robust_core": false
       },
       "Hyperion": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Hyperliquid": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61646,6 +61787,13 @@
       },
       "Perpetua_Resources": {
         "total_usd": 2900000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Perpetual_Futures": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
