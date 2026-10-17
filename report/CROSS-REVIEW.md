@@ -15,14 +15,14 @@
 - ✓ **NVIDIA → OpenAI** (equity): $100.0B [fin-coreweave-oracle.json]; $100.0B [fin-nvidia-openai.json]; $30.0B [fin-nvidia-openai.json] — reconciled: $100B LOI/intent vs the $30B closed/committed tranche (LOI-vs-closed)
 
 ## Connectors (entities appearing across the most files)
-- **Meta** — 122 files
-- **Google** — 74 files
+- **Meta** — 123 files
+- **Google** — 75 files
 - **Chainlink** — 67 files
-- **OpenAI** — 62 files
-- **Microsoft** — 50 files
-- **Oracle** — 43 files
-- **Amazon** — 42 files
-- **NVIDIA** — 41 files
+- **OpenAI** — 63 files
+- **Microsoft** — 51 files
+- **Oracle** — 44 files
+- **Amazon** — 43 files
+- **NVIDIA** — 42 files
 - **FDIC** — 38 files
 - **Anthropic** — 38 files
 - **Circle** — 29 files
@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-crypto-liquidation-oct2025.json` — related files by shared entities (verify cross-refs exist)
-- spec-market-plumbing-control.json: 1 shared entities
-- spec-xai-colossus-power.json: 1 shared entities
-- spec-ai-datacenter-debt-spv.json: 1 shared entities
-- catalog-quiet-money-4.json: 1 shared entities
-- commodities-metals.json: 1 shared entities
-- spec-coreweave-credit-stress-2026.json: 1 shared entities
-- spec-unwind-timing.json: 1 shared entities
-- spec-network-overlay.json: 1 shared entities
+## Newest file `spec-ai-nuclear-smr-buildout.json` — related files by shared entities (verify cross-refs exist)
+- spec-sec-filings-primary.json: 7 shared entities
+- spec-exchanges-asia.json: 7 shared entities
+- fin-ai-depreciation-debttrap.json: 7 shared entities
+- fin-google-amazon-anthropic-meta.json: 7 shared entities
+- fin-meta-family.json: 7 shared entities
+- spec-offbalancesheet-ai-financing.json: 7 shared entities
+- macro-ai-power-grid-bottleneck.json: 7 shared entities
+- fin-coreweave-oracle.json: 7 shared entities
