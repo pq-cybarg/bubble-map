@@ -814,6 +814,16 @@ if _cr:
             note="Filters use only recorded fields (dollar thresholds, hard-status-only, declared-circular-only, exclude-cancelable). Score 1.0 [cert] = certified under every lens.", hi=1.0))
         _cert=_cr.get("certified_core",[])
         body.append(f'<p class=cap>Six nodes are <b>certified</b> (circular under every objective filter): {esc(", ".join(_cert))}. The remaining headline members are real but rest on progressively softer edges — AMD and SpaceX are the weakest-attached (AMD on the warrant LOI, SpaceX on a cancelable edge), which is <b>why</b> the robust count is 11, measured rather than asserted.</p>')
+body.append('<h2 id="ainuclear">AI\'s power bill - the nuclear procurement wave</h2>')
+body.append(f'<p class=cap>Every major hyperscaler has signed nuclear power deals for datacenter load - ~13 projects, &gt;9.8 GW committed. Companion: <a href="{GH}spec-ai-nuclear-smr-buildout.md">spec-ai-nuclear-smr-buildout</a>, <a href="{GH}energy-power.md">energy-power</a>.</p>')
+body.append(hbar_labeled("Committed nuclear capacity by hyperscaler (GW, announced)", [
+    ("Meta (TerraPower+Oklo+Clinton)", 6.6, "~6.6 GW"),
+    ("Amazon (Talen PPA + X-energy)", 1.9, "~1.9 GW"),
+    ("Google (Kairos SMR fleet)", 1.8, "~1.8 GW"),
+    ("Oracle (3-SMR design)", 1.0, "~1.0 GW"),
+    ("Microsoft (TMI/Crane restart)", 0.835, "835 MW")],
+    note="Announced/committed capacity, not delivered. Sources: Constellation/Microsoft, Amazon/X-energy, Google/Kairos, Meta/TerraPower+Oklo, Oracle. ~13 projects, >9.8 GW total.", hi=6.6))
+body.append('<p class=cap><b>The caveat that matters:</b> <b>no datacenter yet runs on a new reactor built for it.</b> The first new capacity online is Microsoft\'s Three Mile Island / Crane restart (835 MW, <b>H2 2027</b>); the SMR fleet deals deliver ~2030-2035; NuScale\'s flagship SMR was cancelled in 2023 on cost; and HALEU fuel is a supply bottleneck. The GW are <b>commitments</b>, not power - and the equity-stake subset (Amazon/X-energy; Altman/Oklo) is the power-side echo of the chip vendor-financing loop.</p>')
 body.append('<h2>The bottom line</h2><p class=cap>Across the decade the funds rate maps onto the 2-year Treasury yield, not onto 2% inflation or full employment. Inflation was almost never at target; "true" labor slack (U-6) ran well above the headline; and one aggregate jobs/inflation print masks sectoral and regional divergence. The mandate is the framing; the bond market is the master.</p>')
 HTML=(f'<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">'
       f'<title>Bubble Map — Charts</title><style>{CSS}</style></head><body>{NAV}<main>'+ "".join(body) +'</main></body></html>')
