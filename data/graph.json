@@ -64,6 +64,10 @@
       "sector": "capital",
       "has_exogenous_revenue": false
     },
+    "AI_Companion_Harms": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "AI_Compute_Credit": {
       "sector": "capital",
       "has_exogenous_revenue": false
@@ -43806,6 +43810,97 @@
       "note": "Apollo (private-credit/asset-management giant) is among the reported ARC presale backers - TradFi private capital into the issuer's chain (fact of reported backing)."
     },
     {
+      "from": "AI_Companion_Harms",
+      "to": "Character_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "Garcia v. Character Technologies: a mother sued over the Oct 2024 death of her 14-year-old son (Sewell Setzer III), who formed an intense attachment to a Character.AI persona. In May 2025 the court REJECTED the First-Amendment motion to dismiss at the pleading stage, letting the case proceed (a procedural RULING, not a liability finding). Additional suits followed (Social Media Victims Law Center / Tech Justice Law Project). Character.AI announced (Oct 2025) it would bar under-18 open-ended chat. FACT of the suit/ruling/policy; CAUSATION is an ALLEGATION, not adjudicated."
+    },
+    {
+      "from": "AI_Companion_Harms",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "Raine v. OpenAI: parents sued OpenAI and CEO Sam Altman (Aug 2025, San Francisco) over the April 2025 suicide of their 16-year-old son Adam Raine, alleging ChatGPT (GPT-4o) engaged with his crisis. OpenAI subsequently added parental controls and routing of sensitive chats to more-cautious models. FACT of the suit + the product response; CAUSATION is an ALLEGATION in pending litigation."
+    },
+    {
+      "from": "Google",
+      "to": "Character_AI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "Google's Aug 2024 ~$2.7B deal to LICENSE Character.AI's technology and re-hire founders Noam Shazeer and Daniel De Freitas - an 'acqui-hire' structure that absorbed the talent/tech while leaving the operating company behind; it is why Google is a co-defendant in Garcia (fact of the deal + co-defendant status; liability is contested/unadjudicated)."
+    },
+    {
+      "from": "FTC",
+      "to": "AI_Companion_Harms",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "regulatory_legal",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "FTC 6(b) study (Sep 2025): orders to OpenAI, Alphabet/Google, Meta (and Instagram), Character.AI, Snap, and xAI seeking how their AI companion chatbots affect children and teens - a market-wide inquiry, not an enforcement finding (fact)."
+    },
+    {
+      "from": "AI_Companion_Harms",
+      "to": "Meta",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "Meta is named in the FTC 6(b) and sits alongside the separately-reported Meta AI 'romantic-with-minors' internal content-standard episode (cross-ref spec-meta-ai-child-safety) - the same companion-chatbot-and-minors risk surface (fact of inclusion; the Meta content-standard specifics are graded in that block)."
+    },
+    {
+      "from": "AI_Companion_Harms",
+      "to": "xAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "xAI is named in the FTC 6(b); its Grok companion personas (e.g., the 'Ani' avatar) drew similar minors-exposure concern - part of the same inquiry (fact of inclusion)."
+    },
+    {
+      "from": "AI_Companion_Harms",
+      "to": "AI_Safety_Regulation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-ai-companion-harms.json",
+      "note": "Policy response: California SB 243 (signed Oct 2025) is the first state AI-companion-chatbot safety law (crisis-referral + AI-disclosure duties); it + the suits + the FTC inquiry form the emerging accountability layer for companion AI (fact of the law; efficacy untested)."
+    },
+    {
       "from": "Iran_IRGC",
       "to": "Crude_Oil",
       "instrument": "other",
@@ -52010,10 +52105,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2062,
-    "num_edges": 3366,
+    "num_nodes": 2063,
+    "num_edges": 3373,
     "num_financial_edges": 276,
-    "num_structural_edges": 3090,
+    "num_structural_edges": 3097,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -52315,11 +52410,15 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
+        "AMD",
         "OpenAI"
       ],
       [
-        "AMD",
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "Microsoft",
         "OpenAI"
       ],
       [
@@ -52331,11 +52430,12 @@
         "SINK_lenders"
       ],
       [
-        "Amazon",
-        "Anthropic"
+        "CoreWeave",
+        "NVIDIA"
       ],
       [
-        "CoreWeave",
+        "Anthropic",
+        "SpaceX",
         "NVIDIA"
       ],
       [
@@ -52344,11 +52444,6 @@
         "Oracle"
       ],
       [
-        "Anthropic",
-        "SpaceX",
-        "NVIDIA"
-      ],
-      [
         "CoreWeave",
         "NVIDIA",
         "OpenAI"
@@ -52356,8 +52451,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "OpenAI",
-        "Microsoft"
+        "Crusoe",
+        "SINK_lenders"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -52368,14 +52469,8 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -52507,6 +52602,13 @@
         "in_robust_core": false
       },
       "AI_Bubble_Skeptic_Case": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "AI_Companion_Harms": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -66921,7 +67023,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 63,
+        "degree": 64,
         "neighbor_sectors": [
           "ai",
           "ai_infra",
@@ -66944,7 +67046,7 @@
           "university"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 28,
+        "source_files": 29,
         "layers": [
           "financial",
           "structural"
@@ -66953,7 +67055,7 @@
       },
       {
         "node": "Google",
-        "degree": 33,
+        "degree": 34,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -66976,7 +67078,7 @@
           "university"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 27,
+        "source_files": 28,
         "layers": [
           "financial",
           "structural"
@@ -66985,7 +67087,7 @@
       },
       {
         "node": "Meta",
-        "degree": 32,
+        "degree": 33,
         "neighbor_sectors": [
           "ai",
           "ai_data",
@@ -67006,7 +67108,7 @@
           "university"
         ],
         "n_neighbor_sectors": 17,
-        "source_files": 20,
+        "source_files": 21,
         "layers": [
           "financial",
           "structural"
@@ -67325,23 +67427,23 @@
         "both_layers": true
       },
       {
-        "node": "Andreessen_Horowitz",
-        "degree": 15,
+        "node": "xAI",
+        "degree": 16,
         "neighbor_sectors": [
-          "ai_lab",
           "capital",
-          "crypto",
-          "crypto_infra",
-          "defense_tech",
-          "elite",
-          "identity",
+          "chip_vendor",
+          "financier",
+          "hyperscaler",
+          "macro",
           "other",
           "person",
-          "political",
-          "university"
+          "private_credit",
+          "space_real_economy",
+          "spv",
+          "state"
         ],
         "n_neighbor_sectors": 11,
-        "source_files": 12,
+        "source_files": 13,
         "layers": [
           "financial",
           "structural"

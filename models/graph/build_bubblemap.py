@@ -209,6 +209,7 @@ LABELS={  # explicit overrides (sinks, SPVs, compounds)
  "Crypto_Liquidation_Oct2025":"Oct 2025 crypto liquidation (~$19B)","Hyperliquid":"Hyperliquid (perp DEX)","Perpetual_Futures":"Perpetual futures (crypto)","DeFi_Protocols":"DeFi protocols",
  "X_energy":"X-energy (SMR dev)","Kairos_Power":"Kairos Power (SMR dev)","Talen_Energy":"Talen Energy (nuclear)","NuScale":"NuScale (SMR dev)",
  "Agentic_Browsers":"Agentic browsers (Atlas/Comet)","Prompt_Injection":"Prompt injection (attack)","Perplexity":"Perplexity","Brave":"Brave (security disclosures)",
+ "AI_Companion_Harms":"AI companion harms (minors)",
  "Clearview_AI":"Clearview AI","Private_Surveillance":"Private surveillance complex","Recorded_Future":"Recorded Future","Cyber_Defense":"Cyber-defense vendors",
  "ShinyHunters":"ShinyHunters","BreachForums":"BreachForums","FLHSMV":"Florida DMV (FLHSMV)","DAVID_Database":"FLHSMV DAVID database","Snowflake":"Snowflake","Salesforce":"Salesforce",
  # SE Asia scam/crime nexus
