@@ -248,6 +248,10 @@
       "sector": "ai",
       "has_exogenous_revenue": false
     },
+    "Agentic_Browsers": {
+      "sector": "surveillance",
+      "has_exogenous_revenue": false
+    },
     "AgustaWestland_Scandal": {
       "sector": "defense",
       "has_exogenous_revenue": false
@@ -1082,6 +1086,10 @@
     },
     "Brannin_McBee": {
       "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Brave": {
+      "sector": "tech",
       "has_exogenous_revenue": false
     },
     "Brave1": {
@@ -5532,6 +5540,10 @@
       "sector": "crypto_infra",
       "has_exogenous_revenue": false
     },
+    "Perplexity": {
+      "sector": "ai_lab",
+      "has_exogenous_revenue": false
+    },
     "Persona": {
       "sector": "surveillance",
       "has_exogenous_revenue": false
@@ -5702,6 +5714,10 @@
     },
     "Project_Meridian": {
       "sector": "state",
+      "has_exogenous_revenue": false
+    },
+    "Prompt_Injection": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Protocol_Labs": {
@@ -11535,6 +11551,97 @@
       "cancelable": false,
       "source_file": "fin-meta-family.json",
       "note": ""
+    },
+    {
+      "from": "OpenAI",
+      "to": "Agentic_Browsers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "OpenAI launched ChatGPT Atlas (macOS-first, Oct 21 2025): ChatGPT in every page + an Agent Mode (preview, paid) that acts on SIGNED-IN sites and uses 'browser memories' - OpenAI's 'super-assistant that understands your world'. Shipped safeguards (no code exec/downloads/extensions/filesystem) + disclosed prompt-injection risk (fact)."
+    },
+    {
+      "from": "Perplexity",
+      "to": "Agentic_Browsers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "Perplexity's Comet (launched Jul 9 2025) is rated L4-L5 autonomy (2025 AI Agent Index) - it proceeds autonomously once initiated, with fewer approval gates than ChatGPT Agent (fact)."
+    },
+    {
+      "from": "Google",
+      "to": "Agentic_Browsers",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "Google is embedding Gemini agentic features into Chrome - the incumbent browser leader moving the same direction, which makes agentic browsing a mass-market default rather than a niche (fact of the direction)."
+    },
+    {
+      "from": "Agentic_Browsers",
+      "to": "Prompt_Injection",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "The defining, UNSOLVED security hole: the agent feeds untrusted webpage content to its LLM without separating it from the user's instructions, so hidden page text (white-on-white, HTML comments, text-in-images) becomes commands. Brave (Aug 2025) demoed Comet exfiltrating a logged-in Gmail recovery code from a malicious Reddit post; LayerX's 'CometJacking' exfiltrates email/calendar via one crafted URL; Trail of Bits found four Gmail-exfil techniques pre-launch. Brave's verdict: systemic, category-wide, not a single-vendor bug (fact of the disclosures)."
+    },
+    {
+      "from": "Prompt_Injection",
+      "to": "OpenAI",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "Prompt injection is the acknowledged-unsolved frontier even for the leaders - OpenAI disclosed the risk at Atlas launch and its CISO has publicly treated it as an open problem (cross-ref spec-heif-heist-openai-ciso). FACT of the acknowledgement; it bypasses same-origin policy + sandboxes because the agent has legitimate credentialed multi-domain access, which traditional browser security was never designed to contain."
+    },
+    {
+      "from": "Agentic_Browsers",
+      "to": "Private_Surveillance",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "CONTROL-SURFACE framing (labeled interpretation): an agent that sees ALL of a user's browsing and acts with their logged-in credentials across domains concentrates enormous data + authority in one AI vendor - a qualitatively new surveillance/control surface vs a passive browser. No vendor misuse is asserted; the point is the attack surface + data concentration, not intent (cross-ref the surveillance layer, digitalid-corporate)."
+    },
+    {
+      "from": "Brave",
+      "to": "Prompt_Injection",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-agentic-browsers.json",
+      "note": "Brave's security team is the lead discloser - it showed the architectural root cause (no trust boundary between user instructions and page content) and that attempted vendor fixes were later defeated; its recommended defense is to cleanly separate trusted user instructions from untrusted website content before sending to the model (fact; the fix is unproven at category scale)."
     },
     {
       "from": "China",
@@ -51903,10 +52010,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2058,
-    "num_edges": 3359,
+    "num_nodes": 2062,
+    "num_edges": 3366,
     "num_financial_edges": 276,
-    "num_structural_edges": 3083,
+    "num_structural_edges": 3090,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51968,6 +52075,7 @@
       "Aave",
       "Adani_Group",
       "Africa_Corps",
+      "Agentic_Browsers",
       "Amazon",
       "American_Dynamism",
       "Amkor",
@@ -52136,6 +52244,7 @@
       "PrivateCredit_Funds",
       "Project_Crypto",
       "Project_Meridian",
+      "Prompt_Injection",
       "PsiQuantum",
       "RIKEN",
       "Rare_Earths",
@@ -52199,24 +52308,12 @@
       "libheif",
       "xAI"
     ],
-    "core_scc_all_edges_size": 246,
+    "core_scc_all_edges_size": 248,
     "nodes_only_circular_via_cancelable": [
       "SpaceX"
     ],
     "num_elementary_cycles": 16,
     "elementary_cycles": [
-      [
-        "Amazon",
-        "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "SINK_lenders"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA"
-      ],
       [
         "Microsoft",
         "OpenAI"
@@ -52230,6 +52327,23 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
+        "SINK_lenders"
+      ],
+      [
+        "Amazon",
+        "Anthropic"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA"
+      ],
+      [
+        "NVIDIA",
+        "OpenAI",
+        "Oracle"
+      ],
+      [
         "Anthropic",
         "SpaceX",
         "NVIDIA"
@@ -52240,21 +52354,16 @@
         "OpenAI"
       ],
       [
+        "CoreWeave",
         "NVIDIA",
         "OpenAI",
-        "Oracle"
+        "Microsoft"
       ],
       [
         "Amazon",
         "OpenAI",
         "NVIDIA",
         "Anthropic"
-      ],
-      [
-        "CoreWeave",
-        "NVIDIA",
-        "OpenAI",
-        "Microsoft"
       ],
       [
         "CoreWeave",
@@ -52720,6 +52829,13 @@
         "in_robust_core": false
       },
       "Agentic_AI": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Agentic_Browsers": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -54183,6 +54299,13 @@
         "in_robust_core": false
       },
       "Brannin_McBee": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Brave": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -61973,6 +62096,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Perplexity": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Persona": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -62268,6 +62398,13 @@
         "in_robust_core": false
       },
       "Project_Meridian": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Prompt_Injection": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -66784,7 +66921,7 @@
       },
       {
         "node": "OpenAI",
-        "degree": 61,
+        "degree": 63,
         "neighbor_sectors": [
           "ai",
           "ai_infra",
@@ -66807,7 +66944,7 @@
           "university"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 27,
+        "source_files": 28,
         "layers": [
           "financial",
           "structural"
@@ -66816,7 +66953,7 @@
       },
       {
         "node": "Google",
-        "degree": 32,
+        "degree": 33,
         "neighbor_sectors": [
           "ai",
           "ai_lab",
@@ -66839,7 +66976,7 @@
           "university"
         ],
         "n_neighbor_sectors": 19,
-        "source_files": 26,
+        "source_files": 27,
         "layers": [
           "financial",
           "structural"
