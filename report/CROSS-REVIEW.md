@@ -31,12 +31,12 @@
 ## Under-connected entities (appear in only ONE file — candidates for new cross-links)
 - Vistra
 
-## Newest file `spec-ai-companion-harms.json` — related files by shared entities (verify cross-refs exist)
-- catalog-billionaires.json: 4 shared entities
-- spec-cross-system-contagion.json: 4 shared entities
-- fin-google-amazon-anthropic-meta.json: 4 shared entities
-- spec-meta-ai-child-safety.json: 4 shared entities
-- macro-history-dereg-manipulation.json: 3 shared entities
-- macro-cre-privatecredit.json: 3 shared entities
-- spec-buist-v-anthropic-pacing.json: 3 shared entities
-- spec-oracle-ai-credit-lynchpin.json: 3 shared entities
+## Newest file `spec-grokipedia-info-epistemics.json` — related files by shared entities (verify cross-refs exist)
+- macro-cre-privatecredit.json: 1 shared entities
+- fin-google-amazon-anthropic-meta.json: 1 shared entities
+- spec-oracle-ai-credit-lynchpin.json: 1 shared entities
+- fin-nvidia-openai.json: 1 shared entities
+- spec-ai-companion-harms.json: 1 shared entities
+- spec-palantir-surveillance.json: 1 shared entities
+- spec-defense-tech-capital.json: 1 shared entities
+- macro-history-dereg-manipulation.json: 1 shared entities
