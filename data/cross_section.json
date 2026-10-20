@@ -3578,25 +3578,25 @@
     },
     {
      "date": "2026-10",
-     "mean": 3.565,
-     "std": 0.68,
-     "min": 3.077,
-     "max": 4.571,
-     "range": 1.494
+     "mean": 3.562,
+     "std": 0.676,
+     "min": 3.075,
+     "max": 4.562,
+     "range": 1.487
     }
    ],
    "dispersion_now": {
-    "std": 0.68,
+    "std": 0.676,
     "z_vs_history": -0.59,
-    "pct_of_history": 9.0,
+    "pct_of_history": 7.0,
     "reading": "compressed"
    },
    "relative_value": {
     "CA (CMF)": {
-     "latest": 3.077,
-     "mean": 3.01,
+     "latest": 3.075,
+     "mean": 3.009,
      "std": 0.059,
-     "z": 1.15,
+     "z": 1.12,
      "pct": 97.0,
      "window": 24
     },
@@ -3617,20 +3617,20 @@
      "window": 24
     },
     "HY muni (HYD)": {
-     "latest": 4.571,
+     "latest": 4.562,
      "mean": 4.544,
      "std": 0.127,
-     "z": 0.21,
-     "pct": 25.0,
+     "z": 0.14,
+     "pct": 24.0,
      "window": 24
     }
    },
    "ranking": [
     {
      "segment": "HY muni (HYD)",
-     "latest": 4.571,
-     "z": 0.21,
-     "pct": 25.0
+     "latest": 4.562,
+     "z": 0.14,
+     "pct": 24.0
     },
     {
      "segment": "National (MUB)",
@@ -3646,8 +3646,8 @@
     },
     {
      "segment": "CA (CMF)",
-     "latest": 3.077,
-     "z": 1.15,
+     "latest": 3.075,
+     "z": 1.12,
      "pct": 97.0
     }
    ],
@@ -4565,9 +4565,9 @@
     {
      "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
      "segment": "CA (CMF)",
-     "latest": 3.077,
+     "latest": 3.075,
      "units": "% dist. yield",
-     "rv_z": 1.15,
+     "rv_z": 1.12,
      "pct": 97.0
     },
     {
@@ -4595,14 +4595,6 @@
      "pct": 95.0
     },
     {
-     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
-     "segment": "HY muni (HYD)",
-     "latest": 4.571,
-     "units": "% dist. yield",
-     "rv_z": 0.21,
-     "pct": 25.0
-    },
-    {
      "cross_section": "Corporate breadth by quality tier (FINRA TRACE advance/decline ratio)",
      "segment": "Investment Grade",
      "latest": 0.995,
@@ -4617,6 +4609,14 @@
      "units": "ratio",
      "rv_z": 0.2,
      "pct": 61.0
+    },
+    {
+     "cross_section": "Municipal bond distribution yield (per-state / quality ETFs)",
+     "segment": "HY muni (HYD)",
+     "latest": 4.562,
+     "units": "% dist. yield",
+     "rv_z": 0.14,
+     "pct": 24.0
     },
     {
      "cross_section": "Sovereign 10Y yield (global cross-section)",

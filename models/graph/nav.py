@@ -9,7 +9,7 @@ NAV_ITEMS = [   # order matches build_dashboard.navlinks() so every page's nav i
     ("persons.html", "Persons"), ("catalog.html", "Catalogs"), ("links.html", "Links"), ("blockchain.html", "Blockchain"),
     ("bubblemap.html", "Bubble Map"), ("guide.html", "Guide"), ("search.html", "Search"), ("globe.html", "Globe"),
     ("quantum.html", "Quantum"), ("ai.html", "AI"),
-    ("leadership.html", "Leadership"), ("lenses.html", "Lenses"), ("methodology.html", "Methodology"),
+    ("leadership.html", "Leadership"), ("lenses.html", "Lenses"), ("mapstats.html", "Stats"), ("timeline.html", "Timeline"), ("methodology.html", "Methodology"),
     ("glossary.html", "Glossary"), ("https://github.com/pq-cybarg/bubble-map", "Source ↗"),
 ]
 
