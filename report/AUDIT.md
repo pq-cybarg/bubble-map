@@ -13,16 +13,17 @@ Canonical numbers (from data/*.json — the source of truth):
 - `base_gap` = **1090**
 
 ## Inventory
-- models: 59 (z3 .py: 10) + TLA + Alloy
-- research: 286 json / 292 md
-- data outputs: 33
+- models: 58 (z3 .py: 10) + TLA + Alloy
+- research: 287 json / 293 md
+- data outputs: 32
 - reports: 10
 
 ## JSON validity
 - ALL VALID
 
 ## Cross-document consistency flags
-- ⚠ stale source count '282' in report/UNMASKING.md (actual 286)
+- ⚠ stale model count '3' in README.md (actual ~58)
+- ⚠ stale source count '282' in report/UNMASKING.md (actual 287)
 
 ## Leg coverage (research present?)
 - AI core: ✓

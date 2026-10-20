@@ -26,4 +26,5 @@ python3 models/graph/build_quantum.py >/dev/null    # quantum sub-site (hardware
 python3 models/graph/build_catalog.py >/dev/null    # catalog index (academia/money/threat-actor/quantum layers)
 python3 models/graph/build_ai_chronology.py >/dev/null # AI chronology + tech-history Tab
 python3 models/graph/build_links.py >/dev/null         # recommended-links Tab
+python3 models/graph/nest_weak_intel.py                # nest weak.intel companion at docs/weak.intel/
 echo "==> Re-review done. Read report/AUDIT.md + report/CROSS-REVIEW.md and reconcile flags before committing."

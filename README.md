@@ -7,11 +7,23 @@ NVIDIA / OpenAI / Microsoft / Oracle / CoreWeave / Anthropic / Amazon (+ the Spa
 and the macro, commodity, banking, and political-economy systems around it.
 
 **Start here:** [`report/UNMASKING.md`](report/UNMASKING.md) — the full analysis.
-**🌐 Live:** https://pq-cybarg.github.io/bubble-map/ · 📊 [Dashboard](https://pq-cybarg.github.io/bubble-map/dashboard.html) · 🌍 [Globe](https://pq-cybarg.github.io/bubble-map/globe.html) · ✍️ [Sign the poll](https://github.com/pq-cybarg/bubble-map/issues/1)
+**Live:** https://pq-cybarg.github.io/bubble-map/ · [Dashboard](https://pq-cybarg.github.io/bubble-map/dashboard.html) · [Globe](https://pq-cybarg.github.io/bubble-map/globe.html) · **[weak.intel](https://pq-cybarg.github.io/bubble-map/weak.intel/)** · [Sign the poll](https://github.com/pq-cybarg/bubble-map/issues/1)
 
 **Verify:** [`CONTRIBUTING.md`](CONTRIBUTING.md) · **Reproduce everything:** `bash run_all.sh`
 
 **Hard-money split (gold lens):** S&P 500 **−69%** vs **NVIDIA +1,985% (1985)** in gold; US median home **−81%** in gold since 1998 — broad debasement + real concentration into the circular oligopoly.
+
+## weak.intel
+
+**weak.intel** is the dual-use cyber / operator companion map. It is a git
+submodule at `weak.intel/` ([pq-cybarg/weak-intel](https://github.com/pq-cybarg/weak-intel))
+and is nested on this site at
+[https://pq-cybarg.github.io/bubble-map/weak.intel/](https://pq-cybarg.github.io/bubble-map/weak.intel/)
+(path `bubble-map/weak.intel`). The nested pages call themselves **weak.intel**.
+
+It has its own proof core (attack-layer SCC, dual-use door, CRQC unwind). Those
+edges are not mixed into the financial circular-core proofs. Rebuild the nest with
+`python3 models/graph/nest_weak_intel.py` (also run from `scripts/new-research.sh`).
 
 ## What is proven vs. evidenced
 - **Layer 1 — AI circular core: PROVEN** by four independent engines (below).
