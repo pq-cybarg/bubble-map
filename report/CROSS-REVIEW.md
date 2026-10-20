@@ -32,11 +32,11 @@
 - Vistra
 
 ## Newest file `spec-grokipedia-info-epistemics.json` — related files by shared entities (verify cross-refs exist)
-- macro-cre-privatecredit.json: 1 shared entities
-- fin-google-amazon-anthropic-meta.json: 1 shared entities
 - spec-oracle-ai-credit-lynchpin.json: 1 shared entities
-- fin-nvidia-openai.json: 1 shared entities
-- spec-ai-companion-harms.json: 1 shared entities
-- spec-palantir-surveillance.json: 1 shared entities
-- spec-defense-tech-capital.json: 1 shared entities
+- spec-blackrock-aladdin-concentration.json: 1 shared entities
 - macro-history-dereg-manipulation.json: 1 shared entities
+- fin-google-amazon-anthropic-meta.json: 1 shared entities
+- spec-ai-companion-harms.json: 1 shared entities
+- spec-buist-v-anthropic-pacing.json: 1 shared entities
+- spec-xai-colossus-power.json: 1 shared entities
+- spec-defense-tech-capital.json: 1 shared entities
