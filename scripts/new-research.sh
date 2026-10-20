@@ -22,6 +22,7 @@ python3 models/graph/fetch_qri.py >/dev/null 2>&1 || true  # qrindex.org HTML sc
 python3 models/graph/build_blockchain.py >/dev/null  # Blockchain registry tab
 python3 models/graph/build_bubblemap.py >/dev/null # interactive funding-graph bubble map
 python3 models/graph/build_guide.py >/dev/null      # Bubble-Map Guide (#108): deterministic graph Q&A + optional BYO-key LLM
+python3 models/graph/build_search.py >/dev/null     # unified site Search (blocks/entities/people)
 python3 models/graph/build_theme_index.py          # theme->blocks index for the flagship/atlas zoom
 python3 models/graph/build_quantum.py >/dev/null    # quantum sub-site (hardware/EC/PQC/compliance/feed)
 python3 models/graph/build_catalog.py >/dev/null    # catalog index (academia/money/threat-actor/quantum layers)
