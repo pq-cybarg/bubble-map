@@ -18,7 +18,7 @@ RULES=[
  ("infofinance",["prediction-market","info-finance","infofinance","polymarket","kalshi","futarchy"]),
  ("censorship", ["censorship","adtech","manufactured-division","manufactured","chat-control"]),
  ("control",    ["digitalid","digital-id","surveillance","worldcoin","age-verif","age-assurance","cbdc","biometric","eidas","identity","right-to-repair","parts-pairing","farm-equipment","seed-ip","-corn","mcdonalds-kytch","3dprinting","ownership","repair","rossmann","futo","fulu","recommended-links","child-safety","child safety","chatbot","meta-ai","red-team","minors","trojan-horse","age-signals","declared-age","chat-control","kill-switch","ultrasonic","uxdt","cactus"]),
- ("epistemic",  ["reproducib","integrity","arxiv","ai-slop","slop","benchmark","eval-","disinformation","lens-reread","strategic-lens","-lenses","reread","epistemic","apophenia","red-herring","arg-","meme"]),
+ ("epistemic",  ["reproducib","integrity","arxiv","ai-slop","slop","benchmark","eval-","disinformation","lens-reread","strategic-lens","-lenses","reread","epistemic","apophenia","red-herring","arg-","meme","openphil","comms-guidelines","knutsson","cremer","beckstead"]),
  ("techtransfer",["research-security","tech-transfer","csc","scholarship","talent","espionage"]),
  ("minerals",   ["rare-earth","rare_earth","critical-mineral","critical_mineral","antimony","eudialyte","critical-minerals","lithium","cobalt","mineral","commodities","-metals"]),
  ("energy",     ["power-grid","grid-bottleneck","ai-power","-energy","energy-","nuclear","smr","haleu","uranium","reactor"]),

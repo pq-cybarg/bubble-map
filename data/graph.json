@@ -1404,6 +1404,10 @@
       "sector": "commodity",
       "has_exogenous_revenue": false
     },
+    "Carla_Zoe_Cremer": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Carnegie_Mellon_University": {
       "sector": "university",
       "has_exogenous_revenue": false
@@ -1442,6 +1446,10 @@
     },
     "Central_SOEs": {
       "sector": "industrial",
+      "has_exogenous_revenue": false
+    },
+    "Centre_for_Effective_Altruism": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Chaebol": {
@@ -2148,6 +2156,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "David_Z_Morris": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "DeFi_Education_Fund": {
       "sector": "crypto",
       "has_exogenous_revenue": false
@@ -2494,6 +2506,10 @@
     },
     "Effective_Altruism": {
       "sector": "elite",
+      "has_exogenous_revenue": false
+    },
+    "Effective_Altruism_Foundation": {
+      "sector": "other",
       "has_exogenous_revenue": false
     },
     "Egypt": {
@@ -2948,6 +2964,10 @@
       "sector": "security_research",
       "has_exogenous_revenue": true
     },
+    "Foundational_Research_Institute": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Founders_Fund": {
       "sector": "financier",
       "has_exogenous_revenue": true
@@ -2971,6 +2991,10 @@
     "Fujitsu": {
       "sector": "tech",
       "has_exogenous_revenue": true
+    },
+    "Future_of_Humanity_Institute": {
+      "sector": "university",
+      "has_exogenous_revenue": false
     },
     "Future_of_Life_Institute": {
       "sector": "other",
@@ -3422,6 +3446,10 @@
     },
     "Hilcorp": {
       "sector": "commodity",
+      "has_exogenous_revenue": false
+    },
+    "Holden_Karnofsky": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Honda": {
@@ -4404,6 +4432,10 @@
       "sector": "logistics",
       "has_exogenous_revenue": false
     },
+    "Longtermism_Comms_Guidelines": {
+      "sector": "other",
+      "has_exogenous_revenue": false
+    },
     "Longview_Philanthropy": {
       "sector": "philanthropy",
       "has_exogenous_revenue": false
@@ -5034,6 +5066,14 @@
     },
     "Niantic_Spatial": {
       "sector": "tech",
+      "has_exogenous_revenue": false
+    },
+    "Nick_Beckstead": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
+    "Nick_Bostrom": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Niger": {
@@ -6516,6 +6556,10 @@
       "sector": "other",
       "has_exogenous_revenue": true
     },
+    "Simon_Knutsson": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "Simpson_Thacher": {
       "sector": "other",
       "has_exogenous_revenue": false
@@ -7030,6 +7074,10 @@
     },
     "Tobacco_MSA": {
       "sector": "other",
+      "has_exogenous_revenue": false
+    },
+    "Toby_Ord": {
+      "sector": "person",
       "has_exogenous_revenue": false
     },
     "Tokenized_Collateral": {
@@ -7908,6 +7956,10 @@
       "sector": "person",
       "has_exogenous_revenue": false
     },
+    "Will_MacAskill": {
+      "sector": "person",
+      "has_exogenous_revenue": false
+    },
     "William_Hinman": {
       "sector": "person",
       "has_exogenous_revenue": false
@@ -8079,6 +8131,10 @@
     "Zenko_Kurishita": {
       "sector": "other",
       "has_exogenous_revenue": true
+    },
+    "Zero_Knowledge_Media": {
+      "sector": "other",
+      "has_exogenous_revenue": false
     },
     "Zhang_Yiming": {
       "sector": "person",
@@ -13635,7 +13691,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-buist-v-anthropic-pacing.json",
+      "source_file": "spec-buist-v-anthropic-pacing.json,spec-openphil-comms-guidelines.json",
       "note": "Coefficient Giving is the successor/rebrand of Open Philanthropy (announced 18 Nov 2025; Moskovitz/Tuna / Good Ventures still the anchor). Same shop, new name: still the dominant outside funder of AI-safety evaluators, alignment shops, and policy placement. Kept as a distinct node so the rebrand is visible on the graph rather than collapsed by alias (fact of rebrand)."
     },
     {
@@ -17366,7 +17422,7 @@
       "status": "",
       "declared_circular": false,
       "cancelable": false,
-      "source_file": "spec-ai-lab-chronology-ea-pathways.json,catalog-nonprofits-foundations.json",
+      "source_file": "spec-ai-lab-chronology-ea-pathways.json,catalog-nonprofits-foundations.json,spec-openphil-comms-guidelines.json",
       "note": "Open Philanthropy (Dustin Moskovitz + Cari Tuna) is the largest EA grantmaker - the hub routing EA capital into AI-safety orgs, policy shops, and labs (fact)."
     },
     {
@@ -35882,6 +35938,279 @@
       "note": ""
     },
     {
+      "from": "Open_Philanthropy",
+      "to": "Effective_Altruism_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "philanthropic_funding",
+      "amount_usd": 1000000,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the grant record: Open Philanthropy granted $1,000,000 to the Effective Altruism Foundation in July 2019 (announced about 2019-07-30; 24 months; 'to support research and operations'). Investigators Nick Beckstead and Claire Zabel. Cause: Effective altruism. Live Coefficient grants path 404s; historical OP URL and vipulnaik dump still hold the row. Grant-page purpose (as Knutsson quotes the public writeup): encourage EAF and other grantees toward longtermism with greater emphasis on shared objectives between value systems; s-risk work 'needs to be communicated about carefully'; OP 'felt ambivalent about EAF's work to date.' Structural overlay, not a financial-core edge."
+    },
+    {
+      "from": "Nick_Beckstead",
+      "to": "Open_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "Beckstead was an Open Philanthropy program officer and a named investigator (with Claire Zabel) on the Jul 2019 EAF grant. He authored the unpublished 'Guidelines for Discussing Longtermism and Existential Risks' v1.6 (last updated 3 Jul 2019) that lists Open Philanthropy among endorsers and routes sharing through Bastian Stern at openphilanthropy.org (fact of PDF header + grant investigators)."
+    },
+    {
+      "from": "Nick_Beckstead",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the PDF: Beckstead wrote the longtermism/x-risk discussion guidelines v1.6 (3 Jul 2019). Substance as stated: highlight SFE-important beliefs; acknowledge the future might be highly suboptimal / contain tragedy conditional on avoiding extinction; do not leave readers thinking longtermism is only extinction-risk or that the future is inevitably near-optimal. Written in response to EAF's SFE-communication draft. Marked not for publication. 'Echo Open Phil leaders' is Morris's characterization, not a verbatim Beckstead instruction."
+    },
+    {
+      "from": "Effective_Altruism_Foundation",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the PDF Knutsson preserved: EAF's own 'Guidelines for Discussing Astronomical Stakes' (first written Mar 2019; last updated 10 Sep 2019; authors Jonas Vollmer, Stefan Torges, Lukas Gloor, David Althaus). Encourages following for all public communication including scholarly publications; discourages writing that the future will likely contain more disvalue than value; recommends referencing Beckstead's dissertation and texts by Shulman, MacAskill, and Bostrom. Torges shared both this doc and the Beckstead doc with Knutsson on 18 Jul 2019."
+    },
+    {
+      "from": "Open_Philanthropy",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Beckstead PDF header: Open Philanthropy is listed among endorsers. FACT of the grant page (as quoted by Knutsson): the $1M EAF grant's 'major purpose' includes shared-objective longtermism and careful communication of speculative s-risk work. Michael Levine (OP comms, 5 and 8 Nov 2019) told Knutsson they had nothing to add beyond the grant page. Knutsson's further claim that the grant might not have been made without EAF's guidelines is his understanding from a conversation, not an OP confirmation."
+    },
+    {
+      "from": "Centre_for_Effective_Altruism",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Beckstead PDF header: 'CEA' is listed among organizational endorsers (with 80,000 Hours, CFAR, MIRI, Open Phil). Graph id is Centre_for_Effective_Altruism; do not alias bare CEA (Council of Economic Advisers collision). Endorsement of unpublished informal guidelines is not an employment contract and not an Oxford finding."
+    },
+    {
+      "from": "Nick_Bostrom",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Beckstead PDF header: Nick Bostrom is a named individual endorser. ZK/Morris allege that Oxford-affiliated endorsement of unpublished comms guidelines may conflict with Oxford Research Integrity Policy 2.2 (academic freedom) / 4.2 (including suppression of inconvenient results). That Oxford-violation claim is an allegation, not a misconduct finding. ZK contacted Oxford; no response at article time."
+    },
+    {
+      "from": "Will_MacAskill",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Beckstead PDF header: Will MacAskill is a named individual endorser. The EAF guidelines also recommend referencing texts by MacAskill. Same Oxford-ethics allegation as Bostrom/Ord: journalist/Knutsson reading, not a tribunal result."
+    },
+    {
+      "from": "Toby_Ord",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Beckstead PDF header: Toby Ord is a named individual endorser. Same grading as the other Oxford-affiliated names: endorsement is fact; 'violates Oxford ethics' is allegation."
+    },
+    {
+      "from": "Simon_Knutsson",
+      "to": "Effective_Altruism_Foundation",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT: on 18 Jul 2019 Stefan Torges (EAF co-ED) shared both guideline Google docs with Knutsson (university PhD student, former FRI researcher, offered EAF/FRI funding). KNUTSSON/TORGES characterization, not OP confirmation: Torges used 'coordinated effort' and 'we will promote future pessimism ... to a lesser extent'; Knutsson was told he could likely get funding in the future if he followed the guidelines; he understood the guidelines as binding for EAF/FRI employees/funded people and 'also meant for independent researchers and university employees.' Not a signed contract in the public record."
+    },
+    {
+      "from": "Simon_Knutsson",
+      "to": "Foundational_Research_Institute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT: Knutsson was a former FRI researcher. FRI is kept as its own node; do not alias FRI to EAF. The EAF astronomical-stakes guidelines name FRI-adjacent authors (Gloor, Althaus) alongside EAF staff. Later CLR/Center on Long-Term Risk branding is a subsequent rebrand note, not collapsed here."
+    },
+    {
+      "from": "Effective_Altruism_Foundation",
+      "to": "Foundational_Research_Institute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "Related 2019 s-risk shops that shared the astronomical-stakes communication draft (EAF staff + FRI-adjacent authors on the EAF PDF). Association of orgs and co-authors, not a legal-entity merge. Do not alias."
+    },
+    {
+      "from": "Effective_Altruism_Foundation",
+      "to": "Effective_Altruism",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "EAF sat inside the EA movement as a suffering-focused / s-risk shop. Open Phil's grant writeup treats EAF as a grantee 'in the space' of longtermism whose communication OP wanted aligned with shared-objective framing (fact of grant page + org identity; not a finding that EA-the-movement is a single principal)."
+    },
+    {
+      "from": "Carla_Zoe_Cremer",
+      "to": "Future_of_Humanity_Institute",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of contemporaneous bios: Cremer was an FHI Research Scholar (CSER affiliate; FHI DPhil scholarship listed from fall 2021). ZK says the FHI appointment ended in 2021; some directories still listed her through institute close. Grade the end-date as disputed in secondary listings; the Research Scholar affiliation is documented. FHI closed by Oxford 16 Apr 2024."
+    },
+    {
+      "from": "Future_of_Humanity_Institute",
+      "to": "University_of_Oxford",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "housed_at",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT: FHI was an Oxford research institute, shuttered by the university on 16 Apr 2024. Already alluded to on the academia-abroad catalog as FHI-legacy seeding of AI-safety/longtermism. This edge names the institute as its own node rather than leaving it only in an Oxford note."
+    },
+    {
+      "from": "Carla_Zoe_Cremer",
+      "to": "Will_MacAskill",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the 28 Dec 2021 EA Forum post and thread: Cremer/Kemp 'Democratising Risk' (arXiv 2201.11214) critiques a 'techno-utopian approach' associated with the MacAskill/Bostrom/Ord wing. Cremer wrote that making the case for democracy was heavily contested and that some people tried to prevent publication 'largely out of fear that publishing might offend key funders who are aligned with the TUA,' including concern about Open Philanthropy funding; 'We don't know if these concerns are warranted.' MacAskill (comment 301) apologized and offered to fund red-team work. Career-harm intimations are Cremer's report of reviewer fear, not a proven retaliatory act."
+    },
+    {
+      "from": "Nick_Beckstead",
+      "to": "Carla_Zoe_Cremer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Forum thread (comment 278, 28-29 Dec 2021): Beckstead wrote that raising these criticisms would not count as a black mark and that he disagreed with the idea that publishing critiques like this is dangerous. Cuts against 'Open Phil retaliated' as a finding. Cremer's fear-of-funders paragraph still stands as her contemporaneous report."
+    },
+    {
+      "from": "Holden_Karnofsky",
+      "to": "Carla_Zoe_Cremer",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "FACT of the Forum thread (comment 188): Karnofsky (then Open Phil) wrote 'Whoever told you that funders would be upset by your publishing this piece, they didn't speak for Open Philanthropy.' Public principal disclaiming the feared punishment. Not a proof that no one in the network applied social pressure; it is a proof that OP's then-leadership denied the funding-threat story on the record."
+    },
+    {
+      "from": "Holden_Karnofsky",
+      "to": "Open_Philanthropy",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "Karnofsky was Open Philanthropy co-CEO / managing director in the 2019-2021 window covering the EAF grant and the Cremer Forum replies (fact of public role). Same person who in 2017 sat the Open Phil board seat tied to the ~$30M OpenAI grant already on this graph."
+    },
+    {
+      "from": "David_Z_Morris",
+      "to": "Longtermism_Comms_Guidelines",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "LEAD not source: Morris (@davidzmorris) posted a 6-part thread on 8 Oct 2026 (status/2108230751627972711) and a Zero Knowledge article arguing that 2019 OP/EAF comms guidelines plus the Cremer episode show 'AI Safety' research as propaganda / defunding of dissent. X posts are leads. Primary sources for this overlay are Knutsson/PDFs/grant record/Cremer. 'AI Safety is propaganda' and 'echo Open Phil leaders' are journalist framing, not graph facts. Part 2 (journalism/Tarbell/SFF) is a pointer only."
+    },
+    {
+      "from": "Zero_Knowledge_Media",
+      "to": "David_Z_Morris",
+      "instrument": "other",
+      "layer": "structural",
+      "raw_instrument": "relationship",
+      "amount_usd": null,
+      "status": "",
+      "declared_circular": false,
+      "cancelable": false,
+      "source_file": "spec-openphil-comms-guidelines.json",
+      "note": "Morris wrote the 8 Oct 2026 piece for Zero Knowledge. Outlet node is Zero_Knowledge_Media so cryptographic zero-knowledge (Atlas antidote keyword zk) is not collapsed into this journalism lead."
+    },
+    {
       "from": "3M",
       "to": "PFAS",
       "instrument": "other",
@@ -51119,10 +51448,10 @@
     }
   ],
   "analysis": {
-    "num_nodes": 2044,
-    "num_edges": 3303,
+    "num_nodes": 2058,
+    "num_edges": 3324,
     "num_financial_edges": 274,
-    "num_structural_edges": 3029,
+    "num_structural_edges": 3050,
     "core_scc_all": [
       "AMD",
       "Amazon",
@@ -51420,15 +51749,7 @@
     "num_elementary_cycles": 16,
     "elementary_cycles": [
       [
-        "Microsoft",
-        "OpenAI"
-      ],
-      [
         "AMD",
-        "OpenAI"
-      ],
-      [
-        "NVIDIA",
         "OpenAI"
       ],
       [
@@ -51444,12 +51765,10 @@
         "NVIDIA"
       ],
       [
-        "NVIDIA",
-        "OpenAI",
-        "Oracle"
+        "Microsoft",
+        "OpenAI"
       ],
       [
-        "CoreWeave",
         "NVIDIA",
         "OpenAI"
       ],
@@ -51461,8 +51780,18 @@
       [
         "CoreWeave",
         "NVIDIA",
+        "OpenAI"
+      ],
+      [
+        "NVIDIA",
         "OpenAI",
-        "Microsoft"
+        "Oracle"
+      ],
+      [
+        "CoreWeave",
+        "NVIDIA",
+        "Lambda",
+        "SINK_lenders"
       ],
       [
         "Amazon",
@@ -51473,14 +51802,14 @@
       [
         "CoreWeave",
         "NVIDIA",
-        "Lambda",
+        "Crusoe",
         "SINK_lenders"
       ],
       [
         "CoreWeave",
         "NVIDIA",
-        "Crusoe",
-        "SINK_lenders"
+        "OpenAI",
+        "Microsoft"
       ],
       [
         "Amazon",
@@ -53963,6 +54292,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Carla_Zoe_Cremer": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Carnegie_Mellon_University": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -54027,6 +54363,13 @@
         "in_robust_core": false
       },
       "Central_SOEs": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Centre_for_Effective_Altruism": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -55265,6 +55608,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "David_Z_Morris": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "DeFi_Education_Fund": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -55869,6 +56219,13 @@
       },
       "Effective_Altruism": {
         "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Effective_Altruism_Foundation": {
+        "total_usd": 1000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -56665,6 +57022,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Foundational_Research_Institute": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Founders_Fund": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -56701,6 +57065,13 @@
         "in_robust_core": false
       },
       "Fujitsu": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Future_of_Humanity_Institute": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -57492,6 +57863,13 @@
         "in_robust_core": false
       },
       "Hilcorp": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Holden_Karnofsky": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
@@ -59213,6 +59591,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Longtermism_Comms_Guidelines": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Longview_Philanthropy": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60319,6 +60704,20 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Nick_Beckstead": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Nick_Bostrom": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Niger": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -60642,7 +61041,7 @@
         "in_robust_core": false
       },
       "Open_Philanthropy": {
-        "total_usd": 0,
+        "total_usd": 1000000,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -62909,6 +63308,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Simon_Knutsson": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "Simpson_Thacher": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -63807,6 +64213,13 @@
       },
       "Tobacco_MSA": {
         "total_usd": 206000000000,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Toby_Ord": {
+        "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,
         "in_core_scc": false,
@@ -65345,6 +65758,13 @@
         "in_core_scc": false,
         "in_robust_core": false
       },
+      "Will_MacAskill": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
       "William_Hinman": {
         "total_usd": 0,
         "circular_usd": 0,
@@ -65640,6 +66060,13 @@
         "in_robust_core": false
       },
       "Zenko_Kurishita": {
+        "total_usd": 0,
+        "circular_usd": 0,
+        "circularity_ratio": 0.0,
+        "in_core_scc": false,
+        "in_robust_core": false
+      },
+      "Zero_Knowledge_Media": {
         "total_usd": 0,
         "circular_usd": 0,
         "circularity_ratio": 0.0,

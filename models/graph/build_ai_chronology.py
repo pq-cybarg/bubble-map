@@ -23,6 +23,7 @@ SECTIONS = [
     ("spec-ai-tech-history-traversal", "The true tech-history of AI (LLMs are one branch)"),
     ("spec-ai-capability-timeline", "AI capability timeline (2012-2026) - by branch"),
     ("spec-ai-lab-chronology-ea-pathways", "AI-lab chronology - focus, capability + the EA / safety-reg pathways"),
+    ("spec-openphil-comms-guidelines", "Open Phil / EAF 2019 communication guidelines"),
     ("spec-ai-safety-evals-ecosystem", "AI safety-evals ecosystem + the EA money map (incl. DataRepublican)"),
     ("spec-ai-regulate-us-capture-debate", "The 'regulate us' push - safety vs capture + the infosec/OSS backlash"),
     ("spec-ai-oss-redistributor-chronology", "Open-weight AI, abliterators + redistributors"),

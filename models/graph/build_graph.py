@@ -306,6 +306,30 @@ ALIAS = {
  "Stargate Finance":"Stargate_Finance","StargateFinance":"Stargate_Finance",
  "AI data centers":"AI_Datacenters","AI Datacenters":"AI_Datacenters","AI_Data_Centers":"AI_Datacenters",
  "Private-credit funds":"PrivateCredit_Funds","Private credit funds":"PrivateCredit_Funds",
+ # Open Phil / EAF 2019 comms guidelines overlay (do not alias Coefficient_Giving to Open_Philanthropy;
+ # do not alias bare CEA - Council of Economic Advisers collision; FRI stays distinct from EAF)
+ "Open Philanthropy":"Open_Philanthropy","Open_Philanthropy":"Open_Philanthropy",
+ "Coefficient Giving":"Coefficient_Giving","Coefficient_Giving":"Coefficient_Giving",
+ "Effective Altruism Foundation":"Effective_Altruism_Foundation","EAF":"Effective_Altruism_Foundation",
+ "Effective_Altruism_Foundation":"Effective_Altruism_Foundation",
+ "Foundational Research Institute":"Foundational_Research_Institute",
+ "Foundational_Research_Institute":"Foundational_Research_Institute",
+ "Centre for Effective Altruism":"Centre_for_Effective_Altruism",
+ "CEA (EA)":"Centre_for_Effective_Altruism","Centre_for_Effective_Altruism":"Centre_for_Effective_Altruism",
+ "Future of Humanity Institute":"Future_of_Humanity_Institute","FHI":"Future_of_Humanity_Institute",
+ "Future_of_Humanity_Institute":"Future_of_Humanity_Institute",
+ "Nick Beckstead":"Nick_Beckstead","Nick_Beckstead":"Nick_Beckstead",
+ "Simon Knutsson":"Simon_Knutsson","Simon_Knutsson":"Simon_Knutsson",
+ "Carla Zoe Cremer":"Carla_Zoe_Cremer","Carla Zoe Cremer":"Carla_Zoe_Cremer",
+ "Carla_Zoe_Cremer":"Carla_Zoe_Cremer",
+ "Holden Karnofsky":"Holden_Karnofsky","Holden_Karnofsky":"Holden_Karnofsky",
+ "Will MacAskill":"Will_MacAskill","William MacAskill":"Will_MacAskill","Will_MacAskill":"Will_MacAskill",
+ "Nick Bostrom":"Nick_Bostrom","Nick_Bostrom":"Nick_Bostrom",
+ "Toby Ord":"Toby_Ord","Toby_Ord":"Toby_Ord",
+ "David Z. Morris":"David_Z_Morris","David Z Morris":"David_Z_Morris","David_Z_Morris":"David_Z_Morris",
+ "Zero Knowledge Media":"Zero_Knowledge_Media",
+ "Zero_Knowledge_Media":"Zero_Knowledge_Media",
+ "Longtermism_Comms_Guidelines":"Longtermism_Comms_Guidelines",
 }
 def canon(n):
     n=(n or "?").strip()

@@ -14,6 +14,7 @@
 
 ## The EA / Open-Philanthropy / safety-money pathways (fact; influence graded)
 - **2017:** **Open Philanthropy -> OpenAI** (~$30M + a board seat) - the first EA-money-into-a-frontier-lab move, framed as buying safety influence.
+- **2019:** Open Philanthropy **$1M** to the **Effective Altruism Foundation**, contemporaneous with unpublished longtermism communication guidelines (Beckstead + EAF/FRI). Overlay: [[spec-openphil-comms-guidelines]].
 - **Open Philanthropy** (Moskovitz/Tuna) is the main **EA** grantmaker; **SFF** (Jaan Tallinn), **FLI**, and **Longview** channel money into safety orgs + policy shops.
 - **2021:** **Anthropic** spins out of OpenAI with an explicit safety framing; early capital includes ~$500M tied to **FTX/SBF** (later in the bankruptcy estate).
 - These rails feed the **safety-policy** apparatus (Encode, think tanks) that produced the pause/pacing letters - the predicate in [[spec-buist-v-anthropic-pacing]].
