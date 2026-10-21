@@ -32,6 +32,7 @@ svg{display:block;width:100%;height:100%;cursor:grab}svg:active{cursor:grabbing}
 #panel a{color:var(--ac2);text-decoration:none}#panel a:hover{text-decoration:underline}
 #panel .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;color:#fff;margin:0 4px 4px 0}
 #panel ul{margin:4px 0;padding-left:18px}#panel li{font-size:12.5px;margin:2px 0}
+.citebtn{font:11px -apple-system,Segoe UI,Roboto,sans-serif;cursor:pointer;background:var(--paper);color:var(--ac2);border:1px solid var(--line);border-radius:6px;padding:4px 9px}.citebtn:hover{background:#f3eedf}
 #close{position:absolute;top:8px;right:10px;cursor:pointer;color:var(--mut);font-size:18px;line-height:1}
 .note{position:absolute;bottom:10px;left:14px;font-size:11px;color:var(--mut);background:#fffdf8c8;padding:4px 8px;border-radius:5px}
 text.lab{font-size:9px;fill:#3a382f;pointer-events:none;paint-order:stroke;stroke:#faf8f2;stroke-width:3px;stroke-linejoin:round}
@@ -337,7 +338,7 @@ function neighbors(d){const ins=[],outs=[];LINKS.forEach(l=>{const s=lerp(l.sour
  if(s===d.id)outs.push({n:t,i:l.instrument||l.iclass,c:l.circular,a:l.amount}); if(t===d.id)ins.push({n:s,i:l.instrument||l.iclass,c:l.circular,a:l.amount});});
  const key=z=>(z.a?1:0); outs.sort((p,q)=>key(q)-key(p)); ins.sort((p,q)=>key(q)-key(p)); return {ins,outs};}
 function showPanel(d){const p=document.getElementById('panel'),b=document.getElementById('pbody');
- const {ins,outs}=neighbors(d);
+ const {ins,outs}=neighbors(d); window.curPanel={d,ins,outs};
  const blk=d.blocks.map(blockLink).join(' &middot; ')||'<span style="color:#6b665d">—</span>';
  const per=d.persons.length?d.persons.map(x=>`<a href="persons.html#${pslug(x)}">${x}</a>`).join(', '):'';
  const nb=a=>a.length?('<ul>'+a.slice(0,16).map(x=>`<li>${x.c?'<b class=ea>↻</b> ':''}<a href="bubblemap.html#node=${encodeURIComponent(x.n)}" onclick="event.preventDefault();focusNode('${x.n.replace(/'/g,"\\'")}');">${NLABEL[x.n]||x.n}</a> <span style=color:#6b665d>(${x.i||'—'})</span>${x.a?` <span class=amt>${x.a}</span>`:''}</li>`).join('')+(a.length>16?`<li style=color:#6b665d>+${a.length-16} more…</li>`:'')+'</ul>'):'<div style="color:#6b665d;font-size:12px">—</div>';
@@ -347,8 +348,25 @@ function showPanel(d){const p=document.getElementById('panel'),b=document.getEle
   +(per?`<div class=k>Key person</div><div>${per}</div>`:'')
   +`<div class=k>Outflows (${outs.length})</div>${nb(outs)}`
   +`<div class=k>Inflows (${ins.length})</div>${nb(ins)}`
-  +`<div class=k>Documented in</div><div style=font-size:12.5px>${blk}</div>`;
+  +`<div class=k>Documented in</div><div style=font-size:12.5px>${blk}</div>`
+  +`<div style="margin-top:11px;border-top:1px solid var(--line);padding-top:9px"><button class=citebtn onclick="copyCite()">Copy sources</button> <button class=citebtn onclick="dlCite()">Download .md</button><span id=citemsg style="font-size:11px;color:#2e6b3e;margin-left:6px"></span></div>`;
  p.style.display='block';}
+function buildCite(){const C=window.curPanel;if(!C)return'';const d=C.d;
+ const base=location.origin+location.pathname.replace(/[^/]*$/,'');
+ const strip=s=>String(s||'').replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim();
+ let L=[`# ${d.label}`,``,`- Sector: ${d.sector} | degree ${d.deg}${d.scc?' | circular-financing core'+(d.robust?' (robust)':' (via cancelable)'):''}`,`- Bubble map: ${base}bubblemap.html#node=${encodeURIComponent(d.id)}`,``];
+ if(d.desc) L.push(strip(d.desc),``);
+ const eds=a=>a.map(x=>`  - ${(NLABEL[x.n]||x.n)} [${x.i||'link'}]${x.a?' '+x.a:''}`);
+ if(C.outs.length) L.push('## Outflows / points to',...eds(C.outs),``);
+ if(C.ins.length) L.push('## Inflows / pointed to by',...eds(C.ins),``);
+ if(d.blocks&&d.blocks.length){ L.push('## Documented in'); d.blocks.forEach(s=>L.push(`  - ${strip(BTITLE[s]||s)} -> ${base}r-${s}.html`)); L.push(``); }
+ L.push('Source: bubble-map (github.com/pq-cybarg/bubble-map). Overlay/structural edges are documented ties, not money flows; grading is per-edge in the research blocks.');
+ return L.join('
+');}
+function copyCite(){const t=buildCite();const m=document.getElementById('citemsg');
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{if(m){m.textContent='copied';setTimeout(()=>m.textContent='',1800);}}).catch(()=>{if(m)m.textContent='select+copy below';prompt('Copy the provenance:',t);});}
+function dlCite(){const t=buildCite(),C=window.curPanel;const a=document.createElement('a');a.href='data:text/markdown;charset=utf-8,'+encodeURIComponent(t);a.download=(C?C.d.id:'node')+'-sources.md';document.body.appendChild(a);a.click();a.remove();}
+window.copyCite=copyCite;window.dlCite=dlCite;
 function centerOn(d){const k=Math.max(curK,1.4);const tx=W()/2-k*d.x,ty=H()/2-k*d.y;
  svg.transition().duration(550).call(zoomB.transform,d3.zoomIdentity.translate(tx,ty).scale(k));}
 function focusNode(id){const d=id2n.get(id);if(!d)return;showPanel(d);egoFocus(d);centerOn(d);q.value='';}
