@@ -406,7 +406,8 @@ if os.path.isdir(DOCS):
         PG=(f"<!doctype html><html lang=en><head><meta charset=utf-8>"
             f"<meta name=viewport content=\"width=device-width,initial-scale=1\">"
             f"<title>{html.escape(str(title))[:90]} — Bubble Map</title><style>{PCSS}</style></head>"
-            f"<body>{NAVBAR}<main>{md2html(md)}{srcbar}</main></body></html>")
+            f"<body>{NAVBAR}<main>{md2html(md)}{srcbar}</main>"
+            f"<script src=glossary-link.js defer></script></body></html>")
         open(os.path.join(DOCS,f"r-{stub}.html"),"w").write(PG); npages+=1
 
     body=[f'<p class=muted>{nres_json} cited research blocks. Each is a readable on-site page (rendered from its <code>.md</code>) and links to its structured data (<code>.json</code>, with every source URL) on GitHub. Generated {BUILD_DATE}.</p>']
@@ -497,7 +498,22 @@ if os.path.isdir(DOCS):
      ("Programmable money / CBDC","A central-bank digital currency whose rules can be coded in — limiting when, where, or how it is spent. The BIS has stated this gives the issuer 'absolute control … and the technology to enforce that.'"),
      ("Supply-chain worm / token theft","Malware that steals a developer's access tokens and uses them to publish poisoned software others trust (e.g., the Shai-Hulud npm worm). The prize is the trust attached to an identity, not a password."),
     ]
-    gl="".join(f"<dt>{html.escape(t)}</dt><dd>{html.escape(d)}</dd>" for t,d in GLOSSARY)
+    import re as _re
+    def _gslug(t): return "g-"+_re.sub(r"[^a-z0-9]+","-",t.lower()).strip("-")
+    def _gkeys(t):
+        head=t.split(" (")[0]
+        keys=set();
+        for part in _re.split(r"\s*/\s*|\s+vs\s+", head):
+            part=part.strip()
+            if len(part)>=4 and " " in part or len(part)>=5: keys.add(part)
+        for ac in _re.findall(r"\b([A-Z][A-Za-z0-9]*(?:-[0-9A-Za-z]+)?)\b", t):
+            if (ac.isupper() and len(ac)>=3) or _re.match(r"^[A-Z]-?\d$", ac) or ac in ("Z3","HTM","AFS","SPV","RPO","SCC","OER","CPI","PCE","DPI","CBDC","PQC","CRQC","CALEA","TIPS","COLA","QCEW"):
+                keys.add(ac)
+        return sorted({k for k in keys if k.lower() not in ("the","and","vs","us","ai")}, key=len, reverse=True)
+    gl="".join(f'<dt id="{_gslug(t)}">{html.escape(t)}</dt><dd>{html.escape(d)}</dd>' for t,d in GLOSSARY)
+    _gterms=[{"a":_gslug(t),"k":_gkeys(t),"d":(d[:150]+"...") if len(d)>150 else d} for t,d in GLOSSARY]
+    _gterms=[g for g in _gterms if g["k"]]
+    json.dump(_gterms, open(os.path.join(DOCS,"glossary-terms.json"),"w"), ensure_ascii=False, separators=(",",":"))
     GL_HTML=(f"<!doctype html><html><head><meta charset=utf-8><title>Bubble Map — Glossary</title><style>{PCSS}</style></head>"
              f"<body>{navlinks('Glossary')}<main><h1>Glossary</h1>"
              "<p class=muted>Plain-language definitions of the technical terms used across the project.</p>"
